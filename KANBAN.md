@@ -1,19 +1,18 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [reklcli] mukl에게 100곡 URL + 상세 분석 데이터 전달 — 2026-03-28
+- [mukl] 100곡 DB INSERT (5곡/배치, 30분텀) — 2026-03-29 진행중
+- [reklcli] 핑거프린팅 우회 방안 검토 — 2026-03-29
 
 ## TODO
-- [mukl] sunolang GitHub repo 생성
-- [mukl] DB 확장 스키마 적용 (상세 분석 필드 반영)
-- [mukl] URL→DB INSERT 파이프라인 구축
-- [Leo] Phase 2: Suno 앱으로 100곡 녹음 → 프롬프트 수집
+- [reklcli] Demucs stem separation 테스트 (핑거프린팅 우회용) — Phase 2 선행
+- [Leo] Phase 2: stem 분리 후 Suno 앱 업로드 → 프롬프트 수집
 - [reklcli] Phase 2: Suno 프롬프트 vs predicted_keywords 대조 분석
 - [reklcli] Phase 3: 보컬 대중음악 200-300곡 선곡 + 분석
 - [reklcli] Phase 5: 통합 RAG 구축
 
 ## BLOCKED
-(없음)
+- [Leo] Phase 2 MP3 업로드: Audible Magic 핑거프린팅 차단 — stem separation 테스트 필요
 
 ## DONE (최근)
 - [reklcli] Phase 1: 100곡 TOR 상세 분석 완료 — 2026-03-28 ✅
