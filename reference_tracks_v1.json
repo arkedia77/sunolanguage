@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "title": "Clair de Lune",
+    "artist": "Claude Debussy",
+    "youtube_url": "https://www.youtube.com/watch?v=97_VJve7UVc",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Impressionistic piano with extensive use of sustain pedal creating harmonic halos, wide dynamic range from pppp to forte, overtone-rich voicings exploiting sympathetic string resonance"
+  },
+  {
+    "id": 2,
+    "title": "Boléro",
+    "artist": "Maurice Ravel",
+    "youtube_url": "https://www.youtube.com/watch?v=r30D3SW4OVw",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Single repeating melody passed through the entire orchestra in a crescendo lasting 15+ minutes, beginning with solo snare drum and flute, layering oboe, clarinet, bassoon, brass, and full strings into an overwhelming orchestral tsunami"
+  },
+  {
+    "id": 3,
+    "title": "Jupiter from The Planets",
+    "artist": "Gustav Holst",
+    "youtube_url": "https://www.youtube.com/watch?v=Nz0b4STz1lo",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Majestic full orchestra with jubilant brass fanfares, swirling string passages, and the famous broad hymn-like central theme. Rich timbral contrasts between massive tutti sections and intimate woodwind solos"
+  },
+  {
+    "id": 4,
+    "title": "Four Seasons - Spring",
+    "artist": "Antonio Vivaldi",
+    "youtube_url": "https://www.youtube.com/watch?v=GRxofEmo3HA",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Bright solo violin with virtuosic ornamental runs over rhythmic string ripieno, birdsong-imitating trills, flowing pastoral melodies with harpsichord continuo providing harmonic sparkle"
+  },
+  {
+    "id": 5,
+    "title": "Flight of the Bumblebee",
+    "artist": "Nikolai Rimsky-Korsakov",
+    "youtube_url": "https://www.youtube.com/watch?v=6QV1RGMLUKE",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Rapid chromatic scales creating a buzzing insect-like texture, typically performed on violin or flute at breakneck speed, staccato articulation with orchestral punctuation"
+  },
+  {
+    "id": 6,
+    "title": "1812 Overture",
+    "artist": "Pyotr Tchaikovsky",
+    "youtube_url": "https://www.youtube.com/watch?v=VbxgYlcNxE8",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Dramatic full orchestra building from somber strings and woodwinds through martial brass fanfares to a climactic finale with cannon fire, carillon bells, and triumphant brass chorale over thundering timpani"
+  },
+  {
+    "id": 7,
+    "title": "Adagio for Strings",
+    "artist": "Samuel Barber",
+    "youtube_url": "https://www.youtube.com/watch?v=izQsgE0L450",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Sustained string ensemble in slowly ascending melodic arcs, building emotional intensity through overlapping legato lines and gradual dynamic swells to a devastating climax followed by silence"
+  },
+  {
+    "id": 8,
+    "title": "Moonlight Sonata (1st Movement)",
+    "artist": "Ludwig van Beethoven",
+    "youtube_url": "https://www.youtube.com/watch?v=4Tr0otuiQuU",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Hypnotic broken-chord triplet pattern in the right hand over deep bass octaves, sustained pedal creating a wash of overtones, dark C-sharp minor tonality with a floating soprano melody"
+  },
+  {
+    "id": 9,
+    "title": "Canon in D",
+    "artist": "Johann Pachelbel",
+    "youtube_url": "https://www.youtube.com/watch?v=JvNQLJ1_HQ0",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Repeating eight-bar bass line (ground bass) with three violins entering in canon, progressively elaborate ornamental variations layering over the unchanging harmonic foundation with harpsichord continuo"
+  },
+  {
+    "id": 10,
+    "title": "Cello Suite No. 1 - Prelude",
+    "artist": "Johann Sebastian Bach",
+    "youtube_url": "https://www.youtube.com/watch?v=1prweT95Mo0",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Solo unaccompanied cello with arpeggiated figures implying full harmony from a single instrument, warm resonant low register with singing upper strings, natural room acoustics and organic bow texture"
+  },
+  {
+    "id": 11,
+    "title": "Rite of Spring (Introduction)",
+    "artist": "Igor Stravinsky",
+    "youtube_url": "https://www.youtube.com/watch?v=EkwqPJZe8ms",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Opening solo bassoon in extreme high register creating an eerie, primordial texture, layered woodwind birdcalls, dissonant polytonal string chords with savage rhythmic punch from brass and percussion"
+  },
+  {
+    "id": 12,
+    "title": "New World Symphony - Largo",
+    "artist": "Antonín Dvořák",
+    "youtube_url": "https://www.youtube.com/watch?v=WuqyfEyNXQo",
+    "genre": "Classical / Orchestral",
+    "texture_description": "Iconic English horn solo with a singing, nostalgic melody over hushed brass chorale, warm string harmonies, and gentle timpani rolls creating a vast, open-landscape atmosphere"
+  },
+  {
+    "id": 13,
+    "title": "Time",
+    "artist": "Hans Zimmer (Inception OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=RxabLA7UQ9k",
+    "genre": "Film Score / OST",
+    "texture_description": "Building from a solo piano motif over ticking clock-like percussion, layering massive brass swells, driving string ostinato, and electronic bass pulses into an overwhelming emotional crescendo"
+  },
+  {
+    "id": 14,
+    "title": "Cornfield Chase",
+    "artist": "Hans Zimmer (Interstellar OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=1Vko01D77Fg",
+    "genre": "Film Score / OST",
+    "texture_description": "Church organ with deep pedal tones and bright principal stops, pulsing piano ostinato, minimal string figures with wide reverb creating vastness, ticking rhythmic elements suggesting urgency"
+  },
+  {
+    "id": 15,
+    "title": "Schindler's List Theme",
+    "artist": "John Williams (performed by Itzhak Perlman)",
+    "youtube_url": "https://www.youtube.com/watch?v=XNSsv86lsok",
+    "genre": "Film Score / OST",
+    "texture_description": "Solo violin with rich vibrato and deeply expressive phrasing over gentle orchestral accompaniment, shifting between sorrowful minor-key passages and moments of fragile hope with harp and clarinet"
+  },
+  {
+    "id": 16,
+    "title": "Imperial March",
+    "artist": "John Williams (Star Wars OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=-bzWSJG93P8",
+    "genre": "Film Score / OST",
+    "texture_description": "Massive brass section led by French horns and trombones in a menacing dotted-rhythm march, driving snare drums, dark string tremolo underpinning, and timpani accents creating military grandeur"
+  },
+  {
+    "id": 17,
+    "title": "Jurassic Park Theme",
+    "artist": "John Williams",
+    "youtube_url": "https://www.youtube.com/watch?v=D8zlUUrFK-M",
+    "genre": "Film Score / OST",
+    "texture_description": "French horn stating a noble, wonder-filled theme over lush string harmonies, building with full brass choir and sweeping orchestral crescendos, harp glissandi adding magical sparkle"
+  },
+  {
+    "id": 18,
+    "title": "Hedwig's Theme",
+    "artist": "John Williams (Harry Potter OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=wtHra9tFISY",
+    "genre": "Film Score / OST",
+    "texture_description": "Celesta playing a whimsical, mysterious melody in a minor key waltz, answered by full orchestra with magical harp arpeggios, warm French horn countermelodies, and sparkling percussion"
+  },
+  {
+    "id": 19,
+    "title": "Ecstasy of Gold",
+    "artist": "Ennio Morricone (The Good, The Bad and The Ugly OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=PYI09PMNazw",
+    "genre": "Film Score / OST",
+    "texture_description": "Building orchestral intensity from solo soprano voice into driving trumpet fanfares, galloping string figures, electric guitar twang, and full orchestral climax with military snare and soaring brass"
+  },
+  {
+    "id": 20,
+    "title": "Cinema Paradiso (Love Theme)",
+    "artist": "Ennio Morricone",
+    "youtube_url": "https://www.youtube.com/watch?v=C0qRnCeNdJk",
+    "genre": "Film Score / OST",
+    "texture_description": "Tender solo piano stating a nostalgic melody, joined by warm string orchestra with gentle oboe countermelody, building to a lush romantic climax with suspended string harmonies"
+  },
+  {
+    "id": 21,
+    "title": "Gabriel's Oboe",
+    "artist": "Ennio Morricone (The Mission OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=2WJhax7Jmxs",
+    "genre": "Film Score / OST",
+    "texture_description": "Solo oboe with pure, singing tone over gentle string accompaniment, ethereal choir pads joining in the second half, building emotional weight through restraint and long melodic lines"
+  },
+  {
+    "id": 22,
+    "title": "Summer",
+    "artist": "Joe Hisaishi (Kikujiro OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=JGZ6UxELkgo",
+    "genre": "Film Score / OST",
+    "texture_description": "Bright, bouncy piano melody with a childlike innocence over light string pizzicato accompaniment, clean production with marimba accents and gentle orchestral swells creating warm nostalgia"
+  },
+  {
+    "id": 23,
+    "title": "One Summer's Day",
+    "artist": "Joe Hisaishi (Spirited Away OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=d1ni1sVCgEk",
+    "genre": "Film Score / OST",
+    "texture_description": "Delicate solo piano with a wistful, floating melody in a major key, gentle sustain pedal creating harmonic warmth, later joined by soft strings and woodwinds adding pastoral dreaminess"
+  },
+  {
+    "id": 24,
+    "title": "Blade Runner Blues",
+    "artist": "Vangelis (Blade Runner OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=ECYLOTv0_nc",
+    "genre": "Film Score / OST",
+    "texture_description": "Lush Yamaha CS-80 synthesizer pads with slow evolving timbres, saxophone-like solo synth lead with pitch bend expression, deep reverb creating a noir-futuristic atmosphere with rain-soaked melancholy"
+  },
+  {
+    "id": 25,
+    "title": "Chariots of Fire",
+    "artist": "Vangelis",
+    "youtube_url": "https://www.youtube.com/watch?v=CSav51fVlKU",
+    "genre": "Film Score / OST",
+    "texture_description": "Iconic Yamaha CS-80 synthesizer melody with warm analog pad layers, steady rhythmic pulse from electronic percussion, building with additional synth brass and string-like timbres into a triumphant anthem"
+  },
+  {
+    "id": 26,
+    "title": "Merry Christmas Mr. Lawrence",
+    "artist": "Ryuichi Sakamoto",
+    "youtube_url": "https://www.youtube.com/watch?v=LGs_vGt0MY8",
+    "genre": "Film Score / OST",
+    "texture_description": "Crystalline synthesizer arpeggios with a haunting melodic theme, layered electronic textures with warm analog tones, blending Eastern minimalism with Western romantic harmony in a deeply emotional piano-synth fusion"
+  },
+  {
+    "id": 27,
+    "title": "Heart of Courage",
+    "artist": "Two Steps From Hell (Thomas Bergersen)",
+    "youtube_url": "https://www.youtube.com/watch?v=XYKUeZQbMF0",
+    "genre": "Hybrid / Cinematic",
+    "texture_description": "Layered full orchestra with soaring brass fanfares, driving string ostinato, massive timpani and epic percussion hits, choir pads building to a triumphant climax with cinematic risers and sub-bass reinforcement"
+  },
+  {
+    "id": 28,
+    "title": "Star Sky",
+    "artist": "Two Steps From Hell (Thomas Bergersen)",
+    "youtube_url": "https://www.youtube.com/watch?v=pICAha0nsb0",
+    "genre": "Hybrid / Cinematic",
+    "texture_description": "Ethereal piano intro layered with lush string pads, building into full orchestral ensemble with hybrid percussion, electronic bass pulses, and sweeping cinematic choir"
+  },
+  {
+    "id": 29,
+    "title": "Protectors of the Earth",
+    "artist": "Two Steps From Hell (Thomas Bergersen)",
+    "youtube_url": "https://www.youtube.com/watch?v=ASj81daun5Q",
+    "genre": "Hybrid / Cinematic",
+    "texture_description": "Aggressive hybrid brass and string unisons over pounding taiko-style percussion, electronic bass drops, and cinematic risers with choir stabs and relentless rhythmic drive"
+  },
+  {
+    "id": 30,
+    "title": "Blood and Stone",
+    "artist": "Audiomachine (Paul Dinletir)",
+    "youtube_url": "https://www.youtube.com/watch?v=mVOGFn5ykxM",
+    "genre": "Hybrid / Cinematic",
+    "texture_description": "Dark, aggressive hybrid orchestral with heavy electronic bass design, distorted percussion layers, massive brass stabs, and string ostinato patterns with cinematic impacts and trailer risers"
+  },
+  {
+    "id": 31,
+    "title": "Guardians at the Gate",
+    "artist": "Audiomachine",
+    "youtube_url": "https://www.youtube.com/watch?v=S5YGxMjywSk",
+    "genre": "Hybrid / Cinematic",
+    "texture_description": "Thundering hybrid percussion with layered taiko drums, aggressive brass countermelodies, soaring violin leads over electronic bass pulses, and choir pads building through multiple intensity tiers"
+  },
+  {
+    "id": 32,
+    "title": "Lacrimosa Dominae",
+    "artist": "Immediate Music",
+    "youtube_url": "https://www.youtube.com/watch?v=bkAMuYFMJBg",
+    "genre": "Hybrid / Cinematic",
+    "texture_description": "Massive Latin choir over full symphonic orchestra with thundering percussion, pipe organ layers, and cinematic brass fanfares blending sacred choral textures with modern production"
+  },
+  {
+    "id": 33,
+    "title": "One-Winged Angel (Advent Children)",
+    "artist": "Nobuo Uematsu / The Black Mages (Final Fantasy VII)",
+    "youtube_url": "https://www.youtube.com/watch?v=q5st0b3ln5U",
+    "genre": "Hybrid / Cinematic",
+    "texture_description": "Full symphony orchestra with Latin choir fused with distorted electric guitars and rock drumming, dramatic dynamic shifts, Stravinsky-influenced dissonant brass clusters, and relentless rhythmic aggression"
+  },
+  {
+    "id": 34,
+    "title": "Halo Theme (Mjolnir Mix)",
+    "artist": "Martin O'Donnell & Michael Salvatori feat. Steve Vai",
+    "youtube_url": "https://www.youtube.com/watch?v=sCxv2daOwjQ",
+    "genre": "Hybrid / Cinematic",
+    "texture_description": "Gregorian monk chant intro into shredding electric guitar over full orchestra, tribal percussion, and electronic bass, layering rock power chords with cinematic strings and brass fanfares"
+  },
+  {
+    "id": 35,
+    "title": "Watermark",
+    "artist": "Enya",
+    "youtube_url": "https://www.youtube.com/watch?v=bPCdsa7hS7M",
+    "genre": "New Age",
+    "texture_description": "Multi-tracked vocal layers creating ethereal choir-like wash, crystalline piano over deep reverb hall, synth pads with cathedral-scale spatial depth"
+  },
+  {
+    "id": 36,
+    "title": "One Man's Dream",
+    "artist": "Yanni",
+    "youtube_url": "https://www.youtube.com/watch?v=eClhtAge0IY",
+    "genre": "New Age",
+    "texture_description": "Grand piano with bright attack and long sustain pedal bloom, orchestral string swells building dramatic arcs, clean production with wide stereo imaging"
+  },
+  {
+    "id": 37,
+    "title": "Silk Road (Theme)",
+    "artist": "Kitaro",
+    "youtube_url": "https://www.youtube.com/watch?v=BddSN2jNS9E",
+    "genre": "New Age",
+    "texture_description": "Analog synthesizer pads with slow filter sweeps, koto-like plucked textures, vast reverb creating desert-scale space, warm Moog-style bass underpinning Eastern melodic motifs"
+  },
+  {
+    "id": 38,
+    "title": "Thanksgiving",
+    "artist": "George Winston",
+    "youtube_url": "https://www.youtube.com/watch?v=XKJRf98GU3o",
+    "genre": "New Age",
+    "texture_description": "Solo acoustic piano with intimate close-mic warmth, Steinway resonance captured with natural room ambience, folk-influenced melodic patterns with sustain pedal harmonics"
+  },
+  {
+    "id": 39,
+    "title": "Spiral",
+    "artist": "Vangelis",
+    "youtube_url": "https://www.youtube.com/watch?v=I-0Z5D7eRh8",
+    "genre": "New Age",
+    "texture_description": "Rich analog Yamaha CS-80 pads with evolving harmonic overtones, percussive synth stabs, cosmic reverb trails and slow-building electronic orchestration"
+  },
+  {
+    "id": 40,
+    "title": "Take Five",
+    "artist": "The Dave Brubeck Quartet",
+    "youtube_url": "https://www.youtube.com/watch?v=-DHuW1h1wHw",
+    "genre": "Jazz",
+    "texture_description": "Paul Desmond's silky, vibrato-less alto saxophone floats over a hypnotic 5/4 piano-bass vamp with Joe Morello's crisp, precise brushed drum work. The alto tone is famously dry and airy."
+  },
+  {
+    "id": 41,
+    "title": "So What",
+    "artist": "Miles Davis",
+    "youtube_url": "https://www.youtube.com/watch?v=ylXk1LBvIqU",
+    "genre": "Jazz",
+    "texture_description": "Miles Davis's muted trumpet delivers cool, spare phrases over Bill Evans's impressionistic piano voicings. Paul Chambers's walking upright bass anchors the modal harmony while Jimmy Cobb's ride cymbal shimmers."
+  },
+  {
+    "id": 42,
+    "title": "A Love Supreme, Pt. I - Acknowledgement",
+    "artist": "John Coltrane",
+    "youtube_url": "https://www.youtube.com/watch?v=W7qWa52k-nE",
+    "genre": "Jazz",
+    "texture_description": "Opens with a gong strike and cymbal wash, then Jimmy Garrison's four-note bass ostinato anchors the piece. Coltrane's tenor saxophone is raw and impassioned with Elvin Jones's polyrhythmic drumming creating a churning, oceanic texture."
+  },
+  {
+    "id": 43,
+    "title": "'Round Midnight",
+    "artist": "Thelonious Monk",
+    "youtube_url": "https://www.youtube.com/watch?v=iYY8-2TWzbU",
+    "genre": "Jazz",
+    "texture_description": "Monk's solo piano with angular, percussive touch, dissonant intervals, and deliberate use of silence. Whole-tone runs and unexpected rhythmic hesitations creating an intimate, late-night atmosphere."
+  },
+  {
+    "id": 44,
+    "title": "Maiden Voyage",
+    "artist": "Herbie Hancock",
+    "youtube_url": "https://www.youtube.com/watch?v=EWC5x9G45yo",
+    "genre": "Jazz",
+    "texture_description": "Freddie Hubbard's warm trumpet states the oceanic theme over Tony Williams's shimmering cymbal work with brushes. Hancock's suspended fourth voicings evoke drifting on open water."
+  },
+  {
+    "id": 45,
+    "title": "Chameleon",
+    "artist": "Herbie Hancock",
+    "youtube_url": "https://www.youtube.com/watch?v=WYRrIBqKsJ4",
+    "genre": "Jazz",
+    "texture_description": "Funky Hohner Clavinet and ARP Odyssey synthesizer riff over Paul Jackson's slap-popping electric bass. Harvey Mason's tight, syncopated drumming with Bennie Maupin's tenor sax and bass clarinet adding dark, reedy textures."
+  },
+  {
+    "id": 46,
+    "title": "Waltz for Debby",
+    "artist": "Bill Evans Trio",
+    "youtube_url": "https://www.youtube.com/watch?v=JmcBqA4Xrp4",
+    "genre": "Jazz",
+    "texture_description": "Bill Evans's delicate, lyrical piano touch with soft pedal coloring, Scott LaFaro's melodic upright bass counterpoint weaving around the piano, Paul Motian's feather-light brushwork barely whispering."
+  },
+  {
+    "id": 47,
+    "title": "Spain",
+    "artist": "Chick Corea & Return to Forever",
+    "youtube_url": "https://www.youtube.com/watch?v=sEhQTjgoTdU",
+    "genre": "Jazz",
+    "texture_description": "Opens with a Fender Rhodes introduction quoting Rodrigo's Concierto de Aranjuez. Joe Farrell's flute soars with bright, silvery tone over Stanley Clarke's rapid acoustic bass with Latin percussion."
+  },
+  {
+    "id": 48,
+    "title": "Moanin'",
+    "artist": "Art Blakey & The Jazz Messengers",
+    "youtube_url": "https://www.youtube.com/watch?v=0QiyLfJmzCo",
+    "genre": "Jazz",
+    "texture_description": "Bobby Timmons's gospel-infused piano call-and-response riff with Lee Morgan's bright trumpet, Benny Golson's warm tenor sax, and Art Blakey's thunderous press rolls creating the definitive hard-bop drum sound."
+  },
+  {
+    "id": 49,
+    "title": "The Sidewinder",
+    "artist": "Lee Morgan",
+    "youtube_url": "https://www.youtube.com/watch?v=qJi03NqXfk8",
+    "genre": "Jazz",
+    "texture_description": "Lee Morgan's trumpet blazes with a boogaloo-flavored funky hook over a driving 24-bar blues. Joe Henderson's gritty tenor sax, Barry Harris's lean piano, and Billy Higgins's shuffling drum groove."
+  },
+  {
+    "id": 50,
+    "title": "Mercy, Mercy, Mercy",
+    "artist": "Cannonball Adderley Quintet",
+    "youtube_url": "https://www.youtube.com/watch?v=s4rXEKtC8iY",
+    "genre": "Jazz",
+    "texture_description": "Joe Zawinul's Wurlitzer electric piano provides a warm, soulful bed. Cannonball Adderley's alto saxophone is rich, full-bodied, and bluesy with Nat Adderley's mellower cornet. Live club ambiance enhances the earthy feel."
+  },
+  {
+    "id": 51,
+    "title": "Four on Six",
+    "artist": "Wes Montgomery",
+    "youtube_url": "https://www.youtube.com/watch?v=YQ3UpUTNrQQ",
+    "genre": "Jazz",
+    "texture_description": "Wes Montgomery's revolutionary thumb-plucked guitar producing a uniquely warm, round tone. His octave technique creates a thick, horn-like texture over Tommy Flanagan's bop piano and propulsive swing."
+  },
+  {
+    "id": 52,
+    "title": "Flamenco Sketches",
+    "artist": "Miles Davis",
+    "youtube_url": "https://www.youtube.com/watch?v=nTwp1sgUJrM",
+    "genre": "Jazz",
+    "texture_description": "The most meditative track on Kind of Blue, with each soloist freely cycling through five modal scales. Miles's open trumpet is breathy and vulnerable, Evans's piano shimmers with impressionistic washes."
+  },
+  {
+    "id": 53,
+    "title": "Blue Train",
+    "artist": "John Coltrane",
+    "youtube_url": "https://www.youtube.com/watch?v=HT_Zs5FKDZE",
+    "genre": "Jazz",
+    "texture_description": "Coltrane's tenor saxophone leads a three-horn frontline with Lee Morgan's trumpet and Curtis Fuller's warm trombone, creating rich brass-and-reed unison textures over a hard-driving rhythmic foundation."
+  },
+  {
+    "id": 54,
+    "title": "Watermelon Man",
+    "artist": "Herbie Hancock",
+    "youtube_url": "https://www.youtube.com/watch?v=ppJQKfqhFfE",
+    "genre": "Jazz",
+    "texture_description": "Head Hunters version with Bill Summers's hindewhu (African pygmy flute) bottle-blowing intro, thick Clavinet and Fender Rhodes electronic-funk texture, and Bennie Maupin's nasal soprano sax over polyrhythmic percussion."
+  },
+  {
+    "id": 55,
+    "title": "Xtal",
+    "artist": "Aphex Twin",
+    "youtube_url": "https://www.youtube.com/watch?v=Nevnq3JfkCM",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Delicate ambient pads layered with intricate breakbeat programming, warm analog synth washes with pitch-shifted vocal textures, lo-fi tape hiss creating intimate electronic warmth"
+  },
+  {
+    "id": 56,
+    "title": "Roygbiv",
+    "artist": "Boards of Canada",
+    "youtube_url": "https://www.youtube.com/watch?v=yT0gRc2c2wQ",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Detuned analog synth melodies with warm tape saturation, downtempo hip-hop influenced beats, hazy VHS-era nostalgia textures with warbly pitch modulation and sun-bleached timbres"
+  },
+  {
+    "id": 57,
+    "title": "An Ending (Ascent)",
+    "artist": "Brian Eno",
+    "youtube_url": "https://www.youtube.com/watch?v=It4WxQ6dnn0",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Pure sustained synthesizer tones building in layered harmonic intervals, creating a luminous, slowly ascending chord progression with cathedral-like reverb and infinite sustain"
+  },
+  {
+    "id": 58,
+    "title": "Awake",
+    "artist": "Tycho",
+    "youtube_url": "https://www.youtube.com/watch?v=xOrcb0Uo48c",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Sun-bleached analog synth pads over crisp electronic drums, warm Juno-106 arpeggios with tape delay, layered clean electric guitar creating shimmering ambient-electronic warmth"
+  },
+  {
+    "id": 59,
+    "title": "Teardrop (Instrumental)",
+    "artist": "Massive Attack",
+    "youtube_url": "https://www.youtube.com/watch?v=u7K72X4eo_s",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Harpsichord-like plucked synth loop over deep sub-bass and sparse trip-hop beats, warm piano chords with heavy reverb, atmospheric string pads creating dark, cinematic tension"
+  },
+  {
+    "id": 60,
+    "title": "Brokendate",
+    "artist": "Com Truise",
+    "youtube_url": "https://www.youtube.com/watch?v=RMjClP1FhBQ",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Retro-futuristic analog synth textures with heavy sidechain compression, neon-drenched Juno pads, punchy 808-style drums with vintage vocoder textures and VHS-era processing"
+  },
+  {
+    "id": 61,
+    "title": "Kerala",
+    "artist": "Bonobo",
+    "youtube_url": "https://www.youtube.com/watch?v=S0Q4gqBUs7c",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Organic downtempo with interlocking percussion layers, warm sub-bass, chopped vocal textures and field recordings woven into lush electronic production with jazz-inflected Rhodes"
+  },
+  {
+    "id": 62,
+    "title": "Says",
+    "artist": "Nils Frahm",
+    "youtube_url": "https://www.youtube.com/watch?v=dIwwjy4slI8",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Layered piano and analog synthesizer building from whisper to overwhelming crescendo, felt-piano intimacy dissolving into massive Juno-60 pad walls with tube saturation"
+  },
+  {
+    "id": 63,
+    "title": "Tendency",
+    "artist": "Jan Jelinek",
+    "youtube_url": "https://www.youtube.com/watch?v=tWgEmgKEMPo",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Micro-sampled jazz fragments looped into abstract dub-techno textures, warm analog hiss, deep sub frequencies with glitchy granular processing creating hypnotic minimal grooves"
+  },
+  {
+    "id": 64,
+    "title": "Archangel",
+    "artist": "Burial",
+    "youtube_url": "https://www.youtube.com/watch?v=E2qLD9c3Gq4",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Ghostly pitched-down vocal samples over crackling vinyl noise, sparse 2-step garage rhythms with cavernous reverb, deep sub-bass and rain-like ambient textures creating nocturnal London atmosphere"
+  },
+  {
+    "id": 65,
+    "title": "Photosynthesis",
+    "artist": "Carbon Based Lifeforms",
+    "youtube_url": "https://www.youtube.com/watch?v=KQE29az48gM",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Deep space ambient with evolving pad textures, nature field recordings layered over warm analog sequences, gentle downtempo beats with expansive reverb creating biosphere-scale soundscapes"
+  },
+  {
+    "id": 66,
+    "title": "Love on a Real Train",
+    "artist": "Tangerine Dream (Risky Business OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=iNMg5GNmdiY",
+    "genre": "Electronic / Ambient",
+    "texture_description": "Dreamy sequenced analog synthesizers with gentle arpeggiated patterns, warm pad layers building with slow modulation, classic Berlin school electronic textures with romantic cinematic atmosphere"
+  },
+  {
+    "id": 67,
+    "title": "Your Hand in Mine",
+    "artist": "Explosions in the Sky",
+    "youtube_url": "https://www.youtube.com/watch?v=JzIK5FaC38w",
+    "genre": "Post-Rock",
+    "texture_description": "Delicate clean electric guitar arpeggios building through layered tremolo-picked guitars into massive distorted crescendos, dynamic contrast from whisper-quiet to wall-of-sound with crashing cymbals"
+  },
+  {
+    "id": 68,
+    "title": "Mogwai Fear Satan",
+    "artist": "Mogwai",
+    "youtube_url": "https://www.youtube.com/watch?v=du4JbfK5okA",
+    "genre": "Post-Rock",
+    "texture_description": "Minimalist guitar figures slowly layering over 16 minutes, building from quiet melodic repetition into crushing distorted guitar walls with pounding drums, extreme dynamic range and hypnotic crescendo"
+  },
+  {
+    "id": 69,
+    "title": "Svefn-g-englar",
+    "artist": "Sigur Rós",
+    "youtube_url": "https://www.youtube.com/watch?v=rtemrZ7-pj0",
+    "genre": "Post-Rock",
+    "texture_description": "Bowed electric guitar creating ethereal, otherworldly textures, falsetto vocals blending as an instrument, glacial string arrangements with slow-building dynamics and vast Icelandic reverb space"
+  },
+  {
+    "id": 70,
+    "title": "All Is Violent, All Is Bright",
+    "artist": "God Is an Astronaut",
+    "youtube_url": "https://www.youtube.com/watch?v=UMjE7-aJgo0",
+    "genre": "Post-Rock",
+    "texture_description": "Electronic beats merged with post-rock guitar dynamics, soaring delay-drenched melodies building into massive distorted climaxes, synthesizer pads adding cinematic depth to the guitar-driven crescendos"
+  },
+  {
+    "id": 71,
+    "title": "Quiet",
+    "artist": "This Will Destroy You",
+    "youtube_url": "https://www.youtube.com/watch?v=RCX2FJLmC2s",
+    "genre": "Post-Rock",
+    "texture_description": "Gentle piano and clean guitar textures slowly expanding into layers of tremolo-picked electric guitar, warm analog delay, and massive reverb-drenched crescendo with pounding floor tom"
+  },
+  {
+    "id": 72,
+    "title": "Surfing with the Alien",
+    "artist": "Joe Satriani",
+    "youtube_url": "https://www.youtube.com/watch?v=uoERl34Nt9s",
+    "genre": "Guitar Instrumental",
+    "texture_description": "Screaming Ibanez electric guitar with whammy bar divebombs and legato technique, saturated high-gain distortion, tight rhythm section with synth pads creating sci-fi rock atmosphere"
+  },
+  {
+    "id": 73,
+    "title": "For the Love of God",
+    "artist": "Steve Vai",
+    "youtube_url": "https://www.youtube.com/watch?v=okLDkcKA1HE",
+    "genre": "Guitar Instrumental",
+    "texture_description": "Intensely emotional electric guitar with extreme whammy bar expression, multi-layered harmonized guitar tracks, soaring sustain and controlled feedback over orchestral-style arrangement"
+  },
+  {
+    "id": 74,
+    "title": "Classical Gas",
+    "artist": "Tommy Emmanuel",
+    "youtube_url": "https://www.youtube.com/watch?v=S33tWZqXhnk",
+    "genre": "Guitar Instrumental",
+    "texture_description": "Virtuosic solo acoustic guitar combining percussive fingerstyle technique with rapid classical-influenced passages, warm nylon and steel string tones with natural body resonance"
+  },
+  {
+    "id": 75,
+    "title": "Tamacun",
+    "artist": "Rodrigo y Gabriela",
+    "youtube_url": "https://www.youtube.com/watch?v=l-qgum7hFXk",
+    "genre": "Guitar Instrumental",
+    "texture_description": "Two acoustic guitars in rapid-fire flamenco-meets-metal interplay, percussive body-slapping rhythms, blazing nylon-string runs and driving strummed patterns creating intense acoustic energy"
+  },
+  {
+    "id": 76,
+    "title": "Sunflower River Blues",
+    "artist": "John Fahey",
+    "youtube_url": "https://www.youtube.com/watch?v=VZVrciyGmBE",
+    "genre": "Guitar Instrumental",
+    "texture_description": "Solo acoustic steel-string guitar in American primitive fingerpicking style, alternating bass patterns with melodic treble figures, raw lo-fi recording capturing intimate room sound and string buzz"
+  },
+  {
+    "id": 77,
+    "title": "Raga Jog",
+    "artist": "Ravi Shankar",
+    "youtube_url": "https://www.youtube.com/watch?v=Xn4q5VS12eQ",
+    "genre": "World Music",
+    "texture_description": "Sitar with buzzing sympathetic strings and microtonal bends over tabla rhythmic cycles, drone tanpura creating harmonic foundation, building from meditative alap through rhythmic jor to ecstatic jhala"
+  },
+  {
+    "id": 78,
+    "title": "Barcelona Nights",
+    "artist": "Ottmar Liebert",
+    "youtube_url": "https://www.youtube.com/watch?v=JBV7m4Gh6sk",
+    "genre": "World Music",
+    "texture_description": "Nylon-string flamenco guitar with rapid rasgueado strumming and delicate picado runs, Latin percussion grooves, warm ambient pads creating a new-flamenco fusion atmosphere"
+  },
+  {
+    "id": 79,
+    "title": "Host of Seraphim",
+    "artist": "Dead Can Dance",
+    "youtube_url": "https://www.youtube.com/watch?v=xpMNXEY_tio",
+    "genre": "World Music",
+    "texture_description": "Lisa Gerrard's glossolalic contralto voice used as a pure instrument without lyrics, massive cathedral reverb, drone-like organ textures and deep percussion creating medieval-sacred atmosphere"
+  },
+  {
+    "id": 80,
+    "title": "Amassakoul",
+    "artist": "Tinariwen",
+    "youtube_url": "https://www.youtube.com/watch?v=Bfpd0rmKo2Y",
+    "genre": "World Music",
+    "texture_description": "Electric guitar with hypnotic pentatonic desert-blues riffs, polyrhythmic hand percussion, call-and-response guitar patterns creating trance-like Saharan groove over deep rhythmic foundation"
+  },
+  {
+    "id": 81,
+    "title": "Kothbiro",
+    "artist": "Ayub Ogada",
+    "youtube_url": "https://www.youtube.com/watch?v=VmIhYFgWpEw",
+    "genre": "World Music",
+    "texture_description": "Nyatiti (East African lyre) with resonant plucked strings and natural buzzing timbres, gentle percussive patterns, warm acoustic recording capturing organic instrument textures and room ambience"
+  },
+  {
+    "id": 82,
+    "title": "Aruarian Dance",
+    "artist": "Nujabes",
+    "youtube_url": "https://www.youtube.com/watch?v=qYcoJpqCha4",
+    "genre": "Lo-fi / Neo-classical / Piano",
+    "texture_description": "Warm vinyl crackle over mellow jazz piano loops, soft boom-bap drums with tape-saturated Rhodes and breathy flute samples floating in a hazy mid-range"
+  },
+  {
+    "id": 83,
+    "title": "Flower Dance",
+    "artist": "DJ Okawari",
+    "youtube_url": "https://www.youtube.com/watch?v=AULG4MoYxQk",
+    "genre": "Lo-fi / Neo-classical / Piano",
+    "texture_description": "Delicate acoustic piano over soft programmed beats, airy reverb space with gentle string swells, clean high-register melodies contrasting warm lo-fi drum textures"
+  },
+  {
+    "id": 84,
+    "title": "Solitude",
+    "artist": "Jinsang",
+    "youtube_url": "https://www.youtube.com/watch?v=ke88KS1Q09s",
+    "genre": "Lo-fi / Neo-classical / Piano",
+    "texture_description": "Melancholic jazz piano loop with tape wobble, soft side-chained pads, muted hi-hats and vinyl rain noise creating a late-night contemplative atmosphere"
+  },
+  {
+    "id": 85,
+    "title": "Nuvole Bianche",
+    "artist": "Ludovico Einaudi",
+    "youtube_url": "https://www.youtube.com/watch?v=sR2W2scFS4Y",
+    "genre": "Lo-fi / Neo-classical / Piano",
+    "texture_description": "Minimalist piano with repeating arpeggiated figures, gradual dynamic crescendo, warm mid-range tone with subtle string accompaniment building emotional weight through restraint"
+  },
+  {
+    "id": 86,
+    "title": "River Flows in You",
+    "artist": "Yiruma",
+    "youtube_url": "https://www.youtube.com/watch?v=7maJOI3QMu0",
+    "genre": "Lo-fi / Neo-classical / Piano",
+    "texture_description": "Bright, crystalline piano tone with flowing right-hand arpeggios, clean studio recording with gentle sustain pedal bloom, lyrical melody over simple harmonic progressions"
+  },
+  {
+    "id": 87,
+    "title": "Near Light",
+    "artist": "Ólafur Arnalds",
+    "youtube_url": "https://www.youtube.com/watch?v=0kYc55bXJFI",
+    "genre": "Lo-fi / Neo-classical / Piano",
+    "texture_description": "Prepared piano with muted hammer tones, generative string patterns from self-playing automated quarter-size violins, glitchy electronic textures beneath delicate acoustic fragility"
+  },
+  {
+    "id": 88,
+    "title": "Experience",
+    "artist": "Ludovico Einaudi",
+    "youtube_url": "https://www.youtube.com/watch?v=_VONMkKkdf4",
+    "genre": "Lo-fi / Neo-classical / Piano",
+    "texture_description": "Driving piano arpeggios building with layered violin and orchestral strings into an emotionally overwhelming crescendo, minimalist harmonic language with maximum dynamic impact"
+  },
+  {
+    "id": 89,
+    "title": "Comptine d'un autre été",
+    "artist": "Yann Tiersen (Amélie OST)",
+    "youtube_url": "https://www.youtube.com/watch?v=NvryolGa19A",
+    "genre": "Lo-fi / Neo-classical / Piano",
+    "texture_description": "Playful solo piano with a deceptively simple repeating left-hand pattern and singing right-hand melody, bright mid-register tone with light pedal, creating bittersweet Parisian nostalgia"
+  },
+  {
+    "id": 90,
+    "title": "Green Onions",
+    "artist": "Booker T. & the M.G.'s",
+    "youtube_url": "https://www.youtube.com/watch?v=_bpS-cOBK6Q",
+    "genre": "Funk / Soul / Blues Instrumental",
+    "texture_description": "Hammond M3 organ with gritty, overdriven tone playing a bluesy riff, Steve Cropper's clean Telecaster rhythm guitar, duck Dunn's deep bass groove, and Al Jackson Jr.'s crisp snare-driven beat"
+  },
+  {
+    "id": 91,
+    "title": "Cissy Strut",
+    "artist": "The Meters",
+    "youtube_url": "https://www.youtube.com/watch?v=4_iC0MyIykM",
+    "genre": "Funk / Soul / Blues Instrumental",
+    "texture_description": "Deeply syncopated New Orleans funk with Art Neville's sparse organ stabs, Leo Nocentelli's chicken-scratch guitar, George Porter Jr.'s rubbery bass line, and Zigaboo Modeliste's iconic second-line groove"
+  },
+  {
+    "id": 92,
+    "title": "Lenny",
+    "artist": "Stevie Ray Vaughan",
+    "youtube_url": "https://www.youtube.com/watch?v=i5sqJNFFwqc",
+    "genre": "Funk / Soul / Blues Instrumental",
+    "texture_description": "Clean Fender Stratocaster with shimmering chorus and reverb, tender jazz-influenced chord melody over gentle rhythm section, warm neck-pickup tone creating late-night ballad intimacy"
+  },
+  {
+    "id": 93,
+    "title": "Cause We've Ended as Lovers",
+    "artist": "Jeff Beck",
+    "youtube_url": "https://www.youtube.com/watch?v=VC02wGj5gPw",
+    "genre": "Funk / Soul / Blues Instrumental",
+    "texture_description": "Lyrical Fender Stratocaster with volume-knob swells and whammy bar vibrato creating a vocal-like expressiveness, warm overdriven tone over lush keyboard pads and gentle groove"
+  },
+  {
+    "id": 94,
+    "title": "Freddie Freeloader",
+    "artist": "Miles Davis",
+    "youtube_url": "https://www.youtube.com/watch?v=RPfFhfSuUZ4",
+    "genre": "Funk / Soul / Blues Instrumental",
+    "texture_description": "Blues-rooted jazz with Wynton Kelly's swinging piano (replacing Evans), Miles's muted trumpet with bluesy inflections, walking bass and swinging ride cymbal creating accessible hard-swinging groove"
+  },
+  {
+    "id": 95,
+    "title": "Maria Tambien",
+    "artist": "Khruangbin",
+    "youtube_url": "https://www.youtube.com/watch?v=fcaWN3ZJnhs",
+    "genre": "Contemporary Instrumental",
+    "texture_description": "Clean Fender Stratocaster with spring reverb and tremolo, deep dub-influenced bass lines, sparse minimal drumming creating Thai-funk-meets-surf-rock textural space"
+  },
+  {
+    "id": 96,
+    "title": "Nangs",
+    "artist": "Tame Impala",
+    "youtube_url": "https://www.youtube.com/watch?v=c3yEjD_oijw",
+    "genre": "Contemporary Instrumental",
+    "texture_description": "Phaser-drenched analog synths with slow modulation, heavy tape flanging, psychedelic stereo panning creating a dissolving sonic space, warm vintage compression throughout"
+  },
+  {
+    "id": 97,
+    "title": "Surge",
+    "artist": "Amon Tobin",
+    "youtube_url": "https://www.youtube.com/watch?v=3dqxMOEB8ec",
+    "genre": "Contemporary Instrumental",
+    "texture_description": "Cinematic breakbeat with heavily processed acoustic samples, dense layered sound design, dark jazz-inflected bass lines with complex drum programming and orchestral sample manipulation"
+  },
+  {
+    "id": 98,
+    "title": "Spastik",
+    "artist": "Plastikman (Richie Hawtin)",
+    "youtube_url": "https://www.youtube.com/watch?v=MICeV6kR-AQ",
+    "genre": "Contemporary Instrumental",
+    "texture_description": "Hypnotic minimal techno with a single 909 snare drum processed through evolving filter sweeps, stripped-down acid textures, relentless mechanical precision with subtle timbral variations"
+  },
+  {
+    "id": 99,
+    "title": "Birth of a Wish",
+    "artist": "Keiichi Okabe / MONACA (NieR: Automata)",
+    "youtube_url": "https://www.youtube.com/watch?v=pDKKMGLQjhg",
+    "genre": "Contemporary Instrumental",
+    "texture_description": "Aggressive electronic beats fused with distorted orchestral strings, chaotic vocal chanting as texture, glitchy synth textures, and industrial percussion blurring orchestra and electronic destruction"
+  },
+  {
+    "id": 100,
+    "title": "Creator of Worlds",
+    "artist": "Epic Score",
+    "youtube_url": "https://www.youtube.com/watch?v=MFGr7s8b2MQ",
+    "genre": "Contemporary Instrumental",
+    "texture_description": "Powerful hybrid brass and string ensemble with electronic percussion layers, synthetic bass design, choir accents, and cinematic risers with a heroic melodic theme over driving rhythmic patterns"
+  }
+]
