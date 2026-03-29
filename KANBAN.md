@@ -1,8 +1,8 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [mukl] 100곡 DB INSERT (5곡/배치, 30분텀) — 2026-03-29 진행중
 - [reklcli] 핑거프린팅 우회 방안 검토 — 2026-03-29
+- [reklcli+Leo] Demucs 스템 분리 테스트 (개별 스템 Suno 앱 업로드) — 2026-03-29
 
 ## TODO
 - [reklcli] Demucs stem separation 테스트 (핑거프린팅 우회용) — Phase 2 선행
@@ -15,6 +15,7 @@
 - [Leo] Phase 2 MP3 업로드: Audible Magic 핑거프린팅 차단 — stem separation 테스트 필요
 
 ## DONE (최근)
+- [mukl] 100곡 DB INSERT 완료 — 2026-03-29 ✅ (tracks 100건, instrument_textures 193건)
 - [reklcli] Phase 1: 100곡 TOR 상세 분석 완료 — 2026-03-28 ✅
   - 100곡 tracks 테이블 상세 필드 전부 채움 (key, bpm, form, harmony, recording, mood, imagery, listening_points, predicted_keywords)
   - 193개 instrument_textures 레코드 (악기별 player, technique, tone_character, role, equipment)
