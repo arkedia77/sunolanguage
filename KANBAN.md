@@ -1,11 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [reklcli] Demucs 스템 분리 진행 중 (46/100곡 완료, 백그라운드 계속) — 2026-03-29
-- [mukl] Demucs 테스트 완료, 스템 파이프라인 대기 중 — 2026-03-29
+- [mukl] 스템 Suno 업로드 파이프라인 대기 중 (스템 29GB 전달 완료) — 2026-03-31
 
 ## TODO
-- [reklcli] 배치 완료 확인 후 스템 파일 mukl에 전달 (2.5G 유선, 172.30.1.79)
 - [mukl] 스템별 Suno 업로드 → 프롬프트 캡처 → DB INSERT
 - [Leo] 메이저 레이블 곡 핸드폰 녹음 테스트 (핑거프린팅 등록곡 검증)
 - [Leo+reklcli] 핸드폰 녹음 세션 (전체곡 SP + Inline Cues + 가사 수집)
@@ -17,6 +15,8 @@
 - 없음
 
 ## DONE (최근)
+- [reklcli] 학술 리서치 서브프로젝트 완료 (4축 × 10편 = 40편, docs/research/) — 2026-03-31 ✅
+- [reklcli] Demucs 100곡 스템 분리 + mushin rsync 전송 완료 — 2026-03-31 ✅
 - [reklcli] 100곡 MP3 다운로드 완료 (001~100) — 2026-03-29 ✅
 - [reklcli] Demucs 스템 분리 파이프라인 검증 (Clair de Lune 테스트) — 2026-03-29 ✅
 - [mukl] Take Five drums 스템 → Suno 업로드 핑거프린팅 통과 확인 — 2026-03-29 ✅
