@@ -1,10 +1,11 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [mukl] 스템 Suno 업로드 파이프라인 대기 중 (스템 29GB 전달 완료) — 2026-03-31
+- [sunomusic] 스템 100곡 Suno 업로드 진행 중 (5곡 완료, drums 80%/bass 40%/other 20% 성공률) — 2026-04-01
+- [rag] 학술 리서치 심화 연구 진행 중 — 2026-04-01
 
 ## TODO
-- [mukl] 스템별 Suno 업로드 → 프롬프트 캡처 → DB INSERT
+- [reklcli] 스템 프롬프트 파싱 스크립트 (match/mismatch 분류 포함)
 - [Leo] 메이저 레이블 곡 핸드폰 녹음 테스트 (핑거프린팅 등록곡 검증)
 - [Leo+reklcli] 핸드폰 녹음 세션 (전체곡 SP + Inline Cues + 가사 수집)
 - [reklcli] Phase 2: Suno 프롬프트 vs predicted_keywords 대조 분석
@@ -15,7 +16,10 @@
 - 없음
 
 ## DONE (최근)
-- [reklcli] 학술 리서치 서브프로젝트 완료 (4축 × 10편 = 40편, docs/research/) — 2026-03-31 ✅
+- [reklcli] 학술 리서치 심화 완료 (1차 40편 + 심화 33편 = ~73편) — 2026-04-01 ✅
+- [reklcli] match/mismatch 분류 원칙 확정 + sunomusic에 방향 답변 — 2026-04-01 ✅
+- [reklcli] rag 프로젝트에 심화 연구 요청 전달 — 2026-04-01 ✅
+- [reklcli] 학술 리서치 서브프로젝트 1차 완료 (4축 × 10편 = 40편, docs/research/) — 2026-03-31 ✅
 - [reklcli] Demucs 100곡 스템 분리 + mushin rsync 전송 완료 — 2026-03-31 ✅
 - [reklcli] 100곡 MP3 다운로드 완료 (001~100) — 2026-03-29 ✅
 - [reklcli] Demucs 스템 분리 파이프라인 검증 (Clair de Lune 테스트) — 2026-03-29 ✅
