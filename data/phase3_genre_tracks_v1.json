@@ -1,0 +1,29 @@
+{
+  "version": "v1",
+  "created_at": "2026-04-02",
+  "purpose": "Phase 3 다장르 Suno 어휘 수집용 선곡 리스트",
+  "source": "leomusic-base 6대 차원 기반 선곡",
+  "total": 20,
+  "tracks": [
+    {"no": 1, "title": "Mask Off", "artist": "Future", "genre": "Trap", "year": 2017, "priority": "A", "dims": ["악기(808,hi-hat)", "보컬(오토튠,랩)", "구조(힙합)"], "instruments": ["808 bass", "hi-hat rolls", "flute sample", "autotuned vocals"]},
+    {"no": 2, "title": "Savage", "artist": "Megan Thee Stallion", "genre": "Trap", "year": 2020, "priority": "A", "dims": ["악기(808)", "보컬(랩플로우)", "리듬(트랩)"], "instruments": ["808 bass", "clap", "hi-hat triplets", "rap vocals", "synth stabs"]},
+    {"no": 3, "title": "Strobe", "artist": "deadmau5", "genre": "Progressive House", "year": 2009, "priority": "A", "dims": ["악기(신스)", "프로덕션(사이드체인)", "구조(build-drop)"], "instruments": ["supersaw synth", "sidechain compression", "four-on-the-floor kick", "sub bass"]},
+    {"no": 4, "title": "Windowlicker", "artist": "Aphex Twin", "genre": "IDM / Techno", "year": 1999, "priority": "A", "dims": ["악기(신스)", "프로덕션(글리치)", "리듬(브레이크비트)"], "instruments": ["granular synth", "breakbeat", "vocoder", "glitch percussion"]},
+    {"no": 5, "title": "Drunk in Love", "artist": "Beyoncé ft. Jay-Z", "genre": "Contemporary R&B", "year": 2013, "priority": "A", "dims": ["보컬(멜리스마,팔세토)", "리듬(그루브)", "화성(R&B)"], "instruments": ["808 bass", "falsetto vocals", "melisma", "sparse keys"]},
+    {"no": 6, "title": "Untitled (How Does It Feel)", "artist": "D'Angelo", "genre": "Neo-Soul", "year": 2000, "priority": "A", "dims": ["악기(Rhodes)", "보컬(팔세토)", "화성(재즈)"], "instruments": ["Rhodes piano", "fingerstyle bass", "falsetto", "minimal drums"]},
+    {"no": 7, "title": "Raining Blood", "artist": "Slayer", "genre": "Thrash Metal", "year": 1986, "priority": "A", "dims": ["악기(디스토션기타)", "보컬(스크림)", "프로덕션(하이게인)"], "instruments": ["distortion guitar", "double bass drum", "aggressive vocals", "palm muting"]},
+    {"no": 8, "title": "Lateralus", "artist": "Tool", "genre": "Progressive Metal", "year": 2001, "priority": "A", "dims": ["리듬(복합박)", "구조(프로그레시브)", "악기(기타/드럼)"], "instruments": ["distortion guitar", "polyrhythmic drums", "complex time signatures", "bass guitar"]},
+    {"no": 9, "title": "Anthropology", "artist": "Charlie Parker & Dizzy Gillespie", "genre": "Bebop", "year": 1946, "priority": "B", "dims": ["화성(재즈)", "악기(색소폰,트럼펫)", "리듬(스윙)"], "instruments": ["alto saxophone", "trumpet", "bebop piano", "upright bass", "swing drums"]},
+    {"no": 10, "title": "So What", "artist": "Miles Davis", "genre": "Modal Jazz", "year": 1959, "priority": "B", "dims": ["화성(모달)", "악기(트럼펫)", "리듬(스윙)"], "instruments": ["muted trumpet", "piano voicings", "walking bass", "brushed drums"]},
+    {"no": 11, "title": "An Ending (Ascent)", "artist": "Brian Eno", "genre": "Ambient", "year": 1983, "priority": "B", "dims": ["프로덕션(앰비언트)", "악기(패드,드론)", "구조(비정형)"], "instruments": ["synth pads", "drone", "reverb layers", "atmospheric texture"]},
+    {"no": 12, "title": "Zombie", "artist": "Fela Kuti", "genre": "Afrobeat", "year": 1977, "priority": "B", "dims": ["리듬(폴리리듬)", "악기(세계악기)", "보컬(콜앤리스폰스)"], "instruments": ["polyrhythmic drums", "talking drum", "horn section", "call-and-response vocals"]},
+    {"no": 13, "title": "Enjoyin'", "artist": "Kabza De Small ft. Kopzz Avenue", "genre": "Amapiano", "year": 2020, "priority": "B", "dims": ["리듬(셔플)", "악기(로그드럼)", "프로덕션(남아공하우스)"], "instruments": ["log drum bass", "shaker", "piano stabs", "vocal chops"]},
+    {"no": 14, "title": "Entre dos Aguas", "artist": "Paco de Lucía", "genre": "Flamenco", "year": 1973, "priority": "B", "dims": ["악기(나일론기타)", "화성(프리지안)", "리듬(플라멩코)"], "instruments": ["nylon guitar rasgueado", "picado runs", "phrygian mode", "cajón"]},
+    {"no": 15, "title": "The Girl from Ipanema", "artist": "Stan Getz & João Gilberto", "genre": "Bossa Nova", "year": 1964, "priority": "B", "dims": ["악기(나일론기타)", "보컬(소프트)", "화성(보사노바)"], "instruments": ["nylon guitar bossa pattern", "tenor saxophone", "soft vocals", "brushed drums"]},
+    {"no": 16, "title": "Feather", "artist": "Nujabes", "genre": "Lo-Fi Hip-Hop", "year": 2005, "priority": "C", "dims": ["프로덕션(로파이)", "리듬(붐뱁)", "악기(재즈샘플)"], "instruments": ["jazz piano sample", "vinyl crackle", "boom bap drums", "rap vocals"]},
+    {"no": 17, "title": "Foggy Mountain Breakdown", "artist": "Earl Scruggs", "genre": "Bluegrass", "year": 1949, "priority": "C", "dims": ["악기(밴조,피들)", "리듬(핑거피킹)"], "instruments": ["banjo", "fiddle", "mandolin", "acoustic guitar", "upright bass"]},
+    {"no": 18, "title": "A Real Hero", "artist": "College ft. Electric Youth", "genre": "Synthwave", "year": 2010, "priority": "C", "dims": ["악기(아날로그신스)", "프로덕션(80s)", "구조(신스웨이브)"], "instruments": ["analog synth pads", "gated reverb", "drum machine", "arpeggiator"]},
+    {"no": 19, "title": "Jegog: Gamelan of the Love God", "artist": "Suar Agung (Bali)", "genre": "Gamelan", "year": 2000, "priority": "C", "dims": ["악기(가믈란)", "화성(비서양음계)"], "instruments": ["bamboo jegog", "gamelan metallophones", "interlocking patterns", "gong"]},
+    {"no": 20, "title": "Raga Yaman", "artist": "Ravi Shankar", "genre": "Raga", "year": 1968, "priority": "C", "dims": ["악기(시타르,타블라)", "화성(비서양음계)", "구조(라가)"], "instruments": ["sitar", "tabla", "tanpura drone", "microtonal ornaments"]}
+  ]
+}
