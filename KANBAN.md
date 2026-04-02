@@ -8,7 +8,8 @@
 ## TODO
 - [sunolanguage] Demucs 완료 후 mushin에 스템 전송 → sunomusic 업로드 요청 업데이트
 - [sunolanguage] 파싱 스크립트 작성 (Suno 서술 템플릿 기준 어휘 자동 분류)
-- [sunolanguage] rag v2 deepdive 검토 (shared/sunolanguage_research/에 도착)
+- [sunolanguage] rag v2 deepdive 활용 방향 결정 (검토 완료, 47레퍼런스/실험설계 확인)
+- [sunolanguage] rag 우편함에 요청 메시지 재전달 (파일명 규칙 수정 필요)
 - [sunolanguage] Phase 3 결과 수신 시 → 장르별 Suno 어휘 차이 분석
 - [sunolanguage] sunomusic rate limit 답변 (28곡 단위 + 쿨다운 추천)
 - [musicscore] ACE-Step 찬송가 942곡 LoRA 학습 (요청 완료, 시작 대기)
