@@ -1,0 +1,3864 @@
+{
+  "afrobeat": {
+    "total_unique_terms": 19,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drums",
+        "kick",
+        "percussion"
+      ],
+      "ac_techniques": [
+        "syncopated uk"
+      ],
+      "ac_genre_style": [
+        "afrobeat",
+        "jazz",
+        "swing"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "dreamy",
+        "euphoric",
+        "lush",
+        "playful",
+        "smooth"
+      ],
+      "ac_timbre": [
+        "airy",
+        "bright",
+        "crisp",
+        "shimmering",
+        "smooth"
+      ]
+    }
+  },
+  "alt rock": {
+    "total_unique_terms": 2,
+    "fields": {
+      "ac_genre_style": [
+        "alt rock"
+      ],
+      "ac_mood_emotion": [
+        "melancholic"
+      ]
+    }
+  },
+  "amapiano": {
+    "total_unique_terms": 2,
+    "fields": {
+      "ac_instruments": [
+        "piano"
+      ],
+      "ac_genre_style": [
+        "amapiano"
+      ]
+    }
+  },
+  "ambient": {
+    "total_unique_terms": 138,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "acoustic guitar",
+        "analog synth",
+        "bass",
+        "bass guitar",
+        "cello",
+        "choir",
+        "drum",
+        "drum kit",
+        "drum machine",
+        "drums",
+        "electric guitar",
+        "electric piano",
+        "guitar",
+        "hammond organ",
+        "hi-hat",
+        "kick",
+        "kick drum",
+        "percussion",
+        "piano",
+        "rhodes piano",
+        "snare",
+        "strings",
+        "sub bass",
+        "synth",
+        "synth bass",
+        "violin",
+        "vocoder"
+      ],
+      "ac_techniques": [
+        "arpeggiated bells",
+        "arpeggiated guitar",
+        "call-and-response",
+        "looping",
+        "power chords",
+        "sampling",
+        "syncopated four",
+        "syncopated hammond"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "choral",
+        "cinematic",
+        "classical",
+        "darkwave",
+        "deep house",
+        "dream pop",
+        "folk",
+        "fusion",
+        "gospel",
+        "indie folk",
+        "indie pop",
+        "indie rock",
+        "jazz",
+        "lofi hip-hop",
+        "neo-soul",
+        "orchestral",
+        "post-rock",
+        "r&b",
+        "rock",
+        "shoegaze",
+        "soul",
+        "swing",
+        "synthwave",
+        "trap",
+        "trip-hop",
+        "worship"
+      ],
+      "ac_mood_emotion": [
+        "anthemic",
+        "bright",
+        "calm",
+        "chill",
+        "cold",
+        "dark",
+        "dreamy",
+        "ethereal",
+        "euphoric",
+        "funky",
+        "gentle",
+        "gritty",
+        "groovy",
+        "hopeful",
+        "hypnotic",
+        "intense",
+        "introspective",
+        "lush",
+        "melancholic",
+        "mellow",
+        "nostalgic",
+        "playful",
+        "powerful",
+        "raw",
+        "relaxed",
+        "smooth",
+        "sparse",
+        "tender",
+        "uplifting",
+        "warm"
+      ],
+      "ac_production": [
+        "atmospheric production",
+        "clean mix",
+        "heavy reverb",
+        "light reverb",
+        "lo-fi aesthetic",
+        "room reverb",
+        "subtle reverb",
+        "vinyl crackle",
+        "vinyl hiss",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "105 bpm",
+        "120 bpm",
+        "70 bpm",
+        "72 bpm",
+        "74 bpm",
+        "75 bpm",
+        "80 bpm",
+        "88 bpm",
+        "95 bpm",
+        "breakdown",
+        "bridge",
+        "chorus",
+        "hook",
+        "intro",
+        "mid-tempo",
+        "outro",
+        "slow tempo",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "cold",
+        "crisp",
+        "dark",
+        "distorted",
+        "full",
+        "gritty",
+        "punchy",
+        "saturated",
+        "shimmering",
+        "smooth",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "blues": {
+    "total_unique_terms": 47,
+    "fields": {
+      "ac_instruments": [
+        "acoustic guitar",
+        "bass",
+        "drum",
+        "drums",
+        "guitar",
+        "piano",
+        "saxophone",
+        "synthesizer",
+        "trumpet",
+        "upright bass"
+      ],
+      "ac_genre_style": [
+        "blues",
+        "cinematic",
+        "dream pop",
+        "folk",
+        "indie rock",
+        "jazz",
+        "r&b",
+        "rock",
+        "swing",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "calm",
+        "dark",
+        "dreamy",
+        "gentle",
+        "groovy",
+        "hopeful",
+        "hypnotic",
+        "introspective",
+        "lush",
+        "melancholic",
+        "mellow",
+        "raw",
+        "relaxed",
+        "smooth",
+        "uplifting",
+        "warm"
+      ],
+      "ac_timbre": [
+        "bright",
+        "crisp",
+        "dark",
+        "rich",
+        "smooth",
+        "soft",
+        "warm"
+      ],
+      "ac_techniques": [
+        "call and response",
+        "vibrato"
+      ],
+      "ac_temporal_structure": [
+        "95 bpm"
+      ]
+    }
+  },
+  "boom bap": {
+    "total_unique_terms": 54,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "bass",
+        "drum",
+        "drums",
+        "kick",
+        "mpc",
+        "piano",
+        "rhodes piano",
+        "sampler",
+        "snare",
+        "turntable"
+      ],
+      "ac_techniques": [
+        "chopping",
+        "sampling",
+        "scratching"
+      ],
+      "ac_genre_style": [
+        "boom bap",
+        "cinematic",
+        "deep house",
+        "hip hop",
+        "hip-hop",
+        "jazz",
+        "r&b",
+        "soul",
+        "swing",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "chill",
+        "eerie",
+        "energetic",
+        "gritty",
+        "haunting",
+        "hypnotic",
+        "mellow",
+        "nostalgic",
+        "playful",
+        "raw",
+        "smooth",
+        "warm"
+      ],
+      "ac_production": [
+        "vinyl crackle"
+      ],
+      "ac_temporal_structure": [
+        "80 bpm",
+        "90bpm",
+        "92 bpm",
+        "94 bpm",
+        "bridge",
+        "fade out",
+        "intro",
+        "outro",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "gritty",
+        "muffled",
+        "punchy",
+        "smooth",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "boom-bap": {
+    "total_unique_terms": 22,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "bass",
+        "drum",
+        "kick",
+        "piano",
+        "snare",
+        "upright bass"
+      ],
+      "ac_genre_style": [
+        "boom-bap",
+        "swing"
+      ],
+      "ac_production": [
+        "vinyl crackle"
+      ],
+      "ac_temporal_structure": [
+        "102bpm",
+        "80 bpm",
+        "hook",
+        "intro"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "gentle",
+        "mellow",
+        "warm"
+      ],
+      "ac_timbre": [
+        "bright",
+        "saturated",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "bossa nova": {
+    "total_unique_terms": 49,
+    "fields": {
+      "ac_instruments": [
+        "acoustic guitar",
+        "acoustic piano",
+        "bass",
+        "choir",
+        "clarinet",
+        "drums",
+        "electric guitar",
+        "flute",
+        "guitar",
+        "percussion",
+        "piano",
+        "snare",
+        "strings",
+        "synth",
+        "trombone",
+        "upright bass",
+        "vibraphone",
+        "xylophone"
+      ],
+      "ac_genre_style": [
+        "bossa nova",
+        "jazz",
+        "new wave",
+        "r&b",
+        "rock"
+      ],
+      "ac_techniques": [
+        "double bass",
+        "syncopated comping",
+        "syncopated percussions",
+        "syncopated staccato",
+        "vibrato"
+      ],
+      "ac_temporal_structure": [
+        "chorus",
+        "interlude",
+        "slow tempo",
+        "solo"
+      ],
+      "ac_mood_emotion": [
+        "dark",
+        "dreamy",
+        "gentle",
+        "hypnotic",
+        "melancholy",
+        "mellow",
+        "warm"
+      ],
+      "ac_timbre": [
+        "airy",
+        "clean",
+        "dark",
+        "full",
+        "soft",
+        "warm"
+      ],
+      "ac_production": [
+        "analog saturation",
+        "plate reverb",
+        "room reverb",
+        "tape saturation"
+      ]
+    }
+  },
+  "chillout": {
+    "total_unique_terms": 7,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drum kit"
+      ],
+      "ac_techniques": [
+        "looping"
+      ],
+      "ac_genre_style": [
+        "chillout"
+      ],
+      "ac_mood_emotion": [
+        "warm"
+      ],
+      "ac_production": [
+        "vinyl crackle"
+      ],
+      "ac_timbre": [
+        "warm"
+      ]
+    }
+  },
+  "choral": {
+    "total_unique_terms": 96,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "brass",
+        "choir",
+        "cymbal",
+        "drums",
+        "flute",
+        "grand piano",
+        "kick",
+        "oboe",
+        "orchestra",
+        "organ",
+        "percussion",
+        "piano",
+        "pipe organ",
+        "string section",
+        "strings",
+        "synth",
+        "timpani",
+        "trumpet",
+        "upright piano",
+        "violin",
+        "woodwind",
+        "woodwinds"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "arpeggiated eighth",
+        "arpeggiated flourishes",
+        "arpeggiated introduction",
+        "arpeggiated octaves",
+        "arpeggiated patterns",
+        "block chords",
+        "four-on-the-floor",
+        "legato bass",
+        "legato counter",
+        "legato pads",
+        "legato phrasing",
+        "legato violins",
+        "legato with",
+        "rubato",
+        "syncopated piano",
+        "vibrato"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "choral",
+        "cinematic",
+        "classical",
+        "folk",
+        "gospel",
+        "hymn",
+        "liturgical",
+        "orchestral",
+        "rock",
+        "sacred",
+        "soul",
+        "worship"
+      ],
+      "ac_production": [
+        "hall reverb",
+        "vinyl crackle",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "100 bpm",
+        "105 bpm",
+        "3/4 time",
+        "4/4 time",
+        "68 bpm",
+        "72 bpm",
+        "84 bpm",
+        "buildup",
+        "chorus",
+        "drop",
+        "interlude",
+        "intro",
+        "solo",
+        "strophic",
+        "verse"
+      ],
+      "ac_timbre": [
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "full",
+        "gritty",
+        "punchy",
+        "resonant",
+        "rich",
+        "shimmering",
+        "soft",
+        "thick",
+        "warm"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "dark",
+        "dreamy",
+        "epic",
+        "euphoric",
+        "gentle",
+        "gritty",
+        "lush",
+        "majestic",
+        "mellow",
+        "powerful",
+        "warm"
+      ]
+    }
+  },
+  "cinematic": {
+    "total_unique_terms": 132,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "acoustic guitar",
+        "analog synth",
+        "bass",
+        "brass",
+        "cello",
+        "choir",
+        "clarinet",
+        "cymbal",
+        "drum",
+        "drum machine",
+        "drums",
+        "electric piano",
+        "guitar",
+        "kick",
+        "kora",
+        "marimba",
+        "organ",
+        "oud",
+        "percussion",
+        "piano",
+        "sampler",
+        "sitar",
+        "strings",
+        "sub bass",
+        "synth",
+        "trumpet",
+        "turntable",
+        "upright bass",
+        "vibraphone",
+        "vocoder"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "blues",
+        "boom bap",
+        "choral",
+        "cinematic",
+        "classical",
+        "deep house",
+        "downtempo",
+        "dream pop",
+        "folk",
+        "funk",
+        "fusion",
+        "gospel",
+        "hip hop",
+        "indie pop",
+        "indie rock",
+        "industrial",
+        "jazz",
+        "orchestral",
+        "post-rock",
+        "rock",
+        "shoegaze",
+        "soul",
+        "swing",
+        "synthwave",
+        "trap",
+        "trip-hop"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "anthemic",
+        "bright",
+        "calm",
+        "cold",
+        "dark",
+        "dreamy",
+        "eerie",
+        "epic",
+        "ethereal",
+        "euphoric",
+        "gentle",
+        "gritty",
+        "haunting",
+        "hopeful",
+        "hypnotic",
+        "intense",
+        "introspective",
+        "lush",
+        "meditative",
+        "melancholic",
+        "nostalgic",
+        "powerful",
+        "raw",
+        "smooth",
+        "sparse",
+        "warm"
+      ],
+      "ac_techniques": [
+        "arpeggiated bells",
+        "arpeggiated guitar",
+        "arpeggiated synths",
+        "four-on-the-floor",
+        "scratching",
+        "syncopated jungle",
+        "vibrato"
+      ],
+      "ac_temporal_structure": [
+        "100 bpm",
+        "105 bpm",
+        "115 bpm",
+        "130 bpm",
+        "72 bpm",
+        "84 bpm",
+        "85 bpm",
+        "90bpm",
+        "breakdown",
+        "bridge",
+        "buildup",
+        "chorus",
+        "drop",
+        "hook",
+        "mid-tempo",
+        "outro",
+        "slow tempo",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "bright",
+        "clean",
+        "cold",
+        "crisp",
+        "dark",
+        "distorted",
+        "glassy",
+        "gritty",
+        "punchy",
+        "saturated",
+        "shimmering",
+        "smooth",
+        "soft",
+        "thick",
+        "thin",
+        "warm"
+      ],
+      "ac_production": [
+        "raw production",
+        "room reverb",
+        "vinyl crackle",
+        "wide stereo"
+      ]
+    }
+  },
+  "classical": {
+    "total_unique_terms": 66,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "choir",
+        "cymbal",
+        "flute",
+        "grand piano",
+        "oboe",
+        "orchestra",
+        "organ",
+        "percussion",
+        "piano",
+        "pipe organ",
+        "string section",
+        "strings",
+        "timpani",
+        "trumpet",
+        "woodwind",
+        "woodwinds"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "choral",
+        "cinematic",
+        "classical",
+        "hymn",
+        "liturgical",
+        "orchestral",
+        "post-rock",
+        "worship"
+      ],
+      "ac_temporal_structure": [
+        "105 bpm",
+        "3/4 time",
+        "4/4 time",
+        "68 bpm",
+        "72 bpm",
+        "84 bpm",
+        "aaba",
+        "interlude",
+        "slow tempo",
+        "solo",
+        "strophic",
+        "verse"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "arpeggiated eighth",
+        "arpeggiated flourishes",
+        "arpeggiated introduction",
+        "arpeggiated octaves",
+        "block chords",
+        "legato counter",
+        "legato feel",
+        "legato violins",
+        "legato with",
+        "rubato",
+        "syncopated piano",
+        "vibrato"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "gentle",
+        "lush",
+        "majestic",
+        "melancholic",
+        "powerful",
+        "sparse"
+      ],
+      "ac_timbre": [
+        "bright",
+        "clean",
+        "full",
+        "resonant",
+        "rich",
+        "soft"
+      ],
+      "ac_production": [
+        "hall reverb",
+        "room reverb"
+      ]
+    }
+  },
+  "country": {
+    "total_unique_terms": 10,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drums",
+        "guitar",
+        "organ"
+      ],
+      "ac_genre_style": [
+        "country",
+        "rock"
+      ],
+      "ac_mood_emotion": [
+        "gritty"
+      ],
+      "ac_temporal_structure": [
+        "bridge",
+        "chorus"
+      ],
+      "ac_timbre": [
+        "gritty"
+      ]
+    }
+  },
+  "darkwave": {
+    "total_unique_terms": 14,
+    "fields": {
+      "ac_genre_style": [
+        "ambient",
+        "darkwave",
+        "dream pop",
+        "jazz",
+        "lofi hip-hop",
+        "r&b",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "dark",
+        "dreamy",
+        "ethereal"
+      ],
+      "ac_instruments": [
+        "808",
+        "bass"
+      ],
+      "ac_timbre": [
+        "dark",
+        "saturated"
+      ]
+    }
+  },
+  "deep house": {
+    "total_unique_terms": 38,
+    "fields": {
+      "ac_genre_style": [
+        "ambient",
+        "boom bap",
+        "cinematic",
+        "deep house",
+        "hip-hop",
+        "jazz"
+      ],
+      "ac_mood_emotion": [
+        "calm",
+        "chill",
+        "energetic",
+        "gentle",
+        "haunting",
+        "intense",
+        "introspective",
+        "lush",
+        "mellow",
+        "playful",
+        "powerful",
+        "raw",
+        "smooth",
+        "warm"
+      ],
+      "ac_timbre": [
+        "airy",
+        "punchy",
+        "shimmering",
+        "smooth",
+        "soft",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "115 bpm",
+        "125bpm",
+        "4/4",
+        "hook"
+      ],
+      "ac_instruments": [
+        "bass",
+        "drum",
+        "drums",
+        "kick",
+        "piano",
+        "saxophone",
+        "synth",
+        "upright bass"
+      ]
+    }
+  },
+  "downtempo": {
+    "total_unique_terms": 40,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drum machine",
+        "guitar",
+        "kick",
+        "marimba",
+        "snare",
+        "sub bass",
+        "synth",
+        "synth bass",
+        "synth pad",
+        "trumpet",
+        "vibraphone"
+      ],
+      "ac_genre_style": [
+        "cinematic",
+        "downtempo",
+        "fusion",
+        "jazz",
+        "trip-hop"
+      ],
+      "ac_mood_emotion": [
+        "dreamy",
+        "ethereal",
+        "gentle",
+        "hopeful",
+        "hypnotic",
+        "lush",
+        "melancholic",
+        "smooth",
+        "sparse",
+        "warm"
+      ],
+      "ac_production": [
+        "subtle reverb",
+        "vinyl crackle"
+      ],
+      "ac_temporal_structure": [
+        "100 bpm",
+        "chorus",
+        "mid-tempo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "resonant",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ]
+    }
+  },
+  "dream pop": {
+    "total_unique_terms": 91,
+    "fields": {
+      "ac_instruments": [
+        "acoustic guitar",
+        "bass",
+        "drum",
+        "drum kit",
+        "drums",
+        "electric guitar",
+        "electric piano",
+        "guitar",
+        "kick",
+        "kick drum",
+        "percussion",
+        "piano",
+        "snare",
+        "sub bass",
+        "synth",
+        "synth lead",
+        "synthesizer"
+      ],
+      "ac_techniques": [
+        "scratching",
+        "sidechain",
+        "syncopated four",
+        "syncopated kick",
+        "vibrato"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "blues",
+        "cinematic",
+        "darkwave",
+        "dream pop",
+        "folk",
+        "gospel",
+        "hip hop",
+        "indie folk",
+        "indie pop",
+        "indie rock",
+        "post-rock",
+        "psychedelia",
+        "r&b",
+        "rock",
+        "shoegaze",
+        "soul",
+        "synthwave"
+      ],
+      "ac_mood_emotion": [
+        "anthemic",
+        "bright",
+        "calm",
+        "chill",
+        "contemplative",
+        "dreamy",
+        "ethereal",
+        "gentle",
+        "groovy",
+        "haunting",
+        "hopeful",
+        "lush",
+        "melancholic",
+        "melancholy",
+        "nostalgic",
+        "relaxed",
+        "smooth",
+        "sparse",
+        "tender",
+        "uplifting",
+        "warm"
+      ],
+      "ac_production": [
+        "atmospheric production",
+        "heavy reverb",
+        "light reverb",
+        "vinyl crackle",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "105 bpm",
+        "120 bpm",
+        "4/4",
+        "50 bpm",
+        "70 bpm",
+        "75 bpm",
+        "88 bpm",
+        "bridge",
+        "chorus",
+        "hook",
+        "intro",
+        "mid-tempo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "punchy",
+        "rich",
+        "shimmering",
+        "smooth",
+        "soft",
+        "thin",
+        "warm"
+      ]
+    }
+  },
+  "drum and bass": {
+    "total_unique_terms": 6,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drum"
+      ],
+      "ac_techniques": [
+        "rubato"
+      ],
+      "ac_genre_style": [
+        "drum and bass",
+        "rock"
+      ],
+      "ac_temporal_structure": [
+        "130 bpm"
+      ]
+    }
+  },
+  "dubstep": {
+    "total_unique_terms": 18,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "percussion"
+      ],
+      "ac_genre_style": [
+        "dubstep",
+        "rock",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "lush",
+        "raw",
+        "smooth",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "140 bpm",
+        "drop"
+      ],
+      "ac_timbre": [
+        "clean",
+        "distorted",
+        "harsh",
+        "smooth",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "flamenco": {
+    "total_unique_terms": 6,
+    "fields": {
+      "ac_instruments": [
+        "guitar"
+      ],
+      "ac_techniques": [
+        "syncopated slap"
+      ],
+      "ac_genre_style": [
+        "flamenco",
+        "jazz",
+        "math rock",
+        "trap"
+      ]
+    }
+  },
+  "folk": {
+    "total_unique_terms": 71,
+    "fields": {
+      "ac_instruments": [
+        "acoustic guitar",
+        "bass",
+        "bass guitar",
+        "cello",
+        "choir",
+        "drum",
+        "drums",
+        "electric guitar",
+        "flute",
+        "guitar",
+        "kick",
+        "organ",
+        "percussion",
+        "piano",
+        "snare",
+        "strings",
+        "synth",
+        "synthesizer",
+        "violin",
+        "vocoder"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "blues",
+        "choral",
+        "cinematic",
+        "dream pop",
+        "folk",
+        "gospel",
+        "indie folk",
+        "indie rock",
+        "orchestral",
+        "r&b",
+        "rock",
+        "shoegaze",
+        "soul"
+      ],
+      "ac_mood_emotion": [
+        "anthemic",
+        "calm",
+        "chill",
+        "dreamy",
+        "epic",
+        "gentle",
+        "hopeful",
+        "introspective",
+        "meditative",
+        "melancholic",
+        "mellow",
+        "nostalgic",
+        "raw",
+        "relaxed",
+        "smooth",
+        "sparse",
+        "uplifting",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "100 bpm",
+        "126 bpm",
+        "4/4 time",
+        "88 bpm",
+        "bridge",
+        "chorus",
+        "outro",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "clean",
+        "raspy",
+        "rich",
+        "smooth",
+        "soft",
+        "warm"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "looping",
+        "vibrato"
+      ]
+    }
+  },
+  "funk": {
+    "total_unique_terms": 58,
+    "fields": {
+      "ac_instruments": [
+        "analog synth",
+        "bass",
+        "brass",
+        "drums",
+        "guitar",
+        "percussion",
+        "snare",
+        "synth"
+      ],
+      "ac_techniques": [
+        "syncopated guitar",
+        "syncopated jungle"
+      ],
+      "ac_genre_style": [
+        "cinematic",
+        "funk",
+        "fusion",
+        "hip hop",
+        "indie pop",
+        "indie rock",
+        "jazz",
+        "neo-psychedelia",
+        "pop rock",
+        "r&b",
+        "rock",
+        "soul"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "calm",
+        "energetic",
+        "funky",
+        "gentle",
+        "groovy",
+        "hypnotic",
+        "meditative",
+        "nostalgic",
+        "playful",
+        "smooth",
+        "warm"
+      ],
+      "ac_production": [
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "108 bpm",
+        "114 bpm",
+        "126 bpm",
+        "128 bpm",
+        "chorus",
+        "drop",
+        "hook",
+        "intro",
+        "outro",
+        "pre-chorus",
+        "verse"
+      ],
+      "ac_timbre": [
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "distorted",
+        "full",
+        "punchy",
+        "sharp",
+        "shimmering",
+        "smooth",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "fusion": {
+    "total_unique_terms": 88,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "bass guitar",
+        "brass",
+        "drum",
+        "drum kit",
+        "electric piano",
+        "guitar",
+        "kick",
+        "kora",
+        "marimba",
+        "oud",
+        "percussion",
+        "piano",
+        "sitar",
+        "snare",
+        "strings",
+        "sub bass",
+        "synth",
+        "trumpet",
+        "vibraphone"
+      ],
+      "ac_techniques": [
+        "four-on-the-floor",
+        "glissando",
+        "staccato rhythmic",
+        "vibrato",
+        "walking bass"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "cinematic",
+        "downtempo",
+        "funk",
+        "fusion",
+        "hip-hop",
+        "jazz",
+        "neo-soul",
+        "r&b",
+        "soul",
+        "synthwave",
+        "trip-hop"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "dark",
+        "dreamy",
+        "energetic",
+        "euphoric",
+        "funky",
+        "gentle",
+        "groovy",
+        "haunting",
+        "hopeful",
+        "hypnotic",
+        "lush",
+        "melancholic",
+        "mellow",
+        "nostalgic",
+        "playful",
+        "raw",
+        "smooth",
+        "sparse",
+        "uplifting",
+        "warm"
+      ],
+      "ac_production": [
+        "atmospheric production",
+        "plate reverb",
+        "vinyl crackle",
+        "warm tone",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "100 bpm",
+        "132 bpm",
+        "174 bpm",
+        "4/4 time",
+        "85 bpm",
+        "bridge",
+        "chorus",
+        "drop",
+        "mid-tempo",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "distorted",
+        "punchy",
+        "raspy",
+        "rich",
+        "shimmering",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ]
+    }
+  },
+  "gospel": {
+    "total_unique_terms": 34,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "brass",
+        "choir",
+        "drums",
+        "guitar",
+        "organ",
+        "piano",
+        "strings"
+      ],
+      "ac_techniques": [
+        "four-on-the-floor"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "choral",
+        "cinematic",
+        "dream pop",
+        "folk",
+        "gospel",
+        "orchestral",
+        "r&b",
+        "rock",
+        "shoegaze",
+        "soul"
+      ],
+      "ac_mood_emotion": [
+        "anthemic",
+        "epic",
+        "euphoric",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "88 bpm",
+        "buildup",
+        "chorus",
+        "drop",
+        "hook"
+      ],
+      "ac_timbre": [
+        "airy",
+        "crisp",
+        "punchy",
+        "shimmering",
+        "warm"
+      ]
+    }
+  },
+  "hip hop": {
+    "total_unique_terms": 70,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "bass",
+        "drum",
+        "drums",
+        "electric piano",
+        "guitar",
+        "kick",
+        "mpc",
+        "piano",
+        "sampler",
+        "snare",
+        "sub bass",
+        "turntable"
+      ],
+      "ac_techniques": [
+        "sampling",
+        "scratching",
+        "sidechain",
+        "syncopated kick"
+      ],
+      "ac_genre_style": [
+        "boom bap",
+        "cinematic",
+        "dream pop",
+        "funk",
+        "hip hop",
+        "hip-hop",
+        "indie pop",
+        "industrial",
+        "jazz",
+        "r&b",
+        "rock",
+        "soul",
+        "swing",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "bright",
+        "chill",
+        "dreamy",
+        "eerie",
+        "funky",
+        "gentle",
+        "gritty",
+        "haunting",
+        "hypnotic",
+        "lush",
+        "mellow",
+        "nostalgic",
+        "playful",
+        "raw",
+        "relaxed",
+        "tender",
+        "warm"
+      ],
+      "ac_production": [
+        "vinyl crackle",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "90bpm",
+        "92 bpm",
+        "bridge",
+        "chorus",
+        "fade out",
+        "hook",
+        "intro",
+        "outro",
+        "solo"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "distorted",
+        "gritty",
+        "punchy",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "hip-hop": {
+    "total_unique_terms": 57,
+    "fields": {
+      "ac_genre_style": [
+        "boom bap",
+        "deep house",
+        "fusion",
+        "hip hop",
+        "hip-hop",
+        "indie rock",
+        "jazz",
+        "neo-soul",
+        "r&b",
+        "rock",
+        "soul",
+        "trap"
+      ],
+      "ac_instruments": [
+        "808",
+        "bass",
+        "bass guitar",
+        "drum",
+        "drum machine",
+        "drums",
+        "electric guitar",
+        "electric piano",
+        "guitar",
+        "percussion",
+        "snare",
+        "synth",
+        "synth bass"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "contemplative",
+        "dreamy",
+        "energetic",
+        "playful",
+        "raw",
+        "relaxed",
+        "smooth",
+        "sparse",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "120 bpm",
+        "chorus",
+        "hook",
+        "intro",
+        "mid-tempo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "clean",
+        "distorted",
+        "full",
+        "punchy",
+        "raspy",
+        "resonant",
+        "rich",
+        "smooth",
+        "thick",
+        "warm"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "walking bass"
+      ],
+      "ac_production": [
+        "atmospheric production",
+        "clean mix",
+        "vinyl crackle",
+        "warm tone"
+      ]
+    }
+  },
+  "hymn": {
+    "total_unique_terms": 66,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "choir",
+        "cymbal",
+        "flute",
+        "grand piano",
+        "oboe",
+        "orchestra",
+        "organ",
+        "percussion",
+        "piano",
+        "pipe organ",
+        "string section",
+        "strings",
+        "timpani",
+        "trumpet",
+        "woodwind",
+        "woodwinds"
+      ],
+      "ac_genre_style": [
+        "choral",
+        "classical",
+        "hymn",
+        "liturgical",
+        "orchestral",
+        "worship"
+      ],
+      "ac_production": [
+        "hall reverb",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "100 bpm",
+        "105 bpm",
+        "3/4 time",
+        "4/4 time",
+        "68 bpm",
+        "72 bpm",
+        "84 bpm",
+        "chorus",
+        "interlude",
+        "intro",
+        "ritardando",
+        "solo",
+        "strophic",
+        "verse"
+      ],
+      "ac_timbre": [
+        "bright",
+        "clean",
+        "full",
+        "resonant",
+        "rich",
+        "thick"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "arpeggiated eighth",
+        "arpeggiated figures",
+        "arpeggiated flourishes",
+        "arpeggiated introduction",
+        "arpeggiated octaves",
+        "arpeggiated patterns",
+        "block chords",
+        "legato counter",
+        "legato pads",
+        "legato phrasing",
+        "legato violins",
+        "legato with",
+        "rubato",
+        "syncopated piano",
+        "vibrato"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "gentle",
+        "lush",
+        "majestic",
+        "powerful"
+      ]
+    }
+  },
+  "indie folk": {
+    "total_unique_terms": 53,
+    "fields": {
+      "ac_instruments": [
+        "acoustic guitar",
+        "banjo",
+        "bass guitar",
+        "cello",
+        "drums",
+        "electric guitar",
+        "electric piano",
+        "guitar",
+        "percussion",
+        "piano",
+        "snare",
+        "strings",
+        "synth",
+        "violin",
+        "vocoder"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "dream pop",
+        "folk",
+        "indie folk",
+        "indie rock",
+        "r&b",
+        "rock",
+        "soul"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "chill",
+        "dark",
+        "dreamy",
+        "gentle",
+        "lush",
+        "melancholic",
+        "nostalgic",
+        "playful",
+        "powerful",
+        "raw",
+        "sparse",
+        "tender",
+        "uplifting",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "130 bpm",
+        "70 bpm",
+        "95 bpm",
+        "chorus",
+        "mid-tempo"
+      ],
+      "ac_timbre": [
+        "airy",
+        "clean",
+        "crisp",
+        "dark",
+        "distorted",
+        "shimmering",
+        "soft",
+        "warm"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords"
+      ],
+      "ac_production": [
+        "lo-fi aesthetic"
+      ]
+    }
+  },
+  "indie pop": {
+    "total_unique_terms": 96,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "acoustic guitar",
+        "analog synth",
+        "bass",
+        "brass",
+        "clean guitar",
+        "drum",
+        "drum kit",
+        "drum machine",
+        "drums",
+        "electric guitar",
+        "electric piano",
+        "guitar",
+        "kick",
+        "kick drum",
+        "nylon guitar",
+        "percussion",
+        "piano",
+        "snare",
+        "sub bass",
+        "synth",
+        "upright piano"
+      ],
+      "ac_techniques": [
+        "call-and-response",
+        "scratching",
+        "sidechain",
+        "syncopated four",
+        "syncopated kick",
+        "vibrato"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "cinematic",
+        "dream pop",
+        "funk",
+        "hip hop",
+        "indie pop",
+        "neo-psychedelia",
+        "psychedelia",
+        "r&b",
+        "rock",
+        "shoegaze",
+        "swing",
+        "synthwave"
+      ],
+      "ac_mood_emotion": [
+        "anthemic",
+        "bright",
+        "contemplative",
+        "dark",
+        "dreamy",
+        "ethereal",
+        "gentle",
+        "groovy",
+        "hopeful",
+        "introspective",
+        "lush",
+        "melancholic",
+        "melancholy",
+        "mellow",
+        "nostalgic",
+        "powerful",
+        "raw",
+        "sparse",
+        "tender",
+        "uplifting",
+        "warm"
+      ],
+      "ac_production": [
+        "atmospheric production",
+        "light reverb",
+        "lo-fi aesthetic",
+        "polished production",
+        "vinyl crackle",
+        "vinyl hiss",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "105 bpm",
+        "110 bpm",
+        "114 bpm",
+        "118 bpm",
+        "4/4",
+        "80 bpm",
+        "88 bpm",
+        "95 bpm",
+        "bridge",
+        "chorus",
+        "hook",
+        "intro",
+        "mid-tempo",
+        "outro",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "full",
+        "punchy",
+        "raspy",
+        "shimmering",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "indie rock": {
+    "total_unique_terms": 89,
+    "fields": {
+      "ac_genre_style": [
+        "ambient",
+        "blues",
+        "cinematic",
+        "dream pop",
+        "folk",
+        "funk",
+        "hip-hop",
+        "indie folk",
+        "indie rock",
+        "neo-psychedelia",
+        "post-rock",
+        "r&b",
+        "rock",
+        "shoegaze",
+        "soul"
+      ],
+      "ac_temporal_structure": [
+        "105 bpm",
+        "126 bpm",
+        "130 bpm",
+        "70 bpm",
+        "85 bpm",
+        "bridge",
+        "chorus",
+        "hook",
+        "intro",
+        "mid-tempo",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "breathy",
+        "bright",
+        "clean",
+        "dark",
+        "distorted",
+        "full",
+        "fuzzy",
+        "gritty",
+        "husky",
+        "punchy",
+        "raspy",
+        "rich",
+        "saturated",
+        "shimmering",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ],
+      "ac_instruments": [
+        "analog synth",
+        "bass",
+        "bass guitar",
+        "choir",
+        "cymbal",
+        "drum",
+        "drums",
+        "electric guitar",
+        "guitar",
+        "hi-hat",
+        "kick",
+        "organ",
+        "snare",
+        "synth pad",
+        "synthesizer"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "arpeggiated pattern",
+        "vibrato"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "bright",
+        "calm",
+        "chill",
+        "dark",
+        "dreamy",
+        "energetic",
+        "gritty",
+        "hypnotic",
+        "introspective",
+        "lush",
+        "melancholic",
+        "mellow",
+        "nostalgic",
+        "raw",
+        "relaxed",
+        "smooth",
+        "somber",
+        "sparse",
+        "warm"
+      ],
+      "ac_production": [
+        "clean tone",
+        "lo-fi aesthetic",
+        "lo-fi production",
+        "raw production",
+        "tape saturation",
+        "wide stereo"
+      ]
+    }
+  },
+  "industrial": {
+    "total_unique_terms": 35,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drums",
+        "guitar",
+        "kick",
+        "percussion",
+        "snare",
+        "synth"
+      ],
+      "ac_techniques": [
+        "syncopated percussion"
+      ],
+      "ac_genre_style": [
+        "cinematic",
+        "hip hop",
+        "industrial",
+        "r&b",
+        "rock"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "dark",
+        "eerie",
+        "gritty",
+        "raw"
+      ],
+      "ac_temporal_structure": [
+        "130 bpm",
+        "160 bpm",
+        "220bpm",
+        "bridge",
+        "drop",
+        "hook",
+        "intro",
+        "outro",
+        "solo"
+      ],
+      "ac_timbre": [
+        "clean",
+        "dark",
+        "distorted",
+        "gritty",
+        "metallic",
+        "sharp",
+        "soft",
+        "thick"
+      ]
+    }
+  },
+  "jazz": {
+    "total_unique_terms": 158,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "acoustic piano",
+        "analog synth",
+        "bass",
+        "brass",
+        "cello",
+        "clarinet",
+        "cymbal",
+        "drum",
+        "drums",
+        "electric guitar",
+        "flute",
+        "guitar",
+        "kick",
+        "kora",
+        "marimba",
+        "mpc",
+        "orchestra",
+        "oud",
+        "percussion",
+        "piano",
+        "rhodes piano",
+        "sampler",
+        "saxophone",
+        "sitar",
+        "snare",
+        "strings",
+        "sub bass",
+        "synth",
+        "synth bass",
+        "synthesizer",
+        "trombone",
+        "trumpet",
+        "turntable",
+        "upright bass",
+        "upright piano",
+        "vibraphone"
+      ],
+      "ac_genre_style": [
+        "afrobeat",
+        "ambient",
+        "blues",
+        "boom bap",
+        "bossa nova",
+        "cinematic",
+        "darkwave",
+        "deep house",
+        "downtempo",
+        "flamenco",
+        "funk",
+        "fusion",
+        "hip hop",
+        "hip-hop",
+        "jazz",
+        "lo-fi hip hop",
+        "lo-fi hip-hop",
+        "lofi hip-hop",
+        "math rock",
+        "r&b",
+        "rock",
+        "swing",
+        "trap",
+        "trip-hop"
+      ],
+      "ac_temporal_structure": [
+        "100 bpm",
+        "110 bpm",
+        "115 bpm",
+        "125bpm",
+        "4/4",
+        "72 bpm",
+        "78 bpm",
+        "80 bpm",
+        "85 bpm",
+        "86 bpm",
+        "90 bpm",
+        "90bpm",
+        "92 bpm",
+        "94 bpm",
+        "95 bpm",
+        "breakdown",
+        "bridge",
+        "chorus",
+        "fade out",
+        "hook",
+        "interlude",
+        "intro",
+        "mid-tempo",
+        "outro",
+        "slow tempo",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "gritty",
+        "harsh",
+        "husky",
+        "muffled",
+        "punchy",
+        "rich",
+        "saturated",
+        "sharp",
+        "shimmering",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ],
+      "ac_techniques": [
+        "call and response",
+        "chopping",
+        "double bass",
+        "polyrhythm",
+        "polyrhythmic",
+        "sampling",
+        "scratching",
+        "syncopated comping",
+        "syncopated hi",
+        "syncopated percussions",
+        "syncopated slap",
+        "syncopated uk",
+        "vibrato",
+        "walking bass"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "bright",
+        "calm",
+        "chill",
+        "dark",
+        "dreamy",
+        "eerie",
+        "ethereal",
+        "euphoric",
+        "funky",
+        "gentle",
+        "gritty",
+        "haunting",
+        "hopeful",
+        "hypnotic",
+        "introspective",
+        "lush",
+        "meditative",
+        "melancholic",
+        "mellow",
+        "nostalgic",
+        "playful",
+        "raw",
+        "relaxed",
+        "serene",
+        "smooth",
+        "sparse",
+        "uplifting",
+        "warm"
+      ],
+      "ac_production": [
+        "clean tone",
+        "room reverb",
+        "stereo width",
+        "tape saturation",
+        "vinyl crackle",
+        "vinyl hiss",
+        "vinyl noise",
+        "wide stereo"
+      ]
+    }
+  },
+  "liturgical": {
+    "total_unique_terms": 35,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "choir",
+        "cymbal",
+        "grand piano",
+        "percussion",
+        "piano",
+        "string section",
+        "strings",
+        "timpani",
+        "woodwinds"
+      ],
+      "ac_techniques": [
+        "arpeggiated eighth",
+        "arpeggiated octaves",
+        "arpeggiated patterns",
+        "block chords",
+        "legato counter",
+        "legato phrasing",
+        "legato with",
+        "vibrato"
+      ],
+      "ac_genre_style": [
+        "choral",
+        "classical",
+        "hymn",
+        "liturgical",
+        "orchestral",
+        "worship"
+      ],
+      "ac_production": [
+        "hall reverb"
+      ],
+      "ac_temporal_structure": [
+        "3/4 time",
+        "4/4 time",
+        "72 bpm",
+        "84 bpm"
+      ],
+      "ac_timbre": [
+        "clean",
+        "full",
+        "resonant"
+      ],
+      "ac_mood_emotion": [
+        "gentle",
+        "lush",
+        "powerful"
+      ]
+    }
+  },
+  "lo-fi hip hop": {
+    "total_unique_terms": 18,
+    "fields": {
+      "ac_instruments": [
+        "drums",
+        "guitar",
+        "rhodes piano",
+        "upright bass"
+      ],
+      "ac_genre_style": [
+        "jazz",
+        "lo-fi hip hop"
+      ],
+      "ac_mood_emotion": [
+        "calm",
+        "chill",
+        "nostalgic",
+        "warm"
+      ],
+      "ac_production": [
+        "stereo width",
+        "vinyl crackle",
+        "vinyl hiss",
+        "vinyl noise"
+      ],
+      "ac_temporal_structure": [
+        "90 bpm"
+      ],
+      "ac_timbre": [
+        "airy",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "lo-fi hip-hop": {
+    "total_unique_terms": 17,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "percussion"
+      ],
+      "ac_genre_style": [
+        "jazz",
+        "lo-fi hip-hop"
+      ],
+      "ac_mood_emotion": [
+        "dreamy",
+        "meditative",
+        "mellow",
+        "smooth",
+        "warm"
+      ],
+      "ac_production": [
+        "vinyl crackle",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "85 bpm"
+      ],
+      "ac_timbre": [
+        "airy",
+        "harsh",
+        "smooth",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "lofi hip-hop": {
+    "total_unique_terms": 10,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "bass"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "darkwave",
+        "jazz",
+        "lofi hip-hop",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "dark"
+      ],
+      "ac_timbre": [
+        "dark",
+        "saturated"
+      ]
+    }
+  },
+  "math rock": {
+    "total_unique_terms": 6,
+    "fields": {
+      "ac_instruments": [
+        "guitar"
+      ],
+      "ac_techniques": [
+        "syncopated slap"
+      ],
+      "ac_genre_style": [
+        "flamenco",
+        "jazz",
+        "math rock",
+        "trap"
+      ]
+    }
+  },
+  "neo-psychedelia": {
+    "total_unique_terms": 25,
+    "fields": {
+      "ac_instruments": [
+        "drums",
+        "synth"
+      ],
+      "ac_genre_style": [
+        "funk",
+        "indie pop",
+        "indie rock",
+        "neo-psychedelia",
+        "psychedelic pop-rock",
+        "rock",
+        "tech house"
+      ],
+      "ac_mood_emotion": [
+        "dark",
+        "energetic",
+        "funky",
+        "hypnotic",
+        "lush",
+        "playful",
+        "uplifting",
+        "warm"
+      ],
+      "ac_production": [
+        "stereo spread",
+        "tape echo"
+      ],
+      "ac_timbre": [
+        "dark",
+        "punchy",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "114 bpm",
+        "126 bpm"
+      ],
+      "ac_techniques": [
+        "sampling"
+      ]
+    }
+  },
+  "neo-soul": {
+    "total_unique_terms": 30,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "bass guitar",
+        "drum",
+        "drums",
+        "electric piano",
+        "percussion",
+        "piano",
+        "synth bass"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "fusion",
+        "hip-hop",
+        "neo-soul",
+        "r&b",
+        "soul"
+      ],
+      "ac_mood_emotion": [
+        "raw",
+        "smooth",
+        "warm"
+      ],
+      "ac_timbre": [
+        "raspy",
+        "rich",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ],
+      "ac_techniques": [
+        "walking bass"
+      ],
+      "ac_production": [
+        "atmospheric production",
+        "vinyl crackle",
+        "warm tone"
+      ],
+      "ac_temporal_structure": [
+        "chorus",
+        "mid-tempo",
+        "verse"
+      ]
+    }
+  },
+  "new wave": {
+    "total_unique_terms": 16,
+    "fields": {
+      "ac_instruments": [
+        "acoustic guitar",
+        "choir",
+        "guitar",
+        "percussion",
+        "strings",
+        "synth",
+        "xylophone"
+      ],
+      "ac_techniques": [
+        "syncopated staccato"
+      ],
+      "ac_genre_style": [
+        "bossa nova",
+        "new wave",
+        "rock"
+      ],
+      "ac_mood_emotion": [
+        "dreamy"
+      ],
+      "ac_production": [
+        "analog saturation",
+        "plate reverb"
+      ],
+      "ac_timbre": [
+        "clean",
+        "soft"
+      ]
+    }
+  },
+  "orchestral": {
+    "total_unique_terms": 70,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "brass",
+        "cello",
+        "choir",
+        "cymbal",
+        "drums",
+        "flute",
+        "grand piano",
+        "oboe",
+        "orchestra",
+        "organ",
+        "percussion",
+        "piano",
+        "string section",
+        "strings",
+        "synth",
+        "timpani",
+        "vocoder",
+        "woodwind",
+        "woodwinds"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "arpeggiated eighth",
+        "block chords",
+        "four-on-the-floor",
+        "legato counter",
+        "legato pads",
+        "legato violins",
+        "vibrato"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "choral",
+        "cinematic",
+        "classical",
+        "folk",
+        "gospel",
+        "hymn",
+        "liturgical",
+        "orchestral",
+        "shoegaze",
+        "worship"
+      ],
+      "ac_temporal_structure": [
+        "3/4 time",
+        "4/4 time",
+        "68 bpm",
+        "72 bpm",
+        "buildup",
+        "chorus",
+        "drop",
+        "interlude",
+        "outro",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "full",
+        "punchy",
+        "resonant",
+        "shimmering"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "dark",
+        "epic",
+        "euphoric",
+        "hopeful",
+        "lush",
+        "meditative",
+        "melancholic",
+        "nostalgic",
+        "powerful",
+        "raw"
+      ],
+      "ac_production": [
+        "hall reverb"
+      ]
+    }
+  },
+  "pop rock": {
+    "total_unique_terms": 17,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "bass guitar",
+        "brass",
+        "clarinet",
+        "drums",
+        "guitar",
+        "snare",
+        "synth"
+      ],
+      "ac_genre_style": [
+        "funk",
+        "pop rock"
+      ],
+      "ac_mood_emotion": [
+        "anthemic",
+        "energetic",
+        "gritty"
+      ],
+      "ac_timbre": [
+        "gritty",
+        "punchy",
+        "sharp"
+      ],
+      "ac_temporal_structure": [
+        "chorus"
+      ]
+    }
+  },
+  "pop-rock": {
+    "total_unique_terms": 14,
+    "fields": {
+      "ac_instruments": [
+        "drums",
+        "electric piano",
+        "fender rhodes"
+      ],
+      "ac_genre_style": [
+        "pop-rock"
+      ],
+      "ac_mood_emotion": [
+        "energetic",
+        "gritty",
+        "raw",
+        "sparse"
+      ],
+      "ac_temporal_structure": [
+        "mid-tempo"
+      ],
+      "ac_timbre": [
+        "distorted",
+        "gritty",
+        "overdriven",
+        "punchy",
+        "raspy"
+      ]
+    }
+  },
+  "post-rock": {
+    "total_unique_terms": 17,
+    "fields": {
+      "ac_genre_style": [
+        "ambient",
+        "cinematic",
+        "classical",
+        "dream pop",
+        "indie rock",
+        "post-rock",
+        "rock",
+        "shoegaze"
+      ],
+      "ac_mood_emotion": [
+        "gentle",
+        "melancholic",
+        "sparse"
+      ],
+      "ac_temporal_structure": [
+        "70 bpm",
+        "slow tempo",
+        "solo"
+      ],
+      "ac_instruments": [
+        "piano"
+      ],
+      "ac_production": [
+        "room reverb"
+      ],
+      "ac_timbre": [
+        "soft"
+      ]
+    }
+  },
+  "psychedelia": {
+    "total_unique_terms": 17,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "synth"
+      ],
+      "ac_techniques": [
+        "vibrato"
+      ],
+      "ac_genre_style": [
+        "dream pop",
+        "indie pop",
+        "psychedelia",
+        "rock"
+      ],
+      "ac_mood_emotion": [
+        "contemplative",
+        "dreamy",
+        "ethereal",
+        "gentle",
+        "melancholy",
+        "nostalgic",
+        "warm"
+      ],
+      "ac_timbre": [
+        "clean",
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "psychedelic pop-rock": {
+    "total_unique_terms": 10,
+    "fields": {
+      "ac_instruments": [
+        "drums",
+        "synth"
+      ],
+      "ac_genre_style": [
+        "neo-psychedelia",
+        "psychedelic pop-rock"
+      ],
+      "ac_mood_emotion": [
+        "hypnotic",
+        "lush",
+        "warm"
+      ],
+      "ac_production": [
+        "stereo spread",
+        "tape echo"
+      ],
+      "ac_timbre": [
+        "warm"
+      ]
+    }
+  },
+  "r&b": {
+    "total_unique_terms": 110,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "acoustic guitar",
+        "bass",
+        "bass guitar",
+        "brass",
+        "cello",
+        "choir",
+        "drum",
+        "drum machine",
+        "drums",
+        "electric guitar",
+        "electric piano",
+        "guitar",
+        "organ",
+        "percussion",
+        "piano",
+        "sub bass",
+        "synth",
+        "synth bass"
+      ],
+      "ac_techniques": [
+        "call-and-response",
+        "syncopated percussion",
+        "walking bass"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "blues",
+        "boom bap",
+        "bossa nova",
+        "darkwave",
+        "dream pop",
+        "folk",
+        "funk",
+        "fusion",
+        "gospel",
+        "hip hop",
+        "hip-hop",
+        "indie folk",
+        "indie pop",
+        "indie rock",
+        "industrial",
+        "jazz",
+        "neo-soul",
+        "r&b",
+        "rock",
+        "soul",
+        "swing",
+        "synthwave",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "calm",
+        "chill",
+        "dark",
+        "dreamy",
+        "ethereal",
+        "funky",
+        "gentle",
+        "groovy",
+        "hopeful",
+        "hypnotic",
+        "introspective",
+        "lush",
+        "melancholic",
+        "melancholy",
+        "mellow",
+        "nostalgic",
+        "powerful",
+        "raw",
+        "smooth",
+        "sparse",
+        "tender",
+        "uplifting",
+        "warm"
+      ],
+      "ac_production": [
+        "atmospheric production",
+        "light reverb",
+        "lo-fi aesthetic",
+        "vinyl crackle",
+        "vinyl hiss",
+        "warm tone",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "105 bpm",
+        "108 bpm",
+        "110 bpm",
+        "4/4",
+        "70 bpm",
+        "74 bpm",
+        "80 bpm",
+        "bridge",
+        "chorus",
+        "hook",
+        "intro",
+        "mid-tempo",
+        "outro",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "distorted",
+        "full",
+        "husky",
+        "punchy",
+        "raspy",
+        "rich",
+        "shimmering",
+        "silky",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ]
+    }
+  },
+  "rock": {
+    "total_unique_terms": 148,
+    "fields": {
+      "ac_instruments": [
+        "acoustic guitar",
+        "analog synth",
+        "bass",
+        "bass guitar",
+        "choir",
+        "clean guitar",
+        "cymbal",
+        "distortion guitar",
+        "drum",
+        "drums",
+        "electric guitar",
+        "electric piano",
+        "guitar",
+        "hi-hat",
+        "kick",
+        "organ",
+        "overdriven guitar",
+        "percussion",
+        "piano",
+        "snare",
+        "strings",
+        "synth",
+        "synthesizer",
+        "wurlitzer",
+        "xylophone"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "blues",
+        "bossa nova",
+        "choral",
+        "cinematic",
+        "country",
+        "dream pop",
+        "drum and bass",
+        "dubstep",
+        "folk",
+        "funk",
+        "gospel",
+        "hip hop",
+        "hip-hop",
+        "indie folk",
+        "indie pop",
+        "indie rock",
+        "industrial",
+        "jazz",
+        "neo-psychedelia",
+        "new wave",
+        "post-rock",
+        "psychedelia",
+        "r&b",
+        "rock",
+        "shoegaze",
+        "soul",
+        "stoner rock",
+        "tech house"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "anthemic",
+        "bright",
+        "calm",
+        "chill",
+        "contemplative",
+        "dark",
+        "dreamy",
+        "eerie",
+        "energetic",
+        "epic",
+        "ethereal",
+        "funky",
+        "gentle",
+        "gritty",
+        "groovy",
+        "haunting",
+        "hopeful",
+        "hypnotic",
+        "lush",
+        "melancholic",
+        "melancholy",
+        "mellow",
+        "nostalgic",
+        "playful",
+        "powerful",
+        "raw",
+        "relaxed",
+        "smooth",
+        "sparse",
+        "uplifting",
+        "warm"
+      ],
+      "ac_production": [
+        "analog saturation",
+        "clean sound",
+        "heavy distortion",
+        "heavy reverb",
+        "lo-fi aesthetic",
+        "plate reverb",
+        "raw production",
+        "tape saturation",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "105 bpm",
+        "114 bpm",
+        "120 bpm",
+        "126 bpm",
+        "128 bpm",
+        "130 bpm",
+        "133 bpm",
+        "140 bpm",
+        "160 bpm",
+        "70 bpm",
+        "88 bpm",
+        "breakdown",
+        "bridge",
+        "chorus",
+        "drop",
+        "hook",
+        "intro",
+        "mid-tempo",
+        "midtempo",
+        "outro",
+        "pre-chorus",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "distorted",
+        "full",
+        "fuzzy",
+        "gritty",
+        "nasal",
+        "overdriven",
+        "punchy",
+        "raspy",
+        "rich",
+        "saturated",
+        "sharp",
+        "shimmering",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "power chords",
+        "shredding",
+        "staccato electric",
+        "syncopated rhythm",
+        "syncopated rhythms",
+        "syncopated staccato",
+        "vibrato"
+      ]
+    }
+  },
+  "sacred": {
+    "total_unique_terms": 10,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drums",
+        "upright piano"
+      ],
+      "ac_genre_style": [
+        "choral",
+        "sacred"
+      ],
+      "ac_mood_emotion": [
+        "mellow",
+        "warm"
+      ],
+      "ac_production": [
+        "vinyl crackle"
+      ],
+      "ac_timbre": [
+        "soft",
+        "warm"
+      ]
+    }
+  },
+  "shoegaze": {
+    "total_unique_terms": 66,
+    "fields": {
+      "ac_instruments": [
+        "acoustic guitar",
+        "bass",
+        "cello",
+        "choir",
+        "drum machine",
+        "drums",
+        "guitar",
+        "organ",
+        "piano",
+        "strings",
+        "synth",
+        "synth lead",
+        "vocoder"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "cinematic",
+        "dream pop",
+        "folk",
+        "gospel",
+        "indie pop",
+        "indie rock",
+        "orchestral",
+        "post-rock",
+        "rock",
+        "shoegaze",
+        "soul",
+        "synthwave",
+        "trip-hop"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "anthemic",
+        "bright",
+        "dark",
+        "dreamy",
+        "energetic",
+        "epic",
+        "ethereal",
+        "funky",
+        "gritty",
+        "hopeful",
+        "hypnotic",
+        "introspective",
+        "lush",
+        "meditative",
+        "melancholic",
+        "nostalgic",
+        "raw",
+        "sparse"
+      ],
+      "ac_production": [
+        "heavy reverb",
+        "tape saturation"
+      ],
+      "ac_timbre": [
+        "airy",
+        "bright",
+        "dark",
+        "distorted",
+        "fuzzy",
+        "gritty",
+        "husky",
+        "shimmering",
+        "soft",
+        "thick"
+      ],
+      "ac_techniques": [
+        "arpeggiated bells"
+      ],
+      "ac_temporal_structure": [
+        "70 bpm",
+        "88 bpm",
+        "breakdown",
+        "bridge",
+        "chorus",
+        "outro",
+        "verse"
+      ]
+    }
+  },
+  "soul": {
+    "total_unique_terms": 67,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "bass guitar",
+        "drum",
+        "drums",
+        "electric piano",
+        "guitar",
+        "hammond organ",
+        "percussion",
+        "piano",
+        "strings",
+        "synth",
+        "upright bass",
+        "violin"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "boom bap",
+        "choral",
+        "cinematic",
+        "dream pop",
+        "folk",
+        "funk",
+        "fusion",
+        "gospel",
+        "hip hop",
+        "hip-hop",
+        "indie folk",
+        "indie rock",
+        "neo-soul",
+        "r&b",
+        "rock",
+        "shoegaze",
+        "soul",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "anthemic",
+        "chill",
+        "dreamy",
+        "funky",
+        "gentle",
+        "gritty",
+        "groovy",
+        "meditative",
+        "melancholic",
+        "raw",
+        "smooth",
+        "uplifting",
+        "warm"
+      ],
+      "ac_timbre": [
+        "airy",
+        "full",
+        "gritty",
+        "raspy",
+        "rich",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "78 bpm",
+        "88 bpm",
+        "chorus",
+        "drop",
+        "mid-tempo",
+        "verse"
+      ],
+      "ac_techniques": [
+        "syncopated hammond",
+        "syncopated jungle",
+        "walking bass"
+      ],
+      "ac_production": [
+        "atmospheric production",
+        "vinyl crackle",
+        "warm tone",
+        "wide stereo"
+      ]
+    }
+  },
+  "stoner rock": {
+    "total_unique_terms": 17,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drums",
+        "guitar"
+      ],
+      "ac_genre_style": [
+        "rock",
+        "stoner rock"
+      ],
+      "ac_mood_emotion": [
+        "dark",
+        "gritty",
+        "hypnotic",
+        "raw"
+      ],
+      "ac_temporal_structure": [
+        "bridge",
+        "chorus",
+        "midtempo"
+      ],
+      "ac_timbre": [
+        "dark",
+        "distorted",
+        "gritty",
+        "punchy",
+        "sharp"
+      ]
+    }
+  },
+  "suno_moods": {
+    "total_unique_terms": 116,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "analog synth",
+        "bass",
+        "bass guitar",
+        "drum",
+        "drum machine",
+        "drums",
+        "electric guitar",
+        "fender rhodes",
+        "guitar",
+        "kick",
+        "kick drum",
+        "percussion",
+        "piano",
+        "rhodes piano",
+        "snare",
+        "sub bass",
+        "synth",
+        "synth bass",
+        "synth lead",
+        "synth pad",
+        "trumpet",
+        "upright bass",
+        "violin",
+        "vocoder"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "anthemic",
+        "bright",
+        "calm",
+        "chill",
+        "contemplative",
+        "dark",
+        "dreamy",
+        "energetic",
+        "epic",
+        "ethereal",
+        "euphoric",
+        "funky",
+        "gentle",
+        "gritty",
+        "groovy",
+        "hopeful",
+        "hypnotic",
+        "intense",
+        "lush",
+        "melancholic",
+        "mellow",
+        "nostalgic",
+        "playful",
+        "powerful",
+        "raw",
+        "smooth",
+        "sparse",
+        "uplifting",
+        "warm"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "arpeggiated synth",
+        "four-on-the-floor",
+        "rubato",
+        "sidechain",
+        "sidechained",
+        "staccato percussion",
+        "syncopated 2",
+        "syncopated bassline",
+        "syncopated drum",
+        "syncopated shakers",
+        "syncopated vocal",
+        "tapping"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "distorted",
+        "full",
+        "gritty",
+        "nasal",
+        "overdriven",
+        "punchy",
+        "rich",
+        "saturated",
+        "sharp",
+        "smooth",
+        "soft",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "116 bpm",
+        "120 bpm",
+        "123 bpm",
+        "124 bpm",
+        "130 bpm",
+        "132bpm",
+        "140 bpm",
+        "148 bpm",
+        "155 bpm",
+        "75 bpm",
+        "bridge",
+        "chorus",
+        "drop",
+        "hook",
+        "intro",
+        "mid-tempo",
+        "outro",
+        "pre-chorus",
+        "slow tempo",
+        "solo",
+        "verse"
+      ],
+      "ac_production": [
+        "bitcrushed",
+        "clean mix",
+        "heavy compression",
+        "plate reverb",
+        "spring reverb",
+        "tape echo",
+        "tape saturation",
+        "vinyl crackle",
+        "vinyl hiss"
+      ]
+    }
+  },
+  "swing": {
+    "total_unique_terms": 95,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "bass",
+        "brass",
+        "clarinet",
+        "drum",
+        "drums",
+        "electric guitar",
+        "electric piano",
+        "guitar",
+        "kick",
+        "orchestra",
+        "percussion",
+        "piano",
+        "sampler",
+        "saxophone",
+        "snare",
+        "strings",
+        "sub bass",
+        "trumpet",
+        "turntable",
+        "upright bass"
+      ],
+      "ac_techniques": [
+        "call and response",
+        "call-and-response",
+        "looping",
+        "scratching",
+        "sidechain",
+        "syncopated uk",
+        "vibrato"
+      ],
+      "ac_genre_style": [
+        "afrobeat",
+        "ambient",
+        "blues",
+        "boom bap",
+        "boom-bap",
+        "cinematic",
+        "hip hop",
+        "indie pop",
+        "jazz",
+        "r&b",
+        "swing"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "bright",
+        "dark",
+        "dreamy",
+        "eerie",
+        "euphoric",
+        "gentle",
+        "gritty",
+        "haunting",
+        "hopeful",
+        "hypnotic",
+        "introspective",
+        "lush",
+        "melancholic",
+        "mellow",
+        "nostalgic",
+        "playful",
+        "raw",
+        "relaxed",
+        "smooth",
+        "sparse",
+        "tender",
+        "uplifting",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "78 bpm",
+        "80 bpm",
+        "90bpm",
+        "92 bpm",
+        "95 bpm",
+        "bridge",
+        "buildup",
+        "chorus",
+        "hook",
+        "intro",
+        "outro",
+        "slow tempo",
+        "solo"
+      ],
+      "ac_timbre": [
+        "airy",
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "full",
+        "gritty",
+        "husky",
+        "punchy",
+        "saturated",
+        "shimmering",
+        "smooth",
+        "soft",
+        "warm"
+      ],
+      "ac_production": [
+        "clean tone",
+        "room reverb",
+        "vinyl crackle",
+        "vinyl hiss"
+      ]
+    }
+  },
+  "synthwave": {
+    "total_unique_terms": 24,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drums",
+        "guitar",
+        "percussion"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "cinematic",
+        "dream pop",
+        "fusion",
+        "indie pop",
+        "r&b",
+        "shoegaze",
+        "synthwave"
+      ],
+      "ac_mood_emotion": [
+        "anthemic",
+        "ethereal",
+        "hopeful",
+        "lush",
+        "melancholic",
+        "nostalgic"
+      ],
+      "ac_timbre": [
+        "airy",
+        "distorted",
+        "shimmering"
+      ],
+      "ac_temporal_structure": [
+        "bridge",
+        "mid-tempo",
+        "solo"
+      ]
+    }
+  },
+  "tech house": {
+    "total_unique_terms": 18,
+    "fields": {
+      "ac_instruments": [
+        "drums"
+      ],
+      "ac_genre_style": [
+        "neo-psychedelia",
+        "rock",
+        "tech house"
+      ],
+      "ac_mood_emotion": [
+        "aggressive",
+        "dark",
+        "energetic",
+        "funky",
+        "hypnotic",
+        "playful",
+        "raw",
+        "uplifting",
+        "warm"
+      ],
+      "ac_timbre": [
+        "dark",
+        "distorted",
+        "punchy",
+        "warm"
+      ],
+      "ac_techniques": [
+        "sampling"
+      ]
+    }
+  },
+  "trap": {
+    "total_unique_terms": 68,
+    "fields": {
+      "ac_instruments": [
+        "808",
+        "acoustic guitar",
+        "bass",
+        "drum machine",
+        "drums",
+        "electric guitar",
+        "guitar",
+        "percussion",
+        "piano",
+        "sub bass",
+        "synth",
+        "synth bass"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "blues",
+        "boom bap",
+        "cinematic",
+        "darkwave",
+        "dubstep",
+        "flamenco",
+        "hip hop",
+        "hip-hop",
+        "jazz",
+        "lofi hip-hop",
+        "math rock",
+        "r&b",
+        "soul",
+        "trap"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "dark",
+        "dreamy",
+        "ethereal",
+        "gentle",
+        "hypnotic",
+        "lush",
+        "melancholic",
+        "powerful",
+        "raw",
+        "relaxed",
+        "smooth",
+        "warm"
+      ],
+      "ac_production": [
+        "vinyl crackle",
+        "wide stereo"
+      ],
+      "ac_temporal_structure": [
+        "105 bpm",
+        "120 bpm",
+        "140 bpm",
+        "4/4",
+        "70 bpm",
+        "74 bpm",
+        "chorus",
+        "hook",
+        "mid-tempo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "breathy",
+        "bright",
+        "clean",
+        "crisp",
+        "dark",
+        "harsh",
+        "punchy",
+        "resonant",
+        "rich",
+        "saturated",
+        "shimmering",
+        "smooth",
+        "soft",
+        "warm"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "syncopated slap"
+      ]
+    }
+  },
+  "trip-hop": {
+    "total_unique_terms": 45,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "drum",
+        "drum machine",
+        "guitar",
+        "kick",
+        "marimba",
+        "sub bass",
+        "synth",
+        "trumpet",
+        "vibraphone"
+      ],
+      "ac_techniques": [
+        "arpeggiated bells"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "cinematic",
+        "downtempo",
+        "fusion",
+        "jazz",
+        "shoegaze",
+        "trip-hop"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "dark",
+        "dreamy",
+        "ethereal",
+        "gentle",
+        "hypnotic",
+        "introspective",
+        "lush",
+        "melancholic",
+        "raw",
+        "smooth",
+        "sparse",
+        "warm"
+      ],
+      "ac_temporal_structure": [
+        "100 bpm",
+        "breakdown",
+        "mid-tempo",
+        "outro"
+      ],
+      "ac_timbre": [
+        "airy",
+        "bright",
+        "dark",
+        "saturated",
+        "shimmering",
+        "smooth",
+        "soft",
+        "thick",
+        "warm"
+      ],
+      "ac_production": [
+        "vinyl crackle"
+      ]
+    }
+  },
+  "worship": {
+    "total_unique_terms": 49,
+    "fields": {
+      "ac_instruments": [
+        "bass",
+        "choir",
+        "cymbal",
+        "drums",
+        "flute",
+        "grand piano",
+        "guitar",
+        "oboe",
+        "orchestra",
+        "percussion",
+        "piano",
+        "string section",
+        "strings",
+        "synth",
+        "timpani",
+        "woodwind"
+      ],
+      "ac_techniques": [
+        "arpeggiated chords",
+        "arpeggiated eighth",
+        "arpeggiated patterns",
+        "block chords",
+        "legato pads",
+        "legato violins",
+        "vibrato"
+      ],
+      "ac_genre_style": [
+        "ambient",
+        "choral",
+        "classical",
+        "hymn",
+        "liturgical",
+        "orchestral",
+        "worship"
+      ],
+      "ac_production": [
+        "hall reverb"
+      ],
+      "ac_temporal_structure": [
+        "4/4 time",
+        "68 bpm",
+        "72 bpm",
+        "bridge",
+        "chorus",
+        "interlude",
+        "outro",
+        "solo",
+        "verse"
+      ],
+      "ac_timbre": [
+        "airy",
+        "bright",
+        "clean",
+        "resonant",
+        "warm"
+      ],
+      "ac_mood_emotion": [
+        "bright",
+        "ethereal",
+        "sparse",
+        "warm"
+      ]
+    }
+  }
+}
