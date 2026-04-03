@@ -3,18 +3,21 @@
 ## IN PROGRESS
 - [sunomusic] Phase 2A: 스템 100곡 Suno 업로드 (5곡 완료) — 진행 중
 - [sunomusic] Phase 2H: 찬송가 업로드 (50곡 중 31성공, #51~ 대기) — 2026-04-02
+- [sunomusic] prompts/ 폴더에 프롬프트 데이터 넣기 — 재요청 2026-04-03
+- [sunomusic] Tier1 장르 보강 녹음 (alt rock, amapiano, DnB, flamenco, math rock, chillout) — 요청 2026-04-03
+- [rag] MusicSem/ConceptCaps 어휘 매핑 — 요청 2026-04-03
 
 ## TODO
-- [sunolanguage] prompts/ 폴더 수신 확인 → sunomusic 프롬프트 데이터 대기 중
 - [sunolanguage] 데이터 500곡+ 확보 → Casini INPUT vs sunolanguage OUTPUT 비교
-- [sunolanguage] MusicSem/ConceptCaps 매핑 (rag에 요청)
-- [sunolanguage] 데이터 부족 장르 보강 (flamenco, math rock, darkwave 등)
+- [sunolanguage] 장르명 정규화를 parsed_tracks.json에도 적용
 - [musicscore] ACE-Step 찬송가 942곡 LoRA 학습 (요청 완료, 시작 대기)
 
 ## BLOCKED
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] 장르 정규화 59→54장르 + RAG 인덱스 v1 빌드 — 2026-04-03 ✅
+- [sunolanguage] 데이터 부족 장르 보강 계획 수립 (Tier1: 6장르) — 2026-04-03 ✅
 - [sunolanguage] 장르별 인사이트 v2 문서 작성 + 노션 업로드 — 2026-04-03 ✅
 - [sunolanguage] sunomusic에 프롬프트 데이터 요청 메시지 전달 — 2026-04-03 ✅
 - [sunolanguage] 스템 100곡(29GB) mushin 외장하드 전송 완료 — 2026-04-03 ✅
