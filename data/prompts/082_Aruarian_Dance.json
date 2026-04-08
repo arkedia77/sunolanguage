@@ -1,0 +1,33 @@
+{
+  "id": 82,
+  "title": "Aruarian Dance",
+  "artist": "Nujabes",
+  "genre": "Lo-fi / Neo-classical / Piano",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "e7e3994e-f6c3-48fe-b4b1-73fc604241ff",
+      "tags": "Bossa nova and jazz fusion. A nylon-string acoustic guitar plays a syncopated fingerstyle pattern with bossa nova chord voicings. An electric bass guitar follows with a melodic, walking line that emphasizes the root and fifth. A drum kit provides a steady rhythm with a crisp rimshot on the snare and a consistent eighth-note pattern on the hi-hat. A clean-toned electric guitar enters with a repetitive, rhythmic riff using double-stops. The track features a mid-tempo groove at 120 BPM in the key of G major. The arrangement is sparse, focusing on the interplay between the acoustic and electric guitars over a light percussion bed.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[nylon-string acoustic guitar enters with syncopated bossa nova pattern]\n[electric bass enters with melodic walking line]\n\n[Section A]\n[drum kit enters with rimshots and steady hi-hat]\n[clean electric guitar enters with rhythmic double-stop riff]\n\n[Section B]\n[acoustic guitar continues fingerstyle pattern]\n[bass becomes more syncopated]\n[electric guitar riff repeats with slight variations in attack]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "ea99279a-ca08-4a12-b079-5cf8e4526b71",
+      "tags": "Funk-rock instrumental featuring a prominent slap bass melody and syncopated drum patterns. The bass uses heavy thumb slaps and finger pops with a bright, compressed tone. A clean electric guitar provides rhythmic scratches and muted 16th-note patterns. The drum kit features a crisp, high-tuned snare and a tight kick drum. The arrangement follows a repetitive groove-based structure with subtle variations in bass fills. 105 BPM, E Minor, 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[slap bass enters with percussive thumb hits and pops]\n[tight kick drum and snare on backbeat]\n\n[Main Groove]\n[syncopated slap bass riff in E minor]\n[muted 16th-note electric guitar scratches]\n[hi-hat openings on the off-beats]\n\n[Bridge]\n[bass transitions to sustained lower notes with occasional pops]\n[drum fills with rapid snare ghost notes]\n\n[Outro]\n[bass riff simplifies to a steady rhythmic pulse]\n[guitar scratches fade out]\n[final kick drum hit]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "1bd066e2-76d1-430e-a96f-ef4f7ad29bd2",
+      "tags": "Boom bap hip hop instrumental at 92 BPM in the key of C minor. The track is built around a dusty, four-bar jazz piano loop featuring minor ninth chords and a melodic top-line flourish. The drum kit consists of a thumping, slightly off-grid kick drum, a crisp snare with a short reverb tail, and shuffled sixteenth-note hi-hats. A warm, filtered electric bass follows the root notes of the piano progression with a slight swing. Occasional vinyl crackle and hiss are layered throughout the arrangement. A secondary melodic element consists of a muted trumpet sample with a wah-wah filter that appears during transition points. The arrangement follows a repetitive loop structure typical of 90s East Coast production.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss]\n[dusty jazz piano loop enters]\n\n[Main Section]\n[boom bap drums enter with thumping kick and crisp snare]\n[warm filtered electric bass enters, swinging eighth notes]\n[shuffled sixteenth-note hi-hats]\n\n[Transition]\n[muted trumpet sample with wah-wah filter]\n\n[Main Section Continued]\n[piano loop continues with minor ninth chords]\n[bass and drums maintain steady head-nod groove]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "cd0de274-1634-4d6f-8494-79a0a9c1073b",
+      "tags": "Bossa nova jazz. Nylon-string acoustic guitar plays syncopated fingerstyle patterns with frequent seventh and ninth chords. A double bass provides a melodic counterpoint, emphasizing the root and fifth on beats one and three with occasional chromatic passing tones. The percussion consists of a soft shaker and a high-tuned snare drum played with brushes, maintaining a steady sixteenth-note subdivision. A clean-toned electric guitar enters with a melodic lead, utilizing slides and vibrato. The tempo is 124 BPM in 4/4 time, likely in the key of G Major.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[nylon-string acoustic guitar fingerpicking, syncopated rhythm]\n[soft shaker enters]\n\n[Section A]\n[double bass enters with walking root-fifth pattern]\n[brushed snare drum provides light backbeat]\n[acoustic guitar continues rhythmic comping]\n\n[Section B]\n[clean electric guitar enters with melodic lead line]\n[subtle reverb on electric guitar]\n[bass becomes more melodic with chromatic runs]\n\n[Outro]\n[electric guitar fades out]\n[acoustic guitar and shaker continue until final chord strum]"
+    }
+  },
+  "status": "ok"
+}

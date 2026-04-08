@@ -1,0 +1,33 @@
+{
+  "id": 31,
+  "title": "Guardians at the Gate",
+  "artist": "Audiomachine",
+  "genre": "Hybrid / Cinematic",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "604eecbc-44f2-4d22-a7ff-1414ff7ce4a8",
+      "tags": "Cinematic orchestral score. Staccato string section plays a repetitive rhythmic ostinato in 4/4 time at 120 BPM in D minor. Legato cellos and double basses provide low-frequency sustain. A brass section featuring French horns and trombones enters with long, swelling melodic lines. Orchestral percussion includes deep timpani rolls and sharp snare hits on the off-beats. High-register violins perform rapid tremolo passages. A grand piano plays isolated, resonant low notes. The arrangement uses sudden dynamic shifts between piano and fortissimo sections.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato string ostinato, low cello sustain]\n\n[Section A]\n[French horn melody enters, timpani rolls]\n[snare drum accents on off-beats]\n\n[Section B]\n[full brass section swells, fortissimo strings]\n[high violin tremolo]\n\n[Outro]\n[decrescendo, isolated low piano notes]\n[staccato strings fade out]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "a2b4e086-68ea-4bdb-beea-b86952b6e2cc",
+      "tags": "Industrial dark ambient with heavy drone elements. The track features a low-frequency, distorted sub-bass drone that oscillates with a slow, rhythmic pulsing. A metallic, resonant texture sits in the mid-range, characterized by a slow-attack filter sweep and granular synthesis artifacts. High-frequency white noise bursts and mechanical clangs occur at irregular intervals, processed through long-tail plate reverb. A rhythmic, muffled thumping resembles a distant kick drum but lacks a defined transient. The piece is in the key of D minor at 60 BPM in 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone enters]\n[distorted metallic resonance with slow filter sweep]\n\n[Main Section]\n[rhythmic pulsing in the low-end]\n[granular synthesis textures and white noise swells]\n[distant, muffled percussive thumps]\n[mechanical clangs with heavy plate reverb]\n\n[Outro]\n[high-frequency textures fade out]\n[sub-bass drone sustains and slowly decays]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "d9a9aed1-f297-4299-8a52-3a5a1b95408b",
+      "tags": "Cinematic orchestral percussion. The track is built around a heavy, resonant taiko drum ensemble performing a syncopated rhythmic pattern. A deep, sub-heavy kick drum emphasizes the downbeats. Metallic accents are provided by a sharp, high-pitched anvil strike and a shimmering tam-tam swell. A low-frequency synth drone maintains a constant pedal point. The tempo is 90 BPM in 4/4 time. The arrangement features a gradual crescendo with layered percussion hits and a final resonant decay.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency synth drone enters]\n[reverberant taiko drum hits on beats 1 and 3]\n\n[Main Section]\n[syncopated taiko ensemble pattern]\n[heavy sub-kick drum on downbeats]\n[sharp metallic anvil strikes on beat 4]\n[tam-tam swell with long decay]\n\n[Outro]\n[final unison taiko strike]\n[reverb tail fades to silence]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "bc47cd64-c988-4235-b80d-b9edda07f8f9",
+      "tags": "Epic orchestral choral piece in D minor at 140 BPM. The arrangement features a large mixed SATB choir performing staccato and legato vocal lines in Latin. Orchestration consists of a full string section with aggressive spiccato cellos and double basses, sustained violins, and violas. Brass includes powerful French horn melodies and low trombone reinforcements. Percussion is dominated by large cinematic taiko drums and orchestral bass drums playing driving rhythmic patterns, accented by sharp snare hits and shimmering suspended cymbal swells. The harmonic structure is built on minor-key ostinatos and dramatic chord shifts, utilizing a 4/4 time signature with occasional syncopated accents in the low strings and percussion.",
+      "prompt": "[Intro]\n[low string ostinato, taiko drums enter]\n[staccato male choir]\n\n[Section A]\n[full choir enters, legato female vocals over staccato male vocals]\n[brass melody enters]\nHe-tu-met, he-tu-met, se-pa-re, se-pa-re\nMi-ve-lum, mi-ve-lum, ho-ven-ta, ho-ven-ta\n\n[Section B]\n[increased percussion intensity, spiccato strings]\nHe-tu-met, he-tu-met, se-pa-re, se-pa-re\nMi-ve-lum, mi-ve-lum, ho-ven-ta, ho-ven-ta\n\n[Section C]\n[choir reaches higher register, fortissimo brass]\nHe-tu-met, he-tu-met, se-pa-re, se-pa-re\nMi-ve-lum, mi-ve-lum, ho-ven-ta, ho-ven-ta\n[final orchestral swell, cymbal crash]"
+    }
+  },
+  "status": "ok"
+}

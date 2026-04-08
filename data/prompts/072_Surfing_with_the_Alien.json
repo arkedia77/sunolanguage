@@ -1,0 +1,32 @@
+{
+  "id": 72,
+  "title": "Surfing with the Alien",
+  "artist": "Joe Satriani",
+  "genre": "Guitar Instrumental",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "5ff15fcd-e947-4653-9206-f597974d6eae",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A high-gain lead guitar performs a fast, technical solo featuring rapid alternate picking, legato runs, and wide vibrato. The bass guitar follows the guitar riffs with a thick, overdriven tone. The drum kit utilizes a double-kick pedal for rapid sixteenth-note patterns, a sharp snare, and frequent crash cymbal accents. 140 BPM. 4/4 time signature. Key of E minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging riff, double-kick drums]\n\n[Main Riff]\n[syncopated power chords, driving bass guitar]\n\n[Guitar Solo]\n[high-gain lead guitar enters, rapid alternate picking, wah-wah pedal effect]\n[shredding legato runs, pinch harmonics]\n\n[Outro]\n[sustained power chord, final drum fill, cymbal crash]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "2586d624-a443-41ee-9c16-35b00963bf55",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff in E minor. The drum kit features a prominent double-kick pedal pattern and a dry, high-tuned snare. An overdriven bass guitar follows the guitar riff exactly. The tempo is 140 BPM in 4/4 time. The arrangement consists of a rhythmic guitar intro followed by a driving instrumental section with frequent crash cymbal accents.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted eighth notes]\n[snare hits on beats 2 and 4]\n\n[Main Section]\n[double-kick drum pattern enters]\n[overdriven bass guitar enters, doubling guitar riff]\n[crash cymbal accents on phrase transitions]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "24ebeb77-87fc-4bf9-90ab-4d526ef0959e",
+      "tags": "Indie rock with a lo-fi aesthetic. A clean electric guitar plays a repetitive, syncopated riff using palm-muted eighth notes and occasional open chords. A second electric guitar provides melodic counterpoint with a bright, slightly overdriven tone. The bass guitar follows the root notes of the guitar progression with a round, warm tone. Drums feature a tight, dry snare and a steady kick pattern with frequent hi-hat accents. The tempo is 124 BPM in 4/4 time. The arrangement is sparse, focusing on the interplay between the two guitar tracks.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar riff with palm muting]\n[steady kick drum and hi-hat]\n\n[Section A]\n[bass guitar enters]\n[second electric guitar enters with melodic lead lines]\n[snare drum enters on beats 2 and 4]\n\n[Section B]\n[guitar riff continues with less muting]\n[hi-hat opens for a more wash-like texture]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T18:08:17"
+}

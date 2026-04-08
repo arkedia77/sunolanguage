@@ -1,0 +1,32 @@
+{
+  "id": 42,
+  "title": "A Love Supreme, Pt. I - Acknowledgement",
+  "artist": "John Coltrane",
+  "genre": "Jazz",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "a5083108-60d3-43b2-a142-aae2ca2ecc0d",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. The bass guitar follows the guitar riffs with a thick, overdriven tone. Drums feature a prominent double-kick pedal pattern and heavy use of crash cymbals. A high-pitched, distorted synthesizer lead plays a repetitive melodic hook. The tempo is 145 BPM in 4/4 time. The arrangement features sudden stops and starts with brief silence between sections. The production uses a dry, close-mic sound on the drums and high-gain saturation on the stringed instruments.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging, palm-muted E string]\n[double-kick drum pattern enters]\n\n[Section A]\n[overdriven bass guitar enters]\n[high-pitched synth lead melody]\n[crash cymbal accents on every beat]\n\n[Section B]\n[guitar switches to sustained power chords]\n[half-time drum feel]\n[synth lead drops out]\n\n[Outro]\n[rapid double-kick drum roll]\n[final distorted guitar chord with feedback swell]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "fb782040-06d6-4301-8804-c4a7da6ea407",
+      "tags": "Afro-Cuban rumba guaguancó. The arrangement features a lead conga performing complex, improvisational quinto patterns characterized by sharp slaps and rapid flams. Two supporting congas maintain a steady, syncopated tumbao rhythm. A pair of wooden sticks, or palitos, strikes the side of a drum in a consistent cascara pattern. A high-pitched woodblock or clave executes a 3-2 rumba clave. The tempo is 118 BPM. The piece is entirely percussive with no melodic or harmonic instruments. The recording has a dry, close-mic acoustic profile with minimal room reverberation. The rhythmic structure is built on polyrhythmic layers where the quinto soloist interacts with the fixed clave and palito patterns through varied accents and syncopations.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[3-2 rumba clave on woodblock]\n[palitos enter with cascara pattern on wooden rim]\n\n[Main Section]\n[low-tuned congas enter with steady tumbao]\n[quinto conga enters with improvisational slaps and flams]\n[quinto performs rapid triplet accents and syncopated variations against the clave]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "238aa280-b0c3-4c2b-99ac-bef4bf7dad02",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated jazz chords with a thumb-plucked bassline. A shaker and a soft woodblock provide a steady sixteenth-note rhythmic layer. A clean, warm electric guitar plays a melodic lead with light vibrato and short decay. The arrangement maintains a consistent 120 BPM in 4/4 time. The key is D major. The acoustic guitar uses a fingerstyle technique with frequent seventh and ninth chord extensions. The electric guitar lead follows a pentatonic scale with occasional chromatic passing tones. The percussion is minimal, focusing on high-frequency textures without a kick or snare drum.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated nylon string acoustic guitar, sixteenth-note shaker]\n\n[Main Theme]\n[clean electric guitar lead enters with light vibrato]\n[woodblock accents on beats 2 and 4]\n\n[Bridge]\n[electric guitar plays sustained melodic lines]\n[acoustic guitar continues rhythmic chordal pattern]\n\n[Outro]\n[electric guitar fades out]\n[shaker and acoustic guitar end on a sustained Dmaj9 chord]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T15:23:15"
+}

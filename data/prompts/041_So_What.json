@@ -1,0 +1,32 @@
+{
+  "id": 41,
+  "title": "So What",
+  "artist": "Miles Davis",
+  "genre": "Jazz",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "84d0388c-70b1-4ac7-9f44-89d2dd675c5c",
+      "tags": "Bossa nova. Solo nylon-string acoustic guitar. 140 BPM. Key of C Major. 4/4 time signature. The guitar performs a fingerstyle arrangement featuring a syncopated bassline played with the thumb on the downbeats and anticipated upbeats, while the fingers pluck chordal clusters and a simultaneous melody. The performance uses jazz-influenced harmonies including major seventh, dominant ninth, and diminished chords. The rhythm utilizes a consistent bossa nova clave pattern with frequent use of rubato and slight tempo fluctuations. The recording has a dry, close-mic proximity with minimal room reverb.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[nylon-string acoustic guitar enters with syncopated Cmaj7 chord pattern]\n\n[Main Theme]\n[descending melodic line over alternating bass notes]\n[chromatic passing chords]\n\n[Bridge]\n[modulation to subdominant chords]\n[increased rhythmic density in fingerpicking]\n\n[Outro]\n[ritardando]\n[final sustained Cmaj9 chord]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "957da1f7-9b00-4445-a222-aa6bd68ef2d6",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff in E minor. The drum kit features a prominent double-kick pedal pattern and a dry, high-tuned snare. A distorted bass guitar follows the guitar riff in unison. The tempo is 140 BPM in 4/4 time. The arrangement consists of a rhythmic instrumental loop with a focus on low-end chugging and aggressive pick attack. High-gain amplification with a mid-scooped EQ profile is used on the guitars. No lead melodies or solos are present.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted syncopation]\n[double-kick drum pattern enters]\n[distorted bass guitar in unison with guitar riff]\n\n[Main Loop]\n[steady 140 BPM groove]\n[dry snare on beats 2 and 4]\n[consistent high-gain guitar chugging]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "81e93539-4217-4627-a738-c5e22a8cbfaf",
+      "tags": "Lo-fi hip hop. A vinyl crackle texture persists throughout the track. The beat consists of a muffled, low-pass filtered kick drum and a crisp, dry snare on the backbeat. A clean electric guitar plays a repetitive four-bar loop of jazz-influenced seventh chords with a slight chorus effect. A sub-bass synth follows the root notes of the guitar progression with a soft attack. The tempo is 85 BPM in 4/4 time. A subtle shaker enters on the off-beats. High-frequency hiss and occasional pops simulate an analog record playback. The arrangement is static with no melodic development or bridge.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss]\n[clean electric guitar playing jazz chords with chorus effect]\n\n[Main Loop]\n[muffled kick drum and dry snare enter]\n[sub-bass synth follows guitar root notes]\n[shaker enters on off-beats]\n\n[Outro]\n[drums and bass drop out]\n[guitar loop fades out]\n[vinyl crackle persists until silence]"
+    },
+    "vocals": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T15:17:05"
+}

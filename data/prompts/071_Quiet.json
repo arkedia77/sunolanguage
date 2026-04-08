@@ -1,0 +1,33 @@
+{
+  "id": 71,
+  "title": "Quiet",
+  "artist": "This Will Destroy You",
+  "genre": "Post-Rock",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "d05a5b56-112b-4db1-b64c-ae35076e72e8",
+      "tags": "Ambient post-rock with shoegaze influences. The track features a clean, delay-heavy electric guitar playing a repetitive, arpeggiated melody. A deep, sustained synth bass provides a low-end drone. Percussion consists of a steady, mid-tempo kick drum and a crisp snare with significant reverb. Atmospheric synth pads swell in the background, creating a dense sonic wash. The arrangement builds layers of distorted guitar textures and shimmering high-end frequencies. Tempo is 100 BPM in 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar with delay, arpeggiated melody]\n[soft synth pad swells]\n\n[Section A]\n[steady kick drum enters]\n[sustained synth bass drone]\n[reverberant snare on beats 2 and 4]\n\n[Section B]\n[distorted guitar layers enter]\n[increased density of synth pads]\n[shimmering high-frequency textures]\n\n[Outro]\n[drums drop out]\n[fading guitar delay and synth drone]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "6766e25e-2e39-43a1-be5e-db858d1c71f4",
+      "tags": "Industrial rock and dark synthwave fusion. The track features a distorted, overdriven bass guitar playing a repetitive, syncopated eighth-note riff. A heavy, acoustic drum kit provides a slow, pounding beat with a gated reverb on the snare and a deep, resonant kick. Layered over the rhythm section are dissonant, screeching industrial synth textures and occasional metallic percussion hits. A clean, palm-muted electric guitar enters later, playing a rhythmic ostinato. The tempo is 85 BPM in the key of D minor. The production is dense and gritty, with significant compression on the master bus and a dark, cavernous reverb applied to the percussion.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted synth drone, low-frequency hum]\n[heavy kick drum enters, slow tempo]\n\n[Section A]\n[overdriven bass guitar riff, syncopated eighth notes]\n[gated snare drum enters on beats 2 and 4]\n[metallic percussion accents]\n\n[Section B]\n[dissonant synth lead enters, high-pitched screeching texture]\n[palm-muted electric guitar ostinato]\n[crash cymbal hits at phrase transitions]\n\n[Outro]\n[drums and guitar drop out]\n[fading distorted bass and synth drone]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "181ded79-518a-45a2-9672-bca777850ea2",
+      "tags": "Hard rock drum track. The kit consists of a punchy kick drum, a crisp snare with a medium-length tail, hi-hats, and crash cymbals. The performance begins with a steady 4/4 backbeat featuring eighth-note hi-hat patterns. The kick drum follows a syncopated pattern, often hitting on the 1, the 'and' of 2, and the 3. Frequent snare fills utilize sixteenth-note triplets and rapid rolls across the kit. The intensity increases with the introduction of open hi-hat accents and more frequent crash cymbal hits on the downbeats. The tempo is 120 BPM in 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[four-beat hi-hat count-in]\n[steady 4/4 rock beat enters, closed hi-hats, snare on 2 and 4]\n\n[Section A]\n[syncopated kick drum pattern]\n[occasional open hi-hat accents]\n\n[Section B]\n[increased velocity on snare]\n[crash cymbal hits on beat 1 of every four bars]\n[sixteenth-note snare fill]\n\n[Section C]\n[ride cymbal replaces hi-hats]\n[double-time kick drum accents]\n[rapid tom-tom fill]\n\n[Outro]\n[final crash cymbal swell]\n[reverb tail fades]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "610fb130-2aa0-4893-a03d-576edfd73770",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, saturated kick drum drives the rhythm at 130 BPM in 4/4 time. A resonant, metallic synth sequence with a short decay provides a percussive melodic hook. A low-frequency sawtooth bassline follows the kick with a slight swing. High-frequency white noise bursts and filtered hi-hats create rhythmic tension. A dark, atmospheric pad with a slow attack and long release sits in the background. The track features a breakdown with a high-pass filter sweep on the main kick and synth sequence, followed by a sudden re-entry of the full low-end. Distorted, processed vocal samples are used as rhythmic elements rather than melodic leads.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum, metallic synth sequence]\n[filtered hi-hats enter]\n\n[Main Section]\n[sawtooth bassline, saturated kick]\n[white noise bursts, rhythmic vocal samples]\n\n[Breakdown]\n[high-pass filter sweep on kick and synths]\n[atmospheric pad swells]\n\n[Drop]\n[full low-end re-entry, driving industrial percussion]\n[resonant synth hook]"
+    }
+  },
+  "status": "ok"
+}

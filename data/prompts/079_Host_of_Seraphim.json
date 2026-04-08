@@ -1,0 +1,32 @@
+{
+  "id": 79,
+  "title": "Host of Seraphim",
+  "artist": "Dead Can Dance",
+  "genre": "World Music",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "2eaf5daa-178e-434e-b567-5eab5a6b36ae",
+      "tags": "Cinematic orchestral score. Sustained high-register violin and viola sections perform long, legato notes in a minor key. A cello and double bass section provides a slow, descending chromatic counterpoint. The arrangement features a dense, wet reverb with a long decay time. The dynamics swell gradually using orchestral crescendos. No percussion or rhythmic elements are present. The harmonic structure relies on dissonant clusters and suspended chords. 60 BPM. C minor. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[sustained high-register violin pads, heavy reverb]\n\n[Main Theme]\n[legato cello and double bass enter with descending chromatic line]\n[orchestral string swell]\n\n[Outro]\n[fading violin harmonics, long reverb tail]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "67d58a5d-1850-40a4-b3af-e01f1475ec4f",
+      "tags": "Dark ambient soundscape. A low-frequency sub-bass drone oscillates with a slow, rhythmic pulse. High-frequency metallic textures and granular synthesis artifacts create a shimmering, dissonant layer above the low end. A resonant, filtered sweep moves across the stereo field with a long decay. Periodic mechanical clicks and industrial whirs occur at irregular intervals. The piece lacks a traditional melodic structure or rhythmic grid. Key: C minor. Tempo: 60 BPM.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone, granular metallic textures]\n\n[Section A]\n[resonant filter sweep, stereo panning effects]\n[mechanical clicks and industrial whirring]\n\n[Section B]\n[dissonant high-frequency shimmer increases in intensity]\n[sub-bass pulse slows]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "e8116749-5cee-4ab7-be20-bae0c1d29bb3",
+      "tags": "Hardcore punk. Distorted electric guitar plays rapid down-stroked power chords in a constant eighth-note rhythm. The bass guitar follows the guitar progression with a thick, overdriven tone. Drums feature a fast d-beat pattern with a prominent, uncompressed snare and constant eighth-note hi-hat hits. Vocals are shouted with a raspy, aggressive delivery and minimal melodic variation. The recording has a raw, lo-fi aesthetic with high-frequency saturation. Key of E minor. 180 BPM. 4/4 time signature.",
+      "prompt": "[Intro]\n[distorted electric guitar power chords, d-beat drums, overdriven bass]\n\n[Verse 1]\n[shouted male vocals]\nI see the walls closing in on me\nLocked in a cage of your reality\nBreak the chains and set me free\nThis is the end of your tyranny\n\n[Chorus]\n[increased vocal intensity]\nNo more lies! [cymbal crash]\nNo more pain! [cymbal crash]\nWe won't follow [guitar slide]\nIn your name!\n\n[Outro]\n[feedback swell]\n[final snare hit]"
+    },
+    "vocals": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T18:42:28"
+}

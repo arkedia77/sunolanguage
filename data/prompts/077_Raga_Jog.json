@@ -1,0 +1,34 @@
+{
+  "id": 77,
+  "title": "Raga Jog",
+  "artist": "Ravi Shankar",
+  "genre": "World Music",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "44ca08c1-1da2-4a20-a716-881c55214aca",
+      "tags": "Traditional Indian Carnatic music featuring a solo Saraswati Veena. The performance utilizes a high degree of gamaka, specifically meend and andolan, creating fluid pitch slides and oscillations between notes. The Veena is tuned to a drone-based system with sympathetic resonance. The player employs a combination of plucking with wire plectrums and sliding the left hand across the frets to achieve microtonal inflections. The tempo is a slow, meditative alapana style without a fixed rhythmic cycle or percussion. The melodic structure follows a specific raga, emphasizing the flattened second and sixth intervals with heavy vibrato. The recording has a dry, close-mic proximity with minimal artificial reverb.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[Saraswati Veena enters with a sustained tonic drone pluck]\n[Slow upward melodic slide with heavy vibrato]\n\n[Main Section]\n[Series of rapid pull-offs and hammer-ons on the melody strings]\n[Deep pitch bends and microtonal oscillations on stable notes]\n[Occasional rhythmic striking of the tala strings for drone emphasis]\n[Descending melodic phrases with legato slides]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "9fbd8e8d-71fa-40f1-8ee0-bda87108004e",
+      "tags": "Bossa nova. Nylon-string acoustic guitar plays syncopated fingerstyle patterns with frequent jazz extensions including major 7th and 9th chords. A shaker provides a steady sixteenth-note pulse. The percussion features a woodblock or rimshot on the cross-stick beat. A melodic flute enters with legato phrasing and light vibrato, performing improvisational runs over the harmonic structure. The bass follows a traditional bossa nova two-beat pattern, emphasizing the root and fifth. 120 BPM. Key of G Major. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated nylon-string acoustic guitar, steady shaker]\n\n[Main Theme]\n[acoustic bass enters with root-fifth pattern]\n[rimshot on cross-stick beat]\n[legato flute melody enters with light vibrato]\n\n[Bridge]\n[flute performs improvisational runs]\n[guitar maintains rhythmic comping]\n\n[Outro]\n[flute melody fades]\n[shaker and guitar continue until final chord]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "e8b2eeaa-263e-42d9-a3b8-04ef1f05fe65",
+      "tags": "Hindustani classical percussion solo featuring the tabla. The performance centers on a complex rhythmic cycle in Teental, a 16-beat time signature. The Dayan, a wooden treble drum, produces clear, resonant pitched strokes and sharp, metallic rim sounds. The Bayan, a larger metal bass drum, executes deep, sliding glissando effects known as meend, modulating the pitch through palm pressure. The tempo is Madhyalaya, approximately 120 BPM. The piece utilizes intricate bols including rapid-fire tirakita and dha-dha-te-te patterns. Rhythmic variations involve syncopated accents and subdivisions of the beat into triplets and quadruplets. The recording features a dry, close-mic proximity with minimal room ambience, emphasizing the transient attack of the finger strikes.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[solo tabla enters, resonant Dayan strokes]\n\n[Main Theme]\n[Teental 16-beat cycle, rhythmic bols with Bayan bass modulations]\n\n[Variation 1]\n[increased density of strokes, rapid finger rolls]\n\n[Variation 2]\n[syncopated accents, sliding bass glissandos]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "3d2f9370-4f13-4957-933d-d055d2e5fd46",
+      "tags": "Traditional Bulgarian folk music featuring a solo female vocal performance. The vocal style utilizes open-throat chest voice with characteristic glottal stops, rapid ornaments, and microtonal inflections. The melody is based on a Phrygian-dominant scale with frequent use of the augmented second interval. The rhythm is a non-metrical, rubato parlando-rubato style, lacking a steady beat or percussion. The vocal delivery is monophonic and unaccompanied, focusing on melismatic passages and sustained high-register notes. The recording has a natural, dry acoustic with minimal room reverb. Key of G sharp minor. Tempo is free and variable.",
+      "prompt": "[Intro]\n[solo female vocal, rubato]\n\n[Verse 1]\nОй, [glottal stop] девойко, [vocal ornament] девойко\n[melismatic passage]\nЧерни ти са [vocal trill] очите\n\n[Verse 2]\nЧерни ти са [sustained note] очите\nКато [unintelligible] на полето\n[vocal slide down]"
+    }
+  },
+  "status": "ok",
+  "retried_at": "2026-04-07T18:32:12"
+}

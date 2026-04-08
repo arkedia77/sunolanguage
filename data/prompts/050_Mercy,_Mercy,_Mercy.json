@@ -1,0 +1,32 @@
+{
+  "id": 50,
+  "title": "Mercy, Mercy, Mercy",
+  "artist": "Cannonball Adderley Quintet",
+  "genre": "Jazz",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "7e3dead7-4d9d-4663-8682-a1446081921f",
+      "tags": "Hard rock. Distorted electric guitar plays a repetitive, palm-muted riff centered on a low E pedal tone. The drum kit features a dry, punchy snare and a resonant kick drum playing a syncopated pattern that emphasizes the first and third beats. A distorted bass guitar doubles the guitar riff. The tempo is 120 BPM in 4/4 time. The guitar tone uses high gain with a mid-range boost.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[palm-muted distorted electric guitar riff]\n[syncopated kick drum and snare enter]\n[distorted bass guitar enters]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "0e7d2fe7-f357-49f7-bf93-3ad089f804ea",
+      "tags": "Hard rock drum solo. The performance features a high-fidelity acoustic drum kit with a resonant, punchy kick drum, a crisp snare with a bright crack, and multiple rack and floor toms. The drummer executes rapid-fire sixteenth-note fills across the toms and snare. The hi-hat is played partially open for a washier texture, while the ride cymbal is struck on the bell for a piercing, rhythmic accent. Frequent crash cymbal hits punctuate the phrases. The recording has a natural room reverb with a slight compression on the overheads. 120 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[snare and hi-hat count-in]\n\n[Main Section]\n[driving kick drum, syncopated snare hits]\n[rapid sixteenth-note tom fills]\n[open hi-hat wash]\n[ride cymbal bell accents]\n[crash cymbal hits on downbeats]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "c52c815e-07db-4c2c-8e07-90ed5856727e",
+      "tags": "Hardcore punk with heavy thrash metal influence. Distorted electric guitars play fast, palm-muted down-strokes and rapid power chord transitions. The bass guitar follows the guitar riffs with a thick, overdriven tone. Drums feature a high-tempo d-beat pattern with a sharp, cracking snare and constant eighth-note hi-hat hits. Vocals are shouted in a rhythmic, aggressive hardcore style with high-pitched screams layered in the background. The recording has a raw, lo-fi aesthetic with minimal stereo separation. Tempo is 185 BPM in the key of E minor.",
+      "prompt": "[Intro]\n[fast distorted guitar riff, d-beat drumming, bass enters]\n[high-pitched vocal scream]\n\n[Verse 1]\n[shouted male vocals]\nStep back! [cymbal crash]\nGet the fuck back!\n[palm-muted guitar chugging]\nStep back!\nGet the fuck back!\n\n[Chorus]\n[faster tempo, rapid snare hits]\nGo! Go! Go! Go!\n[feedback swell]\nGo! Go! Go! Go!\n[guitar solo with heavy wah effect]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T16:20:25"
+}

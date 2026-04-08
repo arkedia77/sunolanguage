@@ -1,0 +1,34 @@
+{
+  "id": 40,
+  "title": "Take Five",
+  "artist": "The Dave Brubeck Quartet",
+  "genre": "Jazz",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "76a551c0-869f-4666-b29a-bd296473473c",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated jazz chords with a steady thumb-plucked bassline on beats 1 and 3. A shaker maintains a constant sixteenth-note pattern. The percussion features a woodblock or rimshot playing a 3-2 son clave pattern. A melodic flute enters with legato phrasing, utilizing vibrato on sustained notes and occasional trills. The arrangement is minimalist, focusing on the interplay between the rhythmic guitar comping and the breathy flute melody. 120 BPM. Key of C Major. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated nylon string acoustic guitar, steady shaker]\n\n[Main Theme]\n[flute enters with legato melody]\n[woodblock playing 3-2 clave pattern]\n\n[Bridge]\n[flute performs melodic trills]\n[guitar continues rhythmic comping]\n\n[Outro]\n[flute melody fades]\n[final acoustic guitar chord sustain]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "1aaeccca-d11e-44d2-8d40-e1011e493247",
+      "tags": "Hard rock. Distorted electric guitar plays a syncopated, palm-muted riff centered on E. A second electric guitar provides sustained power chords and melodic lead fills with high-gain saturation. The bass guitar follows the root notes of the guitar riff with a gritty, overdriven tone. Drums feature a heavy, compressed kick and a crisp snare with a short plate reverb. The arrangement follows a linear progression with a focus on rhythmic interplay between the kick drum and the muted guitar chugging. 120 BPM. 4/4 time signature. Key of E minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[palm-muted distorted electric guitar riff]\n[kick drum enters on quarter notes]\n\n[Main Section]\n[full drum kit enters with backbeat snare]\n[overdriven bass guitar locks with kick drum]\n[lead electric guitar enters with sustained power chords]\n\n[Bridge]\n[guitar riff becomes more syncopated]\n[crash cymbal accents]\n\n[Outro]\n[sustained guitar feedback]\n[final kick drum hit]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "f79f6eae-584d-4239-acda-3f0502dfcf61",
+      "tags": "Percussion solo featuring a high-pitched, resonant woodblock and a dry, low-tuned kick drum. The woodblock performs a syncopated, repetitive rhythmic pattern consisting of two eighth notes followed by a quarter note rest. The kick drum enters on the third beat of every second measure with a single, muffled strike. The recording features a natural room reverb with a short decay. The tempo is 100 BPM in 4/4 time. The woodblock hits are consistent in velocity and timbre throughout the sequence.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated woodblock rhythm]\n\n[Main Pattern]\n[woodblock continues]\n[muffled kick drum enters on beat 3 of every second bar]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "24ca70e0-6f95-4d54-b2d6-d4f798f59e60",
+      "tags": "Lo-fi hip hop. A Rhodes electric piano plays a repetitive four-chord progression with a soft tremolo effect and high-frequency roll-off. The drum kit consists of a muffled, thumping kick drum and a crisp snare with a slight swing. A deep, rounded sub-bass follows the root notes of the piano chords. A recurring melodic motif is played on a muted electric guitar with a clean tone and short decay. Vinyl crackle and ambient hiss are layered throughout the track. 85 BPM. 4/4 time signature. Key of C minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss]\n[Rhodes electric piano enters with four-chord progression]\n\n[Main Section]\n[muffled kick drum and crisp snare enter with swung rhythm]\n[sub-bass enters following piano root notes]\n[muted electric guitar plays melodic motif]\n\n[Outro]\n[drums and bass drop out]\n[Rhodes piano fades out]\n[vinyl crackle continues to silence]"
+    }
+  },
+  "status": "ok",
+  "retried_at": "2026-04-07T15:10:29"
+}

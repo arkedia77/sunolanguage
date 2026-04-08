@@ -1,0 +1,33 @@
+{
+  "id": 87,
+  "title": "Near Light",
+  "artist": "Ólafur Arnalds",
+  "genre": "Lo-fi / Neo-classical / Piano",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "c9ad0f5c-5bd4-4777-b099-4d7c2015afb0",
+      "tags": "Contemporary classical solo piano composition. The piece features a repetitive, minimalist structure centered around a delicate, high-register ostinato. A steady, rhythmic pulse is maintained through constant eighth-note patterns in the right hand, while the left hand provides sparse, resonant bass notes and mid-range harmonic shifts. The performance uses a felt piano or soft-pedal technique to achieve a muted, intimate timbre with audible mechanical noise from the piano keys and dampers. The tempo is approximately 72 BPM in 4/4 time, likely in the key of G Major. The arrangement evolves through subtle dynamic swells and the introduction of a secondary melodic layer that weaves through the established rhythmic framework. High-frequency resonance and a natural room reverb are prominent in the mix.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[soft felt piano enters with repetitive high-register eighth-note ostinato]\n[subtle mechanical key noise]\n\n[Section A]\n[sparse bass notes enter in the left hand]\n[sustained pedal resonance]\n\n[Section B]\n[harmonic shift to minor tonality]\n[increased velocity on right-hand melodic accents]\n\n[Section C]\n[return to home key]\n[gradual decrescendo]\n[final resonant chord held until silence]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "10bf21a5-0441-4e8e-ba2b-3eb7c3857184",
+      "tags": "Cinematic ambient electronic. A deep, resonant sub-bass pulse anchors the track at 60 BPM in the key of D minor. A granular, shimmering pad with a slow attack and long release creates a dense harmonic wash. High-frequency digital textures and glitchy, percussive clicks pan across the stereo field. A minimalist piano melody enters with heavy hall reverb, playing sparse, isolated notes. Sustained cello-like synth drones provide mid-range thickness, utilizing subtle pitch bends and slow filter sweeps. The arrangement is atmospheric and non-linear, focusing on textural evolution rather than traditional melodic progression.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass pulse enters]\n[granular synth pad swells with long reverb]\n\n[Section A]\n[sparse, reverberant piano notes]\n[high-frequency digital glitch textures and clicks]\n\n[Section B]\n[sustained mid-range synth drone with filter sweep]\n[sub-bass intensifies with rhythmic pulsing]\n\n[Outro]\n[piano melody fades]\n[pad textures dissolve into white noise]\n[final sub-bass decay]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "4f7a2706-0f56-4bb3-9391-2317bb89992c",
+      "tags": "Alternative rock with a heavy emphasis on rhythmic syncopation and dynamic shifts. The track features a distorted electric guitar playing a staccato, palm-muted riff that alternates with open, ringing power chords. A prominent electric bass follows the guitar's rhythmic pattern with a gritty, overdriven tone. The drums consist of a tight snare, a punchy kick drum, and consistent hi-hat eighth notes, occasionally opening up for crash cymbal accents. The tempo is 120 BPM in 4/4 time. The arrangement is centered around a repeating four-bar motif that builds in intensity through the addition of layered guitar tracks and increased drum velocity. The production is dry with minimal reverb, focusing on the raw, mechanical interplay between the instruments.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato palm-muted electric guitar riff]\n[bass enters with overdriven tone]\n\n[Section A]\n[tight drum kit enters, eighth-note hi-hats]\n[syncopated kick and snare pattern]\n\n[Section B]\n[guitar shifts to open power chords]\n[crash cymbal accents]\n[layered second guitar enters with sustained notes]\n\n[Outro]\n[drums drop out]\n[fading distorted guitar feedback]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "c0064f77-b7e8-4e67-b596-df62b764abf3",
+      "tags": "Ambient electronic track featuring a prominent, resonant analog synthesizer lead playing a slow, descending melodic motif. A deep, sub-heavy bass synth provides a steady, sustained low-end presence. Shimmering, high-frequency digital pads with long decay times create a dense atmospheric wash. A minimalist percussion section consists of a soft, muffled kick drum on the downbeats and a crisp, high-passed electronic snare with heavy plate reverb. The tempo is 72 BPM in the key of C minor. Subtle white noise sweeps and granular synthesis textures transition between phrases. The arrangement is sparse, focusing on the interplay between the melodic synth lead and the evolving harmonic pads.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[soft, resonant analog synth melody enters]\n[deep sub-bass sustain]\n\n[Main Section]\n[shimmering digital pads swell]\n[muffled kick drum on downbeats]\n[high-passed electronic snare with heavy reverb]\n\n[Outro]\n[percussion drops out]\n[granular textures and white noise sweeps]\n[synth melody fades into atmospheric pads]"
+    }
+  },
+  "status": "ok"
+}

@@ -1,0 +1,34 @@
+{
+  "id": 90,
+  "title": "Green Onions",
+  "artist": "Booker T. & the M.G.'s",
+  "genre": "Funk / Soul / Blues Instrumental",
+  "stems": {
+    "other": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "e9c005c0-3d3e-4ff2-8987-4d77a225e6cb",
+      "tags": "Funk-rock instrumental featuring a prominent, syncopated electric bassline with a bright, percussive tone. The bass plays a repetitive sixteenth-note riff emphasizing the root and octave. A clean electric guitar provides rhythmic staccato scratches and muted strums on the off-beats. The drum kit maintains a steady groove with a crisp snare and tight hi-hat patterns. A subtle, low-frequency synthesizer pad provides harmonic depth in the background. The tempo is 110 BPM in the key of E minor. The arrangement is minimalist, focusing on the interplay between the bass and the dry, punchy drum production.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[percussive slap bass riff enters]\n[tight drum kit with closed hi-hats]\n\n[Main Groove]\n[staccato muted electric guitar scratches]\n[syncopated bassline continues with octave jumps]\n[steady kick drum and snare backbeat]\n\n[Bridge]\n[bass riff simplifies to sustained root notes]\n[subtle low-end synth pad enters]\n\n[Outro]\n[guitar scratches fade out]\n[solo bass riff for two bars]\n[final kick drum hit]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "452b5c65-7dff-4baf-bf66-85e682b37ae9",
+      "tags": "Drum break, funk and soul style. The kit consists of a dry, dampened kick drum, a crisp snare with a short decay, and closed hi-hats. The pattern features a syncopated kick drum placement that interacts with a steady eighth-note hi-hat rhythm. The snare hits are consistent on the backbeat with occasional ghost notes providing rhythmic texture. The recording has a vintage, analog character with minimal room ambience and a tight, focused low-end. 105 BPM, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[four-bar drum break enters]\n[dry kick drum, crisp snare, closed hi-hats]\n\n[Main Pattern]\n[syncopated kick drum, steady eighth-note hi-hats]\n[consistent snare backbeat on 2 and 4]\n[subtle ghost notes on snare]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "0a260fd4-34c2-48b4-b162-b3601d8b38d4",
+      "tags": "Hard rock with heavy metal influences. The track features a prominent, distorted electric guitar playing a syncopated, palm-muted riff that emphasizes the downbeat. A high-gain bass guitar doubles the guitar riff, providing a thick low-end. The drum kit consists of a punchy kick drum, a crisp snare hitting on beats two and four, and consistent eighth-note hi-hat patterns. The tempo is 120 BPM in 4/4 time. The arrangement is centered around a repetitive, driving instrumental groove with a raw, live-room production aesthetic. The guitar tone is saturated with mid-range bite and sustain. The overall structure is a continuous loop of the main riff with minor variations in drum fills.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar enters with palm-muted syncopated riff]\n[bass guitar enters doubling the guitar riff]\n\n[Main Section]\n[drum kit enters with a steady backbeat]\n[kick drum follows the guitar rhythm]\n[snare on beats 2 and 4]\n[closed hi-hats playing eighth notes]\n\n[Bridge]\n[guitar riff continues with increased intensity]\n[occasional crash cymbal accents]\n\n[Outro]\n[instruments sustain final chord]\n[reverb tail fades out]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T19:33:45"
+}

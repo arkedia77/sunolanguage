@@ -1,0 +1,34 @@
+{
+  "id": 66,
+  "title": "Love on a Real Train",
+  "artist": "Tangerine Dream (Risky Business OST)",
+  "genre": "Electronic / Ambient",
+  "stems": {
+    "other": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "df957039-10cf-4c66-8070-ba4314fe4f92",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, overdriven kick drum drives the rhythm at 130 BPM in 4/4 time. A resonant, metallic synth bass sequence alternates between a steady eighth-note pulse and syncopated sixteenth-note patterns. High-frequency industrial textures, including white noise bursts and metallic clangs, function as percussion. A dark, filtered sawtooth lead synth enters with a repetitive, minor-key three-note motif. Periodic bit-crushed vocal samples are processed through heavy delay and ring modulation, rendering them as rhythmic textures rather than melodic lines. The arrangement features sudden low-pass filter sweeps on the master bus and gated reverb on the snare-like industrial hits.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters, four-on-the-floor]\n[metallic percussion hits with long reverb tails]\n\n[Section A]\n[pulsing synth bass enters, eighth-note pattern]\n[high-frequency white noise hats]\n[distorted vocal textures, heavily processed]\n\n[Section B]\n[resonant sawtooth lead synth enters, minor-key motif]\n[syncopated sixteenth-note bass variations]\n[bit-crushed industrial clangs]\n\n[Breakdown]\n[kick drum drops out]\n[low-pass filter sweep on synth lead]\n[atmospheric drone swells]\n\n[Outro]\n[kick drum re-enters]\n[instruments gradually fade out via high-cut filter]\n[final distorted kick hit]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "a3435532-d47b-4a4a-924e-d44011286d82",
+      "tags": "Industrial techno with a heavy, distorted aesthetic. A distorted kick drum drives the rhythm with a resonant, overdriven sub-tail. A metallic, percussive synth sequence provides a constant, syncopated sixteenth-note pattern. High-frequency white noise bursts and filtered industrial textures create rhythmic accents. A resonant, acid-style synth lead enters with a sweeping low-pass filter. The tempo is 140 BPM in the key of D minor. The track features a minimalist, repetitive structure focused on timbral evolution and rhythmic density.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with heavy sub-resonance]\n[metallic sixteenth-note synth sequence enters]\n\n[Section A]\n[white noise percussion hits]\n[filtered industrial textures]\n[closed hi-hats on off-beats]\n\n[Section B]\n[resonant acid synth lead enters with filter sweep]\n[increased distortion on kick drum]\n[high-frequency rhythmic glitch sounds]\n\n[Outro]\n[acid synth fades out]\n[percussion layers drop out leaving only the kick and metallic sequence]\n[final kick drum hit with long reverb tail]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "7c1fcba1-8bf9-4aa9-bdfa-51edb0b8eb48",
+      "tags": "Ambient drone with heavy cinematic sound design. A low-frequency sub-bass pulse oscillates at approximately 60 BPM. Layered over the sub-bass are metallic, resonant textures that shift in timbre through manual filter sweeps and granular synthesis. High-frequency shimmering pads with long decay times create a sense of vast space. Periodic mechanical whirring and industrial clangs occur at irregular intervals, processed with deep hall reverb and stereo delays. The harmonic content is static, centered around a dark, dissonant tonal center. No rhythmic percussion or melodic leads are present.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone enters]\n[distant metallic resonance]\n\n[Main Section]\n[filtered pad swells with long reverb tail]\n[granular texture shifts]\n[intermittent industrial clangs and mechanical whirring]\n[high-frequency shimmering synth layers]\n\n[Outro]\n[high frequencies fade out]\n[sub-bass pulse remains until final cutoff]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T17:42:55"
+}

@@ -1,0 +1,32 @@
+{
+  "id": 69,
+  "title": "Svefn-g-englar",
+  "artist": "Sigur Rós",
+  "genre": "Post-Rock",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "9e507878-2082-4281-87b4-0bb4735c0e8c",
+      "tags": "Ambient electronic soundscape. A high-frequency sine wave oscillator generates a steady, unmodulated drone. A resonant low-pass filter sweep moves slowly across a white noise generator, creating a rhythmic, percussive texture resembling a synthesized shaker or hi-hat. A digital delay with high feedback creates a rhythmic pulse at 120 BPM. The piece is centered on a static C5 pitch. A granular synthesis engine processes a metallic sample, resulting in sporadic, high-pitched chirps and digital artifacts that pan randomly across the stereo field. The dynamic level remains constant with no traditional melodic or harmonic progression.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[high-frequency sine wave drone, white noise with resonant filter sweep]\n\n[Main Section]\n[digital delay pulse at 120 BPM]\n[granular synthesis chirps and metallic artifacts]\n\n[Outro]\n[filter sweep narrows, sine drone fades]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "b67d15dd-eb7e-4237-8ea1-e0864ed71f29",
+      "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail provides the rhythmic core at 130 BPM in the key of F minor. A high-pass filtered white noise riser sweeps upward over four bars. A metallic, percussive synth sequence plays a repetitive sixteenth-note pattern with a short decay and high resonance. A low-frequency oscillator modulates the cutoff of a gritty sawtooth bassline. Distorted industrial hits and clangs occur on the off-beats. The track features a dense, compressed mix with heavy sidechain compression on all melodic elements triggered by the kick drum. A resonant band-pass filter sweep moves across a background drone.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-tail, metallic percussion hits]\n[white noise riser sweep]\n\n[Main Section]\n[sixteenth-note resonant synth sequence enters]\n[sidechained sawtooth bassline]\n[distorted industrial clangs on off-beats]\n[resonant band-pass filter sweep on background drone]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "67fecbe5-a8d7-4355-b0b3-585054011ea2",
+      "tags": "Hardcore punk. Distorted electric guitar plays rapid down-stroked power chords in a constant eighth-note rhythm. The bass guitar follows the guitar progression with a thick, overdriven tone. Drums utilize a fast d-beat pattern with a prominent, uncompressed snare and constant eighth-note hi-hat hits. Vocals are shouted with a raspy, aggressive delivery and minimal melodic variation. The recording has a raw, lo-fi aesthetic with high-frequency saturation. 180 BPM. Key of E minor. 4/4 time signature.",
+      "prompt": "[Intro]\n[fast distorted guitar power chords, d-beat drums, overdriven bass]\n\n[Verse 1]\n[shouted male vocals]\nSystematic lies feed the machine\nCrushing the spirit of the in-between [cymbal crash]\nNo more silence, no more fear\nThe end of the cycle is drawing near\n\n[Chorus]\n[vocals become more rhythmic and percussive]\nBreak the chain! [guitar slide]\nBreak the chain! [snare roll]\nWe won't be part of your losing game\nBreak the chain!\n\n[Outro]\n[feedback swell]\n[abrupt stop]"
+    },
+    "vocals": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T18:01:40"
+}

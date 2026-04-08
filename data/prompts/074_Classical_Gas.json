@@ -1,0 +1,33 @@
+{
+  "id": 74,
+  "title": "Classical Gas",
+  "artist": "Tommy Emmanuel",
+  "genre": "Guitar Instrumental",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "f7514d8f-a68f-4f11-b029-8c96e0c6704f",
+      "tags": "Acoustic fingerstyle guitar solo in E major at 115 BPM. The piece features complex percussive techniques including palm mutes, string slaps, and body hits that simulate a kick and snare pattern. Rapid alternate picking and hammer-on/pull-off sequences create fluid melodic runs. The arrangement utilizes frequent natural harmonics and thumb-fretted bass notes to maintain a polyphonic texture. A mid-song breakdown features rhythmic tapping on the guitar body and aggressive strumming with a percussive backbeat. The recording has a dry, close-mic proximity effect with minimal room reverb.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[bright steel-string acoustic guitar, rapid fingerpicked arpeggios]\n[natural harmonics at the 12th fret]\n\n[Main Theme]\n[percussive palm mutes and string slaps simulating a backbeat]\n[syncopated bass line played with the thumb]\n[hammer-on and pull-off melodic flourishes]\n\n[Percussive Bridge]\n[rhythmic hits on the guitar body]\n[aggressive strumming with muted strings]\n[rapid descending scale runs]\n\n[Outro]\n[slowing tempo, rubato feel]\n[final sustained E major chord with natural harmonics]\n[faint vocal hum at the very end]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "1b5d2e40-d26b-4fdc-ae80-9ab90e360b63",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and synchronized power chords. A prominent electric bass follows the guitar rhythm with a thick, overdriven tone. The drum kit features a punchy kick, a crisp snare on the backbeat, and frequent use of double-kick patterns and crash cymbal accents. A blues-influenced electric guitar solo uses wah-wah effects, rapid alternate picking, and wide vibrato. The tempo is 130 BPM in 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging riff, palm-muted]\n[drums enter with heavy kick and snare]\n[bass guitar enters with overdriven tone]\n\n[Main Theme]\n[synchronized guitar and bass power chords]\n[driving drum beat with eighth-note hi-hats]\n\n[Guitar Solo]\n[lead electric guitar with wah-wah pedal]\n[rapid pentatonic scales and sustained bends]\n[double-kick drum fills]\n\n[Outro]\n[sustained guitar feedback]\n[final crash cymbal hit]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "7b4b8d34-91b2-4991-985f-24d44dd32d10",
+      "tags": "Experimental percussion ensemble piece. The arrangement features a diverse array of idiophones and membranophones including woodblocks, cowbells, shakers, and multiple tuned drums. The rhythmic structure is built on polyrhythmic layers with a constant eighth-note pulse. A prominent woodblock pattern plays a syncopated 3-3-2 rhythm while a lower-pitched drum accents the downbeats. Mid-way through, a metallic shaker enters with a sixteenth-note subdivision. The piece concludes with a synchronized rhythmic unison across all percussion instruments. 120 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[woodblock enters with syncopated pattern]\n[low-tuned drum accents on beat 1]\n\n[Section A]\n[cowbell enters playing off-beats]\n[shaker enters with sixteenth-note pattern]\n[multiple hand drums layering polyrhythms]\n\n[Section B]\n[intensity increases with louder strikes]\n[rapid woodblock rolls]\n\n[Outro]\n[all instruments play in rhythmic unison]\n[final resonant drum hit]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "67087e1c-79ba-4b29-a6d4-f03b36a91024",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A prominent electric bass follows the guitar rhythm with a thick, overdriven tone. The drum kit features a punchy kick, a crisp snare, and active hi-hat and cymbal work. A high-pitched male vocal performs with a gritty, aggressive delivery, utilizing sustained belts and occasional vibrato. The track is in 4/4 time at 135 BPM in the key of E minor.",
+      "prompt": "[Intro]\n[distorted electric guitar riff, palm-muted chugging]\n[drums enter with snare hits and crash cymbals]\n[bass guitar enters with overdriven tone]\n\n[Verse 1]\n[gritty male vocals]\nI'm a man on a mission\nWith a heart of steel\nI'm a force of nature\nAnd I'm coming for the kill [guitar slide]\n\n[Chorus]\n[full band intensity, driving rhythm]\nI'm the king of the mountain\nI'm the lord of the land\nI'm the master of my destiny\nAnd I'm taking a stand [sustained vocal note]\n\n[Guitar Solo]\n[fast pentatonic scale runs, wah-wah pedal effect]\n[double-time drum feel]\n\n[Outro]\n[heavy power chords]\n[vocal ad-lib: yeah!]\n[final crash cymbal, guitar feedback]"
+    }
+  },
+  "status": "ok"
+}

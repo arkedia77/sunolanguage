@@ -1,0 +1,32 @@
+{
+  "id": 26,
+  "title": "Merry Christmas Mr. Lawrence",
+  "artist": "Ryuichi Sakamoto",
+  "genre": "Film Score / OST",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "8b60879b-d3b4-4e0e-b939-b9809e38731f",
+      "tags": "Cinematic ambient piano solo. A single acoustic grand piano plays a minimalist, repetitive motif in the key of C minor at 72 BPM. The performance features a high degree of sustain pedal usage, creating overlapping harmonic resonances. The left hand plays steady, low-register whole notes while the right hand executes a descending three-note melodic pattern. The recording captures mechanical noise from the piano hammers and dampers. A long-tail hall reverb is applied to the entire signal, softening the attack of the notes.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[soft acoustic piano enters, heavy sustain pedal]\n\n[Main Theme]\n[repetitive descending minor melody, low-register bass notes]\n[mechanical hammer noise audible]\n\n[Outro]\n[final chord rings out with long reverb tail]\n[silence]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "3d350353-9c8d-41c1-aaea-e4a7e10e7db1",
+      "tags": "Lo-fi hip hop. A Rhodes piano plays a repetitive four-chord progression with a slight tremolo effect and high-frequency roll-off. The drum kit features a muffled, low-pass filtered kick drum and a crisp snare with a short decay. A sub-bass synth follows the root notes of the piano chords. A vinyl crackle texture persists throughout the track. The tempo is 85 BPM in the key of C major. The arrangement is minimalist with subtle variations in the piano velocity.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle, Rhodes piano chords with tremolo]\n\n[Main Loop]\n[muffled kick drum enters, crisp snare on beats 2 and 4]\n[sub-bass synth follows piano root notes]\n\n[Outro]\n[drums and bass drop out]\n[Rhodes piano fades out with vinyl crackle]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "9c49c63f-3783-41e9-b980-6f3f9d5f99ba",
+      "tags": "Lo-fi hip hop. A Rhodes electric piano plays a repetitive four-chord progression with a soft tremolo effect and high-frequency roll-off. A sampled acoustic drum kit features a dry, thumping kick drum and a crisp snare with a slight swing. A deep, sub-heavy synth bass follows the root notes of the piano chords. A subtle vinyl crackle layer persists throughout the track. A muted trumpet with heavy reverb plays short, melodic fragments in the upper register. 85 BPM. C Minor. 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle begins]\n[Rhodes electric piano plays four-chord progression]\n\n[Main Section]\n[sampled acoustic drums enter with swung eighth notes]\n[sub-bass enters]\n[muted trumpet with reverb plays melodic fragments]\n\n[Outro]\n[drums and bass drop out]\n[Rhodes piano fades out]\n[vinyl crackle fades to silence]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T14:02:01"
+}

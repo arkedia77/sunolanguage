@@ -1,0 +1,33 @@
+{
+  "id": 32,
+  "title": "Lacrimosa Dominae",
+  "artist": "Immediate Music",
+  "genre": "Hybrid / Cinematic",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "90ea9bc8-2fbf-4648-8d2e-48c6123e756b",
+      "tags": "Cinematic orchestral score with a focus on rhythmic tension and dynamic layering. The arrangement features a staccato string section performing a driving ostinato in 4/4 time at 120 BPM. A deep, resonant concert bass drum and orchestral timpani provide heavy, syncopated accents. Brass sections, specifically trombones and horns, enter with swelling crescendos and sharp, accented stabs. High-register violins execute rapid spiccato runs and tremolo textures. A grand piano performs low-octave rhythmic doubling of the bass line. The piece utilizes a minor key, likely D minor, with frequent use of dissonant intervals and chromatic clusters in the woodwinds to build suspense. The percussion section expands to include metallic hits and anvil strikes during peak intensity. The structure follows a linear build, increasing in harmonic density and volume through the addition of layered horn counter-melodies and rapid-fire snare rolls.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low string ostinato, staccato cellos and basses]\n[distant orchestral percussion hits]\n\n[Build Up]\n[viola and second violin staccato layering]\n[timpani rolls, crescendo]\n[piano low-register rhythmic accents]\n\n[Main Theme]\n[brass section enters with sustained swells]\n[staccato string ostinato continues, increased velocity]\n[heavy concert bass drum hits on downbeats]\n\n[Climax]\n[high violin tremolo]\n[full brass stabs, accented horns and trombones]\n[rapid snare drum rolls and metallic percussion accents]\n[woodwind chromatic runs]\n\n[Outro]\n[sudden decrescendo]\n[final low string note, sustained with reverb tail]\n[single piano note resonance]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "77fefcae-ab9f-4f7d-9693-be9b235ef90a",
+      "tags": "Industrial techno with heavy distortion and rhythmic noise. A distorted, resonant kick drum hits on every quarter note, creating a saturated low-end thud. A metallic, high-frequency percussion loop provides a constant 16th-note rhythmic texture. A low-frequency sawtooth synth pulse syncopates against the kick. Periodic industrial sound effects, resembling grinding metal and mechanical hiss, are processed with heavy bit-crushing and delay. The track maintains a steady 135 BPM in the key of C minor. High-pass filtered noise sweeps rise and fall every eight bars. A distorted snare-like noise hit occurs on beats two and four, layered with a short, metallic reverb tail. The arrangement is minimalist, focusing on timbral evolution and rhythmic density rather than melodic progression.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters, four-on-the-floor]\n[metallic 16th-note percussion loop]\n\n[Section A]\n[syncopated sawtooth synth pulse enters]\n[bit-crushed mechanical noise hits]\n[high-pass filtered noise sweep]\n\n[Section B]\n[distorted snare noise on beats 2 and 4]\n[increased saturation on kick drum]\n[resonant synth modulation]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "c2a6ba99-d540-427b-b698-f432f16aeb41",
+      "tags": "Hard rock instrumental featuring a heavy, syncopated drum groove and distorted electric guitar. The track opens with a rhythmic pattern of four heavy kick drum hits followed by a snare crack, repeating four times. A high-gain electric guitar enters with a staccato, palm-muted riff that mirrors the kick drum pattern. The drums transition into a driving backbeat with eighth-note hi-hats and a prominent snare on beats two and four. The guitar riff evolves into a more melodic, descending power chord progression while maintaining a gritty, overdriven tone. The tempo is 120 BPM in the key of E minor, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[four heavy kick drum hits, snare hit]\n[four heavy kick drum hits, snare hit]\n[four heavy kick drum hits, snare hit]\n[four heavy kick drum hits, snare hit]\n\n[Main Theme]\n[distorted electric guitar enters with staccato palm-muted riff]\n[driving drum beat with eighth-note hi-hats]\n[descending power chord progression]\n[crash cymbal accents]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "304ae0b5-16bb-4f42-abc7-8ec455aa723b",
+      "tags": "Symphonic metal with operatic choral arrangements and heavy orchestral elements. The track features a full SATB choir performing Latin-style liturgical chants. Distorted electric guitars play palm-muted rhythmic chugging and power chords, synchronized with a double-kick drum pattern. A prominent orchestral section includes staccato strings, brass swells, and cinematic percussion. The arrangement alternates between dense, wall-of-sound metal sections and melodic, woodwind-led interludes featuring a solo flute or oboe melody. The tempo is 140 BPM in 4/4 time, likely in the key of D minor. High-gain guitar tones are layered with clean, staccato string ostinatos. The production is polished with significant reverb on the choral vocals and a wide stereo field for the orchestral layers.",
+      "prompt": "[Intro]\n[Staccato strings, heavy orchestral percussion]\n[SATB Choir enters with operatic projection]\n\n[Chorus]\nO-se-so-mi-so-da-re [distorted guitar chugging enters]\nO-se-so-mi-so-da-re\nAm-be-re-mi-no-da-re\nSo-me-so-mi-u-ge-re\n\n[Verse 1]\n[Drums and guitars drop out]\n[Solo woodwind melody, soft string pads]\n[SATB Choir, piano dynamic]\nO-se-so-mi-so-da-re\nO-se-so-mi-so-da-re\nAm-be-re-mi-no-da-re\nSo-me-so-mi-u-ge-re\n\n[Chorus]\n[Full band enters, double-kick drumming]\nO-se-so-mi-so-da-re\nO-se-so-mi-so-da-re\nAm-be-re-mi-no-da-re\nSo-me-so-mi-u-ge-re\n\n[Outro]\n[Orchestral hit]\n[Sustained choir chord fades out]"
+    }
+  },
+  "status": "ok"
+}

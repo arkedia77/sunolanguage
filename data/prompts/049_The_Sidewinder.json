@@ -1,0 +1,30 @@
+{
+  "id": 49,
+  "title": "The Sidewinder",
+  "artist": "Lee Morgan",
+  "genre": "Jazz",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "5da9832a-32dd-44d8-bdc7-516d4068e8ee",
+      "tags": "Acoustic blues featuring a solo resonator guitar played with a slide. The performance utilizes a steady alternating thumb bass pattern on the lower strings while the slide executes melodic phrases and microtonal vibrato on the higher strings. Frequent percussive string slaps and rhythmic muting define the groove. The guitar is tuned to Open G. 105 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[solo resonator guitar, rhythmic thumb-bass pattern]\n[slide guitar melody with heavy vibrato]\n\n[Main Theme]\n[syncopated slide riffs, percussive string slaps]\n[descending turnaround phrase]\n\n[Outro]\n[final slide glissando up the neck]\n[staccato tonic chord]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "8b4b96b7-e4e6-46df-ae17-5e999b5c601c",
+      "tags": "Drum solo featuring a standard acoustic drum kit. The performance centers on a syncopated snare and kick pattern with consistent eighth-note hi-hat accents. The snare features a crisp, dry crack with minimal ring. The kick drum is punchy with a short decay. The rhythm utilizes ghost notes on the snare to create a rolling internal groove between the primary backbeats. The hi-hat is played tightly closed, providing a sharp, percussive tick. The tempo is 110 BPM in 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated kick and snare pattern, closed hi-hat eighth notes]\n\n[Main Groove]\n[snare ghost notes, rhythmic kick variations]\n\n[Outro]\n[final snare hit]"
+    },
+    "vocals": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T16:13:48"
+}

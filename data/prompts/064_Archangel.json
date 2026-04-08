@@ -1,0 +1,34 @@
+{
+  "id": 64,
+  "title": "Archangel",
+  "artist": "Burial",
+  "genre": "Electronic / Ambient",
+  "stems": {
+    "other": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "ffb2af48-d695-495b-ba06-67ae3eef1247",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, overdriven kick drum provides a relentless four-on-the-floor pulse at 130 BPM in the key of F minor. A resonant, metallic synth sequence with a high-pass filter sweep creates a rhythmic ostinato. Gritty, bit-crushed percussion layers and white noise bursts punctuate the off-beats. A deep, sub-heavy bassline follows the kick pattern with slight syncopation. Distorted vocal samples are processed through a granular delay and heavy saturation, appearing as rhythmic textures rather than melodic lines. The arrangement features sudden industrial hits and mechanical sound effects, utilizing a dark, aggressive sound palette with minimal melodic development.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters, 130 BPM]\n[metallic synth sequence with resonant filter sweep]\n\n[Section A]\n[bit-crushed percussion layers]\n[white noise bursts on off-beats]\n[distorted, processed vocal textures enter]\n\n[Section B]\n[sub-bass reinforcement]\n[industrial mechanical hits]\n[granular delay effects on synth stabs]\n\n[Outro]\n[percussion layers drop out]\n[fading distorted kick and filtered synth]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "69ef215b-d8b5-4625-9cad-01d07cbd2535",
+      "tags": "Progressive house with a driving 128 BPM tempo in the key of G minor. The track features a prominent, sidechained sawtooth bassline that pulses in syncopated eighth notes against a steady kick drum. A bright, resonant lead synth plays a repetitive four-bar melodic motif characterized by rapid 16th-note arpeggios and frequent filter cutoff automation. Layered over the low-end are crisp, high-frequency percussion elements including open hi-hats on the off-beats and a sharp snare on beats two and four. Atmospheric pads with long release times provide harmonic density in the background, while occasional white noise risers and downlifters manage energy transitions between sections. The arrangement utilizes a subtractive breakdown where the drums drop out, leaving only the filtered lead synth and pads before a sudden reintroduction of the full percussion and bass layers.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[muted kick drum, low-pass filtered synth pad]\n[hi-hats enter, 16th-note pattern]\n\n[Build-up]\n[white noise riser begins]\n[snare roll accelerates]\n[filter cutoff on lead synth increases]\n\n[Drop]\n[sidechained sawtooth bass enters]\n[full kick and snare pattern]\n[arpeggiated lead synth melody]\n\n[Breakdown]\n[drums and bass drop out]\n[reverb-heavy synth pads]\n[filtered lead synth motif]\n\n[Outro]\n[bass and lead synth fade out]\n[kick drum and hi-hats continue]\n[final synth pad swell]"
+    },
+    "vocals": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T17:32:37"
+}

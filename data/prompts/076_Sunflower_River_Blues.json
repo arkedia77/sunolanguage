@@ -1,0 +1,34 @@
+{
+  "id": 76,
+  "title": "Sunflower River Blues",
+  "artist": "John Fahey",
+  "genre": "Guitar Instrumental",
+  "stems": {
+    "other": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "1691e827-2a67-449b-8797-98da01d8c74e",
+      "tags": "Lo-fi hip hop instrumental. A dusty, sampled acoustic piano plays a repetitive four-bar progression featuring jazz-influenced seventh chords. The drum kit consists of a muffled, thumping kick drum and a crisp, slightly off-grid snare with a high-frequency roll-off. A subtle, melodic electric bass follows the piano's root notes with occasional syncopated passing tones. Atmospheric vinyl crackle and a low-level hiss persist throughout the track. A recurring three-note Rhodes electric piano motif appears in the higher register. 88 BPM, C Minor, 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and tape hiss start]\n[muffled acoustic piano enters with jazz chords]\n\n[Main Section]\n[boom-bap drum beat enters with laid-back swing]\n[subtle electric bass enters]\n[high-register Rhodes piano motif repeats every four bars]\n\n[Bridge]\n[drums drop out, piano continues with filter sweep]\n[vinyl crackle becomes more prominent]\n\n[Outro]\n[drums re-enter for two bars]\n[all instruments fade out leaving only vinyl crackle]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "e074ff72-3e52-46b0-8c83-ee73c7e3d738",
+      "tags": "Indie rock. Clean electric guitar plays a repetitive, syncopated arpeggiated riff in 4/4 time. A melodic electric bass line enters, playing eighth-note patterns that outline the chord progression. The drum kit features a steady kick on every beat with a crisp snare on the backbeat and consistent eighth-note closed hi-hats. A second electric guitar provides ambient, sustained melodic fills with light overdrive and reverb. The arrangement maintains a consistent dynamic level throughout the excerpt. Key of G Major. Tempo is 124 BPM.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar arpeggio riff enters]\n\n[Section A]\n[bass guitar enters with melodic eighth-note line]\n[drum kit enters with four-on-the-floor kick and backbeat snare]\n\n[Section B]\n[ambient lead electric guitar enters with sustained melodic fills]\n[rhythm guitar continues arpeggiated pattern]\n[steady eighth-note hi-hats continue]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "41d9dbf7-e415-465f-9a07-b320b86eeca1",
+      "tags": "Indie rock with a prominent post-punk influence. The arrangement features a clean, chorused electric guitar playing a repetitive eighth-note arpeggio pattern. A melodic electric bass plays a counter-melody in the upper register before settling into a driving root-note rhythm. Drums consist of a tight, dry snare and a steady kick with occasional syncopated ghost notes on the snare. A second electric guitar provides ambient, sustained feedback swells and occasional staccato rhythmic stabs. The tempo is 124 BPM in 4/4 time, in the key of A major.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar with chorus effect, arpeggiated eighth notes]\n[melodic electric bass enters in high register]\n\n[Section A]\n[dry snare and kick drum enter, steady backbeat]\n[bass moves to lower register, driving eighth notes]\n\n[Section B]\n[ambient guitar feedback swells]\n[staccato rhythmic guitar stabs on the off-beats]\n[crash cymbal accents]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T18:26:39"
+}

@@ -1,0 +1,32 @@
+{
+  "id": 44,
+  "title": "Maiden Voyage",
+  "artist": "Herbie Hancock",
+  "genre": "Jazz",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "df48342e-9553-474c-89b5-1dc3ffe7dfc1",
+      "tags": "Solo acoustic bass performance. The upright bass utilizes a percussive slap technique where the strings are struck against the fingerboard to create a sharp, rhythmic click on the backbeat. The player alternates between low-register thumb-plucked notes and high-register finger-plucked accents. The performance features rapid chromatic runs and syncopated rhythmic patterns. The recording is dry with minimal room ambience, capturing the mechanical noise of the strings and the woody resonance of the instrument body. 110 BPM. Key of G minor. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[percussive slap on upright bass strings, rhythmic clicking]\n\n[Main Theme]\n[syncopated low-register bass notes, thumb-plucked]\n[high-register finger-plucked accents]\n[chromatic descending bass line]\n\n[Outro]\n[final percussive string slap, resonant low G note]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "41f15b65-6577-4b3b-b88b-9daca4bf73cd",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A double-kick drum kit features rapid sixteenth-note kick patterns and aggressive snare hits. An overdriven electric bass guitar follows the guitar riffs. The track features a high-pitched male vocal with grit and occasional screams. 140 BPM. 4/4 time signature. Key of E minor. The arrangement utilizes frequent tempo-synced guitar stops and rapid-fire drum fills. Lead guitar sections incorporate wah-pedal filtering and fast alternate picking. High-gain distortion is applied to all string instruments.",
+      "prompt": "[Intro]\n[distorted electric guitar chugging, double-kick drums enter]\n[guitar slide]\n\n[Verse 1]\n[gritty male vocals]\nI see the fire in your eyes [palm-muted guitar riff]\nIt's burning through the lies\n[snare roll]\nWe're breaking down the walls tonight [vocal scream]\n\n[Chorus]\n[full band, driving rhythm]\nRise up from the ashes (rise up)\n[power chords]\nTaking back the throne\nRise up from the ashes (rise up)\n[double-time kick drums]\nWe are not alone\n\n[Bridge]\n[drums drop out, feedback swell]\n[staccato guitar hits]\nNo more silence\nNo more pain [vocal growl]\n[guitar solo with wah-pedal]\n\n[Outro]\n[rapid double-kick drums]\nRise up! [vocal scream]\n[final crash cymbal, guitar feedback fades]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "a34dd131-f7a5-419a-88a4-ca38ced3a4ac",
+      "tags": "Traditional Irish Folk. Solo tin whistle in D major performing a lively jig in 6/8 time. The melody features rapid ornamentation including cuts, strikes, and rolls. The performance is monophonic with no accompaniment. The tempo is approximately 120 BPM. The whistle has a breathy, high-pitched timbre with natural acoustic resonance. Phrasing follows a standard AABB structure with repeated eight-bar sections. The articulation is sharp with distinct tonguing on the downbeats of the triplet groupings.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[solo tin whistle enters, D major, 6/8 time]\n\n[A Section]\n[rapid melodic runs with cuts and rolls]\n\n[B Section]\n[higher register melody, staccato tonguing]\n\n[A Section Repeat]\n[variation on the initial theme]\n\n[B Section Repeat]\n[final melodic flourish, sustained end note]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T15:36:28"
+}

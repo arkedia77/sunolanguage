@@ -1,0 +1,34 @@
+{
+  "id": 75,
+  "title": "Tamacun",
+  "artist": "Rodrigo y Gabriela",
+  "genre": "Guitar Instrumental",
+  "stems": {
+    "other": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "bass": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "baf4ff73-4121-4a2d-88dd-4cafc0a24abb",
+      "tags": "Industrial stomp-clap percussion track. The arrangement is built on a heavy, distorted kick drum hitting on every beat, layered with a metallic, resonant snare-like clap on beats two and four. A syncopated rhythmic pattern is created by a high-pitched, metallic 'tink' sound and a lower-frequency wooden thud. The tempo is 120 BPM in 4/4 time. The track features a prominent, distorted synth bass that follows a rhythmic ostinato, providing a gritty, overdriven texture. Mid-way through, a filtered, resonant synth sweep rises in pitch, accompanied by an increase in the density of the metallic percussion hits. The piece concludes with a sudden cut to a decaying reverb tail of the final kick and metallic strike.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[heavy distorted kick drum, metallic clap on 2 and 4]\n[syncopated wood block and metal pipe hits]\n\n[Section A]\n[distorted synth bass enters with rhythmic ostinato]\n[percussion layers increase in volume]\n\n[Section B]\n[resonant synth sweep rises]\n[rapid-fire metallic percussion fills]\n\n[Outro]\n[final heavy kick and clap with long reverb tail]\n[silence]"
+    },
+    "vocals": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T18:23:12"
+}

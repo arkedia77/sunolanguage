@@ -1,0 +1,34 @@
+{
+  "id": 29,
+  "title": "Protectors of the Earth",
+  "artist": "Two Steps From Hell (Thomas Bergersen)",
+  "genre": "Hybrid / Cinematic",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "b813a248-b50d-4d2c-898e-48fdf310d578",
+      "tags": "Cinematic orchestral score with a focus on strings and brass. The arrangement features a staccato violin and viola ostinato in 3/4 time, providing a rhythmic engine at 160 BPM. Cellos and double basses perform accented downbeat pulses. French horns and trumpets enter with a soaring, legato melodic theme. Orchestral percussion includes a concert bass drum on the first beat of every measure and periodic suspended cymbal swells. A flute and oboe double the string ostinato in the higher register during the climax. The piece is in the key of D minor, utilizing a harmonic minor scale for the brass melody. The texture is homophonic, building in layers through terraced dynamics. High-register violins transition from spiccato to tremolo during the final crescendo.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato string ostinato in 3/4 time, D minor]\n[concert bass drum on downbeats]\n\n[A Section]\n[legato French horn melody enters]\n[cello and double bass rhythmic accents]\n\n[B Section]\n[trumpet fanfare melody]\n[suspended cymbal swells]\n[woodwinds doubling string ostinato]\n\n[Climax]\n[full orchestral tutti]\n[high violin tremolo]\n[fortissimo brass chords]\n\n[Outro]\n[staccato strings fade out]\n[final bass drum hit]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "0b1383a8-904a-4145-9477-a591b605f301",
+      "tags": "Cinematic dark ambient and industrial soundscape. The track features a low-frequency sub-bass drone that provides a constant tonal center. A metallic, resonant percussion hit occurs at irregular intervals, processed with long-tail convolution reverb. High-frequency granular synthesis textures create a shimmering, uneasy layer above the low-end. A distorted, bowed string-like synth enters with slow, microtonal pitch slides. The arrangement is minimalist and atmospheric, focusing on textural evolution rather than melodic progression. Key: C minor. Tempo: 60 BPM. Time signature: 4/4.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone enters]\n[distant metallic resonance with heavy reverb]\n\n[Section A]\n[granular high-frequency textures shimmer]\n[intermittent industrial clangs]\n\n[Section B]\n[distorted bowed synth enters with pitch slides]\n[sub-bass pulse intensifies]\n\n[Outro]\n[high-frequency textures fade out]\n[sub-bass drone lingers and cuts to silence]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "96dd6c9f-d60f-4c75-8f99-e16ec7a1dd82",
+      "tags": "Cinematic orchestral hybrid. The track features a prominent, rhythmic cello ostinato playing staccato eighth notes, layered with a deep, distorted sub-bass synth that pulses on the downbeats. A heavy, processed kick drum and metallic industrial percussion hits provide a slow, deliberate rhythmic drive. High-pitched, dissonant violin tremolos and short, aggressive brass stabs in the low register create tension. A ticking clock-like woodblock sound maintains a steady pulse. The arrangement builds through the addition of layered string spiccatos and rising synth textures. Key: D Minor. Tempo: 85 BPM. Time Signature: 4/4.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato cello ostinato enters, D minor]\n[low synth drone, subtle ticking percussion]\n\n[Section A]\n[heavy processed kick drum enters]\n[distorted sub-bass pulses]\n[metallic industrial percussion hits]\n\n[Section B]\n[low brass stabs]\n[high-pitched violin tremolo]\n[layered string spiccatos increase in intensity]\n\n[Outro]\n[percussion drops out]\n[reverberated cello fades out]"
+    },
+    "vocals": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T14:14:11"
+}

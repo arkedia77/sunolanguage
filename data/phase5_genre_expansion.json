@@ -1,0 +1,32 @@
+{
+  "version": "v1",
+  "created_at": "2026-04-08",
+  "purpose": "미커버 장르 확장 — Phase 3 재활용 + 추가 6곡",
+  "total": 23,
+  "stem_strategy": "장르별 2스템 (scripts/stem_strategy.json 참조)",
+  "tracks": [
+    {"title": "Mask Off", "artist": "Future", "genre": "Trap", "youtube_query": "Future Mask Off official", "stems": ["drums", "vocals"]},
+    {"title": "Savage", "artist": "21 Savage", "genre": "Trap", "youtube_query": "21 Savage Savage official", "stems": ["drums", "vocals"]},
+    {"title": "Strobe", "artist": "deadmau5", "genre": "Progressive House", "youtube_query": "deadmau5 Strobe", "stems": ["drums", "bass"]},
+    {"title": "Windowlicker", "artist": "Aphex Twin", "genre": "IDM / Techno", "youtube_query": "Aphex Twin Windowlicker", "stems": ["drums", "bass"]},
+    {"title": "Drunk in Love", "artist": "Beyoncé", "genre": "Contemporary R&B", "youtube_query": "Beyonce Drunk in Love", "stems": ["drums", "vocals"]},
+    {"title": "Untitled (How Does It Feel)", "artist": "D'Angelo", "genre": "Neo-Soul", "youtube_query": "D'Angelo Untitled How Does It Feel", "stems": ["drums", "vocals"]},
+    {"title": "Raining Blood", "artist": "Slayer", "genre": "Thrash Metal", "youtube_query": "Slayer Raining Blood", "stems": ["drums", "bass"]},
+    {"title": "Lateralus", "artist": "Tool", "genre": "Progressive Metal", "youtube_query": "Tool Lateralus", "stems": ["drums", "bass"]},
+    {"title": "Anthropology", "artist": "Charlie Parker & Dizzy Gillespie", "genre": "Bebop", "youtube_query": "Charlie Parker Anthropology", "stems": ["drums", "bass"]},
+    {"title": "Zombie", "artist": "Fela Kuti", "genre": "Afrobeat", "youtube_query": "Fela Kuti Zombie", "stems": ["drums", "bass"]},
+    {"title": "The Girl from Ipanema", "artist": "Stan Getz & Astrud Gilberto", "genre": "Bossa Nova", "youtube_query": "Girl from Ipanema Stan Getz", "stems": ["drums", "bass"]},
+    {"title": "Feather", "artist": "Nujabes", "genre": "Lo-Fi Hip-Hop", "youtube_query": "Nujabes Feather", "stems": ["drums", "bass"]},
+    {"title": "Foggy Mountain Breakdown", "artist": "Earl Scruggs", "genre": "Bluegrass", "youtube_query": "Earl Scruggs Foggy Mountain Breakdown", "stems": ["drums", "bass"]},
+    {"title": "A Real Hero", "artist": "College & Electric Youth", "genre": "Synthwave", "youtube_query": "College Electric Youth A Real Hero", "stems": ["drums", "bass"]},
+    {"title": "Jegog: Gamelan of the Love God", "artist": "Suar Agung", "genre": "Gamelan", "youtube_query": "Jegog Gamelan of the Love God", "stems": ["drums", "bass"]},
+    {"title": "Raga Yaman", "artist": "Ravi Shankar", "genre": "Raga", "youtube_query": "Ravi Shankar Raga Yaman", "stems": ["drums", "bass"]},
+    {"title": "Entre dos Aguas", "artist": "Paco de Lucía", "genre": "Flamenco", "youtube_query": "Paco de Lucia Entre dos Aguas", "stems": ["drums", "bass"]},
+    {"title": "No Woman No Cry", "artist": "Bob Marley", "genre": "Reggae", "youtube_query": "Bob Marley No Woman No Cry live", "stems": ["drums", "bass"]},
+    {"title": "Ring of Fire", "artist": "Johnny Cash", "genre": "Country", "youtube_query": "Johnny Cash Ring of Fire", "stems": ["drums", "vocals"]},
+    {"title": "The Thrill Is Gone", "artist": "B.B. King", "genre": "Blues", "youtube_query": "BB King The Thrill Is Gone", "stems": ["drums", "vocals"]},
+    {"title": "Dynamite", "artist": "BTS", "genre": "K-Pop", "youtube_query": "BTS Dynamite official", "stems": ["drums", "vocals"]},
+    {"title": "La Vida Es Un Carnaval", "artist": "Celia Cruz", "genre": "Salsa", "youtube_query": "Celia Cruz La Vida Es Un Carnaval", "stems": ["drums", "bass"]},
+    {"title": "bad guy", "artist": "Billie Eilish", "genre": "Pop", "youtube_query": "Billie Eilish bad guy", "stems": ["drums", "vocals"]}
+  ]
+}

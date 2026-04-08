@@ -1,0 +1,34 @@
+{
+  "id": 27,
+  "title": "Heart of Courage",
+  "artist": "Two Steps From Hell (Thomas Bergersen)",
+  "genre": "Hybrid / Cinematic",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "583c1056-33a4-4eaf-a1e8-46870be23e4f",
+      "tags": "Orchestral film score with a focus on staccato strings and rhythmic woodwinds. The piece features a prominent ostinato played by violins and violas in 3/4 time at 120 BPM. Cellos and double basses provide syncopated accents on the downbeat. A flute and oboe melody enters in the second section, doubling the string motif an octave higher. French horns provide sustained harmonic support during transitions. The arrangement uses a dry acoustic space with minimal reverb, emphasizing the precision of the bow strokes. The key is G minor. Percussion is limited to subtle orchestral hits and a light triangle strike on phrase endings.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato violin ostinato in G minor, 3/4 time]\n[cello and double bass syncopated accents]\n\n[Section A]\n[woodwinds enter doubling the string motif]\n[flute and oboe staccato lines]\n\n[Section B]\n[French horns enter with sustained mid-range pads]\n[increased dynamic intensity in strings]\n[triangle strike on cadence]\n\n[Outro]\n[woodwinds drop out]\n[strings fade out on a final staccato G minor chord]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "545eec70-0663-4570-ad77-849b369e10e5",
+      "tags": "Cinematic dark ambient and industrial soundscape. The piece features a low-frequency, distorted drone that oscillates with a slow, rhythmic pulse. A metallic, resonant texture creates a sense of vast, hollow space through long-tail convolution reverb. High-frequency granular synthesis elements provide a shimmering, static-like layer that pans across the stereo field. A deep, sub-bass impact occurs at irregular intervals, processed with heavy saturation. The tempo is approximately 60 BPM in 4/4 time, though the rhythm is fluid and atmospheric rather than percussive. The key is centered around C minor with microtonal pitch shifts in the synth pads. Distorted mechanical whirring and metallic scrapes are layered into the background, processed with a low-pass filter that slowly opens and closes.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency distorted drone enters]\n[metallic resonant texture with long reverb]\n\n[Main Section]\n[pulsing sub-bass impacts]\n[granular high-frequency static pans left to right]\n[filtered mechanical whirring]\n\n[Outro]\n[low-pass filter closes on drone]\n[reverb tail fades to silence]"
+    },
+    "drums": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "57e4823e-25e1-4eee-87dc-01bd95e5d361",
+      "tags": "Cinematic orchestral epic with a large choir. The arrangement features a prominent string section playing staccato rhythmic patterns and sustained legato lines. Brass instruments, including horns and trombones, provide powerful melodic accents and low-end swells. Orchestral percussion consists of large taiko-style drums, concert bass drums, and sharp snare hits. A full mixed choir performs Latin-style vocalizations with a dramatic, operatic delivery. The piece is in D minor at 140 BPM. The texture is dense and layered, utilizing wide stereo imaging for the choir and heavy hall reverb across the entire ensemble. The harmonic structure relies on minor-key progressions and sudden dynamic shifts between piano and fortissimo sections.",
+      "prompt": "[Intro]\n[staccato strings, low brass swells, heavy orchestral percussion hits]\n\n[Chorus]\n[full choir, operatic delivery]\nO-men! [brass stabs]\nO-men! [cymbal crash]\nO-men! [timpani roll]\nO-men! [choir crescendos]\n\n[Verse 1]\n[strings transition to rapid sixteenth-note ostinato]\n[choir chanting in unison]\nSa-lus! [snare hit]\nSa-lus! [snare hit]\nSa-lus! [snare hit]\nSa-lus! [snare hit]\n\n[Outro]\n[choir sustains final chord, brass and strings decrescendo]\n[final orchestral hit with long reverb tail]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T14:05:19"
+}

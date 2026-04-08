@@ -1,0 +1,32 @@
+{
+  "id": 54,
+  "title": "Watermelon Man",
+  "artist": "Herbie Hancock",
+  "genre": "Jazz",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "9e746049-2d51-406e-8a14-ef407fbe6d47",
+      "tags": "Funk rock. An electric bass guitar plays a repetitive, syncopated slap-and-pop riff featuring rapid sixteenth-note ghost notes and percussive thumps. The bass tone is bright with a mid-range boost and slight compression. A drum kit maintains a steady backbeat with a crisp snare and a tight, dry kick drum. The tempo is 105 BPM in 4/4 time. The arrangement is minimalist, focusing on the interplay between the percussive bass line and the steady drum groove.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[slap electric bass riff starts, syncopated sixteenth notes]\n[dry kick drum and crisp snare enter with a steady backbeat]\n\n[Main Section]\n[bass continues with percussive ghost notes and pops]\n[drums maintain consistent 4/4 groove]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "73d9139e-ada2-4a6e-b0e7-2863e5698b68",
+      "tags": "Hardcore punk. Distorted electric guitar plays rapid down-stroked power chords in a constant eighth-note rhythm. The bass guitar follows the guitar progression with a heavily overdriven tone. Drums feature a fast d-beat pattern with a prominent, dry snare and constant eighth-note hi-hat hits. Vocals are shouted with a raspy, aggressive delivery and minimal melodic variation. The track maintains a consistent 180 BPM in the key of E minor. The production is lo-fi with a narrow stereo field and high-mid frequency emphasis on the guitars. Transitions are marked by brief drum fills consisting of rapid snare rolls and crash cymbal accents.",
+      "prompt": "[Intro]\n[distorted electric guitar power chords, d-beat drums enter]\n\n[Verse 1]\n[shouted male vocals]\nSystematic failure [snare roll]\nCrushing all the hope inside\nWalls are closing in on us\nNowhere left for us to hide\n\n[Chorus]\n[bass guitar distortion increases]\nBreak the chains (break the chains)\nRise above the lies\nBreak the chains (break the chains)\nSee through their disguise [crash cymbal]\n\n[Bridge]\n[half-time drum feel, chugging guitar rhythm]\nThey control the narrative\nThey control the mind\nLeave the past behind\n\n[Outro]\n[tempo accelerates]\nGo! Go! Go! Go!\n[feedback swell, abrupt stop]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "7aa3e793-d2a5-436e-ba53-1e20dcabe75b",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff in E minor. The drum kit features a prominent double-kick pedal pattern and a bright, cutting snare. A distorted bass guitar follows the guitar riff exactly. The tempo is 140 BPM in 4/4 time. The production uses a dry, close-mic sound for the drums and high-gain saturation on the guitars. The arrangement consists of a rhythmic instrumental loop with no melodic lead or vocal presence.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted eighth notes]\n[double-kick drum pattern enters]\n\n[Main Section]\n[distorted bass guitar enters, doubling guitar riff]\n[snare hits on beats 2 and 4]\n[crash cymbal accents on the downbeat of every four bars]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T16:50:25"
+}

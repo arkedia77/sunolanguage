@@ -1,0 +1,34 @@
+{
+  "id": 99,
+  "title": "Birth of a Wish",
+  "artist": "Keiichi Okabe / MONACA (NieR: Automata)",
+  "genre": "Contemporary Instrumental",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "5d4f2918-a50a-4619-bafd-bd197a4a2747",
+      "tags": "Orchestral cinematic action score. Staccato string ostinatos in violins and violas play repetitive sixteenth-note patterns. Low brass including trombones and tubas perform rhythmic, accented stabs on the downbeats. A driving percussion section features taiko drums, orchestral bass drum, and sharp snare hits. High-pitched woodwind trills and short flute runs punctuate the transitions. The arrangement utilizes a constant crescendo with layering of horns and trumpets playing a heroic, rising minor-key motif. 140 BPM. D minor. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato string ostinato, low percussion hits]\n\n[Main Theme]\n[low brass stabs, driving taiko drums]\n[rising trumpet motif, violin sixteenth-note runs]\n\n[Climax]\n[full orchestral tutti, heavy orchestral bass drum, cymbal crashes]\n[high woodwind trills, sustained horn chords]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "f2c837d6-338c-429c-bdd2-27f0a730033e",
+      "tags": "Lo-fi hip hop featuring a sampled acoustic piano melody with heavy vinyl crackle and hiss. The piano plays a repetitive four-bar loop of jazz-influenced chords with a slight swing. A programmed drum kit consists of a muffled, low-pass filtered kick drum and a crisp, dry snare with a short decay. The bass is a deep, sub-heavy sine wave that follows the root notes of the piano progression. A subtle, high-pitched synth pad provides atmospheric texture in the background. The tempo is 85 BPM in the key of C minor. The mix is characterized by a narrow stereo field and a warm, saturated frequency response typical of analog tape emulation.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss, filtered piano melody enters]\n\n[Main Loop]\n[muffled kick drum and dry snare enter, sub-bass follows piano root notes]\n[subtle high-pitched synth pad swells in background]\n\n[Outro]\n[drums and bass drop out, piano melody continues with increasing low-pass filter]\n[vinyl crackle fades to silence]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "0e749294-4278-4ad8-9c63-a3a57b2f385b",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a syncopated, palm-muted riff in E minor. The drum kit features a prominent double-kick pedal pattern and a bright, cutting snare. A distorted bass guitar follows the guitar riff exactly. The tempo is 140 BPM in 4/4 time. The arrangement consists of a high-gain guitar solo using rapid alternate picking and wah-wah pedal effects over a driving rhythm section.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted eighth notes]\n[drum fill, heavy snare and kick]\n\n[Main Theme]\n[full band enters, driving double-kick drums]\n[syncopated power chord progression]\n\n[Guitar Solo]\n[high-gain lead guitar with wah-wah effect]\n[rapid alternate picking and legato runs]\n[rhythm guitar maintains palm-muted chugging]\n\n[Outro]\n[sustained power chords with feedback]\n[final drum roll on toms and crash cymbals]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "be914e6b-f265-4147-9d14-72a971985b99",
+      "tags": "Indie rock with surf rock influences. Clean electric guitar plays a repetitive, syncopated riff using a bright, bridge-pickup tone with light spring reverb. A second electric guitar provides sustained power chords during transitions. The bass guitar follows a melodic, walking pattern in eighth notes. Drums feature a prominent tambourine on every beat and a driving eighth-note hi-hat pattern. The arrangement is centered around a 140 BPM tempo in the key of G Major. The production is dry with minimal compression on the drums, emphasizing a live room aesthetic.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[bright electric guitar riff with spring reverb]\n[tambourine hits on every beat]\n[driving eighth-note hi-hats and snare on 2 and 4]\n\n[Section A]\n[melodic walking bass line enters]\n[syncopated clean guitar melody continues]\n\n[Section B]\n[rhythm electric guitar enters with sustained chords]\n[crash cymbal accents]\n\n[Outro]\n[guitar riff fades out]\n[final tambourine hit]"
+    }
+  },
+  "status": "ok",
+  "retried_at": "2026-04-07T20:14:47"
+}

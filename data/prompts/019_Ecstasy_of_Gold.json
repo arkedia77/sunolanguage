@@ -1,0 +1,34 @@
+{
+  "id": 19,
+  "title": "Ecstasy of Gold",
+  "artist": "Ennio Morricone (The Good, The Bad and The Ugly OST)",
+  "genre": "Film Score / OST",
+  "stems": {
+    "other": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "a7b32568-dd15-4502-ad0b-8523d47cbec0",
+      "tags": "Cinematic orchestral score with a focus on tension and rhythmic drive. The arrangement features a staccato string section performing a repetitive ostinato in 4/4 time at 120 BPM. A deep, resonant cello and double bass layer provides a rhythmic pulse on the downbeats. Mid-range violas execute syncopated accents. A subtle, low-frequency synth pad adds harmonic depth beneath the acoustic layers. The piece is in the key of D minor. Short, detached bowing techniques define the texture, with gradual crescendos and decrescendos creating dynamic movement. High-register violins enter with sustained, dissonant intervals to increase harmonic tension. The percussion is minimal, consisting of a muted, cinematic bass drum hit on the first beat of every two bars.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato cello and double bass ostinato, D minor]\n[low-frequency synth pad enters]\n\n[Section A]\n[viola section enters with syncopated staccato accents]\n[gradual crescendo]\n\n[Section B]\n[high violin section enters with sustained dissonant notes]\n[muted cinematic bass drum hits on downbeats]\n[staccato string pattern increases in volume and intensity]\n\n[Outro]\n[percussion drops out]\n[strings fade out with a final staccato pluck]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "c8817a5e-0639-4485-8582-85bfc0ff87bb",
+      "tags": "Hard rock instrumental featuring a prominent, syncopated drum kit and distorted electric guitar. The track is built around a heavy, mid-tempo groove at 105 BPM in the key of E minor. The drums utilize a dry, punchy snare and a resonant kick drum that follows a syncopated pattern. The electric guitar uses a high-gain distortion with a thick, mid-range focus, performing palm-muted chugs and rhythmic power chord stabs. A clean electric guitar provides occasional melodic accents with a light chorus effect. The bass guitar is heavily overdriven, doubling the kick drum's rhythmic pattern to create a dense low-end. The structure alternates between sparse, drum-heavy sections and full-band arrangements with layered guitar tracks.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated drum beat, punchy snare and kick]\n[distorted electric guitar enters with palm-muted chugs]\n\n[Section A]\n[full band enters, overdriven bass doubles kick pattern]\n[heavy rhythmic power chords on distorted guitar]\n\n[Section B]\n[drums continue syncopated groove]\n[clean electric guitar with chorus effect adds melodic accents]\n[distorted guitar performs rhythmic stabs]\n\n[Outro]\n[sustained distorted guitar chord]\n[final drum fill on toms and snare]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "0419af1c-6cc1-4c0c-8449-78425b1fbf13",
+      "tags": "Operatic pop and classical crossover featuring a dramatic soprano vocal performance. The arrangement is centered around a grand piano playing arpeggiated chords and a lush orchestral string section providing sustained harmonic pads and melodic counterpoints. A cinematic percussion section includes deep orchestral bass drums and shimmering wind chimes. The vocal style utilizes wide vibrato, operatic head voice, and melismatic runs. The track is in the key of D minor with a tempo of 72 BPM in 4/4 time. The production features high-fidelity hall reverb on both the vocals and the instrumentation, creating a vast spatial image.",
+      "prompt": "[Intro]\n[grand piano arpeggios, sustained orchestral strings]\n[wind chimes]\n\n[Verse 1]\n[soprano vocals with heavy hall reverb]\nAh-ah-ah-ah-ah\n[orchestral bass drum hits]\nAh-ah-ah-ah-ah-ah-ah\n\n[Chorus]\n[vocal intensity increases, strings swell]\nAh-ah-ah-ah-ah-ah-ah-ah\n(Ah-ah-ah-ah)\n[piano continues arpeggios]\nAh-ah-ah-ah-ah-ah-ah-ah\n\n[Bridge]\n[strings transition to higher register]\nAh-ah-ah-ah-ah-ah-ah\n[staccato piano notes]\nAh-ah-ah-ah-ah-ah-ah\n\n[Outro]\n[vocal fades with long reverb tail]\nAh-ah-ah-ah\n[strings fade out]\n[final piano chord resonates]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T13:12:30"
+}

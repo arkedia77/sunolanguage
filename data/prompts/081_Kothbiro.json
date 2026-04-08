@@ -1,0 +1,32 @@
+{
+  "id": 81,
+  "title": "Kothbiro",
+  "artist": "Ayub Ogada",
+  "genre": "World Music",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "8b941911-353b-4780-a307-17c1c3d5cf95",
+      "tags": "Hard rock instrumental featuring a prominent electric bass guitar and acoustic drum kit. The bass guitar uses a heavily distorted, overdriven tone with high mid-range presence, playing a repetitive, syncopated riff centered on a low E pedal point. The drum kit consists of a dry, punchy kick drum and a crisp snare with minimal reverb. The rhythm follows a 4/4 time signature at 110 BPM, characterized by a driving eighth-note pulse. The bass riff utilizes hammer-ons and slides, creating a gritty, mechanical texture. The arrangement is minimalist, focusing entirely on the interplay between the distorted bass line and the steady, unembellished drum beat.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric bass riff starts, syncopated eighth notes]\n[dry kick drum enters on beats 1 and 3]\n\n[Main Section]\n[snare drum enters on beats 2 and 4]\n[bass continues overdriven riff with slides and hammer-ons]\n[steady 4/4 rock beat continues]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "afb8e658-01cb-4f76-8d3b-34a437c87075",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a syncopated, palm-muted riff in E minor. The drum kit features a double-kick pedal pattern with rapid sixteenth-note bursts and a high-tuned, cracking snare. A distorted bass guitar mirrors the guitar riff with a gritty, overdriven tone. The tempo is 140 BPM in 4/4 time. The arrangement utilizes a stop-start dynamic where the instruments cut out simultaneously for brief silences between phrases. Lead guitar layers include a wah-wah pedal effect during brief melodic fills. The production is dry with minimal reverb on the rhythm section.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted syncopation]\n[double-kick drum pattern enters]\n\n[Main Theme]\n[full band, overdriven bass guitar mirrors guitar riff]\n[snare hits on beats 2 and 4]\n\n[Bridge]\n[stop-start rhythmic accents with brief silences]\n[wah-wah guitar lead fills]\n\n[Outro]\n[sustained power chord, cymbal wash]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "06289aae-5b90-4815-9f88-485b7183ca6d",
+      "tags": "Lo-fi hip hop. A dusty, sampled acoustic piano plays a repetitive four-chord progression with a slight detune effect and high-pass filtering. The drum kit consists of a muffled, thumping kick drum and a crisp, layered snare with a short decay. A sub-bass synth follows the root notes of the piano chords with a soft attack. A vinyl crackle texture and occasional bird chirping foley are layered throughout the mix. The tempo is 85 BPM in the key of C minor. The piano uses a swung rhythmic feel, emphasizing the off-beats. A subtle sidechain compression effect causes the piano and atmosphere to duck slightly when the kick drum hits.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle, bird chirping foley]\n[filtered acoustic piano chords]\n\n[Main Loop]\n[muffled kick drum enters]\n[layered snare on beats 2 and 4]\n[sub-bass synth follows piano root notes]\n\n[Bridge]\n[drums drop out]\n[piano continues with increased high-pass filter resonance]\n\n[Outro]\n[drums and bass exit]\n[piano fades out with vinyl crackle]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T18:52:31"
+}

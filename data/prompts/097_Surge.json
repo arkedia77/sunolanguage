@@ -1,0 +1,34 @@
+{
+  "id": 97,
+  "title": "Surge",
+  "artist": "Amon Tobin",
+  "genre": "Contemporary Instrumental",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "967b178c-8379-44b7-bb7a-a2d86f9c0331",
+      "tags": "Experimental electronic and glitch hop. The track features heavily processed, bit-crushed synthesizer leads and distorted bass textures. A syncopated drum machine pattern utilizes crisp, high-frequency snares and a punchy kick with digital artifacts. Granular synthesis and pitch-shifting effects are applied to melodic fragments, creating a stuttering, fragmented rhythmic feel. The arrangement is characterized by sudden dynamic shifts and frequency filtering. 100 BPM. Key of C minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted synth swell, bit-crushed percussion]\n\n[Main Section]\n[syncopated drum machine kick and snare]\n[stuttering synth lead with granular delay]\n[distorted sub-bass enters]\n\n[Breakdown]\n[low-pass filter sweep on all instruments]\n[glitchy digital artifacts and white noise bursts]\n\n[Outro]\n[pitch-shifted melodic fragments]\n[sudden tape stop effect]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "feb06c35-5cb5-4826-8af5-d5724488b043",
+      "tags": "Experimental electronic, industrial ambient. Distorted, low-frequency synth bass pulses in a syncopated rhythm. A metallic, percussive texture resembling a rhythmic scraping or industrial machine noise repeats throughout. High-frequency digital glitches and granular synthesis artifacts appear sporadically. The arrangement is minimalist and repetitive, focusing on timbre and texture over melodic progression. 100 BPM. C minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted synth bass pulse enters]\n[metallic rhythmic scraping texture]\n\n[Main Section]\n[syncopated bass rhythm continues]\n[high-frequency digital glitches]\n[granular synthesis artifacts]\n\n[Outro]\n[bass pulse fades]\n[rhythmic scraping continues to silence]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "ab99e9d8-bafd-4c92-9d26-2ad8521ba053",
+      "tags": "Industrial sound design and cinematic foley. This track consists of rhythmic mechanical textures, metallic impacts, and synthesized atmospheric drones. A heavy, distorted kick drum pattern enters at 120 BPM, layered with the sound of a pneumatic drill and grinding metal. High-frequency digital glitches and white noise bursts punctuate the stereo field. A low-frequency sub-bass pulse oscillates in a steady quarter-note rhythm. The arrangement features sudden dynamic shifts, utilizing silence and sharp transients to create a fragmented, non-linear structure. Metallic clangs with long reverb tails provide a sense of industrial space, while a high-pitched, resonant filter sweep moves across the frequency spectrum.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency atmospheric drone, distant metallic scraping]\n[sharp pneumatic hiss, mechanical clicking]\n\n[Section A]\n[distorted kick drum enters, 120 BPM]\n[rhythmic grinding metal texture, high-frequency digital glitches]\n[heavy metallic impact with long reverb tail]\n\n[Section B]\n[sub-bass pulse, oscillating filter sweep]\n[white noise bursts, staccato mechanical drill sounds]\n[sudden silence, sharp transient click]\n\n[Outro]\n[fading industrial hum, resonant metallic clangs]\n[tape stop effect]"
+    },
+    "vocals": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T20:02:40"
+}

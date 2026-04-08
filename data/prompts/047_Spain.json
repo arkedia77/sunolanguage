@@ -1,0 +1,32 @@
+{
+  "id": 47,
+  "title": "Spain",
+  "artist": "Chick Corea & Return to Forever",
+  "genre": "Jazz",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "ddf30d8a-bc97-4d0c-b715-bca5507c258b",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated fingerstyle chords with a steady thumb-plucked bassline on beats 1 and 3. A solo flute performs melodic improvisations using trills, grace notes, and breathy articulation. The percussion consists of a shaker playing consistent sixteenth notes and a woodblock or rimshot hitting the clave rhythm. The arrangement is sparse and acoustic. Key of G major. Tempo is 110 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated nylon string acoustic guitar chords]\n\n[Main Theme]\n[flute enters with melodic trills]\n[shaker and woodblock percussion enter]\n\n[Outro]\n[flute fades out]\n[acoustic guitar ends on a sustained chord]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "2fe2d1ab-5f79-47ef-bbc6-cfcdd366a80c",
+      "tags": "Funk instrumental featuring a prominent slap bass line and syncopated percussion. The bass utilizes thumb slaps and finger pops in a repetitive 16th-note pattern. A dry, acoustic drum kit plays a steady backbeat with occasional ghost notes on the snare. A clean electric guitar performs rhythmic muted scratches and staccato chords on the offbeats. The tempo is 105 BPM in the key of E minor. The production is dry with minimal reverb, emphasizing the percussive attack of the strings.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[slap bass riff with thumb slaps and pops]\n[dry acoustic drums enter with steady kick and snare]\n\n[Main Groove]\n[clean electric guitar rhythmic scratching]\n[syncopated 16th-note bass pattern continues]\n[closed hi-hat eighth-note pulse]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "184d3a2e-2004-4a58-81b1-989e86332197",
+      "tags": "Funk rock. Clean electric guitar plays a syncopated, percussive riff using 16th-note scratches and double-stops. A slap bass guitar follows the guitar rhythm with aggressive thumb pops and finger plucks. Drums feature a tight, dry snare sound and a crisp hi-hat playing 16th-note patterns with occasional open accents. The tempo is 115 BPM in the key of E minor. The arrangement is sparse, focusing on the interlocking rhythmic relationship between the bass and guitar.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar scratch riff, syncopated slap bass enters]\n[tight drum kit enters with 16th-note hi-hats]\n\n[Main Section]\n[interlocking guitar and bass riffs]\n[snare hits on beats 2 and 4]\n[occasional open hi-hat accents]"
+    },
+    "vocals": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T15:57:23"
+}

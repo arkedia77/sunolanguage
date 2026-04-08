@@ -1,0 +1,33 @@
+{
+  "id": 95,
+  "title": "Maria Tambien",
+  "artist": "Khruangbin",
+  "genre": "Contemporary Instrumental",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "363cfe12-44d1-451a-ba5d-95c5a91c895b",
+      "tags": "Indie rock with surf rock influences. Two clean electric guitars play interlocking melodic lines with heavy spring reverb and vibrato. One guitar focuses on a repetitive, syncopated single-note riff while the other provides rhythmic chord stabs and occasional lead fills. The bass guitar follows the kick drum with a driving eighth-note pattern. Drums feature a prominent, snappy snare and consistent hi-hat eighth notes. The tempo is 135 BPM in 4/4 time, likely in the key of E major. The arrangement is purely instrumental, focusing on the interplay between the two surf-style guitar tones and a steady, mid-tempo rock groove.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar with spring reverb plays syncopated riff]\n[second electric guitar enters with rhythmic chord stabs]\n\n[Section A]\n[bass guitar enters with driving eighth notes]\n[drums enter with steady backbeat and eighth-note hi-hats]\n[interlocking guitar melodies continue]\n\n[Section B]\n[lead guitar plays melodic variations over the main riff]\n[snare hits become more accented]\n\n[Outro]\n[instruments gradually layer out]\n[final sustained guitar chord with heavy vibrato]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "0e045571-ad58-43da-aff6-cee579e7f76f",
+      "tags": "Indie rock with a prominent, driving bassline and a minimalist, dry drum kit. The bass plays a repetitive, syncopated eighth-note riff that anchors the track. The drums feature a tight, dampened snare and a steady kick, maintaining a consistent 4/4 pulse at 115 BPM in the key of A minor. A clean electric guitar enters with rhythmic, percussive muted strums and occasional melodic flourishes using a bridge pickup for a bright, biting tone. The arrangement is sparse, focusing on the interplay between the rhythmic bass and the sharp guitar accents. No vocal elements are present. The production is clean with minimal reverb, emphasizing the separation between the instruments.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[dry drum kit enters with steady kick and snare]\n[syncopated electric bass riff enters]\n\n[Section A]\n[clean electric guitar enters with percussive muted strums]\n[bass continues repetitive eighth-note pattern]\n\n[Section B]\n[guitar shifts to melodic lead flourishes]\n[bass and drums maintain consistent groove]\n\n[Outro]\n[guitar fades out]\n[bass and drums continue for two bars]\n[final snare hit]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "80256f12-fd4b-4076-9aa5-4934bbf5c413",
+      "tags": "Indie rock with a driving, rhythmic focus. The arrangement features a clean electric guitar playing a repetitive, syncopated two-note riff and a prominent electric bass that follows the kick drum pattern. The drum kit consists of a tight snare, a dry kick, and consistent eighth-note hi-hats. A subtle, sustained organ pad provides harmonic filling in the background. The tempo is 124 BPM in 4/4 time. The track is in the key of A major. The production is dry with minimal reverb, emphasizing the interlocking rhythmic parts.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar enters with syncopated two-note riff]\n[tight drum kit enters with eighth-note hi-hats and steady kick]\n\n[Section A]\n[electric bass enters, locking with the kick drum]\n[subtle organ pad enters in the background]\n\n[Section B]\n[guitar riff continues with slight rhythmic variations]\n[bass maintains driving eighth-note feel]\n\n[Outro]\n[instruments fade out gradually]\n[final snare hit]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "b2262c70-a3c2-4168-8ea8-aba702a8b12d",
+      "tags": "Indie rock with psychedelic and world music influences. The track features a prominent, repetitive bassline playing a syncopated four-note riff. A clean electric guitar plays rhythmic, percussive chords with a slight chorus effect. A second electric guitar provides ambient, delayed melodic fragments. The drum kit maintains a steady groove with a crisp snare and active hi-hat patterns. Female vocals are layered with a slight slapback delay, performing repetitive, chant-like melodic phrases. The arrangement includes a subtle synthesizer pad providing harmonic depth in the background. The tempo is 115 BPM in the key of A minor.",
+      "prompt": "[Intro]\n[syncopated bass riff enters]\n[clean electric guitar rhythmic chords]\n[steady drum kit groove with active hi-hats]\n\n[Verse 1]\n[layered female vocals with slapback delay]\nHariya, hariya\nHariya, hariya\nHariya, hariya\nHariya\n\n[Instrumental Break]\n[ambient delayed guitar fragments]\n[bass and drums continue steady groove]\n\n[Verse 2]\n[vocals re-enter]\nHariya, hariya\nHariya, hariya\nHariya, hariya\nHariya\n\n[Outro]\n[instruments gradually fade]\n[final vocal refrain]\nHariya"
+    }
+  },
+  "status": "ok"
+}

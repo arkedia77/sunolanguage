@@ -1,0 +1,34 @@
+{
+  "id": 58,
+  "title": "Awake",
+  "artist": "Tycho",
+  "genre": "Electronic / Ambient",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "8999374b-9ee6-4f98-bcec-e0c9b5b6a59c",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated jazz chords with a steady thumb-plucked bassline on beats 1 and 3. A shaker maintains a constant sixteenth-note pattern. The percussion features a woodblock or rimshot playing a 3-2 son clave pattern. A melodic flute enters with legato phrasing, utilizing vibrato and occasional trills. The arrangement is sparse and acoustic. Key of G major. 120 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated nylon string acoustic guitar, sixteenth-note shaker]\n\n[Main Theme]\n[flute enters with legato melody]\n[woodblock playing 3-2 clave pattern]\n[acoustic guitar continues rhythmic chord comping]\n\n[Outro]\n[flute holds sustained final note]\n[shaker and guitar fade out]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "28646820-57c6-4778-b461-9c890e559528",
+      "tags": "Hard rock track featuring a prominent overdriven electric guitar riff. The guitar uses a bridge pickup tone with high gain and a slight mid-boost, playing a syncopated blues-scale riff that emphasizes the root and minor third. A second guitar track provides sustained power chords during transitions. The drums consist of a dry, punchy kick and a crisp snare with a short decay. The bass guitar follows the root notes of the guitar riff with a distorted, clanky tone. 120 BPM, 4/4 time signature, Key of E minor. The arrangement is centered on a repetitive four-bar loop with a sudden stop at the end of the phrase.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated overdriven electric guitar riff starts]\n[distorted bass enters, doubling the guitar riff]\n[punchy kick drum and snare enter with a straight backbeat]\n\n[Main Section]\n[guitar riff continues with palm-muted accents]\n[crash cymbal accents on the first beat of every four bars]\n\n[Outro]\n[sustained power chord on electric guitar]\n[final snare hit with sudden silence]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "31c2f996-52b4-4276-8be9-68aa1c45b394",
+      "tags": "ASMR soundscape featuring rhythmic friction and percussive textures. The primary sound source is a hand rhythmically rubbing and scratching against a textured, slightly resonant surface, likely a plastic or metallic mesh. The performance consists of rapid, alternating strokes creating a high-frequency white noise profile with a consistent 120 BPM pulse. Short, sharp fingernail taps provide transient accents against the continuous sliding friction sounds. The recording is dry with minimal room reflection, emphasizing the close-mic proximity effect and high-end detail of the surface contact. The rhythm follows a steady sixteenth-note pattern with occasional syncopated pauses.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[rhythmic hand rubbing on textured surface]\n\n[Main Section]\n[rapid alternating friction strokes, 120 BPM]\n[intermittent fingernail taps on resonant surface]\n\n[Outro]\n[friction slows and fades out]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "7bd34f50-8133-4483-b65d-a76f9e6b1e13",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated jazz chords with a thumb-plucked bassline. A shaker provides a steady sixteenth-note pulse. A woodblock hits on the fourth beat of every second measure. The tempo is 120 BPM in 4/4 time. The key is G major. The guitar uses a fingerstyle technique with frequent use of major seventh and minor ninth voicings. The recording features a dry, close-mic aesthetic with minimal room reverb. The arrangement is minimalist, focusing entirely on the interplay between the percussive guitar strumming and the light hand percussion.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[nylon string acoustic guitar enters with syncopated Gmaj7 chords]\n[shaker enters with steady sixteenth notes]\n\n[Main Theme]\n[guitar continues rhythmic chord pattern with alternating bass notes]\n[woodblock hit on beat 4 of every second bar]\n\n[Outro]\n[shaker fades out]\n[final sustained Gmaj9 guitar chord]"
+    }
+  },
+  "status": "ok",
+  "retried_at": "2026-04-07T17:03:49"
+}

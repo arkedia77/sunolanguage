@@ -1,0 +1,34 @@
+{
+  "id": 63,
+  "title": "Tendency",
+  "artist": "Jan Jelinek",
+  "genre": "Electronic / Ambient",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "a1573fad-cd11-487d-b2d1-a6a2ea8d21b4",
+      "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail drives the rhythm at 135 BPM in 4/4 time. A metallic, resonant percussion loop repeats a syncopated sixteenth-note pattern. A high-pass filtered white noise riser swells periodically. A gritty, monophonic sawtooth synth bass plays a repetitive two-note sequence on the off-beats. The track features a dark, cavernous reverb on the percussion and a bitcrushed aesthetic on the high-end frequencies. The arrangement is minimalist and loop-based, centered around the key of C minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-tail, metallic percussion loop]\n\n[Main Section]\n[syncopated sawtooth synth bass enters]\n[white noise riser swells]\n[bitcrushed high-hats]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "549a23d9-ae07-4bfd-b4e3-3f3c33c7513b",
+      "tags": "Industrial techno. A distorted, overdriven kick drum hits on every quarter note at 130 BPM in 4/4 time. A metallic, resonant percussion hit occurs on the off-beats, processed with a short room reverb. A high-frequency, white-noise-based closed hi-hat plays a consistent sixteenth-note pattern. A syncopated, low-frequency synth sequence with a resonant low-pass filter sweep provides a rhythmic pulse. A distorted, industrial sound effect with a long tail enters periodically, featuring heavy bit-crushing and delay. The track maintains a consistent, driving intensity with minimal melodic variation, focusing on timbral evolution and rhythmic repetition. The key is centered around a low C pedal point.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum, sixteenth-note closed hi-hats]\n[metallic off-beat percussion enters]\n\n[Main Section]\n[syncopated filtered synth bass sequence]\n[bit-crushed industrial sound effects with delay]\n[resonant low-pass filter sweep on synth]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "9db4c8a3-c9d5-4961-823e-7f248a0bb702",
+      "tags": "Minimalist deep house. A dry, muted kick drum plays a steady four-on-the-floor pattern at 124 BPM in the key of G minor. A percussive, woodblock-like synth pluck executes a syncopated rhythmic pattern with a short decay and subtle delay. A low-pass filtered sub-bass follows the kick on the downbeats. A crisp, high-frequency closed hi-hat enters on the eighth-note off-beats. The arrangement features a gradual filter sweep on the synth pluck, slowly opening the cutoff frequency to introduce more harmonic brightness over time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[muted kick drum, four-on-the-floor]\n[percussive synth pluck, syncopated rhythm]\n\n[Section A]\n[sub-bass enters, locking with kick]\n[closed hi-hat on off-beats]\n[gradual low-pass filter sweep on synth pluck]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "515efe00-6648-4a4c-9c9b-658f341429c1",
+      "tags": "Lo-fi hip hop. A dusty, sampled acoustic piano plays a repetitive four-bar loop featuring jazz-influenced seventh chords with a slight vinyl crackle effect. The drum kit consists of a muffled, low-pass filtered kick drum and a crisp, dry snare with a slight swing. A sub-bass follows the root notes of the piano progression. A subtle, high-pitched sine wave synth lead enters periodically with short, melodic flourishes. The tempo is 85 BPM in the key of C minor. The mix is characterized by a narrow stereo field and a warm, mid-range focus.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[dusty acoustic piano loop, vinyl crackle]\n\n[Main Section]\n[muffled kick drum enters, dry snare with swing]\n[sub-bass follows piano root notes]\n\n[Bridge]\n[high-pitched sine wave synth lead flourishes]\n[piano continues with low-pass filter sweep]"
+    }
+  },
+  "status": "ok",
+  "retried_at": "2026-04-07T17:26:33"
+}

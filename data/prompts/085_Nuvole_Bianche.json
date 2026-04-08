@@ -1,0 +1,32 @@
+{
+  "id": 85,
+  "title": "Nuvole Bianche",
+  "artist": "Ludovico Einaudi",
+  "genre": "Lo-fi / Neo-classical / Piano",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "6f1d9a78-fd21-4637-839b-396e10b5b854",
+      "tags": "Lo-fi hip hop. A Rhodes electric piano plays a four-bar loop of jazz-influenced seventh chords with a subtle tremolo effect and high-frequency roll-off. The drum kit consists of a muffled, thumping kick drum, a crisp snare with a short decay, and a swung eighth-note hi-hat pattern featuring occasional open-hat accents. A warm, rounded sine-wave synth bass follows the root notes of the piano progression. A recurring vinyl crackle and hiss layer persists throughout the track. A melodic lead is provided by a muted trumpet with heavy reverb, playing short, improvisational phrases. 85 BPM. Key of C minor. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss]\n[Rhodes electric piano enters with jazz chords]\n\n[Main Section]\n[muffled kick drum and swung hi-hats enter]\n[snare on beats 2 and 4]\n[warm sine-wave synth bass enters]\n[muted trumpet with reverb plays melodic phrases]\n\n[Outro]\n[drums and bass drop out]\n[Rhodes piano fades out]\n[vinyl crackle continues to silence]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "b851fa9f-3d71-44b5-a101-8362d802963d",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated jazz chords with a thumb-plucked bassline on beats 1 and 3. A shaker maintains a steady sixteenth-note pattern. The drum kit features a rimshot on the snare playing a bossa nova clave pattern and a soft kick drum on every beat. A clean electric guitar plays melodic lines with light reverb. Key of C major. 120 BPM. 4/4 time signature. The arrangement maintains a consistent dynamic level throughout.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[nylon string acoustic guitar, shaker]\n\n[Main Theme]\n[rimshot snare, soft kick drum, clean electric guitar melody]\n\n[Bridge]\n[acoustic guitar chord soloing]\n\n[Outro]\n[instruments fade out, final acoustic guitar chord]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "83aa6a01-9f7e-4c7a-8b97-1a1d7b421e24",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated jazz chords with a steady thumb-picked bassline on beats 1 and 3. A flute performs a melodic lead with frequent vibrato and grace notes. Percussion consists of a shaker playing sixteenth notes and a woodblock or rimshot hitting the clave rhythm. The tempo is 124 BPM in 4/4 time. The arrangement maintains a consistent dynamic level with the flute and guitar interlocking in a contrapuntal style. The guitar uses a standard bossa nova pattern with frequent extensions like 9ths and 13ths.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[nylon string acoustic guitar playing syncopated chords]\n[shaker enters with sixteenth note pattern]\n\n[Main Theme]\n[flute enters with legato melody]\n[woodblock accents on the bossa nova clave]\n\n[Bridge]\n[flute performs trills and rapid scale runs]\n[guitar maintains steady rhythmic comping]\n\n[Outro]\n[flute melody descends]\n[instruments fade out on a major 9th guitar chord]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T19:10:45"
+}

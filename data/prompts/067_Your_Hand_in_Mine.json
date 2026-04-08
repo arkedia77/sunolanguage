@@ -1,0 +1,32 @@
+{
+  "id": 67,
+  "title": "Your Hand in Mine",
+  "artist": "Explosions in the Sky",
+  "genre": "Post-Rock",
+  "stems": {
+    "other": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "e0b2bfe4-3b94-45ba-998e-1321e0ae4ad9",
+      "tags": "Industrial techno. A heavy, distorted kick drum pulses at 130 BPM in 4/4 time. A metallic, resonant percussion hit occurs on every offbeat. A high-frequency, white-noise-based hi-hat pattern plays sixteenth notes with varying velocity. A low-frequency, distorted synth drone oscillates with a slow filter sweep. A rhythmic, mechanical clanking sound repeats every two bars. The track features a dark, cavernous reverb on the percussion elements. A sharp, percussive synth stab with a short decay enters periodically on the fourth beat of every second measure. The overall texture is dense and abrasive with high-gain saturation on the low-end frequencies.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum pulse, 130 BPM]\n[metallic offbeat percussion enters]\n\n[Main Section]\n[sixteenth note white-noise hi-hats]\n[low-frequency distorted synth drone with filter sweep]\n[mechanical clanking rhythm]\n[cavernous reverb on percussion]\n\n[Breakdown]\n[kick drum continues, hi-hats drop out]\n[percussive synth stab on beat 4]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "6de088f9-2e5e-4b03-a4dd-91e4342da83f",
+      "tags": "Synthwave with heavy outrun and retrowave influences. A gated reverb snare hits on beats 2 and 4, while a sidechained analog synth bass pulses in sixteenth-note triplets. The lead melody is played on a detuned sawtooth synthesizer with a short portamento and heavy delay. Arpeggiated square-wave synths run through a high-pass filter that opens gradually. A digital drum machine provides a steady kick on every beat. Key of C minor. 115 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[steady kick drum, filtered synth pad swell]\n[sidechained synth bass enters]\n\n[Main Theme]\n[detuned sawtooth synth lead melody]\n[gated reverb snare on 2 and 4]\n[arpeggiated square-wave synth in background]\n\n[Bridge]\n[lead synth drops out]\n[high-pass filter sweep on arpeggio]\n[kick drum continues solo for four bars]\n\n[Outro]\n[synth lead returns with heavy delay]\n[instruments fade out individually leaving only the bass pulse]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "9dc44c65-5a26-4536-838d-4ae9ed46a1e6",
+      "tags": "Indie folk. Fingerpicked acoustic guitar in C major at 112 BPM. Male vocals in a mid-range tenor register with light natural vibrato. The acoustic guitar utilizes a steady alternating thumb bass pattern with syncopated melody notes on the higher strings. A subtle room reverb is applied to both the guitar and the vocal tracks. The vocal melody features frequent upward slides and occasional breathy delivery at the end of phrases. The arrangement remains sparse throughout, focusing on the interplay between the rhythmic guitar picking and the lead vocal line.",
+      "prompt": "[Intro]\n[fingerpicked acoustic guitar]\n\n[Verse 1]\n[male vocals enter]\nI've been walking down this dusty road\nWith a heavy heart and a lighter load [guitar continues alternating bass pattern]\nAnd the trees are whispering my name\nNothing ever really stays the same\n\n[Chorus]\n[vocal volume increases slightly]\nOh, the wind is calling me home (calling me home)\nAcross the fields where the wild flowers grow [upward vocal slide]\n[acoustic guitar bridge]\n\n[Verse 2]\nI remember how the summer felt\nBefore the winter ice began to melt\nNow the shadows stretch across the floor\nI don't live here anymore [breathy vocal finish]"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T17:49:32"
+}

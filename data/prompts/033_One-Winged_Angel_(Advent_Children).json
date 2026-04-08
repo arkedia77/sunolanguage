@@ -1,0 +1,32 @@
+{
+  "id": 33,
+  "title": "One-Winged Angel (Advent Children)",
+  "artist": "Nobuo Uematsu / The Black Mages (Final Fantasy VII)",
+  "genre": "Hybrid / Cinematic",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "23a3d4d5-3e50-49a6-8e34-af0437659a4f",
+      "tags": "Industrial noise and experimental soundscape. The piece features a continuous, high-frequency metallic screeching sound layered over a rhythmic, mechanical grinding loop. A low-frequency hum oscillates at a steady rate, while intermittent bursts of white noise and distorted static punctuate the texture. The tempo is approximately 120 BPM, though the rhythm is defined by mechanical repetition rather than traditional percussion. The sound is characterized by heavy saturation and bit-crushing effects, creating a dense, abrasive wall of sound. There are no melodic elements or harmonic progressions. The dynamic level remains consistently high with minimal variation in intensity. The piece concludes with a sudden cut to silence.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[high-frequency metallic screeching, low-frequency oscillating hum]\n\n[Main Section]\n[rhythmic mechanical grinding loop enters]\n[intermittent bursts of white noise and distorted static]\n[heavy saturation and bit-crushing effects throughout]\n\n[Outro]\n[sudden cut to silence]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "a6c44259-d207-4cf2-a816-aa5b147ea879",
+      "tags": "Heavy metal featuring high-gain distorted electric guitars and double-kick drumming. The guitars perform palm-muted chugging riffs and rapid tremolo picking. A prominent bass guitar follows the guitar riffs with a gritty, overdriven tone. The drums utilize fast double-bass pedal patterns and frequent china cymbal accents. 140 BPM. 4/4 time signature. Key of E minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging, palm-muted E string]\n[double-kick drums enter with snare hits on 2 and 4]\n\n[Main Riff]\n[harmonized guitars playing descending minor scale riff]\n[rapid double-bass drumming]\n\n[Bridge]\n[sustained power chords]\n[crash cymbal accents]\n\n[Outro]\n[accelerando drum fill]\n[final sustained E minor chord with guitar feedback]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "130ef720-70e4-463c-83bc-e5f16ee2800b",
+      "tags": "Funk rock. A clean electric guitar plays a syncopated, percussive riff using 16th-note scratches and palm muting. A second electric guitar enters with a wah-wah pedal effect, playing rhythmic stabs. The bass guitar performs a slap-and-pop technique, locking with a dry, punchy kick drum. The drum kit features a crisp snare with a short decay and tight, closed hi-hats playing 16th-note patterns. The arrangement is built on a repetitive two-bar groove in E minor at 110 BPM. The production is dry with minimal reverb, emphasizing the rhythmic interplay between the slap bass and the muted guitar scratches.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar with 16th-note scratches and palm muting]\n[slap bass enters with percussive pops]\n\n[Main Groove]\n[wah-wah electric guitar rhythmic stabs]\n[dry drum kit with tight hi-hats and punchy kick]\n[snare hits on beats 2 and 4]"
+    },
+    "vocals": {
+      "status": "error",
+      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T14:23:19"
+}

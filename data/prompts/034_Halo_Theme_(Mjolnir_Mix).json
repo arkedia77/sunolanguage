@@ -1,0 +1,33 @@
+{
+  "id": 34,
+  "title": "Halo Theme (Mjolnir Mix)",
+  "artist": "Martin O'Donnell & Michael Salvatori feat. Steve Vai",
+  "genre": "Hybrid / Cinematic",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "384bd5b9-e9cf-4eee-9dcd-a6d39fea09b9",
+      "tags": "Psychedelic rock with heavy blues and world music influences. The track features a prominent electric sitar or a guitar with a sitar-emulation effect, characterized by a sharp, metallic attack and sympathetic string resonance. A distorted electric guitar performs wide, slow vibrato bends and feedback-driven sustain. The drum kit uses a dry, 1970s-style production with a prominent tambourine on the backbeat. A fuzzy, overdriven bass guitar follows a repetitive, hypnotic riff. The arrangement includes a wah-wah pedal on the guitar and occasional reverse-tape effects. The tempo is 115 BPM in 4/4 time, likely in the key of E minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[electric sitar melody with heavy reverb]\n[distorted electric guitar feedback swell]\n\n[Section A]\n[drum kit enters with steady backbeat]\n[tambourine on every beat]\n[fuzz bass riff begins]\n[electric sitar plays repetitive raga-style line]\n\n[Section B]\n[wah-wah guitar enters with rhythmic scratching]\n[lead electric guitar plays slow, bluesy bends with high gain]\n[reverse-tape sound effect transition]\n\n[Outro]\n[sitar melody fades]\n[sustained guitar feedback]\n[final drum fill with heavy compression]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "b0a78223-90e8-426a-a9c9-f4a05f5847cb",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, resonant kick drum provides a constant four-on-the-floor pulse at 135 BPM in the key of D minor. A metallic, percussive synth sequence runs in sixteenth notes with automated low-pass filter sweeps. Gritty, overdriven bass stabs syncopate against the kick. High-frequency white noise bursts and mechanical clangs function as rhythmic accents. A dark, cinematic drone pad enters in the mid-section, processed with heavy reverb and bit-crushing. The arrangement features sudden structural drops and high-resonance filter resonance peaks. No melodic elements are present beyond the dissonant synth textures.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum pulse, metallic percussion hits]\n\n[Section A]\n[sixteenth-note synth sequence enters, low-pass filter opening]\n[overdriven bass stabs]\n\n[Section B]\n[white noise bursts, mechanical clanging accents]\n[bit-crushed drone pad swells]\n\n[Breakdown]\n[kick drum drops out, resonant filter sweep on synth sequence]\n[industrial atmosphere, heavy reverb]\n\n[Outro]\n[kick drum returns, gradual filter closing]\n[fading mechanical textures]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "2503fe0c-3977-45d3-a3b6-1f578633cd25",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, resonant kick drum drives the rhythm at 130 BPM in 4/4 time. A syncopated, metallic percussion loop provides high-frequency texture. A monophonic sawtooth bassline plays a repetitive sixteenth-note pattern with a low-pass filter sweep. Distorted, mechanical sound effects and white noise bursts occur on every fourth bar. A resonant, high-pitched synth lead enters with a dissonant, three-note motif. The track features heavy compression and a dark, industrial aesthetic with minimal melodic movement.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum, metallic percussion loop]\n\n[Section A]\n[sawtooth bassline enters, sixteenth-note pattern]\n[low-pass filter sweep on bass]\n\n[Section B]\n[dissonant high-pitched synth lead enters]\n[white noise bursts, mechanical sound effects]\n\n[Outro]\n[synth lead fades out]\n[kick drum and percussion continue to end]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "0c2209b6-49ea-4f72-97fe-399057a9634e",
+      "tags": "Experimental electronic and ambient track featuring heavily processed vocal textures and cinematic sound design. The piece opens with a low-frequency drone and granular synthesis, transitioning into a rhythmic section characterized by a distorted, industrial-leaning synth bass and a syncopated electronic drum pattern. A recurring vocal motif, manipulated with pitch-shifting and extreme reverb, creates a haunting melodic layer. The arrangement utilizes high-pass filter sweeps and bit-crushing effects to create dynamic tension. The tempo is 110 BPM in the key of D minor. The percussion consists of a punchy, compressed kick and a metallic, gated snare that enters in the second half. Layers of atmospheric pads and resonant synth stabs provide harmonic density against the rhythmic elements.",
+      "prompt": "[Intro]\n[low-frequency drone, granular synth textures]\n[Verse 1]\n[heavily processed, pitch-shifted male vocals]\nOoh... [reverb wash]\nOoh... [vocal repeats with delay]\n[Chorus]\n[distorted synth bass enters, syncopated electronic drums]\nOoh... [bit-crushed vocal texture]\nOoh... [high-pass filter sweep]\n[Bridge]\n[drums drop out, resonant synth stabs]\nOoh... [layered vocal harmonies with heavy processing]\n[Outro]\n[metallic gated snare enters]\nOoh... [tape stop effect]\n[fades to silence with granular hiss]"
+    }
+  },
+  "status": "ok"
+}

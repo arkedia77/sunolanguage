@@ -1,0 +1,34 @@
+{
+  "id": 84,
+  "title": "Solitude",
+  "artist": "Jinsang",
+  "genre": "Lo-fi / Neo-classical / Piano",
+  "stems": {
+    "other": {
+      "status": "ok",
+      "uuid": "22584e49-d0c7-430c-be48-aadaac313385",
+      "tags": "Indie pop with a lo-fi aesthetic. A clean electric guitar plays a repetitive, syncopated two-chord progression using a chorus effect and light reverb. A monophonic analog synth lead performs a simple, descending melodic motif with a soft attack and moderate portamento. The percussion consists of a programmed electronic beat featuring a dry, mid-range kick drum on beats one and three, paired with a sharp, gated snare on beats two and four. A high-frequency shaker maintains a steady sixteenth-note pattern. The arrangement is minimalist, focusing on the interplay between the rhythmic guitar and the melodic synth. Key of G major. Tempo is 105 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar with chorus effect, syncopated two-chord riff]\n\n[Main Theme]\n[electronic drum beat enters, dry kick and gated snare]\n[sixteenth-note shaker pattern]\n[monophonic analog synth lead enters with descending melodic motif]\n\n[Outro]\n[synth lead fades out]\n[guitar riff continues solo]\n[final kick drum hit]"
+    },
+    "bass": {
+      "status": "ok",
+      "uuid": "bcc8b93d-0873-46d5-a940-9c97002cc822",
+      "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail drives the rhythm at 130 BPM in 4/4 time. A metallic, percussive synth sequence plays a repetitive sixteenth-note pattern with high-pass filter automation. Gritty, white-noise-based textures and industrial clangs occur on the off-beats. A resonant, acid-style synth bassline enters with a short decay and high resonance, modulating the cutoff frequency throughout the loop. The track maintains a consistent, high-density rhythmic energy with minimal melodic variation.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-tail, metallic sixteenth-note synth sequence]\n\n[Section A]\n[industrial clangs on off-beats, white-noise textures]\n[resonant acid synth bass enters with filter modulation]\n\n[Section B]\n[high-pass filter sweep on percussion, increased distortion saturation]"
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "5e24b34b-7a29-4251-83f6-c9ded79c99d5",
+      "tags": "Boom bap hip hop. A dry, acoustic drum kit plays a steady backbeat with a slightly swung eighth-note hi-hat pattern. A deep, resonant sub-bass follows the kick drum pattern. A clean, jazz-influenced electric guitar plays a repetitive two-bar melodic loop featuring minor seventh chords and chromatic passing tones. A subtle vinyl crackle layer persists throughout the arrangement. 92 BPM. Key of C minor. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle, four-bar drum break with open hi-hat on the and of four]\n\n[Main Loop]\n[clean electric guitar enters with minor seventh chord stabs]\n[sub-bass enters, locking with the kick drum]\n[repetitive two-bar melodic guitar phrase continues]"
+    },
+    "vocals": {
+      "status": "ok",
+      "uuid": "08d5bfd7-69f5-4352-9e87-47664e6eb99f",
+      "tags": "Lo-fi hip hop track at 85 BPM in the key of C major. A Rhodes electric piano plays a four-bar progression of jazz-influenced seventh chords with a subtle tremolo effect and high-frequency roll-off. The drum kit features a dry, compressed kick drum hitting on beats 1 and 3, with a slightly late, unquantized snare on beats 2 and 4 to create a swung, head-nod feel. A crisp closed hi-hat plays straight eighth notes with varying velocity. A melodic bassline played on a warm, filtered sine-wave synth follows the root notes of the piano chords with occasional syncopated passing tones. Atmospheric vinyl crackle and a low-volume rain texture loop continuously in the background. A recurring three-note motif on a muted electric guitar with heavy reverb enters every eight bars.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and rain texture loop starts]\n[Rhodes electric piano enters with jazz chords]\n\n[Main Theme]\n[unquantized boom-bap drum beat enters]\n[sine wave synth bass follows chord roots]\n[closed hi-hat eighth note pattern]\n\n[Bridge]\n[muted electric guitar with heavy reverb plays three-note motif]\n[bass and drums continue with consistent swing]\n\n[Outro]\n[drums and bass drop out]\n[Rhodes piano fades out]\n[vinyl crackle and rain texture linger then fade]"
+    }
+  },
+  "status": "ok",
+  "retried_at": "2026-04-07T19:04:08"
+}

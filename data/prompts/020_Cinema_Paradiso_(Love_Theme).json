@@ -1,0 +1,34 @@
+{
+  "id": 20,
+  "title": "Cinema Paradiso (Love Theme)",
+  "artist": "Ennio Morricone",
+  "genre": "Film Score / OST",
+  "stems": {
+    "other": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "bass": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    },
+    "drums": {
+      "status": "ok",
+      "uuid": "470c5b83-c128-4995-b024-645c1b1f4332",
+      "tags": "Cinematic orchestral score with a focus on strings and woodwinds. The piece features a prominent, recurring oboe melody supported by staccato violin and viola ostinatos. A legato cello and double bass section provides a harmonic floor with sustained low-frequency notes. Flutes and clarinets enter with trills and ascending runs. The arrangement uses a gradual crescendo with the addition of French horns and light orchestral percussion, including a subtle glockenspiel and soft timpani rolls. The tempo is a steady 72 BPM in 4/4 time, likely in the key of G Major. The texture is homophonic, transitioning into a more contrapuntal woodwind section. High-register violins perform soaring, lyrical lines over the rhythmic pulse of the lower strings. No brass beyond horns is present. The piece concludes with a decrescendo, leaving a solo flute and a final sustained string chord.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato string ostinato in violins and violas, 72 BPM]\n[legato cello and double bass entry]\n\n[Main Theme]\n[oboe enters with lyrical melody]\n[soft glockenspiel accents on downbeats]\n\n[Development]\n[flute and clarinet counter-melody enters]\n[French horns provide sustained mid-range support]\n[timpani roll crescendo]\n\n[Climax]\n[full string section with high-register violin melody]\n[woodwind trills and rapid runs]\n[staccato brass accents]\n\n[Outro]\n[decrescendo, strings fade to sustained pads]\n[solo flute performs final melodic fragment]\n[final G major chord in strings with soft harp pluck]"
+    },
+    "vocals": {
+      "status": "failed",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
+    }
+  },
+  "status": "partial",
+  "retried_at": "2026-04-07T13:20:38"
+}
