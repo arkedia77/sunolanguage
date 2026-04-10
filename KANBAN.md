@@ -1,28 +1,24 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunomusic] Phase 4 Tier1 스템 30곡 Suno 녹음 — 전달 완료 2026-04-05, deadline 04-12
-- [sunomusic] Phase 2A: 스템 100곡 Suno 업로드 (5곡 완료) — 진행 중
-- [sunomusic] Phase 2H: 찬송가 업로드 (50곡 중 31성공, #51~ 대기) — 2026-04-02
-- [sunomusic] prompts/ 폴더에 프롬프트 데이터 넣기 — 재요청 2026-04-03
-- [rag] MusicSem/ConceptCaps 어휘 매핑 — 요청 2026-04-03
+- [sunomusic] 스템 업로드 작업 진행 중 — Phase1 보충 14곡 + Phase4 30곡 + Phase5 23곡 (시작 2026-04-09 20:30, 예상 6h)
+- [leomusic-base] Suno 어휘 aliases 매핑 (68악기+64주법) — 요청 2026-04-08
 
 ## TODO
-- [sunolanguage] 데이터 500곡+ 확보 → Casini INPUT vs sunolanguage OUTPUT 비교
+- [sunolanguage] sunomusic 작업 결과 수집 (prompts/ drop) → DB UPDATE + RAG 인덱스 재빌드
+- [sunolanguage] vocab_readiness_report.md 갱신 (25+장르 목표)
+- [sunolanguage] leomusic2 SP 생성 연동 (A등급 장르부터)
 - [sunolanguage] 장르명 정규화를 parsed_tracks.json에도 적용
-- [musicscore] ACE-Step 찬송가 942곡 LoRA 학습 (요청 완료, 시작 대기)
 
 ## BLOCKED
 - 없음
 
 ## DONE (최근)
-- [sunolanguage] Phase 4 Tier1 30곡 다운로드+Demucs+mushin 전송+메시지발송 — 2026-04-05 ✅
-- [sunolanguage] 장르 정규화 59→54장르 + RAG 인덱스 v1 빌드 — 2026-04-03 ✅
-- [sunolanguage] 데이터 부족 장르 보강 계획 수립 (Tier1: 6장르) — 2026-04-03 ✅
-- [sunolanguage] 장르별 인사이트 v2 문서 작성 + 노션 업로드 — 2026-04-03 ✅
-- [sunolanguage] sunomusic에 프롬프트 데이터 요청 메시지 전달 — 2026-04-03 ✅
-- [sunolanguage] 스템 100곡(29GB) mushin 외장하드 전송 완료 — 2026-04-03 ✅
-- [sunolanguage] Phase 3 MP3 20곡 mushin 전송 완료 — 2026-04-03 ✅
-- [sunolanguage] 파싱 스크립트 v2 (342곡/59장르/Audiocards 7필드/장르분석) — 2026-04-03 ✅
-- [sunolanguage] 파싱 스크립트 v1 완성 (36건/150표현/8카테고리) — 2026-04-02 ✅
-- [sunolanguage] RAG v2 활용 방향 확정 (즉시/중기/장기 3단계) — 2026-04-02 ✅
+- [sunolanguage] Phase 5 다운로드+Demucs 23곡 완료 + mushin 전송 — 2026-04-09 ✅
+- [sunolanguage] stem_strategy.json 장르별 2스템 config 생성 — 2026-04-08 ✅
+- [sunolanguage] 어휘 판정 프레임워크 A/B/C등급 + 보고서 — 2026-04-08 ✅
+- [sunolanguage] leomusic2 A등급 어휘 활용 안내 발송 — 2026-04-08 ✅
+- [sunolanguage] leomusic-base aliases 매핑 요청 발송 — 2026-04-08 ✅
+- [sunolanguage] Phase 1 프롬프트 241스템 수집 + DB 반영 — 2026-04-07 ✅
+- [sunolanguage] 50MB 트리밍 스크립트 + 44곡 stems_trimmed 배포 — 2026-04-06 ✅
+- [sunolanguage] Phase 4 Tier1 30곡 다운로드+Demucs+mushin 전송 — 2026-04-05 ✅
