@@ -7,6 +7,14 @@
     ],
     "genre_count": 3
   },
+  "atmospheric pad": {
+    "genres": [
+      "cinematic",
+      "industrial",
+      "swing"
+    ],
+    "genre_count": 3
+  },
   "atmospheric production": {
     "genres": [
       "ambient",
@@ -20,11 +28,48 @@
     ],
     "genre_count": 8
   },
-  "bitcrushed": {
+  "atmospheric texture": {
     "genres": [
-      "suno_moods"
+      "jazz",
+      "lo-fi hip-hop",
+      "swing"
+    ],
+    "genre_count": 3
+  },
+  "atmospheric wash": {
+    "genres": [
+      "ambient"
     ],
     "genre_count": 1
+  },
+  "band-pass filter": {
+    "genres": [
+      "industrial"
+    ],
+    "genre_count": 1
+  },
+  "bit-crushed": {
+    "genres": [
+      "industrial",
+      "phase1_stem"
+    ],
+    "genre_count": 2
+  },
+  "bit-crushing": {
+    "genres": [
+      "ambient",
+      "cinematic",
+      "industrial",
+      "phase1_stem"
+    ],
+    "genre_count": 4
+  },
+  "bitcrushed": {
+    "genres": [
+      "industrial",
+      "suno_moods"
+    ],
+    "genre_count": 2
   },
   "clean mix": {
     "genres": [
@@ -42,52 +87,97 @@
   },
   "clean tone": {
     "genres": [
+      "ambient",
       "indie rock",
       "jazz",
+      "lo-fi hip-hop",
       "swing"
     ],
-    "genre_count": 3
+    "genre_count": 5
+  },
+  "digital delay": {
+    "genres": [
+      "ambient",
+      "synthwave"
+    ],
+    "genre_count": 2
+  },
+  "gated reverb": {
+    "genres": [
+      "darkwave",
+      "fusion",
+      "industrial",
+      "rock",
+      "synthwave"
+    ],
+    "genre_count": 5
   },
   "hall reverb": {
     "genres": [
+      "ambient",
       "choral",
+      "cinematic",
       "classical",
       "hymn",
+      "industrial",
       "liturgical",
       "orchestral",
+      "power metal",
       "worship"
     ],
-    "genre_count": 6
+    "genre_count": 10
   },
   "heavy compression": {
     "genres": [
+      "cinematic",
+      "industrial",
       "suno_moods"
     ],
-    "genre_count": 1
+    "genre_count": 3
   },
   "heavy distortion": {
     "genres": [
+      "blues",
+      "industrial",
       "rock"
     ],
-    "genre_count": 1
+    "genre_count": 3
   },
   "heavy reverb": {
     "genres": [
       "ambient",
+      "cinematic",
       "dream pop",
+      "industrial",
+      "jazz",
+      "lo-fi hip-hop",
       "rock",
-      "shoegaze"
+      "shoegaze",
+      "swing"
     ],
-    "genre_count": 4
+    "genre_count": 9
+  },
+  "high-pass filter": {
+    "genres": [
+      "ambient",
+      "cinematic",
+      "funk",
+      "industrial",
+      "swing",
+      "synthwave"
+    ],
+    "genre_count": 6
   },
   "light reverb": {
     "genres": [
       "ambient",
+      "bossa nova",
       "dream pop",
       "indie pop",
+      "jazz",
       "r&b"
     ],
-    "genre_count": 4
+    "genre_count": 6
   },
   "lo-fi aesthetic": {
     "genres": [
@@ -95,10 +185,12 @@
       "indie folk",
       "indie pop",
       "indie rock",
+      "phase1_stem",
       "r&b",
-      "rock"
+      "rock",
+      "thrash metal"
     ],
-    "genre_count": 6
+    "genre_count": 8
   },
   "lo-fi production": {
     "genres": [
@@ -106,15 +198,41 @@
     ],
     "genre_count": 1
   },
+  "low-pass filter": {
+    "genres": [
+      "ambient",
+      "cinematic",
+      "funk",
+      "industrial",
+      "jazz",
+      "lo-fi hip-hop",
+      "synthwave"
+    ],
+    "genre_count": 7
+  },
+  "narrow stereo": {
+    "genres": [
+      "hip-hop",
+      "industrial",
+      "jazz",
+      "lo-fi hip-hop",
+      "phase1_stem",
+      "swing"
+    ],
+    "genre_count": 6
+  },
   "plate reverb": {
     "genres": [
+      "ambient",
       "bossa nova",
+      "cinematic",
       "fusion",
+      "industrial",
       "new wave",
       "rock",
       "suno_moods"
     ],
-    "genre_count": 5
+    "genre_count": 8
   },
   "polished production": {
     "genres": [
@@ -133,20 +251,60 @@
   "room reverb": {
     "genres": [
       "ambient",
+      "blues",
       "bossa nova",
       "cinematic",
       "classical",
+      "folk",
+      "indie folk",
+      "industrial",
       "jazz",
+      "lo-fi hip-hop",
+      "phase1_stem",
       "post-rock",
+      "rock",
       "swing"
     ],
-    "genre_count": 7
+    "genre_count": 14
+  },
+  "room-reverb": {
+    "genres": [
+      "funk"
+    ],
+    "genre_count": 1
+  },
+  "sidechain compression": {
+    "genres": [
+      "ambient",
+      "cinematic",
+      "industrial",
+      "lo-fi hip-hop",
+      "synthwave"
+    ],
+    "genre_count": 5
   },
   "spring reverb": {
     "genres": [
+      "indie rock",
+      "rock",
       "suno_moods"
     ],
-    "genre_count": 1
+    "genre_count": 3
+  },
+  "stereo field": {
+    "genres": [
+      "ambient",
+      "cinematic",
+      "industrial"
+    ],
+    "genre_count": 3
+  },
+  "stereo imaging": {
+    "genres": [
+      "cinematic",
+      "orchestral"
+    ],
+    "genre_count": 2
   },
   "stereo spread": {
     "genres": [
@@ -157,10 +315,11 @@
   },
   "stereo width": {
     "genres": [
+      "ambient",
       "jazz",
       "lo-fi hip-hop"
     ],
-    "genre_count": 2
+    "genre_count": 3
   },
   "subtle reverb": {
     "genres": [
@@ -176,6 +335,15 @@
       "suno_moods"
     ],
     "genre_count": 3
+  },
+  "tape hiss": {
+    "genres": [
+      "jazz",
+      "lo-fi hip-hop",
+      "phase1_stem",
+      "swing"
+    ],
+    "genre_count": 4
   },
   "tape saturation": {
     "genres": [
@@ -236,11 +404,12 @@
     "genres": [
       "fusion",
       "hip-hop",
+      "indie rock",
       "neo-soul",
       "r&b",
       "soul"
     ],
-    "genre_count": 5
+    "genre_count": 6
   },
   "wide stereo": {
     "genres": [
@@ -255,12 +424,16 @@
       "indie pop",
       "indie rock",
       "jazz",
+      "liturgical",
       "lo-fi hip-hop",
+      "orchestral",
+      "power metal",
       "r&b",
       "rock",
       "soul",
+      "symphonic metal",
       "trap"
     ],
-    "genre_count": 16
+    "genre_count": 20
   }
 }

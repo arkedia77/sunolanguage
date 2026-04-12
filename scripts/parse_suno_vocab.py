@@ -609,6 +609,39 @@ def main():
                 moods_count += 1
         print(f"[suno_moods] {moods_count}곡 로드")
 
+    # 4. data/prompts/*.json (Phase 1+: 스템별 tags/prompt 구조)
+    prompts_dir = PROJECT_ROOT / "data" / "prompts"
+    if prompts_dir.exists():
+        prompts_count = 0
+        stems_count = 0
+        for jf in sorted(prompts_dir.glob("*.json")):
+            data = json.loads(jf.read_text())
+            title = data.get("title", jf.stem)
+            genre = data.get("genre", "")
+            track_id = data.get("id", "")
+            stems = data.get("stems", {})
+            for stem_name, stem_data in stems.items():
+                if stem_data.get("status") != "ok":
+                    continue
+                tags = stem_data.get("tags", "")
+                sp = stem_data.get("prompt", "")
+                if not tags:
+                    continue
+                track = {
+                    "suno_tags": tags,
+                    "suno_sp": sp,
+                    "title": title,
+                    "suno_uuid": stem_data.get("uuid", ""),
+                    "stem": stem_name,
+                    "track_id": track_id,
+                }
+                parsed = parse_track(track, "phase1_stem")
+                parsed["genre_label"] = genre
+                all_parsed.append(parsed)
+                stems_count += 1
+            prompts_count += 1
+        print(f"[data/prompts] {prompts_count}곡, {stems_count}스템 파싱 완료")
+
     if not all_parsed:
         print("파싱할 데이터가 없습니다.")
         return
