@@ -623,15 +623,15 @@ def main():
             for stem_name, stem_data in stems.items():
                 if stem_data.get("status") != "ok":
                     continue
-                tags = stem_data.get("tags", "")
-                sp = stem_data.get("prompt", "")
+                tags = stem_data.get("tags", "") or stem_data.get("description", "")
+                sp = stem_data.get("prompt", "") or stem_data.get("sp", "")
                 if not tags:
                     continue
                 track = {
                     "suno_tags": tags,
                     "suno_sp": sp,
                     "title": title,
-                    "suno_uuid": stem_data.get("uuid", ""),
+                    "suno_uuid": stem_data.get("uuid", "") or stem_data.get("suno_uuid", ""),
                     "stem": stem_name,
                     "track_id": track_id,
                 }

@@ -51,18 +51,22 @@
   "bit-crushed": {
     "genres": [
       "industrial",
+      "jazz",
+      "lo-fi hip-hop",
       "phase1_stem"
     ],
-    "genre_count": 2
+    "genre_count": 4
   },
   "bit-crushing": {
     "genres": [
       "ambient",
+      "boom-bap",
       "cinematic",
+      "hip-hop",
       "industrial",
       "phase1_stem"
     ],
-    "genre_count": 4
+    "genre_count": 6
   },
   "bitcrushed": {
     "genres": [
@@ -70,6 +74,12 @@
       "suno_moods"
     ],
     "genre_count": 2
+  },
+  "bitcrushing": {
+    "genres": [
+      "industrial"
+    ],
+    "genre_count": 1
   },
   "clean mix": {
     "genres": [
@@ -123,17 +133,19 @@
       "liturgical",
       "orchestral",
       "power metal",
+      "rock",
       "worship"
     ],
-    "genre_count": 10
+    "genre_count": 11
   },
   "heavy compression": {
     "genres": [
       "cinematic",
       "industrial",
+      "rock",
       "suno_moods"
     ],
-    "genre_count": 3
+    "genre_count": 4
   },
   "heavy distortion": {
     "genres": [
@@ -163,10 +175,11 @@
       "cinematic",
       "funk",
       "industrial",
+      "progressive house",
       "swing",
       "synthwave"
     ],
-    "genre_count": 6
+    "genre_count": 7
   },
   "light reverb": {
     "genres": [
@@ -212,6 +225,7 @@
   },
   "narrow stereo": {
     "genres": [
+      "boom-bap",
       "hip-hop",
       "industrial",
       "jazz",
@@ -219,7 +233,7 @@
       "phase1_stem",
       "swing"
     ],
-    "genre_count": 6
+    "genre_count": 7
   },
   "plate reverb": {
     "genres": [
@@ -255,17 +269,20 @@
       "bossa nova",
       "cinematic",
       "classical",
+      "flamenco",
       "folk",
+      "fusion",
       "indie folk",
       "industrial",
       "jazz",
       "lo-fi hip-hop",
       "phase1_stem",
       "post-rock",
+      "progressive rock",
       "rock",
       "swing"
     ],
-    "genre_count": 14
+    "genre_count": 17
   },
   "room-reverb": {
     "genres": [
@@ -277,11 +294,18 @@
     "genres": [
       "ambient",
       "cinematic",
+      "funk",
       "industrial",
       "lo-fi hip-hop",
       "synthwave"
     ],
-    "genre_count": 5
+    "genre_count": 6
+  },
+  "sidechained compression": {
+    "genres": [
+      "industrial"
+    ],
+    "genre_count": 1
   },
   "spring reverb": {
     "genres": [
@@ -368,6 +392,7 @@
       "fusion",
       "hip-hop",
       "indie pop",
+      "industrial",
       "jazz",
       "lo-fi hip-hop",
       "neo-soul",
@@ -379,7 +404,7 @@
       "trap",
       "trip-hop"
     ],
-    "genre_count": 20
+    "genre_count": 21
   },
   "vinyl hiss": {
     "genres": [
@@ -423,6 +448,7 @@
       "hymn",
       "indie pop",
       "indie rock",
+      "industrial",
       "jazz",
       "liturgical",
       "lo-fi hip-hop",
@@ -434,6 +460,6 @@
       "symphonic metal",
       "trap"
     ],
-    "genre_count": 20
+    "genre_count": 21
   }
 }

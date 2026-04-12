@@ -1,7 +1,7 @@
 {
   "ac_instruments": {
     "bass": {
-      "count": 218,
+      "count": 256,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -9,7 +9,7 @@
       ]
     },
     "snare": {
-      "count": 169,
+      "count": 218,
       "sources": [
         "phase1_stem",
         "phone_recording",
@@ -17,65 +17,65 @@
       ]
     },
     "guitar": {
-      "count": 147,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "drums": {
-      "count": 144,
+      "count": 170,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "percussion": {
-      "count": 128,
+      "count": 163,
       "sources": [
         "hymn",
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "piano": {
-      "count": 111,
-      "sources": [
-        "hymn",
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "synth": {
-      "count": 111,
-      "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "kick drum": {
-      "count": 109,
+      "count": 155,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "drums": {
+      "count": 151,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "synth": {
+      "count": 140,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "electric guitar": {
-      "count": 90,
+      "count": 117,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
+    "piano": {
+      "count": 115,
+      "sources": [
+        "hymn",
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
     "kick": {
-      "count": 90,
+      "count": 113,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "drum kit": {
-      "count": 78,
+      "count": 112,
       "sources": [
         "phase1_stem",
         "phone_recording",
@@ -83,7 +83,7 @@
       ]
     },
     "bass guitar": {
-      "count": 72,
+      "count": 87,
       "sources": [
         "phase1_stem",
         "phone_recording",
@@ -91,14 +91,14 @@
       ]
     },
     "drum": {
-      "count": 66,
+      "count": 84,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "hi-hat": {
-      "count": 56,
+      "count": 78,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -113,54 +113,68 @@
       ]
     },
     "acoustic guitar": {
-      "count": 34,
+      "count": 38,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "strings": {
-      "count": 28,
+      "count": 34,
       "sources": [
         "hymn",
-        "phase1_stem",
-        "phone_recording",
-        "suno_moods"
-      ]
-    },
-    "electric piano": {
-      "count": 28,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "brass": {
-      "count": 27,
-      "sources": [
         "phase1_stem",
         "phone_recording",
         "suno_moods"
       ]
     },
     "cymbal": {
-      "count": 25,
+      "count": 33,
       "sources": [
         "hymn",
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "electric piano": {
+      "count": 32,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "brass": {
+      "count": 29,
+      "sources": [
+        "phase1_stem",
+        "phone_recording",
+        "suno_moods"
+      ]
+    },
+    "synth bass": {
+      "count": 27,
+      "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "flute": {
-      "count": 24,
+      "count": 26,
       "sources": [
         "hymn",
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "synth bass": {
-      "count": 23,
+    "synth lead": {
+      "count": 21,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "synthesizer": {
+      "count": 20,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -194,24 +208,18 @@
         "suno_moods"
       ]
     },
-    "synthesizer": {
-      "count": 17,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
     "organ": {
-      "count": 14,
+      "count": 15,
       "sources": [
         "hymn",
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "synth lead": {
-      "count": 14,
+    "trumpet": {
+      "count": 15,
       "sources": [
+        "hymn",
         "phase1_stem",
         "suno_moods"
       ]
@@ -223,24 +231,30 @@
         "suno_moods"
       ]
     },
-    "trumpet": {
-      "count": 12,
+    "analog synth": {
+      "count": 13,
       "sources": [
-        "hymn",
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "analog synth": {
+    "slap bass": {
       "count": 12,
       "sources": [
-        "phase1_stem",
-        "suno_moods"
+        "phase1_stem"
       ]
     },
     "808": {
-      "count": 9,
+      "count": 10,
       "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "synth pad": {
+      "count": 10,
+      "sources": [
+        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -256,19 +270,6 @@
       "sources": [
         "phase1_stem",
         "suno_moods"
-      ]
-    },
-    "synth pad": {
-      "count": 8,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "slap bass": {
-      "count": 8,
-      "sources": [
-        "phase1_stem"
       ]
     },
     "oboe": {
@@ -311,6 +312,13 @@
         "suno_moods"
       ]
     },
+    "saxophone": {
+      "count": 6,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
     "upright piano": {
       "count": 6,
       "sources": [
@@ -331,15 +339,21 @@
         "suno_moods"
       ]
     },
-    "saxophone": {
+    "rhodes piano": {
       "count": 5,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "rhodes piano": {
+    "snare drum": {
       "count": 5,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "hammond organ": {
+      "count": 4,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -352,12 +366,6 @@
       ]
     },
     "viola": {
-      "count": 3,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "snare drum": {
       "count": 3,
       "sources": [
         "phase1_stem"
@@ -389,12 +397,6 @@
         "suno_moods"
       ]
     },
-    "hammond organ": {
-      "count": 2,
-      "sources": [
-        "suno_moods"
-      ]
-    },
     "mpc": {
       "count": 2,
       "sources": [
@@ -402,6 +404,13 @@
       ]
     },
     "sitar": {
+      "count": 2,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "turntable": {
       "count": 2,
       "sources": [
         "phase1_stem",
@@ -419,6 +428,12 @@
       "sources": [
         "phase1_stem",
         "suno_moods"
+      ]
+    },
+    "cajón": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
       ]
     },
     "wurlitzer": {
@@ -440,12 +455,6 @@
       ]
     },
     "kora": {
-      "count": 1,
-      "sources": [
-        "suno_moods"
-      ]
-    },
-    "turntable": {
       "count": 1,
       "sources": [
         "suno_moods"
@@ -492,11 +501,23 @@
       "sources": [
         "phase1_stem"
       ]
+    },
+    "moog": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "cajon": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
     }
   },
   "ac_techniques": {
     "vibrato": {
-      "count": 45,
+      "count": 49,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -505,7 +526,14 @@
       ]
     },
     "power chords": {
-      "count": 30,
+      "count": 37,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "four-on-the-floor": {
+      "count": 15,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -517,17 +545,52 @@
         "hymn"
       ]
     },
+    "syncopated pattern": {
+      "count": 12,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
     "syncopated riff": {
+      "count": 12,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato chords": {
+      "count": 12,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated 16th": {
       "count": 11,
       "sources": [
         "phase1_stem"
       ]
     },
-    "four-on-the-floor": {
+    "syncopated accents": {
       "count": 10,
       "sources": [
-        "phase1_stem",
-        "suno_moods"
+        "phase1_stem"
+      ]
+    },
+    "syncopated rhythmic": {
+      "count": 9,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated sixteenth": {
+      "count": 9,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated electric": {
+      "count": 9,
+      "sources": [
+        "phase1_stem"
       ]
     },
     "arpeggiated chords": {
@@ -545,10 +608,11 @@
         "suno_moods"
       ]
     },
-    "syncopated rhythmic": {
+    "call-and-response": {
       "count": 8,
       "sources": [
-        "phase1_stem"
+        "phase1_stem",
+        "suno_moods"
       ]
     },
     "rubato": {
@@ -559,31 +623,39 @@
         "suno_moods"
       ]
     },
+    "sidechained": {
+      "count": 7,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "syncopated drum": {
+      "count": 7,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
     "staccato string": {
       "count": 7,
       "sources": [
         "phase1_stem"
       ]
     },
-    "syncopated accents": {
-      "count": 7,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "syncopated pattern": {
-      "count": 7,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "syncopated sixteenth": {
+    "syncopated eighth": {
       "count": 7,
       "sources": [
         "phase1_stem"
       ]
     },
     "syncopated jazz": {
+      "count": 7,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "sidechain compression": {
       "count": 7,
       "sources": [
         "phase1_stem"
@@ -596,23 +668,35 @@
         "phase1_stem"
       ]
     },
-    "sidechained": {
+    "sidechain": {
       "count": 6,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "syncopated drum": {
+    "power chord": {
       "count": 6,
       "sources": [
-        "phase1_stem",
-        "suno_moods"
+        "phase1_stem"
       ]
     },
-    "staccato chords": {
+    "syncopated fingerstyle": {
       "count": 6,
       "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated two": {
+      "count": 6,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "legato phrasing": {
+      "count": 5,
+      "sources": [
+        "hymn",
         "phase1_stem"
       ]
     },
@@ -623,6 +707,20 @@
         "phone_recording"
       ]
     },
+    "syncopated percussion": {
+      "count": 5,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "polyrhythmic": {
+      "count": 5,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
     "sampling": {
       "count": 5,
       "sources": [
@@ -630,71 +728,27 @@
         "suno_moods"
       ]
     },
-    "sidechain": {
-      "count": 5,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "power chord": {
-      "count": 5,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "syncopated eighth": {
-      "count": 5,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "sidechain compression": {
-      "count": 5,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "syncopated fingerstyle": {
-      "count": 5,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "syncopated electric": {
-      "count": 5,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "syncopated 16th": {
-      "count": 5,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "legato phrasing": {
-      "count": 4,
-      "sources": [
-        "hymn",
-        "phase1_stem"
-      ]
-    },
-    "syncopated percussion": {
-      "count": 4,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "polyrhythmic": {
-      "count": 4,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
     "scratching": {
+      "count": 5,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "syncopated kick": {
+      "count": 5,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "interlocking rhythmic": {
+      "count": 5,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated four": {
       "count": 4,
       "sources": [
         "phase1_stem",
@@ -707,33 +761,20 @@
         "suno_moods"
       ]
     },
-    "call-and-response": {
-      "count": 4,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "syncopated two": {
-      "count": 4,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
     "arpeggiated octaves": {
       "count": 3,
       "sources": [
         "hymn"
       ]
     },
-    "syncopated four": {
+    "tapping": {
       "count": 3,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "tapping": {
+    "syncopated guitar": {
       "count": 3,
       "sources": [
         "phase1_stem",
@@ -759,13 +800,31 @@
         "phase1_stem"
       ]
     },
-    "interlocking rhythmic": {
+    "syncopated snare": {
       "count": 3,
       "sources": [
         "phase1_stem"
       ]
     },
     "syncopated melody": {
+      "count": 3,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato synth": {
+      "count": 3,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato brass": {
+      "count": 3,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated synth": {
       "count": 3,
       "sources": [
         "phase1_stem"
@@ -781,6 +840,13 @@
       "count": 2,
       "sources": [
         "hymn"
+      ]
+    },
+    "arpeggiated figures": {
+      "count": 2,
+      "sources": [
+        "hymn",
+        "phase1_stem"
       ]
     },
     "arpeggiated introduction": {
@@ -836,21 +902,7 @@
         "suno_moods"
       ]
     },
-    "syncopated guitar": {
-      "count": 2,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
     "syncopated bassline": {
-      "count": 2,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "syncopated kick": {
       "count": 2,
       "sources": [
         "phase1_stem",
@@ -875,13 +927,19 @@
         "phase1_stem"
       ]
     },
+    "palm muting": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
     "legato runs": {
       "count": 2,
       "sources": [
         "phase1_stem"
       ]
     },
-    "syncopated snare": {
+    "syncopated 4": {
       "count": 2,
       "sources": [
         "phase1_stem"
@@ -893,7 +951,7 @@
         "phase1_stem"
       ]
     },
-    "staccato synth": {
+    "staccato accents": {
       "count": 2,
       "sources": [
         "phase1_stem"
@@ -905,10 +963,46 @@
         "phase1_stem"
       ]
     },
-    "arpeggiated figures": {
-      "count": 1,
+    "syncopated ghost": {
+      "count": 2,
       "sources": [
-        "hymn"
+        "phase1_stem"
+      ]
+    },
+    "interlocking groove": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated double": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated log": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato piano": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "rasgueado": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated melodic": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
       ]
     },
     "legato violins": {
@@ -1127,12 +1221,6 @@
         "phase1_stem"
       ]
     },
-    "palm muting": {
-      "count": 1,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
     "syncopated electronic": {
       "count": 1,
       "sources": [
@@ -1151,19 +1239,7 @@
         "phase1_stem"
       ]
     },
-    "syncopated 4": {
-      "count": 1,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
     "syncopated pauses": {
-      "count": 1,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "staccato accents": {
       "count": 1,
       "sources": [
         "phase1_stem"
@@ -1211,24 +1287,6 @@
         "phase1_stem"
       ]
     },
-    "syncopated ghost": {
-      "count": 1,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "staccato brass": {
-      "count": 1,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "interlocking groove": {
-      "count": 1,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
     "legato notes": {
       "count": 1,
       "sources": [
@@ -1265,12 +1323,6 @@
         "phase1_stem"
       ]
     },
-    "syncopated double": {
-      "count": 1,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
     "interlocking melodic": {
       "count": 1,
       "sources": [
@@ -1288,39 +1340,178 @@
       "sources": [
         "phase1_stem"
       ]
+    },
+    "syncopated stomp": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "palm-muting": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated sub": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato industrial": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated hits": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato lead": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato analog": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "sidechained compression": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated rasgueado": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "picado": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated grooves": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "interlocking with": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato melodic": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated low": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated growl": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "interlocking of": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated counter": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated bossa": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato notes": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "syncopated phrasing": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "staccato chord": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "interlocking between": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
     }
   },
   "ac_genre_style": {
     "rock": {
-      "count": 113,
+      "count": 140,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "jazz": {
-      "count": 78,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "cinematic": {
-      "count": 62,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "ambient": {
-      "count": 61,
+      "count": 80,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "industrial": {
-      "count": 54,
+      "count": 75,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "cinematic": {
+      "count": 64,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "ambient": {
+      "count": 63,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "funk": {
+      "count": 43,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -1334,24 +1525,17 @@
         "suno_moods"
       ]
     },
+    "indie rock": {
+      "count": 35,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
     "orchestral": {
-      "count": 32,
+      "count": 34,
       "sources": [
         "hymn",
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "indie rock": {
-      "count": 30,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "funk": {
-      "count": 29,
-      "sources": [
         "phase1_stem",
         "suno_moods"
       ]
@@ -1369,14 +1553,14 @@
       ]
     },
     "swing": {
-      "count": 26,
+      "count": 28,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "lo-fi hip hop": {
-      "count": 24,
+      "count": 27,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -1391,7 +1575,7 @@
       ]
     },
     "bossa nova": {
-      "count": 21,
+      "count": 22,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -1405,31 +1589,38 @@
       ]
     },
     "folk": {
-      "count": 18,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "blues": {
-      "count": 15,
+      "count": 20,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "hip hop": {
-      "count": 15,
+      "count": 20,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "fusion": {
-      "count": 14,
+      "count": 18,
       "sources": [
         "phase1_stem",
         "phone_recording",
+        "suno_moods"
+      ]
+    },
+    "blues": {
+      "count": 18,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "boom bap": {
+      "count": 15,
+      "sources": [
+        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -1460,7 +1651,7 @@
         "suno_moods"
       ]
     },
-    "boom bap": {
+    "trap": {
       "count": 11,
       "sources": [
         "phase1_stem",
@@ -1472,12 +1663,6 @@
       "sources": [
         "hymn",
         "phase1_stem"
-      ]
-    },
-    "trap": {
-      "count": 10,
-      "sources": [
-        "suno_moods"
       ]
     },
     "hip-hop": {
@@ -1494,7 +1679,7 @@
       ]
     },
     "deep house": {
-      "count": 7,
+      "count": 8,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -1510,6 +1695,13 @@
       "count": 4,
       "sources": [
         "hymn",
+        "suno_moods"
+      ]
+    },
+    "flamenco": {
+      "count": 4,
+      "sources": [
+        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -1545,11 +1737,24 @@
         "suno_moods"
       ]
     },
+    "afrobeat": {
+      "count": 3,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
     "math rock": {
       "count": 3,
       "sources": [
         "phase1_stem",
         "suno_moods"
+      ]
+    },
+    "progressive house": {
+      "count": 3,
+      "sources": [
+        "phase1_stem"
       ]
     },
     "psychedelic pop-rock": {
@@ -1600,17 +1805,11 @@
         "suno_moods"
       ]
     },
-    "afrobeat": {
+    "amapiano": {
       "count": 2,
       "sources": [
         "phase1_stem",
         "suno_moods"
-      ]
-    },
-    "progressive house": {
-      "count": 2,
-      "sources": [
-        "phase1_stem"
       ]
     },
     "alt rock": {
@@ -1649,19 +1848,7 @@
         "suno_moods"
       ]
     },
-    "amapiano": {
-      "count": 1,
-      "sources": [
-        "suno_moods"
-      ]
-    },
     "psychedelia": {
-      "count": 1,
-      "sources": [
-        "suno_moods"
-      ]
-    },
-    "flamenco": {
       "count": 1,
       "sources": [
         "suno_moods"
@@ -1708,32 +1895,31 @@
       "sources": [
         "phase1_stem"
       ]
+    },
+    "progressive rock": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
     }
   },
   "ac_mood_emotion": {
     "warm": {
-      "count": 89,
+      "count": 94,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "gritty": {
-      "count": 62,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "raw": {
-      "count": 54,
+      "count": 76,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "bright": {
-      "count": 51,
+      "count": 72,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -1742,7 +1928,21 @@
       ]
     },
     "dark": {
-      "count": 47,
+      "count": 60,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "raw": {
+      "count": 55,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "aggressive": {
+      "count": 46,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -1756,22 +1956,16 @@
       ]
     },
     "sparse": {
-      "count": 39,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "aggressive": {
-      "count": 37,
+      "count": 43,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "melancholic": {
-      "count": 35,
+      "count": 36,
       "sources": [
+        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -1801,6 +1995,14 @@
         "suno_moods"
       ]
     },
+    "powerful": {
+      "count": 22,
+      "sources": [
+        "hymn",
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
     "ethereal": {
       "count": 22,
       "sources": [
@@ -1811,14 +2013,6 @@
     "nostalgic": {
       "count": 22,
       "sources": [
-        "suno_moods"
-      ]
-    },
-    "powerful": {
-      "count": 20,
-      "sources": [
-        "hymn",
-        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -1873,14 +2067,22 @@
       ]
     },
     "groovy": {
-      "count": 8,
+      "count": 9,
       "sources": [
+        "phase1_stem",
         "suno_moods"
       ]
     },
     "relaxed": {
       "count": 8,
       "sources": [
+        "suno_moods"
+      ]
+    },
+    "anthemic": {
+      "count": 7,
+      "sources": [
+        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -1898,13 +2100,6 @@
       ]
     },
     "meditative": {
-      "count": 6,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "anthemic": {
       "count": 6,
       "sources": [
         "phase1_stem",
@@ -1967,6 +2162,12 @@
         "suno_moods"
       ]
     },
+    "passionate": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
     "somber": {
       "count": 1,
       "sources": [
@@ -1982,34 +2183,34 @@
   },
   "ac_production": {
     "vinyl crackle": {
-      "count": 45,
+      "count": 53,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "room reverb": {
-      "count": 26,
+      "count": 37,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
+    "low-pass filter": {
+      "count": 21,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
     "hall reverb": {
-      "count": 19,
+      "count": 20,
       "sources": [
         "hymn",
         "phase1_stem"
       ]
     },
-    "low-pass filter": {
-      "count": 19,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
     "wide stereo": {
-      "count": 15,
+      "count": 17,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -2018,37 +2219,56 @@
       ]
     },
     "heavy distortion": {
-      "count": 13,
+      "count": 15,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "heavy reverb": {
-      "count": 13,
+      "count": 15,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "bit-crushing": {
-      "count": 10,
+    "high-pass filter": {
+      "count": 15,
       "sources": [
         "phase1_stem"
       ]
     },
-    "high-pass filter": {
-      "count": 9,
+    "bit-crushing": {
+      "count": 12,
       "sources": [
         "phase1_stem"
       ]
     },
     "plate reverb": {
-      "count": 8,
+      "count": 10,
       "sources": [
         "phase1_stem",
         "phone_recording",
         "suno_moods"
+      ]
+    },
+    "bit-crushed": {
+      "count": 10,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "heavy compression": {
+      "count": 9,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "gated reverb": {
+      "count": 9,
+      "sources": [
+        "phase1_stem"
       ]
     },
     "lo-fi aesthetic": {
@@ -2058,26 +2278,25 @@
         "suno_moods"
       ]
     },
-    "bit-crushed": {
-      "count": 8,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "gated reverb": {
-      "count": 8,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
-    "heavy compression": {
+    "sidechain compression": {
       "count": 7,
       "sources": [
-        "phase1_stem",
-        "suno_moods"
+        "phase1_stem"
       ]
     },
     "narrow stereo": {
+      "count": 7,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "atmospheric pad": {
+      "count": 6,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "stereo field": {
       "count": 6,
       "sources": [
         "phase1_stem"
@@ -2096,16 +2315,18 @@
         "suno_moods"
       ]
     },
-    "stereo field": {
+    "warm tone": {
       "count": 5,
       "sources": [
-        "phase1_stem"
+        "phase1_stem",
+        "suno_moods"
       ]
     },
-    "sidechain compression": {
+    "spring reverb": {
       "count": 5,
       "sources": [
-        "phase1_stem"
+        "phase1_stem",
+        "suno_moods"
       ]
     },
     "clean mix": {
@@ -2114,17 +2335,11 @@
         "suno_moods"
       ]
     },
-    "spring reverb": {
+    "bitcrushed": {
       "count": 4,
       "sources": [
         "phase1_stem",
         "suno_moods"
-      ]
-    },
-    "atmospheric pad": {
-      "count": 4,
-      "sources": [
-        "phase1_stem"
       ]
     },
     "tape echo": {
@@ -2140,23 +2355,9 @@
         "suno_moods"
       ]
     },
-    "warm tone": {
-      "count": 3,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
     "vinyl hiss": {
       "count": 3,
       "sources": [
-        "suno_moods"
-      ]
-    },
-    "bitcrushed": {
-      "count": 3,
-      "sources": [
-        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -2209,6 +2410,12 @@
         "phase1_stem"
       ]
     },
+    "band-pass filter": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
     "clean sound": {
       "count": 1,
       "sources": [
@@ -2239,12 +2446,6 @@
         "phase1_stem"
       ]
     },
-    "band-pass filter": {
-      "count": 1,
-      "sources": [
-        "phase1_stem"
-      ]
-    },
     "atmospheric wash": {
       "count": 1,
       "sources": [
@@ -2262,11 +2463,23 @@
       "sources": [
         "phase1_stem"
       ]
+    },
+    "sidechained compression": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "bitcrushing": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
     }
   },
   "ac_temporal_structure": {
     "4/4 time": {
-      "count": 166,
+      "count": 202,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -2275,15 +2488,7 @@
       ]
     },
     "chorus": {
-      "count": 84,
-      "sources": [
-        "hymn",
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "solo": {
-      "count": 45,
+      "count": 87,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -2291,35 +2496,50 @@
       ]
     },
     "120 bpm": {
-      "count": 45,
+      "count": 58,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "solo": {
+      "count": 53,
+      "sources": [
+        "hymn",
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "hook": {
+      "count": 39,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "bridge": {
-      "count": 36,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "hook": {
-      "count": 34,
+      "count": 38,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "140 bpm": {
-      "count": 33,
+      "count": 35,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "130 bpm": {
+      "count": 34,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "85 bpm": {
-      "count": 29,
+      "count": 30,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -2332,8 +2552,37 @@
         "suno_moods"
       ]
     },
-    "130 bpm": {
+    "105 bpm": {
       "count": 25,
+      "sources": [
+        "hymn",
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "mid-tempo": {
+      "count": 24,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "110 bpm": {
+      "count": 24,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "4/4": {
+      "count": 23,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "115 bpm": {
+      "count": 23,
       "sources": [
         "phase1_stem",
         "suno_moods"
@@ -2347,24 +2596,9 @@
         "suno_moods"
       ]
     },
-    "mid-tempo": {
-      "count": 21,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
     "outro": {
       "count": 21,
       "sources": [
-        "suno_moods"
-      ]
-    },
-    "105 bpm": {
-      "count": 18,
-      "sources": [
-        "hymn",
-        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -2376,45 +2610,37 @@
         "suno_moods"
       ]
     },
-    "110 bpm": {
-      "count": 17,
+    "124 bpm": {
+      "count": 18,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "4/4": {
+    "135 bpm": {
+      "count": 17,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "breakdown": {
       "count": 16,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "115 bpm": {
-      "count": 14,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "124 bpm": {
-      "count": 14,
+    "drop": {
+      "count": 16,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "100 bpm": {
-      "count": 11,
+      "count": 15,
       "sources": [
         "hymn",
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "drop": {
-      "count": 11,
-      "sources": [
         "phase1_stem",
         "suno_moods"
       ]
@@ -2425,13 +2651,6 @@
         "phase1_stem"
       ]
     },
-    "breakdown": {
-      "count": 10,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
     "3/4 time": {
       "count": 8,
       "sources": [
@@ -2439,10 +2658,24 @@
         "phase1_stem"
       ]
     },
-    "135 bpm": {
-      "count": 7,
+    "92 bpm": {
+      "count": 8,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "112 bpm": {
+      "count": 8,
       "sources": [
         "phase1_stem"
+      ]
+    },
+    "88 bpm": {
+      "count": 7,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
       ]
     },
     "180 bpm": {
@@ -2458,10 +2691,18 @@
         "suno_moods"
       ]
     },
-    "112 bpm": {
+    "128 bpm": {
       "count": 6,
       "sources": [
-        "phase1_stem"
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "90 bpm": {
+      "count": 6,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
       ]
     },
     "84 bpm": {
@@ -2472,14 +2713,7 @@
         "suno_moods"
       ]
     },
-    "88 bpm": {
-      "count": 5,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "128 bpm": {
+    "95 bpm": {
       "count": 5,
       "sources": [
         "phase1_stem",
@@ -2492,21 +2726,8 @@
         "suno_moods"
       ]
     },
-    "92 bpm": {
-      "count": 5,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
     "pre-chorus": {
       "count": 5,
-      "sources": [
-        "suno_moods"
-      ]
-    },
-    "95 bpm": {
-      "count": 4,
       "sources": [
         "suno_moods"
       ]
@@ -2530,11 +2751,10 @@
         "suno_moods"
       ]
     },
-    "90 bpm": {
+    "145 bpm": {
       "count": 4,
       "sources": [
-        "phase1_stem",
-        "suno_moods"
+        "phase1_stem"
       ]
     },
     "strophic": {
@@ -2549,10 +2769,11 @@
         "suno_moods"
       ]
     },
-    "145 bpm": {
-      "count": 3,
+    "132 bpm": {
+      "count": 2,
       "sources": [
-        "phase1_stem"
+        "phase1_stem",
+        "phone_recording"
       ]
     },
     "126 bpm": {
@@ -2592,6 +2813,12 @@
         "phase1_stem"
       ]
     },
+    "150 bpm": {
+      "count": 2,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
     "ritardando": {
       "count": 1,
       "sources": [
@@ -2602,12 +2829,6 @@
       "count": 1,
       "sources": [
         "hymn"
-      ]
-    },
-    "132 bpm": {
-      "count": 1,
-      "sources": [
-        "phone_recording"
       ]
     },
     "133 bpm": {
@@ -2736,7 +2957,19 @@
         "phase1_stem"
       ]
     },
-    "150 bpm": {
+    "113 bpm": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "220 bpm": {
+      "count": 1,
+      "sources": [
+        "phase1_stem"
+      ]
+    },
+    "vamp": {
       "count": 1,
       "sources": [
         "phase1_stem"
@@ -2745,80 +2978,29 @@
   },
   "ac_timbre": {
     "distorted": {
-      "count": 133,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "soft": {
-      "count": 100,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "clean": {
-      "count": 90,
-      "sources": [
-        "hymn",
-        "phase1_stem",
-        "phone_recording",
-        "suno_moods"
-      ]
-    },
-    "warm": {
-      "count": 89,
+      "count": 166,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "crisp": {
-      "count": 88,
+      "count": 122,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "resonant": {
-      "count": 84,
+      "count": 116,
       "sources": [
         "hymn",
         "phase1_stem",
         "suno_moods"
       ]
     },
-    "metallic": {
-      "count": 67,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "overdriven": {
-      "count": 64,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "gritty": {
-      "count": 62,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "punchy": {
-      "count": 58,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
-    "bright": {
-      "count": 51,
+    "clean": {
+      "count": 110,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -2826,22 +3008,80 @@
         "suno_moods"
       ]
     },
-    "dark": {
-      "count": 47,
+    "soft": {
+      "count": 103,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "warm": {
+      "count": 94,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "metallic": {
+      "count": 94,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "overdriven": {
+      "count": 88,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "gritty": {
+      "count": 76,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "bright": {
+      "count": 72,
+      "sources": [
+        "hymn",
+        "phase1_stem",
+        "phone_recording",
+        "suno_moods"
+      ]
+    },
+    "punchy": {
+      "count": 71,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "sharp": {
-      "count": 44,
+      "count": 65,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "dark": {
+      "count": 60,
+      "sources": [
+        "phase1_stem",
+        "suno_moods"
+      ]
+    },
+    "saturated": {
+      "count": 43,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "shimmering": {
-      "count": 36,
+      "count": 38,
       "sources": [
         "phase1_stem",
         "phone_recording",
@@ -2854,13 +3094,6 @@
         "suno_moods"
       ]
     },
-    "saturated": {
-      "count": 32,
-      "sources": [
-        "phase1_stem",
-        "suno_moods"
-      ]
-    },
     "airy": {
       "count": 31,
       "sources": [
@@ -2868,14 +3101,14 @@
       ]
     },
     "muffled": {
-      "count": 26,
+      "count": 30,
       "sources": [
         "phase1_stem",
         "suno_moods"
       ]
     },
     "full": {
-      "count": 24,
+      "count": 27,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -2883,7 +3116,7 @@
       ]
     },
     "thick": {
-      "count": 23,
+      "count": 27,
       "sources": [
         "hymn",
         "phase1_stem",
@@ -2911,16 +3144,16 @@
         "suno_moods"
       ]
     },
-    "husky": {
-      "count": 5,
+    "fuzzy": {
+      "count": 6,
       "sources": [
+        "phase1_stem",
         "suno_moods"
       ]
     },
-    "fuzzy": {
+    "husky": {
       "count": 5,
       "sources": [
-        "phase1_stem",
         "suno_moods"
       ]
     },
@@ -2929,6 +3162,12 @@
       "sources": [
         "phase1_stem",
         "suno_moods"
+      ]
+    },
+    "woody": {
+      "count": 4,
+      "sources": [
+        "phase1_stem"
       ]
     },
     "cold": {
@@ -2948,12 +3187,6 @@
       "count": 2,
       "sources": [
         "suno_moods"
-      ]
-    },
-    "woody": {
-      "count": 2,
-      "sources": [
-        "phase1_stem"
       ]
     },
     "bell-like": {
