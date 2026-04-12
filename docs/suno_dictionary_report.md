@@ -246,7 +246,253 @@ Suno가 악기를 묘사할 때 실제로 쓰는 구문입니다.
 
 ---
 
-## 4. 자주 쓰는 형용사+명사 조합 (상위 50)
+## 4. 조성 (Key Signatures)
+
+Suno가 인식하고 명시하는 조성입니다. SP에서 `in the key of X`로 지정 가능.
+
+| 조성 | 빈도 | 장르 |
+|------|------|------|
+| key of D minor | x29 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| key of E minor | x27 | Bluegrass, Blues, Film Score / OST |
+| key of C minor | x25 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| E minor | x22 | Contemporary Instrumental, Electronic / Ambient, Funk / Soul / Blues Instrumental |
+| Key of E minor | x15 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| C minor | x14 | Contemporary Instrumental, Electronic / Ambient, Hybrid / Cinematic |
+| key of G minor | x14 | Electronic / Ambient, Hybrid / Cinematic, New Age |
+| key of G Major | x12 | Contemporary Instrumental, Film Score / OST, Lo-fi / Neo-classical / Piano |
+| Key of C minor | x12 | Afrobeat, Contemporary Instrumental, Electronic / Ambient |
+| D minor | x9 | Contemporary Instrumental, Film Score / OST, Hybrid / Cinematic |
+| a minor | x7 | Hybrid / Cinematic, World Music, suno_moods |
+| d minor | x7 | Electronic / Ambient, Jazz, Post-Rock |
+| key of F minor | x7 | Electronic / Ambient, Hybrid / Cinematic, Post-Rock |
+| Key of G Major | x6 | Guitar Instrumental, New Age, World Music |
+| C major | x6 | Afrobeat, Hybrid / Cinematic, Post-Rock |
+| key of C Major | x5 | Electronic / Ambient, hymn, phone_recording |
+| key of E major | x5 | Contemporary Instrumental, chillout, suno_moods |
+| G major | x5 | Electronic / Ambient, Flamenco, Jazz |
+| key of C major | x5 | Electronic / Ambient, Film Score / OST, Guitar Instrumental |
+| G minor | x5 | Electronic / Ambient, Hybrid / Cinematic, Salsa |
+| key of A minor | x5 | Contemporary Instrumental, Lo-fi / Neo-classical / Piano, flamenco |
+| g minor | x4 | Contemporary Instrumental, Lo-fi / Neo-classical / Piano, suno_moods |
+| Key of G major | x4 | Electronic / Ambient, Jazz, Lo-fi / Neo-classical / Piano |
+| D major | x3 | Jazz, hymn |
+| C Minor | x3 | Film Score / OST, Guitar Instrumental, Lo-fi / Neo-classical / Piano |
+
+### 화성 어휘
+
+| 표현 | 빈도 | 장르 |
+|------|------|------|
+| drone | x41 | Contemporary Instrumental, Electronic / Ambient, Gamelan |
+| ostinato | x33 | Bebop, Contemporary Instrumental, Electronic / Ambient |
+| seventh | x21 | Contemporary Instrumental, Electronic / Ambient, Funk / Soul / Blues Instrumental |
+| chord progression | x20 | Electronic / Ambient, Film Score / OST, Guitar Instrumental |
+| chromatic | x17 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| modulation | x11 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| harmonic support | x10 | Hybrid / Cinematic, New Age, hymn |
+| pentatonic | x9 | Electronic / Ambient, Funk / Soul / Blues Instrumental, Jazz |
+| plagal cadence | x7 | hymn |
+| harmonic structure | x7 | Hybrid / Cinematic, World Music, hymn |
+| suspended | x7 | Hybrid / Cinematic, World Music, hymn |
+| ninth | x5 | Electronic / Ambient, Jazz, Lo-fi / Neo-classical / Piano |
+| pedal point | x4 | Electronic / Ambient, Hybrid / Cinematic, World Music |
+| resolution | x3 | hymn, suno_moods |
+| turnaround | x2 | Funk / Soul / Blues Instrumental, suno_moods |
+| harmonic movement | x2 | Post-Rock, Salsa |
+| phrygian | x2 | World Music, flamenco |
+| tonal progression | x1 | hymn |
+| tonic and dominant | x1 | hymn |
+| key change | x1 | suno_moods |
+
+---
+
+## 5. 무드/감정
+
+| 표현 | 빈도 | 장르 |
+|------|------|------|
+| warm | x109 | Contemporary Instrumental, Electronic / Ambient, Funk / Soul / Blues Instrumental |
+| gritty | x79 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| cinematic | x76 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| bright | x73 | Afrobeat, Bluegrass, Contemporary Instrumental |
+| dark | x68 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| intimate | x62 | Hybrid / Cinematic, Jazz, Lo-fi / Neo-classical / Piano |
+| raw | x62 | Contemporary Instrumental, Funk / Soul / Blues Instrumental, Guitar Instrumental |
+| gentle | x47 | hymn, suno_moods |
+| aggressive | x47 | Contemporary Instrumental, Electronic / Ambient, Guitar Instrumental |
+| sparse | x43 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| smooth | x38 | suno_moods |
+| melancholic | x37 | Lo-Fi Hip-Hop, suno_moods |
+| dreamy | x35 | suno_moods |
+| lush | x34 | Electronic / Ambient, Film Score / OST, New Age |
+| mellow | x25 | suno_moods |
+| powerful | x24 | Contemporary Instrumental, Hybrid / Cinematic, alt rock |
+| ethereal | x24 | Electronic / Ambient, Lo-fi / Neo-classical / Piano, suno_moods |
+| nostalgic | x23 | suno_moods |
+| hypnotic | x22 | Hybrid / Cinematic, suno_moods |
+| energetic | x20 | suno_moods |
+| funky | x14 | suno_moods |
+| bittersweet | x14 | suno_moods |
+| playful | x13 | suno_moods |
+| hopeful | x12 | suno_moods |
+| groovy | x11 | amapiano, suno_moods |
+| uplifting | x10 | suno_moods |
+| epic | x10 | Contemporary Instrumental, Hybrid / Cinematic, suno_moods |
+| introspective | x10 | suno_moods |
+| relaxed | x10 | suno_moods |
+| dramatic | x9 | Contemporary Instrumental, Film Score / OST, Hybrid / Cinematic |
+
+---
+
+## 6. 템포/리듬
+
+| 표현 | 빈도 | 장르 |
+|------|------|------|
+| syncopated | x223 | Afrobeat, Bebop, Bluegrass |
+| 4/4 time | x202 | Afrobeat, Bebop, Blues |
+| steady | x158 | Bluegrass, Blues, Contemporary Instrumental |
+| groove | x119 | Bluegrass, Blues, Contemporary Instrumental |
+| driving | x78 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| 120 bpm | x58 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| backbeat | x53 | Afrobeat, Bluegrass, Blues |
+| off-beat | x47 | Blues, Contemporary Instrumental, Country |
+| 140 bpm | x35 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| 130 bpm | x34 | Electronic / Ambient, Guitar Instrumental, Hybrid / Cinematic |
+| swing | x31 | Afrobeat, Contemporary Instrumental, Electronic / Ambient |
+| 85 bpm | x30 | Afrobeat, Contemporary Instrumental, Electronic / Ambient |
+| 105 bpm | x25 | Blues, Film Score / OST, Funk / Soul / Blues Instrumental |
+| mid-tempo | x24 | Contemporary Instrumental, Film Score / OST, Lo-fi / Neo-classical / Piano |
+| 110 bpm | x24 | Blues, Contemporary Instrumental, Funk / Soul / Blues Instrumental |
+| 4/4 | x23 | Contemporary Instrumental, Contemporary R&B, Electronic / Ambient |
+| 115 bpm | x23 | Afrobeat, Bluegrass, Contemporary Instrumental |
+| 72 bpm | x22 | Film Score / OST, Lo-fi / Neo-classical / Piano, New Age |
+| 124 bpm | x18 | Contemporary Instrumental, Country, Electronic / Ambient |
+| 135 bpm | x17 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| 100 bpm | x15 | Contemporary Instrumental, Electronic / Ambient, Gamelan |
+| four-on-the-floor | x15 | Electronic / Ambient, Film Score / OST, Gamelan |
+| 60 bpm | x11 | Electronic / Ambient, Hybrid / Cinematic, Lo-fi / Neo-classical / Piano |
+| laid-back | x9 | New Age, suno_moods |
+| rubato | x8 | Film Score / OST, Jazz, World Music |
+| 3/4 time | x8 | Film Score / OST, Hybrid / Cinematic, hymn |
+| triplet | x8 | Jazz, Post-Rock, World Music |
+| 92 bpm | x8 | Contemporary R&B, Electronic / Ambient, Lo-fi / Neo-classical / Piano |
+| 112 bpm | x8 | Bluegrass, Film Score / OST, Funk / Soul / Blues Instrumental |
+| 88 bpm | x7 | Electronic / Ambient, Guitar Instrumental, Lo-Fi Hip-Hop |
+
+---
+
+## 7. 다이나믹스/곡 구조
+
+| 표현 | 빈도 | 장르 |
+|------|------|------|
+| piano | x230 | Afrobeat, Contemporary Instrumental, Electronic / Ambient |
+| chorus | x121 | Contemporary Instrumental, Film Score / OST, Guitar Instrumental |
+| solo | x57 | Contemporary Instrumental, Film Score / OST, Guitar Instrumental |
+| hook | x43 | Contemporary Instrumental, Electronic / Ambient, Jazz |
+| bridge | x41 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| verse | x33 | hymn, suno_moods |
+| outro | x21 | suno_moods |
+| intro | x18 | Film Score / OST, Guitar Instrumental, hymn |
+| build | x18 | Hybrid / Cinematic, Progressive House, amapiano |
+| drop | x18 | Contemporary Instrumental, Electronic / Ambient, World Music |
+| breakdown | x16 | Electronic / Ambient, Film Score / OST, Guitar Instrumental |
+| swell | x12 | Electronic / Ambient, Hybrid / Cinematic, Post-Rock |
+| layering | x11 | Contemporary Instrumental, Film Score / OST, Hybrid / Cinematic |
+| riser | x11 | Electronic / Ambient, Hybrid / Cinematic, Post-Rock |
+| forte | x9 | Hybrid / Cinematic, hymn |
+| head | x9 | Film Score / OST, Lo-fi / Neo-classical / Piano, suno_moods |
+| crescendo | x9 | Contemporary Instrumental, Film Score / OST, Hybrid / Cinematic |
+| cut | x7 | Guitar Instrumental, Hybrid / Cinematic, World Music |
+| mezzo-forte | x6 | Film Score / OST, hymn |
+| interlude | x6 | hymn, suno_moods |
+| fortissimo | x6 | Film Score / OST, Hybrid / Cinematic, hymn |
+| pre-chorus | x6 | suno_moods |
+| silence | x6 | Contemporary Instrumental, Hybrid / Cinematic, Jazz |
+| dynamic range | x5 | Film Score / OST, hymn, suno_moods |
+| mezzo-piano | x5 | Lo-fi / Neo-classical / Piano, hymn |
+| strophic | x3 | hymn |
+| builds in intensity | x2 | Lo-fi / Neo-classical / Piano, hymn |
+| buildup | x2 | suno_moods |
+| b section | x2 | suno_moods |
+| decrescendo | x2 | Film Score / OST, suno_moods |
+
+---
+
+## 8. 음색/텍스처
+
+| 표현 | 빈도 | 장르 |
+|------|------|------|
+| distorted | x200 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| soft | x135 | Afrobeat, Contemporary Instrumental, Electronic / Ambient |
+| resonant | x125 | Afrobeat, Bebop, Contemporary Instrumental |
+| crisp | x123 | Afrobeat, Bluegrass, Blues |
+| clean | x118 | Afrobeat, Bluegrass, Blues |
+| metallic | x114 | Bebop, Bluegrass, Contemporary Instrumental |
+| warm | x109 | Contemporary Instrumental, Electronic / Ambient, Funk / Soul / Blues Instrumental |
+| overdriven | x88 | Bluegrass, Contemporary Instrumental, Electronic / Ambient |
+| gritty | x79 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| bright | x73 | Afrobeat, Bluegrass, Contemporary Instrumental |
+| punchy | x73 | Bluegrass, Blues, Contemporary Instrumental |
+| dark | x68 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| sharp | x66 | Bebop, Contemporary Instrumental, Country |
+| saturated | x44 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| sparse | x43 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| shimmering | x38 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| smooth | x38 | suno_moods |
+| lush | x34 | Electronic / Ambient, Film Score / OST, New Age |
+| airy | x32 | suno_moods |
+| dense | x30 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| muffled | x30 | Afrobeat, Contemporary Instrumental, Contemporary R&B |
+| thick | x29 | Contemporary Instrumental, Film Score / OST, Funk / Soul / Blues Instrumental |
+| full | x28 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| ethereal | x24 | Electronic / Ambient, Lo-fi / Neo-classical / Piano, suno_moods |
+| breathy | x21 | Jazz, Lo-fi / Neo-classical / Piano, Post-Rock |
+| raspy | x18 | Contemporary Instrumental, Film Score / OST, Guitar Instrumental |
+| crunchy | x9 | Funk / Soul / Blues Instrumental, suno_moods |
+| rich | x8 | hymn, suno_moods |
+| husky | x6 | suno_moods |
+| fuzzy | x6 | Contemporary Instrumental, Hybrid / Cinematic, World Music |
+
+---
+
+## 9. 보컬/보이싱 ⚠️ 데이터 부족
+
+스템 기반 수집 특성상 보컬 데이터가 제한적입니다. 전곡 업로드로 보강 필요.
+
+| 표현 | 빈도 | 장르 |
+|------|------|------|
+| rap | x124 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| male vocal | x87 | Contemporary Instrumental, Film Score / OST, Guitar Instrumental |
+| female vocal | x40 | Contemporary Instrumental, Electronic / Ambient, Lo-fi / Neo-classical / Piano |
+| satb | x32 | Hybrid / Cinematic, hymn |
+| vocal delivery | x31 | Hybrid / Cinematic, Lo-fi / Neo-classical / Piano, World Music |
+| vibrato | x29 | Contemporary Instrumental, Electronic / Ambient, Film Score / OST |
+| four-part harmony | x19 | hymn |
+| tenor | x17 | Funk / Soul / Blues Instrumental, Post-Rock, hymn |
+| clear diction | x14 | hymn |
+| chant | x14 | Contemporary Instrumental, Hybrid / Cinematic, suno_moods |
+| vocal sample | x12 | Electronic / Ambient, Post-Rock, suno_moods |
+| soprano | x11 | Film Score / OST, hymn |
+| alto | x11 | hymn, suno_moods |
+| layered vocal | x10 | suno_moods |
+| baritone | x9 | Contemporary Instrumental, Hybrid / Cinematic, hymn |
+| wide vibrato | x7 | Contemporary Instrumental, Film Score / OST, Guitar Instrumental |
+| a cappella | x6 | hymn, suno_moods |
+| vocal style | x6 | Film Score / OST, World Music, suno_moods |
+| vocal chop | x6 | Electronic / Ambient, Lo-fi / Neo-classical / Piano, World Music |
+| legato phrasing | x5 | Electronic / Ambient, Flamenco, Jazz |
+| homophonic harmony | x4 | hymn |
+| formal and operatic | x4 | hymn |
+| homophonic texture | x4 | hymn |
+| classical vibrato | x4 | hymn |
+| male tenor | x4 | flamenco, hymn, phone_recording |
+| minimal vibrato | x4 | suno_moods |
+| backing vocal | x4 | flamenco, suno_moods |
+| formal and liturgical | x3 | hymn |
+| controlled vibrato | x3 | hymn |
+| precise diction | x3 | hymn |
+
+---
+
+## 10. 자주 쓰는 형용사+명사 조합 (상위 50)
 
 SP에서 바로 쓸 수 있는 Suno 친화적 표현입니다.
 
@@ -305,7 +551,31 @@ SP에서 바로 쓸 수 있는 Suno 친화적 표현입니다.
 
 ---
 
-## 5. 장르별 핵심 어휘 (상위 15 장르)
+## 11. 커버리지 요약 — 부족한 영역
+
+| 카테고리 | 추출 수 | 평가 |
+|---------|--------|------|
+| 악기 표현 | 228 | ✅ 충분 |
+| 주법 패턴 | 851 | ✅ 충분 |
+| 프로덕션 | 74 | ✅ 양호 |
+| 조성 | 58 | ✅ Suno가 인식함 확인 |
+| 화성 | 23 | ✅ 양호 |
+| 무드/감정 | 55 | ✅ 양호 |
+| 템포/리듬 | 87 | ✅ 양호 |
+| 다이나믹스/구조 | 35 | ✅ 양호 |
+| 음색 | 42 | ✅ 양호 |
+| 보컬 | 54 | ⚠️ 보강 필요 |
+| 장르 | 61 | ⚠️ 226개 중 일부만 커버 |
+
+### 보강 계획
+1. **보컬**: 전곡 업로드(스템X) → 보컬 디렉션 어휘 수집
+2. **무드**: suno_moods 데이터 외 추가 감성 표현 수집
+3. **장르**: 미커버 장르 추가 수집 (현재 62/226)
+4. **화성**: 코드 진행, 모드 등 고급 화성 어휘 보강
+
+---
+
+## 12. 장르별 핵심 어휘 (상위 15 장르)
 
 ### rock (188개 표현)
 - **악기**: acoustic guitar, analog synth, bass, bass guitar, brass, choir, clean guitar, cymbal, distortion guitar, drum
