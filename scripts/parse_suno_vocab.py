@@ -518,10 +518,14 @@ def analyze_genres(parsed_tracks: list[dict]) -> dict:
     genre_vocab = defaultdict(lambda: defaultdict(set))
 
     for track in parsed_tracks:
-        # 장르 결정: ac_genre_style 또는 source
+        # 장르 결정: ac_genre_style > genre_label(Phase 1 스템) > source
         genres = track.get("audiocards", {}).get("ac_genre_style", [])
         if not genres:
-            genres = [track.get("source", "unknown")]
+            gl = (track.get("genre_label") or "").strip()
+            if gl:
+                genres = [gl]
+            else:
+                genres = [track.get("source", "unknown")]
 
         for genre in genres:
             genre = genre.lower().strip()

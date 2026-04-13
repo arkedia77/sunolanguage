@@ -446,17 +446,22 @@
     "temporal": []
   },
   "amapiano": {
-    "total_terms": 14,
+    "total_terms": 22,
     "instruments": [
+      "bass",
       "drum",
+      "electric guitar",
       "flute",
+      "guitar",
       "kick drum",
       "percussion",
       "piano",
+      "snare",
       "synth"
     ],
     "techniques": [
       "staccato piano",
+      "staccato synth",
       "syncopated log"
     ],
     "production": [],
@@ -465,6 +470,8 @@
     ],
     "timbre": [
       "bright",
+      "clean",
+      "crisp",
       "soft",
       "woody"
     ],
@@ -472,6 +479,7 @@
       "amapiano"
     ],
     "temporal": [
+      "112 bpm",
       "113 bpm"
     ]
   },
@@ -672,6 +680,30 @@
       "slow tempo",
       "solo",
       "verse"
+    ]
+  },
+  "bebop": {
+    "total_terms": 10,
+    "instruments": [
+      "drums",
+      "percussion"
+    ],
+    "techniques": [
+      "call-and-response",
+      "staccato accents",
+      "syncopated low"
+    ],
+    "production": [],
+    "mood": [],
+    "timbre": [
+      "metallic",
+      "resonant",
+      "sharp"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "132 bpm",
+      "4/4 time"
     ]
   },
   "blues": {
@@ -1361,27 +1393,76 @@
       "verse"
     ]
   },
+  "contemporary instrumental": {
+    "total_terms": 26,
+    "instruments": [
+      "bass",
+      "bass guitar",
+      "drum kit",
+      "drum machine",
+      "drums",
+      "electric guitar",
+      "guitar",
+      "hi-hat",
+      "kick",
+      "snare",
+      "synthesizer"
+    ],
+    "techniques": [
+      "power chords",
+      "syncopated drum"
+    ],
+    "production": [
+      "bit-crushed",
+      "room reverb"
+    ],
+    "mood": [
+      "aggressive"
+    ],
+    "timbre": [
+      "crisp",
+      "distorted",
+      "overdriven",
+      "punchy",
+      "raspy",
+      "resonant",
+      "thick"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "100 bpm",
+      "180 bpm",
+      "4/4 time"
+    ]
+  },
   "country": {
-    "total_terms": 10,
+    "total_terms": 16,
     "instruments": [
       "bass",
       "drums",
       "guitar",
-      "organ"
+      "organ",
+      "percussion"
     ],
-    "techniques": [],
+    "techniques": [
+      "syncopated pattern"
+    ],
     "production": [],
     "mood": [
       "gritty"
     ],
     "timbre": [
-      "gritty"
+      "gritty",
+      "resonant",
+      "sharp"
     ],
     "genre_style": [
       "country",
       "rock"
     ],
     "temporal": [
+      "124 bpm",
+      "4/4 time",
       "bridge",
       "chorus"
     ]
@@ -1723,8 +1804,78 @@
       "drop"
     ]
   },
+  "electronic / ambient": {
+    "total_terms": 33,
+    "instruments": [
+      "bass guitar",
+      "drum kit",
+      "drums",
+      "electric guitar",
+      "guitar",
+      "hi-hat",
+      "kick drum",
+      "percussion",
+      "snare",
+      "synth",
+      "synth bass"
+    ],
+    "techniques": [
+      "power chords",
+      "scratching",
+      "staccato guitar",
+      "syncopated pauses"
+    ],
+    "production": [
+      "bit-crushing",
+      "room reverb",
+      "tape hiss"
+    ],
+    "mood": [
+      "aggressive",
+      "bright",
+      "gritty"
+    ],
+    "timbre": [
+      "bright",
+      "distorted",
+      "gritty",
+      "metallic",
+      "overdriven",
+      "punchy",
+      "resonant",
+      "sharp"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "120 bpm",
+      "160 bpm",
+      "180 bpm",
+      "4/4 time"
+    ]
+  },
+  "film score / ost": {
+    "total_terms": 7,
+    "instruments": [
+      "percussion"
+    ],
+    "techniques": [
+      "interlocking polyrhythms",
+      "staccato counter"
+    ],
+    "production": [],
+    "mood": [],
+    "timbre": [
+      "metallic",
+      "resonant",
+      "sharp"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "112 bpm"
+    ]
+  },
   "flamenco": {
-    "total_terms": 35,
+    "total_terms": 40,
     "instruments": [
       "bass",
       "brass",
@@ -1741,6 +1892,8 @@
       "picado",
       "rasgueado",
       "staccato brass",
+      "syncopated 4",
+      "syncopated eighth",
       "syncopated melodic",
       "syncopated rasgueado",
       "syncopated slap"
@@ -1755,7 +1908,9 @@
     "timbre": [
       "bright",
       "crisp",
-      "distorted"
+      "distorted",
+      "full",
+      "sharp"
     ],
     "genre_style": [
       "flamenco",
@@ -1767,6 +1922,7 @@
     "temporal": [
       "105 bpm",
       "115 bpm",
+      "124 bpm",
       "220 bpm",
       "4/4",
       "breakdown",
@@ -2168,6 +2324,27 @@
       "verse"
     ]
   },
+  "gamelan": {
+    "total_terms": 7,
+    "instruments": [
+      "kick drum",
+      "percussion"
+    ],
+    "techniques": [],
+    "production": [
+      "room reverb"
+    ],
+    "mood": [],
+    "timbre": [
+      "metallic",
+      "resonant"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "100 bpm",
+      "4/4 time"
+    ]
+  },
   "gospel": {
     "total_terms": 34,
     "instruments": [
@@ -2216,6 +2393,79 @@
       "chorus",
       "drop",
       "hook"
+    ]
+  },
+  "guitar instrumental": {
+    "total_terms": 29,
+    "instruments": [
+      "bass",
+      "bass guitar",
+      "drum",
+      "drums",
+      "electric guitar",
+      "guitar",
+      "hi-hat",
+      "kick",
+      "percussion",
+      "snare"
+    ],
+    "techniques": [
+      "polyrhythmic",
+      "power chords",
+      "syncopated 3",
+      "tapping"
+    ],
+    "production": [
+      "room reverb"
+    ],
+    "mood": [
+      "aggressive",
+      "raw"
+    ],
+    "timbre": [
+      "distorted",
+      "metallic",
+      "overdriven",
+      "raspy",
+      "saturated",
+      "sharp"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "115 bpm",
+      "120 bpm",
+      "180 bpm",
+      "4/4 time",
+      "breakdown",
+      "solo"
+    ]
+  },
+  "hybrid / cinematic": {
+    "total_terms": 13,
+    "instruments": [
+      "bass",
+      "bass guitar",
+      "cymbal",
+      "drums",
+      "guitar",
+      "kick"
+    ],
+    "techniques": [
+      "tremolo picking"
+    ],
+    "production": [],
+    "mood": [
+      "gritty"
+    ],
+    "timbre": [
+      "distorted",
+      "gritty",
+      "overdriven"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "140 bpm",
+      "4/4 time"
     ]
   },
   "hymn": {
@@ -2785,7 +3035,7 @@
     ]
   },
   "jazz": {
-    "total_terms": 192,
+    "total_terms": 208,
     "instruments": [
       "808",
       "acoustic guitar",
@@ -2836,16 +3086,19 @@
     ],
     "techniques": [
       "call and response",
+      "call-and-response",
       "chopping",
       "double bass",
       "interlocking in",
       "legato phrasing",
       "polyrhythm",
       "polyrhythmic",
+      "power chords",
       "rubato",
       "sampling",
       "scratching",
       "staccato chords",
+      "syncopated 4",
       "syncopated bassline",
       "syncopated comping",
       "syncopated eighth",
@@ -2853,10 +3106,14 @@
       "syncopated fingerstyle",
       "syncopated hi",
       "syncopated jazz",
+      "syncopated melody",
       "syncopated passing",
       "syncopated pattern",
       "syncopated percussions",
+      "syncopated rhythmic",
       "syncopated slap",
+      "syncopated snare",
+      "syncopated tumbao",
       "syncopated uk",
       "vibrato",
       "walking bass"
@@ -2916,11 +3173,15 @@
       "clean",
       "crisp",
       "dark",
+      "distorted",
       "gritty",
       "harsh",
       "husky",
+      "metallic",
       "muffled",
+      "overdriven",
       "punchy",
+      "raspy",
       "resonant",
       "rich",
       "saturated",
@@ -2929,7 +3190,8 @@
       "smooth",
       "soft",
       "thick",
-      "warm"
+      "warm",
+      "woody"
     ],
     "genre_style": [
       "afrobeat",
@@ -2961,11 +3223,15 @@
     "temporal": [
       "100 bpm",
       "110 bpm",
+      "112 bpm",
       "115 bpm",
+      "118 bpm",
       "120 bpm",
       "124 bpm",
       "125bpm",
+      "130 bpm",
       "140 bpm",
+      "180 bpm",
       "4/4",
       "4/4 time",
       "72 bpm",
@@ -3057,6 +3323,44 @@
       "4/4 time",
       "72 bpm",
       "84 bpm",
+      "solo"
+    ]
+  },
+  "lo-fi / neo-classical / piano": {
+    "total_terms": 22,
+    "instruments": [
+      "bass guitar",
+      "drums",
+      "electric guitar",
+      "guitar",
+      "hi-hat",
+      "piano",
+      "snare",
+      "upright piano"
+    ],
+    "techniques": [
+      "arpeggiated eighth",
+      "power chords",
+      "staccato single"
+    ],
+    "production": [
+      "room reverb"
+    ],
+    "mood": [
+      "aggressive",
+      "bright"
+    ],
+    "timbre": [
+      "bright",
+      "distorted",
+      "overdriven",
+      "raspy"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "120 bpm",
+      "185 bpm",
+      "4/4",
       "solo"
     ]
   },
@@ -3371,119 +3675,14 @@
       "verse"
     ]
   },
-  "phase1_stem": {
-    "total_terms": 92,
+  "post-rock": {
+    "total_terms": 44,
     "instruments": [
-      "acoustic guitar",
-      "bass",
       "bass guitar",
-      "cymbal",
-      "drum",
-      "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
       "guitar",
       "hi-hat",
-      "kick",
-      "kick drum",
-      "percussion",
-      "piano",
-      "snare",
-      "snare drum",
-      "strings",
-      "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
-    ],
-    "techniques": [
-      "arpeggiated eighth",
-      "call-and-response",
-      "interlocking polyrhythms",
-      "polyrhythmic",
-      "power chords",
-      "scratching",
-      "staccato accents",
-      "staccato counter",
-      "staccato guitar",
-      "staccato single",
-      "staccato synth",
-      "syncopated 3",
-      "syncopated 4",
-      "syncopated accents",
-      "syncopated drum",
-      "syncopated eighth",
-      "syncopated log",
-      "syncopated low",
-      "syncopated melody",
-      "syncopated pattern",
-      "syncopated pauses",
-      "syncopated rhythmic",
-      "syncopated snare",
-      "syncopated tumbao",
-      "tapping",
-      "tremolo picking"
-    ],
-    "production": [
-      "bit-crushed",
-      "bit-crushing",
-      "lo-fi aesthetic",
-      "narrow stereo",
-      "room reverb",
-      "tape hiss"
-    ],
-    "mood": [
-      "aggressive",
-      "bright",
-      "gritty",
-      "raw"
-    ],
-    "timbre": [
-      "bright",
-      "clean",
-      "crisp",
-      "distorted",
-      "full",
-      "gritty",
-      "metallic",
-      "muffled",
-      "overdriven",
-      "punchy",
-      "raspy",
-      "resonant",
-      "saturated",
-      "sharp",
-      "thick",
-      "woody"
-    ],
-    "genre_style": [],
-    "temporal": [
-      "100 bpm",
-      "110 bpm",
-      "112 bpm",
-      "115 bpm",
-      "118 bpm",
-      "120 bpm",
-      "124 bpm",
-      "130 bpm",
-      "132 bpm",
-      "140 bpm",
-      "160 bpm",
-      "180 bpm",
-      "185 bpm",
-      "4/4",
-      "4/4 time",
-      "breakdown",
-      "solo"
-    ]
-  },
-  "post-rock": {
-    "total_terms": 32,
-    "instruments": [
-      "electric guitar",
-      "guitar",
       "kick drum",
       "percussion",
       "piano",
@@ -3492,22 +3691,30 @@
       "synth bass"
     ],
     "techniques": [
-      "arpeggiated melody"
+      "arpeggiated melody",
+      "power chords"
     ],
     "production": [
+      "lo-fi aesthetic",
+      "narrow stereo",
       "room reverb"
     ],
     "mood": [
+      "aggressive",
       "gentle",
       "melancholic",
+      "raw",
       "sparse"
     ],
     "timbre": [
       "clean",
       "crisp",
       "distorted",
+      "overdriven",
+      "raspy",
       "shimmering",
-      "soft"
+      "soft",
+      "thick"
     ],
     "genre_style": [
       "ambient",
@@ -3521,6 +3728,7 @@
     ],
     "temporal": [
       "100 bpm",
+      "180 bpm",
       "4/4 time",
       "70 bpm",
       "mid-tempo",
@@ -3847,22 +4055,30 @@
     ]
   },
   "raga": {
-    "total_terms": 5,
+    "total_terms": 12,
     "instruments": [
+      "kick drum",
       "percussion"
     ],
     "techniques": [
+      "syncopated accents",
+      "syncopated pattern",
       "vibrato"
     ],
     "production": [],
     "mood": [
       "meditative"
     ],
-    "timbre": [],
+    "timbre": [
+      "metallic",
+      "resonant"
+    ],
     "genre_style": [
       "raga"
     ],
     "temporal": [
+      "110 bpm",
+      "4/4 time",
       "solo"
     ]
   },
@@ -4970,6 +5186,38 @@
       "breakdown",
       "mid-tempo",
       "outro"
+    ]
+  },
+  "world music": {
+    "total_terms": 16,
+    "instruments": [
+      "bass guitar",
+      "drums",
+      "electric guitar",
+      "guitar",
+      "hi-hat",
+      "snare"
+    ],
+    "techniques": [
+      "power chords"
+    ],
+    "production": [
+      "lo-fi aesthetic"
+    ],
+    "mood": [
+      "aggressive",
+      "raw"
+    ],
+    "timbre": [
+      "distorted",
+      "overdriven",
+      "raspy",
+      "thick"
+    ],
+    "genre_style": [],
+    "temporal": [
+      "180 bpm",
+      "4/4 time"
     ]
   },
   "worship": {

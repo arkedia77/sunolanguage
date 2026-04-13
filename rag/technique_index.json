@@ -194,12 +194,11 @@
       "classical",
       "hymn",
       "liturgical",
+      "lo-fi / neo-classical / piano",
       "orchestral",
-      "phase1_stem",
       "worship"
     ],
     "co_instruments": [
-      "acoustic guitar",
       "bass",
       "bass drum",
       "bass guitar",
@@ -209,7 +208,6 @@
       "cymbal",
       "drum",
       "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
       "flute",
@@ -227,7 +225,6 @@
       "piano",
       "pipe organ",
       "snare",
-      "snare drum",
       "string section",
       "strings",
       "synth",
@@ -238,7 +235,6 @@
       "timpani",
       "trombone",
       "trumpet",
-      "upright bass",
       "upright piano",
       "viola",
       "violin",
@@ -895,11 +891,12 @@
     "genres": [
       "afrobeat",
       "ambient",
+      "bebop",
       "flamenco",
       "funk",
       "fusion",
       "indie pop",
-      "phase1_stem",
+      "jazz",
       "r&b",
       "rock",
       "swing"
@@ -935,6 +932,7 @@
       "kora",
       "marimba",
       "moog",
+      "mpc",
       "nylon guitar",
       "orchestra",
       "organ",
@@ -956,6 +954,7 @@
       "synth lead",
       "synth pad",
       "synthesizer",
+      "trombone",
       "trumpet",
       "turntable",
       "upright bass",
@@ -966,7 +965,7 @@
       "wurlitzer",
       "xylophone"
     ],
-    "genre_count": 10
+    "genre_count": 11
   },
   "chopping": {
     "genres": [
@@ -1453,32 +1452,10 @@
   },
   "interlocking polyrhythms": {
     "genres": [
-      "phase1_stem"
+      "film score / ost"
     ],
     "co_instruments": [
-      "acoustic guitar",
-      "bass",
-      "bass guitar",
-      "cymbal",
-      "drum",
-      "drum kit",
-      "drum machine",
-      "drums",
-      "electric guitar",
-      "guitar",
-      "hi-hat",
-      "kick",
-      "kick drum",
-      "percussion",
-      "piano",
-      "snare",
-      "snare drum",
-      "strings",
-      "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "percussion"
     ],
     "genre_count": 1
   },
@@ -2737,9 +2714,9 @@
   "polyrhythmic": {
     "genres": [
       "fusion",
+      "guitar instrumental",
       "jazz",
       "math rock",
-      "phase1_stem",
       "progressive metal",
       "progressive rock",
       "rock"
@@ -2858,18 +2835,25 @@
       "blues",
       "choral",
       "cinematic",
+      "contemporary instrumental",
+      "electronic / ambient",
       "funk",
+      "guitar instrumental",
       "indie rock",
       "industrial",
+      "jazz",
       "liturgical",
+      "lo-fi / neo-classical / piano",
       "orchestral",
-      "phase1_stem",
+      "post-rock",
       "rock",
-      "symphonic metal"
+      "symphonic metal",
+      "world music"
     ],
     "co_instruments": [
       "808",
       "acoustic guitar",
+      "acoustic piano",
       "analog synth",
       "bass",
       "bass drum",
@@ -2898,6 +2882,7 @@
       "kora",
       "marimba",
       "moog",
+      "mpc",
       "oboe",
       "orchestra",
       "organ",
@@ -2936,7 +2921,7 @@
       "wurlitzer",
       "xylophone"
     ],
-    "genre_count": 12
+    "genre_count": 18
   },
   "rasgueado": {
     "genres": [
@@ -3126,12 +3111,12 @@
       "boom-bap",
       "cinematic",
       "dream pop",
+      "electronic / ambient",
       "funk",
       "fusion",
       "hip-hop",
       "indie pop",
       "jazz",
-      "phase1_stem",
       "rock",
       "swing"
     ],
@@ -3517,20 +3502,14 @@
   },
   "staccato accents": {
     "genres": [
-      "deep house",
-      "phase1_stem"
+      "bebop",
+      "deep house"
     ],
     "co_instruments": [
-      "acoustic guitar",
       "bass",
-      "bass guitar",
-      "cymbal",
       "drum",
-      "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
-      "guitar",
       "hi-hat",
       "kick",
       "kick drum",
@@ -3538,16 +3517,10 @@
       "piano",
       "saxophone",
       "slap bass",
-      "snare",
-      "snare drum",
-      "strings",
       "synth",
-      "synth bass",
       "synth lead",
       "synth pad",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "upright bass"
     ],
     "genre_count": 2
   },
@@ -3818,32 +3791,10 @@
   },
   "staccato counter": {
     "genres": [
-      "phase1_stem"
+      "film score / ost"
     ],
     "co_instruments": [
-      "acoustic guitar",
-      "bass",
-      "bass guitar",
-      "cymbal",
-      "drum",
-      "drum kit",
-      "drum machine",
-      "drums",
-      "electric guitar",
-      "guitar",
-      "hi-hat",
-      "kick",
-      "kick drum",
-      "percussion",
-      "piano",
-      "snare",
-      "snare drum",
-      "strings",
-      "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "percussion"
     ],
     "genre_count": 1
   },
@@ -3959,32 +3910,20 @@
   },
   "staccato guitar": {
     "genres": [
-      "phase1_stem"
+      "electronic / ambient"
     ],
     "co_instruments": [
-      "acoustic guitar",
-      "bass",
       "bass guitar",
-      "cymbal",
-      "drum",
       "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
       "guitar",
       "hi-hat",
-      "kick",
       "kick drum",
       "percussion",
-      "piano",
       "snare",
-      "snare drum",
-      "strings",
       "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "synth bass"
     ],
     "genre_count": 1
   },
@@ -4396,31 +4335,16 @@
   },
   "staccato single": {
     "genres": [
-      "phase1_stem"
+      "lo-fi / neo-classical / piano"
     ],
     "co_instruments": [
-      "acoustic guitar",
-      "bass",
       "bass guitar",
-      "cymbal",
-      "drum",
-      "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
       "guitar",
       "hi-hat",
-      "kick",
-      "kick drum",
-      "percussion",
       "piano",
       "snare",
-      "snare drum",
-      "strings",
-      "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
       "upright piano"
     ],
     "genre_count": 1
@@ -4565,10 +4489,10 @@
   },
   "staccato synth": {
     "genres": [
+      "amapiano",
       "cinematic",
       "funk",
-      "industrial",
-      "phase1_stem"
+      "industrial"
     ],
     "co_instruments": [
       "808",
@@ -4610,7 +4534,6 @@
       "sitar",
       "slap bass",
       "snare",
-      "snare drum",
       "string section",
       "strings",
       "sub bass",
@@ -4624,7 +4547,6 @@
       "trumpet",
       "turntable",
       "upright bass",
-      "upright piano",
       "vibraphone",
       "viola",
       "violin",
@@ -4880,65 +4802,77 @@
   },
   "syncopated 3": {
     "genres": [
-      "phase1_stem"
+      "guitar instrumental"
     ],
     "co_instruments": [
-      "acoustic guitar",
       "bass",
       "bass guitar",
-      "cymbal",
       "drum",
-      "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
       "guitar",
       "hi-hat",
       "kick",
-      "kick drum",
       "percussion",
-      "piano",
-      "snare",
-      "snare drum",
-      "strings",
-      "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "snare"
     ],
     "genre_count": 1
   },
   "syncopated 4": {
     "genres": [
-      "phase1_stem"
+      "flamenco",
+      "jazz"
     ],
     "co_instruments": [
+      "808",
       "acoustic guitar",
+      "acoustic piano",
+      "analog synth",
       "bass",
       "bass guitar",
+      "brass",
+      "cajón",
+      "cello",
+      "clarinet",
       "cymbal",
       "drum",
       "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
+      "electric piano",
+      "flute",
       "guitar",
       "hi-hat",
       "kick",
       "kick drum",
+      "kora",
+      "marimba",
+      "mpc",
+      "orchestra",
+      "oud",
       "percussion",
       "piano",
+      "rhodes piano",
+      "sampler",
+      "saxophone",
+      "sitar",
       "snare",
       "snare drum",
       "strings",
+      "sub bass",
       "synth",
       "synth bass",
+      "synth lead",
+      "synth pad",
       "synthesizer",
+      "trombone",
+      "trumpet",
+      "turntable",
       "upright bass",
-      "upright piano"
+      "upright piano",
+      "vibraphone"
     ],
-    "genre_count": 1
+    "genre_count": 2
   },
   "syncopated accents": {
     "genres": [
@@ -4948,7 +4882,7 @@
       "classical",
       "industrial",
       "orchestral",
-      "phase1_stem",
+      "raga",
       "rock"
     ],
     "co_instruments": [
@@ -5342,8 +5276,8 @@
   },
   "syncopated drum": {
     "genres": [
+      "contemporary instrumental",
       "funk",
-      "phase1_stem",
       "rock",
       "suno_moods"
     ],
@@ -5390,7 +5324,6 @@
       "synthesizer",
       "trumpet",
       "upright bass",
-      "upright piano",
       "violin",
       "vocoder",
       "wurlitzer",
@@ -5400,12 +5333,12 @@
   },
   "syncopated eighth": {
     "genres": [
+      "flamenco",
       "fusion",
       "indie rock",
       "industrial",
       "jazz",
       "lo-fi hip-hop",
-      "phase1_stem",
       "progressive house",
       "rock",
       "synthwave"
@@ -6267,65 +6200,29 @@
   },
   "syncopated log": {
     "genres": [
-      "amapiano",
-      "phase1_stem"
+      "amapiano"
     ],
     "co_instruments": [
-      "acoustic guitar",
       "bass",
-      "bass guitar",
-      "cymbal",
       "drum",
-      "drum kit",
-      "drum machine",
-      "drums",
       "electric guitar",
       "flute",
       "guitar",
-      "hi-hat",
-      "kick",
       "kick drum",
       "percussion",
       "piano",
       "snare",
-      "snare drum",
-      "strings",
-      "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "synth"
     ],
-    "genre_count": 2
+    "genre_count": 1
   },
   "syncopated low": {
     "genres": [
-      "phase1_stem"
+      "bebop"
     ],
     "co_instruments": [
-      "acoustic guitar",
-      "bass",
-      "bass guitar",
-      "cymbal",
-      "drum",
-      "drum kit",
-      "drum machine",
       "drums",
-      "electric guitar",
-      "guitar",
-      "hi-hat",
-      "kick",
-      "kick drum",
-      "percussion",
-      "piano",
-      "snare",
-      "snare drum",
-      "strings",
-      "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "percussion"
     ],
     "genre_count": 1
   },
@@ -6370,35 +6267,56 @@
   "syncopated melody": {
     "genres": [
       "indie folk",
-      "phase1_stem"
+      "jazz"
     ],
     "co_instruments": [
+      "808",
       "acoustic guitar",
+      "acoustic piano",
+      "analog synth",
       "banjo",
       "bass",
       "bass guitar",
+      "brass",
       "cello",
+      "clarinet",
       "cymbal",
       "drum",
       "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
       "electric piano",
+      "flute",
       "guitar",
       "hi-hat",
       "kick",
       "kick drum",
+      "kora",
+      "marimba",
+      "mpc",
+      "orchestra",
+      "oud",
       "percussion",
       "piano",
+      "rhodes piano",
+      "sampler",
+      "saxophone",
+      "sitar",
       "snare",
       "snare drum",
       "strings",
+      "sub bass",
       "synth",
       "synth bass",
+      "synth lead",
+      "synth pad",
       "synthesizer",
+      "trombone",
+      "trumpet",
+      "turntable",
       "upright bass",
       "upright piano",
+      "vibraphone",
       "violin",
       "vocoder"
     ],
@@ -6462,11 +6380,12 @@
   "syncopated pattern": {
     "genres": [
       "boom-bap",
+      "country",
       "funk",
       "hip-hop",
       "industrial",
       "jazz",
-      "phase1_stem",
+      "raga",
       "rock"
     ],
     "co_instruments": [
@@ -6529,36 +6448,24 @@
       "wurlitzer",
       "xylophone"
     ],
-    "genre_count": 7
+    "genre_count": 8
   },
   "syncopated pauses": {
     "genres": [
-      "phase1_stem"
+      "electronic / ambient"
     ],
     "co_instruments": [
-      "acoustic guitar",
-      "bass",
       "bass guitar",
-      "cymbal",
-      "drum",
       "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
       "guitar",
       "hi-hat",
-      "kick",
       "kick drum",
       "percussion",
-      "piano",
       "snare",
-      "snare drum",
-      "strings",
       "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "synth bass"
     ],
     "genre_count": 1
   },
@@ -6821,13 +6728,14 @@
       "funk",
       "fusion",
       "industrial",
+      "jazz",
       "orchestral",
-      "phase1_stem",
       "rock"
     ],
     "co_instruments": [
       "808",
       "acoustic guitar",
+      "acoustic piano",
       "analog synth",
       "bass",
       "bass drum",
@@ -6857,6 +6765,7 @@
       "kora",
       "marimba",
       "moog",
+      "mpc",
       "oboe",
       "orchestra",
       "organ",
@@ -6865,6 +6774,7 @@
       "percussion",
       "piano",
       "pipe organ",
+      "rhodes piano",
       "sampler",
       "saxophone",
       "sitar",
@@ -7194,16 +7104,20 @@
   },
   "syncopated snare": {
     "genres": [
-      "phase1_stem",
+      "jazz",
       "rock"
     ],
     "co_instruments": [
+      "808",
       "acoustic guitar",
+      "acoustic piano",
       "analog synth",
       "bass",
       "bass guitar",
       "brass",
+      "cello",
       "choir",
+      "clarinet",
       "clean guitar",
       "cymbal",
       "distortion guitar",
@@ -7213,27 +7127,41 @@
       "drums",
       "electric guitar",
       "electric piano",
+      "flute",
       "guitar",
       "hammond organ",
       "hi-hat",
       "kick",
       "kick drum",
+      "kora",
+      "marimba",
+      "mpc",
+      "orchestra",
       "organ",
+      "oud",
       "overdriven guitar",
       "percussion",
       "piano",
+      "rhodes piano",
+      "sampler",
       "saxophone",
       "sitar",
       "slap bass",
       "snare",
       "snare drum",
       "strings",
+      "sub bass",
       "synth",
       "synth bass",
+      "synth lead",
+      "synth pad",
       "synthesizer",
+      "trombone",
       "trumpet",
+      "turntable",
       "upright bass",
       "upright piano",
+      "vibraphone",
       "wurlitzer",
       "xylophone"
     ],
@@ -7409,32 +7337,55 @@
   },
   "syncopated tumbao": {
     "genres": [
-      "phase1_stem"
+      "jazz"
     ],
     "co_instruments": [
+      "808",
       "acoustic guitar",
+      "acoustic piano",
+      "analog synth",
       "bass",
       "bass guitar",
+      "brass",
+      "cello",
+      "clarinet",
       "cymbal",
       "drum",
       "drum kit",
-      "drum machine",
       "drums",
       "electric guitar",
+      "electric piano",
+      "flute",
       "guitar",
       "hi-hat",
       "kick",
       "kick drum",
+      "kora",
+      "marimba",
+      "mpc",
+      "orchestra",
+      "oud",
       "percussion",
       "piano",
+      "rhodes piano",
+      "sampler",
+      "saxophone",
+      "sitar",
       "snare",
       "snare drum",
       "strings",
+      "sub bass",
       "synth",
       "synth bass",
+      "synth lead",
+      "synth pad",
       "synthesizer",
+      "trombone",
+      "trumpet",
+      "turntable",
       "upright bass",
-      "upright piano"
+      "upright piano",
+      "vibraphone"
     ],
     "genre_count": 1
   },
@@ -7592,18 +7543,15 @@
   },
   "tapping": {
     "genres": [
-      "phase1_stem",
+      "guitar instrumental",
       "suno_moods"
     ],
     "co_instruments": [
       "808",
-      "acoustic guitar",
       "analog synth",
       "bass",
       "bass guitar",
-      "cymbal",
       "drum",
-      "drum kit",
       "drum machine",
       "drums",
       "electric guitar",
@@ -7616,17 +7564,13 @@
       "piano",
       "rhodes piano",
       "snare",
-      "snare drum",
-      "strings",
       "sub bass",
       "synth",
       "synth bass",
       "synth lead",
       "synth pad",
-      "synthesizer",
       "trumpet",
       "upright bass",
-      "upright piano",
       "violin",
       "vocoder"
     ],
@@ -7634,32 +7578,15 @@
   },
   "tremolo picking": {
     "genres": [
-      "phase1_stem"
+      "hybrid / cinematic"
     ],
     "co_instruments": [
-      "acoustic guitar",
       "bass",
       "bass guitar",
       "cymbal",
-      "drum",
-      "drum kit",
-      "drum machine",
       "drums",
-      "electric guitar",
       "guitar",
-      "hi-hat",
-      "kick",
-      "kick drum",
-      "percussion",
-      "piano",
-      "snare",
-      "snare drum",
-      "strings",
-      "synth",
-      "synth bass",
-      "synthesizer",
-      "upright bass",
-      "upright piano"
+      "kick"
     ],
     "genre_count": 1
   },

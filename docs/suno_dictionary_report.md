@@ -1,7 +1,7 @@
 # Suno 네이티브 어휘 사전
 
 **생성일**: 2026-04-12
-**데이터**: 665트랙 / 62장르
+**데이터**: 665트랙 / 70장르
 **목적**: Suno가 실제로 사용하는 어휘와 표현 패턴 → SP 작성 참고
 
 ---
@@ -565,7 +565,7 @@ SP에서 바로 쓸 수 있는 Suno 친화적 표현입니다.
 | 다이나믹스/구조 | 35 | ✅ 양호 |
 | 음색 | 42 | ✅ 양호 |
 | 보컬 | 54 | ⚠️ 보강 필요 |
-| 장르 | 61 | ⚠️ 226개 중 일부만 커버 |
+| 장르 | 69 | ⚠️ 226개 중 일부만 커버 |
 
 ### 보강 계획
 1. **보컬**: 전곡 업로드(스템X) → 보컬 디렉션 어휘 수집
@@ -591,12 +591,12 @@ SP에서 바로 쓸 수 있는 Suno 친화적 표현입니다.
 - **무드**: aggressive, anthemic, bright, calm, cold, dark, dreamy, eerie, epic, ethereal
 - **음색**: airy, bell-like, bright, clean, cold, crisp, dark, distorted, full, glassy
 
-### jazz (167개 표현)
+### jazz (183개 표현)
 - **악기**: 808, acoustic guitar, acoustic piano, analog synth, bass, bass guitar, brass, cello, clarinet, cymbal
-- **주법**: call and response, chopping, double bass, interlocking in, legato phrasing, polyrhythm, polyrhythmic, rubato, sampling, scratching
+- **주법**: call and response, call-and-response, chopping, double bass, interlocking in, legato phrasing, polyrhythm, polyrhythmic, power chords, rubato
 - **프로덕션**: atmospheric texture, bit-crushed, clean tone, heavy reverb, light reverb, low-pass filter, narrow stereo, room reverb, stereo width, tape hiss
 - **무드**: aggressive, bright, calm, chill, dark, dreamy, eerie, ethereal, euphoric, funky
-- **음색**: airy, breathy, bright, clean, crisp, dark, gritty, harsh, husky, muffled
+- **음색**: airy, breathy, bright, clean, crisp, dark, distorted, gritty, harsh, husky
 
 ### ambient (153개 표현)
 - **악기**: 808, acoustic guitar, analog synth, bass, bass guitar, cello, choir, drum, drum kit, drum machine
@@ -668,16 +668,16 @@ SP에서 바로 쓸 수 있는 Suno 친화적 표현입니다.
 - **무드**: aggressive, bright, dark, dreamy, epic, euphoric, gentle, gritty, lush, majestic
 - **음색**: bright, clean, crisp, dark, distorted, full, gritty, metallic, punchy, resonant
 
-### phase1_stem (92개 표현)
-- **악기**: acoustic guitar, bass, bass guitar, cymbal, drum, drum kit, drum machine, drums, electric guitar, guitar
-- **주법**: arpeggiated eighth, call-and-response, interlocking polyrhythms, polyrhythmic, power chords, scratching, staccato accents, staccato counter, staccato guitar, staccato single
-- **프로덕션**: bit-crushed, bit-crushing, lo-fi aesthetic, narrow stereo, room reverb, tape hiss
-- **무드**: aggressive, bright, gritty, raw
-- **음색**: bright, clean, crisp, distorted, full, gritty, metallic, muffled, overdriven, punchy
-
 ### indie pop (86개 표현)
 - **악기**: 808, acoustic guitar, analog synth, bass, brass, clean guitar, drum, drum kit, drum machine, drums
 - **주법**: call-and-response, scratching, sidechain, syncopated four, syncopated kick, syncopated two, vibrato
 - **프로덕션**: atmospheric production, light reverb, lo-fi aesthetic, polished production, vinyl crackle, vinyl hiss, wide stereo
 - **무드**: anthemic, bright, contemplative, dark, dreamy, ethereal, gentle, groovy, hopeful, introspective
 - **음색**: airy, breathy, bright, clean, crisp, dark, full, punchy, raspy, sharp
+
+### r&b (86개 표현)
+- **악기**: 808, acoustic guitar, bass, bass guitar, brass, cello, choir, drum, drum machine, drums
+- **주법**: call-and-response, syncopated percussion, walking bass
+- **프로덕션**: atmospheric production, light reverb, lo-fi aesthetic, vinyl crackle, vinyl hiss, warm tone, wide stereo
+- **무드**: bright, calm, chill, dark, dreamy, ethereal, funky, gentle, groovy, hopeful
+- **음색**: airy, breathy, bright, clean, crisp, dark, distorted, full, husky, punchy
