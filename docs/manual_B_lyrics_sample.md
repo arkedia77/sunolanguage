@@ -18,12 +18,12 @@
 
 | 타입 | 출현 | 고유 | 비고 |
 |----|---:|---:|----|
-| section | 1010 | 40 | 가장 안정 |
-| instrument_or_arrangement | 244 | 40 | 가장 다양 (600 고유) |
-| effect | 330 | 40 |  |
-| vocal_direction | 285 | 40 |  |
-| transition_cue | 176 | 40 | 순간 큐 위주 |
-| uncategorized | 61 | 40 | 타입 규칙 보완 필요 |
+| section | 1015 | 45 | 가장 안정 |
+| instrument_or_arrangement | 869 | 600 | 가장 다양 (600 고유) |
+| effect | 381 | 91 |  |
+| vocal_direction | 400 | 152 |  |
+| transition_cue | 408 | 258 | 순간 큐 위주 |
+| uncategorized | 77 | 56 | 타입 규칙 보완 필요 |
 
 ## 샘플 엔트리
 

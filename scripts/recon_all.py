@@ -134,7 +134,7 @@ for song in merged:
         "entries_total": len(bracket_entries),
         "entries": bracket_entries,
         "top_frequencies": dict(bracket_freq.most_common(200)),
-        "by_type_guess_counts": {k: dict(v.most_common(40))
+        "by_type_guess_counts": {k: dict(v.most_common())
                                  for k, v in bracket_by_type_guess.items()},
     }, ensure_ascii=False, indent=2))
 
