@@ -1,12 +1,11 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] Phase V3.1 방법론 보강 마무리 단계 — 2026-04-20
+- [sunolanguage] Phase V3.1 완결 — 남은 건 V3.2 Wave 1 시작 — 2026-04-20
 
 ## TODO
-### Phase V3.1 잔여
-- [sunolanguage] `parse_slot_entities_v3.py` instrument 3계 분할 (.kit / .layer / .role) — 설계 논의 필요
-- [sunolanguage] extract_templates 엔티티 사전 정리 — "male vocals" 패턴 끝경계 버그 수정 (`<VOCAL>ist` 잔존)
+### Phase V3.1 후속 검증
+- [sunolanguage] layer `unspecified` 45% 문장 샘플링 → Suno가 명시적 layer 단서를 남기지 않는 패턴 기록 (책 5장 보강)
 
 ### Phase V3.2 — 장르 균등화 수집 (4-6주)
 - [sunolanguage] Wave 1: 외부 레퍼런스 60곡 수집 (Orchestral×18, Jazz×16, Hip-Hop×14, Electronic×12)
@@ -31,6 +30,9 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] instrument 3계 분할 구현 — kit(7)/layer(5)/role(7)+role_details 필드 추가, SP 1663·BR 1411 엔트리 분류, lexical FTS5에 `--kit/--layer/--role` 필터 노출 — 2026-04-20 ✅
+- [sunolanguage] VOCAL 엔티티 끝경계 버그 수정 — 복합 vocal 패턴 `s?\b` 추가, `<VOCAL>ist` 기형 0건 확인, echo 7.59% 유지 — 2026-04-20 ✅
+- [sunolanguage] instrument 3계 분할 설계안 작성 — `docs/instrument_3way_split_proposal.md` — 2026-04-20 ✅
 - [sunolanguage] 전면 방법론 재검토 + 로드맵 수립 (플랜 `tender-wishing-lynx.md` 승인) — 2026-04-20 ✅
 - [sunolanguage] R1 `scripts/extract_templates.py` — 슬롯별 구문 템플릿 추출 (tempo_key_time: 40x "The tempo is <BPM> in the key of <KEY>.") — 2026-04-20 ✅
 - [sunolanguage] R2 `scripts/measure_echo.py` — echo 평균 7.6%, ≥70% 0건 → Suno 네이티브 어휘 근거 확보 — 2026-04-20 ✅

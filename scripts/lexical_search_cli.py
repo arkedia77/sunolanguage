@@ -12,6 +12,8 @@
   python3 scripts/lexical_search_cli.py q "vinyl crackle" --source=sp --limit=5
   python3 scripts/lexical_search_cli.py q "chord progression" --count
   python3 scripts/lexical_search_cli.py q '"close mic"' --genre="K-Pop"
+  python3 scripts/lexical_search_cli.py q "syncopated" --kit=bass --role=execute
+  python3 scripts/lexical_search_cli.py q "*" --kit=guitar --layer=lead --count
 
 출력: 매칭 문장(slot/source/genre/song_id 메타 포함).
 """
@@ -43,7 +45,11 @@ def build_index():
             sentence TEXT,
             entity TEXT,
             modifiers TEXT,
-            pattern TEXT
+            pattern TEXT,
+            kit TEXT,
+            layer TEXT,
+            role TEXT,
+            role_details TEXT
         )
     """)
     c.execute("""
@@ -87,6 +93,10 @@ def build_index():
                 fmt(e.get("entity", "")),
                 fmt(e.get("modifiers", [])),
                 fmt(e.get("pattern", "") or e.get("delivery", "") or e.get("action", "")),
+                e.get("kit", "") or "",
+                e.get("layer", "") or "",
+                e.get("role", "") or "",
+                fmt(e.get("role_details", [])),
             ))
 
     # raw SP (Suno 재분석) — 문장 단위로 추가하면 중복이 많으므로 곡 전체 문단을 한 행으로
@@ -98,15 +108,17 @@ def build_index():
             sp = sr.get("sp") or ""
             if sp:
                 rid += 1
-                rows.append((rid, "suno_sp_full", "", sid, genre, sp, "", "", ""))
+                rows.append((rid, "suno_sp_full", "", sid, genre, sp, "", "", "", "", "", "", ""))
         lo = s.get("leomusic_original") or {}
         if lo.get("sp"):
             rid += 1
-            rows.append((rid, "leomusic_sp_full", "", sid, genre, lo["sp"], "", "", ""))
+            rows.append((rid, "leomusic_sp_full", "", sid, genre, lo["sp"], "", "", "", "", "", "", ""))
 
     c.executemany(
-        "INSERT INTO entries(id,source,slot,song_id,genre,sentence,entity,modifiers,pattern) "
-        "VALUES(?,?,?,?,?,?,?,?,?)",
+        "INSERT INTO entries("
+        "id,source,slot,song_id,genre,sentence,entity,modifiers,pattern,"
+        "kit,layer,role,role_details) "
+        "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",
         rows,
     )
 
@@ -115,6 +127,9 @@ def build_index():
     c.execute("CREATE INDEX idx_source ON entries(source)")
     c.execute("CREATE INDEX idx_genre ON entries(genre)")
     c.execute("CREATE INDEX idx_song ON entries(song_id)")
+    c.execute("CREATE INDEX idx_kit ON entries(kit)")
+    c.execute("CREATE INDEX idx_layer ON entries(layer)")
+    c.execute("CREATE INDEX idx_role ON entries(role)")
 
     conn.commit()
     print(f"✔ 인덱스 빌드 완료: {DB} ({len(rows):,} rows)")
@@ -132,9 +147,14 @@ def query(args):
     conn = sqlite3.connect(DB)
     c = conn.cursor()
 
-    # FTS5 MATCH — 따옴표 유지 (구문 검색 지원)
-    where = ["entries_fts MATCH ?"]
-    params = [args.query]
+    # FTS5 MATCH — 따옴표 유지 (구문 검색 지원). '*'는 전체 매칭으로 취급.
+    fts_match = args.query
+    use_fts = fts_match != "*"
+    where = []
+    params = []
+    if use_fts:
+        where.append("entries_fts MATCH ?")
+        params.append(fts_match)
     if args.slot:
         where.append("e.slot = ?")
         params.append(args.slot)
@@ -147,12 +167,23 @@ def query(args):
     if args.song_id is not None:
         where.append("e.song_id = ?")
         params.append(args.song_id)
+    if args.kit:
+        where.append("e.kit = ?")
+        params.append(args.kit)
+    if args.layer:
+        where.append("e.layer = ?")
+        params.append(args.layer)
+    if args.role:
+        where.append("e.role = ?")
+        params.append(args.role)
 
-    where_sql = " AND ".join(where)
+    where_sql = " AND ".join(where) if where else "1=1"
+    join_sql = "JOIN entries_fts f ON f.rowid = e.id" if use_fts else ""
+    order_sql = "ORDER BY rank" if use_fts else "ORDER BY e.id"
+
     if args.count:
         sql = (
-            "SELECT COUNT(*) FROM entries e "
-            "JOIN entries_fts f ON f.rowid = e.id "
+            f"SELECT COUNT(*) FROM entries e {join_sql} "
             f"WHERE {where_sql}"
         )
         c.execute(sql, params)
@@ -160,20 +191,23 @@ def query(args):
         return
 
     sql = (
-        "SELECT e.source, e.slot, e.song_id, e.genre, e.sentence, e.entity, e.modifiers "
-        "FROM entries e JOIN entries_fts f ON f.rowid = e.id "
+        "SELECT e.source, e.slot, e.song_id, e.genre, e.sentence, "
+        "e.entity, e.modifiers, e.kit, e.layer, e.role "
+        f"FROM entries e {join_sql} "
         f"WHERE {where_sql} "
-        "ORDER BY rank LIMIT ?"
+        f"{order_sql} LIMIT ?"
     )
     params.append(args.limit)
     c.execute(sql, params)
 
     n = 0
-    for src, slot, sid, genre, sentence, entity, modifiers in c.fetchall():
+    for src, slot, sid, genre, sentence, entity, modifiers, kit, layer, role in c.fetchall():
         n += 1
         head = f"[{src}]"
         if slot:
             head += f"[{slot}]"
+        if kit:
+            head += f"[{kit}/{layer or '-'}/{role or '-'}]"
         head += f" song#{sid}  ({genre})"
         print(head)
         print(f"    {sentence[:240]}")
@@ -195,6 +229,9 @@ def main():
     qp.add_argument("--source", help="소스 제한 (sp_entity/bracket_entity/suno_sp_full/leomusic_sp_full)")
     qp.add_argument("--genre", help="장르 LIKE 제한")
     qp.add_argument("--song-id", type=int, help="특정 곡")
+    qp.add_argument("--kit", help="악기 family (guitar/bass/keys/synth/strings/brass/other)")
+    qp.add_argument("--layer", help="텍스처 층 (lead/rhythm/bass/pad/fill/unspecified)")
+    qp.add_argument("--role", help="기능 (execute/groove_lock/support/fill/layer_on/lead_out/sustain)")
     qp.add_argument("--limit", type=int, default=15, help="결과 상한 (기본 15)")
     qp.add_argument("--count", action="store_true", help="매칭 개수만 출력")
 

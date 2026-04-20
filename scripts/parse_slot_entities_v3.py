@@ -104,12 +104,171 @@ DRUM_ENTITIES = [
     ("beat", re.compile(r"\b(?:pop |rock |driving |trap )?beat\b", re.I)),
 ]
 
+# ─────────────────────────────────────────
+# Instrument 3계 분할: kit / layer / role (2026-04-20)
+# ─────────────────────────────────────────
+INSTRUMENT_FAMILY = {
+    # guitar
+    "fingerpicked acoustic guitar": "guitar",
+    "fingerstyle acoustic guitar": "guitar",
+    "nylon-string acoustic guitar": "guitar",
+    "12-string acoustic guitar": "guitar",
+    "strummed acoustic guitar": "guitar",
+    "steel-string acoustic guitar": "guitar",
+    "acoustic guitar": "guitar",
+    "clean electric guitar": "guitar",
+    "distorted electric guitar": "guitar",
+    "overdriven electric guitar": "guitar",
+    "palm-muted electric guitar": "guitar",
+    "arpeggiated electric guitar": "guitar",
+    "electric guitar": "guitar",
+    "guitar": "guitar",
+    "ukulele": "guitar",
+    "mandolin": "guitar",
+    "banjo": "guitar",
+    # bass
+    "slap bass": "bass",
+    "upright bass": "bass",
+    "fretless bass": "bass",
+    "synth bass": "bass",
+    "sub-bass": "bass",
+    "808 bass": "bass",
+    "electric bass": "bass",
+    "bass guitar": "bass",
+    # keys
+    "grand piano": "keys",
+    "acoustic piano": "keys",
+    "electric piano": "keys",
+    "piano": "keys",
+    "rhodes": "keys",
+    "hammond organ": "keys",
+    "organ": "keys",
+    "keyboard": "keys",
+    "keys": "keys",
+    # synth
+    "synthesizer": "synth",
+    "synth pad": "synth",
+    "string pad": "synth",
+    "pad": "synth",
+    # strings
+    "orchestral strings": "strings",
+    "strings": "strings",
+    "violin": "strings",
+    "cello": "strings",
+    "harp": "strings",
+    # brass (+ reeds/woodwinds 흡수)
+    "muted trumpet": "brass",
+    "trumpet": "brass",
+    "saxophone": "brass",
+    "trombone": "brass",
+    "clarinet": "brass",
+    "brass section": "brass",
+    "brass": "brass",
+    "flute": "brass",
+    # other
+    "harmonica": "other",
+    "accordion": "other",
+    "vibraphone": "other",
+    "glockenspiel": "other",
+}
+
+# Layer 판별: lead / rhythm / bass / pad / fill (counter 제거)
+LAYER_LEAD_RE = re.compile(
+    r"\b(lead\s+(?:line|melody|guitar|synth|riff)|melodic\s+lead|"
+    r"plays?\s+(?:a|the)\s+(?:main\s+)?melody|"
+    r"melodic\s+line|carries?\s+the\s+melody|lead\b)", re.I)
+LAYER_RHYTHM_RE = re.compile(
+    r"\b(rhythm\s+(?:guitar|part)|strums?\b|strumm\w+|"
+    r"comps?\b|comping|chord\s+progression|"
+    r"plays?\s+(?:jazz\s+|open\s+|power\s+|block\s+)?chords?|"
+    r"rhythmic\s+(?:strumming|comp\w*))", re.I)
+LAYER_PAD_RE = re.compile(
+    r"\b(pads?\b|sustained\s+(?:chord|texture|note|string)|"
+    r"background\s+(?:texture|pad)|atmospheric\s+(?:texture|layer|pad)|"
+    r"legato\s+(?:string|pad)|harmonic\s+padding|"
+    r"ambient\s+(?:texture|layer|pad))", re.I)
+LAYER_FILL_RE = re.compile(
+    r"\b(fills?\b|filling|transitional\s+(?:lick|run|fill)|"
+    r"brief\s+lick|ornamentation|ornamental\s+(?:run|line))", re.I)
+
+# Role 판별 (7 role + role_detail)
+ROLE_PATTERNS = [
+    ("groove_lock", re.compile(
+        r"\b(?:follows?|following|locks?\s+(?:with|in)|locked\s+(?:to|with)|"
+        r"syncs?\s+with|grooves?\s+with)\b", re.I)),
+    ("support", re.compile(
+        r"\b(?:provides?|providing|supports?|supporting|"
+        r"underpins?|anchors?|accompanies)\b", re.I)),
+    ("fill", re.compile(
+        r"\b(?:fills?|filling)\b(?!\s+the\s+mix)", re.I)),
+    ("layer_on", re.compile(
+        r"\b(?:layers?|layering|doubles?|doubled|"
+        r"adds?\s+(?:a|an|some|additional)|stacks?)\b", re.I)),
+    ("lead_out", re.compile(
+        r"\b(?:leads?\s+(?:the|with)|carries?\s+(?:the|a)|"
+        r"outlines?\s+(?:the|a)|drives?\s+(?:the|a))\b", re.I)),
+    ("sustain", re.compile(
+        r"\b(?:holds?|holding|sustains?|sustained|drones?|droning)\b", re.I)),
+    ("execute", re.compile(
+        r"\b(?:plays?|playing|delivers?|delivering|performs?|performing)\b", re.I)),
+]
+
+# role_detail: execute의 수식어·패턴 보조 태그
+ROLE_DETAIL_PATTERNS = [
+    (w, re.compile(rf"\b{re.escape(w)}\b", re.I))
+    for w in (
+        "syncopated", "melodic", "rhythmic", "percussive",
+        "jazz", "funk", "rock", "folk",
+        "eighth-note", "sixteenth-note", "quarter-note",
+        "four-to-the-floor", "driving", "laid-back", "steady",
+        "palm-muted", "strummed", "fingerpicked", "arpeggiated",
+    )
+]
+
+
+def classify_family(entity: str) -> str:
+    """악기 엔티티 → family (8개, 미매핑은 'other')."""
+    return INSTRUMENT_FAMILY.get(entity.lower(), "other")
+
+
+def classify_layer(sent: str, family: str) -> str:
+    """문장 + family → layer (lead/rhythm/bass/pad/fill/unspecified)."""
+    s = sent or ""
+    if LAYER_LEAD_RE.search(s):
+        return "lead"
+    if LAYER_PAD_RE.search(s):
+        return "pad"
+    if LAYER_FILL_RE.search(s):
+        return "fill"
+    if family == "bass":
+        return "bass"
+    if LAYER_RHYTHM_RE.search(s):
+        return "rhythm"
+    return "unspecified"
+
+
+def classify_role(sent: str):
+    """문장 주동사 → (role, role_details)."""
+    s = sent or ""
+    role = "unspecified"
+    for r, pat in ROLE_PATTERNS:
+        if pat.search(s):
+            role = r
+            break
+    details = []
+    if role == "execute":
+        for name, pat in ROLE_DETAIL_PATTERNS:
+            if pat.search(s):
+                details.append(name)
+    return role, details
+
+
 VOCAL_ENTITIES = [
-    ("male tenor vocals", re.compile(r"male\s+tenor\s+vocal", re.I)),
-    ("male baritone vocals", re.compile(r"(?:male\s+)?baritone\s+(?:male\s+)?vocal", re.I)),
-    ("female soprano vocals", re.compile(r"female\s+soprano\s+vocal", re.I)),
-    ("female vocals", re.compile(r"female\s+vocal", re.I)),
-    ("male vocals", re.compile(r"male\s+vocal", re.I)),
+    ("male tenor vocals", re.compile(r"male\s+tenor\s+vocals?\b", re.I)),
+    ("male baritone vocals", re.compile(r"(?:male\s+)?baritone\s+(?:male\s+)?vocals?\b", re.I)),
+    ("female soprano vocals", re.compile(r"female\s+soprano\s+vocals?\b", re.I)),
+    ("female vocals", re.compile(r"female\s+vocals?\b", re.I)),
+    ("male vocals", re.compile(r"male\s+vocals?\b", re.I)),
     ("male rapper", re.compile(r"male\s+rapper", re.I)),
     ("female vocalist", re.compile(r"female\s+vocalist", re.I)),
     ("male vocalist", re.compile(r"male\s+vocalist", re.I)),
@@ -377,12 +536,19 @@ def parse_sp_sentence(sent, idx, total):
             "sentence": sent,
         })
 
-    # 악기
+    # 악기 (+ 3계 분할: kit / layer / role)
     instruments = find_entities(sent, INSTRUMENT_ENTITIES)
     for inst in instruments:
+        kit = classify_family(inst)
+        layer = classify_layer(sent, kit)
+        role, role_details = classify_role(sent)
         entries.append({
             "slot": "instrument",
             "entity": inst,
+            "kit": kit,
+            "layer": layer,
+            "role": role,
+            "role_details": role_details,
             "modifiers": modifiers,
             "pattern": pattern,
             "effects": effects,
@@ -554,12 +720,19 @@ def parse_bracket(text):
     modifiers = extract_modifiers(bt)
     effects = extract_effects(bt)
 
-    # 악기
+    # 악기 (+ 3계 분할: kit / layer / role)
     instruments = find_entities(bt, INSTRUMENT_ENTITIES)
     for inst in instruments:
+        kit = classify_family(inst)
+        layer = classify_layer(bt, kit)
+        role, role_details = classify_role(bt)
         entries.append({
             "slot": "instrument",
             "entity": inst,
+            "kit": kit,
+            "layer": layer,
+            "role": role,
+            "role_details": role_details,
             "modifiers": modifiers,
             "effects": effects,
             "action": "",
