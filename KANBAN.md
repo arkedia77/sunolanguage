@@ -1,31 +1,44 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] 매뉴얼 A/B 전수 확장 (샘플 15/10 → 전체) — 전문가 3분 리뷰 피드백 대기 병행 — 2026-04-13
-- [leomusic-base] 어휘 사전 v1.1 aliases 매핑 (68악기+64주법) — 04-16~18 예정 — 2026-04-13
+- [sunolanguage] Phase V3.1 방법론 보강 마무리 단계 — 2026-04-20
 
 ## TODO
-- [sunolanguage] 전문가 3분 리뷰 패키지 송부 (음악이론/출판/AI 프롬프트) — 샘플 3종 Notion 링크 준비됨
-- [sunolanguage] 매뉴얼 B recon top40 캡 해제 — `recon_all.py` 전수 재집계 필요
-- [sunolanguage] Orchestral/Cinematic(2곡) / Jazz(9곡) 갭 타겟 업로드 추가 의뢰
-- [sunolanguage] D4 suno_dictionary_v2 스키마 leomusic2 사전검토 회람
-- [sunolanguage] aliases 04-18 도착 시 base 머지 (`merge_base_export.py`)
-- [sunolanguage] FINAL 패키지 → leomusic/leomusic2 결과 공유
+### Phase V3.1 잔여
+- [sunolanguage] `parse_slot_entities_v3.py` instrument 3계 분할 (.kit / .layer / .role) — 설계 논의 필요
+- [sunolanguage] extract_templates 엔티티 사전 정리 — "male vocals" 패턴 끝경계 버그 수정 (`<VOCAL>ist` 잔존)
+
+### Phase V3.2 — 장르 균등화 수집 (4-6주)
+- [sunolanguage] Wave 1: 외부 레퍼런스 60곡 수집 (Orchestral×18, Jazz×16, Hip-Hop×14, Electronic×12)
+- [sunolanguage] Wave 1 결과로 echo율 재측정 → leomusic 생성곡 대비 비교
+- [sunolanguage] Wave 2: leomusic 생성곡 60곡 (Folk/R&B/Ballad/Rock +10씩, 신장르 +20)
+
+### Phase V3.3 — 책 본문 빌드 파이프라인 (1-2주, V3.1 완료 후)
+- [sunolanguage] `scripts/build_manual_v3.py` — v3 entity + templates → 매뉴얼 A/B 장별 초안
+- [sunolanguage] `scripts/slot_genre_matrix.py` — 장르별 슬롯 채워짐 히트맵 (책 4장 원자재)
+- [sunolanguage] 20곡 템플릿 해석서 → 책 부록 형식 재구성
+
+### 책 집필
+- [sunolanguage] 1장 "Suno의 분류 체계" 본문 (V3.1 완료 후 즉시 가능)
+- [sunolanguage] 2장 "두 채널 시스템" 본문
+- [sunolanguage] 5장 "Suno가 묘사하지 않는 것" 본문 (mastering 2건/limiter 0건 근거 확보)
+- [sunolanguage] 3·4장 본문 (V3.2 Wave 1 완료 후)
+
+### 외부 연동 대기
+- [leomusic-base] 어휘 사전 v1.1 aliases 매핑 (68악기+64주법) — 도착 시 머지
 
 ## BLOCKED
 - 없음
 
 ## DONE (최근)
-- [sunolanguage] Notion 업로드 완료 — coverage_map / manual_A / manual_B 3페이지 — 2026-04-13 ✅
-- [sunolanguage] 매뉴얼 A 샘플 15 엔트리 / 매뉴얼 B 샘플 10 엔트리 작성 — 2026-04-13 ✅
-- [sunolanguage] 전체 커버리지 맵 작성 (12 카테고리 × 11 장르 그룹 매트릭스) — 2026-04-13 ✅
-- [sunolanguage] recon_all.py 전수 정찰 (SP 2,291문장 / 1-3gram 14,195 / 가사 브래킷 2,282) — 2026-04-13 ✅
-- [sunolanguage] 인스트루멘탈 74곡 중 66곡 Suno 재분석 추가 (총 318곡/326 clips 확보) — 2026-04-13 ✅
-- [sunolanguage] D3 커버리지 측정 (v1 16.91 → v2 18.30, coverage 99.5%) — 2026-04-13 ✅
-- [sunolanguage] D2 재구조화 (v1 7,288 hits + 799 신규 후보 → 166 수용) — 2026-04-13 ✅
-- [sunolanguage] D1 4값 머지 (leomusic SP/가사 + Suno SP/가사) — 2026-04-13 ✅
-- [sunolanguage] v1 사전 오염 검증 (leomusic SP 혼입 없음 확인) — 2026-04-13 ✅
-- [sunolanguage] 파이프라인 확정: 1분 컷 → Suno 앱 업로드 (스템 분리 X) — 2026-04-13 ✅
-- [sunolanguage] 최종 산출물 = 책 (Leo 출판용) 확정 — 2026-04-13 ✅
-- [sunolanguage] v2 축소안 확정 — 대표 기반 150~300곡/300~500 clips — 2026-04-13 ✅
-- [sunolanguage] Phase A 회람 4곳 회신 수렴 완료 — 2026-04-13 ✅
+- [sunolanguage] 전면 방법론 재검토 + 로드맵 수립 (플랜 `tender-wishing-lynx.md` 승인) — 2026-04-20 ✅
+- [sunolanguage] R1 `scripts/extract_templates.py` — 슬롯별 구문 템플릿 추출 (tempo_key_time: 40x "The tempo is <BPM> in the key of <KEY>.") — 2026-04-20 ✅
+- [sunolanguage] R2 `scripts/measure_echo.py` — echo 평균 7.6%, ≥70% 0건 → Suno 네이티브 어휘 근거 확보 — 2026-04-20 ✅
+- [sunolanguage] R4 부분 `parse_slot_entities_v3.py` — mastering 분리(2건), harmony 신설(28건) — 2026-04-20 ✅
+- [sunolanguage] `scripts/lexical_search_cli.py` — sqlite FTS5 검색기 (8,268 rows, "limiter" 0건 즉시 확인) — 2026-04-20 ✅
+- [sunolanguage] v3 entity 데이터 leomusic+leomusic2 배포 + 차이 분석 + 파일럿 지시 (agent-comm `36abcb3`) — 2026-04-18 ✅
+- [sunolanguage] v3 10슬롯 entity+modifier 파이프라인 완성 (`parse_slot_entities_v3.py`) — SP 4,250 / 브래킷 3,342 엔트리, 분류율 99.84%/99.88% — 2026-04-18 ✅
+- [sunolanguage] v3 최종보고서 Notion 업로드 완료 — 2026-04-18 ✅
+- [sunolanguage] 폐기 스크립트 6개 `scripts/archive/`로 이동 + README.md 작성 — 2026-04-18 ✅
+- [sunolanguage] `docs/slot_reclassify_v2.md` 슬롯 구조 문서 작성 — 2026-04-18 ✅
+- [sunolanguage] 20곡 7-Slot 템플릿 해석서 Leo 검토 완료 → v3 재설계로 전환 — 2026-04-18 ✅
