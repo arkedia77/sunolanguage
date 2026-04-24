@@ -4,29 +4,18 @@
   "artist": "Ludovico Einaudi",
   "genre": "Lo-fi / Neo-classical / Piano",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     },
     "bass": {
-      "status": "ok",
-      "uuid": "214f6af2-6fd6-4a2c-b600-791bcd266658",
-      "tags": "Industrial techno with heavy distortion and experimental sound design. A saturated, overdriven kick drum provides a rhythmic pulse at 130 BPM in 4/4 time. A resonant, low-frequency synth drone oscillates with a slow filter sweep. High-frequency metallic percussion hits occur on off-beats with short decay. A distorted, bit-crushed synth lead enters with a repetitive two-note sequence. The track features heavy compression and sidechaining to the kick drum. Industrial mechanical textures and white noise bursts are processed through a granular delay. The key is C minor. Sub-bass frequencies are prominent below 60Hz. A high-pass filter sweep gradually removes low-end frequencies during the transition.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum pulse, low-frequency resonant drone]\n\n[Section A]\n[metallic percussion hits on off-beats, bit-crushed synth lead enters]\n[granular delay on mechanical textures]\n\n[Section B]\n[high-pass filter sweep on master bus, white noise bursts]\n[sub-bass intensity increases]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "383be252-b3d1-40dd-9381-9d348e0786df",
-      "tags": "Lo-fi hip hop. A dusty, sampled drum break features a muffled kick and a crisp, slightly off-grid snare with a high-frequency roll-off. A Rhodes electric piano plays a repetitive four-bar progression of jazzy seventh chords with a soft tremolo effect and heavy saturation. A deep, rounded sub-bass follows the root notes of the piano chords with a slight slide between transitions. Vinyl crackle and hiss are layered throughout the arrangement. The tempo is 85 BPM in the key of C minor. A muted trumpet with a Harmon mute plays short, melodic fragments with significant reverb.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss, muffled drum break enters]\n\n[Main Loop]\n[Rhodes electric piano playing jazzy seventh chords]\n[sub-bass enters with subtle slides]\n[muted trumpet fragments with heavy reverb]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "866ad59b-afd3-4a0c-9ffe-64ba4fe10e03",
-      "tags": "Hardcore punk. Distorted electric guitar plays rapid down-stroked power chords in a constant eighth-note rhythm. The bass guitar follows the guitar progression with a heavily overdriven tone. Drums feature a fast d-beat pattern with a prominent, dry snare and constant eighth-note hi-hat hits. Vocals are shouted with a raspy, aggressive delivery and minimal melodic variation. The recording has a lo-fi, DIY aesthetic with high-frequency saturation. Tempo is 185 BPM. Key is E minor. Time signature is 4/4.",
-      "prompt": "[Intro]\n[distorted electric guitar power chords, d-beat drum pattern]\n\n[Verse 1]\n[shouted male vocals]\nI see the walls closing in today\nNo matter what the people say [bass guitar enters with heavy overdrive]\nLocked in a cage of my own design\nRunning out of breath and running out of time\n\n[Chorus]\n[guitar switches to higher register power chords]\nBreak the chains (break the chains)\nNo more pain (no more pain)\n[crash cymbal accents]\nI won't be a victim of your games\n\n[Outro]\n[feedback swell]\n[final snare hit]"
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T19:27:41"
+  "status": "failed"
 }

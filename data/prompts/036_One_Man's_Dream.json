@@ -4,31 +4,18 @@
   "artist": "Yanni",
   "genre": "New Age",
   "stems": {
-    "other": {
-      "status": "failed",
+    "drums": {
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     },
     "bass": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
-    },
-    "drums": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
-    },
-    "vocals": {
-      "status": "failed",
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     }
   },
-  "status": "failed",
-  "retried_at": "2026-04-07T14:41:48"
+  "status": "failed"
 }

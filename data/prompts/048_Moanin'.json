@@ -4,25 +4,18 @@
   "artist": "Art Blakey & The Jazz Messengers",
   "genre": "Jazz",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
-    "bass": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
     "drums": {
       "status": "ok",
-      "uuid": "a25a30cd-0805-4652-a799-e561250a7dee",
+      "uuid": "0e6245cf-f5f3-44f0-8edf-086525e2424e",
       "tags": "Industrial rock featuring a prominent, distorted drum machine loop and heavy electric guitar riffs. The track is in 4/4 time at 100 BPM in the key of E minor. A high-gain electric guitar plays a syncopated, palm-muted rhythmic pattern that alternates with sustained power chords. The drum kit consists of a compressed, punchy kick drum and a metallic, gated snare. A distorted synthesizer bass follows the guitar riff exactly, adding low-end grit. The arrangement is repetitive and mechanical, focusing on a steady rhythmic drive without melodic variation.",
       "prompt": "[Instrumental]\n\n[Intro]\n[distorted drum machine loop, compressed kick and metallic snare]\n\n[Main Riff]\n[palm-muted distorted electric guitar enters]\n[distorted synth bass locks with guitar rhythm]\n\n[Section A]\n[sustained power chords on electric guitar]\n[steady 4/4 drum beat continues]"
     },
-    "vocals": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "bass": {
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:06:07"
+  "status": "partial"
 }

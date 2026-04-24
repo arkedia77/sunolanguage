@@ -4,31 +4,18 @@
   "artist": "DJ Okawari",
   "genre": "Lo-fi / Neo-classical / Piano",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "drums": {
+      "status": "ok",
+      "uuid": "20a09166-30d4-4f4b-82e6-9ab7b6a20176",
+      "tags": "Boom bap hip hop instrumental. A gritty, lo-fi drum break features a heavy, thumping kick and a crisp, layered snare with a slight swing. A prominent, repetitive bassline consists of a deep, sub-heavy synth tone playing a syncopated two-bar loop. A melodic hook is provided by a sampled, high-pitched soul vocal chop, heavily processed with a band-pass filter and short delay. Atmospheric texture is added by a vinyl crackle layer and occasional, muted electric piano chords with a tremolo effect. The track maintains a steady 92 BPM in the key of C minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle, lo-fi drum break enters]\n[syncopated synth bass enters]\n\n[Main Section]\n[filtered vocal chop loop enters]\n[muted electric piano chords with tremolo]\n[heavy kick and snare backbeat]\n\n[Breakdown]\n[vocal chop drops out]\n[bass and drums continue with vinyl crackle]\n\n[Outro]\n[vocal chop re-enters]\n[instruments fade out leaving only vinyl crackle]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "1cef6a64-0a6c-46d6-8e04-c677797d5b10",
-      "tags": "Indie rock with a driving, rhythmic focus. The track features a prominent, slightly overdriven electric bass playing a repetitive, syncopated eighth-note riff. A clean electric guitar provides rhythmic stabs and melodic counterpoint with a bright, jangly tone. The drum kit maintains a steady, mid-tempo groove with a crisp snare and tight hi-hat patterns. A subtle, warm synthesizer pad fills the mid-range frequencies in the background. The arrangement is centered around a 4/4 time signature at approximately 115 BPM in the key of A minor. The production is dry with minimal reverb, emphasizing the interlocking rhythmic layers of the bass and guitar.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated overdriven electric bass riff enters]\n[tight hi-hat and kick drum pattern]\n\n[Section A]\n[clean electric guitar enters with rhythmic stabs]\n[snare drum joins the groove]\n\n[Section B]\n[warm synthesizer pad swells in the background]\n[guitar transitions to a melodic lead line]\n\n[Outro]\n[drums and synth drop out]\n[bass riff fades out with final guitar chord]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "5d918c48-2afe-4198-91a0-510ad9a1887c",
-      "tags": "Industrial techno with heavy EBM influences. The track is built around a distorted, saturated kick drum that provides a rhythmic pulse at 130 BPM in the key of D minor. A metallic, percussive synth sequence with a short decay and high-pass filtering creates a syncopated 16th-note pattern. A resonant, acid-style bassline enters with a low-pass filter sweep, utilizing a sawtooth waveform with high resonance. Industrial foley sounds, including metallic clangs and mechanical whirs, are processed with heavy plate reverb and rhythmic gating. A dark, cinematic drone pad provides a harmonic bed in the lower-mid frequencies. The percussion features a sharp, white-noise snare on the backbeat and closed hi-hats playing straight eighth notes with slight velocity randomization.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters, four-on-the-floor]\n[metallic percussive synth sequence starts]\n\n[Section A]\n[resonant sawtooth bassline enters with filter sweep]\n[closed hi-hats playing eighth notes]\n\n[Section B]\n[white-noise snare on beats 2 and 4]\n[industrial metallic clangs with plate reverb]\n[low-mid drone pad enters]\n\n[Breakdown]\n[kick drum drops out]\n[filtered synth sequence remains with rising resonance]\n[mechanical whirring foley sounds]\n\n[Outro]\n[kick drum re-enters]\n[instruments gradually fade out via low-pass filter]"
-    },
-    "vocals": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+      "uuid": "13bd99d1-57a9-4c72-bbcd-9f79ff02d141",
+      "tags": "Industrial techno with heavy EBM influences. The track features a distorted, overdriven kick drum with a long decay providing a sub-bass rumble. A metallic, percussive synth sequence runs in sixteenth notes with a resonant filter sweep. A high-pitched, dissonant industrial alarm sound repeats every four bars. The percussion includes a sharp, white-noise snare on the backbeat and a constant, un-swung closed hi-hat on every eighth note. A low-frequency sawtooth bassline enters mid-track, playing a syncopated two-note pattern. The production is dry with minimal reverb, emphasizing a cold, mechanical texture. 135 BPM, 4/4 time signature, Key of D minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters with sub-bass tail]\n[metallic sixteenth-note synth sequence]\n\n[Section A]\n[white-noise snare on beats 2 and 4]\n[closed hi-hat on eighth notes]\n[dissonant industrial alarm sound repeats]\n\n[Section B]\n[sawtooth bassline enters, syncopated pattern]\n[resonant filter sweep on synth sequence]\n\n[Outro]\n[percussion drops out]\n[distorted kick fades to sub-rumble]\n[synth sequence fades out]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T18:58:37"
+  "status": "ok"
 }

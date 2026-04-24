@@ -4,31 +4,18 @@
   "artist": "The Meters",
   "genre": "Funk / Soul / Blues Instrumental",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "drums": {
+      "status": "ok",
+      "uuid": "feafb9c6-9757-41a0-92a5-a4a0d1c86c21",
+      "tags": "Funk-rock instrumental. A clean, compressed electric guitar plays a repetitive, syncopated single-note riff with occasional double-stops. The bass guitar follows the guitar riff closely with a percussive, slightly overdriven tone. Drums consist of a tight, dry snare and a consistent kick drum pattern. A second electric guitar provides rhythmic stabs with a wah-wah pedal effect. The tempo is 105 BPM in the key of E minor. The arrangement is minimalist, focusing on the interlocking rhythmic relationship between the bass and the primary guitar riff.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar syncopated riff enters]\n[dry kick drum and snare enter]\n\n[Main Section]\n[percussive bass guitar enters, doubling the guitar riff]\n[wah-wah electric guitar rhythmic stabs]\n[steady 4/4 drum beat with tight snare hits]\n\n[Bridge]\n[bass guitar becomes more melodic with slides]\n[wah-wah guitar increases frequency of stabs]\n\n[Outro]\n[instruments gradually fade out]\n[final clean guitar chord]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "10caf7f1-58e3-4479-8a77-96da5237bae1",
-      "tags": "Funk-rock instrumental track. The arrangement features a prominent, syncopated electric bass line with a bright, percussive tone. A clean electric guitar plays rhythmic, muted scratches and staccato chords. The drum kit maintains a steady backbeat with a crisp snare and tight hi-hat patterns. A second electric guitar provides melodic fills with a slight overdrive and wah-wah filter effect. The tempo is 105 BPM in the key of E minor. The structure alternates between a bass-driven groove and sections where the guitars become more melodic and layered.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated electric bass enters]\n[clean electric guitar rhythmic scratches]\n[drum kit enters with steady backbeat]\n\n[Section A]\n[bass continues percussive riff]\n[guitar plays staccato chords on the offbeats]\n[hi-hat remains closed and tight]\n\n[Section B]\n[overdriven electric guitar enters with wah-wah filter melodic fills]\n[bass line becomes more melodic with occasional slides]\n[snare hits remain consistent on beats 2 and 4]\n\n[Outro]\n[instruments gradually layer out]\n[final bass flourish]\n[drum fill to end]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "19c13289-84c3-4a77-aaff-8999c98b189f",
-      "tags": "Drum break featuring a live acoustic drum kit. The performance centers on a syncopated funk groove at 105 BPM in 4/4 time. The kick drum executes a double-hit pattern on the first beat of every second measure, while the snare provides a crisp backbeat with occasional ghost notes. The hi-hat remains closed, playing consistent eighth-note patterns with slight accents on the downbeats. A dry, room-reverb profile characterizes the mix, with no additional instrumentation or melodic elements present. The recording maintains a consistent dynamic level throughout the loop.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[four-beat hi-hat count-in]\n\n[Main Groove]\n[acoustic drum kit enters]\n[syncopated kick drum, crisp snare backbeat, closed hi-hat eighth notes]\n[occasional snare ghost notes]\n\n[Outro]\n[final snare hit with natural decay]"
-    },
-    "vocals": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+      "uuid": "24bfc98d-6794-4201-8c2b-3375898e8d1f",
+      "tags": "Drum break, funk style. Acoustic drum kit with a dry, tight room sound. The kick drum features a short decay and emphasizes the fundamental frequency around 60Hz. The snare drum is tuned high with a crisp, metallic ring and prominent ghost notes between the primary backbeats. Hi-hats are played slightly open, creating a consistent sizzle on eighth-note subdivisions. The pattern utilizes syncopated kick placements on the 'and' of beats 1 and 3, while the snare maintains a steady backbeat on 2 and 4 with occasional syncopated accents. 105 BPM, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[four-bar drum break, dry acoustic kit]\n[syncopated kick drum, ghost note snare accents]\n\n[Main Section]\n[steady hi-hat eighth notes with slight sizzle]\n[snare backbeat on 2 and 4]\n[kick drum syncopation on the off-beats]\n\n[Outro]\n[final snare hit with natural room decay]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T19:39:32"
+  "status": "ok"
 }

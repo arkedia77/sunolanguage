@@ -4,27 +4,18 @@
   "artist": "John Coltrane",
   "genre": "Jazz",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     },
     "bass": {
-      "status": "ok",
-      "uuid": "16172c5b-a8f7-4d62-9c1e-cc323226851d",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a syncopated, palm-muted riff in E minor at 120 BPM. The drum kit features a prominent double-kick pedal pattern and a dry, high-tuned snare. A distorted bass guitar mirrors the guitar riff with aggressive pick attack. The arrangement utilizes a 4/4 time signature. The guitar tone is characterized by high gain and mid-range scoop. Cymbals are used for frequent accents on the off-beats. The track maintains a consistent intensity without dynamic shifts.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted syncopation]\n[bass guitar enters, doubling the riff]\n\n[Main Section]\n[full drum kit enters, double-kick pedal pattern]\n[heavy snare accents on beats 2 and 4]\n[crash cymbal hits on phrase transitions]\n\n[Outro]\n[sustained power chord]\n[feedback fade out]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "433abe8d-3bac-4dfa-9c13-e34fb5f1cdf5",
-      "tags": "Drum solo featuring a standard acoustic drum kit. The performance consists of rapid, syncopated snare drum rolls and ghost notes interspersed with heavy kick drum accents. The hi-hat is played tightly closed with occasional open accents on the off-beats. The drummer utilizes a high-velocity sticking technique with frequent rimshots on the snare. The recording has a dry, close-mic'd room aesthetic with minimal artificial reverb. The tempo is 130 BPM in 4/4 time. The kick drum follows a complex, non-repetitive pattern that syncopates against the steady hi-hat pulse. No melodic or harmonic instruments are present.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[rapid snare drum rolls, tight hi-hat eighth notes]\n\n[Main Section]\n[syncopated kick drum accents, ghost notes on snare]\n[open hi-hat accents on off-beats]\n[frequent rimshots]\n\n[Outro]\n[final kick drum hit, snare decay]"
-    },
-    "vocals": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:43:49"
+  "status": "failed"
 }

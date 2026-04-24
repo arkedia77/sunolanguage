@@ -4,31 +4,18 @@
   "artist": "Mogwai",
   "genre": "Post-Rock",
   "stems": {
-    "other": {
+    "drums": {
       "status": "ok",
-      "uuid": "64bbfc7e-55b1-4200-b3d0-3ad6330707ba",
-      "tags": "Synthwave with heavy outrun and retrowave influences. A side-chained analog synth bass plays a driving eighth-note pattern. The lead melody features a detuned sawtooth synth with a short portamento and heavy chorus effect. Drums consist of a gated reverb snare and a punchy 707-style kick. Arpeggiated minor triads in a high-register square wave synth provide harmonic movement. A resonant low-pass filter sweep occurs every eight bars on a lush polyphonic pad. Key of C minor. 115 BPM. 4/4 time signature.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[driving eighth-note synth bass, gated reverb snare]\n[resonant filter sweep on polyphonic pads]\n\n[Main Theme]\n[detuned sawtooth synth lead melody enters]\n[arpeggiated square wave synth in high register]\n\n[Bridge]\n[lead synth drops out]\n[sustained pad chords with heavy side-chain compression]\n\n[Outro]\n[drums fade out]\n[final resonant filter sweep on pads]"
+      "uuid": "e75fc6cb-dd43-4150-9ba6-c5b151b1ce2b",
+      "tags": "Dark ambient soundscape with industrial and cinematic elements. A low-frequency drone oscillates at approximately 60 BPM. Metallic textures and mechanical grinding sounds occur at irregular intervals. A high-pitched, resonant filter sweep moves across the stereo field. Distant, reverberant clangs and industrial machinery hums create a dense atmospheric layer. The piece lacks a traditional melodic key or rhythmic pulse, focusing instead on textural evolution and spatial depth through heavy reverb and delay processing. Sub-bass frequencies remain constant while mid-range metallic scrapes provide sporadic rhythmic accents.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency drone, mechanical hum]\n\n[Section A]\n[metallic grinding sounds, resonant filter sweep]\n[distant reverberant clangs]\n\n[Section B]\n[sub-bass oscillation, industrial textures]\n[high-pitched metallic scrapes]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "6f60ffce-28d0-4170-9e18-f06582bec6a6",
-      "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail hits on every quarter note at 130 BPM in the key of F minor. A high-pass filtered white noise riser sweeps upward over four bars. Metallic percussion hits with short decay occur on the off-beats. A resonant, low-frequency synth pulse oscillates with a sawtooth waveform, modulated by a rhythmic low-frequency oscillator. Gritty, bit-crushed textures layer over the mid-range frequencies. The track maintains a constant 4/4 time signature with no melodic shifts. A sharp, percussive synth pluck with heavy delay repeats a syncopated sixteenth-note pattern. The arrangement features a sudden low-pass filter sweep that cuts all frequencies above 200Hz before snapping back to full bandwidth.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum, saturated sub-bass]\n[metallic percussion hits on off-beats]\n\n[Main Section]\n[resonant sawtooth synth pulse with LFO modulation]\n[bit-crushed mid-range textures]\n[syncopated sixteenth-note synth pluck with delay]\n\n[Transition]\n[high-pass filtered white noise riser]\n[low-pass filter sweep on master bus]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "41352a39-46ce-4807-9e79-e88776a82d5f",
+      "uuid": "45048db7-9c9c-4d38-a995-157f0c1d9ee4",
       "tags": "Indie rock with a lo-fi aesthetic. A clean electric guitar plays a repetitive, syncopated four-chord progression using palm-muted eighth notes. The bass guitar follows the root notes of the guitar with a rounded, warm tone. Drums consist of a tight, dry snare and a steady kick drum pattern with occasional eighth-note fills on the rack tom. A second electric guitar enters with a bright, jangly tone playing melodic lead lines in the upper register. The tempo is 112 BPM in the key of G Major and 4/4 time signature.",
       "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar palm-muted riff]\n[bass guitar enters]\n\n[Main Theme]\n[dry snare and kick drum enter]\n[jangly lead electric guitar melody]\n\n[Bridge]\n[lead guitar drops out]\n[palm-muted guitar continues with bass and drums]\n\n[Outro]\n[lead guitar re-enters]\n[final snare hit and guitar ring out]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "5e27005c-c78d-492b-81ad-c06321157f60",
-      "tags": "Hardcore punk. Distorted electric guitar plays rapid down-stroked power chords in a constant eighth-note rhythm. The bass guitar follows the guitar progression with a heavily overdriven tone. Drums feature a high-tempo d-beat pattern with a prominent, dry snare and constant eighth-note hi-hat hits. Vocals are shouted with a raspy, aggressive delivery and minimal melodic variation. The recording has a lo-fi, DIY aesthetic with high-frequency saturation and a narrow stereo field. Tempo is 180 BPM. Key is E minor. 4/4 time signature.",
-      "prompt": "[Intro]\n[distorted electric guitar power chords, d-beat drums, overdriven bass]\n\n[Verse 1]\n[shouted male vocals]\nSystematic lies feed the machine\nNothing is ever what it seems [cymbal crash]\nThey build the walls to keep us in\nBut we won't let the cycle begin\n\n[Chorus]\n[vocals become more strained]\nBreak the chains (break the chains)\nEnd the pain (end the pain)\n[guitar feedback swell]\nNo more silence, no more fear\nThe end of the line is drawing near\n\n[Outro]\n[rapid snare rolls]\nGo! [final power chord rings out with feedback]"
     }
   },
-  "status": "ok",
-  "retried_at": "2026-04-07T17:55:04"
+  "status": "ok"
 }

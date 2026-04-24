@@ -6,14 +6,16 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Hard rock with heavy blues influence, Distorted electric guitars play a syncopated, palm-muted riff in E minor at 120 BPM, The drum kit features a prominent open hi-hat on the off-beats and a heavy snare crack, A distorted bass guitar follows the guitar riff with occasional slides, The arrangement alternates between a driving main riff and a more open section with sustained power chords and crashing cymbals, A wah-wah pedal effect is applied to a lead guitar melody during the bridge, The production is dry with minimal reverb on the rhythm section Publish",
-      "card_title": "drums"
+      "uuid": "92c4354f-f3c1-4498-880b-f732e76d2bcc",
+      "tags": "Funk-rock instrumental with a heavy emphasis on syncopated rhythmic interplay. The track features a clean, percussive electric guitar playing muted 16th-note scratches and staccato chords. A prominent electric bass guitar performs a slap-and-pop technique, locking tightly with a dry, punchy drum kit. The drums utilize a crisp snare and a tight hi-hat pattern with occasional open accents. A bright, brassy synthesizer or horn section provides staccato melodic stabs. The arrangement is built on a repetitive, high-energy groove with sudden stops and rhythmic unisons. 115 BPM, E minor, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[muted 16th-note electric guitar scratches]\n[slap bass enters with syncopated octave jumps]\n[drum kit enters with tight hi-hat and punchy snare]\n\n[Main Groove]\n[staccato electric guitar chords on the off-beats]\n[slap bass continues with percussive ghost notes]\n[bright synth stabs accenting the end of phrases]\n\n[Breakdown]\n[rhythmic unison hits between bass, drums, and guitar]\n[brief drum fill with snare rolls]\n\n[Outro]\n[sustained synth chord fades]\n[final staccato bass pop and snare hit]"
     },
-    "vocals": {
-      "status": "blocked",
-      "reason": "copyright",
-      "description": ""
+    "bass": {
+      "status": "ok",
+      "uuid": "d8d203e7-92f9-4831-98fa-45d4ee0a3e0f",
+      "tags": "Hard rock instrumental. Distorted electric guitars play syncopated power chord riffs and palm-muted rhythmic patterns. The bass guitar follows the kick drum patterns with a gritty, overdriven tone. Acoustic drums feature a heavy snare, active hi-hat work, and frequent crash cymbal accents. The arrangement alternates between driving riff-based sections and more open, rhythmic passages. 130 BPM, 4/4 time signature, E minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[drum stick count-off]\n[distorted electric guitar riff enters with syncopated power chords]\n[bass and drums enter with driving eighth-note rhythm]\n\n[Section A]\n[palm-muted guitar chugging]\n[snare hits on beats 2 and 4]\n[crash cymbal accents at the end of phrases]\n\n[Section B]\n[guitar riff shifts to higher register power chords]\n[bass follows kick drum syncopation]\n\n[Section C]\n[half-time feel on drums with open hi-hats]\n[sustained guitar chords with heavy distortion]\n\n[Outro]\n[rapid snare rolls]\n[final sustained power chord with guitar feedback]\n[abrupt stop]"
     }
   },
-  "status": "partial"
+  "status": "ok"
 }

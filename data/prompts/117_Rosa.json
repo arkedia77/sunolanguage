@@ -5,15 +5,17 @@
   "genre": "flamenco",
   "stems": {
     "drums": {
-      "status": "ok",
-      "description": "Acoustic folk and world percussion, The arrangement features a bright, steel-string acoustic guitar playing a rhythmic, syncopated fingerstyle pattern with frequent percussive slaps on the body of the instrument, A second acoustic guitar provides melodic counterpoint and lead fills, The percussion section consists of a cajon providing a woody thud on the downbeats and crisp slaps on the backbeats, accompanied by a shaker and a tambourine, The tempo is 115 BPM in 4/4 time, The guitars use open-string drones and hammer-ons to create a dense harmonic texture, The production is dry with minimal reverb, emphasizing the tactile transients of the strings and the resonance of the wooden percussion Publish",
-      "card_title": "drums"
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     },
-    "vocals": {
-      "status": "ok",
-      "description": "Flamenco-pop fusion with rumba influences, Features a passionate male tenor vocal with characteristic melismatic flourishes and grit, Instrumentation consists of multiple layered acoustic nylon-string guitars performing percussive rasgueado strumming and syncopated melodic fills, A prominent electric bass provides a melodic, walking foundation, Percussion is centered around a crisp cajón and handclaps (palmas) providing a driving 4/4 rumba rhythm, The arrangement includes bright, staccato brass stabs from a trumpet section during the chorus, High-energy tempo at 115 BPM in the key of A minor Publish",
-      "card_title": "vocals"
+    "bass": {
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "ok"
+  "status": "failed"
 }

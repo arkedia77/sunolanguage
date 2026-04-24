@@ -4,31 +4,18 @@
   "artist": "Kitaro",
   "genre": "New Age",
   "stems": {
-    "other": {
-      "status": "ok",
-      "uuid": "dab8bccf-03e9-47f6-aadd-7668b360379e",
-      "tags": "Cinematic orchestral score. Legato string ensemble performs a soaring melody in the upper register. Sustained cello and double bass provide low-frequency harmonic support. A concert harp plays rapid ascending glissandos and arpeggiated flourishes. Orchestral chimes and a glockenspiel accent the melodic peaks with metallic resonance. The arrangement features a gradual crescendo with lush, wide-panning stereo imaging. Key of G Major. Tempo is 72 BPM. Time signature is 4/4.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[legato string ensemble enters, soft cello sustain]\n[harp glissando]\n\n[Main Theme]\n[high-register violins melody]\n[orchestral chimes and glockenspiel accents]\n[ascending harp arpeggios]\n[full string section crescendo]"
+    "drums": {
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     },
     "bass": {
-      "status": "ok",
-      "uuid": "62479811-d334-4e86-a1ce-61ab47518cb5",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted power chord riffs and syncopated rhythmic patterns. A high-gain lead guitar performs a technical solo featuring rapid alternate picking, legato runs, and wide vibrato. The bass guitar follows the guitar riffs with a gritty, overdriven tone. Drums feature a prominent double-kick pedal technique, a sharp snare crack, and frequent use of china and crash cymbals for accents. The tempo is 145 BPM in 4/4 time. The production uses close-mic techniques for a dry, aggressive sound with minimal room reverb.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted eighth notes]\n[drums enter with double-kick accents and snare hits on 2 and 4]\n\n[Main Theme]\n[overdriven bass guitar enters, doubling the guitar riff]\n[rhythmic guitar chugging with syncopated accents]\n\n[Guitar Solo]\n[lead electric guitar enters with high-gain distortion]\n[rapid alternate picking and legato runs]\n[sustained pinch harmonics and wide vibrato]\n\n[Outro]\n[rhythm guitar returns to main riff]\n[final crash cymbal hit and guitar feedback fade]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "4a057a1d-e699-45c8-b69e-a6e578268d9a",
-      "tags": "Lo-fi hip hop. A Rhodes electric piano plays a jazz-influenced chord progression with a subtle tremolo effect. A sampled acoustic drum kit features a dry, muffled kick and a crisp snare with a slight swing. A warm, rounded electric bass follows the root notes of the piano chords. A recurring melodic motif is played on a clean electric guitar with a small amount of chorus. The track maintains a steady 85 BPM in the key of C major. Vinyl crackle and tape hiss are layered throughout the arrangement to provide a vintage texture.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and tape hiss]\n[Rhodes electric piano enters with jazz chords]\n\n[Main Theme]\n[muffled kick and swung snare enter]\n[warm electric bass enters]\n[clean electric guitar plays melodic motif with chorus]\n\n[Bridge]\n[drums and bass drop out]\n[Rhodes electric piano solo with vinyl crackle]\n\n[Outro]\n[drums and bass re-enter]\n[instruments fade out leaving only vinyl crackle]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "881fef8c-b480-43d8-babd-bc26537ac323",
-      "tags": "Lo-fi hip hop. A dusty, sampled acoustic piano plays a repetitive four-bar loop featuring jazz-influenced seventh chords with a slight vinyl crackle effect. The drum kit consists of a muffled, low-pass filtered kick drum and a crisp, dry snare with a slight swing. A melodic, sub-heavy electric bass follows the root notes of the piano progression. A subtle, high-pitched sine wave synth lead enters periodically with long, sustained notes. The tempo is 85 BPM in the key of C minor. The arrangement maintains a consistent loop-based structure without significant dynamic shifts.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[dusty acoustic piano loop, vinyl crackle]\n\n[Main Section]\n[muffled kick drum enters, dry snare with swing]\n[sub-heavy electric bass enters]\n\n[Bridge]\n[high-pitched sine wave synth lead enters]\n[piano loop continues]\n\n[Outro]\n[drums and bass drop out]\n[piano loop fades with vinyl crackle]"
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "ok",
-  "retried_at": "2026-04-07T14:47:18"
+  "status": "failed"
 }

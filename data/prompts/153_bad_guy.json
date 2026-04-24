@@ -6,14 +6,16 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Industrial techno track at 130 BPM in the key of D minor, The arrangement features a distorted, saturated kick drum with a heavy sub-tail, layered with a metallic, resonant percussion loop that provides a constant 16th-note shuffle, A gritty, overdriven synth bass follows the kick pattern with occasional syncopated accents, High-frequency white noise bursts and filtered industrial textures enter periodically, A sharp, short-decay clap hits on the backbeat, processed with a small room reverb, Mid-way through, a resonant acid-style synth sequence with high resonance and automated cutoff frequency provides a melodic hook, The track maintains a steady 4/4 pulse with minimal melodic variation, focusing on timbral evolution and rhythmic density, Distorted vocal fragments are used as rhythmic elements rather than melodic leads Publish",
-      "card_title": "drums"
+      "uuid": "fb04d913-60cc-4b6c-b6de-5d55b15084a5",
+      "tags": "Funk-rock instrumental. A dry, percussive electric guitar plays a syncopated, muted rhythmic riff using a wah-wah pedal. The bass guitar follows a repetitive, groovy sixteenth-note pattern that locks with the kick drum. The drum kit features a tight, high-tuned snare and a crisp hi-hat playing eighth-note subdivisions with occasional open accents. A clean electric guitar enters with staccato chord stabs on the off-beats. The arrangement is minimalist and loop-based, focusing on rhythmic interplay and a steady groove. 110 BPM, E minor, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[muted wah-wah electric guitar riff]\n[tight drum kit enters with eighth-note hi-hats]\n\n[Main Section]\n[syncopated electric bass enters]\n[staccato clean electric guitar chord stabs on off-beats]\n[wah-wah guitar continues rhythmic pattern]\n\n[Breakdown]\n[bass and clean guitar stabs drop out]\n[wah-wah guitar and drums continue]\n\n[Outro]\n[full groove returns]\n[fade out on wah-wah guitar riff]"
     },
     "vocals": {
-      "status": "timeout",
-      "reason": "upload_timeout",
-      "description": ""
+      "status": "ok",
+      "uuid": "03416012-d709-4174-85b3-125d6eadb083",
+      "tags": "Industrial techno with heavy EBM influences. The track features a distorted, saturated kick drum with a long sub-tail, a metallic percussion loop, and a rhythmic, filtered synth sequence. A high-pitched, resonant synth lead enters with a repetitive, staccato pattern. The arrangement uses aggressive sidechain compression and industrial noise textures. Tempo is 130 BPM in the key of D minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum, metallic percussion loop]\n[filtered synth sequence enters]\n\n[Main Section]\n[staccato high-pitched synth lead enters]\n[industrial noise textures]\n[heavy sidechain compression pumping]\n\n[Breakdown]\n[kick drum drops out, synth sequence continues with filter sweep]\n\n[Outro]\n[kick drum returns, gradual fade out of synth elements]"
     }
   },
-  "status": "partial"
+  "status": "ok"
 }

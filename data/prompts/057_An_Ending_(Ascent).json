@@ -4,31 +4,18 @@
   "artist": "Brian Eno",
   "genre": "Electronic / Ambient",
   "stems": {
-    "other": {
-      "status": "failed",
+    "drums": {
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     },
     "bass": {
-      "status": "ok",
-      "uuid": "bd0dfb1a-0f0f-4ad8-8a06-a389477f3f3b",
-      "tags": "Ambient drone with cinematic sound design. A low-frequency sub-bass foundation sustains a constant pedal tone. Granular synthesis creates a shifting texture of metallic scrapes and resonant hums. High-frequency crystalline pings and digital artifacts enter sporadically with long reverb tails. A slow, rhythmic pulsing occurs through sidechain compression on a white noise floor. Pitch-shifted mechanical whirs and industrial atmosphere layers evolve through automated low-pass filter sweeps. The arrangement features no melodic movement or percussive transients, focusing on timbral evolution and spatial depth. 60 BPM, C minor.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone enters]\n[distant metallic resonance]\n\n[Main Section]\n[granular texture shifts, white noise pulsing]\n[high-frequency digital pings with heavy reverb]\n[mechanical whirring sounds with filter sweeps]\n\n[Outro]\n[high frequencies fade out]\n[sub-bass drone sustains to silence]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "624b7fe3-3f3e-4f29-bdaa-3ca7933d7719",
-      "tags": "Ambient drone with cinematic soundscapes. The piece features a deep, resonant sub-bass foundation that provides a constant low-frequency floor. Layered over this are granular synthesis textures and evolving pads that shift in timbre through slow filter sweeps and long-tail reverb. High-frequency metallic resonances and shimmering bell-like tones appear sporadically, processed through delay and pitch-shifting effects to create a sense of vast acoustic space. The composition lacks a traditional rhythmic pulse or percussion, relying instead on the intersection of harmonic overtones and slow-moving volume swells. Key is C minor. Tempo is 60 BPM. Time signature is 4/4. The arrangement is characterized by the gradual introduction of dissonant clusters that resolve into open fifths.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone enters, dark filtered pad]\n\n[Section A]\n[granular textures emerge, slow resonant filter sweep]\n[metallic shimmering tones with long-tail reverb]\n\n[Section B]\n[harmonic overtones intensify, volume swells on mid-range pads]\n[pitch-shifted bell-like resonances]\n\n[Outro]\n[high frequencies fade, sub-bass drone lingers and slowly decays]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "17d86ce1-40f1-4819-aacc-a138f3f90f6e",
-      "tags": "Dark ambient and cinematic drone. The track is built around a low-frequency, resonant sub-bass foundation that remains static. Layered above are metallic, shimmering textures and granular synthesis pads that slowly evolve with long attack and release times. High-pitched, dissonant sine wave clusters create a sense of tension, occasionally modulated by a slow LFO. A deep, cavernous reverb with a long decay tail is applied to all elements, creating a vast spatial image. There is no rhythmic pulse or percussive element. The harmonic content is microtonal and non-diatonic, shifting through dense clusters of sound. Key: C minor. Tempo: 60 BPM.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone enters]\n[distant metallic resonance]\n\n[Section A]\n[granular pad swells with long attack]\n[high-pitched dissonant sine clusters enter]\n[heavy cavernous reverb on all layers]\n\n[Section B]\n[sub-bass intensifies with low-end resonance]\n[shimmering metallic textures modulate slowly]\n[harmonic clusters shift microtonally]\n\n[Outro]\n[high frequencies fade out]\n[sub-bass drone lingers and slowly decays]"
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:58:18"
+  "status": "failed"
 }

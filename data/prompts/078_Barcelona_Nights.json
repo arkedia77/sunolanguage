@@ -4,31 +4,18 @@
   "artist": "Ottmar Liebert",
   "genre": "World Music",
   "stems": {
-    "other": {
-      "status": "failed",
+    "drums": {
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     },
     "bass": {
-      "status": "ok",
-      "uuid": "1e1b401b-a908-4f8e-be37-cd46bc71ddb5",
-      "tags": "Funk rock instrumental. A distorted electric bass guitar plays a syncopated, percussive riff featuring frequent slides and hammer-ons. The bass tone is characterized by heavy overdrive and a mid-range growl. A dry acoustic drum kit maintains a steady backbeat with a crisp snare and tight hi-hats. The tempo is 105 BPM in 4/4 time. The arrangement is minimalist, focusing on the interplay between the rhythmic bass line and the drum groove. The bass utilizes a pentatonic scale with occasional chromatic passing tones.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric bass riff starts, syncopated eighth notes]\n[acoustic drum kit enters, steady backbeat]\n\n[Main Section]\n[bass continues with percussive slides and hammer-ons]\n[snare hits on beats 2 and 4, closed hi-hat eighth notes]\n\n[Outro]\n[bass riff repeats with slight variations]\n[drums and bass fade out]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "df48d628-fd89-4e59-a9b4-b7f0b42a6146",
-      "tags": "Afrobeat and highlife fusion featuring a prominent, syncopated electric bassline and clean, rhythmic electric guitar scratching. The percussion consists of a steady kick drum, woodblock hits on the off-beats, and a shaker providing a constant sixteenth-note pulse. A bright, staccato brass section provides intermittent melodic stabs and call-and-response patterns. The arrangement is centered around a repetitive, interlocking groove between the bass and the percussion. Key of G major, 115 BPM.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated electric bass enters]\n[shaker and woodblock percussion]\n\n[Section A]\n[clean electric guitar rhythmic scratching]\n[staccato brass section stabs]\n\n[Section B]\n[bass continues melodic ostinato]\n[brass section call-and-response with guitar]\n[steady kick drum pulse]\n\n[Outro]\n[brass section sustained final chord]\n[percussion fades]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "ccd7d8d0-a184-4d28-8503-18b8f9d0e948",
-      "tags": "Hardstyle track at 150 BPM in G minor. The arrangement features a distorted, pitched 909-style kick drum that provides both the rhythmic pulse and the sub-bass melody. A bright, detuned supersaw lead plays a syncopated, anthemic melody with heavy portamento. High-frequency percussion includes a sharp, metallic snare on the backbeat and constant sixteenth-note closed hi-hats. A cinematic breakdown section utilizes a lush, atmospheric pad with a long attack and a filtered vocal chop that repeats a rhythmic motif. The energy builds using a rising pitch shifter on a noise snare roll and a high-pass filter sweep on the lead synth before the drop. The drop reintroduces the distorted kick with a sidechained white noise burst on every beat.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted pitched kick drum enters, 150 BPM]\n[sixteenth-note closed hi-hats]\n\n[Build-up]\n[detuned supersaw lead melody enters]\n[snare roll with rising pitch and volume]\n[white noise sweep]\n\n[Drop]\n[heavy distorted kick with sub-bass tail]\n[syncopated saw lead riff]\n[metallic snare on beats 2 and 4]\n\n[Breakdown]\n[drums drop out]\n[atmospheric synth pads with long reverb]\n[filtered rhythmic vocal chop]\n\n[Outro]\n[kick drum fades out]\n[reverb tail on lead synth]"
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T18:35:52"
+  "status": "failed"
 }

@@ -6,14 +6,16 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Industrial trap with heavy cinematic sound design, The track features a distorted, sub-heavy 808 bassline that syncopates with a crisp, high-frequency trap drum kit, A metallic, percussive synth lead plays a repetitive, dissonant minor-key motif, Layered throughout are cinematic foley effects including mechanical clanks, heavy impacts, and synthesized riser swells, The tempo is 140 BPM in the key of C minor, The arrangement utilizes sudden dynamic shifts, moving between sparse, atmospheric sections with filtered pads and dense, aggressive sections with rapid hi-hat rolls and distorted textures, A recurring low-frequency pulse provides a rhythmic anchor beneath the shifting industrial soundscapes Publish",
-      "card_title": "drums"
+      "uuid": "32e15b2f-4bc4-4621-930e-5a5e31c99dc0",
+      "tags": "Funk-rock instrumental. A clean, compressed electric guitar plays a syncopated, percussive riff using 16th-note scratches and double-stops. The electric bass guitar performs a slap-and-pop technique, locking with the kick drum on a syncopated pattern. The drum kit features a tight, high-tuned snare and a dry kick drum. A Hammond organ with a rotary speaker effect provides sustained chordal pads and occasional rhythmic stabs. The tempo is 105 BPM in 4/4 time. The arrangement is centered around a repetitive groove with subtle variations in the bass fills and guitar voicing.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[percussive clean electric guitar riff enters]\n[slap bass enters with syncopated kick drum]\n\n[Main Groove]\n[tight snare on beats 2 and 4]\n[Hammond organ with rotary effect enters with sustained chords]\n[bass performs melodic pops and slides]\n\n[Bridge]\n[guitar switches to 16th-note muted scratches]\n[organ stabs on the off-beats]\n\n[Outro]\n[instruments fade out individually]\n[final bass flourish]"
     },
     "vocals": {
-      "status": "timeout",
-      "reason": "upload_timeout",
-      "description": ""
+      "status": "ok",
+      "uuid": "ea8f3fd7-bd60-4de6-afc5-1df439c10a7f",
+      "tags": "Trap with heavy cinematic sound design elements. The track features a distorted 808 bass that slides between notes, layered with a sharp, metallic snare and crisp hi-hat rolls. A dark, atmospheric synth pad provides a constant harmonic wash in the background. Prominent sound effects include high-velocity bullet whizzes, metallic clinks, and explosive impacts that are synchronized with the rhythmic grid. A high-pitched, dissonant synth lead enters periodically with short, staccato stabs. The tempo is 140 BPM in the key of C minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted 808 bass enters]\n[atmospheric synth pad swells]\n[bullet whiz sound effects]\n\n[Section A]\n[trap drums enter with crisp hi-hat rolls]\n[metallic snare on beats 2 and 4]\n[synchronized explosion sound effects]\n[staccato high-pitched synth stabs]\n\n[Section B]\n[drums drop out briefly for sound design transition]\n[reloading and metallic clink sound effects]\n[808 bass slides]\n\n[Outro]\n[drums fade out]\n[lingering synth pad and distant explosion echoes]"
     }
   },
-  "status": "partial"
+  "status": "ok"
 }

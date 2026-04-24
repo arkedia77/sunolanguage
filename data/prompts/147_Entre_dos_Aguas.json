@@ -6,11 +6,15 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Bossa nova, Nylon string acoustic guitar plays syncopated bossa nova chords with a steady thumb-plucked bassline on beats 1 and 3, A shaker maintains a consistent sixteenth-note pattern, The percussion features a woodblock or rimshot playing a 3-2 son clave pattern, A melodic flute enters with legato phrasing and light vibrato, The tempo is 120 BPM in 4/4 time, The key is G major, The arrangement is sparse with a dry mix and minimal reverb Publish",
-      "card_title": "drums"
+      "uuid": "3f6b5b41-cb32-4243-a63a-a4e3e4c9e16f",
+      "tags": "Lo-fi hip hop. A muffled, low-pass filtered kick drum and a crisp, dry snare drum play a boom-bap pattern at 85 BPM in 4/4 time. A Rhodes electric piano plays sustained, jazzy seventh chords with a slight tremolo effect. A deep, sub-heavy electric bass follows the root notes of the piano chords. A recurring vinyl crackle and hiss layer persists throughout the track. A melodic, high-pitched sine wave synth lead plays a simple, repetitive four-bar melody with heavy portamento. The track is in the key of C minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss, muffled kick drum, dry snare]\n\n[Main Section]\n[Rhodes electric piano playing sustained seventh chords]\n[sub-bass enters]\n[sine wave synth lead plays portamento melody]\n\n[Outro]\n[synth lead and bass drop out]\n[Rhodes piano fades out]\n[vinyl crackle persists until silence]"
     },
     "bass": {
-      "status": "file_missing"
+      "status": "file_not_found",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
   "status": "partial"

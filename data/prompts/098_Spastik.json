@@ -4,29 +4,18 @@
   "artist": "Plastikman (Richie Hawtin)",
   "genre": "Contemporary Instrumental",
   "stems": {
-    "other": {
+    "drums": {
       "status": "ok",
-      "uuid": "45451a3d-2378-46e9-bc13-bc751c157588",
-      "tags": "Lo-fi hip hop beat. A dusty, vinyl-crackling drum loop features a muffled kick and a crisp, slightly late snare. A Rhodes electric piano plays a repeating four-bar progression of jazzy seventh chords with a soft tremolo effect. A deep, rounded sine-wave synth bass follows the root notes of the piano. A subtle, high-pitched sine whistle melody enters periodically with heavy portamento. The track maintains a steady 85 BPM in the key of C minor. High-frequency content is rolled off with a low-pass filter to create a warm, vintage aesthetic. Occasional foley sounds of rain and distant city ambience are layered into the background.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and rain foley]\n[electric piano enters with jazzy chords]\n\n[Main Section]\n[muffled kick and snare drum loop enters]\n[sub bass follows piano root notes]\n[high-pitched sine synth with portamento plays occasional melodic accents]\n\n[Outro]\n[drums and bass drop out]\n[electric piano fades out]\n[rain foley and vinyl crackle continue to silence]"
+      "uuid": "6fbc5279-ce2c-469f-9a82-8d76f9b0659e",
+      "tags": "Industrial noise and sound design piece. The track features heavy mechanical textures, including rhythmic metallic scraping, high-frequency digital glitches, and deep sub-bass impacts. Distorted white noise bursts and granular synthesis textures create a dense, abrasive atmosphere. A recurring low-end thud functions as a rhythmic anchor, while sharp, percussive transients mimic the sound of industrial machinery. The piece utilizes extreme dynamic shifts and stereo panning for spatial disorientation. Heavy saturation and bit-crushing effects are applied to the mid-range frequencies.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[metallic scraping, low-frequency hum]\n[sharp digital glitch]\n\n[Section A]\n[distorted sub-bass impact]\n[granular noise bursts]\n[rhythmic mechanical thuds]\n\n[Section B]\n[high-frequency sine wave piercing]\n[stereo-panned white noise]\n[heavy saturation on mid-range textures]\n\n[Outro]\n[fading mechanical hum]\n[final metallic transient]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "e3aa499a-da89-4deb-9119-cd8b6745d485",
-      "tags": "Hardcore punk. Distorted electric guitar plays rapid down-stroked power chords in a chromatic descending pattern. The bass guitar follows the guitar line with a thick, overdriven tone. Drums feature a fast d-beat pattern with constant eighth-note hits on a closed hi-hat and a high-tuned, resonant snare. Vocals are shouted with a raspy, aggressive delivery and minimal melodic variation. The recording has a lo-fi, DIY aesthetic with prominent room reverb on the drum kit. 180 BPM. Key of E minor. 4/4 time signature.",
-      "prompt": "[Intro]\n[distorted electric guitar power chords, d-beat drum pattern]\n\n[Verse 1]\n[shouted male vocals]\nSystematic lies [crash cymbal]\nFeeding on the weak\nBroken promises\nThe future's looking bleak [guitar feedback]\n\n[Chorus]\n[bass guitar distortion increases]\nNo way out! (No way out!)\nNo way out! (No way out!)\n[snare rolls]\n\n[Outro]\n[guitar chugging on low E string]\n[final crash cymbal]"
-    },
-    "drums": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "4fec5068-8ee9-4a75-b4df-602507214296",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff in E minor. The bass guitar follows the guitar riff with a thick, overdriven tone. Drums feature a double-kick pedal pattern with rapid sixteenth-note bursts and a bright, cutting snare. A wah-filtered lead guitar performs a fast, blues-scale solo with wide vibrato and rapid alternate picking. The tempo is 140 BPM in 4/4 time. High-gain amplification and room reverb are applied to the entire mix.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted]\n[bass guitar enters, doubling the riff]\n[drums enter with crash cymbal and double-kick pedal]\n\n[Main Theme]\n[syncopated guitar power chords]\n[driving drum beat with sixteenth-note kick patterns]\n\n[Guitar Solo]\n[wah-wah pedal effect on lead guitar]\n[fast alternate picking and blues-scale runs]\n[sustained feedback swell]\n\n[Outro]\n[abrupt stop on final power chord]\n[reverb tail fades]"
+      "uuid": "d8fed07a-b9b9-47a5-b236-563bf740184a",
+      "tags": "Hardcore techno featuring a distorted 909 kick drum with a long, saturated decay. A high-pitched, resonant acid synth line plays a repetitive, syncopated sixteenth-note pattern with frequent cutoff frequency modulation. A sharp, metallic open hi-hat hits on every offbeat. Distorted vocal samples are processed with heavy bitcrushing and rhythmic gating. The track maintains a constant 165 BPM in the key of F minor. Industrial percussion hits and white noise sweeps punctuate the transitions between phrases.",
+      "prompt": "[Intro]\n[distorted 909 kick drum, resonant acid synth riff]\n[bitcrushed male vocal sample]\nOne, two, three, go!\n\n[Main Section]\n[offbeat open hi-hat enters]\n[gated vocal sample repeats]\nDon't stop (don't stop)\n[white noise sweep]\nDon't stop (don't stop)\n\n[Breakdown]\n[kick drum drops out, low-pass filter on synth]\n[distorted vocal]\nFeel the pressure\n[snare roll build-up]\n\n[Drop]\n[kick drum returns with heavy saturation]\n[acid synth cutoff increases]\nGo!"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T20:09:16"
+  "status": "ok"
 }

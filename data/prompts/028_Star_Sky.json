@@ -4,31 +4,18 @@
   "artist": "Two Steps From Hell (Thomas Bergersen)",
   "genre": "Hybrid / Cinematic",
   "stems": {
-    "other": {
-      "status": "ok",
-      "uuid": "15bbb518-154b-4b5b-be78-c50a1c98cf6c",
-      "tags": "Indie folk. Fingerpicked acoustic guitar in C major at 112 BPM. A male baritone vocal performs a melodic lead with a slight rasp. The guitar pattern uses a steady alternating bass note on beats 1 and 3 with syncopated treble plucks. A second acoustic guitar enters with high-register melodic counterpoint. Subtle room reverb is applied to the vocals and guitars. The arrangement remains sparse without percussion or bass guitar. The vocal delivery is intimate and close-mic'd, emphasizing breath sounds and consonant articulation. The song follows a 4/4 time signature throughout.",
-      "prompt": "[Intro]\n[fingerpicked acoustic guitar in C major]\n\n[Verse 1]\n[male baritone vocals]\nI've been walking down this road for a long time\n[high-register acoustic guitar counterpoint enters]\nSearching for a sign that I can call mine\nEvery shadow looks like a place to hide\nBut I'm just looking for a way inside\n\n[Chorus]\nOh, the wind blows cold through the hollow trees\n[vocal harmony enters]\nAnd I'm down here shaking on my knees\nGive me light, give me hope, give me one more day\n[guitar counterpoint becomes more rhythmic]\nBefore the memories wash away\n\n[Outro]\n[vocal harmony fades]\nWash away\n[acoustic guitar slows to a final strum]\n[reverb tail]"
-    },
-    "bass": {
-      "status": "ok",
-      "uuid": "b7db0757-1657-48b8-b5a0-3b4981bbab6c",
-      "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail provides the rhythmic core at 130 BPM in the key of F minor. A metallic, resonant percussion loop with high-pass filtering and short delay repeats every bar. A low-frequency sawtooth synth drone fluctuates with a slow LFO on the cutoff frequency. Gritty, white-noise-based risers occur every eight bars. The mix is heavily compressed with a pumping sidechain effect triggered by the kick drum. High-frequency industrial clangs with heavy reverb appear on the off-beats. A bitcrushed synth lead enters with a syncopated, three-note rhythmic pattern.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-tail, metallic percussion loop]\n[low sawtooth synth drone with LFO filter modulation]\n\n[Section A]\n[sidechained white-noise risers]\n[reverberated industrial clangs on off-beats]\n\n[Section B]\n[bitcrushed synth lead enters with syncopated three-note pattern]\n[increased saturation on the master bus]"
-    },
     "drums": {
       "status": "ok",
-      "uuid": "6778c34f-9139-4577-a915-5da345268fa8",
+      "uuid": "14870b87-4e80-4a5e-aff0-96d1c84a5f2b",
       "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff centered on a low E pedal tone. The drum kit features a dry, punchy snare and a double-kick pedal executing rapid sixteenth-note bursts. An overdriven bass guitar doubles the guitar riff exactly. The arrangement maintains a consistent 4/4 time signature at 140 BPM in the key of E minor. High-gain amplification creates a thick, saturated texture with minimal room reverb. The lead guitar utilizes a wah-wah pedal for rhythmic filtering during the transition. The percussion includes frequent open hi-hat accents on the off-beats.",
       "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted syncopation]\n[kick drum and snare enter with heavy accents]\n\n[Main Theme]\n[full band enters, double-kick drum patterns]\n[overdriven bass guitar doubling guitar riff]\n[open hi-hat accents on off-beats]\n\n[Bridge]\n[wah-wah pedal effect on lead guitar]\n[snare rolls and rapid double-kick bursts]"
     },
-    "vocals": {
+    "bass": {
       "status": "ok",
-      "uuid": "d4778e25-2c31-4847-bc60-e4179183f82d",
-      "tags": "Symphonic power metal featuring a high-pitched operatic female soprano. The arrangement consists of distorted electric guitars playing palm-muted chugging patterns, a fast double-bass drum pedal technique, and a prominent orchestral string section with brass accents. A grand piano provides melodic counterpoint during the vocal phrases. The production uses heavy hall reverb on the vocals and a wide stereo image for the orchestral layers. The tempo is 160 BPM in the key of G minor. The bass guitar follows the kick drum patterns with a saturated, mid-forward tone. High-velocity snare hits emphasize the backbeat while the crash cymbals mark the start of each four-bar phrase.",
-      "prompt": "[Chorus]\n[distorted guitars, double-bass drumming, orchestral strings, grand piano]\n[operatic female soprano vocals with heavy reverb]\nI know your face\nIt's etched in gray\nAll of time cannot erase\nWhat my heart maintains"
+      "uuid": "b98e73ff-5403-4f53-abf4-0bfe1ec1e03d",
+      "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail drives the rhythm at 135 BPM in the key of C minor. A metallic, percussive synth sequence repeats a syncopated sixteenth-note pattern. High-frequency white noise bursts and resonant filter sweeps occur every four bars. A gritty, overdriven bass synth mirrors the kick rhythm with short, staccato decays. Industrial foley sounds, resembling clanging metal and steam hisses, are processed with short room reverb and rhythmic delay. The arrangement features a constant high-pass filter automation on the master bus that periodically cuts low-end frequencies before dropping back into full-range percussion.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-tail, metallic percussion hits]\n\n[Main Section]\n[syncopated sixteenth-note synth sequence enters]\n[white noise bursts with rhythmic delay]\n[resonant filter sweeps]\n\n[Breakdown]\n[low-pass filter on kick drum, high-frequency industrial foley sounds]\n[steam hiss sound effect]\n\n[Drop]\n[full-range distorted kick and bass synth, clanging metal percussion]"
     }
   },
-  "status": "ok",
-  "retried_at": "2026-04-07T14:10:49"
+  "status": "ok"
 }

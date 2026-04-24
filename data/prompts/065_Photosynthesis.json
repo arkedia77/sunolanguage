@@ -4,29 +4,18 @@
   "artist": "Carbon Based Lifeforms",
   "genre": "Electronic / Ambient",
   "stems": {
-    "other": {
-      "status": "ok",
-      "uuid": "acc65f73-27bb-4795-a211-bddb801ccc6f",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitar plays a syncopated, palm-muted riff centered on E. A second electric guitar provides sustained power chords and melodic lead fills with high-gain saturation. The bass guitar follows the kick drum patterns with a gritty, overdriven tone. Drums feature a prominent double-kick pedal technique, a crisp snare with a short decay, and consistent 16th-note hi-hat patterns. 140 BPM, 4/4 time signature, E minor.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted]\n[double-kick drum entry, crash cymbal]\n\n[Main Theme]\n[overdriven bass guitar enters]\n[lead electric guitar melody with heavy vibrato]\n\n[Bridge]\n[snare rolls, rapid double-bass drumming]\n[sustained power chords]"
-    },
-    "bass": {
-      "status": "ok",
-      "uuid": "f3461bc6-62f6-4525-8c6a-f62714255c4a",
-      "tags": "Lo-fi hip hop. A detuned, warbling electric piano plays a repetitive four-chord progression with heavy flutter and wow effects. A sampled acoustic drum loop features a muffled kick, a crisp snare with a short room reverb, and a steady eighth-note closed hi-hat pattern. A deep, rounded sub-bass follows the root notes of the piano chords. A vinyl crackle texture and occasional bird chirping foley are layered throughout the mix. The tempo is 85 BPM in the key of C major. The piano uses a low-pass filter that opens and closes slightly over four-bar cycles. A subtle sidechain compression effect causes the melodic elements to duck slightly on every kick drum hit.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle, bird chirping foley]\n[detuned electric piano enters with four-chord progression]\n\n[Main Section]\n[sampled drum loop enters with muffled kick and crisp snare]\n[sub-bass follows piano root notes]\n[low-pass filter automation on piano]\n\n[Outro]\n[drums and bass drop out]\n[piano fades out with increasing reverb]\n[vinyl crackle and bird chirping continue to silence]"
-    },
     "drums": {
       "status": "ok",
-      "uuid": "4af987fb-8e49-48f7-9ae3-04ee8b874e4b",
+      "uuid": "76459c1d-c3b1-4d55-aae3-0dab35dc892f",
       "tags": "Boom bap hip hop. A dry, acoustic drum kit plays a swung 16th-note groove with a prominent, thumping kick and a crisp snare. A deep, melodic electric bass guitar line follows a syncopated pattern with subtle slides between notes. A clean, jazz-influenced electric guitar plays rhythmic, staccato chords on the off-beats. A high-pitched, filtered synthesizer lead performs a repetitive, two-bar melodic hook with a slight portamento effect. 92 BPM. Key of C minor. 4/4 time signature.",
       "prompt": "[Instrumental]\n\n[Intro]\n[dry acoustic drums, swung 16th-note hi-hats]\n[syncopated electric bass enters]\n\n[Main Section]\n[staccato jazz guitar chords on off-beats]\n[high-pitched filtered synth lead with portamento]\n[repetitive two-bar melodic hook]"
     },
-    "vocals": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "bass": {
+      "status": "ok",
+      "uuid": "76459c1d-c3b1-4d55-aae3-0dab35dc892f",
+      "tags": "Boom bap hip hop. A dry, acoustic drum kit plays a swung 16th-note groove with a prominent, thumping kick and a crisp snare. A deep, melodic electric bass guitar line follows a syncopated pattern with subtle slides between notes. A clean, jazz-influenced electric guitar plays rhythmic, staccato chords on the off-beats. A high-pitched, filtered synthesizer lead performs a repetitive, two-bar melodic hook with a slight portamento effect. 92 BPM. Key of C minor. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[dry acoustic drums, swung 16th-note hi-hats]\n[syncopated electric bass enters]\n\n[Main Section]\n[staccato jazz guitar chords on off-beats]\n[high-pitched filtered synth lead with portamento]\n[repetitive two-bar melodic hook]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T17:39:24"
+  "status": "ok"
 }

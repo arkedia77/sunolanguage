@@ -6,13 +6,15 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Acoustic folk and percussion, The track features a dry, close-miked acoustic guitar playing a repetitive fingerstyle pattern in 4/4 time, A hand-clapping rhythm provides the primary percussion, accented by a wooden block or rimshot sound on the backbeat, A shaker maintains a steady sixteenth-note pulse, The tempo is 100 BPM, The arrangement is minimalist, focusing on the interplay between the syncopated guitar melody and the organic percussion elements, The guitar uses a standard tuning with a bright, steel-string timbre, No bass or melodic accompaniment is present beyond the single guitar track Publish",
-      "card_title": "drums"
+      "uuid": "abab9f4a-28f8-41cf-8ed8-155989d3bb98",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated bossa nova chords with a steady thumb-plucked bassline on beats 1 and 3. A shaker maintains a consistent sixteenth-note pattern. The percussion features a woodblock or rimshot playing a 3-2 son clave pattern. A melodic flute enters with legato phrasing and light vibrato. The tempo is 120 BPM in 4/4 time. The key is G major. The arrangement is sparse with a dry mix and minimal reverb.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated nylon string acoustic guitar, sixteenth-note shaker]\n\n[Main Theme]\n[flute melody enters, legato phrasing]\n[woodblock playing 3-2 clave pattern]\n\n[Outro]\n[flute fades out]\n[acoustic guitar and shaker continue to end]"
     },
     "bass": {
       "status": "ok",
-      "description": "Funk-rock instrumental, A clean, compressed electric guitar plays a syncopated, percussive riff using 16th-note scratches and palm-muted staccato notes, The electric bass follows the guitar rhythm with a bright, mid-forward tone, emphasizing the downbeat of each measure, A drum kit maintains a steady groove with a tight, dry snare and a consistent kick pattern, The tempo is 105 BPM in 4/4 time, The arrangement is minimalist, focusing on the interplay between the rhythmic guitar scratching and the locked bass and drum section Publish",
-      "card_title": "bass"
+      "uuid": "a829473d-9ccc-42f4-9a81-11dfc692f24e",
+      "tags": "Acoustic folk percussion track. The arrangement consists of a dry, close-miked acoustic guitar and a layered percussion section. The acoustic guitar performs a repetitive, syncopated fingerstyle pattern using palm-muted bass notes and sharp treble snaps. Percussion includes a wooden stomp box on beats one and three, accompanied by handclaps and a metallic tambourine jingle on the backbeats. A shaker maintains a steady sixteenth-note subdivision. The tempo is 105 BPM in 4/4 time. The recording features minimal room reverb, emphasizing a dry, intimate studio aesthetic. The guitar follows a percussive slap-and-pluck technique where the strings are struck against the frets to create a rhythmic click.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[acoustic guitar enters with syncopated fingerstyle pattern]\n[stomp box on beats 1 and 3]\n[handclaps and tambourine on beats 2 and 4]\n[steady sixteenth-note shaker]"
     }
   },
   "status": "ok"

@@ -1,8 +1,8 @@
 {
   "sp": {
     "genre": {
-      "unique_templates": 157,
-      "total_occurrences": 162,
+      "unique_templates": 175,
+      "total_occurrences": 180,
       "top": [
         {
           "template": "K-Pop ballad featuring a \u0000<VOCAL>\u0001.",
@@ -361,16 +361,25 @@
       ]
     },
     "instrument": {
-      "unique_templates": 750,
-      "total_occurrences": 781,
+      "unique_templates": 887,
+      "total_occurrences": 932,
       "top": [
         {
           "template": "A <MOD> <INSTR> follows the \u0000<DRUM>\u0001 pattern.",
-          "count": 5,
+          "count": 6,
           "examples": [
             "A mellow synth bass follows the kick drum pattern.",
             "A sub-heavy synth bass follows the kick drum pattern.",
             "A warm synth bass follows the kick drum pattern."
+          ]
+        },
+        {
+          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL>.",
+          "count": 3,
+          "examples": [
+            "The arrangement is intimate, focusing on the interplay between the acoustic guitar and the vocal.",
+            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal.",
+            "The arrangement is sparse, focusing on the interplay between the piano and the vocal."
           ]
         },
         {
@@ -401,6 +410,15 @@
           ]
         },
         {
+          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and <INSTR>.",
+          "count": 3,
+          "examples": [
+            "The production is clean with light plate reverb on the vocals and guitar.",
+            "The production is clean with light hall reverb on the vocals and piano.",
+            "The production is clean with moderate plate reverb on the vocals and guitar."
+          ]
+        },
+        {
           "template": "<INSTR> plays <CHORD> with <EFFECT> and <EFFECT>.",
           "count": 2,
           "examples": [
@@ -414,14 +432,6 @@
           "examples": [
             "A deep, sub-heavy synth bass follows the kick pattern.",
             "A deep, rounded synth bass follows the kick drum pattern."
-          ]
-        },
-        {
-          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL>.",
-          "count": 2,
-          "examples": [
-            "The arrangement is intimate, focusing on the interplay between the acoustic guitar and the vocal.",
-            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal."
           ]
         },
         {
@@ -497,6 +507,14 @@
           ]
         },
         {
+          "template": "A sub-<INSTR> provides low-end weight, while the <DRUM> consists of a <MOD> \u0000<DRUM>\u0001 on the backbeat and a \u0000<DRUM>\u0001.",
+          "count": 2,
+          "examples": [
+            "A sub-bass synth provides low-end weight, while the percussion consists of a crisp electronic snare on the backbeat and a muted kick drum.",
+            "A sub-bass synth provides low-end weight, while the percussion consists of a crisp electronic snare on the backbeat and a tight kick drum."
+          ]
+        },
+        {
           "template": "The <INSTR> maintains a <MOD> eighth-note arpeggio pattern throughout.",
           "count": 2,
           "examples": [
@@ -537,11 +555,11 @@
           ]
         },
         {
-          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and <INSTR>.",
+          "template": "A <MOD> <INSTR> provides harmonic density in the background.",
           "count": 2,
           "examples": [
-            "The production is clean with light plate reverb on the vocals and guitar.",
-            "The production is clean with light hall reverb on the vocals and piano."
+            "A subtle synthesizer pad provides harmonic density in the background.",
+            "A subtle synth pad provides harmonic density in the background."
           ]
         },
         {
@@ -553,6 +571,22 @@
           ]
         },
         {
+          "template": "The production features high-fidelity clarity with a <EFFECT> on the <VOCAL> and <INSTR>.",
+          "count": 2,
+          "examples": [
+            "The production features high-fidelity clarity with a hall reverb on the vocals and piano.",
+            "The production features high-fidelity clarity with a hall reverb on the vocals and strings."
+          ]
+        },
+        {
+          "template": "<MOD> <INSTR> provide harmonic depth in the background.",
+          "count": 2,
+          "examples": [
+            "Subtle atmospheric synth pads provide harmonic depth in the background.",
+            "Subtle synth pads provide harmonic depth in the background."
+          ]
+        },
+        {
           "template": "The arrangement is minimalist, focusing on the interplay between the <VOCAL> and the <INSTR>.",
           "count": 2,
           "examples": [
@@ -561,11 +595,67 @@
           ]
         },
         {
+          "template": "<MOD>, <MOD> <INSTR> provide a <MOD> harmonic wash in the background.",
+          "count": 2,
+          "examples": [
+            "Subtle, atmospheric synth pads provide a soft harmonic wash in the background.",
+            "Soft, atmospheric synth pads provide a subtle harmonic wash in the background."
+          ]
+        },
+        {
+          "template": "A <INSTR> plays jazz-inflected chords with <EFFECT> and <EFFECT>.",
+          "count": 2,
+          "examples": [
+            "A clean electric guitar plays jazz-inflected chords with light chorus and reverb.",
+            "A clean electric guitar plays jazz-inflected chords with subtle chorus and reverb."
+          ]
+        },
+        {
+          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and a <MOD> image for the <INSTR>.",
+          "count": 2,
+          "examples": [
+            "The production is clean with light plate reverb on the vocals and a wide stereo image for the acoustic guitar.",
+            "The production is polished with moderate reverb on the vocals and a wide stereo image for the guitar."
+          ]
+        },
+        {
           "template": "<INSTR> plays a syncopated, <MOD> <CHORD> with <EFFECT> and <EFFECT>.",
           "count": 2,
           "examples": [
             "Clean electric guitar plays a syncopated, jazzy chord progression with light chorus and reverb.",
             "Clean electric guitar plays a syncopated, jazzy chord progression with subtle chorus and reverb."
+          ]
+        },
+        {
+          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL> performance.",
+          "count": 2,
+          "examples": [
+            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal performance.",
+            "The arrangement is sparse, focusing on the interplay between the guitar and the vocal performance."
+          ]
+        },
+        {
+          "template": "<INSTR> provide legato accompaniment.",
+          "count": 2,
+          "examples": [
+            "Orchestral strings provide legato accompaniment.",
+            "Strings provide legato accompaniment."
+          ]
+        },
+        {
+          "template": "<INSTR> plays a syncopated, palm-muted rhythmic pattern in <KEY> Major at <BPM>.",
+          "count": 2,
+          "examples": [
+            "Clean electric guitar plays a syncopated, palm-muted rhythmic pattern in E Major at 105 BPM.",
+            "Clean electric guitar plays a syncopated, palm-muted rhythmic pattern in G Major at 105 BPM."
+          ]
+        },
+        {
+          "template": "A <INSTR> provides melodic counterpoint with slides and vibrato.",
+          "count": 2,
+          "examples": [
+            "A fretless bass provides melodic counterpoint with slides and vibrato.",
+            "A fretless bass guitar provides melodic counterpoint with slides and vibrato."
           ]
         },
         {
@@ -665,89 +755,12 @@
           "examples": [
             "The track utilizes a prominent, syncopated slap bass line that interacts with a crisp electronic drum kit."
           ]
-        },
-        {
-          "template": "A <MOD>, staccato <INSTR> lead plays a <MOD> four-note motif.",
-          "count": 1,
-          "examples": [
-            "A bright, staccato synth lead plays a repetitive four-note motif."
-          ]
-        },
-        {
-          "template": "The arrangement includes rhythmic <VOCAL> samples and percussive <INSTR> stabs.",
-          "count": 1,
-          "examples": [
-            "The arrangement includes rhythmic vocal samples and percussive synth stabs."
-          ]
-        },
-        {
-          "template": "High-frequency <INSTR> arpeggios and <MOD> sound effects provide rhythmic texture.",
-          "count": 1,
-          "examples": [
-            "High-frequency synth arpeggios and digital sound effects provide rhythmic texture."
-          ]
-        },
-        {
-          "template": "The bridge features a stripped-back section with filtered <INSTR> before returning to the <MOD> groove.",
-          "count": 1,
-          "examples": [
-            "The bridge features a stripped-back section with filtered synth pads before returning to the full groove."
-          ]
-        },
-        {
-          "template": "A <MOD>, <MOD> <INSTR> plays a <MOD> eighth-note strumming pattern.",
-          "count": 1,
-          "examples": [
-            "A clean, bright acoustic guitar plays a steady eighth-note strumming pattern."
-          ]
-        },
-        {
-          "template": "A <MOD>, <MOD> <INSTR> provides harmonic support with <CHORD> and <MOD> melodic fills.",
-          "count": 1,
-          "examples": [
-            "A warm, resonant grand piano provides harmonic support with sustained chords and occasional melodic fills."
-          ]
-        },
-        {
-          "template": "The arrangement features a <INSTR> line performing syncopated sixteenth-note patterns, a <MOD> <INSTR> playing jazz-influenced chord extensions, and a <INSTR> with rhythmic palm-muted scratching.",
-          "count": 1,
-          "examples": [
-            "The arrangement features a slap bass line performing syncopated sixteenth-note patterns, a bright acoustic piano playing jazz-influenced chord extensions, and a clean electric guitar with rhythmic palm-muted scratching."
-          ]
-        },
-        {
-          "template": "<INSTR> provide sustained harmonic support in the background, while <MOD> <INSTR> accent the transitions.",
-          "count": 1,
-          "examples": [
-            "Synthesizer pads provide sustained harmonic support in the background, while occasional brass stabs accent the transitions."
-          ]
-        },
-        {
-          "template": "A <INSTR> plays a <MOD> eighth-note strumming pattern.",
-          "count": 1,
-          "examples": [
-            "A steel-string acoustic guitar plays a steady eighth-note strumming pattern."
-          ]
-        },
-        {
-          "template": "A <INSTR> follows the root notes of the progression.",
-          "count": 1,
-          "examples": [
-            "A clean electric bass guitar follows the root notes of the progression."
-          ]
-        },
-        {
-          "template": "K-Indie rock track featuring a <INSTR> playing a rhythmic, syncopated chord pattern.",
-          "count": 1,
-          "examples": [
-            "K-Indie rock track featuring a clean electric guitar playing a rhythmic, syncopated chord pattern."
-          ]
         }
       ]
     },
     "effect_electronic": {
-      "unique_templates": 217,
-      "total_occurrences": 228,
+      "unique_templates": 250,
+      "total_occurrences": 267,
       "top": [
         {
           "template": "The <INSTR> follows the \u0000<DRUM>\u0001 pattern with a <MOD>, overdriven tone.",
@@ -759,11 +772,28 @@
           ]
         },
         {
+          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and <INSTR>.",
+          "count": 3,
+          "examples": [
+            "The production is clean with light plate reverb on the vocals and guitar.",
+            "The production is clean with light hall reverb on the vocals and piano.",
+            "The production is clean with moderate plate reverb on the vocals and guitar."
+          ]
+        },
+        {
           "template": "<INSTR> plays <CHORD> with <EFFECT> and <EFFECT>.",
           "count": 2,
           "examples": [
             "Clean electric guitar plays arpeggiated chords with light chorus and reverb.",
             "Clean electric guitar plays arpeggiated chords with light chorus and delay."
+          ]
+        },
+        {
+          "template": "The <VOCAL> performance is <MOD> and breathy, utilizing a close-mic technique with <MOD> <EFFECT>.",
+          "count": 2,
+          "examples": [
+            "The vocal performance is intimate and breathy, utilizing a close-mic technique with light plate reverb.",
+            "The vocal performance is intimate and breathy, utilizing a close-mic technique with subtle plate reverb."
           ]
         },
         {
@@ -807,14 +837,6 @@
           ]
         },
         {
-          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and <INSTR>.",
-          "count": 2,
-          "examples": [
-            "The production is clean with light plate reverb on the vocals and guitar.",
-            "The production is clean with light hall reverb on the vocals and piano."
-          ]
-        },
-        {
           "template": "<INSTR> plays a rhythmic, syncopated <CHORD> with <EFFECT> and <EFFECT>.",
           "count": 2,
           "examples": [
@@ -823,11 +845,43 @@
           ]
         },
         {
+          "template": "The production features high-fidelity clarity with a <EFFECT> on the <VOCAL> and <INSTR>.",
+          "count": 2,
+          "examples": [
+            "The production features high-fidelity clarity with a hall reverb on the vocals and piano.",
+            "The production features high-fidelity clarity with a hall reverb on the vocals and strings."
+          ]
+        },
+        {
+          "template": "A <INSTR> plays jazz-inflected chords with <EFFECT> and <EFFECT>.",
+          "count": 2,
+          "examples": [
+            "A clean electric guitar plays jazz-inflected chords with light chorus and reverb.",
+            "A clean electric guitar plays jazz-inflected chords with subtle chorus and reverb."
+          ]
+        },
+        {
+          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and a <MOD> image for the <INSTR>.",
+          "count": 2,
+          "examples": [
+            "The production is clean with light plate reverb on the vocals and a wide stereo image for the acoustic guitar.",
+            "The production is polished with moderate reverb on the vocals and a wide stereo image for the guitar."
+          ]
+        },
+        {
           "template": "<INSTR> plays a syncopated, <MOD> <CHORD> with <EFFECT> and <EFFECT>.",
           "count": 2,
           "examples": [
             "Clean electric guitar plays a syncopated, jazzy chord progression with light chorus and reverb.",
             "Clean electric guitar plays a syncopated, jazzy chord progression with subtle chorus and reverb."
+          ]
+        },
+        {
+          "template": "<DRUM> feature a \u0000<DRUM>\u0001 with <MOD> <EFFECT> and a \u0000<DRUM>\u0001.",
+          "count": 2,
+          "examples": [
+            "Drums feature a crisp snare with moderate reverb and a soft kick drum.",
+            "Drums feature a crisp snare with heavy reverb and a soft kick."
           ]
         },
         {
@@ -940,13 +994,6 @@
           "count": 1,
           "examples": [
             "The vocal delivery is conversational and close-mic'd with subtle plate reverb."
-          ]
-        },
-        {
-          "template": "The <VOCAL> performance is <MOD> and breathy, utilizing a close-mic technique with <MOD> <EFFECT>.",
-          "count": 1,
-          "examples": [
-            "The vocal performance is intimate and breathy, utilizing a close-mic technique with light plate reverb."
           ]
         },
         {
@@ -1081,44 +1128,16 @@
           "examples": [
             "The chorus introduces overdriven electric guitar power chords and open crash cymbals."
           ]
-        },
-        {
-          "template": "\u0000<VOCAL>\u0001 are delivered in a <MOD> tenor with <MOD> <EFFECT> and <MOD> <EFFECT>.",
-          "count": 1,
-          "examples": [
-            "Male vocals are delivered in a mid-range tenor with light compression and subtle plate reverb."
-          ]
-        },
-        {
-          "template": "\u0000<VOCAL>\u0001 are delivered in a breathy, <MOD> style with <MOD> pitch correction and <EFFECT>.",
-          "count": 1,
-          "examples": [
-            "Female vocals are delivered in a breathy, intimate style with light pitch correction and plate reverb."
-          ]
-        },
-        {
-          "template": "The production uses a long <EFFECT> on both the <INSTR> and <VOCAL> to create a <MOD> acoustic environment.",
-          "count": 1,
-          "examples": [
-            "The production uses a long hall reverb on both the piano and vocals to create a spacious acoustic environment."
-          ]
-        },
-        {
-          "template": "The production is <MOD> with close-mic positioning on both the <VOCAL> and the <INSTR>, featuring a short <EFFECT>.",
-          "count": 1,
-          "examples": [
-            "The production is intimate with close-mic positioning on both the vocals and the guitar, featuring a short room reverb."
-          ]
         }
       ]
     },
     "drums": {
-      "unique_templates": 297,
-      "total_occurrences": 312,
+      "unique_templates": 346,
+      "total_occurrences": 368,
       "top": [
         {
           "template": "A <MOD> <INSTR> follows the \u0000<DRUM>\u0001 pattern.",
-          "count": 5,
+          "count": 6,
           "examples": [
             "A mellow synth bass follows the kick drum pattern.",
             "A sub-heavy synth bass follows the kick drum pattern.",
@@ -1153,6 +1172,15 @@
           ]
         },
         {
+          "template": "\u0000<DRUM>\u0001 features a \u0000<DRUM>\u0001 and \u0000<DRUM>\u0001.",
+          "count": 3,
+          "examples": [
+            "Electronic drum kit features a crisp snare and tight kick.",
+            "Electronic drum kit features a punchy kick and crisp snare.",
+            "Drum kit features a crisp snare and punchy kick."
+          ]
+        },
+        {
           "template": "A <MOD>, <MOD> <INSTR> follows the \u0000<DRUM>\u0001 pattern.",
           "count": 2,
           "examples": [
@@ -1177,6 +1205,14 @@
           ]
         },
         {
+          "template": "A sub-<INSTR> provides low-end weight, while the <DRUM> consists of a <MOD> \u0000<DRUM>\u0001 on the backbeat and a \u0000<DRUM>\u0001.",
+          "count": 2,
+          "examples": [
+            "A sub-bass synth provides low-end weight, while the percussion consists of a crisp electronic snare on the backbeat and a muted kick drum.",
+            "A sub-bass synth provides low-end weight, while the percussion consists of a crisp electronic snare on the backbeat and a tight kick drum."
+          ]
+        },
+        {
           "template": "<DRUM> consists of a <MOD>, <MOD> \u0000<DRUM>\u0001 on beats <NUM> and <NUM>, with a <MOD> \u0000<DRUM>\u0001 on beats <NUM> and <NUM>.",
           "count": 2,
           "examples": [
@@ -1185,11 +1221,35 @@
           ]
         },
         {
-          "template": "\u0000<DRUM>\u0001 features a \u0000<DRUM>\u0001 and \u0000<DRUM>\u0001.",
+          "template": "<DRUM> feature a \u0000<DRUM>\u0001 with <MOD> <EFFECT> and a \u0000<DRUM>\u0001.",
           "count": 2,
           "examples": [
-            "Electronic drum kit features a crisp snare and tight kick.",
-            "Electronic drum kit features a punchy kick and crisp snare."
+            "Drums feature a crisp snare with moderate reverb and a soft kick drum.",
+            "Drums feature a crisp snare with heavy reverb and a soft kick."
+          ]
+        },
+        {
+          "template": "The \u0000<DRUM>\u0001 uses a \u0000<DRUM>\u0001 and a \u0000<DRUM>\u0001.",
+          "count": 2,
+          "examples": [
+            "The drum kit uses a crisp snare and a punchy kick drum.",
+            "The drum kit uses a crisp snare and a tight kick drum."
+          ]
+        },
+        {
+          "template": "The <DRUM> consist of a \u0000<DRUM>\u0001 and a \u0000<DRUM>\u0001.",
+          "count": 2,
+          "examples": [
+            "The drums consist of a crisp snare and a tight kick drum.",
+            "The drums consist of a crisp snare and a soft kick drum."
+          ]
+        },
+        {
+          "template": "The \u0000<DRUM>\u0001 uses a \u0000<DRUM>\u0001 and a <MOD> \u0000<DRUM>\u0001 pattern.",
+          "count": 2,
+          "examples": [
+            "The drum kit uses a crisp snare and a driving kick pattern.",
+            "The drum kit uses a crisp snare and a tight hi-hat pattern."
           ]
         },
         {
@@ -1443,47 +1503,12 @@
           "examples": [
             "The percussion consists of a soft, dry kick drum on beats 1 and 3, a crisp rimshot on beats 2 and 4, and a subtle shaker providing sixteenth-note subdivisions."
           ]
-        },
-        {
-          "template": "The <DRUM> consist of a <MOD> boom-bap <DRUM> with a \u0000<DRUM>\u0001 and <MOD> \u0000<DRUM>\u0001.",
-          "count": 1,
-          "examples": [
-            "The drums consist of a crisp boom-bap beat with a dry snare and tight hi-hats."
-          ]
-        },
-        {
-          "template": "A melodic <INSTR> line moves in a walking pattern, locking with a <MOD>, mid-tempo \u0000<DRUM>\u0001 featuring a \u0000<DRUM>\u0001 and <MOD> \u0000<DRUM>\u0001.",
-          "count": 1,
-          "examples": [
-            "A melodic bass guitar line moves in a walking pattern, locking with a dry, mid-tempo drum kit featuring a tight snare and crisp hi-hats."
-          ]
-        },
-        {
-          "template": "K-Rock track featuring <MOD> <INSTR>s and <MOD> live <DRUM>.",
-          "count": 1,
-          "examples": [
-            "K-Rock track featuring aggressive distorted electric guitars and driving live drums."
-          ]
-        },
-        {
-          "template": "The <INSTR> follows the \u0000<DRUM>\u0001 patterns with a <MOD>, overdriven tone.",
-          "count": 1,
-          "examples": [
-            "The bass guitar follows the kick drum patterns with a gritty, overdriven tone."
-          ]
-        },
-        {
-          "template": "The <DRUM> utilize <MOD> \u0000<DRUM>\u0001 accents and a <MOD> \u0000<DRUM>\u0001.",
-          "count": 1,
-          "examples": [
-            "The drums utilize heavy crash cymbal accents and a punchy snare."
-          ]
         }
       ]
     },
     "vocal_main": {
-      "unique_templates": 483,
-      "total_occurrences": 499,
+      "unique_templates": 557,
+      "total_occurrences": 582,
       "top": [
         {
           "template": "K-Pop ballad featuring a \u0000<VOCAL>\u0001.",
@@ -1492,6 +1517,15 @@
             "K-Pop ballad featuring a male baritone vocal.",
             "K-Pop ballad featuring a baritone male vocal.",
             "K-Pop ballad featuring a male tenor vocal."
+          ]
+        },
+        {
+          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL>.",
+          "count": 3,
+          "examples": [
+            "The arrangement is intimate, focusing on the interplay between the acoustic guitar and the vocal.",
+            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal.",
+            "The arrangement is sparse, focusing on the interplay between the piano and the vocal."
           ]
         },
         {
@@ -1504,11 +1538,12 @@
           ]
         },
         {
-          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL>.",
-          "count": 2,
+          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and <INSTR>.",
+          "count": 3,
           "examples": [
-            "The arrangement is intimate, focusing on the interplay between the acoustic guitar and the vocal.",
-            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal."
+            "The production is clean with light plate reverb on the vocals and guitar.",
+            "The production is clean with light hall reverb on the vocals and piano.",
+            "The production is clean with moderate plate reverb on the vocals and guitar."
           ]
         },
         {
@@ -1517,6 +1552,14 @@
           "examples": [
             "The arrangement is sparse, focusing on the interplay between the rhythmic acoustic guitar and the vocal melody.",
             "The arrangement is sparse, focusing on the interplay between the rhythmic guitar and the vocal melody."
+          ]
+        },
+        {
+          "template": "The <VOCAL> performance is <MOD> and breathy, utilizing a close-mic technique with <MOD> <EFFECT>.",
+          "count": 2,
+          "examples": [
+            "The vocal performance is intimate and breathy, utilizing a close-mic technique with light plate reverb.",
+            "The vocal performance is intimate and breathy, utilizing a close-mic technique with subtle plate reverb."
           ]
         },
         {
@@ -1536,11 +1579,27 @@
           ]
         },
         {
+          "template": "The <VOCAL> performance is <MOD> with breathy delivery and <MOD> vibrato.",
+          "count": 2,
+          "examples": [
+            "The vocal performance is intimate with breathy delivery and subtle vibrato.",
+            "The vocal performance is intimate with breathy delivery and light vibrato."
+          ]
+        },
+        {
           "template": "\u0000<VOCAL>\u0001 are delivered in a breathy, <MOD> baritone register with <MOD> vibrato.",
           "count": 2,
           "examples": [
             "Male vocals are delivered in a breathy, intimate baritone register with minimal vibrato.",
             "Male vocals are delivered in a breathy, intimate baritone register with subtle vibrato."
+          ]
+        },
+        {
+          "template": "The <VOCAL> performance uses a mix of chest <VOCAL> and breathy delivery, with <MOD> vibrato on sustained notes.",
+          "count": 2,
+          "examples": [
+            "The vocal performance uses a mix of chest voice and breathy delivery, with subtle vibrato on sustained notes.",
+            "The vocal performance uses a mix of chest voice and breathy delivery, with occasional vibrato on sustained notes."
           ]
         },
         {
@@ -1560,11 +1619,11 @@
           ]
         },
         {
-          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and <INSTR>.",
+          "template": "The production features high-fidelity clarity with a <EFFECT> on the <VOCAL> and <INSTR>.",
           "count": 2,
           "examples": [
-            "The production is clean with light plate reverb on the vocals and guitar.",
-            "The production is clean with light hall reverb on the vocals and piano."
+            "The production features high-fidelity clarity with a hall reverb on the vocals and piano.",
+            "The production features high-fidelity clarity with a hall reverb on the vocals and strings."
           ]
         },
         {
@@ -1584,11 +1643,35 @@
           ]
         },
         {
+          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and a <MOD> image for the <INSTR>.",
+          "count": 2,
+          "examples": [
+            "The production is clean with light plate reverb on the vocals and a wide stereo image for the acoustic guitar.",
+            "The production is polished with moderate reverb on the vocals and a wide stereo image for the guitar."
+          ]
+        },
+        {
+          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL> performance.",
+          "count": 2,
+          "examples": [
+            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal performance.",
+            "The arrangement is sparse, focusing on the interplay between the guitar and the vocal performance."
+          ]
+        },
+        {
           "template": "A \u0000<VOCAL>\u0001 performs with a breathy, <MOD> delivery and <MOD> vibrato.",
           "count": 2,
           "examples": [
             "A male tenor vocal performs with a breathy, intimate delivery and light vibrato.",
             "A baritone male vocal performs with a breathy, intimate delivery and minimal vibrato."
+          ]
+        },
+        {
+          "template": "\u0000<VOCAL>\u0001 are delivered in a breathy, <MOD> style with close-mic proximity.",
+          "count": 2,
+          "examples": [
+            "Male baritone vocals are delivered in a breathy, intimate style with close-mic proximity.",
+            "Female vocals are delivered in a breathy, intimate style with close-mic proximity."
           ]
         },
         {
@@ -1800,62 +1883,45 @@
           "examples": [
             "The vocal performance is intimate with breathy delivery in the lower register, transitioning to a resonant chest voice."
           ]
-        },
-        {
-          "template": "The production features long-tail <EFFECT> on the <INSTR> and <VOCAL>.",
-          "count": 1,
-          "examples": [
-            "The production features long-tail plate reverb on the violin and vocals."
-          ]
-        },
-        {
-          "template": "\u0000<VOCAL>\u0001 are <MOD> and melodic, sitting <MOD> in the mix with <MOD> doubling and short <EFFECT>.",
-          "count": 1,
-          "examples": [
-            "Male vocals are energetic and melodic, sitting forward in the mix with light doubling and short plate reverb."
-          ]
-        },
-        {
-          "template": "\u0000<VOCAL>\u0001 are delivered in a <MOD>, breathy tenor.",
-          "count": 1,
-          "examples": [
-            "Male vocals are delivered in a smooth, breathy tenor."
-          ]
-        },
-        {
-          "template": "\u0000<VOCAL>\u0001 are delivered in a conversational, <MOD> baritone with <MOD> breathiness.",
-          "count": 1,
-          "examples": [
-            "Male vocals are delivered in a conversational, mid-range baritone with light breathiness."
-          ]
-        },
-        {
-          "template": "A <MOD>, \u0000<VOCAL>\u0001 performs with a <MOD>, conversational delivery in the lower register.",
-          "count": 1,
-          "examples": [
-            "A smooth, baritone male vocal performs with a relaxed, conversational delivery in the lower register."
-          ]
-        },
-        {
-          "template": "A <INSTR> follows the <VOCAL> melody with melodic slides.",
-          "count": 1,
-          "examples": [
-            "A fretless bass guitar follows the vocal melody with melodic slides."
-          ]
-        },
-        {
-          "template": "<MOD>, <MOD> \u0000<VOCAL>\u0001 with <MOD> breathiness and <MOD> resonance.",
-          "count": 1,
-          "examples": [
-            "Soft, intimate male baritone vocals with light breathiness and natural resonance."
-          ]
         }
       ]
     },
     "mixing": {
-      "unique_templates": 95,
-      "total_occurrences": 95,
+      "unique_templates": 106,
+      "total_occurrences": 110,
       "top": [
+        {
+          "template": "The <VOCAL> performance is <MOD> and breathy, utilizing a close-mic technique with <MOD> <EFFECT>.",
+          "count": 2,
+          "examples": [
+            "The vocal performance is intimate and breathy, utilizing a close-mic technique with light plate reverb.",
+            "The vocal performance is intimate and breathy, utilizing a close-mic technique with subtle plate reverb."
+          ]
+        },
+        {
+          "template": "The production features high-fidelity clarity with a <EFFECT> on the <VOCAL> and <INSTR>.",
+          "count": 2,
+          "examples": [
+            "The production features high-fidelity clarity with a hall reverb on the vocals and piano.",
+            "The production features high-fidelity clarity with a hall reverb on the vocals and strings."
+          ]
+        },
+        {
+          "template": "The production is <MOD> with <MOD> <EFFECT> on the <VOCAL> and a <MOD> image for the <INSTR>.",
+          "count": 2,
+          "examples": [
+            "The production is clean with light plate reverb on the vocals and a wide stereo image for the acoustic guitar.",
+            "The production is polished with moderate reverb on the vocals and a wide stereo image for the guitar."
+          ]
+        },
+        {
+          "template": "\u0000<VOCAL>\u0001 are delivered in a breathy, <MOD> style with close-mic proximity.",
+          "count": 2,
+          "examples": [
+            "Male baritone vocals are delivered in a breathy, intimate style with close-mic proximity.",
+            "Female vocals are delivered in a breathy, intimate style with close-mic proximity."
+          ]
+        },
         {
           "template": "Breathy, <MOD> \u0000<VOCAL>\u0001 are <MOD> with <MOD> <EFFECT> and <MOD> in the mix.",
           "count": 1,
@@ -1896,13 +1962,6 @@
           "count": 1,
           "examples": [
             "The vocal delivery is conversational and close-mic'd with subtle plate reverb."
-          ]
-        },
-        {
-          "template": "The <VOCAL> performance is <MOD> and breathy, utilizing a close-mic technique with <MOD> <EFFECT>.",
-          "count": 1,
-          "examples": [
-            "The vocal performance is intimate and breathy, utilizing a close-mic technique with light plate reverb."
           ]
         },
         {
@@ -2184,34 +2243,22 @@
           "examples": [
             "The production features high-fidelity clarity with a medium hall reverb on the vocals and piano."
           ]
-        },
-        {
-          "template": "The production features high-fidelity clarity with a <EFFECT> on the <VOCAL> and <INSTR>.",
-          "count": 1,
-          "examples": [
-            "The production features high-fidelity clarity with a hall reverb on the vocals and piano."
-          ]
-        },
-        {
-          "template": "<MOD> record scratches and vinyl crackle textures are present in the mix.",
-          "count": 1,
-          "examples": [
-            "Subtle record scratches and vinyl crackle textures are present in the mix."
-          ]
-        },
-        {
-          "template": "The production is <MOD> with <MOD> <EFFECT> and <MOD> <EFFECT> on the <VOCAL>.",
-          "count": 1,
-          "examples": [
-            "The production is polished with light compression and subtle reverb on the vocals."
-          ]
         }
       ]
     },
     "arrangement": {
-      "unique_templates": 318,
-      "total_occurrences": 327,
+      "unique_templates": 365,
+      "total_occurrences": 379,
       "top": [
+        {
+          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL>.",
+          "count": 3,
+          "examples": [
+            "The arrangement is intimate, focusing on the interplay between the acoustic guitar and the vocal.",
+            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal.",
+            "The arrangement is sparse, focusing on the interplay between the piano and the vocal."
+          ]
+        },
         {
           "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL> melody.",
           "count": 3,
@@ -2219,14 +2266,6 @@
             "The arrangement is sparse, focusing on the interplay between the guitar and the vocal melody.",
             "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal melody.",
             "The arrangement is sparse, focusing on the interplay between the fingerpicked acoustic guitar and the vocal melody."
-          ]
-        },
-        {
-          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL>.",
-          "count": 2,
-          "examples": [
-            "The arrangement is intimate, focusing on the interplay between the acoustic guitar and the vocal.",
-            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal."
           ]
         },
         {
@@ -2243,6 +2282,22 @@
           "examples": [
             "The arrangement centers on a fingerpicked acoustic guitar with a warm, resonant tone.",
             "The arrangement centers on a fingerpicked acoustic guitar with a warm, natural tone."
+          ]
+        },
+        {
+          "template": "The <VOCAL> performance is <MOD> and breathy, utilizing a close-mic technique with <MOD> <EFFECT>.",
+          "count": 2,
+          "examples": [
+            "The vocal performance is intimate and breathy, utilizing a close-mic technique with light plate reverb.",
+            "The vocal performance is intimate and breathy, utilizing a close-mic technique with subtle plate reverb."
+          ]
+        },
+        {
+          "template": "The <VOCAL> performance is <MOD> with breathy delivery and <MOD> vibrato.",
+          "count": 2,
+          "examples": [
+            "The vocal performance is intimate with breathy delivery and subtle vibrato.",
+            "The vocal performance is intimate with breathy delivery and light vibrato."
           ]
         },
         {
@@ -2270,11 +2325,27 @@
           ]
         },
         {
+          "template": "The arrangement is <MOD>, focusing on the interplay between the <INSTR> and the <VOCAL> performance.",
+          "count": 2,
+          "examples": [
+            "The arrangement is sparse, focusing on the interplay between the acoustic guitar and the vocal performance.",
+            "The arrangement is sparse, focusing on the interplay between the guitar and the vocal performance."
+          ]
+        },
+        {
           "template": "A \u0000<VOCAL>\u0001 performs with a breathy, <MOD> delivery and <MOD> vibrato.",
           "count": 2,
           "examples": [
             "A male tenor vocal performs with a breathy, intimate delivery and light vibrato.",
             "A baritone male vocal performs with a breathy, intimate delivery and minimal vibrato."
+          ]
+        },
+        {
+          "template": "\u0000<VOCAL>\u0001 are delivered in a breathy, <MOD> style with close-mic proximity.",
+          "count": 2,
+          "examples": [
+            "Male baritone vocals are delivered in a breathy, intimate style with close-mic proximity.",
+            "Female vocals are delivered in a breathy, intimate style with close-mic proximity."
           ]
         },
         {
@@ -2453,13 +2524,6 @@
           ]
         },
         {
-          "template": "The <VOCAL> performance is <MOD> and breathy, utilizing a close-mic technique with <MOD> <EFFECT>.",
-          "count": 1,
-          "examples": [
-            "The vocal performance is intimate and breathy, utilizing a close-mic technique with light plate reverb."
-          ]
-        },
-        {
           "template": "The arrangement is built around a syncopated <INSTR>line and a <MOD> \u0000<DRUM>\u0001 <DRUM> with a <MOD> \u0000<DRUM>\u0001 and <MOD> \u0000<DRUM>\u0001.",
           "count": 1,
           "examples": [
@@ -2549,37 +2613,16 @@
           "examples": [
             "The arrangement centers on a grand piano playing rubato block chords and arpeggios."
           ]
-        },
-        {
-          "template": "The <VOCAL> performance is <MOD> with breathy delivery and <MOD> vibrato.",
-          "count": 1,
-          "examples": [
-            "The vocal performance is intimate with breathy delivery and subtle vibrato."
-          ]
-        },
-        {
-          "template": "The arrangement features a <MOD> <INSTR>line with a sawtooth timbre, layered with <INSTR> stabs on the offbeats.",
-          "count": 1,
-          "examples": [
-            "The arrangement features a driving synth bassline with a sawtooth timbre, layered with clean electric guitar stabs on the offbeats."
-          ]
-        },
-        {
-          "template": "A <INSTR> plays a fingerstyle pattern with <MOD> fret noise and a <MOD>, <MOD> tone.",
-          "count": 1,
-          "examples": [
-            "A nylon-string acoustic guitar plays a fingerstyle pattern with prominent fret noise and a warm, intimate tone."
-          ]
         }
       ]
     },
     "tempo_key_time": {
-      "unique_templates": 84,
-      "total_occurrences": 239,
+      "unique_templates": 89,
+      "total_occurrences": 265,
       "top": [
         {
           "template": "The tempo is <BPM> in the key of <KEY>.",
-          "count": 40,
+          "count": 42,
           "examples": [
             "The tempo is 72 BPM in the key of C Major.",
             "The tempo is 92 BPM in the key of G minor.",
@@ -2587,17 +2630,8 @@
           ]
         },
         {
-          "template": "key of <KEY>, <BPM>.",
-          "count": 18,
-          "examples": [
-            "Key of E Major, 85 BPM.",
-            "Key of E Major, 105 BPM.",
-            "Key of E Major, 128 BPM."
-          ]
-        },
-        {
           "template": "Tempo is <BPM> in the key of <KEY>.",
-          "count": 16,
+          "count": 19,
           "examples": [
             "Tempo is 92 BPM in the key of G Major.",
             "Tempo is 105 BPM in the key of G Major.",
@@ -2605,8 +2639,17 @@
           ]
         },
         {
+          "template": "key of <KEY>, <BPM>.",
+          "count": 19,
+          "examples": [
+            "Key of E Major, 85 BPM.",
+            "Key of E Major, 105 BPM.",
+            "Key of E Major, 128 BPM."
+          ]
+        },
+        {
           "template": "key of <KEY>, <BPM>, <TIME> time signature.",
-          "count": 14,
+          "count": 15,
           "examples": [
             "Key of E Major, 115 BPM, 4/4 time signature.",
             "Key of G Major, 72 BPM, 4/4 time signature.",
@@ -2615,7 +2658,7 @@
         },
         {
           "template": "Tempo is <BPM>.",
-          "count": 13,
+          "count": 14,
           "examples": [
             "Tempo is 88 BPM.",
             "Tempo is 78 BPM.",
@@ -2624,7 +2667,7 @@
         },
         {
           "template": "The track is in the key of <KEY> at <BPM> in <TIME> time.",
-          "count": 11,
+          "count": 13,
           "examples": [
             "The track is in the key of E Major at 95 BPM in 4/4 time.",
             "The track is in the key of E Major at 78 BPM in 4/4 time.",
@@ -2633,11 +2676,20 @@
         },
         {
           "template": "The tempo is <BPM> in <TIME> time, likely in the key of <KEY>.",
-          "count": 9,
+          "count": 10,
           "examples": [
             "The tempo is 72 BPM in 4/4 time, likely in the key of E Major.",
             "The tempo is 92 BPM in 4/4 time, likely in the key of C Major.",
             "The tempo is 74 BPM in 4/4 time, likely in the key of C Major."
+          ]
+        },
+        {
+          "template": "The tempo is <BPM> in <TIME> time.",
+          "count": 8,
+          "examples": [
+            "The tempo is 78 BPM in 4/4 time.",
+            "The tempo is 72 BPM in 4/4 time.",
+            "The tempo is 88 BPM in 4/4 time."
           ]
         },
         {
@@ -2647,15 +2699,6 @@
             "Tempo 128 BPM.",
             "Tempo 72 BPM.",
             "Tempo 124 BPM."
-          ]
-        },
-        {
-          "template": "The tempo is <BPM> in <TIME> time.",
-          "count": 6,
-          "examples": [
-            "The tempo is 78 BPM in 4/4 time.",
-            "The tempo is 72 BPM in 4/4 time.",
-            "The tempo is 88 BPM in 4/4 time."
           ]
         },
         {
@@ -2678,7 +2721,7 @@
         },
         {
           "template": "Tempo is <BPM> in <TIME> time.",
-          "count": 4,
+          "count": 5,
           "examples": [
             "Tempo is 72 BPM in 4/4 time.",
             "Tempo is 82 BPM in 4/4 time.",
@@ -2687,11 +2730,29 @@
         },
         {
           "template": "<BPM>, <TIME> time signature, key of <KEY>.",
-          "count": 4,
+          "count": 5,
           "examples": [
             "105 BPM, 4/4 time signature, Key of G Major.",
             "100 BPM, 4/4 time signature, Key of G Major.",
             "72 BPM, 4/4 time signature, Key of G Major."
+          ]
+        },
+        {
+          "template": "<BPM>.",
+          "count": 4,
+          "examples": [
+            "72 BPM.",
+            "78 BPM.",
+            "82 BPM."
+          ]
+        },
+        {
+          "template": "<BPM>, key of <KEY>, <TIME> time signature.",
+          "count": 4,
+          "examples": [
+            "105 BPM, Key of E Major, 4/4 time signature.",
+            "72 BPM, Key of C Major, 4/4 time signature.",
+            "105 BPM, Key of G Major, 4/4 time signature."
           ]
         },
         {
@@ -2710,15 +2771,6 @@
             "Tempo is 78 BPM in 4/4 time, key of G Major.",
             "Tempo is 72 BPM in 4/4 time, key of G Major.",
             "Tempo is 145 BPM in 4/4 time, key of E major."
-          ]
-        },
-        {
-          "template": "<BPM>.",
-          "count": 3,
-          "examples": [
-            "72 BPM.",
-            "78 BPM.",
-            "82 BPM."
           ]
         },
         {
@@ -2748,11 +2800,11 @@
           ]
         },
         {
-          "template": "<BPM>, key of <KEY>, <TIME> time signature.",
+          "template": "The tempo is approximately <BPM> in the key of <KEY>.",
           "count": 2,
           "examples": [
-            "105 BPM, Key of E Major, 4/4 time signature.",
-            "72 BPM, Key of C Major, 4/4 time signature."
+            "The tempo is approximately 72 BPM in the key of C Major.",
+            "The tempo is approximately 75 BPM in the key of C Major."
           ]
         },
         {
@@ -2761,6 +2813,22 @@
           "examples": [
             "K-Pop City Pop track in G Major at 110 BPM.",
             "K-Pop City Pop track in G Major at 115 BPM."
+          ]
+        },
+        {
+          "template": "<BPM>, <KEY> Major, <TIME> time.",
+          "count": 2,
+          "examples": [
+            "92 BPM, G Major, 4/4 time.",
+            "132 BPM, E Major, 4/4 time."
+          ]
+        },
+        {
+          "template": "<INSTR> plays a syncopated, palm-muted rhythmic pattern in <KEY> Major at <BPM>.",
+          "count": 2,
+          "examples": [
+            "Clean electric guitar plays a syncopated, palm-muted rhythmic pattern in E Major at 105 BPM.",
+            "Clean electric guitar plays a syncopated, palm-muted rhythmic pattern in G Major at 105 BPM."
           ]
         },
         {
@@ -2883,13 +2951,6 @@
           ]
         },
         {
-          "template": "The tempo is approximately <BPM> in the key of <KEY>.",
-          "count": 1,
-          "examples": [
-            "The tempo is approximately 72 BPM in the key of C Major."
-          ]
-        },
-        {
           "template": "K-Pop R&B track with a mid-tempo groove.",
           "count": 1,
           "examples": [
@@ -2951,26 +3012,12 @@
           "examples": [
             "A steady mid-tempo drum kit provides a crisp backbeat with prominent hi-hat work."
           ]
-        },
-        {
-          "template": "<BPM>, key of <KEY>, <TIME> time.",
-          "count": 1,
-          "examples": [
-            "100 BPM, Key of E Major, 4/4 time."
-          ]
-        },
-        {
-          "template": "A <MOD>, mid-tempo boom-bap \u0000<DRUM>\u0001 enters with a \u0000<DRUM>\u0001 and a <MOD> \u0000<DRUM>\u0001.",
-          "count": 1,
-          "examples": [
-            "A dry, mid-tempo boom-bap drum kit enters with a crisp snare and a subtle kick."
-          ]
         }
       ]
     },
     "absence": {
-      "unique_templates": 14,
-      "total_occurrences": 14,
+      "unique_templates": 18,
+      "total_occurrences": 18,
       "top": [
         {
           "template": "The bridge features a stripped-back section with filtered <INSTR> before returning to the <MOD> groove.",
@@ -3069,12 +3116,40 @@
           "examples": [
             "The arrangement is minimalist, featuring only the acoustic guitar and a single vocal track without additional percussion or instrumentation."
           ]
+        },
+        {
+          "template": "Solo <INSTR> performs a melancholic, legato melody in the tenor register.",
+          "count": 1,
+          "examples": [
+            "Solo cello performs a melancholic, legato melody in the tenor register."
+          ]
+        },
+        {
+          "template": "The arrangement is <MOD> and minimalist, focusing on the interplay between the solo <INSTR> and the ensemble textures.",
+          "count": 1,
+          "examples": [
+            "The arrangement is sparse and minimalist, focusing on the interplay between the solo cello and the ensemble textures."
+          ]
+        },
+        {
+          "template": "The track maintains a minimalist, acoustic-focused production without <DRUM>.",
+          "count": 1,
+          "examples": [
+            "The track maintains a minimalist, acoustic-focused production without percussion."
+          ]
+        },
+        {
+          "template": "The <INSTR> is absent in this section, focusing on the interplay between the <INSTR> and the <VOCAL> melody.",
+          "count": 1,
+          "examples": [
+            "The bass is absent in this section, focusing on the interplay between the piano and the vocal melody."
+          ]
         }
       ]
     },
     "vocal_chorus": {
-      "unique_templates": 65,
-      "total_occurrences": 65,
+      "unique_templates": 77,
+      "total_occurrences": 77,
       "top": [
         {
           "template": "\u0000<VOCAL>\u0001 are delivered in a <MOD>, melodic tenor range with <MOD> doubling in the <EFFECT>.",
@@ -3429,8 +3504,8 @@
       ]
     },
     "unclassified": {
-      "unique_templates": 6,
-      "total_occurrences": 6,
+      "unique_templates": 12,
+      "total_occurrences": 12,
       "top": [
         {
           "template": "A legato string section provides harmonic padding.",
@@ -3473,12 +3548,54 @@
           "examples": [
             "Both voices utilize breathy delivery and gentle vibrato."
           ]
+        },
+        {
+          "template": "<KEY> minor.",
+          "count": 1,
+          "examples": [
+            "D minor."
+          ]
+        },
+        {
+          "template": "<MOD> rock with <MOD> metal influences.",
+          "count": 1,
+          "examples": [
+            "Hard rock with heavy metal influences."
+          ]
+        },
+        {
+          "template": "Woodwinds, specifically flutes and oboes, provide counter-melodies.",
+          "count": 1,
+          "examples": [
+            "Woodwinds, specifically flutes and oboes, provide counter-melodies."
+          ]
+        },
+        {
+          "template": "Contemporary K-Pop R&B ballad.",
+          "count": 1,
+          "examples": [
+            "Contemporary K-Pop R&B ballad."
+          ]
+        },
+        {
+          "template": "Trot, Korean adult contemporary.",
+          "count": 1,
+          "examples": [
+            "Trot, Korean adult contemporary."
+          ]
+        },
+        {
+          "template": "A <MOD> string section provides staccato accents and soaring legato counter-melodies.",
+          "count": 1,
+          "examples": [
+            "A bright string section provides staccato accents and soaring legato counter-melodies."
+          ]
         }
       ]
     },
     "harmony": {
-      "unique_templates": 21,
-      "total_occurrences": 23,
+      "unique_templates": 23,
+      "total_occurrences": 25,
       "top": [
         {
           "template": "<INSTR> plays a rhythmic, syncopated <CHORD> with <EFFECT> and <EFFECT>.",
@@ -3628,12 +3745,26 @@
           "examples": [
             "A rhythmic pluck synth provides harmonic movement in the mid-range."
           ]
+        },
+        {
+          "template": "A dusty, sampled <INSTR> plays a <MOD> four-bar progression featuring minor seventh and major <CHORD> with a high-cut filter and <MOD> wow and flutter pitch modulation.",
+          "count": 1,
+          "examples": [
+            "A dusty, sampled acoustic piano plays a repetitive four-bar progression featuring minor seventh and major ninth chords with a high-cut filter and subtle wow and flutter pitch modulation."
+          ]
+        },
+        {
+          "template": "<INSTR> plays a syncopated, jazz-influenced <CHORD> with <EFFECT> and <EFFECT>.",
+          "count": 1,
+          "examples": [
+            "Clean electric guitar plays a syncopated, jazz-influenced chord progression with light chorus and reverb."
+          ]
         }
       ]
     },
     "effect_sound": {
-      "unique_templates": 17,
-      "total_occurrences": 17,
+      "unique_templates": 19,
+      "total_occurrences": 19,
       "top": [
         {
           "template": "A <MOD> vinyl crackle texture persists throughout the arrangement.",
@@ -3753,6 +3884,20 @@
           "examples": [
             "High-frequency foley sounds, including water droplets and mechanical hums, are layered into the mix."
           ]
+        },
+        {
+          "template": "<MOD> vinyl crackle and ambient city street noise are layered throughout the arrangement.",
+          "count": 1,
+          "examples": [
+            "Atmospheric vinyl crackle and ambient city street noise are layered throughout the arrangement."
+          ]
+        },
+        {
+          "template": "A <MOD>, muffled \u0000<DRUM>\u0001 enters on the downbeats.",
+          "count": 1,
+          "examples": [
+            "A soft, muffled kick drum enters on the downbeats."
+          ]
         }
       ]
     },
@@ -3779,15 +3924,16 @@
   },
   "lyrics_brackets": {
     "section": {
-      "unique_templates": 9,
-      "total_occurrences": 10,
+      "unique_templates": 11,
+      "total_occurrences": 13,
       "top": [
         {
           "template": "Verse <NUM>",
-          "count": 2,
+          "count": 3,
           "examples": [
             "Verse 1",
-            "Verse 2"
+            "Verse 2",
+            "Verse 3"
           ]
         },
         {
@@ -3845,16 +3991,30 @@
           "examples": [
             "Instrumental Outro"
           ]
+        },
+        {
+          "template": "Instrumental",
+          "count": 1,
+          "examples": [
+            "Instrumental"
+          ]
+        },
+        {
+          "template": "Interlude",
+          "count": 1,
+          "examples": [
+            "Interlude"
+          ]
         }
       ]
     },
     "instrument": {
-      "unique_templates": 439,
-      "total_occurrences": 529,
+      "unique_templates": 537,
+      "total_occurrences": 652,
       "top": [
         {
           "template": "<INSTR> enters",
-          "count": 17,
+          "count": 18,
           "examples": [
             "muted trumpet enters",
             "bass guitar enters",
@@ -3881,11 +4041,20 @@
         },
         {
           "template": "<INSTR> swell",
-          "count": 5,
+          "count": 6,
           "examples": [
             "synth pads swell",
             "synth swell",
             "clean electric guitar swell"
+          ]
+        },
+        {
+          "template": "<INSTR> enter",
+          "count": 5,
+          "examples": [
+            "electric piano pads enter",
+            "strings enter",
+            "Rhodes piano pads enter"
           ]
         },
         {
@@ -3913,6 +4082,24 @@
             "fingerpicked acoustic guitar arpeggio",
             "clean electric guitar arpeggio",
             "fingerstyle acoustic guitar arpeggio"
+          ]
+        },
+        {
+          "template": "<INSTR>, \u0000<DRUM>\u0001",
+          "count": 4,
+          "examples": [
+            "nylon string acoustic guitar, shaker",
+            "grand piano, soft kick drum",
+            "fingerpicked acoustic guitar, soft kick drum"
+          ]
+        },
+        {
+          "template": "<INSTR> slide",
+          "count": 4,
+          "examples": [
+            "bass slide",
+            "electric guitar slide",
+            "guitar slide"
           ]
         },
         {
@@ -3952,15 +4139,6 @@
           ]
         },
         {
-          "template": "<INSTR>, \u0000<DRUM>\u0001",
-          "count": 3,
-          "examples": [
-            "nylon string acoustic guitar, shaker",
-            "grand piano, soft kick drum",
-            "fingerpicked acoustic guitar, soft kick drum"
-          ]
-        },
-        {
           "template": "<INSTR> and \u0000<DRUM>\u0001 enter",
           "count": 3,
           "examples": [
@@ -3979,12 +4157,30 @@
           ]
         },
         {
-          "template": "<INSTR> slide",
+          "template": "<INSTR> stabs",
           "count": 3,
           "examples": [
-            "bass slide",
-            "electric guitar slide",
-            "guitar slide"
+            "synth stabs",
+            "piano stabs",
+            "accordion stabs"
+          ]
+        },
+        {
+          "template": "<INSTR> fills",
+          "count": 3,
+          "examples": [
+            "clean electric guitar fills",
+            "piano fills",
+            "bass fills"
+          ]
+        },
+        {
+          "template": "<INSTR> fill",
+          "count": 3,
+          "examples": [
+            "guitar fill",
+            "bass fill",
+            "harmonica fill"
           ]
         },
         {
@@ -3997,11 +4193,36 @@
           ]
         },
         {
+          "template": "<INSTR> swells",
+          "count": 3,
+          "examples": [
+            "cello swells",
+            "clean electric guitar swells",
+            "synth pad swells"
+          ]
+        },
+        {
+          "template": "<INSTR>, <INSTR>, \u0000<DRUM>\u0001",
+          "count": 2,
+          "examples": [
+            "upright bass, grand piano, brushed snare drum",
+            "fingerstyle acoustic guitar, upright bass, brushed snare"
+          ]
+        },
+        {
           "template": "<MOD> <INSTR>",
           "count": 2,
           "examples": [
             "clean arpeggiated electric guitar",
             "driving synth bass"
+          ]
+        },
+        {
+          "template": "<INSTR> enters with <CHORD>",
+          "count": 2,
+          "examples": [
+            "piano enters with sustained chords",
+            "clean electric guitar enters with jazz chords"
           ]
         },
         {
@@ -4077,11 +4298,19 @@
           ]
         },
         {
-          "template": "<INSTR> enter",
+          "template": "<INSTR> with <EFFECT> effect, <CHORD>",
           "count": 2,
           "examples": [
-            "electric piano pads enter",
-            "strings enter"
+            "clean electric guitar with chorus effect, arpeggiated chords",
+            "clean electric guitar with chorus effect, jazz chords"
+          ]
+        },
+        {
+          "template": "<INSTR> playing <CHORD>",
+          "count": 2,
+          "examples": [
+            "grand piano playing sustained chords",
+            "clean electric guitar playing jazz chords"
           ]
         },
         {
@@ -4114,14 +4343,6 @@
           "examples": [
             "bass guitar slides up",
             "bass slides up"
-          ]
-        },
-        {
-          "template": "<INSTR> stabs",
-          "count": 2,
-          "examples": [
-            "synth stabs",
-            "piano stabs"
           ]
         },
         {
@@ -4173,11 +4394,11 @@
           ]
         },
         {
-          "template": "<INSTR> fill",
+          "template": "<INSTR>, <INSTR> melody",
           "count": 2,
           "examples": [
-            "guitar fill",
-            "bass fill"
+            "fingerpicked acoustic guitar, harmonica melody",
+            "fingerstyle acoustic guitar, clean electric guitar melody"
           ]
         },
         {
@@ -4189,11 +4410,11 @@
           ]
         },
         {
-          "template": "<INSTR> swells",
+          "template": "<INSTR> enters with slide",
           "count": 2,
           "examples": [
-            "cello swells",
-            "clean electric guitar swells"
+            "fretless bass enters with slide",
+            "bass guitar enters with slide"
           ]
         },
         {
@@ -4211,65 +4432,12 @@
             "arpeggiated nylon-string acoustic guitar",
             "arpeggiated acoustic guitar"
           ]
-        },
-        {
-          "template": "staccato <INSTR> riff",
-          "count": 2,
-          "examples": [
-            "staccato electric guitar riff",
-            "staccato synth riff"
-          ]
-        },
-        {
-          "template": "<MOD> <INSTR>, <INSTR>, <MOD> <DRUM>",
-          "count": 2,
-          "examples": [
-            "funky clean electric guitar, slap bass, tight drums",
-            "clean funky electric guitar, slap bass, steady drums"
-          ]
-        },
-        {
-          "template": "<INSTR> riff, <MOD> \u0000<DRUM>\u0001",
-          "count": 2,
-          "examples": [
-            "clean electric guitar riff, steady kick drum",
-            "palm-muted electric guitar riff, subtle shaker"
-          ]
-        },
-        {
-          "template": "<INSTR> counterpoint",
-          "count": 2,
-          "examples": [
-            "bass counterpoint",
-            "clean electric guitar counterpoint"
-          ]
-        },
-        {
-          "template": "arpeggiated <INSTR> with <EFFECT>",
-          "count": 1,
-          "examples": [
-            "arpeggiated clean electric guitar with chorus"
-          ]
-        },
-        {
-          "template": "<INSTR>, <INSTR>, \u0000<DRUM>\u0001",
-          "count": 1,
-          "examples": [
-            "upright bass, grand piano, brushed snare drum"
-          ]
-        },
-        {
-          "template": "<INSTR> chords intensify",
-          "count": 1,
-          "examples": [
-            "piano chords intensify"
-          ]
         }
       ]
     },
     "effect_electronic": {
-      "unique_templates": 72,
-      "total_occurrences": 76,
+      "unique_templates": 85,
+      "total_occurrences": 93,
       "top": [
         {
           "template": "<INSTR> with <EFFECT>, <MOD> <INSTR>",
@@ -4277,6 +4445,14 @@
           "examples": [
             "clean electric guitar with light chorus, soft sub-bass",
             "clean electric guitar with chorus, soft synth bass"
+          ]
+        },
+        {
+          "template": "<INSTR> with <EFFECT> effect, <CHORD>",
+          "count": 2,
+          "examples": [
+            "clean electric guitar with chorus effect, arpeggiated chords",
+            "clean electric guitar with chorus effect, jazz chords"
           ]
         },
         {
@@ -4301,6 +4477,30 @@
           "examples": [
             "overdriven electric guitar riff, slap bass, upbeat drums",
             "distorted electric guitar riff, slap bass, driving drums"
+          ]
+        },
+        {
+          "template": "\u0000<DRUM>\u0001 hit with <EFFECT>",
+          "count": 2,
+          "examples": [
+            "snare hit with reverb",
+            "snare hit with long reverb"
+          ]
+        },
+        {
+          "template": "<INSTR> enters",
+          "count": 2,
+          "examples": [
+            "overdriven electric guitar enters",
+            "distorted electric guitar enters"
+          ]
+        },
+        {
+          "template": "<INSTR> riff, <MOD> <DRUM>, <INSTR>",
+          "count": 2,
+          "examples": [
+            "distorted electric guitar riff, driving drums, bass guitar",
+            "distorted electric guitar riff, driving drum beat, slap bass"
           ]
         },
         {
@@ -4371,13 +4571,6 @@
           "count": 1,
           "examples": [
             "distorted electric guitar power chords, bright acoustic piano stabs"
-          ]
-        },
-        {
-          "template": "<INSTR> with <EFFECT> effect, <CHORD>",
-          "count": 1,
-          "examples": [
-            "clean electric guitar with chorus effect, arpeggiated chords"
           ]
         },
         {
@@ -4603,37 +4796,16 @@
           "examples": [
             "clean electric guitar melody, driving drums, distorted rhythm guitar"
           ]
-        },
-        {
-          "template": "distorted <CHORD>, \u0000<DRUM>\u0001",
-          "count": 1,
-          "examples": [
-            "distorted power chords, crash cymbals"
-          ]
-        },
-        {
-          "template": "arpeggiated <INSTR> with <EFFECT>, <MOD> <INSTR>",
-          "count": 1,
-          "examples": [
-            "arpeggiated clean electric guitar with chorus, soft synth pad"
-          ]
-        },
-        {
-          "template": "\u0000<DRUM>\u0001 hit with <EFFECT>",
-          "count": 1,
-          "examples": [
-            "snare hit with reverb"
-          ]
         }
       ]
     },
     "vocal_main": {
-      "unique_templates": 105,
-      "total_occurrences": 143,
+      "unique_templates": 121,
+      "total_occurrences": 163,
       "top": [
         {
           "template": "<MOD> \u0000<VOCAL>\u0001",
-          "count": 15,
+          "count": 16,
           "examples": [
             "warm male vocals",
             "intimate baritone male vocals",
@@ -4642,11 +4814,20 @@
         },
         {
           "template": "<VOCAL>",
-          "count": 7,
+          "count": 8,
           "examples": [
             "vocalizing",
             "male rap vocals",
             "melodic singing vocals"
+          ]
+        },
+        {
+          "template": "breathy \u0000<VOCAL>\u0001",
+          "count": 5,
+          "examples": [
+            "breathy female vocals",
+            "breathy baritone male vocals",
+            "breathy male vocals"
           ]
         },
         {
@@ -4659,17 +4840,8 @@
           ]
         },
         {
-          "template": "breathy \u0000<VOCAL>\u0001",
-          "count": 4,
-          "examples": [
-            "breathy female vocals",
-            "breathy baritone male vocals",
-            "breathy male vocals"
-          ]
-        },
-        {
           "template": "\u0000<VOCAL>\u0001 enter",
-          "count": 4,
+          "count": 5,
           "examples": [
             "male vocals enter",
             "male baritone vocals enter",
@@ -5002,8 +5174,8 @@
       ]
     },
     "drums": {
-      "unique_templates": 217,
-      "total_occurrences": 252,
+      "unique_templates": 263,
+      "total_occurrences": 303,
       "top": [
         {
           "template": "\u0000<DRUM>\u0001 and \u0000<DRUM>\u0001 enter",
@@ -5016,7 +5188,7 @@
         },
         {
           "template": "\u0000<DRUM>\u0001 enters",
-          "count": 6,
+          "count": 7,
           "examples": [
             "kick drum enters",
             "brushed snare enters",
@@ -5033,6 +5205,15 @@
           ]
         },
         {
+          "template": "<INSTR>, \u0000<DRUM>\u0001",
+          "count": 4,
+          "examples": [
+            "nylon string acoustic guitar, shaker",
+            "grand piano, soft kick drum",
+            "fingerpicked acoustic guitar, soft kick drum"
+          ]
+        },
+        {
           "template": "<INSTR> riff, <MOD> <DRUM>",
           "count": 3,
           "examples": [
@@ -5042,21 +5223,20 @@
           ]
         },
         {
-          "template": "<INSTR>, \u0000<DRUM>\u0001",
-          "count": 3,
-          "examples": [
-            "nylon string acoustic guitar, shaker",
-            "grand piano, soft kick drum",
-            "fingerpicked acoustic guitar, soft kick drum"
-          ]
-        },
-        {
           "template": "<INSTR> and \u0000<DRUM>\u0001 enter",
           "count": 3,
           "examples": [
             "sub-bass and shaker enter",
             "sub-bass and kick drum enter",
             "bass and kick drum enter"
+          ]
+        },
+        {
+          "template": "<INSTR>, <INSTR>, \u0000<DRUM>\u0001",
+          "count": 2,
+          "examples": [
+            "upright bass, grand piano, brushed snare drum",
+            "fingerstyle acoustic guitar, upright bass, brushed snare"
           ]
         },
         {
@@ -5140,6 +5320,14 @@
           ]
         },
         {
+          "template": "\u0000<DRUM>\u0001 hit with <EFFECT>",
+          "count": 2,
+          "examples": [
+            "snare hit with reverb",
+            "snare hit with long reverb"
+          ]
+        },
+        {
           "template": "<INSTR> riff, <MOD> \u0000<DRUM>\u0001",
           "count": 2,
           "examples": [
@@ -5148,10 +5336,11 @@
           ]
         },
         {
-          "template": "<INSTR>, <INSTR>, \u0000<DRUM>\u0001",
-          "count": 1,
+          "template": "<INSTR> riff, <MOD> <DRUM>, <INSTR>",
+          "count": 2,
           "examples": [
-            "upright bass, grand piano, brushed snare drum"
+            "distorted electric guitar riff, driving drums, bass guitar",
+            "distorted electric guitar riff, driving drum beat, slap bass"
           ]
         },
         {
@@ -5363,26 +5552,12 @@
           "examples": [
             "electronic drums enter, synth bass enters"
           ]
-        },
-        {
-          "template": "<INSTR> with palm muting, <MOD> \u0000<DRUM>\u0001",
-          "count": 1,
-          "examples": [
-            "clean electric guitar with palm muting, steady kick drum"
-          ]
-        },
-        {
-          "template": "\u0000<DRUM>\u0001 become more <MOD>",
-          "count": 1,
-          "examples": [
-            "hi-hats become more prominent"
-          ]
         }
       ]
     },
     "arrangement": {
-      "unique_templates": 59,
-      "total_occurrences": 60,
+      "unique_templates": 70,
+      "total_occurrences": 72,
       "top": [
         {
           "template": "<MOD> band energy increases, \u0000<DRUM>\u0001",
@@ -5390,6 +5565,14 @@
           "examples": [
             "full band energy increases, crash cymbal",
             "full band energy increases, open hi-hats"
+          ]
+        },
+        {
+          "template": "<MOD> band, <MOD> <INSTR>",
+          "count": 2,
+          "examples": [
+            "full band, energetic slap bass",
+            "full band, driving slap bass"
           ]
         },
         {
@@ -5687,13 +5870,6 @@
           ]
         },
         {
-          "template": "<MOD> band, <MOD> <INSTR>",
-          "count": 1,
-          "examples": [
-            "full band, energetic slap bass"
-          ]
-        },
-        {
           "template": "<MOD> band, <MOD> energy, ringing <CHORD>",
           "count": 1,
           "examples": [
@@ -5738,8 +5914,8 @@
       ]
     },
     "transition": {
-      "unique_templates": 6,
-      "total_occurrences": 6,
+      "unique_templates": 9,
+      "total_occurrences": 9,
       "top": [
         {
           "template": "instrumental fade out",
@@ -5782,12 +5958,33 @@
           "examples": [
             "full band intensity increases"
           ]
+        },
+        {
+          "template": "string ensemble swells in volume",
+          "count": 1,
+          "examples": [
+            "string ensemble swells in volume"
+          ]
+        },
+        {
+          "template": "legato violins enter with melody, timpani rolls",
+          "count": 1,
+          "examples": [
+            "legato violins enter with melody, timpani rolls"
+          ]
+        },
+        {
+          "template": "fade out",
+          "count": 1,
+          "examples": [
+            "fade out"
+          ]
         }
       ]
     },
     "absence": {
-      "unique_templates": 10,
-      "total_occurrences": 10,
+      "unique_templates": 18,
+      "total_occurrences": 18,
       "top": [
         {
           "template": "instrumental fade out",
@@ -5858,12 +6055,68 @@
           "examples": [
             "fades out"
           ]
+        },
+        {
+          "template": "solo <INSTR> enters with legato melody",
+          "count": 1,
+          "examples": [
+            "solo cello enters with legato melody"
+          ]
+        },
+        {
+          "template": "solo <INSTR> continues expressive melodic lines",
+          "count": 1,
+          "examples": [
+            "solo cello continues expressive melodic lines"
+          ]
+        },
+        {
+          "template": "solo <INSTR> sustains final note",
+          "count": 1,
+          "examples": [
+            "solo cello sustains final note"
+          ]
+        },
+        {
+          "template": "<DRUM> and <INSTR> drop out",
+          "count": 1,
+          "examples": [
+            "drums and bass drop out"
+          ]
+        },
+        {
+          "template": "<INSTR> loop fades out with increasing <EFFECT>",
+          "count": 1,
+          "examples": [
+            "piano loop fades out with increasing reverb"
+          ]
+        },
+        {
+          "template": "<DRUM> drop out, <MOD> <INSTR> chords",
+          "count": 1,
+          "examples": [
+            "drums drop out, soft synth chords"
+          ]
+        },
+        {
+          "template": "<DRUM> and <INSTR> drop out, syncopated <INSTR> and electronic <DRUM> enter",
+          "count": 1,
+          "examples": [
+            "drums and guitar drop out, syncopated synth bass and electronic percussion enter"
+          ]
+        },
+        {
+          "template": "fade out",
+          "count": 1,
+          "examples": [
+            "fade out"
+          ]
         }
       ]
     },
     "vocal_chorus": {
-      "unique_templates": 15,
-      "total_occurrences": 16,
+      "unique_templates": 19,
+      "total_occurrences": 20,
       "top": [
         {
           "template": "<VOCAL> ad-lib",
@@ -5970,12 +6223,40 @@
           "examples": [
             "vocal doubling, fuller percussion"
           ]
+        },
+        {
+          "template": "<VOCAL> harmonies enter, \u0000<DRUM>\u0001 on backbeat",
+          "count": 1,
+          "examples": [
+            "vocal harmonies enter, rimshot on backbeat"
+          ]
+        },
+        {
+          "template": "unison male and \u0000<VOCAL>\u0001, <MOD> band energy",
+          "count": 1,
+          "examples": [
+            "unison male and female vocals, full band energy"
+          ]
+        },
+        {
+          "template": "<VOCAL> harmony",
+          "count": 1,
+          "examples": [
+            "vocal harmony"
+          ]
+        },
+        {
+          "template": "<MOD> band, layered <VOCAL> harmonies, <INSTR>",
+          "count": 1,
+          "examples": [
+            "full band, layered vocal harmonies, synth pads"
+          ]
         }
       ]
     },
     "effect_sound": {
-      "unique_templates": 16,
-      "total_occurrences": 16,
+      "unique_templates": 18,
+      "total_occurrences": 18,
       "top": [
         {
           "template": "<INSTR> riser",
@@ -6087,6 +6368,20 @@
           "count": 1,
           "examples": [
             "muffled filter effect"
+          ]
+        },
+        {
+          "template": "vinyl crackle and <MOD> street noise",
+          "count": 1,
+          "examples": [
+            "vinyl crackle and distant street noise"
+          ]
+        },
+        {
+          "template": "vinyl crackle remains until silence",
+          "count": 1,
+          "examples": [
+            "vinyl crackle remains until silence"
           ]
         }
       ]
@@ -6210,8 +6505,8 @@
       ]
     },
     "harmony": {
-      "unique_templates": 2,
-      "total_occurrences": 2,
+      "unique_templates": 3,
+      "total_occurrences": 3,
       "top": [
         {
           "template": "<INSTR> <CHORD>",
@@ -6226,12 +6521,19 @@
           "examples": [
             "clean electric guitar chord progression, soft synth bass"
           ]
+        },
+        {
+          "template": "rhythmic power <CHORD>",
+          "count": 1,
+          "examples": [
+            "rhythmic power chord progression"
+          ]
         }
       ]
     },
     "unclassified": {
-      "unique_templates": 2,
-      "total_occurrences": 2,
+      "unique_templates": 7,
+      "total_occurrences": 7,
       "top": [
         {
           "template": "rhythmic delivery",
@@ -6245,6 +6547,41 @@
           "count": 1,
           "examples": [
             "unintelligible"
+          ]
+        },
+        {
+          "template": "Main Theme",
+          "count": 1,
+          "examples": [
+            "Main Theme"
+          ]
+        },
+        {
+          "template": "Section A",
+          "count": 1,
+          "examples": [
+            "Section A"
+          ]
+        },
+        {
+          "template": "Section B",
+          "count": 1,
+          "examples": [
+            "Section B"
+          ]
+        },
+        {
+          "template": "<MOD> melodic runs and sustained bends",
+          "count": 1,
+          "examples": [
+            "fast melodic runs and sustained bends"
+          ]
+        },
+        {
+          "template": "Development",
+          "count": 1,
+          "examples": [
+            "Development"
           ]
         }
       ]
@@ -6263,9 +6600,9 @@
       "<CHORD>",
       "<NUM>"
     ],
-    "source_sp_entities": 4279,
-    "source_bracket_entities": 3345,
-    "sp_unique_sentence_slot_pairs": 2770,
-    "br_unique_bracket_slot_pairs": 1138
+    "source_sp_entities": 5053,
+    "source_bracket_entities": 4053,
+    "sp_unique_sentence_slot_pairs": 3236,
+    "br_unique_bracket_slot_pairs": 1387
   }
 }

@@ -4,29 +4,18 @@
   "artist": "Joe Satriani",
   "genre": "Guitar Instrumental",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "94975852-18a9-471d-8906-6a9527b73e28",
+      "tags": "Hard rock drum stem. The performance features a standard four-piece kit with a crisp, dry snare and a punchy kick drum. The hi-hats are played slightly open for a washier texture during more intense sections. The drummer utilizes frequent crash cymbal accents and occasional ride cymbal bell hits. The pattern is characterized by a steady backbeat with syncopated kick drum variations and rapid sixteenth-note snare fills. The recording has a natural room resonance with minimal artificial reverb. 120 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[click track count-off]\n[kick drum and hi-hat eighth notes]\n\n[Verse 1]\n[snare on beats 2 and 4, steady kick drum pattern]\n[closed hi-hats]\n\n[Chorus]\n[open hi-hats, increased kick drum syncopation]\n[crash cymbal accents on phrase transitions]\n\n[Bridge]\n[snare rolls and sixteenth-note fills]\n[ride cymbal bell accents]\n\n[Outro]\n[heavy crash cymbal hits, final kick drum flourish]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "5ff15fcd-e947-4653-9206-f597974d6eae",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A high-gain lead guitar performs a fast, technical solo featuring rapid alternate picking, legato runs, and wide vibrato. The bass guitar follows the guitar riffs with a thick, overdriven tone. The drum kit utilizes a double-kick pedal for rapid sixteenth-note patterns, a sharp snare, and frequent crash cymbal accents. 140 BPM. 4/4 time signature. Key of E minor.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging riff, double-kick drums]\n\n[Main Riff]\n[syncopated power chords, driving bass guitar]\n\n[Guitar Solo]\n[high-gain lead guitar enters, rapid alternate picking, wah-wah pedal effect]\n[shredding legato runs, pinch harmonics]\n\n[Outro]\n[sustained power chord, final drum fill, cymbal crash]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "2586d624-a443-41ee-9c16-35b00963bf55",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff in E minor. The drum kit features a prominent double-kick pedal pattern and a dry, high-tuned snare. An overdriven bass guitar follows the guitar riff exactly. The tempo is 140 BPM in 4/4 time. The arrangement consists of a rhythmic guitar intro followed by a driving instrumental section with frequent crash cymbal accents.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted eighth notes]\n[snare hits on beats 2 and 4]\n\n[Main Section]\n[double-kick drum pattern enters]\n[overdriven bass guitar enters, doubling guitar riff]\n[crash cymbal accents on phrase transitions]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "24ebeb77-87fc-4bf9-90ab-4d526ef0959e",
-      "tags": "Indie rock with a lo-fi aesthetic. A clean electric guitar plays a repetitive, syncopated riff using palm-muted eighth notes and occasional open chords. A second electric guitar provides melodic counterpoint with a bright, slightly overdriven tone. The bass guitar follows the root notes of the guitar progression with a round, warm tone. Drums feature a tight, dry snare and a steady kick pattern with frequent hi-hat accents. The tempo is 124 BPM in 4/4 time. The arrangement is sparse, focusing on the interplay between the two guitar tracks.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar riff with palm muting]\n[steady kick drum and hi-hat]\n\n[Section A]\n[bass guitar enters]\n[second electric guitar enters with melodic lead lines]\n[snare drum enters on beats 2 and 4]\n\n[Section B]\n[guitar riff continues with less muting]\n[hi-hat opens for a more wash-like texture]"
+      "uuid": "112c45da-b51e-497f-9db6-568c9397ef4c",
+      "tags": "Hard rock instrumental featuring a prominent, overdriven electric bass guitar playing a repetitive, syncopated riff. The track is built around a heavy, mid-tempo groove at 105 BPM in the key of E minor. A distorted electric guitar enters with sustained power chords and feedback swells. The drum kit maintains a steady backbeat with a dry snare and a punchy kick drum that emphasizes the bass rhythm. The production is raw and aggressive, with the bass guitar occupying the center of the mix and utilizing a high-gain fuzz or overdrive pedal to create a thick, harmonically rich texture. The arrangement is minimalist, focusing on the interplay between the driving bass line and the atmospheric guitar layers.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric bass enters with syncopated riff]\n[kick drum and snare enter, steady 4/4 beat]\n\n[Section A]\n[bass riff continues]\n[distorted electric guitar enters with sustained power chords and feedback]\n\n[Section B]\n[bass riff shifts to a higher register]\n[guitar plays rhythmic chugging on the root note]\n[crash cymbal accents]\n\n[Outro]\n[drums drop out]\n[sustained bass note fades with feedback]\n[guitar feedback swell]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T18:08:17"
+  "status": "ok"
 }

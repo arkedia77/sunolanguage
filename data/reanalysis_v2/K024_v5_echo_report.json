@@ -1,0 +1,143 @@
+{
+  "batch": "K024_v5",
+  "baseline_echo_avg": 0.0759,
+  "suno_corpus_vocab_size": 850,
+  "avg_suno_coverage_pct": 96.1,
+  "per_song": [
+    {
+      "id": 1,
+      "genre": "Korean Ballad",
+      "char_count": 577,
+      "sp_tokens": 47,
+      "in_suno": 45,
+      "not_in_suno": [
+        "descent",
+        "tender"
+      ],
+      "suno_coverage_pct": 95.7
+    },
+    {
+      "id": 2,
+      "genre": "Korean Ballad",
+      "char_count": 591,
+      "sp_tokens": 49,
+      "in_suno": 46,
+      "not_in_suno": [
+        "modal",
+        "quiet",
+        "suspensions"
+      ],
+      "suno_coverage_pct": 93.9
+    },
+    {
+      "id": 3,
+      "genre": "Piano Ballad",
+      "char_count": 625,
+      "sp_tokens": 54,
+      "in_suno": 53,
+      "not_in_suno": [
+        "energy"
+      ],
+      "suno_coverage_pct": 98.1
+    },
+    {
+      "id": 4,
+      "genre": "Contemporary Ballad",
+      "char_count": 594,
+      "sp_tokens": 47,
+      "in_suno": 45,
+      "not_in_suno": [
+        "suspended",
+        "tape"
+      ],
+      "suno_coverage_pct": 95.7
+    },
+    {
+      "id": 5,
+      "genre": "Dance Pop",
+      "char_count": 624,
+      "sp_tokens": 59,
+      "in_suno": 58,
+      "not_in_suno": [
+        "dance"
+      ],
+      "suno_coverage_pct": 98.3
+    },
+    {
+      "id": 6,
+      "genre": "Electro Pop",
+      "char_count": 638,
+      "sp_tokens": 60,
+      "in_suno": 56,
+      "not_in_suno": [
+        "dance",
+        "electro",
+        "energy",
+        "step"
+      ],
+      "suno_coverage_pct": 93.3
+    },
+    {
+      "id": 7,
+      "genre": "Synth-Pop",
+      "char_count": 512,
+      "sp_tokens": 50,
+      "in_suno": 47,
+      "not_in_suno": [
+        "dance",
+        "energy",
+        "vibrant"
+      ],
+      "suno_coverage_pct": 94.0
+    },
+    {
+      "id": 8,
+      "genre": "Acoustic Folk",
+      "char_count": 604,
+      "sp_tokens": 50,
+      "in_suno": 49,
+      "not_in_suno": [
+        "energy"
+      ],
+      "suno_coverage_pct": 98.0
+    },
+    {
+      "id": 9,
+      "genre": "Acoustic Folk",
+      "char_count": 616,
+      "sp_tokens": 52,
+      "in_suno": 51,
+      "not_in_suno": [
+        "energy"
+      ],
+      "suno_coverage_pct": 98.1
+    },
+    {
+      "id": 10,
+      "genre": "Acoustic Folk",
+      "char_count": 618,
+      "sp_tokens": 52,
+      "in_suno": 50,
+      "not_in_suno": [
+        "energy",
+        "lullaby"
+      ],
+      "suno_coverage_pct": 96.2
+    }
+  ],
+  "missing_words": {
+    "energy": 6,
+    "dance": 3,
+    "descent": 1,
+    "tender": 1,
+    "modal": 1,
+    "quiet": 1,
+    "suspensions": 1,
+    "suspended": 1,
+    "tape": 1,
+    "electro": 1,
+    "step": 1,
+    "vibrant": 1,
+    "lullaby": 1
+  }
+}

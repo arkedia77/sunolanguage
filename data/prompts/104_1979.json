@@ -5,15 +5,17 @@
   "genre": "alt rock",
   "stems": {
     "drums": {
-      "status": "timeout",
-      "reason": "upload_timeout",
-      "description": ""
+      "status": "ok",
+      "uuid": "a01ac436-9e11-4c40-a692-371ce6717349",
+      "tags": "Funk-rock bass stem. A four-string electric bass guitar plays a syncopated, percussive riff featuring frequent hammer-ons, pull-offs, and ghost notes. The tone is bright and punchy with a slight mid-range growl, characteristic of a bridge pickup on a solid-body bass. The performance follows a 4/4 time signature at 110 BPM in the key of E minor. The riff centers on a low E root note, utilizing the minor pentatonic scale with chromatic passing tones. The articulation is aggressive, with a consistent sixteenth-note subdivision and heavy emphasis on the downbeat of each measure.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[percussive electric bass riff enters, syncopated sixteenth-note pattern]\n\n[Main Riff]\n[bass continues with hammer-ons and ghost notes]\n[slight variation in the turnaround every four bars]\n\n[Outro]\n[bass riff sustains on the root E note and fades]"
     },
-    "vocals": {
-      "status": "timeout",
-      "reason": "upload_timeout",
-      "description": ""
+    "bass": {
+      "status": "ok",
+      "uuid": "92c4354f-f3c1-4498-880b-f732e76d2bcc",
+      "tags": "Funk-rock instrumental with a heavy emphasis on syncopated rhythmic interplay. The track features a clean, percussive electric guitar playing muted 16th-note scratches and staccato chords. A prominent electric bass guitar performs a slap-and-pop technique, locking tightly with a dry, punchy drum kit. The drums utilize a crisp snare and a tight hi-hat pattern with occasional open accents. A bright, brassy synthesizer or horn section provides staccato melodic stabs. The arrangement is built on a repetitive, high-energy groove with sudden stops and rhythmic unisons. 115 BPM, E minor, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[muted 16th-note electric guitar scratches]\n[slap bass enters with syncopated octave jumps]\n[drum kit enters with tight hi-hat and punchy snare]\n\n[Main Groove]\n[staccato electric guitar chords on the off-beats]\n[slap bass continues with percussive ghost notes]\n[bright synth stabs accenting the end of phrases]\n\n[Breakdown]\n[rhythmic unison hits between bass, drums, and guitar]\n[brief drum fill with snare rolls]\n\n[Outro]\n[sustained synth chord fades]\n[final staccato bass pop and snare hit]"
     }
   },
-  "status": "failed"
+  "status": "ok"
 }

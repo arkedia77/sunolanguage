@@ -6,13 +6,15 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Indie rock with a driving, rhythmic focus, The track features a clean electric guitar playing a syncopated, percussive riff using palm-muted eighth notes, A prominent bass guitar follows the kick drum pattern with a slightly overdriven tone, The drum kit maintains a steady groove with a tight, dry snare and consistent hi-hat eighth notes, A second electric guitar enters with melodic, single-note lines using light chorus and delay effects, The arrangement is centered around a repetitive, interlocking rhythmic motif between the guitar and bass, Key of A minor, Tempo is 120 BPM, 4/4 time signature Publish",
-      "card_title": "drums"
+      "uuid": "b9c24893-1780-490c-b713-fe27031cdfff",
+      "tags": "Hardcore punk. Distorted electric guitar plays a fast, down-stroked eighth-note riff using power chords. The bass guitar follows the guitar progression with a thick, overdriven tone. Drums feature a rapid d-beat pattern with a prominent, dry snare and constant eighth-note hi-hat hits. The tempo is 180 BPM in 4/4 time. The recording has a raw, lo-fi aesthetic with minimal stereo separation. The guitar tone is mid-heavy with high gain. The kick drum is punchy but lacks sub-bass frequencies.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, down-stroked power chords]\n[bass guitar enters with overdrive]\n\n[Main Section]\n[d-beat drum pattern enters, dry snare, eighth-note hi-hats]\n[guitar and bass continue fast eighth-note progression]"
     },
     "bass": {
       "status": "ok",
-      "description": "Lo-fi hip hop instrumental, The track features a dusty, sampled drum break with a prominent, muffled kick and a crisp, slightly off-grid snare, A repetitive four-bar electric bassline plays syncopated eighth notes with a warm, rounded tone, The melodic centerpiece is a melancholic, jazz-influenced electric piano progression using seventh chords, processed with a subtle vibrato and bit-crushed texture, Atmospheric vinyl crackle and hiss are layered throughout the arrangement, A muted, filtered trumpet enters periodically, playing short, melodic fragments with heavy reverb, The tempo is 88 BPM in the key of C minor Publish",
-      "card_title": "bass"
+      "uuid": "94e80951-26ad-4692-b2f2-fdb9f3e54a86",
+      "tags": "Funk-rock instrumental. A clean, percussive electric guitar plays a syncopated 16th-note scratch riff. The bass guitar performs a slap-and-pop technique with heavy compression, locking into a syncopated groove with the kick drum. Drums feature a tight, dry snare sound with ghost notes and a crisp hi-hat playing 16th-note patterns. A wah-wah pedal effect is applied to a secondary rhythm guitar. The arrangement includes occasional brass stabs from a trumpet and saxophone section. Tempo is 115 BPM in the key of E minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[percussive muted guitar scratch riff]\n[tight drum kit enters with 16th-note hi-hats]\n\n[Main Theme]\n[slap bass enters with syncopated pops]\n[clean rhythm guitar with wah-wah effect]\n[brass section stabs]\n\n[Bridge]\n[bass solo with heavy thumb-slap technique]\n[snare ghost notes and rimshots]\n\n[Outro]\n[sustained brass chord]\n[final drum fill and cymbal choke]"
     }
   },
   "status": "ok"

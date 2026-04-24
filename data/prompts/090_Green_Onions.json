@@ -4,31 +4,18 @@
   "artist": "Booker T. & the M.G.'s",
   "genre": "Funk / Soul / Blues Instrumental",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "drums": {
+      "status": "ok",
+      "uuid": "7e13efeb-7bf9-41a8-a63e-95e5966488c7",
+      "tags": "Industrial techno. A distorted, resonant kick drum provides a heavy, saturated low-end pulse at 135 BPM in the key of F minor. A metallic, percussive synth sequence with a short decay and high-pass filtering plays a syncopated sixteenth-note pattern. A white noise snare with a gated reverb hits on beats 2 and 4. A high-pitched, resonant acid synth line enters with automated filter cutoff and resonance sweeps. Industrial foley textures and metallic clangs are processed with rhythmic delay and bit-crushing. The arrangement features a breakdown with a low-pass filter sweep on the master bus before a sudden drop back into the full percussive groove.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum pulse, metallic percussive synth sequence]\n\n[Section A]\n[white noise snare enters on 2 and 4, hi-hat sixteenth notes]\n[resonant acid synth line with filter sweeps]\n\n[Breakdown]\n[kick drum drops out, low-pass filter sweep on synths, metallic foley textures]\n\n[Section B]\n[kick drum returns, bit-crushed industrial clangs, high-resonance synth lead]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "e9c005c0-3d3e-4ff2-8987-4d77a225e6cb",
-      "tags": "Funk-rock instrumental featuring a prominent, syncopated electric bassline with a bright, percussive tone. The bass plays a repetitive sixteenth-note riff emphasizing the root and octave. A clean electric guitar provides rhythmic staccato scratches and muted strums on the off-beats. The drum kit maintains a steady groove with a crisp snare and tight hi-hat patterns. A subtle, low-frequency synthesizer pad provides harmonic depth in the background. The tempo is 110 BPM in the key of E minor. The arrangement is minimalist, focusing on the interplay between the bass and the dry, punchy drum production.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[percussive slap bass riff enters]\n[tight drum kit with closed hi-hats]\n\n[Main Groove]\n[staccato muted electric guitar scratches]\n[syncopated bassline continues with octave jumps]\n[steady kick drum and snare backbeat]\n\n[Bridge]\n[bass riff simplifies to sustained root notes]\n[subtle low-end synth pad enters]\n\n[Outro]\n[guitar scratches fade out]\n[solo bass riff for two bars]\n[final kick drum hit]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "452b5c65-7dff-4baf-bf66-85e682b37ae9",
-      "tags": "Drum break, funk and soul style. The kit consists of a dry, dampened kick drum, a crisp snare with a short decay, and closed hi-hats. The pattern features a syncopated kick drum placement that interacts with a steady eighth-note hi-hat rhythm. The snare hits are consistent on the backbeat with occasional ghost notes providing rhythmic texture. The recording has a vintage, analog character with minimal room ambience and a tight, focused low-end. 105 BPM, 4/4 time signature.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[four-bar drum break enters]\n[dry kick drum, crisp snare, closed hi-hats]\n\n[Main Pattern]\n[syncopated kick drum, steady eighth-note hi-hats]\n[consistent snare backbeat on 2 and 4]\n[subtle ghost notes on snare]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "0a260fd4-34c2-48b4-b162-b3601d8b38d4",
-      "tags": "Hard rock with heavy metal influences. The track features a prominent, distorted electric guitar playing a syncopated, palm-muted riff that emphasizes the downbeat. A high-gain bass guitar doubles the guitar riff, providing a thick low-end. The drum kit consists of a punchy kick drum, a crisp snare hitting on beats two and four, and consistent eighth-note hi-hat patterns. The tempo is 120 BPM in 4/4 time. The arrangement is centered around a repetitive, driving instrumental groove with a raw, live-room production aesthetic. The guitar tone is saturated with mid-range bite and sustain. The overall structure is a continuous loop of the main riff with minor variations in drum fills.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar enters with palm-muted syncopated riff]\n[bass guitar enters doubling the guitar riff]\n\n[Main Section]\n[drum kit enters with a steady backbeat]\n[kick drum follows the guitar rhythm]\n[snare on beats 2 and 4]\n[closed hi-hats playing eighth notes]\n\n[Bridge]\n[guitar riff continues with increased intensity]\n[occasional crash cymbal accents]\n\n[Outro]\n[instruments sustain final chord]\n[reverb tail fades out]"
+      "uuid": "d5183ab1-392e-4cdf-a86d-736fbd71bd3a",
+      "tags": "A dry, isolated drum kit performance in a rock style. The kit consists of a kick drum, snare, hi-hats, and a crash cymbal. The pattern features a steady eighth-note hi-hat pulse with a syncopated kick drum pattern that emphasizes the downbeat and the 'and' of beat 2. The snare hits are consistent backbeats on 2 and 4. The recording is dry with minimal room ambience and no artificial reverb. The tempo is 120 BPM in 4/4 time.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[four-click count-in on drumsticks]\n\n[Main Pattern]\n[acoustic drum kit enters]\n[steady eighth-note hi-hats]\n[kick drum on 1 and the 'and' of 2]\n[snare on 2 and 4]\n\n[Outro]\n[final kick and crash cymbal hit]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T19:33:45"
+  "status": "ok"
 }

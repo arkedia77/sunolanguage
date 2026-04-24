@@ -4,31 +4,18 @@
   "artist": "Ennio Morricone (The Good, The Bad and The Ugly OST)",
   "genre": "Film Score / OST",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "drums": {
+      "status": "ok",
+      "uuid": "850989f1-10cd-4177-8515-3b82dedb18d8",
+      "tags": "Stomp and clap folk rock. The arrangement features a heavy, resonant kick drum on every beat, layered with crisp handclaps on the backbeat. A bright, percussive acoustic guitar plays a rhythmic strumming pattern emphasizing the downbeats. A tambourine provides high-frequency accents on the offbeats. The track is in 4/4 time at 110 BPM in the key of G Major. The production is dry with minimal reverb, focusing on the organic, woody textures of the percussion and acoustic strings. The dynamic structure alternates between a stripped-back kick and clap rhythm and a fuller arrangement with the acoustic guitar and tambourine.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[resonant kick drum on every beat, handclaps on beats 2 and 4]\n\n[Section A]\n[bright acoustic guitar enters with rhythmic strumming]\n[tambourine accents on offbeats]\n\n[Section B]\n[acoustic guitar drops out]\n[kick drum and handclaps continue]\n\n[Section C]\n[acoustic guitar re-enters]\n[full percussion ensemble with tambourine and layered claps]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "a7b32568-dd15-4502-ad0b-8523d47cbec0",
-      "tags": "Cinematic orchestral score with a focus on tension and rhythmic drive. The arrangement features a staccato string section performing a repetitive ostinato in 4/4 time at 120 BPM. A deep, resonant cello and double bass layer provides a rhythmic pulse on the downbeats. Mid-range violas execute syncopated accents. A subtle, low-frequency synth pad adds harmonic depth beneath the acoustic layers. The piece is in the key of D minor. Short, detached bowing techniques define the texture, with gradual crescendos and decrescendos creating dynamic movement. High-register violins enter with sustained, dissonant intervals to increase harmonic tension. The percussion is minimal, consisting of a muted, cinematic bass drum hit on the first beat of every two bars.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[staccato cello and double bass ostinato, D minor]\n[low-frequency synth pad enters]\n\n[Section A]\n[viola section enters with syncopated staccato accents]\n[gradual crescendo]\n\n[Section B]\n[high violin section enters with sustained dissonant notes]\n[muted cinematic bass drum hits on downbeats]\n[staccato string pattern increases in volume and intensity]\n\n[Outro]\n[percussion drops out]\n[strings fade out with a final staccato pluck]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "c8817a5e-0639-4485-8582-85bfc0ff87bb",
-      "tags": "Hard rock instrumental featuring a prominent, syncopated drum kit and distorted electric guitar. The track is built around a heavy, mid-tempo groove at 105 BPM in the key of E minor. The drums utilize a dry, punchy snare and a resonant kick drum that follows a syncopated pattern. The electric guitar uses a high-gain distortion with a thick, mid-range focus, performing palm-muted chugs and rhythmic power chord stabs. A clean electric guitar provides occasional melodic accents with a light chorus effect. The bass guitar is heavily overdriven, doubling the kick drum's rhythmic pattern to create a dense low-end. The structure alternates between sparse, drum-heavy sections and full-band arrangements with layered guitar tracks.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated drum beat, punchy snare and kick]\n[distorted electric guitar enters with palm-muted chugs]\n\n[Section A]\n[full band enters, overdriven bass doubles kick pattern]\n[heavy rhythmic power chords on distorted guitar]\n\n[Section B]\n[drums continue syncopated groove]\n[clean electric guitar with chorus effect adds melodic accents]\n[distorted guitar performs rhythmic stabs]\n\n[Outro]\n[sustained distorted guitar chord]\n[final drum fill on toms and snare]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "0419af1c-6cc1-4c0c-8449-78425b1fbf13",
-      "tags": "Operatic pop and classical crossover featuring a dramatic soprano vocal performance. The arrangement is centered around a grand piano playing arpeggiated chords and a lush orchestral string section providing sustained harmonic pads and melodic counterpoints. A cinematic percussion section includes deep orchestral bass drums and shimmering wind chimes. The vocal style utilizes wide vibrato, operatic head voice, and melismatic runs. The track is in the key of D minor with a tempo of 72 BPM in 4/4 time. The production features high-fidelity hall reverb on both the vocals and the instrumentation, creating a vast spatial image.",
-      "prompt": "[Intro]\n[grand piano arpeggios, sustained orchestral strings]\n[wind chimes]\n\n[Verse 1]\n[soprano vocals with heavy hall reverb]\nAh-ah-ah-ah-ah\n[orchestral bass drum hits]\nAh-ah-ah-ah-ah-ah-ah\n\n[Chorus]\n[vocal intensity increases, strings swell]\nAh-ah-ah-ah-ah-ah-ah-ah\n(Ah-ah-ah-ah)\n[piano continues arpeggios]\nAh-ah-ah-ah-ah-ah-ah-ah\n\n[Bridge]\n[strings transition to higher register]\nAh-ah-ah-ah-ah-ah-ah\n[staccato piano notes]\nAh-ah-ah-ah-ah-ah-ah\n\n[Outro]\n[vocal fades with long reverb tail]\nAh-ah-ah-ah\n[strings fade out]\n[final piano chord resonates]"
+      "uuid": "13383ac3-ab29-44ce-b9b6-c1c7beb7390c",
+      "tags": "Cinematic orchestral score with a focus on tension and rhythmic drive. The arrangement features a staccato string section playing repetitive, driving ostinatos in the cellos and violas, while violins provide high-pitched tremolo and soaring melodic lines. A prominent pipe organ enters with sustained, dissonant chords and melodic flourishes. Percussion consists of deep orchestral bass drums, sharp snare hits, and shimmering cymbals. Brass sections, including trumpets and trombones, provide powerful, staccato accents and long, swelling crescendos. The piece is in D minor with a tempo of 120 BPM in 4/4 time. Woodwinds, specifically flutes and oboes, add trills and rapid runs during transitions. The mix is wide with significant hall reverb, emphasizing the scale of the ensemble. The structure relies on a gradual build-up of layers, increasing in harmonic complexity and dynamic intensity toward a climactic resolution.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[staccato cello ostinato, low orchestral bass drum hits]\n[high-pitched violin tremolo enters]\n\n[Section A]\n[full string section enters with rhythmic drive]\n[pipe organ enters with sustained minor chords]\n[snare drum accents on beats 2 and 4]\n\n[Section B]\n[brass section swells, trumpets playing staccato fanfares]\n[pipe organ melodic flourishes]\n[cymbals crashing on phrase transitions]\n\n[Climax]\n[fortissimo dynamics, full ensemble including woodwind trills]\n[heavy pipe organ pedal notes]\n[sustained final chord with long reverb tail]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T13:12:30"
+  "status": "ok"
 }

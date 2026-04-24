@@ -4,29 +4,18 @@
   "artist": "Miles Davis",
   "genre": "Funk / Soul / Blues Instrumental",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "c185af48-b486-4281-b5a6-703792171f99",
+      "tags": "Funk rock. An electric bass guitar plays a syncopated, percussive slap-and-pop riff featuring rapid sixteenth-note ghost notes and hammer-ons. The bass tone is bright with a mid-range scoop and high-end snap. A clean electric guitar enters with rhythmic, muted scratches and staccato ninth chords on the off-beats. The tempo is 105 BPM in the key of E minor. The arrangement is sparse, focusing on the interlocking rhythmic relationship between the bass and the guitar. The recording has a dry, close-mic studio aesthetic with minimal room reverb.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[percussive slap bass riff with ghost notes]\n\n[Section A]\n[slap bass continues]\n[clean electric guitar enters with muted rhythmic scratches and staccato chords]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "812e4f47-2a21-41bd-bff6-ad34b3aeb86f",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff in E minor at 120 BPM. The drum kit features a prominent open hi-hat on the off-beats and a heavy snare on beats 2 and 4. An overdriven bass guitar doubles the guitar riff. The arrangement utilizes a 4/4 time signature. The guitar tone is characterized by high gain and mid-range scoop. The track maintains a consistent rhythmic drive with eighth-note chugging on the low E string.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted syncopation]\n[bass guitar enters, doubling guitar riff]\n\n[Main Section]\n[drums enter, open hi-hat on off-beats, heavy snare on 2 and 4]\n[rhythmic chugging on low E string]\n[crash cymbal accents]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "c1a8a5dd-1b4e-4d72-bde8-cf6c63934495",
-      "tags": "Funk-rock fusion with heavy slap bass and syncopated percussion. The arrangement features a prominent electric bass guitar utilizing thumb-slap and finger-pop techniques, locking into a 16th-note groove with the kick drum. A clean-toned electric guitar plays rhythmic muted scratches and staccato chords on the off-beats. The drum kit consists of a tight, high-tuned snare and a dry kick drum. A Hammond B3 organ provides sustained chordal textures in the background. The tempo is 112 BPM in 4/4 time, centered in the key of E minor.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[slap bass riff, muted electric guitar scratches]\n[tight snare and kick drum enter]\n\n[Main Theme]\n[syncopated bass line with finger pops]\n[staccato electric guitar chords on the upbeats]\n[Hammond B3 organ swells]\n\n[Bridge]\n[bass guitar solo with heavy 16th-note ghost notes]\n[drum fills on high-tuned toms]\n\n[Outro]\n[sustained organ chord]\n[final bass slap and snare hit]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "f4a9c866-3bed-4b66-96c0-26442bd90ec6",
-      "tags": "Blues rock instrumental. A distorted electric guitar performs a lead melody using heavy vibrato, wide string bends, and rapid pentatonic runs. A second electric guitar provides rhythmic accompaniment with crunchy overdrive, playing syncopated double-stops and blues turnarounds. The bass guitar follows a walking blues pattern in eighth notes. The drum kit features a prominent shuffle feel on the ride cymbal with a snappy snare on the backbeat. 120 BPM. Key of E Major. 4/4 time signature.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, shuffle drums, bass enters]\n\n[Main Theme]\n[lead electric guitar with heavy vibrato and string bends]\n[rhythm guitar playing syncopated blues chords]\n\n[Solo Section]\n[fast pentatonic scales on lead guitar]\n[walking bass line]\n\n[Outro]\n[final sustained power chord with feedback]"
+      "uuid": "b4e117b6-365f-49cc-a1a2-595a9a1d288a",
+      "tags": "Hardcore punk. Distorted electric guitar plays rapid, palm-muted downstrokes and power chord transitions. Overdriven bass guitar follows the guitar root notes with a pick. Drums feature a fast d-beat pattern with constant eighth-note hi-hat hits and a prominent, dry snare. Male vocals are shouted with a raspy, aggressive delivery. 180 BPM, 4/4 time signature, Key of E Minor. The guitar tone is mid-heavy with high gain, while the bass has a clanky, metallic high-end. The vocal performance is rhythmic and percussive, sitting forward in the mix with minimal reverb.",
+      "prompt": "[Intro]\n[fast d-beat drums, distorted electric guitar, overdriven bass]\n[feedback swell]\n\n[Verse 1]\n[shouted male vocals]\nSystematic [snare hit] breakdown\nWalls are closing in [guitar slide]\nNo more [unintelligible] silence\nLet the [unintelligible] begin\n\n[Chorus]\n[full intensity, crash cymbals]\nRise up! (Rise up!)\nBreak the chains today\nRise up! (Rise up!)\nThere is no other way [guitar feedback]\n\n[Outro]\n[abrupt stop on final snare hit]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T19:59:23"
+  "status": "ok"
 }

@@ -1,25 +1,29 @@
 {
   "drums": {
-    "count": 200,
+    "count": 242,
     "top_modifiers": [
       [
         "clean",
-        42
+        44
       ],
       [
         "driving",
-        35
+        41
       ],
       [
         "soft",
-        25
+        32
       ],
       [
         "full",
-        17
+        25
       ],
       [
         "bright",
+        17
+      ],
+      [
+        "steady",
         14
       ],
       [
@@ -27,8 +31,8 @@
         12
       ],
       [
-        "steady",
-        11
+        "punchy",
+        8
       ],
       [
         "muted",
@@ -37,19 +41,15 @@
       [
         "funky",
         7
-      ],
-      [
-        "punchy",
-        7
       ]
     ]
   },
   "kick drum": {
-    "count": 82,
+    "count": 96,
     "top_modifiers": [
       [
         "soft",
-        25
+        31
       ],
       [
         "clean",
@@ -57,15 +57,19 @@
       ],
       [
         "steady",
-        6
+        7
+      ],
+      [
+        "full",
+        4
       ],
       [
         "muted",
         4
       ],
       [
-        "full",
-        2
+        "driving",
+        3
       ],
       [
         "dry",
@@ -80,33 +84,29 @@
         1
       ],
       [
-        "driving",
-        1
-      ],
-      [
         "subtle",
         1
       ]
     ]
   },
   "snare drum": {
-    "count": 57,
+    "count": 72,
     "top_modifiers": [
       [
         "soft",
-        5
+        7
+      ],
+      [
+        "full",
+        4
       ],
       [
         "clean",
         3
       ],
       [
-        "full",
-        3
-      ],
-      [
         "heavy",
-        2
+        3
       ],
       [
         "crisp",
@@ -131,11 +131,11 @@
     ]
   },
   "beat": {
-    "count": 37,
+    "count": 44,
     "top_modifiers": [
       [
         "driving",
-        20
+        22
       ],
       [
         "clean",
@@ -147,10 +147,14 @@
       ],
       [
         "steady",
-        4
+        5
       ],
       [
         "bright",
+        4
+      ],
+      [
+        "soft",
         3
       ],
       [
@@ -168,40 +172,40 @@
       [
         "energetic",
         1
-      ],
-      [
-        "soft",
-        1
       ]
     ]
   },
   "shaker": {
-    "count": 21,
+    "count": 28,
     "top_modifiers": [
       [
         "soft",
-        3
+        5
+      ],
+      [
+        "clean",
+        2
       ],
       [
         "subtle",
         2
       ],
       [
-        "clean",
+        "light",
         1
       ]
     ]
   },
   "percussion": {
-    "count": 19,
+    "count": 27,
     "top_modifiers": [
       [
         "light",
-        6
+        12
       ],
       [
         "clean",
-        3
+        4
       ],
       [
         "full",
@@ -230,7 +234,7 @@
     ]
   },
   "crash cymbal": {
-    "count": 17,
+    "count": 18,
     "top_modifiers": [
       [
         "full",
@@ -251,15 +255,15 @@
     ]
   },
   "drum kit": {
-    "count": 13,
+    "count": 18,
     "top_modifiers": [
       [
         "full",
-        5
+        7
       ],
       [
         "clean",
-        4
+        5
       ],
       [
         "tight",
@@ -291,8 +295,21 @@
       ]
     ]
   },
+  "rimshot": {
+    "count": 15,
+    "top_modifiers": [
+      [
+        "soft",
+        3
+      ],
+      [
+        "dry",
+        1
+      ]
+    ]
+  },
   "hi-hat": {
-    "count": 13,
+    "count": 14,
     "top_modifiers": [
       [
         "rapid",
@@ -320,34 +337,12 @@
       ]
     ]
   },
-  "rimshot": {
-    "count": 11,
-    "top_modifiers": [
-      [
-        "soft",
-        2
-      ],
-      [
-        "dry",
-        1
-      ]
-    ]
-  },
   "cymbal": {
-    "count": 4,
+    "count": 8,
     "top_modifiers": []
   },
-  "clap": {
-    "count": 4,
-    "top_modifiers": [
-      [
-        "full",
-        1
-      ]
-    ]
-  },
   "woodblock": {
-    "count": 3,
+    "count": 4,
     "top_modifiers": [
       [
         "clean",
@@ -355,6 +350,15 @@
       ],
       [
         "steady",
+        1
+      ]
+    ]
+  },
+  "clap": {
+    "count": 4,
+    "top_modifiers": [
+      [
+        "full",
         1
       ]
     ]

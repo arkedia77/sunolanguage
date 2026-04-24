@@ -6,14 +6,16 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Hard rock drum track featuring a high-gain, acoustic drum kit, The performance is characterized by a heavy, driving backbeat with a prominent, punchy kick drum and a crisp, cracking snare, The hi-hats are played slightly open for a washier, aggressive texture, frequently transitioning to a ride cymbal with a clear bell ping during intensified sections, Frequent syncopated kick patterns and powerful tom-tom fills punctuate the transitions, The room ambience is tight but natural, suggesting a professional studio environment with moderate compression on the overheads, The tempo is 120 BPM in 4/4 time Publish",
-      "card_title": "drums"
+      "uuid": "617af0ee-b1d9-4ab3-9af6-f940eee12050",
+      "tags": "Alternative rock with grunge and post-punk influences. A distorted electric bass guitar plays a repetitive, syncopated four-bar riff featuring slides and heavy fuzz. The drums enter with a steady mid-tempo backbeat, utilizing a dry snare and a resonant kick drum. A clean electric guitar provides sparse, rhythmic stabs on the off-beats. The arrangement is minimalist, focusing on the interplay between the driving bassline and the steady percussion. 110 BPM. Key of E minor. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[fuzz-distorted bass guitar enters with syncopated riff and slides]\n\n[Section A]\n[drums enter with steady backbeat]\n[dry snare, resonant kick]\n\n[Section B]\n[clean electric guitar enters with rhythmic stabs on off-beats]\n[bass continues driving fuzz riff]\n\n[Outro]\n[instruments sustain and fade out]"
     },
-    "vocals": {
-      "status": "timeout",
-      "reason": "upload_timeout",
-      "description": ""
+    "bass": {
+      "status": "ok",
+      "uuid": "617af0ee-b1d9-4ab3-9af6-f940eee12050",
+      "tags": "Alternative rock with grunge and post-punk influences. A distorted electric bass guitar plays a repetitive, syncopated four-bar riff featuring slides and heavy fuzz. The drums enter with a steady mid-tempo backbeat, utilizing a dry snare and a resonant kick drum. A clean electric guitar provides sparse, rhythmic stabs on the off-beats. The arrangement is minimalist, focusing on the interplay between the driving bassline and the steady percussion. 110 BPM. Key of E minor. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[fuzz-distorted bass guitar enters with syncopated riff and slides]\n\n[Section A]\n[drums enter with steady backbeat]\n[dry snare, resonant kick]\n\n[Section B]\n[clean electric guitar enters with rhythmic stabs on off-beats]\n[bass continues driving fuzz riff]\n\n[Outro]\n[instruments sustain and fade out]"
     }
   },
-  "status": "partial"
+  "status": "ok"
 }

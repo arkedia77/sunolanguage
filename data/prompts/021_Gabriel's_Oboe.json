@@ -4,31 +4,18 @@
   "artist": "Ennio Morricone (The Mission OST)",
   "genre": "Film Score / OST",
   "stems": {
-    "other": {
-      "status": "failed",
+    "drums": {
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     },
     "bass": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "84aeccd9-9abf-4752-90fd-40a16aa779ae",
-      "tags": "Experimental percussion ensemble piece. The arrangement features a variety of wooden and metallic idiophones including woodblocks, temple blocks, and cowbells. A prominent, resonant wooden percussion instrument performs a syncopated, rhythmic ostinato. High-pitched, metallic accents from a cowbell or similar metal plate provide sharp, staccato counter-rhythms. The tempo is approximately 112 BPM. The piece is characterized by a dry acoustic environment with minimal artificial reverb, emphasizing the natural decay of the wooden blocks. The rhythmic structure is built on interlocking polyrhythms between the high-pitched woodblocks and the mid-range temple blocks.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[hollow woodblock hits, rhythmic clicking]\n\n[Section A]\n[syncopated temple block pattern enters]\n[high-pitched metallic cowbell accents]\n\n[Section B]\n[interlocking polyrhythms between multiple woodblocks]\n[steady quarter-note pulse on a lower-pitched block]\n\n[Outro]\n[rhythmic density decreases]\n[final resonant woodblock strike]"
-    },
-    "vocals": {
-      "status": "failed",
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T13:28:48"
+  "status": "failed"
 }

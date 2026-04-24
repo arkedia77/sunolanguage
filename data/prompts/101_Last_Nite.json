@@ -6,14 +6,16 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Hard rock drum track featuring a high-gain, punchy acoustic drum kit, The performance is centered around a driving 4/4 backbeat at 120 BPM, The kick drum follows a syncopated pattern with double-stroke accents, while the snare provides a sharp, cracking backbeat on 2 and 4, The hi-hats alternate between tight, closed eighth-note patterns and sloshy, semi-open accents to emphasize transitions, Frequent fills utilize rapid-fire sixteenth-note triplets across the rack and floor toms, punctuated by bright, resonant crash cymbal hits, The room sound is captured with a natural, medium-sized hall reverb, giving the drums a powerful, live-room presence, The snare has a prominent ring and high-frequency snap, while the kick maintains a solid low-end thump with a defined beater click Publish",
-      "card_title": "drums"
+      "uuid": "7c6a0054-3113-4e7b-bc24-e82b3aaaf38a",
+      "tags": "Industrial metal with cinematic orchestral elements. Distorted electric guitars play palm-muted chugging riffs in drop tuning. A heavy drum kit features a gated snare and double-kick patterns. Orchestral strings and brass stabs provide rhythmic accents. Synthesizers contribute distorted bass pulses and high-frequency glitch textures. The arrangement uses sudden dynamic shifts and mechanical sound effects. 120 BPM, 4/4 time signature, D minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted synth bass pulse]\n[mechanical sound effects]\n[orchestral brass stabs]\n\n[Section A]\n[palm-muted distorted guitar chugging]\n[heavy kick drum and gated snare]\n[staccato string section accents]\n\n[Section B]\n[double-kick drum patterns]\n[sustained distorted guitar power chords]\n[high-pitched synth glitch textures]\n\n[Outro]\n[sudden silence]\n[reverb tail of final brass hit]"
     },
-    "vocals": {
-      "status": "timeout",
-      "reason": "upload_timeout",
-      "description": ""
+    "bass": {
+      "status": "ok",
+      "uuid": "a356a974-28c2-4838-8efe-4301ae7b2d72",
+      "tags": "Hard rock instrumental. The track features a prominent, dry acoustic drum kit with a crisp snare and resonant kick. A distorted electric guitar plays a syncopated, palm-muted riff centered around a low E pedal tone. A clean electric guitar provides rhythmic counterpoint with staccato chords. The bass guitar is heavily overdriven, doubling the main guitar riff with a thick, mid-range presence. The tempo is 120 BPM in 4/4 time. The arrangement is sparse, focusing on the interplay between the percussive guitar chugging and the steady drum beat.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[drum fill, snare and kick]\n[distorted electric guitar enters with palm-muted riff]\n[overdriven bass guitar enters, doubling the riff]\n\n[Main Section]\n[staccato clean electric guitar chords on the off-beats]\n[steady drum beat with eighth-note hi-hats]\n[distorted guitar continues syncopated riffing]\n\n[Outro]\n[instruments sustain and fade out]"
     }
   },
-  "status": "partial"
+  "status": "ok"
 }

@@ -4,29 +4,18 @@
   "artist": "Vangelis (Blade Runner OST)",
   "genre": "Film Score / OST",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "7d73515d-9a16-402d-bff0-5846f319758f",
+      "tags": "Classical chamber music for solo piano. The piece features a lyrical, rubato-heavy melody in the right hand supported by arpeggiated left-hand accompaniment. The harmonic language is Romantic, utilizing chromatic passing tones and expressive modulations. The dynamic range is wide, shifting from pianissimo delicate passages to forte chordal climaxes. The tempo is fluid, approximately 60 BPM in 4/4 time, with frequent use of ritardando and accelerando. The piano is recorded with a natural, concert hall reverb.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[Solo piano enters, soft arpeggiated left-hand chords]\n[Lyrical right-hand melody begins with rubato]\n\n[Section A]\n[Melody rises in pitch and intensity]\n[Sustained pedal used for resonance]\n[Chromatic descending bass line]\n\n[Section B]\n[Dynamic increase to forte]\n[Dense chordal textures in both hands]\n[Rapid arpeggios across multiple octaves]\n\n[Outro]\n[Decrescendo to pianissimo]\n[Final sustained tonic chord with long decay]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "58994d63-bb6e-43fc-90f6-ab881e8f18a1",
+      "uuid": "bf0ebd56-9e0b-40bc-97a5-4385a6667a0c",
       "tags": "Lo-fi hip hop. A Rhodes electric piano plays a jazz-influenced progression with a heavy tremolo effect and high-frequency roll-off. The drum kit features a muffled, low-pass filtered kick drum and a crisp, dry snare with a slight swing. A sub-bass synth follows the root notes of the piano chords. A recurring melodic motif is played on a clean electric guitar with a chorus effect and long reverb tail. Vinyl crackle and static noise are layered throughout the arrangement. The tempo is 85 BPM in the key of C minor.",
       "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and static noise]\n[muffled Rhodes electric piano enters with tremolo]\n\n[Main Theme]\n[low-pass filtered kick drum and dry snare enter with swung rhythm]\n[sub-bass synth enters]\n[clean electric guitar with chorus and reverb plays melodic motif]\n\n[Bridge]\n[drums drop out]\n[Rhodes piano continues with filtered frequency sweep]\n\n[Outro]\n[guitar motif fades out]\n[drums and bass exit]\n[Rhodes piano and vinyl crackle fade to silence]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "6ffc5616-be3e-47f5-b204-eb73a9482fe3",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. The bass guitar follows the guitar riffs with a thick, overdriven tone. Drums feature a prominent double-kick pedal pattern and heavy crash cymbal accents. A high-pitched male vocal utilizes a gritty, raspy delivery with occasional melodic soaring. The arrangement includes a technical guitar solo with rapid alternate picking and vibrato. Key of E minor. Tempo 140 BPM. 4/4 time signature.",
-      "prompt": "[Intro]\n[distorted electric guitar chugging riff, double-kick drums enter]\n\n[Verse 1]\n[raspy male vocals]\nI'm a man on a mission\nWith a heart of steel\nI'm a force of nature\nAnd I'm coming for the kill [guitar slide]\n\n[Chorus]\n[full band intensity, crash cymbals]\nI'm the king of the mountain\nI'm the lord of the land\nI'm the master of my destiny\nWith the world in my hand\n\n[Guitar Solo]\n[fast alternate picking, wah-wah pedal effect]\n\n[Outro]\n[sustained power chord, feedback swell]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "13dc904d-76b3-4855-84ce-09622831f0bd",
-      "tags": "Cinematic orchestral score. The arrangement features a prominent string section with staccato violins and violas playing a repetitive rhythmic ostinato. A solo cello performs a melodic line in the lower register. Sustained brass pads from horns and trombones provide harmonic density. Orchestral percussion includes deep, resonant timpani hits on the downbeats and a subtle, high-frequency metallic shimmer from a triangle or mark tree. The piece is in the key of D minor at 85 BPM in 4/4 time. The dynamics utilize a gradual crescendo through the layering of woodwinds, specifically oboe and flute, which double the string melody. The mix features a large hall reverb with a long decay time.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[staccato string ostinato, low cello melody]\n\n[Section A]\n[sustained brass pads enter, timpani hits on downbeats]\n\n[Section B]\n[oboe and flute double the melody, crescendo, mark tree shimmer]\n\n[Outro]\n[brass and woodwinds fade, solo staccato violins remain, final timpani strike]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T13:47:47"
+  "status": "ok"
 }

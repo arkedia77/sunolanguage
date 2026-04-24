@@ -4,31 +4,18 @@
   "artist": "Yann Tiersen (Amélie OST)",
   "genre": "Lo-fi / Neo-classical / Piano",
   "stems": {
-    "other": {
+    "drums": {
       "status": "ok",
-      "uuid": "a616169a-3a14-4b23-93df-6b958f3fee0d",
-      "tags": "Minimalist solo piano composition in A minor at 120 BPM. The piece features a repetitive, arpeggiated eighth-note pattern in the right hand, primarily moving between A, C, and E, while the left hand provides rhythmic counterpoint with staccato single notes and occasional octaves. The performance utilizes a bright, felt-dampened upright piano timbre with a short decay and intimate room reverb. The structure is built on a four-bar ostinato that undergoes subtle melodic variations and shifts in register. The dynamics remain consistently mezzo-piano with a mechanical, precise touch. A secondary section introduces a higher-register melodic motif consisting of descending scale fragments over the established rhythmic pulse.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[staccato piano arpeggio in A minor, eighth-note pulse]\n\n[Section A]\n[repetitive right-hand motif, syncopated left-hand bass notes]\n\n[Section B]\n[melodic variation in higher register, descending scale fragments]\n\n[Outro]\n[return to primary ostinato, sudden stop]"
+      "uuid": "dac43607-bb4b-444c-a4fb-841e20a8557d",
+      "tags": "Cinematic ambient electronic. A repetitive, high-pitched digital synth bell pattern plays a four-note ostinato in 4/4 time. A deep, sub-heavy synth bass enters with long, sustained notes. A low-pass filtered kick drum provides a steady pulse at 120 BPM. Atmospheric pads with long release times create a dense harmonic wash. A distorted, industrial-style synth lead enters in the second half, playing a slow, descending melody with heavy reverb and delay. The track is in the key of C minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[high-pitched digital synth bell ostinato]\n[sub-bass enters with sustained root notes]\n\n[Section A]\n[low-pass filtered kick drum pulse]\n[atmospheric synth pads with long release]\n\n[Section B]\n[distorted industrial synth lead enters]\n[heavy reverb and delay on lead melody]\n[kick drum becomes more prominent]\n\n[Outro]\n[lead synth fades out]\n[synth bell ostinato continues alone]\n[final sub-bass swell]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "6f7c63f6-b703-4b6c-9234-05580692488b",
-      "tags": "Indie folk. Fingerpicked acoustic guitar in 4/4 time at 84 BPM in the key of G Major. The guitar pattern uses a steady alternating bass note thumb technique with syncopated melody notes on the higher strings. A soft, breathy female vocal enters with a close-mic proximity effect and minimal reverb. The vocal delivery is intimate and conversational, staying within a narrow melodic range. A subtle, bowed string pad or low-frequency synth drone enters during the second half of the phrase to provide harmonic weight. The arrangement remains sparse, focusing on the interplay between the rhythmic acoustic guitar and the dry vocal track.",
-      "prompt": "[Intro]\n[fingerpicked acoustic guitar]\n\n[Verse 1]\n[breathy female vocals]\nI've been thinking about the way [string pad enters]\nThat the light hits the floor in the morning\nAnd I wonder if you're seeing it too\nFrom the other side of the room\n\n[Chorus]\n[guitar continues steady fingerpicking]\nIt's a long way down\nFrom the heights that we found\n(Ooh)\n[string pad swells]\nIt's a long way back to the start"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "aa596d21-5322-4254-b12e-c0c0c903c461",
-      "tags": "Indie rock with a prominent post-punk influence. The track features a driving, eighth-note bassline that maintains a steady pulse throughout. A clean electric guitar plays a repetitive, melodic arpeggio riff with light chorus and delay. The drum kit uses a tight, dry snare and a consistent hi-hat pattern. A secondary distorted electric guitar enters during the more intense sections, playing sustained power chords. The arrangement is minimalist, focusing on the interplay between the melodic bass and the rhythmic guitar figures. 120 BPM, 4/4 time signature, Key of A Minor.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar arpeggio with chorus effect]\n[driving eighth-note bass enters]\n\n[Section A]\n[steady drum beat with tight snare and closed hi-hat]\n[bass continues melodic eighth-note pattern]\n\n[Section B]\n[distorted electric guitar enters with sustained power chords]\n[increased intensity in drum fills]\n\n[Outro]\n[distorted guitar fades out]\n[bass and clean guitar arpeggio continue to end]\n[final kick drum hit]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "6800ea46-eb01-48e4-ab11-55fba76e51a4",
-      "tags": "Ambient electronic track with a focus on evolving textures and rhythmic pulses. A deep, sub-heavy sine bass provides a steady rhythmic foundation with syncopated accents. Layered over the bass are shimmering, granular synth pads that slowly modulate in timbre and stereo width. A crisp, high-frequency percussive element, resembling a filtered woodblock or rimshot, enters with a repetitive sixteenth-note pattern. Ethereal, reverb-drenched vocal chops are used as melodic fragments rather than lyrical content. The track features a prominent low-pass filter sweep that gradually opens and closes over several bars. Key: C Minor. Tempo: 110 BPM. Time Signature: 4/4.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sine bass pulse, soft granular synth pads]\n\n[Section A]\n[filtered percussive sixteenth-note pattern enters]\n[reverb-drenched vocal fragments]\n\n[Section B]\n[low-pass filter opens, brightening the synth pads]\n[sub-bass becomes more prominent with syncopated hits]\n\n[Outro]\n[percussion drops out]\n[filter closes, pads fade into sub-bass hum]"
+      "uuid": "7e13efeb-7bf9-41a8-a63e-95e5966488c7",
+      "tags": "Industrial techno. A distorted, resonant kick drum provides a heavy, saturated low-end pulse at 135 BPM in the key of F minor. A metallic, percussive synth sequence with a short decay and high-pass filtering plays a syncopated sixteenth-note pattern. A white noise snare with a gated reverb hits on beats 2 and 4. A high-pitched, resonant acid synth line enters with automated filter cutoff and resonance sweeps. Industrial foley textures and metallic clangs are processed with rhythmic delay and bit-crushing. The arrangement features a breakdown with a low-pass filter sweep on the master bus before a sudden drop back into the full percussive groove.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum pulse, metallic percussive synth sequence]\n\n[Section A]\n[white noise snare enters on 2 and 4, hi-hat sixteenth notes]\n[resonant acid synth line with filter sweeps]\n\n[Breakdown]\n[kick drum drops out, low-pass filter sweep on synths, metallic foley textures]\n\n[Section B]\n[kick drum returns, bit-crushed industrial clangs, high-resonance synth lead]"
     }
   },
-  "status": "ok",
-  "retried_at": "2026-04-07T19:30:23"
+  "status": "ok"
 }

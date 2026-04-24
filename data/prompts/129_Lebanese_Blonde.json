@@ -6,13 +6,15 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Funk-rock instrumental, A clean, rhythmic electric guitar plays a syncopated 16th-note scratch riff, The bass guitar follows a repetitive, percussive slap-and-pop pattern, Drums feature a tight, dry snare and a steady kick drum with occasional open hi-hat accents, A bright, staccato brass section consisting of trumpet and saxophone enters with punchy, rhythmic stabs, The tempo is 115 BPM in the key of E minor, The arrangement is built on a static harmonic groove with a prominent cowbell hit on the upbeat of beat four in certain measures, A wah-wah guitar effect is applied to secondary melodic licks, The mix is dry with minimal reverb, emphasizing the rhythmic interplay between the percussion and the bass Publish",
-      "card_title": "drums"
+      "uuid": "3d37064a-e9c3-4bf6-a8dd-303141fe034b",
+      "tags": "Funk-rock instrumental featuring a prominent, syncopated electric bass line and clean electric guitar. The bass utilizes a percussive slap-and-pop technique, locking with a tight, dry drum kit. The guitar plays rhythmic, muted 16th-note scratches and staccato chords. A secondary guitar part provides melodic fills with a slight overdrive and wah-wah filter. The tempo is 105 BPM in the key of E minor. The arrangement is sparse, focusing on the interplay between the bass and the drum groove, which features a crisp snare and active hi-hat patterns.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[slap electric bass enters with syncopated riff]\n[clean electric guitar rhythmic scratches]\n[dry drum kit enters with steady backbeat and 16th-note hi-hats]\n\n[Main Groove]\n[bass continues slap-and-pop pattern]\n[staccato guitar chords on the off-beats]\n[occasional wah-wah guitar melodic fills]\n\n[Bridge]\n[bass moves to a sustained pedal note]\n[guitar scratches intensify]\n[drum fill with snare rolls]\n\n[Outro]\n[instruments gradually drop out]\n[final slap bass flourish]\n[kick drum hit]"
     },
     "bass": {
       "status": "ok",
-      "description": "Funk-rock instrumental, A prominent, distorted electric bass plays a syncopated, percussive riff featuring hammer-ons and slides, A clean electric guitar provides rhythmic staccato chords on the off-beats, The drum kit maintains a steady groove with a crisp snare and active hi-hat patterns, A wah-wah filtered guitar enters later, adding rhythmic texture with muted strums and melodic flourishes, The track is in the key of E minor at 105 BPM, The arrangement is centered around a repetitive, interlocking groove between the bass and drums, with occasional fills and variations in the guitar layers, The production is dry with minimal reverb, emphasizing the rhythmic precision of the performances Publish",
-      "card_title": "bass"
+      "uuid": "821bddf8-3c3d-49d4-aef1-5ec27db5924c",
+      "tags": "Alternative rock with a heavy, distorted bass-driven sound. The track features a prominent, fuzzy bass guitar playing a syncopated, rhythmic riff that anchors the composition. A standard drum kit provides a steady backbeat with a crisp snare and driving hi-hats. Gritty, overdriven electric guitar layers enter with power chords and melodic accents. The arrangement is instrumental, focusing on the interplay between the thick bass tone and the percussive elements. 120 BPM, 4/4 time signature, key of E minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted bass guitar riff enters, syncopated eighth notes]\n[hi-hat count-in]\n\n[Section A]\n[full drum kit enters, steady backbeat]\n[fuzzy bass continues main riff]\n\n[Section B]\n[overdriven electric guitar enters with sustained power chords]\n[bass riff becomes more melodic with slides]\n\n[Bridge]\n[drums drop to kick and snare only]\n[filtered bass effect]\n\n[Outro]\n[full band crescendo]\n[final crash cymbal hit, bass feedback rings out]"
     }
   },
   "status": "ok"

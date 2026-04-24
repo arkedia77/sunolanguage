@@ -4,27 +4,18 @@
   "artist": "Miles Davis",
   "genre": "Jazz",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     },
     "bass": {
-      "status": "ok",
-      "uuid": "53788bb4-05c9-443b-9b98-64038843863a",
-      "tags": "Hard rock featuring a prominent electric guitar riff using a wah-wah pedal and heavy distortion. The drums consist of a dry, punchy kick and snare with bright hi-hats. A distorted electric bass follows the guitar riff exactly. The tempo is 110 BPM in 4/4 time. The guitar uses a repetitive, syncopated blues-scale pattern with frequent pitch bends and vibrato. The production is dry with minimal reverb on the rhythm section.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar with wah-wah pedal effect plays syncopated riff]\n[distorted bass enters doubling the guitar riff]\n[drums enter with steady kick and snare backbeat]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "1f9bcbba-b6e4-43c6-b4e8-eb68d35b6549",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff centered on E. The drum kit features a dry, punchy snare and a double-kick pedal pattern that mirrors the guitar rhythm. A high-gain bass guitar follows the root notes of the guitar riff. The tempo is 140 BPM in 4/4 time. The arrangement consists of a repetitive, chugging rhythmic motif with frequent cymbal crashes on the downbeats. The guitar tone is characterized by high saturation and a mid-scooped EQ profile. The production is dry with minimal reverb on the percussion.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted syncopation]\n[double-kick drum enters with snare hits on beats 2 and 4]\n\n[Main Riff Section]\n[high-gain bass guitar enters, doubling the guitar riff]\n[frequent crash cymbal accents on the downbeat]\n[staccato guitar chugging with rapid double-bass drum bursts]"
-    },
-    "vocals": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:36:08"
+  "status": "failed"
 }

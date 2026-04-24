@@ -4,29 +4,18 @@
   "artist": "Steve Vai",
   "genre": "Guitar Instrumental",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "2c50a79d-a2d5-48a4-bb40-41dcf934b72b",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A high-gain lead guitar performs a fast, technical solo featuring rapid alternate picking, legato runs, and wide vibrato. The bass guitar follows the guitar riffs with a thick, overdriven tone. The drum kit utilizes a double-kick pedal for rapid sixteenth-note patterns, a sharp snare, and frequent crash cymbal accents. 140 BPM. 4/4 time signature. Key of E minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging riff, double-kick drums]\n\n[Main Riff]\n[syncopated power chords, driving bass guitar]\n\n[Guitar Solo]\n[high-gain lead guitar enters, rapid alternate picking, wah-wah pedal effect]\n[shredding legato runs, pinch harmonics]\n\n[Outro]\n[sustained power chord, final drum fill, cymbal crash]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "1a8322e9-36b6-457c-ab13-60360c3e2bdd",
-      "tags": "Experimental electronic and industrial percussion. The track features a heavily processed, distorted kick drum that functions as a melodic bass element, playing a syncopated rhythmic pattern. A metallic, resonant percussion hit with a short decay occurs on the off-beats. High-frequency digital noise bursts and glitch artifacts are layered over the low-end pulses. The tempo is 120 BPM. The sound design utilizes aggressive saturation and bit-crushing effects on the percussion hits. A subtle, low-pass filtered sub-bass layer follows the kick drum rhythm. The arrangement is minimalist, focusing on the interplay between the distorted low-end transients and the sharp, industrial mid-range textures.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-bass tail, syncopated rhythm]\n[metallic percussion hits on off-beats]\n\n[Main Section]\n[digital noise bursts and glitch artifacts]\n[bit-crushed percussion layers]\n[low-pass filtered sub-bass pulses]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "606008cf-27ac-49ff-b016-fe54195e36f5",
+      "uuid": "4171ebe8-1991-49d5-8f35-7857703320dd",
       "tags": "Hardcore punk. Distorted electric guitar plays rapid down-stroked power chords in a constant eighth-note rhythm. The bass guitar follows the guitar root notes with a saturated, overdriven tone. Drums feature a high-tempo d-beat pattern with a sharp, cracking snare and consistent eighth-note hi-hat hits. Vocals are shouted with a raspy, aggressive delivery and minimal melodic variation. The production is raw with high-frequency emphasis and short room reverb on the drums. Key of E minor. 180 BPM. 4/4 time signature.",
       "prompt": "[Intro]\n[distorted electric guitar power chords, d-beat drum pattern]\n\n[Verse 1]\n[shouted male vocals]\nSystematic lies [crash cymbal]\nFeeding on the weak\nNo more compromise\nThe future's looking bleak [guitar slide]\n\n[Chorus]\n[full band intensity]\nBreak the chains (break the chains)\nRise above the noise\nBreak the chains (break the chains)\nYou have no other choice [feedback swell]\n\n[Outro]\n[rapid snare rolls]\nGo! [final crash cymbal]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "699a0f81-3a11-41b6-a815-8c97e271719b",
-      "tags": "Lo-fi hip hop. A clean electric guitar plays a repetitive four-bar loop consisting of jazz-influenced seventh chords with a slight chorus effect and high-frequency roll-off. A sampled drum break features a muffled kick drum and a crisp, dry snare with a slight swing. A sub-bass synth follows the root notes of the guitar progression. A vinyl crackle texture persists throughout the arrangement. The tempo is 85 BPM in the key of C major. The arrangement maintains a consistent loop without dynamic shifts or bridge sections.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle, clean electric guitar playing jazz chords]\n\n[Main Loop]\n[sampled drum break enters, muffled kick, dry snare]\n[sub-bass synth enters following guitar root notes]\n\n[Outro]\n[drums and bass drop out]\n[guitar loop fades with vinyl crackle]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T18:14:54"
+  "status": "ok"
 }

@@ -4,31 +4,18 @@
   "artist": "Vangelis",
   "genre": "Film Score / OST",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "drums": {
+      "status": "ok",
+      "uuid": "14da3a92-e30b-4bb8-964f-021c28cfea57",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, overdriven kick drum provides a relentless pulse at 135 BPM in 4/4 time. A resonant, metallic synth sequence runs in sixteenth notes, modulated by a low-pass filter. Gritty, bit-crushed percussion hits and white noise bursts punctuate the off-beats. A dark, growling bass synth follows the kick pattern with slight sidechain compression. High-frequency industrial clangs and mechanical sound effects are processed with short room reverb and delay. The track maintains a dense, saturated texture throughout with minimal melodic variation, focusing on rhythmic intensity and timbral evolution.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum pulse]\n[metallic synth sequence enters]\n\n[Section A]\n[bit-crushed percussion hits]\n[white noise bursts]\n[resonant filter modulation on synth]\n\n[Section B]\n[industrial clangs with short delay]\n[mechanical sound effects]\n[saturated bass synth layer]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "cb62f64e-bb9b-4c0f-bb8f-2b00e55aa73b",
-      "tags": "Industrial techno with a heavy EBM influence. A distorted, overdriven kick drum drives a relentless four-on-the-floor pattern at 135 BPM in the key of D minor. A resonant, metallic synth sequence provides a rhythmic ostinato with a high-pass filter sweep. Gritty, saturated bass pulses lock to the kick. Percussion includes a sharp, compressed snare on beats 2 and 4, layered with metallic hi-hats and industrial foley hits. A dark, atmospheric pad provides a dissonant harmonic layer in the background. The track features a breakdown with a rising pitch-shifted synth lead and a sudden re-entry of the full percussion section.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters, four-on-the-floor]\n[metallic synth sequence with high-pass filter sweep]\n\n[Section A]\n[saturated bass pulses enter]\n[sharp snare on beats 2 and 4]\n[closed hi-hats in sixteenth notes]\n\n[Breakdown]\n[kick and snare drop out]\n[rising pitch-shifted synth lead]\n[atmospheric pad swells]\n\n[Section B]\n[full percussion re-enters]\n[industrial foley hits and metallic percussion layers]\n[resonant synth ostinato becomes more aggressive]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "bcd46947-7d19-47cd-86ea-859708e45823",
-      "tags": "Industrial rock with heavy electronic elements. Distorted electric guitar plays a syncopated, palm-muted riff in the intro before opening into sustained power chords. A gritty, overdriven synth bass follows the guitar rhythm. The drum kit features a processed, punchy snare and a heavy kick drum with a steady eighth-note hi-hat pattern. Atmospheric, high-pitched synth textures and occasional industrial sound effects provide background layers. The track is in the key of D minor at 120 BPM.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted]\n[industrial percussion hits]\n\n[Main Section]\n[heavy drum kit enters, punchy snare]\n[overdriven synth bass]\n[sustained guitar power chords]\n[high-pitched atmospheric synth pads]\n\n[Breakdown]\n[drums drop out, filtered synth pulse]\n[distorted guitar feedback swell]\n\n[Outro]\n[full band returns]\n[final crash cymbal, ringing guitar chord]"
-    },
-    "vocals": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+      "uuid": "7e674472-c5d7-4862-912e-207ab29b167a",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, overdriven kick drum drives the rhythm at 130 BPM in 4/4 time. A resonant, acid-style synth bassline plays a repetitive sixteenth-note pattern with frequent filter cutoff modulation. Metallic percussion hits and white noise snares provide rhythmic accents. A high-pitched, dissonant synth lead enters with long, sustained notes processed through heavy delay and bitcrushing. Dark, atmospheric pads with slow LFO-driven panning create a dense background texture. The track features industrial sound effects including mechanical clangs and electrical hums.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters, 130 BPM]\n[mechanical clanging sound effect]\n\n[Section A]\n[acid synth bassline enters with sixteenth-note pattern]\n[white noise snare on beats 2 and 4]\n[metallic percussion accents]\n\n[Section B]\n[high-pitched dissonant synth lead enters with heavy delay]\n[filter cutoff modulation on bassline increases]\n[bitcrushed textures]\n\n[Outro]\n[synth lead fades out]\n[percussion drops out leaving only the distorted kick and electrical hum]\n[final mechanical clang]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T13:55:26"
+  "status": "ok"
 }

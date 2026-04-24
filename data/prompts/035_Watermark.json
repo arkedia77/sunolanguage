@@ -4,27 +4,18 @@
   "artist": "Enya",
   "genre": "New Age",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
-    "bass": {
-      "status": "ok",
-      "uuid": "7e91b0b9-6bed-4ac5-87af-96b582a151b7",
-      "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail drives the rhythm at 130 BPM in the key of C minor. A metallic, percussive synth sequence repeats a syncopated sixteenth-note pattern. High-frequency white noise bursts and bit-crushed industrial hits occur on the off-beats. A resonant low-pass filter sweep modulates a gritty sawtooth bassline. The percussion features a sharp, metallic closed hi-hat on every eighth note and a layered clap with heavy reverb on the second and fourth beats. A dark, atmospheric drone pad sits in the background with a slow LFO modulating the cutoff frequency. Periodic glitch effects and tape-stop stutters interrupt the main loop.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-tail, metallic synth sequence]\n[bit-crushed industrial hits]\n\n[Main Section]\n[syncopated sixteenth-note synth pattern, closed hi-hats]\n[resonant low-pass filter sweep on sawtooth bass]\n[layered clap with heavy reverb on beats 2 and 4]\n[atmospheric drone pad with LFO modulation]\n\n[Outro]\n[glitch effects and tape-stop stutter]\n[kick drum fades out, white noise bursts]"
-    },
     "drums": {
       "status": "ok",
-      "uuid": "f6ec73f4-d498-4358-b240-a04090f0f6ae",
+      "uuid": "0e102497-00a5-49d9-bc6c-01ec5fdecb1e",
       "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A prominent bass guitar follows the guitar riffs with a thick, overdriven tone. The drum kit features a heavy snare, double-kick pedal patterns, and frequent crash cymbal accents. A high-pitched male vocal performs with a gritty, aggressive delivery and occasional melodic flourishes. The track is in the key of E minor at 140 BPM in 4/4 time. The arrangement features a breakdown with a syncopated guitar and drum pattern before returning to a driving tempo. Lead guitar sections include fast alternate picking and wah-pedal filtered solos.",
       "prompt": "[Intro]\n[distorted electric guitar chugging riff, double-kick drums]\n[bass guitar enters with heavy distortion]\n\n[Verse 1]\n[gritty male vocals]\nI see the fire in your eyes [crash cymbal]\nBurning through the lies we told\n[palm-muted guitar rhythm]\nNothing left to sacrifice\nAs the world is turning cold\n\n[Chorus]\n[full band, driving tempo]\nBreak the chains and set it free (set it free)\n[wah-pedal guitar lead]\nRising from the misery\n[snare hits on every beat]\nWe are the ones who never fall\nStanding tall against it all\n\n[Bridge]\n[half-time feel, syncopated guitar and kick drum]\nNo more running\nNo more hiding\n[guitar solo with fast alternate picking]\n\n[Outro]\n[sustained power chord, feedback swell]\n[final drum fill, cymbal crash]"
     },
-    "vocals": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "bass": {
+      "status": "ok",
+      "uuid": "09f8281a-ce3e-4912-a2c7-cc63dbd25501",
+      "tags": "Cinematic orchestral trailer music. Staccato string ostinatos in violins and violas drive the rhythmic momentum. Low brass, including trombones and tubas, perform sustained, dissonant swells and accented stabs. Taiko drums and large orchestral percussion provide heavy, syncopated accents on the downbeats. A high-pitched, metallic synth ping repeats at regular intervals. The arrangement features a gradual crescendo with layering of horns and aggressive cello rhythmic patterns. Key of D minor. Tempo is 140 BPM. 4/4 time signature. Short, dry string articulations contrast with long, reverberant brass tails. Sub-bass pulses sync with the orchestral percussion hits. High-frequency woodwind trills appear briefly during the build-up. The track concludes with a sudden silence followed by a final, resonant low-frequency impact.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low sub-bass drone, metallic synth ping]\n[staccato string ostinato enters]\n\n[Build-up]\n[taiko drum hits, syncopated orchestral percussion]\n[low brass swells, dissonant horn accents]\n[high-pitched string tremolo]\n\n[Climax]\n[full orchestral ensemble, aggressive brass stabs]\n[rapid-fire percussion rolls]\n[heavy sub-bass impact]\n\n[Outro]\n[sudden silence]\n[final resonant low-frequency hit]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T14:30:59"
+  "status": "ok"
 }

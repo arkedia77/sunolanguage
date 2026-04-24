@@ -4,31 +4,18 @@
   "artist": "Burial",
   "genre": "Electronic / Ambient",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "drums": {
+      "status": "ok",
+      "uuid": "d7d7ba8d-14d0-4e35-b05e-fb9f5c77983e",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, overdriven kick drum provides a constant four-on-the-floor pulse at 130 BPM in the key of F minor. A resonant, metallic synth sequence runs in sixteenth notes, modulated by a low-pass filter sweep. A gritty, monophonic saw-wave bassline syncopates against the kick. Percussion includes sharp, compressed open hi-hats on the off-beats and a layered snare with a short gated reverb on beats two and 4. Occasional industrial foley samples, resembling clanging metal and steam hisses, are processed with heavy delay and bit-crushing. The arrangement features sudden low-frequency oscillations and white noise risers that peak before rhythmic drops.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum pulse, filtered white noise riser]\n\n[Section A]\n[sixteenth-note metallic synth sequence enters]\n[syncopated saw-wave bassline]\n[compressed open hi-hats on off-beats]\n\n[Section B]\n[snare with gated reverb on beats 2 and 4]\n[bit-crushed metallic foley hits with delay]\n[low-frequency oscillation sweep]\n\n[Outro]\n[percussion drops out, leaving distorted kick and fading synth sequence]\n[tape stop effect]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "ffb2af48-d695-495b-ba06-67ae3eef1247",
-      "tags": "Industrial techno with heavy EBM influences. A distorted, overdriven kick drum provides a relentless four-on-the-floor pulse at 130 BPM in the key of F minor. A resonant, metallic synth sequence with a high-pass filter sweep creates a rhythmic ostinato. Gritty, bit-crushed percussion layers and white noise bursts punctuate the off-beats. A deep, sub-heavy bassline follows the kick pattern with slight syncopation. Distorted vocal samples are processed through a granular delay and heavy saturation, appearing as rhythmic textures rather than melodic lines. The arrangement features sudden industrial hits and mechanical sound effects, utilizing a dark, aggressive sound palette with minimal melodic development.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters, 130 BPM]\n[metallic synth sequence with resonant filter sweep]\n\n[Section A]\n[bit-crushed percussion layers]\n[white noise bursts on off-beats]\n[distorted, processed vocal textures enter]\n\n[Section B]\n[sub-bass reinforcement]\n[industrial mechanical hits]\n[granular delay effects on synth stabs]\n\n[Outro]\n[percussion layers drop out]\n[fading distorted kick and filtered synth]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "69ef215b-d8b5-4625-9cad-01d07cbd2535",
-      "tags": "Progressive house with a driving 128 BPM tempo in the key of G minor. The track features a prominent, sidechained sawtooth bassline that pulses in syncopated eighth notes against a steady kick drum. A bright, resonant lead synth plays a repetitive four-bar melodic motif characterized by rapid 16th-note arpeggios and frequent filter cutoff automation. Layered over the low-end are crisp, high-frequency percussion elements including open hi-hats on the off-beats and a sharp snare on beats two and four. Atmospheric pads with long release times provide harmonic density in the background, while occasional white noise risers and downlifters manage energy transitions between sections. The arrangement utilizes a subtractive breakdown where the drums drop out, leaving only the filtered lead synth and pads before a sudden reintroduction of the full percussion and bass layers.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[muted kick drum, low-pass filtered synth pad]\n[hi-hats enter, 16th-note pattern]\n\n[Build-up]\n[white noise riser begins]\n[snare roll accelerates]\n[filter cutoff on lead synth increases]\n\n[Drop]\n[sidechained sawtooth bass enters]\n[full kick and snare pattern]\n[arpeggiated lead synth melody]\n\n[Breakdown]\n[drums and bass drop out]\n[reverb-heavy synth pads]\n[filtered lead synth motif]\n\n[Outro]\n[bass and lead synth fade out]\n[kick drum and hi-hats continue]\n[final synth pad swell]"
-    },
-    "vocals": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+      "uuid": "2a3d6ad9-7a21-4d7e-b19d-b9b72d8cd072",
+      "tags": "Industrial techno with heavy distortion and experimental sound design. A distorted, overdriven kick drum provides a rhythmic pulse at 135 BPM in 4/4 time. A resonant, metallic synth sequence with high-pass filtering and automated resonance sweeps creates a shifting harmonic texture. Gritty, bit-crushed percussion loops and white noise bursts are layered with mechanical foley sounds. A deep, saturated sub-bass follows the kick pattern. The track features aggressive sidechain compression and industrial soundscapes with metallic clangs and digital glitches.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum pulse, low-frequency rumble]\n[metallic synth texture enters with high-pass filter sweep]\n\n[Main Section]\n[overdriven kick drum, saturated sub-bass]\n[bit-crushed percussion loops, mechanical foley sounds]\n[resonant synth sequence with automated filter modulation]\n\n[Breakdown]\n[kick drum drops out, ambient industrial drones]\n[digital glitches and white noise bursts]\n\n[Outro]\n[kick drum returns, fading metallic synth resonance]\n[final distorted kick hit with long reverb tail]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T17:32:37"
+  "status": "ok"
 }

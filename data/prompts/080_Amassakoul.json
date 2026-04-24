@@ -4,31 +4,18 @@
   "artist": "Tinariwen",
   "genre": "World Music",
   "stems": {
-    "other": {
+    "drums": {
       "status": "ok",
-      "uuid": "eca64cf9-1d57-49ab-bee6-54091e8327d2",
-      "tags": "Indie folk instrumental featuring a prominent acoustic guitar and a rhythmic shaker. The acoustic guitar plays a bright, fingerpicked melody in G major at 110 BPM. A wooden shaker provides a steady sixteenth-note pulse. The arrangement is minimalist, focusing on the interplay between the percussive guitar strums and the high-frequency shaker. The guitar tone is natural and woody with light room reverb. The track maintains a consistent 4/4 time signature throughout. The melodic structure consists of a repeating four-bar phrase with subtle variations in the fingerpicking pattern. The dynamics remain steady with no significant builds or drops.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[bright fingerpicked acoustic guitar enters]\n[steady sixteenth-note shaker enters]\n\n[Main Theme]\n[acoustic guitar plays melodic arpeggios with percussive muted strums]\n[shaker continues consistent pulse]\n\n[Variation Section]\n[guitar adds higher register accents]\n[shaker remains constant]\n\n[Outro]\n[guitar melody slows slightly]\n[final acoustic guitar chord rings out with natural decay]\n[shaker stops]"
+      "uuid": "1e607996-529b-4fd9-a3d3-ffb57aa4678a",
+      "tags": "Dark ambient soundscape. A low-frequency sub-bass drone oscillates with a slow, rhythmic pulse. High-frequency metallic textures and granular synthesis artifacts create a shimmering, dissonant layer above the low end. A resonant, filtered sweep moves across the stereo field with a long decay. Periodic mechanical clicks and industrial whirs occur at irregular intervals. The piece lacks a traditional melodic structure or rhythmic grid. Key: C minor. Tempo: 60 BPM.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone, granular metallic textures]\n\n[Section A]\n[resonant filter sweep, stereo panning effects]\n[mechanical clicks and industrial whirring]\n\n[Section B]\n[dissonant high-frequency shimmer increases in intensity]\n[sub-bass pulse slows]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "7730d29c-b04c-42da-ba51-e7f032c3cee7",
-      "tags": "Indie rock instrumental featuring a prominent, driving electric bass line playing eighth-note patterns. A clean electric guitar performs a repetitive, syncopated two-note riff using a slight chorus effect. The drum kit maintains a steady groove with a tight snare and consistent hi-hat eighth notes. A second electric guitar enters with a distorted, fuzzy tone playing sustained power chords and melodic lead lines. The arrangement follows a linear progression, building intensity through the addition of layered guitar textures and increased cymbal activity. 120 BPM, 4/4 time signature, Key of A Minor.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[driving electric bass enters with eighth-note pulse]\n[clean electric guitar enters with syncopated two-note riff]\n[tight drum kit enters, steady backbeat]\n\n[Section A]\n[bass continues eighth-note pattern]\n[clean guitar riff repeats]\n[closed hi-hat eighth notes]\n\n[Section B]\n[distorted electric guitar enters with fuzzy tone]\n[sustained power chords]\n[increased kick drum syncopation]\n\n[Section C]\n[lead electric guitar plays melodic line with heavy overdrive]\n[open hi-hats and frequent crash cymbal accents]\n[bass remains driving and constant]\n\n[Outro]\n[instruments layer for final crescendo]\n[sudden stop on final beat]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "c22d95a0-af7a-4eb2-a6cc-c2fea30637c0",
-      "tags": "Hard rock instrumental featuring a prominent, syncopated electric bass line and driving acoustic drums. The track is in the key of E minor at 120 BPM. A distorted electric guitar enters with rhythmic power chords and palm-muted chugging. The arrangement is centered on a heavy, mid-tempo groove with the bass guitar providing the melodic hook through a repetitive, percussive riff. The drums utilize a standard rock kit with a crisp snare and active hi-hat patterns. The production is clean with minimal effects, focusing on the raw timbre of the overdriven guitar and the punchy low-end of the bass. The structure alternates between bass-driven sections and full-band crescendos with layered guitar tracks.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated electric bass riff, 120 BPM]\n[hi-hat count-in]\n\n[Section A]\n[acoustic drums enter, driving rock beat]\n[bass continues main riff]\n\n[Section B]\n[distorted electric guitar enters with power chords]\n[palm-muted chugging on guitar]\n[heavy snare hits]\n\n[Section C]\n[guitar drops out]\n[bass and drums continue groove]\n[open hi-hat accents]\n\n[Outro]\n[full band ensemble]\n[final sustained guitar chord with feedback]\n[abrupt stop]"
-    },
-    "vocals": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+      "uuid": "c3262900-53bb-456a-a9a6-38c465264015",
+      "tags": "Industrial techno with heavy EBM influences. Distorted, overdriven kick drum at 130 BPM in 4/4 time. A resonant, metallic percussion loop provides high-frequency syncopation. A gritty, monophonic synth bassline plays a repetitive sixteenth-note pattern with a low-pass filter sweep. Industrial sound effects, including metallic clangs and white noise bursts, are processed with short room reverb. A dark, atmospheric pad enters in the mid-section with a slow attack. The track features a minimalist, driving structure focused on rhythmic texture and timbral evolution rather than melodic progression.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum, metallic percussion loop]\n\n[Section A]\n[monophonic synth bass enters with sixteenth-note pattern]\n[white noise bursts, metallic clangs]\n\n[Section B]\n[low-pass filter opens on bassline]\n[atmospheric synth pad swells]\n\n[Outro]\n[synth pad fades out]\n[kick drum and percussion loop continue to end]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T18:45:55"
+  "status": "ok"
 }

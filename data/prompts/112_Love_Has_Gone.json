@@ -6,14 +6,16 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Industrial techno with heavy EBM influences, A distorted, resonant kick drum drives the rhythm at 130 BPM in 4/4 time, A syncopated, metallic percussion loop provides high-frequency energy, A gritty, monophonic synth bassline follows a 16th-note pattern with frequent filter modulation, Dark, atmospheric pads with long release times create a dense background texture, A sharp, staccato lead synth enters with a repetitive minor-key motif, Occasional white noise sweeps and industrial foley hits punctuate the transitions, The track maintains a consistent, driving energy with subtle automation on the percussion's decay and the synth's resonance Publish",
-      "card_title": "drums"
+      "uuid": "0f880946-f735-40a7-8ab9-1b80e43a67ff",
+      "tags": "Industrial metal with heavy electronic influences. Distorted electric guitars play palm-muted, syncopated riffs in a low tuning. A synthesized bass follows the guitar patterns with a gritty, overdriven tone. The drum kit features a sharp, compressed snare and a punchy kick drum, supplemented by industrial percussion hits and metallic clangs. High-pitched, dissonant synth leads and atmospheric pads provide a dark, mechanical texture. The tempo is 140 BPM in 4/4 time, likely in the key of D minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, palm-muted]\n[industrial percussion hits, metallic clangs]\n\n[Main Theme]\n[full drum kit enters, driving kick and snare]\n[overdriven synth bass enters]\n[dissonant high-pitched synth lead]\n\n[Bridge]\n[guitar riff intensifies with power chords]\n[atmospheric synth pads swell]\n\n[Outro]\n[sustained guitar feedback]\n[final industrial percussion hit]"
     },
     "bass": {
-      "status": "blocked",
-      "reason": "copyright",
-      "description": ""
+      "status": "ok",
+      "uuid": "708fe571-ff26-4613-87c5-5b6df9db166f",
+      "tags": "Industrial techno with heavy distortion and aggressive sound design. The track features a saturated, overdriven kick drum with a long, rumbling sub-tail that functions as the bassline. A metallic, percussive synth sequence provides a rhythmic, industrial texture. High-frequency white noise bursts and distorted hi-hats create a dense, abrasive atmosphere. The arrangement is minimalist and repetitive, focusing on timbral evolution and rhythmic intensity. 135 BPM, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-rumble]\n[metallic industrial percussion sequence]\n\n[Main Section]\n[saturated kick drum continues]\n[syncopated white noise bursts]\n[distorted hi-hats enter]\n[rhythmic synth pulse with high-pass filter modulation]\n\n[Breakdown]\n[kick drum drops out]\n[reverberant industrial textures and mechanical drones]\n\n[Outro]\n[kick drum re-enters]\n[gradual fade out of percussive elements]"
     }
   },
-  "status": "partial"
+  "status": "ok"
 }

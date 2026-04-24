@@ -4,31 +4,18 @@
   "artist": "Boards of Canada",
   "genre": "Electronic / Ambient",
   "stems": {
-    "other": {
-      "status": "ok",
-      "uuid": "f11a0661-e340-4516-b254-01ab6b0f6fc0",
-      "tags": "Lo-fi hip hop instrumental. A dusty, sampled drum break features a muffled kick and a crisp, slightly off-grid snare with a prominent hi-hat shuffle. A melodic, electric piano progression uses jazz-influenced seventh chords with a soft tremolo effect. A deep, rounded sine-wave synth bass follows the root notes of the piano with a slight portamento between transitions. Atmospheric vinyl crackle and a low-pass filtered ambient pad persist throughout the arrangement. A recurring three-note glockenspiel motif appears every four bars. The tempo is 88 BPM in the key of C Major.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle, soft electric piano chords, muffled kick drum]\n\n[Main Theme]\n[sampled drum break enters, syncopated hi-hats]\n[sine synth bass enters, melodic electric piano continues]\n[low-pass filtered ambient pad in background]\n\n[Bridge]\n[glockenspiel three-note motif enters]\n[drums slightly filtered, bass remains steady]\n\n[Outro]\n[drums drop out, electric piano fades with heavy reverb]\n[vinyl crackle persists until silence]"
-    },
-    "bass": {
-      "status": "failed",
+    "drums": {
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     },
-    "drums": {
-      "status": "ok",
-      "uuid": "99272d30-6754-435e-a996-7b1ae4ef4214",
-      "tags": "Lo-fi hip hop instrumental. The track features a dusty, sampled drum break with a prominent, slightly muffled kick and a crisp snare on beats 2 and 4. A repetitive, four-bar electric piano progression uses jazz-influenced seventh chords with a warm, saturated tone and noticeable wow and flutter. A melodic, syncopated electric bassline follows the chord changes with a rounded, sub-heavy timbre. Atmospheric vinyl crackle and a low-pass filter on the master bus create a vintage aesthetic. The tempo is 88 BPM in the key of C minor. A subtle, high-pitched sine wave synth lead enters periodically with a portamento effect.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle, electric piano chords with tremolo]\n\n[Main Section]\n[boom-bap drum break enters, syncopated electric bass]\n[low-pass filter sweep]\n\n[Bridge]\n[drums drop out, electric piano solo with heavy reverb]\n[subtle sine wave synth lead with portamento]\n\n[Outro]\n[bass and synth exit, drums fade out]\n[fading electric piano and vinyl crackle]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "08e53d40-a8c2-4454-bb3c-b4943fb4fb8b",
-      "tags": "Electro-house with heavy funk and disco influences. A prominent, syncopated slap bass line drives the groove, characterized by percussive pops and slides. The drum machine features a crisp, high-tuned snare and a tight, dry kick. A recurring vocal chop sample, processed with a high-pass filter and rhythmic gating, repeats a short phrase. Bright, staccato synth stabs with a short decay provide harmonic accents on the off-beats. A resonant, sweeping low-pass filter effect is applied to the master bus during transitions. The track is in the key of G minor at 124 BPM.",
-      "prompt": "[Intro]\n[slap bass enters with syncopated thumb hits and pops]\n[tight electronic kick drum and closed hi-hats]\n\n[Section A]\n[high-pitched male vocal chop repeats] Hey! [staccato synth stabs on off-beats]\nHey! [bass slide]\nHey!\nHey!\n\n[Section B]\n[vocal chop continues] Hey!\n[low-pass filter sweep on the master track]\nHey!\n[filter opens up] Hey!\nHey!\n\n[Outro]\n[drums and synths drop out]\n[solo slap bass riff with percussive ghost notes]\n[final vocal chop] Hey!"
+    "bass": {
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:54:45"
+  "status": "failed"
 }

@@ -4,29 +4,18 @@
   "artist": "Vangelis",
   "genre": "New Age",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
-    "bass": {
-      "status": "ok",
-      "uuid": "3d3248da-6ff2-41fe-8727-d949b830b3a5",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a syncopated, palm-muted riff centered around a low E pedal tone. A second electric guitar provides harmonized lead lines and occasional pinch harmonics. The drum kit features a prominent double-kick pedal pattern with rapid sixteenth-note bursts and a dry, high-tuned snare. An overdriven electric bass guitar follows the guitar riff exactly. The arrangement is characterized by frequent stops and starts with sudden silence between phrases. Key of E minor. Tempo is 140 BPM. 4/4 time signature.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff with palm muting, syncopated kick drum]\n[snare hits on beats 2 and 4]\n\n[Main Theme]\n[full band enters, overdriven bass guitar, double-kick drum patterns]\n[harmonized guitar lead enters]\n\n[Bridge]\n[staccato guitar chugging, rapid double-bass drum fills]\n[sudden silence between musical phrases]"
-    },
     "drums": {
       "status": "ok",
-      "uuid": "85fad1f0-ee2b-450b-bf44-8136d4ca8b7e",
+      "uuid": "adc3bcd9-4d16-4e23-b645-c415496692a9",
       "tags": "Lo-fi hip hop. A dusty, vinyl-crackling drum break features a muffled kick and a crisp, slightly swung snare. A Rhodes electric piano plays a repeating four-bar progression of jazz-influenced seventh chords with a soft tremolo effect. A deep, rounded electric bass follows the root notes of the piano with a laid-back, behind-the-beat feel. A subtle, high-pitched sine wave synth melody enters periodically with heavy portamento. The track maintains a steady 85 BPM in the key of C minor. High-frequency hiss and occasional vinyl pops are layered throughout the mix. The arrangement is minimalist, focusing on the interplay between the Rhodes and the drum loop.",
       "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss, muffled drum break enters]\n\n[Main Theme]\n[Rhodes electric piano playing jazz chords, electric bass enters]\n\n[Bridge]\n[sine wave synth with portamento melody, drums continue with swung snare]\n\n[Outro]\n[bass and synth fade out, Rhodes piano and vinyl crackle remain until silence]"
     },
-    "vocals": {
+    "bass": {
       "status": "ok",
-      "uuid": "a902bf3b-a082-4deb-a22f-e37a35e1dc12",
-      "tags": "Synthwave with a heavy emphasis on retro-futuristic textures. A prominent analog-style synthesizer plays a syncopated, rhythmic lead line using a sawtooth waveform with a short decay and moderate resonance. A deep, compressed sub-bass synth follows the root notes of the lead melody. The percussion consists of a gated reverb snare and a punchy, mid-heavy kick drum. A shimmering, high-frequency synth pad provides sustained harmonic backing in the background. The track is in the key of G minor at 105 BPM.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated sawtooth synth lead, punchy kick drum]\n[gated reverb snare enters]\n\n[Main Theme]\n[sub-bass synth enters, locking with kick]\n[high-frequency synth pad swells in background]\n[staccato synth melody continues]"
+      "uuid": "495ee10c-1ac0-4733-82d6-6b8162584f87",
+      "tags": "Industrial techno with heavy EBM influences. A distorted, overdriven kick drum drives the rhythm at 130 BPM in 4/4 time. A resonant, syncopated synth bassline follows a 16th-note pattern with high-pass filter automation. Metallic percussion hits and white noise snares occur on the backbeat. A high-pitched, dissonant lead synth enters with a short decay and heavy delay, playing a repetitive three-note motif. Industrial sound effects, including mechanical clangs and bit-crushed textures, are layered throughout the arrangement. The track maintains a consistent high-energy density with minimal melodic variation, focusing on timbral evolution and rhythmic drive. Key of D minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum, metallic percussion]\n[syncopated synth bass enters]\n\n[Main Section]\n[high-pitched dissonant synth lead with delay]\n[white noise snare hits]\n[bit-crushed industrial sound effects]\n\n[Breakdown]\n[kick drum drops out, filtered synth bass continues]\n[mechanical clanging sounds]\n\n[Outro]\n[kick drum re-enters]\n[synth lead fades out]\n[final distorted kick hit]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T15:04:58"
+  "status": "ok"
 }

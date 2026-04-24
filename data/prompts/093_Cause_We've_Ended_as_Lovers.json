@@ -4,29 +4,18 @@
   "artist": "Jeff Beck",
   "genre": "Funk / Soul / Blues Instrumental",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "3244a891-34a2-464b-af35-58118ef4fb94",
+      "tags": "Funk rock featuring a prominent slap bass technique. The bassline utilizes percussive thumb slaps and finger pops in a syncopated sixteenth-note pattern. A clean electric guitar plays rhythmic muted scratches and staccato chords on the upbeats. The drum kit maintains a steady groove with a crisp snare and a tight hi-hat pattern. The tempo is 105 BPM in the key of E minor. The production is dry with minimal reverb, emphasizing the percussive attack of the strings. The arrangement focuses on the interplay between the bass and the drum kit's kick and snare syncopation.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[slap bass solo, percussive thumb hits and pops]\n\n[Main Groove]\n[clean electric guitar enters with muted scratches]\n[drum kit enters with syncopated kick and snare]\n[bass continues sixteenth-note slap pattern]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "c52995ba-062d-4fee-96ca-7cc4140298a5",
-      "tags": "Funk-rock instrumental. A clean electric guitar plays a syncopated, percussive riff using 16th-note scratches and palm-muted double stops. The electric bass guitar performs a slap-and-pop technique, emphasizing the downbeat with a low E and following with rapid octaves and chromatic passing tones. The drum kit maintains a tight groove with a crisp snare and a steady kick drum pattern that mirrors the bass guitar's rhythmic accents. Key of E minor. 105 BPM. 4/4 time signature. The mix features a dry, close-mic'd aesthetic with minimal reverb, highlighting the transient attack of the slap bass and the rhythmic precision of the guitar scratches.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[slap electric bass enters with syncopated E minor riff]\n[clean electric guitar enters with percussive 16th-note scratches]\n[drum kit enters with tight backbeat and ghost notes on snare]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "886a59b9-a969-4855-8991-ee7fe00310a7",
+      "uuid": "63c95b71-d6e5-4dc4-9049-0ce9f1aee5bd",
       "tags": "Lo-fi hip hop track at 85 BPM in the key of C minor. A Rhodes electric piano plays a four-bar progression of jazzy seventh chords with a soft tremolo effect and high-frequency roll-off. The drum kit features a muffled, saturated kick drum hitting on beats 1 and 3, with a crisp, layered snare on beats 2 and 4. A steady 16th-note closed hi-hat pattern includes occasional velocity variations and subtle swing. A warm, sub-heavy synth bass follows the root notes of the piano chords with a slight portamento between transitions. A recurring vinyl crackle and hiss layer persists throughout the arrangement. A melodic lead is provided by a sampled, filtered flute that plays short, pentatonic phrases with heavy reverb and delay.",
       "prompt": "[Instrumental]\n\n[Intro]\n[vinyl crackle and hiss begins]\n[Rhodes electric piano enters with tremolo chords]\n\n[Main Section]\n[saturated kick and snare enter]\n[16th-note closed hi-hats]\n[sub synth bass enters]\n[filtered flute lead plays melodic phrases with delay]\n\n[Outro]\n[drums and bass drop out]\n[Rhodes piano fades out]\n[vinyl crackle lingers and fades]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "695e26db-e8a6-43b3-8708-b97bcc59e673",
-      "tags": "Funk and soul instrumental. The arrangement features a clean, rhythmic electric guitar playing syncopated 16th-note muted strums and dominant 7th chords. A Fender Precision-style electric bass performs a melodic, walking line with frequent slides and ghost notes. The drum kit maintains a tight groove with a crisp, high-tuned snare and a dry kick drum. A brass section consisting of trumpet and tenor saxophone provides staccato rhythmic stabs and unison melodic flourishes. A Hammond B3 organ with a slow Leslie speaker effect fills the harmonic space with sustained chords and occasional percussive glissandos. The tempo is 105 BPM in the key of E Major. The mix uses a dry, 1970s-style production with minimal reverb and clear instrument separation.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated clean electric guitar, hi-hat eighth notes]\n[bass guitar enters with chromatic walk-up]\n\n[Main Theme]\n[brass section staccato stabs]\n[Hammond B3 organ sustained chords]\n[tight snare and kick drum groove]\n\n[Bridge]\n[guitar switches to wah-wah pedal filter sweeps]\n[bass performs melodic fills in upper register]\n[brass section unisons]\n\n[Outro]\n[gradual volume fade out]\n[final brass swell and organ glissando]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T19:52:48"
+  "status": "ok"
 }

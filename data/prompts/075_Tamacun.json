@@ -4,31 +4,18 @@
   "artist": "Rodrigo y Gabriela",
   "genre": "Guitar Instrumental",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
-    },
-    "bass": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
-    },
     "drums": {
       "status": "ok",
-      "uuid": "baf4ff73-4121-4a2d-88dd-4cafc0a24abb",
-      "tags": "Industrial stomp-clap percussion track. The arrangement is built on a heavy, distorted kick drum hitting on every beat, layered with a metallic, resonant snare-like clap on beats two and four. A syncopated rhythmic pattern is created by a high-pitched, metallic 'tink' sound and a lower-frequency wooden thud. The tempo is 120 BPM in 4/4 time. The track features a prominent, distorted synth bass that follows a rhythmic ostinato, providing a gritty, overdriven texture. Mid-way through, a filtered, resonant synth sweep rises in pitch, accompanied by an increase in the density of the metallic percussion hits. The piece concludes with a sudden cut to a decaying reverb tail of the final kick and metallic strike.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[heavy distorted kick drum, metallic clap on 2 and 4]\n[syncopated wood block and metal pipe hits]\n\n[Section A]\n[distorted synth bass enters with rhythmic ostinato]\n[percussion layers increase in volume]\n\n[Section B]\n[resonant synth sweep rises]\n[rapid-fire metallic percussion fills]\n\n[Outro]\n[final heavy kick and clap with long reverb tail]\n[silence]"
+      "uuid": "62f48a6e-15bf-40ea-89bf-26e6840a3499",
+      "tags": "Percussion ensemble piece featuring a variety of hand drums and body percussion. The track is built around a syncopated, polyrhythmic structure with a steady pulse. It features low-tuned tom-toms or floor toms providing a resonant, thumping bass foundation, while higher-pitched hand drums like congas or bongos execute rapid, sixteenth-note patterns and sharp accents. Handclaps and rhythmic chest-slapping add organic, mid-range textures. The tempo is 120 BPM in 4/4 time. The arrangement focuses on rhythmic interplay and dynamic builds, with sections alternating between sparse, singular drum hits and dense, layered tribal-style grooves. No melodic or harmonic instruments are present.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[single resonant drum hits with long decay]\n[rhythmic chest slapping and handclaps enter]\n\n[Main Section]\n[syncopated hand drum pattern enters]\n[low-tuned floor toms provide steady quarter note pulse]\n[rapid sixteenth-note conga fills]\n\n[Build-up]\n[increased density of handclaps and rimshots]\n[crescendo of polyrhythmic drumming]\n\n[Outro]\n[drums drop out leaving only handclaps]\n[final resonant bass drum hit]"
     },
-    "vocals": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "bass": {
+      "status": "ok",
+      "uuid": "b2d16263-5d64-4858-9bfe-50a278833ed2",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A driving drum kit features a prominent snare on 2 and 4 with rapid double-kick patterns and frequent crash cymbal accents. The electric bass follows the guitar riffs with a gritty, overdriven tone. The track is in 4/4 time at 140 BPM in the key of E minor. The arrangement alternates between dense rhythmic sections and brief melodic lead guitar flourishes using pinch harmonics.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging riff, palm-muted]\n[drum kit enters with driving kick and snare]\n\n[Section A]\n[heavy power chords, overdriven bass enters]\n[double-kick drum patterns]\n\n[Section B]\n[lead guitar flourish with pinch harmonics]\n[syncopated rhythmic stops]\n\n[Outro]\n[sustained guitar feedback, final crash cymbal]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T18:23:12"
+  "status": "ok"
 }

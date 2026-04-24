@@ -4,31 +4,18 @@
   "artist": "Aphex Twin",
   "genre": "Electronic / Ambient",
   "stems": {
-    "other": {
-      "status": "failed",
+    "drums": {
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     },
     "bass": {
-      "status": "failed",
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "013693d8-208e-4437-9a27-a94cd25b1a13",
-      "tags": "Industrial techno with heavy EBM influences. A distorted, overdriven kick drum drives the rhythm at 130 BPM in 4/4 time. A metallic, percussive synth sequence with a short decay and high resonance plays a syncopated sixteenth-note pattern. A secondary FM synth provides a harsh, dissonant drone that modulates with a slow LFO on the cutoff frequency. High-frequency white noise bursts act as rhythmic accents on the off-beats. A gritty, bit-crushed bass synth mirrors the kick drum's rhythm with sub-bass weight. The track features a minimalist arrangement focusing on timbral evolution through filter sweeps and distortion saturation. No melodic elements are present, relying entirely on rhythmic noise and industrial textures. The mix is dense with heavy compression and a narrow stereo field, emphasizing a mono-compatible, club-focused low end. Percussive hits have a short, gated reverb to maintain clarity amidst the distortion.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum enters, four-on-the-floor]\n[metallic percussive synth sequence starts]\n\n[Section A]\n[white noise rhythmic accents on off-beats]\n[bit-crushed sub-bass layers with kick]\n\n[Section B]\n[dissonant FM synth drone enters with slow filter modulation]\n[increased distortion saturation on the main kick]\n\n[Breakdown]\n[kick drum drops out, percussive synth continues with high-pass filter sweep]\n[harsh noise textures swell]\n\n[Outro]\n[kick drum re-enters, full intensity]\n[instruments fade out individually leaving only the distorted kick]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "bd308a88-b987-4dbc-b52b-386160d95af0",
-      "tags": "Ambient electronic track with a heavy emphasis on atmospheric textures and rhythmic vocal sampling. The piece features a deep, sub-heavy synth bass that provides a steady pulse. A crisp, minimalist drum kit consists of a tight kick drum and a sharp, high-frequency snare with a short decay. Shimmering, ethereal synth pads with long attack and release times create a dense harmonic wash. A recurring melodic motif is played on a clean, bell-like digital synth with a light delay effect. The track is characterized by chopped and pitched vocal samples that are processed with heavy reverb and granular synthesis, creating a rhythmic, non-lexical texture. The tempo is 120 BPM in the key of C minor. The arrangement builds through the addition of layered percussion, including a sixteenth-note hi-hat pattern and occasional woodblock accents. High-pass filters are used on the pads to create dynamic swells throughout the progression.",
-      "prompt": "[Intro]\n[ethereal synth pads swell, sub-bass pulse enters]\n[Verse 1]\n[reverberant, pitched-shifted female vocalizations]\nAh-ah-ah-ah\n[minimalist kick and snare enter]\nOoh-ooh-ooh-ooh\n[Chorus]\n[chopped vocal samples in rhythmic pattern]\n(Eh-eh-ah) [bell-like synth melody enters]\n(Oh-oh-way) [sixteenth-note hi-hats enter]\n(Eh-eh-ah)\n(Oh-oh-way)\n[Bridge]\n[vocal samples become more granular and stuttered]\n(A-a-a-ah)\n[high-pass filter sweep on pads]\n[Outro]\n[drums drop out]\n[fading synth pads and distant vocal echoes]\nAh-ah-ah-ah\n[sub-bass fades to silence]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:51:25"
+  "status": "failed"
 }

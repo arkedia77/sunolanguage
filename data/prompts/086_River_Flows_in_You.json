@@ -4,31 +4,18 @@
   "artist": "Yiruma",
   "genre": "Lo-fi / Neo-classical / Piano",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "drums": {
+      "status": "ok",
+      "uuid": "82f5b2ce-5e70-45ac-a3ac-5c80be91ad31",
+      "tags": "pure silence",
+      "prompt": "[Instrumental]"
     },
     "bass": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
-    },
-    "drums": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
-    },
-    "vocals": {
-      "status": "failed",
+      "status": "blocked",
       "uuid": null,
       "tags": "",
       "prompt": ""
     }
   },
-  "status": "failed",
-  "retried_at": "2026-04-07T19:21:30"
+  "status": "partial"
 }

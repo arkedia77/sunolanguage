@@ -4,27 +4,18 @@
   "artist": "Lee Morgan",
   "genre": "Jazz",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "c643aba1-e7d3-4673-b35f-e556ad5c214c",
+      "tags": "Hard rock drum solo. The performance features a standard acoustic drum kit with a crisp, dry snare, a resonant kick drum, and bright crash cymbals. The drummer executes rapid-fire sixteenth-note snare rolls and syncopated kick drum patterns. The rhythm utilizes frequent accents on the snare and sudden cymbal crashes to punctuate the phrasing. The recording has a close-mic'ed, studio-dry aesthetic with minimal room reverb. 130 BPM, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[snare drum roll, kick drum accents]\n\n[Main Section]\n[syncopated snare and kick pattern]\n[cymbal crash]\n[rapid sixteenth-note snare fills]\n[cymbal crash]\n[descending tom-tom fill]\n\n[Outro]\n[final snare hit, sustained cymbal ring]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "5da9832a-32dd-44d8-bdc7-516d4068e8ee",
-      "tags": "Acoustic blues featuring a solo resonator guitar played with a slide. The performance utilizes a steady alternating thumb bass pattern on the lower strings while the slide executes melodic phrases and microtonal vibrato on the higher strings. Frequent percussive string slaps and rhythmic muting define the groove. The guitar is tuned to Open G. 105 BPM. 4/4 time signature.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[solo resonator guitar, rhythmic thumb-bass pattern]\n[slide guitar melody with heavy vibrato]\n\n[Main Theme]\n[syncopated slide riffs, percussive string slaps]\n[descending turnaround phrase]\n\n[Outro]\n[final slide glissando up the neck]\n[staccato tonic chord]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "8b4b96b7-e4e6-46df-ae17-5e999b5c601c",
-      "tags": "Drum solo featuring a standard acoustic drum kit. The performance centers on a syncopated snare and kick pattern with consistent eighth-note hi-hat accents. The snare features a crisp, dry crack with minimal ring. The kick drum is punchy with a short decay. The rhythm utilizes ghost notes on the snare to create a rolling internal groove between the primary backbeats. The hi-hat is played tightly closed, providing a sharp, percussive tick. The tempo is 110 BPM in 4/4 time.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated kick and snare pattern, closed hi-hat eighth notes]\n\n[Main Groove]\n[snare ghost notes, rhythmic kick variations]\n\n[Outro]\n[final snare hit]"
-    },
-    "vocals": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+      "uuid": "78bf1f61-5c79-4e4a-a143-8a45b1ba7c61",
+      "tags": "Funk instrumental featuring a prominent slap bass guitar performance. The bass utilizes percussive thumb slaps and finger pops, executing a syncopated 16th-note riff with frequent dead notes and chromatic slides. A dry, close-miked drum kit maintains a steady groove with a crisp snare and tight hi-hats. The recording has a raw, unprocessed studio aesthetic with minimal reverb. Key of E minor. 105 BPM.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[slap bass guitar solo riff, percussive thumb slaps and pops]\n\n[Main Groove]\n[dry drum kit enters, steady backbeat]\n[syncopated 16th-note bass line with chromatic slides]\n[snare hits on beats 2 and 4]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:13:48"
+  "status": "ok"
 }

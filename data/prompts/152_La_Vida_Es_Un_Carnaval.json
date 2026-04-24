@@ -5,15 +5,17 @@
   "genre": "Salsa",
   "stems": {
     "drums": {
-      "status": "ok",
-      "description": "Afrobeat track in 4/4 time at 110 BPM, The arrangement features a syncopated electric bassline playing a repetitive two-bar groove, Percussion consists of a dry kick drum on every beat, a sharp snare on the 2 and 4, and a complex layer of congas and shakers providing sixteenth-note subdivisions, A clean-toned electric guitar plays muted, rhythmic staccato chords on the off-beats, A bright, brassy synthesizer enters with a melodic hook characterized by short, punchy notes and syncopated phrasing, The track maintains a steady, driving rhythmic pocket with minimal harmonic movement, focusing on the interplay between the percussive elements and the cyclic guitar and bass riffs Publish",
-      "card_title": "drums"
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     },
     "bass": {
       "status": "ok",
-      "description": "Funk, 110 BPM, G minor, The track features a syncopated electric bassline playing a repetitive 16th-note groove, A clean-toned electric guitar performs percussive, muted 'chika-chika' strumming patterns and staccato chord stabs on the off-beats, The drum kit maintains a steady backbeat with a crisp snare and tight hi-hat patterns, A bright, percussive synth or clavinet-style keyboard provides rhythmic accents, The arrangement is built on a static harmonic vamp, emphasizing rhythmic interlocking between the bass and the muted guitar Publish",
-      "card_title": "bass"
+      "uuid": "94a24aaf-99b3-4193-bd67-8f262651de21",
+      "tags": "Funk rock. Clean electric guitar plays a syncopated, percussive riff using 16th-note scratches and double-stops. An electric bass guitar performs a slap-and-pop technique, locking with the kick drum on the downbeat and syncopating on the off-beats. The drum kit features a tight, dry snare sound and a consistent hi-hat pattern with occasional open accents. A Hammond organ provides sustained chords with a slow rotary speaker effect. The tempo is 105 BPM in the key of E minor. The arrangement maintains a steady groove with minimal melodic variation, focusing on rhythmic interplay between the bass and guitar.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[clean electric guitar riff with 16th-note scratches]\n[slap bass enters with kick drum]\n\n[Main Groove]\n[tight snare and hi-hat pattern]\n[Hammond organ enters with sustained chords]\n[guitar continues syncopated double-stops]"
     }
   },
-  "status": "ok"
+  "status": "partial"
 }

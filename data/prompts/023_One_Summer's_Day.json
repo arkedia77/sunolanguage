@@ -4,31 +4,18 @@
   "artist": "Joe Hisaishi (Spirited Away OST)",
   "genre": "Film Score / OST",
   "stems": {
-    "other": {
-      "status": "failed",
-      "uuid": null,
-      "tags": "",
-      "prompt": ""
+    "drums": {
+      "status": "ok",
+      "uuid": "17a17778-dffd-4650-b816-81f88691ff96",
+      "tags": "Indie rock with post-punk influences. Clean electric guitar plays a repetitive, palm-muted eighth-note riff on the root note before opening into arpeggiated chords. A second electric guitar enters with a melodic lead line using light overdrive and chorus. The bass guitar follows the kick drum with a driving eighth-note pattern. Drums feature a steady backbeat with prominent hi-hat accents and occasional crash cymbal hits. The arrangement builds through the addition of layered guitar textures. Key of E Major. 125 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[palm-muted electric guitar eighth-notes]\n[bass guitar enters with steady root notes]\n\n[Section A]\n[clean electric guitar arpeggios]\n[drums enter with steady backbeat and closed hi-hats]\n\n[Section B]\n[lead electric guitar enters with melodic riff]\n[chorus effect on lead guitar]\n[increased velocity on hi-hats]\n\n[Section C]\n[rhythm guitar switches to open strumming]\n[crash cymbal accents]\n[bass guitar becomes more melodic]\n\n[Outro]\n[lead guitar fades out]\n[drums drop to kick and snare only]\n[final sustained guitar chord with reverb]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "dd484be0-497b-44da-8999-d3013f542af6",
-      "tags": "Classical solo piano composition in the style of a Romantic-era nocturne. The piece features a lyrical, cantabile melody in the right hand characterized by expressive rubato and chromatic passing tones. The left hand maintains a consistent accompaniment of wide-ranging arpeggiated broken chords, spanning over two octaves to provide harmonic depth. The performance utilizes extensive sustain pedal, creating a resonant, blended texture. The dynamic range shifts from pianissimo to mezzo-forte with frequent hairpins and delicate ornamentation including turns and short trills. The tempo is a fluid Andante with significant rhythmic flexibility. The harmonic language is tonal but features secondary dominants and brief modulations to closely related keys.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[Solo piano enters, soft dynamic]\n[Arpeggiated left-hand accompaniment begins in a steady triple-meter feel]\n\n[Main Theme]\n[Right-hand melody enters, legato and cantabile]\n[Sustain pedal creates a resonant wash]\n[Melodic flourishes with rapid scalar runs and grace notes]\n\n[Development Section]\n[Increased harmonic tension with chromatic bass movement]\n[Dynamic swell to mezzo-forte]\n[Dense chordal voicing in the right hand]\n\n[Outro]\n[Melody descends in pitch and volume]\n[Final arpeggiated flourish in the high register]\n[Sustained final tonic chord fades to silence]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "d7e093c6-9954-4611-bcf2-41b2107f38a3",
-      "tags": "Cinematic orchestral score with a focus on tension and rhythmic drive. The piece features a prominent staccato string section performing repetitive, driving ostinatos in 4/4 time. Deep, resonant orchestral percussion including taiko drums and concert bass drums provide a heavy rhythmic pulse. Low brass accents from trombones and tubas punctuate the arrangement with long, swelling notes. A high-pitched, shimmering tremolo string layer sits in the upper register. The tempo is approximately 120 BPM. The arrangement builds through layered orchestration, adding woodwind trills and metallic percussion hits. The harmonic language is minor-key and modal, centered around D minor, utilizing dissonant clusters and sudden dynamic shifts from piano to fortissimo.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[low synth drone, distant metallic percussion hits]\n[staccato cello ostinato enters]\n\n[Building Section]\n[viola and violin staccato layers enter]\n[steady orchestral bass drum pulses]\n[low brass swells]\n\n[Climax]\n[full string section tremolo]\n[heavy taiko drum ensemble rhythmic pattern]\n[sharp brass accents]\n[high woodwind trills]\n\n[Outro]\n[sudden silence]\n[reverberant piano note fades out]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "9a7ccbbc-fa2f-46f9-b9f8-e39e7d5f3f7b",
-      "tags": "Classical chamber music for solo violin and piano. The piece features a lyrical, rubato-heavy violin melody characterized by frequent vibrato, double stops, and expressive glissandi. The piano accompaniment utilizes arpeggiated broken chords and sustained pedal tones to create a harmonic wash. The composition follows a ternary structure with a more agitated middle section featuring staccato violin bowing and rapid piano scales before returning to the initial melodic theme. The tempo fluctuates significantly between 60 and 85 BPM, primarily in 3/4 time. The key is D Major.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[sustained piano chords, D major]\n[violin enters with a long, vibrato-heavy D5 note]\n\n[A Section]\n[lyrical violin melody with expressive rubato]\n[arpeggiated piano accompaniment begins]\n[violin performs ascending glissando]\n\n[B Section]\n[piano shifts to minor tonality]\n[staccato violin bowing, spiccato technique]\n[rapid chromatic piano scales]\n[violin double stops]\n\n[A' Section]\n[return to primary D major theme]\n[violin melody in higher register, E6 to A6]\n[piano arpeggios slow down]\n\n[Outro]\n[final sustained violin harmonic]\n[piano tonic chord fades with sustain pedal]"
+      "uuid": "95cb1bd5-66cc-4032-988d-a29c1ca077b8",
+      "tags": "Ambient electronic soundscape. A deep, resonant sub-bass synth provides a steady low-frequency drone. High-frequency granular synthesis textures and shimmering digital pads create a sense of vast space. A rhythmic, percussive element resembling a metallic click or a ticking clock repeats at 120 BPM. Sparse, reverberant piano notes punctuate the texture with long decay times. The piece is in the key of C minor. Subtle white noise sweeps and filtered synth swells rise and fall throughout the arrangement. The mix is characterized by extreme stereo width and heavy use of convolution reverb.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low-frequency sub-bass drone enters]\n[granular synth textures with high-frequency shimmer]\n\n[Section A]\n[metallic percussive click repeats at 120 BPM]\n[reverberant piano notes with long decay]\n[filtered synth pad swells]\n\n[Section B]\n[white noise sweeps]\n[sub-bass drone intensifies]\n[piano melody becomes more sparse]\n\n[Outro]\n[percussive click fades out]\n[granular textures dissolve into silence]\n[sub-bass drone lingers and fades]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T13:41:10"
+  "status": "ok"
 }

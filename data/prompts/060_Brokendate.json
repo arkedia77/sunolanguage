@@ -4,29 +4,18 @@
   "artist": "Com Truise",
   "genre": "Electronic / Ambient",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "26200df9-95cb-4f61-bb3f-5a102013c145",
+      "tags": "Blues rock. Overdriven electric guitar plays a repetitive four-bar riff using double-stops and palm-muted low strings. A second electric guitar provides rhythmic stabs on the off-beats. The drum kit features a dry, tight snare sound and a prominent ride cymbal. The electric bass follows the guitar riff with a slight swing feel. 115 BPM. Key of E Major. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[overdriven electric guitar riff starts]\n[tight snare and kick drum enter]\n\n[Main Section]\n[electric bass enters, doubling the guitar riff]\n[rhythm guitar stabs on off-beats]\n[ride cymbal pattern begins]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "65777cd2-c812-4ade-b99a-c82793323d9e",
+      "uuid": "c8988dcd-f4b6-483d-a9ca-b1278fa42d8e",
       "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail drives the rhythm at 130 BPM in the key of F minor. A metallic, percussive synth sequence plays a repetitive sixteenth-note pattern with a resonant filter sweep. High-frequency white noise bursts and bit-crushed industrial clangs occur on every second and fourth beat. A low-frequency sawtooth bass drone oscillates with a slow LFO on the cutoff frequency. The track features a dense, claustrophobic mix with heavy compression and short room reverb on the percussion elements. A high-pitched, dissonant sine wave lead enters with a portamento effect, sliding between semitones.",
       "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-tail, metallic sixteenth-note synth sequence]\n\n[Section A]\n[bit-crushed industrial clangs on beats 2 and 4, white noise bursts]\n[low-frequency sawtooth bass drone with LFO modulation]\n\n[Section B]\n[dissonant sine wave lead with portamento enters]\n[resonant filter sweep on percussive synth]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "6bda5a54-0a7a-43e6-b834-f938a5620b97",
-      "tags": "Industrial rock with heavy electronic elements. A distorted, overdriven electric guitar plays a repetitive, syncopated two-note riff. The drum machine features a dry, compressed snare and a punchy kick drum with a steady eighth-note hi-hat pattern. A gritty, monophonic synth bass follows the guitar riff. The tempo is 100 BPM in the key of D minor. The production is characterized by high-gain distortion on the melodic instruments and a dry, close-mic aesthetic on the percussion.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff, dry drum machine kick and snare]\n\n[Main Section]\n[gritty synth bass enters, eighth-note hi-hats]\n[syncopated two-note guitar pattern continues]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "798a7e50-5914-4ee0-8c96-8c728e8ec366",
-      "tags": "Deep House with a focus on atmospheric textures and rhythmic syncopation. A muted, sub-heavy kick drum drives the rhythm at 124 BPM in the key of G minor. A percussive, wooden-sounding synth pluck plays a syncopated 16th-note pattern with a short decay and moderate delay. A low-pass filtered sawtooth bassline follows the kick on the off-beats. Shakers and a crisp open hi-hat emphasize the upbeat. A lush, wide-panned polyphonic synth pad enters with long attack and release times, using a slow filter sweep to create movement. A secondary FM synth lead provides occasional staccato accents with a high-frequency resonance. The track maintains a steady 4/4 time signature throughout. Reverb is applied sparingly to the percussion but heavily to the pads to create depth.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[muted sub-kick, syncopated wooden synth pluck]\n[shakers enter]\n\n[Main Section]\n[low-pass filtered sawtooth bassline enters]\n[open hi-hat on the upbeat]\n[lush polyphonic synth pad with slow filter sweep]\n\n[Breakdown]\n[kick and bass drop out]\n[FM synth lead accents with high resonance]\n[pad swells in volume]\n\n[Outro]\n[kick and bass return]\n[instruments layer out one by one until only the synth pluck remains]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T17:15:56"
+  "status": "ok"
 }

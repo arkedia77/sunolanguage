@@ -4,29 +4,18 @@
   "artist": "Cannonball Adderley Quintet",
   "genre": "Jazz",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "b7ff66c5-812f-4fc8-ac26-7650df810c1b",
+      "tags": "Hard rock drum solo. The performance features a standard five-piece acoustic drum kit with a bright, resonant snare and a punchy kick drum. The drummer executes a series of syncopated fills across the rack and floor toms, interspersed with rapid double-kick patterns. High-velocity sixteenth-note snare rolls transition into heavy accents on the crash and ride cymbals. The recording has a dry, close-mic'd aesthetic with minimal room reverb, emphasizing the transient attack of the sticks. 130 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[snare hit, kick drum pulse]\n\n[Section A]\n[syncopated snare and kick pattern]\n[crash cymbal accents]\n\n[Section B]\n[rapid tom-tom fills]\n[double-kick drum pedal patterns]\n\n[Outro]\n[sustained cymbal wash, final snare crack]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "7e3dead7-4d9d-4663-8682-a1446081921f",
-      "tags": "Hard rock. Distorted electric guitar plays a repetitive, palm-muted riff centered on a low E pedal tone. The drum kit features a dry, punchy snare and a resonant kick drum playing a syncopated pattern that emphasizes the first and third beats. A distorted bass guitar doubles the guitar riff. The tempo is 120 BPM in 4/4 time. The guitar tone uses high gain with a mid-range boost.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[palm-muted distorted electric guitar riff]\n[syncopated kick drum and snare enter]\n[distorted bass guitar enters]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "0e7d2fe7-f357-49f7-bf93-3ad089f804ea",
-      "tags": "Hard rock drum solo. The performance features a high-fidelity acoustic drum kit with a resonant, punchy kick drum, a crisp snare with a bright crack, and multiple rack and floor toms. The drummer executes rapid-fire sixteenth-note fills across the toms and snare. The hi-hat is played partially open for a washier texture, while the ride cymbal is struck on the bell for a piercing, rhythmic accent. Frequent crash cymbal hits punctuate the phrases. The recording has a natural room reverb with a slight compression on the overheads. 120 BPM. 4/4 time signature.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[snare and hi-hat count-in]\n\n[Main Section]\n[driving kick drum, syncopated snare hits]\n[rapid sixteenth-note tom fills]\n[open hi-hat wash]\n[ride cymbal bell accents]\n[crash cymbal hits on downbeats]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "c52c815e-07db-4c2c-8e07-90ed5856727e",
-      "tags": "Hardcore punk with heavy thrash metal influence. Distorted electric guitars play fast, palm-muted down-strokes and rapid power chord transitions. The bass guitar follows the guitar riffs with a thick, overdriven tone. Drums feature a high-tempo d-beat pattern with a sharp, cracking snare and constant eighth-note hi-hat hits. Vocals are shouted in a rhythmic, aggressive hardcore style with high-pitched screams layered in the background. The recording has a raw, lo-fi aesthetic with minimal stereo separation. Tempo is 185 BPM in the key of E minor.",
-      "prompt": "[Intro]\n[fast distorted guitar riff, d-beat drumming, bass enters]\n[high-pitched vocal scream]\n\n[Verse 1]\n[shouted male vocals]\nStep back! [cymbal crash]\nGet the fuck back!\n[palm-muted guitar chugging]\nStep back!\nGet the fuck back!\n\n[Chorus]\n[faster tempo, rapid snare hits]\nGo! Go! Go! Go!\n[feedback swell]\nGo! Go! Go! Go!\n[guitar solo with heavy wah effect]"
+      "uuid": "6ae0a43f-0b02-4935-a947-1866204bd9ea",
+      "tags": "Industrial techno with heavy distortion and mechanical textures. A distorted kick drum with a long, saturated sub-tail provides the rhythmic core at 130 BPM in the key of F minor. A metallic, percussive synth sequence repeats a syncopated sixteenth-note pattern with a resonant low-pass filter sweep. High-frequency white noise bursts and bit-crushed industrial clangs occur on the off-beats. A gritty, monophonic saw-wave bassline follows the kick pattern with slight portamento between notes. The track features a dense, claustrophobic mix with heavy compression and short room reverb on the percussion.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted kick drum with sub-tail, metallic percussion]\n\n[Main Section]\n[syncopated sixteenth-note synth sequence enters]\n[bit-crushed industrial clangs]\n[resonant filter sweep on synth]\n\n[Outro]\n[kick drum fades, white noise bursts continue]\n[low-pass filter closes on all elements]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:20:25"
+  "status": "ok"
 }

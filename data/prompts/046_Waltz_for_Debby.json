@@ -4,25 +4,18 @@
   "artist": "Bill Evans Trio",
   "genre": "Jazz",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
-    "bass": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
     "drums": {
       "status": "ok",
-      "uuid": "fb4d6d07-899e-4769-a41c-0c8cfd7fad48",
+      "uuid": "14e474e8-77a8-4074-a0f7-5a3564453958",
       "tags": "Percussion ensemble piece featuring body percussion and found sounds. The arrangement consists of rhythmic hand claps, chest thumps, and finger snaps layered over a steady, resonant foot stomp. The rhythmic pattern is built on a syncopated 4/4 groove at 112 BPM. A metallic, percussive sound resembling a cowbell or struck metal pipe provides a steady quarter-note pulse. The piece utilizes call-and-response dynamics between different percussive timbres. The mix is dry with minimal room reverb, emphasizing the transient attack of the claps and the low-end resonance of the stomps. No melodic or harmonic instruments are present.",
       "prompt": "[Instrumental]\n\n[Intro]\n[steady foot stomps, rhythmic hand claps]\n\n[Section A]\n[syncopated finger snaps enter]\n[metallic cowbell-like pulse begins]\n\n[Section B]\n[chest thumps layered with stomps]\n[double-time hand clap accents]\n\n[Outro]\n[metallic pulse fades]\n[final resonant foot stomp]"
     },
-    "vocals": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "bass": {
+      "status": "ok",
+      "uuid": "03e86767-58ff-466d-8927-48de723ddf28",
+      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated jazz chords with a thumb-plucked bassline. A shaker provides a steady sixteenth-note pulse. A woodblock hits on the fourth beat of every second measure. The tempo is 120 BPM in 4/4 time. The key is C major. The guitar uses a fingerstyle technique with frequent use of major seventh and minor ninth voicings. The recording has a dry, intimate room acoustic with minimal artificial reverb.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[nylon string acoustic guitar playing syncopated chords]\n[shaker enters with sixteenth-note pattern]\n\n[Main Theme]\n[acoustic guitar continues with thumb-plucked bass notes]\n[woodblock hits on beat 4 of every other measure]\n\n[Outro]\n[shaker fades out]\n[final sustained acoustic guitar chord]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T15:50:47"
+  "status": "ok"
 }

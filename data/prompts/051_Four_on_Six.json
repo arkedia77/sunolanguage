@@ -4,27 +4,18 @@
   "artist": "Wes Montgomery",
   "genre": "Jazz",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
-    "bass": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
     "drums": {
       "status": "ok",
-      "uuid": "841d9a0d-b4eb-4b51-8a71-0a129be69298",
-      "tags": "Solo acoustic guitar fingerstyle performance. The arrangement features a constant alternating thumb bass pattern on the lower strings while the index and middle fingers play syncopated melody lines and chordal fragments on the higher strings. The guitar has a bright, steel-string timbre with prominent fret noise and percussive string slaps. The performance utilizes open tunings with frequent use of hammer-ons, pull-offs, and slides to connect melodic phrases. The tempo is 115 BPM in 4/4 time. The recording has a close-mic proximity effect with minimal room reverb.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[bright steel-string acoustic guitar enters with alternating thumb bass]\n\n[Section A]\n[syncopated melody over steady quarter-note bass notes]\n[percussive string slaps on beats 2 and 4]\n\n[Section B]\n[ascending melodic runs using hammer-ons and pull-offs]\n[sustained open string drones]\n\n[Outro]\n[ritardando]\n[final strummed open chord with natural resonance]"
+      "uuid": "02ec83d9-df96-4911-a760-844b1672e817",
+      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A high-gain lead guitar performs rapid alternate picking and pinch harmonics. The bass guitar follows the guitar riffs with a thick, overdriven tone. The drum kit features a prominent double-kick pedal pattern, a crisp snare, and frequent crash cymbal accents. 140 BPM. 4/4 time signature. E Minor.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging riff, steady kick drum]\n[crash cymbal hits]\n\n[Main Riff]\n[full band enters, double-kick drum pattern, palm-muted guitar rhythm]\n[bass guitar with heavy distortion]\n\n[Lead Section]\n[lead guitar enters with high-gain solo, rapid alternate picking]\n[pinch harmonics and vibrato]\n\n[Outro]\n[sustained power chords, drum fills with heavy tom-tom use]\n[final crash cymbal]"
     },
-    "vocals": {
-      "status": "ok",
-      "uuid": "ccec9a2c-6ac2-4df1-910e-46c2c3e79a1a",
-      "tags": "Bossa nova and Latin jazz. Nylon string acoustic guitar plays syncopated fingerstyle chords with a steady thumb-plucked bassline. A flute performs melodic improvisations using trills, flutter-tonguing, and rapid scalar runs. Percussion consists of a shaker playing consistent sixteenth notes and a woodblock or rimshot hitting on the fourth beat of every second measure. The tempo is 124 BPM in 4/4 time. The key is G major. The arrangement maintains a sparse, acoustic texture with a dry mix and minimal artificial reverb.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[nylon string acoustic guitar, syncopated fingerstyle pattern]\n[shaker enters with sixteenth notes]\n\n[Main Theme]\n[flute enters with legato melody]\n[woodblock accents on beat 4 of alternating measures]\n\n[Flute Solo]\n[flute performs rapid trills and chromatic runs]\n[acoustic guitar continues rhythmic comping]\n\n[Outro]\n[flute melody slows]\n[shaker fades out]\n[final sustained acoustic guitar chord]"
+    "bass": {
+      "status": "blocked",
+      "uuid": null,
+      "tags": "",
+      "prompt": ""
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T16:28:27"
+  "status": "partial"
 }

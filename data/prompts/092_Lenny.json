@@ -4,29 +4,18 @@
   "artist": "Stevie Ray Vaughan",
   "genre": "Funk / Soul / Blues Instrumental",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
+    "drums": {
+      "status": "ok",
+      "uuid": "24bfc98d-6794-4201-8c2b-3375898e8d1f",
+      "tags": "Drum break, funk style. Acoustic drum kit with a dry, tight room sound. The kick drum features a short decay and emphasizes the fundamental frequency around 60Hz. The snare drum is tuned high with a crisp, metallic ring and prominent ghost notes between the primary backbeats. Hi-hats are played slightly open, creating a consistent sizzle on eighth-note subdivisions. The pattern utilizes syncopated kick placements on the 'and' of beats 1 and 3, while the snare maintains a steady backbeat on 2 and 4 with occasional syncopated accents. 105 BPM, 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[four-bar drum break, dry acoustic kit]\n[syncopated kick drum, ghost note snare accents]\n\n[Main Section]\n[steady hi-hat eighth notes with slight sizzle]\n[snare backbeat on 2 and 4]\n[kick drum syncopation on the off-beats]\n\n[Outro]\n[final snare hit with natural room decay]"
     },
     "bass": {
       "status": "ok",
-      "uuid": "59348c46-9a8d-4a95-b2ed-497eed83fb91",
-      "tags": "Hard rock with heavy metal influences. The track features a high-gain distorted electric guitar playing a syncopated, palm-muted riff centered around a low E pedal tone. A second electric guitar provides harmonized lead lines and sustained power chords. The bass guitar is heavily overdriven, doubling the guitar riff with a metallic clank. The drum kit consists of a punchy kick drum, a dry snare with a sharp crack, and bright hi-hats played with a loose, sloshy texture. The tempo is 120 BPM in 4/4 time. The production is dry with minimal reverb, emphasizing the mid-range bite of the guitars. The arrangement focuses on a repetitive, driving groove with occasional cymbal accents and brief pauses for rhythmic emphasis.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar riff with palm muting]\n[overdriven bass enters doubling the riff]\n\n[Main Section]\n[full drum kit enters with driving kick and snare]\n[sloshy hi-hat accents]\n[rhythmic pauses with guitar feedback]\n\n[Outro]\n[sustained power chord]\n[final kick drum hit]"
-    },
-    "drums": {
-      "status": "ok",
-      "uuid": "35d8d9de-14d5-468c-8450-9f8596f2375d",
-      "tags": "Funk-rock instrumental. A dry, percussive electric guitar plays a syncopated 16th-note rhythmic scratch pattern using muted strums and dominant 9th chords. The bass guitar performs a slap-and-pop technique, locking with the kick drum on the downbeat and executing rapid octaves and chromatic passing tones. Drums consist of a tight, high-tuned snare with a crisp crack and a dry kick drum. The tempo is 110 BPM in 4/4 time. The arrangement features a call-and-response between the guitar's rhythmic stabs and the bass guitar's melodic fills. The production is dry with minimal reverb, emphasizing the transient peaks of the percussion and string attacks.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[percussive muted guitar strums]\n[slap bass enters with syncopated octaves]\n[tight snare and dry kick drum enter]\n\n[Main Groove]\n[clean electric guitar playing 16th-note funk riffs]\n[bass guitar performs melodic pops and slides]\n[steady eighth-note hi-hat pattern]"
-    },
-    "vocals": {
-      "status": "ok",
-      "uuid": "ce79fe5f-15c0-45f3-a5df-e8b9d9bac5ac",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play palm-muted chugging riffs and power chords. A high-gain lead guitar performs rapid alternate picking and melodic shredding. The bass guitar follows the root notes of the guitar riffs with a gritty, overdriven tone. Acoustic drums feature a prominent double-kick pedal pattern, a sharp snare, and frequent crash cymbal accents. 140 BPM. 4/4 time signature. E minor.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar chugging riff, palm-muted eighth notes]\n[drums enter with double-kick patterns and crash cymbals]\n\n[Main Theme]\n[lead electric guitar enters with high-gain melodic riff]\n[bass guitar follows rhythm guitar root notes]\n\n[Bridge]\n[rhythm guitar shifts to sustained power chords]\n[drum fill with rapid snare and tom hits]\n\n[Solo Section]\n[lead guitar performs rapid alternate picking and legato runs]\n[rhythm section maintains driving double-kick groove]\n\n[Outro]\n[final power chord ring out with guitar feedback]\n[cymbal swell]"
+      "uuid": "b8738930-bc64-4257-b579-5b3d4521bdc1",
+      "tags": "Funk-rock instrumental. The arrangement features a clean, percussive electric guitar playing a syncopated 16th-note rhythmic pattern with frequent muted strums. A prominent electric bass guitar performs a slap-and-pop technique, locking tightly with the kick drum. The drum kit maintains a steady backbeat with a crisp snare and a tight, closed hi-hat. Occasional open hi-hat accents and subtle crash cymbal hits punctuate the transitions. The tempo is 105 BPM in 4/4 time. The mix is dry with minimal reverb, emphasizing the rhythmic interplay between the bass and guitar.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated clean electric guitar riff with muted strums]\n[slap bass enters with percussive pops]\n[drum kit enters with steady kick and closed hi-hat]\n\n[Main Theme]\n[slap bass and guitar lock into a repetitive funk groove]\n[snare hits on beats 2 and 4]\n[occasional open hi-hat accents]\n\n[Bridge]\n[bass performs melodic fills using slides and hammer-ons]\n[guitar maintains rhythmic scratching]\n\n[Outro]\n[groove continues with slight variations in bass intensity]\n[final snare hit and guitar chord ring out]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T19:46:10"
+  "status": "ok"
 }

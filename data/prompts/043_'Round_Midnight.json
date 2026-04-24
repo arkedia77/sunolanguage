@@ -4,29 +4,18 @@
   "artist": "Thelonious Monk",
   "genre": "Jazz",
   "stems": {
-    "other": {
-      "status": "error",
-      "error": "ElementHandle.set_input_files: Cannot transfer files larger than 50Mb to a browser not co-located with the server"
-    },
-    "bass": {
-      "status": "ok",
-      "uuid": "03bd4c5f-26cc-4b28-b146-15bbc990ac12",
-      "tags": "Hard rock with heavy metal influences. Distorted electric guitars play a palm-muted, syncopated riff centered on E. The drum kit features a prominent double-kick pedal pattern with rapid sixteenth-note bursts and a high-tuned, cracking snare. A distorted bass guitar follows the guitar riff in unison. The tempo is 140 BPM in 4/4 time. The arrangement consists of a rhythmic instrumental groove with a focus on low-end punch and high-gain saturation. Lead guitar layers provide occasional sustained feedback and pick slides. The production is dry with minimal reverb on the rhythm section.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[distorted electric guitar palm-muted riff, syncopated kick drum]\n\n[Main Section]\n[full drum kit enters, double-kick pedal bursts]\n[distorted bass guitar in unison with guitar riff]\n[sustained guitar feedback swell]\n\n[Outro]\n[final snare hit, guitar ring out]"
-    },
     "drums": {
       "status": "ok",
-      "uuid": "bd2b3cff-15a9-40ba-ac21-f06bd8d9250e",
+      "uuid": "2991559b-2ff8-4cda-93db-e451c1af24bf",
       "tags": "Industrial techno. A distorted, resonant kick drum provides a heavy, saturated low-end pulse. A metallic, high-pitched percussive loop repeats a syncopated pattern with a short decay. A white noise snare hit occurs on the backbeat with a long reverb tail. A dark, filtered synthesizer pad swells in the background with a slow LFO modulation on the cutoff frequency. The tempo is 130 BPM. The track features a minimalist, repetitive structure focused on timbral evolution and rhythmic density. High-frequency hats enter with a sixteenth-note shuffle pattern. A gritty, monophonic synth bassline plays a two-note sequence emphasizing the tonic.",
       "prompt": "[Instrumental]\n\n[Intro]\n[distorted resonant kick drum, metallic percussive loop]\n\n[Section A]\n[white noise snare with reverb, filtered synth pad swells]\n\n[Section B]\n[sixteenth-note hi-hat shuffle, gritty synth bassline enters]"
     },
-    "vocals": {
+    "bass": {
       "status": "ok",
-      "uuid": "fc7b7e72-64f4-4927-98ab-075b7ce876d7",
-      "tags": "Bossa nova. Nylon string acoustic guitar plays syncopated jazz chords with a thumb-driven bassline. A flute performs a melodic lead with frequent vibrato and breathy articulation. Percussion consists of a shaker playing consistent sixteenth notes and a triangle hitting on the offbeats. The tempo is 124 BPM in 4/4 time. The guitar uses a fingerstyle technique with a soft attack, while the flute melody features chromatic passing tones and wide interval leaps. The recording has a dry, intimate room acoustic with minimal artificial reverb.",
-      "prompt": "[Instrumental]\n\n[Intro]\n[syncopated nylon string acoustic guitar chords]\n\n[Main Theme]\n[flute enters with melodic lead]\n[shaker and triangle percussion enter]\n\n[Bridge]\n[flute performs trills and rapid scale runs]\n[guitar maintains steady rhythmic pattern]\n\n[Outro]\n[percussion fades out]\n[final sustained flute note with vibrato]\n[staccato guitar chord]"
+      "uuid": "0494485d-be82-4cf1-8227-8a5f471bb01f",
+      "tags": "Cinematic orchestral suspense. A low-frequency synth drone provides a constant sub-bass floor. A deep, resonant orchestral bass drum strikes on the downbeat of every four-bar phrase with a long decay. A metallic, high-pitched percussive hit with heavy plate reverb occurs on the fourth beat of every second measure. A staccato cello motif repeats a three-note descending minor pattern. A solo violin enters with a sustained, vibrato-heavy high note that slowly crescendos. Key of D minor. 72 BPM. 4/4 time signature.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[low synth drone, resonant orchestral bass drum]\n\n[Section A]\n[staccato cello motif enters]\n[metallic percussion hit with heavy reverb]\n\n[Section B]\n[sustained high violin note with slow crescendo]\n[bass drum continues on downbeats]"
     }
   },
-  "status": "partial",
-  "retried_at": "2026-04-07T15:29:51"
+  "status": "ok"
 }

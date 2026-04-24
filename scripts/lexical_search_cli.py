@@ -19,13 +19,37 @@
 """
 import argparse
 import json
+import re
 import sqlite3
 import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data" / "reanalysis_v2"
+PROMPTS = REPO / "data" / "prompts"
 DB = DATA / "lexical_index.sqlite"
+
+STOPWORDS = {
+    'the', 'a', 'an', 'and', 'or', 'in', 'on', 'at', 'to', 'of', 'is',
+    'with', 'for', 'by', 'its', 'it', 'as', 'are', 'was', 'has', 'be',
+    'from', 'this', 'that', 'which', 'into', 'each', 'both', 'while',
+}
+SECTION_RE = re.compile(
+    r'^(Intro|Verse|Chorus|Bridge|Outro|Pre-Chorus|Hook|Section|'
+    r'Instrumental|Refrain|Interlude|Build|Climax|Main|Drop|Guitar Solo)\b', re.I
+)
+SOURCE_COL = {
+    'sp_entity': 'sp', 'suno_sp_full': 'sp', 'leomusic_sp_full': 'sp',
+    'bracket_entity': 'bracket',
+    'stems_sp': 'stems_sp',
+    'stems_bracket': 'stems_bracket',
+}
+
+
+def tokenize(text):
+    text = text.lower()
+    text = re.sub(r'[^\w\s\-]', ' ', text)
+    return [w for w in text.split() if len(w) >= 2 and w not in STOPWORDS]
 
 
 def build_index():
@@ -114,6 +138,37 @@ def build_index():
             rid += 1
             rows.append((rid, "leomusic_sp_full", "", sid, genre, lo["sp"], "", "", "", "", "", "", ""))
 
+    # stems from prompts/*.json
+    if PROMPTS.exists():
+        for pf in sorted(PROMPTS.glob("*.json")):
+            pdata = json.loads(pf.read_text())
+            if pdata.get("status") != "ok":
+                continue
+            sid = pdata.get("id")
+            genre = pdata.get("genre", "")
+            stem_type = None
+            for stem_name, stem in pdata.get("stems", {}).items():
+                if not isinstance(stem, dict) or stem.get("status") != "ok":
+                    continue
+                stem_type = stem_name
+                tags = stem.get("tags", "")
+                if tags:
+                    for sent in re.split(r'(?<=[.!?])\s+', tags):
+                        sent = sent.strip().rstrip('.')
+                        if not sent or len(sent) < 10:
+                            continue
+                        rid += 1
+                        rows.append((rid, "stems_sp", "", sid, genre, sent,
+                                     "", "", "", "", "", "", ""))
+                prompt = stem.get("prompt", "")
+                if prompt:
+                    brackets = re.findall(r'\[([^\]]+)\]', prompt)
+                    for b in brackets:
+                        rid += 1
+                        slot = "section" if SECTION_RE.match(b) else ""
+                        rows.append((rid, "stems_bracket", slot, sid, genre, b,
+                                     "", "", "", "", "", "", ""))
+
     c.executemany(
         "INSERT INTO entries("
         "id,source,slot,song_id,genre,sentence,entity,modifiers,pattern,"
@@ -131,11 +186,97 @@ def build_index():
     c.execute("CREATE INDEX idx_layer ON entries(layer)")
     c.execute("CREATE INDEX idx_role ON entries(role)")
 
+    # --- words / phrases / word_phrase_map ---
+    c.execute("""
+        CREATE TABLE words (
+            id INTEGER PRIMARY KEY,
+            word TEXT UNIQUE NOT NULL,
+            freq_total INTEGER DEFAULT 0,
+            freq_sp INTEGER DEFAULT 0,
+            freq_bracket INTEGER DEFAULT 0,
+            freq_stems_sp INTEGER DEFAULT 0,
+            freq_stems_bracket INTEGER DEFAULT 0
+        )
+    """)
+    c.execute("CREATE INDEX idx_word ON words(word)")
+
+    c.execute("""
+        CREATE TABLE phrases (
+            id INTEGER PRIMARY KEY,
+            phrase TEXT NOT NULL,
+            source TEXT NOT NULL,
+            song_id INTEGER,
+            genre TEXT,
+            slot TEXT
+        )
+    """)
+    c.execute("CREATE INDEX idx_phrase ON phrases(phrase)")
+    c.execute("CREATE INDEX idx_phrase_source ON phrases(source)")
+
+    c.execute("""
+        CREATE TABLE word_phrase_map (
+            word_id INTEGER NOT NULL,
+            phrase_id INTEGER NOT NULL,
+            position INTEGER,
+            PRIMARY KEY (word_id, phrase_id, position),
+            FOREIGN KEY (word_id) REFERENCES words(id),
+            FOREIGN KEY (phrase_id) REFERENCES phrases(id)
+        )
+    """)
+
+    word_freq = {}
+    phrases_list = []
+    word_phrase_links = []
+
+    for row in rows:
+        rid_r, source, slot, sid, genre, sentence, entity, *_ = row
+        text = entity if entity else sentence
+        if not text:
+            continue
+        col = SOURCE_COL.get(source, 'sp')
+        phrase_idx = len(phrases_list)
+        phrases_list.append((text, source, sid, genre, slot))
+
+        words = tokenize(text)
+        for pos, w in enumerate(words):
+            if w not in word_freq:
+                word_freq[w] = {'sp': 0, 'bracket': 0, 'stems_sp': 0, 'stems_bracket': 0}
+            word_freq[w][col] += 1
+            word_phrase_links.append((w, phrase_idx, pos))
+
+    word_id_map = {}
+    for i, w in enumerate(sorted(word_freq.keys()), 1):
+        word_id_map[w] = i
+
+    c.executemany(
+        "INSERT INTO words(id, word, freq_total, freq_sp, freq_bracket, "
+        "freq_stems_sp, freq_stems_bracket) VALUES(?,?,?,?,?,?,?)",
+        [(word_id_map[w], w, sum(f.values()), f['sp'], f['bracket'],
+          f['stems_sp'], f['stems_bracket'])
+         for w, f in sorted(word_freq.items())]
+    )
+
+    c.executemany(
+        "INSERT INTO phrases(id, phrase, source, song_id, genre, slot) VALUES(?,?,?,?,?,?)",
+        [(i + 1, p[0], p[1], p[2], p[3], p[4]) for i, p in enumerate(phrases_list)]
+    )
+
+    c.executemany(
+        "INSERT OR IGNORE INTO word_phrase_map(word_id, phrase_id, position) VALUES(?,?,?)",
+        [(word_id_map[w], pidx + 1, pos) for w, pidx, pos in word_phrase_links]
+    )
+
     conn.commit()
-    print(f"✔ 인덱스 빌드 완료: {DB} ({len(rows):,} rows)")
+    print(f"✔ 인덱스 빌드 완료: {DB} ({len(rows):,} entries)")
     c.execute("SELECT source, COUNT(*) FROM entries GROUP BY source")
     for src, n in c.fetchall():
         print(f"    {src:22s} {n:6d}")
+    c.execute("SELECT COUNT(*) FROM words")
+    print(f"    {'words':22s} {c.fetchone()[0]:6d} unique")
+    c.execute("SELECT COUNT(*) FROM phrases")
+    print(f"    {'phrases':22s} {c.fetchone()[0]:6d}")
+    c.execute("SELECT COUNT(*) FROM word_phrase_map")
+    print(f"    {'word→phrase links':22s} {c.fetchone()[0]:6d}")
     conn.close()
 
 
@@ -217,6 +358,80 @@ def query(args):
     print(f"--- {n} matches (limit={args.limit}) ---")
 
 
+def word_query(args):
+    if not DB.exists():
+        print(f"인덱스 없음 — 먼저 실행: python3 {Path(__file__).name} build", file=sys.stderr)
+        sys.exit(1)
+
+    conn = sqlite3.connect(DB)
+    c = conn.cursor()
+
+    word = args.word.lower().strip()
+
+    c.execute("SELECT id, freq_total, freq_sp, freq_bracket, freq_stems_sp, freq_stems_bracket "
+              "FROM words WHERE word = ?", (word,))
+    row = c.fetchone()
+    if not row:
+        if args.like:
+            c.execute("SELECT word, freq_total, freq_sp, freq_bracket, freq_stems_sp, freq_stems_bracket "
+                       "FROM words WHERE word LIKE ? ORDER BY freq_total DESC LIMIT ?",
+                       (f"%{word}%", args.limit))
+            matches = c.fetchall()
+            if not matches:
+                print(f"'{word}' 포함 단어 없음")
+                return
+            print(f"'{word}' 포함 단어 {len(matches)}개:")
+            for w, ft, fsp, fbr, fss, fsb in matches:
+                print(f"  {w:30s}  total={ft:4d}  sp={fsp:4d}  bracket={fbr:4d}  stems_sp={fss:4d}  stems_bracket={fsb:4d}")
+            return
+        print(f"'{word}' 미발견. --like 옵션으로 부분 검색 가능")
+        return
+
+    wid, ft, fsp, fbr, fss, fsb = row
+    print(f"단어: {word}")
+    print(f"  빈도: total={ft}  sp={fsp}  bracket={fbr}  stems_sp={fss}  stems_bracket={fsb}")
+
+    c.execute("""
+        SELECT p.phrase, p.source, p.genre
+        FROM word_phrase_map m JOIN phrases p ON m.phrase_id = p.id
+        WHERE m.word_id = ?
+        ORDER BY p.source, p.phrase
+        LIMIT ?
+    """, (wid, args.limit))
+    phrases = c.fetchall()
+    if phrases:
+        print(f"\n  연결 구문 ({len(phrases)}개):")
+        for phrase, src, genre in phrases:
+            print(f"    [{src:15s}] ({genre[:20] if genre else '-':20s}) {phrase[:120]}")
+
+    conn.close()
+
+
+def word_top(args):
+    if not DB.exists():
+        print(f"인덱스 없음", file=sys.stderr)
+        sys.exit(1)
+
+    conn = sqlite3.connect(DB)
+    c = conn.cursor()
+
+    col = f"freq_{args.source}" if args.source else "freq_total"
+    valid_cols = {'freq_total', 'freq_sp', 'freq_bracket', 'freq_stems_sp', 'freq_stems_bracket'}
+    if col not in valid_cols:
+        print(f"잘못된 source: {args.source}. 사용: sp/bracket/stems_sp/stems_bracket")
+        return
+
+    where = f"WHERE {col} > 0" if args.source else ""
+    c.execute(f"SELECT word, freq_total, freq_sp, freq_bracket, freq_stems_sp, freq_stems_bracket "
+              f"FROM words {where} ORDER BY {col} DESC LIMIT ?", (args.limit,))
+
+    print(f"{'word':30s} {'total':>6s} {'sp':>6s} {'brkt':>6s} {'st_sp':>6s} {'st_br':>6s}")
+    print("-" * 80)
+    for w, ft, fsp, fbr, fss, fsb in c.fetchall():
+        print(f"{w:30s} {ft:6d} {fsp:6d} {fbr:6d} {fss:6d} {fsb:6d}")
+    conn.close()
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -226,7 +441,7 @@ def main():
     qp = sub.add_parser("q", help="쿼리")
     qp.add_argument("query", help="FTS5 검색어 (따옴표로 구문 검색: '\"close mic\"')")
     qp.add_argument("--slot", help="슬롯 제한 (instrument/drums/tempo_key_time/...)")
-    qp.add_argument("--source", help="소스 제한 (sp_entity/bracket_entity/suno_sp_full/leomusic_sp_full)")
+    qp.add_argument("--source", help="소스 제한 (sp_entity/bracket_entity/suno_sp_full/leomusic_sp_full/stems_sp/stems_bracket)")
     qp.add_argument("--genre", help="장르 LIKE 제한")
     qp.add_argument("--song-id", type=int, help="특정 곡")
     qp.add_argument("--kit", help="악기 family (guitar/bass/keys/synth/strings/brass/other)")
@@ -235,9 +450,22 @@ def main():
     qp.add_argument("--limit", type=int, default=15, help="결과 상한 (기본 15)")
     qp.add_argument("--count", action="store_true", help="매칭 개수만 출력")
 
+    wqp = sub.add_parser("wq", help="단어 검색 (words 테이블)")
+    wqp.add_argument("word", help="검색할 단어")
+    wqp.add_argument("--like", action="store_true", help="부분 매칭 (LIKE)")
+    wqp.add_argument("--limit", type=int, default=30, help="결과 상한")
+
+    wtp = sub.add_parser("wtop", help="빈도 상위 단어")
+    wtp.add_argument("--source", help="소스 제한 (sp/bracket/stems_sp/stems_bracket)")
+    wtp.add_argument("--limit", type=int, default=50, help="결과 상한")
+
     args = ap.parse_args()
     if args.cmd == "build":
         build_index()
+    elif args.cmd == "wq":
+        word_query(args)
+    elif args.cmd == "wtop":
+        word_top(args)
     else:
         query(args)
 

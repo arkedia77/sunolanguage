@@ -6,13 +6,15 @@
   "stems": {
     "drums": {
       "status": "ok",
-      "description": "Funk and disco-pop fusion, A clean, DI-style electric guitar plays a syncopated rhythmic pattern using 16th-note scratches and palm-muted staccato chords, A bright, resonant acoustic guitar doubles the rhythmic accents, The bass guitar performs a melodic, walking line with frequent slides and percussive pops, A dry drum kit features a tight, high-tuned snare and a crisp hi-hat playing consistent 16th-note subdivisions with occasional open-hat accents, Handclaps are layered on the backbeat, The arrangement is centered in C major at 115 BPM Publish",
-      "card_title": "drums"
+      "uuid": "37c554ea-b4b5-42f9-8f4b-12e87528b06b",
+      "tags": "Percussion ensemble piece featuring a single wooden block or high-pitched wood percussion instrument. The performance consists of a steady, unadorned quarter-note pulse at 120 BPM. The timbre is dry with a short decay and minimal room resonance. The rhythm is strictly metronomic with no dynamic variation or syncopation. The recording captures a single monophonic source with a clean, transparent signal chain.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[woodblock quarter-note pulse at 120 BPM]\n\n[Main Section]\n[steady woodblock rhythm continues without variation]"
     },
     "bass": {
       "status": "ok",
-      "description": "Lo-fi hip hop beat, A Rhodes electric piano plays a jazz-influenced four-bar progression with a soft tremolo effect, The drum kit features a muffled, low-pass filtered kick drum and a crisp snare with a slight swing, A sub-bass synth follows the root notes of the piano chords, A recurring vinyl crackle and hiss layer persists throughout the track, A high-pitched, filtered synth lead enters with a simple, melodic motif using long sustain, 85 BPM, Key of C minor, 4/4 time Publish",
-      "card_title": "bass"
+      "uuid": "30f574e7-1635-44b2-bc66-fd8a67c906d8",
+      "tags": "Funk, disco-influenced instrumental. A clean, DI-style electric guitar plays a syncopated 16th-note scratch rhythm with frequent palm muting and percussive rakes. A slap bass guitar follows the guitar rhythm with aggressive thumb pops and finger plucks. The drum kit features a tight, high-tuned snare and a dry kick drum. Handclaps are layered on the backbeat. The tempo is 115 BPM in the key of E minor. The arrangement is sparse, focusing on the interlocking rhythmic relationship between the bass and the muted guitar strums.",
+      "prompt": "[Instrumental]\n\n[Intro]\n[percussive muted electric guitar scratch rhythm]\n[slap bass enters with syncopated pops]\n\n[Main Groove]\n[tight snare and dry kick drum enter]\n[handclaps on beats 2 and 4]\n[interlocking slap bass and muted guitar riffs]"
     }
   },
   "status": "ok"
