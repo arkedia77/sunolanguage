@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-04-24 19:00",
+  "from": "sunolanguage",
+  "to": "sunomusic",
+  "task": "Dead Budget 테스트 — 전공 용어 Suno 반응 검증 (2단계)",
+  "purpose": "Suno corpus 0회 전공 용어를 SP+가사에 넣어 생성 → 생성 결과를 다시 Suno 앱에 녹음하여 라운드트립 검증",
+  "total_tracks": 10,
+
+  "phase_1_generate": {
+    "description": "아래 10곡을 Suno Custom 모드에서 생성. SP=tags, 가사=lyrics 필드에 입력.",
+    "tracks": [
+      {
+        "id": "DB01",
+        "title": "DB01_Fugue_푸가구조",
+        "sp": "Baroque chamber ensemble. A three-voice fugue with subject entry in the soprano, answered by the alto, then the bass. Harpsichord and string trio. The subject is a stepwise ascending line in D minor. Stretto passages appear in the development. 80 BPM. 4/4 time signature.",
+        "lyrics": "[Intro]\n[Fugue Subject - Soprano]\n(instrumental)\n\n[Answer - Alto enters]\n(instrumental)\n\n[Subject - Bass enters]\n(instrumental)\n\n[Stretto - all voices]\n(instrumental)\n\n[Episode]\n(instrumental)\n\n[Final Entry - full texture]\n(instrumental)\n\n[Coda]\n(instrumental)",
+        "is_instrumental": true
+      },
+      {
+        "id": "DB02",
+        "title": "DB02_SonataForm_소나타형식",
+        "sp": "Classical orchestral piece in sonata form. Exposition with two contrasting themes in C major and G major. Development section modulates through E minor and A minor with motivic fragmentation. Recapitulation returns both themes in C major. Full orchestra with prominent violin and oboe. 120 BPM. 4/4 time.",
+        "lyrics": "[Exposition - Theme A, C major]\n(instrumental)\n\n[Exposition - Theme B, G major]\n(instrumental)\n\n[Development - modulation, E minor]\n(instrumental)\n\n[Development - fragmentation, A minor]\n(instrumental)\n\n[Recapitulation - Theme A returns, C major]\n(instrumental)\n\n[Recapitulation - Theme B, C major]\n(instrumental)\n\n[Coda]\n(instrumental)",
+        "is_instrumental": true
+      },
+      {
+        "id": "DB03",
+        "title": "DB03_Passaggio_파사지오벨칸토",
+        "sp": "Operatic ballad. Lyric tenor voice navigating the primo passaggio around E4 and secondo passaggio around A4 with consistent appoggio support. Bel canto technique with chiaroscuro tone. Piano accompaniment with arpeggiated chords. 72 BPM in F major. 3/4 time.",
+        "lyrics": "[Verse 1]\n[Chest voice, warm]\nNel silenzio della sera\nIl mio cuore cerca te\n\n[Pre-Chorus]\n[Passaggio transition, E4 to A4]\nSale il canto verso il cielo\n\n[Chorus]\n[Full voice, appoggio support]\nAmore mio, ritorna a me\nLa luce del mattino\n\n[Verse 2]\n[Piano, gentle]\nOgni stella mi ricorda\nIl tuo sguardo dolce e puro\n\n[Chorus]\n[Bel canto, chiaroscuro]\nAmore mio, ritorna a me\n\n[Outro]\n[Decrescendo, head voice]\n(hums softly)",
+        "is_instrumental": false
+      },
+      {
+        "id": "DB04",
+        "title": "DB04_Neapolitan6th_나폴리증6화음",
+        "sp": "Romantic piano solo. Expressive rubato melody in C minor. The harmonic progression features a Neapolitan sixth chord resolving to the dominant, followed by an Italian augmented sixth chord creating dramatic tension before the final cadence. Rich pedal sustain. 66 BPM. 4/4 time.",
+        "lyrics": "[Intro]\n[Rubato, pedal sustain]\n(instrumental)\n\n[Theme A]\n[C minor, expressive melody]\n(instrumental)\n\n[Neapolitan sixth chord - Db major]\n[Resolve to G dominant]\n(instrumental)\n\n[Italian augmented sixth]\n[Chromatic tension building]\n(instrumental)\n\n[Final Cadence]\n[Resolution to C minor]\n(instrumental)\n\n[Outro]\n[Dying away]\n(instrumental)",
+        "is_instrumental": true
+      },
+      {
+        "id": "DB05",
+        "title": "DB05_ContraryMotion_반진행성부진행",
+        "sp": "String quartet in B-flat major. Strict four-part voice leading with contrary motion between soprano and bass voices. Each voice moves by stepwise motion with proper resolution of dissonances. Violin I and cello in contrary motion, violin II and viola in oblique motion. 88 BPM. 4/4 time.",
+        "lyrics": "[Intro]\n[Violin I and Cello in contrary motion]\n(instrumental)\n\n[Section A]\n[Soprano ascends, bass descends]\n[Stepwise voice leading]\n(instrumental)\n\n[Section B]\n[Oblique motion - inner voices hold]\n[Contrary motion continues outer voices]\n(instrumental)\n\n[Climax]\n[All four voices, strict counterpoint]\n(instrumental)\n\n[Resolution]\n[Voices converge to unison]\n(instrumental)",
+        "is_instrumental": true
+      },
+      {
+        "id": "DB06",
+        "title": "DB06_MotivicDev_동기발전",
+        "sp": "Orchestral film score. A four-note motif introduced by solo French horn undergoes systematic motivic development — augmentation, diminution, inversion, and retrograde transformations across the orchestra. Strings provide harmonic foundation. Timpani and cymbals mark structural climaxes. 100 BPM in D minor. 4/4 time.",
+        "lyrics": "[Intro]\n[Solo French horn - four-note motif]\n(instrumental)\n\n[Augmentation]\n[Strings play motif at half speed]\n(instrumental)\n\n[Diminution]\n[Woodwinds play motif at double speed]\n(instrumental)\n\n[Inversion]\n[Trumpets play motif upside down]\n(instrumental)\n\n[Retrograde]\n[Full orchestra - motif backwards]\n(instrumental)\n\n[Climax]\n[sforzando, timpani, all transformations layered]\n(instrumental)\n\n[Coda]\n[Original motif returns, solo horn]\n(instrumental)",
+        "is_instrumental": true
+      },
+      {
+        "id": "DB07",
+        "title": "DB07_ColLegno_현악확장주법",
+        "sp": "Contemporary chamber music. String quartet with extended techniques. Violins play col legno battuto on the opening ostinato. Viola performs sul ponticello tremolo creating glassy harmonics. Cello uses sul tasto for a breathy, diffused tone. Con sordino throughout. Sparse texture with long silences. 54 BPM in A minor. Free meter.",
+        "lyrics": "[Intro]\n[col legno battuto - violins tap with wood]\n(instrumental)\n\n[Section A]\n[sul ponticello - viola bows near bridge]\n[Glassy, metallic harmonics]\n(instrumental)\n\n[Section B]\n[sul tasto - cello bows over fingerboard]\n[Breathy, diffused tone]\n(instrumental)\n\n[Section C]\n[con sordino - all muted]\n[pppp, barely audible]\n(instrumental)\n\n[Climax]\n[Remove mutes, ordinary bowing, forte]\n(instrumental)\n\n[Outro]\n[Return to col legno, dying away]\n(instrumental)",
+        "is_instrumental": true
+      },
+      {
+        "id": "DB08",
+        "title": "DB08_Coloratura_콜로라투라카덴차",
+        "sp": "Operatic aria. Soprano voice performing elaborate coloratura passages with rapid melismatic runs spanning two octaves. Cadenza section features trills, turns, and ascending chromatic scales. Orchestra provides light staccato accompaniment. 132 BPM in E-flat major. 3/4 time.",
+        "lyrics": "[Orchestral Intro]\n(instrumental)\n\n[Aria - Verse]\nO luce eterna che risplendi\nNel cielo vasto e infinito\n\n[Coloratura passage]\nA~a~a~a~a~a~a~ah\n(melismatic runs, two octaves)\n\n[Verse 2]\nLa voce sale come il vento\nOltre le stelle e il firmamento\n\n[Cadenza - solo voice]\n(trills, turns, ascending scales)\nA~a~a~a~ah\n\n[Final phrase]\n[Orchestra returns]\nEterna luce, splendi su di me\n\n[Outro]\n(instrumental)",
+        "is_instrumental": false
+      },
+      {
+        "id": "DB09",
+        "title": "DB09_Ritardando_리타르단도페르마타",
+        "sp": "Romantic orchestral piece. Strings play a sweeping melody with gradual ritardando approaching the climax. A fermata on the dominant chord creates suspense. The resolution arrives with a sforzando fortissimo on the tonic chord. Full orchestra in G minor. 96 BPM. 4/4 time.",
+        "lyrics": "[Intro]\n[pp, strings only]\n(instrumental)\n\n[Theme]\n[mp, sweeping melody]\n(instrumental)\n\n[Build]\n[crescendo, più mosso]\n(instrumental)\n\n[Ritardando]\n[Gradually slowing, tension building]\n(instrumental)\n\n[Fermata]\n[Hold — dominant chord, silence after]\n(instrumental)\n\n[Sforzando Resolution]\n[ff, sudden fortissimo on tonic]\n[Full orchestra explodes]\n(instrumental)\n\n[Coda]\n[pp, ritardando al niente]\n(instrumental)",
+        "is_instrumental": true
+      },
+      {
+        "id": "DB10",
+        "title": "DB10_Sprechgesang_슈프레히게장",
+        "sp": "Art song with piano. Mezzo-soprano with a tessitura centered around A3-E5. The verse sections use sprechgesang delivery — pitched speech between singing and speaking. The chorus transitions into full lyric singing. Piano plays broken chord patterns. 80 BPM in F minor. 4/4 time.",
+        "lyrics": "[Piano Intro]\n(instrumental)\n\n[Verse 1 - Sprechgesang]\n[Pitched speaking, not quite singing]\n빈 방에 앉아 창밖을 보면\n시간이 멈춘 것처럼 느껴져\n\n[Pre-Chorus - Parlando]\n[Speaking rhythm, melody emerging]\n말하듯 노래하듯 그 사이 어딘가\n\n[Chorus - Full lyric singing]\n[Mezzo-soprano, warm full voice]\n그리운 날들이여\n다시 돌아올 수 있을까\n\n[Verse 2 - Sprechgesang]\n[Return to pitched speech]\n거울 속에 비친 낯선 얼굴\n어제의 나는 어디로 갔을까\n\n[Chorus]\n[Full voice, tessitura A3-E5]\n그리운 날들이여\n\n[Outro]\n[Whispered, fading]\n(spoken) 다시... 돌아올 수 있을까...",
+        "is_instrumental": false
+      }
+    ]
+  },
+
+  "phase_2_roundtrip": {
+    "description": "Phase 1에서 생성된 10곡을 1분 컷 → Suno 앱에 녹음 → SP+가사 캡처",
+    "result_format": {
+      "path": "/Volumes/sunomusic/sunolanguage/prompts/",
+      "filename": "DB{번호}_{테스트명}.json",
+      "schema": {
+        "id": "DB01 등",
+        "title": "제목",
+        "is_instrumental": "bool",
+        "source": "dead_budget_test",
+        "phase1_uuid": "Phase 1에서 생성된 Suno 곡 UUID",
+        "full_track": {
+          "status": "ok | partial | failed",
+          "uuid": "Phase 2 재분석 UUID",
+          "tags": "Suno가 묘사한 SP",
+          "prompt": "Suno가 인식한 가사"
+        }
+      }
+    }
+  },
+
+  "naming_rule": "제목 = DB{번호}_{영문용어}_{한글용어}. 번호로 어떤 전공 용어 테스트인지 즉시 식별.",
+  "deadline": "여유 있음"
+}

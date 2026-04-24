@@ -1,0 +1,125 @@
+{
+  "purpose": "Dead Budget 용어 Suno 반응 테스트 — 378곡/5,070어휘 중 0회 용어를 SP+브라켓 가사에 삽입하여 Suno 반응 검증",
+  "created_at": "2026-04-24",
+  "method": "SP+가사로 Suno 생성 → 생성된 음악을 다시 Suno 앱에 녹음 → Suno가 뭐라고 묘사하는지 라운드트립 검증",
+
+  "test_prompts": [
+    {
+      "id": "DB_01",
+      "target_term": "fugue",
+      "category": "form",
+      "sp": "Baroque chamber ensemble. A three-voice fugue with subject entry in the soprano, answered by the alto, then the bass. Harpsichord and string trio. The subject is a stepwise ascending line in D minor. Stretto passages appear in the development. 80 BPM. 4/4 time signature.",
+      "lyrics": "[Intro]\n[Fugue Subject - Soprano]\n(instrumental)\n\n[Answer - Alto enters]\n(instrumental)\n\n[Subject - Bass enters]\n(instrumental)\n\n[Stretto - all voices]\n(instrumental)\n\n[Episode]\n(instrumental)\n\n[Final Entry - full texture]\n(instrumental)\n\n[Coda]\n(instrumental)",
+      "control_sp": "Baroque chamber ensemble. Harpsichord and string trio performing interlocking melodic lines with imitative counterpoint. A stepwise ascending melody in D minor passed between high, mid, and low registers. 80 BPM. 4/4 time signature.",
+      "control_lyrics": "[Intro]\n(instrumental)\n\n[Melody - high register]\n(instrumental)\n\n[Melody passed to mid register]\n(instrumental)\n\n[Melody passed to low register]\n(instrumental)\n\n[All instruments together]\n(instrumental)\n\n[Outro]\n(instrumental)",
+      "listen_for": "실제 푸가 구조(주제-응답-대주제)가 나오는지, 아니면 그냥 바로크풍 합주인지"
+    },
+    {
+      "id": "DB_02",
+      "target_term": "sonata form",
+      "category": "form",
+      "sp": "Classical orchestral piece in sonata form. Exposition with two contrasting themes in C major and G major. Development section modulates through E minor and A minor with motivic fragmentation. Recapitulation returns both themes in C major. Full orchestra with prominent violin and oboe. 120 BPM. 4/4 time.",
+      "lyrics": "[Exposition - Theme A, C major]\n(instrumental)\n\n[Exposition - Theme B, G major]\n(instrumental)\n\n[Development - modulation, E minor]\n(instrumental)\n\n[Development - fragmentation, A minor]\n(instrumental)\n\n[Recapitulation - Theme A returns, C major]\n(instrumental)\n\n[Recapitulation - Theme B, C major]\n(instrumental)\n\n[Coda]\n(instrumental)",
+      "control_sp": "Classical orchestral piece. Two contrasting melodic themes — one bright and bold, one lyrical and gentle. The middle section becomes turbulent and dramatic with key changes. The ending returns to the opening mood. Full orchestra with prominent violin and oboe. 120 BPM in C major. 4/4 time.",
+      "control_lyrics": "[Opening Theme - bright, bold]\n(instrumental)\n\n[Second Theme - lyrical, gentle]\n(instrumental)\n\n[Middle Section - turbulent, dramatic]\n(instrumental)\n\n[Key change - darker mood]\n(instrumental)\n\n[Return to Opening Theme]\n(instrumental)\n\n[Ending]\n(instrumental)",
+      "listen_for": "제시부-발전부-재현부 구조가 실제로 나타나는지, 전조가 지시대로 되는지"
+    },
+    {
+      "id": "DB_03",
+      "target_term": "passaggio / appoggio / bel canto",
+      "category": "vocal_technique",
+      "sp": "Operatic ballad. Lyric tenor voice navigating the primo passaggio around E4 and secondo passaggio around A4 with consistent appoggio support. Bel canto technique with chiaroscuro tone. Piano accompaniment with arpeggiated chords. 72 BPM in F major. 3/4 time.",
+      "lyrics": "[Verse 1]\n[Chest voice, warm]\nNel silenzio della sera\nIl mio cuore cerca te\n\n[Pre-Chorus]\n[Passaggio transition, E4 to A4]\nSale il canto verso il cielo\n\n[Chorus]\n[Full voice, appoggio support]\nAmore mio, ritorna a me\nLa luce del mattino\n\n[Verse 2]\n[Piano, gentle]\nOgni stella mi ricorda\nIl tuo sguardo dolce e puro\n\n[Chorus]\n[Bel canto, chiaroscuro]\nAmore mio, ritorna a me\n\n[Outro]\n[Decrescendo, head voice]\n(hums softly)",
+      "control_sp": "Operatic ballad. Male tenor voice with smooth transitions between chest voice and head voice, warm resonant tone with bright overtones. Piano accompaniment with arpeggiated chords. 72 BPM in F major. 3/4 time.",
+      "control_lyrics": "[Verse 1]\n[Warm chest voice]\nNel silenzio della sera\nIl mio cuore cerca te\n\n[Pre-Chorus]\n[Transitioning higher]\nSale il canto verso il cielo\n\n[Chorus]\n[Full powerful voice]\nAmore mio, ritorna a me\nLa luce del mattino\n\n[Verse 2]\n[Soft, gentle]\nOgni stella mi ricorda\nIl tuo sguardo dolce e puro\n\n[Chorus]\n[Warm resonant singing]\nAmore mio, ritorna a me\n\n[Outro]\n[Fading, soft high voice]\n(hums softly)",
+      "listen_for": "보컬이 음역 전환을 매끄럽게 하는지, passaggio/appoggio 지시가 실제 차이를 만드는지"
+    },
+    {
+      "id": "DB_04",
+      "target_term": "Neapolitan sixth / augmented sixth",
+      "category": "harmony",
+      "sp": "Romantic piano solo. Expressive rubato melody in C minor. The harmonic progression features a Neapolitan sixth chord resolving to the dominant, followed by an Italian augmented sixth chord creating dramatic tension before the final cadence. Rich pedal sustain. 66 BPM. 4/4 time.",
+      "lyrics": "[Intro]\n[Rubato, pedal sustain]\n(instrumental)\n\n[Theme A]\n[C minor, expressive melody]\n(instrumental)\n\n[Neapolitan sixth chord - Db major]\n[Resolve to G dominant]\n(instrumental)\n\n[Italian augmented sixth]\n[Chromatic tension building]\n(instrumental)\n\n[Final Cadence]\n[Resolution to C minor]\n(instrumental)\n\n[Outro]\n[Dying away]\n(instrumental)",
+      "control_sp": "Romantic piano solo. Expressive rubato melody in C minor. The harmonic progression features unexpected flat-key chords creating surprise, followed by a chromatic tension chord resolving dramatically to the final phrase. Rich pedal sustain. 66 BPM. 4/4 time.",
+      "control_lyrics": "[Intro]\n[Rubato, pedal sustain]\n(instrumental)\n\n[Theme A]\n[C minor, expressive melody]\n(instrumental)\n\n[Surprising flat chord]\n[Tension building]\n(instrumental)\n\n[Chromatic tension]\n[Dramatic build]\n(instrumental)\n\n[Resolution]\n[Final phrase]\n(instrumental)\n\n[Outro]\n[Dying away]\n(instrumental)",
+      "listen_for": "실제 나폴리 6화음(bII6)이나 증6화음이 들리는지, 아니면 그냥 로맨틱 피아노인지"
+    },
+    {
+      "id": "DB_05",
+      "target_term": "contrary motion / voice leading",
+      "category": "counterpoint",
+      "sp": "String quartet in B-flat major. Strict four-part voice leading with contrary motion between soprano and bass voices. Each voice moves by stepwise motion with proper resolution of dissonances. Violin I and cello in contrary motion, violin II and viola in oblique motion. 88 BPM. 4/4 time.",
+      "lyrics": "[Intro]\n[Violin I and Cello in contrary motion]\n(instrumental)\n\n[Section A]\n[Soprano ascends, bass descends]\n[Stepwise voice leading]\n(instrumental)\n\n[Section B]\n[Oblique motion - inner voices hold]\n[Contrary motion continues outer voices]\n(instrumental)\n\n[Climax]\n[All four voices, strict counterpoint]\n(instrumental)\n\n[Resolution]\n[Voices converge to unison]\n(instrumental)",
+      "control_sp": "String quartet in B-flat major. Violin and cello melodies moving in opposite directions. Smooth connected lines in all four parts. Violin I leads high while cello descends low, inner voices hold steady. 88 BPM. 4/4 time.",
+      "control_lyrics": "[Intro]\n[Violin high, Cello low]\n(instrumental)\n\n[Section A]\n[Violin rises, Cello falls]\n(instrumental)\n\n[Section B]\n[Inner strings hold steady]\n[Outer strings keep moving opposite]\n(instrumental)\n\n[Climax]\n[All four instruments together]\n(instrumental)\n\n[Resolution]\n[All instruments meet]\n(instrumental)",
+      "listen_for": "바이올린과 첼로가 실제로 반진행하는지, 4성부 진행 규칙이 지켜지는지"
+    },
+    {
+      "id": "DB_06",
+      "target_term": "motivic development (augmentation/diminution/inversion)",
+      "category": "composition",
+      "sp": "Orchestral film score. A four-note motif introduced by solo French horn undergoes systematic motivic development — augmentation, diminution, inversion, and retrograde transformations across the orchestra. Strings provide harmonic foundation. Timpani and cymbals mark structural climaxes. 100 BPM in D minor. 4/4 time.",
+      "lyrics": "[Intro]\n[Solo French horn - four-note motif]\n(instrumental)\n\n[Augmentation]\n[Strings play motif at half speed]\n(instrumental)\n\n[Diminution]\n[Woodwinds play motif at double speed]\n(instrumental)\n\n[Inversion]\n[Trumpets play motif upside down]\n(instrumental)\n\n[Retrograde]\n[Full orchestra - motif backwards]\n(instrumental)\n\n[Climax]\n[sforzando, timpani, all transformations layered]\n(instrumental)\n\n[Coda]\n[Original motif returns, solo horn]\n(instrumental)",
+      "control_sp": "Orchestral film score. A four-note melody introduced by solo French horn, then repeated by different instruments — stretched slower by strings, played faster by woodwinds, flipped upside down by trumpets. Timpani and cymbals mark structural climaxes. 100 BPM in D minor. 4/4 time.",
+      "control_lyrics": "[Intro]\n[Solo French horn - main melody]\n(instrumental)\n\n[Slow version]\n[Strings play melody slowly]\n(instrumental)\n\n[Fast version]\n[Woodwinds play melody quickly]\n(instrumental)\n\n[Flipped melody]\n[Trumpets play melody reversed pitch]\n(instrumental)\n\n[All together]\n[Full orchestra, loud climax]\n(instrumental)\n\n[Ending]\n[Horn returns with original melody]\n(instrumental)",
+      "listen_for": "동기가 실제로 확대/축소/전위/역행되는지, 아니면 그냥 주제 반복인지"
+    },
+    {
+      "id": "DB_07",
+      "target_term": "col legno / sul ponticello / sul tasto / con sordino",
+      "category": "string_technique",
+      "sp": "Contemporary chamber music. String quartet with extended techniques. Violins play col legno battuto on the opening ostinato. Viola performs sul ponticello tremolo creating glassy harmonics. Cello uses sul tasto for a breathy, diffused tone. Con sordino throughout. Sparse texture with long silences. 54 BPM in A minor. Free meter.",
+      "lyrics": "[Intro]\n[col legno battuto - violins tap with wood]\n(instrumental)\n\n[Section A]\n[sul ponticello - viola bows near bridge]\n[Glassy, metallic harmonics]\n(instrumental)\n\n[Section B]\n[sul tasto - cello bows over fingerboard]\n[Breathy, diffused tone]\n(instrumental)\n\n[Section C]\n[con sordino - all muted]\n[pppp, barely audible]\n(instrumental)\n\n[Climax]\n[Remove mutes, ordinary bowing, forte]\n(instrumental)\n\n[Outro]\n[Return to col legno, dying away]\n(instrumental)",
+      "control_sp": "Contemporary chamber music. String quartet with unusual textures. Violins tap strings with wooden percussive clicks on the opening pattern. Viola bows near the bridge creating thin metallic overtones. Cello bows over the fingerboard for a soft airy tone. All instruments muted. Sparse texture with long silences. 54 BPM in A minor.",
+      "control_lyrics": "[Intro]\n[Percussive string tapping]\n(instrumental)\n\n[Section A]\n[Bowing near the bridge]\n[Thin metallic sound]\n(instrumental)\n\n[Section B]\n[Bowing over fingerboard]\n[Soft airy tone]\n(instrumental)\n\n[Section C]\n[All muted, very quiet]\n(instrumental)\n\n[Climax]\n[Unmuted, full bowing, loud]\n(instrumental)\n\n[Outro]\n[Return to tapping, fading]\n(instrumental)",
+      "listen_for": "col legno(나무로 두드리기), sul ponticello(금속적 배음), sul tasto(부드러운 음색), con sordino(약음기)가 실제로 구분되는지"
+    },
+    {
+      "id": "DB_08",
+      "target_term": "coloratura / melisma / cadenza",
+      "category": "vocal_technique",
+      "sp": "Operatic aria. Soprano voice performing elaborate coloratura passages with rapid melismatic runs spanning two octaves. Cadenza section features trills, turns, and ascending chromatic scales. Orchestra provides light staccato accompaniment. 132 BPM in E-flat major. 3/4 time.",
+      "lyrics": "[Orchestral Intro]\n(instrumental)\n\n[Aria - Verse]\nO luce eterna che risplendi\nNel cielo vasto e infinito\n\n[Coloratura passage]\nA~a~a~a~a~a~a~ah\n(melismatic runs, two octaves)\n\n[Verse 2]\nLa voce sale come il vento\nOltre le stelle e il firmamento\n\n[Cadenza - solo voice]\n(trills, turns, ascending scales)\nA~a~a~a~ah\n\n[Final phrase]\n[Orchestra returns]\nEterna luce, splendi su di me\n\n[Outro]\n(instrumental)",
+      "control_sp": "Operatic aria. Soprano voice performing fast melodic runs and decorative vocal flourishes spanning two octaves. A solo vocal section features rapid trills and ascending scales. Orchestra provides light staccato accompaniment. 132 BPM in E-flat major. 3/4 time.",
+      "control_lyrics": "[Orchestral Intro]\n(instrumental)\n\n[Aria - Verse]\nO luce eterna che risplendi\nNel cielo vasto e infinito\n\n[Fast vocal runs]\nA~a~a~a~a~a~a~ah\n(rapid decorative flourishes)\n\n[Verse 2]\nLa voce sale come il vento\nOltre le stelle e il firmamento\n\n[Solo voice section]\n(trills and ascending scales)\nA~a~a~a~ah\n\n[Final phrase]\n[Orchestra returns]\nEterna luce, splendi su di me\n\n[Outro]\n(instrumental)",
+      "listen_for": "실제 콜로라투라 기교(빠른 음계, 트릴, 장식음)가 나오는지, cadenza에서 자유로운 독주가 나오는지"
+    },
+    {
+      "id": "DB_09",
+      "target_term": "ritardando / fermata / sforzando / pp / ff",
+      "category": "dynamics_tempo",
+      "sp": "Romantic orchestral piece. Strings play a sweeping melody with gradual ritardando approaching the climax. A fermata on the dominant chord creates suspense. The resolution arrives with a sforzando fortissimo on the tonic chord. Full orchestra in G minor. 96 BPM. 4/4 time.",
+      "lyrics": "[Intro]\n[pp, strings only]\n(instrumental)\n\n[Theme]\n[mp, sweeping melody]\n(instrumental)\n\n[Build]\n[crescendo, più mosso]\n(instrumental)\n\n[Ritardando]\n[Gradually slowing, tension building]\n(instrumental)\n\n[Fermata]\n[Hold — dominant chord, silence after]\n(instrumental)\n\n[Sforzando Resolution]\n[ff, sudden fortissimo on tonic]\n[Full orchestra explodes]\n(instrumental)\n\n[Coda]\n[pp, ritardando al niente]\n(instrumental)",
+      "control_sp": "Romantic orchestral piece. Strings play a sweeping melody gradually slowing down before the climax. A long held pause on a tension chord creates suspense. The resolution arrives with a sudden loud accent on the final chord. Full orchestra in G minor. 96 BPM. 4/4 time.",
+      "control_lyrics": "[Intro]\n[Very quiet, strings only]\n(instrumental)\n\n[Theme]\n[Medium volume, sweeping melody]\n(instrumental)\n\n[Build]\n[Getting louder and faster]\n(instrumental)\n\n[Slowing down]\n[Gradually slower, tension]\n(instrumental)\n\n[Long pause]\n[Hold tension chord, then silence]\n(instrumental)\n\n[Loud resolution]\n[Sudden full volume, all instruments]\n(instrumental)\n\n[Ending]\n[Fading to silence]\n(instrumental)",
+      "listen_for": "점진적 감속(rit.), 늘임(fermata), 강악센트(sfz), 다이나믹 대비(pp↔ff)가 표현되는지"
+    },
+    {
+      "id": "DB_10",
+      "target_term": "tessitura / sprechgesang / parlando",
+      "category": "vocal_range",
+      "sp": "Art song with piano. Mezzo-soprano with a tessitura centered around A3-E5. The verse sections use sprechgesang delivery — pitched speech between singing and speaking. The chorus transitions into full lyric singing. Piano plays broken chord patterns. 80 BPM in F minor. 4/4 time.",
+      "lyrics": "[Piano Intro]\n(instrumental)\n\n[Verse 1 - Sprechgesang]\n[Pitched speaking, not quite singing]\n빈 방에 앉아 창밖을 보면\n시간이 멈춘 것처럼 느껴져\n\n[Pre-Chorus - Parlando]\n[Speaking rhythm, melody emerging]\n말하듯 노래하듯 그 사이 어딘가\n\n[Chorus - Full lyric singing]\n[Mezzo-soprano, warm full voice]\n그리운 날들이여\n다시 돌아올 수 있을까\n\n[Verse 2 - Sprechgesang]\n[Return to pitched speech]\n거울 속에 비친 낯선 얼굴\n어제의 나는 어디로 갔을까\n\n[Chorus]\n[Full voice, tessitura A3-E5]\n그리운 날들이여\n\n[Outro]\n[Whispered, fading]\n(spoken) 다시... 돌아올 수 있을까...",
+      "control_sp": "Art song with piano. Female mezzo-soprano voice sitting mostly in the mid-range. The verse sections use a spoken-word melodic delivery between singing and talking. The chorus transitions into full warm singing. Piano plays broken chord patterns. 80 BPM in F minor. 4/4 time.",
+      "control_lyrics": "[Piano Intro]\n(instrumental)\n\n[Verse 1 - Spoken melodic]\n[Half-speaking, half-singing]\n빈 방에 앉아 창밖을 보면\n시간이 멈춘 것처럼 느껴져\n\n[Pre-Chorus]\n[Speaking with rhythm]\n말하듯 노래하듯 그 사이 어딘가\n\n[Chorus - Full singing]\n[Warm full voice]\n그리운 날들이여\n다시 돌아올 수 있을까\n\n[Verse 2 - Spoken melodic]\n[Return to half-speaking]\n거울 속에 비친 낯선 얼굴\n어제의 나는 어디로 갔을까\n\n[Chorus]\n[Full warm singing]\n그리운 날들이여\n\n[Outro]\n[Whispered, fading]\n(spoken) 다시... 돌아올 수 있을까...",
+      "listen_for": "Sprechgesang(말하듯 노래)이 실제로 나오는지, 테시투라 범위가 지켜지는지"
+    }
+  ],
+
+  "test_design": {
+    "total_tracks": "20곡 (target 10 + control 10)",
+    "A_B_comparison": "각 곡마다 target(전공 용어 SP+가사) vs control(Suno 네이티브 표현으로 같은 뜻) 비교 생성",
+    "round_trip": "생성된 20곡을 다시 Suno 앱에 녹음 → Suno가 묘사하는 SP 수집 → 원래 지시와 비교",
+    "scoring": {
+      "3": "지시한 기법이 명확히 들림",
+      "2": "부분적으로 반영 (방향은 맞으나 불완전)",
+      "1": "거의 무시됨 (일반적 장르 음악만 생성)",
+      "0": "완전 무시 또는 오류"
+    },
+    "hypothesis": {
+      "H1": "target과 control 결과가 거의 동일 → Suno가 전공 용어를 무시하고 일반 표현만 처리",
+      "H2": "target이 더 정확 → Suno가 학습은 했으나 자발적으로 안 쓸 뿐 (수동적 어휘)",
+      "H3": "control이 더 정확 → 전공 용어가 오히려 Suno를 혼란시킴 (역효과)"
+    }
+  }
+}

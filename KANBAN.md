@@ -26,6 +26,10 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] Dead Budget 라운드트립 테스트 — 전공용어 10곡 생성→재분석 완료 + 3열 비교표 Notion 업로드 — 2026-04-24 ✅
+- [sunolanguage] Dead Budget 전공자 청취 체크리스트 작성 + Notion 업로드 — 2026-04-24 ✅
+- [sunolanguage] Suno 3계층 어휘 구조 발견 (네이티브/수동이해/데드존) — 2026-04-24 ✅
+- [sunolanguage] Suno 저작권 필터 발견 — 가사+타이틀 지역명 차단, SP는 통과 — 2026-04-24 ✅
 - [sunolanguage] rag 강의자료 회신 — 관현악·작곡 전공자 대상 7개 섹션 — 2026-04-24 ✅
 - [sunolanguage] leomusic-base 참조 요청 발신 (강의자료 + 확장 아이디어) — 2026-04-24 ✅
 - [sunolanguage] Suno Native Standard v3.2 작성 → leomusic/leomusic2 전달 — 2026-04-24 ✅
