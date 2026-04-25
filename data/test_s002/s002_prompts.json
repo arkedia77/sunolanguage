@@ -1,0 +1,136 @@
+{
+  "purpose": "S002 — 이대 관현악과 15악기 전수 활용 + () 디렉션 확장 테스트",
+  "created_at": "2026-04-25",
+  "previous": "S001 = Dead Budget (DB01~DB10, 클래식 전공용어 라운드트립)",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "instruments_target": {
+    "현악_5": ["violin", "viola", "cello", "double bass", "harp"],
+    "목관_4": ["flute", "oboe", "clarinet", "bassoon"],
+    "금관_4": ["french horn", "trumpet", "trombone", "tuba"],
+    "타악_1": ["timpani", "snare drum", "cymbals", "triangle", "glockenspiel"],
+    "corpus_0회": ["oboe", "double bass", "french horn", "tuba", "timpani"]
+  },
+
+  "test_prompts": [
+    {
+      "id": "S002_01",
+      "title": "Dawn Over the Han River",
+      "concept": "현악 5중주 — 5개 현악기 전부 활용, 서정적 아침 풍경",
+      "instruments_tested": ["violin", "viola", "cello", "double bass", "harp"],
+      "sp": "Orchestral chamber piece for string quintet with harp. Solo violin introduces a lyrical melody in G major over sustained viola and cello harmonies. The double bass provides a deep pizzicato foundation on beats 1 and 3. Harp plays gentle arpeggiated chords between phrases. The second section features a cello solo with violin and viola tremolo accompaniment. The piece builds to a full string texture with the harp providing glissandi transitions. 72 BPM. 3/4 time signature. Warm hall reverb throughout.",
+      "lyrics": "[Intro]\n[harp arpeggios, sustained viola pad]\n(instrumental)\n\n[Theme A]\n[solo violin melody, lyrical and singing]\n[double bass pizzicato on beats 1 and 3]\n(instrumental)\n\n[Theme B]\n[cello solo, warm and expressive]\n[violin and viola tremolo accompaniment]\n(harp glissando transition)\n\n[Climax]\n[full string quintet, all five voices]\n[harp arpeggiated flourish]\n(instrumental)\n\n[Outro]\n[violin harmonic, harp single note]\n(fading to silence)"
+    },
+    {
+      "id": "S002_02",
+      "title": "The Woodwind Garden",
+      "concept": "목관 4중주 — oboe/clarinet/flute/bassoon 전부 활용, 봄 정원",
+      "instruments_tested": ["flute", "oboe", "clarinet", "bassoon"],
+      "sp": "Chamber music for woodwind quartet. A solo flute opens with a bright, pastoral melody. Oboe enters with a warm, reedy counter-melody in thirds. Clarinet provides flowing arpeggiated accompaniment in the middle register. Bassoon anchors the harmony with a legato bass line. The four voices interweave in imitative counterpoint during the development section. The flute and oboe trade the main theme while clarinet and bassoon maintain rhythmic momentum. 88 BPM in B-flat major. 4/4 time. Intimate room acoustic.",
+      "lyrics": "[Intro]\n[solo flute, bright pastoral melody]\n(instrumental)\n\n[Section A]\n[oboe enters, reedy counter-melody]\n[clarinet arpeggiated accompaniment]\n[bassoon legato bass line]\n(instrumental)\n\n[Development]\n[flute and oboe trading melody]\n[clarinet running sixteenth notes]\n[bassoon staccato rhythmic drive]\n(instrumental)\n\n[Recapitulation]\n[all four woodwinds together]\n(interweaving melodic lines)\n\n[Coda]\n[flute trill, oboe sustained note]\n[clarinet descending scale]\n[bassoon final low note]\n(instrumental)"
+    },
+    {
+      "id": "S002_03",
+      "title": "Fanfare for the Forgotten",
+      "concept": "금관 5중주 — trumpet/horn/trombone/tuba 전부 활용, 장엄한 팡파르",
+      "instruments_tested": ["trumpet", "french horn", "trombone", "tuba"],
+      "sp": "Brass quintet fanfare. Two trumpets open with a bold unison call in D major. French horn provides sustained harmonic pedal tones beneath the trumpet melody. Trombone enters with a lyrical counter-melody using slide glissandi. Tuba anchors the ensemble with a steady, resonant bass line on the root and fifth. The middle section features a french horn solo with muted trumpet accompaniment. The finale brings all five brass voices into a triumphant chorale texture. 100 BPM. 4/4 time. Bright, open acoustic.",
+      "lyrics": "[Fanfare]\n[two trumpets, bold unison call]\n[french horn sustained pedal tone]\n(instrumental)\n\n[Section A]\n[trombone lyrical counter-melody]\n[tuba steady bass, root and fifth]\n[trumpets continue above]\n(instrumental)\n\n[Horn Solo]\n[french horn solo, warm and noble]\n[muted trumpets, soft chords]\n(trombone and tuba sustain)\n\n[Chorale]\n[all five brass voices]\n[triumphant harmonic texture]\n(building to fortissimo)\n\n[Final Call]\n[trumpet high note, held]\n[french horn resolving chord]\n[tuba final low pedal]\n(instrumental)"
+    },
+    {
+      "id": "S002_04",
+      "title": "Percussion Ritual",
+      "concept": "타악기 앙상블 — timpani 중심 + 다양한 타악기, 원시적 리듬",
+      "instruments_tested": ["timpani", "snare drum", "cymbals", "triangle", "tambourine", "bass drum"],
+      "sp": "Percussion ensemble piece. Timpani opens with a deep, rolling tremolo in D. Snare drum enters with a military-style paradiddle pattern. Bass drum provides heavy accents on beats 1 and 3. Suspended cymbals create slow swells with a shimmering sustain. Triangle marks the downbeat of each four-bar phrase. Tambourine adds a steady sixteenth-note shake during the climax. The piece builds from a solo timpani introduction to a full percussion ensemble groove. 108 BPM. 4/4 time. Dry, close-miked studio sound.",
+      "lyrics": "[Intro]\n[solo timpani, deep rolling tremolo]\n(rumbling, building tension)\n\n[Section A]\n[snare drum paradiddle pattern enters]\n[bass drum accents on 1 and 3]\n(military march feel)\n\n[Section B]\n[suspended cymbal swells]\n[triangle marking phrases]\n[timpani melodic tuning changes]\n(instrumental)\n\n[Climax]\n[full percussion ensemble]\n[tambourine sixteenth-note shake]\n[snare roll building]\n[cymbal crash on final beat]\n(explosive energy)\n\n[Outro]\n[timpani solo returns]\n[single triangle hit]\n(silence)"
+    },
+    {
+      "id": "S002_05",
+      "title": "Elegy in Amber",
+      "concept": "오보에 + 하프 듀오 — corpus 0회 악기 집중, 애가",
+      "instruments_tested": ["oboe", "harp"],
+      "sp": "Duet for oboe and harp. The oboe performs a mournful, singing melody with expressive vibrato and dynamic swells. The harp accompanies with broken chords and occasional harmonic overtones. The oboe melody features long, sustained phrases with gentle ornamental turns at phrase endings. The harp provides a pedal bass note that rings throughout each section. The mood is intimate and sorrowful. 60 BPM in E minor. Free rubato tempo. Close-miked with natural room reverb.",
+      "lyrics": "[Intro]\n[harp single low note, ringing]\n(silence, then oboe enters)\n\n[Theme]\n[oboe mournful melody, expressive vibrato]\n[harp broken chord accompaniment]\n(singing, sustained phrases)\n\n[Variation]\n[oboe ornamental turns]\n[harp harmonic overtones]\n(rubato, breathing with the melody)\n\n[Climax]\n[oboe highest register, pianissimo]\n[harp arpeggiated swell]\n(emotional peak, then releasing)\n\n[Outro]\n[oboe fading phrase]\n[harp final chord, letting ring]\n(dying away to nothing)"
+    },
+    {
+      "id": "S002_06",
+      "title": "The Iron Waltz",
+      "concept": "튜바 + 트롬본 듀오 — corpus 0회 저음 금관, 무거운 왈츠",
+      "instruments_tested": ["tuba", "trombone"],
+      "sp": "Duet for tuba and trombone. A heavy, lumbering waltz in B-flat minor. Tuba plays the oom-pah-pah bass pattern with a deep, round tone. Trombone carries the melody with broad slide glissandi and warm vibrato. The middle section features tuba performing a surprisingly lyrical solo while trombone provides sustained harmony. Both instruments use muted tones in the quiet section. The finale returns to the waltz with both voices in parallel thirds. 76 BPM. 3/4 time. Large hall reverb.",
+      "lyrics": "[Intro]\n[tuba oom-pah-pah bass pattern]\n(heavy, lumbering)\n\n[Waltz Theme]\n[trombone melody with slide glissandi]\n[tuba steady waltz bass]\n(broad, warm)\n\n[Quiet Section]\n[muted tuba lyrical solo]\n[muted trombone sustained harmony]\n(surprisingly gentle)\n\n[Return]\n[both unmuted, parallel thirds]\n[tuba and trombone waltz together]\n(building energy)\n\n[Finale]\n[trombone high note, held]\n[tuba low pedal, rumbling]\n(final waltz cadence)"
+    },
+    {
+      "id": "S002_07",
+      "title": "Full Orchestra — Sunlight Through Stained Glass",
+      "concept": "풀 오케스트라 — 15악기 전부 등장, 대성당 빛 묘사",
+      "instruments_tested": ["violin", "viola", "cello", "double bass", "harp", "flute", "oboe", "clarinet", "bassoon", "french horn", "trumpet", "trombone", "tuba", "timpani", "cymbals"],
+      "sp": "Full orchestral piece depicting sunlight filtering through stained glass. The piece opens with solo harp arpeggios joined by a flute melody. Strings enter gradually — first violins, then violas, cellos, and double basses building a rich harmonic bed. The oboe and clarinet weave a duet over the string texture. French horns provide warm sustained chords. The climax features trumpets and trombones in a bright fanfare, supported by timpani rolls and cymbal crashes. Tuba reinforces the bass during the triumphant finale. Bassoon provides a melodic bridge between the woodwind and brass sections. 92 BPM in E-flat major. 4/4 time. Cathedral reverb.",
+      "lyrics": "[Intro]\n[solo harp arpeggios]\n[flute melody enters, ethereal]\n(instrumental)\n\n[Strings Enter]\n[violins first, pianissimo]\n[violas and cellos join]\n[double bass sustained pedal]\n(gradually building)\n\n[Woodwind Duet]\n[oboe and clarinet interweaving]\n[bassoon melodic bridge underneath]\n[strings continue as harmonic bed]\n(warm, glowing)\n\n[Horn Chorale]\n[french horns sustained chords]\n[harp glissandi between phrases]\n(noble, expansive)\n\n[Climax]\n[trumpets and trombones fanfare]\n[timpani rolling tremolo]\n[cymbal crash]\n[tuba bass reinforcement]\n[full orchestra fortissimo]\n(sunlight bursting through)\n\n[Outro]\n[strings diminuendo]\n[solo flute returns]\n[harp final arpeggio]\n(light fading, peaceful)"
+    },
+    {
+      "id": "S002_08",
+      "title": "한강의 밤",
+      "concept": "한국어 가사 + 관현악 — 장르 편향 테스트 + () 디렉션",
+      "instruments_tested": ["violin", "cello", "flute", "french horn", "harp"],
+      "sp": "Orchestral art song with Korean lyrics. Solo violin introduces a melancholic melody over harp arpeggios. A lyric baritone male voice enters with a warm, intimate delivery. Cello provides a counter-melody during the chorus. Flute adds ornamental flourishes between vocal phrases. French horn sustains long tones in the background. The arrangement is sparse and transparent, allowing the voice to dominate. 68 BPM in D minor. 3/4 time. Intimate hall acoustic.",
+      "lyrics": "[Intro]\n[solo violin melody, harp arpeggios]\n\n[Verse 1]\n[baritone male voice, warm]\n한강 위로 달이 뜨면\n도시의 소음이 잠들고\n물결 위에 빛이 흔들려\n누군가의 한숨이 들려\n\n[Chorus]\n[cello counter-melody enters]\n이 밤이 지나면\n우리는 어디에 있을까\n(flute ornamental flourish)\n별빛 아래 서서\n대답 없는 물에 묻는다\n\n[Verse 2]\n[french horn sustained tone]\n다리 위의 사람들은\n각자의 길을 걸어가고\n나만 여기 멈춰 서서\n흘러가는 것들을 본다\n\n[Bridge]\n(humming, 아아아~)\n[violin and cello duet]\n[harp gentle chords]\n\n[Outro]\n(spoken softly) 강물은... 기억할까...\n[violin harmonic, fading]\n[harp single note, silence]"
+    },
+    {
+      "id": "S002_09",
+      "title": "Bassoon Midnight",
+      "concept": "바순 솔로 + 피아노 — corpus 1회 악기, 재즈 느낌 크로스오버",
+      "instruments_tested": ["bassoon", "piano"],
+      "sp": "Jazz-influenced duet for bassoon and grand piano. The bassoon performs a smoky, low-register melody with a warm, woody tone and subtle vibrato. The piano provides walking bass in the left hand and sparse jazz chords in the right. The bassoon uses the full range from the deep bass register to the expressive tenor range. Staccato passages alternate with long legato phrases. The bridge features a piano solo with the bassoon providing rhythmic punctuation. 96 BPM in F minor. 4/4 time with swing feel. Dry studio sound.",
+      "lyrics": "[Intro]\n[piano walking bass, sparse jazz chords]\n(instrumental)\n\n[Theme]\n[bassoon smoky melody, low register]\n[piano comping underneath]\n(woody tone, subtle vibrato)\n\n[Section B]\n[bassoon rises to tenor range]\n[piano chords become more active]\n(staccato passages, playful)\n\n[Piano Solo]\n[piano improvisation]\n[bassoon rhythmic punctuation]\n(call and response)\n\n[Return]\n[bassoon legato melody, full range]\n[piano settling down]\n(warm, late-night mood)\n\n[Outro]\n[bassoon lowest note, sustained]\n[piano final chord, letting ring]\n(silence)"
+    },
+    {
+      "id": "S002_10",
+      "title": "Double Bass Dreams",
+      "concept": "더블베이스 솔로 — corpus 0회 악기, 무반주 독주",
+      "instruments_tested": ["double bass"],
+      "sp": "Solo double bass piece. The performer uses arco bowing for a deep, singing melody in the low register, transitioning to pizzicato for a rhythmic middle section. The upper register is explored with harmonics creating an ethereal, bell-like quality. Extended techniques include col legno tapping on the body of the instrument and sul ponticello for metallic overtones. The piece moves between written meter and free rubato passages. Key of A minor. Approximately 66 BPM. Close-miked with minimal reverb to capture the resonance of the instrument body.",
+      "lyrics": "[Intro]\n[double bass arco, deep singing melody]\n(resonant, from the belly of the instrument)\n\n[Section A]\n[arco legato, low register]\n(singing, sustained bowing)\n\n[Section B]\n[pizzicato, rhythmic groove]\n(plucking, jazz-like walking)\n\n[Section C]\n[harmonics in upper register]\n(bell-like, ethereal)\n\n[Extended]\n[col legno tapping on body]\n[sul ponticello metallic overtones]\n(experimental textures)\n\n[Finale]\n[return to arco melody]\n[final low open string, letting ring]\n(the instrument breathing)"
+    },
+    {
+      "id": "S002_11",
+      "title": "Clarinet Noir",
+      "concept": "클라리넷 + 현악 — corpus 1회, 필름누아르 분위기",
+      "instruments_tested": ["clarinet", "violin", "viola", "cello"],
+      "sp": "Film noir-style piece for solo clarinet with string trio accompaniment. The clarinet plays a sultry, winding melody in the chalumeau register with a dark, rich tone. Violin provides high sustained notes creating tension. Viola plays a syncopated rhythmic figure. Cello provides a walking bass line with occasional slides. The clarinet transitions to the altissimo register for dramatic high points. Muted strings in the quiet section. 80 BPM in C minor. 4/4 time. Smoky club atmosphere with room reverb.",
+      "lyrics": "[Intro]\n[clarinet solo, chalumeau register]\n(dark, smoky, winding melody)\n\n[Section A]\n[violin high sustained notes]\n[viola syncopated rhythm]\n[cello walking bass with slides]\n[clarinet continues melody]\n(film noir atmosphere)\n\n[Quiet Section]\n[muted strings, pianissimo]\n[clarinet whisper tone]\n(tension, suspense)\n\n[Dramatic Peak]\n[clarinet altissimo register]\n[strings unmuted, forte]\n(sudden brightness, then retreating)\n\n[Outro]\n[clarinet descending to lowest note]\n[strings fading]\n(the last cigarette, smoke curling)"
+    },
+    {
+      "id": "S002_12",
+      "title": "이탈리아어 가사 관현악 — Luce Notturna",
+      "concept": "소프라노 + 풀 관현악 — () 디렉션 + 이탈리아어 + 저작권 필터 우회",
+      "instruments_tested": ["soprano voice", "violin", "cello", "flute", "oboe", "french horn", "harp", "timpani"],
+      "sp": "Orchestral art song for soprano voice and chamber orchestra. The soprano delivers a lyric performance with bel canto phrasing and controlled vibrato. The orchestra features solo flute dialogues with the voice, oboe sustained tones, french horn warm chords, and a string section of violins and cellos. Harp provides transitional arpeggios. Timpani marks the climax with a soft roll. The arrangement prioritizes vocal clarity with transparent orchestration. 66 BPM in A-flat major. 3/4 time. Concert hall reverb.",
+      "lyrics": "[Orchestral Intro]\n[harp arpeggios, strings pianissimo]\n[flute solo melody]\n\n[Verse 1]\n[soprano, warm lyric voice]\nQuando la notte scende piano\nE le stelle parlano al cuore\nIo cammino senza una mano\nCercando ancora il tuo calore\n\n[Chorus]\n[french horn sustained chord]\n[strings swell]\nLuce notturna, guidami tu\n(melismatic run on \"tu\")\nDove il silenzio diventa musica\nE ogni lacrima brilla di più\n\n[Verse 2]\n[oboe sustained tone underneath]\nIl vento porta le parole\nChe non ho detto mai a te\nOgni ricordo è come il sole\nChe tramonta e poi ritorna a me\n\n[Bridge]\n(humming, soprano and flute in unison)\n[harp glissando]\n[timpani soft roll]\n\n[Final Chorus]\n[full orchestra]\nLuce notturna, guidami tu\n(ascending coloratura passage)\nNella tua luce io troverò\nLa pace che il giorno non ha\n(spoken softly) Buonanotte... luce mia...\n\n[Outro]\n[solo flute, then silence]"
+    }
+  ],
+
+  "test_design": {
+    "total_tracks": 12,
+    "instruments_coverage": "15/15 관현악기 + 타악기 세부",
+    "corpus_0_instruments": ["oboe (S002_02,05,12)", "double bass (S002_01,07,10)", "french horn (S002_03,07,08,12)", "tuba (S002_03,06)", "timpani (S002_04,07,12)"],
+    "paren_directives": [
+      "(instrumental) — 기본",
+      "(singing, sustained phrases) — S002_05",
+      "(humming, 아아아~) — S002_08, 한국어",
+      "(spoken softly) 강물은... 기억할까... — S002_08",
+      "(melismatic run on 'tu') — S002_12",
+      "(ascending coloratura passage) — S002_12",
+      "(spoken softly) Buonanotte... luce mia... — S002_12",
+      "(resonant, from the belly of the instrument) — S002_10",
+      "(the last cigarette, smoke curling) — S002_11, 분위기 묘사"
+    ],
+    "language_test": {
+      "korean": "S002_08 (한강의 밤) — K-Pop 편향 재검증",
+      "italian": "S002_12 (Luce Notturna) — 저작권 필터 + 편향 테스트"
+    },
+    "genre_bias_test": "S002_08: 한국어 + 관현악 → K-Pop인지 Orchestral인지",
+    "copyright_filter_test": "S002_12: 이탈리아어 가사 + 지역명 없음 → 통과 예상",
+    "round_trip": "전곡 생성 → 재업로드 → Suno SP/가사 캡처 → S001과 비교"
+  }
+}
