@@ -12,6 +12,13 @@
 - [sunolanguage] `scripts/build_manual_v3.py` — v3 entity + templates → 매뉴얼 A/B 장별 초안
 - [sunolanguage] `scripts/slot_genre_matrix.py` — 장르별 슬롯 채워짐 히트맵 (책 4장 원자재)
 
+### 검증 대기
+- [sunolanguage] S002 결과 대기 — sunomusic 관현악 15악기 12곡 생성+재분석 (1~2주)
+- [sunolanguage] 55 Best 출처 확인 대기 — sunomusic 회신 후 corpus 합류 여부 결정
+- [sunolanguage] 55 Best 차단 9곡 제목 대기
+- [sunolanguage] S001 전공자 청취 평가 — Leo 판정 필요
+- [sunolanguage] [] vs () 체계적 비교 테스트 — 같은 지시를 두 방식으로 대조
+
 ### 책 집필
 - [sunolanguage] 1장 "Suno의 분류 체계" 본문
 - [sunolanguage] 2장 "두 채널 시스템" 본문
@@ -26,6 +33,13 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] LM3 플랜 점검 회신 — 10개 질문 답변 (country 태깅/BGE-M3/timeline/운영부담 등) — 2026-04-25 ✅
+- [sunolanguage] S002 관현악 12곡 설계 + 프롬프트 전문 발송 (이대 15악기 + () 디렉션 9개) — 2026-04-25 ✅
+- [sunolanguage] S001 정식 명칭 확정 (DB01~10 → S001_01~10) + sunomusic DB 저장 지시 — 2026-04-25 ✅
+- [sunolanguage] 어휘 사전 v1.1→v2.0 업데이트 (437곡/5,070단어/189장르/13,501 entries) + Notion 업로드 — 2026-04-25 ✅
+- [sunolanguage] () 괄호 보컬 디렉션 검증 — 4/4 유효 (hums/melismatic/trills/spoken) Leo 실청취 — 2026-04-25 ✅
+- [sunolanguage] 55 Best 유저곡 11곡 수신 + 출처 확인 요청 발신 — 2026-04-25 ✅
+- [sunolanguage] 독백체 가사 스타일 leomusic/leomusic2 전달 — 2026-04-25 ✅
 - [sunolanguage] Dead Budget 라운드트립 테스트 — 전공용어 10곡 생성→재분석 완료 + 3열 비교표 Notion 업로드 — 2026-04-24 ✅
 - [sunolanguage] Dead Budget 전공자 청취 체크리스트 작성 + Notion 업로드 — 2026-04-24 ✅
 - [sunolanguage] Suno 3계층 어휘 구조 발견 (네이티브/수동이해/데드존) — 2026-04-24 ✅
