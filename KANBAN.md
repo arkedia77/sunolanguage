@@ -1,12 +1,11 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- 없음
+- [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunomusic 재분석 대기 중 (2026-04-27 발주)
 
 ## TODO
 ### Phase V3.2 — 장르 균등화 수집 (4-6주)
-- [sunolanguage] Wave 2: leomusic 생성곡 60곡 (Folk/R&B/Ballad/Rock +10씩, 신장르 +20)
-- [sunolanguage] Wave 1 결과로 echo율 재측정 → leomusic 생성곡 대비 비교
+- [sunolanguage] W002 결과 수신 후 echo율 재측정 → corpus 438곡 목표
 
 ### Phase V3.3 — 책 본문 빌드 파이프라인 (1-2주)
 - [sunolanguage] `scripts/build_manual_v3.py` — v3 entity + templates → 매뉴얼 A/B 장별 초안
