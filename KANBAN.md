@@ -7,9 +7,8 @@
 ### Phase V3.2 — 장르 균등화 수집 (4-6주)
 - [sunolanguage] W002 결과 수신 후 echo율 재측정 → corpus 438곡 목표
 
-### Phase V3.3 — 책 본문 빌드 파이프라인 (1-2주)
-- [sunolanguage] `scripts/build_manual_v3.py` — v3 entity + templates → 매뉴얼 A/B 장별 초안
-- [sunolanguage] `scripts/slot_genre_matrix.py` — 장르별 슬롯 채워짐 히트맵 (책 4장 원자재)
+### 책 본문 집필 (V3.3 초안 기반)
+- [sunolanguage] 1·2·5장 본문 — docs/manual_v3/ 초안 → 출판 수준 원고
 
 ### 검증 대기
 - [sunolanguage] S002 결과 대기 — sunomusic 관현악 15악기 12곡 생성+재분석 (1~2주)
@@ -32,6 +31,9 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] V3.3 파이프라인 완료 (slot_genre_matrix + build_manual_v3) — 2026-04-27 ✅
+- [sunolanguage] W002 Wave 2 선곡 60곡 + sunomusic 발주 — 2026-04-27 ✅
+- [sunolanguage] 외부 회신 3건 (leomusic2 DB화/leomusic-base 매핑/admin NAS) — 2026-04-27 ✅
 - [sunolanguage] LM3 플랜 점검 회신 — 10개 질문 답변 (country 태깅/BGE-M3/timeline/운영부담 등) — 2026-04-25 ✅
 - [sunolanguage] S002 관현악 12곡 설계 + 프롬프트 전문 발송 (이대 15악기 + () 디렉션 9개) — 2026-04-25 ✅
 - [sunolanguage] S001 정식 명칭 확정 (DB01~10 → S001_01~10) + sunomusic DB 저장 지시 — 2026-04-25 ✅
