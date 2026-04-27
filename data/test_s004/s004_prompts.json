@@ -1,0 +1,159 @@
+{
+  "purpose": "S004 — 이대 관현악과 장르 교차(Genre Crossover) 테스트",
+  "created_at": "2026-04-27",
+  "previous": "S002 = 15악기 존재 테스트, S003 = 주법·기법 심화 테스트",
+  "theme": "관현악기를 비클래식 장르 맥락에 배치 — Suno가 장르를 어떻게 재분류하는지 검증",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "test_axes": [
+    "관현악기 + 비클래식 장르 조합 시 Suno 장르 태깅 편향",
+    "클래식 악기가 대중음악 맥락에서 보존되는지 또는 대체되는지",
+    "관현악기 이름이 SP에서 유지되는지 장르 통합 표현(strings, brass)으로 치환되는지",
+    "장르별 고유 악기와 관현악기의 공존 가능 여부"
+  ],
+  "instruments_target": {
+    "현악": ["violin", "viola", "cello", "double bass", "harp"],
+    "목관": ["flute", "oboe", "clarinet", "bassoon"],
+    "금관": ["french horn", "trumpet", "trombone", "tuba"],
+    "타악": ["timpani", "glockenspiel"]
+  },
+
+  "test_prompts": [
+    {
+      "id": "S004_01",
+      "title": "Violin Drop",
+      "concept": "바이올린 + EDM — 바이올린이 빌드업 리프 담당, 드롭에서도 리드",
+      "instruments_tested": ["violin", "synthesizer", "drum machine"],
+      "genre_crossover": "Orchestral Violin → EDM / Future Bass",
+      "sp": "Future bass electronic track with solo violin as the lead instrument. The violin plays an emotional, soaring melody over a synthesizer pad during the buildup. A sidechain-compressed kick drum pulses underneath. The drop features the violin performing rapid sixteenth-note arpeggios with heavy reverb and delay effects, replacing the typical synth lead. Sub-bass hits on the downbeat. Hi-hats and snare provide a four-on-the-floor electronic rhythm. The breakdown strips back to solo violin with a pitch-shifted, layered effect. 140 BPM in A minor. 4/4 time. Heavy electronic production.",
+      "lyrics": "[Intro]\n[synthesizer pad, building]\n[violin enters, emotional melody]\n(soaring, yearning)\n\n[Buildup]\n[snare roll building]\n[violin ascending, higher and higher]\n[sidechain compression pulsing]\n(tension, anticipation)\n\n[Drop]\n[violin rapid arpeggios with reverb]\n[sub-bass hits on downbeat]\n[hi-hats and snare, four-on-the-floor]\n(the violin IS the synth lead)\n\n[Breakdown]\n[solo violin, pitch-shifted layers]\n(ethereal, fragmented)\n\n[Second Drop]\n[violin double-time arpeggios]\n[heavier sub-bass]\n[cymbal crashes on transitions]\n(maximum energy)\n\n[Outro]\n[violin fading, delay trails]\n[synthesizer pad resolving]\n(echoes dissolving)"
+    },
+    {
+      "id": "S004_02",
+      "title": "Cello Beats",
+      "concept": "첼로 + Lo-fi Hip Hop — 첼로 루프가 메인 샘플, lo-fi 프로세싱",
+      "instruments_tested": ["cello", "drum machine", "electric bass"],
+      "genre_crossover": "Orchestral Cello → Lo-fi Hip Hop / Chillhop",
+      "sp": "Lo-fi hip hop beat built around a looped cello sample. The cello plays a melancholic four-bar phrase that repeats with vinyl crackle and tape saturation applied. A boom-bap drum pattern with a dusty, compressed kick and snappy snare hits on beats 2 and 4. Electric bass provides a simple two-note bass line. The cello melody is slightly detuned and pitch-wobbled to simulate an old vinyl record. Hi-hats shuffle with a swing feel. The second half introduces a live cello counter-melody over the looped sample. 85 BPM in D minor. 4/4 time. Warm, lo-fi production with vinyl noise.",
+      "lyrics": "[Intro]\n[vinyl crackle, cello loop fading in]\n(dusty, warm, nostalgic)\n\n[Main Loop]\n[cello four-bar phrase, repeating]\n[boom-bap drums enter]\n[electric bass two-note line]\n(head-nodding groove)\n\n[Verse Section]\n[cello loop continues]\n[hi-hats shuffling with swing]\n[vinyl crackle throughout]\n(lo-fi, late night studying)\n\n[Live Cello]\n[new cello counter-melody over the loop]\n(real instrument over its own ghost)\n\n[Breakdown]\n[drums drop out]\n[cello loop solo with tape wobble]\n(the record skipping)\n\n[Return]\n[drums back, heavier]\n[both cello parts together]\n(instrumental)\n\n[Outro]\n[everything fading into vinyl hiss]\n(the needle lifting)"
+    },
+    {
+      "id": "S004_03",
+      "title": "Flauta na Praia",
+      "concept": "플루트 + 보사노바 — 플루트가 기타 대신 리드, 브라질 리듬",
+      "instruments_tested": ["flute", "nylon guitar", "upright bass", "brushed drums"],
+      "genre_crossover": "Orchestral Flute → Bossa Nova / Brazilian Jazz",
+      "sp": "Bossa nova piece with solo flute as the lead voice instead of the traditional guitar melody. The flute plays a light, airy melody with soft articulation and gentle vibrato in the style of Brazilian choro. Nylon-string guitar provides the signature bossa nova rhythmic pattern with syncopated comping. Upright bass plays a two-feel walking line. Brushed drums maintain a soft bossa nova groove with cross-stick on beat 2. The flute improvises melodic variations in the second chorus with ornamental grace notes. 130 BPM in F major. 4/4 time with bossa nova syncopation. Warm, intimate club recording.",
+      "lyrics": "[Intro]\n[nylon guitar bossa nova rhythm]\n[upright bass enters]\n(warm, Brazilian night)\n\n[Theme A]\n[flute light airy melody]\n[guitar syncopated comping]\n[brushed drums, cross-stick]\n(gentle, swaying)\n\n[Theme B]\n[flute lower register, darker color]\n[bass walking line more active]\n(deeper, more introspective)\n\n[Improvisation]\n[flute ornamental variations]\n[guitar solo behind]\n[bass and drums steady]\n(playful, spontaneous)\n\n[Return to Theme]\n[flute melody returns, simpler]\n[guitar and bass settling]\n(coming home)\n\n[Coda]\n[flute trill, guitar final chord]\n[bass pizzicato ending note]\n(a smile, then goodnight)"
+    },
+    {
+      "id": "S004_04",
+      "title": "Oboe in the Machine",
+      "concept": "오보에 + 앰비언트 일렉트로닉 — 오보에 멜로디 + 신스 패드 + 그래뉼러 텍스처",
+      "instruments_tested": ["oboe", "synthesizer", "granular texture"],
+      "genre_crossover": "Orchestral Oboe → Ambient Electronic / IDM",
+      "sp": "Ambient electronic piece featuring a solo oboe over synthesizer textures. The oboe plays long, sustained tones with a pure, reedy timbre that slowly morphs through granular processing into a synthetic texture. Warm analog synthesizer pads provide a bed of slowly evolving harmonies. Granular synthesis fragments of the oboe tone create a shimmering, particulate cloud around the original instrument. Subtle rhythmic pulses from a modular synthesizer provide forward motion without a traditional beat. The oboe alternates between natural acoustic playing and heavily processed passages. 60 BPM. Free tempo sections. Spacious reverb with long decay.",
+      "lyrics": "[Opening]\n[synthesizer pad, slowly evolving]\n(vast, empty, floating)\n\n[Oboe Enters]\n[oboe sustained tone, pure and natural]\n(a human voice in a digital landscape)\n\n[Granular Processing]\n[oboe tone fragmenting into particles]\n(the reed dissolving into pixels)\n\n[Acoustic Return]\n[oboe clear melody, unprocessed]\n[synth pad underneath]\n(organic against synthetic)\n\n[Deep Processing]\n[oboe heavily effected, unrecognizable]\n[modular synthesizer rhythmic pulses]\n(machine and reed becoming one)\n\n[Duet]\n[natural oboe and processed oboe together]\n(the instrument talking to its own ghost)\n\n[Outro]\n[granular cloud fading]\n[oboe final note, dry, close]\n(the reed alone again)"
+    },
+    {
+      "id": "S004_05",
+      "title": "Klezmer Clarinet",
+      "concept": "클라리넷 + 클레즈머/발칸 — 동유럽 민속 맥락의 클라리넷",
+      "instruments_tested": ["clarinet", "accordion", "violin", "double bass"],
+      "genre_crossover": "Orchestral Clarinet → Klezmer / Balkan Folk",
+      "sp": "Klezmer-style piece with solo clarinet leading a small Eastern European folk ensemble. The clarinet plays a wailing, ornamental melody with characteristic krekhts, bends, and grace notes in the Phrygian dominant scale. An accordion provides chordal accompaniment with bellows accents. A folk violin doubles the melody in unison during the chorus. Double bass plays a driving two-beat pattern. The tempo accelerates from a slow, rubato introduction into a frantic dance. The clarinet uses extreme dynamic swells and laughing articulations. 120 BPM accelerating to 160 BPM. Primarily in D Phrygian dominant. 4/4 time. Live room recording with natural ambience.",
+      "lyrics": "[Rubato Intro]\n[clarinet solo, slow and wailing]\n(krekhts and bends, crying)\n\n[Verse]\n[clarinet ornamental melody]\n[accordion bellows accompaniment]\n[double bass steady two-beat]\n(Eastern European village square)\n\n[Chorus]\n[violin doubling clarinet in unison]\n[accordion chords intensifying]\n[bass driving harder]\n(the whole village dancing)\n\n[Accelerando]\n[tempo increasing gradually]\n[clarinet playing faster ornaments]\n(spinning, whirling)\n\n[Frenzied Dance]\n[clarinet at maximum speed]\n[all instruments fortissimo]\n[double bass slapping]\n(feet stomping, joy and madness)\n\n[Sudden Stop]\n[silence]\n[clarinet solo, one last wail]\n(laughter turning to tears)"
+    },
+    {
+      "id": "S004_06",
+      "title": "Horn of the Titans",
+      "concept": "프렌치 호른 + 시네마틱 에픽 트레일러 — 에픽 호른 앙상블 + 타이코 + 신스",
+      "instruments_tested": ["french horn", "timpani", "taiko drums", "synthesizer", "choir"],
+      "genre_crossover": "Orchestral French Horn → Cinematic Epic Trailer",
+      "sp": "Epic cinematic trailer music built around a french horn ensemble. Eight french horns in unison perform a heroic, ascending theme over thundering taiko drum hits. Timpani provides a militaristic rhythmic ostinato. A deep synthesizer bass drone creates tension beneath the horns. A wordless choir joins during the climax with sustained vowel sounds. The piece follows trailer music structure: quiet atmospheric opening, rising tension, a false climax, silence, then the final massive impact. The horn melody is simple and anthem-like, designed for maximum emotional impact. 90 BPM. 4/4 time. Massive reverb with cinematic compression.",
+      "lyrics": "[Atmospheric Opening]\n[synthesizer drone, low and ominous]\n[single french horn, distant]\n(something approaching)\n\n[Rising Tension]\n[more horns joining, building]\n[timpani ostinato begins]\n(the army assembling)\n\n[Horn Theme]\n[eight horns in unison, heroic ascending melody]\n[taiko drum hits on accents]\n(noble, unstoppable)\n\n[False Climax]\n[full ensemble fortissimo]\n[cymbal crash]\n(the peak — but not yet)\n\n[Silence]\n(two beats of nothing)\n\n[Final Impact]\n[all horns, taiko, timpani, choir]\n[wordless choir sustained vowels]\n[synthesizer sub-bass rumble]\n(the wall breaks, light floods in)\n\n[Resolution]\n[solo french horn, the theme simplified]\n[choir fading]\n(quiet after the storm)"
+    },
+    {
+      "id": "S004_07",
+      "title": "Trompeta Caliente",
+      "concept": "트럼펫 + 마리아치/라틴 — 마리아치 트럼펫 듀엣 + 기타론 + 비우엘라",
+      "instruments_tested": ["trumpet", "guitarron", "vihuela", "guitar"],
+      "genre_crossover": "Orchestral Trumpet → Mariachi / Latin",
+      "sp": "Mariachi-style piece featuring two trumpets in tight harmony. The trumpets play a passionate melody in parallel thirds with a bright, piercing tone and strong vibrato typical of Mexican mariachi tradition. A guitarron provides the deep bass line with its characteristic booming attack. Vihuela strums a rapid rhythmic pattern. Acoustic guitar adds harmonic support. The trumpets perform call-and-response phrases, one playing a question and the other answering. A trumpet cadenza section demonstrates the full range from low pedal tones to brilliant high notes. 132 BPM in G major. 3/4 time with son jarocho rhythm. Live outdoor recording with natural ambience.",
+      "lyrics": "[Grito]\n[trumpet fanfare, two trumpets]\n(bright, celebratory, announcing)\n\n[Theme]\n[two trumpets in parallel thirds]\n[guitarron booming bass line]\n[vihuela rapid strumming]\n(mariachi pride, passion)\n\n[Call and Response]\n[first trumpet: melodic question]\n[second trumpet: answering phrase]\n[guitar harmonic support]\n(conversation between brass voices)\n\n[Verse]\n[trumpets in unison, lower register]\n[guitarron walking bass]\n(storytelling, reflective)\n\n[Cadenza]\n[solo trumpet, unaccompanied]\n[from lowest pedal to highest note]\n(virtuosic display, the crowd gasps)\n\n[Final Chorus]\n[both trumpets, fortissimo, high register]\n[full ensemble driving]\n(the fiesta at its peak)\n\n[Ending]\n[trumpet sustained high note, vibrato]\n[guitarron final boom]\n(one last cry to the sky)"
+    },
+    {
+      "id": "S004_08",
+      "title": "Bone Funk",
+      "concept": "트롬본 + 펑크/소울 — 호른 섹션 리프 + 슬랩 베이스 + 클라비넷",
+      "instruments_tested": ["trombone", "trumpet", "tenor saxophone", "slap bass", "clavinet", "drums"],
+      "genre_crossover": "Orchestral Trombone → Funk / Soul",
+      "sp": "Funk track featuring trombone as the lead horn in a three-piece brass section with trumpet and tenor saxophone. The trombone plays a syncopated, punchy riff with sharp staccato attacks and occasional slide scoops into notes. Slap bass provides a popping, percussive bass line. Clavinet plays a wah-filtered rhythmic chop. Drums lay down a tight, dry funk groove with ghost notes on the snare. The horn section hits together on the main riff then splits for individual solo sections. The trombone solo features growling tone and plunger mute wah effects. 108 BPM in E-flat. 4/4 time. Dry, tight studio mix.",
+      "lyrics": "[Intro]\n[clavinet wah-filtered chop]\n[slap bass groove enters]\n[drums tight funk pattern]\n(head-bobbing, instant groove)\n\n[Horn Riff]\n[trombone, trumpet, saxophone together]\n[syncopated punchy staccato hits]\n(the brass section is the hook)\n\n[Verse Groove]\n[horns resting, rhythm section alone]\n[slap bass popping fills]\n[clavinet scratching]\n(space for the groove to breathe)\n\n[Horn Hits]\n[brass section accent hits]\n(bap! — bap bap! — bap!)\n\n[Trombone Solo]\n[trombone growling tone]\n[plunger mute wah-wah]\n[rhythm section pushing harder]\n(dirty, nasty, funky)\n\n[Final Riff]\n[all horns fortissimo]\n[slap bass fill]\n[drums crash]\n(the band hitting as one)\n\n[Outro]\n[trombone slide down to lowest note]\n(one last grunt)"
+    },
+    {
+      "id": "S004_09",
+      "title": "Harp of the Highlands",
+      "concept": "하프 + 켈틱 포크 — 아이리시 하프 스타일 + 틴 휘슬 + 보드란",
+      "instruments_tested": ["harp", "tin whistle", "bodhran", "fiddle"],
+      "genre_crossover": "Orchestral Harp → Celtic Folk / Irish Traditional",
+      "sp": "Celtic folk piece with concert harp adapted to Irish traditional style. The harp plays arpeggiated patterns and melodic lines inspired by the clarsach tradition, with open fifth drones ringing throughout. A tin whistle carries the main melody with characteristic ornaments including cuts, strikes, and rolls. Bodhran provides a driving rhythmic pulse with the tipper creating varied patterns. A folk fiddle doubles the melody and adds harmony in thirds during the chorus. The harp transitions between accompaniment arpeggios and melodic passages. The tune follows the traditional AABB structure of an Irish reel. 132 BPM in D major (Dorian mode). 4/4 time. Live session recording in a pub.",
+      "lyrics": "[Harp Intro]\n[concert harp, open fifth drone]\n[arpeggiated pattern, Irish style]\n(ancient, mist over green hills)\n\n[A Section — First Time]\n[tin whistle melody with ornaments]\n[harp arpeggiated accompaniment]\n[bodhran steady pulse]\n(the reel begins)\n\n[A Section — Repeat]\n[fiddle joining tin whistle]\n[harp more active, melodic fills]\n(energy building)\n\n[B Section — First Time]\n[tin whistle higher melody]\n[harp melodic passage, leading]\n[bodhran pattern changing]\n(lifting, soaring)\n\n[B Section — Repeat]\n[fiddle harmony in thirds]\n[harp and tin whistle together]\n[bodhran driving]\n(the whole pub stomping)\n\n[Harp Solo]\n[concert harp alone, virtuosic]\n[arpeggios and melody combined]\n(fingers flying over strings)\n\n[Final Round]\n[all instruments full speed]\n[accelerating to the final note]\n(one last stomp, then cheers)"
+    },
+    {
+      "id": "S004_10",
+      "title": "Bassoon Tango",
+      "concept": "바순 + 탱고 — 바순이 반도네온 역할, 피아솔라 스타일",
+      "instruments_tested": ["bassoon", "violin", "piano", "double bass"],
+      "genre_crossover": "Orchestral Bassoon → Argentine Tango / Nuevo Tango",
+      "sp": "Argentine tango piece with bassoon replacing the traditional bandoneon. The bassoon plays a passionate, dark melody in its tenor register with aggressive accents and dramatic pauses. The piano provides the rhythmic marcato accompaniment typical of tango with sharp, percussive chords. A solo violin adds fiery counter-melodies and high-register ornaments. Double bass plays a heavy, driving two-beat pattern with occasional arco sustains. The arrangement follows Piazzolla-influenced nuevo tango style with sudden tempo changes, abrupt dynamic shifts, and a fugue-like section where all instruments chase the main theme. 126 BPM in D minor. 4/4 time with tango rhythmic accents. Dry studio recording.",
+      "lyrics": "[Intro]\n[piano marcato chords, sharp]\n[double bass heavy two-beat]\n(tension, danger, Buenos Aires at night)\n\n[Bassoon Theme]\n[bassoon dark melody, aggressive accents]\n[piano rhythmic accompaniment]\n(passionate, the bandoneon's replacement)\n\n[Violin Counter-melody]\n[violin fiery ornaments above]\n[bassoon continuing below]\n[double bass arco sustain]\n(two voices arguing)\n\n[Dramatic Pause]\n(silence — then)\n\n[Fugue Section]\n[bassoon starts the theme]\n[violin enters two bars later]\n[piano enters, chasing]\n[bass enters last]\n(all four instruments pursuing)\n\n[Tempo Change]\n[suddenly half-speed, rubato]\n[bassoon solo, lyrical]\n(breathing, remembering)\n\n[Final Section]\n[back to tempo, all instruments]\n[bassoon highest register, crying]\n[violin and piano driving]\n(racing to the end)\n\n[Last Note]\n[all instruments, one sharp accent]\n(a door slamming)"
+    },
+    {
+      "id": "S004_11",
+      "title": "Rockabilly Bull Fiddle",
+      "concept": "더블베이스 + 로커빌리 — 슬랩 베이스 주법 + 록 기타 + 드럼",
+      "instruments_tested": ["double bass", "electric guitar", "drums", "vocal"],
+      "genre_crossover": "Orchestral Double Bass → Rockabilly / Psychobilly",
+      "sp": "Rockabilly track with a stand-up double bass performing aggressive slap bass technique. The double bass player slaps and pops the strings against the fingerboard, creating a percussive, clicking attack with each note. The bass walks a classic rockabilly pattern with chromatic passing tones. A twangy electric guitar with slapback delay plays rockabilly licks and power chords. Drums provide a driving train-beat pattern with heavy use of the ride cymbal. A male vocal delivers with a hiccupping, Elvis-inspired phrasing. The bass solo section features rapid thumb-slapping and string pulls. 180 BPM in E major. 4/4 time. Vintage recording with tape compression and slapback echo.",
+      "lyrics": "[Intro]\n[double bass slap, walking pattern]\n[electric guitar twangy riff, slapback delay]\n(rockabilly engine starting)\n\n[Verse 1]\n[male vocal, hiccupping phrasing]\nWell I got a bull fiddle and it's seven feet tall\nI slap those strings and the whole room falls\n[bass walking chromatic pattern]\n[guitar power chords]\n(wild, swinging)\n\n[Chorus]\n[full band driving]\nSlap it, pop it, let it ring\nThat big old bass can make you swing\n[double bass accenting every word]\n(the crowd going crazy)\n\n[Bass Solo]\n[double bass solo, rapid thumb-slapping]\n[string pulls snapping against fingerboard]\n[drums ride cymbal only]\n(virtuosic, dangerous)\n\n[Verse 2]\n[vocal returns]\nFrom the concert hall down to this bar\nThis bull fiddle's now a rock and roll star\n[bass and guitar in unison riff]\n(tongue-in-cheek)\n\n[Outro]\n[all instruments accelerating]\n[double bass final slap, string buzz]\n[guitar feedback]\n(chaos, then silence)"
+    },
+    {
+      "id": "S004_12",
+      "title": "Timpani Thunder Metal",
+      "concept": "팀파니 + 에픽 메탈 — 팀파니가 킥드럼 대체 + 디스토션 기타 + 더블페달",
+      "instruments_tested": ["timpani", "electric guitar", "bass guitar", "drum kit", "choir"],
+      "genre_crossover": "Orchestral Timpani → Symphonic Metal / Epic Metal",
+      "sp": "Symphonic metal track with timpani integrated alongside a standard metal drum kit. The timpani provides thunderous low-end hits replacing the kick drum on key accents while the drum kit maintains a double bass drum pattern. Distorted electric guitars play a heavy palm-muted riff in drop-D tuning. Bass guitar doubles the guitar riff an octave lower. A male choir chants in unison on sustained power chord sections. The timpani performs solo fills between guitar riff sections, tuned to match the harmonic progression. The arrangement alternates between orchestral grandeur and metal aggression. 140 BPM in D minor. 4/4 time. Modern metal production with heavy compression.",
+      "lyrics": "[Timpani Intro]\n[solo timpani, tuned to D, rolling]\n(ominous, building from darkness)\n\n[Metal Riff Enters]\n[distorted guitars, palm-muted, drop-D]\n[bass guitar doubling]\n[drum kit double bass drums]\n[timpani hitting on downbeats]\n(the collision of classical and metal)\n\n[Verse Riff]\n[guitars chugging eighth notes]\n[timpani accenting with guitar hits]\n[drum kit blast beat]\n(relentless, grinding)\n\n[Choir Section]\n[male choir chanting in unison]\n[timpani and guitars sustaining power chords]\n(epic, monumental)\n\n[Timpani Solo]\n[timpani solo between riffs]\n[tuning changes matching harmony]\n(the timpanist in the spotlight)\n\n[Breakdown]\n[half-speed, guitars and timpani together]\n[choir re-enters, wordless]\n(the weight of mountains)\n\n[Final Riff]\n[all instruments maximum intensity]\n[timpani fortissimo rolls]\n[guitars tremolo picking]\n[choir building]\n(the last battle)\n\n[End]\n[timpani single hit, letting ring]\n[guitars cut]\n(the drum echoes, then nothing)"
+    }
+  ],
+
+  "test_design": {
+    "total_tracks": 12,
+    "theme": "장르 교차(Genre Crossover) — 관현악기를 비클래식 장르에 배치하여 Suno의 장르-악기 연관 편향 측정",
+    "genre_mapping": {
+      "S004_01": {"instrument": "violin", "genre": "Future Bass / EDM"},
+      "S004_02": {"instrument": "cello", "genre": "Lo-fi Hip Hop / Chillhop"},
+      "S004_03": {"instrument": "flute", "genre": "Bossa Nova / Brazilian Jazz"},
+      "S004_04": {"instrument": "oboe", "genre": "Ambient Electronic / IDM"},
+      "S004_05": {"instrument": "clarinet", "genre": "Klezmer / Balkan Folk"},
+      "S004_06": {"instrument": "french horn", "genre": "Cinematic Epic Trailer"},
+      "S004_07": {"instrument": "trumpet", "genre": "Mariachi / Latin"},
+      "S004_08": {"instrument": "trombone", "genre": "Funk / Soul"},
+      "S004_09": {"instrument": "harp", "genre": "Celtic Folk / Irish Traditional"},
+      "S004_10": {"instrument": "bassoon", "genre": "Argentine Tango / Nuevo Tango"},
+      "S004_11": {"instrument": "double bass", "genre": "Rockabilly / Psychobilly"},
+      "S004_12": {"instrument": "timpani", "genre": "Symphonic Metal / Epic Metal"}
+    },
+    "key_questions": [
+      "Suno가 violin + EDM을 'orchestral electronic' vs 'future bass'로 분류하는가?",
+      "cello + lo-fi를 'classical' vs 'lo-fi hip hop'으로 분류하는가?",
+      "clarinet + klezmer를 이해하는가? (klezmer는 corpus 0건)",
+      "trumpet + mariachi를 이해하는가? (mariachi는 corpus 0건 예상)",
+      "재분석 시 관현악기 이름이 유지되는가 아니면 장르 통합 표현(strings, brass)으로 치환되는가?",
+      "비클래식 장르의 고유 악기(guitarron, bodhran, clavinet)가 재분석에서 보존되는가?"
+    ],
+    "comparison_with_s002_s003": "S002=존재 테스트, S003=기법 테스트, S004=맥락 테스트. 같은 악기가 맥락에 따라 다르게 인식되는지 3중 검증",
+    "round_trip": "전곡 생성 → 재업로드 → Suno SP/가사 캡처 → 악기명 보존율 + 장르 태깅 편향 측정"
+  }
+}

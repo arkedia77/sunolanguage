@@ -1,0 +1,150 @@
+{
+  "purpose": "S003 — 이대 관현악과 주법·기법(Technique) 심화 테스트",
+  "created_at": "2026-04-27",
+  "previous": "S002 = 15악기 존재 테스트 + () 디렉션 확장",
+  "theme": "같은 악기라도 주법/기법에 따라 Suno가 구분하여 생성하는지 검증",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "test_axes": [
+    "동일 악기의 상반된 주법 대조 (arco vs pizzicato, muted vs open 등)",
+    "전공자 수준 기법 용어 Suno 반응 (sul ponticello, flutter tonguing 등)",
+    "Dead Zone 표현 경계선 탐색 (ppp, sfz, ritardando 등 다이내믹 마킹)",
+    "확장 기법(extended technique) Suno 이해도"
+  ],
+  "instruments_target": {
+    "현악_5": ["violin", "viola", "cello", "double bass", "harp"],
+    "목관_4": ["flute", "oboe", "clarinet", "bassoon"],
+    "금관_4": ["french horn", "trumpet", "trombone", "tuba"],
+    "타악": ["timpani", "snare drum", "cymbals", "glockenspiel"]
+  },
+
+  "test_prompts": [
+    {
+      "id": "S003_01",
+      "title": "Four Faces of the Violin",
+      "concept": "바이올린 주법 4종 대조 — arco legato / spiccato / col legno / sul ponticello",
+      "instruments_tested": ["violin", "piano"],
+      "technique_focus": ["arco legato", "spiccato", "col legno", "sul ponticello", "harmonics"],
+      "sp": "Solo violin with piano accompaniment showcasing four contrasting bowing techniques. Section A features arco legato playing with long, singing phrases and warm vibrato in G major. Section B switches to rapid spiccato with the bow bouncing off the string in a dance-like passage. Section C uses col legno, striking the string with the wooden stick of the bow for a percussive, clicking texture. Section D employs sul ponticello bowing near the bridge for a glassy, metallic overtone-rich sound. The final section combines all techniques in alternation. Piano provides a steady harmonic foundation throughout. 84 BPM. 4/4 time. Close-miked studio recording.",
+      "lyrics": "[Section A — Arco Legato]\n[violin long singing phrases, warm vibrato]\n[piano sustained chords]\n(smooth, connected bowing)\n\n[Section B — Spiccato]\n[violin bouncing bow, rapid detached notes]\n[piano light staccato accompaniment]\n(dance-like, sparkling)\n\n[Section C — Col Legno]\n[violin wooden stick striking strings]\n[piano silent, letting violin speak]\n(percussive clicking texture)\n\n[Section D — Sul Ponticello]\n[violin bowing near the bridge]\n[piano tremolo underneath]\n(glassy, metallic overtones)\n\n[Finale — Combined]\n[all four techniques alternating freely]\n[piano building underneath]\n(virtuosic display)\n\n[Coda]\n[violin natural harmonic, high]\n[piano final chord]\n(bell-like, fading)"
+    },
+    {
+      "id": "S003_02",
+      "title": "Cello: From Earth to Sky",
+      "concept": "첼로 음역 탐험 — 저음역 깊은 울림 → thumb position 고음역 → 하모닉스",
+      "instruments_tested": ["cello"],
+      "technique_focus": ["low register", "thumb position", "natural harmonics", "artificial harmonics", "vibrato types"],
+      "sp": "Unaccompanied cello solo exploring the full range of the instrument. The piece begins in the lowest register on the C string with a dark, resonant melody using slow, wide vibrato. The middle section ascends into thumb position on the A string, producing a tenor-like singing quality with narrow, intense vibrato. The climax reaches the highest register using natural harmonics that produce transparent, bell-like overtones. Artificial harmonics create an ethereal whistling effect in the bridge. The piece descends back to the low register for the conclusion. Free tempo with written rubato. Key center on C. Minimal reverb to expose every nuance of tone production.",
+      "lyrics": "[Low Register]\n[cello C string, dark resonant melody]\n(deep, wide vibrato, from the earth)\n\n[Ascending]\n[cello moving through registers]\n[increasing intensity of vibrato]\n(climbing, each note higher)\n\n[Thumb Position]\n[cello high on A string, tenor-like]\n(narrow intense vibrato, singing)\n\n[Harmonics]\n[natural harmonics, transparent]\n(bell-like overtones floating)\n\n[Artificial Harmonics]\n[whistling ethereal sound]\n(ghostly, barely there)\n\n[Descent]\n[returning to C string]\n[open string resonance]\n(coming home to earth)\n\n[Final Note]\n[lowest C, letting ring]\n(the instrument breathing its last)"
+    },
+    {
+      "id": "S003_03",
+      "title": "Flute Breath",
+      "concept": "플루트 확장 기법 — flutter tonguing / 오버블로잉 / 멀티포닉스 / whistle tone",
+      "instruments_tested": ["flute"],
+      "technique_focus": ["flutter tonguing", "overblowing", "multiphonics", "whistle tones", "breathy tone"],
+      "sp": "Solo flute piece exploring extended techniques. Opens with a pure, clear melody in the middle register with classical tone. Transitions to flutter tonguing, creating a rapid tremolo effect with the tongue rolling. Overblowing produces sharp, bright upper partials above the fundamental. The multiphonics section has the flutist singing while playing, creating two simultaneous pitches. Whistle tones are produced at the quietest dynamic, ghostly high harmonics barely audible. A breathy tone section deliberately includes the sound of air alongside the pitch. 72 BPM in D major. Free sections alternate with measured passages. Dry recording with no reverb.",
+      "lyrics": "[Pure Tone]\n[flute clear melody, middle register]\n(classical, centered tone)\n\n[Flutter Tonguing]\n[flute rapid tremolo, tongue rolling]\n(buzzing, vibrating air column)\n\n[Overblowing]\n[flute forced upper partials]\n(bright, piercing, raw)\n\n[Multiphonics]\n[flute singing while playing]\n(two pitches at once, otherworldly)\n\n[Whistle Tones]\n[flute ghostly harmonics, pianississimo]\n(barely audible, floating)\n\n[Breathy Tone]\n[air sound mixed with pitch]\n(wind through a hollow reed)\n\n[Return]\n[pure tone melody returns]\n[final note, perfect intonation]\n(clarity after chaos)"
+    },
+    {
+      "id": "S003_04",
+      "title": "Oboe: Reed and Breath",
+      "concept": "오보에 표현력 테스트 — 더블리드 비브라토 / 레가토 vs 스타카토 / 음색 변화",
+      "instruments_tested": ["oboe", "english horn"],
+      "technique_focus": ["double reed vibrato", "legato phrasing", "staccato articulation", "piano dynamic", "fortissimo projection"],
+      "sp": "Duet for oboe and english horn exploring double reed expression. The oboe opens with a plaintive melody using a narrow, controlled vibrato characteristic of the double reed. Long legato phrases connect seamlessly with careful breath management. The english horn enters with a darker, more veiled timbre in its lower register. A staccato dialogue section has both instruments trading short, tongued motifs. The oboe demonstrates its dynamic range from a thread-like pianissimo to a penetrating fortissimo. The english horn provides sustained drones underneath the oboe's melodic variations. 66 BPM in A minor. 3/4 time. Concert hall acoustic.",
+      "lyrics": "[Oboe Solo]\n[oboe plaintive melody, controlled vibrato]\n(nasal, singing, reedy)\n\n[Legato Phrases]\n[oboe seamless breath connections]\n(each phrase a single exhale)\n\n[English Horn Enters]\n[english horn, darker veiled timbre]\n[oboe continuing above]\n(two reed voices conversing)\n\n[Staccato Dialogue]\n[oboe short tongued motifs]\n[english horn responding]\n(playful, quick exchanges)\n\n[Dynamic Range]\n[oboe pianissimo, thread-like]\n(barely a whisper of reed)\n[oboe fortissimo, penetrating]\n(cutting through everything)\n\n[Sustained Drone]\n[english horn low drone]\n[oboe melody variations above]\n(timeless, ancient sound)\n\n[Coda]\n[oboe final note, diminuendo al niente]\n(disappearing into silence)"
+    },
+    {
+      "id": "S003_05",
+      "title": "Clarinet Chameleon",
+      "concept": "클라리넷 음역별 음색 — chalumeau / clarion / altissimo + Gershwin 글리산도",
+      "instruments_tested": ["clarinet", "bass clarinet"],
+      "technique_focus": ["chalumeau register", "clarion register", "altissimo register", "glissando", "circular breathing effect"],
+      "sp": "Duet for B-flat clarinet and bass clarinet exploring register colors. The clarinet begins in the chalumeau register with a dark, woody tone. It crosses the break into the clarion register, producing a bright, projecting sound. The altissimo register pushes to the highest notes with a piercing, focused tone. A Gershwin-style portamento glissando sweeps from the lowest to the highest note in one continuous slide. The bass clarinet provides a deep, rumbling pedal tone throughout. A quasi-circular-breathing passage creates the illusion of an endless phrase without a breath. 92 BPM in B-flat major. 4/4 time. Intimate room recording.",
+      "lyrics": "[Chalumeau Register]\n[clarinet low register, dark woody tone]\n[bass clarinet rumbling underneath]\n(warm, chocolatey, shadowy)\n\n[Crossing the Break]\n[clarinet transitioning registers]\n(the voice changing, brightening)\n\n[Clarion Register]\n[clarinet bright, projecting]\n[bass clarinet steady pedal]\n(brilliant, ringing)\n\n[Altissimo]\n[clarinet highest register, piercing]\n(focused, laser-like)\n\n[Glissando]\n[clarinet sweeping from bottom to top]\n(Gershwin slide, one continuous smear)\n\n[Endless Phrase]\n[clarinet seemingly without breathing]\n[bass clarinet drone continues]\n(the phrase that never ends)\n\n[Finale]\n[clarinet and bass clarinet in octaves]\n[descending to the lowest note together]\n(two voices becoming one)"
+    },
+    {
+      "id": "S003_06",
+      "title": "Horn Calls and Whispers",
+      "concept": "프렌치 호른 기법 — stopped horn / open horn / hand muting / bell up / echo horn",
+      "instruments_tested": ["french horn"],
+      "technique_focus": ["stopped horn", "open horn", "hand muting", "bell-up playing", "echo effect"],
+      "sp": "Solo french horn piece demonstrating the instrument's timbral versatility. Opens with a classic open horn call in E-flat major, heroic and resonant. The hand gradually closes inside the bell, transitioning from open to half-stopped to fully stopped, producing a nasal, metallic timbre marked with a brassy edge. A bell-up passage projects the sound directly toward the audience with maximum brilliance. Echo horn technique alternates between loud calls and soft replies, simulating a horn heard across a mountain valley. Muted passages use a straight mute for a distant, veiled quality. 80 BPM. 4/4 time. Large reverberant hall to emphasize echo effects.",
+      "lyrics": "[Open Horn Call]\n[french horn heroic call, E-flat major]\n(noble, resonant, ringing)\n\n[Closing the Hand]\n[gradually stopping the bell]\n(open to half-stopped, tone darkening)\n\n[Fully Stopped]\n[metallic, nasal, brassy]\n(strained, tense, fighting through)\n\n[Bell Up]\n[horn bell raised, projecting directly]\n(brilliant, aggressive, exposed)\n\n[Echo Horn]\n[loud call, then soft reply]\n[loud call, then softer reply]\n(mountain valley, distance)\n\n[Muted]\n[straight mute inserted]\n(distant, veiled, dreaming)\n\n[Final Call]\n[open horn, fortissimo]\n[single note held, then fading]\n(the last echo disappearing)"
+    },
+    {
+      "id": "S003_07",
+      "title": "Three Mutes of the Trumpet",
+      "concept": "트럼펫 뮤트 3종 비교 — straight mute / cup mute / harmon mute (wah-wah)",
+      "instruments_tested": ["trumpet"],
+      "technique_focus": ["straight mute", "cup mute", "harmon mute", "wah-wah effect", "open bell"],
+      "sp": "Solo trumpet piece comparing three mute types against the open bell. Opens with an open bell jazz melody, bright and direct. Switches to a straight mute for a thin, focused, slightly nasal tone. The cup mute section produces a warm, muffled, velvety sound ideal for ballad playing. The harmon mute with stem removed creates the classic Miles Davis whisper tone, intimate and breathy. A wah-wah section uses the harmon mute plunger for a vocal crying effect. Each mute plays the same melodic fragment for direct comparison. 76 BPM in B-flat minor. 4/4 time with swing feel. Dry recording to isolate mute character.",
+      "lyrics": "[Open Bell]\n[trumpet bright, direct, full sound]\n(jazz melody, no mute)\n\n[Straight Mute]\n[trumpet thin, focused, nasal]\n(same melody, edgier now)\n\n[Cup Mute]\n[trumpet warm, muffled, velvety]\n(same melody, like a whisper through cotton)\n\n[Harmon Mute — No Stem]\n[trumpet intimate, breathy, Miles Davis tone]\n(same melody, midnight in a small room)\n\n[Wah-Wah]\n[harmon mute with plunger, crying effect]\n(wah wah wah, the trumpet is speaking)\n\n[Comparison]\n[same four-bar phrase repeated]\n[open, straight, cup, harmon — back to back]\n(hearing the difference)\n\n[Coda]\n[harmon mute, single note, pianissimo]\n(a candle flickering out)"
+    },
+    {
+      "id": "S003_08",
+      "title": "Trombone: The Slide as Voice",
+      "concept": "트롬본 슬라이드 기법 — 글리산도 / 립 트릴 / 더블 텅잉 / 멀티포닉스",
+      "instruments_tested": ["trombone", "bass trombone"],
+      "technique_focus": ["slide glissando", "lip trill", "double tonguing", "multiphonics", "pedal tones"],
+      "sp": "Duet for tenor trombone and bass trombone exploring slide and brass techniques. The tenor trombone opens with a smooth slide glissando connecting notes in a portamento style. Lip trills create a rapid oscillation between adjacent harmonics without moving the slide. Double tonguing enables fast articulated passages at speed. A multiphonics section has the trombonist singing one pitch while playing another, creating a chord from a single instrument. The bass trombone demonstrates pedal tones in the lowest register, producing a subterranean rumble. Both trombones perform parallel glissandi in the finale. 88 BPM in F major. 4/4 time. Medium hall reverb.",
+      "lyrics": "[Slide Glissando]\n[tenor trombone smooth portamento]\n(sliding between notes like a voice)\n\n[Lip Trill]\n[rapid oscillation, no slide movement]\n(shimmering, trembling brass)\n\n[Double Tonguing]\n[fast articulated passage, tu-ku-tu-ku]\n(machine-gun precision)\n\n[Bass Trombone Pedal Tones]\n[bass trombone lowest register]\n(subterranean rumble, shaking the floor)\n\n[Multiphonics]\n[trombone singing while playing]\n(one instrument, two voices, eerie chord)\n\n[Parallel Glissandi]\n[both trombones sliding together]\n(two sirens harmonizing)\n\n[Finale]\n[tenor trombone high B-flat]\n[bass trombone low pedal B-flat]\n(four octaves apart, one note)"
+    },
+    {
+      "id": "S003_09",
+      "title": "Harp: Colors of the Strings",
+      "concept": "하프 고유 기법 — bisbigliando / harmonics / pres de la table / glissando 종류별",
+      "instruments_tested": ["harp"],
+      "technique_focus": ["bisbigliando", "harmonics", "pres de la table", "glissando ascending", "glissando descending", "pedal buzz"],
+      "sp": "Solo harp piece showcasing the instrument's unique color palette. Opens with a bisbigliando tremolo, rapidly alternating between two adjacent strings at pianissimo to create a shimmering, watery texture. Harmonics are produced by touching the string at the midpoint, creating transparent bell-like tones an octave above. Pres de la table playing near the soundboard produces a thin, metallic, guitar-like twang. Multiple glissando types are demonstrated: a full ascending glissando across all strings, a partial descending glissando, and a chromatic glissando using the pedals. Pedal buzz is deliberately incorporated for its rattling, percussive effect. 60 BPM. Free tempo. Close-miked to capture string resonance.",
+      "lyrics": "[Bisbigliando]\n[harp rapid tremolo between two strings]\n(shimmering, watery, barely touching)\n\n[Harmonics]\n[harp touching strings at midpoint]\n(bell-like, transparent, floating)\n\n[Pres de la Table]\n[harp playing near the soundboard]\n(thin, metallic, twanging)\n\n[Ascending Glissando]\n[full sweep from low to high]\n(a wave rising)\n\n[Descending Glissando]\n[sweeping from high to low]\n(a waterfall of notes)\n\n[Chromatic Glissando]\n[pedals changing during glissando]\n(every half step, no gaps)\n\n[Pedal Buzz]\n[deliberate rattling, percussive]\n(the harp's hidden voice)\n\n[Coda]\n[bisbigliando returns, fading]\n[single harmonic, ringing]\n(water settling to stillness)"
+    },
+    {
+      "id": "S003_10",
+      "title": "Timpani Master",
+      "concept": "팀파니 기법 — 스틱 종류별 음색 / 뮤트 / 글리산도 / 튜닝 체인지",
+      "instruments_tested": ["timpani"],
+      "technique_focus": ["felt mallets", "wooden sticks", "fingertip roll", "muffling", "pedal glissando", "tuning changes mid-phrase"],
+      "sp": "Solo timpani piece demonstrating the instrument's melodic and timbral range. Four timpani are tuned to D, A, B-flat, and F. Standard felt mallets produce a warm, resonant tone with a deep fundamental. Switching to wooden sticks creates a harder, more articulated attack with prominent overtones. Fingertip rolls directly on the drumhead produce a quiet, shimmering texture. Muffling with the hand while striking creates dry, staccato notes. Pedal glissando bends the pitch smoothly while the drum is ringing. The player retunes the drums mid-phrase to play a chromatic passage impossible with fixed tuning. 100 BPM. 4/4 time. Concert hall with natural resonance.",
+      "lyrics": "[Felt Mallets]\n[timpani warm rolls, four drums]\n(deep, thunderous, orchestral)\n\n[Wooden Sticks]\n[timpani hard articulated attacks]\n(crack, snap, overtones ringing)\n\n[Fingertip Roll]\n[fingers directly on drumhead]\n(quiet shimmer, like distant thunder)\n\n[Muffled Strokes]\n[hand dampening while striking]\n(dry, dead, staccato)\n\n[Pedal Glissando]\n[pitch bending while drum rings]\n(swooping, whale-like)\n\n[Tuning Changes]\n[retuning mid-phrase, chromatic melody]\n(timpani as melodic instrument)\n\n[Cadenza]\n[all four drums, rapid passage]\n[rolls, accents, glissandi combined]\n(the timpanist unleashed)\n\n[Final Roll]\n[pianissimo to fortissimo crescendo]\n[single muffled stroke to end]\n(thunder, then silence)"
+    },
+    {
+      "id": "S003_11",
+      "title": "String Orchestra: Texture Lab",
+      "concept": "현악 합주 텍스처 — divisi / con sordino vs senza / sul tasto / tremolo / col legno battuto",
+      "instruments_tested": ["violin", "viola", "cello", "double bass"],
+      "technique_focus": ["divisi", "con sordino", "senza sordino", "sul tasto", "tremolo", "col legno battuto"],
+      "sp": "String orchestra piece systematically exploring ensemble textures. The piece opens with the full section playing con sordino, mutes dampening the strings for a silvery, distant quality. Removing the mutes reveals the full, warm senza sordino tone. Violins split into divisi, four separate parts creating a dense harmonic cluster. Sul tasto bowing over the fingerboard produces a flute-like, hollow timbre. Measured tremolo builds tension with rapid bow changes. Col legno battuto has the entire section tapping strings with the wood of the bow in rhythmic unison. Double basses provide a constant low pedal throughout all texture changes. 70 BPM in D minor. 4/4 time. Large concert hall.",
+      "lyrics": "[Con Sordino]\n[full strings with mutes, silvery]\n(distant, veiled, dreaming)\n\n[Senza Sordino]\n[mutes removed, full warm sound]\n(suddenly present, alive)\n\n[Divisi]\n[violins in four parts, dense cluster]\n[violas in two parts]\n[cellos sustaining]\n(shimmering harmonic cloud)\n\n[Sul Tasto]\n[bowing over fingerboard]\n(flute-like, hollow, airy)\n\n[Tremolo]\n[rapid bow changes, building]\n[double bass pedal underneath]\n(tension rising, shaking)\n\n[Col Legno Battuto]\n[entire section tapping with bow wood]\n(rhythmic clicking, like rain on a roof)\n\n[Finale]\n[con sordino returns]\n[one by one, instruments drop out]\n(the texture dissolving)"
+    },
+    {
+      "id": "S003_12",
+      "title": "Orchestra Dynamics: From Silence to Thunder",
+      "concept": "풀 오케스트라 다이내믹 스트레스 테스트 — ppp→fff / sfz / fp / subito piano / niente",
+      "instruments_tested": ["violin", "viola", "cello", "double bass", "flute", "oboe", "clarinet", "bassoon", "french horn", "trumpet", "trombone", "tuba", "timpani", "cymbals", "harp"],
+      "technique_focus": ["pianississimo", "fortississimo", "sforzando", "forte-piano", "subito piano", "crescendo al niente", "diminuendo al niente"],
+      "sp": "Full orchestra piece testing extreme dynamic contrasts. Opens at pianississimo with strings barely audible, a whisper of sound. A long, gradual crescendo over thirty-two bars builds from near-silence to a shattering fortississimo with full brass, timpani, and cymbal crashes. Sforzando accents punctuate unexpected beats with sudden explosions. Forte-piano markings have the orchestra attack at full volume then instantly drop to piano. Subito piano passages cut the volume without transition. The piece ends with a diminuendo al niente, the orchestra fading to absolute silence. All fifteen orchestral instruments participate. 76 BPM in C minor. 4/4 time. Large concert hall with natural decay.",
+      "lyrics": "[Pianississimo]\n[strings barely audible, a whisper]\n[woodwinds entering, thread-like]\n(from nothing, from silence)\n\n[Long Crescendo]\n[horns and brass joining gradually]\n[timpani soft roll building]\n[harp arpeggios growing louder]\n(thirty-two bars of building)\n\n[Fortississimo]\n[full orchestra, maximum volume]\n[cymbal crash, timpani thunder]\n[brass fanfare blazing]\n(the wall of sound)\n\n[Sforzando Accents]\n[sudden explosions on unexpected beats]\n(shock, jolt, surprise)\n\n[Forte-Piano]\n[full attack then instant drop to piano]\n(a shout becoming a whisper)\n\n[Subito Piano]\n[volume cut without warning]\n(as if someone pulled the plug)\n\n[Diminuendo al Niente]\n[orchestra fading, instrument by instrument]\n[last sound: solo violin harmonic]\n(disappearing into absolute silence)"
+    }
+  ],
+
+  "test_design": {
+    "total_tracks": 12,
+    "theme": "주법·기법(Technique) 심화 — S002에서 '존재'를 테스트했다면 S003은 '표현력'을 테스트",
+    "technique_categories": {
+      "현악_주법": ["arco legato", "spiccato", "col legno", "sul ponticello", "pizzicato", "harmonics", "con sordino", "divisi", "sul tasto", "tremolo", "col legno battuto", "thumb position"],
+      "관악_기법": ["flutter tonguing", "overblowing", "multiphonics", "whistle tones", "double tonguing", "circular breathing", "stopped horn", "hand muting", "mute types"],
+      "타악_기법": ["mallet types", "fingertip roll", "muffling", "pedal glissando", "tuning changes"],
+      "하프_기법": ["bisbigliando", "harmonics", "pres de la table", "glissando types", "pedal buzz"],
+      "다이내믹_마킹": ["ppp", "fff", "sfz", "fp", "subito piano", "niente"]
+    },
+    "dead_zone_stress_test": [
+      "ppp / fff (dynamic markings — corpus 0건)",
+      "sfz / fp (accent markings — corpus 0건)",
+      "ritardando / accelerando (tempo markings — corpus 0건 예상)",
+      "al niente (소멸 지시 — corpus 0건 예상)"
+    ],
+    "comparison_with_s002": "S002_01~12는 악기의 존재 여부를 테스트. S003은 같은 악기라도 기법에 따른 음색 변화를 Suno가 구분하는지 검증",
+    "round_trip": "전곡 생성 → 재업로드 → Suno SP/가사 캡처 → 기법 용어 보존율 측정"
+  }
+}

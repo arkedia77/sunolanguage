@@ -7,6 +7,10 @@
 ### Phase V3.2 — 장르 균등화 수집 (4-6주)
 - [sunolanguage] W002 결과 수신 후 echo율 재측정 → corpus 438곡 목표
 
+### 이대 관현악과 특집 시리즈
+- [sunolanguage] S003 주법·기법 심화 12곡 — sunomusic 발주 완료 (S002 후 순차 착수)
+- [sunolanguage] S004 장르 교차 12곡 — sunomusic 발주 완료 (S003 후 순차 착수)
+
 ### 책 본문 집필 (V3.3 초안 기반)
 - [sunolanguage] 1·2·5장 본문 — docs/manual_v3/ 초안 → 출판 수준 원고
 
@@ -31,6 +35,11 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] 이대 강의 자료 작성 + Notion 업로드 (에이전트 시점 10섹션) — 2026-04-28 ✅
+- [sunolanguage] S002-S004 시리즈 가이드 문서 + Notion 업로드 — 2026-04-28 ✅
+- [sunolanguage] S003·S004 sunomusic 발주 (작업지시서+프롬프트전문 4건, push 완료) — 2026-04-28 ✅
+- [sunolanguage] S003 주법·기법 심화 12곡 설계 + Notion 업로드 — 2026-04-27 ✅
+- [sunolanguage] S004 장르 교차 12곡 설계 + Notion 업로드 — 2026-04-27 ✅
 - [sunolanguage] V3.3 파이프라인 완료 (slot_genre_matrix + build_manual_v3) — 2026-04-27 ✅
 - [sunolanguage] W002 Wave 2 선곡 60곡 + sunomusic 발주 — 2026-04-27 ✅
 - [sunolanguage] 외부 회신 3건 (leomusic2 DB화/leomusic-base 매핑/admin NAS) — 2026-04-27 ✅
