@@ -1,6 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
+- [sunolanguage] SP Builder 웹앱 — MVP 완료, Leo 수정 피드백 반영 + Phase 3/4 구현 예정
 - [sunolanguage] S007–S015 설계 — S007 Dynamics부터 순차 생성 (플랜 파일 참조)
 - [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunomusic 재분석 대기 중 (2026-04-27 발주)
 
@@ -36,6 +37,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] SP Builder 웹앱 MVP 완료 (Vite+JS, 3패널, 57장르/42악기, SP+브래킷 자동생성) — 2026-04-28 ✅
 - [sunolanguage] S005 화성 경계선 10곡 + S006 보이싱 8곡 설계 완료 — 2026-04-28 ✅
 - [sunolanguage] S005-S015 전체 플랜 수립 (7축 100곡) — 2026-04-28 ✅
 - [sunolanguage] S002-S004 청취 가이드 콘텐츠 작성 + dacuman 발송 2건 (디자인 요청+강의자료) — 2026-04-28 ✅
