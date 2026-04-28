@@ -52,12 +52,16 @@ export function renderPreview(container, state, data) {
       <button class="copy-btn primary" id="copy-sp">Copy SP</button>
       <button class="copy-btn secondary" id="copy-lyrics">Copy Lyrics</button>
       <button class="copy-btn secondary" id="copy-both">Copy Both</button>
+      <button class="copy-btn reset" id="reset-btn">Reset</button>
     </div>
   `;
 
-  container.querySelector('#copy-sp').addEventListener('click', () => copyWithFeedback('copy-sp', spPlain));
-  container.querySelector('#copy-lyrics').addEventListener('click', () => copyWithFeedback('copy-lyrics', bracketsPlain));
-  container.querySelector('#copy-both').addEventListener('click', () => copyWithFeedback('copy-both', spPlain + '\n\n---\n\n' + bracketsPlain));
+  container.querySelector('#copy-sp')?.addEventListener('click', () => copyWithFeedback('copy-sp', spPlain));
+  container.querySelector('#copy-lyrics')?.addEventListener('click', () => copyWithFeedback('copy-lyrics', bracketsPlain));
+  container.querySelector('#copy-both')?.addEventListener('click', () => copyWithFeedback('copy-both', spPlain + '\n\n---\n\n' + bracketsPlain));
+  container.querySelector('#reset-btn')?.addEventListener('click', () => {
+    if (confirm('Reset all settings?')) location.reload();
+  });
 }
 
 async function copyWithFeedback(btnId, text) {

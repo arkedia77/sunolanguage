@@ -1,4 +1,4 @@
-import { updateGlobal, toggleInArray } from '../state/store.js';
+import { updateGlobal, toggleInArray, autoFillFromGenre } from '../state/store.js';
 
 let initialized = false;
 
@@ -13,38 +13,8 @@ export function renderGlobalSettings(container, state, data) {
         <div class="search-input">
           <input type="text" id="genre-search" placeholder="Search genres..." />
         </div>
-        <div class="chip-group" id="genre-chips"></div>
-      </div>
-
-      <div class="panel-section">
-        <div class="panel-section-title">Tempo (BPM)</div>
-        <div class="range-row">
-          <input type="range" id="bpm-slider" min="60" max="200" value="${g.bpm}" />
-          <span class="range-value" id="bpm-value">${g.bpm}</span>
-        </div>
-        <div class="preset-row" id="bpm-presets"></div>
-      </div>
-
-      <div class="panel-section">
-        <div class="panel-section-title">Key</div>
-        <select id="key-select">
-          <option value="">— Select Key —</option>
-        </select>
-      </div>
-
-      <div class="panel-section">
-        <div class="panel-section-title">Time Signature</div>
-        <div class="radio-group" id="time-sig-group"></div>
-      </div>
-
-      <div class="panel-section">
-        <div class="panel-section-title">Vocal</div>
-        <div class="chip-group" id="vocal-chips"></div>
-      </div>
-
-      <div class="panel-section">
-        <div class="panel-section-title">Arrangement</div>
-        <div class="chip-group" id="arrangement-chips"></div>
+        <div id="genre-categories"></div>
+        <button class="autofill-btn" id="autofill-btn" style="display:none">Auto-fill from Genre</button>
       </div>
 
       <div class="panel-section">
@@ -58,119 +28,94 @@ export function renderGlobalSettings(container, state, data) {
       </div>
     `;
 
-    setupGenreChips(container, data);
-    setupBpmPresets(container, data);
-    setupKeySelect(container, data);
-    setupTimeSigGroup(container);
-    setupVocalChips(container, data);
-    setupArrangementChips(container, data);
+    setupGenreCategories(container, data);
     setupEffectsChips(container, data);
     setupMoodChips(container, data);
     setupGenreSearch(container);
+    setupAutoFill(container, data);
   }
 
   updateActiveStates(container, state, data);
 }
 
-function setupGenreChips(container, data) {
-  const el = container.querySelector('#genre-chips');
-  el.innerHTML = data.genres
-    .map(g => `<div class="chip" data-genre="${g.name}">${g.name} <span class="freq">${g.songCount}</span></div>`)
-    .join('');
+function setupGenreCategories(container, data) {
+  const el = container.querySelector('#genre-categories');
+  let html = '';
+  for (const cat of data.genreCategories) {
+    html += `
+      <div class="genre-category" data-cat="${cat.name}">
+        <div class="genre-category-header">
+          <span class="genre-cat-arrow">&#x25B6;</span>
+          <span class="genre-cat-name">${cat.name}</span>
+          <span class="genre-cat-count">${cat.totalSongs}</span>
+        </div>
+        <div class="genre-category-body" style="display:none">
+          <div class="chip-group">
+            ${cat.genres.map(g => `<div class="chip genre-chip" data-genre="${g.name}">${g.name} <span class="freq">${g.songCount}</span></div>`).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  el.innerHTML = html;
+
   el.addEventListener('click', e => {
-    const chip = e.target.closest('.chip');
-    if (!chip) return;
-    const name = chip.dataset.genre;
-    updateGlobal('genre', name);
+    const header = e.target.closest('.genre-category-header');
+    if (header) {
+      const cat = header.closest('.genre-category');
+      const body = cat.querySelector('.genre-category-body');
+      const arrow = cat.querySelector('.genre-cat-arrow');
+      const isOpen = body.style.display !== 'none';
+      body.style.display = isOpen ? 'none' : '';
+      arrow.innerHTML = isOpen ? '&#x25B6;' : '&#x25BC;';
+      return;
+    }
+    const chip = e.target.closest('.genre-chip');
+    if (chip) {
+      updateGlobal('genre', chip.dataset.genre);
+    }
   });
 }
 
 function setupGenreSearch(container) {
   const input = container.querySelector('#genre-search');
-  const chips = container.querySelector('#genre-chips');
+  const cats = container.querySelectorAll('.genre-category');
   input.addEventListener('input', () => {
     const q = input.value.toLowerCase();
-    for (const chip of chips.children) {
-      chip.style.display = chip.dataset.genre.toLowerCase().includes(q) ? '' : 'none';
+    if (!q) {
+      for (const cat of cats) {
+        cat.style.display = '';
+        cat.querySelector('.genre-category-body').style.display = 'none';
+        cat.querySelector('.genre-cat-arrow').innerHTML = '&#x25B6;';
+        for (const chip of cat.querySelectorAll('.genre-chip')) chip.style.display = '';
+      }
+      return;
     }
-  });
-}
-
-function setupBpmPresets(container, data) {
-  const el = container.querySelector('#bpm-presets');
-  const presets = [72, 85, 92, 105, 120, 128, 140];
-  el.innerHTML = presets.map(v => `<button class="preset-btn" data-bpm="${v}">${v}</button>`).join('');
-  el.addEventListener('click', e => {
-    const btn = e.target.closest('.preset-btn');
-    if (!btn) return;
-    const bpm = parseInt(btn.dataset.bpm);
-    updateGlobal('bpm', bpm);
-    container.querySelector('#bpm-slider').value = bpm;
-    container.querySelector('#bpm-value').textContent = bpm;
-  });
-  container.querySelector('#bpm-slider').addEventListener('input', e => {
-    const bpm = parseInt(e.target.value);
-    container.querySelector('#bpm-value').textContent = bpm;
-    updateGlobal('bpm', bpm);
-  });
-}
-
-function setupKeySelect(container, data) {
-  const sel = container.querySelector('#key-select');
-  for (const k of data.keys) {
-    const opt = document.createElement('option');
-    opt.value = k.label;
-    opt.textContent = `${k.label} (${k.freq})`;
-    sel.appendChild(opt);
-  }
-  sel.addEventListener('change', () => updateGlobal('key', sel.value));
-}
-
-function setupTimeSigGroup(container) {
-  const el = container.querySelector('#time-sig-group');
-  const sigs = ['4/4', '3/4', '6/8'];
-  el.innerHTML = sigs.map(s => `<button class="radio-btn" data-sig="${s}">${s}</button>`).join('');
-  el.addEventListener('click', e => {
-    const btn = e.target.closest('.radio-btn');
-    if (!btn) return;
-    updateGlobal('timeSignature', btn.dataset.sig);
-  });
-}
-
-function setupVocalChips(container, data) {
-  const el = container.querySelector('#vocal-chips');
-  el.innerHTML = data.vocalTypes
-    .map(v => `<div class="chip" data-vocal="${v}">${v}</div>`)
-    .join('');
-  el.addEventListener('click', e => {
-    const chip = e.target.closest('.chip');
-    if (!chip) return;
-    toggleInArray('vocalTypes', chip.dataset.vocal);
-  });
-}
-
-function setupArrangementChips(container, data) {
-  const el = container.querySelector('#arrangement-chips');
-  el.innerHTML = data.arrangements
-    .map(a => `<div class="chip" data-arr="${a}">${a}</div>`)
-    .join('');
-  el.addEventListener('click', e => {
-    const chip = e.target.closest('.chip');
-    if (!chip) return;
-    updateGlobal('arrangement', chip.dataset.arr);
+    for (const cat of cats) {
+      const chips = cat.querySelectorAll('.genre-chip');
+      let anyVisible = false;
+      for (const chip of chips) {
+        const match = chip.dataset.genre.toLowerCase().includes(q);
+        chip.style.display = match ? '' : 'none';
+        if (match) anyVisible = true;
+      }
+      cat.style.display = anyVisible ? '' : 'none';
+      if (anyVisible) {
+        cat.querySelector('.genre-category-body').style.display = '';
+        cat.querySelector('.genre-cat-arrow').innerHTML = '&#x25BC;';
+      }
+    }
   });
 }
 
 function setupEffectsChips(container, data) {
   const el = container.querySelector('#effects-chips');
-  const topEffects = data.effects.slice(0, 20);
-  el.innerHTML = topEffects
+  el.innerHTML = data.effects.slice(0, 20)
     .map(e => `<div class="chip" data-effect="${e}">${e}</div>`)
     .join('');
   el.addEventListener('click', e => {
     const chip = e.target.closest('.chip');
-    if (!chip) return;
-    toggleInArray('effects', chip.dataset.effect);
+    if (chip) toggleInArray('effects', chip.dataset.effect);
   });
 }
 
@@ -181,22 +126,32 @@ function setupMoodChips(container, data) {
     .join('');
   el.addEventListener('click', e => {
     const chip = e.target.closest('.chip');
-    if (!chip) return;
-    toggleInArray('mood', chip.dataset.mood);
+    if (chip) toggleInArray('mood', chip.dataset.mood);
+  });
+}
+
+function setupAutoFill(container, data) {
+  container.querySelector('#autofill-btn').addEventListener('click', () => {
+    const genre = container.querySelector('.genre-chip.active')?.dataset.genre;
+    if (!genre) return;
+    const fillData = data.genreAutoFill[genre];
+    if (fillData) autoFillFromGenre(fillData);
   });
 }
 
 function updateActiveStates(container, state, data) {
   const g = state.global;
 
-  for (const chip of container.querySelectorAll('#genre-chips .chip')) {
-    chip.classList.toggle('active', chip.dataset.genre === g.genre);
-  }
-  for (const chip of container.querySelectorAll('#vocal-chips .chip')) {
-    chip.classList.toggle('active', g.vocalTypes.includes(chip.dataset.vocal));
-  }
-  for (const chip of container.querySelectorAll('#arrangement-chips .chip')) {
-    chip.classList.toggle('active', chip.dataset.arr === g.arrangement);
+  for (const chip of container.querySelectorAll('.genre-chip')) {
+    const isActive = chip.dataset.genre === g.genre;
+    chip.classList.toggle('active', isActive);
+    if (isActive) {
+      const body = chip.closest('.genre-category-body');
+      if (body && body.style.display === 'none') {
+        body.style.display = '';
+        body.closest('.genre-category').querySelector('.genre-cat-arrow').innerHTML = '&#x25BC;';
+      }
+    }
   }
   for (const chip of container.querySelectorAll('#effects-chips .chip')) {
     chip.classList.toggle('active', g.effects.includes(chip.dataset.effect));
@@ -204,19 +159,15 @@ function updateActiveStates(container, state, data) {
   for (const chip of container.querySelectorAll('#mood-chips .chip')) {
     chip.classList.toggle('active', g.mood.includes(chip.dataset.mood));
   }
-  for (const btn of container.querySelectorAll('#time-sig-group .radio-btn')) {
-    btn.classList.toggle('active', btn.dataset.sig === g.timeSignature);
-  }
 
-  // Genre recommendations
+  const autoBtn = container.querySelector('#autofill-btn');
+  autoBtn.style.display = g.genre ? '' : 'none';
+
   const recs = data.genreRecommendations[g.genre];
-  if (recs) {
-    const recInstruments = new Set(recs.instrument || []);
-    for (const chip of container.querySelectorAll('#effects-chips .chip')) {
-      const isRec = (recs.effect_electronic || []).some(e =>
-        e.toLowerCase().includes(chip.dataset.effect.toLowerCase())
-      );
-      chip.classList.toggle('recommended', isRec);
-    }
+  for (const chip of container.querySelectorAll('#effects-chips .chip')) {
+    const isRec = recs && (recs.effect_electronic || []).some(e =>
+      e.toLowerCase().includes(chip.dataset.effect.toLowerCase())
+    );
+    chip.classList.toggle('recommended', isRec);
   }
 }

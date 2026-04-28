@@ -5,7 +5,11 @@ export function generateSP(state, data) {
   if (g.genre) {
     let genreSentence = g.genre;
     if (g.vocalTypes.length > 0) {
-      genreSentence += ` featuring ${g.vocalTypes.join(' and ')}`;
+      const vocalDesc = g.vocalTypes.map(v => {
+        const bare = ['male', 'female', 'tenor', 'alto', 'baritone', 'soprano', 'mezzo-soprano'];
+        return bare.includes(v.toLowerCase()) ? `${v} vocals` : v;
+      });
+      genreSentence += ` featuring ${vocalDesc.join(' and ')}`;
     }
     sentences.push({ text: genreSentence + '.', slot: 'genre' });
   }
@@ -68,6 +72,13 @@ export function generateSP(state, data) {
     sentences.push({
       text: tempoparts.join('. ') + '.',
       slot: 'tempo',
+    });
+  }
+
+  if (g.mood && g.mood.length > 0) {
+    sentences.push({
+      text: `${capitalize(joinList(g.mood))} mood.`,
+      slot: 'mood',
     });
   }
 

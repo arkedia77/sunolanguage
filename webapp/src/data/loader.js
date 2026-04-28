@@ -119,9 +119,108 @@ function buildGenreRecommendations() {
   return recs;
 }
 
+function parseTempoKeyTime(raw) {
+  try {
+    const cleaned = raw.replace(/'/g, '"').replace(/\bNone\b/g, 'null');
+    return JSON.parse(cleaned);
+  } catch { return null; }
+}
+
+function buildGenreAutoFill() {
+  const fills = {};
+  for (const g of rawSlotMatrix.matrix) {
+    if (g.genre === '(미정)') continue;
+    const slots = g.slots;
+    const fill = { instruments: [], drums: [], effects: [], arrangement: '', bpm: 0, key: '', timeSignature: '' };
+
+    const instEntities = (slots.instrument?.top_entities || []).slice(0, 4);
+    fill.instruments = instEntities.map(e => e.entity);
+
+    const drumEntity = (slots.drums?.top_entities || [])[0];
+    if (drumEntity) {
+      fill.drums = drumEntity.entity.split(',').map(s => s.trim()).filter(s => s && s !== 'drums');
+    }
+
+    const effectSkip = new Set(['with chorus', 'and chorus', 'in the mix', 'forward in the mix', 'centered in the mix']);
+    const rawEffects = (slots.effect_electronic?.top_entities || []).slice(0, 5)
+      .flatMap(e => e.entity.split(',').map(s => s.trim()))
+      .filter(e => e && !effectSkip.has(e));
+    fill.effects = [...new Set(rawEffects)].slice(0, 4);
+
+    const arrEntity = (slots.arrangement?.top_entities || []).find(e => e.entity !== 'arrangement');
+    if (arrEntity) fill.arrangement = arrEntity.entity;
+
+    const tktEntity = (slots.tempo_key_time?.top_entities || [])[0];
+    if (tktEntity) {
+      const parsed = parseTempoKeyTime(tktEntity.entity);
+      if (parsed) {
+        fill.bpm = parsed.bpm || 0;
+        fill.key = parsed.key || '';
+        fill.timeSignature = parsed.time_signature || '';
+      }
+    }
+
+    const vocalEntity = (slots.vocal_main?.top_entities || []).find(e => e.entity !== 'vocals');
+    fill.vocal = vocalEntity ? vocalEntity.entity : '';
+
+    fills[g.genre] = fill;
+  }
+  return fills;
+}
+
+const GENRE_CATEGORY_MAP = {
+  'Pop': ['Indie Pop', 'City Pop', 'Acoustic Pop', 'Dream Pop', 'Funk Pop', 'Electro Pop', 'Art Pop', 'Jazz Pop', 'Folk Pop', 'Dance Pop', 'Dark Pop', 'Lo-fi Pop', 'Disco Pop', 'Synth Pop', 'Bedroom Pop', 'Indie Synth Pop', 'Hyperpop', 'Pop', 'K-POP', 'K-Pop'],
+  'Ballad': ['Korean Ballad', 'Acoustic Ballad', 'Jazz Ballad', 'Soul Ballad', 'Piano Ballad'],
+  'Rock': ['Rock', 'Indie Rock', 'Alternative Rock', 'Pop Rock', 'Pop Punk', 'Post-Punk', 'Soft Rock', 'Synth-Punk', 'Alternative'],
+  'R&B / Soul': ['R&B', 'Neo-Soul', 'Contemporary R&B', 'Soft R&B', 'Indie Soul', 'Soft Indie'],
+  'Folk': ['Folk', 'Indie Folk', 'Acoustic Folk', 'Ambient Folk', 'Acoustic Indie'],
+  'Electronic': ['Electronic', 'Electropop', 'Future Bass', 'Chillwave', 'Synth-Pop', 'Ambient'],
+  'Hip-Hop': ['Hip-Hop'],
+  'Jazz': ['Jazz Pop', 'Jazz Ballad'],
+  'Cinematic': ['Cinematic', 'Cinematic Emotional'],
+  'World': ['Bossa Nova', 'TROT'],
+};
+
+function buildGenreCategories(genres) {
+  const genreSet = new Set(genres.map(g => g.name));
+  const assigned = new Set();
+  const categories = [];
+
+  for (const [cat, members] of Object.entries(GENRE_CATEGORY_MAP)) {
+    const matched = members
+      .filter(m => genreSet.has(m) && !assigned.has(m))
+      .map(m => genres.find(g => g.name === m));
+    for (const m of matched) assigned.add(m.name);
+    if (matched.length > 0) {
+      const total = matched.reduce((s, g) => s + g.songCount, 0);
+      categories.push({ name: cat, genres: matched, totalSongs: total });
+    }
+  }
+
+  const unassigned = genres.filter(g => !assigned.has(g.name));
+  if (unassigned.length > 0) {
+    const total = unassigned.reduce((s, g) => s + g.songCount, 0);
+    categories.push({ name: 'Other', genres: unassigned, totalSongs: total });
+  }
+
+  categories.sort((a, b) => b.totalSongs - a.totalSongs);
+  return categories;
+}
+
+function buildInstrumentTechniques() {
+  const techs = {};
+  for (const [name, info] of Object.entries(rawInstrumentIndex)) {
+    techs[name.toLowerCase()] = (info.co_techniques || []).slice(0, 12);
+  }
+  return techs;
+}
+
+const genreList = buildGenreList();
+
 export const data = {
   instruments: buildInstrumentList(),
-  genres: buildGenreList(),
+  genres: genreList,
+  genreCategories: buildGenreCategories(genreList),
   vocalTypes: buildVocalTypes(),
   drumComponents: buildDrumComponents(),
   keys: buildKeys(),
@@ -130,6 +229,8 @@ export const data = {
   moods: buildMoods(),
   arrangements: buildArrangements(),
   genreRecommendations: buildGenreRecommendations(),
+  genreAutoFill: buildGenreAutoFill(),
+  instrumentTechniques: buildInstrumentTechniques(),
   genreIndex: rawGenreIndex,
   instrumentIndex: rawInstrumentIndex,
 };
