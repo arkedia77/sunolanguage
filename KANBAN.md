@@ -1,6 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
+- [sunolanguage] S007–S015 설계 — S007 Dynamics부터 순차 생성 (플랜 파일 참조)
 - [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunomusic 재분석 대기 중 (2026-04-27 발주)
 
 ## TODO
@@ -35,6 +36,9 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] S005 화성 경계선 10곡 + S006 보이싱 8곡 설계 완료 — 2026-04-28 ✅
+- [sunolanguage] S005-S015 전체 플랜 수립 (7축 100곡) — 2026-04-28 ✅
+- [sunolanguage] S002-S004 청취 가이드 콘텐츠 작성 + dacuman 발송 2건 (디자인 요청+강의자료) — 2026-04-28 ✅
 - [sunolanguage] 이대 강의 자료 작성 + Notion 업로드 (에이전트 시점 10섹션) — 2026-04-28 ✅
 - [sunolanguage] S002-S004 시리즈 가이드 문서 + Notion 업로드 — 2026-04-28 ✅
 - [sunolanguage] S003·S004 sunomusic 발주 (작업지시서+프롬프트전문 4건, push 완료) — 2026-04-28 ✅
