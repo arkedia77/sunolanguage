@@ -1,0 +1,129 @@
+{
+  "purpose": "S005 — Harmony: The Chord Frontier (화성의 경계선)",
+  "created_at": "2026-04-28",
+  "previous": "S001-S004 = 관현악기 축. S005부터는 악기 외 축 탐험 시작",
+  "theme": "Suno는 key of X(652회)는 이해하지만 코드명(0회)·코드 진행(0회)은 데드존 — 화성 지시의 해상도 경계선은 어디인가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis B: 화성/코드 인식",
+  "instrument_policy": "대중음악 악기 고정(piano, guitar, bass, drums) — 악기 변수 최소화, 화성만 변수",
+  "test_axes": [
+    "모드/스케일 명이 실제 음계 차이를 만드는가",
+    "7th 코드 세부 종류를 구분하는가",
+    "구체적 코드명(Am7, Cmaj7)이 반영되는가 — 데드존 정면 도전",
+    "로마 숫자 코드 진행(I-IV-V)이 반영되는가 — 데드존 정면 도전",
+    "같은 화성 의도를 자연어로 우회하면 반응하는가 — 핵심 대조군",
+    "경계선 화성 용어(chromatic, tritone)는 어디까지 통하는가"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S005_01",
+      "title": "Modal Spectrum",
+      "concept": "같은 멜로디를 4개 모드(Dorian→Mixolydian→Phrygian→Lydian)로 지정 — 모드명이 실제 음계 차이를 만드는가?",
+      "harmony_level": "Level 1 — 모드/스케일",
+      "corpus_reference": "Dorian(3회), Mixolydian(2회), Phrygian(5회), Lydian(1회) — 코퍼스에 희소하게 존재",
+      "sp": "Jazz piano trio exploring four different modes over the same root note D. Section A plays a melody in D Dorian mode, giving a minor quality with a raised sixth. Section B shifts to D Mixolydian mode, creating a major feel with a flatted seventh, bluesy and relaxed. Section C moves to D Phrygian mode, dark and Spanish-flavored with the characteristic half-step between the first and second notes. Section D brightens into D Lydian mode with a raised fourth creating a dreamy, floating quality. Upright bass walks underneath. Brushed drums keep a light swing. Each mode plays for 16 bars. 120 BPM. 4/4 time. Intimate jazz club recording.",
+      "lyrics": "[Section A — D Dorian]\n[piano melody, minor with raised sixth]\n[upright bass walking]\n[brushed drums, swing]\n(modal jazz, cool and sophisticated)\n\n[Section B — D Mixolydian]\n[same melody shape, flatted seventh]\n[bass adjusts to major feel]\n(bluesy, relaxed, dominant quality)\n\n[Section C — D Phrygian]\n[same melody, half-step from root]\n[bass darker pattern]\n(Spanish, mysterious, tense)\n\n[Section D — D Lydian]\n[same melody, raised fourth]\n[bass lighter walking]\n(dreamy, floating, bright)\n\n[Coda]\n[piano returns to Dorian]\n[single chord, letting ring]\n(home)"
+    },
+    {
+      "id": "S005_02",
+      "title": "Four Sevenths",
+      "concept": "7th 코드 4종(dominant 7th / major 7th / minor 7th / diminished 7th) — 같은 루트에서 7th 종류에 따른 색채 차이를 Suno가 구분하는가?",
+      "harmony_level": "Level 2 — 코드 성격",
+      "corpus_reference": "seventh(21회) — 코퍼스에 존재하지만 세부 종류 구분은 0회",
+      "sp": "Solo piano piece presenting four types of seventh chords on the root C. Section A features a dominant seventh chord with a bright, tense, unresolved sound that wants to move forward. Section B uses a major seventh chord, lush and warm, the sound of a romantic ballad. Section C plays a minor seventh chord, melancholic and introspective, cool jazz coloring. Section D introduces a diminished seventh chord, anxious and unstable, every note pulling in a different direction. Each section arpegiates the chord slowly, then plays a short melody using the chord tones. 72 BPM in free tempo. Close-miked grand piano. No reverb.",
+      "lyrics": "[Section A — Dominant Seventh]\n[piano C dominant seventh chord, arpeggiated]\n[short melody using chord tones]\n(tense, unresolved, leaning forward)\n\n[Section B — Major Seventh]\n[piano C major seventh chord, arpeggiated]\n[same melodic shape, different color]\n(lush, warm, romantic)\n\n[Section C — Minor Seventh]\n[piano C minor seventh chord, arpeggiated]\n[melody now darker]\n(cool, melancholic, jazz)\n\n[Section D — Diminished Seventh]\n[piano C diminished seventh, arpeggiated]\n[melody anxious, unstable]\n(tense, every note pulling away)\n\n[Comparison]\n[all four seventh chords played back to back]\n[dominant, major, minor, diminished]\n(hearing the difference)\n\n[Final]\n[C major seventh, sustained, fading]\n(resolution into warmth)"
+    },
+    {
+      "id": "S005_03",
+      "title": "Chord Name Injection",
+      "concept": "구체적 코드명(Am7, Cmaj7, F#dim, Bb9)을 SP에 직접 투입 — 데드존(0회) 정면 도전",
+      "harmony_level": "Level 3 — 구체적 코드명",
+      "corpus_reference": "구체적 코드명 = 0회 (완전 데드존)",
+      "sp": "Guitar and piano ballad following a specific chord progression. The intro plays Am7 for four bars with a gentle arpeggiated guitar. The verse moves through Cmaj7 to Fmaj7 to Dm9. The pre-chorus uses Bb9 to E7 creating tension. The chorus resolves with F major to G major to Am7. The bridge introduces F#dim as a passing chord between Fmaj7 and G7, adding chromatic color. The outro returns to Am7 with added extensions, ending on an Am9 chord letting ring. Acoustic guitar fingerpicking. Piano plays chord voicings. Electric bass follows the root notes. 76 BPM in A minor. 4/4 time. Warm studio recording.",
+      "lyrics": "[Intro — Am7]\n[guitar arpeggiated Am7, four bars]\n[piano joining softly]\n(gentle, settled)\n\n[Verse — Cmaj7 → Fmaj7 → Dm9]\n[guitar fingerpicking through changes]\n[piano chord voicings]\n[bass following roots]\n(moving through warm colors)\n\n[Pre-Chorus — Bb9 → E7]\n[Bb9 adding unexpected warmth]\n[E7 creating tension back to A minor]\n(the pull, the lean)\n\n[Chorus — F → G → Am7]\n[full strum, open chords]\n[piano doubling]\n(resolution, arrival)\n\n[Bridge — Fmaj7 → F#dim → G7]\n[F#dim passing chord, chromatic step]\n(a shadow between two lights)\n\n[Outro — Am9]\n[guitar Am9, letting ring]\n[piano single note]\n(open ending, unresolved beauty)"
+    },
+    {
+      "id": "S005_04",
+      "title": "Roman Numeral Road",
+      "concept": "로마 숫자 코드 진행 표기(I-IV-V-I, ii-V-I, I-vi-IV-V)를 SP에 직접 투입 — 데드존(0회) 정면 도전",
+      "harmony_level": "Level 4 — 진행 표기",
+      "corpus_reference": "로마 숫자 코드 진행 = 0회 (완전 데드존)",
+      "sp": "Pop rock song demonstrating three classic chord progressions. The verse uses a I-IV-V-I progression in G major, the most fundamental harmonic movement in Western music. The pre-chorus shifts to a ii-V-I jazz turnaround, adding sophistication with the minor second chord leading to the dominant. The chorus uses I-vi-IV-V, the iconic four-chord progression heard in countless pop songs. Electric guitar plays power chords in the verse, clean arpeggios in the pre-chorus, and full strumming in the chorus. Bass guitar follows the root movement. Drums build from verse to chorus. 110 BPM in G major. 4/4 time. Rock studio production.",
+      "lyrics": "[Verse — I-IV-V-I in G major]\n[electric guitar power chords]\n[bass following roots: G, C, D, G]\n[drums steady rock beat]\n(fundamental, strong, familiar)\n\n[Pre-Chorus — ii-V-I]\n[guitar clean arpeggios]\n[bass: A minor, D, G]\n(jazz sophistication in a rock song)\n\n[Chorus — I-vi-IV-V]\n[guitar full strumming]\n[bass: G, E minor, C, D]\n[drums fill into chorus]\n(the four chords that rule pop music)\n\n[Verse 2 — I-IV-V-I again]\n[same progression, fuller arrangement]\n(coming back to basics)\n\n[Bridge — vi-IV-I-V]\n[guitar quieter, emotional]\n[bass sustained notes]\n(the same four chords, different order, different feeling)\n\n[Final Chorus — I-vi-IV-V]\n[full band fortissimo]\n(one last ride through the magic four)"
+    },
+    {
+      "id": "S005_05",
+      "title": "Harmony in Plain Words",
+      "concept": "S005_03과 동일한 화성 의도를 자연어로 기술 — 대조군 (코드명 없이 같은 결과를 얻을 수 있는가?)",
+      "harmony_level": "Level 2.5 — 자연어 화성",
+      "corpus_reference": "warm(67회), tension(34회), resolve(8회) — 자연어 화성 어휘는 코퍼스에 풍부",
+      "sp": "Guitar and piano ballad with expressive harmonic movement. The intro establishes a warm minor chord with a gentle arpeggiated guitar, settling into a contemplative mood. The verse moves through warm major chords with added color tones, creating a sense of hopeful movement. The pre-chorus introduces an unexpected warm chord from outside the key, then builds tension with a dominant chord that pulls strongly back to the home key. The chorus resolves with simple major chords moving upward before returning to the contemplative minor home. The bridge adds a chromatic passing chord that creates a brief shadow between two bright chords. The outro returns to the opening minor chord with added upper extensions, creating an open, unresolved ending. Acoustic guitar fingerpicking. Piano plays chord voicings. Electric bass follows the chord roots. 76 BPM in A minor. 4/4 time. Warm studio recording.",
+      "lyrics": "[Intro — settling into minor]\n[guitar arpeggiated minor chord, four bars]\n[piano joining softly]\n(gentle, settled)\n\n[Verse — warm major movement]\n[guitar fingerpicking through changes]\n[piano chord voicings with color tones]\n[bass following roots]\n(moving through warm colors)\n\n[Pre-Chorus — outside chord then tension]\n[unexpected warmth from outside the key]\n[dominant tension pulling back home]\n(the pull, the lean)\n\n[Chorus — resolution upward]\n[full strum, bright major chords]\n[piano doubling]\n(resolution, arrival)\n\n[Bridge — chromatic shadow]\n[chromatic passing chord between two majors]\n(a shadow between two lights)\n\n[Outro — open minor with extensions]\n[guitar minor chord with upper tones, letting ring]\n[piano single note]\n(open ending, unresolved beauty)"
+    },
+    {
+      "id": "S005_06",
+      "title": "Chromatic Tension Lab",
+      "concept": "화성학 중급 용어(chromatic passing tone, tritone substitution, secondary dominant) — 경계선 탐색",
+      "harmony_level": "Level 3.5 — 중급 화성 이론",
+      "corpus_reference": "chromatic(17회) — 코퍼스에 존재하여 경계선 근처",
+      "sp": "Jazz combo piece exploring chromatic harmony techniques. The piano plays a standard jazz progression but introduces chromatic passing tones between each chord change, creating smooth voice leading with half-step connections. A tritone substitution replaces the dominant V chord with a chord a tritone away, creating a surprising chromatic bass descent. A secondary dominant chord temporarily tonicizes the IV chord, briefly making it sound like a new key center. The bass plays chromatic walking lines connecting chord tones. Guitar comps with altered dominant chords using sharp-nine and flat-thirteen extensions. Drums play a medium swing pattern. 130 BPM in C major. 4/4 time with swing feel. Live studio session.",
+      "lyrics": "[Head — Standard Changes]\n[piano standard jazz chords]\n[bass walking, diatonic]\n[drums medium swing]\n(the foundation, clean and clear)\n\n[Chromatic Passing Tones]\n[piano half-step connections between chords]\n[bass chromatic walking line]\n(smooth, slippery, sliding between)\n\n[Tritone Substitution]\n[piano replaces V with bII]\n[bass descending chromatically]\n(surprise — the expected chord replaced)\n\n[Secondary Dominant]\n[V of IV — briefly a new key center]\n[bass and piano pivot together]\n(a detour that makes the destination sweeter)\n\n[Altered Dominants]\n[guitar sharp-nine, flat-thirteen voicings]\n[piano clashing but beautiful]\n(tension pushed to the edge)\n\n[Resolution]\n[back to simple I chord, no extensions]\n[bass on the root]\n(home after the journey)"
+    },
+    {
+      "id": "S005_07",
+      "title": "The Pedal Point",
+      "concept": "페달 포인트(pedal point on tonic, dominant pedal) — 코퍼스에 존재하는 화성 개념(4회)의 확장",
+      "harmony_level": "Level 2 — 기능적 화성",
+      "corpus_reference": "pedal(4회), drone(12회) — 코퍼스에 존재",
+      "sp": "Ambient rock piece built on pedal point harmony. The bass guitar holds a single low E note throughout the entire piece as a tonic pedal point, never changing. Above this pedal, the guitar plays chords that move freely: E minor, C major, A minor, D major, G major — all heard against the unchanging E bass. The effect is a constantly shifting harmonic color over a stable foundation. In the bridge, the pedal shifts to B, creating a dominant pedal that generates tension wanting to resolve back to E. The synth pad provides sustained harmonic clouds. Drums play a spacious pattern with lots of cymbal wash. 90 BPM in E minor. 4/4 time. Spacious reverb.",
+      "lyrics": "[Intro — Tonic Pedal]\n[bass guitar, single low E, sustained]\n[guitar E minor chord above]\n[drums spacious]\n(the foundation that never moves)\n\n[Verse — Chords Over Pedal]\n[bass still on E]\n[guitar: C major over E pedal]\n[guitar: A minor over E pedal]\n(the chords change but the earth stays)\n\n[Chorus — More Movement]\n[bass still on E]\n[guitar: D major over E — tension]\n[guitar: G major over E — brightness]\n[synth pad harmonic cloud]\n(colors shifting above the anchor)\n\n[Bridge — Dominant Pedal]\n[bass shifts to B — dominant pedal]\n[guitar chords above B]\n(tension, wanting to go home)\n\n[Resolution]\n[bass returns to E]\n[guitar simple E minor]\n(the pedal returns, relief)\n\n[Outro]\n[bass E, fading]\n[guitar harmonic]\n(the last vibration)"
+    },
+    {
+      "id": "S005_08",
+      "title": "Scale Colors",
+      "concept": "스케일 종류별 음향(minor pentatonic / blues scale / whole tone / octatonic) — 스케일명의 해상도",
+      "harmony_level": "Level 1.5 — 스케일",
+      "corpus_reference": "pentatonic(9회), blues scale(2회), whole tone(0회), octatonic(0회)",
+      "sp": "Electric guitar solo piece exploring four different scales over a static chord vamp. Section A uses the minor pentatonic scale, the backbone of blues and rock soloing, with five notes creating a raw, soulful sound. Section B adds the blue note to create a blues scale, adding a gritty, expressive passing tone between the fourth and fifth. Section C uses a whole tone scale where every interval is a whole step, creating a dreamlike, floating quality with no sense of resolution. Section D uses an octatonic scale alternating whole and half steps, creating a symmetrical, disorienting, Stravinsky-like sound. Backing: a single power chord vamp on E with bass and drums. 100 BPM. 4/4 time. Dry, direct guitar tone.",
+      "lyrics": "[Section A — Minor Pentatonic]\n[guitar solo, five-note scale]\n[bass and drums E power chord vamp]\n(raw, soulful, the blues DNA)\n\n[Section B — Blues Scale]\n[guitar adding the blue note]\n[same backing vamp]\n(grittier, more expressive, the extra spice)\n\n[Section C — Whole Tone Scale]\n[guitar all whole steps, no half steps]\n[bass shifts to whole tone bass line]\n(dreamlike, floating, no gravity)\n\n[Section D — Octatonic Scale]\n[guitar alternating whole-half steps]\n[bass chromatic movement]\n(disorienting, symmetrical, Stravinsky)\n\n[Comparison]\n[four-bar phrase in each scale, back to back]\n(pentatonic → blues → whole tone → octatonic)\n\n[Ending]\n[guitar returns to pentatonic]\n[single bent note, fading]\n(home is five notes)"
+    },
+    {
+      "id": "S005_09",
+      "title": "Cadence Catalog",
+      "concept": "카덴스 유형(perfect / plagal / deceptive / half cadence) — 코퍼스에 있는 plagal(7회)에서 출발하여 확장",
+      "harmony_level": "Level 3 — 기능 화성",
+      "corpus_reference": "plagal(7회), cadence(0회 명시적), resolve(8회)",
+      "sp": "Piano and string quartet piece demonstrating four types of musical cadence. Section A ends with a perfect cadence, the strongest resolution — the dominant chord moving to the tonic like a period at the end of a sentence. Section B ends with a plagal cadence, the gentle resolution — the subdominant moving to the tonic, the 'amen' cadence heard in hymns. Section C ends with a deceptive cadence — the dominant chord that should resolve to the tonic instead moves to the submediant, a surprise that delays resolution. Section D ends with a half cadence, stopping on the dominant chord, an incomplete sentence that leaves the listener hanging. Each section plays the same eight-bar melody but with a different ending. Piano and string quartet. 80 BPM in C major. 4/4 time. Concert hall reverb.",
+      "lyrics": "[Section A — Perfect Cadence]\n[piano and strings, eight-bar melody]\n[ending: V to I — complete resolution]\n(a sentence with a period)\n\n[Section B — Plagal Cadence]\n[same melody]\n[ending: IV to I — gentle amen]\n(a prayer ending softly)\n\n[Section C — Deceptive Cadence]\n[same melody]\n[ending: V to vi — surprise, not home]\n(the door you expected is the wrong one)\n\n[Section D — Half Cadence]\n[same melody]\n[ending: stops on V — hanging, unfinished]\n(a sentence without a period)\n\n[Comparison]\n[same four-bar phrase, four endings back to back]\n[perfect, plagal, deceptive, half]\n(four ways to end — or not end)\n\n[Final]\n[piano alone, perfect cadence, V to I]\n[strings sustain the tonic]\n(the only true ending)"
+    },
+    {
+      "id": "S005_10",
+      "title": "The Key Change",
+      "concept": "구체적 전조 지시(C major → E-flat major) — key change(1회)가 데드존 근처, 전조의 구체적 목표 키 지정이 먹히는가?",
+      "harmony_level": "Level 4 — 전조",
+      "corpus_reference": "key change(1회), modulation(0회), key of X(652회)",
+      "sp": "Pop anthem that modulates through three keys for emotional escalation. The song starts in C major with a straightforward verse and chorus. At the second chorus, the key modulates up to D major, a whole step higher, creating a lift in energy and brightness. The final chorus modulates up again to E-flat major, another half step, the classic truck driver modulation that pushes the emotional climax to its peak. Each modulation is preceded by a two-bar transition using the dominant of the new key. Piano, electric guitar, bass, and drums. Male vocal in a pop rock style. 118 BPM. 4/4 time. Big pop production with wide stereo.",
+      "lyrics": "[Verse 1 — C major]\n[piano and guitar, C major]\n[male vocal, comfortable range]\nEvery road I've ever known\nLed me back to where I've grown\nBut tonight I'm breaking through\nFinding something brave and new\n\n[Chorus 1 — C major]\n[full band, C major]\nRise, rise, higher than before\nRise, rise, there's always something more\n\n[Verse 2 — still C major]\n[same arrangement]\nEvery wall I've ever built\nCrumbles underneath my guilt\nBut the sky is wide and clear\nAnd I'm done with living here\n\n[Modulation — C to D major]\n[two-bar transition, dominant of D]\n(the lift, the key is rising)\n\n[Chorus 2 — D major]\n[full band, D major — brighter, higher]\nRise, rise, higher than before\nRise, rise, there's always something more\n\n[Modulation — D to E-flat major]\n[two-bar transition, dominant of E-flat]\n(one more push, the final climb)\n\n[Final Chorus — E-flat major]\n[full band, E-flat major — peak energy]\nRise, rise, higher than before\nRise, rise, there's always something more\n(the truck driver modulation — maximum emotion)\n\n[Outro — E-flat major]\n[guitar and piano fading]\n[vocal ad lib, high]\n(staying in the new key, never going back)"
+    }
+  ],
+
+  "test_design": {
+    "total_tracks": 10,
+    "theme": "화성 인식의 해상도 경계선 — 조성(Level 0)에서 코드 진행(Level 4)까지",
+    "harmony_levels": {
+      "Level 0": "key of X — 코퍼스 652회, 확실히 작동",
+      "Level 1": "모드/스케일명 — 코퍼스 희소(1~9회), S005_01/08에서 테스트",
+      "Level 2": "코드 성격/기능 — seventh(21회), S005_02/07에서 테스트",
+      "Level 3": "구체적 코드명 — 코퍼스 0회, S005_03/09에서 데드존 도전",
+      "Level 4": "코드 진행 표기 — 코퍼스 0회, S005_04/10에서 데드존 도전"
+    },
+    "control_pair": {
+      "formal": "S005_03 (Am7, Cmaj7 등 코드명 직접 투입)",
+      "natural": "S005_05 (같은 화성 의도를 자연어로 기술)",
+      "purpose": "같은 화성 의도가 전공 용어 vs 자연어에서 얼마나 다르게 실현되는가"
+    },
+    "instrument_policy": "전곡 대중음악 악기(piano, guitar, bass, drums) — 악기 변수 제거, 화성만 독립 변수",
+    "round_trip": "전곡 생성 → 재업로드 → SP+가사 캡처 → (1) 입력 코드명/진행 유지율 (2) 자연어 번역 여부 (3) 완전 무시 여부 3단계 판정"
+  }
+}

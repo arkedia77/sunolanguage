@@ -1,0 +1,109 @@
+{
+  "purpose": "S006 — Voicing Architecture (보이싱과 화성 텍스처)",
+  "created_at": "2026-04-28",
+  "previous": "S005 = 화성의 수평적 경계선 (코드명, 진행). S006 = 화성의 수직적 배치 (보이싱)",
+  "theme": "같은 코드라도 어떻게 쌓는가(보이싱)에 따라 소리가 완전히 달라진다 — Suno가 보이싱 지시를 구분하는가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis B: 화성/코드 인식 (S005의 짝)",
+  "instrument_policy": "피아노 + 기타 고정 — 보이싱이 가장 직접적으로 드러나는 악기",
+  "test_axes": [
+    "close voicing vs open voicing의 음향 차이",
+    "drop-2 같은 재즈 보이싱 유형의 인식",
+    "자리바꿈(inversion)이 실제 음향에 반영되는가",
+    "클러스터·4도/5도 쌓기 등 20세기 화성 텍스처",
+    "대위법적 텍스처 지시의 효과",
+    "화성 리듬(코드 교체 빈도)의 제어"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S006_01",
+      "title": "Close vs Open",
+      "concept": "같은 코드를 close voicing(1옥타브 이내) vs open voicing(3옥타브 스프레드)로 지정",
+      "voicing_type": "기본 보이싱 대비",
+      "corpus_reference": "voicings(3회) — 코퍼스에 존재하나 세부 유형 구분 0회",
+      "sp": "Piano solo comparing two voicing styles on the same chord progression. The first half plays every chord in close voicing, with all notes packed within a single octave in the middle register of the piano. The sound is dense, compact, and warm. The second half plays the exact same chords in open voicing, with notes spread across three octaves from the bass register to the treble. The sound is spacious, resonant, and orchestral. The chord progression is simple: C major, A minor, F major, G major, repeated four times in each voicing style. Slow tempo, sustained chords, no pedal rhythmic pattern. 60 BPM. Free tempo. Grand piano with natural resonance.",
+      "lyrics": "[Close Voicing]\n[piano all chord tones within one octave]\n[middle register, dense and compact]\n(warm, intimate, contained)\n\n[Close Voicing — continued]\n[same progression: C, Am, F, G]\n[notes close together]\n(every voice touching its neighbor)\n\n[Transition]\n[single note, middle C]\n(the pivot)\n\n[Open Voicing]\n[piano chord tones spread across three octaves]\n[bass register to treble]\n(spacious, resonant, orchestral)\n\n[Open Voicing — continued]\n[same progression: C, Am, F, G]\n[notes far apart]\n(each voice has room to breathe)\n\n[Final Comparison]\n[close voicing C major]\n[then open voicing C major]\n[back to back]\n(hearing the difference in space)"
+    },
+    {
+      "id": "S006_02",
+      "title": "Drop-2 Jazz Guitar",
+      "concept": "재즈 기타의 핵심 보이싱 유형 — drop-2 voicing을 Suno가 이해하는가?",
+      "voicing_type": "재즈 보이싱",
+      "corpus_reference": "jazz voicings(1회), jazz chords(4회)",
+      "sp": "Jazz guitar trio with guitar using drop-2 voicings throughout. The guitar plays four-note jazz chords with the second voice from the top dropped down an octave, creating the characteristic spread voicing used by jazz guitarists since Wes Montgomery. The voicings are played on the middle four strings of the guitar. Walking bass line underneath. Ride cymbal and brushed snare keeping time. The progression follows a jazz standard form with ii-V-I turnarounds. The guitar comps with a rhythmic Charleston pattern on the chords. 140 BPM in B-flat major. 4/4 time with swing feel. Dry, warm guitar tone, no effects.",
+      "lyrics": "[Head In]\n[guitar drop-2 voicings, four-note chords]\n[walking bass]\n[ride cymbal, brushes]\n(classic jazz guitar sound)\n\n[A Section]\n[guitar comping Charleston rhythm]\n[bass walking through changes]\n(the spread voicing breathing)\n\n[B Section — Bridge]\n[guitar voicings move to higher register]\n[bass continues walking]\n(brighter, more open)\n\n[Guitar Solo]\n[guitar single-note solo]\n[bass and drums keeping time]\n(stepping out from the chords)\n\n[Head Out]\n[guitar returns to drop-2 comping]\n[bass and drums settle]\n(back to the voicings)\n\n[Ending]\n[guitar final chord, drop-2, letting ring]\n[bass final note]\n(one chord says everything)"
+    },
+    {
+      "id": "S006_03",
+      "title": "Inversion Staircase",
+      "concept": "같은 코드의 자리바꿈(root position → 1st inversion → 2nd inversion) — 베이스 노트 변화가 음향에 반영되는가?",
+      "voicing_type": "자리바꿈",
+      "corpus_reference": "inversion(0회) — 데드존",
+      "sp": "Piano and cello duet demonstrating chord inversions. The piano plays a C major chord in three positions while the cello plays the bass note. Root position: the cello plays C as the bass, the piano plays C-E-G above. The chord sounds stable and grounded. First inversion: the cello plays E as the bass, the piano plays E-G-C above. The chord sounds lighter, less stable, moving forward. Second inversion: the cello plays G as the bass, the piano plays G-C-E above. The chord sounds suspended, unstable, wanting to resolve. Each inversion is held for eight bars, then the progression repeats with F major and G major chords in all three inversions. 66 BPM. 3/4 time. Concert hall acoustic.",
+      "lyrics": "[C Major — Root Position]\n[cello plays C as bass]\n[piano C-E-G above]\n(stable, grounded, home)\n\n[C Major — First Inversion]\n[cello plays E as bass]\n[piano E-G-C above]\n(lighter, leaning forward)\n\n[C Major — Second Inversion]\n[cello plays G as bass]\n[piano G-C-E above]\n(suspended, unstable, floating)\n\n[F Major — Three Inversions]\n[cello: F, then A, then C as bass]\n[piano adjusting above each time]\n(the same three positions, new chord)\n\n[G Major — Three Inversions]\n[cello: G, then B, then D as bass]\n[piano adjusting above]\n(the bass note changes everything)\n\n[Final]\n[C major root position, cello and piano]\n(returning to the most stable version)"
+    },
+    {
+      "id": "S006_04",
+      "title": "Cluster and Quartal",
+      "concept": "20세기 화성 — tone cluster / quartal harmony(4도 쌓기) / quintal harmony(5도 쌓기)",
+      "voicing_type": "비전통 화성 텍스처",
+      "corpus_reference": "cluster(0회), quartal(0회), quintal(0회) — 전부 데드존",
+      "sp": "Contemporary piano piece exploring non-traditional harmonic structures. Section A features tone clusters — groups of adjacent notes played simultaneously, creating a dense, dissonant mass of sound. The pianist uses the forearm to press multiple white keys at once. Section B uses quartal harmony, chords built by stacking perfect fourths instead of thirds. The sound is open, ambiguous, neither major nor minor, characteristic of McCoy Tyner and modern jazz. Section C uses quintal harmony, stacking perfect fifths for an even more open, hollow, medieval quality. Section D combines all three textures in alternation. Solo piano, no accompaniment. Free tempo. Concert grand piano with the sustain pedal held throughout for maximum resonance.",
+      "lyrics": "[Section A — Tone Clusters]\n[piano forearm clusters, adjacent notes]\n(dense, dissonant, a wall of piano)\n\n[Cluster Melody]\n[clusters moving up and down the keyboard]\n(the mass of sound shifting)\n\n[Section B — Quartal Harmony]\n[piano chords stacked in fourths]\n(open, ambiguous, McCoy Tyner)\n\n[Quartal Melody]\n[melody using fourth intervals]\n(floating, neither major nor minor)\n\n[Section C — Quintal Harmony]\n[piano chords stacked in fifths]\n(hollow, medieval, vast)\n\n[Quintal Melody]\n[melody using fifth intervals]\n(ancient, open, like stone arches)\n\n[Section D — Combined]\n[alternating cluster, quartal, quintal]\n(three textures in conversation)\n\n[Final]\n[single perfect fifth, sustained]\n(the simplest interval, ringing)"
+    },
+    {
+      "id": "S006_05",
+      "title": "Doubling and Spacing",
+      "concept": "성부 배치 — 옥타브 더블링, 유니즌, 3도 하모니 등 성부 간격 지시",
+      "voicing_type": "성부 배치",
+      "corpus_reference": "unison(22회), harmony(33회), octave(11회) — 코퍼스에 존재",
+      "sp": "Pop arrangement demonstrating five vocal and instrumental doubling techniques. Section A features the melody played in unison by guitar and piano on the exact same pitch. Section B doubles the melody at the octave, guitar an octave above the piano. Section C adds three-part harmony in parallel thirds below the melody. Section D uses contrary motion, the melody ascending while the bass line descends in opposite direction. Section E combines all techniques: unison at the start, octave doubling in the middle, harmony at the climax. Bass guitar and drums provide rhythm section. 100 BPM in D major. 4/4 time. Clean pop production.",
+      "lyrics": "[Section A — Unison]\n[guitar and piano, same melody, same octave]\n[bass and drums rhythm section]\n(one voice from two instruments)\n\n[Section B — Octave Doubling]\n[guitar melody one octave above piano]\n(same melody, bigger sound, more space)\n\n[Section C — Parallel Thirds]\n[melody on top]\n[harmony a third below]\n[second harmony a third below that]\n(three voices moving together)\n\n[Section D — Contrary Motion]\n[melody ascending]\n[bass line descending]\n(two voices moving apart)\n\n[Section E — Combined]\n[unison start]\n[octave doubling in middle]\n[full harmony at climax]\n(building the arrangement)\n\n[Outro]\n[single unison note, guitar and piano]\n(back to one)"
+    },
+    {
+      "id": "S006_06",
+      "title": "Two Voices Talking",
+      "concept": "대위법 텍스처 — 2성 대위법, 캐논, 반진행(contrary motion)",
+      "voicing_type": "대위법",
+      "corpus_reference": "counterpoint(0회), canon(0회), interplay(8회)",
+      "sp": "Baroque-inspired piece for two keyboards demonstrating contrapuntal textures. The first section presents a two-voice counterpoint where both keyboards play independent melodies that harmonize when sounding together. The second section is a strict canon at the fifth — the second keyboard enters five bars after the first, playing the exact same melody transposed up a fifth. The third section features contrary motion, both keyboards starting on the same note and moving in opposite directions, one ascending and one descending. The fourth section combines free counterpoint with imitation, each keyboard echoing fragments of the other's melody. Two pianos. 108 BPM in C major. 4/4 time. Dry studio recording to hear both voices clearly.",
+      "lyrics": "[Two-Voice Counterpoint]\n[piano 1: melody A]\n[piano 2: independent melody B]\n(two conversations at once, harmonizing)\n\n[Canon at the Fifth]\n[piano 1: melody starts]\n[piano 2: same melody, five bars later, up a fifth]\n(the echo that harmonizes with itself)\n\n[Contrary Motion]\n[piano 1: ascending from middle C]\n[piano 2: descending from middle C]\n(mirror image, moving apart)\n\n[Free Imitation]\n[piano 1: melodic fragment]\n[piano 2: echoes the fragment, varied]\n[piano 1: new fragment]\n[piano 2: echoes again]\n(musical conversation, copying and changing)\n\n[Finale]\n[both pianos arriving on the same note]\n[unison C, two octaves]\n(two voices becoming one)"
+    },
+    {
+      "id": "S006_07",
+      "title": "Harmonic Rhythm",
+      "concept": "화성 리듬 — 코드 교체 빈도(매 비트 vs 2마디마다 vs 한 섹션 내내 한 코드)가 음악의 움직임에 미치는 영향",
+      "voicing_type": "화성 리듬",
+      "corpus_reference": "chord changes(20회), harmonic(33회)",
+      "sp": "Rock band piece demonstrating three speeds of harmonic rhythm using the same four chords. Section A has rapid harmonic rhythm with chord changes every beat — the chords fly by creating a sense of urgency and forward motion. Section B slows the harmonic rhythm to one chord change every two bars — the music breathes, each chord has time to settle. Section C uses a single chord sustained for the entire sixteen-bar section — a drone-like, hypnotic stasis where all movement comes from rhythm and melody, not harmony. The chords are G, C, D, E minor. Electric guitar, bass, drums. 120 BPM in G major. 4/4 time. Rock production.",
+      "lyrics": "[Section A — Chord Every Beat]\n[guitar: G-C-D-Em, one per beat]\n[bass following every change]\n[drums driving]\n(urgent, racing through changes)\n\n[Section A continued]\n[same rapid changes]\n(no time to breathe, always moving)\n\n[Section B — Chord Every Two Bars]\n[guitar: G for two bars, then C for two bars]\n[bass settling into each chord]\n[drums spacious]\n(breathing, each chord a room to live in)\n\n[Section B continued]\n[D for two bars, Em for two bars]\n(slow enough to feel each color)\n\n[Section C — One Chord, Sixteen Bars]\n[guitar: G major, sustained, sixteen bars]\n[bass staying on G]\n[drums carrying all the motion]\n(hypnotic, drone-like, the chord is the world)\n\n[Comparison]\n[rapid: G-C-D-Em in four beats]\n[slow: G for eight beats]\n[static: G for sixteen bars]\n(the speed of harmony changes everything)"
+    },
+    {
+      "id": "S006_08",
+      "title": "Suspended in Air",
+      "concept": "서스펜션 — sus4 해결, sus2, add9 미해결 등 서스펜디드 코드의 긴장과 해소",
+      "voicing_type": "서스펜션/해결",
+      "corpus_reference": "suspended(2회) — 코퍼스에 희소하게 존재",
+      "sp": "Acoustic guitar and piano piece exploring suspended chords and their resolutions. The piece opens with a Csus4 chord — the fourth replacing the third, creating a floating, unresolved tension. After four bars, the suspension resolves down to a regular C major chord, and the tension releases. The next section uses a Csus2, the second replacing the third for an open, airy quality. An Aadd9 chord adds color without tension — the ninth sits on top like a halo but does not need to resolve. A passage alternates between Dsus4 resolving to D major and Dsus4 not resolving, demonstrating the difference between resolved and perpetual suspension. Acoustic guitar fingerpicking. Piano sustained chords. 68 BPM. 3/4 time. Natural room ambience.",
+      "lyrics": "[Csus4 — Tension]\n[guitar Csus4 chord, arpeggiated]\n[piano sustaining the fourth]\n(floating, unresolved, wanting)\n\n[Resolution to C Major]\n[the fourth drops to the third]\n[guitar C major]\n(release, arrival, the answer)\n\n[Csus2 — Open Air]\n[guitar Csus2, arpeggiated]\n[piano sustaining the second]\n(open, airy, not tense but not settled)\n\n[Aadd9 — Color]\n[guitar Aadd9]\n[the ninth sits on top like a halo]\n(beautiful, no need to resolve)\n\n[Dsus4 Resolving]\n[suspension, then resolution]\n[suspension, then resolution]\n(tension-release, tension-release)\n\n[Dsus4 Not Resolving]\n[suspension held, never resolving]\n(perpetual floating, never landing)\n\n[Final]\n[Csus4, long pause, then C major]\n(the longest wait, the sweetest resolution)"
+    }
+  ],
+
+  "test_design": {
+    "total_tracks": 8,
+    "theme": "화성의 수직적 배치(보이싱)와 텍스처 — 같은 코드도 쌓는 방식에 따라 달라진다",
+    "voicing_categories": {
+      "기본_배치": "S006_01 (close vs open), S006_05 (doubling/spacing)",
+      "재즈_보이싱": "S006_02 (drop-2)",
+      "자리바꿈": "S006_03 (root/1st/2nd inversion)",
+      "비전통_화성": "S006_04 (cluster/quartal/quintal)",
+      "대위법": "S006_06 (canon/contrary motion/imitation)",
+      "화성_리듬": "S006_07 (코드 교체 빈도)",
+      "서스펜션": "S006_08 (sus4/sus2/add9 해결/미해결)"
+    },
+    "s005_connection": "S005 = 수평적 화성(어떤 코드, 어떤 진행). S006 = 수직적 화성(같은 코드를 어떻게 쌓는가). 둘이 합쳐서 Axis B 완결",
+    "instrument_policy": "피아노 + 기타 고정 (보이싱이 직접 드러나는 악기). 일부 곡에 베이스/드럼/첼로 추가",
+    "round_trip": "전곡 생성 → 재업로드 → SP+가사 캡처 → (1) 보이싱 용어 유지율 (2) 텍스처 차이 청취 가능 여부 (3) 자연어 번역 패턴"
+  }
+}
