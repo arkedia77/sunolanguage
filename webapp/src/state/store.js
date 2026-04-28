@@ -12,6 +12,7 @@ const state = {
     arrangement: '',
     mood: [],
     effects: [],
+    mainInstruments: [],
   },
   sections: [],
   activeSectionId: null,
@@ -203,6 +204,14 @@ export function autoFillFromGenre(fillData) {
     }
   }
 
+  if (fillData.instruments?.length > 0) {
+    for (const instName of fillData.instruments) {
+      if (!state.global.mainInstruments.includes(instName)) {
+        state.global.mainInstruments.push(instName);
+      }
+    }
+  }
+
   for (const sec of state.sections) {
     if (sec.instruments.length === 0 && fillData.instruments.length > 0) {
       for (const instName of fillData.instruments) {
@@ -232,6 +241,7 @@ export function loadTemplate(template) {
   state.global.vocalTypes = template.vocalTypes ? template.vocalTypes.slice() : [];
   state.global.effects = template.effects ? template.effects.slice() : [];
   state.global.mood = template.mood ? template.mood.slice() : [];
+  state.global.mainInstruments = template.instruments ? template.instruments.slice() : [];
 
   loadPreset(template.preset || 'simple');
 

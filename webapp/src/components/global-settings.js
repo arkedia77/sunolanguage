@@ -10,6 +10,7 @@ export function renderGlobalSettings(container, state, data) {
     container.innerHTML = `
       <div class="panel-section">
         <div class="panel-section-title">Genre</div>
+        <div class="panel-desc">SP 첫 문장. Suno가 곡 전체 스타일을 결정합니다.</div>
         <div class="search-input">
           <input type="text" id="genre-search" placeholder="Search genres..." />
         </div>
@@ -18,19 +19,17 @@ export function renderGlobalSettings(container, state, data) {
       </div>
 
       <div class="panel-section">
-        <div class="panel-section-title">Effects</div>
-        <div class="chip-group" id="effects-chips"></div>
-      </div>
-
-      <div class="panel-section">
-        <div class="panel-section-title">Mood</div>
-        <div class="chip-group" id="mood-chips"></div>
+        <div class="panel-section-title">Main Instruments</div>
+        <div class="panel-desc">곡 전체의 메인 악기 → SP에 반영. 섹션별 배치는 Song Form에서.</div>
+        <div class="search-input">
+          <input type="text" id="inst-search" placeholder="Search instruments..." />
+        </div>
+        <div class="chip-group" id="main-inst-chips"></div>
       </div>
     `;
 
     setupGenreCategories(container, data);
-    setupEffectsChips(container, data);
-    setupMoodChips(container, data);
+    setupMainInstruments(container, data);
     setupGenreSearch(container);
     setupAutoFill(container, data);
   }
@@ -108,25 +107,35 @@ function setupGenreSearch(container) {
   });
 }
 
-function setupEffectsChips(container, data) {
-  const el = container.querySelector('#effects-chips');
-  el.innerHTML = data.effects.slice(0, 20)
-    .map(e => `<div class="chip" data-effect="${e}">${e}</div>`)
-    .join('');
-  el.addEventListener('click', e => {
-    const chip = e.target.closest('.chip');
-    if (chip) toggleInArray('effects', chip.dataset.effect);
-  });
-}
+function setupMainInstruments(container, data) {
+  const el = container.querySelector('#main-inst-chips');
+  const recs = () => {
+    const genre = container.querySelector('.genre-chip.active')?.dataset.genre;
+    if (!genre) return new Set();
+    const r = data.genreRecommendations[genre];
+    return new Set((r?.instrument || []).map(s => s.toLowerCase()));
+  };
 
-function setupMoodChips(container, data) {
-  const el = container.querySelector('#mood-chips');
-  el.innerHTML = data.moods
-    .map(m => `<div class="chip" data-mood="${m}">${m}</div>`)
-    .join('');
+  function renderChips(filter) {
+    const recSet = recs();
+    const filtered = filter
+      ? data.instruments.filter(i => i.name.toLowerCase().includes(filter))
+      : data.instruments.slice(0, 30);
+    el.innerHTML = filtered
+      .map(i => {
+        const isRec = recSet.has(i.name.toLowerCase());
+        return `<div class="chip ${isRec ? 'recommended' : ''}" data-main-inst="${i.name}">${i.name} <span class="freq">${i.count}</span></div>`;
+      }).join('');
+  }
+
+  renderChips('');
+
+  const search = container.querySelector('#inst-search');
+  search.addEventListener('input', () => renderChips(search.value.toLowerCase()));
+
   el.addEventListener('click', e => {
     const chip = e.target.closest('.chip');
-    if (chip) toggleInArray('mood', chip.dataset.mood);
+    if (chip) toggleInArray('mainInstruments', chip.dataset.mainInst);
   });
 }
 
@@ -153,21 +162,11 @@ function updateActiveStates(container, state, data) {
       }
     }
   }
-  for (const chip of container.querySelectorAll('#effects-chips .chip')) {
-    chip.classList.toggle('active', g.effects.includes(chip.dataset.effect));
-  }
-  for (const chip of container.querySelectorAll('#mood-chips .chip')) {
-    chip.classList.toggle('active', g.mood.includes(chip.dataset.mood));
+
+  for (const chip of container.querySelectorAll('#main-inst-chips .chip')) {
+    chip.classList.toggle('active', g.mainInstruments.includes(chip.dataset.mainInst));
   }
 
   const autoBtn = container.querySelector('#autofill-btn');
   autoBtn.style.display = g.genre ? '' : 'none';
-
-  const recs = data.genreRecommendations[g.genre];
-  for (const chip of container.querySelectorAll('#effects-chips .chip')) {
-    const isRec = recs && (recs.effect_electronic || []).some(e =>
-      e.toLowerCase().includes(chip.dataset.effect.toLowerCase())
-    );
-    chip.classList.toggle('recommended', isRec);
-  }
 }

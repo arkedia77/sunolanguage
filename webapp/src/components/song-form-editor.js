@@ -65,8 +65,24 @@ export function renderSongForm(container, state, data) {
       </div>
     </div>
 
+    <div class="settings-row">
+      <div class="settings-cell" style="flex:1">
+        <label class="settings-label">Effects <span class="label-hint-inline">프로덕션 이펙트 → SP에 반영</span></label>
+        <div class="chip-group compact" id="center-effects-chips">
+          ${data.effects.slice(0, 16).map(e => `<div class="chip mini ${g.effects.includes(e) ? 'active' : ''}" data-effect="${e}">${e}</div>`).join('')}
+        </div>
+      </div>
+      <div class="settings-cell" style="flex:1">
+        <label class="settings-label">Mood <span class="label-hint-inline">곡의 감정/분위기 → SP에 반영</span></label>
+        <div class="chip-group compact" id="center-mood-chips">
+          ${data.moods.slice(0, 16).map(m => `<div class="chip mini ${g.mood.includes(m) ? 'active' : ''}" data-mood="${m}">${m}</div>`).join('')}
+        </div>
+      </div>
+    </div>
+
     <div class="panel-section">
       <div class="panel-section-title">Song Form</div>
+      <div class="panel-desc">곡의 구조(섹션 순서)를 정합니다. 각 섹션 클릭 → 악기 등장/퇴장 배치 → 브래킷에 반영.</div>
       <div class="form-presets">
         <div class="preset-group">
           <span class="preset-group-label">Pop</span>
@@ -192,6 +208,14 @@ export function renderSongForm(container, state, data) {
   container.querySelector('#center-arr-chips')?.addEventListener('click', e => {
     const chip = e.target.closest('.chip');
     if (chip) updateGlobal('arrangement', chip.dataset.arr);
+  });
+  container.querySelector('#center-effects-chips')?.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (chip) toggleInArray('effects', chip.dataset.effect);
+  });
+  container.querySelector('#center-mood-chips')?.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (chip) toggleInArray('mood', chip.dataset.mood);
   });
 
   container.querySelector('.add-section-bar').addEventListener('click', e => {

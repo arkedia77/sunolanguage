@@ -14,16 +14,23 @@ export function generateSP(state, data) {
     sentences.push({ text: genreSentence + '.', slot: 'genre' });
   }
 
-  const allInstruments = [];
+  if (g.mainInstruments && g.mainInstruments.length > 0) {
+    sentences.push({
+      text: capitalize(joinList(g.mainInstruments)) + '.',
+      slot: 'instrument',
+    });
+  }
+
+  const sectionInstruments = [];
   for (const sec of sections) {
     for (const inst of sec.instruments) {
-      if (inst.name && !allInstruments.find(a => a.name === inst.name)) {
-        allInstruments.push(inst);
+      if (inst.name && !g.mainInstruments?.includes(inst.name) && !sectionInstruments.find(a => a.name === inst.name)) {
+        sectionInstruments.push(inst);
       }
     }
   }
 
-  for (const inst of allInstruments) {
+  for (const inst of sectionInstruments) {
     let text = '';
     const mods = inst.modifiers.length > 0 ? inst.modifiers.join(', ') + ' ' : '';
     const name = inst.name;
