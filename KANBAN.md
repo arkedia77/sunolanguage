@@ -2,7 +2,6 @@
 
 ## IN PROGRESS
 - [sunolanguage] SP Builder 웹앱 — Phase 3/4 완료, 메인악기 패널+Effects/Mood 중앙 이동 완료, Suno 29개 대장르 카테고리 반영 남음
-- [sunolanguage] S007–S015 설계 — S007 Dynamics부터 순차 생성 (플랜 파일 참조)
 - [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunomusic 재분석 대기 중 (2026-04-27 발주)
 
 ## TODO
@@ -12,6 +11,9 @@
 ### 이대 관현악과 특집 시리즈
 - [sunolanguage] S003 주법·기법 심화 12곡 — sunomusic 발주 완료 (S002 후 순차 착수)
 - [sunolanguage] S004 장르 교차 12곡 — sunomusic 발주 완료 (S003 후 순차 착수)
+
+### S007–S015 어휘 지형도 완성 (82곡)
+- [sunolanguage] S007–S015 82곡 — sunomusic 일괄 발주 완료 (2026-04-29). 결과 대기
 
 ### 책 본문 집필 (V3.3 초안 기반)
 - [sunolanguage] 1·2·5장 본문 — docs/manual_v3/ 초안 → 출판 수준 원고
@@ -37,6 +39,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] S007–S015 9개 시리즈 82곡 설계 + sunomusic 일괄 발주 (통합 작업지시서+프롬프트전문 10건, push 완료) — 2026-04-29 ✅
 - [sunolanguage] SP Builder 메인악기 패널 + Effects/Mood 중앙 이동 + SP 생성 개선 — 2026-04-28 ✅
 - [sunolanguage] SP Builder Phase 3/4 — 장르 카테고리 아코디언 + 자동채우기 + 20 템플릿 + 워크플로우 레이아웃 + SortableJS 드래그 + 프리셋 토글 — 2026-04-28 ✅
 - [sunolanguage] SP Builder 웹앱 MVP 완료 (Vite+JS, 3패널, 57장르/42악기, SP+브래킷 자동생성) — 2026-04-28 ✅
