@@ -1,0 +1,94 @@
+{
+  "purpose": "S012 — Language and Pronunciation (언어와 발음의 경계)",
+  "created_at": "2026-04-29",
+  "previous": "S011 = 보컬 질감/전달. S012 = 보컬 축의 나머지 절반 — 언어, 발음, 장르 편향",
+  "theme": "한국어→K-Pop 장르 편향 존재, 발음/딕션 지시(17회)는 미지 영역 — 언어가 장르를 결정하는가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis E: 보컬/언어",
+  "instrument_policy": "곡별 상이 — 언어/장르 편향 테스트 특성상 다양한 장르 반주 사용",
+  "test_axes": [
+    "4개 언어(영어/한국어/일본어/스페인어)에 따른 장르 편향 유무",
+    "억양/액센트 지시가 발음에 반영되는가",
+    "딕션(발음 선명도) 지시가 효과가 있는가",
+    "코드 스위칭(한 곡 안에서 언어 전환)이 가능한가",
+    "보컬 유무(instrumental/vocal)가 다른 요소에 영향을 미치는가",
+    "음절 밀도(dense vs sparse syllables)를 제어할 수 있는가",
+    "감정적 전달 () 디렉션의 효과",
+    "음소 단위 발음 지시가 가능한가"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S012_01",
+      "title": "Language Bias Test",
+      "concept": "4개 언어 편향 비교 — 동일한 SP + 다른 언어 가사. 한국어→K-Pop 편향이 실제 존재하는가?",
+      "language_type": "언어별 편향",
+      "corpus_reference": "Korean(한국어 가사 시 K-Pop 편향 보고), English(기본), Japanese(관측 미비), Spanish(관측 미비)",
+      "sp": "Indie folk song with acoustic guitar fingerpicking, upright bass, light brushed drums, and harmonica. Warm, intimate, singer-songwriter style. Simple chord progression in G major. Gentle male vocal. The arrangement, instrumentation, and style must remain exactly the same regardless of what language the lyrics are in. This is an English-language version. The song should sound like American indie folk, not K-pop, not J-pop, not Latin pop. 95 BPM in G major. 4/4 time. Acoustic home recording.",
+      "lyrics": "[Verse 1]\n(gentle, folk singing)\nThe morning light is coming through the kitchen window\nCoffee on the counter and the radio is low\nI am writing letters to the people I have lost\nEvery stamp a small surrender every word a cost\n\n[Chorus]\nBut the road keeps going\nAnd the river keeps flowing\nAnd the morning keeps showing up\nWhether I am ready or not\n\n[Verse 2]\nThe garden needs attention and the fence needs paint\nThe dog is getting older and my patience wearing thin\nBut something in the birdsong says tomorrow is a gift\nSomething in the morning says the fog is going to lift\n\n[Chorus]\nThe road keeps going\nAnd the river keeps flowing\nAnd the morning keeps showing up\n\n[Outro]\n(humming the melody)\nMmm mmm mmm..."
+    },
+    {
+      "id": "S012_02",
+      "title": "Korean Same Song",
+      "concept": "S012_01과 동일한 SP, 한국어 가사 — 한국어가 K-Pop 편향을 유발하는지 테스트",
+      "language_type": "한국어 편향 테스트",
+      "corpus_reference": "K-pop(78회), Korean(26회) — 한국어 가사 사용 시 장르 편향 가설",
+      "sp": "Indie folk song with acoustic guitar fingerpicking, upright bass, light brushed drums, and harmonica. Warm, intimate, singer-songwriter style. Simple chord progression in G major. Gentle male vocal. The arrangement, instrumentation, and style must remain exactly the same regardless of what language the lyrics are in. This is a Korean-language version. The song should sound like American indie folk, not K-pop. 95 BPM in G major. 4/4 time. Acoustic home recording.",
+      "lyrics": "[Verse 1]\n(gentle, folk singing)\n아침 햇살이 부엌 창문으로 들어오고\n카운터 위에 커피 라디오는 작게 틀어놓고\n잃어버린 사람들에게 편지를 쓰고 있어\n우표 하나하나가 작은 항복 말 한마디가 대가\n\n[Chorus]\n하지만 길은 계속 이어지고\n강은 계속 흐르고\n아침은 계속 찾아와\n내가 준비됐든 아니든\n\n[Verse 2]\n정원은 손이 필요하고 울타리엔 페인트가 필요해\n개는 점점 늙어가고 내 인내심도 닳아가\n그래도 새소리 속에 내일은 선물이라는 말이 있어\n아침 안개 속에 곧 걷힐 거라는 말이 있어\n\n[Chorus]\n길은 계속 이어지고\n강은 계속 흐르고\n아침은 계속 찾아와\n\n[Outro]\n(허밍)\n음 음 음..."
+    },
+    {
+      "id": "S012_03",
+      "title": "Accent Direction",
+      "concept": "억양/액센트 지시 — SP에서 특정 발음 스타일(Southern American, British, Irish)을 요구했을 때 반영되는가?",
+      "language_type": "억양 지시",
+      "corpus_reference": "accent(0회), Southern(4회), British(3회), Irish(6회)",
+      "sp": "Country folk song sung with a thick Southern American accent. The vocalist should drawl every vowel, drop the g from every -ing ending, and pronounce words the way they sound in rural Tennessee. The word fire becomes fahr. The word going becomes goin. The word night becomes naht. The accent should be unmistakable and consistent throughout — not a caricature but an authentic deep Southern singing voice, the kind heard in traditional Appalachian folk music. Acoustic guitar, banjo, fiddle, upright bass. 100 BPM in D major. 3/4 time. Porch recording.",
+      "lyrics": "[Verse 1]\n(thick Southern drawl, dropping g's)\nI been walkin down that old dirt road\nCarryin more than my share of the load\nThe sun goin down behind the hill\nAnd the whippoorwill is singin still\n\n[Chorus]\n(strong Southern accent)\nLord I'm comin home tonight\nComin home by the firelight\nAin't nothin in this world so fine\nAs the porch and the stars and a jug of wine\n\n[Verse 2]\n(same thick drawl)\nMama's cookin somethin on the stove\nDaddy's sittin where he always sat\nThe screen door slammin like it always does\nAnd I remember where my heart is at\n\n[Chorus]\nLord I'm comin home tonight\nDown that same old road by the same old light\n\n[Outro]\n(spoken, thick accent)\nSome roads don't go nowhere\nBut they still take you home"
+    },
+    {
+      "id": "S012_04",
+      "title": "Diction Clarity",
+      "concept": "딕션(발음 선명도) 지시 — 극도로 명확한 발음 vs 극도로 불명확한 발음. SP 지시에 반응하는가?",
+      "language_type": "딕션 제어",
+      "corpus_reference": "clear(16회), crisp(8회), mumble(0회), slurred(2회), enunciated(0회)",
+      "sp": "Pop song with two contrasting vocal sections testing diction control. Section A requires crystal clear diction — every consonant is crisp and precise, every vowel is pure, every word is perfectly enunciated as if the singer is a trained broadcaster. Every single syllable must be intelligible on first listen with no ambiguity. Section B requires extremely unclear diction — the vocals are mumbled, slurred, vowels blending into each other, consonants swallowed, words running together, the kind of singing where you cannot make out the lyrics without a lyric sheet. The contrast between the two sections should be dramatic. Same melody, same key, same accompaniment. Piano and light drums. 100 BPM in C major. 4/4 time.",
+      "lyrics": "[Section A — crystal clear diction]\n(every consonant precise, every vowel pure, enunciated)\nI. Am. Speaking. Every. Word. With. Perfect. Clarity.\nYou. Can. Hear. Each. Syllable. Each. Letter. Each. Sound.\nNothing. Is. Lost. Nothing. Is. Hidden.\nEvery. Word. Arrives. Complete.\n\n[Section A continued]\n(broadcaster precision)\nThe rain falls on the window pane\nI watch the drops race to the bottom\nEvery word you hear is chosen\nEvery sound is crisp and certain\n\n[Section B — mumbled, slurred diction]\n(words blending, consonants swallowed, unclear)\nTherainfallsonthewindow...\nwatchthedropsrace...mmm...bottom\nEvrywrdyouhearis...mmm\n...crspncertn...\n\n[Section B continued]\n(maximum slurring)\n...mmblinthrough thwords nw...\ncantmakeout whatimsaying...\nthvoiceis there buthwords re gone...\njustafeeling notalanguage...\n\n[Final — one line clear, one line mumbled]\n(alternating)\nI am speaking clearly now\n...mmblingntheshadows...\nI am speaking clearly now\n...goneagain..."
+    },
+    {
+      "id": "S012_05",
+      "title": "Code Switching",
+      "concept": "코드 스위칭 — 한 곡 안에서 영어↔한국어 전환. 언어 전환 시 장르/음악 스타일이 변하는가?",
+      "language_type": "이중 언어",
+      "corpus_reference": "bilingual(0회), code switching(0회), mixed language(0회)",
+      "sp": "Pop song that switches between English and Korean lyrics within the same musical arrangement. The instrumentation and production style must remain constant throughout — synth pop with electronic beats, synthesizer pads, and modern production. When the lyrics switch from English to Korean, the music should NOT change style. The genre should remain synth pop regardless of language. The verse is in English, the chorus is in Korean, the bridge switches between both languages line by line. Male vocal. 118 BPM in A minor. 4/4 time. Modern pop production.",
+      "lyrics": "[Verse 1 — English]\n(singing in English, synth pop style)\nWalking through the neon lights\nEvery sign a different color\nI am looking for a feeling\nThat I lost somewhere in summer\n\n[Chorus — Korean]\n(singing in Korean, same style, same production)\n네온 불빛 아래서\n너를 찾고 있어\n여름 어딘가에 두고 온\n그 감정을 찾고 있어\n\n[Verse 2 — English]\n(English again, no style change)\nThe city hums a frequency\nThat only lonely people hear\nI tune my heart to match the pitch\nAnd hope that you are somewhere near\n\n[Chorus — Korean]\n(Korean, same music, same production)\n도시가 흥얼거리는 주파수\n외로운 사람만 들을 수 있어\n내 심장을 그 음에 맞추고\n네가 어딘가에 있길 바라\n\n[Bridge — switching line by line]\n(alternating English and Korean)\nI am here 나는 여기에\nYou are there 너는 거기에\nBetween us 우리 사이에\nJust the air 공기뿐이야\n\n[Final Chorus — mixed]\n네온 불빛 아래서\nI am looking for you\n여름 어딘가에\nSomewhere in the summer"
+    },
+    {
+      "id": "S012_06",
+      "title": "Syllable Density",
+      "concept": "음절 밀도 — 같은 멜로디에 음절이 빽빽한 가사 vs 음절이 희박한 가사. 가사 밀도가 음악에 미치는 영향",
+      "language_type": "음절 밀도",
+      "corpus_reference": "dense(4회), sparse(18회), rapid-fire(2회), wordy(0회)",
+      "sp": "Hip-hop and ballad hybrid testing syllable density contrast. Section A is a rapid-fire rap verse with maximum syllable density — as many syllables as possible crammed into each bar, tongue-twister speed, every beat subdivided into multiple syllables, the words tumbling over each other in a stream. Section B is an open ballad verse with minimum syllable density — one or two words per bar, long held notes, vast spaces between words, the opposite of rap's compression. Both sections use the same 90 BPM tempo and the same chord progression in D minor. The only difference is how many syllables occupy each bar. Trap beat with 808 bass for Section A, piano ballad for Section B. 90 BPM in D minor. 4/4 time.",
+      "lyrics": "[Section A — maximum syllable density, rap]\n(rapid-fire, as many syllables as possible per beat)\nI got a million words to say and every single one of them is fighting for a place inside the bar and I am cramming every syllable into every microsecond of this beat because the silence is the enemy and words are ammunition and I loaded up the clip with consonants and vowels and I'm firing full auto at the tempo\n\n[Section A continued]\n(still rapid-fire)\nNever stopping never pausing never breathing never letting any empty space survive between the syllables because density is gravity and gravity is power and the words are planets orbiting the beat at the speed of thought\n\n[Section B — minimum syllable density, ballad]\n(one or two words per bar, long held notes)\nSilence...\n\nIs...\n\nA language...\n\nToo...\n\n[Section B continued]\n(vast spaces between words)\nOne...\n\nWord...\n\nIs...\n\nEnough...\n\n[Final — density increasing from minimum to maximum]\n(starting sparse, ending dense)\nOne...\nOne word...\nOne word is all...\nOne word is all I need to say and every syllable that follows is another layer building on the first until the words are everywhere"
+    },
+    {
+      "id": "S012_07",
+      "title": "Emotional Parenthetical",
+      "concept": "감정적 전달 () 디렉션 — () 괄호 안의 감정 지시가 보컬 전달에 반영되는지 체계적 테스트",
+      "language_type": "() 디렉션",
+      "corpus_reference": "() 디렉션: Leo 실청취로 4/4 유효 확인 (S001 세션). 체계적 확장 테스트",
+      "sp": "Ballad where each verse uses a different emotional parenthetical direction to test the () vocal directive system. The melody and accompaniment remain exactly the same throughout — the only change is the emotional instruction in parentheses. Same key, same tempo, same instruments, same melody. Six different emotional deliveries of the same song. Piano accompaniment, gentle and unchanging. 70 BPM in F minor. 4/4 time. Intimate recording.",
+      "lyrics": "[Verse 1]\n(joyful, smiling, radiating happiness)\nI remember everything about that day\nThe way the light fell on the water\nThe way you turned and looked at me\nAnd everything was golden\n\n[Verse 2 — same melody]\n(grief-stricken, barely holding back tears)\nI remember everything about that day\nThe way the light fell on the water\nThe way you turned and looked at me\nAnd everything was golden\n\n[Verse 3 — same melody]\n(angry, seething, controlled fury)\nI remember everything about that day\nThe way the light fell on the water\nThe way you turned and looked at me\nAnd everything was golden\n\n[Verse 4 — same melody]\n(terrified, trembling with fear)\nI remember everything about that day\nThe way the light fell on the water\nThe way you turned and looked at me\nAnd everything was golden\n\n[Verse 5 — same melody]\n(nostalgic, bittersweet, wistful)\nI remember everything about that day\nThe way the light fell on the water\nThe way you turned and looked at me\nAnd everything was golden\n\n[Verse 6 — same melody]\n(detached, clinical, emotionless)\nI remember everything about that day\nThe way the light fell on the water\nThe way you turned and looked at me\nAnd everything was golden"
+    },
+    {
+      "id": "S012_08",
+      "title": "Phoneme-Level Direction",
+      "concept": "음소 단위 발음 지시 — SP에서 특정 모음/자음의 처리 방식을 지정. 가장 세밀한 수준의 보컬 제어 시도",
+      "language_type": "음소 단위",
+      "corpus_reference": "pronunciation(0회), vowel(0회), consonant(0회), phoneme(0회) — 완전 데드존",
+      "sp": "Art pop song with specific phoneme-level vocal instructions. The vocalist must elongate all open vowels — ah, oh, ee — holding them twice as long as normal, stretching each vowel sound into a sustained tone. Consonants should be percussive and sharp — every p, t, k should pop like a drum hit. The sibilant sounds — s, sh, z — should be exaggerated and drawn out like white noise. The letter r should be rolled with a trill on the tongue. The letter l should be dark and rounded. These phoneme-level instructions should create a vocal performance where every sound in the language is treated as a musical element with its own character. Art pop production with synths and programmed drums. 105 BPM in B minor. 4/4 time.",
+      "lyrics": "[Verse 1 — elongated vowels]\n(stretch every open vowel: ah, oh, ee)\nOooopen yooour eeeeyes\nThe moooorning liiiiight is caaaalling\nEeeeevery soooound aaaa symphoneeeee\nOf vooooowels faaaalling\n\n[Verse 2 — percussive consonants]\n(pop every p, t, k like drum hits)\nPick the Petals from the Paper\nTear the Ticket into Pieces\nKick the Corner of the Kingdom\nCount the Clicks and Cracks and Creases\n\n[Chorus — sibilant emphasis]\n(draw out every s, sh, z sound)\nSssshine through the ssshadowsss\nSsslip through the sssilence\nThe sssnake of sssound sssurroundsss\nEverything in sssibilance\n\n[Bridge — rolled r, dark l]\n(trill every r, round every l)\nRrroll the rrrriver rrrround the rrrocks\nLllet the lllight llland llllow\nRrrhythm and llllanguage\nTwo forces that fllllow\n\n[Final — all techniques combined]\n(elongated vowels + percussive consonants + sibilants + rolled r)\nOooopen the gaaate and Kick iT down\nSssslide through the Crrracks in the sssound\nEvery Phoneme a Pearl\nEvery Tttongue-Tip a drrrrum"
+    }
+  ]
+}

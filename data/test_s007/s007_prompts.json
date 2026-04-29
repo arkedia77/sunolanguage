@@ -1,0 +1,111 @@
+{
+  "purpose": "S007 — Dynamics: From Whisper to Thunder (다이내믹의 지형도)",
+  "created_at": "2026-04-29",
+  "previous": "S005-S006 = 화성 축. S007부터 시간 축(Axis C) 시작",
+  "theme": "forte(9회)·crescendo(9회) 기본은 알지만, ppp/fff/sfz/fp(전부 0회)는 데드존 — 음량 지시의 해상도 경계선은 어디인가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis C: 다이내믹/템포 (시간 축)",
+  "instrument_policy": "대중음악 악기 고정(piano, guitar, bass, drums) + 장르 고정(rock/pop) — 다이내믹만 변수",
+  "test_axes": [
+    "piano vs forte 기본 대비가 실제 음량 차이를 만드는가",
+    "6단계(ppp→fff) 그라데이션을 구분하는가",
+    "sfz/fp 같은 순간적 다이내믹 변화를 인식하는가",
+    "긴 크레셴도/디크레셴도를 지속적으로 수행하는가",
+    "subito(갑작스런 변화) 지시를 따르는가",
+    "전공 용어 vs 자연어 — 핵심 대조군",
+    "아티큘레이션(staccato/legato)이 다이내믹과 상호작용하는가"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S007_01",
+      "title": "Piano vs Forte Baseline",
+      "concept": "가장 기본적인 다이내믹 대비 — piano(여리게)와 forte(세게)를 명시적으로 지정했을 때 실제 음량 차이가 나는가?",
+      "dynamics_level": "Level 1 — 기본 대비",
+      "corpus_reference": "piano(악기명과 혼동 가능), forte(9회), soft(89회), loud(45회)",
+      "sp": "Rock band piece with extreme volume contrast between sections. The verse is played piano, very soft and delicate. Drums use only brushes. Guitar plays clean fingerpicking at low volume. Bass plays gently with fingers. The vocalist whispers. The chorus explodes into forte, loud and powerful. Drums switch to full kit with heavy hitting. Guitar switches to distorted power chords at maximum volume. Bass plays aggressively with a pick. The vocalist belts at full power. The contrast between verse and chorus should be dramatic and immediate. Electric guitar, electric bass, drum kit, male vocals. 120 BPM in E minor. 4/4 time. Rock production.",
+      "lyrics": "[Verse 1 — piano, soft]\n(whispering, barely there)\nIn the quiet of this room\nI can hear my heartbeat\nEvery breath a small balloon\nRising in the silence\n\n[Chorus — forte, loud]\n(belting, full power)\nBUT WHEN THE STORM ARRIVES\nTHERE IS NO PLACE TO HIDE\nTHE THUNDER SHAKES THE WALLS\nAND WE COME ALIVE\n\n[Verse 2 — piano, soft]\n(whispering again)\nBack to silence once again\nFingers barely touching strings\n\n[Chorus — forte, loud]\n(belting, maximum power)\nBUT WHEN THE STORM ARRIVES\nWE RISE WE RISE WE RISE\n\n[Outro — piano, fading]\n(whisper, disappearing)\nIn the quiet..."
+    },
+    {
+      "id": "S007_02",
+      "title": "Six-Step Gradation",
+      "concept": "6단계 다이내믹(ppp→pp→p→f→ff→fff) — 코퍼스 0회인 극단 다이내믹을 포함한 전체 스펙트럼",
+      "dynamics_level": "Level 3 — 전문 용어 그라데이션",
+      "corpus_reference": "ppp(0회), pp(0회), p(악기명 혼동), f(0회), ff(0회), fff(0회) — 전부 데드존",
+      "sp": "Solo piano piece presenting six dynamic levels as a continuous staircase. The piece begins at pianississimo, the softest possible touch, barely audible, like hearing a piano from three rooms away. It gradually steps up to pianissimo, still very quiet but now each note has definition. Then piano, a normal soft playing level. Then forte, a confident full sound. Then fortissimo, powerful and resonant, the piano singing at full voice. Finally fortississimo, the loudest possible attack, hammering the keys with maximum force, the piano almost percussive. Each dynamic level sustains for eight bars playing the same simple melody, so the only variable is volume. Grand piano. 80 BPM. 4/4 time. Concert hall with natural acoustics.",
+      "lyrics": "[ppp — pianississimo]\n[barely audible, softest possible touch]\n[simple melody, eight bars]\n(hearing a piano from three rooms away)\n\n[pp — pianissimo]\n[very quiet but defined notes]\n[same melody, slightly louder]\n(a secret being told)\n\n[p — piano]\n[normal soft playing]\n[same melody, comfortable]\n(a conversation at normal distance)\n\n[f — forte]\n[confident, full sound]\n[same melody, projecting]\n(speaking to an audience)\n\n[ff — fortissimo]\n[powerful, resonant]\n[same melody, the piano singing]\n(filling a concert hall)\n\n[fff — fortississimo]\n[maximum force, hammering]\n[same melody, almost percussive]\n(the piano screaming)\n\n[Descent]\n[fff back down through all six levels to ppp]\n(the staircase in reverse)\n\n[Final]\n[single note at ppp, fading to nothing]\n(silence reclaims the room)"
+    },
+    {
+      "id": "S007_03",
+      "title": "Sforzando and Forte-Piano",
+      "concept": "순간적 다이내믹 표기 — sfz(갑자기 강하게)와 fp(세게 치고 즉시 여리게) — 코퍼스 0회 데드존",
+      "dynamics_level": "Level 4 — 순간적 다이내믹",
+      "corpus_reference": "sfz(0회), fp(0회), sforzando(0회), forte-piano(0회) — 완전 데드존",
+      "sp": "String quartet piece built entirely on sudden dynamic attacks. The violins, viola, and cello play a sustained quiet passage at pianissimo, then without warning hit a sforzando accent — a single note played with sudden explosive force before immediately returning to quiet. This sforzando interruption happens unpredictably throughout the piece. The second section introduces forte-piano markings where every phrase begins with a loud attack that instantly drops to soft, like a bell being struck then muted. The third section combines both: sforzando accents interrupt a forte-piano texture. First violin, second violin, viola, cello. 72 BPM in D minor. 4/4 time. Intimate chamber music recording.",
+      "lyrics": "[Quiet Passage]\n[strings pianissimo, sustained, gentle]\n(calm surface)\n\n[Sforzando Attack 1]\n[sudden explosive accent — sfz!]\n[immediately back to pianissimo]\n(a crack of lightning in silence)\n\n[Quiet Again]\n[strings pianissimo]\n[another sfz — unpredictable timing]\n(you never know when it comes)\n\n[Forte-Piano Section]\n[every note starts loud, instantly drops to soft]\n[fp on each downbeat]\n(struck bell, immediately muted)\n\n[Forte-Piano Melody]\n[melody where each note attacks then fades]\n(each note a tiny explosion then whisper)\n\n[Combined — sfz within fp texture]\n[forte-piano phrases interrupted by sforzando]\n(two kinds of surprise layered)\n\n[Final]\n[one last sfz — then complete silence]\n(the last crack, then nothing)"
+    },
+    {
+      "id": "S007_04",
+      "title": "The Long Crescendo",
+      "concept": "32마디에 걸친 점진적 크레셴도 — Suno가 긴 호흡의 음량 변화를 지속할 수 있는가?",
+      "dynamics_level": "Level 2 — 점진적 변화",
+      "corpus_reference": "crescendo(9회), building(62회), gradually(14회)",
+      "sp": "Orchestral rock piece built on a single thirty-two bar crescendo from complete silence to maximum volume. The piece starts with a single acoustic guitar note played at the softest possible volume. Every two bars, a new instrument joins and the overall volume increases slightly. Bar 1: solo acoustic guitar, barely audible. Bar 8: bass guitar enters quietly. Bar 12: hi-hat only, tapping softly. Bar 16: piano joins with single notes. Bar 20: full drum kit enters at moderate volume. Bar 24: electric guitar with distortion, volume increasing. Bar 28: all instruments at forte. Bar 32: every instrument at maximum volume, full distortion, crashing cymbals, the loudest possible moment. The crescendo must be continuous and gradual, never stepping back. 100 BPM in A minor. 4/4 time.",
+      "lyrics": "[Bar 1-4 — ppp]\n[solo acoustic guitar, barely audible]\n(a single thread of sound)\n\n[Bar 5-8 — pp]\n[acoustic guitar slightly louder]\n[bass guitar enters, very quiet]\n(two threads now)\n\n[Bar 9-12 — p]\n[guitars growing]\n[hi-hat enters, tapping softly]\n(the pulse begins)\n\n[Bar 13-16 — mp]\n[piano joins with single notes]\n[bass more present]\n[drums still restrained]\n(momentum building)\n\n[Bar 17-20 — mf]\n[full drum kit enters]\n[all instruments at moderate volume]\n(the middle ground)\n\n[Bar 21-24 — f]\n[electric guitar with distortion]\n[drums more aggressive]\n[volume clearly increasing]\n(power entering)\n\n[Bar 25-28 — ff]\n[all instruments forte]\n[drums full fills]\n[bass driving hard]\n(the wave cresting)\n\n[Bar 29-32 — fff]\n[MAXIMUM VOLUME]\n[every instrument at full power]\n[crashing cymbals, full distortion]\n(THE WALL OF SOUND)\n\n[Sudden Cut]\n[silence]\n(nothing)"
+    },
+    {
+      "id": "S007_05",
+      "title": "Subito Piano",
+      "concept": "subito piano — 최대 음량에서 갑자기 최소 음량으로 전환. 점진적이 아닌 즉각적 다이내믹 전환",
+      "dynamics_level": "Level 3 — 갑작스런 전환",
+      "corpus_reference": "subito(0회), suddenly soft(0회), drop(악기 의미 혼용)",
+      "sp": "Hard rock song with three dramatic subito piano moments. The band plays at full volume fortissimo for sixteen bars: heavy distorted guitar riffs, pounding drums, screaming vocals. Then without any transition or fade, the music drops instantly to the softest possible level — subito piano. Acoustic guitar fingerpicking replaces the electric. The drummer switches to brushes mid-bar. The vocalist drops to a whisper. This extreme sudden drop happens three times in the song, each time more shocking because the listener expects it but it still surprises. After each quiet section of eight bars, the full volume returns just as suddenly. Electric guitar, acoustic guitar, bass, drums, male vocals. 130 BPM in B minor. 4/4 time. Raw rock recording.",
+      "lyrics": "[Full Volume — fff]\n(screaming)\nWE ARE THE FIRE WE ARE THE FLAME\nNOTHING CAN STOP US NOTHING IS THE SAME\nWE BURN THROUGH THE NIGHT\nWE OWN THIS STAGE\n\n[SUBITO PIANO — instant drop to ppp]\n(suddenly whispering)\nbut then the silence falls like snow\nand everything moves slow\nfingers on acoustic strings\nbrushes barely touching things\n\n[Full Volume Returns — fff]\n(screaming again)\nBACK TO THE FIRE BACK TO THE ROAR\nLOUDER THAN EVER LOUDER THAN BEFORE\n\n[SUBITO PIANO — second drop]\n(whispering, even softer)\nand again the world goes still\nonly heartbeat only breath\n\n[Full Volume — fff]\n(maximum power)\nONE LAST TIME WE SHAKE THE GROUND\n\n[SUBITO PIANO — third drop, longest]\n(barely audible whisper)\nand the quiet wins\nthe quiet always wins\nthe quiet...\n\n[Silence]"
+    },
+    {
+      "id": "S007_06",
+      "title": "Al Niente",
+      "concept": "al niente(무로) — 소리가 완전한 무음까지 점진적으로 사라지는 지시. 데드존 정면 도전",
+      "dynamics_level": "Level 4 — 전문 소멸 지시",
+      "corpus_reference": "al niente(0회), fade to nothing(0회), morendo(0회), perdendosi(0회)",
+      "sp": "Chamber orchestra piece that ends with an extended al niente — a gradual fade to absolute nothing over sixty-four bars. The piece begins with full orchestra at mezzo forte: strings, woodwinds, brass, percussion. Every eight bars, one section drops out and the remaining instruments reduce their volume. First the percussion stops. Then the brass fades away. Then the woodwinds thin to a single flute. Then the upper strings leave one by one. The last sixty-four bars are a solo cello playing a sustained note that decreases in volume so gradually that the listener cannot tell the exact moment the sound ends — it simply dissolves into silence. This is al niente, to nothing. The disappearance should be imperceptible. 60 BPM. Key of G minor. 4/4 time. Concert hall acoustic.",
+      "lyrics": "[Full Orchestra — mf]\n[strings, woodwinds, brass, percussion]\n[rich, warm, full sound]\n(the complete ensemble)\n\n[Percussion Exits]\n[timpani and cymbals fade, stop]\n[orchestra continues without percussion]\n(one layer removed)\n\n[Brass Exits]\n[horns and trumpets fade away]\n[strings and woodwinds remain]\n(the sound thins)\n\n[Woodwinds Thin]\n[oboe stops, clarinet stops]\n[single flute remains with strings]\n(narrowing)\n\n[Strings Thin]\n[violins stop, violas stop]\n[cello and flute only]\n(almost empty)\n\n[Flute Exits]\n[flute final note, fading]\n[solo cello alone]\n(one voice left)\n\n[Al Niente — solo cello]\n[sustained note, getting softer]\n[softer]\n[softer still]\n[barely audible]\n[is it still playing?]\n(dissolving into air)\n\n[Silence — or is the cello still there?]\n(al niente — to nothing)"
+    },
+    {
+      "id": "S007_07",
+      "title": "Terraced Dynamics",
+      "concept": "단계적 다이내믹(계단식 음량) — 바로크 시대 양식. 점진적 변화 없이 섹션 단위로 음량 블록 전환",
+      "dynamics_level": "Level 3 — 양식적 다이내믹",
+      "corpus_reference": "terraced(0회), echo dynamics(0회), Baroque(14회)",
+      "sp": "Baroque-style concerto grosso for harpsichord and strings demonstrating terraced dynamics. In Baroque music, dynamics change in blocks like steps on a staircase, not gradually. The concertino group plays a phrase at forte. The ripieno group immediately echoes the same phrase at piano. No crescendo or decrescendo connects the two levels — the change is instant, like flipping a switch. Section A alternates forte and piano blocks every four bars. Section B uses three levels: forte, mezzo-forte, and piano in a descending terrace. Section C uses the echo effect where the full ensemble plays loud, then a small group repeats the phrase softly as if heard from a distance. Harpsichord, strings. 96 BPM in D major. 4/4 time. Bright, clear recording.",
+      "lyrics": "[Forte Block]\n[full ensemble, confident volume]\n[harpsichord and all strings]\n(the statement, bold)\n\n[Piano Block — immediate switch]\n[same phrase, soft]\n[smaller group]\n(the echo, distant)\n\n[Forte Block]\n[full volume returns, no transition]\n(step up — instant)\n\n[Piano Block]\n[soft again, no fade]\n(step down — instant)\n\n[Three Terraces]\n[forte — full ensemble]\n[mezzo-forte — strings only]\n[piano — solo harpsichord]\n(three steps descending)\n\n[Three Terraces Ascending]\n[piano — harpsichord alone]\n[mezzo-forte — strings join]\n[forte — full ensemble]\n(three steps climbing)\n\n[Echo Effect]\n[full ensemble plays phrase loudly]\n[small group repeats softly]\n[as if heard from another room]\n(the Baroque echo)\n\n[Final Forte]\n[full ensemble, maximum Baroque volume]\n[harpsichord flourish]\n(the final statement, no fade, just stop)"
+    },
+    {
+      "id": "S007_08",
+      "title": "Dynamics in Plain Words",
+      "concept": "S007_02-04와 동일한 다이내믹 의도를 자연어로 기술 — 핵심 대조군. 전공 용어 없이 같은 효과를 얻을 수 있는가?",
+      "dynamics_level": "Level 1 — 자연어 다이내믹",
+      "corpus_reference": "soft(89회), loud(45회), quiet(28회), whisper(22회), powerful(19회), gentle(84회), intense(42회)",
+      "sp": "Rock band piece with dramatic volume storytelling. The song starts so quiet you have to strain to hear it. A single guitar string plucked so gently it barely makes a sound. The drums just a fingertip tap on the rim. The bass just a ghost note. Vocals barely a breath. Then the song gets a tiny bit louder. And a tiny bit more. Like sunrise — you cannot see it moving but suddenly it is bright. By the middle of the song, the band plays at a comfortable, normal volume. Then it keeps getting louder. The guitar gets more aggressive. The drums hit harder. The bass drives forward. The vocals push. By the end, the band is playing at the absolute loudest possible volume, every instrument screaming and distorted and overwhelming. Then in one instant, everything drops to a whisper. And then the whisper fades to nothing. 100 BPM in A minor. 4/4 time. Rock production.",
+      "lyrics": "[The Whisper]\n(barely breathing)\nCan you hear me if I barely speak\nCan you find me in the quiet\nEvery word a feather falling\nEvery note a candle flickering\n\n[Growing]\n(a little louder now)\nThe sound is waking up\nThe room is getting warmer\nSomething building in the chest\n\n[Normal]\n(comfortable, conversational)\nNow we are here together\nThe music at the level of a heartbeat\nSteady and present and real\n\n[Getting Loud]\n(pushing, straining)\nLOUDER NOW THE WALLS ARE SHAKING\nCAN YOU FEEL THE FLOOR VIBRATING\n\n[Maximum]\n(screaming with everything)\nTHIS IS EVERYTHING WE HAVE\nEVERY OUNCE OF SOUND AND FURY\nTHE ABSOLUTE LOUDEST THE BAND CAN PLAY\n\n[The Drop]\n(instant whisper)\nand then...\nnothing but breath...\n\n[Fading]\n(disappearing)\n..."
+    },
+    {
+      "id": "S007_09",
+      "title": "Articulation Dynamics",
+      "concept": "아티큘레이션(staccato/legato/marcato/tenuto)이 다이내믹과 상호작용 — 같은 음량에서 터치 방식의 차이",
+      "dynamics_level": "Level 3 — 아티큘레이션 복합",
+      "corpus_reference": "staccato(12회), legato(9회), marcato(0회), tenuto(0회)",
+      "sp": "Piano etude exploring four articulation styles at the same dynamic level mezzo-forte. Section A plays the melody in staccato — every note short, detached, crisp, like raindrops bouncing off a surface. Section B plays the same melody in legato — every note connected smoothly to the next with no gap, singing and flowing. Section C plays in marcato — every note accented and punched, heavy and deliberate, with weight on each attack. Section D plays in tenuto — every note held for its full value with gentle emphasis, sustained and thoughtful. All four sections are at the same volume level, proving that articulation is not dynamics but touch. Solo grand piano. 100 BPM in C major. 4/4 time. Close-miked studio recording.",
+      "lyrics": "[Staccato]\n[every note short, detached, crisp]\n[same melody]\n(raindrops bouncing)\n\n[Staccato continued]\n[notes separated by silence]\n[light, precise]\n(each note an island)\n\n[Legato]\n[every note connected, no gap]\n[same melody, flowing]\n(a river of sound)\n\n[Legato continued]\n[singing, smooth, sustained]\n(one note melts into the next)\n\n[Marcato]\n[every note accented, punched]\n[same melody, heavy]\n(marching, deliberate)\n\n[Marcato continued]\n[weight on each attack]\n[forceful but controlled]\n(each note stamped)\n\n[Tenuto]\n[every note held full value]\n[same melody, sustained]\n(thoughtful, patient)\n\n[Tenuto continued]\n[gentle emphasis, no rush]\n(each note given its full life)\n\n[Comparison]\n[staccato — legato — marcato — tenuto]\n[four bars each, back to back]\n(same melody, same volume, four different touches)"
+    },
+    {
+      "id": "S007_10",
+      "title": "Extreme Dynamic Contrast",
+      "concept": "극단적 다이내믹 콘트라스트 — 한 곡 안에서 가능한 최대 음량 범위를 사용. S007 시리즈 종합 스트레스 테스트",
+      "dynamics_level": "Level 5 — 극단 종합",
+      "corpus_reference": "종합: soft(89회) + loud(45회) vs ppp/fff/sfz(전부 0회)",
+      "sp": "Cinematic orchestral piece designed for maximum dynamic range. The piece opens with a single solo violin playing the theme at the absolute softest level, a thread of sound in a vast empty concert hall. Without warning, the full orchestra attacks at maximum fortississimo — one hundred musicians playing the same note at full force. The shock is physical. Then instant silence. The solo violin returns, even softer than before. A solo timpani roll begins at the edge of hearing and swells over thirty-two bars to a thunderous fortissimo. A solo flute plays a melody that is interrupted by sforzando brass stabs — soft melody, explosive punctuation. The final section layers every technique: the orchestra crescendos from nothing to maximum, hits a subito piano, crescendos again, hits sforzando accents randomly, then performs an al niente fade that takes a full minute to reach silence. Full symphony orchestra. 66 BPM in C minor. 4/4 time.",
+      "lyrics": "[Solo Violin — ppp]\n[single thread of sound]\n[vast empty hall]\n(silence with one voice)\n\n[FULL ORCHESTRA — fff, sudden]\n[one hundred musicians, maximum force]\n[ONE NOTE]\n(the shock)\n\n[Silence]\n[nothing]\n[three full bars of rest]\n(the echo dies)\n\n[Solo Violin Returns — pppp]\n[even softer than before]\n(trembling thread)\n\n[Timpani Swell]\n[solo timpani, edge of hearing]\n[thirty-two bars of continuous crescendo]\n[from nothing to thunder]\n(the slow earthquake)\n\n[Flute with Brass Stabs]\n[solo flute, gentle melody]\n[BRASS — sfz!]\n[flute continues]\n[BRASS — sfz!]\n(beauty interrupted by explosions)\n\n[Final Section — Everything]\n[orchestra crescendo from nothing]\n[SUBITO PIANO — instant drop]\n[crescendo again]\n[sfz accents — random, shocking]\n[crescendo to maximum]\n\n[Al Niente]\n[the entire orchestra fading]\n[one minute of gradual disappearance]\n[softer... softer... softer...]\n(to nothing)\n\n[Silence]\n(the end is the absence of all sound)"
+    }
+  ]
+}

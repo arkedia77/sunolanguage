@@ -1,0 +1,113 @@
+{
+  "purpose": "S011 — Vocal Grain and Delivery (보컬의 결과 전달)",
+  "created_at": "2026-04-29",
+  "previous": "S009-S010 = 구조 축. S011부터 보컬 축(Axis E) 시작",
+  "theme": "breathy(155회) 등 기본 디스크립터는 풍부하지만 성악 전문 용어(passaggio, sprechgesang = 0회)는 데드존 — 보컬 지시의 해상도 한계",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis E: 보컬/언어",
+  "instrument_policy": "보컬 중심 — 반주는 단순하게 유지 (피아노 또는 기타 + 베이스/드럼)",
+  "test_axes": [
+    "보컬 질감(breathy/raspy/smooth/gritty/nasal/airy) 구분",
+    "레지스터 전환(chest/falsetto/mixed/head voice)",
+    "벨트 vs 헤드 보이스 차이",
+    "전달 방식(spoken/whispered/shouted/yelled/sung/chanted)",
+    "보컬 이펙트(autotune/vocoder/distortion)",
+    "멜리스마 vs 음절적 창법",
+    "합창 텍스처(unison→multi-part)",
+    "비가사 보컬(humming/scatting/vocalize)",
+    "성악 전문 용어(passaggio/sprechgesang/coloratura)"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S011_01",
+      "title": "Six Vocal Textures",
+      "concept": "보컬 질감 6종 비교 — breathy/raspy/smooth/gritty/nasal/airy. Suno가 각각을 구분하여 생성하는가?",
+      "vocal_type": "질감 대비",
+      "corpus_reference": "breathy(155회), raspy(34회), smooth(67회), gritty(18회), nasal(3회), airy(22회)",
+      "sp": "Pop song where each verse is sung with a different vocal texture to test Suno's ability to distinguish vocal qualities. Verse one uses a breathy vocal quality — lots of air escaping around the notes, intimate and whispery, like singing close to someone's ear. Verse two uses a raspy, rough vocal quality — gravel and grit in the throat, like a voice worn by years of singing. Verse three uses a smooth, clean vocal quality — pure tone with no roughness, polished and controlled like silk. Verse four uses a gritty vocal quality — distorted and raw, almost growling, the voice pushed to its rough edge. Verse five uses a nasal vocal quality — the sound resonating in the nose, pinched and bright. Verse six uses an airy vocal quality — light and floating, barely connected to the body. Simple piano accompaniment throughout, unchanging. 90 BPM in D major. 4/4 time.",
+      "lyrics": "[Verse 1 — breathy vocal]\n(breathy, intimate, air around every note)\nI breathe the words more than I sing them\nEvery syllable a whisper dressed as song\nClose your eyes and lean in closer\nThis voice is only meant for you\n\n[Verse 2 — raspy vocal]\n(raspy, rough, gravel in the throat)\nThe road has worn this voice to leather\nEvery crack a story every scratch a scar\nI earned this roughness mile by mile\nThis voice has lived a thousand bars\n\n[Verse 3 — smooth vocal]\n(smooth, pure, polished, silk)\nNow the surface is glass\nNot a single imperfection\nEvery note a perfect circle\nEvery phrase a clean reflection\n\n[Verse 4 — gritty vocal]\n(gritty, distorted, raw, almost growling)\nTear the edges off the notes\nLet the voice break let it shatter\nGrit and fury in the throat\nBeauty doesn't always matter\n\n[Verse 5 — nasal vocal]\n(nasal, pinched, bright, resonating in the nose)\nThe sound lives higher than you'd think\nBehind the eyes above the mouth\nA brighter sharper kind of singing\nPointed like a compass south\n\n[Verse 6 — airy vocal]\n(airy, floating, barely there)\nAlmost not a voice at all\nJust a breeze that learned the melody\nWeightless shapeless barely tethered\nDrifting through the harmony"
+    },
+    {
+      "id": "S011_02",
+      "title": "Register Shifts",
+      "concept": "레지스터 전환 — chest voice → head voice → falsetto → mixed voice를 같은 곡 안에서 명시적으로 요구",
+      "vocal_type": "레지스터",
+      "corpus_reference": "falsetto(67회), chest voice(3회), head voice(2회), mixed voice(0회)",
+      "sp": "R&B ballad showcasing four vocal registers in sequence. The verse is sung entirely in chest voice — full, rich, resonant, the natural speaking register extended into song, powerful and grounded. The pre-chorus shifts to head voice — lighter, more focused, the sound placed higher in the resonance chambers, less weight but more clarity. The chorus soars into falsetto — the voice flipping above its natural break point, ethereal and floating, the trademark R&B falsetto. The bridge uses mixed voice — a blend of chest and head resonance, the most technically demanding register that combines power with height. Each register should be distinctly audible as a different vocal quality. Male vocalist, piano, bass, light drums. 72 BPM in A-flat major. 4/4 time. Intimate studio.",
+      "lyrics": "[Verse — chest voice]\n(full, rich, grounded, the natural register)\nDown here where the voice is heavy\nEvery word has weight and gravity\nThe chest resonates like a drum\nThis is where the power comes from\n\n[Pre-Chorus — head voice]\n(lighter, focused, placed higher)\nRising now above the weight\nThe voice finds a brighter room\nClearer thinner but still strong\nLike light through a narrow window\n\n[Chorus — falsetto]\n(ethereal, floating, above the break)\nAnd now I'm flying\nAbove the clouds of my own voice\nThis is the place where gravity lets go\nFalsetto floating free\n\n[Bridge — mixed voice]\n(chest and head blended, powerful yet high)\nBut here is where the magic lives\nBetween the earth and sky\nBoth registers at once\nThe voice that has it all\nPower and height\nWeight and light\n\n[Final Chorus — falsetto then drops to chest]\n(starting high, ending grounded)\nFlying... flying...\n(chest voice, sudden)\nBut I always come home\nTo the voice that lives in my chest"
+    },
+    {
+      "id": "S011_03",
+      "title": "Belt vs Head",
+      "concept": "벨트 vs 헤드 보이스 — 같은 높은 음을 두 가지 방법으로 부르기. 뮤지컬/팝 보컬의 핵심 차이",
+      "vocal_type": "벨트 대비",
+      "corpus_reference": "belting(8회), belt(4회), powerful(19회), soaring(12회)",
+      "sp": "Musical theater showstopper that alternates between belting and head voice on the same high notes. In the verse, the female vocalist sings the melody in a comfortable range. At the chorus, she reaches the same high note twice using two different techniques. The first time, she belts the note — chest voice pushed up to its extreme, loud, powerful, raw, the Broadway belt that shakes the rafters. The second time, she sings the same note in pure head voice — lighter, rounder, classical, floating above the orchestra. The contrast should be dramatic: belt is fire, head voice is moonlight, same pitch but completely different instrument. Female vocalist, piano, strings. 84 BPM in B-flat major. 4/4 time. Theater acoustic.",
+      "lyrics": "[Verse — comfortable range]\n(singing naturally, moderate range)\nI have been standing at the edge\nOf everything I ever wanted\nThe note is waiting at the top\nThe question is how do I reach it\n\n[Chorus — BELT]\n(belting, chest voice pushed high, Broadway power)\nI WILL REACH THE SKY\n(holding the high note, raw, powerful)\nWITH FIRE IN MY THROAT\nTHIS IS THE BELT\nTHE VOICE THAT SHAKES THE ROOM\n\n[Verse 2]\n(back to comfortable range)\nNow let me try another way\nThe same height but a different ladder\n\n[Chorus — HEAD VOICE]\n(head voice, same high note, lighter, rounder)\nI will reach the sky\n(holding the same note, floating, classical)\nWith moonlight in my voice\nThis is the head voice\nThe voice that floats above\n\n[Final — both back to back]\n(belt first)\nI WILL REACH—\n(then head voice, same note)\nI will reach—\n(the difference is everything)"
+    },
+    {
+      "id": "S011_04",
+      "title": "Delivery Spectrum",
+      "concept": "전달 방식 6종 — spoken/whispered/sung/chanted/shouted/screamed. 같은 가사를 6가지 방식으로",
+      "vocal_type": "전달 방식",
+      "corpus_reference": "spoken(24회), whisper(22회), shout(8회), scream(7회), chant(11회), singing(일반)",
+      "sp": "Experimental vocal piece where the same four-line text is delivered six times using six different vocal techniques. Delivery one: spoken word, no pitch, conversational rhythm, like reading aloud. Delivery two: whispered, no pitch, barely audible, intimate. Delivery three: sung, full melody, pitched, the normal way a song works. Delivery four: chanted, monotone pitch, rhythmic, like a ritual incantation. Delivery five: shouted, loud, forceful, confrontational, with rough pitch. Delivery six: screamed, extreme vocal distortion, hardcore vocal fry, the voice at its absolute limit. Minimal accompaniment: a single sustained drone note on synthesizer. No drums, no rhythm section. The focus is entirely on the voice. 80 BPM implied. Key of E minor. Free time.",
+      "lyrics": "[Spoken — no pitch, conversational]\n(speaking, not singing)\nThe walls are made of paper.\nThe floor is made of glass.\nEvery word I say goes through them.\nNothing here will last.\n\n[Whispered — barely audible]\n(whispering, intimate)\nThe walls are made of paper.\nThe floor is made of glass.\nEvery word I say goes through them.\nNothing here will last.\n\n[Sung — full melody]\n(singing with melody)\nThe walls are made of paper\nThe floor is made of glass\nEvery word I say goes through them\nNothing here will last\n\n[Chanted — monotone, ritualistic]\n(chanting on one note, rhythmic)\nThe walls are made of paper\nThe floor is made of glass\nEvery word I say goes through them\nNothing here will last\n\n[Shouted — loud, confrontational]\n(shouting, forceful)\nTHE WALLS ARE MADE OF PAPER\nTHE FLOOR IS MADE OF GLASS\nEVERY WORD I SAY GOES THROUGH THEM\nNOTHING HERE WILL LAST\n\n[Screamed — extreme, distorted]\n(screaming, vocal fry, at the limit)\nTHE WALLS ARE MADE OF PAPER!\nTHE FLOOR IS MADE OF GLASS!\nEVERY WORD I SAY—\nNOTHING LASTS!"
+    },
+    {
+      "id": "S011_05",
+      "title": "Vocal Effects Lab",
+      "concept": "보컬 이펙트 — autotune/vocoder/vocal distortion. Suno가 프로세싱된 보컬 사운드를 생성하는가?",
+      "vocal_type": "보컬 이펙트",
+      "corpus_reference": "autotune(5회), vocoder(4회), vocal effects(2회), distorted vocals(3회)",
+      "sp": "Electronic pop track showcasing three vocal processing effects. Section A uses heavy autotune with the correction set to zero, creating the robotic pitch-quantized effect heard in T-Pain and modern trap music. Every note snaps instantly to the nearest pitch with no natural slide between notes. Section B uses a vocoder, the voice processed through a synthesizer so it sounds like a talking robot or a choir of synthesizers shaped by the singer's mouth movements. Section C uses vocal distortion, the voice overdriven like a guitar through an amplifier, raw and aggressive and fuzzy. Each section uses the same melody so the only variable is the processing. Synth pads, 808 bass, trap hi-hats. 85 BPM in C minor. 4/4 time. Modern pop production.",
+      "lyrics": "[Section A — heavy autotune]\n(robotic pitch correction, T-Pain style)\nEvery note locked to the grid\nNo sliding between the pitches\nThe voice becomes a machine\nA beautiful perfect machine\n\n[Autotune continued]\n(the artificial perfection)\nI am not human anymore\nI am a frequency\nSnapped to the nearest truth\n\n[Section B — vocoder]\n(voice through synthesizer, robot choir)\nNow the voice becomes the keyboard\nEvery vowel a chord\nEvery consonant a filter sweep\nI am speaking through electricity\n\n[Vocoder continued]\n(talking synthesizer, Daft Punk style)\nThe words are shapes\nThe shapes are sounds\nThe sounds are not human\n\n[Section C — vocal distortion]\n(overdriven voice, fuzzy, aggressive)\nNOW THE VOICE IS BROKEN ON PURPOSE\nDISTORTED LIKE A GUITAR\nFUZZ AND FEEDBACK AND FURY\nTHE VOICE AS NOISE\n\n[Distortion continued]\n(maximum overdrive)\nBEAUTY IN THE BREAKING\nTHE VOICE PUSHED PAST ITS EDGE\n\n[Final — clean vocal, no effects]\n(completely unprocessed, naked)\nAnd here is the voice\nWithout anything\nJust me"
+    },
+    {
+      "id": "S011_06",
+      "title": "Melisma vs Syllabic",
+      "concept": "멜리스마(한 음절에 여러 음) vs 음절적(한 음절에 한 음) — 창법의 근본적 차이",
+      "vocal_type": "창법",
+      "corpus_reference": "melismatic(3회), melisma(0회), syllabic(0회), runs(12회), riffs(8회)",
+      "sp": "Gospel-influenced pop song contrasting melismatic and syllabic singing styles. The verse is strictly syllabic — one note per syllable, clean and direct, every word clearly articulated with no ornamentation. Like a hymn, simple and dignified. The chorus explodes into melismatic singing — a single syllable stretched across five to ten notes in rapid succession, the voice running up and down scales within one word. The word love is sung across eight different pitches in a cascading melismatic run. The word free has a twelve-note melismatic phrase. The contrast between the disciplined syllabic verse and the extravagant melismatic chorus should be dramatic. Female vocalist with gospel power, piano, organ, bass, drums. 78 BPM in E-flat major. 4/4 time. Church acoustic.",
+      "lyrics": "[Verse — syllabic, one note per syllable]\n(clean, direct, one pitch per syllable)\nI. Have. Walked. Through. Fire.\nI. Have. Crossed. The. Sea.\nEv. ery. Step. Was. Mea. sured.\nEv. ery. Word. Set. Free.\n\n[Chorus — melismatic, multiple notes per syllable]\n(melismatic runs, gospel ornamentation)\nLo-o-o-o-o-o-o-ove\n(eight notes cascading on one syllable)\nSe-e-e-e-et me\nFre-e-e-e-e-e-e-e-e-e-e-ee\n(twelve notes on one syllable)\n\n[Verse 2 — syllabic again]\n(strict, one note per syllable)\nThe. Road. Was. Long. And. Nar. row.\nThe. Night. Was. Dark. And. Cold.\n\n[Chorus — melismatic]\n(vocal runs, riffs, ornaments)\nLo-o-o-o-o-o-o-ove\n(the voice dancing through pitches)\nCa-a-a-a-arry me\nHo-o-o-o-o-o-o-o-ome\n\n[Bridge — melisma builds]\n(increasingly elaborate runs)\nOh-oh-oh-oh-oh-oh-oh\n(voice exploring every note between two pitches)\n\n[Final — one clean syllabic line]\n(suddenly simple, one note per syllable)\nLove."
+    },
+    {
+      "id": "S011_07",
+      "title": "Choral Textures",
+      "concept": "합창 텍스처 — 유니즌 → 2성 → 4성 → 8성부. 같은 멜로디를 점진적으로 분할",
+      "vocal_type": "합창 텍스처",
+      "corpus_reference": "choir(52회), unison(22회), harmony(33회), four-part(0회), eight-part(0회)",
+      "sp": "Choral piece that begins with a single unison voice and progressively divides into eight independent parts. Section A: all voices sing the melody in unison — one pitch, one rhythm, maximum unity. Section B: the voices split into two parts, soprano and alto singing in parallel thirds. Section C: four-part harmony emerges — soprano, alto, tenor, bass each on independent lines. Section D: the voices divide into eight parts — two soprano lines, two alto lines, two tenor lines, two bass lines — creating a rich, complex texture where every voice is independent. The same melody is always present but becomes increasingly embedded in a web of harmony. The piece then reverses: eight parts collapse to four, to two, to unison. Mixed choir of thirty-two voices. No accompaniment, a cappella. 66 BPM in B-flat major. 4/4 time.",
+      "lyrics": "[Unison — all voices, one pitch]\n(thirty-two voices singing the same note)\nWe begin as one\nOne voice one note one truth\n\n[Two Parts — soprano and alto]\n(voices split into two lines, thirds apart)\nNow we are two\nThe melody and its shadow\nMoving together in parallel\n\n[Four Parts — SATB]\n(soprano, alto, tenor, bass)\nFour voices four directions\nThe melody lives in the soprano\nThe bass provides the ground\nAlto and tenor fill the space between\n\n[Eight Parts — divided choir]\n(every section divided in two)\nEight independent lines\nA web of voices\nEvery singer on a different path\nYet every path belongs to the same song\n\n[Collapse to Four]\n(divided parts reunite within sections)\nReturning\n\n[Collapse to Two]\n(tenor and bass join alto and soprano)\nSimplifying\n\n[Return to Unison]\n(all thirty-two voices on one note)\nWe end as we began\nOne voice\n(the unity after complexity)"
+    },
+    {
+      "id": "S011_08",
+      "title": "Non-Lexical Vocals",
+      "concept": "비가사 보컬 — humming/scatting/vocalise/ululation. 단어 없이 목소리만으로 표현",
+      "vocal_type": "비가사",
+      "corpus_reference": "humming(18회), scat(4회), vocalise(0회), wordless(5회), ooh(32회), aah(21회)",
+      "sp": "Vocal jazz piece using four types of non-lexical vocalization with no actual words in the entire song. Section A is humming — the vocalist hums the melody with closed lips, creating a warm, nasal, intimate sound. Section B is jazz scat singing — improvised nonsense syllables like doo-ba-dee-dah-bop-ba-doo in the tradition of Ella Fitzgerald, rhythmic and playful. Section C is vocalise — the voice singing on open vowels, ah and oh, with no consonants, treating the voice as a pure instrument. Section D is vocal percussion and extended technique — the voice making clicks, pops, trills, and sounds that imitate instruments. No real words in the entire piece. Female jazz vocalist, piano trio. 130 BPM in C major. 4/4 time with swing. Jazz club recording.",
+      "lyrics": "[Section A — Humming]\n(humming, lips closed, warm)\nMmm mmm mmm mmm mm-mm-mm\nMm mmm mm mm mmm\n(the melody through closed lips)\n\n[Humming continued]\nMmm mmm mmm mmm\n(warm, nasal, intimate)\n\n[Section B — Scat Singing]\n(jazz scat, nonsense syllables)\nDoo-ba-dee-dah bop ba-doo\nShoo-bee-doo-wah dee-dah-day\nBa-da-ba-da-ba-doo-bee-doo\nSkee-dat-dat-dat-dah!\n\n[Scat Solo]\n(improvised scat over changes)\nDoo-dee-doo-dah-bah-dee-bop\nBa-doo-dee-dee-dah-dee-doo\n(rhythmic, playful, swinging)\n\n[Section C — Vocalise]\n(open vowels only, no consonants)\nAaaah... ooooh... eeee... aaah...\n(the voice as pure instrument)\nOooh aaah ooh aaah\n(singing without words, only tone)\n\n[Section D — Extended Vocal]\n(clicks, pops, trills, vocal percussion)\n*click* *pop* *trill*\n*tongue roll* *lip trill*\n(the voice as percussion, as bird, as machine)\n\n[Final — return to humming]\nMmm mmm mmm...\n(ending where we began, wordless)"
+    },
+    {
+      "id": "S011_09",
+      "title": "Vocal Layering",
+      "concept": "보컬 레이어링 — 같은 가수의 목소리를 여러 겹으로 쌓기. 더블링/트리플링/하모니 스태킹",
+      "vocal_type": "레이어링",
+      "corpus_reference": "layered vocals(8회), double-tracked(2회), stacked(3회), vocal layers(4회)",
+      "sp": "Pop production piece demonstrating progressive vocal layering. The first verse has a single vocal track — one voice, dry, unprocessed, alone. The second verse doubles the vocal — the same voice singing the same melody twice, slightly different timing creating a thicker sound. The chorus triples the vocal and adds a harmony layer above and below — five vocal tracks total, creating a wall of voices from one singer. The bridge has eight stacked vocal layers: melody doubled, harmony in thirds above doubled, harmony in thirds below doubled, and two octave doublings. The outro strips back to the single voice. All vocals are the same singer multi-tracked. Synth pop production: synths, bass, drums. 108 BPM in E major. 4/4 time.",
+      "lyrics": "[Verse 1 — single vocal, dry]\n(one voice, alone, naked)\nOne voice is all I have\nOne throat one pair of lungs\nBut listen to what happens\nWhen one voice is not enough\n\n[Verse 2 — double-tracked vocal]\n(same voice twice, slightly thicker)\nNow there are two of me\nSinging the same words\nThe edges blur the sound thickens\nOne voice pretending to be two\n\n[Chorus — five vocal layers]\n(melody doubled + harmony above + harmony below)\nWE ARE A CHOIR OF ONE\nFIVE VOICES FROM ONE THROAT\nTHE HARMONIES ARE ME\nEVERY LAYER IS MY OWN\n\n[Bridge — eight vocal layers]\n(maximum stacking: doubles + thirds + octaves)\nNOW I AM EIGHT\nEIGHT VERSIONS OF THE SAME VOICE\nFILLING EVERY FREQUENCY\nA WALL OF ME\n\n[Outro — back to single vocal]\n(stripped to one voice again)\nAnd in the end\nOne voice\nIs still enough"
+    },
+    {
+      "id": "S011_10",
+      "title": "Classical Vocal Terms",
+      "concept": "성악 전문 용어 — passaggio/sprechgesang/coloratura/bel canto/vibrato control. 데드존 정면 도전",
+      "vocal_type": "성악 전문 용어",
+      "corpus_reference": "passaggio(0회), sprechgesang(0회), coloratura(0회), bel canto(0회), vibrato(12회)",
+      "sp": "Art song demonstrating five classical vocal techniques using their technical terminology. Section A asks for bel canto style — beautiful singing with smooth legato, even tone production across all registers, no breaks or roughness, the Italian ideal of vocal beauty. Section B requires the singer to navigate the passaggio — the transition zone between chest and head voice — multiple times, moving smoothly through the break without any audible shift. Section C uses Sprechgesang, the half-spoken, half-sung technique of Schoenberg, where the voice hits the written pitch then immediately falls away from it in a speech-like manner. Section D features coloratura — rapid, elaborate, ornamental passage work, scales and arpeggios sung at high speed with agility and precision. Section E controls vibrato width: wide operatic vibrato, then narrow subtle vibrato, then straight tone with no vibrato at all. Soprano voice, piano. Free tempo. Key of A major. Art song.",
+      "lyrics": "[Section A — Bel Canto]\n(beautiful singing, smooth legato, even tone)\nLa voce bella canta\nSmooth and seamless across every register\nNo break no roughness\nThe Italian ideal of pure vocal beauty\n\n[Section B — Passaggio Navigation]\n(moving through the vocal break zone)\nRising through the passaggio\nThe voice crosses from chest to head\nSmooth smooth smooth\nNo audible break no click no shift\n(ascending then descending through the transition)\n\n[Section C — Sprechgesang]\n(half-spoken, half-sung, Schoenberg style)\nThe voice hits the note\nThen falls away\nSpoken rhythm\nSung pitch\nNeither speech nor song\n(the uncomfortable middle ground)\n\n[Section D — Coloratura]\n(rapid ornamental passages)\nAh-ah-ah-ah-ah-ah-ah-ah-ah-ah\n(scales at speed, arpeggios, trills)\nThe voice as acrobat\nAgile precise brilliant\n(sixteenth-note passages climbing and falling)\n\n[Section E — Vibrato Control]\n(wide operatic vibrato)\nAaaah~~~~~\n(then narrow, subtle vibrato)\nAaaah~~~\n(then straight tone, no vibrato at all)\nAaaaah—\n(three widths, same note, different life)"
+    }
+  ]
+}

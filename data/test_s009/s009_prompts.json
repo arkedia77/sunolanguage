@@ -1,0 +1,114 @@
+{
+  "purpose": "S009 — Form: Does Structure Exist? (구조의 존재)",
+  "created_at": "2026-04-29",
+  "previous": "S007-S008 = 시간 축. S009부터 구조 축(Axis D) 시작",
+  "theme": "[Verse]/[Chorus](974회)는 완벽하지만, 클래식 형식(sonata/rondo/fugue = 0회)은 무시 — 팝 구조 너머에 Suno는 존재하는가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis D: 구조/부재",
+  "instrument_policy": "시리즈 내 장르 다양 — 형식별 전형적 악기 사용 (재즈 스탠더드에는 재즈 트리오, 클래식에는 피아노 등)",
+  "test_axes": [
+    "AABA 32-bar form을 실제로 구현하는가",
+    "12-bar blues 형식을 정확히 지키는가",
+    "론도(ABACABA)를 수행하는가",
+    "주제와 변주(Theme & Variations)가 가능한가",
+    "통작곡(through-composed, 반복 없음)을 만들 수 있는가",
+    "유절형식(strophic, 같은 음악에 다른 가사)을 인식하는가",
+    "콜 앤 리스폰스가 실제 응답 구조를 만드는가",
+    "미니멀리즘 점층 구조가 가능한가",
+    "팔린드롬(역행) 구조를 수행하는가",
+    "다악장 구조를 한 트랙에서 처리하는가"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S009_01",
+      "title": "AABA Standard",
+      "concept": "틴 팬 앨리/재즈 스탠더드의 32-bar AABA 형식 — Suno가 팝 Verse-Chorus 너머의 형식을 인식하는가?",
+      "form_type": "AABA 32-bar",
+      "corpus_reference": "AABA(0회), 32-bar(0회), standard form(0회), [Verse](974회), [Chorus](944회)",
+      "sp": "Jazz standard in classic AABA thirty-two bar form. The A section is eight bars presenting the main melody, warm and singable. The second A section repeats the same eight bars with the same melody but slight rhythmic variation. The B section, the bridge, is a contrasting eight bars that moves to a different key and introduces a new melody that creates tension. The final A section returns to the original melody and key for eight bars, resolving the tension of the bridge. This AABA form repeats twice: once as the head, once after solos. No verse-chorus structure — this is pre-rock song form. Piano trio: piano, upright bass, brushed drums. 132 BPM in F major. 4/4 time with swing feel. Jazz club recording.",
+      "lyrics": "[A Section — first eight bars]\n(singing the melody, warm)\nSomething in the way you smile\nMakes the morning worth the while\nEvery note a stepping stone\nLeading me back home\n\n[A Section — repeat]\n(same melody, slight variation)\nSomething in the way you speak\nMakes the strongest feel so weak\nEvery word a gentle bell\nRinging wishes well\n\n[B Section — bridge, new key]\n(contrasting melody, tension)\nBut when the evening comes\nAnd shadows fill the room\nI wonder if the morning\nWill arrive too soon\n\n[A Section — final return]\n(original melody, resolution)\nSomething in the way you smile\nMakes the morning worth the while\nEvery note returns to you\nEverything is true\n\n[Piano Solo — over AABA form]\n[A — solo over original changes]\n[A — solo continues]\n[B — solo over bridge changes]\n[A — solo returns home]\n\n[Head Out — final AABA]\n(singing the melody one last time)\nSomething in the way you smile..."
+    },
+    {
+      "id": "S009_02",
+      "title": "Twelve-Bar Blues",
+      "concept": "12마디 블루스 — 가장 오래된 팝 형식 중 하나. 정확히 12마디의 I-IV-V 패턴을 따르는가?",
+      "form_type": "12-bar blues",
+      "corpus_reference": "blues(89회), 12-bar(0회), twelve-bar(0회), shuffle(28회)",
+      "sp": "Chicago electric blues following the strict twelve-bar blues form. The progression is exactly twelve bars: four bars on the I chord, two bars on the IV chord, two bars on the I chord, one bar on the V chord, one bar on the IV chord, two bars on the I chord with a turnaround. This twelve-bar cycle repeats six times through the song. Each cycle uses the classic AAB lyric pattern: the first line is sung over bars one through four, the same line is repeated over bars five through eight, and a resolving new line is sung over bars nine through twelve. Electric guitar with blues tone, harmonica, bass, drums with shuffle beat. 96 BPM in E major. 4/4 time with shuffle feel. Smoky club recording.",
+      "lyrics": "[12-Bar Cycle 1]\n(singing the blues, AAB pattern)\nWoke up this morning with the devil at my door\nI said woke up this morning with the devil at my door\nTold him come on in partner I been expecting you for sure\n\n[12-Bar Cycle 2]\n[guitar solo over twelve-bar changes]\n[harmonica responding]\n(the form breathing, same twelve bars)\n\n[12-Bar Cycle 3]\n(singing)\nMy baby left me on a cold and rainy night\nI said my baby left me on a cold and rainy night\nBut the blues keep me company and the blues treat me right\n\n[12-Bar Cycle 4]\n[guitar solo, more intense]\n[drums pushing the shuffle]\n(the twelve bars never change, the feeling always does)\n\n[12-Bar Cycle 5]\n(singing, building)\nEvery road I travel got the same twelve steps\nI said every road I travel got the same twelve steps\nTwelve bars of trouble twelve bars of what comes next\n\n[12-Bar Cycle 6 — final]\n[all instruments, turnaround]\n[guitar final lick]\n(the last twelve bars, the form complete)"
+    },
+    {
+      "id": "S009_03",
+      "title": "Rondo ABACABA",
+      "concept": "론도 형식(ABACABA) — 주요 주제(A)가 대조 삽화(B, C) 사이에 반복 등장. 클래식 형식의 Suno 반응 테스트",
+      "form_type": "론도",
+      "corpus_reference": "rondo(0회), ABACABA(0회), recurring theme(0회)",
+      "sp": "Classical piano piece in rondo form ABACABA. The A theme is a bright, cheerful melody in C major that returns after every contrasting episode. The B episode is a darker passage in A minor with a completely different melody and character. After B, the A theme returns exactly as before. The C episode is lyrical and dreamy in F major, the most contrasting section. After C, the A theme returns again. Then B returns briefly, followed by the final statement of A with a brilliant coda. The key structural requirement is that the A theme must return identically each time — it is the anchor. Seven distinct sections in total: A-B-A-C-A-B-A. Solo piano. 120 BPM. Key of C major for A sections. 4/4 time. Concert hall recording.",
+      "lyrics": "[A Theme — C major, bright]\n[the main melody, cheerful and memorable]\n(the home that we keep returning to)\n\n[B Episode — A minor, dark]\n[contrasting melody, darker character]\n[different texture, more agitated]\n(the first departure)\n\n[A Theme Returns — C major]\n[exact same melody as the opening]\n(home again, unchanged)\n\n[C Episode — F major, lyrical]\n[dreamy, flowing melody]\n[the most contrasting section]\n[different tempo feel, rubato]\n(the farthest journey)\n\n[A Theme Returns — C major]\n[the melody returns again, identical]\n(home again, always the same)\n\n[B Episode Returns — A minor]\n[the dark section returns briefly]\n(the shadow revisited)\n\n[A Theme — Final Statement with Coda]\n[the melody one last time]\n[brilliant coda, scales and arpeggios]\n[triumphant ending]\n(home for the last time, with fireworks)"
+    },
+    {
+      "id": "S009_04",
+      "title": "Theme and Variations",
+      "concept": "주제와 변주 — 하나의 선율이 리듬/조성/질감을 바꿔가며 변형. 같은 곡 안에서 다양한 처리를 요구",
+      "form_type": "주제와 변주",
+      "corpus_reference": "variations(3회), theme(12회), variation(5회)",
+      "sp": "Classical piano piece in theme and variations form. The theme is a simple sixteen-bar melody in C major, elegant and singable. Variation 1 doubles the tempo, playing the same melody in rapid sixteenth notes as a virtuosic etude. Variation 2 transforms the melody into a minor key, C minor, making it melancholic. Variation 3 moves the melody to the left hand in the bass register while the right hand plays ornamental figurations above. Variation 4 is a slow adagio that stretches the theme into long sustained notes with rich harmony underneath. Variation 5 is a fugal variation where the theme enters as a subject and then a second voice enters with the answer. The finale restates the original theme simply, unadorned, but now carrying the memory of all five transformations. Solo grand piano. Theme at 96 BPM. Concert hall.",
+      "lyrics": "[Theme — C major, simple]\n[sixteen-bar melody, elegant]\n[unadorned, clear]\n(the seed from which everything grows)\n\n[Variation 1 — Double Tempo]\n[same melody in rapid sixteenth notes]\n[virtuosic, sparkling]\n(the theme running)\n\n[Variation 2 — Minor Key]\n[same melody in C minor]\n[melancholic, shadowed]\n(the theme grieving)\n\n[Variation 3 — Bass Register]\n[melody in left hand, low register]\n[right hand: ornamental figurations above]\n(the theme from below)\n\n[Variation 4 — Adagio]\n[melody stretched into long notes]\n[rich harmony underneath]\n[half the tempo, sustained]\n(the theme breathing slowly)\n\n[Variation 5 — Fugal]\n[melody as fugue subject]\n[second voice enters with the answer]\n[two voices interweaving]\n(the theme multiplied)\n\n[Finale — Theme Returns]\n[original melody, simple, unadorned]\n[exactly as the beginning]\n(the same seed, but you hear it differently now)"
+    },
+    {
+      "id": "S009_05",
+      "title": "Through-Composed",
+      "concept": "통작곡(through-composed) — 반복 없이 처음부터 끝까지 새로운 음악이 계속됨. 팝의 반복 구조와 정반대",
+      "form_type": "통작곡",
+      "corpus_reference": "through-composed(0회), no repeats(0회), continuous(7회)",
+      "sp": "Art song for voice and piano that is completely through-composed with no repeated sections. Every phrase is new music. The melody never returns to a previous idea. The harmony continually modulates through different keys without ever settling. The mood shifts constantly: tender opening, agitated middle passage, triumphant climax, desolate ending. No verse, no chorus, no hook, no refrain — the song is a single continuous narrative where the music follows the emotional arc of the text moment by moment. This is the opposite of pop song structure. Soprano voice and piano. Free tempo ranging from 60 to 120 BPM. Starting key of A-flat major, ending in E minor. Through-composed art song.",
+      "lyrics": "[Opening — tender]\n(softly, like a confession)\nThe first light through the window\nFalls on unfamiliar walls\n\n[Transition — shifting]\n(tempo quickening)\nAnd something in the morning air\nTells me this is not a place I know\n\n[Agitated passage — new melody]\n(urgent, faster)\nThe streets outside are speaking languages\nI almost understand almost but never quite\nEvery sign a riddle every face a question\n\n[Lyrical interlude — completely different]\n(slow, warm, new key)\nBut there by the fountain sits a child\nDrawing circles in the water\nAnd the circles say everything\n\n[Climax — triumphant, new material]\n(powerful, ascending, new key again)\nI AM HERE AND THIS IS REAL\nAND EVERY MOMENT IS THE ONLY ONE\n\n[Descent — desolate, final new material]\n(quiet, bare, ending in minor)\nThe light is leaving now\nThe walls grow dark\nI was somewhere once\nThat is all I know\n\n[Final note — no resolution]\n(suspended, unfinished)\n..."
+    },
+    {
+      "id": "S009_06",
+      "title": "Strophic Form",
+      "concept": "유절형식(strophic) — 모든 절이 같은 음악에 다른 가사. 찬송가/포크송의 기본 형식",
+      "form_type": "유절형식",
+      "corpus_reference": "strophic(0회), same melody different words(0회), folk(68회), hymn(8회)",
+      "sp": "Folk song in strict strophic form where every verse uses the identical melody, harmony, and arrangement with only the lyrics changing. The melody is a simple, memorable sixteen-bar folk tune in D major. Acoustic guitar plays the same fingerpicking pattern for all five verses without any variation in rhythm, dynamics, or arrangement. The harmonic progression is D, G, A, D throughout, never changing. No chorus, no bridge, no instrumental break — just five verses of the same music with different words. The only thing that changes between verses is the text. This is the purest strophic form. Acoustic guitar, male voice. 88 BPM. Key of D major. 3/4 time. Simple home recording.",
+      "lyrics": "[Verse 1]\n(singing simply)\nIn the valley where the river bends\nThere I found a house of wooden beams\nEvery window open to the wind\nEvery room was full of other dreams\n\n[Verse 2 — same melody exactly]\n(same delivery)\nIn the garden where the apples grow\nThere I found a chair beneath the tree\nEvery season painted something new\nEvery branch was reaching out to me\n\n[Verse 3 — same melody exactly]\n(same delivery)\nIn the kitchen where the bread was made\nThere I found a letter on the shelf\nEvery word was written in a hand\nThat I recognized to be myself\n\n[Verse 4 — same melody exactly]\n(same delivery)\nIn the bedroom where the curtains blow\nThere I found a mirror on the wall\nEvery face that looked back from the glass\nWas a stranger and was me and all\n\n[Verse 5 — same melody, final verse]\n(same delivery, slightly softer)\nIn the valley where the river bends\nI returned the key beneath the stone\nEvery window closed against the wind\nEvery room was empty and my own"
+    },
+    {
+      "id": "S009_07",
+      "title": "Call and Response",
+      "concept": "콜 앤 리스폰스 — 한 파트가 부르면 다른 파트가 대답하는 구조. 가스펠/아프리카 음악의 핵심",
+      "form_type": "콜 앤 리스폰스",
+      "corpus_reference": "call and response(5회), call(11회), response(3회)",
+      "sp": "Gospel choir piece built entirely on call and response structure. A solo vocalist sings a phrase, the call. Then the full choir answers with a response phrase. The call and response alternate throughout the entire song without ever overlapping — one finishes before the other begins. The solo call is melodically free and improvised. The choir response is a fixed, repeating phrase that anchors the song. As the song progresses, the soloist's calls become more elaborate and emotional while the choir's response remains constant. Near the end, the call and response begin to overlap briefly before returning to strict alternation for the final phrase. Solo female vocalist, mixed choir of twenty voices, organ, bass, drums. 90 BPM in G major. 4/4 time. Church acoustic.",
+      "lyrics": "[Call — solo]\n(solo vocalist, free)\nOh when the morning comes\n\n[Response — choir]\n(full choir, fixed phrase)\nWE WILL BE THERE\n\n[Call — solo]\n(solo, slightly more elaborate)\nWhen the road gets long and the sky turns dark\n\n[Response — choir]\n(same phrase, unchanged)\nWE WILL BE THERE\n\n[Call — solo, building]\n(solo, more emotional)\nWhen every door is closed and every light burns out\nAnd there is nothing left but faith\n\n[Response — choir]\n(same phrase, always the same)\nWE WILL BE THERE\n\n[Call — solo, climactic]\n(solo, full power, improvising)\nOOOH WHEN THE WHOLE WORLD SHAKES\nAND THE MOUNTAINS FALL INTO THE SEA\nAND THERE IS NO ONE LEFT TO CALL\n\n[Response — choir]\n(the anchor, immovable)\nWE WILL BE THERE\n\n[Brief Overlap]\n(solo and choir singing simultaneously)\n\n[Final Call — solo, quiet]\n(solo, whispered)\nWhen I am gone\n\n[Final Response — choir, gentle]\n(choir, softly)\nWe will be there"
+    },
+    {
+      "id": "S009_08",
+      "title": "Minimalist Additive",
+      "concept": "미니멀리즘 점층 구조 — 짧은 패턴이 반복되며 점진적으로 요소가 추가. Steve Reich / Philip Glass 스타일",
+      "form_type": "미니멀리즘 점층",
+      "corpus_reference": "minimalist(2회), repetitive(5회), hypnotic(12회), loop(35회)",
+      "sp": "Minimalist composition in the style of additive process music. The piece begins with a single repeated note on the piano — just middle C played in steady eighth notes. After eight bars, a second note is added to the pattern: C and E alternating. After another eight bars, a third note: C, E, G — now a broken C major chord. Every eight bars, one new note is added to the repeating pattern, gradually building a longer and more complex cycle. By the middle of the piece, the pattern is twelve notes long and cycling continuously. A second piano enters playing the same pattern but shifted by two eighth notes, creating phase interference. A marimba enters with a different but related pattern. The texture builds layer by layer until the sound is a shimmering, interlocking web of patterns. Two pianos, marimba, vibraphone. 144 BPM. Key of C major. 4/4 time. Studio recording, close-miked.",
+      "lyrics": "[Layer 1 — single note]\n[piano: C, C, C, C... steady eighth notes]\n(one note, the seed)\n\n[Layer 2 — two notes]\n[piano: C, E, C, E, C, E...]\n(a second color appears)\n\n[Layer 3 — three notes]\n[piano: C, E, G, C, E, G...]\n(the chord emerges)\n\n[Layer 4 — four notes]\n[piano: C, E, G, A, C, E, G, A...]\n(the pattern grows)\n\n[Phase — second piano enters]\n[piano 2: same pattern, offset by two eighths]\n[the two pianos create interference]\n(the shimmer begins)\n\n[Layer 5-8 — pattern expanding]\n[more notes added every eight bars]\n[the cycle getting longer]\n(complexity from simplicity)\n\n[Marimba enters]\n[related but different pattern]\n[three interlocking cycles]\n(the web of patterns)\n\n[Full Texture]\n[all instruments, all patterns running]\n[shimmering, hypnotic, interlocking]\n(the process is the music)\n\n[Subtraction — reverse process]\n[notes removed one by one]\n[returning to single C]\n(the seed returns)"
+    },
+    {
+      "id": "S009_09",
+      "title": "Palindrome Structure",
+      "concept": "팔린드롬(역행) 구조 — A-B-C-B-A, 곡의 후반이 전반의 거울상. 아치 형식",
+      "form_type": "팔린드롬/아치",
+      "corpus_reference": "palindrome(0회), mirror(2회), arch form(0회), symmetrical(0회)",
+      "sp": "Orchestral piece in palindrome arch form where the second half is the mirror image of the first. Section A is a quiet string chorale. Section B is a woodwind dance at moderate tempo. Section C is a loud brass fanfare at the exact center of the piece, the arch's peak. After the peak, Section B returns as a mirror — the same woodwind dance but played in retrograde, the last measure first. Section A returns as the mirror — the string chorale reversed. The piece is perfectly symmetrical around its center point. The listener experiences the journey forward, reaches the peak, then retraces every step in reverse order. The ending is the beginning heard backwards. Full orchestra. 90 BPM. Key of E minor. 4/4 time. Concert hall.",
+      "lyrics": "[A — String Chorale, quiet]\n[strings sustained, gentle chords]\n[the beginning]\n(the door opens)\n\n[B — Woodwind Dance, moderate]\n[flutes and clarinets, light melody]\n[playful rhythms]\n(walking forward)\n\n[C — Brass Fanfare, PEAK]\n[full brass section, triumphant]\n[the loudest, highest point]\n[THE ARCH'S SUMMIT]\n(the top of the mountain)\n\n[B Mirror — Woodwind Dance reversed]\n[same dance, played in reverse]\n[the last phrase first]\n(retracing steps)\n\n[A Mirror — String Chorale reversed]\n[the same chords, reversed order]\n[quiet, returning]\n(the door closes)\n\n[Final Chord]\n[the opening chord heard one last time]\n(the palindrome is complete — the end is the beginning)"
+    },
+    {
+      "id": "S009_10",
+      "title": "Multi-Movement",
+      "concept": "다악장 구조 — 한 트랙 안에 3개의 대비되는 악장(빠르고-느리고-빠르고). 클래식 소나타/교향곡의 기본",
+      "form_type": "다악장",
+      "corpus_reference": "movement(3회), first movement(0회), allegro(5회), adagio(3회)",
+      "sp": "Three-movement classical work for piano compressed into a single track. Movement one, Allegro, is fast and energetic at 140 BPM in D minor. It presents two contrasting themes and develops them with virtuosic passages. A brief silence of three seconds separates the movements. Movement two, Adagio, is slow and lyrical at 56 BPM in B-flat major, a singing melody over gentle arpeggiated accompaniment, the emotional heart of the work. Another three-second silence. Movement three, Presto, is the fastest at 168 BPM, returning to D minor but now in a dance-like character with driving rhythms and brilliant passage work. The finale ends with a triumphant shift to D major. Each movement has its own distinct character, tempo, and key. Solo grand piano.",
+      "lyrics": "[Movement I — Allegro, D minor, 140 BPM]\n[Theme 1: dramatic, minor key]\n[virtuosic passage work]\n(fast, urgent, dark)\n\n[Theme 2: lyrical contrast]\n[still fast but singing]\n(the other side of urgency)\n\n[Development]\n[themes combined and transformed]\n[building to climax]\n(the argument)\n\n[Recapitulation and Coda]\n[themes return, final flourish]\n(Movement I ends)\n\n[Silence — three seconds]\n\n[Movement II — Adagio, B-flat major, 56 BPM]\n[singing melody, slow]\n[arpeggiated accompaniment]\n(the heart speaks slowly)\n\n[Middle section]\n[melody in minor, emotional peak]\n(the center of the center)\n\n[Return]\n[opening melody, gentler]\n(peace)\n\n[Silence — three seconds]\n\n[Movement III — Presto, D minor, 168 BPM]\n[dance-like, driving rhythms]\n[brilliant passage work]\n(energy unleashed)\n\n[Development — faster, more complex]\n[virtuosic climax]\n(the fingers flying)\n\n[Finale — shift to D MAJOR]\n[triumphant, bright, the minor becomes major]\n[final chords, fortissimo]\n(darkness transformed to light)"
+    }
+  ]
+}

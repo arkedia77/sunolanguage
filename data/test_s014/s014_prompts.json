@@ -1,0 +1,94 @@
+{
+  "purpose": "S014 — Spatial and Environmental Sound (공간과 환경의 소리)",
+  "created_at": "2026-04-29",
+  "previous": "S013 = 프로덕션 이펙트. S014 = 프로덕션 축의 나머지 절반 — 공간/환경/녹음 맥락",
+  "theme": "effect_sound(31회)의 좁은 어휘 — 공간/환경의 세부 구분은 제한적. 물리적 공간과 녹음 환경을 SP로 제어할 수 있는가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis F: 프로덕션/공간",
+  "instrument_policy": "곡별 상이 — 공간적 특성이 가장 잘 드러나는 악기/편성 선택",
+  "test_axes": [
+    "공간 크기 5단계(욕실→대성당)를 구분하는가",
+    "라이브 vs 스튜디오 녹음 느낌 차이",
+    "환경음 삽입(비, 바람, 새소리 등)이 가능한가",
+    "물리적 음향 특성(석조/목조/콘크리트)을 반영하는가",
+    "마이크 거리(close-miked vs room-miked)를 구분하는가",
+    "녹음 매체(vinyl/cassette/digital)의 음질 차이",
+    "3D 오디오/바이노럴 지시가 효과가 있는가",
+    "폴리(foley) 사운드와 음악의 통합"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S014_01",
+      "title": "Five Room Sizes",
+      "concept": "공간 크기 5단계 — 욕실/거실/강당/대성당/협곡. 같은 연주, 다른 공간 크기",
+      "spatial_type": "공간 크기",
+      "corpus_reference": "room(74회), hall(23회), cathedral(3회), bathroom(0회), canyon(0회)",
+      "sp": "Solo acoustic guitar piece played in five different sized spaces. Section A is recorded in a small bathroom — the sound bounces rapidly between the tile walls, creating a bright, fluttery reverb with a very short decay, the guitar sounding close and surrounded. Section B is in a living room — warm, moderate reverb, the sound of a home performance with carpeted floors absorbing some reflections. Section C is in a concert hall — the guitar projects into a large space, reverb decay of two seconds, the sound majestic and distant. Section D is in a stone cathedral — immense reverb of five to eight seconds, every note blurring into the next, the space overwhelming the instrument. Section E is in an outdoor canyon — the sound echoes off distant rock walls, the delay is long and distinct, you hear the note then a clear echo returning from far away. Same guitar, same melody, five spaces. 80 BPM. Key of E minor. Fingerstyle.",
+      "lyrics": "[Section A — Bathroom]\n[acoustic guitar in a small tiled room]\n[bright, fluttery, very short reverb]\n[the walls are inches away]\n(the smallest room, the tightest echo)\n\n[Bathroom continued]\n[every note reflects immediately]\n[the sound is close and surrounded]\n(trapped in tile)\n\n[Section B — Living Room]\n[acoustic guitar in a carpeted room]\n[warm, moderate reverb]\n[comfortable, natural]\n(a house concert, intimate)\n\n[Living room continued]\n[the carpet absorbs, the wood reflects]\n(the sound of home)\n\n[Section C — Concert Hall]\n[acoustic guitar in a large hall]\n[two-second reverb, majestic]\n[the sound projects into distance]\n(the guitar filling a thousand seats)\n\n[Section D — Cathedral]\n[acoustic guitar in a stone cathedral]\n[five to eight seconds of reverb]\n[every note blurs into the next]\n(the space is bigger than the music)\n\n[Cathedral continued]\n[the sound disappears into stone]\n[echoes upon echoes]\n(God's reverb)\n\n[Section E — Canyon]\n[acoustic guitar outdoors, rock walls]\n[long distinct echo, the note then its return]\n[you hear the distance]\n(the echo tells you how big the world is)"
+    },
+    {
+      "id": "S014_02",
+      "title": "Live vs Studio",
+      "concept": "라이브 녹음 vs 스튜디오 녹음 — 같은 곡, 같은 밴드, 다른 녹음 환경의 음향적 차이",
+      "spatial_type": "녹음 환경",
+      "corpus_reference": "live(52회), studio(38회), live recording(12회), live performance(8회)",
+      "sp": "Rock band playing the same song twice — once as a live concert recording and once as a studio recording. The live version has audience noise, crowd chatter before the song starts, applause, the sound of the room with natural reverb, bleed between microphones, slight imperfections in timing, the energy and rawness of a real performance, and a slight lo-fi quality from the venue's acoustics. The studio version is clean, isolated, perfectly timed, each instrument in its own sonic space, no audience, no room sound, polished and precise. The difference should be obvious — one version sounds like being at a concert, the other sounds like being in a control room. Guitar, bass, drums, vocals. 125 BPM in G major. 4/4 time.",
+      "lyrics": "[LIVE VERSION — concert hall]\n[crowd noise, chatter, tuning]\n(the audience is here)\n\n[Live — song begins]\n(raw, energetic, the crowd responds)\nWe are alive in this room tonight\nYou can hear the crowd you can feel the lights\nEvery note has sweat on it\nEvery chord has fight in it\n\n[Live Chorus]\n(the crowd singing along)\nTHIS IS LIVE THIS IS REAL\n(audience cheering)\nNO SECOND TAKES NO EDITS\nJUST THE MOMENT AND THE FEEL\n\n[Crowd applause, noise between sections]\n(you hear the room, the bleed, the imperfections)\n\n[STUDIO VERSION — clean, isolated]\n[no audience, no room sound]\n(surgical silence between notes)\n\n[Studio — same song]\n(polished, precise, controlled)\nWe are alive in this room tonight\nYou can hear the... silence\nEvery note is perfect\nEvery chord is measured\n\n[Studio Chorus]\n(no crowd, just the band)\nThis is studio this is craft\nEvery take selected\nJust the sound and nothing else\nClinically perfected"
+    },
+    {
+      "id": "S014_03",
+      "title": "Environmental Sound Integration",
+      "concept": "환경음 삽입 — 비, 바람, 새소리, 도시 소음 등을 음악에 통합. Suno가 비음악적 소리를 포함하는가?",
+      "spatial_type": "환경음",
+      "corpus_reference": "rain(18회), wind(11회), birds(5회), nature sounds(4회), field recording(2회)",
+      "sp": "Acoustic folk song where environmental sounds are integral to the music, not background noise. The song starts with the sound of rain falling on a tin roof before any instruments enter. The guitar begins playing alongside the rain, using the rain's rhythm as the tempo reference. Bird songs serve as melodic counterpoints between vocal phrases — a real bird answering the singer. Wind sounds swell during the bridge like a natural crescendo. Thunder serves as a bass drum hit at the climax. The environmental sounds should be as prominent as the instruments, mixed equally, not buried in the background. The song ends with the rain continuing after the instruments stop, and the rain gradually fades to silence. Acoustic guitar, voice, rain, wind, birdsong, thunder. 85 BPM implied by the rain rhythm. Key of D minor.",
+      "lyrics": "[Rain on tin roof — before instruments]\n[the sound of rain, steady, rhythmic]\n(nature provides the tempo)\n\n[Guitar enters with the rain]\n(playing alongside the rain's rhythm)\nThe rain is playing drums tonight\nOn the old tin roof above\nListen to the pattern\nNature's rhythm never rushed\n\n[Bird responds between phrases]\n[birdsong after each vocal line]\n(the bird as harmony singer)\nThe mockingbird is answering\n(birdsong)\nEvery word I sing\n(birdsong)\n\n[Wind Swell — bridge]\n[wind sounds growing louder]\n[the natural crescendo]\n(the earth breathing in)\nThe wind is rising now\nLifting everything\n\n[Thunder as Bass Drum]\n[THUNDER — at the climax]\n(nature's percussion)\nAND THE SKY SPEAKS BACK\n(THUNDER)\n\n[Instruments stop — rain continues]\n[only rain remains]\n[steady, patient, continuing]\n(the rain was here before the song and stays after)\n\n[Rain fades to silence]\n(even the rain ends eventually)"
+    },
+    {
+      "id": "S014_04",
+      "title": "Material Acoustics",
+      "concept": "물리적 음향 특성 — 석조/목조/콘크리트/유리 공간에서의 음향 차이. 건축 재료가 소리에 미치는 영향",
+      "spatial_type": "건축 음향",
+      "corpus_reference": "stone(3회), wood(6회), concrete(0회), glass(0회), acoustic(49회)",
+      "sp": "String quartet performing in four spaces made of different materials. Section A is performed in a stone church — hard reflections, long reverb, the sound is bright and echoing, every note rings against the ancient walls. Section B is in a wooden concert hall — warm, resonant, the wood absorbs some high frequencies and reflects the lows, creating a rich, balanced sound that feels organic. Section C is in a concrete bunker — harsh, flat reflections, the sound is cold and industrial, aggressive standing waves create an unpleasant resonance. Section D is in a glass atrium — bright, brittle reflections from every surface, the sound shimmers and scatters, high frequencies amplified by the hard smooth surfaces. Same quartet, same piece, four acoustic environments defined by their building materials. Violin, violin, viola, cello. 72 BPM in G minor. 4/4 time.",
+      "lyrics": "[Section A — Stone Church]\n[strings in a stone room]\n[hard reflections, long reverb]\n[bright, echoing, ancient]\n(the sound bouncing off centuries of stone)\n\n[Stone continued]\n[every note rings and sustains]\n[the stone keeps the sound alive]\n(music stored in rock)\n\n[Section B — Wooden Hall]\n[strings in a wooden room]\n[warm, resonant, organic]\n[wood absorbs highs, reflects lows]\n(the room itself is an instrument)\n\n[Wood continued]\n[rich, balanced, alive]\n[the wood breathes with the music]\n(the natural home for strings)\n\n[Section C — Concrete Bunker]\n[strings in a concrete room]\n[harsh, flat reflections]\n[cold, industrial, unpleasant resonance]\n(the sound has no warmth)\n\n[Concrete continued]\n[standing waves, aggressive echoes]\n[the concrete fights the music]\n(brutalism in acoustics)\n\n[Section D — Glass Atrium]\n[strings in a glass room]\n[bright, brittle reflections]\n[shimmering, scattering]\n(the sound shatters against transparency)\n\n[Glass continued]\n[high frequencies amplified]\n[every surface a mirror for sound]\n(hearing light)"
+    },
+    {
+      "id": "S014_05",
+      "title": "Microphone Distance",
+      "concept": "마이크 거리 — close-miked(직접) vs room-miked(공간) vs distant-miked(원거리). 같은 연주, 다른 캡처 거리",
+      "spatial_type": "마이크 거리",
+      "corpus_reference": "close-miked(3회), room(74회), distant(5회), intimate(40회), far away(2회)",
+      "sp": "Solo piano piece recorded at three different microphone distances simultaneously. Section A is close-miked — the microphones are inside the piano, capturing every hammer strike, every pedal mechanism, every string vibration in microscopic detail. The sound is intimate, mechanical, and hyper-detailed, you can hear the pianist breathing. Section B is room-miked — the microphones are ten feet away, capturing the piano blended with the room's acoustics. The mechanical details disappear, replaced by the instrument's full, projected tone. Section C is distant-miked — the microphones are at the back of a concert hall, fifty feet away. The piano is small and distant, the room dominates, the direct sound arrives noticeably after the visual cue. Each section plays the same passage. Grand piano. 72 BPM in C major. Concert hall.",
+      "lyrics": "[Section A — Close-Miked]\n[microphones inside the piano]\n[hammer strikes, pedal mechanisms, string vibrations]\n[hyper-detailed, intimate]\n(you can hear the pianist breathing)\n\n[Close-miked continued]\n[the mechanical reality of the piano]\n[felt hitting strings, dampers lifting]\n(the instrument as machine)\n\n[Section B — Room-Miked]\n[microphones ten feet away]\n[the piano blended with the room]\n[mechanical details gone]\n(the projected tone, the instrument as voice)\n\n[Room-miked continued]\n[balanced between direct sound and reflection]\n[the sweet spot of concert recording]\n(how the audience hears it)\n\n[Section C — Distant-Miked]\n[microphones fifty feet away]\n[the piano is small and far]\n[the room dominates]\n(the instrument disappearing into space)\n\n[Distant-miked continued]\n[more room than piano]\n[the concert hall is the instrument now]\n(hearing the building, not the piano)\n\n[All Three — same chord]\n[close: the hammer and string]\n[room: the instrument singing]\n[distant: the hall speaking]\n(three truths about one sound)"
+    },
+    {
+      "id": "S014_06",
+      "title": "Recording Medium",
+      "concept": "녹음 매체 — vinyl/cassette/reel-to-reel/digital. 각 매체의 음질 특성을 SP로 재현",
+      "spatial_type": "녹음 매체",
+      "corpus_reference": "vinyl(22회), cassette(4회), tape(8회), digital(5회), lo-fi(45회)",
+      "sp": "The same jazz trio performance presented as if recorded on four different media. Version A sounds like a vinyl record — warm, with subtle surface crackle and pop, slight bass roll-off, the characteristic warmth and compression of vinyl playback with occasional groove noise. Version B sounds like a cassette tape — muffled, with tape hiss prominent in quiet passages, reduced high-frequency response, slight wobble from the transport mechanism. Version C sounds like a reel-to-reel tape recording — warm and full with the best analog quality, subtle tape saturation, excellent frequency response but with a characteristic smoothness that digital lacks. Version D is pristine digital recording — perfect reproduction, no noise floor, full frequency range from 20 Hz to 20 kHz, clinical accuracy. Piano, upright bass, drums. 130 BPM in B-flat major. 4/4 time with swing.",
+      "lyrics": "[Version A — Vinyl Record]\n[surface crackle and pop]\n[warm, compressed, bass slightly rolled off]\n[the sound of a turntable]\n(music through a diamond needle)\n\n[Vinyl continued]\n[groove noise between phrases]\n[the warmth of the format]\n(you can hear the age)\n\n[Version B — Cassette Tape]\n[tape hiss, muffled]\n[high frequencies reduced]\n[slight wobble from the mechanism]\n(music through a plastic ribbon)\n\n[Cassette continued]\n[the warmth of low fidelity]\n[everything slightly soft]\n(the sound of a bedroom mixtape)\n\n[Version C — Reel-to-Reel Tape]\n[warm, full, excellent analog quality]\n[subtle tape saturation]\n[smooth, rich, the best analog has to offer]\n(music through the finest magnetic tape)\n\n[Reel-to-reel continued]\n[the gold standard of analog]\n[Abbey Road quality]\n(this is what mastering tape sounds like)\n\n[Version D — Digital]\n[pristine, no noise, full frequency range]\n[clinical, perfect, exact reproduction]\n(music as data, zeros and ones)\n\n[Digital continued]\n[nothing added, nothing lost]\n[the truth, uncolored]\n(is perfection always desirable?)"
+    },
+    {
+      "id": "S014_07",
+      "title": "Binaural 3D Audio",
+      "concept": "3D 오디오/바이노럴 — SP에서 음원 위치를 3차원으로 지정. '머리 위', '뒤에서', '왼쪽 아래에서' 등",
+      "spatial_type": "3D 오디오",
+      "corpus_reference": "binaural(0회), 3D audio(0회), surround(2회), immersive(6회), spatial audio(0회)",
+      "sp": "Binaural audio experience designed for headphone listening where sound sources move in three-dimensional space around the listener's head. The piece begins with a single bell ringing directly in front at eye level. The bell then moves slowly to the right, passes behind the head, continues to the left, and returns to the front — completing a full circle around the listener. A second sound, a whispered voice, starts directly above the head and slowly descends to ear level. A bass drone starts below and rises to ear level. A bird sound circles at a distance, sometimes close, sometimes far. The piece creates a three-dimensional sound field where every element has a specific location in space: front, back, left, right, above, below, near, and far. Headphone listening required. No BPM. Ambient.",
+      "lyrics": "[Bell — directly in front]\n[a single bell, eye level, center]\n(right in front of you)\n\n[Bell moves right]\n[the bell slides to the right ear]\n(passing to your right)\n\n[Bell behind]\n[the bell is now behind your head]\n(you feel it behind you)\n\n[Bell moves left]\n[continuing around to the left ear]\n(circling, always moving)\n\n[Bell returns to front]\n[the circle complete]\n(back where it started)\n\n[Whisper from above]\n[a voice directly above your head]\n[descending slowly to ear level]\n(the ceiling speaking)\n\n[Bass from below]\n[a drone from below your feet]\n[rising to ear level]\n(the floor humming)\n\n[Bird circling at distance]\n[sometimes close to the right]\n[sometimes far to the left]\n[sometimes behind, sometimes above]\n(a living sound in three-dimensional space)\n\n[All sources moving simultaneously]\n[bell circling, whisper descending, bass rising, bird orbiting]\n(surrounded by sound in every direction)\n\n[Everything converges to center]\n[all sounds meet at one point, directly ahead]\n(the universe collapsing to a single point)"
+    },
+    {
+      "id": "S014_08",
+      "title": "Foley Integration",
+      "concept": "폴리(foley) 사운드와 음악의 통합 — 발자국, 문 여닫기, 유리잔 소리 등을 음악적 요소로 사용",
+      "spatial_type": "폴리 통합",
+      "corpus_reference": "foley(0회), sound effects(4회), footsteps(0회), ambient sounds(2회), sound design(3회)",
+      "sp": "Experimental music piece where everyday sounds become the instruments. The rhythm section is made entirely of foley sounds: footsteps on wooden floor create the kick drum pattern, a door closing serves as the snare hit, keys jangling provide the hi-hat rhythm, a squeaky chair makes a rhythmic creak pattern. The melodic elements are also foley: glasses filled with different levels of water are tapped to create a tuned percussion melody, a creaking door hinge provides a singing sustained tone, wind through a window crack creates a pad-like drone. The piece demonstrates that any sound can be music if it is organized rhythmically and melodically. All sounds should be recognizable as their real-world sources while also functioning as musical elements. No traditional instruments. 95 BPM. Key of C major approximated by the water glasses. 4/4 time.",
+      "lyrics": "[Footsteps as Kick Drum]\n[wooden floor, regular pace]\n[the rhythm of walking becomes the beat]\n(step — step — step — step)\n\n[Door as Snare]\n[door closing on beats 2 and 4]\n[the snare hit of the real world]\n(slam — slam — slam — slam)\n\n[Keys as Hi-Hat]\n[keys jangling in rhythm]\n[metallic, bright, rhythmic]\n(jingle — jingle — jingle — jingle)\n\n[Chair as Percussion]\n[squeaky chair, rhythmic creaking]\n(creak — creak — creak)\n\n[Water Glasses — Melody]\n[glasses filled to different levels]\n[tapped with a spoon]\n[a scale, a melody from water]\n(the kitchen xylophone)\n\n[Door Hinge — Sustained Tone]\n[slowly opening door, the hinge sings]\n[a sustained creaky tone]\n(the door is a violin)\n\n[Wind — Drone]\n[wind through a window crack]\n[a constant airy tone]\n(the building breathes a note)\n\n[Full Foley Ensemble]\n[all sounds together]\n[footsteps kick, door snare, key hi-hat]\n[glass melody, hinge tone, wind drone]\n(a symphony of everyday)\n\n[Silence — all sounds stop]\n[just the room]\n(the music was always here)"
+    }
+  ]
+}

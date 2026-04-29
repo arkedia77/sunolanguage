@@ -1,0 +1,94 @@
+{
+  "purpose": "S010 — Absence and Silence (부재와 침묵의 어휘)",
+  "created_at": "2026-04-29",
+  "previous": "S009 = 구조. S010 = 구조 축의 나머지 절반 — 무엇이 '없는가'를 테스트",
+  "theme": "absence 슬롯(21회)은 극빈약. '빼라'는 지시를 Suno가 따르는가? 침묵과 부재를 음악적 요소로 다룰 수 있는가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis D: 구조/부재",
+  "instrument_policy": "곡별 상이 — 부재 테스트 특성상 '무엇이 빠져야 하는가'에 따라 악기 편성이 달라짐",
+  "test_axes": [
+    "드럼 없는 곡을 Suno가 생성하는가 (no drums 지시 준수)",
+    "점진적 악기 퇴장을 수행하는가",
+    "완전한 무음 구간(그랜드 포즈)을 삽입하는가",
+    "네거티브 스페이스(음 사이의 여백)를 의도적으로 만드는가",
+    "아카펠라(악기 완전 부재)를 정확히 지키는가",
+    "감산적 편곡(빼면서 구축)이 가능한가",
+    "특정 악기만 선택적으로 제외하는가",
+    "페이드 투 낫씽(완전 소멸)을 수행하는가"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S010_01",
+      "title": "No Drums",
+      "concept": "드럼 없는 곡 — Suno가 'no drums' 지시를 실제로 따르는가? 가장 기본적인 부재 테스트",
+      "absence_type": "단일 악기 부재",
+      "corpus_reference": "no drums(3회), without drums(0회), drumless(0회)",
+      "sp": "Pop rock song with absolutely no drums or percussion of any kind. The song must have no kick drum, no snare, no hi-hat, no cymbals, no tambourine, no shaker, no claps, no percussion loops — nothing that marks rhythm through hitting. The groove comes entirely from the bass guitar's rhythmic pattern and the guitar's strumming. The absence of drums should feel intentional and dramatic, like a room with one wall missing. Electric guitar strumming eighth notes for rhythm. Bass guitar playing a rhythmic walking line that implies the beat. Piano adding harmonic support. Vocals carry the melody. Absolutely no drums, no percussion, no rhythmic hits of any kind. 110 BPM implied by the bass line. Key of A major. 4/4 time.",
+      "lyrics": "[Verse 1 — no drums]\n(singing over drumless groove)\nThere is a space where the beat should be\nA hollow where the rhythm used to live\nListen to the silence where the kick drum was\nListen to the nothing the snare forgave\n\n[Chorus — still no drums]\n(full vocals, guitar strumming, but NO drums)\nWe dance without a heartbeat\nWe move without a pulse\nThe music lives in the spaces\nWhere the drums should be\n\n[Verse 2 — no drums]\n(the absence is the feature)\nThe bass walks alone without a partner\nThe guitar strums against the air\nEvery note falls into the gap\nWhere percussion used to fill\n\n[Chorus — no drums]\nWe dance without a heartbeat\nWe move without a pulse\n\n[Bridge — no drums, stripped further]\n(piano and voice only, no guitar even)\nJust a voice\nJust a chord\nNothing keeping time\n\n[Final Chorus — no drums to the end]\n(absolutely no percussion, ever)\nWe dance without a heartbeat"
+    },
+    {
+      "id": "S010_02",
+      "title": "Gradual Exit",
+      "concept": "점진적 악기 퇴장 — 풀 밴드에서 시작해 하나씩 빠져나가 마지막에 1개만 남음",
+      "absence_type": "점진적 감산",
+      "corpus_reference": "fade(22회), stripping(0회), one by one(0회), exit(0회)",
+      "sp": "Rock band piece that starts with all instruments and removes them one by one until only a single voice remains. The opening has full band at maximum: two electric guitars, bass, drums with double kick, keyboards, backing vocals, and lead vocals. Every sixteen bars, one instrument stops playing and does not return. First the keyboards drop out. Then the second guitar. Then the backing vocals. Then the drums simplify to just hi-hat. Then the bass stops. Then the hi-hat stops. Then the first guitar stops. The final section is completely solo voice with no accompaniment for thirty-two bars. Each exit should be noticeable — the listener should feel each absence. 95 BPM in F-sharp minor. 4/4 time.",
+      "lyrics": "[Full Band — everything playing]\n(all instruments, maximum)\nWe started with everything\nEvery voice every string every drum\nThe room was full of sound\n\n[Keyboards exit]\n(the pads disappear)\nOne color fades from the painting\nDid you notice it go?\n\n[Second guitar exits]\n(the rhythm guitar stops)\nThe harmony thins\nTwo guitars become one\n\n[Backing vocals exit]\n(the choir vanishes)\nThe voices behind me are gone\nI am singing alone now\n\n[Drums simplify — only hi-hat remains]\n(kick and snare disappear)\nThe heartbeat simplified\nTo a single ticking\n\n[Bass exits]\n(the low end vanishes)\nThe ground falls away\nI am floating\n\n[Hi-hat exits]\n(the last rhythm stops)\nNo pulse now\nNo time\n\n[Guitar exits]\n(the last instrument stops)\nNothing but breath\n\n[Solo Voice — 32 bars, no accompaniment]\n(completely alone)\nThis is what remains\nWhen everything is taken\nJust a voice in an empty room\nSinging to the walls\nSinging to the absence\nSinging to the space\nWhere the music was"
+    },
+    {
+      "id": "S010_03",
+      "title": "Grand Pause",
+      "concept": "그랜드 포즈(GP) — 모든 악기가 동시에 멈추는 완전 무음 구간. Suno가 의도적 침묵을 생성하는가?",
+      "absence_type": "완전 무음",
+      "corpus_reference": "silence(15회), pause(18회), stop(12회), grand pause(0회)",
+      "sp": "Orchestral piece with three dramatic grand pauses where every instrument stops simultaneously and complete silence fills the space for four full beats. The music builds to a massive fortissimo climax, then every instrument cuts off at exactly the same moment. Four beats of absolute silence. Nothing. Not even room tone or reverb tail. Then the music resumes as if nothing happened. The second grand pause occurs during a quiet passage — the music simply stops mid-phrase for four beats of silence, then continues from where it stopped. The third grand pause is the longest — eight full beats of silence in the middle of the loudest passage. The silence should be jarring and physical, like the air being sucked out of the room. Full orchestra. 88 BPM in E-flat major. 4/4 time. Concert hall.",
+      "lyrics": "[Build to Climax]\n[full orchestra, fortissimo]\n[brass, strings, percussion, woodwinds]\n[building, building, building—]\n\n[GRAND PAUSE 1 — four beats of absolute silence]\n[NOTHING]\n[every instrument stopped]\n[four beats]\n(the shock of sudden nothing)\n\n[Music Resumes — forte]\n[orchestra continues as if nothing happened]\n(life returns)\n\n[Quiet Passage]\n[strings alone, piano dynamic]\n[gentle melody flowing—]\n\n[GRAND PAUSE 2 — four beats mid-phrase]\n[SILENCE]\n[the phrase interrupted]\n(a door slammed in a whisper)\n\n[Phrase Continues]\n[strings pick up exactly where they stopped]\n(the sentence finished after the pause)\n\n[Massive Climax]\n[FULL ORCHESTRA FORTISSISSIMO]\n[THE LOUDEST POSSIBLE MOMENT—]\n\n[GRAND PAUSE 3 — eight beats of silence]\n[NOTHING]\n[NOTHING]\n[eight full beats]\n(the longest silence, the deepest void)\n\n[Final Phrase]\n[orchestra, pianissimo]\n[after the silence, everything is changed]\n(sound means more after it was taken away)"
+    },
+    {
+      "id": "S010_04",
+      "title": "Negative Space",
+      "concept": "네거티브 스페이스 — 음 사이의 여백이 음 자체만큼 중요한 곡. 미니멀리즘적 접근",
+      "absence_type": "의도적 여백",
+      "corpus_reference": "space(24회), sparse(18회), minimal(21회), breathing room(0회)",
+      "sp": "Jazz trumpet piece where the rests between notes are as important as the notes themselves. The trumpet plays short phrases of two to three notes separated by long silences of four to eight beats. Miles Davis late-period style — what is not played defines the music as much as what is played. The piano plays a single chord every eight bars, then silence. The bass plays one note every four bars, then silence. The drums play nothing except an occasional single cymbal touch every sixteen bars. The piece is ninety percent silence and ten percent sound. Every note exists in a vast empty space. The listener should be aware of the silence as a musical element, not as an absence of music. Trumpet, piano, bass, drums. 60 BPM implied. Key of D minor. Free time. Studio recording, very dry, no reverb.",
+      "lyrics": "[Trumpet — three notes]\n[then silence... four beats]\n(the notes float in emptiness)\n\n[Silence — eight beats]\n(the silence is the music)\n\n[Piano — single chord]\n[then silence... eight beats]\n(one color, then nothing)\n\n[Trumpet — two notes]\n[then silence... six beats]\n(less is everything)\n\n[Bass — one note]\n[silence... four beats]\n(the lowest voice, barely speaking)\n\n[Long Silence — twelve beats]\n(listening to the room)\n\n[Cymbal — single touch]\n[silence... sixteen beats]\n(a whisper of metal, then gone)\n\n[Trumpet — one note, sustained]\n[fading into silence]\n(a single thread dissolving)\n\n[Silence — the longest gap]\n(is the piece still playing?)\n\n[Piano — final chord]\n[held, fading]\n(the last sound before nothing)\n\n[Silence]\n(the piece ends, but when did it end?)"
+    },
+    {
+      "id": "S010_05",
+      "title": "A Cappella Pure",
+      "concept": "아카펠라 — 악기 완전 부재, 인간 목소리만으로 전체 곡 구성. Suno가 악기를 진정으로 '안 쓸' 수 있는가?",
+      "absence_type": "악기 완전 부재",
+      "corpus_reference": "a cappella(14회), acapella(3회), vocals only(2회), no instruments(0회)",
+      "sp": "A cappella choral piece for mixed voices with absolutely no instruments. Four-part harmony: soprano, alto, tenor, bass. The soprano carries the melody. The alto provides harmonic support a third below. The tenor adds a countermelody. The bass sings the root notes and provides harmonic foundation. No piano, no guitar, no drums, no synthesizer, no beatboxing, no vocal percussion — only pure singing voices creating harmony. The blend should be warm and seamless, like a church choir. The piece moves through four-part chorale style in the verses and opens to six-part harmony in the chorus with divided sopranos and divided basses. Mixed choir of sixteen voices. No instruments of any kind. 76 BPM. Key of G major. 4/4 time. Cathedral acoustic with natural reverb.",
+      "lyrics": "[Verse 1 — four-part harmony, no instruments]\n(soprano melody, alto harmony, tenor countermelody, bass foundation)\nWhen voices are the only sound\nThe air itself becomes the ground\nNo string no drum no key no reed\nJust breath and tone are all we need\n\n[Verse 2 — four-part harmony]\n(same voicing, new words)\nThe human voice was first to sing\nBefore the hand could pluck a string\nBefore the stick could strike the skin\nThe song was always there within\n\n[Chorus — six-part harmony, no instruments]\n(divided sopranos, divided basses, fuller sound)\nWe are the instrument\nWe are the song\nEvery voice a string\nEvery breath a drum\nWe are all we need\n\n[Verse 3 — four-part harmony]\n(soprano solo then choir joins)\nOne voice begins alone\nThen two then four then all\nThe harmony is not the notes\nThe harmony is that we sing at all\n\n[Final Chorus — six-part, fortissimo then diminishing]\nWe are the instrument\nWe are the song\n(voices fading one by one)\n(until one voice remains)\n(then silence)"
+    },
+    {
+      "id": "S010_06",
+      "title": "Subtractive Arrangement",
+      "concept": "감산적 편곡 — 보통 편곡은 쌓아가지만, 이 곡은 빼면서 구축. 각 섹션이 전 섹션보다 더 적은 요소",
+      "absence_type": "감산적 구축",
+      "corpus_reference": "stripped(6회), stripped-back(3회), bare(8회), less is more(0회)",
+      "sp": "Pop song with subtractive arrangement where each section has fewer elements than the one before. The intro has the maximum instrumentation: full band with strings, brass, backing choir, two guitars, bass, drums, keyboards, and lead vocal. Verse one removes the strings and brass. The pre-chorus removes the choir and second guitar. The chorus removes the keyboards. Verse two removes the drums. The bridge has only acoustic guitar and voice. The final chorus has only voice. The song gets quieter, simpler, and more naked as it progresses, the opposite of a normal pop arrangement that builds. The emotional impact increases as the production decreases. Starting with everything and arriving at nothing. 100 BPM in C major. 4/4 time.",
+      "lyrics": "[Intro — MAXIMUM: strings, brass, choir, 2 guitars, bass, drums, keys, vocal]\n(everything, overwhelming, lush)\nThis is the sound of everything at once\n\n[Verse 1 — strings and brass removed]\n(still full, but the orchestral shimmer is gone)\nAlready something missing\nCan you hear the space where the violins were?\n\n[Pre-Chorus — choir and second guitar removed]\n(thinner, the support vanishing)\nThe voices behind me have left\nThe harmony is mine alone to hold\n\n[Chorus — keyboards removed]\n(guitar bass drums and voice only)\nStripped down to the bone\nEvery loss reveals what matters\n\n[Verse 2 — drums removed]\n(no pulse, floating)\nThe heartbeat stopped\nBut the song keeps going\nRhythm lives in the words now\n\n[Bridge — acoustic guitar and voice only]\n(almost naked)\nJust six strings and one voice\nThis is all that's left\nAnd it is enough\n\n[Final Chorus — voice only, no instruments]\n(completely bare)\nStripped down to the bone\nEvery loss reveals what matters\nThis voice\nAlone\nIs everything"
+    },
+    {
+      "id": "S010_07",
+      "title": "Selective Exclusion",
+      "concept": "특정 악기만 선택적으로 제외 — 'no bass' / 'no guitar' 같은 네거티브 지시를 Suno가 정밀하게 따르는가?",
+      "absence_type": "선택적 부재",
+      "corpus_reference": "no bass(0회), without(7회), exclude(0회)",
+      "sp": "Three versions of the same rock song, each missing one critical instrument to test selective exclusion. Version A plays the full song without any bass guitar — drums, two guitars, and vocals only. The low end is completely empty, the music feels thin and top-heavy. Version B plays the same song without any guitar — bass, drums, keyboards replacing guitar, and vocals. The midrange loses its edge. Version C plays the same song without any vocals — full instrumental with guitar, bass, and drums. For this recording, play all three versions back to back as one continuous track with a two-beat silence between each version. Same melody, same arrangement, minus one different element each time. 120 BPM in E minor. 4/4 time. Rock production.",
+      "lyrics": "[Version A — NO BASS GUITAR]\n[drums, two guitars, vocals]\n[the low end is gone, thin and top-heavy]\n(singing)\nSomething is missing from below\nThe foundation crumbled and nobody knows\nWe play without the bottom\nWe play without the ground\n\n[Two beats of silence]\n\n[Version B — NO GUITAR]\n[bass, drums, keyboards, vocals]\n[the midrange edge is gone, smooth but toothless]\n(singing)\nSomething is missing from the middle\nThe teeth are gone the bite is gentle\nWe play without the edge\nWe play without the fire\n\n[Two beats of silence]\n\n[Version C — NO VOCALS]\n[guitar, bass, drums — full instrumental]\n[the human element is absent]\n[the melody exists only in instruments]\n(no singing, the voice-shaped hole)\n\n[Guitar plays the vocal melody]\n[the absence of the voice is deafening]\n(three versions, three absences, three different kinds of empty)"
+    },
+    {
+      "id": "S010_08",
+      "title": "Fade to Nothing",
+      "concept": "페이드 투 낫씽 — 곡 전체가 사라지는 과정 자체가 곡의 내용. S010 시리즈 종합 테스트",
+      "absence_type": "완전 소멸",
+      "corpus_reference": "fade out(15회), fading(12회), disappear(3회), nothing(8회)",
+      "sp": "Ambient electronic piece that is entirely about disappearing. The track opens at full volume with a rich, layered soundscape: pad synthesizers, arpeggiated sequences, deep bass drones, shimmering high-frequency textures, field recordings of rain and wind, vocal samples. Over the course of five minutes, every element gradually fades to nothing. But this is not a simple volume fade — each layer thins independently. The arpeggio loses notes one by one. The pad narrows its frequency range. The bass drone drops in octaves until it is below hearing. The rain recording becomes more distant. The vocal sample becomes more and more reverb until it is just an echo of an echo. By the final minute, only a single sine wave remains, barely audible, then even that dissolves. The piece ends in absolute digital silence — not even room noise. Synthesizers, field recordings, vocal samples. No BPM — ambient, free tempo. No key — atonal drones.",
+      "lyrics": "[Full Soundscape]\n[pads, arpeggios, bass drone, high textures, rain, wind, vocals]\n(everything present, the maximum)\n\n[Arpeggio Thinning]\n[the arpeggio loses one note]\n[then another]\n[from eight notes to six to four to two]\n(the pattern dissolving)\n\n[Bass Descending]\n[the drone drops an octave]\n[then another octave]\n[approaching the edge of hearing]\n(sinking below perception)\n\n[Rain Distancing]\n[the rain recording moves further away]\n[as if the window is closing]\n(the world outside receding)\n\n[Vocal Echo]\n[the vocal sample drowning in reverb]\n[an echo of an echo of an echo]\n(the human voice becoming atmosphere)\n\n[Pad Narrowing]\n[the pad loses frequencies]\n[high end gone, then low end]\n[just a narrow band in the middle]\n(the color draining)\n\n[Almost Nothing]\n[a single sine wave, barely audible]\n(one frequency remains)\n\n[The Sine Wave Fades]\n[softer... softer...]\n(is it still there?)\n\n[Digital Silence]\n[absolute nothing — not even room tone]\n(the piece has ceased to exist)"
+    }
+  ]
+}

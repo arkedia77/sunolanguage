@@ -1,0 +1,114 @@
+{
+  "purpose": "S013 — Production: The Invisible Layer (보이지 않는 레이어)",
+  "created_at": "2026-04-29",
+  "previous": "S011-S012 = 보컬 축. S013부터 프로덕션 축(Axis F) 시작",
+  "theme": "reverb(170회)·compression(32회)은 알지만 마스터링(master bus 2회, limiter 0회)은 완전 데드존 — 프로덕션 지시의 해상도 한계",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis F: 프로덕션/공간",
+  "instrument_policy": "곡별 상이 — 프로덕션 이펙트가 가장 잘 드러나는 악기/장르 선택",
+  "test_axes": [
+    "리버브 5종(room/hall/plate/spring/shimmer)을 구분하는가",
+    "딜레이 세부 파라미터(시간, 피드백)를 제어하는가",
+    "스테레오 필드(wide/narrow/mono/panning)를 제어하는가",
+    "컴프레션 유형(optical/FET/tube)을 구분하는가",
+    "주파수 단위 EQ 지시가 반영되는가",
+    "새추레이션/디스토션의 세부 유형을 구분하는가",
+    "로파이 극한 조합이 가능한가",
+    "사이드체인 컴프레션을 생성하는가",
+    "마스터링 지시(limiter/dithering)가 데드존인가",
+    "빈티지 vs 모던 프로덕션 스타일 차이"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S013_01",
+      "title": "Five Reverbs",
+      "concept": "리버브 5종 비교 — room/hall/plate/spring/shimmer. 같은 소스에 다른 리버브를 적용",
+      "production_type": "리버브 유형",
+      "corpus_reference": "reverb(170회), room(74회), hall(23회), plate(8회), spring(11회), shimmer(9회)",
+      "sp": "Solo snare drum piece showcasing five different types of reverb applied to the same dry snare hit pattern. Section A uses a small room reverb — short decay, early reflections, the sound of playing in a bedroom. Section B uses a large concert hall reverb — long decay of three to four seconds, expansive and majestic, the snare echoing in a cathedral. Section C uses a plate reverb — dense, metallic, bright, the classic studio reverb with a distinctive sheen. Section D uses a spring reverb — boingy, splashy, the characteristic twang of a spring reverb tank found in guitar amplifiers. Section E uses a shimmer reverb — the reverb tail pitch-shifted up an octave, creating an ethereal, crystalline, ambient wash that transforms the snare hit into a celestial event. Same snare pattern throughout: simple quarter notes. 100 BPM. 4/4 time.",
+      "lyrics": "[Section A — Room Reverb]\n[snare hits in a small room]\n[short decay, close walls]\n(intimate, contained, bedroom-sized)\n\n[Room continued]\n[the reverb barely there]\n[just enough to feel the walls]\n(a real room, nothing more)\n\n[Section B — Hall Reverb]\n[same snare, concert hall]\n[long decay, three to four seconds]\n[expansive, majestic]\n(the snare in a cathedral)\n\n[Hall continued]\n[each hit echoes forever]\n(the sound of enormous space)\n\n[Section C — Plate Reverb]\n[same snare, plate reverb]\n[dense, metallic, bright sheen]\n(the classic studio sound)\n\n[Plate continued]\n[distinctive metallic quality]\n(you can hear the plate vibrating)\n\n[Section D — Spring Reverb]\n[same snare, spring reverb]\n[boingy, splashy, twangy]\n(the guitar amp reverb tank)\n\n[Spring continued]\n[the characteristic spring splash]\n(the wobble, the drip)\n\n[Section E — Shimmer Reverb]\n[same snare, shimmer reverb]\n[reverb tail pitch-shifted up an octave]\n[ethereal, crystalline, ambient]\n(the snare becomes a choir of angels)\n\n[Shimmer continued]\n[each hit blooms into an octave-shifted wash]\n(a celestial event from a drum hit)"
+    },
+    {
+      "id": "S013_02",
+      "title": "Delay Parameters",
+      "concept": "딜레이 세부 파라미터 — 딜레이 타임(1/4 vs 1/8 vs dotted 1/8), 피드백 양, 핑퐁 딜레이 등",
+      "production_type": "딜레이 제어",
+      "corpus_reference": "delay(28회), echo(16회), ping-pong(0회), dotted(2회), feedback(0회)",
+      "sp": "Ambient guitar piece exploring four types of delay effects. Section A uses a quarter-note delay synced to the tempo — each note repeats exactly one beat later, creating a rhythmic doubling effect. Section B uses a dotted eighth-note delay, the U2-Edge signature sound where the repeats fall between the beats creating a galloping, polyrhythmic pattern. Section C uses a long delay with high feedback — each note repeats many times, each repeat slightly quieter, building layers of overlapping echoes that fill the stereo field. Section D uses ping-pong delay — the repeats alternate between the left and right speakers, bouncing back and forth across the stereo image. Clean electric guitar playing single notes. 120 BPM in E minor. 4/4 time. Ambient production.",
+      "lyrics": "[Section A — Quarter-Note Delay]\n[guitar note, then exact repeat one beat later]\n[rhythmic doubling]\n(the note and its shadow, on the beat)\n\n[Quarter-note continued]\n[single notes creating rhythmic patterns]\n[the delay perfectly synced]\n(mechanical precision)\n\n[Section B — Dotted Eighth Delay]\n[guitar note, repeat falls between beats]\n[the galloping U2-Edge pattern]\n(the repeat pushes against the rhythm)\n\n[Dotted eighth continued]\n[the off-beat repeats create polyrhythm]\n(three notes from one, syncopated)\n\n[Section C — Long Delay, High Feedback]\n[guitar note repeats many times]\n[each repeat quieter, overlapping]\n[the space fills with echoes]\n(layers upon layers of the same note)\n\n[High feedback continued]\n[the echoes never fully die]\n[a wash of overlapping repeats]\n(the past accumulating)\n\n[Section D — Ping-Pong Delay]\n[guitar note bounces left then right]\n[alternating stereo repeats]\n(the sound playing tennis)\n\n[Ping-pong continued]\n[left... right... left... right...]\n[the note traveling across the stereo field]\n(spatial rhythm)"
+    },
+    {
+      "id": "S013_03",
+      "title": "Stereo Field Control",
+      "concept": "스테레오 필드 제어 — wide/narrow/mono/hard-pan. 공간적 배치를 SP로 제어할 수 있는가?",
+      "production_type": "스테레오 제어",
+      "corpus_reference": "stereo(12회), wide(18회), mono(3회), panning(2회), left(7회), right(5회)",
+      "sp": "Electronic track demonstrating four stereo field configurations. Section A is completely mono — every instrument and every sound comes from the exact center, no width at all, the most narrow possible stereo image. Section B uses hard panning — the guitar is panned entirely to the left speaker, the keyboard is panned entirely to the right speaker, and the bass and drums are in the center. Section C uses an extra-wide stereo mix — every element spread as wide as possible, instruments placed from far left to far right, the widest possible stereo image. Section D alternates between mono and wide every four bars, making the stereo field breathe in and out. Synthesizer, guitar, bass, electronic drums. 110 BPM in D minor. 4/4 time.",
+      "lyrics": "[Section A — Mono]\n[everything from the center]\n[no width, no spread]\n[all instruments in the exact middle]\n(flat, narrow, focused)\n\n[Mono continued]\n[the sound has no left or right]\n[only center]\n(like listening through a single speaker)\n\n[Section B — Hard Panning]\n[guitar: far left speaker only]\n[keyboard: far right speaker only]\n[bass and drums: center]\n(the instruments separated in space)\n\n[Hard panning continued]\n[left ear hears guitar]\n[right ear hears keyboard]\n(a different song in each ear)\n\n[Section C — Extra Wide]\n[every element spread to maximum width]\n[instruments from far left to far right]\n[the stereo image enormous]\n(the sound is wider than your head)\n\n[Wide continued]\n[immersive, enveloping]\n[sound coming from everywhere]\n(you are inside the music)\n\n[Section D — Breathing Stereo]\n[mono for four bars — narrow]\n[then wide for four bars — expansive]\n[then mono again — narrow]\n[then wide — expansive]\n(the stereo field inhaling and exhaling)"
+    },
+    {
+      "id": "S013_04",
+      "title": "Compression Types",
+      "concept": "컴프레션 유형 — optical/FET/tube/bus compression. 프로 엔지니어 수준의 세부 지시",
+      "production_type": "컴프레션",
+      "corpus_reference": "compression(32회), compressed(8회), pumping(5회), squashed(0회)",
+      "sp": "Drum loop processed through four different compression styles. Section A uses optical compression — slow, smooth, transparent, the drums retain their natural dynamics but the peaks are gently tamed, like the LA-2A compressor. Section B uses FET compression — fast attack, aggressive, the drums become punchy and in-your-face, the transients either crushed or emphasized, like the 1176 compressor pushed hard. Section C uses tube compression — warm, colored, adding harmonic saturation along with compression, the drums sound vintage and fat. Section D uses heavy bus compression — the entire mix pumps and breathes together, the kind of glue compression that makes a mix feel like one instrument, the pumping effect exaggerated and rhythmic. Same drum pattern: kick, snare, hi-hat, simple rock beat. 100 BPM. 4/4 time.",
+      "lyrics": "[Section A — Optical Compression]\n[drums with slow, smooth compression]\n[natural dynamics mostly preserved]\n[peaks gently controlled]\n(transparent, barely noticeable)\n\n[Optical continued]\n[the LA-2A sound]\n[smooth, musical, polite]\n(compression you feel but don't hear)\n\n[Section B — FET Compression]\n[drums with fast, aggressive compression]\n[punchy, in-your-face]\n[transients emphasized or crushed]\n(the 1176 pushed hard)\n\n[FET continued]\n[every hit is a punch]\n[the drums sound closer, more aggressive]\n(compression as attitude)\n\n[Section C — Tube Compression]\n[drums with warm, colored compression]\n[harmonic saturation added]\n[vintage and fat]\n(the tube glow)\n\n[Tube continued]\n[the drums sound like they were recorded in 1965]\n[warm, round, saturated]\n(compression as flavor)\n\n[Section D — Heavy Bus Compression]\n[the entire mix pumps and breathes]\n[exaggerated pumping effect]\n[everything moves together]\n(the mix breathing as one organism)\n\n[Bus compression continued]\n[kick triggers the pump]\n[the mix ducks and recovers rhythmically]\n(compression as rhythm)"
+    },
+    {
+      "id": "S013_05",
+      "title": "Frequency EQ",
+      "concept": "주파수 단위 EQ 지시 — SP에서 특정 주파수를 부스트/컷하는 지시. 데드존 도전",
+      "production_type": "EQ",
+      "corpus_reference": "EQ(0회), bass boost(3회), treble(2회), frequency(0회), high-pass(0회), low-pass(0회)",
+      "sp": "Full band rock mix processed through three extreme EQ settings to test frequency control. Version A boosts the sub-bass frequencies below 100 Hz by twelve decibels — the kick drum and bass guitar become overwhelming, the low end dominates, the chest vibrates. Version B boosts the high frequencies above 8000 Hz by twelve decibels — the cymbals become piercing, the air and sparkle become excessive, the mix is thin and bright and harsh. Version C applies a narrow midrange boost at 1000 Hz by twelve decibels — the vocals and guitar become honky and nasal, the midrange pokes through unpleasantly. Each EQ version plays for sixteen bars with the same arrangement. Rock band: guitar, bass, drums, vocals. 120 BPM in A minor. 4/4 time.",
+      "lyrics": "[Version A — Sub-Bass Boost +12dB below 100Hz]\n[kick drum and bass overwhelming]\n[the low end dominates everything]\n[your chest vibrates]\n(too much bottom, the earth is shaking)\n\n[Sub-bass continued]\n[the guitar and vocals are buried]\n[only bass and kick matter]\n(a wall of low frequency)\n\n[Version B — High Frequency Boost +12dB above 8kHz]\n[cymbals piercing and harsh]\n[air and sparkle excessive]\n[the mix is thin and bright]\n(ice picks in the ears)\n\n[High boost continued]\n[every sibilant exaggerated]\n[every cymbal hit a needle]\n(painfully bright)\n\n[Version C — Midrange Boost +12dB at 1kHz]\n[vocals and guitar honky and nasal]\n[the midrange pokes through]\n[unpleasant, telephone-like]\n(the frequency that annoys)\n\n[Midrange continued]\n[everything sounds like it is in a tin can]\n[the nasal honk dominates]\n(the ugly middle)\n\n[Reference — flat EQ, no processing]\n[the same mix, no EQ]\n[balanced, natural]\n(what it should sound like)"
+    },
+    {
+      "id": "S013_06",
+      "title": "Saturation Flavors",
+      "concept": "새추레이션 유형 — tape/tube/transistor/digital clipping. 같은 소스에 4가지 왜곡 색채",
+      "production_type": "새추레이션",
+      "corpus_reference": "distortion(36회), saturated(4회), tape(8회), warm(67회), overdrive(15회)",
+      "sp": "Clean synth pad processed through four types of saturation. Section A uses tape saturation — the warm, gentle compression and harmonic coloring of recording to analog tape, subtle soft clipping that adds thickness without obvious distortion. Section B uses tube saturation — the warm, even-harmonic distortion of vacuum tubes, rich and musical, the sound of vintage equipment being driven slightly hot. Section C uses transistor saturation — harder, odd-harmonic distortion, more aggressive and edgy than tube, the sound of a solid-state preamp pushed past its clean headroom. Section D uses digital clipping — hard, flat, ugly distortion where the waveform is brutally chopped at the ceiling, the harsh sound of digital overload. Synth pad, clean tone as reference at the start. No BPM — sustained chords. Key of C major. Ambient.",
+      "lyrics": "[Reference — clean, no saturation]\n[synth pad, pure and unprocessed]\n(the starting point, clinical)\n\n[Section A — Tape Saturation]\n[same pad through analog tape]\n[warm, gently compressed]\n[subtle soft clipping, thicker]\n(the sound of a good studio in 1972)\n\n[Tape continued]\n[harmonics added, not harsh]\n[the pad sounds more alive]\n(warmth without obvious distortion)\n\n[Section B — Tube Saturation]\n[same pad through vacuum tubes]\n[even harmonics, rich, musical]\n(the glow of hot glass)\n\n[Tube continued]\n[driven slightly hot]\n[warm distortion, vintage]\n(the sound loves you back)\n\n[Section C — Transistor Saturation]\n[same pad through solid-state]\n[odd harmonics, edgy, aggressive]\n(the bite, the edge)\n\n[Transistor continued]\n[harder than tube, more aggressive]\n[the distortion has teeth]\n(solid-state attitude)\n\n[Section D — Digital Clipping]\n[same pad, digitally clipped]\n[hard, flat, ugly distortion]\n[the waveform brutally chopped]\n(the sound of a computer screaming)\n\n[Digital continued]\n[harsh, unmusical, painful]\n(the worst kind of distortion — or is it?)"
+    },
+    {
+      "id": "S013_07",
+      "title": "Lo-Fi Extreme",
+      "concept": "로파이 극한 조합 — Suno가 잘 아는 lo-fi 어휘를 극한까지 조합. 대조군(잘 아는 영역의 한계 탐색)",
+      "production_type": "로파이 극한",
+      "corpus_reference": "lo-fi(45회), vinyl(22회), tape hiss(6회), crackle(8회), warm(67회), dusty(5회)",
+      "sp": "Lo-fi hip hop beat with every possible lo-fi production technique applied simultaneously at extreme settings. Heavy vinyl crackle and surface noise throughout. Tape hiss at a high level, audible between every phrase. The entire mix runs through a low-pass filter removing everything above 8000 Hz, making it muffled and dark. Bit-depth reduction to 12-bit creating subtle digital artifacts. Wow and flutter from a deteriorating tape machine causing pitch wobble. The drums sound like they were sampled from a dusty record — muffled, compressed, the transients rounded off. The piano chords are buried in reverb and filtered to sound like they are playing in another room. The bass is warm and round with no high-frequency content. Everything sounds old, worn, damaged, and beautiful. 75 BPM in C minor. 4/4 time.",
+      "lyrics": "[Full Lo-Fi Treatment]\n[vinyl crackle, tape hiss, low-pass filter]\n[everything muffled and warm]\n(the sound of a beautiful ruin)\n\n[Drums — dusty, muffled]\n[sampled from a worn record]\n[transients rounded, compressed]\n(drums heard through a wall)\n\n[Piano — distant, filtered]\n[buried in reverb]\n[sounds like another room]\n(a memory of a piano)\n\n[Bass — warm, round]\n[no high frequencies, pure warmth]\n(the foundation, soft and heavy)\n\n[Wow and Flutter]\n[pitch wobbling slightly]\n[the tape machine dying slowly]\n(the imperfection as beauty)\n\n[Bit Reduction]\n[subtle digital artifacts]\n[12-bit crunch under the warmth]\n(digital damage disguised as analog)\n\n[Maximum Lo-Fi]\n[every technique at once]\n[the music barely surviving the processing]\n(beauty through destruction)\n\n[Silence — just the crackle and hiss remain]\n[the music stops but the noise continues]\n(the ghosts of sound)"
+    },
+    {
+      "id": "S013_08",
+      "title": "Sidechain Pump",
+      "concept": "사이드체인 컴프레션 — 킥 드럼이 다른 트랙의 볼륨을 눌러 '펌핑' 효과 생성. EDM의 핵심 기법",
+      "production_type": "사이드체인",
+      "corpus_reference": "sidechain(4회), pumping(5회), ducking(0회)",
+      "sp": "EDM track with exaggerated sidechain compression creating a dramatic pumping effect. Every instrument except the kick drum is sidechained — when the kick hits, the synth pad, the bass, the vocal chop, and the hi-hats all duck in volume dramatically, then swell back up before the next kick. The pumping effect should be extreme and obvious, the signature sound of French house and EDM where the mix breathes in and out with the kick drum. The four-on-the-floor kick pattern at 128 BPM creates a rhythmic pumping that makes the entire mix pulsate. Synth pads, sub bass, vocal chops, hi-hats, kick drum. 128 BPM in F minor. 4/4 time. Club production.",
+      "lyrics": "[Intro — kick only]\n[four-on-the-floor kick, clean]\n(the trigger)\n\n[Sidechain Engaged — pad enters]\n[synth pad swells between kicks]\n[KICK — pad ducks]\n[pad swells — KICK — pad ducks]\n(the pump, the breath)\n\n[Full Sidechain]\n[bass, pad, vocal chops all ducking]\n[KICK — everything ducks]\n[swell — KICK — duck]\n[swell — KICK — duck]\n(the entire mix breathing with the kick)\n\n[Buildup]\n[the pumping becomes more extreme]\n[the duck deeper, the swell higher]\n(inhale — exhale — inhale — exhale)\n\n[Drop — maximum sidechain]\n[KICK and everything pumps]\n[the mix pulsates violently]\n[every element enslaved to the kick]\n(the heartbeat of EDM)\n\n[Breakdown — kick removed]\n[the pumping stops]\n[everything sustains without ducking]\n(the relief of no compression)\n\n[Drop 2 — sidechain returns]\n[KICK — pump — KICK — pump]\n(the addiction to the pulse)\n\n[Outro — kick fades, pump fades]\n[the breathing slows]\n(the heart rate returning to normal)"
+    },
+    {
+      "id": "S013_09",
+      "title": "Mastering Dead Zone",
+      "concept": "마스터링 지시 — master bus/limiter/dithering/LUFS 타깃. 코퍼스 0회 데드존 정면 도전",
+      "production_type": "마스터링",
+      "corpus_reference": "mastering(2회), master bus(0회), limiter(0회), dithering(0회), LUFS(0회), loudness(3회)",
+      "sp": "Pop rock song with specific mastering instructions applied to the final mix. The master bus should have a gentle two-decibel compression with a slow attack to preserve transients. A brick-wall limiter should be set at negative one decibel true peak, preventing any signal from exceeding this ceiling. The target integrated loudness should be negative fourteen LUFS, the standard for streaming platforms. A subtle high-shelf EQ boost of one decibel at 12000 Hz should add air to the final master. The stereo image should be widened by two decibels in the high frequencies. Dithering should be applied for 16-bit output. These are professional mastering parameters that Suno almost certainly cannot interpret. Standard rock band: guitar, bass, drums, vocals. 120 BPM in E major. 4/4 time. Professional mastered sound.",
+      "lyrics": "[The Song — standard pop rock]\n(singing normally)\nThis song sounds like every other song\nUntil you listen to the master bus\nThe limiter at negative one\nThe loudness at negative fourteen LUFS\n\n[Chorus]\nCan you hear the mastering?\nCan you hear the limiter working?\nCan you hear the ceiling?\nCan you hear the air at twelve thousand hertz?\n\n[Verse 2]\nThe dithering is invisible\nThe true peak never clips\nThe stereo widened in the highs\nProfessional from fingertips\n\n[Chorus]\nCan you hear the mastering?\nOr is this all just words\nThat Suno reads and ignores\nBecause mastering is not its world\n\n[Bridge]\n(spoken)\nNegative fourteen LUFS.\nBrick wall limiter.\nHigh shelf at twelve K.\nDithering to sixteen bit.\n\n[Final Chorus]\nThe invisible layer\nThe thing you feel but cannot name\nThe mastering engineer's art\nIs it here? Or just a claim?"
+    },
+    {
+      "id": "S013_10",
+      "title": "Vintage vs Modern",
+      "concept": "빈티지 vs 모던 프로덕션 — 같은 곡을 1970년대 스타일과 2020년대 스타일로. S013 시리즈 종합",
+      "production_type": "시대적 프로덕션",
+      "corpus_reference": "vintage(14회), retro(12회), modern(22회), analog(8회), digital(5회)",
+      "sp": "The same rock song produced in two radically different styles back to back. Version A is vintage 1970s production: recorded to analog tape, warm and slightly distorted, drums recorded in a large room with natural reverb, no click track so the tempo breathes, bass guitar recorded through a tube amp with natural compression, vocals have tape echo and plate reverb, the mix is slightly muddy in the low-mids, the stereo image is narrow, everything sounds like it was recorded live in one room at Abbey Road Studios. Version B is modern 2020s production: pristine digital recording, drums triggered and perfectly quantized, bass guitar recorded direct with a plugin amp simulator, vocals auto-tuned and pitch-corrected, heavy compression and limiting, wide stereo image, surgical EQ removing all mud, loud and polished. Same song, same arrangement, two production eras. 115 BPM in A major. 4/4 time.",
+      "lyrics": "[Version A — 1970s Vintage Production]\n(warm, analog, slightly rough)\nWe recorded this on tape\nIn a room with wooden walls\nThe drums are real the echo's real\nNothing here is digital at all\n\n[Vintage Chorus]\n(plate reverb, tape echo, warm)\nThis is how it sounded then\nBefore the screens before the grids\nWhen music lived in rooms\nAnd tape was what the studio did\n\n[Vintage Bridge]\n(the tape machine hums)\nYou can hear the room you can hear the tape\nYou can hear the tubes you can hear the air\n\n[Silence — two beats]\n\n[Version B — 2020s Modern Production]\n(pristine, digital, loud, polished)\nWe recorded this in a laptop\nIn a room that doesn't matter\nThe drums are programmed the pitch is perfect\nNothing here is analog at all\n\n[Modern Chorus]\n(auto-tune, heavy compression, wide stereo)\nThis is how it sounds now\nAfter the screens after the grids\nWhen music lives in software\nAnd plugins do what hardware did\n\n[Modern Bridge]\n(surgically clean)\nYou hear no room you hear no tape\nYou hear no tubes you hear no air\nJust perfection\n\n[Final — both styles merge]\n(vintage warmth meets modern clarity)\nSomewhere in between\nIs where the music lives"
+    }
+  ]
+}

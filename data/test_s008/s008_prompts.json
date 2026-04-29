@@ -1,0 +1,93 @@
+{
+  "purpose": "S008 — Tempo: Beyond BPM (BPM 너머의 시간)",
+  "created_at": "2026-04-29",
+  "previous": "S007 = 다이내믹. S008 = 시간 축의 나머지 절반 — 템포, 박자, 리듬의 경계",
+  "theme": "BPM 숫자(424회)는 정확하지만 ritardando/accelerando(0회)·비정형 박자(5/4, 7/8)는 데드존 — 템포와 리듬 제어의 해상도 한계",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis C: 다이내믹/템포 (시간 축)",
+  "instrument_policy": "대중음악 악기 고정(piano, guitar, bass, drums) — 템포/리듬만 변수",
+  "test_axes": [
+    "ritardando(점진적 느려짐)를 실제로 수행하는가",
+    "accelerando(점진적 빨라짐)를 실제로 수행하는가",
+    "rubato vs strict tempo — 유연한 시간 vs 정밀한 시간의 차이",
+    "홀수/비정형 박자(5/4, 7/8, 11/8)를 실제로 연주하는가",
+    "폴리리듬(3 over 4 등)을 생성하는가",
+    "페르마타/체수라(일시정지)를 인식하는가",
+    "swing vs straight 8th notes의 구분"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S008_01",
+      "title": "Ritardando",
+      "concept": "점진적으로 느려지는 템포 — ritardando. 곡 끝뿐 아니라 곡 중간에서도 수행 가능한가?",
+      "tempo_type": "점진적 감속",
+      "corpus_reference": "ritardando(0회), slowing down(3회), rallentando(0회)",
+      "sp": "Jazz piano trio where the tempo gradually slows down in the middle of the song, not just at the end. The piece starts at a brisk 160 BPM swing tempo. At the bridge section, a ritardando begins — the tempo gradually decelerates over sixteen bars, slowing to 80 BPM by the end of the bridge. The bass player and drummer follow the piano's slowing tempo precisely. After the bridge, the tempo remains at 80 BPM for the final chorus, giving the same melody a completely different character at half the original speed. A second ritardando occurs in the last eight bars, slowing from 80 BPM to approximately 40 BPM, the music stretching like taffy until the final chord is held indefinitely. Piano, upright bass, drums. Key of F major. 4/4 time. Live jazz club recording.",
+      "lyrics": "[Head — 160 BPM, brisk swing]\n[piano melody, up-tempo]\n[bass walking fast]\n[drums ride cymbal, swinging]\n(energetic, forward momentum)\n\n[Solo Section — 160 BPM]\n[piano improvisation]\n[bass and drums keeping pace]\n(the tempo is alive, pushing)\n\n[Bridge — ritardando begins]\n[tempo starts slowing]\n[160... 140... 120...]\n[bass and drums following]\n(the brakes, gently applied)\n\n[Bridge continued — still slowing]\n[100... 90... 80 BPM]\n[the music stretching]\n(time becoming elastic)\n\n[Final Chorus — 80 BPM]\n[same melody, half the original speed]\n[completely different character]\n(familiar melody in slow motion)\n\n[Ending — second ritardando]\n[80... 60... 50... 40 BPM]\n[each note longer and longer]\n[the music dissolving into time]\n(stretching like taffy)\n\n[Final Chord — held indefinitely]\n(time stops)"
+    },
+    {
+      "id": "S008_02",
+      "title": "Accelerando",
+      "concept": "점진적으로 빨라지는 템포 — accelerando. ritardando의 반대",
+      "tempo_type": "점진적 가속",
+      "corpus_reference": "accelerando(0회), speeding up(0회), faster and faster(2회)",
+      "sp": "Electronic rock track built on a continuous accelerando from start to finish. The piece opens at 60 BPM, a slow, deliberate pulse. The drum machine begins with a simple four-on-the-floor kick pattern. Over the course of the entire song, the tempo gradually increases without stopping. By the one-minute mark, the tempo reaches 90 BPM and the energy shifts from contemplative to driving. By two minutes, 120 BPM, and the track feels like a normal dance tempo. By three minutes, 150 BPM, the track is frantic and intense. In the final thirty seconds, the tempo pushes past 180 BPM toward 200, the drums becoming a blur, the synth arpeggios spiraling faster and faster until the track collapses into white noise. Synthesizer, drum machine, electric bass, electric guitar. Key of D minor. 4/4 time.",
+      "lyrics": "[60 BPM — The Crawl]\n[drum machine, slow pulse]\n[synth pad, sustained]\n[bass, long notes]\n(deliberate, patient)\n\n[75 BPM — Waking Up]\n[tempo noticeably increasing]\n[synth arpeggio begins]\n[bass notes getting shorter]\n(something stirring)\n\n[90 BPM — Walking]\n[comfortable mid-tempo]\n[guitar enters with clean riff]\n[drums more active]\n(momentum established)\n\n[120 BPM — Running]\n[dance tempo now]\n[full band driving]\n[synth arpeggio spiraling]\n(the normal speed of music)\n\n[150 BPM — Sprinting]\n[frantic, intense]\n[guitar distorted riff]\n[drums double-time feel]\n(too fast to think)\n\n[180+ BPM — The Blur]\n[drums becoming a wall of rhythm]\n[synth arpeggios spiraling out of control]\n[bass a continuous rumble]\n(everything dissolving into speed)\n\n[Collapse]\n[white noise]\n(the tempo ate itself)"
+    },
+    {
+      "id": "S008_03",
+      "title": "Rubato vs Strict",
+      "concept": "rubato(자유로운 시간)와 strict tempo(정확한 박자)를 같은 곡 안에서 대비. 연주자가 시간을 '훔치는' 표현적 자유",
+      "tempo_type": "시간 유연성",
+      "corpus_reference": "rubato(3회), free tempo(5회), strict(4회), metronomic(0회)",
+      "sp": "Romantic piano piece alternating between strict metronomic tempo and expressive rubato. Section A is played with a strict, unwavering pulse at exactly 72 BPM. Every note falls precisely on the beat, mechanical and clock-like, a metronome made music. Section B plays the same melody in rubato — the pianist speeds up through ascending phrases, slows down at the top of the phrase, lingers on emotionally important notes, rushes through connecting passages. The tempo breathes with the music, sometimes 60 BPM, sometimes 90, following the emotional shape of the melody. Section C returns to strict tempo, and Section D returns to rubato. The contrast reveals how much emotional expression lives in the timing, not just the notes. Solo piano. Nominal 72 BPM. Key of E-flat major. 4/4 time. Intimate studio recording.",
+      "lyrics": "[Section A — Strict Tempo]\n[piano, exactly 72 BPM]\n[every note precisely on beat]\n[mechanical, clock-like]\n(a metronome playing music)\n\n[Strict continued]\n[same melody, unwavering pulse]\n[no expression in timing]\n(correct but lifeless)\n\n[Section B — Rubato]\n[same melody, tempo breathing]\n[speeding up through ascending phrases]\n[slowing at the top]\n[lingering on important notes]\n(the melody comes alive)\n\n[Rubato continued]\n[rushing through connecting passages]\n[stretching emotional moments]\n(time bending to feeling)\n\n[Section C — Strict Again]\n[back to 72 BPM exactly]\n[the melody feels constrained]\n(the cage of perfect time)\n\n[Section D — Rubato Again]\n[the melody freed]\n[tempo follows the heart]\n(this is how a human plays)\n\n[Final — Rubato dissolving]\n[the last phrase stretched infinitely]\n[one note held beyond measure]\n(time belongs to the musician)"
+    },
+    {
+      "id": "S008_04",
+      "title": "Odd Meters",
+      "concept": "비정형 박자(5/4, 7/8, 11/8) — Suno가 4/4와 3/4 너머의 박자를 실제로 연주할 수 있는가?",
+      "tempo_type": "비정형 박자",
+      "corpus_reference": "5/4(3회), 7/8(1회), 11/8(0회), odd time(0회)",
+      "sp": "Progressive rock instrumental demonstrating three odd time signatures. Section A is in 5/4 time — five beats per measure creating an asymmetric feel, counted as three plus two. The guitar plays a riff that emphasizes the grouping: three strong beats then two, creating a limping, urgent groove. Section B switches to 7/8 time — seven eighth notes per measure, grouped as two plus two plus three. The bass drives a pattern that naturally accents this grouping. Section C uses 11/8 time — eleven eighth notes grouped as three plus three plus three plus two, a complex pattern that feels both flowing and unpredictable. Each section plays for thirty-two bars to establish the feel. Electric guitar, bass, drums, keyboard. 130 BPM. Key of G minor. Progressive rock production.",
+      "lyrics": "[5/4 Time — three plus two]\n[guitar riff: ONE two three ONE two]\n[bass following the 5/4 groove]\n[drums: kick snare kick kick snare]\n(the limp that grooves)\n\n[5/4 continued]\n[the pattern becomes natural]\n[keyboard melody over 5/4]\n(five feels like home)\n\n[Transition — one bar of 4/4]\n[the band resets]\n\n[7/8 Time — two plus two plus three]\n[bass drives: ONE two ONE two ONE two three]\n[guitar riff follows the grouping]\n[drums accenting the three]\n(the missing eighth note, the stumble)\n\n[7/8 continued]\n[keyboard solo over 7/8]\n[the odd meter as playground]\n(seven can dance)\n\n[Transition — one bar of 4/4]\n[reset again]\n\n[11/8 Time — three plus three plus three plus two]\n[bass pattern: ONE two three ONE two three ONE two three ONE two]\n[guitar and keyboard weaving]\n[drums navigating the eleven]\n(the most complex groove)\n\n[11/8 continued]\n[all instruments locked into the pattern]\n(eleven eighth notes, one breath)\n\n[Final — all three meters in sequence]\n[four bars of 5/4, four bars of 7/8, four bars of 11/8]\n(the tour of odd time)"
+    },
+    {
+      "id": "S008_05",
+      "title": "Polyrhythm",
+      "concept": "폴리리듬 — 두 개의 서로 다른 리듬 패턴이 동시에 진행. 3 over 4(한 손은 3박, 다른 손은 4박)",
+      "tempo_type": "복합 리듬",
+      "corpus_reference": "polyrhythm(0회), polyrhythmic(2회), cross-rhythm(0회), three against four(0회)",
+      "sp": "Afro-Cuban jazz piece built on polyrhythmic foundations. The piece layers multiple rhythm cycles that align at different intervals. The left hand of the piano plays a pattern that repeats every three beats while the right hand plays a pattern that repeats every four beats — three against four polyrhythm. They align every twelve beats then diverge again. The congas play a pattern in six while the bass plays in four, creating a six against four polyrhythm. The drum kit holds down a steady four-four pulse as the anchor while all the polyrhythmic layers float above it. The effect is a constantly shifting rhythmic texture where the groove is always moving but always grounded. Piano, congas, bass, drum kit. 110 BPM in C minor. 4/4 time as the anchor. Live studio recording with room ambience.",
+      "lyrics": "[Foundation — 4/4 anchor]\n[drum kit, steady four-on-the-floor]\n[bass, four-beat pattern]\n(the ground)\n\n[Three Against Four — piano]\n[left hand: pattern repeating every 3 beats]\n[right hand: pattern repeating every 4 beats]\n[they meet every 12 beats]\n(two clocks, different speeds)\n\n[Six Against Four — congas enter]\n[congas: pattern repeating every 6 beats]\n[bass still in 4]\n(another layer of time)\n\n[Full Polyrhythm]\n[all layers running simultaneously]\n[drum kit: 4, piano left: 3, piano right: 4, congas: 6, bass: 4]\n(five rhythmic streams, one groove)\n\n[Alignment Point]\n[every layer meets on beat one]\n[momentary unison]\n(the convergence)\n\n[Divergence]\n[layers pulling apart again]\n[each following its own cycle]\n(the beautiful disagreement)\n\n[Final Alignment]\n[all layers converge one last time]\n[held on the downbeat]\n(every rhythm agrees, once)"
+    },
+    {
+      "id": "S008_06",
+      "title": "Metric Modulation",
+      "concept": "메트릭 모듈레이션 — 한 박자의 세분화가 새로운 박자의 기본 단위가 되는 기법. 템포가 수학적으로 변환됨",
+      "tempo_type": "수학적 템포 변환",
+      "corpus_reference": "metric modulation(0회), tempo change(12회)",
+      "sp": "Contemporary jazz ensemble piece demonstrating metric modulation. The piece begins at 120 BPM in 4/4 time. In the transition to Section B, the triplet eighth notes of Section A become the regular eighth notes of Section B — mathematically this means the new tempo is 180 BPM, because the triplet subdivision at 120 becomes the pulse at 180. The band executes this shift seamlessly, the tempo appearing to jump but actually being a mathematical reinterpretation of the same rhythmic stream. A second metric modulation occurs when the dotted quarter note at 180 BPM becomes the new quarter note, shifting the tempo to 120 BPM but now in 6/8 time. The piece cycles through three metric modulations, each time the tempo changing through rhythmic reinterpretation rather than simply speeding up or slowing down. Piano, bass, drums, saxophone. Key of B-flat major.",
+      "lyrics": "[Section A — 120 BPM, 4/4]\n[piano comping, regular eighth notes]\n[bass walking, drums swinging]\n[saxophone melody]\n(the starting tempo, comfortable)\n\n[Transition — triplets become eighths]\n[piano plays triplet eighth notes]\n[these triplets become the new pulse]\n(the pivot point)\n\n[Section B — 180 BPM, 4/4]\n[same triplet speed is now regular eighths]\n[the tempo jumped but the rhythm is continuous]\n[bass and drums adjusted]\n(faster, but mathematically the same)\n\n[Saxophone solo at 180]\n[high energy, fast swing]\n(riding the new tempo)\n\n[Transition — dotted quarter becomes quarter]\n[the dotted quarter at 180 becomes new beat]\n(another mathematical pivot)\n\n[Section C — 120 BPM, 6/8]\n[back to 120 but now in 6/8]\n[everything feels different]\n[compound meter, lilting]\n(same speed, different world)\n\n[Final — return to original]\n[back to 120 BPM, 4/4]\n[the home tempo]\n(where we started, changed by the journey)"
+    },
+    {
+      "id": "S008_07",
+      "title": "Fermata and Caesura",
+      "concept": "페르마타(음 위 일시정지)와 체수라(음악의 숨표/쉼) — 시간의 일시적 정지",
+      "tempo_type": "시간 정지",
+      "corpus_reference": "fermata(0회), caesura(0회), pause(18회), break(악기 의미 혼용)",
+      "sp": "Rock ballad with dramatic pauses built into the structure. The song flows normally at 80 BPM until specific fermata moments where the band holds a note or chord indefinitely, time suspended, the listener waiting for the music to resume. The first fermata occurs on the last note of the verse — the band holds the chord for an unmeasured duration, approximately four extra beats. The second fermata is longer, holding for approximately eight beats on the word held in the lyrics. Between the chorus and bridge, a caesura occurs — a complete cutoff of all sound, a breath mark, two beats of absolute silence before the bridge begins. The final fermata is the longest, the last chord of the song held and sustained until it naturally decays. Electric guitar, bass, drums, piano, vocals. 80 BPM in G major. 4/4 time.",
+      "lyrics": "[Verse]\n(singing, steady tempo)\nI have walked a thousand roads\nSearched a thousand skies\nEvery path leads back to you\nEvery star\n[FERMATA — hold \"star\" indefinitely]\n(time stops on this word)\n\n[Verse continues]\naligns with yours tonight\nAnd I am standing at your door\nWith everything I\n[FERMATA — hold, longer this time]\n(suspended, waiting)\n\n[Chorus]\n(full band, flowing)\nHold me where the world stands still\nHold me hold me hold me\n\n[CAESURA — complete silence, two beats]\n(the breath between thoughts)\n\n[Bridge]\n(quietly, restarting)\nIn the silence between heartbeats\nThere is room for everything\nEvery word I never said\nLives in the pause\n\n[Final Chorus]\nHold me where the world stands still\nHold me through the\n[FINAL FERMATA — last chord held until decay]\n(time dissolves, the chord rings forever)"
+    },
+    {
+      "id": "S008_08",
+      "title": "Swing vs Straight",
+      "concept": "스윙 vs 스트레이트 8분음표 — 같은 곡을 두 해석으로 연주. 재즈의 핵심 리듬 차이",
+      "tempo_type": "리듬 해석",
+      "corpus_reference": "swing(63회), straight(12회), shuffle(28회)",
+      "sp": "Jazz standard arrangement played twice — first with straight eighth notes, then with swing feel. The first half plays the melody and accompaniment with perfectly even, straight eighth notes — each pair of eighth notes is exactly equal in duration, like classical music or rock. The feel is square, precise, and modern. The second half plays the exact same arrangement with swing eighth notes — the first eighth note of each pair is long and the second is short, creating a lilting, bouncy triplet-based feel. The transformation from straight to swing changes the entire character of the music even though the notes are identical. The transition happens at the midpoint with a four-bar drum break where the drummer shifts from straight to swing pattern. Piano, bass, drums. 140 BPM in B-flat major. 4/4 time. Dry studio recording.",
+      "lyrics": "[Straight Eighth Notes]\n[piano melody, even eighth notes]\n[bass walking, even subdivisions]\n[drums: ride cymbal, straight pattern]\n(square, precise, modern)\n\n[Straight continued]\n[same melody, same arrangement]\n[everything perfectly even]\n(classical precision in jazz)\n\n[Straight solo section]\n[piano solo with straight eighths]\n[no swing, no bounce]\n(intellectual, analytical)\n\n[Drum Break — the transition]\n[drums shift from straight to swing]\n[four bars of transformation]\n(the rhythm loosening, breathing)\n\n[Swing Eighth Notes]\n[same melody, now swung]\n[long-short, long-short pattern]\n[bass walking with swing feel]\n[drums: ride cymbal, jazz pattern]\n(bouncy, lilting, alive)\n\n[Swing continued]\n[same notes, completely different music]\n[the groove transformed]\n(this is what jazz feels like)\n\n[Swing solo section]\n[piano solo with swing eighths]\n[loose, conversational, human]\n(the same notes, but dancing)\n\n[Final — one phrase straight, then swung]\n[hearing the difference back to back]\n(two rhythms, one melody, two worlds)"
+    }
+  ]
+}

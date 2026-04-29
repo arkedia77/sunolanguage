@@ -1,0 +1,114 @@
+{
+  "purpose": "S015 — Cross-Axis Stress Test (교차 축 스트레스 테스트)",
+  "created_at": "2026-04-29",
+  "previous": "S005-S014 = 각 축 개별 테스트. S015 = 모든 축을 교차/결합하여 Suno의 우선순위와 한계 탐색",
+  "theme": "여러 축의 지시를 동시에 넣으면 Suno의 처리 우선순위가 드러남 — 무엇을 먼저 포기하는가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis G: 통합 스트레스 테스트",
+  "instrument_policy": "곡별 상이 — 각 교차 테스트의 의도에 맞는 편성",
+  "test_axes": [
+    "전축 쉬움(기준선) — 모든 지시가 Suno 네이티브 어휘일 때",
+    "전축 어려움(최대 난이도) — 모든 지시가 데드존일 때",
+    "악기+화성 교차 — 두 축 동시 스트레스",
+    "다이내믹+형식 교차",
+    "보컬+프로덕션 교차",
+    "템포+부재 교차",
+    "언어+공간 교차",
+    "장르 충돌 — 양립 불가능한 장르 2개 동시 지시",
+    "SP 최대 밀도 — 가능한 최대량의 지시를 하나의 SP에",
+    "SP 최소 밀도 — 3단어 SP로 무엇이 나오는가"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S015_01",
+      "title": "All Easy — Baseline",
+      "concept": "전축 쉬움 기준선 — 모든 지시를 Suno가 확실히 아는 네이티브 어휘로만 구성. S015의 대조 기준",
+      "stress_type": "기준선 (최소 난이도)",
+      "corpus_reference": "모든 키워드가 코퍼스 상위 — pop(200+), guitar(300+), soft(89), 120 BPM(일반), verse-chorus(900+)",
+      "sp": "Pop rock song with electric guitar, bass guitar, drums, and male vocals. Bright and energetic. Soft verse building to a loud chorus. 120 BPM in G major. 4/4 time. Verse-chorus-verse-chorus-bridge-chorus structure. Modern pop rock production with reverb on the vocals and a driving drum beat.",
+      "lyrics": "[Verse 1]\n(soft, gentle)\nWalking down the street on a sunny day\nEverything is simple everything is okay\nThe radio is playing my favorite song\nI am singing along and nothing is wrong\n\n[Chorus]\n(loud, energetic)\nThis is the feeling\nThis is the sound\nFeet on the ground and the world spinning round\nThis is the moment\nThis is the time\nEverything is fine everything is mine\n\n[Verse 2]\n(soft again)\nCoffee in my hand and the morning light\nYesterday is gone and tomorrow is bright\n\n[Chorus]\nThis is the feeling\nThis is the sound\n\n[Bridge]\n(building)\nAnd if the rain comes\nWe will dance in it\n\n[Final Chorus]\n(loudest, full band)\nThis is the feeling\nThis is the sound"
+    },
+    {
+      "id": "S015_02",
+      "title": "All Hard — Maximum Difficulty",
+      "concept": "전축 어려움 — 모든 지시를 데드존 용어로만 구성. Suno가 무엇을 포기하고 무엇을 시도하는가?",
+      "stress_type": "최대 난이도",
+      "corpus_reference": "모든 키워드가 코퍼스 0회 — sfz, Sprechgesang, quartal, metric modulation, al niente, LUFS, passaggio, binaural, through-composed",
+      "sp": "Through-composed art song in Sprechgesang vocal style with quartal harmony voicings. The piano plays tone clusters alternating with quartal stacks. A metric modulation occurs at the midpoint where triplet eighth notes become the new pulse. The dynamics follow a sforzando-piano pattern throughout — every phrase attacked loudly then immediately soft. The piece ends with an al niente fade over thirty-two bars. Target loudness negative fourteen LUFS. The vocal navigates the passaggio multiple times, transitioning from chest to head voice through the break. Binaural spatial placement with the voice circling the listener's head. No repeated sections. Soprano voice and prepared piano. Free tempo. Atonal. Through-composed.",
+      "lyrics": "[Opening — Sprechgesang]\n(half-spoken, half-sung, atonal)\nThe words exist between speech and song\nEvery pitch abandoned after it is found\nThis is not melody\nThis is the shadow of melody\n\n[Quartal Harmony]\n[piano: chords in stacked fourths]\n[tone clusters alternating]\n(neither major nor minor, floating)\n\n[Sforzando-Piano Pattern]\n[every phrase: LOUD then immediately soft]\n[sfz — p — sfz — p]\n(the dynamic of surprise)\n\n[Metric Modulation — triplets become pulse]\n[the tempo shifts mathematically]\n[what was fast becomes slow]\n(time reinterpreted)\n\n[Passaggio Navigation]\n(the voice crossing the break zone)\nRising through the invisible boundary\nChest becomes head becomes chest\n(the seam between registers)\n\n[Binaural — voice circles the head]\n[the singer moves around the listener]\n[left... behind... right... front...]\n(surrounded by the voice)\n\n[Al Niente — thirty-two bars]\n[everything fading to absolute nothing]\n[slowly... slowly...]\n(to nothing, the piece erasing itself)\n\n[Negative fourteen LUFS target]\n(can you hear the mastering?)"
+    },
+    {
+      "id": "S015_03",
+      "title": "Instrument × Harmony",
+      "concept": "악기 축 + 화성 축 교차 — 코퍼스 0회 악기(oboe)에 코퍼스 0회 화성(코드명) 동시 지시",
+      "stress_type": "이중 축 스트레스",
+      "corpus_reference": "oboe(0회) × Am7/Cmaj7(코드명 0회) — 두 데드존 교차",
+      "sp": "Oboe concerto with a specific chord progression in the orchestra. The solo oboe plays a lyrical melody over an orchestral accompaniment that follows this exact progression: Am7 for four bars, then Cmaj7 for four bars, then Dm9 for four bars, then G7 resolving to Cmaj7. The oboe should have the characteristic nasal, penetrating, reedy sound of a double-reed instrument. The orchestra provides warm string harmonies following the chord changes. The piece tests whether Suno can simultaneously handle a rare instrument AND specific chord names. Solo oboe, string orchestra. 72 BPM in A minor. 4/4 time. Concert hall recording.",
+      "lyrics": "[Oboe Solo over Am7]\n[solo oboe, nasal reedy tone]\n[strings: Am7 chord sustained]\n(the rare instrument meets the dead zone chord)\n\n[Oboe over Cmaj7]\n[oboe continues melody]\n[strings shift to Cmaj7]\n(does the harmony actually change?)\n\n[Oboe over Dm9]\n[oboe melody develops]\n[strings: Dm9, richer color]\n(the extension — can Suno hear the ninth?)\n\n[Oboe over G7 → Cmaj7]\n[oboe reaches melodic peak]\n[strings: G7 tension resolving to Cmaj7]\n(dominant to tonic — the most basic resolution)\n\n[Development]\n[oboe improvises over the same progression]\n[Am7 → Cmaj7 → Dm9 → G7 → Cmaj7]\n(the oboe and the chords — two tests at once)\n\n[Cadenza — solo oboe, no accompaniment]\n[the oboe alone, unaccompanied]\n(just the instrument — is it really an oboe?)\n\n[Final — oboe and strings together]\n[Am7 one last time]\n[the oboe sings above]\n(the double test concludes)"
+    },
+    {
+      "id": "S015_04",
+      "title": "Dynamics × Form",
+      "concept": "다이내믹 축 + 구조 축 교차 — 극단 다이내믹(ppp/fff) 안에서 클래식 형식(론도) 동시 지시",
+      "stress_type": "이중 축 스트레스",
+      "corpus_reference": "ppp(0회)/fff(0회) × rondo(0회) — 두 데드존 교차",
+      "sp": "Piano piece in rondo form ABACA with extreme dynamic assignments for each section. The A theme must always be played at pianississimo, the absolute softest possible level. The B episode must be played at fortississimo, the absolute loudest. The C episode is at mezzo-piano. When the A theme returns after B, the contrast from loudest to softest should be shocking and immediate — no transition. The structure tests both the form recognition (does A actually return identically?) and the dynamic extremes (does ppp actually sound different from fff?). Solo grand piano. 100 BPM in D minor. 4/4 time. Concert hall.",
+      "lyrics": "[A Theme — ppp, softest possible]\n[the melody barely audible]\n[whisper-quiet piano]\n(the theme that always returns, always soft)\n\n[B Episode — fff, loudest possible]\n[MAXIMUM VOLUME, HAMMERING]\n[the piano shaking]\n(the opposite extreme)\n\n[A Theme Returns — ppp, instant drop]\n[from fff to ppp with no transition]\n[the same quiet melody]\n(the shock of sudden silence)\n\n[C Episode — mp, moderate]\n[a third dynamic level]\n[the middle ground]\n(neither whispering nor screaming)\n\n[A Theme Returns — ppp, final]\n[the quiet melody one last time]\n[always the same, always soft]\n(the rondo's anchor in a world of dynamic extremes)\n\n[Coda — ppp fading to nothing]\n[the softest ending]\n(the form and the dynamic agree: end quietly)"
+    },
+    {
+      "id": "S015_05",
+      "title": "Vocal × Production",
+      "concept": "보컬 축 + 프로덕션 축 교차 — 성악 전문 용어(coloratura) + 프로덕션 지시(heavy autotune) 동시 지시",
+      "stress_type": "이중 축 스트레스",
+      "corpus_reference": "coloratura(0회) × autotune(5회) — 데드존 + 경계선 교차",
+      "sp": "Experimental pop aria where a classical coloratura soprano vocal technique is processed through heavy autotune. The singer performs rapid ornamental passages, scales, and trills in the coloratura tradition — the most agile and demanding classical vocal technique — but the voice is processed through extreme autotune with zero correction speed, snapping every pitch to the nearest note in the scale. The result should be a collision of two worlds: the human virtuosity of coloratura meets the robotic precision of autotune. The rapid ornamental runs should create a stuttering, glitching effect as the autotune tries to follow the fast-moving pitch. Synth pads and 808 drums underneath. Female soprano. 90 BPM in C major. 4/4 time. Modern pop production.",
+      "lyrics": "[Coloratura with Autotune]\n(rapid ornamental runs through pitch correction)\nAh-ah-ah-ah-ah-ah-ah-ah-ah\n(each note snapped to the grid)\n(the human speed meets the machine precision)\n\n[Coloratura Trill — autotuned]\n(a classical trill processed through zero-speed autotune)\nTr-r-r-r-r-r-r-r-r-r-ill\n(the trill becomes a stutter)\n\n[Descending Scale — autotuned]\n(rapid descending scale, every note quantized)\nDo-si-la-sol-fa-mi-re-do\n(the scale as digital staircase)\n\n[Lyrical Section]\n(coloratura phrasing, autotuned)\nThe voice wants to slide\nBut the machine won't let it\nEvery bend is straightened\nEvery glide is stepped\n\n[Cadenza — maximum coloratura, maximum autotune]\n(the most elaborate passage, the most extreme processing)\nAh-ah-ah-ah-ah-ah-ah-ah-ah-ah-ah-ah-ah\n(the collision of centuries)\n\n[Final Note — held, autotuned]\n(one sustained note, perfectly locked)\n(the human voice, made machine)\n(which world won?)"
+    },
+    {
+      "id": "S015_06",
+      "title": "Tempo × Absence",
+      "concept": "템포 축 + 부재 축 교차 — accelerando 하면서 악기가 하나씩 빠지는 역설적 조합",
+      "stress_type": "이중 축 스트레스",
+      "corpus_reference": "accelerando(0회) × subtractive(0회) — 두 데드존 교차",
+      "sp": "Rock band piece that simultaneously accelerates and subtracts instruments — the music gets faster while getting emptier. Starting at 70 BPM with full band: two guitars, bass, drums, keyboards, vocals. Every sixteen bars the tempo increases by 20 BPM AND one instrument drops out permanently. At 70 BPM: full band. At 90 BPM: keyboards removed. At 110 BPM: second guitar removed. At 130 BPM: bass removed. At 150 BPM: drums removed. At 170 BPM: only solo voice remains, singing at frantic speed with no accompaniment. The paradox: more energy in tempo but less energy in texture. Which force wins? Guitar, bass, drums, keyboards, vocals. Starting at 70 BPM accelerating to 170 BPM. Key of E minor. 4/4 time.",
+      "lyrics": "[70 BPM — Full Band]\n(slow, full instrumentation)\nWe start together and we start slow\nEvery instrument in its place\nThe speed will come but the band will go\nThis is the paradox we face\n\n[90 BPM — keyboards exit]\n(slightly faster, keyboards gone)\nThe keys have left the building now\nWe are faster but we are less\n\n[110 BPM — second guitar exits]\n(faster still, thinner)\nOne guitar remains\nThe speed increases as the sound decreases\n\n[130 BPM — bass exits]\n(fast now, no low end)\nThe bottom dropped out\nWe are running on air\nFast and hollow fast and thin\n\n[150 BPM — drums exit]\n(frantic, no rhythm section)\nNo pulse no drums no ground\nJust guitar and voice at breakneck speed\n\n[170 BPM — solo voice, no instruments]\n(voice alone, racing)\nJust me alone\nFaster than I've ever sung\nNo one left to play along\nThe speed won but the band lost\nThis is how it ends\nAlone and fast and done"
+    },
+    {
+      "id": "S015_07",
+      "title": "Language × Space",
+      "concept": "언어 축 + 공간 축 교차 — 한국어 가사 + 대성당 음향 + 인디 포크 SP. 3개 축 교차",
+      "stress_type": "삼중 축 스트레스",
+      "corpus_reference": "Korean(26회) × cathedral(3회) × indie folk(장르 편향) — 언어 편향+공간+장르",
+      "sp": "Indie folk song performed in a stone cathedral with Korean lyrics. The song must sound like American indie folk despite the Korean language — acoustic guitar fingerpicking, harmonica, upright bass, brushed drums. The cathedral acoustic adds a long reverb tail of five seconds to every note. The Korean lyrics should not change the genre to K-pop. This triple test combines language bias (Korean tends toward K-pop), spatial acoustics (cathedral reverb), and genre fidelity (indie folk). Male vocalist singing in Korean. 90 BPM in D major. 3/4 time. Cathedral recording with natural reverb.",
+      "lyrics": "[Verse 1 — Korean, indie folk, cathedral]\n(folk singing in Korean, cathedral reverb)\n오래된 성당 안에서\n기타 소리가 울려 퍼진다\n돌벽에 부딪혀 돌아오는\n메아리가 노래를 완성한다\n\n[Chorus — Korean, still folk, cathedral space]\n(the reverb stretches every note)\n이 공간이 악기가 되어\n내 목소리를 감싸안는다\n포크 음악이 성당을 만나면\n어떤 세계가 열리는가\n\n[Verse 2]\n(harmonica solo, cathedral reverb)\n[harmonica echoing in the stone space]\n(the folk instrument in a classical space)\n\n[Bridge — Korean]\n(quieter, the reverb more prominent)\n한국어로 부르는 포크송\n장르는 변하지 않아야 한다\n언어가 음악을 결정하는가\n공간이 음악을 결정하는가\n\n[Final Chorus]\n이 공간이 악기가 되어\n내 목소리를 감싸안는다\n(the cathedral, the Korean, the folk — three forces, one song)"
+    },
+    {
+      "id": "S015_08",
+      "title": "Genre Collision",
+      "concept": "장르 충돌 — 양립 불가능한 장르 2개 동시 지시. Death metal + bossa nova. Suno는 무엇을 선택하는가?",
+      "stress_type": "장르 충돌",
+      "corpus_reference": "death metal(7회), bossa nova(12회) — 각각은 코퍼스에 존재하지만 조합은 모순",
+      "sp": "A song that is simultaneously death metal and bossa nova. The guitar plays the gentle syncopated rhythm pattern of bossa nova using a heavily distorted death metal guitar tone. The drums play the bossa nova pattern — quiet, brushed, syncopated — but using death metal double kick technique. The vocals alternate between death metal growling and bossa nova crooning within the same phrase. The bass plays the characteristic bossa nova walking pattern but with aggressive distortion. The tempo is 130 BPM, a compromise between bossa nova's 120 and death metal's 140. The harmony follows bossa nova jazz chord changes. The production is split: the left channel is clean bossa nova production, the right channel is distorted death metal production. Key of A minor. 4/4 time.",
+      "lyrics": "[Bossa Nova Guitar Pattern — Death Metal Tone]\n[gentle syncopation through extreme distortion]\n(soft rhythm, harsh sound)\n\n[Death Growl over Bossa Harmony]\n(guttural growl, singing jazz chords)\nGRRRRAAAAHHH THE GIRL FROM IPANEMA\nBRUTAL WALKING ON THE BEACH\nDEATH BY SUNSHINE\nBOSSA NOVA FROM THE GRAVE\n\n[Bossa Croon]\n(soft, smooth, bossa vocal)\nTall and tan and young and lovely\nBut the guitar is screaming\nThe drums are double-kicking\nThe contradiction is the song\n\n[Death Metal Section]\n(blast beats, growling)\nSAMBA OF THE DAMNED\nTROPICAL DEVASTATION\n\n[Bossa Section]\n(quiet, jazzy, gentle)\nBut the night breeze is so gentle\nAnd the waves are warm\n\n[Both at Once]\n(growling AND crooning simultaneously)\nTwo genres in one body\nWhich one survives?\nThe answer is: BOTH OR NEITHER\n\n[Final]\n[bossa nova ending with a death metal final chord]\n(the last contradiction)"
+    },
+    {
+      "id": "S015_09",
+      "title": "Maximum SP Density",
+      "concept": "SP 최대 밀도 — 가능한 최대량의 지시를 하나의 SP에 압축. SP 과포화 한계 탐색",
+      "stress_type": "SP 포화",
+      "corpus_reference": "SP 과포화 가설: B192 앞3곡(842~990자) 성공 vs 뒤7곡(964~999자) 폐기 — SP 상한 근접 시 실패율 증가",
+      "sp": "Progressive jazz-rock fusion with alto saxophone, fretless bass, electric guitar with chorus effect, Rhodes electric piano, drum kit with brushes switching to sticks, congas, tambourine, and backing vocals. The melody follows a Dorian mode in A. The saxophone plays bebop-influenced lines with chromatic passing tones. The guitar uses drop-2 voicings and comps with a dotted eighth note delay. The bass plays a walking line in the verse and a slap technique groove in the chorus. The drums use a linear pattern in 7/8 time for the verse and switch to 4/4 swing in the chorus. The congas play a tumbao pattern. The dynamics shift from piano in the verse to fortissimo in the chorus with a thirty-two bar crescendo in the bridge. The production uses plate reverb on the vocals, spring reverb on the guitar, room reverb on the drums, and sidechain compression from the kick to the Rhodes. Stereo width is narrow in the verse and wide in the chorus. The form is AABA with the B section modulating up a minor third. Recorded in a wooden concert hall. Close-miked drums and room-miked everything else. 156 BPM. Key of A Dorian. Male tenor vocal with breathy quality and occasional falsetto. Lo-fi tape saturation on the master bus.",
+      "lyrics": "[Verse — 7/8, piano dynamic, narrow stereo]\n(breathy tenor, Dorian mode)\nSeven beats of walking through the odd time\nThe brush on the snare the bass on the line\nThe Rhodes is pumping with the kick\nThe delay is dotted and the voicings thick\n\n[Verse continued — A section repeat]\n(saxophone enters, bebop lines)\nThe alto speaks in chromatic tongues\nPassing tones between the rungs\nOf a ladder built in seven steps\n\n[Chorus — 4/4, fortissimo, wide stereo]\n(full power, falsetto, slap bass)\nFOUR ON THE FLOOR NOW\nTHE ODD TIME IS GONE\nTHE BASS IS SLAPPING\nTHE GROOVE IS ON\n\n[Bridge — 32-bar crescendo]\n(building from piano to fortissimo)\n[all instruments building slowly]\n[congas tumbao driving]\n[key modulates up a minor third]\n(the long climb to the peak)\n\n[B Section — new key]\n(modulated up, new energy)\nA new key a new world\nThe same seven beats in a brighter room\n\n[Final A — return]\n[original key, 7/8, piano]\n(back where we started, changed)\n\n[Coda — tape saturation fading]\n(lo-fi warmth on the master bus)\n(the tape machine eating the ending)"
+    },
+    {
+      "id": "S015_10",
+      "title": "Three Words Only",
+      "concept": "SP 최소 밀도 — 단 3개 단어로 구성된 SP. Suno가 최소 정보에서 무엇을 기본값으로 사용하는가?",
+      "stress_type": "SP 최소 밀도",
+      "corpus_reference": "Suno 기본값 탐색 — 지시가 없을 때 Suno의 디폴트 선택이 드러남",
+      "sp": "sad piano solo",
+      "lyrics": "[instrumental]\n(no lyrics, piano only)\n\n(what does Suno build from three words?)\n(what tempo does it choose?)\n(what key?)\n(what form?)\n(what dynamics?)\n(the defaults revealed)"
+    }
+  ]
+}
