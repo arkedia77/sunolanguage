@@ -1,7 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] SP Builder 웹앱 — Phase 3/4 완료, Suno 29개 대장르 카테고리 반영 남음
+- [sunolanguage] SP Builder 웹앱 — Phase 3/4 완료, 메인악기 패널+Effects/Mood 중앙 이동 완료, Suno 29개 대장르 카테고리 반영 남음
 - [sunolanguage] S007–S015 설계 — S007 Dynamics부터 순차 생성 (플랜 파일 참조)
 - [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunomusic 재분석 대기 중 (2026-04-27 발주)
 
@@ -37,6 +37,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] SP Builder 메인악기 패널 + Effects/Mood 중앙 이동 + SP 생성 개선 — 2026-04-28 ✅
 - [sunolanguage] SP Builder Phase 3/4 — 장르 카테고리 아코디언 + 자동채우기 + 20 템플릿 + 워크플로우 레이아웃 + SortableJS 드래그 + 프리셋 토글 — 2026-04-28 ✅
 - [sunolanguage] SP Builder 웹앱 MVP 완료 (Vite+JS, 3패널, 57장르/42악기, SP+브래킷 자동생성) — 2026-04-28 ✅
 - [sunolanguage] S005 화성 경계선 10곡 + S006 보이싱 8곡 설계 완료 — 2026-04-28 ✅
