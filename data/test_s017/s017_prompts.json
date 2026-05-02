@@ -1,0 +1,140 @@
+{
+  "purpose": "S017 — Lunch Restaurant: Groove & Sophistication (점심 레스토랑 BGM: 그루브와 세련됨)",
+  "created_at": "2026-05-02",
+  "previous": "S016 = 어쿠스틱 온기. S017 = 같은 레스토랑이지만 리듬과 그루브 중심",
+  "theme": "리듬감 있지만 우아한 점심 BGM — 장르별 고유 그루브(bossa, jazz, city pop, swing)를 레스토랑 맥락에서 유지하는가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis H: 공간 BGM (실용 축)",
+  "instrument_policy": "레스토랑 그루브 악기 — rhodes, electric piano, saxophone, muted trumpet, clean electric guitar. 모두 corpus 검증 완료.",
+  "test_axes": [
+    "장르별 고유 리듬 패턴이 레스토랑 볼륨에서도 구현되는가",
+    "muted trumpet, saxophone 같은 재즈 악기가 부드러운 톤으로 나오는가",
+    "vinyl crackle 같은 프로덕션 요소가 lo-fi 분위기를 만드는가",
+    "swing feel 지시가 실제 스윙 리듬을 만드는가",
+    "city pop 특유의 깔끔한 전기 기타 톤이 구현되는가",
+    "보컬 포함 곡에서도 배경음악 수준의 에너지를 유지하는가"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S017_01",
+      "title": "Smooth Jazz Lunch",
+      "concept": "스무스 재즈 — saxophone + electric piano + walking bass. corpus saxophone=6회(5장르). 레스토랑 재즈의 정석.",
+      "genre": "Smooth Jazz",
+      "bpm": 100,
+      "key": "Eb major",
+      "instruments": ["saxophone", "electric piano", "electric bass", "brushed drums"],
+      "corpus_reference": "saxophone(6회/5장르), electric piano(33회/21장르, subtle/soft), smooth(118회)",
+      "sp": "Smooth jazz instrumental with a relaxed, flowing groove. Saxophone plays a warm, breathy melody in the middle register, smooth and lyrical with gentle vibrato. Electric piano comps soft jazz chords with subtle voicings, adding occasional melodic fills. Electric bass plays a smooth walking line with a clean, warm tone. Brushed drums keep a gentle swing groove with light ride cymbal and cross-stick accents. The energy is sophisticated and relaxed — never loud, never rushed. The saxophone breathes naturally between phrases. Like jazz playing softly in a dimly lit restaurant. Saxophone, electric piano, electric bass, brushed drums. 100 BPM in Eb major. 4/4 swing feel. Warm, intimate production.",
+      "lyrics": "[Head]\n[saxophone states the melody]\n[warm, breathy tone]\n[electric piano comps underneath]\n[bass walks, brushes swing]\n\n[Sax Solo]\n[gentle improvisation]\n[staying smooth and lyrical]\n[never pushing volume]\n[piano responds with fills]\n\n[Piano Solo]\n[electric piano takes the lead]\n[sax rests]\n[bass and drums support]\n\n[Head Return]\n[saxophone restates the melody]\n[with slight embellishments]\n[ensemble plays together softly]\n\n[Outro]\n[sax plays the last phrase]\n[slowing down]\n[piano holds final chord]\n[bass plays last note]"
+    },
+    {
+      "id": "S017_02",
+      "title": "Neo-Soul Kitchen",
+      "concept": "네오소울 — rhodes + muted trumpet + warm bass. corpus Contemporary R&B/Neo-Soul에서 muted trumpet=3회. 세련된 점심 분위기.",
+      "genre": "Neo-Soul / Contemporary R&B",
+      "bpm": 92,
+      "key": "Ab major",
+      "instruments": ["rhodes", "muted trumpet", "electric bass", "light drums"],
+      "corpus_reference": "rhodes(16회/10장르, subtle modifier), muted trumpet(3회/1장르), syncopated(454회)",
+      "sp": "Warm neo-soul instrumental with a laid-back, syncopated groove. Rhodes electric piano plays rich, sustained chords with subtle tremolo and a warm, vintage tone. Muted trumpet enters with a soft, intimate melody — breathy and restrained, like someone playing with a harmon mute from across the room. Electric bass plays a syncopated groove with a deep, warm tone and occasional slides. Light drums play a relaxed hip-hop influenced pattern with soft snare ghost notes and open hi-hat accents. The mood is sophisticated and cozy. Rhodes, muted trumpet, electric bass, light drums. 92 BPM in Ab major. 4/4 time. Warm analog production with plate reverb.",
+      "lyrics": "[Intro]\n[rhodes alone, sustained chords]\n[warm tremolo]\n\n[Groove]\n[bass enters with syncopated line]\n[drums join, laid-back pattern]\n[ghost notes on snare]\n\n[Trumpet Theme]\n[muted trumpet plays melody]\n[soft, intimate tone]\n[rhodes comps underneath]\n\n[Rhodes Solo]\n[electric piano takes the lead]\n[melodic fills and runs]\n[bass and drums hold the groove]\n\n[Trumpet Return]\n[muted trumpet restates melody]\n[with slight variation]\n[ensemble stays relaxed]\n\n[Outro]\n[trumpet fades]\n[rhodes plays final chords]\n[bass last note]\n[drums fade to nothing]"
+    },
+    {
+      "id": "S017_03",
+      "title": "City Pop Terrace",
+      "concept": "시티팝 — clean electric guitar + electric piano. corpus City Pop=407 entries(109 unique). 트렌디한 점심 레스토랑.",
+      "genre": "City Pop",
+      "bpm": 108,
+      "key": "F major",
+      "instruments": ["clean electric guitar", "electric piano", "electric bass", "drums"],
+      "corpus_reference": "City Pop(407entries), clean electric guitar(19회 in city pop), electric piano(33회), clean(376회)",
+      "sp": "Bright city pop instrumental with a breezy, urban daytime feel. Clean electric guitar plays smooth, chorused arpeggios and funky rhythm parts with a crystalline tone. Electric piano adds warm chord pads and occasional melodic fills. Electric bass provides a tight, syncopated groove with a clean, punchy tone and octave jumps. Drums play a crisp, four-on-the-floor pattern with open hi-hat accents and tight snare. The vibe is sunny and sophisticated — like eating on a rooftop terrace in a modern city. The energy is upbeat but never aggressive. Clean electric guitar, electric piano, electric bass, drums. 108 BPM in F major. 4/4 time. Bright, polished production with light chorus effect.",
+      "lyrics": "[Intro]\n[clean guitar arpeggios with chorus]\n[bright, crystalline tone]\n\n[A Section]\n[full band enters]\n[bass syncopated groove]\n[drums crisp and tight]\n[guitar plays rhythm parts]\n\n[B Section]\n[electric piano takes the melody]\n[guitar switches to arpeggios]\n[bass octave jumps]\n\n[A Section Return]\n[guitar leads again]\n[smooth funky rhythm]\n[same bright energy]\n\n[Solo Section]\n[guitar plays a melodic solo]\n[clean tone, not distorted]\n[piano comps underneath]\n\n[B Section]\n[piano melody returns]\n[all instruments together]\n\n[Outro]\n[guitar arpeggios fade]\n[piano holds last chord]\n[bass final note]"
+    },
+    {
+      "id": "S017_04",
+      "title": "Latin Jazz Garden",
+      "concept": "라틴 재즈 — nylon guitar + trumpet + upright bass. corpus trumpet=7회(5장르). 활기 있지만 우아한 레스토랑.",
+      "genre": "Latin Jazz",
+      "bpm": 115,
+      "key": "D minor",
+      "instruments": ["nylon-string acoustic guitar", "trumpet", "upright bass", "congas", "shaker"],
+      "corpus_reference": "trumpet(7회/5장르, bright modifier), nylon-string(26회/13장르), syncopated(454회)",
+      "sp": "Latin jazz instrumental with a warm, syncopated groove. Nylon-string acoustic guitar plays rhythmic montuno patterns with percussive muting and syncopated accents. Trumpet plays a bright, clean melody over the groove, staying in the middle register with a confident but not loud tone. Upright bass walks a Latin-flavored line with occasional syncopated fills. Congas provide the rhythmic foundation with a steady tumbao pattern. A shaker keeps sixteenth notes flowing. The energy is lively but controlled — perfect for a lunch with good company, not a nightclub. Nylon guitar, trumpet, upright bass, congas, shaker. 115 BPM in D minor. 4/4 time. Live room recording feel.",
+      "lyrics": "[Intro]\n[congas and shaker establish groove]\n[nylon guitar enters with montuno]\n\n[Head]\n[trumpet plays the melody]\n[bright, clean tone]\n[bass walks underneath]\n[full rhythm section]\n\n[Guitar Solo]\n[nylon guitar improvises]\n[staying rhythmic and percussive]\n[trumpet rests]\n\n[Trumpet Solo]\n[trumpet improvises gently]\n[middle register, controlled]\n[rhythm section supports]\n\n[Head Return]\n[trumpet restates melody]\n[full ensemble together]\n[same lively but controlled energy]\n\n[Outro]\n[trumpet plays final phrase]\n[rhythm section continues]\n[fading out gradually]"
+    },
+    {
+      "id": "S017_05",
+      "title": "Lo-Fi Café Beats",
+      "concept": "로파이 카페 — electric piano + vinyl crackle. corpus vinyl crackle=15회. 프로덕션 요소가 분위기에 미치는 영향 테스트.",
+      "genre": "Lo-Fi / Chillhop",
+      "bpm": 85,
+      "key": "C major",
+      "instruments": ["electric piano", "electric bass", "soft drums"],
+      "corpus_reference": "vinyl crackle(15회), electric piano(33회, subtle/soft), warm(458회)",
+      "sp": "Lo-fi instrumental with a warm, hazy café atmosphere. Electric piano plays soft, mellow jazz chords with a slightly detuned, vintage character. Electric bass provides a simple, deep groove with a warm, round tone. Soft drums play a relaxed beat with dusty, muffled kick and snare, sounding like they are coming through old speakers. Vinyl crackle is present throughout, adding a nostalgic, analog warmth to the entire mix. The production is intentionally imperfect — slightly compressed, slightly warm, like an old record playing in a cozy coffee shop. Electric piano, electric bass, soft drums. Vinyl crackle throughout. 85 BPM in C major. 4/4 time. Lo-fi production, warm and hazy.",
+      "lyrics": "[Loop 1]\n[electric piano soft chords]\n[vinyl crackle underneath]\n[bass enters, deep and warm]\n[drums, muffled and relaxed]\n\n[Loop 2]\n[piano plays melodic phrase]\n[same groove continues]\n[crackle ever-present]\n\n[Loop 3]\n[piano returns to chords]\n[bass adds a fill]\n[drums stay steady]\n\n[Loop 4]\n[piano melody variation]\n[everything stays at the same level]\n[no builds, no drops]\n\n[Loop 5]\n[back to opening chords]\n[groove continues]\n[like a record that could play forever]\n\n[Fade]\n[everything fades slowly]\n[vinyl crackle last to go]"
+    },
+    {
+      "id": "S017_06",
+      "title": "Light Swing Bistro",
+      "concept": "라이트 스윙 — piano + upright bass + brushed drums + muted trumpet. corpus Electro Swing=23 entries. 빈티지 비스트로 분위기.",
+      "genre": "Swing / Jazz",
+      "bpm": 130,
+      "key": "Bb major",
+      "instruments": ["acoustic piano", "upright bass", "brushed drums", "muted trumpet"],
+      "corpus_reference": "acoustic piano(38회/21장르), muted trumpet(3회/1장르), shuffle(17회), swung(9회)",
+      "sp": "Light swing instrumental with a cheerful, vintage bistro feel. Acoustic piano plays bouncy comping chords with a bright, clean tone, emphasizing the off-beats in a swing rhythm. Upright bass walks a steady swinging quarter-note line. Brushed drums play a shuffle pattern with brushes swishing on the snare and a soft ride cymbal keeping time. Muted trumpet plays a playful melody with a warm, buzzy tone from the harmon mute. The mood is happy and light, like a 1950s lunch scene. The tempo is bright but the volume stays moderate. Acoustic piano, upright bass, brushed drums, muted trumpet. 130 BPM in Bb major. 4/4 swing feel. Vintage recording quality.",
+      "lyrics": "[Intro]\n[piano sets the swing feel]\n[bouncy off-beat chords]\n\n[Head]\n[muted trumpet plays the melody]\n[warm, buzzy harmon mute tone]\n[bass walks, brushes shuffle]\n\n[Piano Solo]\n[piano plays a cheerful solo]\n[right hand runs and fills]\n[rhythm section swings underneath]\n\n[Trumpet Solo]\n[muted trumpet improvises]\n[playful and light]\n[never loud or aggressive]\n\n[Head Return]\n[trumpet restates melody]\n[piano comps along]\n[full swing feel]\n\n[Outro]\n[trumpet plays tag phrase]\n[piano answers]\n[bass walks to final note]\n[brushes one last swish]"
+    },
+    {
+      "id": "S017_07",
+      "title": "Modern Bossa Remix",
+      "concept": "모던 보사노바 — clean electric guitar로 전통 bossa를 현대적으로. S016_01과 대조군 (nylon vs electric).",
+      "genre": "Bossa Nova / Modern Jazz",
+      "bpm": 115,
+      "key": "D major",
+      "instruments": ["clean electric guitar", "electric piano", "electric bass", "brushed drums"],
+      "corpus_reference": "clean electric guitar(city pop 19회), electric piano(33회), bossa nova(185 entries)",
+      "sp": "Modern bossa nova instrumental with clean electric guitar instead of traditional nylon. Clean electric guitar plays bossa nova rhythm patterns with a warm, slightly chorused tone, maintaining the syncopated feel but with a contemporary edge. Electric piano adds harmonic depth with sustained jazz chords and subtle melodic fills. Electric bass provides the characteristic bossa two-beat pattern with a smooth, round tone. Brushed drums play a gentle bossa groove with cross-stick and soft hi-hat. The piece bridges traditional bossa nova warmth with modern city pop clarity. Clean electric guitar, electric piano, electric bass, brushed drums. 115 BPM in D major. 4/4 time. Clean, modern production with plate reverb.",
+      "lyrics": "[Intro]\n[clean electric guitar, bossa rhythm]\n[warm chorused tone]\n\n[A Section]\n[full band enters]\n[electric piano jazz chords]\n[bass two-beat pattern]\n[brushed drums, cross-stick]\n\n[B Section]\n[guitar plays melody over the groove]\n[electric piano fills between phrases]\n[bass and drums steady]\n\n[A Section Return]\n[back to the bossa rhythm]\n[same modern warmth]\n\n[Guitar Solo]\n[gentle melodic improvisation]\n[clean tone throughout]\n[rhythm section supports]\n\n[B Section Return]\n[melody restated]\n[all instruments together]\n\n[Outro]\n[guitar and piano duo]\n[bass and drums fade]\n[guitar last bossa chord]"
+    },
+    {
+      "id": "S017_08",
+      "title": "Jazz Pop Afternoon",
+      "concept": "재즈팝 + 남성 보컬 — 보컬 있는 세련된 점심 BGM. corpus grand piano=81회. 에너지 유지 테스트.",
+      "genre": "Jazz Pop / Singer-Songwriter",
+      "bpm": 105,
+      "key": "G major",
+      "instruments": ["grand piano", "acoustic guitar", "electric bass", "light drums"],
+      "corpus_reference": "grand piano(81회/36장르), acoustic guitar(269회), intimate(445회)",
+      "sp": "Jazz-influenced pop song with soft male vocals and a warm, conversational feel. Grand piano plays gentle jazz chords with melodic fills between vocal phrases. Acoustic guitar adds light rhythmic strumming on the off-beats. Electric bass provides a clean, simple groove. Light drums play with brushes, keeping a gentle two-and-four pattern. The male vocalist sings in a soft, conversational tone — not performing, just singing naturally as if to himself. The lyrics are about the simple pleasure of a good afternoon. Grand piano, acoustic guitar, electric bass, light drums, soft male vocals. 105 BPM in G major. 4/4 time. Warm, intimate recording.",
+      "lyrics": "[Verse 1]\n(soft, conversational, not performing)\nThe menu hasn't changed since May\nBut I keep coming back this way\nThe window seat, the bread, the wine\nA borrowed hour that feels like mine\n\n[Chorus]\n(same soft tone, slightly more open)\nAfternoon, you move so slow\nI like the way you let things go\nNo rush, no plans, no need to know\nAfternoon, just take it slow\n\n[Verse 2]\n(natural, intimate)\nThe waiter nods, he knows my face\nAnother glass, a quiet space\nThe world outside can wait a while\nI'll sit right here and keep this smile\n\n[Chorus]\n(gentle, never belting)\nAfternoon, you move so slow\nI like the way you let things go\n\n[Outro]\n(humming)\nMm mm mm mm\nMm mm mm"
+    },
+    {
+      "id": "S017_09",
+      "title": "Acoustic Blues Brunch",
+      "concept": "어쿠스틱 블루스 — fingerpicked guitar + harmonica + upright bass. corpus에서 blues rock 존재. 브런치 레스토랑의 따뜻한 블루스.",
+      "genre": "Acoustic Blues",
+      "bpm": 90,
+      "key": "G major",
+      "instruments": ["fingerpicked acoustic guitar", "harmonica", "upright bass"],
+      "corpus_reference": "fingerpicked acoustic guitar(97회), Blues Rock(corpus 존재), shuffle(17회)",
+      "sp": "Warm acoustic blues instrumental with a relaxed, Sunday brunch feel. Fingerpicked acoustic guitar plays a shuffle blues pattern with alternating bass notes in the left hand and melodic fills on the upper strings. The tone is warm and clean with natural string buzz. Harmonica plays a sweet, gentle melody over the guitar, using a clean tone without heavy bending or wailing — more melodic than raw. Upright bass joins with a simple walking pattern, warm and understated. The blues feel is happy and easy, not sad or intense — like a lazy weekend morning. Fingerpicked acoustic guitar, harmonica, upright bass. 90 BPM in G major. 4/4 shuffle feel. Natural acoustic recording.",
+      "lyrics": "[Intro]\n[fingerpicked guitar alone]\n[shuffle blues pattern]\n[alternating bass notes]\n\n[Theme]\n[harmonica enters with melody]\n[sweet, gentle tone]\n[guitar continues underneath]\n[bass walks in]\n\n[Guitar Solo]\n[guitar plays melodic fills]\n[staying warm and clean]\n[harmonica rests]\n[bass keeps walking]\n\n[Harmonica Solo]\n[harmonica plays gentle improvisation]\n[melodic, not wailing]\n[guitar strums softly]\n\n[Theme Return]\n[harmonica restates melody]\n[all three instruments together]\n[same relaxed energy]\n\n[Outro]\n[harmonica fades]\n[guitar plays last shuffle phrase]\n[bass final note]\n[guitar chord rings out]"
+    },
+    {
+      "id": "S017_10",
+      "title": "Dream Pop Dining",
+      "concept": "드림팝 — clean electric guitar + synth pad + soft drums. corpus Dream Pop=191 entries(76 unique). 몽환적이지만 편안한 레스토랑.",
+      "genre": "Dream Pop",
+      "bpm": 95,
+      "key": "E major",
+      "instruments": ["clean electric guitar", "synth pad", "electric bass", "soft drums"],
+      "corpus_reference": "Dream Pop(191entries), clean electric guitar(9회 in dream pop), synth pad(5회 in dream pop), subtle atmospheric(8회)",
+      "sp": "Dreamy pop instrumental with a hazy, floating feel. Clean electric guitar plays shimmering arpeggios with heavy reverb and subtle chorus, creating a wash of crystalline sound. A lush synth pad provides a warm, evolving harmonic bed underneath. Electric bass plays long, sustained notes with a deep, smooth tone. Soft drums play a gentle pattern with muted kick, rim clicks, and washy cymbals. The overall texture is atmospheric and enveloping, like soft light filtering through frosted glass. The energy floats without direction — no builds, no drops, just gentle motion. Clean electric guitar, synth pad, electric bass, soft drums. 95 BPM in E major. 4/4 time. Heavy reverb, atmospheric production.",
+      "lyrics": "[Intro]\n[synth pad fades in slowly]\n[warm, evolving texture]\n\n[Guitar Enters]\n[clean arpeggios with reverb]\n[shimmering, crystalline]\n[pad continues underneath]\n\n[Full Texture]\n[bass enters with long notes]\n[drums join softly]\n[rim clicks and washy cymbals]\n\n[Melody]\n[guitar plays a simple melody]\n[floating over the texture]\n[everything stays soft]\n\n[Variation]\n[guitar arpeggios shift pattern]\n[pad changes chord]\n[bass follows]\n[drums stay gentle]\n\n[Return]\n[back to opening arpeggios]\n[same dreamy energy]\n\n[Outro]\n[guitar fades]\n[pad sustains alone]\n[dissolving slowly]"
+    }
+  ]
+}

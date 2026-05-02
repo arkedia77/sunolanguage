@@ -1,0 +1,140 @@
+{
+  "purpose": "S016 — Lunch Restaurant: Acoustic Warmth (점심 레스토랑 BGM: 어쿠스틱 온기)",
+  "created_at": "2026-05-02",
+  "previous": "S015 = 통합 축(Axis G). S016부터 실용 축(Axis H: 공간 BGM) 시작",
+  "theme": "점심 식사 공간에 적합한 어쿠스틱 중심 BGM — Suno가 일관된 저에너지 분위기를 유지하면서 '배경감'을 달성할 수 있는가?",
+  "method": "Suno Custom 모드 생성 → 풀 길이 재업로드 → SP+가사 라운드트립",
+  "axis": "Axis H: 공간 BGM (실용 축)",
+  "instrument_policy": "레스토랑 어쿠스틱 악기 — acoustic guitar, piano, upright bass, cello, violin, nylon guitar. 모두 corpus 검증 완료.",
+  "test_axes": [
+    "Suno가 클라이맥스 없이 일관된 저에너지를 유지할 수 있는가",
+    "warm/intimate/smooth 같은 무드 지시가 실제 톤에 영향을 주는가",
+    "fingerpicked/brushed/soft 같은 주법 지시가 볼륨을 낮추는가",
+    "3/4 왈츠 박자가 정확히 구현되는가 (레스토랑 우아함)",
+    "악기 솔로/듀오 구성에서 사운드 품질이 유지되는가",
+    "plate reverb/room reverb 등 공간감 지시가 실제 반영되는가"
+  ],
+
+  "test_prompts": [
+    {
+      "id": "S016_01",
+      "title": "Bossa Nova Café",
+      "concept": "클래식 보사노바 카페 BGM — nylon guitar + upright bass + brushed drums. corpus에서 bossa nova=185 entries, nylon-string=26회. 레스토랑 BGM의 정석.",
+      "genre": "Bossa Nova",
+      "bpm": 120,
+      "key": "A major",
+      "instruments": ["nylon-string acoustic guitar", "upright bass", "brushed drums", "light shaker"],
+      "corpus_reference": "nylon-string acoustic guitar(26회/13장르), upright bass(18회/7장르), warm(458회), intimate(445회), syncopated(454회)",
+      "sp": "Warm bossa nova instrumental with a gentle, swaying rhythm. Nylon-string acoustic guitar plays syncopated jazz chords with thumb-plucked bass notes and frequent hammer-ons. Upright bass provides a steady two-beat walking pattern with warm, rounded tone. Brushed drums keep a light bossa nova groove with cross-stick on beat two and four. A soft shaker maintains a steady sixteenth-note pulse. The overall feel is intimate and smooth, like background music in a sunlit café. No dramatic builds or climaxes — the energy stays relaxed and even throughout. 120 BPM in A major. 4/4 time. Warm, intimate recording with plate reverb.",
+      "lyrics": "[Intro]\n[nylon guitar solo, gentle syncopated chords]\n\n[A Section]\n[full ensemble enters softly]\n[upright bass two-beat pattern]\n[brushed drums, cross-stick]\n[shaker steady pulse]\n\n[B Section]\n[guitar melody over the groove]\n[bass walks gently]\n[same relaxed energy]\n\n[A Section Return]\n[back to the opening chords]\n[ensemble stays soft]\n\n[B Section]\n[guitar improvises lightly]\n[never louder than the opening]\n\n[Outro]\n[instruments thin out one by one]\n[guitar alone, last chord rings]"
+    },
+    {
+      "id": "S016_02",
+      "title": "Morning Fingerpicking",
+      "concept": "핑거피킹 어쿠스틱 기타 + 소프트 피아노 — corpus에서 fingerpicked acoustic guitar=97회, 가장 레스토랑다운 주법.",
+      "genre": "Acoustic Folk",
+      "bpm": 92,
+      "key": "G major",
+      "instruments": ["fingerpicked acoustic guitar", "soft piano", "light pad"],
+      "corpus_reference": "fingerpicked acoustic guitar(97회/33장르), grand piano soft(81회), steady(264회)",
+      "sp": "Gentle acoustic folk instrumental built on a steady fingerpicked acoustic guitar pattern. The guitar plays a repetitive arpeggiated pattern in G major with clean, warm tone and occasional string squeaks for authenticity. A soft piano enters after eight bars, adding sustained chords and melodic fills in the upper register. A subtle pad provides harmonic padding in the background, barely noticeable but adding warmth. The piece maintains a steady, unhurried pace throughout with no crescendos or dramatic moments. Like quiet morning music in a neighborhood restaurant. Fingerpicked acoustic guitar, piano, subtle pad. 92 BPM in G major. 4/4 time. Room reverb, natural acoustic feel.",
+      "lyrics": "[Intro]\n[fingerpicked guitar alone]\n[steady arpeggiated pattern]\n[warm, clean tone]\n\n[Section A]\n[piano enters with soft sustained chords]\n[guitar continues the same pattern]\n[pad barely audible underneath]\n\n[Section B]\n[piano plays a simple melody]\n[guitar keeps fingerpicking]\n[same gentle energy]\n\n[Section A Return]\n[back to chords and arpeggios]\n[nothing changes in volume]\n\n[Section B]\n[piano melody with slight variation]\n[guitar steady throughout]\n\n[Outro]\n[pad fades first]\n[piano holds last chord]\n[guitar final arpeggio, ring out]"
+    },
+    {
+      "id": "S016_03",
+      "title": "Piano Jazz Trio",
+      "concept": "재즈 피아노 트리오 — grand piano + upright bass + brushed drums. 클래식 재즈 카페 분위기. corpus Jazz=385 entries.",
+      "genre": "Jazz",
+      "bpm": 110,
+      "key": "Bb major",
+      "instruments": ["grand piano", "upright bass", "brushed drums"],
+      "corpus_reference": "grand piano(81회/36장르), upright bass(18회/7장르), smooth(118회), legato(71회)",
+      "sp": "Light jazz trio instrumental with a relaxed, swinging feel. Grand piano plays smooth comping chords with occasional melodic runs in the right hand. The touch is soft and clean, never percussive. Upright bass walks a steady quarter-note line with warm, rounded tone and occasional slides between notes. Brushed drums play a light swing pattern with brushes circling on the snare and soft hi-hat on beats two and four. The trio plays together intimately, listening to each other. No loud solos or dramatic builds. The mood is elegant and understated, perfect for a quiet lunch. Grand piano, upright bass, brushed drums. 110 BPM in Bb major. 4/4 time with swing feel. Intimate room recording.",
+      "lyrics": "[Head In]\n[piano states the melody softly]\n[bass walks underneath]\n[brushes circle on snare]\n\n[Piano Solo]\n[gentle improvisation]\n[staying in the middle register]\n[bass and drums support quietly]\n\n[Head Return]\n[melody restated with small variations]\n[trio plays as one]\n\n[Bass Feature]\n[bass walks a melodic line]\n[piano plays sparse chords]\n[brushes keep time]\n\n[Head Out]\n[final statement of the melody]\n[ritardando on last two bars]\n[piano holds final chord]"
+    },
+    {
+      "id": "S016_04",
+      "title": "Chanson d'Après-Midi",
+      "concept": "프렌치 카페 분위기 — accordion + acoustic guitar. corpus에서 accordion=4회(1장르). Suno가 아코디언 톤을 얼마나 잘 구현하는지 테스트.",
+      "genre": "French Pop / Chanson",
+      "bpm": 100,
+      "key": "F major",
+      "instruments": ["accordion", "acoustic guitar", "upright bass"],
+      "corpus_reference": "accordion(4회/1장르), acoustic guitar(269회/65장르), warm(458회)",
+      "sp": "French chanson-style instrumental with a warm afternoon feel. Accordion plays the main melody with a gentle, sustained tone and light vibrato. Acoustic guitar strums soft jazz chords on the off-beats, creating a lilting rhythm. Upright bass provides a simple root-fifth pattern, warm and understated. The piece has the feeling of a Parisian sidewalk café in spring. The energy is light and pleasant, never building to any climax. The accordion melody is lyrical and slightly nostalgic but not sad. Accordion, acoustic guitar, upright bass. 100 BPM in F major. 3/4 time. Waltz feel. Warm analog recording with light reverb.",
+      "lyrics": "[Intro]\n[accordion alone, melody statement]\n[gentle vibrato, sustained notes]\n\n[A Section]\n[guitar enters with soft off-beat chords]\n[bass joins with root-fifth pattern]\n[accordion continues melody]\n\n[B Section]\n[accordion plays a second melody]\n[slightly higher register]\n[guitar and bass stay the same]\n\n[A Section Return]\n[first melody returns]\n[same energy, same warmth]\n\n[B Section]\n[second melody with gentle ornamentation]\n[accordion adds light trills]\n\n[Outro]\n[guitar and bass fade]\n[accordion alone, last phrase]\n[final note with long sustain]"
+    },
+    {
+      "id": "S016_05",
+      "title": "Cello and Piano Conversation",
+      "concept": "첼로+피아노 듀오 — 클래시컬 크로스오버. corpus cello=25회/9장르. 우아한 실내악 레스토랑 분위기.",
+      "genre": "Classical Crossover / Chamber",
+      "bpm": 72,
+      "key": "D major",
+      "instruments": ["cello", "grand piano"],
+      "corpus_reference": "cello(25회/9장르, warm/steady modifiers), grand piano(81회/36장르), legato(71회), rubato(59회)",
+      "sp": "Elegant chamber duo for cello and grand piano. The cello plays warm, legato melodies in the middle register with a rich, singing tone. The piano accompanies with gentle arpeggiated chords in the left hand and soft counter-melodies in the right. The two instruments converse naturally, taking turns with the melody. The tempo is unhurried with slight rubato for expressiveness. The dynamic stays between piano and mezzo-piano throughout — no forte passages, no dramatic swells. Like refined background music at an upscale lunch restaurant. Cello, grand piano. 72 BPM in D major. 4/4 time. Concert hall acoustic with natural reverb.",
+      "lyrics": "[Opening]\n[piano sets the harmonic foundation]\n[gentle arpeggios, left hand]\n\n[Cello Enters]\n[warm legato melody]\n[middle register, singing tone]\n[piano supports underneath]\n\n[Dialogue]\n[piano takes the melody]\n[cello plays long sustained notes]\n[they trade phrases back and forth]\n\n[Cello Melody]\n[cello returns to the main theme]\n[piano arpeggios continue]\n[slight rubato, breathing together]\n\n[Final Section]\n[both instruments play the melody together]\n[in harmony, mezzo-piano]\n[slowing gently]\n\n[Closing]\n[cello holds a long note]\n[piano plays final arpeggio]\n[both fade to silence]"
+    },
+    {
+      "id": "S016_06",
+      "title": "Folk Garden",
+      "concept": "소프트 포크 앙상블 — acoustic guitar + fingerstyle + light percussion. corpus에서 fingerstyle=25회/17장르. 가든 레스토랑 분위기.",
+      "genre": "Acoustic Folk / Indie Folk",
+      "bpm": 96,
+      "key": "E major",
+      "instruments": ["fingerstyle acoustic guitar", "acoustic guitar", "electric bass", "light tambourine"],
+      "corpus_reference": "fingerstyle acoustic guitar(25회/17장르), acoustic guitar(269회/65장르), electric bass clean(376회)",
+      "sp": "Warm indie folk instrumental with two acoustic guitars layered together. The first guitar plays a steady fingerstyle pattern with alternating bass notes and arpeggiated chords. The second guitar adds light strummed chords on beats two and four, creating a gentle rhythmic pulse. Electric bass plays clean, simple root notes with a warm tone, following the chord changes. A light tambourine taps on the off-beats, adding subtle texture. The feel is like eating lunch in a garden surrounded by trees. Relaxed and natural with no urgency. Two acoustic guitars, clean electric bass, light tambourine. 96 BPM in E major. 4/4 time. Natural acoustic recording.",
+      "lyrics": "[Intro]\n[fingerstyle guitar alone]\n[alternating bass notes and arpeggios]\n\n[Verse Feel]\n[second guitar enters with light strums]\n[bass joins on root notes]\n[tambourine taps softly]\n\n[Chorus Feel]\n[both guitars play together]\n[melody emerges from the fingerpicking]\n[bass holds steady]\n\n[Verse Feel]\n[back to the opening groove]\n[same gentle energy]\n[tambourine continues]\n\n[Bridge Feel]\n[fingerstyle guitar plays higher]\n[strumming guitar softens]\n[bass walks slightly]\n\n[Final Section]\n[all instruments together]\n[same relaxed energy as the start]\n\n[Outro]\n[strumming stops]\n[fingerstyle alone]\n[last arpeggio rings]"
+    },
+    {
+      "id": "S016_07",
+      "title": "Quiet Piano Room",
+      "concept": "앰비언트 피아노 — solo grand piano + subtle pad. corpus piano=127회/54장르, spacious(5회). 고급 레스토랑 미니멀 BGM.",
+      "genre": "Ambient Piano / Neoclassical",
+      "bpm": 68,
+      "key": "F major",
+      "instruments": ["grand piano", "subtle synth pad"],
+      "corpus_reference": "piano(127회/54장르), spacious(5회), soft(32회), rubato(59회)",
+      "sp": "Minimalist ambient piano piece with a spacious, contemplative feel. Grand piano plays soft, widely spaced chords with long sustain, letting each note ring and decay naturally. The right hand plays a simple repeating melody with just four or five notes, unhurried and gentle. A subtle synth pad enters halfway through, providing a warm harmonic bed underneath the piano, barely perceptible. The sustain pedal is used generously, creating a wash of overlapping harmonics. The piece breathes slowly with natural pauses between phrases. Like background music in a quiet, refined dining room. Grand piano, subtle pad. 68 BPM in F major. 4/4 time. Long-tail reverb, spacious acoustic.",
+      "lyrics": "[Opening]\n[piano alone]\n[soft, spaced chords]\n[each note rings and decays]\n\n[Melody]\n[simple four-note melody]\n[right hand, gentle touch]\n[left hand holds sustained bass notes]\n\n[Development]\n[melody repeats with slight variation]\n[sustain pedal creates harmonic wash]\n[natural pauses between phrases]\n\n[Pad Enters]\n[synth pad barely perceptible]\n[warm harmonic bed underneath]\n[piano continues the melody]\n\n[Return]\n[melody stated one more time]\n[softer than before]\n[pad sustains]\n\n[Closing]\n[piano plays final chord]\n[lets it ring and fade]\n[pad dissolves]\n[silence]"
+    },
+    {
+      "id": "S016_08",
+      "title": "Acoustic Pop Lunch",
+      "concept": "어쿠스틱 팝 + 소프트 여성 보컬 — 보컬 포함 레스토랑 BGM. 노래가 있어도 배경감 유지 가능한가 테스트.",
+      "genre": "Acoustic Pop",
+      "bpm": 108,
+      "key": "A major",
+      "instruments": ["fingerpicked acoustic guitar", "electric piano", "electric bass", "light drums"],
+      "corpus_reference": "fingerpicked acoustic guitar(97회), electric piano(33회/21장르, subtle/soft modifiers), delicate(18회)",
+      "sp": "Light acoustic pop song with soft female vocals and a warm, breezy feel. Fingerpicked acoustic guitar plays a steady eighth-note pattern as the foundation. Electric piano adds subtle harmonic padding in the background with a clean, warm tone. Electric bass plays simple, clean root notes. Light drums with soft hi-hat and gentle kick on beats one and three. The female vocalist sings with a soft, intimate tone, never pushing or belting. The song has a pleasant, everyday feeling — like humming while enjoying a meal. Fingerpicked acoustic guitar, electric piano, clean electric bass, light drums, soft female vocals. 108 BPM in A major. 4/4 time. Warm, clean production.",
+      "lyrics": "[Verse 1]\n(soft, intimate singing)\nSunlight through the window glass\nAnother afternoon that moves too fast\nCoffee getting cold beside my plate\nBut I don't mind, I like to wait\n\n[Chorus]\n(gentle, never belting)\nThis is all I need today\nA quiet hour, a little break\nNothing rushing, nothing late\nJust a moment on my plate\n\n[Verse 2]\n(same soft tone)\nPeople passing by outside\nConversations floating, side by side\nFork and knife on porcelain\nSmall pleasures over and again\n\n[Chorus]\n(same gentle energy)\nThis is all I need today\nA quiet hour, a little break\n\n[Outro]\n(humming softly)\nMm mm mm mm mm\nMm mm mm mm"
+    },
+    {
+      "id": "S016_09",
+      "title": "Nylon Guitar Solo",
+      "concept": "나일론 기타 솔로 — 단일 악기 구성에서 Suno 품질 테스트. corpus nylon-string=26회/13장르. 클래시컬 기타 레스토랑의 정석.",
+      "genre": "Classical Guitar / Instrumental",
+      "bpm": 80,
+      "key": "E minor",
+      "instruments": ["nylon-string acoustic guitar"],
+      "corpus_reference": "nylon-string acoustic guitar(26회/13장르, prominent/steady modifiers), legato(71회), arpeggiated(130회)",
+      "sp": "Solo nylon-string acoustic guitar piece in a classical style. The guitarist plays arpeggiated patterns and legato melodies with a warm, rounded tone. The piece moves between fingerpicked arpeggios in the lower strings and melodic phrases in the upper register. The tempo is relaxed with slight rubato for natural expression. The playing is clean and precise but not mechanical — it breathes with subtle dynamic variation between phrases. The mood is elegant and understated, like a classical guitarist performing quietly in the corner of an Italian restaurant. Solo nylon-string acoustic guitar. 80 BPM in E minor. 3/4 time. Close-miked, intimate recording with room reverb.",
+      "lyrics": "[Opening]\n[arpeggiated chords, lower strings]\n[warm, rounded tone]\n\n[Theme A]\n[melody in the upper register]\n[arpeggios continue underneath]\n[legato phrasing]\n\n[Theme B]\n[new melody, slightly brighter]\n[fingerpicked patterns shift]\n[subtle dynamic variation]\n\n[Theme A Return]\n[first melody comes back]\n[gentle rubato]\n[same quiet energy]\n\n[Development]\n[combining elements of both themes]\n[arpeggios and melody intertwined]\n\n[Final Statement]\n[Theme A one last time]\n[slowing gradually]\n\n[Ending]\n[final chord, let ring]\n[silence]"
+    },
+    {
+      "id": "S016_10",
+      "title": "Strings and Guitar Waltz",
+      "concept": "어쿠스틱 기타 + 바이올린 + 첼로 왈츠 — 3/4 박자 우아함. corpus violin=7회(3장르). 소편성 실내악 레스토랑.",
+      "genre": "Acoustic Waltz / Chamber",
+      "bpm": 88,
+      "key": "D major",
+      "instruments": ["acoustic guitar", "violin", "cello"],
+      "corpus_reference": "violin(7회/3장르), cello(25회/9장르), acoustic guitar(269회/65장르), legato(71회)",
+      "sp": "Elegant acoustic waltz for guitar, violin, and cello. The acoustic guitar provides a gentle waltz accompaniment with bass notes on beat one and soft chords on beats two and three. The violin plays a lyrical melody with a warm, singing tone, using legato bowing. The cello adds a low melodic counterpoint, occasionally doubling the guitar bass line. The three instruments create a small chamber ensemble feel, intimate and refined. The energy is consistent throughout — graceful and flowing, never intense. Like string musicians playing softly at a special lunch occasion. Acoustic guitar, violin, cello. 88 BPM in D major. 3/4 time. Natural room acoustic.",
+      "lyrics": "[Intro]\n[guitar alone, waltz pattern]\n[bass note, chord, chord]\n\n[Theme]\n[violin enters with melody]\n[cello joins on low notes]\n[guitar keeps the waltz rhythm]\n\n[Second Theme]\n[cello takes the melody]\n[violin plays sustained harmony]\n[guitar continues accompaniment]\n\n[Return to First Theme]\n[violin melody again]\n[all three instruments together]\n[same gentle energy]\n\n[Variation]\n[melody ornamented slightly]\n[cello and violin in dialogue]\n[guitar steady underneath]\n\n[Closing]\n[all three slow together]\n[violin holds last note]\n[guitar final waltz chord]\n[cello low D, fading]"
+    }
+  ]
+}
