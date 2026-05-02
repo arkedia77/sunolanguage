@@ -3,6 +3,7 @@
 ## IN PROGRESS
 - [sunolanguage] SP Builder 웹앱 — Phase 3/4 완료, 메인악기 패널+Effects/Mood 중앙 이동 완료, Suno 29개 대장르 카테고리 반영 남음
 - [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunomusic 재분석 대기 중 (2026-04-27 발주)
+- [sunolanguage] S016-S017 점심 레스토랑 BGM 20곡 — sunomusic 우선 생성 요청 완료 (2026-05-02 발주, Leo 우선 요청)
 
 ## TODO
 ### Phase V3.2 — 장르 균등화 수집 (4-6주)
@@ -39,6 +40,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] S016-S017 점심 레스토랑 BGM 20곡 설계 + sunomusic 우선 발주 (작업지시서+프롬프트전문 3건, push 완료) — 2026-05-02 ✅
 - [sunolanguage] S007–S015 9개 시리즈 82곡 설계 + sunomusic 일괄 발주 (통합 작업지시서+프롬프트전문 10건, push 완료) — 2026-04-29 ✅
 - [sunolanguage] SP Builder 메인악기 패널 + Effects/Mood 중앙 이동 + SP 생성 개선 — 2026-04-28 ✅
 - [sunolanguage] SP Builder Phase 3/4 — 장르 카테고리 아코디언 + 자동채우기 + 20 템플릿 + 워크플로우 레이아웃 + SortableJS 드래그 + 프리셋 토글 — 2026-04-28 ✅
