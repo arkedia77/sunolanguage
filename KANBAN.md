@@ -1,22 +1,17 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] S018 "Genre Frontier" 16곡 설계 완료 — sunomusic 발주 대기 (Leo 승인 후)
-- [sunolanguage] 사전 v3.0 설계 — 5개 신규 축 구조 확정, 빌드 트리거 대기
-- [sunolanguage] leomusic2 vocab gap 회신 완료 — push 완료 (2026-05-06)
-- [sunolanguage] S003/S004 생성 완료 → 재분석(Phase 2) 대기
-- [sunolanguage] S016-S017 생성 완료 (20/20) → 재분석(Phase 2) 대기
+- [sunolanguage] S018 "Genre Frontier" 16곡 — sunomusic 발주 완료 (2026-05-06), 생성 대기
+- [sunolanguage] S003/S004/S016-S017 44곡 — 재분석(Phase 2) 요청 발송 완료 (2026-05-06), 결과 대기
+- [sunolanguage] 사전 v3.0 — 빌더 구현 완료 + 첫 빌드 완료, 재분석 결과 수신 시 corpus 확장 후 재빌드
 
 ## TODO
 ### S018 장르 프론티어 (corpus ZERO 해소)
-- [sunolanguage] S018 16곡 sunomusic 발주 — Leo 승인 후 즉시 가능
 - [sunolanguage] 결과 수신 → 재분석 → corpus 머지 → 40개 장르갭 중 16개 해소
 
 ### 사전 v3.0 빌드
-- [sunolanguage] build_dictionary_v3.py 스켈레톤 구현
-- [sunolanguage] genre_frontier 초기값 40개 장르 (외부 레퍼런스 기반)
-- [sunolanguage] negative_vocab / studio_stem_map 확정
-- [sunolanguage] S003+S004+S016-S017 재분석 수신 시 corpus 머지 → v3.0 빌드
+- [sunolanguage] S003+S004+S016-S017 재분석 수신 시 corpus 머지 → v3.0 재빌드
+- [sunolanguage] S018 결과 수신 시 genre_frontier validated 업데이트
 
 ### v5.5 검증
 - [sunolanguage] Top-Anchor A/B 테스트 (S018에 내장)
@@ -42,6 +37,10 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] 사전 v3.0 빌더 구현 + 첫 빌드 (5축 신규 + 437곡 기존 corpus) — 2026-05-06 ✅
+- [sunolanguage] genre_frontier 40장르 초기값 JSON 생성 — 2026-05-06 ✅
+- [sunolanguage] S018 16곡 sunomusic 발주 (작업지시서+프롬프트전문) — 2026-05-06 ✅
+- [sunolanguage] S003/S004/S016-S017 44곡 재분석 요청 발송 — 2026-05-06 ✅
 - [sunolanguage] Suno v5.5 vs v5.0 업그레이드 종합 정리 + Notion 업로드 — 2026-05-06 ✅
 - [sunolanguage] corpus 미발굴 패턴 분석 (텍스처 순위/동사 문법/감정어 빈약 확정) — 2026-05-06 ✅
 - [sunolanguage] S018 "Genre Frontier" 16곡 설계 (corpus ZERO 해소 + v5.5 검증) — 2026-05-06 ✅
