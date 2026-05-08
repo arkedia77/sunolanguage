@@ -95929,5 +95929,3202 @@
     "song_id": "S017_10",
     "genre": "Dream Pop",
     "source": "sp"
+  },
+  {
+    "slot": "genre",
+    "entity": "Synthwave with a focus on instructional vocal cues",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Synthwave with a focus on instructional vocal cues.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Synthwave with a focus on instructional vocal cues.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent arpeggiated synthesizer with a long reverb tail and a delay-heavy lead synth.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "long reverb",
+      "delay"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "sentence": "The track features a prominent arpeggiated synthesizer with a long reverb tail and a delay-heavy lead synth.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "drums"
+    ],
+    "modifiers": [
+      "driving"
+    ],
+    "pattern": "the rhythmic backbone",
+    "effects": [],
+    "chords": [],
+    "sentence": "A driving four-on-the-floor kick drum and a gated snare provide the rhythmic backbone.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "thick"
+    ],
+    "pattern": "of a thick, filtered sawtooth synth that enters after the initial intro",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bassline consists of a thick, filtered sawtooth synth that enters after the initial intro.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "thick"
+    ],
+    "pattern": "of a thick, filtered sawtooth synth that enters after the initial intro",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bassline consists of a thick, filtered sawtooth synth that enters after the initial intro.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "bright"
+    ],
+    "pattern": "in the upper register",
+    "effects": [],
+    "chords": [],
+    "sentence": "A bright, soaring synth lead melody plays in the upper register.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes distinct sections marked by filter sweeps and the addition of layered synth leads.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [],
+    "instruments_mentioned": [
+      "synthesizer"
+    ],
+    "sentence": "The arrangement includes distinct sections marked by filter sweeps and the addition of layered synth leads.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 120,
+      "key": "c major",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "The tempo is 120 BPM in the key of C major.",
+    "song_id": "S018_01",
+    "genre": "Synthwave",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "UK Drill.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 140,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "140 BPM, D minor.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "piano",
+    "kit": "keys",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "syncopated"
+    ],
+    "modifiers": [
+      "dark",
+      "atmospheric"
+    ],
+    "pattern": "a dark, atmospheric piano melody playing minor chords in a syncopated rhythm",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a dark, atmospheric piano melody playing minor chords in a syncopated rhythm.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "808 bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "low"
+    ],
+    "pattern": "the melodic low end with long glides between notes",
+    "effects": [],
+    "chords": [],
+    "sentence": "A sliding 808 bass provides the melodic low end with long glides between notes.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "low"
+    ],
+    "pattern": "the melodic low end with long glides between notes",
+    "effects": [],
+    "chords": [],
+    "sentence": "A sliding 808 bass provides the melodic low end with long glides between notes.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "hi-hat",
+      "drum kit",
+      "beat",
+      "drums"
+    ],
+    "modifiers": [
+      "sharp",
+      "high-pitched",
+      "rapid-fire"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The drum kit consists of a sharp, high-pitched snare on the third beat of each bar, rapid-fire triplet hi-hats with varying velocities, and a syncopated kick drum pattern.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "distant",
+      "high-pitched",
+      "atmospheric"
+    ],
+    "pattern": "a cinematic urban texture",
+    "effects": [],
+    "chords": [],
+    "sentence": "A distant, high-pitched siren sample and atmospheric pads create a cinematic urban texture.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "rap delivery"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals are delivered in a rhythmic, staccato rap style with heavy use of ad-libs and vocal doubling.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "ad-libs",
+      "doubling"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "sentence": "Male vocals are delivered in a rhythmic, staccato rap style with heavy use of ad-libs and vocal doubling.",
+    "song_id": "S018_02",
+    "genre": "UK Drill",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "a log drum bassline and syncopated percussion",
+    "effects": [],
+    "chords": [],
+    "sentence": "Amapiano track featuring a log drum bassline and syncopated percussion.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums",
+      "percussion"
+    ],
+    "modifiers": [],
+    "pattern": "a log drum bassline and syncopated percussion",
+    "effects": [],
+    "chords": [],
+    "sentence": "Amapiano track featuring a log drum bassline and syncopated percussion.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums"
+    ],
+    "modifiers": [
+      "deep"
+    ],
+    "pattern": "a rhythmic, melodic pattern",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement is built around a deep, percussive log drum that plays a rhythmic, melodic pattern.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "deep"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "The arrangement is built around a deep, percussive log drum that plays a rhythmic, melodic pattern.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "melodic",
+      "rhythmic"
+    ],
+    "modifiers": [
+      "clean",
+      "muted",
+      "occasional"
+    ],
+    "pattern": "muted, rhythmic chords and occasional melodic flourishes",
+    "effects": [],
+    "chords": [],
+    "sentence": "A clean electric guitar plays muted, rhythmic chords and occasional melodic flourishes.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "melodic",
+      "rhythmic"
+    ],
+    "modifiers": [
+      "clean",
+      "muted",
+      "occasional"
+    ],
+    "pattern": "muted, rhythmic chords and occasional melodic flourishes",
+    "effects": [],
+    "chords": [],
+    "sentence": "A clean electric guitar plays muted, rhythmic chords and occasional melodic flourishes.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "shaker",
+      "woodblock",
+      "rimshot"
+    ],
+    "modifiers": [
+      "steady"
+    ],
+    "pattern": "a steady, syncopated groove",
+    "effects": [],
+    "chords": [],
+    "sentence": "Shakers and a woodblock-style rimshot provide a steady, syncopated groove.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "soft",
+      "airy"
+    ],
+    "pattern": "harmonic backing",
+    "effects": [],
+    "chords": [
+      "harmonic backing"
+    ],
+    "sentence": "A soft, airy synth pad provides harmonic backing.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "soft",
+      "airy"
+    ],
+    "pattern": "harmonic backing",
+    "effects": [],
+    "chords": [
+      "harmonic backing"
+    ],
+    "sentence": "A soft, airy synth pad provides harmonic backing.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "female vocals",
+      "male vocals"
+    ],
+    "modifiers": [
+      "repetitive",
+      "light"
+    ],
+    "pattern": "",
+    "effects": [
+      "light reverb"
+    ],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Female vocals are present, characterized by repetitive, rhythmic phrasing and melodic ad-libs with light reverb.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "ad-libs"
+    ],
+    "modifiers": [
+      "repetitive",
+      "light"
+    ],
+    "sentence": "Female vocals are present, characterized by repetitive, rhythmic phrasing and melodic ad-libs with light reverb.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "reverb"
+    ],
+    "modifiers": [
+      "repetitive",
+      "light"
+    ],
+    "sentence": "Female vocals are present, characterized by repetitive, rhythmic phrasing and melodic ad-libs with light reverb.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 113,
+      "key": "g# minor",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "The tempo is 113 BPM in the key of G# minor.",
+    "song_id": "S018_03",
+    "genre": "Amapiano",
+    "source": "sp"
+  },
+  {
+    "slot": "genre",
+    "entity": "Reggaeton with a blend of Latin pop and electronic elements",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Reggaeton with a blend of Latin pop and electronic elements.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "prominent",
+      "crisp",
+      "heavy",
+      "sharp"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent dembow rhythm played by a crisp electronic drum kit with a heavy kick and sharp snare.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "the kick pattern",
+    "effects": [],
+    "chords": [],
+    "sentence": "A syncopated, staccato synth bassline follows the kick pattern.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "the kick pattern",
+    "effects": [],
+    "chords": [],
+    "sentence": "A syncopated, staccato synth bassline follows the kick pattern.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum"
+    ],
+    "modifiers": [],
+    "pattern": "the kick pattern",
+    "effects": [],
+    "chords": [],
+    "sentence": "A syncopated, staccato synth bassline follows the kick pattern.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "bright",
+      "atmospheric"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Melodic elements include a bright, plucked synth lead and atmospheric pads.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "pad",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "bright",
+      "atmospheric"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Melodic elements include a bright, plucked synth lead and atmospheric pads.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals"
+    ],
+    "modifiers": [
+      "processed",
+      "light"
+    ],
+    "pattern": "",
+    "effects": [
+      "light autotune",
+      "doubling"
+    ],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals are processed with light autotune and doubling.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "doubling"
+    ],
+    "modifiers": [
+      "processed",
+      "light"
+    ],
+    "sentence": "Male vocals are processed with light autotune and doubling.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "mixing",
+    "entity": [
+      "processed"
+    ],
+    "modifiers": [
+      "processed",
+      "light"
+    ],
+    "sentence": "Male vocals are processed with light autotune and doubling.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "autotune"
+    ],
+    "modifiers": [
+      "processed",
+      "light"
+    ],
+    "sentence": "Male vocals are processed with light autotune and doubling.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes a breakdown with filtered percussion and a build-up using a rising synth riser.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "percussion"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes a breakdown with filtered percussion and a build-up using a rising synth riser.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_sound",
+    "entity": [
+      "riser"
+    ],
+    "modifiers": [],
+    "sentence": "The arrangement includes a breakdown with filtered percussion and a build-up using a rising synth riser.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [],
+    "instruments_mentioned": [
+      "synthesizer"
+    ],
+    "sentence": "The arrangement includes a breakdown with filtered percussion and a build-up using a rising synth riser.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 95,
+      "key": "g minor",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Key of G minor, 95 BPM.",
+    "song_id": "S018_04",
+    "genre": "Reggaeton",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Doom metal with sludge influences.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "distorted electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "slow"
+    ],
+    "pattern": "slow, down-tuned power chords and dissonant intervals",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "Distorted electric guitars play slow, down-tuned power chords and dissonant intervals.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "slow"
+    ],
+    "pattern": "slow, down-tuned power chords and dissonant intervals",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "Distorted electric guitars play slow, down-tuned power chords and dissonant intervals.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "slow"
+    ],
+    "sentence": "Distorted electric guitars play slow, down-tuned power chords and dissonant intervals.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [
+      "thick"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar is heavily overdriven, following the guitar riffs with a thick, fuzzy tone.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "bass guitar",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [
+      "thick"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar is heavily overdriven, following the guitar riffs with a thick, fuzzy tone.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "overdriven"
+    ],
+    "modifiers": [
+      "thick"
+    ],
+    "sentence": "The bass guitar is heavily overdriven, following the guitar riffs with a thick, fuzzy tone.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "crash cymbal",
+      "drums"
+    ],
+    "modifiers": [
+      "slow",
+      "heavy",
+      "prominent",
+      "deep",
+      "resonant"
+    ],
+    "pattern": "a slow, heavy tempo with prominent crash cymbals and a deep, resonant kick drum",
+    "effects": [],
+    "chords": [],
+    "sentence": "Drums feature a slow, heavy tempo with prominent crash cymbals and a deep, resonant kick drum.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [
+      "slow",
+      "heavy",
+      "prominent",
+      "deep",
+      "resonant"
+    ],
+    "sentence": "Drums feature a slow, heavy tempo with prominent crash cymbals and a deep, resonant kick drum.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Vocals are harsh, guttural growls and shouted phrases.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "sustain",
+    "role_details": [],
+    "modifiers": [
+      "wide"
+    ],
+    "pattern": "a slow-tempo guitar solo with high-gain sustain and wide vibrato",
+    "effects": [
+      "wide vibrato"
+    ],
+    "chords": [],
+    "sentence": "The track features a slow-tempo guitar solo with high-gain sustain and wide vibrato.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [
+      "wide"
+    ],
+    "sentence": "The track features a slow-tempo guitar solo with high-gain sustain and wide vibrato.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 65,
+      "key": "b minor",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Key of B minor, 65 BPM.",
+    "song_id": "S018_05",
+    "genre": "Doom Metal",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Drum and Bass with heavy neurofunk influences.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Drum and Bass with heavy neurofunk influences.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent, distorted reese bass that modulates with a growling, metallic timbre.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "sentence": "The track features a prominent, distorted reese bass that modulates with a growling, metallic timbre.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "drums"
+    ],
+    "modifiers": [
+      "classic",
+      "crisp",
+      "high-pitched",
+      "punchy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The drum pattern is a classic breakbeat with a crisp, high-pitched snare and a punchy kick.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "clean",
+      "repetitive"
+    ],
+    "pattern": "a contrasting layer, playing a repetitive, syncopated melody",
+    "effects": [],
+    "chords": [],
+    "sentence": "A clean, melodic electric guitar riff provides a contrasting layer, playing a repetitive, syncopated melody.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "atmospheric"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Atmospheric synth pads and filtered vocal chops are used for transitions.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "atmospheric"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Atmospheric synth pads and filtered vocal chops are used for transitions.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "atmospheric"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Atmospheric synth pads and filtered vocal chops are used for transitions.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 174,
+      "key": "f minor",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "The tempo is 174 BPM in the key of F minor.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "sudden",
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement uses sudden drops and build-ups characterized by rising synth sirens and rapid snare rolls.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum"
+    ],
+    "modifiers": [
+      "sudden",
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement uses sudden drops and build-ups characterized by rising synth sirens and rapid snare rolls.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "sudden",
+      "rapid"
+    ],
+    "instruments_mentioned": [
+      "synthesizer"
+    ],
+    "sentence": "The arrangement uses sudden drops and build-ups characterized by rising synth sirens and rapid snare rolls.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "hi-hat",
+      "shaker",
+      "percussion"
+    ],
+    "modifiers": [
+      "constant"
+    ],
+    "pattern": "a constant sixteenth-note rhythm",
+    "effects": [],
+    "chords": [],
+    "sentence": "High-frequency percussion like shakers and closed hi-hats maintain a constant sixteenth-note rhythm.",
+    "song_id": "S018_06",
+    "genre": "Drum and Bass",
+    "source": "sp"
+  },
+  {
+    "slot": "genre",
+    "entity": "Bossa nova jazz with a light, lounge-style arrangement",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Bossa nova jazz with a light, lounge-style arrangement.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "light"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "Bossa nova jazz with a light, lounge-style arrangement.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "nylon-string acoustic guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "layer_on",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a nylon-string acoustic guitar playing syncopated bossa nova rhythms and a walking double bass line.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "layer_on",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a nylon-string acoustic guitar playing syncopated bossa nova rhythms and a walking double bass line.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "layer_on",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a nylon-string acoustic guitar playing syncopated bossa nova rhythms and a walking double bass line.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "soft"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "A drum kit uses brushes on the snare and a soft kick drum.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "saxophone",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "lead_out",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "A tenor saxophone leads with melodic improvisations.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "female vocals",
+      "male vocals",
+      "vocalizing"
+    ],
+    "modifiers": [
+      "repetitive"
+    ],
+    "pattern": "rhythmic, repetitive vocalizations",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "A female vocal ensemble provides rhythmic, repetitive vocalizations.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 132,
+      "key": "f major",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "The tempo is 132 BPM in the key of F major.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "saxophone",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean",
+      "natural"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The production is clean with a natural room reverb on the saxophone and vocals.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "clean",
+      "natural"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "The production is clean with a natural room reverb on the saxophone and vocals.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "room reverb"
+    ],
+    "modifiers": [
+      "clean",
+      "natural"
+    ],
+    "sentence": "The production is clean with a natural room reverb on the saxophone and vocals.",
+    "song_id": "S018_07",
+    "genre": "Bebop",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Bluegrass and country instrumental with vocal cues.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Banjo, fiddle, acoustic guitar, and upright bass.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "upright bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Banjo, fiddle, acoustic guitar, and upright bass.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Banjo, fiddle, acoustic guitar, and upright bass.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "banjo",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Banjo, fiddle, acoustic guitar, and upright bass.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "banjo",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "rapid-fire",
+      "heavy"
+    ],
+    "pattern": "rapid-fire Scruggs-style rolls with heavy syncopation",
+    "effects": [],
+    "chords": [],
+    "sentence": "Banjo plays rapid-fire Scruggs-style rolls with heavy syncopation.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "melodic leads and double-stop accents",
+    "effects": [],
+    "chords": [],
+    "sentence": "Fiddle performs melodic leads and double-stop accents.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "fill",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "rhythmic strumming and flatpicked fills",
+    "effects": [],
+    "chords": [],
+    "sentence": "Acoustic guitar provides rhythmic strumming and flatpicked fills.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "upright bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "steady"
+    ],
+    "modifiers": [
+      "steady"
+    ],
+    "pattern": "a steady two-beat pattern on the root and fifth",
+    "effects": [],
+    "chords": [],
+    "sentence": "Upright bass plays a steady two-beat pattern on the root and fifth.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "steady"
+    ],
+    "modifiers": [
+      "steady"
+    ],
+    "pattern": "a steady two-beat pattern on the root and fifth",
+    "effects": [],
+    "chords": [],
+    "sentence": "Upright bass plays a steady two-beat pattern on the root and fifth.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "beat"
+    ],
+    "modifiers": [
+      "steady"
+    ],
+    "pattern": "a steady two-beat pattern on the root and fifth",
+    "effects": [],
+    "chords": [],
+    "sentence": "Upright bass plays a steady two-beat pattern on the root and fifth.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": "g major",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Key of G Major.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 135,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "135 BPM.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": null,
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "4/4 time signature.",
+    "song_id": "S018_08",
+    "genre": "Bluegrass",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Irish folk and Celtic fusion.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "a tin whistle, fiddle, acoustic guitar",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a tin whistle, fiddle, acoustic guitar, and bodhrán.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "full"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "The track begins with a solo tin whistle melody before transitioning into a full ensemble arrangement.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "rhythm",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "rhythmic strumming in 4/4 time",
+    "effects": [],
+    "chords": [],
+    "sentence": "The acoustic guitar provides rhythmic strumming in 4/4 time.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": null,
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "The acoustic guitar provides rhythmic strumming in 4/4 time.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "melodic leads and ornamentation",
+    "effects": [],
+    "chords": [],
+    "sentence": "The fiddle plays melodic leads and ornamentation.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [
+      "driving"
+    ],
+    "pattern": "with a driving, syncopated pulse",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bodhrán enters with a driving, syncopated pulse.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 80,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "The tempo starts at 80 BPM and accelerates to 120 BPM for the ensemble section.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": "d major",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Key of D Major.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "female vocals",
+      "male vocals"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Female vocals are clear and melodic, following the whistle's initial theme.",
+    "song_id": "S018_09",
+    "genre": "Celtic Folk",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Gypsy jazz and swing manouche.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "rapid chromatic runs, arpeggios",
+    "effects": [
+      "vibrato"
+    ],
+    "chords": [],
+    "sentence": "Lead acoustic guitar performs rapid chromatic runs, arpeggios, and vibrato-heavy melodies.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "percussive"
+    ],
+    "modifiers": [],
+    "pattern": "of two acoustic guitars playing percussive, staccato chords in a la pompe style",
+    "effects": [],
+    "chords": [],
+    "sentence": "Rhythm section consists of two acoustic guitars playing percussive, staccato chords in a la pompe style.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "upright bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "walking lines on beats one and three",
+    "effects": [],
+    "chords": [],
+    "sentence": "Upright bass plays walking lines on beats one and three.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "walking lines on beats one and three",
+    "effects": [],
+    "chords": [],
+    "sentence": "Upright bass plays walking lines on beats one and three.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "violin",
+    "kit": "strings",
+    "layer": "lead",
+    "role": "layer_on",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "with soaring melodic lines, double stops",
+    "effects": [],
+    "chords": [],
+    "sentence": "Violin enters with soaring melodic lines, double stops, and glissandos.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 210,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Tempo is 210 BPM.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": "g minor",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Key of G minor.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": null,
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "4/4 time signature.",
+    "song_id": "S018_10",
+    "genre": "Gypsy Jazz",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 126,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Phonk house track at 126 BPM in G minor.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "cowbell"
+    ],
+    "modifiers": [
+      "prominent",
+      "repetitive"
+    ],
+    "pattern": "a prominent cowbell melody playing a syncopated, repetitive riff",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent cowbell melody playing a syncopated, repetitive riff.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "prominent",
+      "repetitive"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "The arrangement features a prominent cowbell melody playing a syncopated, repetitive riff.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "808 bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "the root notes with heavy saturation",
+    "effects": [],
+    "chords": [],
+    "sentence": "A distorted 808 bassline follows the root notes with heavy saturation.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "the root notes with heavy saturation",
+    "effects": [],
+    "chords": [],
+    "sentence": "A distorted 808 bassline follows the root notes with heavy saturation.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "sentence": "A distorted 808 bassline follows the root notes with heavy saturation.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "hi-hat",
+      "clap",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "punchy",
+      "sharp",
+      "rapid-fire"
+    ],
+    "pattern": "of a punchy kick, sharp claps on the backbeat",
+    "effects": [],
+    "chords": [],
+    "sentence": "The drum kit consists of a punchy kick, sharp claps on the backbeat, and rapid-fire closed hi-hat rolls.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "processed"
+    ],
+    "pattern": "",
+    "effects": [
+      "distortion",
+      "reverb"
+    ],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Vocal samples are heavily processed with distortion, pitch-shifting, and reverb, often repeating short phrases.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "mixing",
+    "entity": [
+      "processed"
+    ],
+    "modifiers": [
+      "processed"
+    ],
+    "sentence": "Vocal samples are heavily processed with distortion, pitch-shifting, and reverb, often repeating short phrases.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distortion",
+      "reverb"
+    ],
+    "modifiers": [
+      "processed"
+    ],
+    "sentence": "Vocal samples are heavily processed with distortion, pitch-shifting, and reverb, often repeating short phrases.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "dark",
+      "atmospheric"
+    ],
+    "pattern": "a background layer during transitions",
+    "effects": [],
+    "chords": [],
+    "sentence": "A dark, atmospheric synth pad provides a background layer during transitions.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "dark",
+      "atmospheric"
+    ],
+    "pattern": "a background layer during transitions",
+    "effects": [],
+    "chords": [],
+    "sentence": "A dark, atmospheric synth pad provides a background layer during transitions.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "cowbell"
+    ],
+    "modifiers": [
+      "compressed",
+      "aggressive",
+      "low"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The mix is characterized by high-frequency cowbell accents and a compressed, aggressive low end.",
+    "song_id": "S018_11",
+    "genre": "Drift Phonk",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Acid House.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "high"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Roland TB-303 bassline with high resonance and automated filter cutoff sweeps.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "hi-hat",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "prominent",
+      "heavy"
+    ],
+    "pattern": "a prominent open hi-hat on the off-beats and a heavy four-on-the-floor kick",
+    "effects": [],
+    "chords": [],
+    "sentence": "Roland TR-909 drum machine patterns featuring a prominent open hi-hat on the off-beats and a heavy four-on-the-floor kick.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "processed"
+    ],
+    "pattern": "",
+    "effects": [
+      "delay and reverb"
+    ],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Distorted vocal samples processed with delay and reverb.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "mixing",
+    "entity": [
+      "processed"
+    ],
+    "modifiers": [
+      "processed"
+    ],
+    "sentence": "Distorted vocal samples processed with delay and reverb.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted",
+      "delay",
+      "reverb"
+    ],
+    "modifiers": [
+      "processed"
+    ],
+    "sentence": "Distorted vocal samples processed with delay and reverb.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 125,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "125 BPM, C minor.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "harmony",
+    "entity": [
+      "modulation"
+    ],
+    "modifiers": [],
+    "chords": [],
+    "sentence": "The 303 sequence uses a 16-step pattern with slides and accents, gradually increasing in brightness through filter modulation.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "hi-hat",
+      "percussion"
+    ],
+    "modifiers": [
+      "sharp",
+      "driving"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Percussion layers include a sharp snare on beats 2 and 4 and a driving closed hi-hat sixteenth-note pattern.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_sound",
+    "entity": [
+      "white noise"
+    ],
+    "modifiers": [
+      "occasional"
+    ],
+    "sentence": "Occasional white noise risers and crashes punctuate transitions.",
+    "song_id": "S018_12",
+    "genre": "Acid House",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Cumbia with English and Spanish vocals.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "accordion",
+    "kit": "other",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "melodic",
+      "rhythmic"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent accordion playing melodic hooks and rhythmic stabs",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent accordion playing melodic hooks and rhythmic stabs.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "instruments_mentioned": [
+      "accordion"
+    ],
+    "sentence": "The arrangement features a prominent accordion playing melodic hooks and rhythmic stabs.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "cowbell"
+    ],
+    "modifiers": [
+      "constant"
+    ],
+    "pattern": "a constant scraping sixteenth-note pattern, while a cowbell accents the offbeats",
+    "effects": [],
+    "chords": [],
+    "sentence": "A guiro provides a constant scraping sixteenth-note pattern, while a cowbell accents the offbeats.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "syncopated"
+    ],
+    "modifiers": [],
+    "pattern": "a syncopated two-bar pattern typical of the genre",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar plays a syncopated two-bar pattern typical of the genre.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "bass guitar",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "syncopated"
+    ],
+    "modifiers": [],
+    "pattern": "a syncopated two-bar pattern typical of the genre",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar plays a syncopated two-bar pattern typical of the genre.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "rhythmic"
+    ],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "rhythmic skank chords on the upbeats",
+    "effects": [],
+    "chords": [],
+    "sentence": "A clean electric guitar performs rhythmic skank chords on the upbeats.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "rhythmic"
+    ],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "rhythmic skank chords on the upbeats",
+    "effects": [],
+    "chords": [],
+    "sentence": "A clean electric guitar performs rhythmic skank chords on the upbeats.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "drums"
+    ],
+    "modifiers": [
+      "steady",
+      "crisp"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The drums consist of a steady kick on beats one and three with a crisp snare on two and four.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "singing"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals alternate between lead singing and group shouts.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 95,
+      "key": "g major",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "The tempo is 95 BPM in the key of G major.",
+    "song_id": "S018_13",
+    "genre": "Cumbia",
+    "source": "sp"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Alternative rock with shoegaze and post-punk influences.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "arpeggiated"
+    ],
+    "modifiers": [
+      "clean",
+      "repetitive"
+    ],
+    "pattern": "a repetitive arpeggiated melody with chorus and delay effects",
+    "effects": [
+      "chorus and delay"
+    ],
+    "chords": [],
+    "sentence": "Clean electric guitar plays a repetitive arpeggiated melody with chorus and delay effects.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "arpeggiated"
+    ],
+    "modifiers": [
+      "clean",
+      "repetitive"
+    ],
+    "pattern": "a repetitive arpeggiated melody with chorus and delay effects",
+    "effects": [
+      "chorus and delay"
+    ],
+    "chords": [],
+    "sentence": "Clean electric guitar plays a repetitive arpeggiated melody with chorus and delay effects.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "with chorus",
+      "delay"
+    ],
+    "modifiers": [
+      "clean",
+      "repetitive"
+    ],
+    "sentence": "Clean electric guitar plays a repetitive arpeggiated melody with chorus and delay effects.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "distorted electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "sustain",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "with sustained power chords and feedback swells",
+    "effects": [
+      "feedback"
+    ],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "Distorted electric guitar enters with sustained power chords and feedback swells.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "sustain",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "with sustained power chords and feedback swells",
+    "effects": [
+      "feedback"
+    ],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "Distorted electric guitar enters with sustained power chords and feedback swells.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [],
+    "sentence": "Distorted electric guitar enters with sustained power chords and feedback swells.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "driving"
+    ],
+    "modifiers": [
+      "driving"
+    ],
+    "pattern": "driving eighth notes",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar plays driving eighth notes.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "bass guitar",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "driving"
+    ],
+    "modifiers": [
+      "driving"
+    ],
+    "pattern": "driving eighth notes",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar plays driving eighth notes.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "hi-hat",
+      "crash cymbal",
+      "drums"
+    ],
+    "modifiers": [
+      "steady",
+      "frequent"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Drums feature a steady backbeat with frequent crash cymbal accents and sixteenth-note hi-hat patterns.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [
+      "heavy reverb"
+    ],
+    "chords": [],
+    "delivery": [
+      "breathy tone"
+    ],
+    "sentence": "Male vocals are delivered with a melodic, slightly breathy tone and heavy reverb.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "reverb"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "sentence": "Male vocals are delivered with a melodic, slightly breathy tone and heavy reverb.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "aggressive"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement builds in intensity with layered guitar textures and more aggressive drumming in the choruses.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "aggressive"
+    ],
+    "instruments_mentioned": [
+      "guitar"
+    ],
+    "sentence": "The arrangement builds in intensity with layered guitar textures and more aggressive drumming in the choruses.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 135,
+      "key": "e major",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Key of E major, 135 BPM.",
+    "song_id": "S018_14",
+    "genre": "Shoegaze",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums",
+      "percussion"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Amapiano with heavy log drum and percussion focus.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "syncopated",
+      "percussive"
+    ],
+    "modifiers": [
+      "deep"
+    ],
+    "pattern": "a deep, percussive log drum bassline playing syncopated patterns",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a deep, percussive log drum bassline playing syncopated patterns.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums"
+    ],
+    "modifiers": [
+      "deep"
+    ],
+    "pattern": "a deep, percussive log drum bassline playing syncopated patterns",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a deep, percussive log drum bassline playing syncopated patterns.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "shaker"
+    ],
+    "modifiers": [
+      "constant"
+    ],
+    "pattern": "a constant sixteenth-note rhythmic layer",
+    "effects": [],
+    "chords": [],
+    "sentence": "Shakers and woodblocks provide a constant sixteenth-note rhythmic layer.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "melodic"
+    ],
+    "modifiers": [
+      "clean",
+      "brief",
+      "muted"
+    ],
+    "pattern": "brief, muted melodic fragments",
+    "effects": [],
+    "chords": [],
+    "sentence": "A clean electric guitar plays brief, muted melodic fragments.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "melodic"
+    ],
+    "modifiers": [
+      "clean",
+      "brief",
+      "muted"
+    ],
+    "pattern": "brief, muted melodic fragments",
+    "effects": [],
+    "chords": [],
+    "sentence": "A clean electric guitar plays brief, muted melodic fragments.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals are delivered in a rhythmic, chant-like style with call-and-response elements.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "call-and-response"
+    ],
+    "modifiers": [],
+    "sentence": "Male vocals are delivered in a rhythmic, chant-like style with call-and-response elements.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "percussion"
+    ],
+    "modifiers": [
+      "bright"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Bright cowbells and metallic percussion accents punctuate the groove.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 113,
+      "key": "g minor",
+      "time_signature": null
+    },
+    "modifiers": [
+      "steady"
+    ],
+    "sentence": "The track maintains a steady 113 BPM in the key of G minor.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums"
+    ],
+    "modifiers": [
+      "sudden"
+    ],
+    "pattern": "rhythmic tension",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement uses sudden drops and re-entries of the log drum to create rhythmic tension.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "sudden"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "The arrangement uses sudden drops and re-entries of the log drum to create rhythmic tension.",
+    "song_id": "S018_15",
+    "genre": "Afrobeats",
+    "source": "sp"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 138,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Uplifting Trance at 138 BPM in F Major.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "sub-bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent four-on-the-floor kick drum and a sidechained sub-bass",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent four-on-the-floor kick drum and a sidechained sub-bass.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent four-on-the-floor kick drum and a sidechained sub-bass",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent four-on-the-floor kick drum and a sidechained sub-bass.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "drums"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent four-on-the-floor kick drum and a sidechained sub-bass",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent four-on-the-floor kick drum and a sidechained sub-bass.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "delay",
+      "reverb"
+    ],
+    "modifiers": [
+      "bright",
+      "heavy"
+    ],
+    "sentence": "A bright, detuned supersaw lead plays a melodic hook with heavy delay and reverb.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "rhythmic counterpoint",
+    "effects": [],
+    "chords": [],
+    "sentence": "Staccato synth plucks provide rhythmic counterpoint.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "atmospheric"
+    ],
+    "pattern": "transitions between sections",
+    "effects": [],
+    "chords": [],
+    "sentence": "Atmospheric pads and white noise sweeps create transitions between sections.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "effect_sound",
+    "entity": [
+      "white noise"
+    ],
+    "modifiers": [
+      "atmospheric"
+    ],
+    "sentence": "Atmospheric pads and white noise sweeps create transitions between sections.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "voice"
+    ],
+    "modifiers": [
+      "deep",
+      "processed"
+    ],
+    "pattern": "spoken-word cues throughout the arrangement",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "A deep, processed male voice provides spoken-word cues throughout the arrangement.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "mixing",
+    "entity": [
+      "processed"
+    ],
+    "modifiers": [
+      "deep",
+      "processed"
+    ],
+    "sentence": "A deep, processed male voice provides spoken-word cues throughout the arrangement.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "deep",
+      "processed"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "A deep, processed male voice provides spoken-word cues throughout the arrangement.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "hi-hat",
+      "percussion"
+    ],
+    "modifiers": [
+      "driving"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The percussion includes a driving 16th-note hi-hat pattern and a snare roll that builds tension before the drop.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "lead",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "A key change occurs in the final section, modulating the lead melody and bassline.",
+    "song_id": "S018_16",
+    "genre": "Trance",
+    "source": "sp"
   }
 ]
