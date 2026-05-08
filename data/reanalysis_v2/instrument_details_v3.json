@@ -1,10 +1,10 @@
 {
   "electric bass": {
-    "count": 345,
+    "count": 387,
     "top_modifiers": [
       [
         "warm",
-        83
+        86
       ],
       [
         "clean",
@@ -12,35 +12,35 @@
       ],
       [
         "bright",
-        30
+        31
       ],
       [
         "rounded",
-        29
-      ],
-      [
-        "crisp",
-        24
+        31
       ],
       [
         "occasional",
+        26
+      ],
+      [
+        "crisp",
+        25
+      ],
+      [
+        "steady",
         22
       ],
       [
         "prominent",
-        19
+        20
       ],
       [
-        "steady",
-        18
+        "sub-heavy",
+        17
       ],
       [
         "subtle",
         17
-      ],
-      [
-        "sub-heavy",
-        15
       ]
     ],
     "top_patterns": [
@@ -53,11 +53,11 @@
         9
       ],
       [
-        "a steady fingerstyle pattern with alternating bass notes and",
-        6
+        "the root notes of the guitar progression",
+        7
       ],
       [
-        "the root notes of the guitar progression",
+        "a steady fingerstyle pattern with alternating bass notes and",
         6
       ],
       [
@@ -69,6 +69,10 @@
       [
         "vibrato",
         2
+      ],
+      [
+        "sidechain",
+        1
       ]
     ],
     "top_chords": [
@@ -82,7 +86,7 @@
       ],
       [
         "jazz chords",
-        3
+        4
       ],
       [
         "power chords",
@@ -95,15 +99,15 @@
     ]
   },
   "electric guitar": {
-    "count": 279,
+    "count": 297,
     "top_modifiers": [
       [
         "clean",
-        226
+        238
       ],
       [
         "light",
-        71
+        72
       ],
       [
         "bright",
@@ -111,7 +115,7 @@
       ],
       [
         "muted",
-        33
+        35
       ],
       [
         "subtle",
@@ -119,23 +123,23 @@
       ],
       [
         "occasional",
-        19
+        20
+      ],
+      [
+        "repetitive",
+        18
       ],
       [
         "jazzy",
         17
       ],
       [
-        "repetitive",
+        "slight",
         15
       ],
       [
         "driving",
         13
-      ],
-      [
-        "slight",
-        12
       ]
     ],
     "top_patterns": [
@@ -163,7 +167,7 @@
     "top_effects": [
       [
         "light chorus and reverb",
-        40
+        41
       ],
       [
         "light chorus and delay",
@@ -178,8 +182,8 @@
         5
       ],
       [
-        "light vibrato",
-        2
+        "vibrato",
+        4
       ]
     ],
     "top_chords": [
@@ -193,7 +197,7 @@
       ],
       [
         "seventh chords",
-        20
+        21
       ],
       [
         "chord progression",
@@ -206,11 +210,11 @@
     ]
   },
   "clean electric guitar": {
-    "count": 180,
+    "count": 191,
     "top_modifiers": [
       [
         "clean",
-        180
+        191
       ],
       [
         "light",
@@ -222,7 +226,7 @@
       ],
       [
         "muted",
-        25
+        26
       ],
       [
         "bright",
@@ -234,6 +238,10 @@
       ],
       [
         "repetitive",
+        14
+      ],
+      [
+        "slight",
         12
       ],
       [
@@ -241,12 +249,8 @@
         9
       ],
       [
-        "slight",
-        9
-      ],
-      [
-        "sparse",
-        3
+        "warm",
+        4
       ]
     ],
     "top_patterns": [
@@ -289,8 +293,8 @@
         5
       ],
       [
-        "light vibrato",
-        2
+        "vibrato",
+        3
       ]
     ],
     "top_chords": [
@@ -304,7 +308,7 @@
       ],
       [
         "seventh chords",
-        16
+        17
       ],
       [
         "ninth chords",
@@ -316,32 +320,127 @@
       ]
     ]
   },
-  "synthesizer": {
-    "count": 160,
+  "acoustic guitar": {
+    "count": 181,
     "top_modifiers": [
       [
-        "subtle",
-        42
+        "steady",
+        58
       ],
       [
-        "bright",
-        37
+        "clean",
+        27
       ],
       [
-        "shimmering",
-        16
+        "sparse",
+        22
       ],
       [
-        "digital",
-        15
+        "prominent",
+        13
       ],
       [
-        "atmospheric",
-        14
+        "warm",
+        12
       ],
       [
         "occasional",
-        12
+        11
+      ],
+      [
+        "repetitive",
+        11
+      ],
+      [
+        "bright",
+        10
+      ],
+      [
+        "light",
+        8
+      ],
+      [
+        "intimate",
+        4
+      ]
+    ],
+    "top_patterns": [
+      [
+        "a steady fingerstyle pattern with alternating bass notes and",
+        6
+      ],
+      [
+        "between the acoustic guitar and the vocal melody",
+        6
+      ],
+      [
+        "a steady eighth-note pattern",
+        5
+      ],
+      [
+        "between the rhythmic acoustic guitar and the vocal melody",
+        4
+      ],
+      [
+        "a repetitive arpeggiated pattern in 4/4 time",
+        4
+      ]
+    ],
+    "top_effects": [
+      [
+        "short room reverb",
+        1
+      ],
+      [
+        "light plate reverb",
+        1
+      ],
+      [
+        "vibrato",
+        1
+      ]
+    ],
+    "top_chords": [
+      [
+        "arpeggiated chords",
+        10
+      ],
+      [
+        "jazz chords",
+        6
+      ],
+      [
+        "harmonic support",
+        1
+      ]
+    ]
+  },
+  "synthesizer": {
+    "count": 166,
+    "top_modifiers": [
+      [
+        "subtle",
+        43
+      ],
+      [
+        "bright",
+        38
+      ],
+      [
+        "shimmering",
+        17
+      ],
+      [
+        "digital",
+        16
+      ],
+      [
+        "atmospheric",
+        15
+      ],
+      [
+        "occasional",
+        13
       ],
       [
         "crisp",
@@ -352,12 +451,12 @@
         7
       ],
       [
-        "clean",
+        "high-pitched",
         6
       ],
       [
-        "high-pitched",
-        5
+        "clean",
+        6
       ]
     ],
     "top_patterns": [
@@ -406,194 +505,28 @@
       ]
     ]
   },
-  "acoustic guitar": {
-    "count": 149,
+  "guitar": {
+    "count": 130,
     "top_modifiers": [
       [
-        "steady",
-        56
+        "sparse",
+        35
+      ],
+      [
+        "warm",
+        16
       ],
       [
         "clean",
-        27
-      ],
-      [
-        "sparse",
-        22
-      ],
-      [
-        "prominent",
         13
       ],
       [
-        "warm",
-        12
-      ],
-      [
-        "occasional",
-        11
-      ],
-      [
-        "repetitive",
-        11
-      ],
-      [
-        "bright",
-        9
-      ],
-      [
-        "light",
-        8
-      ],
-      [
-        "intimate",
-        4
-      ]
-    ],
-    "top_patterns": [
-      [
-        "a steady fingerstyle pattern with alternating bass notes and",
-        6
-      ],
-      [
-        "between the acoustic guitar and the vocal melody",
-        6
-      ],
-      [
-        "a steady eighth-note pattern",
-        5
-      ],
-      [
-        "between the rhythmic acoustic guitar and the vocal melody",
-        4
-      ],
-      [
-        "a repetitive arpeggiated pattern in 4/4 time",
-        4
-      ]
-    ],
-    "top_effects": [
-      [
-        "short room reverb",
-        1
-      ],
-      [
-        "light plate reverb",
-        1
-      ]
-    ],
-    "top_chords": [
-      [
-        "arpeggiated chords",
-        10
-      ],
-      [
-        "jazz chords",
-        4
-      ]
-    ]
-  },
-  "bass guitar": {
-    "count": 111,
-    "top_modifiers": [
-      [
-        "warm",
-        17
-      ],
-      [
-        "rounded",
-        15
-      ],
-      [
-        "frequent",
-        7
-      ],
-      [
-        "clean",
-        6
-      ],
-      [
-        "gritty",
-        5
-      ],
-      [
-        "thick",
-        5
-      ],
-      [
-        "bright",
-        5
-      ],
-      [
-        "occasional",
-        4
-      ],
-      [
-        "driving",
-        3
-      ],
-      [
-        "tight",
-        3
-      ]
-    ],
-    "top_patterns": [
-      [
-        "syncopated sixteenth-note patterns",
-        5
-      ],
-      [
-        "the kick drum with a warm, rounded tone",
-        3
-      ],
-      [
-        "the kick drum with a thick, overdriven tone",
-        3
-      ],
-      [
-        "a busy, percussive line with frequent slides and pops",
-        3
-      ],
-      [
-        "the kick drum with a consistent eighth-note pulse",
-        3
-      ]
-    ],
-    "top_effects": [
-      [
-        "vibrato",
-        1
-      ]
-    ],
-    "top_chords": [
-      [
-        "chord progression",
-        2
-      ],
-      [
-        "power chords",
-        2
-      ]
-    ]
-  },
-  "guitar": {
-    "count": 107,
-    "top_modifiers": [
-      [
-        "sparse",
-        34
-      ],
-      [
-        "warm",
-        15
-      ],
-      [
-        "clean",
+        "steady",
         12
       ],
       [
         "dry",
-        9
+        11
       ],
       [
         "occasional",
@@ -604,8 +537,8 @@
         7
       ],
       [
-        "steady",
-        6
+        "consistent",
+        5
       ],
       [
         "intimate",
@@ -614,10 +547,6 @@
       [
         "centered",
         4
-      ],
-      [
-        "consistent",
-        3
       ]
     ],
     "top_patterns": [
@@ -631,7 +560,7 @@
       ],
       [
         "the root notes of the guitar progression",
-        4
+        5
       ],
       [
         "between the guitar and the vocal melody",
@@ -679,8 +608,198 @@
       ]
     ]
   },
+  "bass guitar": {
+    "count": 115,
+    "top_modifiers": [
+      [
+        "warm",
+        18
+      ],
+      [
+        "rounded",
+        16
+      ],
+      [
+        "frequent",
+        7
+      ],
+      [
+        "clean",
+        6
+      ],
+      [
+        "occasional",
+        5
+      ],
+      [
+        "gritty",
+        5
+      ],
+      [
+        "thick",
+        5
+      ],
+      [
+        "bright",
+        5
+      ],
+      [
+        "consistent",
+        4
+      ],
+      [
+        "driving",
+        3
+      ]
+    ],
+    "top_patterns": [
+      [
+        "syncopated sixteenth-note patterns",
+        5
+      ],
+      [
+        "the kick drum with a warm, rounded tone",
+        3
+      ],
+      [
+        "the kick drum with a thick, overdriven tone",
+        3
+      ],
+      [
+        "a busy, percussive line with frequent slides and pops",
+        3
+      ],
+      [
+        "the kick drum with a consistent eighth-note pulse",
+        3
+      ]
+    ],
+    "top_effects": [
+      [
+        "vibrato",
+        1
+      ]
+    ],
+    "top_chords": [
+      [
+        "chord progression",
+        2
+      ],
+      [
+        "power chords",
+        2
+      ]
+    ]
+  },
+  "piano": {
+    "count": 69,
+    "top_modifiers": [
+      [
+        "subtle",
+        7
+      ],
+      [
+        "bright",
+        6
+      ],
+      [
+        "occasional",
+        6
+      ],
+      [
+        "warm",
+        5
+      ],
+      [
+        "spacious",
+        5
+      ],
+      [
+        "clean",
+        5
+      ],
+      [
+        "digital",
+        4
+      ],
+      [
+        "steady",
+        3
+      ],
+      [
+        "moderate",
+        3
+      ],
+      [
+        "sparse",
+        3
+      ]
+    ],
+    "top_patterns": [
+      [
+        "a sense of space",
+        4
+      ],
+      [
+        "a spacious acoustic environment",
+        4
+      ],
+      [
+        "high-fidelity room reverb on the piano and strings",
+        1
+      ],
+      [
+        "a steady quarter-note pulse with occasional syncopated flour",
+        1
+      ],
+      [
+        "a syncopated synth bassline, bright digital piano chords",
+        1
+      ]
+    ],
+    "top_effects": [
+      [
+        "moderate hall reverb",
+        2
+      ],
+      [
+        "subtle reverb",
+        2
+      ],
+      [
+        "light plate reverb",
+        1
+      ],
+      [
+        "light hall reverb",
+        1
+      ]
+    ],
+    "top_chords": [
+      [
+        "arpeggiated chords",
+        3
+      ],
+      [
+        "block chords",
+        3
+      ],
+      [
+        "sustained chords",
+        3
+      ],
+      [
+        "harmonic padding",
+        2
+      ],
+      [
+        "minor seventh",
+        1
+      ]
+    ]
+  },
   "pad": {
-    "count": 59,
+    "count": 62,
     "top_modifiers": [
       [
         "subtle",
@@ -745,7 +864,12 @@
         1
       ]
     ],
-    "top_effects": [],
+    "top_effects": [
+      [
+        "sidechain",
+        1
+      ]
+    ],
     "top_chords": [
       [
         "harmonic density",
@@ -769,123 +893,20 @@
       ]
     ]
   },
-  "piano": {
-    "count": 58,
-    "top_modifiers": [
-      [
-        "subtle",
-        7
-      ],
-      [
-        "warm",
-        5
-      ],
-      [
-        "spacious",
-        5
-      ],
-      [
-        "occasional",
-        5
-      ],
-      [
-        "bright",
-        4
-      ],
-      [
-        "digital",
-        4
-      ],
-      [
-        "clean",
-        4
-      ],
-      [
-        "moderate",
-        3
-      ],
-      [
-        "sparse",
-        3
-      ],
-      [
-        "mid-range",
-        2
-      ]
-    ],
-    "top_patterns": [
-      [
-        "a sense of space",
-        4
-      ],
-      [
-        "a spacious acoustic environment",
-        4
-      ],
-      [
-        "high-fidelity room reverb on the piano and strings",
-        1
-      ],
-      [
-        "a steady quarter-note pulse with occasional syncopated flour",
-        1
-      ],
-      [
-        "a syncopated synth bassline, bright digital piano chords",
-        1
-      ]
-    ],
-    "top_effects": [
-      [
-        "moderate hall reverb",
-        2
-      ],
-      [
-        "subtle reverb",
-        2
-      ],
-      [
-        "light plate reverb",
-        1
-      ],
-      [
-        "light hall reverb",
-        1
-      ]
-    ],
-    "top_chords": [
-      [
-        "arpeggiated chords",
-        3
-      ],
-      [
-        "sustained chords",
-        3
-      ],
-      [
-        "block chords",
-        2
-      ],
-      [
-        "harmonic padding",
-        2
-      ],
-      [
-        "minor seventh",
-        1
-      ]
-    ]
-  },
   "synth bass": {
-    "count": 57,
+    "count": 60,
     "top_modifiers": [
       [
         "sub-heavy",
-        13
+        14
       ],
       [
         "warm",
         12
+      ],
+      [
+        "deep",
+        8
       ],
       [
         "crisp",
@@ -896,24 +917,20 @@
         7
       ],
       [
-        "deep",
-        6
-      ],
-      [
         "clean",
         5
       ],
       [
-        "punchy",
-        3
-      ],
-      [
         "bright",
-        3
+        4
       ],
       [
         "driving",
-        2
+        3
+      ],
+      [
+        "punchy",
+        3
       ],
       [
         "low",
@@ -955,7 +972,7 @@
     ]
   },
   "synth pad": {
-    "count": 53,
+    "count": 54,
     "top_modifiers": [
       [
         "subtle",
@@ -963,7 +980,7 @@
       ],
       [
         "atmospheric",
-        10
+        11
       ],
       [
         "bright",
@@ -971,7 +988,7 @@
       ],
       [
         "shimmering",
-        6
+        7
       ],
       [
         "occasional",
@@ -1044,8 +1061,77 @@
       ]
     ]
   },
+  "fingerpicked acoustic guitar": {
+    "count": 50,
+    "top_modifiers": [
+      [
+        "steady",
+        22
+      ],
+      [
+        "clean",
+        19
+      ],
+      [
+        "repetitive",
+        10
+      ],
+      [
+        "warm",
+        5
+      ],
+      [
+        "occasional",
+        5
+      ],
+      [
+        "resonant",
+        2
+      ],
+      [
+        "prominent",
+        2
+      ],
+      [
+        "natural",
+        2
+      ],
+      [
+        "sparse",
+        2
+      ],
+      [
+        "soft",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "a repetitive arpeggiated pattern in 4/4 time",
+        4
+      ],
+      [
+        "a steady eighth-note pattern",
+        4
+      ],
+      [
+        "a repetitive arpeggiated pattern in 4/4 time at 72 BPM in th",
+        3
+      ],
+      [
+        "a syncopated folk-style pattern in G Major at 84 BPM",
+        3
+      ],
+      [
+        "a syncopated four-bar loop with prominent fret noise",
+        2
+      ]
+    ],
+    "top_effects": [],
+    "top_chords": []
+  },
   "grand piano": {
-    "count": 47,
+    "count": 49,
     "top_modifiers": [
       [
         "resonant",
@@ -1114,6 +1200,10 @@
       [
         "light chorus and delay",
         1
+      ],
+      [
+        "tremolo",
+        1
       ]
     ],
     "top_chords": [
@@ -1140,7 +1230,7 @@
     ]
   },
   "slap bass": {
-    "count": 47,
+    "count": 48,
     "top_modifiers": [
       [
         "bright",
@@ -1148,7 +1238,7 @@
       ],
       [
         "prominent",
-        9
+        10
       ],
       [
         "crisp",
@@ -1208,88 +1298,23 @@
     "top_effects": [],
     "top_chords": []
   },
-  "fingerpicked acoustic guitar": {
-    "count": 47,
-    "top_modifiers": [
-      [
-        "steady",
-        21
-      ],
-      [
-        "clean",
-        19
-      ],
-      [
-        "repetitive",
-        10
-      ],
-      [
-        "warm",
-        5
-      ],
-      [
-        "occasional",
-        5
-      ],
-      [
-        "resonant",
-        2
-      ],
-      [
-        "prominent",
-        2
-      ],
-      [
-        "natural",
-        2
-      ],
-      [
-        "sparse",
-        2
-      ],
-      [
-        "soft",
-        1
-      ]
-    ],
-    "top_patterns": [
-      [
-        "a repetitive arpeggiated pattern in 4/4 time",
-        4
-      ],
-      [
-        "a steady eighth-note pattern",
-        4
-      ],
-      [
-        "a repetitive arpeggiated pattern in 4/4 time at 72 BPM in th",
-        3
-      ],
-      [
-        "a syncopated folk-style pattern in G Major at 84 BPM",
-        3
-      ],
-      [
-        "a syncopated four-bar loop with prominent fret noise",
-        2
-      ]
-    ],
-    "top_effects": [],
-    "top_chords": []
-  },
   "strings": {
-    "count": 35,
+    "count": 43,
     "top_modifiers": [
       [
         "steady",
         7
       ],
       [
+        "dry",
+        5
+      ],
+      [
         "occasional",
         5
       ],
       [
-        "dry",
+        "clean",
         4
       ],
       [
@@ -1297,16 +1322,16 @@
         3
       ],
       [
-        "light",
+        "natural",
         3
       ],
       [
-        "natural",
-        2
+        "minimal",
+        3
       ],
       [
-        "clean",
-        2
+        "light",
+        3
       ],
       [
         "moderate",
@@ -1315,10 +1340,6 @@
       [
         "prominent",
         2
-      ],
-      [
-        "slow",
-        1
       ]
     ],
     "top_patterns": [
@@ -1365,7 +1386,7 @@
     ]
   },
   "distorted electric guitar": {
-    "count": 30,
+    "count": 31,
     "top_modifiers": [
       [
         "driving",
@@ -1373,6 +1394,10 @@
       ],
       [
         "aggressive",
+        2
+      ],
+      [
+        "heavy",
         2
       ],
       [
@@ -1384,7 +1409,7 @@
         1
       ],
       [
-        "heavy",
+        "rapid",
         1
       ]
     ],
@@ -1414,6 +1439,10 @@
       [
         "heavy compression",
         1
+      ],
+      [
+        "heavy spring reverb",
+        1
       ]
     ],
     "top_chords": [
@@ -1435,12 +1464,90 @@
       ]
     ]
   },
+  "brass section": {
+    "count": 28,
+    "top_modifiers": [
+      [
+        "bright",
+        12
+      ],
+      [
+        "subtle",
+        3
+      ],
+      [
+        "occasional",
+        2
+      ],
+      [
+        "shimmering",
+        2
+      ],
+      [
+        "digital",
+        2
+      ],
+      [
+        "punchy",
+        2
+      ],
+      [
+        "prominent",
+        2
+      ],
+      [
+        "muted",
+        1
+      ],
+      [
+        "powerful",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "staccato stabs and melodic flourishes during transitions",
+        1
+      ],
+      [
+        "with staccato stabs on the off-beats",
+        1
+      ],
+      [
+        "staccato stabs on the off-beats",
+        1
+      ],
+      [
+        "a bright brass section with trumpets and trombones, slap bas",
+        1
+      ],
+      [
+        "emphasize the downbeats during the chorus",
+        1
+      ]
+    ],
+    "top_effects": [],
+    "top_chords": [
+      [
+        "harmonic depth",
+        2
+      ],
+      [
+        "harmonic support",
+        1
+      ],
+      [
+        "harmonic accents",
+        1
+      ]
+    ]
+  },
   "sub-bass": {
-    "count": 25,
+    "count": 27,
     "top_modifiers": [
       [
         "deep",
-        5
+        6
       ],
       [
         "crisp",
@@ -1451,15 +1558,15 @@
         2
       ],
       [
+        "digital",
+        2
+      ],
+      [
         "subtle",
         2
       ],
       [
         "prominent",
-        1
-      ],
-      [
-        "digital",
         1
       ],
       [
@@ -1510,7 +1617,7 @@
     ]
   },
   "acoustic piano": {
-    "count": 25,
+    "count": 27,
     "top_modifiers": [
       [
         "bright",
@@ -1518,6 +1625,10 @@
       ],
       [
         "clean",
+        3
+      ],
+      [
+        "occasional",
         3
       ],
       [
@@ -1545,10 +1656,6 @@
         1
       ],
       [
-        "occasional",
-        1
-      ],
-      [
         "resonant",
         1
       ]
@@ -1556,6 +1663,10 @@
     "top_patterns": [
       [
         "rhythmic chord stabs on the off-beats",
+        2
+      ],
+      [
+        "harmonic support with jazz voicings and occasional trills",
         2
       ],
       [
@@ -1569,17 +1680,17 @@
       [
         "arpeggiated chords in the lower register with sustained peda",
         1
-      ],
-      [
-        "rhythmic chord stabs",
-        1
       ]
     ],
     "top_effects": [],
     "top_chords": [
       [
         "harmonic support",
-        3
+        5
+      ],
+      [
+        "jazz voicings",
+        2
       ],
       [
         "arpeggiated chords",
@@ -1592,34 +1703,97 @@
       [
         "block chords",
         1
-      ],
-      [
-        "minor seventh",
-        1
       ]
     ]
   },
-  "brass section": {
-    "count": 23,
+  "violin": {
+    "count": 26,
     "top_modifiers": [
       [
-        "bright",
-        12
-      ],
-      [
-        "subtle",
+        "rapid",
         3
       ],
       [
-        "shimmering",
+        "prominent",
+        3
+      ],
+      [
+        "frequent",
         2
       ],
       [
-        "digital",
-        2
+        "dense",
+        1
+      ],
+      [
+        "high-energy",
+        1
+      ],
+      [
+        "full",
+        1
+      ],
+      [
+        "fast",
+        1
       ],
       [
         "occasional",
+        1
+      ],
+      [
+        "clean",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "on a solo violin playing a lyrical melody over a grand piano",
+        1
+      ],
+      [
+        "long-tail plate reverb on the violin and vocals",
+        1
+      ],
+      [
+        "harmonic support with sustained cello and violin lines",
+        1
+      ],
+      [
+        "sustained legato counter-melodies and harmonic support",
+        1
+      ],
+      [
+        "a violin and piano duo",
+        1
+      ]
+    ],
+    "top_effects": [
+      [
+        "vibrato",
+        2
+      ]
+    ],
+    "top_chords": [
+      [
+        "harmonic support",
+        2
+      ]
+    ]
+  },
+  "upright bass": {
+    "count": 25,
+    "top_modifiers": [
+      [
+        "occasional",
+        4
+      ],
+      [
+        "steady",
+        3
+      ],
+      [
+        "prominent",
         1
       ],
       [
@@ -1627,54 +1801,70 @@
         1
       ],
       [
-        "punchy",
+        "relaxed",
         1
       ],
       [
-        "prominent",
+        "warm",
+        1
+      ],
+      [
+        "soft",
+        1
+      ],
+      [
+        "subtle",
+        1
+      ],
+      [
+        "heavy",
+        1
+      ],
+      [
+        "consistent",
         1
       ]
     ],
     "top_patterns": [
       [
-        "staccato stabs and melodic flourishes during transitions",
+        "a two-beat pattern",
+        2
+      ],
+      [
+        "a traditional bossa nova two-beat pattern",
         1
       ],
       [
-        "with staccato stabs on the off-beats",
+        "of a grand piano, upright bass",
         1
       ],
       [
-        "staccato stabs on the off-beats",
+        "a walking line in a relaxed swing feel",
         1
       ],
       [
-        "a bright brass section with trumpets and trombones, slap bas",
-        1
-      ],
-      [
-        "emphasize the downbeats during the chorus",
+        "a fingerstyle acoustic guitar, a warm upright bass",
         1
       ]
     ],
     "top_effects": [],
     "top_chords": [
       [
-        "harmonic support",
+        "harmonic accompaniment",
         1
       ],
       [
-        "harmonic depth",
+        "jazz voicings",
         1
       ],
       [
-        "harmonic accents",
+        "jazz chords",
         1
       ]
     ]
   },
   "electric piano": {
-    "count": 22,
+    "count": 24,
     "top_modifiers": [
       [
         "subtle",
@@ -1690,6 +1880,10 @@
       ],
       [
         "bright",
+        2
+      ],
+      [
+        "soft",
         2
       ],
       [
@@ -1710,10 +1904,6 @@
       ],
       [
         "clean",
-        1
-      ],
-      [
-        "soft",
         1
       ]
     ],
@@ -1747,7 +1937,7 @@
       ],
       [
         "harmonic support",
-        2
+        3
       ],
       [
         "seventh chords",
@@ -1759,6 +1949,147 @@
       ],
       [
         "sustained chord",
+        1
+      ]
+    ]
+  },
+  "cello": {
+    "count": 23,
+    "top_modifiers": [
+      [
+        "steady",
+        2
+      ],
+      [
+        "sparse",
+        2
+      ],
+      [
+        "warm",
+        1
+      ],
+      [
+        "moderate",
+        1
+      ],
+      [
+        "prominent",
+        1
+      ],
+      [
+        "atmospheric",
+        1
+      ],
+      [
+        "shimmering",
+        1
+      ],
+      [
+        "high-pitched",
+        1
+      ],
+      [
+        "frequent",
+        1
+      ],
+      [
+        "occasional",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "a counter-melody in the lower register",
+        1
+      ],
+      [
+        "on a fingerpicked acoustic guitar and a legato cello",
+        1
+      ],
+      [
+        "with legato melodic counterpoints in the lower register",
+        1
+      ],
+      [
+        "harmonic support with sustained cello and violin lines",
+        1
+      ],
+      [
+        "a steady eighth-note pattern",
+        1
+      ]
+    ],
+    "top_effects": [
+      [
+        "moderate vibrato",
+        1
+      ]
+    ],
+    "top_chords": [
+      [
+        "harmonic support",
+        2
+      ]
+    ]
+  },
+  "nylon-string acoustic guitar": {
+    "count": 19,
+    "top_modifiers": [
+      [
+        "prominent",
+        5
+      ],
+      [
+        "steady",
+        4
+      ],
+      [
+        "frequent",
+        1
+      ],
+      [
+        "warm",
+        1
+      ],
+      [
+        "intimate",
+        1
+      ],
+      [
+        "occasional",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "rhythmic accompaniment with bossa nova comping patterns",
+        2
+      ],
+      [
+        "syncopated jazz chords with frequent hammer-ons and slides",
+        1
+      ],
+      [
+        "a fingerstyle pattern with prominent fret noise and a warm, ",
+        1
+      ],
+      [
+        "syncopated jazz chords with thumb-plucked bass notes",
+        1
+      ],
+      [
+        "arpeggiated chords with prominent finger-slide noise",
+        1
+      ]
+    ],
+    "top_effects": [],
+    "top_chords": [
+      [
+        "jazz chords",
+        5
+      ],
+      [
+        "arpeggiated chords",
         1
       ]
     ]
@@ -1817,125 +2148,8 @@
     ],
     "top_chords": []
   },
-  "cello": {
-    "count": 13,
-    "top_modifiers": [
-      [
-        "steady",
-        1
-      ],
-      [
-        "sparse",
-        1
-      ],
-      [
-        "warm",
-        1
-      ],
-      [
-        "moderate",
-        1
-      ]
-    ],
-    "top_patterns": [
-      [
-        "a counter-melody in the lower register",
-        1
-      ],
-      [
-        "on a fingerpicked acoustic guitar and a legato cello",
-        1
-      ],
-      [
-        "with legato melodic counterpoints in the lower register",
-        1
-      ],
-      [
-        "harmonic support with sustained cello and violin lines",
-        1
-      ],
-      [
-        "a steady eighth-note pattern",
-        1
-      ]
-    ],
-    "top_effects": [
-      [
-        "moderate vibrato",
-        1
-      ]
-    ],
-    "top_chords": [
-      [
-        "harmonic support",
-        2
-      ]
-    ]
-  },
-  "nylon-string acoustic guitar": {
-    "count": 12,
-    "top_modifiers": [
-      [
-        "prominent",
-        5
-      ],
-      [
-        "steady",
-        3
-      ],
-      [
-        "frequent",
-        1
-      ],
-      [
-        "warm",
-        1
-      ],
-      [
-        "intimate",
-        1
-      ],
-      [
-        "occasional",
-        1
-      ]
-    ],
-    "top_patterns": [
-      [
-        "syncopated jazz chords with frequent hammer-ons and slides",
-        1
-      ],
-      [
-        "a fingerstyle pattern with prominent fret noise and a warm, ",
-        1
-      ],
-      [
-        "syncopated jazz chords with thumb-plucked bass notes",
-        1
-      ],
-      [
-        "arpeggiated chords with prominent finger-slide noise",
-        1
-      ],
-      [
-        "a fingerstyle pattern with prominent bass notes and steady a",
-        1
-      ]
-    ],
-    "top_effects": [],
-    "top_chords": [
-      [
-        "jazz chords",
-        3
-      ],
-      [
-        "arpeggiated chords",
-        1
-      ]
-    ]
-  },
   "rhodes": {
-    "count": 11,
+    "count": 13,
     "top_modifiers": [
       [
         "subtle",
@@ -1959,6 +2173,10 @@
       ],
       [
         "clean",
+        1
+      ],
+      [
+        "soft",
         1
       ]
     ],
@@ -2004,80 +2222,6 @@
       ],
       [
         "harmonic warmth",
-        1
-      ]
-    ]
-  },
-  "upright bass": {
-    "count": 10,
-    "top_modifiers": [
-      [
-        "steady",
-        2
-      ],
-      [
-        "prominent",
-        1
-      ],
-      [
-        "muted",
-        1
-      ],
-      [
-        "relaxed",
-        1
-      ],
-      [
-        "warm",
-        1
-      ],
-      [
-        "soft",
-        1
-      ],
-      [
-        "occasional",
-        1
-      ],
-      [
-        "subtle",
-        1
-      ]
-    ],
-    "top_patterns": [
-      [
-        "a two-beat pattern",
-        1
-      ],
-      [
-        "a traditional bossa nova two-beat pattern",
-        1
-      ],
-      [
-        "of a grand piano, upright bass",
-        1
-      ],
-      [
-        "a walking line in a relaxed swing feel",
-        1
-      ],
-      [
-        "a fingerstyle acoustic guitar, a warm upright bass",
-        1
-      ]
-    ],
-    "top_effects": [],
-    "top_chords": [
-      [
-        "harmonic accompaniment",
-        1
-      ],
-      [
-        "jazz voicings",
-        1
-      ],
-      [
-        "jazz chords",
         1
       ]
     ]
@@ -2157,7 +2301,7 @@
     ]
   },
   "brass": {
-    "count": 8,
+    "count": 10,
     "top_modifiers": [
       [
         "digital",
@@ -2166,6 +2310,10 @@
       [
         "bright",
         3
+      ],
+      [
+        "rapid",
+        2
       ],
       [
         "shimmering",
@@ -2181,10 +2329,6 @@
       ],
       [
         "sudden",
-        1
-      ],
-      [
-        "rapid",
         1
       ],
       [
@@ -2218,8 +2362,54 @@
       ]
     ]
   },
+  "trumpet": {
+    "count": 9,
+    "top_modifiers": [
+      [
+        "bright",
+        3
+      ],
+      [
+        "prominent",
+        2
+      ],
+      [
+        "muted",
+        2
+      ],
+      [
+        "punchy",
+        1
+      ],
+      [
+        "occasional",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "a prominent trumpet section, violins",
+        1
+      ],
+      [
+        "of trumpet and saxophone provides punchy, unison stabs and m",
+        1
+      ]
+    ],
+    "top_effects": [],
+    "top_chords": [
+      [
+        "harmonic accompaniment",
+        1
+      ],
+      [
+        "jazz voicings",
+        1
+      ]
+    ]
+  },
   "steel-string acoustic guitar": {
-    "count": 7,
+    "count": 8,
     "top_modifiers": [
       [
         "steady",
@@ -2259,6 +2449,40 @@
         1
       ]
     ]
+  },
+  "saxophone": {
+    "count": 7,
+    "top_modifiers": [
+      [
+        "bright",
+        3
+      ],
+      [
+        "heavy",
+        1
+      ],
+      [
+        "punchy",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "of trumpet and saxophone provides punchy, unison stabs and m",
+        1
+      ]
+    ],
+    "top_effects": [
+      [
+        "heavy vibrato",
+        1
+      ],
+      [
+        "vibrato",
+        1
+      ]
+    ],
+    "top_chords": []
   },
   "orchestral strings": {
     "count": 6,
@@ -2347,83 +2571,133 @@
     "top_effects": [],
     "top_chords": []
   },
-  "trumpet": {
-    "count": 5,
+  "harmonica": {
+    "count": 6,
     "top_modifiers": [
       [
-        "bright",
-        3
+        "clean",
+        2
+      ],
+      [
+        "moderate",
+        1
       ],
       [
         "prominent",
         1
       ],
       [
-        "muted",
-        1
-      ]
-    ],
-    "top_patterns": [],
-    "top_effects": [],
-    "top_chords": [
-      [
-        "harmonic accompaniment",
+        "bright",
         1
       ],
       [
-        "jazz voicings",
+        "light",
         1
       ]
-    ]
-  },
-  "violin": {
-    "count": 5,
-    "top_modifiers": [],
+    ],
     "top_patterns": [
       [
-        "on a solo violin playing a lyrical melody over a grand piano",
+        "a prominent harmonica melody, acoustic guitar strumming in a",
         1
       ],
       [
-        "long-tail plate reverb on the violin and vocals",
+        "melodic fills between vocal phrases",
         1
       ],
       [
-        "harmonic support with sustained cello and violin lines",
+        "melodic leads and improvisational flourishes throughout",
+        1
+      ]
+    ],
+    "top_effects": [
+      [
+        "moderate vibrato",
         1
       ],
       [
-        "sustained legato counter-melodies and harmonic support",
+        "light chorus and reverb",
+        1
+      ]
+    ],
+    "top_chords": [
+      [
+        "arpeggiated chords",
+        1
+      ]
+    ]
+  },
+  "flute": {
+    "count": 6,
+    "top_modifiers": [
+      [
+        "sparse",
+        1
+      ],
+      [
+        "atmospheric",
+        1
+      ],
+      [
+        "shimmering",
+        1
+      ],
+      [
+        "high-pitched",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "a solo oboe and flute playing a playful, staccato melody in ",
+        1
+      ],
+      [
+        "to play melodic flourishes and a solo",
+        1
+      ],
+      [
+        "between the guitar's rhythmic comping and the flute's legato",
+        1
+      ],
+      [
+        "for melodic counterpoint and soloing",
         1
       ]
     ],
     "top_effects": [],
-    "top_chords": [
-      [
-        "harmonic support",
-        2
-      ]
-    ]
+    "top_chords": []
   },
-  "saxophone": {
-    "count": 5,
+  "vibraphone": {
+    "count": 6,
     "top_modifiers": [
       [
-        "bright",
-        3
+        "dry",
+        2
       ],
       [
-        "heavy",
-        1
-      ]
-    ],
-    "top_patterns": [],
-    "top_effects": [
+        "moderate",
+        2
+      ],
       [
-        "heavy vibrato",
-        1
+        "natural",
+        2
+      ],
+      [
+        "consistent",
+        2
       ]
     ],
+    "top_patterns": [
+      [
+        "to play melodic leads and harmonized chords",
+        2
+      ],
+      [
+        "bossa nova groove",
+        2
+      ]
+    ],
+    "top_effects": [],
     "top_chords": []
   },
   "arpeggiated electric guitar": {
@@ -2470,6 +2744,39 @@
         1
       ]
     ],
+    "top_chords": []
+  },
+  "clarinet": {
+    "count": 5,
+    "top_modifiers": [
+      [
+        "frequent",
+        1
+      ],
+      [
+        "steady",
+        1
+      ],
+      [
+        "rapid",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "a solo clarinet, acoustic guitar",
+        1
+      ],
+      [
+        "melodic lines with frequent glissandi, trills",
+        1
+      ],
+      [
+        "high-register flourishes and unison lines with the clarinet",
+        1
+      ]
+    ],
+    "top_effects": [],
     "top_chords": []
   },
   "palm-muted electric guitar": {
@@ -2527,57 +2834,6 @@
       ]
     ]
   },
-  "harmonica": {
-    "count": 4,
-    "top_modifiers": [
-      [
-        "clean",
-        2
-      ],
-      [
-        "moderate",
-        1
-      ],
-      [
-        "prominent",
-        1
-      ],
-      [
-        "bright",
-        1
-      ],
-      [
-        "light",
-        1
-      ]
-    ],
-    "top_patterns": [
-      [
-        "a prominent harmonica melody, acoustic guitar strumming in a",
-        1
-      ],
-      [
-        "melodic fills between vocal phrases",
-        1
-      ]
-    ],
-    "top_effects": [
-      [
-        "moderate vibrato",
-        1
-      ],
-      [
-        "light chorus and reverb",
-        1
-      ]
-    ],
-    "top_chords": [
-      [
-        "arpeggiated chords",
-        1
-      ]
-    ]
-  },
   "808 bass": {
     "count": 3,
     "top_modifiers": [
@@ -2611,15 +2867,77 @@
     "top_effects": [],
     "top_chords": []
   },
-  "muted trumpet": {
-    "count": 1,
+  "glockenspiel": {
+    "count": 3,
     "top_modifiers": [
+      [
+        "bright",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "every eight bars, playing a descending pentatonic scale",
+        1
+      ]
+    ],
+    "top_effects": [],
+    "top_chords": []
+  },
+  "accordion": {
+    "count": 3,
+    "top_modifiers": [
+      [
+        "rapid",
+        1
+      ]
+    ],
+    "top_patterns": [],
+    "top_effects": [],
+    "top_chords": []
+  },
+  "harp": {
+    "count": 3,
+    "top_modifiers": [
+      [
+        "rapid",
+        1
+      ],
+      [
+        "delicate",
+        1
+      ],
+      [
+        "driving",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "a concert harp, acoustic guitar",
+        1
+      ],
+      [
+        "rhythmic strumming and fingerpicked accents",
+        1
+      ]
+    ],
+    "top_effects": [],
+    "top_chords": []
+  },
+  "muted trumpet": {
+    "count": 2,
+    "top_modifiers": [
+      [
+        "muted",
+        2
+      ],
       [
         "prominent",
         1
       ],
       [
-        "muted",
+        "occasional",
         1
       ]
     ],
@@ -2636,22 +2954,27 @@
       ]
     ]
   },
-  "glockenspiel": {
-    "count": 1,
+  "keys": {
+    "count": 2,
     "top_modifiers": [],
-    "top_patterns": [
-      [
-        "every eight bars, playing a descending pentatonic scale",
-        1
-      ]
-    ],
+    "top_patterns": [],
     "top_effects": [],
     "top_chords": []
   },
-  "accordion": {
-    "count": 1,
-    "top_modifiers": [],
-    "top_patterns": [],
+  "mandolin": {
+    "count": 2,
+    "top_modifiers": [
+      [
+        "constant",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "rhythmic accompaniment with constant eighth-note strumming",
+        1
+      ]
+    ],
     "top_effects": [],
     "top_chords": []
   }

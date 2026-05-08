@@ -1,12 +1,12 @@
 {
   "version": "3.0",
-  "created_at": "2026-05-06",
+  "created_at": "2026-05-07",
   "previous_version": "2.0 (2026-04-25, 437곡/5,070단어/189장르)",
   "corpus": {
-    "tracks_count": 437,
-    "unique_words": 5070,
-    "total_entries": 13501,
-    "genres_count": 189,
+    "tracks_count": 480,
+    "unique_words": 5405,
+    "total_entries": 15005,
+    "genres_count": 203,
     "sources": [
       "leomusic 생성곡 318곡",
       "Wave 1 외부곡 60곡 (19개 장르)",
@@ -16,20 +16,20 @@
   },
   "instrument_phrases": {
     "electric bass": {
-      "count": 693,
-      "genre_spread": 139,
+      "count": 802,
+      "genre_spread": 152,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 159
+          "freq": 177
+        },
+        {
+          "pattern": "enter",
+          "freq": 23
         },
         {
           "pattern": "the kick drum pattern",
           "freq": 20
-        },
-        {
-          "pattern": "enter",
-          "freq": 19
         },
         {
           "pattern": "slides",
@@ -37,7 +37,7 @@
         },
         {
           "pattern": "scratches",
-          "freq": 12
+          "freq": 13
         }
       ],
       "top_modifiers": [
@@ -50,59 +50,59 @@
           "freq": 33
         },
         {
+          "modifier": "[\"steady\"]",
+          "freq": 25
+        },
+        {
           "modifier": "[\"driving\"]",
           "freq": 17
         },
         {
-          "modifier": "[\"steady\"]",
-          "freq": 15
-        },
-        {
           "modifier": "[\"warm\", \"rounded\"]",
-          "freq": 14
+          "freq": 16
         }
       ]
     },
     "electric guitar": {
-      "count": 547,
-      "genre_spread": 119,
+      "count": 594,
+      "genre_spread": 126,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 44
+          "freq": 49
         },
         {
           "pattern": "scratches",
-          "freq": 11
+          "freq": 12
         },
         {
           "pattern": "subtle arpeggiated textures in the background",
           "freq": 6
         },
         {
-          "pattern": "melodic counterpoint with light chorus and reverb",
+          "pattern": "slides",
           "freq": 6
         },
         {
-          "pattern": "arpeggiated chords with light chorus and reverb",
-          "freq": 5
+          "pattern": "melodic counterpoint with light chorus and reverb",
+          "freq": 6
         }
       ],
       "top_modifiers": [
         {
           "modifier": "[\"clean\"]",
-          "freq": 155
+          "freq": 170
         },
         {
           "modifier": "[\"clean\", \"light\"]",
-          "freq": 57
-        },
-        {
-          "modifier": "[\"driving\"]",
-          "freq": 26
+          "freq": 58
         },
         {
           "modifier": "[\"clean\", \"muted\"]",
+          "freq": 27
+        },
+        {
+          "modifier": "[\"driving\"]",
           "freq": 26
         },
         {
@@ -112,12 +112,12 @@
       ]
     },
     "clean electric guitar": {
-      "count": 348,
-      "genre_spread": 94,
+      "count": 372,
+      "genre_spread": 101,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 26
+          "freq": 29
         },
         {
           "pattern": "scratches",
@@ -139,18 +139,18 @@
       "top_modifiers": [
         {
           "modifier": "[\"clean\"]",
-          "freq": 130
+          "freq": 145
         },
         {
           "modifier": "[\"clean\", \"light\"]",
-          "freq": 55
-        },
-        {
-          "modifier": "[\"clean\", \"subtle\"]",
-          "freq": 22
+          "freq": 56
         },
         {
           "modifier": "[\"clean\", \"muted\"]",
+          "freq": 23
+        },
+        {
+          "modifier": "[\"clean\", \"subtle\"]",
           "freq": 22
         },
         {
@@ -159,13 +159,61 @@
         }
       ]
     },
-    "synthesizer": {
-      "count": 270,
-      "genre_spread": 71,
+    "acoustic guitar": {
+      "count": 363,
+      "genre_spread": 77,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 25
+          "freq": 21
+        },
+        {
+          "pattern": "continues",
+          "freq": 17
+        },
+        {
+          "pattern": "between the acoustic guitar and the vocal melody",
+          "freq": 6
+        },
+        {
+          "pattern": "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords",
+          "freq": 6
+        },
+        {
+          "pattern": "fades",
+          "freq": 5
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"steady\"]",
+          "freq": 37
+        },
+        {
+          "modifier": "[\"sparse\"]",
+          "freq": 21
+        },
+        {
+          "modifier": "[\"light\"]",
+          "freq": 17
+        },
+        {
+          "modifier": "[\"steady\", \"occasional\"]",
+          "freq": 10
+        },
+        {
+          "modifier": "[\"clean\", \"repetitive\"]",
+          "freq": 10
+        }
+      ]
+    },
+    "synthesizer": {
+      "count": 282,
+      "genre_spread": 72,
+      "top_patterns": [
+        {
+          "pattern": "enters",
+          "freq": 26
         },
         {
           "pattern": "swell",
@@ -191,7 +239,7 @@
         },
         {
           "modifier": "[\"subtle\"]",
-          "freq": 18
+          "freq": 19
         },
         {
           "modifier": "[\"full\"]",
@@ -202,62 +250,14 @@
           "freq": 6
         },
         {
-          "modifier": "[\"subtle\", \"atmospheric\"]",
-          "freq": 4
-        }
-      ]
-    },
-    "acoustic guitar": {
-      "count": 269,
-      "genre_spread": 65,
-      "top_patterns": [
-        {
-          "pattern": "enters",
-          "freq": 11
-        },
-        {
-          "pattern": "continues",
-          "freq": 8
-        },
-        {
-          "pattern": "between the acoustic guitar and the vocal melody",
-          "freq": 6
-        },
-        {
-          "pattern": "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords",
-          "freq": 6
-        },
-        {
-          "pattern": "a steady eighth-note pattern",
+          "modifier": "[\"atmospheric\"]",
           "freq": 5
-        }
-      ],
-      "top_modifiers": [
-        {
-          "modifier": "[\"steady\"]",
-          "freq": 34
-        },
-        {
-          "modifier": "[\"sparse\"]",
-          "freq": 21
-        },
-        {
-          "modifier": "[\"light\"]",
-          "freq": 15
-        },
-        {
-          "modifier": "[\"steady\", \"occasional\"]",
-          "freq": 10
-        },
-        {
-          "modifier": "[\"clean\", \"repetitive\"]",
-          "freq": 10
         }
       ]
     },
     "guitar": {
-      "count": 176,
-      "genre_spread": 82,
+      "count": 241,
+      "genre_spread": 93,
       "top_patterns": [
         {
           "pattern": "between the vocal melody and the rhythmic guitar strumming",
@@ -268,48 +268,48 @@
           "freq": 6
         },
         {
+          "pattern": "the root notes of the guitar progression",
+          "freq": 5
+        },
+        {
           "pattern": "scratches",
           "freq": 5
         },
         {
-          "pattern": "continue",
+          "pattern": "flourish",
           "freq": 5
-        },
-        {
-          "pattern": "the root notes of the guitar progression",
-          "freq": 4
         }
       ],
       "top_modifiers": [
         {
           "modifier": "[\"sparse\"]",
-          "freq": 30
+          "freq": 31
+        },
+        {
+          "modifier": "[\"steady\"]",
+          "freq": 12
         },
         {
           "modifier": "[\"warm\", \"occasional\"]",
           "freq": 6
         },
         {
-          "modifier": "[\"warm\"]",
-          "freq": 5
-        },
-        {
-          "modifier": "[\"steady\"]",
-          "freq": 5
-        },
-        {
           "modifier": "[\"clean\"]",
+          "freq": 6
+        },
+        {
+          "modifier": "[\"warm\"]",
           "freq": 5
         }
       ]
     },
     "bass guitar": {
-      "count": 158,
-      "genre_spread": 72,
+      "count": 166,
+      "genre_spread": 74,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 37
+          "freq": 40
         },
         {
           "pattern": "syncopated sixteenth-note patterns",
@@ -331,7 +331,7 @@
       "top_modifiers": [
         {
           "modifier": "[\"warm\", \"rounded\"]",
-          "freq": 13
+          "freq": 14
         },
         {
           "modifier": "[\"frequent\"]",
@@ -352,12 +352,12 @@
       ]
     },
     "piano": {
-      "count": 127,
-      "genre_spread": 54,
+      "count": 154,
+      "genre_spread": 57,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 10
+          "freq": 11
         },
         {
           "pattern": "a spacious acoustic environment",
@@ -390,18 +390,18 @@
           "freq": 5
         },
         {
-          "modifier": "[\"sparse\"]",
-          "freq": 3
+          "modifier": "[\"bright\"]",
+          "freq": 5
         },
         {
-          "modifier": "[\"digital\"]",
+          "modifier": "[\"sparse\"]",
           "freq": 3
         }
       ]
     },
     "synth pad": {
-      "count": 106,
-      "genre_spread": 49,
+      "count": 110,
+      "genre_spread": 50,
       "top_patterns": [
         {
           "pattern": "swell",
@@ -409,7 +409,7 @@
         },
         {
           "pattern": "enters",
-          "freq": 8
+          "freq": 9
         },
         {
           "pattern": "enter",
@@ -448,16 +448,16 @@
       ]
     },
     "slap bass": {
-      "count": 102,
-      "genre_spread": 34,
+      "count": 107,
+      "genre_spread": 35,
       "top_patterns": [
         {
-          "pattern": "enters",
+          "pattern": "scratches",
           "freq": 11
         },
         {
-          "pattern": "scratches",
-          "freq": 10
+          "pattern": "enters",
+          "freq": 11
         },
         {
           "pattern": "syncopated sixteenth-note patterns",
@@ -496,12 +496,12 @@
       ]
     },
     "synth bass": {
-      "count": 99,
-      "genre_spread": 49,
+      "count": 106,
+      "genre_spread": 50,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 23
+          "freq": 25
         },
         {
           "pattern": "the kick drum pattern",
@@ -544,8 +544,8 @@
       ]
     },
     "fingerpicked acoustic guitar": {
-      "count": 97,
-      "genre_spread": 33,
+      "count": 105,
+      "genre_spread": 35,
       "top_patterns": [
         {
           "pattern": "a steady eighth-note pattern",
@@ -571,7 +571,7 @@
       "top_modifiers": [
         {
           "modifier": "[\"steady\"]",
-          "freq": 11
+          "freq": 12
         },
         {
           "modifier": "[\"clean\", \"repetitive\"]",
@@ -592,8 +592,8 @@
       ]
     },
     "grand piano": {
-      "count": 81,
-      "genre_spread": 36,
+      "count": 84,
+      "genre_spread": 38,
       "top_patterns": [
         {
           "pattern": "on a grand piano playing sustained chords and melodic fills",
@@ -640,8 +640,8 @@
       ]
     },
     "pad": {
-      "count": 75,
-      "genre_spread": 50,
+      "count": 81,
+      "genre_spread": 52,
       "top_patterns": [
         {
           "pattern": "enter",
@@ -688,12 +688,12 @@
       ]
     },
     "strings": {
-      "count": 65,
-      "genre_spread": 33,
+      "count": 80,
+      "genre_spread": 37,
       "top_patterns": [
         {
           "pattern": "enter",
-          "freq": 18
+          "freq": 19
         },
         {
           "pattern": "increases",
@@ -704,11 +704,11 @@
           "freq": 2
         },
         {
-          "pattern": "with legato phrasing, building in volume and density",
-          "freq": 1
+          "pattern": "fade",
+          "freq": 2
         },
         {
-          "pattern": "legato pads that swell during transitions",
+          "pattern": "with legato phrasing, building in volume and density",
           "freq": 1
         }
       ],
@@ -735,9 +735,105 @@
         }
       ]
     },
+    "brass section": {
+      "count": 67,
+      "genre_spread": 21,
+      "top_patterns": [
+        {
+          "pattern": "enters",
+          "freq": 4
+        },
+        {
+          "pattern": "with staccato stabs on the off-beats",
+          "freq": 1
+        },
+        {
+          "pattern": "staccato stabs on the off-beats",
+          "freq": 1
+        },
+        {
+          "pattern": "staccato stabs and melodic flourishes during transitions",
+          "freq": 1
+        },
+        {
+          "pattern": "staccato stabs and melodic fills",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"bright\"]",
+          "freq": 9
+        },
+        {
+          "modifier": "[\"full\"]",
+          "freq": 4
+        },
+        {
+          "modifier": "[\"punchy\"]",
+          "freq": 3
+        },
+        {
+          "modifier": "[\"occasional\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"full\", \"driving\"]",
+          "freq": 2
+        }
+      ]
+    },
+    "violin": {
+      "count": 65,
+      "genre_spread": 7,
+      "top_patterns": [
+        {
+          "pattern": "enters",
+          "freq": 8
+        },
+        {
+          "pattern": "stops",
+          "freq": 2
+        },
+        {
+          "pattern": "fades",
+          "freq": 2
+        },
+        {
+          "pattern": "with vibrato-heavy melodic lines and double stops",
+          "freq": 1
+        },
+        {
+          "pattern": "with staccato phrasing and double-stop harmonies",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"rapid\"]",
+          "freq": 6
+        },
+        {
+          "modifier": "[\"heavy\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"sharp\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"prominent\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"prominent\", \"rapid\"]",
+          "freq": 1
+        }
+      ]
+    },
     "distorted electric guitar": {
-      "count": 62,
-      "genre_spread": 26,
+      "count": 63,
+      "genre_spread": 27,
       "top_patterns": [
         {
           "pattern": "enters",
@@ -778,69 +874,73 @@
           "freq": 1
         },
         {
-          "modifier": "[\"full\"]",
+          "modifier": "[\"heavy\", \"rapid\"]",
           "freq": 1
         }
       ]
     },
-    "brass section": {
-      "count": 54,
-      "genre_spread": 20,
+    "cello": {
+      "count": 55,
+      "genre_spread": 11,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 4
+          "freq": 11
         },
         {
-          "pattern": "with staccato stabs on the off-beats",
+          "pattern": "returns",
+          "freq": 2
+        },
+        {
+          "pattern": "drop ",
+          "freq": 2
+        },
+        {
+          "pattern": "with legato melodic counterpoints in the lower register",
           "freq": 1
         },
         {
-          "pattern": "staccato stabs on the off-beats",
-          "freq": 1
-        },
-        {
-          "pattern": "staccato stabs and melodic flourishes during transitions",
-          "freq": 1
-        },
-        {
-          "pattern": "staccato stabs and melodic fills",
+          "pattern": "to provide melodic counterpoint and low-end support",
           "freq": 1
         }
       ],
       "top_modifiers": [
         {
-          "modifier": "[\"bright\"]",
-          "freq": 9
-        },
-        {
-          "modifier": "[\"full\"]",
-          "freq": 4
-        },
-        {
-          "modifier": "[\"punchy\"]",
+          "modifier": "[\"sparse\"]",
           "freq": 2
         },
         {
-          "modifier": "[\"full\", \"driving\"]",
+          "modifier": "[\"low\"]",
           "freq": 2
         },
         {
-          "modifier": "[\"subtle\"]",
+          "modifier": "[\"warm\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"steady\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"prominent\", \"steady\"]",
           "freq": 1
         }
       ]
     },
     "sub-bass": {
-      "count": 47,
-      "genre_spread": 29,
+      "count": 52,
+      "genre_spread": 30,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 14
+          "freq": 15
         },
         {
           "pattern": "low-end weight on the downbeats",
+          "freq": 3
+        },
+        {
+          "pattern": "enter",
           "freq": 3
         },
         {
@@ -849,10 +949,6 @@
         },
         {
           "pattern": "sustained low-end notes on the downbeats",
-          "freq": 2
-        },
-        {
-          "pattern": "low-end weight with sustained notes",
           "freq": 2
         }
       ],
@@ -874,14 +970,110 @@
           "freq": 1
         },
         {
+          "modifier": "[\"soft\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "upright bass": {
+      "count": 49,
+      "genre_spread": 14,
+      "top_patterns": [
+        {
+          "pattern": "enters",
+          "freq": 9
+        },
+        {
+          "pattern": "a two-beat pattern",
+          "freq": 2
+        },
+        {
+          "pattern": "with long, sustained notes on the root",
+          "freq": 1
+        },
+        {
+          "pattern": "the guitar with a steady two-beat pattern",
+          "freq": 1
+        },
+        {
+          "pattern": "slide",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"steady\"]",
+          "freq": 3
+        },
+        {
+          "modifier": "[\"steady\", \"occasional\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"warm\", \"soft\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"subtle\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"soft\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "nylon-string acoustic guitar": {
+      "count": 42,
+      "genre_spread": 20,
+      "top_patterns": [
+        {
+          "pattern": "enters",
+          "freq": 3
+        },
+        {
+          "pattern": "rhythmic accompaniment with bossa nova comping patterns",
+          "freq": 2
+        },
+        {
+          "pattern": "syncopated jazz chords with thumb-plucked bass notes",
+          "freq": 1
+        },
+        {
+          "pattern": "syncopated jazz chords with frequent hammer-ons and slides",
+          "freq": 1
+        },
+        {
+          "pattern": "syncopated jazz chords with a steady thumb-picked bassline",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
           "modifier": "[\"prominent\"]",
+          "freq": 3
+        },
+        {
+          "modifier": "[\"steady\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"steady\", \"occasional\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"prominent\", \"warm\", \"intimate\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"prominent\", \"steady\"]",
           "freq": 1
         }
       ]
     },
     "acoustic piano": {
-      "count": 38,
-      "genre_spread": 21,
+      "count": 42,
+      "genre_spread": 23,
       "top_patterns": [
         {
           "pattern": "scratches",
@@ -892,15 +1084,15 @@
           "freq": 2
         },
         {
+          "pattern": "harmonic support with jazz voicings and occasional trills",
+          "freq": 2
+        },
+        {
           "pattern": "enters",
           "freq": 2
         },
         {
           "pattern": "with sustained chords",
-          "freq": 1
-        },
-        {
-          "pattern": "syncopated chords",
           "freq": 1
         }
       ],
@@ -922,14 +1114,14 @@
           "freq": 2
         },
         {
-          "modifier": "[\"warm\", \"resonant\"]",
-          "freq": 1
+          "modifier": "[\"occasional\"]",
+          "freq": 2
         }
       ]
     },
     "electric piano": {
-      "count": 33,
-      "genre_spread": 21,
+      "count": 36,
+      "genre_spread": 23,
       "top_patterns": [
         {
           "pattern": "harmonic padding in the background",
@@ -937,7 +1129,7 @@
         },
         {
           "pattern": "enter",
-          "freq": 4
+          "freq": 5
         },
         {
           "pattern": "sustained harmonic support in the background",
@@ -959,7 +1151,7 @@
         },
         {
           "modifier": "[\"soft\"]",
-          "freq": 2
+          "freq": 3
         },
         {
           "modifier": "[\"occasional\"]",
@@ -976,12 +1168,12 @@
       ]
     },
     "fretless bass": {
-      "count": 32,
-      "genre_spread": 15,
+      "count": 34,
+      "genre_spread": 17,
       "top_patterns": [
         {
           "pattern": "enters",
-          "freq": 14
+          "freq": 16
         },
         {
           "pattern": "slides",
@@ -1015,54 +1207,6 @@
         },
         {
           "modifier": "[\"clean\", \"subtle\"]",
-          "freq": 1
-        }
-      ]
-    },
-    "nylon-string acoustic guitar": {
-      "count": 26,
-      "genre_spread": 13,
-      "top_patterns": [
-        {
-          "pattern": "syncopated jazz chords with thumb-plucked bass notes",
-          "freq": 1
-        },
-        {
-          "pattern": "syncopated jazz chords with frequent hammer-ons and slides",
-          "freq": 1
-        },
-        {
-          "pattern": "syncopated bossa nova chords and fingerstyle patterns",
-          "freq": 1
-        },
-        {
-          "pattern": "syncopated bossa nova chords",
-          "freq": 1
-        },
-        {
-          "pattern": "arpeggiated chords with prominent finger-slide noise",
-          "freq": 1
-        }
-      ],
-      "top_modifiers": [
-        {
-          "modifier": "[\"prominent\"]",
-          "freq": 3
-        },
-        {
-          "modifier": "[\"steady\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"steady\", \"occasional\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"prominent\", \"warm\", \"intimate\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"prominent\", \"steady\"]",
           "freq": 1
         }
       ]
@@ -1115,68 +1259,68 @@
         }
       ]
     },
-    "cello": {
+    "brass": {
       "count": 25,
-      "genre_spread": 9,
+      "genre_spread": 11,
       "top_patterns": [
         {
-          "pattern": "enters",
-          "freq": 4
-        },
-        {
-          "pattern": "with legato melodic counterpoints in the lower register",
-          "freq": 1
-        },
-        {
-          "pattern": "to provide melodic counterpoint and low-end support",
-          "freq": 1
-        },
-        {
           "pattern": "swells",
+          "freq": 2
+        },
+        {
+          "pattern": "swell",
           "freq": 1
         },
         {
-          "pattern": "sustained legato counter-melodies and harmonic support",
+          "pattern": "increases",
+          "freq": 1
+        },
+        {
+          "pattern": "flourishes",
+          "freq": 1
+        },
+        {
+          "pattern": "bright, bell-like pads and staccato brass-style stabs",
           "freq": 1
         }
       ],
       "top_modifiers": [
         {
-          "modifier": "[\"warm\"]",
+          "modifier": "[\"rapid\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"full\", \"rapid\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"full\", \"energetic\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"sudden\", \"rapid\"]",
           "freq": 1
         },
         {
-          "modifier": "[\"steady\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"sparse\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"moderate\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"low\"]",
+          "modifier": "[\"shimmering\", \"digital\"]",
           "freq": 1
         }
       ]
     },
     "string pad": {
-      "count": 21,
-      "genre_spread": 13,
+      "count": 23,
+      "genre_spread": 14,
       "top_patterns": [
+        {
+          "pattern": "enter",
+          "freq": 3
+        },
         {
           "pattern": "swell",
           "freq": 2
         },
         {
           "pattern": "harmonic support in the background",
-          "freq": 2
-        },
-        {
-          "pattern": "enter",
           "freq": 2
         },
         {
@@ -1211,58 +1355,14 @@
         }
       ]
     },
-    "upright bass": {
-      "count": 18,
-      "genre_spread": 7,
-      "top_patterns": [
-        {
-          "pattern": "enters",
-          "freq": 4
-        },
-        {
-          "pattern": "with long, sustained notes on the root",
-          "freq": 1
-        },
-        {
-          "pattern": "the guitar with a steady two-beat pattern",
-          "freq": 1
-        },
-        {
-          "pattern": "slide",
-          "freq": 1
-        },
-        {
-          "pattern": "of a grand piano, upright bass",
-          "freq": 1
-        }
-      ],
-      "top_modifiers": [
-        {
-          "modifier": "[\"warm\", \"soft\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"subtle\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"steady\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"steady\", \"occasional\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"soft\"]",
-          "freq": 1
-        }
-      ]
-    },
     "rhodes": {
-      "count": 16,
-      "genre_spread": 10,
+      "count": 22,
+      "genre_spread": 11,
       "top_patterns": [
+        {
+          "pattern": "enter",
+          "freq": 2
+        },
         {
           "pattern": "swell",
           "freq": 1
@@ -1278,13 +1378,13 @@
         {
           "pattern": "jazzy, extended chords with a Rhodes-like timbre",
           "freq": 1
-        },
-        {
-          "pattern": "jazz-influenced chord extensions",
-          "freq": 1
         }
       ],
       "top_modifiers": [
+        {
+          "modifier": "[\"soft\"]",
+          "freq": 2
+        },
         {
           "modifier": "[\"subtle\"]",
           "freq": 1
@@ -1298,11 +1398,91 @@
           "freq": 1
         },
         {
-          "modifier": "[\"soft\"]",
+          "modifier": "[\"slight\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "harmonica": {
+      "count": 17,
+      "genre_spread": 4,
+      "top_patterns": [
+        {
+          "pattern": "returns",
           "freq": 1
         },
         {
-          "modifier": "[\"slight\"]",
+          "pattern": "melodic leads and improvisational flourishes throughout",
+          "freq": 1
+        },
+        {
+          "pattern": "melodic fills between vocal phrases",
+          "freq": 1
+        },
+        {
+          "pattern": "fades",
+          "freq": 1
+        },
+        {
+          "pattern": "enters",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"prominent\", \"clean\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"moderate\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"light\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"clean\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"clean\", \"light\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "flute": {
+      "count": 17,
+      "genre_spread": 3,
+      "top_patterns": [
+        {
+          "pattern": "enters",
+          "freq": 5
+        },
+        {
+          "pattern": "to play melodic flourishes and a solo",
+          "freq": 1
+        },
+        {
+          "pattern": "for melodic counterpoint and soloing",
+          "freq": 1
+        },
+        {
+          "pattern": "fades",
+          "freq": 1
+        },
+        {
+          "pattern": "between the guitar's rhythmic comping and the flute's legato phrasing",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"sparse\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"atmospheric\", \"shimmering\", \"high-pitched\"]",
           "freq": 1
         }
       ]
@@ -1347,50 +1527,6 @@
         }
       ]
     },
-    "brass": {
-      "count": 15,
-      "genre_spread": 10,
-      "top_patterns": [
-        {
-          "pattern": "swell",
-          "freq": 1
-        },
-        {
-          "pattern": "increases",
-          "freq": 1
-        },
-        {
-          "pattern": "bright, bell-like pads and staccato brass-style stabs",
-          "freq": 1
-        },
-        {
-          "pattern": "a bright, slap-style electric bass, clean funk-rhythm electric guitar",
-          "freq": 1
-        }
-      ],
-      "top_modifiers": [
-        {
-          "modifier": "[\"full\", \"energetic\"]",
-          "freq": 2
-        },
-        {
-          "modifier": "[\"sudden\", \"rapid\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"shimmering\", \"digital\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"prominent\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"polished\"]",
-          "freq": 1
-        }
-      ]
-    },
     "arpeggiated electric guitar": {
       "count": 15,
       "genre_spread": 10,
@@ -1427,38 +1563,241 @@
         }
       ]
     },
-    "harmonica": {
-      "count": 11,
-      "genre_spread": 3,
+    "vibraphone": {
+      "count": 14,
+      "genre_spread": 2,
       "top_patterns": [
         {
-          "pattern": "melodic fills between vocal phrases",
+          "pattern": "to play melodic leads and harmonized chords",
+          "freq": 2
+        },
+        {
+          "pattern": "enters",
+          "freq": 2
+        },
+        {
+          "pattern": "bossa nova groove",
+          "freq": 2
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"soft\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"dry\", \"moderate\", \"natural\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"consistent\"]",
+          "freq": 2
+        }
+      ]
+    },
+    "trumpet": {
+      "count": 14,
+      "genre_spread": 7,
+      "top_patterns": [
+        {
+          "pattern": "of trumpet and saxophone provides punchy, unison stabs and melodic flourishes",
           "freq": 1
         },
         {
-          "pattern": "a prominent harmonica melody, acoustic guitar strumming in a swing feel",
+          "pattern": "flourishes",
+          "freq": 1
+        },
+        {
+          "pattern": "flourish",
+          "freq": 1
+        },
+        {
+          "pattern": "enters",
+          "freq": 1
+        },
+        {
+          "pattern": "a prominent trumpet section, violins",
           "freq": 1
         }
       ],
       "top_modifiers": [
         {
-          "modifier": "[\"prominent\", \"clean\"]",
+          "modifier": "[\"bright\"]",
+          "freq": 4
+        },
+        {
+          "modifier": "[\"muted\"]",
+          "freq": 3
+        },
+        {
+          "modifier": "[\"punchy\"]",
           "freq": 1
         },
         {
-          "modifier": "[\"moderate\"]",
+          "modifier": "[\"prominent\"]",
           "freq": 1
+        },
+        {
+          "modifier": "[\"prominent\", \"muted\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "clarinet": {
+      "count": 13,
+      "genre_spread": 1,
+      "top_patterns": [
+        {
+          "pattern": "melodic lines with frequent glissandi, trills",
+          "freq": 1
+        },
+        {
+          "pattern": "high-register flourishes and unison lines with the clarinet",
+          "freq": 1
+        },
+        {
+          "pattern": "enters",
+          "freq": 1
+        },
+        {
+          "pattern": "a solo clarinet, acoustic guitar",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"rapid\"]",
+          "freq": 2
+        },
+        {
+          "modifier": "[\"steady\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"heavy\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"frequent\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"fast\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "saxophone": {
+      "count": 11,
+      "genre_spread": 7,
+      "top_patterns": [
+        {
+          "pattern": "of trumpet and saxophone provides punchy, unison stabs and melodic flourishes",
+          "freq": 1
+        },
+        {
+          "pattern": "fades",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"bright\"]",
+          "freq": 3
+        },
+        {
+          "modifier": "[\"punchy\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"heavy\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "steel-string acoustic guitar": {
+      "count": 9,
+      "genre_spread": 8,
+      "top_patterns": [
+        {
+          "pattern": "a steady fingerstyle pattern in 4/4 time at 72 BPM in the key of E Major",
+          "freq": 2
+        },
+        {
+          "pattern": "enters",
+          "freq": 1
+        },
+        {
+          "pattern": "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords",
+          "freq": 1
+        },
+        {
+          "pattern": "a steady eighth-note strumming pattern",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"steady\"]",
+          "freq": 5
         },
         {
           "modifier": "[\"light\"]",
           "freq": 1
         },
         {
-          "modifier": "[\"clean\"]",
+          "modifier": "[\"bright\", \"frequent\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "harp": {
+      "count": 9,
+      "genre_spread": 1,
+      "top_patterns": [
+        {
+          "pattern": "swell",
           "freq": 1
         },
         {
-          "modifier": "[\"clean\", \"light\"]",
+          "pattern": "rhythmic strumming and fingerpicked accents",
+          "freq": 1
+        },
+        {
+          "pattern": "flourishes",
+          "freq": 1
+        },
+        {
+          "pattern": "continues",
+          "freq": 1
+        },
+        {
+          "pattern": "a concert harp, acoustic guitar",
+          "freq": 1
+        }
+      ],
+      "top_modifiers": [
+        {
+          "modifier": "[\"rapid\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"delicate\", \"driving\"]",
+          "freq": 1
+        }
+      ]
+    },
+    "accordion": {
+      "count": 9,
+      "genre_spread": 2,
+      "top_patterns": [],
+      "top_modifiers": [
+        {
+          "modifier": "[\"rapid\"]",
+          "freq": 1
+        },
+        {
+          "modifier": "[\"clean\"]",
           "freq": 1
         }
       ]
@@ -1495,85 +1834,26 @@
         }
       ]
     },
-    "violin": {
-      "count": 7,
+    "glockenspiel": {
+      "count": 8,
       "genre_spread": 3,
       "top_patterns": [
         {
-          "pattern": "sustained legato counter-melodies and harmonic support",
-          "freq": 1
-        },
-        {
-          "pattern": "on a solo violin playing a lyrical melody over a grand piano",
-          "freq": 1
-        },
-        {
-          "pattern": "long-tail plate reverb on the violin and vocals",
-          "freq": 1
-        },
-        {
-          "pattern": "harmonic support with sustained cello and violin lines",
-          "freq": 1
-        },
-        {
-          "pattern": "enter",
-          "freq": 1
-        }
-      ],
-      "top_modifiers": []
-    },
-    "trumpet": {
-      "count": 7,
-      "genre_spread": 5,
-      "top_patterns": [
-        {
           "pattern": "enters",
+          "freq": 2
+        },
+        {
+          "pattern": "fades",
+          "freq": 1
+        },
+        {
+          "pattern": "every eight bars, playing a descending pentatonic scale",
           "freq": 1
         }
       ],
       "top_modifiers": [
         {
           "modifier": "[\"bright\"]",
-          "freq": 3
-        },
-        {
-          "modifier": "[\"muted\"]",
-          "freq": 2
-        },
-        {
-          "modifier": "[\"prominent\", \"muted\"]",
-          "freq": 1
-        }
-      ]
-    },
-    "steel-string acoustic guitar": {
-      "count": 7,
-      "genre_spread": 7,
-      "top_patterns": [
-        {
-          "pattern": "a steady fingerstyle pattern in 4/4 time at 72 BPM in the key of E Major",
-          "freq": 2
-        },
-        {
-          "pattern": "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords",
-          "freq": 1
-        },
-        {
-          "pattern": "a steady eighth-note strumming pattern",
-          "freq": 1
-        }
-      ],
-      "top_modifiers": [
-        {
-          "modifier": "[\"steady\"]",
-          "freq": 5
-        },
-        {
-          "modifier": "[\"light\"]",
-          "freq": 1
-        },
-        {
-          "modifier": "[\"bright\", \"frequent\"]",
           "freq": 1
         }
       ]
@@ -1606,21 +1886,6 @@
       "top_modifiers": [
         {
           "modifier": "[\"driving\", \"prominent\"]",
-          "freq": 1
-        }
-      ]
-    },
-    "saxophone": {
-      "count": 6,
-      "genre_spread": 5,
-      "top_patterns": [],
-      "top_modifiers": [
-        {
-          "modifier": "[\"bright\"]",
-          "freq": 3
-        },
-        {
-          "modifier": "[\"heavy\"]",
           "freq": 1
         }
       ]
@@ -1665,21 +1930,14 @@
         }
       ]
     },
-    "accordion": {
-      "count": 4,
-      "genre_spread": 1,
-      "top_patterns": [],
-      "top_modifiers": [
-        {
-          "modifier": "[\"clean\"]",
-          "freq": 1
-        }
-      ]
-    },
     "muted trumpet": {
-      "count": 3,
-      "genre_spread": 1,
+      "count": 5,
+      "genre_spread": 2,
       "top_patterns": [
+        {
+          "pattern": "flourishes",
+          "freq": 1
+        },
         {
           "pattern": "enters",
           "freq": 1
@@ -1688,20 +1946,24 @@
       "top_modifiers": [
         {
           "modifier": "[\"muted\"]",
-          "freq": 2
+          "freq": 3
         },
         {
           "modifier": "[\"prominent\", \"muted\"]",
           "freq": 1
+        },
+        {
+          "modifier": "[\"occasional\", \"muted\"]",
+          "freq": 1
         }
       ]
     },
-    "glockenspiel": {
-      "count": 2,
+    "mandolin": {
+      "count": 5,
       "genre_spread": 1,
       "top_patterns": [
         {
-          "pattern": "every eight bars, playing a descending pentatonic scale",
+          "pattern": "rhythmic accompaniment with constant eighth-note strumming",
           "freq": 1
         },
         {
@@ -1709,43 +1971,67 @@
           "freq": 1
         }
       ],
-      "top_modifiers": []
+      "top_modifiers": [
+        {
+          "modifier": "[\"constant\"]",
+          "freq": 1
+        }
+      ]
     },
-    "flute": {
-      "count": 1,
+    "keys": {
+      "count": 2,
       "genre_spread": 1,
       "top_patterns": [],
+      "top_modifiers": []
+    },
+    "strummed acoustic guitar": {
+      "count": 1,
+      "genre_spread": 1,
+      "top_patterns": [
+        {
+          "pattern": "enters",
+          "freq": 1
+        }
+      ],
       "top_modifiers": []
     }
   },
   "drum_vocab": {
     "[\"kick drum\", \"drums\"]": {
-      "count": 132,
-      "genre_spread": 72
+      "count": 140,
+      "genre_spread": 74
     },
     "[\"drums\"]": {
-      "count": 109,
-      "genre_spread": 57
+      "count": 122,
+      "genre_spread": 59
     },
     "[\"kick drum\", \"snare drum\", \"drums\"]": {
-      "count": 67,
-      "genre_spread": 38
-    },
-    "[\"snare drum\"]": {
-      "count": 40,
-      "genre_spread": 32
+      "count": 70,
+      "genre_spread": 41
     },
     "[\"percussion\"]": {
+      "count": 49,
+      "genre_spread": 33
+    },
+    "[\"snare drum\"]": {
+      "count": 46,
+      "genre_spread": 35
+    },
+    "[\"shaker\"]": {
       "count": 38,
-      "genre_spread": 31
+      "genre_spread": 27
     },
     "[\"kick drum\", \"snare drum\", \"drum kit\", \"drums\"]": {
       "count": 32,
       "genre_spread": 24
     },
     "[\"beat\", \"drums\"]": {
-      "count": 27,
-      "genre_spread": 21
+      "count": 30,
+      "genre_spread": 22
+    },
+    "[\"beat\"]": {
+      "count": 25,
+      "genre_spread": 22
     },
     "[\"snare drum\", \"hi-hat\", \"drums\"]": {
       "count": 24,
@@ -1755,45 +2041,57 @@
       "count": 24,
       "genre_spread": 21
     },
-    "[\"shaker\"]": {
-      "count": 23,
-      "genre_spread": 19
-    },
     "[\"snare drum\", \"hi-hat\", \"drum kit\", \"drums\"]": {
-      "count": 20,
-      "genre_spread": 16
-    },
-    "[\"beat\"]": {
-      "count": 19,
-      "genre_spread": 18
+      "count": 21,
+      "genre_spread": 17
     },
     "[\"kick drum\", \"snare drum\", \"hi-hat\", \"drums\"]": {
-      "count": 16,
-      "genre_spread": 16
+      "count": 19,
+      "genre_spread": 19
     },
     "[\"crash cymbal\"]": {
-      "count": 16,
-      "genre_spread": 15
+      "count": 17,
+      "genre_spread": 16
+    },
+    "[\"snare drum\", \"drums\"]": {
+      "count": 15,
+      "genre_spread": 11
     },
     "[\"kick drum\", \"snare drum\", \"drums\", \"percussion\"]": {
       "count": 12,
       "genre_spread": 12
     },
-    "[\"snare drum\", \"drums\"]": {
+    "[\"kick drum\", \"shaker\", \"drums\", \"percussion\"]": {
+      "count": 12,
+      "genre_spread": 12
+    },
+    "[\"hi-hat\"]": {
+      "count": 12,
+      "genre_spread": 12
+    },
+    "[\"shaker\", \"percussion\"]": {
       "count": 11,
       "genre_spread": 9
     },
-    "[\"kick drum\", \"shaker\", \"drums\", \"percussion\"]": {
-      "count": 11,
-      "genre_spread": 11
-    },
-    "[\"hi-hat\"]": {
-      "count": 11,
-      "genre_spread": 11
+    "[\"woodblock\"]": {
+      "count": 10,
+      "genre_spread": 7
     },
     "[\"kick drum\"]": {
       "count": 10,
       "genre_spread": 10
+    },
+    "[\"kick drum\", \"snare drum\", \"hi-hat\", \"drum kit\", \"drums\"]": {
+      "count": 10,
+      "genre_spread": 9
+    },
+    "[\"cymbal\"]": {
+      "count": 10,
+      "genre_spread": 7
+    },
+    "[\"kick drum\", \"snare drum\"]": {
+      "count": 9,
+      "genre_spread": 9
     },
     "[\"kick drum\", \"shaker\", \"drums\"]": {
       "count": 9,
@@ -1803,51 +2101,35 @@
       "count": 8,
       "genre_spread": 7
     },
-    "[\"shaker\", \"percussion\"]": {
-      "count": 8,
-      "genre_spread": 6
-    },
-    "[\"kick drum\", \"snare drum\"]": {
-      "count": 8,
-      "genre_spread": 8
-    },
     "[\"kick drum\", \"rimshot\", \"drums\"]": {
       "count": 8,
       "genre_spread": 6
     },
-    "[\"cymbal\"]": {
-      "count": 8,
-      "genre_spread": 6
-    },
-    "[\"kick drum\", \"snare drum\", \"hi-hat\", \"drum kit\", \"drums\"]": {
+    "[\"snare drum\", \"hi-hat\"]": {
       "count": 7,
-      "genre_spread": 7
+      "genre_spread": 6
     },
     "[\"snare drum\", \"drum kit\", \"drums\"]": {
-      "count": 6,
-      "genre_spread": 6
+      "count": 7,
+      "genre_spread": 7
     },
     "[\"rimshot\"]": {
       "count": 6,
       "genre_spread": 6
     },
-    "[\"woodblock\"]": {
-      "count": 5,
-      "genre_spread": 3
-    },
     "[\"kick drum\", \"snare drum\", \"hi-hat\", \"drums\", \"percussion\"]": {
-      "count": 5,
-      "genre_spread": 5
+      "count": 6,
+      "genre_spread": 6
     },
     "[\"clap\"]": {
       "count": 5,
       "genre_spread": 4
     },
-    "[\"snare drum\", \"hi-hat\"]": {
-      "count": 4,
-      "genre_spread": 3
-    },
     "[\"snare drum\", \"hi-hat\", \"percussion\"]": {
+      "count": 4,
+      "genre_spread": 4
+    },
+    "[\"snare drum\", \"hi-hat\", \"drum kit\", \"beat\", \"drums\"]": {
       "count": 4,
       "genre_spread": 4
     },
@@ -1859,15 +2141,23 @@
       "count": 4,
       "genre_spread": 4
     },
-    "[\"snare drum\", \"hi-hat\", \"drum kit\", \"beat\", \"drums\"]": {
+    "[\"hi-hat\", \"drum kit\", \"drums\"]": {
+      "count": 4,
+      "genre_spread": 4
+    },
+    "[\"shaker\", \"woodblock\"]": {
       "count": 3,
-      "genre_spread": 3
+      "genre_spread": 2
     },
     "[\"shaker\", \"rimshot\", \"percussion\"]": {
       "count": 3,
       "genre_spread": 2
     },
     "[\"kick drum\", \"rimshot\", \"drums\", \"percussion\"]": {
+      "count": 3,
+      "genre_spread": 2
+    },
+    "[\"hi-hat\", \"shaker\"]": {
       "count": 3,
       "genre_spread": 2
     },
@@ -1886,6 +2176,14 @@
     "[\"snare drum\", \"shaker\", \"drums\", \"percussion\"]": {
       "count": 2,
       "genre_spread": 2
+    },
+    "[\"snare drum\", \"hi-hat\", \"woodblock\", \"rimshot\", \"drum kit\", \"drums\", \"percussion\"]": {
+      "count": 2,
+      "genre_spread": 2
+    },
+    "[\"snare drum\", \"hi-hat\", \"crash cymbal\", \"drums\"]": {
+      "count": 2,
+      "genre_spread": 1
     },
     "[\"snare drum\", \"hi-hat\", \"crash cymbal\", \"drum kit\", \"drums\"]": {
       "count": 2,
@@ -1911,6 +2209,10 @@
       "count": 2,
       "genre_spread": 2
     },
+    "[\"kick drum\", \"shaker\", \"woodblock\", \"drums\", \"percussion\"]": {
+      "count": 2,
+      "genre_spread": 2
+    },
     "[\"kick drum\", \"shaker\", \"beat\", \"drums\"]": {
       "count": 2,
       "genre_spread": 1
@@ -1919,13 +2221,21 @@
       "count": 2,
       "genre_spread": 1
     },
-    "[\"hi-hat\", \"drum kit\", \"drums\"]": {
-      "count": 2,
-      "genre_spread": 2
-    },
     "[\"finger snap\"]": {
       "count": 2,
       "genre_spread": 2
+    },
+    "[\"crash cymbal\", \"drums\"]": {
+      "count": 2,
+      "genre_spread": 2
+    },
+    "[\"woodblock\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"tambourine\"]": {
+      "count": 1,
+      "genre_spread": 1
     },
     "[\"snare drum\", \"tom\", \"drums\"]": {
       "count": 1,
@@ -1939,15 +2249,39 @@
       "count": 1,
       "genre_spread": 1
     },
+    "[\"snare drum\", \"shaker\", \"rimshot\", \"drum kit\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"snare drum\", \"shaker\", \"drum kit\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"snare drum\", \"ride cymbal\", \"shaker\", \"woodblock\", \"rimshot\", \"drum kit\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
     "[\"snare drum\", \"hi-hat\", \"shaker\", \"percussion\"]": {
       "count": 1,
       "genre_spread": 1
     },
-    "[\"snare drum\", \"hi-hat\", \"crash cymbal\", \"drums\"]": {
-      "count": 1,
-      "genre_spread": 0
-    },
     "[\"snare drum\", \"hi-hat\", \"beat\", \"drums\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"snare drum\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"snare drum\", \"cymbal\", \"drums\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"snare drum\", \"cymbal\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"snare drum\", \"crash cymbal\", \"drums\", \"percussion\"]": {
       "count": 1,
       "genre_spread": 1
     },
@@ -1955,7 +2289,11 @@
       "count": 1,
       "genre_spread": 1
     },
-    "[\"shaker\", \"woodblock\"]": {
+    "[\"shaker\", \"woodblock\", \"rimshot\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"shaker\", \"woodblock\", \"percussion\"]": {
       "count": 1,
       "genre_spread": 1
     },
@@ -1967,7 +2305,23 @@
       "count": 1,
       "genre_spread": 1
     },
+    "[\"shaker\", \"tambourine\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"shaker\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"rimshot\", \"drums\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
     "[\"rimshot\", \"beat\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"ride cymbal\", \"rimshot\", \"drum kit\", \"drums\"]": {
       "count": 1,
       "genre_spread": 1
     },
@@ -1975,7 +2329,19 @@
       "count": 1,
       "genre_spread": 1
     },
+    "[\"kick drum\", \"snare drum\", \"shaker\", \"woodblock\", \"drum kit\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"kick drum\", \"snare drum\", \"shaker\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
     "[\"kick drum\", \"snare drum\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"kick drum\", \"snare drum\", \"hi-hat\", \"drum kit\", \"drums\", \"percussion\"]": {
       "count": 1,
       "genre_spread": 1
     },
@@ -1992,10 +2358,6 @@
       "genre_spread": 1
     },
     "[\"kick drum\", \"snare drum\", \"beat\", \"drums\"]": {
-      "count": 1,
-      "genre_spread": 1
-    },
-    "[\"kick drum\", \"shaker\", \"woodblock\", \"drums\", \"percussion\"]": {
       "count": 1,
       "genre_spread": 1
     },
@@ -2016,6 +2378,10 @@
       "genre_spread": 1
     },
     "[\"kick drum\", \"finger snap\", \"drums\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"kick drum\", \"cymbal\", \"drums\"]": {
       "count": 1,
       "genre_spread": 1
     },
@@ -2047,7 +2413,11 @@
       "count": 1,
       "genre_spread": 1
     },
-    "[\"crash cymbal\", \"drums\"]": {
+    "[\"cymbal\", \"percussion\"]": {
+      "count": 1,
+      "genre_spread": 1
+    },
+    "[\"cymbal\", \"drums\"]": {
       "count": 1,
       "genre_spread": 1
     },
@@ -2062,37 +2432,43 @@
   },
   "technique_patterns": {
     "enters": {
-      "count": 416
+      "count": 500
     },
     "enter": {
-      "count": 83
+      "count": 93
     },
     "scratches": {
-      "count": 54
+      "count": 57
     },
     "swell": {
-      "count": 44
+      "count": 45
     },
     "the kick drum pattern": {
       "count": 39
     },
+    "continues": {
+      "count": 38
+    },
     "slides": {
-      "count": 33
+      "count": 36
     },
     "syncopated sixteenth-note patterns": {
       "count": 23
     },
-    "continues": {
-      "count": 21
-    },
     "on a grand piano playing sustained chords and melodic fills": {
       "count": 20
     },
-    "continue": {
-      "count": 16
+    "drop ": {
+      "count": 20
     },
     "the root notes of the guitar progression": {
-      "count": 15
+      "count": 17
+    },
+    "fades": {
+      "count": 16
+    },
+    "continue": {
+      "count": 16
     },
     "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords": {
       "count": 13
@@ -2106,8 +2482,17 @@
     "melodic counterpoint with light chorus and reverb": {
       "count": 12
     },
+    "fade": {
+      "count": 12
+    },
     "a steady eighth-note pattern": {
       "count": 12
+    },
+    "swells": {
+      "count": 11
+    },
+    "increases": {
+      "count": 11
     },
     "harmonic depth in the background": {
       "count": 11
@@ -2121,7 +2506,7 @@
     "a jazz-influenced progression with seventh chords and subtle vibrato": {
       "count": 10
     },
-    "swells": {
+    "slide": {
       "count": 9
     },
     "melodic slides and syncopated fills": {
@@ -2130,7 +2515,7 @@
     "low-end weight on the downbeats": {
       "count": 9
     },
-    "increases": {
+    "flourish": {
       "count": 9
     },
     "arpeggiated chords with light chorus and reverb": {
@@ -2149,6 +2534,9 @@
       "count": 8
     },
     "the kick pattern": {
+      "count": 7
+    },
+    "flourishes": {
       "count": 7
     },
     "between the vocal melody and the rhythmic guitar strumming": {
@@ -2178,10 +2566,10 @@
     "sustained low-end notes on the downbeats": {
       "count": 6
     },
-    "slide": {
+    "scratch": {
       "count": 6
     },
-    "scratch": {
+    "rhythmic muted scratches and staccato chords": {
       "count": 6
     },
     "low-end weight with sustained notes": {
@@ -2191,9 +2579,6 @@
       "count": 6
     },
     "during the chorus": {
-      "count": 6
-    },
-    "drop ": {
       "count": 6
     },
     "distorted electric guitars, driving acoustic drums": {
@@ -2216,6 +2601,9 @@
     },
     "a repetitive arpeggiated pattern in 4/4 time at 72 BPM in the key of G Major": {
       "count": 6
+    },
+    "returns": {
+      "count": 5
     },
     "melodic counterpoint with slides and vibrato": {
       "count": 5
@@ -2289,13 +2677,16 @@
     "subtle arpeggiated textures": {
       "count": 4
     },
+    "stops": {
+      "count": 4
+    },
     "sparse, melodic root notes": {
       "count": 4
     },
     "rhythmic muted scratches and staccato ninth chords": {
       "count": 4
     },
-    "rhythmic muted scratches and staccato chords": {
+    "rhythmic accompaniment with bossa nova comping patterns": {
       "count": 4
     },
     "palm-muted eighth notes in the verses and open power chords in the chorus": {
@@ -2307,10 +2698,16 @@
     "melodic movement in the low end": {
       "count": 4
     },
+    "melodic lines and syncopated chordal stabs": {
+      "count": 4
+    },
     "melodic counterpoint with single-note lines and light vibrato": {
       "count": 4
     },
     "melodic counterpoint with frequent slides": {
+      "count": 4
+    },
+    "melodic accents": {
       "count": 4
     },
     "legato pads and counter-melodies": {
@@ -2333,67 +2730,46 @@
     },
     "harmonic density": {
       "count": 4
-    },
-    "harmonic accents": {
-      "count": 4
-    },
-    "flourish": {
-      "count": 4
-    },
-    "fades": {
-      "count": 4
-    },
-    "driving power chords and palm-muted eighth-note patterns": {
-      "count": 4
-    },
-    "between the vocal melody and the acoustic guitar": {
-      "count": 4
-    },
-    "between the rhythmic acoustic guitar and the vocal melody": {
-      "count": 4
-    },
-    "between the guitar and the vocal melody": {
-      "count": 4
-    },
-    "between the fingerpicked acoustic guitar and the vocal melody": {
-      "count": 4
-    },
-    "arpeggiated eighth notes over a steady kick drum and subtle synth pads": {
-      "count": 4
     }
   },
   "production_vocab": {
     "[\"reverb\"]": {
-      "count": 77
+      "count": 84
     },
     "[\"distorted\"]": {
-      "count": 77
+      "count": 78
     },
     "[\"plate reverb\"]": {
-      "count": 47
+      "count": 48
     },
     "[\"light chorus\", \"reverb\"]": {
-      "count": 40
+      "count": 41
     },
     "[\"with chorus\"]": {
       "count": 39
     },
+    "[\"room reverb\"]": {
+      "count": 28
+    },
     "[\"overdriven\"]": {
       "count": 25
     },
-    "[\"compression\"]": {
-      "count": 21
-    },
     "[\"close-mic\"]": {
-      "count": 20
-    },
-    "[\"room reverb\"]": {
-      "count": 19
+      "count": 24
     },
     "[\"hall reverb\"]": {
-      "count": 19
+      "count": 22
+    },
+    "[\"compression\"]": {
+      "count": 22
     },
     "[\"vinyl crackle\"]": {
+      "count": 20
+    },
+    "[\"chorus effect\"]": {
+      "count": 17
+    },
+    "[\"light chorus\"]": {
       "count": 15
     },
     "[\"light chorus\", \"delay\"]": {
@@ -2402,14 +2778,11 @@
     "[\"processed\"]": {
       "count": 14
     },
-    "[\"light chorus\"]": {
-      "count": 14
-    },
-    "[\"chorus effect\"]": {
-      "count": 14
-    },
     "[\"high-fidelity\"]": {
       "count": 11
+    },
+    "[\"muffled\"]": {
+      "count": 10
     },
     "[\"subtle chorus\", \"reverb\"]": {
       "count": 8
@@ -2418,13 +2791,13 @@
       "count": 8
     },
     "[\"close-mic\", \"proximity\"]": {
-      "count": 7
+      "count": 8
     },
     "[\"stereo image\"]": {
       "count": 6
     },
-    "[\"muffled\"]": {
-      "count": 6
+    "[\"sidechain\", \"compression\"]": {
+      "count": 5
     },
     "[\"proximity\"]": {
       "count": 5
@@ -2432,7 +2805,10 @@
     "[\"processed\", \"compression\"]": {
       "count": 5
     },
-    "[\"sidechain\", \"compression\"]": {
+    "[\"short reverb\"]": {
+      "count": 4
+    },
+    "[\"long reverb\"]": {
       "count": 4
     },
     "[\"feedback swell\"]": {
@@ -2444,13 +2820,7 @@
     "[\"sits forward\", \"in the mix\"]": {
       "count": 3
     },
-    "[\"short reverb\"]": {
-      "count": 3
-    },
     "[\"overdrive\"]": {
-      "count": 3
-    },
-    "[\"long reverb\"]": {
       "count": 3
     },
     "[\"forward in the mix\"]": {
@@ -2458,6 +2828,9 @@
     },
     "[\"distortion\"]": {
       "count": 3
+    },
+    "[\"vinyl crackle\", \"tape hiss\"]": {
+      "count": 2
     },
     "[\"tremolo effect\"]": {
       "count": 2
@@ -2481,6 +2854,12 @@
       "count": 2
     },
     "[\"high-fidelity\", \"compression\"]": {
+      "count": 2
+    },
+    "[\"distorted\", \"spring reverb\"]": {
+      "count": 2
+    },
+    "[\"delay\"]": {
       "count": 2
     },
     "[\"clock-ticking\", \"sound effect\"]": {
@@ -2570,9 +2949,6 @@
     "[\"foley\", \"dripping\", \"hum\"]": {
       "count": 1
     },
-    "[\"delay\"]": {
-      "count": 1
-    },
     "[\"clean production\", \"compression\"]": {
       "count": 1
     },
@@ -2583,46 +2959,49 @@
   "key_signatures": {
     "keys": {
       "e major": 152,
-      "g major": 93,
-      "c major": 36,
-      "g minor": 10,
+      "g major": 105,
+      "c major": 40,
+      "g minor": 12,
       "b major": 8,
       "b minor": 6,
+      "d minor": 5,
       "e minor": 3,
+      "d major": 3,
       "g# minor": 2,
       "c minor": 2,
-      "d minor": 1
+      "f major": 2
     },
     "bpm": {
-      "72": 116,
-      "92": 29,
-      "105": 24,
-      "115": 23,
+      "72": 117,
+      "92": 31,
+      "115": 29,
+      "105": 25,
       "88": 22,
       "118": 21,
       "78": 18,
       "82": 16,
       "128": 16,
-      "124": 14,
+      "124": 15,
+      "120": 14,
+      "85": 13,
+      "95": 11,
       "165": 11,
-      "85": 10,
-      "95": 10,
       "68": 10,
-      "84": 8,
-      "145": 7,
-      "120": 5,
-      "100": 4,
-      "175": 4,
-      "74": 4
+      "145": 10,
+      "84": 9,
+      "100": 5,
+      "110": 5,
+      "175": 4
     },
     "time_signatures": {
-      "4/4": 199,
-      "3/4": 1
+      "4/4": 225,
+      "3/4": 3,
+      "6/8": 1
     }
   },
   "harmony_vocab": {
     "[\"chord progression\"]": {
-      "count": 28
+      "count": 29
     },
     "[\"cadence\"]": {
       "count": 3
@@ -2645,8 +3024,8 @@
   },
   "mood_emotion": {
     "warm": {
-      "count": 458,
-      "sp": 453,
+      "count": 506,
+      "sp": 501,
       "bracket": 0
     },
     "gritty": {
@@ -2655,58 +3034,58 @@
       "bracket": 0
     },
     "cinematic": {
-      "count": 61,
-      "sp": 46,
-      "bracket": 0
-    },
-    "dreamy": {
-      "count": 31,
-      "sp": 31,
-      "bracket": 0
-    },
-    "mellow": {
-      "count": 6,
-      "sp": 6,
-      "bracket": 0
-    },
-    "ethereal": {
-      "count": 31,
-      "sp": 31,
-      "bracket": 0
-    },
-    "intimate": {
-      "count": 445,
-      "sp": 443,
-      "bracket": 0
-    },
-    "melancholic": {
-      "count": 17,
-      "sp": 17,
-      "bracket": 0
-    },
-    "atmospheric": {
-      "count": 117,
-      "sp": 87,
-      "bracket": 0
-    },
-    "lush": {
-      "count": 55,
+      "count": 70,
       "sp": 55,
       "bracket": 0
     },
+    "dreamy": {
+      "count": 32,
+      "sp": 32,
+      "bracket": 0
+    },
+    "mellow": {
+      "count": 7,
+      "sp": 7,
+      "bracket": 0
+    },
+    "ethereal": {
+      "count": 33,
+      "sp": 33,
+      "bracket": 0
+    },
+    "intimate": {
+      "count": 462,
+      "sp": 460,
+      "bracket": 0
+    },
+    "melancholic": {
+      "count": 20,
+      "sp": 20,
+      "bracket": 0
+    },
+    "atmospheric": {
+      "count": 122,
+      "sp": 92,
+      "bracket": 0
+    },
+    "lush": {
+      "count": 60,
+      "sp": 60,
+      "bracket": 0
+    },
     "dark": {
-      "count": 45,
-      "sp": 23,
+      "count": 48,
+      "sp": 26,
       "bracket": 0
     },
     "bright": {
-      "count": 290,
-      "sp": 257,
+      "count": 305,
+      "sp": 272,
       "bracket": 0
     },
     "emotional": {
-      "count": 358,
-      "sp": 358,
+      "count": 360,
+      "sp": 360,
       "bracket": 0
     },
     "soulful": {
@@ -2715,13 +3094,13 @@
       "bracket": 0
     },
     "upbeat": {
-      "count": 19,
-      "sp": 17,
-      "bracket": 0
+      "count": 22,
+      "sp": 18,
+      "bracket": 2
     },
     "nostalgic": {
-      "count": 45,
-      "sp": 45,
+      "count": 47,
+      "sp": 47,
       "bracket": 0
     },
     "haunting": {
@@ -2735,33 +3114,33 @@
       "bracket": 0
     },
     "punchy": {
-      "count": 126,
-      "sp": 102,
+      "count": 129,
+      "sp": 105,
       "bracket": 0
     },
     "aggressive": {
-      "count": 62,
-      "sp": 33,
+      "count": 65,
+      "sp": 36,
       "bracket": 0
     },
     "smooth": {
-      "count": 118,
-      "sp": 118,
+      "count": 133,
+      "sp": 133,
       "bracket": 0
     },
     "delicate": {
-      "count": 18,
-      "sp": 17,
+      "count": 19,
+      "sp": 18,
       "bracket": 0
     },
     "dramatic": {
-      "count": 22,
-      "sp": 21,
+      "count": 31,
+      "sp": 30,
       "bracket": 0
     },
     "playful": {
-      "count": 35,
-      "sp": 35,
+      "count": 38,
+      "sp": 38,
       "bracket": 0
     },
     "somber": {
@@ -2792,73 +3171,78 @@
   },
   "tempo_rhythm": {
     "syncopated": {
-      "count": 454,
-      "sp": 212,
-      "bracket": 0
+      "count": 490,
+      "sp": 246,
+      "bracket": 2
     },
     "steady": {
-      "count": 264,
-      "sp": 150,
-      "bracket": 0
+      "count": 289,
+      "sp": 173,
+      "bracket": 2
     },
     "driving": {
-      "count": 172,
-      "sp": 96,
-      "bracket": 23
+      "count": 181,
+      "sp": 104,
+      "bracket": 24
     },
     "swung": {
-      "count": 9,
-      "sp": 2,
+      "count": 10,
+      "sp": 3,
       "bracket": 0
     },
     "shuffle": {
-      "count": 17,
-      "sp": 15,
-      "bracket": 0
-    },
-    "rubato": {
-      "count": 59,
-      "sp": 58,
-      "bracket": 0
-    },
-    "staccato": {
-      "count": 154,
-      "sp": 81,
-      "bracket": 0
-    },
-    "legato": {
-      "count": 71,
-      "sp": 66,
-      "bracket": 0
-    },
-    "arpeggiated": {
-      "count": 130,
-      "sp": 115,
-      "bracket": 10
-    },
-    "fingerpicked": {
-      "count": 207,
-      "sp": 157,
-      "bracket": 50
-    },
-    "strummed": {
-      "count": 8,
-      "sp": 8,
-      "bracket": 0
-    },
-    "palm-muted": {
-      "count": 134,
-      "sp": 57,
-      "bracket": 11
-    },
-    "pizzicato": {
-      "count": 19,
+      "count": 21,
       "sp": 19,
       "bracket": 0
     },
+    "rubato": {
+      "count": 64,
+      "sp": 63,
+      "bracket": 0
+    },
+    "staccato": {
+      "count": 177,
+      "sp": 99,
+      "bracket": 5
+    },
+    "legato": {
+      "count": 90,
+      "sp": 84,
+      "bracket": 1
+    },
+    "arpeggiated": {
+      "count": 142,
+      "sp": 126,
+      "bracket": 11
+    },
+    "fingerpicked": {
+      "count": 226,
+      "sp": 171,
+      "bracket": 55
+    },
+    "strummed": {
+      "count": 11,
+      "sp": 10,
+      "bracket": 1
+    },
+    "palm-muted": {
+      "count": 135,
+      "sp": 58,
+      "bracket": 11
+    },
+    "spiccato": {
+      "count": 4,
+      "sp": 3,
+      "bracket": 1
+    },
+    "pizzicato": {
+      "count": 24,
+      "sp": 22,
+      "bracket": 2
+    },
     "tremolo": {
-      "count": 49,
-      "sp": 30,
+      "count": 56,
+      "sp": 37,
       "bracket": 0
     },
     "trill": {
@@ -2869,10 +3253,10 @@
   },
   "dynamics_structure": {
     "[\"arrangement\"]": {
-      "count": 181
+      "count": 215
     },
     "[\"intimate\"]": {
-      "count": 103
+      "count": 104
     },
     "[\"arrangement\", \"sparse\", \"focusing on\", \"interplay\"]": {
       "count": 55
@@ -2883,19 +3267,19 @@
     "[\"minimalist\"]": {
       "count": 12
     },
+    "[\"sparse\"]": {
+      "count": 7
+    },
+    "[\"lush\"]": {
+      "count": 7
+    },
     "[\"arrangement\", \"sparse\", \"intimate\"]": {
       "count": 7
     },
     "[\"transition to\"]": {
       "count": 6
     },
-    "[\"sparse\"]": {
-      "count": 6
-    },
     "[\"minimalist\", \"arrangement\"]": {
-      "count": 6
-    },
-    "[\"lush\"]": {
       "count": 6
     },
     "[\"arrangement\", \"sparse\"]": {
@@ -2943,13 +3327,31 @@
     "[\"minimalist\", \"focusing on\"]": {
       "count": 2
     },
+    "[\"intimate\", \"transitions into\"]": {
+      "count": 2
+    },
     "[\"interplay\"]": {
+      "count": 2
+    },
+    "[\"focusing on\"]": {
+      "count": 2
+    },
+    "[\"crescendo\"]": {
+      "count": 2
+    },
+    "[\"arrangement\", \"transitions into\"]": {
+      "count": 2
+    },
+    "[\"arrangement\", \"sparse\", \"interplay\"]": {
       "count": 2
     },
     "[\"arrangement\", \"sparse\", \"focusing on\"]": {
       "count": 2
     },
     "[\"arrangement\", \"minimalist\"]": {
+      "count": 2
+    },
+    "[\"arrangement\", \"intimate\"]": {
       "count": 2
     },
     "unison male and female vocals, full band energy": {
@@ -2969,45 +3371,27 @@
     },
     "full synth arrangement, sidechained pads": {
       "count": 1
-    },
-    "full synth arrangement, shimmering pads": {
-      "count": 1
-    },
-    "full synth arrangement, layered vocals": {
-      "count": 1
-    },
-    "full synth arrangement, driving percussion": {
-      "count": 1
-    },
-    "full funk arrangement, slap bass becomes more active": {
-      "count": 1
-    },
-    "full funk arrangement, driving bassline": {
-      "count": 1
-    },
-    "full electronic production, heavy sub-bass": {
-      "count": 1
     }
   },
   "timbre_texture": {
     "distorted": {
-      "count": 422,
-      "sp": 137,
-      "bracket": 76
+      "count": 428,
+      "sp": 141,
+      "bracket": 78
     },
     "soft": {
-      "count": 342,
-      "sp": 328,
+      "count": 373,
+      "sp": 359,
       "bracket": 0
     },
     "resonant": {
-      "count": 151,
-      "sp": 38,
+      "count": 155,
+      "sp": 42,
       "bracket": 0
     },
     "compressed": {
-      "count": 29,
-      "sp": 18,
+      "count": 31,
+      "sp": 20,
       "bracket": 0
     },
     "saturated": {
@@ -3016,23 +3400,23 @@
       "bracket": 0
     },
     "crisp": {
-      "count": 243,
-      "sp": 192,
+      "count": 256,
+      "sp": 205,
       "bracket": 0
     },
     "clean": {
-      "count": 796,
-      "sp": 540,
-      "bracket": 168
+      "count": 863,
+      "sp": 594,
+      "bracket": 181
     },
     "heavy": {
-      "count": 268,
-      "sp": 88,
+      "count": 283,
+      "sp": 103,
       "bracket": 4
     },
     "airy": {
-      "count": 35,
-      "sp": 34,
+      "count": 36,
+      "sp": 35,
       "bracket": 0
     },
     "thick": {
@@ -3041,8 +3425,8 @@
       "bracket": 0
     },
     "thin": {
-      "count": 3,
-      "sp": 1,
+      "count": 5,
+      "sp": 3,
       "bracket": 0
     },
     "fuzzy": {
@@ -3051,48 +3435,48 @@
       "bracket": 0
     },
     "metallic": {
-      "count": 174,
-      "sp": 6,
+      "count": 179,
+      "sp": 11,
       "bracket": 0
     },
     "glassy": {
-      "count": 7,
-      "sp": 7,
+      "count": 8,
+      "sp": 8,
       "bracket": 0
     },
     "woody": {
-      "count": 7,
-      "sp": 1,
+      "count": 8,
+      "sp": 2,
       "bracket": 0
     },
     "breathy": {
-      "count": 233,
-      "sp": 233,
+      "count": 238,
+      "sp": 238,
       "bracket": 0
     },
     "nasal": {
-      "count": 6,
-      "sp": 6,
+      "count": 8,
+      "sp": 8,
       "bracket": 0
     },
     "hollow": {
-      "count": 3,
-      "sp": 3,
+      "count": 4,
+      "sp": 4,
       "bracket": 0
     },
     "punchy": {
-      "count": 126,
-      "sp": 102,
+      "count": 129,
+      "sp": 105,
       "bracket": 0
     },
     "shimmering": {
-      "count": 43,
-      "sp": 39,
+      "count": 48,
+      "sp": 44,
       "bracket": 1
     },
     "lo-fi": {
-      "count": 106,
-      "sp": 86,
+      "count": 112,
+      "sp": 92,
       "bracket": 0
     },
     "hi-fi": {
@@ -3101,26 +3485,26 @@
       "bracket": 0
     },
     "analog": {
-      "count": 56,
-      "sp": 54,
+      "count": 60,
+      "sp": 58,
       "bracket": 0
     }
   },
   "vocal_expressions": {
     "[\"vocals\"]": {
-      "count": 337
+      "count": 339
     },
     "[\"male vocals\"]": {
-      "count": 271
+      "count": 273
     },
     "[\"female vocals\", \"male vocals\"]": {
-      "count": 112
+      "count": 113
     },
     "[\"male tenor vocals\"]": {
       "count": 78
     },
     "[\"male baritone vocals\", \"male vocals\"]": {
-      "count": 74
+      "count": 75
     },
     "[\"vocals\", \"voice\"]": {
       "count": 35
@@ -3138,10 +3522,13 @@
       "count": 18
     },
     "[\"male vocals\", \"falsetto\"]": {
-      "count": 14
+      "count": 15
     },
     "[\"male vocals\", \"falsetto\", \"voice\"]": {
       "count": 13
+    },
+    "[\"vocalizing\"]": {
+      "count": 12
     },
     "[\"vocalist\"]": {
       "count": 9
@@ -3157,9 +3544,6 @@
     },
     "[\"male tenor vocals\", \"voice\"]": {
       "count": 7
-    },
-    "[\"vocalizing\"]": {
-      "count": 6
     },
     "[\"rap delivery\"]": {
       "count": 6
@@ -3218,6 +3602,9 @@
     "[\"falsetto\", \"vocals\"]": {
       "count": 2
     },
+    "[\"voice\"]": {
+      "count": 1
+    },
     "[\"male vocalist\", \"vocalist\", \"rap delivery\"]": {
       "count": 1
     },
@@ -3232,26 +3619,41 @@
     },
     "[\"female vocalist\", \"male vocalist\", \"vocalist\", \"falsetto\", \"voice\"]": {
       "count": 1
+    },
+    "[\"female soprano vocals\", \"vocalizing\"]": {
+      "count": 1
+    },
+    "[\"falsetto\", \"vocalizing\"]": {
+      "count": 1
     }
   },
   "vocal_chorus": {
     "[\"doubling\"]": {
-      "count": 43
+      "count": 44
     },
     "[\"layered vocal\", \"harmonies\"]": {
       "count": 15
     },
-    "[\"ad-lib\"]": {
+    "[\"unison\"]": {
       "count": 14
     },
     "[\"harmonies\"]": {
-      "count": 12
+      "count": 14
+    },
+    "[\"ad-lib\"]": {
+      "count": 14
     },
     "[\"ad-libs\"]": {
-      "count": 12
+      "count": 13
+    },
+    "[\"call-and-response\"]": {
+      "count": 10
     },
     "[\"vocal harmonies\"]": {
       "count": 8
+    },
+    "[\"choir\"]": {
+      "count": 4
     },
     "[\"vocal harmony\"]": {
       "count": 3
@@ -3263,9 +3665,6 @@
       "count": 2
     },
     "[\"vocal harmonies\", \"ad-libs\"]": {
-      "count": 1
-    },
-    "[\"unison\"]": {
       "count": 1
     },
     "[\"layered vocal\"]": {
@@ -3280,11 +3679,43 @@
     "[\"harmonies\", \"ad-libs\"]": {
       "count": 1
     },
+    "[\"choral\"]": {
+      "count": 1
+    },
     "[\"call-and-response\", \"unison\"]": {
+      "count": 1
+    },
+    "[\"call and response\"]": {
       "count": 1
     }
   },
   "genre_vocabulary_map": {
+    "": {
+      "total_entries": 858,
+      "unique_entities": 204,
+      "top_instruments": [
+        {
+          "entity": "electric bass",
+          "freq": 57
+        },
+        {
+          "entity": "violin",
+          "freq": 43
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 32
+        },
+        {
+          "entity": "guitar",
+          "freq": 29
+        },
+        {
+          "entity": "cello",
+          "freq": 25
+        }
+      ]
+    },
     "Indie Pop": {
       "total_entries": 467,
       "unique_entities": 127,
@@ -3312,20 +3743,20 @@
       ]
     },
     "City Pop": {
-      "total_entries": 407,
-      "unique_entities": 109,
+      "total_entries": 438,
+      "unique_entities": 119,
       "top_instruments": [
         {
           "entity": "electric bass",
-          "freq": 34
+          "freq": 36
         },
         {
           "entity": "electric guitar",
-          "freq": 25
+          "freq": 27
         },
         {
           "entity": "clean electric guitar",
-          "freq": 19
+          "freq": 21
         },
         {
           "entity": "acoustic guitar",
@@ -3333,14 +3764,18 @@
         },
         {
           "entity": "guitar",
-          "freq": 8
+          "freq": 9
         }
       ]
     },
     "Jazz": {
-      "total_entries": 385,
-      "unique_entities": 19,
+      "total_entries": 412,
+      "unique_entities": 30,
       "top_instruments": [
+        {
+          "entity": "guitar",
+          "freq": 8
+        },
         {
           "entity": "upright bass",
           "freq": 3
@@ -3354,8 +3789,8 @@
           "freq": 3
         },
         {
-          "entity": "grand piano",
-          "freq": 1
+          "entity": "acoustic guitar",
+          "freq": 3
         }
       ]
     },
@@ -3390,6 +3825,32 @@
         }
       ]
     },
+    "Acoustic Pop": {
+      "total_entries": 301,
+      "unique_entities": 93,
+      "top_instruments": [
+        {
+          "entity": "electric bass",
+          "freq": 18
+        },
+        {
+          "entity": "synthesizer",
+          "freq": 16
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 11
+        },
+        {
+          "entity": "electric guitar",
+          "freq": 9
+        },
+        {
+          "entity": "clean electric guitar",
+          "freq": 9
+        }
+      ]
+    },
     "Electronic / Ambient": {
       "total_entries": 268,
       "unique_entities": 1,
@@ -3418,32 +3879,6 @@
         {
           "entity": "synth bass",
           "freq": 6
-        }
-      ]
-    },
-    "Acoustic Pop": {
-      "total_entries": 264,
-      "unique_entities": 85,
-      "top_instruments": [
-        {
-          "entity": "electric bass",
-          "freq": 16
-        },
-        {
-          "entity": "synthesizer",
-          "freq": 15
-        },
-        {
-          "entity": "electric guitar",
-          "freq": 9
-        },
-        {
-          "entity": "clean electric guitar",
-          "freq": 9
-        },
-        {
-          "entity": "pad",
-          "freq": 8
         }
       ]
     },
@@ -3535,10 +3970,62 @@
       "unique_entities": 1,
       "top_instruments": []
     },
+    "Dream Pop": {
+      "total_entries": 228,
+      "unique_entities": 88,
+      "top_instruments": [
+        {
+          "entity": "electric bass",
+          "freq": 15
+        },
+        {
+          "entity": "electric guitar",
+          "freq": 12
+        },
+        {
+          "entity": "synthesizer",
+          "freq": 11
+        },
+        {
+          "entity": "clean electric guitar",
+          "freq": 9
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 7
+        }
+      ]
+    },
     "chillout": {
       "total_entries": 224,
       "unique_entities": 1,
       "top_instruments": []
+    },
+    "Bossa Nova": {
+      "total_entries": 216,
+      "unique_entities": 73,
+      "top_instruments": [
+        {
+          "entity": "acoustic guitar",
+          "freq": 22
+        },
+        {
+          "entity": "electric guitar",
+          "freq": 16
+        },
+        {
+          "entity": "electric bass",
+          "freq": 16
+        },
+        {
+          "entity": "clean electric guitar",
+          "freq": 12
+        },
+        {
+          "entity": "nylon-string acoustic guitar",
+          "freq": 6
+        }
+      ]
     },
     "Hip-Hop": {
       "total_entries": 215,
@@ -3651,58 +4138,6 @@
         {
           "entity": "clean electric guitar",
           "freq": 7
-        }
-      ]
-    },
-    "Dream Pop": {
-      "total_entries": 191,
-      "unique_entities": 76,
-      "top_instruments": [
-        {
-          "entity": "electric guitar",
-          "freq": 12
-        },
-        {
-          "entity": "synthesizer",
-          "freq": 11
-        },
-        {
-          "entity": "electric bass",
-          "freq": 11
-        },
-        {
-          "entity": "clean electric guitar",
-          "freq": 9
-        },
-        {
-          "entity": "synth pad",
-          "freq": 5
-        }
-      ]
-    },
-    "Bossa Nova": {
-      "total_entries": 185,
-      "unique_entities": 64,
-      "top_instruments": [
-        {
-          "entity": "acoustic guitar",
-          "freq": 18
-        },
-        {
-          "entity": "electric bass",
-          "freq": 13
-        },
-        {
-          "entity": "electric guitar",
-          "freq": 11
-        },
-        {
-          "entity": "clean electric guitar",
-          "freq": 10
-        },
-        {
-          "entity": "nylon-string acoustic guitar",
-          "freq": 5
         }
       ]
     },
@@ -4110,6 +4545,32 @@
       "unique_entities": 1,
       "top_instruments": []
     },
+    "Acoustic Folk": {
+      "total_entries": 89,
+      "unique_entities": 50,
+      "top_instruments": [
+        {
+          "entity": "acoustic guitar",
+          "freq": 10
+        },
+        {
+          "entity": "violin",
+          "freq": 7
+        },
+        {
+          "entity": "electric bass",
+          "freq": 6
+        },
+        {
+          "entity": "fingerpicked acoustic guitar",
+          "freq": 5
+        },
+        {
+          "entity": "sub-bass",
+          "freq": 2
+        }
+      ]
+    },
     "Jazz Ballad": {
       "total_entries": 88,
       "unique_entities": 40,
@@ -4484,32 +4945,6 @@
         }
       ]
     },
-    "Acoustic Folk": {
-      "total_entries": 52,
-      "unique_entities": 35,
-      "top_instruments": [
-        {
-          "entity": "electric bass",
-          "freq": 4
-        },
-        {
-          "entity": "acoustic guitar",
-          "freq": 3
-        },
-        {
-          "entity": "sub-bass",
-          "freq": 2
-        },
-        {
-          "entity": "fingerpicked acoustic guitar",
-          "freq": 2
-        },
-        {
-          "entity": "electric guitar",
-          "freq": 2
-        }
-      ]
-    },
     "Soul Ballad": {
       "total_entries": 52,
       "unique_entities": 32,
@@ -4838,6 +5273,32 @@
       "unique_entities": 1,
       "top_instruments": []
     },
+    "Lo-Fi / Chillhop": {
+      "total_entries": 40,
+      "unique_entities": 26,
+      "top_instruments": [
+        {
+          "entity": "electric guitar",
+          "freq": 4
+        },
+        {
+          "entity": "upright bass",
+          "freq": 3
+        },
+        {
+          "entity": "electric bass",
+          "freq": 3
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 3
+        },
+        {
+          "entity": "nylon-string acoustic guitar",
+          "freq": 2
+        }
+      ]
+    },
     "Acoustic Indie / Folk": {
       "total_entries": 39,
       "unique_entities": 27,
@@ -4861,6 +5322,58 @@
         {
           "entity": "strings",
           "freq": 1
+        }
+      ]
+    },
+    "Classical Guitar / Instrumental": {
+      "total_entries": 39,
+      "unique_entities": 23,
+      "top_instruments": [
+        {
+          "entity": "vibraphone",
+          "freq": 7
+        },
+        {
+          "entity": "guitar",
+          "freq": 4
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 4
+        },
+        {
+          "entity": "electric bass",
+          "freq": 3
+        },
+        {
+          "entity": "nylon-string acoustic guitar",
+          "freq": 2
+        }
+      ]
+    },
+    "French Pop / Chanson": {
+      "total_entries": 39,
+      "unique_entities": 23,
+      "top_instruments": [
+        {
+          "entity": "vibraphone",
+          "freq": 7
+        },
+        {
+          "entity": "guitar",
+          "freq": 4
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 4
+        },
+        {
+          "entity": "electric bass",
+          "freq": 3
+        },
+        {
+          "entity": "nylon-string acoustic guitar",
+          "freq": 2
         }
       ]
     },
@@ -4968,6 +5481,32 @@
         }
       ]
     },
+    "Jazz Pop / Singer-Songwriter": {
+      "total_entries": 36,
+      "unique_entities": 22,
+      "top_instruments": [
+        {
+          "entity": "flute",
+          "freq": 4
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 4
+        },
+        {
+          "entity": "electric guitar",
+          "freq": 3
+        },
+        {
+          "entity": "electric bass",
+          "freq": 3
+        },
+        {
+          "entity": "upright bass",
+          "freq": 2
+        }
+      ]
+    },
     "Lo-Fi Hip-Hop": {
       "total_entries": 36,
       "unique_entities": 1,
@@ -4996,6 +5535,80 @@
         {
           "entity": "overdriven electric guitar",
           "freq": 1
+        }
+      ]
+    },
+    "Latin Jazz": {
+      "total_entries": 35,
+      "unique_entities": 21,
+      "top_instruments": [
+        {
+          "entity": "guitar",
+          "freq": 4
+        },
+        {
+          "entity": "piano",
+          "freq": 3
+        },
+        {
+          "entity": "electric guitar",
+          "freq": 3
+        },
+        {
+          "entity": "electric bass",
+          "freq": 3
+        },
+        {
+          "entity": "clean electric guitar",
+          "freq": 3
+        }
+      ]
+    },
+    "Neo-Soul / Contemporary R&B": {
+      "total_entries": 35,
+      "unique_entities": 20,
+      "top_instruments": [
+        {
+          "entity": "saxophone",
+          "freq": 4
+        },
+        {
+          "entity": "electric bass",
+          "freq": 4
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 4
+        },
+        {
+          "entity": "upright bass",
+          "freq": 2
+        },
+        {
+          "entity": "nylon-string acoustic guitar",
+          "freq": 2
+        }
+      ]
+    },
+    "Swing / Jazz": {
+      "total_entries": 35,
+      "unique_entities": 23,
+      "top_instruments": [
+        {
+          "entity": "electric guitar",
+          "freq": 4
+        },
+        {
+          "entity": "electric bass",
+          "freq": 4
+        },
+        {
+          "entity": "guitar",
+          "freq": 2
+        },
+        {
+          "entity": "clean electric guitar",
+          "freq": 2
         }
       ]
     },
@@ -5082,6 +5695,32 @@
         }
       ]
     },
+    "Bossa Nova / Modern Jazz": {
+      "total_entries": 33,
+      "unique_entities": 15,
+      "top_instruments": [
+        {
+          "entity": "acoustic guitar",
+          "freq": 5
+        },
+        {
+          "entity": "violin",
+          "freq": 4
+        },
+        {
+          "entity": "upright bass",
+          "freq": 4
+        },
+        {
+          "entity": "guitar",
+          "freq": 4
+        },
+        {
+          "entity": "electric bass",
+          "freq": 4
+        }
+      ]
+    },
     "EDM / Future Bass": {
       "total_entries": 33,
       "unique_entities": 24,
@@ -5130,6 +5769,28 @@
         },
         {
           "entity": "clean electric guitar",
+          "freq": 2
+        }
+      ]
+    },
+    "Ambient Piano / Neoclassical": {
+      "total_entries": 32,
+      "unique_entities": 18,
+      "top_instruments": [
+        {
+          "entity": "electric bass",
+          "freq": 4
+        },
+        {
+          "entity": "guitar",
+          "freq": 3
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 3
+        },
+        {
+          "entity": "bass guitar",
           "freq": 2
         }
       ]
@@ -5183,6 +5844,58 @@
         {
           "entity": "clean electric guitar",
           "freq": 2
+        }
+      ]
+    },
+    "Acoustic Blues": {
+      "total_entries": 31,
+      "unique_entities": 24,
+      "top_instruments": [
+        {
+          "entity": "acoustic guitar",
+          "freq": 3
+        },
+        {
+          "entity": "fingerpicked acoustic guitar",
+          "freq": 2
+        },
+        {
+          "entity": "electric guitar",
+          "freq": 2
+        },
+        {
+          "entity": "electric bass",
+          "freq": 2
+        },
+        {
+          "entity": "clean electric guitar",
+          "freq": 1
+        }
+      ]
+    },
+    "Acoustic Folk / Indie Folk": {
+      "total_entries": 31,
+      "unique_entities": 18,
+      "top_instruments": [
+        {
+          "entity": "cello",
+          "freq": 5
+        },
+        {
+          "entity": "piano",
+          "freq": 4
+        },
+        {
+          "entity": "pad",
+          "freq": 2
+        },
+        {
+          "entity": "grand piano",
+          "freq": 2
+        },
+        {
+          "entity": "strings",
+          "freq": 1
         }
       ]
     },
@@ -5243,6 +5956,32 @@
         }
       ]
     },
+    "Acoustic Waltz / Chamber": {
+      "total_entries": 30,
+      "unique_entities": 21,
+      "top_instruments": [
+        {
+          "entity": "electric bass",
+          "freq": 3
+        },
+        {
+          "entity": "acoustic guitar",
+          "freq": 3
+        },
+        {
+          "entity": "strings",
+          "freq": 2
+        },
+        {
+          "entity": "steel-string acoustic guitar",
+          "freq": 2
+        },
+        {
+          "entity": "guitar",
+          "freq": 1
+        }
+      ]
+    },
     "Ambient / Post-Classical": {
       "total_entries": 30,
       "unique_entities": 22,
@@ -5292,6 +6031,32 @@
         {
           "entity": "clean electric guitar",
           "freq": 2
+        }
+      ]
+    },
+    "Classical Crossover / Chamber": {
+      "total_entries": 30,
+      "unique_entities": 17,
+      "top_instruments": [
+        {
+          "entity": "acoustic guitar",
+          "freq": 5
+        },
+        {
+          "entity": "violin",
+          "freq": 4
+        },
+        {
+          "entity": "upright bass",
+          "freq": 3
+        },
+        {
+          "entity": "electric bass",
+          "freq": 3
+        },
+        {
+          "entity": "guitar",
+          "freq": 1
         }
       ]
     },
@@ -7485,306 +8250,306 @@
     }
   },
   "descriptor_combos": {
-    "guitar": 3220,
-    "electric": 2509,
-    "bass": 2179,
-    "vocals": 1852,
-    "drum": 1619,
-    "bpm": 1421,
-    "male": 1223,
-    "chorus": 1118,
-    "key": 1039,
-    "kick": 979,
-    "drums": 963,
-    "acoustic": 957,
-    "arrangement": 892,
-    "snare": 868,
-    "synth": 863,
-    "major": 830,
-    "vocal": 825,
-    "clean": 796,
-    "piano": 706,
-    "reverb": 700,
-    "verse": 700,
-    "intro": 686,
-    "null": 673,
+    "guitar": 3597,
+    "electric": 2753,
+    "bass": 2433,
+    "vocals": 1869,
+    "drum": 1738,
+    "bpm": 1559,
+    "male": 1236,
+    "acoustic": 1169,
+    "chorus": 1139,
+    "key": 1120,
+    "drums": 1053,
+    "kick": 1024,
+    "arrangement": 972,
+    "snare": 936,
+    "major": 906,
+    "synth": 885,
+    "clean": 863,
+    "vocal": 831,
+    "piano": 790,
+    "reverb": 758,
+    "intro": 729,
+    "null": 727,
+    "verse": 707,
+    "melodic": 623,
     "k-pop": 596,
-    "melodic": 547,
-    "rhythmic": 535,
-    "time_signature": 524,
-    "chords": 479,
-    "warm": 458,
-    "syncopated": 454,
-    "production": 452,
-    "ballad": 450,
-    "pop": 450,
-    "intimate": 445,
-    "light": 430,
-    "distorted": 422,
-    "percussion": 420,
+    "rhythmic": 584,
+    "time_signature": 575,
+    "chords": 512,
+    "warm": 506,
+    "section": 496,
+    "syncopated": 490,
+    "percussion": 478,
+    "production": 475,
+    "intimate": 462,
+    "light": 462,
+    "pop": 460,
+    "ballad": 451,
+    "distorted": 428,
+    "time": 411,
+    "pattern": 410,
+    "subtle": 400,
+    "tempo": 398,
+    "enters": 397,
+    "plays": 386,
+    "throughout": 385,
     "korean": 383,
-    "enters": 382,
-    "delivery": 381,
-    "subtle": 376,
-    "pattern": 372,
-    "throughout": 370,
-    "section": 362,
-    "emotional": 358,
-    "tempo": 358,
-    "pad": 355,
-    "time": 344,
-    "soft": 342,
-    "kit": 330,
-    "minor": 330,
-    "synthesizer": 328,
-    "voice": 325,
-    "plays": 317,
-    "instrumental": 315,
-    "lyrics": 315,
-    "hi-hat": 308,
-    "notes": 300,
-    "energy": 299,
-    "features": 297,
-    "bright": 290,
-    "featuring": 272,
-    "heavy": 268,
-    "sparse": 267,
-    "steady": 264,
-    "between": 263,
-    "outro": 257,
-    "track": 251,
-    "72": 246,
-    "female": 246,
-    "baritone": 245,
-    "crisp": 243,
-    "dry": 243,
-    "sustained": 238,
-    "breathy": 233,
-    "follows": 229,
-    "full": 225,
-    "slap": 222,
-    "bridge": 218,
-    "provides": 218,
-    "tenor": 218,
-    "groove": 216,
-    "tight": 211,
-    "fingerpicked": 207,
-    "lead": 206,
-    "minimal": 205,
-    "texture": 200,
-    "final": 199,
-    "string": 199,
-    "tone": 199,
-    "riff": 198,
-    "pads": 195,
-    "strings": 194,
-    "focusing": 193,
-    "layered": 193,
-    "accents": 189,
-    "occasional": 189,
-    "playing": 188,
-    "percussive": 185,
-    "harmonic": 184,
-    "interplay": 184,
-    "room": 184,
-    "warmth": 181,
-    "through": 175,
-    "long": 174,
-    "metallic": 174,
-    "textures": 173,
-    "driving": 172,
+    "delivery": 382,
+    "instrumental": 375,
+    "pad": 374,
+    "soft": 373,
+    "minor": 363,
+    "kit": 361,
+    "emotional": 360,
+    "synthesizer": 346,
+    "hi-hat": 343,
+    "features": 334,
+    "notes": 331,
+    "voice": 328,
+    "lyrics": 316,
+    "between": 307,
+    "energy": 306,
+    "bright": 305,
+    "outro": 297,
+    "steady": 289,
+    "heavy": 283,
+    "featuring": 282,
+    "sparse": 271,
+    "provides": 267,
+    "track": 267,
+    "sustained": 257,
+    "crisp": 256,
+    "dry": 255,
+    "female": 254,
+    "72": 250,
+    "baritone": 248,
+    "tone": 242,
+    "full": 240,
+    "string": 239,
+    "breathy": 238,
+    "follows": 238,
+    "bridge": 234,
+    "lead": 234,
+    "groove": 231,
+    "slap": 231,
+    "playing": 229,
+    "fingerpicked": 226,
+    "strings": 226,
+    "tenor": 222,
+    "tight": 222,
+    "occasional": 215,
+    "accents": 212,
+    "minimal": 212,
+    "room": 210,
+    "texture": 209,
+    "final": 206,
+    "harmonic": 206,
+    "percussive": 204,
+    "riff": 204,
+    "pads": 201,
+    "focusing": 199,
+    "layered": 199,
+    "shaker": 191,
+    "brass": 188,
+    "interplay": 188,
+    "rhythm": 188,
+    "beat": 185,
+    "warmth": 184,
+    "cello": 183,
+    "long": 183,
+    "gentle": 182,
+    "driving": 181,
+    "through": 181,
+    "metallic": 179,
+    "register": 179,
+    "dynamic": 178,
+    "staccato": 177,
+    "textures": 175,
     "minutes": 172,
-    "rhythm": 172,
-    "gentle": 167,
-    "beat": 166,
+    "creating": 171,
+    "melody": 171,
+    "chord": 169,
+    "song": 169,
+    "out": 167,
     "rock": 166,
-    "song": 166,
-    "dynamic": 162,
-    "creating": 159,
-    "register": 158,
-    "chord": 157,
-    "power": 155,
-    "brass": 154,
-    "staccato": 154,
-    "resonant": 151,
+    "folk": 164,
+    "patterns": 164,
+    "fills": 159,
+    "no": 159,
+    "sub-bass": 158,
+    "compression": 157,
+    "power": 157,
+    "eighth-note": 156,
+    "resonant": 155,
+    "grand": 154,
+    "cymbal": 151,
+    "natural": 151,
     "verses": 151,
-    "compression": 150,
-    "no": 150,
-    "sub-bass": 150,
+    "electronic": 148,
+    "indie": 147,
     "k-indie": 147,
-    "eighth-note": 146,
-    "folk": 146,
-    "indie": 146,
-    "fills": 144,
-    "patterns": 143,
-    "depth": 142,
-    "out": 142,
-    "grand": 141,
+    "signature": 145,
+    "depth": 144,
+    "harmonies": 144,
+    "arpeggiated": 142,
+    "mix": 142,
     "overdriven": 141,
-    "harmonies": 140,
-    "shaker": 140,
-    "melody": 138,
-    "mix": 137,
-    "signature": 137,
-    "electronic": 136,
-    "palm-muted": 134,
-    "vocalist": 134,
+    "upright": 141,
+    "violin": 141,
+    "line": 140,
+    "stabs": 139,
+    "influences": 138,
+    "solo": 137,
+    "pulse": 136,
+    "vocalist": 136,
+    "effect": 135,
+    "falsetto": 135,
+    "palm-muted": 135,
+    "doubling": 134,
     "chest": 133,
-    "cymbal": 133,
-    "doubling": 132,
-    "falsetto": 132,
-    "arpeggiated": 130,
-    "influences": 130,
-    "stabs": 130,
-    "ambient": 129,
+    "elements": 133,
+    "smooth": 133,
+    "muted": 132,
+    "ambient": 131,
+    "crash": 131,
+    "vibrato": 131,
+    "progression": 130,
+    "provide": 130,
+    "structure": 130,
+    "hits": 129,
     "must": 129,
-    "elements": 127,
-    "pulse": 127,
+    "punchy": 129,
+    "sixteenth-note": 129,
+    "sound": 129,
+    "prominent": 128,
+    "delivered": 127,
+    "performs": 127,
+    "conversational": 126,
     "industrial": 126,
-    "line": 126,
-    "punchy": 126,
-    "crash": 125,
-    "delivered": 125,
-    "minimalist": 125,
-    "natural": 125,
-    "progression": 125,
-    "cello": 124,
-    "conversational": 124,
+    "minimalist": 126,
+    "root": 126,
+    "hi-hats": 125,
+    "main": 124,
+    "beats": 123,
+    "transitions": 123,
+    "atmospheric": 122,
     "pre-chorus": 122,
-    "effect": 121,
-    "sound": 121,
-    "muted": 120,
-    "hi-hats": 119,
-    "hits": 119,
-    "sixteenth-note": 119,
-    "filter": 118,
-    "prominent": 118,
-    "root": 118,
-    "smooth": 118,
-    "atmospheric": 117,
-    "funk": 117,
-    "atmosphere": 116,
-    "backbeat": 115,
-    "plate": 115,
-    "vibrato": 115,
-    "singing": 114,
-    "rhodes": 112,
-    "short": 111,
-    "main": 110,
-    "low": 109,
-    "transitions": 109,
-    "noise": 108,
-    "phrasing": 108,
-    "delay": 107,
-    "performs": 107,
-    "provide": 107,
-    "structure": 107,
-    "beats": 106,
-    "lo-fi": 106,
-    "background": 105,
-    "clarity": 105,
+    "rhodes": 121,
+    "singing": 121,
+    "filter": 120,
+    "plate": 120,
+    "feel": 119,
+    "funk": 119,
+    "atmosphere": 117,
+    "backbeat": 117,
+    "phrasing": 116,
+    "short": 115,
+    "jazz": 114,
+    "over": 114,
+    "during": 113,
+    "low": 113,
+    "lo-fi": 112,
+    "background": 110,
+    "delay": 110,
+    "noise": 109,
+    "vinyl": 109,
+    "two": 108,
+    "clarity": 106,
+    "repetitive": 106,
+    "theme": 105,
+    "building": 103,
+    "bossa": 102,
+    "city": 102,
     "mixed": 102,
-    "repetitive": 102,
-    "during": 101,
-    "building": 100,
-    "city": 99,
-    "over": 98,
-    "centers": 97,
-    "feel": 97,
+    "guitars": 101,
+    "open": 101,
+    "orchestral": 100,
+    "close-mic": 99,
+    "centers": 98,
+    "rapid": 98,
+    "range": 97,
+    "slides": 97,
+    "slight": 97,
     "space": 97,
     "hook": 96,
-    "vinyl": 95,
-    "open": 94,
-    "guitars": 93,
-    "range": 93,
-    "slight": 92,
-    "theme": 92,
-    "slides": 91,
-    "solo": 90,
-    "close-mic": 89,
-    "two": 89,
-    "mood": 88,
-    "maintaining": 86,
-    "providing": 86,
+    "crackle": 92,
+    "mood": 92,
+    "deep": 91,
+    "fingerstyle": 91,
+    "legato": 90,
+    "providing": 90,
+    "maintaining": 89,
+    "consists": 88,
+    "drop": 88,
+    "sections": 88,
+    "climax": 86,
+    "frequent": 85,
+    "performance": 85,
+    "silence": 85,
+    "uses": 85,
     "establishing": 84,
-    "fingerstyle": 84,
-    "performance": 83,
-    "silence": 83,
-    "upright": 83,
-    "processed": 82,
-    "band": 81,
-    "high-pitched": 81,
-    "tension": 81,
-    "climax": 80,
-    "crackle": 80,
-    "filtered": 80,
-    "bars": 79,
-    "deep": 79,
-    "digital": 78,
+    "nova": 84,
+    "tension": 84,
+    "band": 83,
+    "high-pitched": 83,
+    "off-beats": 83,
+    "processed": 83,
+    "92": 82,
+    "filtered": 82,
+    "like": 82,
+    "bars": 81,
+    "create": 80,
+    "115": 79,
+    "digital": 79,
+    "emphasizing": 79,
+    "lines": 79,
+    "maintains": 79,
+    "consistent": 78,
     "sequence": 78,
-    "off-beats": 77,
-    "orchestral": 77,
-    "drop": 76,
+    "harmony": 77,
+    "instrumentation": 77,
+    "style": 77,
+    "wide": 77,
     "energetic": 76,
     "rap": 76,
     "white": 76,
-    "wide": 76,
-    "92": 75,
-    "create": 75,
-    "harmony": 75,
-    "instrumentation": 75,
-    "rapid": 75,
-    "uses": 75,
-    "feature": 74,
-    "jazz": 74,
+    "105": 75,
+    "feature": 75,
+    "recording": 74,
     "seconds": 74,
-    "transitioning": 73,
-    "105": 72,
-    "consists": 72,
+    "slightly": 74,
+    "transitioning": 74,
+    "enter": 73,
+    "studio": 73,
+    "support": 73,
+    "three": 73,
+    "effects": 72,
     "only": 72,
+    "rimshot": 72,
+    "seventh": 72,
     "stereo": 72,
-    "enter": 71,
-    "legato": 71,
+    "without": 72,
+    "fusion": 71,
     "mid": 71,
-    "seventh": 71,
+    "one": 71,
+    "cinematic": 70,
+    "decay": 70,
+    "fade": 70,
+    "fully": 70,
     "presence": 70,
-    "studio": 70,
-    "emphasizing": 69,
-    "frequent": 69,
-    "fully": 69,
+    "instruments": 69,
+    "loop": 69,
+    "modern": 69,
     "8b": 68,
-    "effects": 68,
-    "style": 68,
-    "consistent": 67,
-    "contemplative": 67,
+    "bassline": 68,
+    "contemplative": 68,
+    "swing": 68,
     "high-frequency": 67,
-    "loop": 67,
-    "maintains": 67,
-    "prioritizes": 67,
-    "slightly": 67,
-    "support": 67,
-    "decay": 66,
-    "mechanical": 66,
-    "scratches": 66,
-    "sections": 66,
-    "without": 66,
-    "115": 65,
-    "like": 65,
-    "lines": 65,
-    "mid-high": 65,
-    "three": 65,
-    "bassline": 64,
-    "mastered": 64,
-    "sweep": 64,
-    "slow": 63,
-    "aggressive": 62,
-    "capturing": 62,
-    "high-quality": 62,
-    "intensity": 62,
-    "mid-range": 62,
-    "cinematic": 61,
-    "modern": 61,
-    "organic": 61
+    "mechanical": 67,
+    "nylon-string": 67,
+    "prioritizes": 67
   },
   "dead_budget_findings": {
     "test_date": "2026-04-24",
@@ -11960,15 +12725,15 @@
     }
   },
   "stats": {
-    "total_instrument_phrases": 42,
-    "total_drum_entities": 85,
+    "total_instrument_phrases": 48,
+    "total_drum_entities": 108,
     "total_technique_patterns": 100,
-    "total_production_terms": 72,
+    "total_production_terms": 74,
     "total_harmony_terms": 7,
     "total_mood_terms": 29,
     "total_timbre_terms": 23,
-    "total_vocal_expressions": 42,
-    "total_genres_mapped": 190,
+    "total_vocal_expressions": 45,
+    "total_genres_mapped": 204,
     "total_descriptor_combos": 300,
     "genre_frontier_count": 6,
     "negative_vocab_categories": 5,

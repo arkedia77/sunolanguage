@@ -1062,7 +1062,7 @@ print()
 print("=== 미분류 ===")
 for e in all_sp_entries:
     if e["slot"] == "unclassified":
-        print(f"  [SP] [{e['song_id']:04d}] {e['sentence'][:100]}")
+        print(f"  [SP] [{e['song_id']}] {e['sentence'][:100]}")
 for e in all_bracket_entries:
     if e["slot"] == "unclassified":
-        print(f"  [BR] [{e['song_id']:04d}] [{e['bracket'][:80]}]")
+        print(f"  [BR] [{e['song_id']}] [{e['bracket'][:80]}]")

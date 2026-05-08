@@ -1,18 +1,22 @@
 {
   "electric bass": {
-    "count": 348,
+    "count": 415,
     "top_modifiers": [
       [
         "clean",
         65
       ],
       [
+        "driving",
+        25
+      ],
+      [
         "bright",
         24
       ],
       [
-        "driving",
-        23
+        "steady",
+        15
       ],
       [
         "full",
@@ -20,19 +24,15 @@
       ],
       [
         "soft",
-        11
+        12
       ],
       [
         "muted",
-        11
+        12
       ],
       [
         "tight",
-        9
-      ],
-      [
-        "steady",
-        8
+        10
       ],
       [
         "warm",
@@ -46,11 +46,11 @@
     "top_actions": [
       [
         "enters",
-        159
+        177
       ],
       [
         "enter",
-        19
+        23
       ],
       [
         "slides",
@@ -58,7 +58,11 @@
       ],
       [
         "scratches",
-        12
+        13
+      ],
+      [
+        "drop ",
+        9
       ],
       [
         "continue",
@@ -66,11 +70,11 @@
       ],
       [
         "continues",
-        4
+        7
       ],
       [
         "slide",
-        3
+        4
       ],
       [
         "swell",
@@ -79,19 +83,15 @@
       [
         "increases",
         2
-      ],
-      [
-        "drop ",
-        2
       ]
     ]
   },
   "electric guitar": {
-    "count": 268,
+    "count": 297,
     "top_modifiers": [
       [
         "clean",
-        189
+        202
       ],
       [
         "driving",
@@ -107,22 +107,22 @@
       ],
       [
         "steady",
-        13
+        14
       ],
       [
         "muted",
-        11
-      ],
-      [
-        "funky",
-        9
+        13
       ],
       [
         "light",
-        9
+        10
       ],
       [
         "tight",
+        10
+      ],
+      [
+        "funky",
         9
       ],
       [
@@ -133,18 +133,26 @@
     "top_actions": [
       [
         "enters",
-        44
+        49
       ],
       [
         "scratches",
-        11
+        12
       ],
       [
         "slides",
-        4
+        6
       ],
       [
         "enter",
+        2
+      ],
+      [
+        "fades",
+        2
+      ],
+      [
+        "returns",
         2
       ],
       [
@@ -162,23 +170,94 @@
       [
         "scratch",
         1
+      ]
+    ]
+  },
+  "acoustic guitar": {
+    "count": 182,
+    "top_modifiers": [
+      [
+        "light",
+        10
       ],
       [
-        "continue",
+        "steady",
+        4
+      ],
+      [
+        "clean",
+        2
+      ],
+      [
+        "soft",
+        2
+      ],
+      [
+        "rapid",
+        2
+      ],
+      [
+        "bright",
         1
       ],
       [
+        "prominent",
+        1
+      ],
+      [
+        "full",
+        1
+      ],
+      [
+        "driving",
+        1
+      ],
+      [
+        "fast",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        21
+      ],
+      [
+        "continues",
+        17
+      ],
+      [
         "fades",
+        5
+      ],
+      [
+        "ring out",
+        2
+      ],
+      [
+        "fade",
+        2
+      ],
+      [
+        "slides",
+        1
+      ],
+      [
+        "increases",
+        1
+      ],
+      [
+        "rings out",
         1
       ]
     ]
   },
   "clean electric guitar": {
-    "count": 168,
+    "count": 181,
     "top_modifiers": [
       [
         "clean",
-        168
+        181
       ],
       [
         "soft",
@@ -186,11 +265,11 @@
       ],
       [
         "steady",
-        9
+        10
       ],
       [
         "light",
-        9
+        10
       ],
       [
         "jazzy",
@@ -220,7 +299,7 @@
     "top_actions": [
       [
         "enters",
-        26
+        29
       ],
       [
         "scratches",
@@ -244,55 +323,8 @@
       ]
     ]
   },
-  "acoustic guitar": {
-    "count": 120,
-    "top_modifiers": [
-      [
-        "light",
-        8
-      ],
-      [
-        "steady",
-        3
-      ],
-      [
-        "clean",
-        2
-      ],
-      [
-        "soft",
-        2
-      ],
-      [
-        "bright",
-        1
-      ],
-      [
-        "prominent",
-        1
-      ]
-    ],
-    "top_actions": [
-      [
-        "enters",
-        11
-      ],
-      [
-        "continues",
-        8
-      ],
-      [
-        "fades",
-        2
-      ],
-      [
-        "slides",
-        1
-      ]
-    ]
-  },
   "synthesizer": {
-    "count": 110,
+    "count": 116,
     "top_modifiers": [
       [
         "bright",
@@ -316,11 +348,11 @@
       ],
       [
         "atmospheric",
-        3
+        4
       ],
       [
         "low",
-        2
+        3
       ],
       [
         "funky",
@@ -338,7 +370,7 @@
     "top_actions": [
       [
         "enters",
-        25
+        26
       ],
       [
         "swell",
@@ -361,21 +393,108 @@
         2
       ],
       [
-        "intensifies",
-        1
+        "drop ",
+        2
       ],
       [
-        "drop ",
+        "intensifies",
         1
       ]
     ]
   },
-  "piano": {
-    "count": 69,
+  "guitar": {
+    "count": 111,
     "top_modifiers": [
       [
         "clean",
-        6
+        9
+      ],
+      [
+        "light",
+        4
+      ],
+      [
+        "bright",
+        4
+      ],
+      [
+        "muted",
+        3
+      ],
+      [
+        "steady",
+        3
+      ],
+      [
+        "punchy",
+        2
+      ],
+      [
+        "full",
+        2
+      ],
+      [
+        "driving",
+        2
+      ],
+      [
+        "rapid",
+        2
+      ],
+      [
+        "high-energy",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "flourish",
+        5
+      ],
+      [
+        "drop ",
+        5
+      ],
+      [
+        "enters",
+        5
+      ],
+      [
+        "scratches",
+        5
+      ],
+      [
+        "continue",
+        5
+      ],
+      [
+        "continues",
+        4
+      ],
+      [
+        "swell",
+        3
+      ],
+      [
+        "stops",
+        2
+      ],
+      [
+        "scratch",
+        2
+      ],
+      [
+        "increases",
+        2
+      ]
+    ]
+  },
+  "piano": {
+    "count": 85,
+    "top_modifiers": [
+      [
+        "clean",
+        7
       ],
       [
         "soft",
@@ -383,7 +502,7 @@
       ],
       [
         "bright",
-        4
+        5
       ],
       [
         "light",
@@ -417,7 +536,7 @@
     "top_actions": [
       [
         "enters",
-        10
+        11
       ],
       [
         "continues",
@@ -428,15 +547,19 @@
         3
       ],
       [
+        "increases",
+        2
+      ],
+      [
+        "fade",
+        2
+      ],
+      [
         "intensify",
         1
       ],
       [
         "continue",
-        1
-      ],
-      [
-        "increases",
         1
       ],
       [
@@ -450,102 +573,11 @@
       [
         "swell",
         1
-      ],
-      [
-        "scratches",
-        1
-      ]
-    ]
-  },
-  "guitar": {
-    "count": 69,
-    "top_modifiers": [
-      [
-        "clean",
-        9
-      ],
-      [
-        "bright",
-        4
-      ],
-      [
-        "muted",
-        3
-      ],
-      [
-        "punchy",
-        2
-      ],
-      [
-        "full",
-        2
-      ],
-      [
-        "light",
-        2
-      ],
-      [
-        "high-energy",
-        1
-      ],
-      [
-        "sparse",
-        1
-      ],
-      [
-        "funky",
-        1
-      ],
-      [
-        "steady",
-        1
-      ]
-    ],
-    "top_actions": [
-      [
-        "scratches",
-        5
-      ],
-      [
-        "continue",
-        5
-      ],
-      [
-        "enters",
-        4
-      ],
-      [
-        "continues",
-        3
-      ],
-      [
-        "swell",
-        3
-      ],
-      [
-        "stops",
-        2
-      ],
-      [
-        "scratch",
-        2
-      ],
-      [
-        "flourish",
-        2
-      ],
-      [
-        "drop ",
-        2
-      ],
-      [
-        "increases",
-        2
       ]
     ]
   },
   "slap bass": {
-    "count": 55,
+    "count": 59,
     "top_modifiers": [
       [
         "clean",
@@ -556,16 +588,20 @@
         15
       ],
       [
+        "muted",
+        6
+      ],
+      [
+        "tight",
+        6
+      ],
+      [
         "punchy",
         5
       ],
       [
-        "muted",
-        5
-      ],
-      [
-        "tight",
-        5
+        "driving",
+        4
       ],
       [
         "funky",
@@ -573,10 +609,6 @@
       ],
       [
         "full",
-        3
-      ],
-      [
-        "driving",
         3
       ],
       [
@@ -595,16 +627,20 @@
       ],
       [
         "scratches",
-        10
+        11
       ],
       [
         "flourish",
+        1
+      ],
+      [
+        "continues",
         1
       ]
     ]
   },
   "synth pad": {
-    "count": 53,
+    "count": 56,
     "top_modifiers": [
       [
         "clean",
@@ -654,7 +690,7 @@
       ],
       [
         "enters",
-        8
+        9
       ],
       [
         "enter",
@@ -671,14 +707,22 @@
       [
         "intensifies",
         1
+      ],
+      [
+        "drop ",
+        1
       ]
     ]
   },
   "fingerpicked acoustic guitar": {
-    "count": 50,
+    "count": 55,
     "top_modifiers": [
       [
         "soft",
+        1
+      ],
+      [
+        "light",
         1
       ]
     ],
@@ -686,11 +730,15 @@
       [
         "slides",
         1
+      ],
+      [
+        "fades",
+        1
       ]
     ]
   },
   "bass guitar": {
-    "count": 47,
+    "count": 51,
     "top_modifiers": [
       [
         "clean",
@@ -701,11 +749,11 @@
         2
       ],
       [
-        "steady",
-        1
+        "soft",
+        2
       ],
       [
-        "soft",
+        "steady",
         1
       ],
       [
@@ -720,7 +768,7 @@
     "top_actions": [
       [
         "enters",
-        37
+        40
       ],
       [
         "slides",
@@ -733,11 +781,15 @@
       [
         "enter",
         1
+      ],
+      [
+        "flourishes",
+        1
       ]
     ]
   },
   "synth bass": {
-    "count": 42,
+    "count": 46,
     "top_modifiers": [
       [
         "clean",
@@ -753,7 +805,7 @@
       ],
       [
         "driving",
-        2
+        3
       ],
       [
         "atmospheric",
@@ -783,7 +835,7 @@
     "top_actions": [
       [
         "enters",
-        23
+        25
       ],
       [
         "enter",
@@ -795,8 +847,149 @@
       ]
     ]
   },
+  "violin": {
+    "count": 39,
+    "top_modifiers": [
+      [
+        "rapid",
+        5
+      ],
+      [
+        "heavy",
+        2
+      ],
+      [
+        "sharp",
+        1
+      ],
+      [
+        "light",
+        1
+      ],
+      [
+        "high-pitched",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        8
+      ],
+      [
+        "stops",
+        2
+      ],
+      [
+        "fades",
+        2
+      ],
+      [
+        "enter",
+        1
+      ],
+      [
+        "continues",
+        1
+      ]
+    ]
+  },
+  "brass section": {
+    "count": 39,
+    "top_modifiers": [
+      [
+        "full",
+        6
+      ],
+      [
+        "driving",
+        3
+      ],
+      [
+        "bright",
+        3
+      ],
+      [
+        "clean",
+        2
+      ],
+      [
+        "punchy",
+        2
+      ],
+      [
+        "muted",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        4
+      ],
+      [
+        "scratches",
+        1
+      ],
+      [
+        "enter",
+        1
+      ],
+      [
+        "slide",
+        1
+      ]
+    ]
+  },
+  "strings": {
+    "count": 37,
+    "top_modifiers": [
+      [
+        "soft",
+        5
+      ],
+      [
+        "full",
+        2
+      ],
+      [
+        "low",
+        1
+      ],
+      [
+        "driving",
+        1
+      ],
+      [
+        "constant",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enter",
+        19
+      ],
+      [
+        "increases",
+        3
+      ],
+      [
+        "fade",
+        2
+      ],
+      [
+        "enters",
+        1
+      ],
+      [
+        "flourishes",
+        1
+      ]
+    ]
+  },
   "grand piano": {
-    "count": 34,
+    "count": 35,
     "top_modifiers": [
       [
         "soft",
@@ -852,90 +1045,47 @@
       ]
     ]
   },
-  "brass section": {
-    "count": 31,
+  "cello": {
+    "count": 32,
     "top_modifiers": [
-      [
-        "full",
-        6
-      ],
-      [
-        "driving",
-        3
-      ],
-      [
-        "bright",
-        3
-      ],
-      [
-        "clean",
-        2
-      ],
-      [
-        "punchy",
-        2
-      ],
-      [
-        "muted",
-        1
-      ]
-    ],
-    "top_actions": [
-      [
-        "enters",
-        4
-      ],
-      [
-        "scratches",
-        1
-      ],
-      [
-        "enter",
-        1
-      ]
-    ]
-  },
-  "strings": {
-    "count": 30,
-    "top_modifiers": [
-      [
-        "soft",
-        5
-      ],
-      [
-        "full",
-        2
-      ],
       [
         "low",
-        1
-      ],
-      [
-        "driving",
-        1
+        2
       ]
     ],
     "top_actions": [
       [
-        "enter",
-        18
-      ],
-      [
-        "increases",
-        3
-      ],
-      [
         "enters",
+        11
+      ],
+      [
+        "returns",
+        2
+      ],
+      [
+        "drop ",
+        2
+      ],
+      [
+        "swells",
         1
       ],
       [
-        "fade",
+        "enter",
+        1
+      ],
+      [
+        "continues",
+        1
+      ],
+      [
+        "fades",
         1
       ]
     ]
   },
   "sub-bass": {
-    "count": 22,
+    "count": 25,
     "top_modifiers": [
       [
         "clean",
@@ -973,11 +1123,80 @@
     "top_actions": [
       [
         "enters",
-        14
+        15
       ],
       [
         "enter",
+        3
+      ],
+      [
+        "fade",
+        1
+      ]
+    ]
+  },
+  "upright bass": {
+    "count": 24,
+    "top_modifiers": [
+      [
+        "steady",
         2
+      ],
+      [
+        "soft",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        9
+      ],
+      [
+        "slide",
+        1
+      ],
+      [
+        "enter",
+        1
+      ],
+      [
+        "continues",
+        1
+      ]
+    ]
+  },
+  "nylon-string acoustic guitar": {
+    "count": 23,
+    "top_modifiers": [
+      [
+        "light",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        3
+      ]
+    ]
+  },
+  "fretless bass": {
+    "count": 20,
+    "top_modifiers": [
+      [
+        "clean",
+        4
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        16
+      ],
+      [
+        "slides",
+        4
       ]
     ]
   },
@@ -995,27 +1214,8 @@
     ],
     "top_actions": []
   },
-  "fretless bass": {
-    "count": 18,
-    "top_modifiers": [
-      [
-        "clean",
-        4
-      ]
-    ],
-    "top_actions": [
-      [
-        "enters",
-        14
-      ],
-      [
-        "slides",
-        4
-      ]
-    ]
-  },
   "pad": {
-    "count": 16,
+    "count": 19,
     "top_modifiers": [
       [
         "soft",
@@ -1045,18 +1245,8 @@
       ]
     ]
   },
-  "nylon-string acoustic guitar": {
-    "count": 14,
-    "top_modifiers": [
-      [
-        "light",
-        1
-      ]
-    ],
-    "top_actions": []
-  },
   "acoustic piano": {
-    "count": 13,
+    "count": 15,
     "top_modifiers": [
       [
         "bright",
@@ -1086,39 +1276,59 @@
       ]
     ]
   },
-  "cello": {
-    "count": 12,
+  "brass": {
+    "count": 15,
     "top_modifiers": [
       [
-        "low",
+        "full",
+        4
+      ],
+      [
+        "rapid",
+        3
+      ],
+      [
+        "energetic",
+        2
+      ],
+      [
+        "bright",
+        2
+      ],
+      [
+        "steady",
+        1
+      ],
+      [
+        "heavy",
         1
       ]
     ],
     "top_actions": [
       [
-        "enters",
-        4
-      ],
-      [
         "swells",
+        2
+      ],
+      [
+        "swell",
         1
       ],
       [
-        "enter",
+        "increases",
         1
       ],
       [
-        "continues",
+        "flourishes",
         1
       ]
     ]
   },
-  "palm-muted electric guitar": {
-    "count": 11,
+  "string pad": {
+    "count": 13,
     "top_modifiers": [
       [
-        "steady",
-        1
+        "soft",
+        3
       ],
       [
         "subtle",
@@ -1127,17 +1337,21 @@
     ],
     "top_actions": [
       [
-        "enters",
-        1
+        "enter",
+        3
       ],
       [
-        "continue",
+        "swell",
+        2
+      ],
+      [
+        "fade",
         1
       ]
     ]
   },
   "electric piano": {
-    "count": 11,
+    "count": 12,
     "top_modifiers": [
       [
         "bright",
@@ -1167,7 +1381,7 @@
     "top_actions": [
       [
         "enter",
-        4
+        5
       ],
       [
         "scratch",
@@ -1175,12 +1389,12 @@
       ]
     ]
   },
-  "string pad": {
+  "palm-muted electric guitar": {
     "count": 11,
     "top_modifiers": [
       [
-        "soft",
-        3
+        "steady",
+        1
       ],
       [
         "subtle",
@@ -1189,15 +1403,56 @@
     ],
     "top_actions": [
       [
-        "swell",
-        2
+        "enters",
+        1
       ],
       [
-        "enter",
-        2
+        "continue",
+        1
+      ]
+    ]
+  },
+  "harmonica": {
+    "count": 11,
+    "top_modifiers": [
+      [
+        "light",
+        1
       ],
       [
-        "fade",
+        "clean",
+        1
+      ],
+      [
+        "bluesy",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        1
+      ],
+      [
+        "returns",
+        1
+      ],
+      [
+        "fades",
+        1
+      ]
+    ]
+  },
+  "flute": {
+    "count": 11,
+    "top_modifiers": [],
+    "top_actions": [
+      [
+        "enters",
+        5
+      ],
+      [
+        "fades",
         1
       ]
     ]
@@ -1220,79 +1475,31 @@
     ],
     "top_actions": []
   },
-  "upright bass": {
-    "count": 8,
+  "rhodes": {
+    "count": 9,
     "top_modifiers": [
       [
         "soft",
-        1
-      ]
-    ],
-    "top_actions": [
-      [
-        "enters",
-        4
-      ],
-      [
-        "slide",
-        1
-      ]
-    ]
-  },
-  "brass": {
-    "count": 7,
-    "top_modifiers": [
-      [
-        "full",
-        2
-      ],
-      [
-        "energetic",
-        2
-      ],
-      [
-        "bright",
-        2
-      ],
-      [
-        "steady",
-        1
-      ]
-    ],
-    "top_actions": [
-      [
-        "swell",
-        1
-      ],
-      [
-        "increases",
-        1
-      ]
-    ]
-  },
-  "harmonica": {
-    "count": 7,
-    "top_modifiers": [
-      [
-        "light",
         1
       ],
       [
         "clean",
         1
-      ]
-    ],
-    "top_actions": []
-  },
-  "rhodes": {
-    "count": 5,
-    "top_modifiers": [
+      ],
       [
-        "soft",
+        "steady",
+        1
+      ],
+      [
+        "prominent",
         1
       ]
     ],
     "top_actions": [
+      [
+        "enter",
+        2
+      ],
       [
         "scratch",
         1
@@ -1304,9 +1511,112 @@
       [
         "enters",
         1
+      ]
+    ]
+  },
+  "clarinet": {
+    "count": 8,
+    "top_modifiers": [
+      [
+        "fast",
+        1
       ],
       [
-        "enter",
+        "rapid",
+        1
+      ],
+      [
+        "heavy",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        1
+      ]
+    ]
+  },
+  "vibraphone": {
+    "count": 8,
+    "top_modifiers": [
+      [
+        "soft",
+        2
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        2
+      ]
+    ]
+  },
+  "accordion": {
+    "count": 6,
+    "top_modifiers": [
+      [
+        "clean",
+        1
+      ]
+    ],
+    "top_actions": []
+  },
+  "harp": {
+    "count": 6,
+    "top_modifiers": [],
+    "top_actions": [
+      [
+        "continues",
+        1
+      ],
+      [
+        "swell",
+        1
+      ],
+      [
+        "flourishes",
+        1
+      ]
+    ]
+  },
+  "trumpet": {
+    "count": 5,
+    "top_modifiers": [
+      [
+        "muted",
+        3
+      ],
+      [
+        "bright",
+        1
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        1
+      ],
+      [
+        "flourish",
+        1
+      ],
+      [
+        "flourishes",
+        1
+      ]
+    ]
+  },
+  "glockenspiel": {
+    "count": 5,
+    "top_modifiers": [],
+    "top_actions": [
+      [
+        "enters",
+        2
+      ],
+      [
+        "fades",
         1
       ]
     ]
@@ -1327,6 +1637,35 @@
       [
         "enters",
         2
+      ]
+    ]
+  },
+  "saxophone": {
+    "count": 4,
+    "top_modifiers": [],
+    "top_actions": [
+      [
+        "fades",
+        1
+      ]
+    ]
+  },
+  "muted trumpet": {
+    "count": 3,
+    "top_modifiers": [
+      [
+        "muted",
+        3
+      ]
+    ],
+    "top_actions": [
+      [
+        "enters",
+        1
+      ],
+      [
+        "flourishes",
+        1
       ]
     ]
   },
@@ -1353,52 +1692,12 @@
       ]
     ]
   },
-  "accordion": {
+  "mandolin": {
     "count": 3,
-    "top_modifiers": [
-      [
-        "clean",
-        1
-      ]
-    ],
-    "top_actions": []
-  },
-  "muted trumpet": {
-    "count": 2,
-    "top_modifiers": [
-      [
-        "muted",
-        2
-      ]
-    ],
-    "top_actions": [
-      [
-        "enters",
-        1
-      ]
-    ]
-  },
-  "trumpet": {
-    "count": 2,
-    "top_modifiers": [
-      [
-        "muted",
-        2
-      ]
-    ],
-    "top_actions": [
-      [
-        "enters",
-        1
-      ]
-    ]
-  },
-  "violin": {
-    "count": 2,
     "top_modifiers": [],
     "top_actions": [
       [
-        "enter",
+        "enters",
         1
       ]
     ]
@@ -1413,12 +1712,7 @@
       ]
     ]
   },
-  "saxophone": {
-    "count": 1,
-    "top_modifiers": [],
-    "top_actions": []
-  },
-  "glockenspiel": {
+  "strummed acoustic guitar": {
     "count": 1,
     "top_modifiers": [],
     "top_actions": [
@@ -1428,9 +1722,14 @@
       ]
     ]
   },
-  "flute": {
+  "steel-string acoustic guitar": {
     "count": 1,
     "top_modifiers": [],
-    "top_actions": []
+    "top_actions": [
+      [
+        "enters",
+        1
+      ]
+    ]
   }
 }
