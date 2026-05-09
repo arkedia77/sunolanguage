@@ -1,70 +1,149 @@
 # 2장: 두 채널 시스템 — SP 산문 vs 가사 브래킷
 
-> Suno는 하나의 음악을 두 가지 언어로 묘사한다: SP의 산문체 분석과 가사 안의 [] 브래킷 지시.
+> Suno는 하나의 음악을 두 가지 언어로 묘사한다: SP의 산문체 분석과 가사 안의 [] 브래킷 지시. 각 채널은 고유한 역할이 있다.
 
-## 2.1 채널 비교
+## 2.1 채널 개요
 
-| 구분 | SP 산문 | 가사 브래킷 |
-|------|--------|-----------|
-| 총 entity | 5040 | 4053 |
-| 슬롯 종류 | 13 | 13 |
+Suno가 음악을 재분석하면 두 가지 텍스트를 출력한다:
 
-## 2.2 슬롯별 채널 분포
+- **Style Prompt (SP)**: 음악의 전체 구조를 서술하는 산문체 텍스트. 장르, 악기 편성, 주법, 프로덕션, 보컬 특성, 템포/조성을 포괄한다.
+- **가사**: 가사 텍스트 안에 [] 브래킷과 () 괄호를 삽입하여 섹션 구분과 연주 지시를 전달한다.
 
-| 슬롯 | SP | 브래킷 | SP 비율 |
-|------|---:|------:|-------:|
-| absence | 21 | 18 | 54% |
-| arrangement | 453 | 79 | 85% |
-| drums | 409 | 405 | 50% |
-| effect_electronic | 317 | 116 | 73% |
-| effect_sound | 19 | 18 | 51% |
-| genre | 382 | 0 | 100% |
-| harmony | 32 | 4 | 89% |
-| instrument | 1994 | 1730 | 54% |
-| mastering | 2 | 0 | 100% |
-| mixing | 120 | 0 | 100% |
-| pronunciation | 0 | 17 | 0% |
-| section | 0 | 1151 | 0% |
-| tempo_key_time | 524 | 0 | 100% |
-| transition | 0 | 9 | 0% |
-| unclassified | 0 | 11 | 0% |
-| vocal_chorus | 85 | 34 | 71% |
-| vocal_main | 682 | 461 | 60% |
+이 두 채널은 동일한 음악을 다른 관점에서 묘사한다. SP는 "이 음악은 무엇인가"를, 가사 브래킷은 "이 음악이 어떤 순서로 진행되는가"를 전달한다.
 
-## 2.3 양쪽 채널 모두 등장하는 표현
+## 2.2 채널별 슬롯 분포
 
-총 97개 표현이 양쪽 채널에 모두 출현
+437곡 corpus 기준:
 
-- **solo cello** (absence): SP 5회 / 브래킷 5회
-- **solo violin** (absence): SP 1회 / 브래킷 1회
-- **kick drum, drums** (drums): SP 75회 / 브래킷 57회
-- **kick drum, snare drum, drums** (drums): SP 54회 / 브래킷 13회
-- **percussion** (drums): SP 15회 / 브래킷 23회
-- **reverb** (effect_electronic): SP 59회 / 브래킷 18회
-- **plate reverb** (effect_electronic): SP 44회 / 브래킷 3회
-- **distorted** (effect_electronic): SP 37회 / 브래킷 40회
-- **vinyl crackle** (effect_sound): SP 8회 / 브래킷 7회
-- **muffled** (effect_sound): SP 4회 / 브래킷 2회
-- **record scratch** (effect_sound): SP 1회 / 브래킷 1회
-- **chord progression** (harmony): SP 24회 / 브래킷 4회
-- **electric bass** (instrument): SP 345회 / 브래킷 348회
-- **electric guitar** (instrument): SP 279회 / 브래킷 268회
-- **clean electric guitar** (instrument): SP 180회 / 브래킷 168회
+| 슬롯 | SP | 브래킷 | SP 전용 여부 |
+|------|---:|------:|:----------:|
+| **genre** | 382 | 0 | SP 전용 |
+| **tempo_key_time** | 524 | 0 | SP 전용 |
+| **mixing** | 120 | 0 | SP 전용 |
+| **mastering** | 2 | 0 | SP 전용 |
+| **section** | 0 | 1,151 | 브래킷 전용 |
+| **pronunciation** | 0 | 17 | 브래킷 전용 |
+| **transition** | 0 | 9 | 브래킷 전용 |
+| instrument | 1,994 | 1,730 | 양쪽 |
+| drums | 409 | 405 | 양쪽 |
+| vocal_main | 682 | 461 | 양쪽 |
+| arrangement | 453 | 79 | SP 우세 |
+| effect_electronic | 317 | 116 | SP 우세 |
+| vocal_chorus | 85 | 34 | SP 우세 |
+| harmony | 32 | 4 | SP 우세 |
+| absence | 21 | 18 | 양쪽 |
 
-## 2.4 브래킷에만 나타나는 표현 (SP 부재)
+### 핵심 규칙
 
-- **Verse 1** (section): 브래킷 381회
-- **Intro** (section): 브래킷 376회
-- **Chorus** (section): 브래킷 250회
-- **with chorus** (effect_electronic): 브래킷 39회
-- **falsetto** (vocal_main): 브래킷 18회
-- **ad-lib** (vocal_chorus): 브래킷 14회
-- **hi-hat** (drums): 브래킷 11회
-- **kick drum, snare drum** (drums): 브래킷 8회
-- **cymbal** (drums): 브래킷 8회
-- **vocalizing** (vocal_main): 브래킷 6회
-- **singing** (vocal_main): 브래킷 5회
-- **drop out** (absence): 브래킷 4회
-- **feedback swell** (effect_electronic): 브래킷 4회
-- **fade out** (absence): 브래킷 3회
-- **fades out** (absence): 브래킷 3회
+1. **장르와 템포는 SP에서만 선언된다.** 브래킷에서 장르를 지정하는 경우는 0건.
+2. **섹션 구분은 브래킷에서만 일어난다.** `[Intro]`, `[Verse 1]`, `[Chorus]` 등의 구조 지시는 SP에 나타나지 않는다.
+3. **악기와 드럼은 양쪽 채널에 동등하게 분포한다.** SP에서 전체 편성을 기술하고, 브래킷에서 특정 지점의 진입/퇴장을 지시한다.
+4. **믹싱 관련 어휘는 SP에만 존재한다.** reverb, compression, EQ 같은 프로덕션 용어는 브래킷에서 거의 나타나지 않는다.
+
+## 2.3 양쪽 채널에 공존하는 표현
+
+97개 표현이 SP와 브래킷 양쪽에 출현한다. 이들은 Suno가 두 채널에서 공통으로 사용하는 핵심 어휘다.
+
+| 표현 | SP 빈도 | 브래킷 빈도 | 역할 차이 |
+|------|--------:|----------:|----------|
+| electric bass | 345 | 348 | SP: 주법 묘사 / 브래킷: 진입 시점 |
+| electric guitar | 279 | 268 | SP: 톤/이펙트 / 브래킷: 진입·리프 |
+| kick drum, drums | 75 | 57 | SP: 패턴 묘사 / 브래킷: 진입 |
+| reverb | 59 | 18 | SP: 프로덕션 / 브래킷: 이펙트 큐 |
+| distorted | 37 | 40 | 양쪽에서 동등하게 사용 |
+| vinyl crackle | 8 | 7 | 양쪽에서 동등하게 사용 |
+
+SP에서는 악기의 **특성**(톤, 주법, 효과)을 묘사하고, 브래킷에서는 악기의 **시점**(진입, 퇴장, 변화)을 지시하는 패턴이 일관적이다.
+
+## 2.4 브래킷 전용 표현
+
+브래킷에서만 등장하는 표현은 크게 세 가지 역할로 나뉜다:
+
+### 역할 1: 섹션 마커
+
+DB 385행 기준 브래킷 빈도:
+
+| 태그 | 빈도 |
+|------|------|
+| [Intro] | 376 |
+| [Verse 1] | 342 |
+| [Chorus] | 230 |
+| [Outro] | 61 |
+| [Pre-Chorus] | 59 |
+| [Verse 2] | 45 |
+| [Bridge] | 18 |
+| [Instrumental] | 39 |
+| [Instrumental Break] | 8 |
+
+Suno는 거의 모든 곡에서 `[Intro]`와 `[Verse 1]`을 사용하며, 이 두 태그가 가장 안정적인 구조 마커다.
+
+S시리즈에서는 섹션 마커 대신 `[A Section]`, `[B Section]`, `[Main Theme]` 같은 형식도 등장한다. 이는 기악곡(instrumental)에서 가사 섹션 구분이 불필요할 때 Suno가 선택하는 대안 형식이다.
+
+### 역할 2: 악기 진입 큐
+
+| 태그 | 빈도 |
+|------|------|
+| [fingerpicked acoustic guitar] | 29 |
+| [bass guitar enters] | 18 |
+| [kick drum enters] | 15 |
+| [shaker enters] | 11 |
+| [electric bass enters] | 11 |
+| [synth bass enters] | 7 |
+| [fingerstyle acoustic guitar] | 7 |
+
+`enters` 동사가 핵심이다. Suno는 브래킷에서 악기의 시간적 진입을 `[X enters]` 형식으로 지시한다.
+
+### 역할 3: 보컬 큐
+
+| 태그 | 빈도 |
+|------|------|
+| [breathy male vocals] | 58 |
+| [breathy female vocals] | 28 |
+| [male vocals] | 25 |
+| [male tenor vocals] | 21 |
+| [smooth male vocals] | 12 |
+| [female vocals] | 11 |
+| [falsetto] | 9 |
+| [baritone male vocals] | 9 |
+| [vocal chop] | 8 |
+
+보컬 큐에서 `breathy`가 가장 빈번하게 등장하며(86회), Suno의 기본 보컬 질감 수식어임을 보여준다.
+
+## 2.5 () 괄호 시스템
+
+가사 텍스트 안의 () 괄호는 [] 브래킷과 다른 역할을 한다.
+
+### 괄호의 역할: 보컬 행위 지시
+
+Leo의 실청취 검증 결과, () 안의 지시는 Suno가 실제로 반응하는 보컬 퍼포먼스 디렉션이다. 4/4 테스트 전부 유효:
+- `(hums softly)` → 허밍 생성
+- `(melismatic runs)` → 멜리스마 생성
+- `(trills/scales)` → 트릴/스케일 보컬
+- `(spoken)` → 스포큰 워드
+
+DB 385행에서 발견된 () 사용 패턴:
+
+| 유형 | 예시 | 빈도 |
+|------|------|------|
+| 감탄사/허밍 | (Hmm-mm), (Ooh-ooh), (Humming) | 28 |
+| 응원/추임새 | (Woo-hoo!), (Yeah), (Woo!) | 14 |
+| 한국어 | (우후), (음-) | 6 |
+| 악기 모방 | (808, 808, 808, 808), (sax-o-vol) | 6 |
+
+### [] vs () 차이
+
+| 구분 | [] 브래킷 | () 괄호 |
+|------|----------|---------|
+| 위치 | 가사 줄 사이 (독립 행) | 가사 줄 안 (인라인) |
+| 역할 | 섹션 구분, 악기 큐, 보컬 큐 | 보컬 행위 디렉션, 감탄사 |
+| 대상 | 편곡/구조 | 가수의 퍼포먼스 |
+| 검증 | 구조 수준 확인 | 4/4 실청취 유효 |
+
+## 2.6 SP 작성을 위한 시사점
+
+1. **장르와 템포는 반드시 SP에 넣어라** — 브래킷에서는 인식되지 않는다.
+2. **섹션 구분은 가사 브래킷으로** — `[Intro]`, `[Verse 1]` 등은 가사에서만 작동한다.
+3. **악기 진입 시점은 `[X enters]` 형식으로** — 브래킷에서 시간적 진행을 제어한다.
+4. **보컬 행위 디렉션은 () 괄호로** — `(hums softly)`, `(spoken)` 등은 가사 안에 인라인으로.
+5. **SP의 악기 묘사 = 전체적 특성, 브래킷의 악기 묘사 = 시간적 진입** — 역할을 구분하라.
+6. **`breathy`는 Suno의 기본 보컬 수식어** — 보컬 큐에서 가장 자주 등장(86회).

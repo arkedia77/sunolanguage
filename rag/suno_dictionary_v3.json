@@ -1,7 +1,7 @@
 {
-  "version": "3.0",
-  "created_at": "2026-05-08",
-  "previous_version": "2.0 (2026-04-25, 437곡/5,070단어/189장르)",
+  "version": "3.1",
+  "created_at": "2026-05-09",
+  "previous_version": "3.0 (2026-05-08, 496곡/5,496단어/216장르)",
   "corpus": {
     "tracks_count": 496,
     "unique_words": 5496,
@@ -2043,6 +2043,36 @@
         }
       ],
       "top_modifiers": []
+    },
+    "fiddle": {
+      "phrases": [],
+      "count": 6,
+      "source": "suno_reanalysis_db_S018"
+    },
+    "whistle": {
+      "phrases": [],
+      "count": 3,
+      "source": "suno_reanalysis_db_S018"
+    },
+    "bodhrán": {
+      "phrases": [],
+      "count": 2,
+      "source": "suno_reanalysis_db_S018"
+    },
+    "guiro": {
+      "phrases": [],
+      "count": 1,
+      "source": "suno_reanalysis_db_S018"
+    },
+    "log drum": {
+      "phrases": [],
+      "count": 5,
+      "source": "suno_reanalysis_db_S018"
+    },
+    "reese bass": {
+      "phrases": [],
+      "count": 1,
+      "source": "suno_reanalysis_db_S018"
     }
   },
   "drum_vocab": {
@@ -2815,6 +2845,61 @@
     },
     "harmonic density": {
       "count": 4
+    },
+    "counterpoint": {
+      "count": 40,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "K-Ballad"
+    },
+    "strumming": {
+      "count": 30,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "K-Ballad"
+    },
+    "arpeggios": {
+      "count": 19,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "K-Ballad"
+    },
+    "hammer-ons": {
+      "count": 12,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "K-Ballad"
+    },
+    "rolls": {
+      "count": 12,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "K-Hip Hop"
+    },
+    "runs": {
+      "count": 16,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "Jazz"
+    },
+    "leaps": {
+      "count": 14,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "K-Ballad"
+    },
+    "walking": {
+      "count": 28,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "Jazz"
+    },
+    "ostinatos": {
+      "count": 5,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "Classical"
+    },
+    "comping": {
+      "count": 3,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "Bossa Nova"
+    },
+    "call-and-response": {
+      "count": 8,
+      "source": "suno_reanalysis_db_385rows",
+      "top_genre": "Jazz"
     }
   },
   "production_vocab": {
@@ -3288,6 +3373,18 @@
       "count": 14,
       "sp": 14,
       "bracket": 0
+    },
+    "jazz-influenced": {
+      "count": 35,
+      "source": "suno_reanalysis_db_385rows"
+    },
+    "high-energy": {
+      "count": 17,
+      "source": "suno_reanalysis_db_385rows"
+    },
+    "powerful": {
+      "count": 22,
+      "source": "suno_reanalysis_db_385rows"
     }
   },
   "tempo_rhythm": {
@@ -3370,6 +3467,22 @@
       "count": 1,
       "sp": 1,
       "bracket": 0
+    },
+    "mid-tempo": {
+      "count": 24,
+      "source": "suno_reanalysis_db_385rows"
+    },
+    "downbeats": {
+      "count": 24,
+      "source": "suno_reanalysis_db_385rows"
+    },
+    "four-bar": {
+      "count": 13,
+      "source": "suno_reanalysis_db_385rows"
+    },
+    "four-on-the-floor": {
+      "count": 3,
+      "source": "suno_reanalysis_db_385rows"
     }
   },
   "dynamics_structure": {
@@ -3609,6 +3722,18 @@
       "count": 65,
       "sp": 63,
       "bracket": 0
+    },
+    "rounded": {
+      "count": 34,
+      "source": "suno_reanalysis_db_385rows"
+    },
+    "sub-heavy": {
+      "count": 18,
+      "source": "suno_reanalysis_db_385rows"
+    },
+    "low-end": {
+      "count": 13,
+      "source": "suno_reanalysis_db_385rows"
     }
   },
   "vocal_expressions": {
@@ -13170,7 +13295,7 @@
   "stats": {
     "total_instrument_phrases": 49,
     "total_drum_entities": 117,
-    "total_technique_patterns": 100,
+    "total_technique_patterns": 111,
     "total_production_terms": 83,
     "total_harmony_terms": 8,
     "total_mood_terms": 30,
@@ -13180,6 +13305,9 @@
     "total_descriptor_combos": 300,
     "genre_frontier_count": 6,
     "negative_vocab_categories": 5,
-    "studio_stem_tracks": 12
-  }
+    "studio_stem_tracks": 12,
+    "db_crossref_date": "2026-05-09",
+    "db_rows_analyzed": 385
+  },
+  "update_notes": "DB 385행 교차분석으로 미등재 네이티브 어휘 추가: technique 11, timbre 3, tempo 4, mood 3, instrument 6"
 }

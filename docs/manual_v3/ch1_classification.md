@@ -1,635 +1,193 @@
 # 1장: Suno의 분류 체계
 
-> Suno가 음악을 들었을 때 가장 먼저 출력하는 것: 장르 태그와 템포/키/박자.
+> Suno가 음악을 들으면 가장 먼저 하는 일: 장르 라벨을 붙이고, 템포와 조성을 선언한다.
 
-## 1.1 장르 태깅
+## 1.1 장르 라벨링 — Suno의 첫 문장
 
-총 180개 장르 표현, 382회 출현
+Suno 재분석 SP의 첫 문장은 97.2%의 확률로 **장르 선언**이다. 437곡 corpus에서 장르가 SP의 첫 번째 문장 이외의 위치에 등장하는 경우는 2.8%에 불과하다.
 
-### 1. K-Pop R&B ballad
-- **출현**: 22회 (22곡)
-- **검증**: confirmed
-- **장르 분포**: Electronic(2), Neo-Soul(2), Neo-Soul / Jazzy Pop(1), City Pop / Disco Funk(1), Hip-Hop / Lo-fi Boom Bap(1)
-- **인용문**:
-  - #0121 *발밑 무지개* [Neo-Soul / Jazzy Pop]
-    > K-Pop R&B ballad.
-  - #0129 *김이 걷히면* [City Pop / Disco Funk]
-    > K-Pop R&B ballad.
-  - #0134 *투잡* [Hip-Hop / Lo-fi Boom Bap]
-    > K-Pop R&B ballad.
+```
+평균 슬롯 출현 순서:
+  Genre        → position 0.0  (97.2% 첫 문장)
+  Instrument   → position 1.4
+  Mood/Effect  → position 2.9
+  Vocal        → position 3.7
+  Tempo/Key    → position 4.8
+```
 
-### 2. K-Pop ballad
-- **출현**: 21회 (21곡)
-- **검증**: confirmed
-- **장르 분포**: TROT(2), Baroque Pop(1), Dream Pop / Shoegaze(1), Indie Folk / Acoustic Pop(1), Dark Pop / Synth R&B(1)
-- **인용문**:
-  - #0032 *세 바퀴* [Baroque Pop]
-    > K-Pop ballad.
-  - #0130 *잔물결* [Dream Pop / Shoegaze]
-    > K-Pop ballad.
-  - #0152 *바빠* [Indie Folk / Acoustic Pop]
-    > K-Pop ballad.
+이 순서는 Suno의 "묘사 문법"에서 가장 안정적인 규칙이다. Genre가 먼저 나오고, 악기 편성이 따르고, 분위기와 효과가 중간에 위치하며, 보컬 묘사가 뒤쪽에, 템포/조성 선언이 마지막에 온다.
 
-### 3. K-Pop ballad featuring a baritone male vocal
-- **출현**: 21회 (21곡)
-- **검증**: confirmed
-- **장르 분포**: TROT(3), Indie Pop(2), Acoustic Ballad / Folk Pop(1), Industrial / Dark Electronic(1), Indie Pop / Bedroom Pop(1)
-- **인용문**:
-  - #0122 *갈라진 지도* [Acoustic Ballad / Folk Pop]
-    > K-Pop ballad featuring a baritone male vocal.
-  - #0123 *닳는 말* [Industrial / Dark Electronic]
-    > K-Pop ballad featuring a baritone male vocal.
-  - #0142 *손바닥 고백* [Indie Pop / Bedroom Pop]
-    > K-Pop ballad featuring a baritone male vocal.
+## 1.2 장르 표현의 규모와 구조
 
-### 4. K-Indie folk ballad
-- **출현**: 19회 (19곡)
-- **검증**: confirmed
-- **장르 분포**: City Pop(2), R&B(2), Folk(2), Indie Pop / Dream Pop(1), Dark Pop / Synth R&B(1)
-- **인용문**:
-  - #0011 *화면 속 타인* [Indie Pop / Dream Pop]
-    > K-Indie folk ballad.
-  - #0153 *프로페셔널* [Dark Pop / Synth R&B]
-    > K-Indie folk ballad.
-  - #0170 *첫 월급* [Ambient Piano]
-    > K-Indie folk ballad.
+| 지표 | 수치 |
+|------|------|
+| 분석 corpus | 437곡 (W1 378 + S시리즈 59) |
+| 고유 장르 표현 | 216개 |
+| DB 385행 기준 고유 장르 | 214개 (W1 162 + S시리즈 52) |
 
-### 5. K-Pop ballad with R&B influences
-- **출현**: 13회 (13곡)
-- **검증**: confirmed
-- **장르 분포**: Indie Pop(3), Contemporary R&B(1), Dream Pop / Synth Pop(1), Ambient Folk(1), Electro Pop(1)
-- **인용문**:
-  - #0012 *빈 밥상* [Contemporary R&B]
-    > K-Pop ballad with R&B influences.
-  - #0141 *프레임* [Dream Pop / Synth Pop]
-    > K-Pop ballad with R&B influences.
-  - #0163 *증명사진* [Ambient Folk]
-    > K-Pop ballad with R&B influences.
+Suno의 장르 라벨은 단일 키워드가 아니라 **복합 구문**이다. 평균 5~8단어 길이의 문장형 라벨이 대부분이다.
 
-### 6. K-Pop acoustic ballad
-- **출현**: 12회 (12곡)
-- **검증**: confirmed
-- **장르 분포**: Neo-Soul / Jazzy Pop(1), Future Bass / Electro Pop(1), Acoustic Indie / Folk(1), Pop Soul(1), Art Pop / Experimental(1)
-- **인용문**:
-  - #0121 *발밑 무지개* [Neo-Soul / Jazzy Pop]
-    > K-Pop acoustic ballad.
-  - #0127 *반 톤* [Future Bass / Electro Pop]
-    > K-Pop acoustic ballad.
-  - #0132 *닮아간다* [Acoustic Indie / Folk]
-    > K-Pop acoustic ballad.
+### 장르 라벨의 구문 유형
 
-### 7. K-Indie Pop
-- **출현**: 11회 (11곡)
-- **검증**: confirmed
-- **장르 분포**: City Pop(2), Acoustic Pop / Folk Pop(1), Indie Electronic(1), Hip-Hop(1), Folk(1)
-- **인용문**:
-  - #0102 *빈 박스* [Acoustic Pop / Folk Pop]
-    > K-Indie Pop.
-  - #0176 *음성 메시지* [Indie Electronic]
-    > K-Indie Pop.
-  - #0204 *할 일 목록* [Hip-Hop]
-    > K-Indie Pop.
+**Type A: 단순 장르명** (전체의 약 15%)
+- `K-Pop ballad`
+- `Gypsy Jazz`
+- `Acid House`
+- `UK Drill`
 
-### 8. K-Pop Funk-Pop
-- **출현**: 11회 (11곡)
-- **검증**: confirmed
-- **장르 분포**: Piano Ballad(2), Disco Pop(2), City Pop / Funk(1), Shoegaze(1), Dream Pop(1)
-- **인용문**:
-  - #0139 *알람 위의 알람* [City Pop / Funk]
-    > K-Pop Funk-Pop.
-  - #1146 *안경을 닦는 손* [Piano Ballad]
-    > K-Pop Funk-Pop.
-  - #1156 *새벽 3시의 고속도로* [Shoegaze]
-    > K-Pop Funk-Pop.
+**Type B: 장르 + 영향/융합** (전체의 약 45%)
+- `K-Pop ballad with R&B influences`
+- `Smooth jazz fusion with bossa nova influences`
+- `K-Pop and Synth-pop fusion featuring male vocals`
 
-### 9. K-Pop Ballad
-- **출현**: 9회 (9곡)
-- **검증**: plausible
-- **장르 분포**: Piano Ballad / Cinematic(1), Indie R&B(1), Indie Pop(1), Pop(1), R&B Soul(1)
-- **인용문**:
-  - #0072 *빈손* [Piano Ballad / Cinematic]
-    > K-Pop Ballad.
-  - #0161 *손끝* [Indie R&B]
-    > K-Pop Ballad.
-  - #0185 *레시피* [Indie Pop]
-    > K-Pop Ballad.
+**Type C: 장르 + 기술적 수식** (전체의 약 30%)
+- `K-Pop ballad featuring a baritone male vocal`
+- `Lo-fi hip hop track at 85 BPM in G minor`
+- `Uplifting Trance at 138 BPM in F Major`
 
-### 10. K-Indie ballad
-- **출현**: 8회 (8곡)
-- **검증**: plausible
-- **장르 분포**: Ambient / Post-Rock(1), Indie Synth Pop(1), Funk Pop(1), K-Pop(1), Acoustic Pop(1)
-- **인용문**:
-  - #0138 *벽지 아래* [Ambient / Post-Rock]
-    > K-Indie ballad.
-  - #1445 *에어팟 끼면 괜찮아* [Indie Synth Pop]
-    > K-Indie ballad.
-  - #1446 *문어 먹는 방법* [Funk Pop]
-    > K-Indie ballad.
+**Type D: 풀 문장형 묘사** (전체의 약 10%)
+- `Classical orchestral piece with a focus on string ensemble and woodwinds`
+- `Bluegrass and country instrumental with vocal cues`
+- `Progressive Trance with heavy J-Pop and Eurobeat influences`
 
-### 11. K-Pop ballad featuring a male baritone vocal
-- **출현**: 7회 (7곡)
-- **검증**: plausible
-- **장르 분포**: Indie Pop(2), Waltz / Chamber Waltz(1), Acoustic Indie / Folk(1), City Pop(1), City Pop / Neo City Pop(1)
-- **인용문**:
-  - #0092 *주름진 손* [Waltz / Chamber Waltz]
-    > K-Pop ballad featuring a male baritone vocal.
-  - #0132 *닮아간다* [Acoustic Indie / Folk]
-    > K-Pop ballad featuring a male baritone vocal.
-  - #0944 *흔들려도 남는 것* [Indie Pop]
-    > K-Pop ballad featuring a male baritone vocal.
+Type B와 C가 가장 흔하며, Suno는 순수 장르명보다 영향 관계나 보컬 특성을 장르 라벨에 포함시키는 것을 선호한다.
 
-### 12. K-Pop Indie Pop
-- **출현**: 6회 (6곡)
-- **검증**: plausible
-- **장르 분포**: Synth Pop / Dream Pop(1), City Pop(1), Korean Ballad(1), Indie Pop(1), Rock(1)
-- **인용문**:
-  - #0131 *한쪽 귀* [Synth Pop / Dream Pop]
-    > K-Pop Indie Pop.
-  - #0973 *빨간불의 시간* [City Pop]
-    > K-Pop Indie Pop.
-  - #1217 *낯선 골목* [Korean Ballad]
-    > K-Pop Indie Pop.
+## 1.3 대장르 분포
 
-### 13. K-Pop and Synth-pop
-- **출현**: 4회 (4곡)
-- **검증**: plausible
-- **장르 분포**: Indie Synth Pop / New Romantic(1), Future Bass / Electro Pop(1), (미정)(1), Acoustic Pop(1)
-- **인용문**:
-  - #0082 *공유 목록* [Indie Synth Pop / New Romantic]
-    > K-Pop and Synth-pop.
-  - #0137 *플레이리스트* [Future Bass / Electro Pop]
-    > K-Pop and Synth-pop.
-  - #0198 *별점* [(미정)]
-    > K-Pop and Synth-pop.
+DB 385행(W1 326 + S시리즈 59)을 키워드 기반으로 대장르 분류한 결과:
 
-### 14. K-Pop ballad with soft rock influences
-- **출현**: 4회 (4곡)
-- **검증**: plausible
-- **장르 분포**: Minimal Techno / IDM(1), Emo Pop / Pop Rock(1), Disco Pop(1), Pop(1)
-- **인용문**:
-  - #0124 *사십 초* [Minimal Techno / IDM]
-    > K-Pop ballad with soft rock influences.
-  - #0149 *스킵* [Emo Pop / Pop Rock]
-    > K-Pop ballad with soft rock influences.
-  - #1558 *나란히 1위* [Disco Pop]
-    > K-Pop ballad with soft rock influences.
+### K-계열 (W1 중심, 85%)
 
-### 15. K-Pop and City Pop fusion
-- **출현**: 4회 (4곡)
-- **검증**: plausible
-- **장르 분포**: Modern Ballad Indie(1), Jazz Pop(1), Dance Pop(1), Indie Acoustic(1)
-- **인용문**:
-  - #0158 *노동의 손* [Modern Ballad Indie]
-    > K-Pop and City Pop fusion.
-  - #1667 *생방 3초* [Jazz Pop]
-    > K-Pop and City Pop fusion.
-  - #0420 *손잡이의 손들* [Dance Pop]
-    > K-Pop and City Pop fusion.
+| 대장르 | 행수 | 비율 | 주요 소스 |
+|--------|------|------|-----------|
+| K-Ballad | 162 | 42.1% | W1 |
+| K-Indie | 40 | 10.4% | W1 |
+| K-Pop (기타) | 27 | 7.0% | W1+S016 |
+| K-Funk Pop | 26 | 6.8% | W1 |
+| K-Rock | 25 | 6.5% | W1 |
+| K-Hip Hop | 19 | 4.9% | W1 |
+| K-R&B | 12 | 3.1% | W1 |
+| K-City Pop | 11 | 2.9% | W1 |
 
-### 16. K-Pop ballad with synth-pop elements
-- **출현**: 4회 (4곡)
-- **검증**: plausible
-- **장르 분포**: Synth-Pop(1), Indie Pop(1), Acoustic Ballad(1), K-POP(1)
-- **인용문**:
-  - #0206 *진흙* [Synth-Pop]
-    > K-Pop ballad with synth-pop elements.
-  - #1165 *나가기 취소* [Indie Pop]
-    > K-Pop ballad with synth-pop elements.
-  - #1167 *박스 제일 밑에서* [Acoustic Ballad]
-    > K-Pop ballad with synth-pop elements.
+W1은 한국 음악 원곡을 Suno에 녹음한 재분석 데이터다. Suno는 한국 음악을 `K-` 접두어로 분류하며, 하위 장르를 세밀하게 구분한다. 특히 `K-Pop ballad`라는 라벨이 가장 빈번(42.1%)하며, 같은 한국 발라드도 `K-Indie folk ballad`, `K-Pop R&B ballad`, `K-Pop acoustic ballad` 등으로 세분화된다.
 
-### 17. K-Pop ballad featuring a male tenor vocal
-- **출현**: 4회 (4곡)
-- **검증**: plausible
-- **장르 분포**: Acoustic Pop(2), Electro Pop(1)
-- **인용문**:
-  - #0917 *옛날 일기* [Acoustic Pop]
-    > K-Pop ballad featuring a male tenor vocal.
-  - #0934 *함께 노는 시간* [Acoustic Pop]
-    > K-Pop ballad featuring a male tenor vocal.
-  - #0967 *블랙 카페* [Electro Pop]
-    > K-Pop ballad featuring a male tenor vocal.
+### 비K-계열 (S시리즈 중심)
 
-### 18. K-Pop ballad with jazz-pop influences
-- **출현**: 4회 (4곡)
-- **검증**: plausible
-- **장르 분포**: Acoustic Pop(1), Lo-fi Pop(1), Jazz Ballad(1), Bossa Nova(1)
-- **인용문**:
-  - #1395 *가로등 셋* [Acoustic Pop]
-    > K-Pop ballad with jazz-pop influences.
-  - #1415 *한 정거장만 더* [Lo-fi Pop]
-    > K-Pop ballad with jazz-pop influences.
-  - #10021 *종이컵 하나의 무게* [Jazz Ballad]
-    > K-Pop ballad with jazz-pop influences.
+| 대장르 | 행수 | 주요 소스 |
+|--------|------|-----------|
+| Bossa Nova | 12 | S003/S016/S017/S018 |
+| Classical/Orchestral | 10 | S003/S004/S016 |
+| Jazz | 9 | 다수 S시리즈 |
+| Electronic | 6 | S004/S018 |
+| Folk/World | 5 | S004/S018 |
+| Rock | 5 | S004/W1 |
+| Lo-fi | 3 | S004/S017 |
 
-### 19. K-Indie folk pop
-- **출현**: 3회 (3곡)
-- **검증**: plausible
-- **장르 분포**: Bossa Nova(2), Neo-Soul / Chill R&B(1)
-- **인용문**:
-  - #0111 *새벽 배달* [Neo-Soul / Chill R&B]
-    > K-Indie folk pop.
-  - #1513 *여수행 버스는 새벽 다섯 시* [Bossa Nova]
-    > K-Indie folk pop.
-  - #1571 *서른두 번째 도장* [Bossa Nova]
-    > K-Indie folk pop.
+S시리즈는 의도적으로 다양한 장르를 테스트한 데이터로, 52개 고유 장르 / 59행(거의 모든 곡이 다른 장르)이다.
 
-### 20. K-Pop with elements of funk and disco
-- **출현**: 3회 (3곡)
-- **검증**: plausible
-- **장르 분포**: Ambient / Post-Classical(1), Alternative(1), City Pop(1)
-- **인용문**:
-  - #0128 *나무의 이력서* [Ambient / Post-Classical]
-    > K-Pop with elements of funk and disco.
-  - #0909 *서류 위의 눈물* [Alternative]
-    > K-Pop with elements of funk and disco.
-  - #1767 *이견 없음* [City Pop]
-    > K-Pop with elements of funk and disco.
+## 1.4 K-접두어 시스템
 
-### 21. K-Ballad featuring a baritone male vocal
-- **출현**: 3회 (3곡)
-- **검증**: plausible
-- **장르 분포**: Post-Punk / New Wave(1), Future Bass / Electro Pop(1), City Pop(1)
-- **인용문**:
-  - #0136 *사과 위의 변명* [Post-Punk / New Wave]
-    > K-Ballad featuring a baritone male vocal.
-  - #0146 *삼 초* [Future Bass / Electro Pop]
-    > K-Ballad featuring a baritone male vocal.
-  - #1056 *착륙 삼십 분 전* [City Pop]
-    > K-Ballad featuring a baritone male vocal.
+Suno가 한국 음악에 부여하는 `K-` 접두어는 단순 지역 태그가 아니라 **별도의 장르 분류 체계**이다.
 
-### 22. K-Indie acoustic ballad
-- **출현**: 3회 (3곡)
-- **검증**: plausible
-- **장르 분포**: Post-Rock / Cinematic(1), Bedroom Pop / Lo-Fi R&B(1), R&B(1)
-- **인용문**:
-  - #0148 *사랑이라서* [Post-Rock / Cinematic]
-    > K-Indie acoustic ballad.
-  - #1716 *아마도요* [Bedroom Pop / Lo-Fi R&B]
-    > K-Indie acoustic ballad.
-  - #1717 *같은 페이지* [R&B]
-    > K-Indie acoustic ballad.
+| K-접두어 | 빈도 | 서양 대응 장르 |
+|----------|------|---------------|
+| K-Pop | 246/326 (75.5%) | Pop 전반 |
+| K-Indie | 60 (18.4%) | Indie Pop/Folk |
+| K-Rock | 7 (2.1%) | Rock/Punk |
+| K-Hip Hop | 4 (1.2%) | Hip Hop |
+| K-R&B | 12 (3.7%) | R&B/Soul |
+| K-Ballad | 3 (0.9%) | Ballad |
 
-### 23. K-Pop R&B with a mid-tempo groove
-- **출현**: 3회 (3곡)
-- **검증**: plausible
-- **장르 분포**: Alternative R&B / Indie Electronic(1), Indie Pop(1), Synth Pop(1)
-- **인용문**:
-  - #0151 *바랜 사진* [Alternative R&B / Indie Electronic]
-    > K-Pop R&B with a mid-tempo groove.
-  - #1063 *그 삼십 초* [Indie Pop]
-    > K-Pop R&B with a mid-tempo groove.
-  - #1535 *점 세 개* [Synth Pop]
-    > K-Pop R&B with a mid-tempo groove.
+`K-Pop`이 압도적이며, 원곡이 힙합이든 트로트든 Suno는 상당수를 K-Pop 계열로 분류한다. 이는 Suno의 한국 음악 인식이 K-Pop 중심으로 편향되어 있음을 보여준다.
 
-### 24. K-Pop educational pop track
-- **출현**: 3회 (3곡)
-- **검증**: plausible
-- **장르 분포**: Disco Pop(1), Korean Ballad(1), Indie Rock(1)
-- **인용문**:
-  - #1032 *숨은 시옷 찾기* [Disco Pop]
-    > K-Pop educational pop track.
-  - #1036 *부모가 된 후 만난 나* [Korean Ballad]
-    > K-Pop educational pop track.
-  - #1037 *도시의 모서리에서 본 일몰* [Indie Rock]
-    > K-Pop educational pop track.
+## 1.5 장르 라벨의 부속 요소
 
-### 25. K-Indie pop ballad
-- **출현**: 3회 (3곡)
-- **검증**: plausible
-- **장르 분포**: Indie Pop(1), Bossa Nova(1)
-- **인용문**:
-  - #1762 *최종최종진짜최종* [None]
-    > K-Indie pop ballad.
-  - #1766 *삼십칠 초* [Indie Pop]
-    > K-Indie pop ballad.
-  - #1067 *새벽 다섯 시 플랫폼* [Bossa Nova]
-    > K-Indie pop ballad.
+### 템포 선언
 
-### 26. K-Pop ballad with acoustic folk influences
-- **출현**: 2회 (2곡)
-- **검증**: single_occurrence
-- **장르 분포**: Post-Punk / New Wave(1), Synth Pop(1)
-- **인용문**:
-  - #0042 *야* [Post-Punk / New Wave]
-    > K-Pop ballad with acoustic folk influences.
-  - #1665 *안녕 한마디의 무게* [Synth Pop]
-    > K-Pop ballad with acoustic folk influences.
+Suno는 정확한 BPM을 SP에 명시한다. `at {BPM} BPM` 또는 `Tempo is {BPM}` 형식이 표준이며, `key of {조성}` 패턴이 652회 출현한다.
 
-### 27. K-Indie, Bossa Nova
-- **출현**: 2회 (2곡)
-- **검증**: single_occurrence
-- **장르 분포**: Soft Rock / Indie Folk(1), Bossa Nova(1)
-- **인용문**:
-  - #0125 *보풀* [Soft Rock / Indie Folk]
-    > K-Indie, Bossa Nova.
-  - #1399 *돌길 끝* [Bossa Nova]
-    > K-Indie, Bossa Nova.
+```
+빈도 상위 BPM:
+  120 BPM — 가장 빈번한 기본값
+  100, 130, 140 — 장르에 따라 분포
+  174 BPM — DnB 전용
+  138 BPM — Trance 전용
+```
 
-### 28. K-Pop Indie Rock
-- **출현**: 2회 (2곡)
-- **검증**: single_occurrence
-- **장르 분포**: Art Pop / Alternative R&B(1), Folk(1)
-- **인용문**:
-  - #0143 *가능성의 맛* [Art Pop / Alternative R&B]
-    > K-Pop Indie Rock.
-  - #1661 *길을 모르는 구름* [Folk]
-    > K-Pop Indie Rock.
+### 조성 선언
 
-### 29. K-Pop and J-Pop fusion with high-energy bubblegum pop elements
-- **출현**: 2회 (2곡)
-- **검증**: single_occurrence
-- **장르 분포**: Alternative R&B / Indie Electronic(1), TROT(1)
-- **인용문**:
-  - #0151 *바랜 사진* [Alternative R&B / Indie Electronic]
-    > K-Pop and J-Pop fusion with high-energy bubblegum pop elements.
-  - #20011 *읽씹하지 마* [TROT]
-    > K-Pop and J-Pop fusion with high-energy bubblegum pop elements.
+`key of X` 패턴은 652회 출현하지만, 구체적 코드명(Am7, Cmaj7)은 **0건**, 코드 진행 표기(I-IV-V)도 **0건**이다. Suno의 화성 인식은 조성(key) 수준에서 멈춘다.
 
-### 30. K-Pop Hip-Hop track featuring a male rapper and a melodic male vocalist
-- **출현**: 2회 (2곡)
-- **검증**: single_occurrence
-- **장르 분포**: Synth Pop with Indie Soul(1), Ambient(1)
-- **인용문**:
-  - #0159 *오후 세 시* [Synth Pop with Indie Soul]
-    > K-Pop Hip-Hop track featuring a male rapper and a melodic male vocalist.
-  - #0182 *손가락 자국* [Ambient]
-    > K-Pop Hip-Hop track featuring a male rapper and a melodic male vocalist.
+### 박자 선언
 
+`{N}/{N} time` 형식으로 박자를 명시한다. 4/4가 압도적이며, 3/4(왈츠), 6/8(셀틱/바로크) 등이 장르별로 고정적이다.
 
-## 1.2 템포 · 키 · 박자
+## 1.6 장르와 어휘의 상관관계
 
-총 132개 표현, 524회 출현
+DB 교차분석에서 발견된 장르별 고유 어휘 패턴:
 
-### 1. key=e major
-- **출현**: 38회 (38곡)
-- **검증**: confirmed
-- **장르 분포**: Indie Pop(3), City Pop(2), Acoustic Pop(2), Electronic(2), Piano Ballad / Cinematic(1)
-- **인용문**:
-  - #0072 *빈손* [Piano Ballad / Cinematic]
-    > Key of E Major.
-  - #0091 *새 안경* [Britpop / Mod Revival]
-    > Key of E Major.
-  - #0130 *잔물결* [Dream Pop / Shoegaze]
-    > Key of E Major.
+### 장르가 어휘를 결정한다
 
-### 2. bpm=72 / time_signature=4/4
-- **출현**: 37회 (37곡)
-- **검증**: confirmed
-- **장르 분포**: Acoustic Pop(3), Indie Pop(3), City Pop(2), Indie Folk(2), Jazz Ballad(2)
-- **주요 수식어**: `steady`(3), `clean`(1), `repetitive`(1)
-- **인용문**:
-  - #0012 *빈 밥상* [Contemporary R&B]
-    > Tempo is 72 BPM in 4/4 time.
-  - #0072 *빈손* [Piano Ballad / Cinematic]
-    > Tempo is 72 BPM in 4/4 time.
-  - #0092 *주름진 손* [Waltz / Chamber Waltz]
-    > The tempo is 72 BPM in 4/4 time.
+같은 악기라도 장르에 따라 Suno의 묘사가 달라진다:
 
-### 3. time_signature=4/4
-- **출현**: 35회 (34곡)
-- **검증**: confirmed
-- **장르 분포**: Dark Pop / Synth R&B(2), Piano Ballad(2), Funk Pop(2), Dream Pop / Shoegaze(1), Minimal Electronic Ambient(1)
-- **주요 수식어**: `clean`(4), `repetitive`(4), `laid-back`(1)
-- **인용문**:
-  - #0130 *잔물결* [Dream Pop / Shoegaze]
-    > 4/4 time signature.
-  - #0153 *프로페셔널* [Dark Pop / Synth R&B]
-    > 4/4 time signature.
-  - #0160 *자기 길* [Minimal Electronic Ambient]
-    > 4/4 time signature.
+| 장르 | 기타 묘사 | 베이스 묘사 | 드럼 묘사 |
+|------|----------|-----------|----------|
+| K-Ballad | fingerstyle, arpeggiated, light chorus | sub-bass synth, low-end warmth | soft kick, brushed |
+| K-Funk | palm-muted scratches, staccato | slap bass, sixteenth-note | tight, crisp snare |
+| K-Rock | power chords, overdrive | follows kick drum | eighth-note, high-energy |
+| Bossa Nova | nylon-string, comping | walking upright bass | brushes, woodblock |
+| Jazz | chromatic runs, la pompe | walking, double bass | swing, call-and-response |
+| Electronic | — | reese bass, sub-bass | four-on-the-floor, breakbeat |
 
-### 4. key=g major
-- **출현**: 26회 (26곡)
-- **검증**: confirmed
-- **장르 분포**: (미정)(2), Acoustic Pop(2), Jazz Ballad(2), Electronic(2), Bossa Nova(2)
-- **인용문**:
-  - #0111 *새벽 배달* [Neo-Soul / Chill R&B]
-    > Key of G Major.
-  - #0153 *프로페셔널* [Dark Pop / Synth R&B]
-    > Key of G Major.
-  - #0170 *첫 월급* [Ambient Piano]
-    > Key of G Major.
+### K-Ballad의 어휘 세계
 
-### 5. {'bpm': None, 'key': None, 'time_signature': None}
-- **출현**: 25회 (25곡)
-- **검증**: confirmed
-- **장르 분포**: City Pop(2), Indie Pop(2), Chillwave / Synthpop(1), Acoustic Pop / Folk Pop(1), Acoustic Indie / Singer-Songwriter(1)
-- **주요 수식어**: `tight`(7), `crisp`(7), `dry`(5), `steady`(4), `subtle`(3)
-- **인용문**:
-  - #0061 *건조기 자장가* [Chillwave / Synthpop]
-    > K-Indie pop with a mid-tempo groove.
-  - #0102 *빈 박스* [Acoustic Pop / Folk Pop]
-    > Time Signature: 4/4.
-  - #0112 *돋보기 두 개* [Acoustic Indie / Singer-Songwriter]
-    > The arrangement features a subtle shaker and a soft, mid-tempo percussion groove.
+K-Ballad(162행)에서 가장 자주 등장하는 어휘:
 
-### 6. bpm=72
-- **출현**: 23회 (23곡)
-- **검증**: confirmed
-- **장르 분포**: Dream Pop / Shoegaze(1), Emo Pop / Pop Rock(1), Indie R&B(1), Ambient Piano(1), Indie Pop(1)
-- **주요 수식어**: `steady`(1)
-- **인용문**:
-  - #0130 *잔물결* [Dream Pop / Shoegaze]
-    > 72 BPM.
-  - #0149 *스킵* [Emo Pop / Pop Rock]
-    > Tempo is 72 BPM.
-  - #0161 *손끝* [Indie R&B]
-    > Tempo is 72 BPM.
+```
+breathy(125), soft(107), intimate(87), reverb(121),
+light(119), subtle(110), warm(92), acoustic(144),
+counterpoint(15), jazz-influenced(19), rounded(10)
+```
 
-### 7. bpm=72 / key=g major / time_signature=4/4
-- **출현**: 19회 (19곡)
-- **검증**: confirmed
-- **장르 분포**: Lo-fi Pop(3), City Pop(2), R&B(2), Folk(2), TROT(2)
-- **주요 수식어**: `clean`(3), `repetitive`(3), `steady`(1)
-- **인용문**:
-  - #0121 *발밑 무지개* [Neo-Soul / Jazzy Pop]
-    > Key of G Major, 72 BPM, 4/4 time signature.
-  - #0132 *닮아간다* [Acoustic Indie / Folk]
-    > Tempo is 72 BPM in 4/4 time, key of G Major.
-  - #0152 *바빠* [Indie Folk / Acoustic Pop]
-    > The tempo is 72 BPM in 4/4 time, in the key of G Major.
+K-Ballad의 어휘는 부드러움(soft/breathy/intimate)과 공간감(reverb/light/subtle) 중심이다. 주목할 점은 `counterpoint`(15회)와 `jazz-influenced`(19회)가 발라드에서 빈번하게 등장한다는 것이다 — Suno는 한국 발라드의 편곡을 대위법적이고 재즈 영향을 받은 것으로 인식한다.
 
-### 8. bpm=72 / key=e major / time_signature=4/4
-- **출현**: 15회 (15곡)
-- **검증**: confirmed
-- **장르 분포**: Acoustic Ballad(2), Korean Ballad(2), Minimal Techno / IDM(1), Future Bass / Electro Pop(1), Post-Rock / Cinematic(1)
-- **주요 수식어**: `steady`(2)
-- **인용문**:
-  - #0124 *사십 초* [Minimal Techno / IDM]
-    > The track is in the key of E Major at 72 BPM in 4/4 time.
-  - #0127 *반 톤* [Future Bass / Electro Pop]
-    > 72 BPM, 4/4 time, Key of E Major.
-  - #0148 *사랑이라서* [Post-Rock / Cinematic]
-    > The tempo is 72 BPM in 4/4 time, likely in the key of E Major.
+### 장르별 배타적 어휘
 
-### 9. key=c major
-- **출현**: 12회 (12곡)
-- **검증**: confirmed
-- **장르 분포**: Indie Folk(2), Industrial / Dark Electronic(1), Post-Punk / New Wave(1), (미정)(1), Acoustic Ballad / Intimate Folk(1)
-- **인용문**:
-  - #0123 *닳는 말* [Industrial / Dark Electronic]
-    > The harmonic structure follows a diatonic progression in the key of C Major.
-  - #0136 *사과 위의 변명* [Post-Punk / New Wave]
-    > The key is C Major.
-  - #0191 *동기화* [(미정)]
-    > Key of C Major.
+특정 장르에서만 등장하는 어휘:
 
-### 10. bpm=88
-- **출현**: 9회 (9곡)
-- **검증**: plausible
-- **장르 분포**: City Pop(2), Electronic(2), Neo-Soul / Chill R&B(1), Acoustic Ballad / Intimate Folk(1), K-Hip-Hop(1)
-- **인용문**:
-  - #0111 *새벽 배달* [Neo-Soul / Chill R&B]
-    > Tempo is 88 BPM.
-  - #0261 *회식 근육* [Acoustic Ballad / Intimate Folk]
-    > Tempo is 88 BPM.
-  - #0414 *봄은 또 온다* [K-Hip-Hop]
-    > Tempo is 88 BPM.
+| 어휘 | 배타적 장르 | 빈도 |
+|------|-----------|------|
+| la pompe | Gypsy Jazz | 5 |
+| dembow | Reggaeton | 1 |
+| reese bass | DnB | 1 |
+| bodhrán | Celtic Folk | 2 |
+| log drum | Amapiano/Afrobeats | 5 |
+| Scruggs-style | Bluegrass | 1 |
+| guiro | Cumbia | 1 |
+| TR-909 | Acid House | 1 |
+| supersaw | Trance | 2 |
+| four-on-the-floor | Electronic 전반 | 3 |
 
-### 11. bpm=68 / time_signature=4/4
-- **출현**: 9회 (9곡)
-- **검증**: plausible
-- **장르 분포**: Post-Punk / New Wave(1), Future Bass / Electro Pop(1), Ethereal Ambient(1), (미정)(1), Indie Pop(1)
-- **인용문**:
-  - #0136 *사과 위의 변명* [Post-Punk / New Wave]
-    > The tempo is approximately 68 BPM in 4/4 time.
-  - #0146 *삼 초* [Future Bass / Electro Pop]
-    > The tempo is approximately 68 BPM in 4/4 time.
-  - #0188 *지하철* [Ethereal Ambient]
-    > The tempo is 68 BPM in 4/4 time.
+이 어휘들은 해당 장르를 식별하는 핵심 마커이며, 다른 장르에서는 거의 나타나지 않는다.
 
-### 12. bpm=72 / key=c major / time_signature=4/4
-- **출현**: 9회 (9곡)
-- **검증**: plausible
-- **장르 분포**: Indie Acoustic(2), Indie Pop / Bedroom Pop(1), Indie Folk / Acoustic(1), Synth Pop(1), Acoustic Pop(1)
-- **인용문**:
-  - #0142 *손바닥 고백* [Indie Pop / Bedroom Pop]
-    > The track is in the key of C Major with a tempo of 72 BPM in 4/4 time.
-  - #0379 *빈 방의 마지막* [Indie Folk / Acoustic]
-    > 72 BPM, 4/4 time signature, Key of C Major.
-  - #0928 *서사 없는 사랑* [Synth Pop]
-    > The tempo is 72 BPM in 4/4 time, in the key of C Major.
+## 1.7 Suno의 장르 인식 편향
 
-### 13. bpm=115
-- **출현**: 9회 (9곡)
-- **검증**: plausible
-- **장르 분포**: Rock(2), Ambient Ballad(1), Piano Ballad(1), Indie Pop(1), Pop Rock(1)
-- **주요 수식어**: `clean`(1)
-- **인용문**:
-  - #0173 *마지막 이발소* [Ambient Ballad]
-    > Tempo is 115 BPM.
-  - #1436 *거울 리허설* [Piano Ballad]
-    > Tempo 115 BPM.
-  - #1618 *딱지가 떨어진 날* [Indie Pop]
-    > K-Pop City Pop track at 115 BPM in E Major.
+### 관찰된 편향
 
-### 14. bpm=92 / key=g major
-- **출현**: 8회 (8곡)
-- **검증**: plausible
-- **장르 분포**: Synth-Pop / Bedroom Pop(1), Synth Pop / Dream Pop(1), Soft Indie(1), Bedroom Pop(1), Ambient(1)
-- **인용문**:
-  - #0022 *뜯지 않은 상자* [Synth-Pop / Bedroom Pop]
-    > Tempo is 92 BPM in the key of G Major.
-  - #0131 *한쪽 귀* [Synth Pop / Dream Pop]
-    > The tempo is 92 BPM in the key of G major.
-  - #0165 *희망의 형태* [Soft Indie]
-    > The tempo is 92 BPM in the key of G Major.
+1. **K-Pop 흡수**: 원곡이 트로트, 인디 포크, 힙합이어도 Suno는 상당수를 K-Pop으로 분류
+2. **Ballad 과대 대표**: W1의 50%가 Ballad 태그를 포함 — 한국 음악 = 발라드라는 Suno의 편향
+3. **Bebop → Bossa Nova 드리프트**: S018에서 Bebop으로 의도한 곡을 Suno가 "Bossa Nova jazz"로 재분류 — 재즈 하위 장르 구분 약함
+4. **Afrobeats → Amapiano 혼동**: S018에서 Afrobeats로 의도한 곡을 "Amapiano"로 분류 — 아프리카 장르 구분 불명확
 
-### 15. bpm=165 / key=e major
-- **출현**: 8회 (8곡)
-- **검증**: plausible
-- **장르 분포**: Indie Rock(2), Minimal Electronic Ambient(1), (미정)(1), Pop Rock(1), Acoustic Ballad(1)
-- **인용문**:
-  - #0160 *자기 길* [Minimal Electronic Ambient]
-    > Tempo is 165 BPM in the key of E Major.
-  - #0168 *늦둥이 아빠* [Indie Rock]
-    > The tempo is 165 BPM in the key of E Major.
-  - #0195 *초월* [(미정)]
-    > The tempo is 165 BPM in the key of E Major.
+### 장르 경계의 유동성
 
-### 16. bpm=118
-- **출현**: 7회 (7곡)
-- **검증**: plausible
-- **장르 분포**: Acoustic Pop(2), Folk(1), Shoegaze(1), Synth Pop(1), Funk Pop(1)
-- **인용문**:
-  - #0936 *침묵의 대화* [Folk]
-    > Tempo is 118 BPM.
-  - #1156 *새벽 3시의 고속도로* [Shoegaze]
-    > Tempo is 118 BPM.
-  - #1463 *14층까지의 자화상* [Synth Pop]
-    > Tempo is 118 BPM.
+동일한 음악을 두 번 재분석하면 장르 라벨이 달라질 수 있다(echo 분석에서 평균 Jaccard 유사도 7.6%). 이는 Suno의 장르 분류가 확정적 룩업이 아니라 확률적 생성임을 의미한다.
 
-### 17. bpm=128 / key=e major
-- **출현**: 6회 (6곡)
-- **검증**: plausible
-- **장르 분포**: TROT(2), Chillwave / Dream Pop(1), Ambient Folk Pop(1), Indie Pop(1), Alternative Rock(1)
-- **인용문**:
-  - #0101 *유리 너머* [Chillwave / Dream Pop]
-    > Key of E Major, 128 BPM.
-  - #0155 *빈 벤치* [Ambient Folk Pop]
-    > Tempo is 128 BPM in the key of E Major.
-  - #0171 *이명* [Indie Pop]
-    > The tempo is 128 BPM in the key of E Major.
+## 1.8 SP 작성을 위한 시사점
 
-### 18. bpm=92 / key=e major / time_signature=4/4
-- **출현**: 6회 (6곡)
-- **검증**: plausible
-- **장르 분포**: Soft Rock / Indie Folk(1), Chamber Pop / Orchestral(1), Narrative Folk(1), Indie Pop(1), Lo-fi Pop(1)
-- **인용문**:
-  - #0125 *보풀* [Soft Rock / Indie Folk]
-    > Key of E Major, 92 BPM, 4/4 time signature.
-  - #0150 *반갑다* [Chamber Pop / Orchestral]
-    > Key of E Major, 92 BPM, 4/4 time signature.
-  - #0208 *빚* [Narrative Folk]
-    > The track is in the key of E Major with a tempo of 92 BPM in 4/4 time.
-
-### 19. bpm=72 / key=g major
-- **출현**: 6회 (6곡)
-- **검증**: plausible
-- **장르 분포**: Ambient / Post-Rock(1), Dream Pop / Synth Pop(1), Soft Jazz(1), Soul Ballad(1), Hyperpop(1)
-- **인용문**:
-  - #0138 *벽지 아래* [Ambient / Post-Rock]
-    > Tempo is 72 BPM in the key of G Major.
-  - #0141 *프레임* [Dream Pop / Synth Pop]
-    > Tempo is 72 BPM in the key of G Major.
-  - #0175 *자유의 값* [Soft Jazz]
-    > Tempo is 72 BPM in the key of G Major.
-
-### 20. bpm=78
-- **출현**: 6회 (6곡)
-- **검증**: plausible
-- **장르 분포**: Indie Pop / Bedroom Pop(1), Dark Pop / Synth R&B(1), Ambient Folk(1), Pop-Ballad(1), Electro Pop(1)
-- **인용문**:
-  - #0142 *손바닥 고백* [Indie Pop / Bedroom Pop]
-    > Tempo is 78 BPM.
-  - #0153 *프로페셔널* [Dark Pop / Synth R&B]
-    > Tempo is 78 BPM.
-  - #0163 *증명사진* [Ambient Folk]
-    > Tempo is 78 BPM.
-
-
-## 1.3 장르 문장 템플릿
-
-고유 템플릿 175개
-
-- `K-Pop ballad featuring a  <VOCAL>.` (4회)
-  - 예: K-Pop ballad featuring a male baritone vocal.
-- `K-Pop Rock with <MOD> J-Rock influences.` (2회)
-  - 예: K-Pop Rock with heavy J-Rock influences.
-- `K-Pop City Pop track in <KEY> Major at <BPM>.` (2회)
-  - 예: K-Pop City Pop track in G Major at 110 BPM.
-- `K-Pop Indie Pop ballad.` (1회)
-  - 예: K-Pop Indie Pop ballad.
-- `K-Pop ballad with jazz-pop and soul influences.` (1회)
-  - 예: K-Pop ballad with jazz-pop and soul influences.
-- `K-Indie folk ballad.` (1회)
-  - 예: K-Indie folk ballad.
-- `K-Pop ballad with R&B influences.` (1회)
-  - 예: K-Pop ballad with R&B influences.
-- `K-Hip Hop with a boom bap influence.` (1회)
-  - 예: K-Hip Hop with a boom bap influence.
-- `K-Pop R&B track featuring a  <VOCAL>.` (1회)
-  - 예: K-Pop R&B track featuring a male vocalist.
-- `K-Pop and <INSTR>-pop fusion featuring  <VOCAL>.` (1회)
-  - 예: K-Pop and synth-pop fusion featuring male vocals.
+1. **장르를 첫 문장에 배치하라** — Suno의 97.2% 패턴을 따른다
+2. **복합 장르 구문을 사용하라** — 단순 "Pop"보다 "K-Pop ballad with R&B influences" 형식이 Suno의 네이티브 패턴
+3. **K-접두어를 활용하라** — 한국 음악을 원할 때 K-Pop/K-Indie/K-Rock 접두어가 효과적
+4. **조성은 `key of X`로** — 코드명이나 진행 표기는 데드존
+5. **장르별 핵심 마커를 포함하라** — Bossa Nova면 "nylon-string guitar, brushes", Trance면 "supersaw, four-on-the-floor"
+6. **BPM을 명시하라** — `at {N} BPM` 형식으로, Suno가 장르에 따라 기대하는 BPM 범위가 있다
