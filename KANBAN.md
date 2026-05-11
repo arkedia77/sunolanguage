@@ -1,14 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] W1 reanalysis_genre UPDATE — SQL 본문 직접 전달 완료, sunomusic 실행 대기 중
 - [sunolanguage] 사전 v3.1 — DB 교차분석 27개 + key change 추가 완료, S시리즈 추가 수신 시 재빌드
 
 ## TODO
-### DB 분석 (후속)
-- [sunolanguage] SP 길이 vs 장르 상관관계 — DB에서 SP 길이 분포 조회
-- [sunolanguage] 비-Ballad K-장르 심층 분석 — K-Indie(40행), K-Funk(26행), K-Rock(25행) 서브타입
-
 ### genre_frontier 후속
 - [sunolanguage] 미검증 25개 장르 must_have도 Suno 네이티브 기반으로 작성 (S019+ 데이터 필요)
 
@@ -30,13 +25,16 @@
 - [sunolanguage] Top-Anchor 자동 배치 기능 추가 (v5.5 반영)
 
 ### 책 본문
-- [sunolanguage] 1·2·5장 완성도 향상 — K-Ballad 서브타입 분석 결과 ch1에 반영 필요
 - [sunolanguage] 3·4장 — W002+S007-S015 결과 필요
 
 ## BLOCKED
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] 비-Ballad K-장르 심층 분석 (K-Indie 76행, K-Funk 33행, K-Rock 40행) — 2026-05-11 ✅
+- [sunolanguage] SP 길이 vs 장르 상관관계 분석 (385행, Pearson r=0.33) — 2026-05-11 ✅
+- [sunolanguage] ch1 업데이트 (서브타입 비교, SP 길이, 장르 경계, 배타적 어휘) — 2026-05-11 ✅
+- [sunolanguage] W1 reanalysis_genre UPDATE 326행 sunomusic 실행 확인 — 2026-05-11 ✅
 - [sunolanguage] K-Ballad 10개 서브타입 심층 분석 (163행, 악기·보컬·주법 시그니처) — 2026-05-10 ✅
 - [sunolanguage] v5.5 key change (pump-up modulation) 발견 + 사전 등록 + leomusic/2 알림 — 2026-05-09 ✅
 - [sunolanguage] DB 385행 교차분석 + 장르별 네이티브 어휘 대조 — 2026-05-09 ✅

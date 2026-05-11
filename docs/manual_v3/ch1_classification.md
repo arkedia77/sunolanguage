@@ -24,6 +24,7 @@ Suno 재분석 SP의 첫 문장은 97.2%의 확률로 **장르 선언**이다. 4
 | 분석 corpus | 437곡 (W1 378 + S시리즈 59) |
 | 고유 장르 표현 | 216개 |
 | DB 385행 기준 고유 장르 | 214개 (W1 162 + S시리즈 52) |
+| 평균 SP 길이 | 522자 (Q1 464 ~ Q3 575) |
 
 Suno의 장르 라벨은 단일 키워드가 아니라 **복합 구문**이다. 평균 5~8단어 길이의 문장형 라벨이 대부분이다.
 
@@ -122,9 +123,45 @@ Suno는 정확한 BPM을 SP에 명시한다. `at {BPM} BPM` 또는 `Tempo is {BP
 
 `{N}/{N} time` 형식으로 박자를 명시한다. 4/4가 압도적이며, 3/4(왈츠), 6/8(셀틱/바로크) 등이 장르별로 고정적이다.
 
-## 1.6 장르와 어휘의 상관관계
+## 1.6 SP 길이와 장르의 관계
 
-DB 교차분석에서 발견된 장르별 고유 어휘 패턴:
+Suno 재분석 SP의 길이는 장르에 따라 체계적으로 달라진다.
+
+### 전체 분포
+
+75%의 SP가 400~599자 구간에 집중되어 있다. "표준 SP"는 약 500자다.
+
+```
+200-299    3행  █
+300-399   20행  ██████████
+400-499  142행  ████████████████████████████████████████████████ ← 최빈
+500-599  149행  █████████████████████████████████████████████████ ← 최빈
+600-699   60행  ████████████████████
+700-799    9행  ███
+800-899    2행  █
+```
+
+### 장르별 SP 길이
+
+| 장르 | 행수 | 평균 | 범위 |
+|------|------|------|------|
+| Classical | 6 | **697자** | 634~756 |
+| Jazz | 14 | **586자** | 409~761 |
+| Folk | 9 | **586자** | 419~672 |
+| Electronic | 15 | 572자 | 459~789 |
+| Hip-Hop | 18 | 551자 | 394~721 |
+| Rock | 38 | 539자 | 344~682 |
+| Funk | 31 | 517자 | 378~676 |
+| Indie | 35 | 524자 | 408~656 |
+| Ballad | 158 | **484자** | 230~673 |
+
+편성 복잡도가 SP 길이를 결정한다: 오케스트라 편성의 Classical(697자)이 가장 길고, 미니멀 편성의 Ballad(484자)가 가장 짧다. 장르 설명의 단어수와 SP 길이 사이에 약한 양의 상관이 있다(Pearson r=0.33).
+
+Instrumental 트랙(560자)이 Vocal 트랙(505자)보다 평균 55자 더 길다 — 보컬 묘사가 빠진 대신 악기 묘사가 더 상세해진다.
+
+## 1.7 장르와 어휘의 상관관계
+
+DB 385행 교차분석에서 발견된 장르별 고유 어휘 패턴:
 
 ### 장르가 어휘를 결정한다
 
@@ -141,7 +178,7 @@ DB 교차분석에서 발견된 장르별 고유 어휘 패턴:
 
 ### K-Ballad의 어휘 세계
 
-K-Ballad(162행)에서 가장 자주 등장하는 어휘:
+K-Ballad(163행)에서 가장 자주 등장하는 어휘:
 
 ```
 breathy(125), soft(107), intimate(87), reverb(121),
@@ -150,6 +187,62 @@ counterpoint(15), jazz-influenced(19), rounded(10)
 ```
 
 K-Ballad의 어휘는 부드러움(soft/breathy/intimate)과 공간감(reverb/light/subtle) 중심이다. 주목할 점은 `counterpoint`(15회)와 `jazz-influenced`(19회)가 발라드에서 빈번하게 등장한다는 것이다 — Suno는 한국 발라드의 편곡을 대위법적이고 재즈 영향을 받은 것으로 인식한다.
+
+#### K-Ballad 10개 서브타입
+
+163행을 서브타입별로 분류하면 각각 고유한 악기·보컬·주법 시그니처를 갖는다:
+
+| 서브타입 | 행수 | 핵심 악기 | 보컬 | 주법 |
+|----------|------|----------|------|------|
+| R&B | 33 | electric guitar 85% + synth 61% | falsetto + smooth | syncopated 52% |
+| Baritone | 29 | grand piano 69% + strings 41% | baritone + rich | arpeggiated |
+| Plain | 30 | piano 50% + acoustic 50% | breathy + soft | steady |
+| Folk | 22 | acoustic guitar 100% | breathy 68% + intimate 64% | fingerstyle 55%, steady 95% |
+| Acoustic | 20 | acoustic guitar 100% | breathy + warm | arpeggiated |
+| Indie | 10 | electric guitar + bass | soft + intimate | clean + reverb |
+| Jazz | 5 | electric guitar + grand piano | smooth + warm | swing 80% |
+| Rock | 5 | electric guitar 100% | powerful + belted | arpeggiated 100% |
+| Synth | 4 | synth + pad | breathy | steady |
+
+R&B 서브타입은 일렉 기타+신스 조합과 팔세토가 핵심이고, Folk/Acoustic은 어쿠스틱 기타 100%와 핑거스타일/스테디 리듬이 특징이다. Baritone 서브타입은 그랜드 피아노+스트링 섹션의 클래시컬 편성이 다른 서브타입과 확연히 구분된다.
+
+### K-Indie의 어휘 세계 (76행)
+
+K-Indie는 K-Ballad와 부분적으로 겹치면서도 독자적 시그니처를 갖는다:
+
+| 서브타입 | 행수 | 핵심 악기 | 보컬 | 주법 |
+|----------|------|----------|------|------|
+| Pop | 29 | electric guitar 97% + kick 76% | soft 62%, tenor 48% | clean 100% + syncopated 76% |
+| Folk | 22 | acoustic 100%, 리듬 최소 | soft 86% + baritone 64% | steady 95% + fingerstyle 55% |
+| Rock | 6 | 일렉+풀 드럼셋 | tenor 67% | syncopated 83% + overdriven 83% |
+| Ballad | 6 | acoustic 83% | breathy+warm+intimate 100% | arpeggiated 83% |
+
+**K-Indie Pop**(29행)이 가장 큰 서브타입으로, clean 100% + syncopated 76%의 "깔끔하지만 리듬감 있는" 사운드가 핵심이다. K-Indie Folk는 K-Ballad Folk와 시그니처가 거의 동일(acoustic 100%, steady 95%, fingerstyle 55%)하여 장르 경계가 모호하다.
+
+### K-Funk의 어휘 세계 (33행)
+
+K-Funk는 K-Ballad/K-Indie와 전혀 다른 어휘 세계를 형성한다:
+
+| 서브타입 | 행수 | 핵심 악기 | 보컬 | 주법 |
+|----------|------|----------|------|------|
+| Pure Funk-Pop | 14 | electric guitar 93% + **brass 71%** | **bright 100%** | **slap 100% + staccato 100%** |
+| J-Fusion | 5 | 일렉+synth 80% + bass 80% | bright 80% + tenor 60% | slap 100% + syncopated 100% |
+| Disco-Funk | 5 | 일렉+**synth 100%**+pad 80% | bright 100% | slap 80% + sixteenth-note 60% |
+| Synth-Funk | 3 | **synth+pad 100%** | bright 100% | slap 100% + driving 67% |
+
+K-Funk의 DNA는 **slap(85%)**과 **staccato(73%)**와 **bright(85%)**다. 이 세 어휘는 K-Ballad(0%)와 K-Indie(0%)에서 거의 등장하지 않아 강력한 장르 식별자다. brass(52%)도 K-Funk에서만 유의미하게 출현한다.
+
+### K-Rock의 어휘 세계 (40행)
+
+| 서브타입 | 행수 | 핵심 악기 | 보컬 | 주법 |
+|----------|------|----------|------|------|
+| Punk/Pop-Punk | 11 | 일렉 100% + bass 82% | (묘사 최소) | **driving 100% + distorted 91% + power chord 91%** |
+| J-Rock Fusion | 8 | 일렉 100% + snare 88% | bright 88% + tenor 75% | distorted 75% + palm-muted 75% |
+| Pop-Rock | 6 | 일렉+풀 리듬 섹션 | bright 100% + tenor 67% | syncopated 83% + power chord 83% |
+| Indie Rock | 5 | 풀 드럼셋 100% | tenor 80% | clean 100% + overdriven 80% |
+| Soft Rock | 5 | 일렉+pad 80% | breathy 80% + soft 80% | **arpeggiated 100% + delay 100%** |
+
+K-Rock의 DNA는 **distorted(62%)**와 **driving(65%)**과 **power chord(65%)**다. electric guitar는 전 서브타입에서 100%로, K-Rock에서 일렉 기타는 필수다. Soft Rock 서브타입은 arpeggiated+clean+delay로 K-Ballad와 거의 동일하여 장르 경계가 모호하다.
 
 ### 장르별 배타적 어휘
 
@@ -170,7 +263,38 @@ K-Ballad의 어휘는 부드러움(soft/breathy/intimate)과 공간감(reverb/li
 
 이 어휘들은 해당 장르를 식별하는 핵심 마커이며, 다른 장르에서는 거의 나타나지 않는다.
 
-## 1.7 Suno의 장르 인식 편향
+### K-장르 간 배타적 식별 어휘
+
+같은 K-계열이라도 장르 간에 거의 겹치지 않는 배타적 어휘가 존재한다:
+
+| 어휘 | K-Ballad | K-Indie | K-Funk | K-Rock |
+|------|----------|---------|--------|--------|
+| slap | — | — | **85%** | — |
+| staccato | — | — | **73%** | — |
+| brass | — | — | **52%** | — |
+| sixteenth-note | — | — | **52%** | — |
+| power chord | — | — | — | **65%** |
+| distorted | — | — | — | **62%** |
+| palm-muted | — | — | — | **52%** |
+| driving | — | — | — | **65%** |
+| fingerstyle | — | 21% | — | — |
+| grand piano | 40% | — | — | — |
+| string section | 15% | — | — | — |
+
+이 표는 SP에서 장르를 전환할 때 핵심적이다. K-Funk를 원하면 slap+staccato를, K-Rock을 원하면 power chord+distorted를 포함시키면 된다.
+
+## 1.8 K-장르 경계의 겹침
+
+서브타입 분석에서 장르 경계가 모호한 조합이 발견된다:
+
+1. **K-Indie Ballad ≈ K-Ballad Folk**: acoustic+breathy+arpeggiated. 악기·보컬·주법 시그니처가 거의 동일.
+2. **K-Rock Soft Rock ≈ K-Ballad Rock**: arpeggiated+clean+delay. BPM만 차이(73 vs 72).
+3. **K-Indie Rock ≈ K-Rock Indie Rock**: syncopated+clean+reverb. 템포 차이(109 vs 107 BPM)도 미미.
+4. **K-Funk**: 다른 K-장르와 겹침 최소 — slap/staccato/brass로 가장 독립적인 어휘 세계.
+
+이는 Suno의 장르 분류가 이산적(discrete) 카테고리가 아니라 연속적 스펙트럼임을 보여준다. K-Indie Folk와 K-Ballad Folk를 구분하는 것은 장르명의 차이이지, 실제 어휘 세계의 차이가 아니다.
+
+## 1.9 Suno의 장르 인식 편향
 
 ### 관찰된 편향
 
@@ -183,7 +307,7 @@ K-Ballad의 어휘는 부드러움(soft/breathy/intimate)과 공간감(reverb/li
 
 동일한 음악을 두 번 재분석하면 장르 라벨이 달라질 수 있다(echo 분석에서 평균 Jaccard 유사도 7.6%). 이는 Suno의 장르 분류가 확정적 룩업이 아니라 확률적 생성임을 의미한다.
 
-## 1.8 SP 작성을 위한 시사점
+## 1.10 SP 작성을 위한 시사점
 
 1. **장르를 첫 문장에 배치하라** — Suno의 97.2% 패턴을 따른다
 2. **복합 장르 구문을 사용하라** — 단순 "Pop"보다 "K-Pop ballad with R&B influences" 형식이 Suno의 네이티브 패턴
@@ -191,3 +315,6 @@ K-Ballad의 어휘는 부드러움(soft/breathy/intimate)과 공간감(reverb/li
 4. **조성은 `key of X`로** — 코드명이나 진행 표기는 데드존
 5. **장르별 핵심 마커를 포함하라** — Bossa Nova면 "nylon-string guitar, brushes", Trance면 "supersaw, four-on-the-floor"
 6. **BPM을 명시하라** — `at {N} BPM` 형식으로, Suno가 장르에 따라 기대하는 BPM 범위가 있다
+7. **SP 길이를 장르에 맞춰라** — Ballad ~480자, Rock ~540자, Classical ~700자. 재분석 SP 평균(522자)의 2배에 근접하면 Suno 처리 한계
+8. **K-장르 전환은 배타적 어휘로** — K-Funk는 slap+staccato, K-Rock은 power chord+distorted를 반드시 포함
+9. **Instrumental은 더 길게 써도 된다** — 보컬 묘사 대신 악기 묘사에 50~60자 여유 가능
