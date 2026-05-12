@@ -2,17 +2,18 @@
 
 ## IN PROGRESS
 - [sunolanguage] 사전 v3.1 — DB 교차분석 27개 + key change 추가 완료, S시리즈 추가 수신 시 재빌드
+- [sunolanguage] S_PU 시리즈 발주 대기 — pump-up modulation 테스트 18 SP × 3회 = 54곡 (sunomusic)
 
 ## TODO
-### genre_frontier 후속
-- [sunolanguage] 미검증 25개 장르 must_have도 Suno 네이티브 기반으로 작성 (S019+ 데이터 필요)
-
 ### v5.5 검증
-- [sunolanguage] pump-up modulation 빈도/조건 정밀 측정 (v5.0 vs v5.5 동일 SP 비교)
+- [sunolanguage] S_PU 시리즈 sunomusic 발주 — `data/v55_pumpup_test_protocol.md` 참조
 - [sunolanguage] Top-Anchor A/B 테스트 (S018에 내장)
 - [sunolanguage] 네거티브 프롬프팅 효과 측정 (S018 7곡에 배정)
 - [sunolanguage] SP 길이별 테스트 200/500/900자 (S018_03/08/12)
 - [sunolanguage] [] vs () 체계적 비교 테스트 — 같은 지시를 두 방식으로 대조
+
+### genre_frontier 후속
+- [sunolanguage] 미검증 25개 S019+ 데이터로 hit_rate 실측 (v1.3 네이티브 재작성은 완료)
 
 ### 검증 대기
 - [sunolanguage] S002 결과 대기 — sunomusic 관현악 15악기 12곡 (재분석 포함)
@@ -20,17 +21,18 @@
 - [sunolanguage] S007-S015 82곡 — sunomusic 생성+재분석 (2026-04-29 발주, 장기)
 - [sunolanguage] 55 Best 출처 확인 대기 — sunomusic 회신 후 corpus 합류 여부 결정
 
-### SP Builder
-- [sunolanguage] Suno 29개 공식 대장르 카테고리 반영
-- [sunolanguage] Top-Anchor 자동 배치 기능 추가 (v5.5 반영)
-
 ### 책 본문
-- [sunolanguage] 3·4장 — W002+S007-S015 결과 필요
+- [sunolanguage] 3·4장 W002+S007-S015 데이터 반영 (현재 K-장르+SP 길이까지 반영 완료)
 
 ## BLOCKED
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] v5.5 pump-up modulation 테스트 설계 — S_PU 시리즈 18 SP, 54곡 프로토콜 완성 — 2026-05-12 ✅
+- [sunolanguage] genre_frontier v1.3 — 25개 미검증 장르 must_have Suno 네이티브 재작성 — 2026-05-12 ✅
+- [sunolanguage] SP Builder 신규 — 29개 대장르, 121개 서브장르, Top-Anchor 자동 배치 — 2026-05-12 ✅
+- [sunolanguage] ch3 업데이트 — §3.14 K-장르별 악기 수식어 패턴 추가 — 2026-05-12 ✅
+- [sunolanguage] ch4 업데이트 — §4.4 K-장르 슬롯 비교, §4.5 SP 길이, §4.6 장르 경계 추가 — 2026-05-12 ✅
 - [sunolanguage] 비-Ballad K-장르 심층 분석 (K-Indie 76행, K-Funk 33행, K-Rock 40행) — 2026-05-11 ✅
 - [sunolanguage] SP 길이 vs 장르 상관관계 분석 (385행, Pearson r=0.33) — 2026-05-11 ✅
 - [sunolanguage] ch1 업데이트 (서브타입 비교, SP 길이, 장르 경계, 배타적 어휘) — 2026-05-11 ✅

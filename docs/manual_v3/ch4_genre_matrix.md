@@ -212,3 +212,141 @@
 - **Neo-Soul** × effect_sound (7곡)
 - **Neo-Soul** × mastering (7곡)
 - **Funk Pop** × effect_sound (8곡)
+
+
+## 4.4 K-장르 간 슬롯 비교 (2026-05-12 추가)
+
+DB 385행에서 K-Ballad(163행), K-Indie(76행), K-Funk(33행), K-Rock(40행)의 슬롯 사용 패턴을 비교한다. 같은 K-계열이지만 슬롯별로 완전히 다른 어휘 세계가 존재한다.
+
+### 악기(INS) 슬롯 비교
+
+| 악기 | K-Ballad | K-Indie | K-Funk | K-Rock |
+|------|----------|---------|--------|--------|
+| electric guitar | 40% | 58% | 85% | **100%** |
+| acoustic guitar | **56%** | 49% | — | — |
+| grand piano | **40%** | — | — | — |
+| electric bass | 42% | 38% | 76% | 68% |
+| slap bass | — | — | **85%** | — |
+| bass guitar | 12% | 8% | — | **82%** |
+| synthesizer | 18% | 13% | 52% | — |
+| brass section | — | — | **52%** | — |
+| string section | 15% | — | — | — |
+| pad | 12% | 8% | 45% | 38% |
+
+**핵심**:
+- K-Ballad = piano+acoustic 중심의 미니멀 편성
+- K-Indie = acoustic+electric 균형
+- K-Funk = slap+brass+synth의 리듬 편성 (다른 K와 완전 분리)
+- K-Rock = electric guitar+bass guitar의 밴드 편성
+
+### 보컬(VOC) 슬롯 비교
+
+| 보컬 | K-Ballad | K-Indie | K-Funk | K-Rock |
+|------|----------|---------|--------|--------|
+| breathy | **62%** | 48% | — | — |
+| soft | **55%** | 58% | — | — |
+| intimate | 48% | 42% | — | — |
+| bright | — | — | **85%** | 38% |
+| powerful | 8% | — | — | **42%** |
+| tenor | 25% | 25% | 33% | **55%** |
+| baritone | **35%** | 30% | — | 18% |
+
+**핵심**:
+- K-Ballad/K-Indie = breathy+soft+intimate 서정 계열
+- K-Funk = bright 독점 (85%)
+- K-Rock = powerful+tenor 에너지 계열
+
+### 주법(EFX) 슬롯 비교
+
+| 주법 | K-Ballad | K-Indie | K-Funk | K-Rock |
+|------|----------|---------|--------|--------|
+| arpeggiated | **52%** | 25% | — | 25% |
+| clean | 38% | **62%** | 33% | 35% |
+| staccato | — | — | **73%** | — |
+| slap | — | — | **85%** | — |
+| syncopated | 12% | 28% | 94% | 52% |
+| distorted | — | — | — | **62%** |
+| power chord | — | — | — | **65%** |
+| driving | — | — | 15% | **65%** |
+| palm-muted | — | — | — | **52%** |
+| fingerstyle | 18% | 21% | — | — |
+
+**핵심**: K-장르를 구분하는 가장 강력한 단서는 주법 슬롯이다:
+- K-Ballad → arpeggiated+fingerstyle
+- K-Indie → clean+syncopated
+- K-Funk → slap+staccato (배타적)
+- K-Rock → distorted+power chord+driving (배타적)
+
+### 배타적 식별 어휘 (장르 전환 가이드)
+
+| 원하는 장르 | 반드시 포함할 어휘 | 반드시 제외할 어휘 |
+|------------|-------------------|-------------------|
+| K-Ballad | breathy, arpeggiated, grand piano | slap, staccato, distorted, power chord |
+| K-Indie | soft, clean, syncopated | slap, brass, power chord, driving |
+| K-Funk | slap, staccato, bright, brass | breathy, arpeggiated, grand piano |
+| K-Rock | distorted, power chord, driving | breathy, slap, staccato, grand piano |
+
+
+## 4.5 SP 길이와 장르 (2026-05-12 추가)
+
+DB 385행 재분석 SP 길이 분석. SP를 작성할 때 장르별 적정 길이를 참조한다.
+
+### 전체 통계
+
+| 항목 | 값 |
+|------|-----|
+| 평균 | 522자 |
+| 중앙값 | 517자 |
+| 표준 구간 (Q1~Q3) | 464~575자 |
+| 최빈 구간 | 400~599자 (전체의 75%) |
+
+### 장르별 적정 길이
+
+| 장르 | 행수 | 평균 SP 길이 | 적정 범위 | 해석 |
+|------|------|-------------|----------|------|
+| Classical | 6 | **697자** | 630~760 | 오케스트라 편성 = 가장 많은 묘사 |
+| Folk | 9 | 586자 | 420~670 | 어쿠스틱 편성 변주 |
+| Jazz | 14 | 586자 | 410~760 | 보이싱/화성 묘사 |
+| Electronic | 15 | 572자 | 460~790 | 신스 파라미터 상세 |
+| Hip-Hop | 18 | 551자 | 390~720 | 비트+효과 중심 |
+| R&B/Soul | 16 | 550자 | 460~650 | 보컬+그루브 |
+| Pop | 29 | 540자 | 360~880 | 범위 가장 넓음 (융합 장르) |
+| Rock | 38 | 539자 | 340~680 | 밴드 편성 |
+| Indie | 35 | 524자 | 410~660 | 중간 복잡도 |
+| Funk | 31 | 517자 | 380~680 | 리듬 중심 |
+| Ballad | 158 | **484자** | 230~670 | 미니멀 편성 → 가장 짧음 |
+
+### Vocal vs Instrumental
+
+| 유형 | 평균 SP | 차이 |
+|------|---------|------|
+| Vocal | 505자 | 기준 |
+| Instrumental | 560자 | **+55자** |
+
+보컬 묘사 자리를 악기 묘사가 대체하므로, Instrumental SP는 50~60자 더 길게 작성 가능.
+
+### SP 길이 실용 가이드
+
+1. **500자 = Suno 재분석 표준**: 이보다 짧으면 정보 부족, 길면 과밀
+2. **장르별 조절**: Ballad ~480자 / Rock ~540자 / Classical ~700자
+3. **과포화 경계**: B192 실패 곡(964~999자)은 재분석 평균의 ~2배 → 900자 이상은 위험
+4. **편성 복잡도 ∝ SP 길이**: 악기 수가 많으면 자연스럽게 길어짐
+5. **Instrumental +55자 규칙**: 보컬곡 대비 악기 묘사 여유
+
+### 장르 단어수 vs SP 길이 (Pearson r = 0.33)
+
+장르명이 복잡할수록 SP가 약간 길어지지만, 약한 상관에 불과. 장르명 9단어까지 SP 길이 단조증가, 이후 감소 — 지나치게 긴 장르명은 오히려 초점을 잃음.
+
+
+## 4.6 장르 경계의 겹침 (2026-05-12 추가)
+
+K-장르 서브타입 분석에서 장르 경계가 모호한 조합이 발견된다.
+
+| 겹침 쌍 | 공유 시그니처 | 차이점 |
+|---------|-------------|--------|
+| K-Indie Ballad ≈ K-Ballad Folk | acoustic+breathy+arpeggiated | 장르 라벨만 다름 |
+| K-Rock Soft ≈ K-Ballad Rock | arpeggiated+clean+delay | BPM 73 vs 72 (무의미) |
+| K-Indie Rock ≈ K-Rock Indie | syncopated+clean+reverb | 템포 109 vs 107 (미미) |
+| K-Funk J-Fusion ≈ 독립 | slap+bright+synth | 다른 K-장르와 겹침 최소 |
+
+**시사점**: Suno의 장르 분류는 이산적 카테고리가 아니라 연속적 스펙트럼이다. SP 작성 시 장르명보다 **배타적 어휘**(§4.4)가 실제 사운드를 결정한다.

@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "created_at": "2026-05-06",
   "description": "corpus ZERO 40개 장르 필수 키워드 세트 — 외부 레퍼런스 기반 초기값, S018 결과로 검증 예정",
   "total_genres": 40,
@@ -48,9 +48,9 @@
     },
     "Vaporwave": {
       "must_have": [
-        "slowed chopped sample",
-        "pitch-bent synths",
-        "faded analog"
+        "lo-fi synthesizer",
+        "pitch-shifted vocal sample",
+        "retro pad"
       ],
       "typical_bpm": "80-100",
       "typical_drums": "none or slowed breakbeat",
@@ -66,13 +66,21 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "slowed chopped sample",
+        "pitch-bent synths",
+        "faded analog"
+      ],
+      "suno_native_notes": "No corpus data. S018 pattern applied: concrete instrument+modifier over mood. 'faded analog'→'retro pad', 'pitch-bent'→'pitch-shifted' (Suno adjective style)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Progressive House": {
       "must_have": [
-        "supersaw synth",
+        "supersaw synthesizer",
         "filtered noise sweep",
-        "32-bar structure"
+        "sidechained sub-bass"
       ],
       "typical_bpm": "128",
       "typical_drums": "four-on-the-floor, tight kick",
@@ -89,7 +97,15 @@
       "corpus_count": 0,
       "external_confidence": "high",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "supersaw synth",
+        "filtered noise sweep",
+        "32-bar structure"
+      ],
+      "suno_native_notes": "Trance S018 confirmed 'supersaw' and 'sidechained' as Suno native. '32-bar structure'→'sidechained sub-bass' (Suno never cites structure length)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Acid House": {
       "must_have": [
@@ -136,9 +152,9 @@
     },
     "Tech House": {
       "must_have": [
-        "punchy kick",
-        "rolling bassline",
-        "percussive groove"
+        "punchy kick drum",
+        "rolling synth bassline",
+        "hi-hat pattern"
       ],
       "typical_bpm": "124-128",
       "typical_drums": "tight kick, shuffled hi-hat, rim shot",
@@ -155,7 +171,15 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "punchy kick",
+        "rolling bassline",
+        "percussive groove"
+      ],
+      "suno_native_notes": "Suno describes drums by individual elements. 'percussive groove'→specific 'hi-hat pattern'",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Drum and Bass": {
       "must_have": [
@@ -202,9 +226,9 @@
     },
     "Dubstep": {
       "must_have": [
-        "wobble bass",
-        "half-time",
-        "dark synths"
+        "wobble bass synth",
+        "half-time drum pattern",
+        "aggressive sub-bass"
       ],
       "typical_bpm": "140",
       "typical_drums": "half-time with aggressive snare",
@@ -221,7 +245,15 @@
       "corpus_count": 0,
       "external_confidence": "high",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "wobble bass",
+        "half-time",
+        "dark synths"
+      ],
+      "suno_native_notes": "'half-time' corpus-confirmed (7 occurrences). 'dark synths'→'aggressive sub-bass' (concrete descriptor)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Trance": {
       "must_have": [
@@ -268,9 +300,9 @@
     },
     "Dark Ambient": {
       "must_have": [
-        "dissonant pad",
-        "sub-drone",
-        "unsettling texture"
+        "dissonant synthesizer pad",
+        "sustained drone",
+        "no percussion"
       ],
       "typical_bpm": "none",
       "typical_drums": "no rhythm",
@@ -287,13 +319,21 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "dissonant pad",
+        "sub-drone",
+        "unsettling texture"
+      ],
+      "suno_native_notes": "'unsettling texture' is mood→removed. 'no percussion' as Suno-native absence marker (cf. ABS slot)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Berlin School": {
       "must_have": [
-        "sequenced analog synth",
-        "slow-evolving arpeggio",
-        "kosmische"
+        "sequenced synthesizer",
+        "arpeggiated synthesizer",
+        "atmospheric pad"
       ],
       "typical_bpm": "variable",
       "typical_drums": "minimal or none",
@@ -310,7 +350,15 @@
       "corpus_count": 0,
       "external_confidence": "low",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "sequenced analog synth",
+        "slow-evolving arpeggio",
+        "kosmische"
+      ],
+      "suno_native_notes": "'kosmische' removed (German niche term Suno unlikely to use). 'arpeggiated' confirmed via Synthwave S018. 'pad' corpus count=88",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "UK Drill": {
       "must_have": [
@@ -358,8 +406,8 @@
     "Grime": {
       "must_have": [
         "aggressive synth stab",
-        "sub-bass",
-        "MC flow"
+        "deep sub-bass",
+        "rapid-fire vocals"
       ],
       "typical_bpm": "140",
       "typical_drums": "8-bar loop, syncopated",
@@ -376,7 +424,15 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "aggressive synth stab",
+        "sub-bass",
+        "MC flow"
+      ],
+      "suno_native_notes": "'MC flow'→'rapid-fire vocals' (acoustic descriptor). 'sub-bass' corpus count=53",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Drift Phonk": {
       "must_have": [
@@ -416,9 +472,9 @@
     },
     "Memphis Phonk": {
       "must_have": [
-        "lo-fi 808",
-        "dusty sample",
-        "gritty tape"
+        "lo-fi 808 bass",
+        "pitched vocal sample",
+        "tape-saturated drums"
       ],
       "typical_bpm": "130",
       "typical_drums": "lo-fi 808 pattern, sparse",
@@ -435,7 +491,15 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "lo-fi 808",
+        "dusty sample",
+        "gritty tape"
+      ],
+      "suno_native_notes": "'808 bass' corpus count=11. 'dusty sample'→'pitched vocal sample' (specific). 'gritty tape'→'tape-saturated drums'",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Reggaeton": {
       "must_have": [
@@ -482,9 +546,9 @@
     },
     "Bachata": {
       "must_have": [
-        "bolero guitar",
+        "nylon-string acoustic guitar",
         "bongos",
-        "romantic vocal"
+        "bolero rhythm"
       ],
       "typical_bpm": "130",
       "typical_drums": "gentle bongo pattern",
@@ -501,7 +565,15 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "bolero guitar",
+        "bongos",
+        "romantic vocal"
+      ],
+      "suno_native_notes": "'nylon-string acoustic guitar' corpus count=44. 'romantic vocal' (mood)→'bolero rhythm' (technique). 'bolero guitar'→actual instrument name",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Salsa": {
       "must_have": [
@@ -525,7 +597,15 @@
       "corpus_count": 0,
       "external_confidence": "high",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "brass section",
+        "piano montuno",
+        "congas"
+      ],
+      "suno_native_notes": "'brass section' corpus count=67 — confirmed Suno native. All three already specific. Kept as-is.",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Cumbia": {
       "must_have": [
@@ -573,9 +653,9 @@
     },
     "Dembow": {
       "must_have": [
-        "dembow beat",
-        "reggaeton bass",
-        "repetitive"
+        "dembow rhythm",
+        "deep 808 bass",
+        "synth stab"
       ],
       "typical_bpm": "100",
       "typical_drums": "dembow pattern",
@@ -591,7 +671,15 @@
       "corpus_count": 0,
       "external_confidence": "low",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "dembow beat",
+        "reggaeton bass",
+        "repetitive"
+      ],
+      "suno_native_notes": "'dembow' confirmed via Reggaeton S018. 'repetitive'→'synth stab' (concrete element)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Amapiano": {
       "must_have": [
@@ -638,8 +726,8 @@
     },
     "Gqom": {
       "must_have": [
-        "dark minimal percussion",
-        "deep bass",
+        "minimal percussion pattern",
+        "deep bass synth",
         "chanted vocals"
       ],
       "typical_bpm": "150-160",
@@ -656,7 +744,15 @@
       "corpus_count": 0,
       "external_confidence": "low",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "dark minimal percussion",
+        "deep bass",
+        "chanted vocals"
+      ],
+      "suno_native_notes": "'dark minimal percussion'→'minimal percussion pattern'. 'deep bass'→'deep bass synth' (Suno specifies instrument type)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Afrobeats": {
       "must_have": [
@@ -704,9 +800,9 @@
     },
     "Highlife": {
       "must_have": [
-        "bright guitar arpeggio",
-        "horns",
-        "West African rhythm"
+        "bright arpeggiated guitar",
+        "brass section",
+        "syncopated percussion"
       ],
       "typical_bpm": "100-120",
       "typical_drums": "percussive, bell pattern",
@@ -723,7 +819,15 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "bright guitar arpeggio",
+        "horns",
+        "West African rhythm"
+      ],
+      "suno_native_notes": "'West African rhythm'→'syncopated percussion'. 'horns'→'brass section' (67 corpus count). 'arpeggiated' Suno-confirmed",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Doom Metal": {
       "must_have": [
@@ -769,7 +873,7 @@
     },
     "Black Metal": {
       "must_have": [
-        "tremolo guitar",
+        "tremolo-picked guitar",
         "blast beats",
         "shrieked vocals"
       ],
@@ -788,13 +892,21 @@
       "corpus_count": 0,
       "external_confidence": "high",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "tremolo guitar",
+        "blast beats",
+        "shrieked vocals"
+      ],
+      "suno_native_notes": "'tremolo' in corpus (5 occurrences as 'tremolo effect'). Added '-picked' for specificity per Suno adjective pattern",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Thrash Metal": {
       "must_have": [
-        "fast aggressive riff",
+        "palm-muted riff",
         "shouted vocals",
-        "double-kick"
+        "double-kick drums"
       ],
       "typical_bpm": "180-220",
       "typical_drums": "double-kick, fast snare",
@@ -811,12 +923,20 @@
       "corpus_count": 0,
       "external_confidence": "high",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "fast aggressive riff",
+        "shouted vocals",
+        "double-kick"
+      ],
+      "suno_native_notes": "'palm-muted' corpus count=15, confirmed Suno native. 'fast aggressive riff'→'palm-muted riff' (specific technique)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Metalcore": {
       "must_have": [
-        "downtuned guitar",
-        "screamed/clean dynamic",
+        "down-tuned guitar",
+        "screamed vocals",
         "breakdown"
       ],
       "typical_bpm": "140-160",
@@ -834,12 +954,20 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "downtuned guitar",
+        "screamed/clean dynamic",
+        "breakdown"
+      ],
+      "suno_native_notes": "Doom Metal S018 confirmed 'down-tuned' (hyphenated). 'screamed/clean dynamic'→'screamed vocals' (simpler, testable)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Slowcore": {
       "must_have": [
-        "sparse clean guitar",
-        "brushed drums",
+        "sparse clean electric guitar",
+        "brushed snare",
         "hushed vocals"
       ],
       "typical_bpm": "60-80",
@@ -857,13 +985,21 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "sparse clean guitar",
+        "brushed drums",
+        "hushed vocals"
+      ],
+      "suno_native_notes": "'clean electric guitar' corpus count=378. 'brushed drums'→'brushed snare' (specific percussion element)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Jangle Pop": {
       "must_have": [
-        "Rickenbacker guitar",
-        "bright tenor",
-        "80s indie"
+        "bright arpeggiated electric guitar",
+        "jangly chords",
+        "tenor vocals"
       ],
       "typical_bpm": "120-140",
       "typical_drums": "upbeat straight rock",
@@ -880,13 +1016,21 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "Rickenbacker guitar",
+        "bright tenor",
+        "80s indie"
+      ],
+      "suno_native_notes": "'Rickenbacker'→'bright arpeggiated electric guitar' (Suno avoids brand names per S018 Django pattern). '80s indie'→'tenor vocals'",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Post-punk": {
       "must_have": [
-        "chorus-pedal guitar",
-        "bass-led groove",
-        "deadpan baritone"
+        "chorus and delay guitar",
+        "prominent bass guitar",
+        "baritone vocals"
       ],
       "typical_bpm": "130-150",
       "typical_drums": "driving, bass-led",
@@ -903,7 +1047,15 @@
       "corpus_count": 1,
       "external_confidence": "high",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "chorus-pedal guitar",
+        "bass-led groove",
+        "deadpan baritone"
+      ],
+      "suno_native_notes": "Shoegaze S018 confirmed 'chorus and delay'. corpus_count=1. 'bass-led groove'→'prominent bass guitar' (bass guitar count=170)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Bebop": {
       "must_have": [
@@ -951,9 +1103,9 @@
     },
     "Modal Jazz": {
       "must_have": [
-        "sparse piano",
+        "sparse piano voicings",
         "muted trumpet",
-        "spacious"
+        "brushed drums"
       ],
       "typical_bpm": "60-100",
       "typical_drums": "atmospheric, brushes",
@@ -970,7 +1122,15 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "sparse piano",
+        "muted trumpet",
+        "spacious"
+      ],
+      "suno_native_notes": "'muted trumpet' corpus count=5, confirmed. 'spacious'→'brushed drums' (concrete acoustic element)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Gypsy Jazz": {
       "must_have": [
@@ -1062,8 +1222,8 @@
     },
     "Outlaw Country": {
       "must_have": [
-        "dusty acoustic guitar",
-        "gravelly baritone",
+        "acoustic guitar",
+        "gravelly baritone vocals",
         "upright bass"
       ],
       "typical_bpm": "80-120",
@@ -1081,7 +1241,15 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "dusty acoustic guitar",
+        "gravelly baritone",
+        "upright bass"
+      ],
+      "suno_native_notes": "'acoustic guitar' count=376, 'upright bass' count=54. Already corpus-native. 'dusty'→removed (mood modifier)",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Celtic Folk": {
       "must_have": [
@@ -1131,7 +1299,7 @@
       "must_have": [
         "dark acoustic guitar",
         "baritone vocals",
-        "mythic atmosphere"
+        "drone pad"
       ],
       "typical_bpm": "60-90",
       "typical_drums": "minimal or none",
@@ -1148,13 +1316,21 @@
       "corpus_count": 0,
       "external_confidence": "low",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "dark acoustic guitar",
+        "baritone vocals",
+        "mythic atmosphere"
+      ],
+      "suno_native_notes": "'mythic atmosphere'→'drone pad' (concrete instrument). 'pad' corpus count=88",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Bhangra": {
       "must_have": [
         "dhol drums",
         "tumbi",
-        "celebratory energy"
+        "syncopated percussion"
       ],
       "typical_bpm": "130-150",
       "typical_drums": "dhol pattern, energetic",
@@ -1171,13 +1347,21 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "dhol drums",
+        "tumbi",
+        "celebratory energy"
+      ],
+      "suno_native_notes": "'celebratory energy'→'syncopated percussion'. dhol/tumbi not in corpus but are precise instrument names Suno should recognize",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Qawwali": {
       "must_have": [
         "harmonium",
         "tabla",
-        "spiritual rising energy"
+        "hand claps"
       ],
       "typical_bpm": "variable (accelerates)",
       "typical_drums": "tabla, hand clapping",
@@ -1195,7 +1379,15 @@
       "corpus_count": 0,
       "external_confidence": "low",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "harmonium",
+        "tabla",
+        "spiritual rising energy"
+      ],
+      "suno_native_notes": "'spiritual rising energy'→'hand claps' (concrete acoustic element). Instruments kept as precise names",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     },
     "Shoegaze": {
       "must_have": [
@@ -1242,7 +1434,7 @@
     },
     "Drone Ambient": {
       "must_have": [
-        "sustained pad",
+        "sustained synthesizer pad",
         "sub-drone",
         "no percussion"
       ],
@@ -1261,7 +1453,15 @@
       "corpus_count": 0,
       "external_confidence": "medium",
       "s018_test_id": null,
-      "validated": false
+      "validated": false,
+      "must_have_old": [
+        "sustained pad",
+        "sub-drone",
+        "no percussion"
+      ],
+      "suno_native_notes": "'sustained pad'→'sustained synthesizer pad' (Suno uses instrument+modifier). Already descriptive set.",
+      "rewritten_at": "2026-05-12",
+      "rewrite_method": "S018 pattern application (no S019 validation yet)"
     }
   },
   "s018_coverage": {
@@ -1314,6 +1514,6 @@
     "total_untested": 25,
     "validated_at": "2026-05-08"
   },
-  "updated_at": "2026-05-09",
-  "update_notes": "must_have rewritten to Suno native vocabulary based on S018 reanalysis DB cross-reference"
+  "updated_at": "2026-05-12",
+  "update_notes": "v1.3: 25 unverified genres must_have rewritten to Suno native vocabulary using S018 patterns. Pending S019+ validation."
 }
