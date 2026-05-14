@@ -307,14 +307,168 @@ K-Rock의 DNA는 **distorted(62%)**와 **driving(65%)**과 **power chord(65%)**�
 
 동일한 음악을 두 번 재분석하면 장르 라벨이 달라질 수 있다(echo 분석에서 평균 Jaccard 유사도 7.6%). 이는 Suno의 장르 분류가 확정적 룩업이 아니라 확률적 생성임을 의미한다.
 
-## 1.10 SP 작성을 위한 시사점
+## 1.10 SP 오프닝 문법 — 첫 문장이 장르를 결정한다
 
-1. **장르를 첫 문장에 배치하라** — Suno의 97.2% 패턴을 따른다
-2. **복합 장르 구문을 사용하라** — 단순 "Pop"보다 "K-Pop ballad with R&B influences" 형식이 Suno의 네이티브 패턴
-3. **K-접두어를 활용하라** — 한국 음악을 원할 때 K-Pop/K-Indie/K-Rock 접두어가 효과적
-4. **조성은 `key of X`로** — 코드명이나 진행 표기는 데드존
-5. **장르별 핵심 마커를 포함하라** — Bossa Nova면 "nylon-string guitar, brushes", Trance면 "supersaw, four-on-the-floor"
-6. **BPM을 명시하라** — `at {N} BPM` 형식으로, Suno가 장르에 따라 기대하는 BPM 범위가 있다
-7. **SP 길이를 장르에 맞춰라** — Ballad ~480자, Rock ~540자, Classical ~700자. 재분석 SP 평균(522자)의 2배에 근접하면 Suno 처리 한계
-8. **K-장르 전환은 배타적 어휘로** — K-Funk는 slap+staccato, K-Rock은 power chord+distorted를 반드시 포함
-9. **Instrumental은 더 길게 써도 된다** — 보컬 묘사 대신 악기 묘사에 50~60자 여유 가능
+445개 재분석 SP의 첫 문장(마침표 전)을 분석하면, Suno가 장르를 선언하는 공식(formula)이 있다.
+
+### 오프닝 구문 템플릿
+
+| 템플릿 | 비율 | 예시 |
+|--------|------|------|
+| **Genre.** | 55.7% | `K-Pop ballad.` |
+| **Genre with Influence.** | 25.4% | `K-Pop ballad with R&B influences.` |
+| **Genre featuring Vocal.** | 17.5% | `K-Pop ballad featuring a baritone male vocal.` |
+| **Genre featuring Vocal with Influence.** | 1.3% | `K-Indie ballad featuring a male tenor vocal with jazz-pop influences.` |
+
+절반 이상이 장르명만으로 첫 문장을 마치며, 복합 형식일 때도 `featuring` (보컬) + `with` (서브장르 영향)의 정형화된 구문을 사용한다.
+
+### 첫 단어 분포
+
+| 첫 단어 | 빈도 | 비율 |
+|---------|------|------|
+| K-Pop | 274 | 61.6% |
+| K-Indie | 66 | 14.8% |
+| Bossa | 10 | 2.2% |
+| K-Rock | 7 | 1.6% |
+| Cinematic | 5 | 1.1% |
+| 기타 (83종) | 83 | 18.7% |
+
+**83.4%가 K- 접두어로 시작한다.** Suno의 기본 장르 인식 프레임워크가 K-접두어 기반임을 보여준다.
+
+### `featuring` 뒤에 오는 것
+
+| 패턴 | 빈도 |
+|------|------|
+| a baritone male vocal | 25 |
+| a male baritone vocal | 7 |
+| a male tenor vocal | 6 |
+| a male tenor vocalist | 4 |
+| a female vocalist | 2 |
+
+`featuring`은 거의 전적으로 **보컬 유형 선언**에 사용된다. 음역(baritone/tenor) + 성별(male/female) 조합이 핵심.
+
+### `with` 뒤에 오는 것
+
+| 패턴 | 빈도 |
+|------|------|
+| R&B influences | 14 |
+| a mid-tempo groove | 6 |
+| jazz-pop influences | 5 |
+| soft rock influences | 4 |
+| synth-pop elements | 4 |
+| bossa nova influences | 4 |
+
+`with`는 **서브장르 영향(influences)** 또는 **요소(elements)** 선언에 사용된다.
+
+### 오프닝 길이
+
+- 평균 5.3단어, 중앙값 5, 최대 17단어
+- 5단어 이내가 대다수 — 간결한 장르 선언이 Suno의 표준
+
+### SP 작성 규칙: 첫 문장 공식
+
+Suno의 네이티브 패턴을 따르는 SP의 첫 문장은 이렇게 작성한다:
+
+```
+{K-접두어 장르} [featuring a {음역} {성별} vocal] [with {서브장르} influences].
+```
+
+예시:
+- `K-Pop ballad.` (최소형)
+- `K-Pop R&B ballad featuring a male tenor vocal.` (보컬 선언형)
+- `K-Indie folk ballad with jazz-pop influences.` (영향 선언형)
+- `K-Rock featuring a powerful male vocal with heavy metal influences.` (완전형)
+
+**주의**: 첫 문장에 악기, 템포, 프로덕션을 넣지 않는다 — 이것은 Suno가 두 번째 문장 이후에 기술하는 영역이다.
+
+## 1.11 SP 7문장 공식 — Suno가 음악을 묘사하는 순서
+
+445개 재분석 SP의 문장 수와 위치별 주제를 분석하면, Suno가 음악을 기술하는 정형화된 7문장 구조가 있다.
+
+### 문장 수
+
+| 문장수 | 곡수 | 비율 |
+|--------|------|------|
+| 6 | 115 | 25.8% |
+| **7** | **183** | **41.1%** |
+| 8 | 93 | 20.9% |
+
+평균 7.1문장, 중앙값 7. **6~8문장이 87.9%** — Suno의 SP 출력은 거의 항상 7문장 전후다.
+
+### 문장 위치별 주제
+
+| 위치 | 지배적 주제 | 비율 | 해석 |
+|------|-----------|------|------|
+| #1 | GENRE | 63% | 장르 선언 (§1.10) |
+| #2 | **INSTRUMENT** | **91%** | 주요 악기 묘사 |
+| #3 | INSTRUMENT | 66% | 보조 악기 / 베이스 |
+| #4 | INSTRUMENT(35%) / DRUMS(30%) | 혼합 | 리듬 섹션 진입 |
+| #5 | VOCAL | 32% | 보컬 묘사 |
+| #6 | TEMPO/KEY(34%) / ARRANGEMENT(22%) | 혼합 | 구조·템포 마무리 |
+
+2번째 문장이 악기인 비율 91% — 장르 선언 직후 반드시 악기 묘사가 온다.
+
+### SP 7문장 템플릿
+
+```
+#1  {장르 선언}                    ← "K-Pop ballad with R&B influences."
+#2  {주요 악기 묘사}               ← "Clean electric guitar plays arpeggiated chords..."
+#3  {보조 악기 / 베이스}           ← "Electric bass follows the kick drum pattern..."
+#4  {드럼 / 추가 악기}            ← "The drums consist of a dry, tight kick..."
+#5  {보컬 묘사}                    ← "Breathy, intimate male vocals..."
+#6  {어레인지먼트 / 프로덕션}     ← "The arrangement is sparse..."
+#7  {템포 / 조성}                  ← "72 BPM in E Major, 4/4 time signature."
+```
+
+### 마지막 문장의 주제
+
+| 유형 | 비율 |
+|------|------|
+| **TEMPO/KEY** | **50.1%** |
+| VOCAL | 16.4% |
+| ARRANGEMENT | 13.5% |
+| INSTRUMENT | 11.9% |
+
+절반이 템포/조성으로 끝난다. **"첫 문장 = 장르, 마지막 문장 = 템포"** — SP의 양 끝이 프레임을 형성한다.
+
+### SP 핵심 동사 6개
+
+Suno가 악기를 묘사할 때 사용하는 동사는 6개에 집중:
+
+| 동사 | 빈도 | 용법 |
+|------|------|------|
+| plays | 264 | `Guitar plays arpeggiated chords` — 직접 연주 |
+| features | 205 | `The arrangement features a...` — 편성 소개 |
+| provides | 176 | `Bass provides low-end weight` — 역할 부여 |
+| follows | 162 | `Bass follows the kick drum pattern` — 추종 |
+| fills | 107 | `Piano fills the harmonic space` — 공간 채우기 |
+| enters | 95 | `Strings enter in the chorus` — 시간적 진입 |
+
+이 6개 동사가 SP 전체 동사 사용의 85%+. SP를 쓸 때 이 동사를 사용하면 Suno의 네이티브 문법에 부합한다.
+
+### 문장 시작 패턴
+
+| 패턴 | 빈도 | 위치 |
+|------|------|------|
+| The tempo is | 164 | 마지막 문장 |
+| The arrangement is | 106 | 5~6번째 |
+| The arrangement features | 104 | 5~6번째 |
+| A clean electric | 73 | 2번째 |
+| The bass guitar | 61 | 3~4번째 |
+| The drum kit | 41 | 4번째 |
+| The vocal performance | 35 | 5번째 |
+
+각 문장의 시작어만으로도 위치를 예측할 수 있다 — 그만큼 Suno의 SP 문법은 고정적이다.
+
+## 1.12 SP 작성을 위한 시사점
+
+1. **7문장 구조를 따르라** — 장르 → 주악기 → 보조악기 → 드럼 → 보컬 → 어레인지먼트 → 템포/조성 (§1.11)
+2. **첫 문장은 장르 선언 공식** — `{장르} [featuring {보컬}] [with {영향}].` 5단어 이내 (§1.10)
+3. **마지막 문장은 템포/조성** — `72 BPM in E Major, 4/4 time signature.` (50.1%)
+4. **K-접두어를 활용하라** — 한국 음악을 원할 때 K-Pop/K-Indie/K-Rock 접두어가 효과적 (83.4%)
+5. **핵심 동사 6개** — plays/features/provides/follows/fills/enters만으로 충분 (§1.11)
+6. **조성은 `key of X`로** — 코드명이나 진행 표기는 데드존
+7. **장르별 핵심 마커를 포함하라** — Bossa Nova면 "nylon-string guitar, brushes", Trance면 "supersaw, four-on-the-floor"
+8. **SP 길이를 장르에 맞춰라** — Ballad ~480자, Rock ~540자, Classical ~700자. 900자 이상 위험
+9. **K-장르 전환은 배타적 어휘로** — K-Funk는 slap+staccato, K-Rock은 power chord+distorted
+10. **Instrumental은 더 길게 써도 된다** — 보컬 묘사 대신 악기 묘사에 50~60자 여유

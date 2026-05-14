@@ -350,3 +350,48 @@ K-장르 서브타입 분석에서 장르 경계가 모호한 조합이 발견�
 | K-Funk J-Fusion ≈ 독립 | slap+bright+synth | 다른 K-장르와 겹침 최소 |
 
 **시사점**: Suno의 장르 분류는 이산적 카테고리가 아니라 연속적 스펙트럼이다. SP 작성 시 장르명보다 **배타적 어휘**(§4.4)가 실제 사운드를 결정한다.
+
+## 4.7 장르별 수식어 프로파일 (2026-05-14 추가)
+
+445개 재분석 SP에서 25개 핵심 수식어의 장르별 사용률을 분석한다. `clean`은 모든 장르에서 64~92%로 보편적이므로, 장르를 감별하는 것은 **2~3위 수식어**다.
+
+### 장르별 Top 3 수식어 (clean 제외)
+
+| 장르 | 곡수 | 2위 | 3위 | 4위 |
+|------|------|-----|-----|-----|
+| Pop | 193 | subtle 45% | breathy 39% | crisp 36% |
+| Electronic | 43 | subtle 65% | crisp 60% | bright 40% |
+| Ballad | 43 | breathy 58% | subtle 56% | **warm 49%** |
+| R&B | 38 | breathy 55% | **soft 50%** | subtle 50% |
+| Folk | 36 | subtle 53% | soft 47% | breathy 47% |
+| Rock | 25 | **distorted 36%** | subtle 32% | bright 32% |
+| Jazz | 15 | subtle 47% | crisp 40% | smooth 33% |
+| Funk | 13 | subtle 69% | breathy 62% | crisp 54% |
+| Bossa Nova | 9 | **soft 78%** | subtle 67% | **sparse 56%** |
+| Trot | 12 | subtle 50% | crisp 42% | soft 42% |
+
+### 장르 감별 수식어
+
+특정 장르에서 유의미하게 높고 타 장르에서 낮은 수식어:
+
+| 수식어 | 감별 장르 | 해당 장르 | 타장르 평균 | 배율 |
+|--------|----------|----------|-----------|------|
+| **warm** | Ballad | 49% | 23% | ×2.1 |
+| **distorted** | Rock | 36% | 7% | ×5.1 |
+| **punchy** | Funk | 38% | 10% | ×3.8 |
+| **sparse** | Bossa Nova | 56% | 18% | ×3.1 |
+| **soft** | Bossa Nova | 78% | 33% | ×2.4 |
+
+### SP 작성 실용 가이드
+
+장르를 바꾸고 싶을 때, 수식어만 교체하면 된다:
+
+| 목표 장르 | 추가할 수식어 | 제거할 수식어 |
+|----------|-------------|-------------|
+| → Ballad | warm, breathy, intimate | distorted, punchy, bright |
+| → Rock | distorted, heavy, driving | soft, warm, breathy |
+| → Funk | punchy, bright, crisp, tight | warm, soft, sparse |
+| → Bossa Nova | soft, sparse, warm, mellow | distorted, punchy, heavy |
+| → Electronic | crisp, bright, subtle, atmospheric | warm, soft, acoustic |
+
+§4.4의 배타적 악기/주법 어휘와 이 수식어 프로파일을 결합하면, 장르명 없이도 원하는 장르의 사운드를 유도할 수 있다.

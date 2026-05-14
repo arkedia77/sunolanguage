@@ -10,7 +10,7 @@
 - [sunolanguage] Top-Anchor A/B 테스트 (S018에 내장)
 - [sunolanguage] 네거티브 프롬프팅 효과 측정 (S018 7곡에 배정)
 - [sunolanguage] SP 길이별 테스트 200/500/900자 (S018_03/08/12)
-- [sunolanguage] [] vs () 체계적 비교 테스트 — 같은 지시를 두 방식으로 대조
+- [sunolanguage] S_BP 시리즈 sunomusic 발주 — `data/bracket_vs_paren_test_protocol.md` 참조 (설계 완료, 발주 대기)
 
 ### genre_frontier 후속
 - [sunolanguage] 미검증 25개 S019+ 데이터로 hit_rate 실측 (v1.3 네이티브 재작성은 완료)
@@ -28,6 +28,13 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] SP 구조 심층 분석 — 7문장 공식, 동사 체계, 수식어 클러스터, 악기 기본 수식어, 장르 프로파일 — 2026-05-14 ✅
+- [sunolanguage] ch1 §1.11 추가 — SP 7문장 공식 + 핵심 동사 6개 + 문장 시작 패턴 — 2026-05-14 ✅
+- [sunolanguage] ch3 §3.15~3.16 추가 — 수식어 공기 클러스터 (서정/선명/범용) + 악기별 기본 수식어 — 2026-05-14 ✅
+- [sunolanguage] ch4 §4.7 추가 — 장르별 수식어 프로파일 + 감별 수식어 5종 — 2026-05-14 ✅
+- [sunolanguage] [] vs () 비교 테스트 설계 — S_BP 시리즈 7가사×3회=21곡 프로토콜 완성 — 2026-05-12 ✅
+- [sunolanguage] ch1 §1.10 추가 — SP 오프닝 문법 (445곡 분석: 55.7% Genre only, 83.4% K-접두어) — 2026-05-12 ✅
+- [sunolanguage] ch2 §2.6~2.7 추가 — 브래킷 시퀀스 문법 + () 사용 빈도·위치 분석 — 2026-05-12 ✅
 - [sunolanguage] v5.5 pump-up modulation 테스트 설계 — S_PU 시리즈 18 SP, 54곡 프로토콜 완성 — 2026-05-12 ✅
 - [sunolanguage] genre_frontier v1.3 — 25개 미검증 장르 must_have Suno 네이티브 재작성 — 2026-05-12 ✅
 - [sunolanguage] SP Builder 신규 — 29개 대장르, 121개 서브장르, Top-Anchor 자동 배치 — 2026-05-12 ✅
