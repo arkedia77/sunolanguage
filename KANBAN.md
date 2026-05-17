@@ -2,7 +2,8 @@
 
 ## IN PROGRESS
 - [sunolanguage] 사전 v3.1 — DB 교차분석 27개 + key change 추가 완료, S시리즈 추가 수신 시 재빌드
-- [sunolanguage] S_PU 시리즈 발주 대기 — pump-up modulation 테스트 18 SP × 3회 = 54곡 (sunomusic)
+- [sunolanguage] S_PU 1차 18곡 분석 대기 — K-Ballad+K-Rock 완료 (5/14), NAS 마운트 후 pump-up 판정 필요
+- [sunolanguage] S_PU 나머지 4장르 36곡 — 1차 분석 후 진행 여부 결정 (sunomusic 대기 중)
 
 ## TODO
 ### v5.5 검증
