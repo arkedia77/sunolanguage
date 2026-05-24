@@ -2,8 +2,9 @@
 
 ## IN PROGRESS
 - [sunolanguage] 사전 v3.1 — DB 교차분석 27개 + key change 추가 완료, S시리즈 추가 수신 시 재빌드
-- [sunolanguage] S_PU 1차 18곡 분석 대기 — K-Ballad+K-Rock 완료 (5/14), NAS 마운트 후 pump-up 판정 필요
-- [sunolanguage] S_PU 나머지 4장르 36곡 — 1차 분석 후 진행 여부 결정 (sunomusic 대기 중)
+- [sunolanguage] S_PU 54곡 pump-up 판정 — 54/54 전곡 생성 완료 (5/19). NAS 마운트 또는 DB 조회로 분석 필요
+- [sunolanguage] S002 12곡 분석 — 생성+DB 적재 완료, sunolanguage 측 분석 미실시
+- [sunolanguage] S_PU 나머지 4장르 36곡 — 1차 54곡 분석 후 진행 여부 결정
 
 ## TODO
 ### v5.5 검증
@@ -17,9 +18,8 @@
 - [sunolanguage] 미검증 25개 S019+ 데이터로 hit_rate 실측 (v1.3 네이티브 재작성은 완료)
 
 ### 검증 대기
-- [sunolanguage] S002 결과 대기 — sunomusic 관현악 15악기 12곡 (재분석 포함)
-- [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunomusic 재분석 대기 (2026-04-27 발주)
-- [sunolanguage] S007-S015 82곡 — sunomusic 생성+재분석 (2026-04-29 발주, 장기)
+- [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunolanguage 자체 영역 (sunomusic 5/17 확인)
+- [sunolanguage] S007-S015 82곡 — sunomusic 미착수, Leo 우선순위 결정 필요
 - [sunolanguage] 55 Best 출처 확인 대기 — sunomusic 회신 후 corpus 합류 여부 결정
 
 ### 책 본문
