@@ -2,8 +2,8 @@
 
 ## IN PROGRESS
 - [sunolanguage] 사전 v3.1 — DB 교차분석 27개 + key change 추가 완료, S시리즈 추가 수신 시 재빌드
-- [sunolanguage] S_PU 54곡 pump-up 판정 — 54/54 전곡 생성 완료 (5/19). NAS 마운트 또는 DB 조회로 분석 필요
-- [sunolanguage] S002 12곡 분석 — 생성+DB 적재 완료, sunolanguage 측 분석 미실시
+- [sunolanguage] S_PU 54곡 pump-up 판정 — songs_test_lab INSERT 완료 (test_id 1~54). 재분석 미실시 → sunomusic WF-3 대기
+- [sunolanguage] S002 12곡 분석 — suno_reanalysis 누락 확정, UUID/재분석 sunomusic에서 수령 필요
 - [sunolanguage] S_PU 나머지 4장르 36곡 — 1차 54곡 분석 후 진행 여부 결정
 
 ## TODO
@@ -29,6 +29,11 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] S_PU 54곡 songs_test_lab INSERT — 6장르×3조건×3rep, test_id 1~54 — 2026-05-24 ✅
+- [sunolanguage] songs_test_lab 신설 + role_sunolanguage LOGIN 활성화 — LEO 결정, admin 구현 — 2026-05-24 ✅
+- [sunolanguage] sp_builder.py §1.10/§1.11 준수 수정 — 오프닝/7문장/drums/보컬 5건 수정 — 2026-05-24 ✅
+- [sunolanguage] lexical_index.sqlite 재빌드 — 15,509 entries, 5,496 unique words — 2026-05-24 ✅
+- [sunolanguage] 디스크 오프로드 43GB → /Volumes/LEO + symlink — admin 요청 — 2026-05-24 ✅
 - [sunolanguage] SP 구조 심층 분석 — 7문장 공식, 동사 체계, 수식어 클러스터, 악기 기본 수식어, 장르 프로파일 — 2026-05-14 ✅
 - [sunolanguage] ch1 §1.11 추가 — SP 7문장 공식 + 핵심 동사 6개 + 문장 시작 패턴 — 2026-05-14 ✅
 - [sunolanguage] ch3 §3.15~3.16 추가 — 수식어 공기 클러스터 (서정/선명/범용) + 악기별 기본 수식어 — 2026-05-14 ✅
