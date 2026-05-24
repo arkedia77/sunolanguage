@@ -159,7 +159,7 @@ MAJOR_GENRES = {
     "Jazz": {
         "sub_genres": ["Jazz Ballad", "Jazz Pop", "Bebop", "Modal Jazz", "Latin Jazz", "Gypsy Jazz"],
         "instruments": ["upright bass", "piano", "muted trumpet", "saxophone"],
-        "drums": "brushes on snare with ride cymbal and gentle kick",
+        "drums": "brush pattern on snare with ride cymbal and gentle kick",
         "vocal": {"male": "smooth male baritone vocals", "female": "smooth female vocals"},
         "bpm": "60-180", "key": "Bb Major", "time_sig": "4/4",
         "moods": ["smooth", "intimate", "spacious", "swinging"],
@@ -352,46 +352,46 @@ def build_sp(genre_name, genre_info, args):
     time_sig = genre_info["time_sig"]
 
     genre_label = sub if sub else genre_name
-    if not instrumental:
-        vocal_desc = genre_info["vocal"].get(vocal_gender, genre_info["vocal"]["male"])
-        genre_line = f"{genre_label} featuring {vocal_desc.split()[0]} {vocal_desc.split()[1]} vocals"
-    else:
-        genre_line = f"{genre_label} instrumental"
+    vocal_desc = genre_info["vocal"].get(vocal_gender, genre_info["vocal"]["male"])
 
     instruments = genre_info["instruments"]
-    core_2 = instruments[:2]
-    remaining = instruments[2:]
-
-    core_desc = ", ".join(core_2)
 
     lines = []
 
-    # Position 1: Genre (highest weight)
-    lines.append(f"{mood.capitalize()} {genre_line}.")
-
-    # Position 2-3: Core instruments (high weight)
-    inst_sentences = []
-    for i, inst in enumerate(instruments):
-        patterns = _get_instrument_pattern(inst, genre_name)
-        inst_sentences.append(patterns)
-    lines.extend(inst_sentences[:4])
-
-    # Position 4: Drums
-    drums = genre_info["drums"]
-    article = "" if drums[0].isupper() or drums.startswith("no ") else "a "
-    lines.append(f"The drums feature {article}{drums}.")
-
-    # Position 5: Vocal (medium weight)
+    # §1.10: Genre [featuring Vocal]. — genre first, no mood lead
     if not instrumental:
-        vocal = genre_info["vocal"].get(vocal_gender, genre_info["vocal"]["male"])
-        lines.append(f"The {vocal} deliver with emotional expression.")
+        lines.append(f"{genre_label} featuring {vocal_desc}.")
     else:
-        lines.append("No vocals.")
+        lines.append(f"{genre_label} instrumental.")
 
-    # Position 6: Arrangement (low weight)
-    lines.append(f"The arrangement is {genre_info['arrangement']}.")
+    # §1.11: 주악기(pos 2)→보조악기(pos 3)→드럼(pos 4) — max 3 instrument sentences
+    inst_sentences = []
+    for inst in instruments:
+        inst_sentences.append(_get_instrument_pattern(inst, genre_name))
+    lines.extend(inst_sentences[:3])
 
-    # Position 7: Tempo/Key (lowest)
+    # Drums
+    drums = genre_info["drums"]
+    if drums.startswith("no "):
+        lines.append(f"The drums feature {drums}.")
+    else:
+        article = "an " if drums[0] in "aeiou" else "a " if drums[0].islower() else ""
+        lines.append(f"The drums feature {article}{drums}.")
+
+    # §1.11: 보컬(pos 5) — mood integrated, skip if mood already in vocal_desc
+    if not instrumental:
+        if mood.lower() in vocal_desc.lower():
+            lines.append(f"The {vocal_desc} deliver with expressive phrasing.")
+        else:
+            article = "an" if mood[0] in "aeiou" else "a"
+            lines.append(f"The {vocal_desc} deliver with {article} {mood} quality.")
+
+    # §1.11: 어레인지(pos 6)→템포(pos 7)
+    arr = genre_info["arrangement"]
+    if arr[0].islower() and not arr.startswith(("builds", "alternates", "loop")):
+        lines.append(f"The arrangement is {arr}.")
+    else:
+        lines.append(f"The arrangement {arr}.")
     lines.append(f"{bpm} BPM in {key}, {time_sig} time signature.")
 
     sp = " ".join(lines)
