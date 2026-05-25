@@ -1,7 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **S_INST200 200곡 SP 생성** — 코퍼스 공백 타겟팅, 5세션×40곡, 기획 완료 (2026-05-25), 다음 세션부터 SP 생성 시작
+- [sunolanguage] **S_INST200 200곡 SP 생성** — 세션1-2 완료 (SI001-SI080, DB test_id 55-134), 세션3 SI081-SI120 대기
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
 - [sunolanguage] S_PU 54곡 pump-up 판정 — songs_test_lab INSERT 완료, sunomusic WF-3 재분석 대기
