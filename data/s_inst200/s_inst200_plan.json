@@ -1,0 +1,2815 @@
+{
+  "series": "S_INST200",
+  "version": "2.0",
+  "description": "200-song gap-targeting batch — corpus blind spots only",
+  "design_principle": "NOT good music. Fill every hole in key/BPM/time sig/instrument/genre.",
+  "total_songs": 200,
+  "sessions": 5,
+  "songs_per_session": 40,
+  "vocal_tracks": 19,
+  "unique_genres": 200,
+  "unique_instruments": 344,
+  "gap_targeting": {
+    "zero_keys_covered": [
+      "A",
+      "Ab",
+      "Bb",
+      "C#",
+      "Db",
+      "Eb",
+      "F#"
+    ],
+    "modal_keys_introduced": true,
+    "bpm_range": "20-300",
+    "non_44_count": 85,
+    "non_44_pct": 42.5
+  },
+  "created_at": "2026-05-25",
+  "songs": [
+    {
+      "id": "SI001",
+      "genre": "Doom Metal",
+      "instruments": [
+        "down-tuned guitar",
+        "bass guitar",
+        "slow heavy drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 45,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI002",
+      "genre": "Dark Ambient",
+      "instruments": [
+        "dissonant synth pad",
+        "sub-drone",
+        "granular texture"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 35,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI003",
+      "genre": "Neo-Soul",
+      "instruments": [
+        "rhodes",
+        "fretless bass",
+        "finger snaps"
+      ],
+      "form": "Verse-Chorus",
+      "time": "6/8",
+      "bpm": 65,
+      "key": "Ab Major",
+      "vocal": null
+    },
+    {
+      "id": "SI004",
+      "genre": "Film Score",
+      "instruments": [
+        "full orchestra",
+        "french horn",
+        "timpani"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 55,
+      "key": "Ab Major",
+      "vocal": null
+    },
+    {
+      "id": "SI005",
+      "genre": "Big Band Swing",
+      "instruments": [
+        "brass section",
+        "tenor saxophone",
+        "drum kit"
+      ],
+      "form": "AABA",
+      "time": "4/4",
+      "bpm": 185,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI006",
+      "genre": "Reggae",
+      "instruments": [
+        "offbeat guitar",
+        "deep bass",
+        "one-drop drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 78,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI007",
+      "genre": "New Orleans Jazz",
+      "instruments": [
+        "trombone",
+        "clarinet",
+        "tuba"
+      ],
+      "form": "Collective improvisation",
+      "time": "4/4",
+      "bpm": 118,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI008",
+      "genre": "Polka",
+      "instruments": [
+        "accordion",
+        "tuba",
+        "clarinet"
+      ],
+      "form": "AABB",
+      "time": "2/4",
+      "bpm": 135,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI009",
+      "genre": "Progressive Metal",
+      "instruments": [
+        "distorted guitar",
+        "bass guitar",
+        "double-kick drums"
+      ],
+      "form": "Suite",
+      "time": "7/8",
+      "bpm": 155,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI010",
+      "genre": "Impressionist",
+      "instruments": [
+        "piano",
+        "flute",
+        "harp"
+      ],
+      "form": "Through-composed",
+      "time": "6/8",
+      "bpm": 48,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI011",
+      "genre": "Shoegaze",
+      "instruments": [
+        "heavily distorted guitar",
+        "bass with flanger",
+        "crash washes"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 98,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI012",
+      "genre": "Art Pop",
+      "instruments": [
+        "celesta",
+        "synthesizer",
+        "orchestral harp"
+      ],
+      "form": "Through-composed",
+      "time": "5/4",
+      "bpm": 88,
+      "key": "F# Major",
+      "vocal": null
+    },
+    {
+      "id": "SI013",
+      "genre": "Gospel",
+      "instruments": [
+        "Hammond organ",
+        "piano",
+        "choir"
+      ],
+      "form": "Call-and-Response",
+      "time": "12/8",
+      "bpm": 62,
+      "key": "Eb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI014",
+      "genre": "Bebop",
+      "instruments": [
+        "alto saxophone",
+        "piano",
+        "ride cymbal"
+      ],
+      "form": "AABA",
+      "time": "4/4",
+      "bpm": 210,
+      "key": "Eb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI015",
+      "genre": "Disco",
+      "instruments": [
+        "strings",
+        "four-on-the-floor kick",
+        "electric bass"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 125,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI016",
+      "genre": "Waltz",
+      "instruments": [
+        "string orchestra",
+        "grand piano",
+        "harp"
+      ],
+      "form": "Ternary (ABA)",
+      "time": "3/4",
+      "bpm": 170,
+      "key": "Eb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI017",
+      "genre": "Black Metal",
+      "instruments": [
+        "tremolo-picked guitar",
+        "blast beats",
+        "bass guitar"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 195,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI018",
+      "genre": "Drone Ambient",
+      "instruments": [
+        "sustained synth pad",
+        "sub-drone",
+        "overtone singing"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 30,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI019",
+      "genre": "Trance",
+      "instruments": [
+        "supersaw lead",
+        "sidechained bass",
+        "snare roll builds"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 142,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI020",
+      "genre": "Romantic Period",
+      "instruments": [
+        "grand piano",
+        "solo violin",
+        "orchestral strings"
+      ],
+      "form": "Ternary (ABA)",
+      "time": "3/4",
+      "bpm": 58,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI021",
+      "genre": "Stoner Metal",
+      "instruments": [
+        "fuzzy down-tuned guitar",
+        "bass guitar",
+        "heavy drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 55,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI022",
+      "genre": "Trip-Hop",
+      "instruments": [
+        "scratched vinyl",
+        "atmospheric strings",
+        "deep bass"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 82,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI023",
+      "genre": "Bluegrass",
+      "instruments": [
+        "banjo",
+        "mandolin",
+        "upright bass"
+      ],
+      "form": "AABB",
+      "time": "4/4",
+      "bpm": 160,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI024",
+      "genre": "Flamenco",
+      "instruments": [
+        "nylon-string guitar",
+        "cajón",
+        "hand claps"
+      ],
+      "form": "Through-composed",
+      "time": "12/8",
+      "bpm": 95,
+      "key": "A Phrygian",
+      "vocal": null
+    },
+    {
+      "id": "SI025",
+      "genre": "Surf Rock",
+      "instruments": [
+        "spring reverb guitar",
+        "upright bass",
+        "floor tom"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 165,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI026",
+      "genre": "Thrash Metal",
+      "instruments": [
+        "palm-muted riff",
+        "bass guitar",
+        "double-kick drums"
+      ],
+      "form": "Verse-Chorus-Solo",
+      "time": "4/4",
+      "bpm": 200,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI027",
+      "genre": "Funeral Doom",
+      "instruments": [
+        "extremely slow guitar drone",
+        "organ",
+        "sparse timpani"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 25,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI028",
+      "genre": "Ambient Minimalist",
+      "instruments": [
+        "sustained piano notes",
+        "tape loop",
+        "silence"
+      ],
+      "form": "Free-form",
+      "time": "3/4",
+      "bpm": 35,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI029",
+      "genre": "Speedcore",
+      "instruments": [
+        "distorted kick drum",
+        "noise synth",
+        "gabber bass"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 250,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI030",
+      "genre": "Fast Bebop",
+      "instruments": [
+        "tenor saxophone",
+        "piano",
+        "ride cymbal"
+      ],
+      "form": "AABA",
+      "time": "4/4",
+      "bpm": 280,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI031",
+      "genre": "Balkan Brass",
+      "instruments": [
+        "trumpet",
+        "tuba",
+        "snare drum"
+      ],
+      "form": "Strophic",
+      "time": "7/8",
+      "bpm": 140,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI032",
+      "genre": "Progressive Rock",
+      "instruments": [
+        "12-string guitar",
+        "mellotron",
+        "bass guitar"
+      ],
+      "form": "Suite",
+      "time": "5/4",
+      "bpm": 108,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI033",
+      "genre": "Carnatic Fusion",
+      "instruments": [
+        "mridangam",
+        "violin",
+        "veena"
+      ],
+      "form": "Through-composed",
+      "time": "7/8",
+      "bpm": 90,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI034",
+      "genre": "Turkish Psychedelic",
+      "instruments": [
+        "electric saz",
+        "organ",
+        "fuzzy guitar"
+      ],
+      "form": "Verse-Chorus",
+      "time": "9/8",
+      "bpm": 115,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI035",
+      "genre": "Math Rock",
+      "instruments": [
+        "tapping electric guitar",
+        "bass guitar",
+        "complex drums"
+      ],
+      "form": "Through-composed",
+      "time": "11/8",
+      "bpm": 145,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI036",
+      "genre": "Viennese Waltz",
+      "instruments": [
+        "string orchestra",
+        "flute",
+        "timpani"
+      ],
+      "form": "AABB",
+      "time": "3/4",
+      "bpm": 180,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI037",
+      "genre": "Jazz Waltz",
+      "instruments": [
+        "piano",
+        "upright bass",
+        "brush drums"
+      ],
+      "form": "AABA",
+      "time": "3/4",
+      "bpm": 155,
+      "key": "Eb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI038",
+      "genre": "Celtic Folk",
+      "instruments": [
+        "tin whistle",
+        "bodhrán",
+        "fiddle"
+      ],
+      "form": "Strophic",
+      "time": "6/8",
+      "bpm": 125,
+      "key": "Ab Major",
+      "vocal": null
+    },
+    {
+      "id": "SI039",
+      "genre": "Tarantella",
+      "instruments": [
+        "mandolin",
+        "tambourine",
+        "accordion"
+      ],
+      "form": "Strophic",
+      "time": "6/8",
+      "bpm": 175,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI040",
+      "genre": "Military March",
+      "instruments": [
+        "brass band",
+        "snare drum",
+        "piccolo"
+      ],
+      "form": "March (trio)",
+      "time": "2/4",
+      "bpm": 120,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI041",
+      "genre": "Country",
+      "instruments": [
+        "fiddle",
+        "dobro",
+        "acoustic guitar"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 115,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI042",
+      "genre": "Raga",
+      "instruments": [
+        "sitar",
+        "tabla",
+        "tanpura"
+      ],
+      "form": "Through-composed",
+      "time": "7/8",
+      "bpm": 70,
+      "key": "A Mixolydian",
+      "vocal": null
+    },
+    {
+      "id": "SI043",
+      "genre": "Death Metal",
+      "instruments": [
+        "heavily distorted guitar",
+        "blast beats",
+        "guttural bass"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 205,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI044",
+      "genre": "Modal Jazz",
+      "instruments": [
+        "muted trumpet",
+        "piano",
+        "upright bass"
+      ],
+      "form": "AABA",
+      "time": "4/4",
+      "bpm": 68,
+      "key": "D Dorian",
+      "vocal": null
+    },
+    {
+      "id": "SI045",
+      "genre": "Spanish Fusion",
+      "instruments": [
+        "nylon-string guitar",
+        "cajón",
+        "upright bass"
+      ],
+      "form": "Through-composed",
+      "time": "12/8",
+      "bpm": 95,
+      "key": "E Phrygian",
+      "vocal": null
+    },
+    {
+      "id": "SI046",
+      "genre": "Medieval",
+      "instruments": [
+        "recorder",
+        "lute",
+        "hurdy-gurdy"
+      ],
+      "form": "Binary (AB)",
+      "time": "3/4",
+      "bpm": 80,
+      "key": "D Mixolydian",
+      "vocal": null
+    },
+    {
+      "id": "SI047",
+      "genre": "Hindustani Classical",
+      "instruments": [
+        "bansuri",
+        "tabla",
+        "tanpura"
+      ],
+      "form": "Through-composed",
+      "time": "7/8",
+      "bpm": 55,
+      "key": "C Lydian",
+      "vocal": null
+    },
+    {
+      "id": "SI048",
+      "genre": "Greek Rebetiko",
+      "instruments": [
+        "bouzouki",
+        "guitar",
+        "violin"
+      ],
+      "form": "Strophic",
+      "time": "9/8",
+      "bpm": 90,
+      "key": "D Phrygian",
+      "vocal": null
+    },
+    {
+      "id": "SI049",
+      "genre": "Blues",
+      "instruments": [
+        "slide guitar",
+        "harmonica",
+        "stomp box"
+      ],
+      "form": "12-bar blues",
+      "time": "12/8",
+      "bpm": 65,
+      "key": "A Mixolydian",
+      "vocal": null
+    },
+    {
+      "id": "SI050",
+      "genre": "Psychedelic Rock",
+      "instruments": [
+        "mellotron",
+        "fuzz guitar",
+        "wah-wah bass"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 105,
+      "key": "E Dorian",
+      "vocal": null
+    },
+    {
+      "id": "SI051",
+      "genre": "Whole Tone Experiment",
+      "instruments": [
+        "piano",
+        "vibraphone",
+        "flute"
+      ],
+      "form": "Free-form",
+      "time": "5/4",
+      "bpm": 72,
+      "key": "C Whole Tone",
+      "vocal": null
+    },
+    {
+      "id": "SI052",
+      "genre": "Locrian Drone",
+      "instruments": [
+        "synthesizer drone",
+        "bass guitar",
+        "sparse drums"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 42,
+      "key": "B Locrian",
+      "vocal": null
+    },
+    {
+      "id": "SI053",
+      "genre": "Symphonic Metal",
+      "instruments": [
+        "orchestral strings",
+        "distorted guitar",
+        "double-kick"
+      ],
+      "form": "Verse-Chorus-Bridge",
+      "time": "4/4",
+      "bpm": 158,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI054",
+      "genre": "Chamber Music",
+      "instruments": [
+        "string quartet",
+        "clarinet",
+        "piano"
+      ],
+      "form": "Rondo (ABACA)",
+      "time": "3/4",
+      "bpm": 100,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI055",
+      "genre": "Funk",
+      "instruments": [
+        "clavinet",
+        "slap bass",
+        "wah-wah guitar"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 108,
+      "key": "F Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI056",
+      "genre": "Baroque",
+      "instruments": [
+        "harpsichord",
+        "violin",
+        "cello"
+      ],
+      "form": "Binary (AB)",
+      "time": "3/4",
+      "bpm": 80,
+      "key": "F Major",
+      "vocal": null
+    },
+    {
+      "id": "SI057",
+      "genre": "Progressive House",
+      "instruments": [
+        "supersaw synth",
+        "sidechained sub-bass",
+        "filtered sweep"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 128,
+      "key": "F Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI058",
+      "genre": "Solo Piano Nocturne",
+      "instruments": [
+        "grand piano"
+      ],
+      "form": "Through-composed",
+      "time": "6/8",
+      "bpm": 52,
+      "key": "F Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI059",
+      "genre": "Dave Brubeck-style Jazz",
+      "instruments": [
+        "piano",
+        "alto saxophone",
+        "upright bass"
+      ],
+      "form": "AABA",
+      "time": "5/4",
+      "bpm": 170,
+      "key": "Eb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI060",
+      "genre": "Bulgarian Folk",
+      "instruments": [
+        "kaval",
+        "gadulka",
+        "tapan"
+      ],
+      "form": "Strophic",
+      "time": "11/8",
+      "bpm": 130,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI061",
+      "genre": "Gamelan",
+      "instruments": [
+        "metalophone",
+        "gong",
+        "bamboo flute"
+      ],
+      "form": "Cyclical",
+      "time": "7/8",
+      "bpm": 55,
+      "key": "C Pentatonic",
+      "vocal": null
+    },
+    {
+      "id": "SI062",
+      "genre": "Afro-Cuban 6/8",
+      "instruments": [
+        "congas",
+        "tres guitar",
+        "bass"
+      ],
+      "form": "Verse-Montuno",
+      "time": "6/8",
+      "bpm": 100,
+      "key": "F Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI063",
+      "genre": "Slow Blues",
+      "instruments": [
+        "overdriven guitar",
+        "hammond organ",
+        "drums"
+      ],
+      "form": "12-bar blues",
+      "time": "12/8",
+      "bpm": 58,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI064",
+      "genre": "West African Percussion",
+      "instruments": [
+        "djembe",
+        "balafon",
+        "shekere"
+      ],
+      "form": "Call-and-Response",
+      "time": "12/8",
+      "bpm": 100,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI065",
+      "genre": "Gospel Slow",
+      "instruments": [
+        "organ",
+        "piano",
+        "bass guitar"
+      ],
+      "form": "Strophic",
+      "time": "12/8",
+      "bpm": 50,
+      "key": "Ab Major",
+      "vocal": null
+    },
+    {
+      "id": "SI066",
+      "genre": "Samba",
+      "instruments": [
+        "surdo",
+        "pandeiro",
+        "cavaquinho"
+      ],
+      "form": "Strophic",
+      "time": "2/4",
+      "bpm": 105,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI067",
+      "genre": "Quickstep",
+      "instruments": [
+        "brass section",
+        "piano",
+        "upright bass"
+      ],
+      "form": "AABA",
+      "time": "2/4",
+      "bpm": 200,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI068",
+      "genre": "Mazurka",
+      "instruments": [
+        "piano",
+        "violin",
+        "cello"
+      ],
+      "form": "AABB",
+      "time": "3/4",
+      "bpm": 145,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI069",
+      "genre": "Minuet",
+      "instruments": [
+        "harpsichord",
+        "flute",
+        "violin"
+      ],
+      "form": "Binary (AB)",
+      "time": "3/4",
+      "bpm": 112,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI070",
+      "genre": "Glacial Ambient",
+      "instruments": [
+        "frozen pad",
+        "ice texture",
+        "distant bell"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 20,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI071",
+      "genre": "Sufi Drone",
+      "instruments": [
+        "ney",
+        "frame drum",
+        "sustained chant"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 38,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI072",
+      "genre": "Drum and Bass",
+      "instruments": [
+        "reese bass",
+        "breakbeat drums",
+        "atmospheric pad"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 176,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI073",
+      "genre": "Grindcore",
+      "instruments": [
+        "blast beats",
+        "distorted guitar",
+        "screaming bass"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 240,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI074",
+      "genre": "Cumbia",
+      "instruments": [
+        "accordion",
+        "guiro",
+        "cowbell"
+      ],
+      "form": "Strophic",
+      "time": "4/4",
+      "bpm": 92,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI075",
+      "genre": "Acid House",
+      "instruments": [
+        "303 bassline",
+        "TR-909 drums",
+        "filter sweeps"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 126,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI076",
+      "genre": "Neoclassical",
+      "instruments": [
+        "piano",
+        "cello",
+        "violin"
+      ],
+      "form": "Ternary (ABA)",
+      "time": "3/4",
+      "bpm": 75,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI077",
+      "genre": "Electro Swing",
+      "instruments": [
+        "brass section",
+        "electronic beats",
+        "double bass"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 128,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI078",
+      "genre": "Dub",
+      "instruments": [
+        "heavy bass",
+        "spring reverb drums",
+        "echo guitar"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 75,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI079",
+      "genre": "Tango",
+      "instruments": [
+        "bandoneón",
+        "violin",
+        "piano"
+      ],
+      "form": "AABB",
+      "time": "4/4",
+      "bpm": 66,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI080",
+      "genre": "Power Metal",
+      "instruments": [
+        "fast arpeggiated guitar",
+        "double-kick",
+        "keyboard"
+      ],
+      "form": "Verse-Chorus-Solo",
+      "time": "4/4",
+      "bpm": 168,
+      "key": "F# Major",
+      "vocal": null
+    },
+    {
+      "id": "SI081",
+      "genre": "Chinese Traditional",
+      "instruments": [
+        "erhu",
+        "guzheng",
+        "dizi"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 65,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI082",
+      "genre": "Japanese Koto",
+      "instruments": [
+        "koto",
+        "shakuhachi",
+        "taiko"
+      ],
+      "form": "Through-composed",
+      "time": "6/8",
+      "bpm": 55,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI083",
+      "genre": "Korean Traditional",
+      "instruments": [
+        "gayageum",
+        "haegeum",
+        "daegeum"
+      ],
+      "form": "Through-composed",
+      "time": "6/8",
+      "bpm": 60,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI084",
+      "genre": "Chinese Pipa",
+      "instruments": [
+        "pipa",
+        "erhu",
+        "bamboo flute"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 72,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI085",
+      "genre": "Shamisen Rock",
+      "instruments": [
+        "shamisen",
+        "taiko",
+        "electric bass"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 148,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI086",
+      "genre": "Raga Evening",
+      "instruments": [
+        "sitar",
+        "tabla",
+        "tanpura"
+      ],
+      "form": "Through-composed",
+      "time": "7/8",
+      "bpm": 48,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI087",
+      "genre": "Bhangra",
+      "instruments": [
+        "dhol drums",
+        "tumbi",
+        "synthesizer"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 142,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI088",
+      "genre": "Qawwali",
+      "instruments": [
+        "harmonium",
+        "tabla",
+        "hand claps"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 90,
+      "key": "Bb Minor",
+      "vocal": "Urdu"
+    },
+    {
+      "id": "SI089",
+      "genre": "Arabian Maqam",
+      "instruments": [
+        "oud",
+        "ney",
+        "darbuka"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 82,
+      "key": "D Phrygian",
+      "vocal": null
+    },
+    {
+      "id": "SI090",
+      "genre": "Persian Classical",
+      "instruments": [
+        "tar",
+        "santur",
+        "tombak"
+      ],
+      "form": "Through-composed",
+      "time": "6/8",
+      "bpm": 75,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI091",
+      "genre": "Afrobeats",
+      "instruments": [
+        "log drum",
+        "shakers",
+        "clean electric guitar"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 108,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI092",
+      "genre": "Highlife",
+      "instruments": [
+        "bright arpeggiated guitar",
+        "brass section",
+        "percussion"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 112,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI093",
+      "genre": "Amapiano",
+      "instruments": [
+        "log drum",
+        "piano chords",
+        "shakers"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 113,
+      "key": "Eb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI094",
+      "genre": "Gqom",
+      "instruments": [
+        "minimal percussion",
+        "deep bass synth",
+        "chanted patterns"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 152,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI095",
+      "genre": "Soukous",
+      "instruments": [
+        "bright arpeggiated guitar",
+        "bass guitar",
+        "sebene rhythm"
+      ],
+      "form": "Verse-Sebene",
+      "time": "4/4",
+      "bpm": 135,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI096",
+      "genre": "Mbaqanga",
+      "instruments": [
+        "accordion",
+        "pennywhistle",
+        "electric guitar"
+      ],
+      "form": "Strophic",
+      "time": "4/4",
+      "bpm": 118,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI097",
+      "genre": "Ethiopian Jazz",
+      "instruments": [
+        "masinko",
+        "krar",
+        "kebero"
+      ],
+      "form": "Through-composed",
+      "time": "6/8",
+      "bpm": 95,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI098",
+      "genre": "West African Drum Ensemble",
+      "instruments": [
+        "djembe",
+        "balafon",
+        "shekere"
+      ],
+      "form": "Call-and-Response",
+      "time": "12/8",
+      "bpm": 110,
+      "key": "Ab Major",
+      "vocal": null
+    },
+    {
+      "id": "SI099",
+      "genre": "Kalimba Ambient",
+      "instruments": [
+        "kalimba",
+        "atmospheric pad",
+        "field recording"
+      ],
+      "form": "Free-form",
+      "time": "3/4",
+      "bpm": 55,
+      "key": "F# Major",
+      "vocal": null
+    },
+    {
+      "id": "SI100",
+      "genre": "Capoeira",
+      "instruments": [
+        "berimbau",
+        "pandeiro",
+        "atabaque"
+      ],
+      "form": "Call-and-Response",
+      "time": "4/4",
+      "bpm": 120,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI101",
+      "genre": "Salsa",
+      "instruments": [
+        "timbales",
+        "trumpet",
+        "piano montuno"
+      ],
+      "form": "Verse-Montuno",
+      "time": "4/4",
+      "bpm": 98,
+      "key": "F Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI102",
+      "genre": "Bachata",
+      "instruments": [
+        "nylon-string guitar",
+        "bongos",
+        "güiro"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 130,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI103",
+      "genre": "Klezmer",
+      "instruments": [
+        "clarinet",
+        "accordion",
+        "violin"
+      ],
+      "form": "AABB",
+      "time": "4/4",
+      "bpm": 130,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI104",
+      "genre": "Russian Folk",
+      "instruments": [
+        "balalaika",
+        "accordion",
+        "domra"
+      ],
+      "form": "Strophic",
+      "time": "2/4",
+      "bpm": 140,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI105",
+      "genre": "Andean Folk",
+      "instruments": [
+        "charango",
+        "pan flute",
+        "bombo drum"
+      ],
+      "form": "Strophic",
+      "time": "4/4",
+      "bpm": 100,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI106",
+      "genre": "Scottish Highland",
+      "instruments": [
+        "bagpipe",
+        "snare drum",
+        "fiddle"
+      ],
+      "form": "March",
+      "time": "6/8",
+      "bpm": 110,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI107",
+      "genre": "Harpsichord Concerto",
+      "instruments": [
+        "harpsichord",
+        "string ensemble",
+        "oboe"
+      ],
+      "form": "Ritornello",
+      "time": "3/4",
+      "bpm": 105,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI108",
+      "genre": "Celesta Lullaby",
+      "instruments": [
+        "celesta",
+        "harp",
+        "soft strings"
+      ],
+      "form": "Strophic",
+      "time": "6/8",
+      "bpm": 48,
+      "key": "F# Major",
+      "vocal": null
+    },
+    {
+      "id": "SI109",
+      "genre": "Theremin Ambient",
+      "instruments": [
+        "theremin",
+        "modular synth",
+        "tape loops"
+      ],
+      "form": "Free-form",
+      "time": "5/4",
+      "bpm": 40,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI110",
+      "genre": "Chiptune",
+      "instruments": [
+        "8-bit square wave",
+        "triangle bass",
+        "noise percussion"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 155,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI111",
+      "genre": "Bassoon Quartet",
+      "instruments": [
+        "bassoon",
+        "oboe",
+        "clarinet"
+      ],
+      "form": "Rondo (ABACA)",
+      "time": "3/4",
+      "bpm": 100,
+      "key": "F Major",
+      "vocal": null
+    },
+    {
+      "id": "SI112",
+      "genre": "Recorder Consort",
+      "instruments": [
+        "soprano recorder",
+        "alto recorder",
+        "bass recorder"
+      ],
+      "form": "Binary (AB)",
+      "time": "3/4",
+      "bpm": 88,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI113",
+      "genre": "Marimba Ensemble",
+      "instruments": [
+        "marimba",
+        "vibraphone",
+        "glockenspiel"
+      ],
+      "form": "Theme-Variations",
+      "time": "5/4",
+      "bpm": 120,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI114",
+      "genre": "Steel Drum Calypso",
+      "instruments": [
+        "steel drum",
+        "bass guitar",
+        "cowbell"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 118,
+      "key": "F Major",
+      "vocal": null
+    },
+    {
+      "id": "SI115",
+      "genre": "Hang Drum Meditation",
+      "instruments": [
+        "hang drum",
+        "atmospheric pad",
+        "field recording"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 60,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI116",
+      "genre": "Taiko Ensemble",
+      "instruments": [
+        "taiko drums",
+        "shime-daiko",
+        "kane"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 92,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI117",
+      "genre": "Mongolian Throat Singing",
+      "instruments": [
+        "morin khuur",
+        "throat singing drone",
+        "frame drum"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 62,
+      "key": "Eb Minor",
+      "vocal": "Mongolian"
+    },
+    {
+      "id": "SI118",
+      "genre": "Dubstep",
+      "instruments": [
+        "wobble bass",
+        "aggressive sub-bass",
+        "half-time drums"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 140,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI119",
+      "genre": "Enka",
+      "instruments": [
+        "shamisen",
+        "koto",
+        "shakuhachi"
+      ],
+      "form": "Strophic",
+      "time": "4/4",
+      "bpm": 70,
+      "key": "C# Minor",
+      "vocal": "Japanese"
+    },
+    {
+      "id": "SI120",
+      "genre": "Fado",
+      "instruments": [
+        "Portuguese guitar",
+        "nylon-string guitar",
+        "upright bass"
+      ],
+      "form": "Strophic",
+      "time": "3/4",
+      "bpm": 65,
+      "key": "F Minor",
+      "vocal": "Portuguese"
+    },
+    {
+      "id": "SI121",
+      "genre": "Sitar + Drum and Bass",
+      "instruments": [
+        "sitar",
+        "fast breakbeat",
+        "reese bass"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 174,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI122",
+      "genre": "Erhu + Ambient",
+      "instruments": [
+        "erhu",
+        "synth pad",
+        "distant percussion"
+      ],
+      "form": "Free-form",
+      "time": "3/4",
+      "bpm": 45,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI123",
+      "genre": "Banjo + Electronica",
+      "instruments": [
+        "banjo",
+        "electronic beats",
+        "synth bass"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 128,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI124",
+      "genre": "Koto + Jazz",
+      "instruments": [
+        "koto",
+        "upright bass",
+        "brush drums"
+      ],
+      "form": "AABA",
+      "time": "4/4",
+      "bpm": 95,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI125",
+      "genre": "Accordion + Trance",
+      "instruments": [
+        "accordion",
+        "supersaw synth",
+        "four-on-the-floor kick"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 138,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI126",
+      "genre": "Bagpipe + Metal",
+      "instruments": [
+        "bagpipe",
+        "distorted guitar",
+        "blast beats"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 165,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI127",
+      "genre": "Steel Drum + Hip-Hop",
+      "instruments": [
+        "steel drum",
+        "808 bass",
+        "hi-hat triplets"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 88,
+      "key": "Eb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI128",
+      "genre": "Oud + Dubstep",
+      "instruments": [
+        "oud",
+        "wobble bass",
+        "half-time drums"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 140,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI129",
+      "genre": "Guzheng + Lo-fi",
+      "instruments": [
+        "guzheng",
+        "vinyl crackle",
+        "soft electronic beat"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 78,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI130",
+      "genre": "Tango + Electronica",
+      "instruments": [
+        "bandoneón",
+        "electronic beats",
+        "synth strings"
+      ],
+      "form": "AABB",
+      "time": "4/4",
+      "bpm": 78,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI131",
+      "genre": "Celtic + Drum and Bass",
+      "instruments": [
+        "tin whistle",
+        "fast breakbeat",
+        "reese bass"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 172,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI132",
+      "genre": "Didgeridoo + Ambient",
+      "instruments": [
+        "didgeridoo",
+        "drone pad",
+        "rain stick"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 35,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI133",
+      "genre": "Vaporwave",
+      "instruments": [
+        "lo-fi synthesizer",
+        "pitch-shifted sample",
+        "retro pad"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 85,
+      "key": "Ab Major",
+      "vocal": null
+    },
+    {
+      "id": "SI134",
+      "genre": "Tech House",
+      "instruments": [
+        "punchy kick",
+        "rolling bassline",
+        "hi-hat pattern"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 126,
+      "key": "F Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI135",
+      "genre": "Deep House",
+      "instruments": [
+        "warm pad",
+        "deep bass",
+        "organic percussion"
+      ],
+      "form": "Build-Drop",
+      "time": "4/4",
+      "bpm": 122,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI136",
+      "genre": "Grime",
+      "instruments": [
+        "aggressive synth stab",
+        "deep sub-bass",
+        "percussive hi-hat"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 140,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI137",
+      "genre": "Memphis Phonk",
+      "instruments": [
+        "lo-fi 808",
+        "pitched vocal sample",
+        "tape-saturated drums"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 130,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI138",
+      "genre": "Dembow",
+      "instruments": [
+        "deep 808 bass",
+        "dembow drum pattern",
+        "synth stab"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 100,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI139",
+      "genre": "Black Metal Ambient",
+      "instruments": [
+        "tremolo-picked guitar",
+        "synth pad",
+        "sparse drums"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 160,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI140",
+      "genre": "Metalcore",
+      "instruments": [
+        "down-tuned guitar",
+        "screamed vocals tag",
+        "breakdown drums"
+      ],
+      "form": "Verse-Breakdown",
+      "time": "4/4",
+      "bpm": 150,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI141",
+      "genre": "Slowcore",
+      "instruments": [
+        "sparse clean guitar",
+        "brushed snare",
+        "fretless bass"
+      ],
+      "form": "Verse-Chorus",
+      "time": "3/4",
+      "bpm": 55,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI142",
+      "genre": "Jangle Pop",
+      "instruments": [
+        "bright arpeggiated 12-string",
+        "bass guitar",
+        "upbeat drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 128,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI143",
+      "genre": "Post-punk",
+      "instruments": [
+        "chorus delay guitar",
+        "prominent bass guitar",
+        "gated snare"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 142,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI144",
+      "genre": "Neo-folk",
+      "instruments": [
+        "dark acoustic guitar",
+        "drone cello",
+        "frame drum"
+      ],
+      "form": "Strophic",
+      "time": "3/4",
+      "bpm": 60,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI145",
+      "genre": "Outlaw Country",
+      "instruments": [
+        "acoustic guitar",
+        "upright bass",
+        "pedal steel"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 100,
+      "key": "A Major",
+      "vocal": null
+    },
+    {
+      "id": "SI146",
+      "genre": "Drift Phonk",
+      "instruments": [
+        "distorted cowbell",
+        "aggressive 808",
+        "dark synth"
+      ],
+      "form": "Loop-based",
+      "time": "4/4",
+      "bpm": 134,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI147",
+      "genre": "Solo Cello",
+      "instruments": [
+        "cello"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 48,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI148",
+      "genre": "Solo Acoustic Guitar",
+      "instruments": [
+        "fingerpicked acoustic guitar"
+      ],
+      "form": "Through-composed",
+      "time": "6/8",
+      "bpm": 72,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI149",
+      "genre": "Saxophone + Piano",
+      "instruments": [
+        "tenor saxophone",
+        "piano"
+      ],
+      "form": "AABA",
+      "time": "4/4",
+      "bpm": 68,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI150",
+      "genre": "Violin + Harp",
+      "instruments": [
+        "violin",
+        "harp"
+      ],
+      "form": "Binary (AB)",
+      "time": "3/4",
+      "bpm": 85,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI151",
+      "genre": "Solo Harp",
+      "instruments": [
+        "concert harp"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 62,
+      "key": "Ab Major",
+      "vocal": null
+    },
+    {
+      "id": "SI152",
+      "genre": "Organ Fugue",
+      "instruments": [
+        "pipe organ"
+      ],
+      "form": "Fugue",
+      "time": "4/4",
+      "bpm": 72,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI153",
+      "genre": "Aksak Folk",
+      "instruments": [
+        "zurna",
+        "davul",
+        "tambura"
+      ],
+      "form": "Strophic",
+      "time": "9/8",
+      "bpm": 130,
+      "key": "Bb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI154",
+      "genre": "Prog Jazz",
+      "instruments": [
+        "piano",
+        "upright bass",
+        "drums"
+      ],
+      "form": "Through-composed",
+      "time": "11/8",
+      "bpm": 130,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI155",
+      "genre": "Indian Tabla Solo",
+      "instruments": [
+        "tabla",
+        "tanpura"
+      ],
+      "form": "Through-composed",
+      "time": "7/8",
+      "bpm": 90,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI156",
+      "genre": "Extratone",
+      "instruments": [
+        "hyper-speed kick",
+        "noise texture",
+        "dissonant synth"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 300,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI157",
+      "genre": "Noise Ambient",
+      "instruments": [
+        "white noise",
+        "feedback drone",
+        "reversed cymbal"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 30,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI158",
+      "genre": "Zouk",
+      "instruments": [
+        "synthesizer",
+        "electric guitar",
+        "ka drum"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 108,
+      "key": "F Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI159",
+      "genre": "Berlin School",
+      "instruments": [
+        "sequenced synth",
+        "arpeggiated synth",
+        "atmospheric pad"
+      ],
+      "form": "Free-form",
+      "time": "5/4",
+      "bpm": 42,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI160",
+      "genre": "Glitch",
+      "instruments": [
+        "granular synthesis",
+        "detuned piano",
+        "stuttered percussion"
+      ],
+      "form": "Free-form",
+      "time": "11/8",
+      "bpm": 110,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI161",
+      "genre": "Italian Opera Aria",
+      "instruments": [
+        "full orchestra",
+        "grand piano",
+        "harp"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 68,
+      "key": "Ab Major",
+      "vocal": "Italian"
+    },
+    {
+      "id": "SI162",
+      "genre": "Italian Art Song",
+      "instruments": [
+        "piano",
+        "strings",
+        "oboe"
+      ],
+      "form": "Strophic",
+      "time": "6/8",
+      "bpm": 58,
+      "key": "Db Major",
+      "vocal": "Italian"
+    },
+    {
+      "id": "SI163",
+      "genre": "French Chanson",
+      "instruments": [
+        "accordion",
+        "nylon-string guitar",
+        "upright bass"
+      ],
+      "form": "Strophic",
+      "time": "3/4",
+      "bpm": 90,
+      "key": "F Minor",
+      "vocal": "French"
+    },
+    {
+      "id": "SI164",
+      "genre": "Spanish Bolero",
+      "instruments": [
+        "nylon-string guitar",
+        "congas",
+        "upright bass"
+      ],
+      "form": "Strophic",
+      "time": "4/4",
+      "bpm": 62,
+      "key": "A Minor",
+      "vocal": "Spanish"
+    },
+    {
+      "id": "SI165",
+      "genre": "Brazilian Bossa Nova",
+      "instruments": [
+        "nylon-string guitar",
+        "electric piano",
+        "soft percussion"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 72,
+      "key": "Db Major",
+      "vocal": "Portuguese"
+    },
+    {
+      "id": "SI166",
+      "genre": "German Lied",
+      "instruments": [
+        "grand piano"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 55,
+      "key": "Eb Major",
+      "vocal": "German"
+    },
+    {
+      "id": "SI167",
+      "genre": "Hindi Film Song",
+      "instruments": [
+        "sitar",
+        "tabla",
+        "strings"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 95,
+      "key": "Bb Minor",
+      "vocal": "Hindi"
+    },
+    {
+      "id": "SI168",
+      "genre": "Swahili Pop",
+      "instruments": [
+        "electric guitar",
+        "bass guitar",
+        "percussion"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 110,
+      "key": "Ab Major",
+      "vocal": "Swahili"
+    },
+    {
+      "id": "SI169",
+      "genre": "Arabic Pop",
+      "instruments": [
+        "oud",
+        "darbuka",
+        "strings"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 95,
+      "key": "Bb Phrygian",
+      "vocal": "Arabic"
+    },
+    {
+      "id": "SI170",
+      "genre": "K-Ballad Vocal",
+      "instruments": [
+        "grand piano",
+        "strings",
+        "gentle drums"
+      ],
+      "form": "Verse-Chorus-Bridge",
+      "time": "4/4",
+      "bpm": 68,
+      "key": "Db Major",
+      "vocal": "Korean"
+    },
+    {
+      "id": "SI171",
+      "genre": "K-Trot Vocal",
+      "instruments": [
+        "accordion",
+        "saxophone",
+        "electric bass"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 122,
+      "key": "A Major",
+      "vocal": "Korean"
+    },
+    {
+      "id": "SI172",
+      "genre": "Chinese Ballad",
+      "instruments": [
+        "erhu",
+        "piano",
+        "strings"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 70,
+      "key": "F# Minor",
+      "vocal": "Mandarin"
+    },
+    {
+      "id": "SI173",
+      "genre": "Irish Gaelic Folk",
+      "instruments": [
+        "tin whistle",
+        "bodhrán",
+        "acoustic guitar"
+      ],
+      "form": "Strophic",
+      "time": "6/8",
+      "bpm": 100,
+      "key": "A Major",
+      "vocal": "Irish Gaelic"
+    },
+    {
+      "id": "SI174",
+      "genre": "Hawaiian Slack-key",
+      "instruments": [
+        "slack-key guitar",
+        "ukulele",
+        "steel guitar"
+      ],
+      "form": "Strophic",
+      "time": "4/4",
+      "bpm": 85,
+      "key": "Bb Major",
+      "vocal": "Hawaiian"
+    },
+    {
+      "id": "SI175",
+      "genre": "Turkish Folk",
+      "instruments": [
+        "bağlama",
+        "ney",
+        "frame drum"
+      ],
+      "form": "Strophic",
+      "time": "9/8",
+      "bpm": 88,
+      "key": "Eb Phrygian",
+      "vocal": "Turkish"
+    },
+    {
+      "id": "SI176",
+      "genre": "Reggaeton",
+      "instruments": [
+        "dembow rhythm",
+        "staccato synth bass",
+        "atmospheric pad"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 95,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI177",
+      "genre": "Garage Rock",
+      "instruments": [
+        "overdriven guitar",
+        "bass guitar",
+        "lo-fi drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 150,
+      "key": "A Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI178",
+      "genre": "New Wave",
+      "instruments": [
+        "sequenced synth",
+        "fretless bass",
+        "electronic drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 135,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI179",
+      "genre": "Synth Punk",
+      "instruments": [
+        "distorted synth",
+        "aggressive bass",
+        "four-on-the-floor kick"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 162,
+      "key": "C# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI180",
+      "genre": "Space Rock",
+      "instruments": [
+        "reverb guitar",
+        "synthesizer",
+        "echo drums"
+      ],
+      "form": "Through-composed",
+      "time": "4/4",
+      "bpm": 100,
+      "key": "Eb Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI181",
+      "genre": "Boogie",
+      "instruments": [
+        "talk box guitar",
+        "bass guitar",
+        "electronic drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 112,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI182",
+      "genre": "City Pop",
+      "instruments": [
+        "slap bass",
+        "clean electric guitar",
+        "electric piano"
+      ],
+      "form": "Verse-Chorus-Bridge",
+      "time": "4/4",
+      "bpm": 110,
+      "key": "F# Major",
+      "vocal": null
+    },
+    {
+      "id": "SI183",
+      "genre": "K-Pop Dance",
+      "instruments": [
+        "synthesizer",
+        "sub-bass",
+        "crisp snare"
+      ],
+      "form": "Verse-Chorus-Bridge",
+      "time": "4/4",
+      "bpm": 125,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI184",
+      "genre": "K-Indie",
+      "instruments": [
+        "clean electric guitar",
+        "soft synth pad",
+        "light drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 100,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI185",
+      "genre": "K-Rock",
+      "instruments": [
+        "distorted guitar",
+        "palm-muted riffs",
+        "driving drums"
+      ],
+      "form": "Verse-Chorus-Bridge",
+      "time": "4/4",
+      "bpm": 138,
+      "key": "Ab Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI186",
+      "genre": "Microtonal Experiment",
+      "instruments": [
+        "microtonal synthesizer",
+        "detuned piano",
+        "percussion"
+      ],
+      "form": "Free-form",
+      "time": "5/4",
+      "bpm": 75,
+      "key": "Quarter-tone D",
+      "vocal": null
+    },
+    {
+      "id": "SI187",
+      "genre": "Polyrhythm Study",
+      "instruments": [
+        "marimba",
+        "djembe",
+        "shakers"
+      ],
+      "form": "Through-composed",
+      "time": "7/8",
+      "bpm": 110,
+      "key": "Ab Major",
+      "vocal": null
+    },
+    {
+      "id": "SI188",
+      "genre": "Silence Study",
+      "instruments": [
+        "prepared piano",
+        "long pauses",
+        "single bell"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 25,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI189",
+      "genre": "Feedback Noise",
+      "instruments": [
+        "guitar feedback",
+        "noise generator",
+        "industrial drums"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 220,
+      "key": "Atonal",
+      "vocal": null
+    },
+    {
+      "id": "SI190",
+      "genre": "Binaural Drone",
+      "instruments": [
+        "binaural beat synth",
+        "sub-bass oscillator",
+        "wind texture"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 30,
+      "key": "F Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI191",
+      "genre": "Pentatonic Ambient",
+      "instruments": [
+        "crystal singing bowls",
+        "synth pad",
+        "wind chimes"
+      ],
+      "form": "Free-form",
+      "time": "4/4",
+      "bpm": 40,
+      "key": "A Pentatonic",
+      "vocal": null
+    },
+    {
+      "id": "SI192",
+      "genre": "Chromatic Etude",
+      "instruments": [
+        "piano",
+        "violin",
+        "cello"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 90,
+      "key": "Chromatic",
+      "vocal": null
+    },
+    {
+      "id": "SI193",
+      "genre": "Lydian Dream",
+      "instruments": [
+        "electric piano",
+        "synth pad",
+        "soft drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "6/8",
+      "bpm": 82,
+      "key": "F Lydian",
+      "vocal": null
+    },
+    {
+      "id": "SI194",
+      "genre": "Aeolian Rock",
+      "instruments": [
+        "clean guitar",
+        "bass guitar",
+        "drums"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 112,
+      "key": "A Aeolian",
+      "vocal": null
+    },
+    {
+      "id": "SI195",
+      "genre": "Dulcimer Folk",
+      "instruments": [
+        "hammered dulcimer",
+        "fiddle",
+        "acoustic guitar"
+      ],
+      "form": "Strophic",
+      "time": "3/4",
+      "bpm": 98,
+      "key": "Db Major",
+      "vocal": null
+    },
+    {
+      "id": "SI196",
+      "genre": "Zither Classical",
+      "instruments": [
+        "zither",
+        "violin",
+        "cello"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 65,
+      "key": "F# Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI197",
+      "genre": "Ukulele Pop",
+      "instruments": [
+        "ukulele",
+        "light percussion",
+        "bass"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 118,
+      "key": "Bb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI198",
+      "genre": "Melodica Reggae",
+      "instruments": [
+        "melodica",
+        "heavy bass",
+        "spring reverb snare"
+      ],
+      "form": "Verse-Chorus",
+      "time": "4/4",
+      "bpm": 76,
+      "key": "Eb Major",
+      "vocal": null
+    },
+    {
+      "id": "SI199",
+      "genre": "Cimbalom Jazz",
+      "instruments": [
+        "cimbalom",
+        "upright bass",
+        "brush drums"
+      ],
+      "form": "AABA",
+      "time": "4/4",
+      "bpm": 100,
+      "key": "Db Minor",
+      "vocal": null
+    },
+    {
+      "id": "SI200",
+      "genre": "Glass Harmonica",
+      "instruments": [
+        "glass harmonica",
+        "harp",
+        "sustained strings"
+      ],
+      "form": "Through-composed",
+      "time": "3/4",
+      "bpm": 50,
+      "key": "Ab Major",
+      "vocal": null
+    }
+  ]
+}
