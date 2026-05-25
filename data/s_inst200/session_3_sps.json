@@ -1,0 +1,642 @@
+[
+  {
+    "id": "SI081",
+    "genre": "Chinese Traditional",
+    "sp": "Chinese Traditional instrumental. Erhu plays a mournful, expressive melody with long sustained bows and subtle vibrato bending between notes. Guzheng provides cascading arpeggiated runs with crisp plucked attacks and delicate tremolo passages. Dizi delivers breathy, ornamented phrases with flutter-tonguing and pitch bends that float above the ensemble. The arrangement is contemplative and spacious, with each instrument taking turns leading the melodic narrative. 65 BPM in A Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 505,
+    "instruments": [
+      "erhu",
+      "guzheng",
+      "dizi"
+    ],
+    "form": "Through-composed",
+    "time": "4/4",
+    "bpm": 65,
+    "key": "A Minor"
+  },
+  {
+    "id": "SI082",
+    "genre": "Japanese Koto",
+    "sp": "Japanese Koto instrumental. Koto plays meditative, pentatonic phrases with precise plucked attacks and resonant string bends that linger in the silence. Shakuhachi provides haunting, breathy melodic lines with controlled overblowing and subtle pitch fluctuations. Taiko enters with sparse, deep strikes that punctuate the stillness with thunderous resonance. The arrangement is austere and unhurried, embracing silence as a structural element between phrases. 55 BPM in Db Minor, 6/8 time signature.",
+    "lyrics": null,
+    "char_count": 499,
+    "instruments": [
+      "koto",
+      "shakuhachi",
+      "taiko"
+    ],
+    "form": "Through-composed",
+    "time": "6/8",
+    "bpm": 55,
+    "key": "Db Minor"
+  },
+  {
+    "id": "SI083",
+    "genre": "Korean Traditional",
+    "sp": "Korean Traditional instrumental. Gayageum plays ornate melodic passages with deep vibrato and sliding bends across silk strings. Haegeum provides sustained, expressive bowed lines with a nasal, penetrating tone and wide intervallic leaps. Daegeum delivers rich, breathy low-register phrases with characteristic buzzing membrane resonance and gentle trills. The arrangement is graceful and flowing, blending the three voices into an intimate chamber texture. 60 BPM in A Minor, 6/8 time signature.",
+    "lyrics": null,
+    "char_count": 496,
+    "instruments": [
+      "gayageum",
+      "haegeum",
+      "daegeum"
+    ],
+    "form": "Through-composed",
+    "time": "6/8",
+    "bpm": 60,
+    "key": "A Minor"
+  },
+  {
+    "id": "SI084",
+    "genre": "Chinese Pipa",
+    "sp": "Chinese Pipa instrumental. Pipa plays rapid tremolo picking with sharp, metallic attacks and dramatic downward sweeps across all four strings. Erhu provides sustained, sorrowful countermelodies with intense vibrato and sliding portamentos between phrases. Bamboo flute delivers airy, floating melodies with soft articulations and ornamental grace notes. The arrangement is dramatic and narrative, alternating between explosive pipa passages and delicate, lyrical interludes. 72 BPM in F# Minor, 3/4 time signature.",
+    "lyrics": null,
+    "char_count": 514,
+    "instruments": [
+      "pipa",
+      "erhu",
+      "bamboo flute"
+    ],
+    "form": "Through-composed",
+    "time": "3/4",
+    "bpm": 72,
+    "key": "F# Minor"
+  },
+  {
+    "id": "SI085",
+    "genre": "Shamisen Rock",
+    "sp": "Shamisen Rock instrumental. Shamisen plays aggressive, percussive riffs with sharp bachi strikes and rapid-fire tremolo picking on thick silk strings. Taiko provides thunderous, driving rhythms with layered patterns between large odaiko booms and tight shime-daiko accents. Electric bass delivers distorted, low-end power riffs with palm-muted eighth notes and sliding chromatic runs. The drums feature a hard-hitting rock pattern with double kick accents and crashing cymbals. The arrangement is intense and relentless, fusing traditional Japanese ferocity with modern rock energy. 148 BPM in A Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 622,
+    "instruments": [
+      "shamisen",
+      "taiko",
+      "electric bass"
+    ],
+    "form": "Verse-Chorus",
+    "time": "4/4",
+    "bpm": 148,
+    "key": "A Minor"
+  },
+  {
+    "id": "SI086",
+    "genre": "Raga Evening",
+    "sp": "Raga Evening instrumental. Sitar plays slow, meditative alap phrases with deep meend bends and shimmering sympathetic string resonance. Tabla provides gentle, intricate rhythmic cycles with soft fingertip bols and resonant bass strokes in an asymmetric pattern. Tanpura sustains a continuous, rich drone with layered overtones that create a hypnotic tonal foundation. The arrangement is devotional and expansive, allowing each phrase to breathe and dissolve into the drone. 48 BPM in Db Major, 7/8 time signature.",
+    "lyrics": null,
+    "char_count": 513,
+    "instruments": [
+      "sitar",
+      "tabla",
+      "tanpura"
+    ],
+    "form": "Through-composed",
+    "time": "7/8",
+    "bpm": 48,
+    "key": "Db Major"
+  },
+  {
+    "id": "SI087",
+    "genre": "Bhangra",
+    "sp": "Bhangra instrumental. Dhol drums play driving, syncopated rhythms with alternating heavy bass thumps and sharp, cracking treble strokes. Tumbi provides a bright, repetitive single-string melodic hook with a twangy, buzzing attack. Synthesizer delivers thick, layered brass stabs and pulsing pad chords that fill the midrange. The drums feature a relentless four-on-the-floor kick with clapped accents on the offbeats. The arrangement is euphoric and high-energy, built around the infectious dhol groove. 142 BPM in Bb Major, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 544,
+    "instruments": [
+      "dhol drums",
+      "tumbi",
+      "synthesizer"
+    ],
+    "form": "Verse-Chorus",
+    "time": "4/4",
+    "bpm": 142,
+    "key": "Bb Major"
+  },
+  {
+    "id": "SI088",
+    "genre": "Qawwali",
+    "sp": "Qawwali featuring Urdu vocals. Harmonium plays sustained, droning chord progressions with a warm, reedy tone and subtle bellows dynamics. Tabla provides hypnotic, cyclical rhythmic patterns with crisp, articulate finger strokes building in intensity. Hand claps create a driving, communal pulse that accelerates with the devotional energy. The vocals deliver passionate, melismatic phrases with call-and-response patterns and ecstatic repetitions. The arrangement is devotional and intensifying, gradually building from a meditative opening to fervent climax. 90 BPM in Bb Minor, 4/4 time signature.",
+    "lyrics": "[Verse 1]\nDil ke andar ek awaaz hai\nIshq ka ek raaz hai\nHar lamha mein tera noor\nMeri aankhon ka niyaaz hai\n\n[Chorus]\nMeri rooh teri talash mein\nHar raat ka ye safar\nTera naam mere hothon pe\nTera ishq hai mera ghar\n\n[Verse 2]\nChand sitaron mein chupa hai\nWoh chehra jo yaad aata hai\nDard mein bhi sukoon milta hai\nJab dil tera naam gaata hai\n\n[Chorus]\nMeri rooh teri talash mein\nHar raat ka ye safar\nTera naam mere hothon pe\nTera ishq hai mera ghar\n\n[Bridge]\nSufi dil ke rang mein\nHar dard ek tohfa hai\nJalta hai ye diya pyaar ka\nIshq ka ye silsila hai\n\n[Final Chorus]\nMeri rooh teri talash mein\nHar raat ka ye safar\nTera naam mere hothon pe\nTera ishq hai mera ghar",
+    "char_count": 599,
+    "instruments": [
+      "harmonium",
+      "tabla",
+      "hand claps"
+    ],
+    "form": "Through-composed",
+    "time": "4/4",
+    "bpm": 90,
+    "key": "Bb Minor"
+  },
+  {
+    "id": "SI089",
+    "genre": "Arabian Maqam",
+    "sp": "Arabian Maqam instrumental. Oud plays ornate, microtonal melodic phrases with rapid tremolo picking and descending scalar runs across doubled courses. Ney provides a haunting, breathy tone with overblown harmonics and subtle quarter-tone inflections. Darbuka delivers crisp, intricate hand-drum patterns with sharp tek and dum strokes in complex subdivisions. The arrangement is meditative and improvisatory, weaving between composed melodic sections and spontaneous ornamental passages. 82 BPM in D Phrygian, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 529,
+    "instruments": [
+      "oud",
+      "ney",
+      "darbuka"
+    ],
+    "form": "Through-composed",
+    "time": "4/4",
+    "bpm": 82,
+    "key": "D Phrygian"
+  },
+  {
+    "id": "SI090",
+    "genre": "Persian Classical",
+    "sp": "Persian Classical instrumental. Tar plays expressive, ornamented melodic lines with rapid tremolo strumming and delicate grace notes on a resonant skin-topped body. Santur provides shimmering, cascading runs with light mallet strikes that create a crystalline, bell-like texture. Tombak delivers precise, virtuosic finger patterns with alternating bass tones and sharp rim accents in a flowing compound meter. The arrangement is introspective and refined, following a traditional radif structure with improvised embellishments. 75 BPM in Eb Minor, 6/8 time signature.",
+    "lyrics": null,
+    "char_count": 567,
+    "instruments": [
+      "tar",
+      "santur",
+      "tombak"
+    ],
+    "form": "Through-composed",
+    "time": "6/8",
+    "bpm": 75,
+    "key": "Eb Minor"
+  },
+  {
+    "id": "SI091",
+    "genre": "Afrobeats",
+    "sp": "Afrobeats instrumental. Clean electric guitar plays bright, rhythmic chordal patterns with muted upstrokes and percussive ghost strums. Log drum provides a deep, resonant melodic bass pattern with syncopated rhythms that anchor the groove. Shakers deliver a constant, flowing sixteenth-note pulse with subtle dynamic swells. The drums feature a crisp, bouncing pattern with tight hi-hats and a snappy snare on the backbeat. The arrangement is infectious and laid-back, built around interlocking rhythmic layers that create a hypnotic dance groove. 108 BPM in Bb Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 588,
+    "instruments": [
+      "log drum",
+      "shakers",
+      "clean electric guitar"
+    ],
+    "form": "Verse-Chorus",
+    "time": "4/4",
+    "bpm": 108,
+    "key": "Bb Minor"
+  },
+  {
+    "id": "SI092",
+    "genre": "Highlife",
+    "sp": "Highlife instrumental. Bright arpeggiated guitar plays interlocking melodic patterns with clean, ringing tones and nimble fingerpicking across the upper register. Brass section provides warm, jubilant horn lines with staccato accents and sustained harmonic pads. Percussion delivers layered polyrhythmic patterns with claves, congas, and a steady cowbell pulse. The drums feature a relaxed, swinging groove with a shuffled hi-hat and a deep, round kick. The arrangement is joyful and celebratory, with call-and-response phrases between guitar and horns. 112 BPM in A Major, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 593,
+    "instruments": [
+      "bright arpeggiated guitar",
+      "brass section",
+      "percussion"
+    ],
+    "form": "Verse-Chorus",
+    "time": "4/4",
+    "bpm": 112,
+    "key": "A Major"
+  },
+  {
+    "id": "SI093",
+    "genre": "Amapiano",
+    "sp": "Amapiano instrumental. Log drum plays a bouncy, syncopated bass melody with deep, woody tones and rhythmic ghost notes. Piano chords provide warm, jazzy voicings with soft, sustained pads and occasional staccato stabs. Shakers deliver a smooth, flowing percussive texture with light, continuous eighth-note patterns. The drums feature a characteristic low-tempo bounce with a wide, boomy kick and sparse, crisp hi-hat taps. The arrangement is minimalist and groove-driven, letting the log drum melody and piano interplay carry the track. 113 BPM in Eb Major, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 578,
+    "instruments": [
+      "log drum",
+      "piano chords",
+      "shakers"
+    ],
+    "form": "Loop-based",
+    "time": "4/4",
+    "bpm": 113,
+    "key": "Eb Major"
+  },
+  {
+    "id": "SI094",
+    "genre": "Gqom",
+    "sp": "Gqom instrumental. Deep bass synth delivers a pounding, distorted sub-bass pattern with aggressive pitch bends and abrupt cutoffs. Minimal percussion provides raw, industrial-sounding hits with sparse claps and heavily processed snare rolls. Chanted patterns create hypnotic, looping vocal samples with rhythmic repetition and pitch-shifted layers. The drums feature a relentless, driving kick pattern with syncopated rimshots and filtered noise sweeps. The arrangement is dark and minimalist, building tension through repetition and stripped-back intensity. 152 BPM in Ab Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 599,
+    "instruments": [
+      "minimal percussion",
+      "deep bass synth",
+      "chanted patterns"
+    ],
+    "form": "Loop-based",
+    "time": "4/4",
+    "bpm": 152,
+    "key": "Ab Minor"
+  },
+  {
+    "id": "SI095",
+    "genre": "Soukous",
+    "sp": "Soukous instrumental. Bright arpeggiated guitar plays rapid, fluid melodic lines with clean, sparkling tones and intricate fingerpicked patterns that cascade across the fretboard. Bass guitar provides a deep, melodic groove with walking bass lines and rhythmic fills that lock with the percussion. Sebene rhythm guitar delivers tight, repetitive riff patterns with muted strumming and syncopated accents. The drums feature a fast, danceable pattern with rolling hi-hats and a punchy snare crack. The arrangement is exuberant and kinetic, building from a structured verse into an extended sebene jam section. 135 BPM in A Major, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 647,
+    "instruments": [
+      "bright arpeggiated guitar",
+      "bass guitar",
+      "sebene rhythm"
+    ],
+    "form": "Verse-Sebene",
+    "time": "4/4",
+    "bpm": 135,
+    "key": "A Major"
+  },
+  {
+    "id": "SI096",
+    "genre": "Mbaqanga",
+    "sp": "Mbaqanga instrumental. Accordion plays bright, pumping chord patterns with bellows-driven dynamics and cheerful melodic fills. Pennywhistle provides piercing, agile melodic lines with rapid ornamental runs and a sharp, cutting tone. Electric guitar delivers clean, rhythmic strumming with muted scratch patterns and occasional wah-filtered fills. The drums feature a bouncing, shuffled groove with a deep bass drum and crisp snare backbeat. The arrangement is lively and communal, with a danceable township feel and trading melodic phrases between accordion and pennywhistle. 118 BPM in Bb Major, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 616,
+    "instruments": [
+      "accordion",
+      "pennywhistle",
+      "electric guitar"
+    ],
+    "form": "Strophic",
+    "time": "4/4",
+    "bpm": 118,
+    "key": "Bb Major"
+  },
+  {
+    "id": "SI097",
+    "genre": "Ethiopian Jazz",
+    "sp": "Ethiopian Jazz instrumental. Masinko plays soulful, one-stringed bowed melodies with intense vibrato and microtonal inflections rooted in pentatonic scales. Krar provides shimmering, plucked accompaniment with arpeggiated patterns and resonant open-string drones on its lyre-shaped frame. Kebero delivers deep, hand-struck rhythmic patterns with layered polyrhythmic accents in a swaying compound meter. The arrangement is atmospheric and contemplative, blending ancient Ethiopian modes with jazz-inflected harmonic explorations. 95 BPM in Eb Minor, 6/8 time signature.",
+    "lyrics": null,
+    "char_count": 569,
+    "instruments": [
+      "masinko",
+      "krar",
+      "kebero"
+    ],
+    "form": "Through-composed",
+    "time": "6/8",
+    "bpm": 95,
+    "key": "Eb Minor"
+  },
+  {
+    "id": "SI098",
+    "genre": "West African Drum Ensemble",
+    "sp": "West African Drum Ensemble instrumental. Djembe plays dynamic, polyrhythmic patterns with alternating bass tones, open slaps, and sharp edge strikes. Balafon provides bright, wooden melodic phrases with rapid mallet runs and buzzing gourd resonators underneath. Shekere delivers a steady, shimmering rhythmic pulse with flowing bead patterns and sharp accented shakes. The drums feature interlocking hand percussion with talking drum fills and dunun bass patterns. The arrangement is communal and celebratory, building layers of rhythmic complexity in a call-and-response structure. 110 BPM in Ab Major, 12/8 time signature.",
+    "lyrics": null,
+    "char_count": 624,
+    "instruments": [
+      "djembe",
+      "balafon",
+      "shekere"
+    ],
+    "form": "Call-and-Response",
+    "time": "12/8",
+    "bpm": 110,
+    "key": "Ab Major"
+  },
+  {
+    "id": "SI099",
+    "genre": "Kalimba Ambient",
+    "sp": "Kalimba Ambient instrumental. Kalimba plays gentle, repeating melodic patterns with soft, bell-like tines and natural buzzing overtones that shimmer and decay. Atmospheric pad provides a warm, evolving drone with slow filter sweeps and layered harmonic textures. Field recording adds subtle natural ambience with distant birdsong and soft wind that blends into the sonic landscape. The arrangement is tranquil and meditative, floating in an open, spacious mix with generous reverb and minimal processing. 55 BPM in F# Major, 3/4 time signature.",
+    "lyrics": null,
+    "char_count": 544,
+    "instruments": [
+      "kalimba",
+      "atmospheric pad",
+      "field recording"
+    ],
+    "form": "Free-form",
+    "time": "3/4",
+    "bpm": 55,
+    "key": "F# Major"
+  },
+  {
+    "id": "SI100",
+    "genre": "Capoeira",
+    "sp": "Capoeira instrumental. Berimbau plays a hypnotic, single-string rhythmic pattern with distinctive buzzing attacks and pitch bends created by pressing a stone against the wire. Pandeiro provides a bright, syncopated tambourine groove with crisp thumb rolls and sharp frame slaps. Atabaque delivers deep, resonant hand-drum patterns with booming bass strokes and rapid fingertip fills. The arrangement is ritualistic and grounding, built around the circular berimbau ostinato with layered percussion intensifying through repetition. 120 BPM in Bb Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 571,
+    "instruments": [
+      "berimbau",
+      "pandeiro",
+      "atabaque"
+    ],
+    "form": "Call-and-Response",
+    "time": "4/4",
+    "bpm": 120,
+    "key": "Bb Minor"
+  },
+  {
+    "id": "SI101",
+    "genre": "Salsa",
+    "sp": "Salsa instrumental. Piano montuno plays a driving, syncopated comping pattern with bright, percussive chord stabs and rapid octave runs. Trumpet delivers bold, brassy melodic lines with sharp attacks and sustained high notes that cut through the ensemble. Timbales provide crisp, cascading shell patterns with explosive fills and sharp rimshot accents. The drums feature a tight clave-based pattern with a punchy kick and agogo bell marking the pulse. The arrangement is fiery and rhythmically complex, with montuno patterns driving the dance energy. 98 BPM in F Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 589,
+    "instruments": [
+      "timbales",
+      "trumpet",
+      "piano montuno"
+    ],
+    "form": "Verse-Montuno",
+    "time": "4/4",
+    "bpm": 98,
+    "key": "F Minor"
+  },
+  {
+    "id": "SI102",
+    "genre": "Bachata",
+    "sp": "Bachata instrumental. Nylon-string guitar plays romantic, arpeggiated patterns with warm fingerpicked tones and sliding grace notes between chord changes. Bongos provide a steady, syncopated martillo rhythm with soft fingertip rolls and sharp open-tone slaps on the offbeats. Guiro delivers a scratchy, rhythmic pulse with alternating long and short scraping strokes that drive the tempo forward. The arrangement is intimate and swaying, with the guitar melody carrying a melancholic, romantic mood over the gentle percussive groove. 130 BPM in A Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 573,
+    "instruments": [
+      "nylon-string guitar",
+      "bongos",
+      "guiro"
+    ],
+    "form": "Verse-Chorus",
+    "time": "4/4",
+    "bpm": 130,
+    "key": "A Minor"
+  },
+  {
+    "id": "SI103",
+    "genre": "Klezmer",
+    "sp": "Klezmer instrumental. Clarinet plays exuberant, wailing melodies with rapid ornamental runs, dramatic glissandos, and laughing vibrato in the upper register. Accordion provides rich, chordal accompaniment with bellows-driven swells and a warm, buzzing drone bass. Violin delivers passionate, soaring countermelodies with intense vibrato and double-stopped harmonies. The drums feature a driving freylekhs rhythm with a brisk snare pattern and a stomping bass drum on the downbeat. The arrangement is festive and emotionally charged, alternating between jubilant dance sections and mournful, rubato passages. 130 BPM in Db Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 648,
+    "instruments": [
+      "clarinet",
+      "accordion",
+      "violin"
+    ],
+    "form": "AABB",
+    "time": "4/4",
+    "bpm": 130,
+    "key": "Db Minor"
+  },
+  {
+    "id": "SI104",
+    "genre": "Russian Folk",
+    "sp": "Russian Folk instrumental. Balalaika plays rapid, strummed tremolo patterns with a bright, metallic tone and rhythmic chordal bursts on its triangular body. Accordion provides driving, bellows-pumped bass lines with staccato chord stabs and melodic fills in the upper register. Domra delivers quick, mandolin-like melodic runs with precise plucked articulations and lively ornamental trills. The drums feature a brisk march-like pattern with a sharp snare crack and a steady bass drum pulse. The arrangement is spirited and propulsive, building momentum through accelerating dynamics and layered instrumental entries. 140 BPM in A Minor, 2/4 time signature.",
+    "lyrics": null,
+    "char_count": 657,
+    "instruments": [
+      "balalaika",
+      "accordion",
+      "domra"
+    ],
+    "form": "Strophic",
+    "time": "2/4",
+    "bpm": 140,
+    "key": "A Minor"
+  },
+  {
+    "id": "SI105",
+    "genre": "Andean Folk",
+    "sp": "Andean Folk instrumental. Charango plays bright, rapid strumming patterns with a high-pitched, shimmering tone and melodic runs across doubled string courses. Pan flute provides haunting, breathy melodies with soft, airy attacks and gentle vibrato that echoes across mountain valleys. Bombo drum delivers deep, resonant strikes with a booming low end and sharp rim accents that anchor the rhythm. The arrangement is pastoral and evocative, with layered textures that build from sparse solo passages to full ensemble crescendos. 100 BPM in Bb Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 568,
+    "instruments": [
+      "charango",
+      "pan flute",
+      "bombo drum"
+    ],
+    "form": "Strophic",
+    "time": "4/4",
+    "bpm": 100,
+    "key": "Bb Minor"
+  },
+  {
+    "id": "SI106",
+    "genre": "Scottish Highland",
+    "sp": "Scottish Highland instrumental. Bagpipe plays a stirring, sustained melody with continuous drone pipes and ornamental grace notes in a pentatonic major scale. Snare drum provides a tight, military-style pattern with crisp buzz rolls and sharp flam accents. Fiddle delivers lively, bowing double-stopped harmonies with quick ornamental turns and driving rhythmic bowing. The arrangement is bold and ceremonial, structured as a traditional march with a steady, processional build and layered drone harmonies. 110 BPM in A Major, 6/8 time signature.",
+    "lyrics": null,
+    "char_count": 546,
+    "instruments": [
+      "bagpipe",
+      "snare drum",
+      "fiddle"
+    ],
+    "form": "March",
+    "time": "6/8",
+    "bpm": 110,
+    "key": "A Major"
+  },
+  {
+    "id": "SI107",
+    "genre": "Harpsichord Concerto",
+    "sp": "Harpsichord Concerto instrumental. Harpsichord plays elaborate, ornamental passages with crisp, plucked articulation and rapid scalar runs in a brilliant, metallic tone. String ensemble provides rich, sustained harmonic support with legato bowing and warm contrapuntal lines. Oboe delivers lyrical, singing melodies with a warm, reedy tone and graceful phrasing over the ensemble texture. The arrangement is elegant and structured, following a Baroque ritornello form with alternating solo and tutti sections. 105 BPM in Db Major, 3/4 time signature.",
+    "lyrics": null,
+    "char_count": 550,
+    "instruments": [
+      "harpsichord",
+      "string ensemble",
+      "oboe"
+    ],
+    "form": "Ritornello",
+    "time": "3/4",
+    "bpm": 105,
+    "key": "Db Major"
+  },
+  {
+    "id": "SI108",
+    "genre": "Celesta Lullaby",
+    "sp": "Celesta Lullaby instrumental. Celesta plays a gentle, twinkling melody with crystalline, bell-like tones and delicate, music-box articulation. Harp provides soft, arpeggiated accompaniment with warm, resonant glissandos and sustained pedal tones. Soft strings deliver hushed, legato pads with a warm, enveloping texture and subtle dynamic swells beneath the melody. The arrangement is tender and dreamlike, with a sparse, transparent mix and gentle dynamic breathing that rocks like a cradle. 48 BPM in F# Major, 6/8 time signature.",
+    "lyrics": null,
+    "char_count": 532,
+    "instruments": [
+      "celesta",
+      "harp",
+      "soft strings"
+    ],
+    "form": "Strophic",
+    "time": "6/8",
+    "bpm": 48,
+    "key": "F# Major"
+  },
+  {
+    "id": "SI109",
+    "genre": "Theremin Ambient",
+    "sp": "Theremin Ambient instrumental. Theremin plays eerie, wavering melodic lines with smooth portamento glides and a haunting, voice-like vibrato. Modular synthesizer provides evolving, generative textures with slowly morphing filter sweeps and granular noise bursts. Tape loops deliver warped, degraded sonic fragments with wow and flutter artifacts and reversed ambient layers. The arrangement is otherworldly and disorienting, suspending time with asymmetric phrasing and vast, cavernous reverb spaces. 40 BPM in Eb Minor, 5/4 time signature.",
+    "lyrics": null,
+    "char_count": 540,
+    "instruments": [
+      "theremin",
+      "modular synth",
+      "tape loops"
+    ],
+    "form": "Free-form",
+    "time": "5/4",
+    "bpm": 40,
+    "key": "Eb Minor"
+  },
+  {
+    "id": "SI110",
+    "genre": "Chiptune",
+    "sp": "Chiptune instrumental. 8-bit square wave plays rapid, energetic melodic lines with bright, buzzy tones and fast arpeggiated patterns that cascade through octaves. Triangle bass provides a smooth, warm low-end pulse with simple, driving root-note patterns. Noise percussion delivers crisp, lo-fi drum patterns with sharp, static-burst snares and rapid-fire hi-hat ticks. The arrangement is hyperactive and playful, with dense, layered countermelodies and abrupt key changes that evoke retro arcade energy. 155 BPM in Bb Major, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 545,
+    "instruments": [
+      "8-bit square wave",
+      "triangle bass",
+      "noise percussion"
+    ],
+    "form": "Verse-Chorus",
+    "time": "4/4",
+    "bpm": 155,
+    "key": "Bb Major"
+  },
+  {
+    "id": "SI111",
+    "genre": "Bassoon Quartet",
+    "sp": "Bassoon Quartet instrumental. Bassoon plays rich, warm melodic lines with a deep, woody tone and subtle vibrato in the lower register. Oboe provides a bright, piercing countermelody with delicate phrasing and expressive dynamic shading. Clarinet delivers smooth, fluid passages with a silky, rounded tone and agile ornamental runs. The arrangement is refined and conversational, with contrapuntal voices weaving through elegant three-part harmonies in a classical rondo form. 100 BPM in F Major, 3/4 time signature.",
+    "lyrics": null,
+    "char_count": 515,
+    "instruments": [
+      "bassoon",
+      "oboe",
+      "clarinet"
+    ],
+    "form": "Rondo (ABACA)",
+    "time": "3/4",
+    "bpm": 100,
+    "key": "F Major"
+  },
+  {
+    "id": "SI112",
+    "genre": "Recorder Consort",
+    "sp": "Recorder Consort instrumental. Soprano recorder plays a clear, bright melodic line with precise articulation and gentle ornamental trills in the upper register. Alto recorder provides warm, singing countermelodies with a mellow, rounded tone and flowing legato phrasing. Bass recorder delivers a deep, resonant foundation with breathy, sustained bass notes and slow-moving harmonic support. The arrangement is intimate and polished, featuring Renaissance-style imitative polyphony with staggered melodic entries. 88 BPM in Db Major, 3/4 time signature.",
+    "lyrics": null,
+    "char_count": 552,
+    "instruments": [
+      "soprano recorder",
+      "alto recorder",
+      "bass recorder"
+    ],
+    "form": "Binary (AB)",
+    "time": "3/4",
+    "bpm": 88,
+    "key": "Db Major"
+  },
+  {
+    "id": "SI113",
+    "genre": "Marimba Ensemble",
+    "sp": "Marimba Ensemble instrumental. Marimba plays rapid, interlocking melodic patterns with soft mallets producing warm, woody tones and resonant sustain. Vibraphone provides shimmering, sustained chords with slow motor vibrato and bell-like harmonic overtones. Glockenspiel delivers bright, sparkling accents with a crystalline attack that punctuates the rhythmic texture. The arrangement is hypnotic and rhythmically complex, with phasing patterns and hocketed melodies in an asymmetric five-beat groove. 120 BPM in Bb Major, 5/4 time signature.",
+    "lyrics": null,
+    "char_count": 542,
+    "instruments": [
+      "marimba",
+      "vibraphone",
+      "glockenspiel"
+    ],
+    "form": "Theme-Variations",
+    "time": "5/4",
+    "bpm": 120,
+    "key": "Bb Major"
+  },
+  {
+    "id": "SI114",
+    "genre": "Steel Drum Calypso",
+    "sp": "Steel Drum Calypso instrumental. Steel drum plays bright, melodic phrases with a resonant, metallic ring and syncopated rhythmic accents that bounce between chord tones. Bass guitar provides a deep, rolling bass line with smooth legato slides and a warm, round tone. Cowbell delivers a steady, driving pulse with sharp metallic clicks on the offbeats. The drums feature a relaxed, calypso-style groove with brushed snare and a light, bouncing kick pattern. The arrangement is sunny and festive, with the steel drum melody dancing over a laid-back Caribbean groove. 118 BPM in F Major, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 604,
+    "instruments": [
+      "steel drum",
+      "bass guitar",
+      "cowbell"
+    ],
+    "form": "Verse-Chorus",
+    "time": "4/4",
+    "bpm": 118,
+    "key": "F Major"
+  },
+  {
+    "id": "SI115",
+    "genre": "Hang Drum Meditation",
+    "sp": "Hang Drum Meditation instrumental. Hang drum plays resonant, bell-like melodic patterns with soft finger strikes and rich, sustaining overtones that bloom and decay naturally. Atmospheric pad provides a warm, evolving drone with slow harmonic shifts and ethereal, choir-like textures. Field recording adds subtle natural ambience with gentle rain and distant water flowing into the sonic space. The arrangement is serene and spacious, with generous silence between phrases and deep, immersive reverb. 60 BPM in Db Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 540,
+    "instruments": [
+      "hang drum",
+      "atmospheric pad",
+      "field recording"
+    ],
+    "form": "Free-form",
+    "time": "4/4",
+    "bpm": 60,
+    "key": "Db Minor"
+  },
+  {
+    "id": "SI116",
+    "genre": "Taiko Ensemble",
+    "sp": "Taiko Ensemble instrumental. Taiko drums play thunderous, full-bodied strikes with massive low-end resonance and dynamic patterns that alternate between single booms and rapid rolls. Shime-daiko provides tight, high-pitched accents with crisp, cutting attacks and intricate rhythmic subdivisions. Kane delivers sharp, metallic bell strikes that punctuate the rhythmic phrases with bright, ringing accents. The arrangement is powerful and ceremonial, building from sparse solo passages to overwhelming full-ensemble crescendos with choreographed precision. 92 BPM in Db Major, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 595,
+    "instruments": [
+      "taiko drums",
+      "shime-daiko",
+      "kane"
+    ],
+    "form": "Through-composed",
+    "time": "4/4",
+    "bpm": 92,
+    "key": "Db Major"
+  },
+  {
+    "id": "SI117",
+    "genre": "Mongolian Throat Singing",
+    "sp": "Mongolian Throat Singing featuring Mongolian vocals. Morin khuur plays haunting, sustained bowed melodies with a warm, horse-hair string tone and wide vibrato on a carved horse-head fiddle. Throat singing drone provides deep, guttural overtone harmonics with two simultaneous pitches and a rich, buzzing resonance. Frame drum delivers sparse, steady strikes with a deep, booming tone and subtle rattling overtones. The vocals feature khoomei-style overtone singing with a resonant fundamental and whistling harmonic melodies. The arrangement is vast and primordial, evoking open steppes and windswept landscapes. 62 BPM in Eb Minor, 4/4 time signature.",
+    "lyrics": "[Verse 1]\nХөх тэнгэрийн доор\nСалхи морьтой давхина\nНарны гэрэл алтаар\nТал нутгийг гийгүүлнэ\n\n[Chorus]\nМонгол нутаг минь\nҮүрд мөнхийн газар\nЭцэг өвгөдийн дуу\nЗүрхэнд минь мөнхөд байна\n\n[Verse 2]\nУулсын цаана\nГолын ус цэнгэлтэй урсана\nГэрийн утаа тэнгэрт\nШувуудын дуу сонсогдоно\n\n[Chorus]\nМонгол нутаг минь\nҮүрд мөнхийн газар\nЭцэг өвгөдийн дуу\nЗүрхэнд минь мөнхөд байна",
+    "char_count": 652,
+    "instruments": [
+      "morin khuur",
+      "throat singing drone",
+      "frame drum"
+    ],
+    "form": "Through-composed",
+    "time": "4/4",
+    "bpm": 62,
+    "key": "Eb Minor"
+  },
+  {
+    "id": "SI118",
+    "genre": "Dubstep",
+    "sp": "Dubstep instrumental. Wobble bass delivers a massive, modulated low-frequency oscillation with rapid filter cutoff automation and distorted overtones. Aggressive sub-bass provides a crushing, floor-shaking foundation with pitch-bent drops and growling resonance. Half-time drums feature a heavy, syncopated breakbeat pattern with snapping snares and scattered, glitchy hi-hat fills. The arrangement is brutal and dynamic, built around tension-and-release cycles with atmospheric buildups exploding into devastating bass drops. 140 BPM in Ab Minor, 4/4 time signature.",
+    "lyrics": null,
+    "char_count": 567,
+    "instruments": [
+      "wobble bass",
+      "aggressive sub-bass",
+      "half-time drums"
+    ],
+    "form": "Build-Drop",
+    "time": "4/4",
+    "bpm": 140,
+    "key": "Ab Minor"
+  },
+  {
+    "id": "SI119",
+    "genre": "Enka",
+    "sp": "Enka featuring Japanese vocals. Shamisen plays sparse, rhythmic accompaniment with sharp bachi plucking and melodic fills between vocal phrases. Koto provides delicate, arpeggiated harmonic support with gentle plucked patterns and subtle string bends. Shakuhachi delivers haunting, breathy interludes with controlled overblowing and expressive pitch bending. The vocals feature a rich, melismatic singing style with dramatic vibrato and emotional kobushi ornamentation. The arrangement is elegant and emotionally intense, with restrained instrumentation that showcases the vocal drama. 70 BPM in C# Minor, 4/4 time signature.",
+    "lyrics": "[Verse 1]\n夜の港に 波が寄せて\n遠い灯りが 揺れている\nあなたの声が 風に乗って\nこの胸の中 響いている\n\n[Chorus]\n忘れられない あの日の空\n涙の雨が 降り続く\nただひとつだけ 願いがある\nもう一度だけ 会いたくて\n\n[Verse 2]\n桜散る道 ひとり歩く\n思い出だけが 寄り添って\n月が照らした あの小道を\n今もまだ夢に 見ている\n\n[Chorus]\n忘れられない あの日の空\n涙の雨が 降り続く\nただひとつだけ 願いがある\nもう一度だけ 会いたくて\n\n[Bridge]\n季節は巡り 時は流れ\n変わらぬ想い 胸に抱いて\n\n[Final Chorus]\n忘れられない あの日の空\n涙の雨が 降り続く\nただひとつだけ 願いがある\nもう一度だけ 会いたくて",
+    "char_count": 625,
+    "instruments": [
+      "shamisen",
+      "koto",
+      "shakuhachi"
+    ],
+    "form": "Strophic",
+    "time": "4/4",
+    "bpm": 70,
+    "key": "C# Minor"
+  },
+  {
+    "id": "SI120",
+    "genre": "Fado",
+    "sp": "Fado featuring Portuguese vocals. Portuguese guitar plays intricate, tremolo melodic lines with a bright, metallic twelve-string tone and rapid ornamental runs. Nylon-string guitar provides warm, fingerpicked harmonic accompaniment with gentle arpeggiated chords and rhythmic strumming. Upright bass delivers a deep, resonant foundation with slow, legato walking lines and sustained root notes. The vocals feature a powerful, emotionally raw singing style with melismatic phrasing and aching vibrato. The arrangement is intimate and melancholic, with sparse instrumentation that lets the saudade of the voice fill the room. 65 BPM in F Minor, 3/4 time signature.",
+    "lyrics": "[Verse 1]\nNa noite escura do mar\nAs ondas cantam saudade\nUm barco longe a navegar\nLevando a minha metade\n\n[Chorus]\nO fado, o destino meu\nQue dor tao grande me deste\nO amor que me prometeu\nFoi sombra que apareceste\n\n[Verse 2]\nNas ruas velhas da cidade\nA lua chora comigo\nGuardei no peito a verdade\nDe um amor que foi castigo\n\n[Chorus]\nO fado, o destino meu\nQue dor tao grande me deste\nO amor que me prometeu\nFoi sombra que apareceste\n\n[Bridge]\nA guitarra chora baixinho\nA noite abraca o silencio\nSigo sozinho o caminho\nDa saudade e do misterio\n\n[Final Chorus]\nO fado, o destino meu\nQue dor tao grande me deste\nO amor que me prometeu\nFoi sombra que apareceste",
+    "char_count": 662,
+    "instruments": [
+      "Portuguese guitar",
+      "nylon-string guitar",
+      "upright bass"
+    ],
+    "form": "Strophic",
+    "time": "3/4",
+    "bpm": 65,
+    "key": "F Minor"
+  }
+]
