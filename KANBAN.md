@@ -1,10 +1,12 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] 사전 v3.1 — DB 교차분석 27개 + key change 추가 완료, S시리즈 추가 수신 시 재빌드
-- [sunolanguage] S_PU 54곡 pump-up 판정 — songs_test_lab INSERT 완료 (test_id 1~54). 재분석 미실시 → sunomusic WF-3 대기
-- [sunolanguage] S002 12곡 분석 — suno_reanalysis 누락 확정, UUID/재분석 sunomusic에서 수령 필요
-- [sunolanguage] S_PU 나머지 4장르 36곡 — 1차 54곡 분석 후 진행 여부 결정
+- [sunolanguage] 곡 만들기 — Leo 지시 (다음 세션), sp_builder.py + 코퍼스 기반 SP 작성 실습
+- [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
+- [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (발주+정책 합의 완료 2026-05-25, LEO 가동 승인 대기)
+- [sunolanguage] S_PU 54곡 pump-up 판정 — songs_test_lab INSERT 완료, sunomusic WF-3 재분석 대기
+- [sunolanguage] S002 12곡 분석 — UUID/재분석 sunomusic에서 수령 필요
+- [sunolanguage] 사전 v3.1 — S시리즈 추가 수신 시 재빌드
 
 ## TODO
 ### v5.5 검증
@@ -18,7 +20,7 @@
 - [sunolanguage] 미검증 25개 S019+ 데이터로 hit_rate 실측 (v1.3 네이티브 재작성은 완료)
 
 ### 검증 대기
-- [sunolanguage] W002 Wave 2 장르 균등화 60곡 — sunolanguage 자체 영역 (sunomusic 5/17 확인)
+- [sunolanguage] W002 Wave 2 장르 균등화 60곡 — 프로토콜+녹음목록 완성 (2026-05-25), Leo 녹음 착수 필요
 - [sunolanguage] S007-S015 82곡 — sunomusic 미착수, Leo 우선순위 결정 필요
 - [sunolanguage] 55 Best 출처 확인 대기 — sunomusic 회신 후 corpus 합류 여부 결정
 
@@ -30,6 +32,9 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] W002 균등화 프로토콜+녹음목록 설계 — 7장르 60곡 비례 배분 — 2026-05-25 ✅
+- [sunolanguage] sunolang DDL 설계 + json_to_db.py — 4테이블 스키마 + 적재 스크립트 + admin 요청 — 2026-05-25 ✅
+- [sunolanguage] sunolang 코퍼스 DB 독립 테이블 결정 ACK — leomusic2 경유 Leo 결정 수신 — 2026-05-25 ✅
 - [sunolanguage] ch5 보강 — §5.7 BPM 재해석 + §5.8 구조 제어 데드존 + §5.9 장르 데드존 (164→283행) — 2026-05-25 ✅
 - [sunolanguage] S_BP 21곡 sunomusic 발주 — [] vs () 비교 테스트, SP+가사 7종 전문 포함 — 2026-05-25 ✅
 - [sunolanguage] Moonlit Sleep 자문 회신 — 코퍼스 385행 기반 Q1~Q6 답변 (BPM 하한/lo-fi 패턴/ambient/instrumental/장르토큰/loop) — 2026-05-25 ✅
