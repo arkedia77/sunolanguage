@@ -12,7 +12,7 @@
 - [sunolanguage] Top-Anchor A/B 테스트 (S018에 내장)
 - [sunolanguage] 네거티브 프롬프팅 효과 측정 (S018 7곡에 배정)
 - [sunolanguage] SP 길이별 테스트 200/500/900자 (S018_03/08/12)
-- [sunolanguage] S_BP 시리즈 sunomusic 발주 — `data/bracket_vs_paren_test_protocol.md` 참조 (설계 완료, 발주 대기)
+- [sunolanguage] S_BP 21곡 sunomusic 생성 대기 — 발주 완료 2026-05-25, 결과 회신 대기
 
 ### genre_frontier 후속
 - [sunolanguage] 미검증 25개 S019+ 데이터로 hit_rate 실측 (v1.3 네이티브 재작성은 완료)
@@ -24,11 +24,15 @@
 
 ### 책 본문
 - [sunolanguage] 3·4장 W002+S007-S015 데이터 반영 (현재 K-장르+SP 길이까지 반영 완료)
+- [sunolanguage] ch5 추가 보강 — W002/S007-S015 데이터 반영 시 업데이트 (현재 283행, BPM/구조/장르 데드존 추가 완료)
 
 ## BLOCKED
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] ch5 보강 — §5.7 BPM 재해석 + §5.8 구조 제어 데드존 + §5.9 장르 데드존 (164→283행) — 2026-05-25 ✅
+- [sunolanguage] S_BP 21곡 sunomusic 발주 — [] vs () 비교 테스트, SP+가사 7종 전문 포함 — 2026-05-25 ✅
+- [sunolanguage] Moonlit Sleep 자문 회신 — 코퍼스 385행 기반 Q1~Q6 답변 (BPM 하한/lo-fi 패턴/ambient/instrumental/장르토큰/loop) — 2026-05-25 ✅
 - [sunolanguage] S_PU 54곡 songs_test_lab INSERT — 6장르×3조건×3rep, test_id 1~54 — 2026-05-24 ✅
 - [sunolanguage] songs_test_lab 신설 + role_sunolanguage LOGIN 활성화 — LEO 결정, admin 구현 — 2026-05-24 ✅
 - [sunolanguage] sp_builder.py §1.10/§1.11 준수 수정 — 오프닝/7문장/drums/보컬 5건 수정 — 2026-05-24 ✅

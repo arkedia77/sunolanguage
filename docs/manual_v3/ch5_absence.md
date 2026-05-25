@@ -154,7 +154,122 @@ Suno가 인식하지 못하거나 의도적으로 무시하는 표현:
 | 분위기 | jazz-influenced(35), high-energy(17), powerful(22) | 3개 |
 | 악기 | fiddle(6), bodhrán(2), guiro(1), log drum(5), reese bass(1), whistle(3) | 6개 |
 
-## 5.7 SP 작성을 위한 시사점
+## 5.7 BPM 재해석 — Suno가 템포를 자의적으로 바꾼다
+
+385행 코퍼스에서 original_sp와 reanalysis_sp 양쪽에 BPM이 명시된 58쌍을 대조한 결과:
+
+| 구분 | 수치 |
+|------|------|
+| BPM 일치 | 5/58 (8.6%) |
+| BPM 변경 | 53/58 (**91.4%**) |
+
+Suno는 SP에 명시된 BPM을 거의 그대로 따르지 않는다.
+
+### 저BPM 더블링 패턴
+
+BPM 80 이하에서 Suno의 재해석이 가장 극단적이다:
+
+| 입력 BPM | 결과 BPM | 시프트 | 곡 |
+|---------|---------|--------|-----|
+| 60 | 210 | +150 | S003_09 Harp — 반박자 재해석 |
+| 60 | 120 | +60 | S004_04 Oboe — 2배 더블링 |
+| 66 | 124 | +58 | S003_04 Oboe — 2배 근사 |
+| 68 | 105 | +37 | S016_07 Quiet Piano Room |
+| 72 | 210 | +138 | S016_05 Cello+Piano — 3배 근사 |
+| 80 | 130 | +50 | S016_09 Nylon Guitar |
+
+해석: Suno가 BPM 60 이하 음원을 들으면 내부적으로 2~3배 더블링으로 재해석한다. SP에 50 BPM을 명시해도 100+ BPM으로 처리할 가능성이 높다.
+
+### 코퍼스 BPM 분포
+
+387건의 SP에서 추출한 BPM 분포:
+
+| 구간 | 곡수 | 비율 |
+|------|------|------|
+| 60~69 | 10 | 2.6% |
+| **70~79** | **119** | **30.7%** — 최빈 구간 |
+| 80~89 | 52 | 13.4% |
+| 90~99 | 43 | 11.1% |
+| 100~109 | 26 | 6.7% |
+| 110~119 | 47 | 12.1% |
+| 120~129 | 43 | 11.1% |
+
+코퍼스 최솟값은 65 BPM (Doom Metal 1건). 68 BPM이 10건(전부 K-Ballad)으로 Suno가 안정적으로 생성하는 실질적 하한이다. BPM 40~55 구간은 **0건**.
+
+### SP 작성 시사점
+
+- `72 BPM` — Suno가 가장 많이 생성하는 느린 템포 (K-Ballad 표준)
+- `68 BPM` — 안정적 하한. 이 이하는 Suno가 자의적 재해석 위험
+- BPM 50 이하를 원한다면 SP가 아닌 DAW 후처리(타임 스트레칭)로 접근
+
+## 5.8 구조 제어 데드존 — Suno SP의 경계
+
+385건 SP 전문에서 곡의 매크로 구조를 제어하려는 토큰 검색 결과:
+
+| 토큰 | 출현 수 | 용법 |
+|------|--------:|------|
+| loop | 15 | **전부 묘사적** — "four-bar loop", "piano loop" (악기가 루프를 연주한다는 뜻) |
+| seamless | 0 | — |
+| fade in | 0 | — |
+| fade out | 0 | — |
+| no intro | 0 | — |
+| no outro | 0 | — |
+| crossfade | 0 | — |
+
+Suno의 SP 언어는 **악기·편성·템포·조성**을 기술하는 체계다. 곡의 시작/종료/전환 같은 매크로 구조는 SP의 제어 범위 밖이다.
+
+`loop`가 15회 등장하지만 이는 "반복 패턴을 연주한다"라는 악기 기법 묘사이지 "곡을 루프하라"는 구조 지시가 아니다. Suno는 `repetitive four-bar loop`, `consistent dynamic level`, `minimal structural variation` 같은 간접 묘사로 loop-friendly 특성을 유도할 수 있지만, 이는 보장이 아닌 경향성이다.
+
+### 브래킷 구조 제어와의 비교
+
+가사 채널 브래킷은 제한적 구조 제어가 가능하다:
+- `[drop out]` (4회) — 악기 퇴장
+- `[fade out]` / `[fades out]` (각 3회) — 페이드 아웃
+- `[Intro]`, `[Verse]`, `[Chorus]`, `[Bridge]`, `[Outro]` — 섹션 마커
+
+즉, 구조 제어는 SP가 아닌 **가사 브래킷**의 영역이다. SP에서 구조를 제어하려는 시도는 데드존이다.
+
+## 5.9 장르 데드존 — Suno가 모르는 장르 영역
+
+385행 코퍼스의 reanalysis_genre 전수 조사에서 Suno가 자발적으로 사용한 장르 토큰과 **한 번도 등장하지 않은** 장르 영역:
+
+### Suno 네이티브 장르 (코퍼스에서 확인)
+
+| 영역 | 예시 | 코퍼스 건수 |
+|------|------|----------:|
+| K-Pop/K-Ballad 계열 | K-Pop ballad, K-Pop R&B, K-Indie folk ballad | 300+ |
+| 월드뮤직 | Bossa Nova(4), Gypsy Jazz(4), Amapiano(2) | 15+ |
+| 서양 록/팝 | Synthwave(1), Doom Metal(1), Acid House(1) | 10+ |
+| Lo-fi | Lo-fi hip hop(1), Lofi hip hop(1), Korean Lo-fi Hip Hop(1) | 3 |
+| 재즈 | Smooth jazz fusion(2), Bebop→Bossa nova 재해석(1) | 5+ |
+
+### 코퍼스 0건 장르 (데드존)
+
+| 장르 | 코퍼스 | SP 내 키워드 | 판정 |
+|------|--------|------------|------|
+| **ambient** (순수) | 0건 (장르 토큰) | 4건 (부차적 수식어: "ambient swells") | 장르로 미인식. 수식어로만 사용 |
+| **drone** | 0건 (장르 토큰) | 2건 ("sustained drones" — 기법 묘사) | 장르 아닌 기법 |
+| **Nordic dark ambient** | 0건 | 0건 | 완전 데드존 |
+| **sleep / sleep music** | 0건 | 0건 | 완전 데드존 |
+| **chill / chillhop** | 0건 | 0건 | 완전 데드존 |
+| **meditation / healing** | 0건 | 0건 | 완전 데드존 |
+| **ASMR** | 0건 | 0건 | 완전 데드존 |
+| **new age** | 0건 | 0건 | 완전 데드존 |
+
+### 해석
+
+Suno의 학습 데이터와 생성 능력은 **구조적·리듬적 음악**에 집중되어 있다. 팝, 록, 발라드, 펑크, 재즈처럼 명확한 비트·멜로디·화성 구조가 있는 장르에서 강하고, ambient·drone·sleep처럼 무구조·무멜로디·무리듬 음악은 코퍼스에 거의 반영되지 않았다.
+
+`ambient`라는 단어 자체는 Suno가 알지만(4건), 이는 "ambient pad"나 "ambient swells" 같은 **수식어**로서의 사용이지 **장르 정체성**이 아니다. SP에 `ambient` 장르를 명시해도 Suno가 순수 ambient 결과물을 안정적으로 생성한다는 코퍼스 근거는 없다.
+
+### SP 작성 시사점
+
+- 순수 ambient/drone이 필요하면 Suno 외 도구(AIVA, Mubert 등) 병행 권장
+- Suno로 접근해야 한다면 `Downtempo electronic` + 구체적 악기 편성으로 최소한의 구조를 부여
+- `sleep`, `meditation`, `healing`, `ASMR` 같은 기능적 장르 토큰은 Suno에 무의미
+- Lo-fi hip hop은 네이티브 확인 (3건) — BPM 82~88, vinyl crackle + jazz chords 패턴
+
+## 5.10 SP 작성을 위한 종합 시사점
 
 1. **코드명 넣지 마라** — 0건. `key of F minor`까지가 Suno의 화성 인식 한계
 2. **다이내믹 마킹 넣지 마라** — 0건. `builds`, `swells`, `drops`로 대체
@@ -162,3 +277,7 @@ Suno가 인식하지 못하거나 의도적으로 무시하는 표현:
 4. **마스터링 지시 넣지 마라** — 2건. Suno는 트랙 레벨 프로덕션까지만 인식
 5. **absence를 활용하라** — `no percussion`, `solo cello` 같은 명시적 부재 지시는 유효 (총 21회)
 6. **1층 어휘를 우선 사용하라** — 이 장의 3계층 모델에서 1층 어휘가 가장 확실한 Suno 반응을 보장
+7. **BPM 68 이상을 유지하라** — 코퍼스 실질 하한. 이하는 Suno가 2~3배 더블링으로 재해석
+8. **구조 제어는 가사 브래킷으로** — SP에서 fade/loop/intro 제어는 데드존. `[Outro]`, `[fade out]` 등 가사 채널 활용
+9. **순수 ambient/drone은 Suno 약점** — 코퍼스 0건. 구조적 음악(비트·멜로디 있는)으로 접근하거나 외부 도구 병행
+10. **BPM 시프트를 감안하라** — 91.4% 변경률. SP BPM은 목표가 아닌 힌트. 최종 BPM은 Suno 재량
