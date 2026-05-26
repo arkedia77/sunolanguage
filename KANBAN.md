@@ -1,7 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **S_INST200 200곡 sunomusic 발주 대기** — 5세션 전량 완료 (SI001-SI200, DB test_id 55-254), 200곡 일괄 발주 준비
+- [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26, 200곡 SP+가사 전문 전송 완료, 결과 회신 대기
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
 - [sunolanguage] S_PU 54곡 pump-up 판정 — songs_test_lab INSERT 완료, sunomusic WF-3 재분석 대기
