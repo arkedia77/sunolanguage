@@ -1,6 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
+- [sunolanguage] **Serendipity Engine (SP + Lyrics)** — SP 10,646 + Lyrics 2,539 Qdrant 완료, pair 5/5 PASS, **다음: 가사 2행 커플릿 하이브리드 구현** (전문가 4인 자문 합의)
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26, 200곡 SP+가사 전문 전송 완료, 결과 회신 대기
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
@@ -32,6 +33,11 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] Lyrics Corpus 시스템 E2E 완주 — 2,539 섹션 다국어 임베딩, pair 5/5 PASS, coherence 0.55 — 2026-05-28 ✅
+- [sunolanguage] Serendipity Engine E2E 완주 — Qdrant 10,646 청크 임베딩, 20/20 PASS (drift 0.5+0.8 네이티브 100%), Gate 1~3 통과 — 2026-05-28 ✅
+- [sunolanguage] Serendipity Engine 6개 스크립트 작성 — chunk_builder/embed_pipeline/serendipity/slot_assembler/preset_validator/preset_engine — 2026-05-28 ✅
+- [sunolanguage] chunks.json 10,646건 빌드 — SP 5,690 + Bracket 4,956, 437곡 192장르 — 2026-05-27 ✅
+- [sunolanguage] Notion 설계 문서 게시 — 아키텍처+Gate 워크플로우+기술스택+CLI — 2026-05-27 ✅
 - [sunolanguage] W002 균등화 프로토콜+녹음목록 설계 — 7장르 60곡 비례 배분 — 2026-05-25 ✅
 - [sunolanguage] sunolang DDL 설계 + json_to_db.py — 4테이블 스키마 + 적재 스크립트 + admin 요청 — 2026-05-25 ✅
 - [sunolanguage] sunolang 코퍼스 DB 독립 테이블 결정 ACK — leomusic2 경유 Leo 결정 수신 — 2026-05-25 ✅

@@ -1,0 +1,376 @@
+#!/usr/bin/env python3
+"""
+lyrics_engine.py — Lyrics Corpus Retrieval Engine CLI.
+
+Commands:
+    search     Search lyrics sections by theme/keyword
+    match-sp   Find lyrics matching an SP preset's genre/mood
+    assemble   Build a coherent lyrics sheet from a seed section
+    pair       Generate SP preset + matching lyrics in one shot
+    batch      Generate N SP+lyrics packages with validation
+    stats      Show Qdrant collection and corpus stats
+
+Usage:
+    python scripts/lyrics_engine.py search "밤하늘 아래" --section=chorus
+    python scripts/lyrics_engine.py match-sp "K-Pop ballad. Clean electric guitar..."
+    python scripts/lyrics_engine.py assemble --seed-song=1
+    python scripts/lyrics_engine.py pair --seed="acoustic guitar" --drift=0.5
+    python scripts/lyrics_engine.py batch --count=5 --validate
+    python scripts/lyrics_engine.py stats
+"""
+
+import json
+import os
+import sys
+import time
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
+
+HISTORY_DIR = PROJECT_ROOT / "data" / "lyrics_history"
+
+
+def cmd_search(args: list[str]):
+    from lyrics_retriever import theme_search, format_results, get_client, get_model
+
+    query = "사랑"
+    section = None
+    genre = None
+    language = None
+    limit = 5
+
+    positional_done = False
+    for a in args:
+        if a.startswith("--section="):
+            section = a.split("=")[1]
+        elif a.startswith("--genre="):
+            genre = a.split("=")[1]
+        elif a.startswith("--language="):
+            language = a.split("=")[1]
+        elif a.startswith("--limit="):
+            limit = int(a.split("=")[1])
+        elif not a.startswith("--") and not positional_done:
+            query = a
+            positional_done = True
+
+    print(f"Search: '{query}'" +
+          (f" section={section}" if section else "") +
+          (f" genre={genre}" if genre else ""))
+    print()
+
+    client = get_client()
+    model = get_model()
+    results = theme_search(query, section_tag=section, genre=genre,
+                           language=language, limit=limit,
+                           client=client, model=model)
+    print(format_results(results))
+
+
+def cmd_match_sp(args: list[str]):
+    from lyrics_retriever import match_sp, format_results, get_client, get_model
+
+    sp_text = ""
+    sections = ["verse", "chorus", "bridge"]
+    from_preset = False
+    seed = "acoustic guitar"
+    drift = 0.5
+
+    for a in args:
+        if a.startswith("--sections="):
+            sections = a.split("=")[1].split(",")
+        elif a.startswith("--from-preset"):
+            from_preset = True
+        elif a.startswith("--seed="):
+            seed = a.split("=")[1]
+        elif a.startswith("--drift="):
+            drift = float(a.split("=")[1])
+        elif not a.startswith("--"):
+            sp_text = a
+
+    if from_preset:
+        from serendipity import controlled_drift, get_client as sp_client, get_model as sp_model
+        from slot_assembler import assemble_sp
+        preset = controlled_drift(seed, drift_factor=drift,
+                                  client=sp_client(), model=sp_model())
+        sp_text = assemble_sp(preset)
+        print(f"Generated SP ({len(sp_text)} chars): {sp_text[:80]}...")
+        print()
+
+    if not sp_text:
+        print("Need SP text or --from-preset flag")
+        return
+
+    client = get_client()
+    model = get_model()
+    results = match_sp(sp_text, sections=sections, client=client, model=model)
+
+    for section, hits in results.items():
+        print(f"--- {section} ---")
+        print(format_results(hits))
+        print()
+
+
+def cmd_assemble(args: list[str]):
+    from lyrics_retriever import coherent_assemble, get_client, get_model
+    from lyrics_assembler import assemble_lyrics, lyrics_summary
+    from lyrics_validator import validate_lyrics, print_validation
+
+    seed_song = None
+    seed_text = None
+    do_validate = False
+
+    for a in args:
+        if a.startswith("--seed-song="):
+            seed_song = int(a.split("=")[1])
+        elif a.startswith("--seed-text="):
+            seed_text = a.split("=")[1]
+        elif a == "--validate":
+            do_validate = True
+
+    client = get_client()
+    model = get_model()
+
+    results = coherent_assemble(
+        seed_song_id=seed_song, seed_text=seed_text,
+        client=client, model=model,
+    )
+
+    if not results:
+        return
+
+    selected = {}
+    metas = []
+    for tag, hits in results.items():
+        if hits:
+            best = hits[0]["payload"]
+            selected[tag] = best
+            metas.append(best)
+
+    print("=== Selected Sections ===")
+    print(lyrics_summary(selected))
+    print()
+
+    lyrics = assemble_lyrics(selected)
+    print("=== Assembled Lyrics ===")
+    print(lyrics)
+    print(f"\nLength: {len(lyrics)} chars")
+
+    if do_validate:
+        print()
+        result = validate_lyrics(lyrics, sections_meta=metas)
+        print_validation(result)
+
+
+def cmd_pair(args: list[str]):
+    from serendipity import controlled_drift
+    from serendipity import get_client as sp_get_client, get_model as sp_get_model
+    from slot_assembler import assemble_sp
+    from preset_validator import validate_sp, print_validation as sp_print_validation
+    from lyrics_retriever import match_sp, get_client, get_model
+    from lyrics_assembler import assemble_lyrics
+    from lyrics_validator import validate_lyrics, print_validation as lyr_print_validation
+
+    seed = "acoustic guitar"
+    drift = 0.5
+    do_validate = False
+    sections = ["verse", "pre_chorus", "chorus", "bridge", "outro"]
+
+    for a in args:
+        if a.startswith("--seed="):
+            seed = a.split("=")[1]
+        elif a.startswith("--drift="):
+            drift = float(a.split("=")[1])
+        elif a == "--validate":
+            do_validate = True
+        elif a.startswith("--sections="):
+            sections = a.split("=")[1].split(",")
+
+    print(f"Pair: seed='{seed}', drift={drift}")
+    print()
+
+    sp_client = sp_get_client()
+    sp_model = sp_get_model()
+    preset = controlled_drift(seed, drift_factor=drift, client=sp_client, model=sp_model)
+    sp_text = assemble_sp(preset)
+
+    print(f"=== SP ({len(sp_text)} chars) ===")
+    print(sp_text)
+    print()
+
+    lyr_client = get_client()
+    lyr_model = get_model()
+    matched = match_sp(sp_text, sections=sections,
+                       client=lyr_client, model=lyr_model)
+
+    selected = {}
+    metas = []
+    for tag, hits in matched.items():
+        if hits:
+            best = hits[0]["payload"]
+            selected[tag] = best
+            metas.append(best)
+
+    lyrics = assemble_lyrics(selected)
+    print(f"=== Lyrics ({len(lyrics)} chars) ===")
+    print(lyrics)
+
+    if do_validate:
+        print()
+        print("--- SP Validation ---")
+        sp_result = validate_sp(sp_text)
+        sp_print_validation(sp_result)
+
+        print("--- Lyrics Validation ---")
+        lyr_result = validate_lyrics(lyrics, sections_meta=metas)
+        lyr_print_validation(lyr_result)
+
+
+def cmd_batch(args: list[str]):
+    from serendipity import controlled_drift
+    from serendipity import get_client as sp_get_client, get_model as sp_get_model
+    from slot_assembler import assemble_sp
+    from preset_validator import validate_sp
+    from lyrics_retriever import match_sp, get_client, get_model
+    from lyrics_assembler import assemble_lyrics
+    from lyrics_validator import validate_lyrics
+
+    count = 5
+    seed = "acoustic guitar"
+    drift = 0.5
+    do_validate = True
+    save = False
+
+    for a in args:
+        if a.startswith("--count="):
+            count = int(a.split("=")[1])
+        elif a.startswith("--seed="):
+            seed = a.split("=")[1]
+        elif a.startswith("--drift="):
+            drift = float(a.split("=")[1])
+        elif a == "--save":
+            save = True
+        elif a == "--no-validate":
+            do_validate = False
+
+    print(f"Batch: {count} SP+lyrics packages, seed='{seed}', drift={drift}")
+    print()
+
+    sp_client = sp_get_client()
+    sp_model = sp_get_model()
+    lyr_client = get_client()
+    lyr_model = get_model()
+
+    results = []
+    t0 = time.time()
+
+    for i in range(count):
+        preset = controlled_drift(seed, drift_factor=drift,
+                                  client=sp_client, model=sp_model)
+        sp_text = assemble_sp(preset)
+
+        matched = match_sp(sp_text, sections=["verse", "chorus", "bridge"],
+                           client=lyr_client, model=lyr_model)
+        selected = {}
+        metas = []
+        for tag, hits in matched.items():
+            if hits:
+                selected[tag] = hits[0]["payload"]
+                metas.append(hits[0]["payload"])
+
+        lyrics = assemble_lyrics(selected)
+
+        entry = {
+            "index": i,
+            "sp": sp_text,
+            "lyrics": lyrics,
+            "sp_length": len(sp_text),
+            "lyrics_length": len(lyrics),
+        }
+
+        if do_validate:
+            sp_val = validate_sp(sp_text)
+            lyr_val = validate_lyrics(lyrics, sections_meta=metas)
+            entry["sp_validation"] = sp_val
+            entry["lyrics_validation"] = lyr_val
+            print(f"  [{i + 1:3d}/{count}] SP={len(sp_text)}c [{sp_val['verdict']}] "
+                  f"| Lyrics={len(lyrics)}c [{lyr_val['verdict']}] "
+                  f"coherence={lyr_val['coherence_score']:.2f}")
+        else:
+            print(f"  [{i + 1:3d}/{count}] SP={len(sp_text)}c | Lyrics={len(lyrics)}c")
+
+        results.append(entry)
+
+    elapsed = time.time() - t0
+    print(f"\nGenerated {count} packages in {elapsed:.1f}s")
+
+    if do_validate:
+        sp_pass = sum(1 for r in results if r["sp_validation"]["verdict"] == "PASS")
+        lyr_pass = sum(1 for r in results if r["lyrics_validation"]["verdict"] == "PASS")
+        avg_coh = sum(r["lyrics_validation"]["coherence_score"] for r in results) / len(results)
+        print(f"  SP: {sp_pass}/{count} PASS")
+        print(f"  Lyrics: {lyr_pass}/{count} PASS")
+        print(f"  Avg coherence: {avg_coh:.2f}")
+
+    if save:
+        HISTORY_DIR.mkdir(parents=True, exist_ok=True)
+        ts = time.strftime("%Y%m%d_%H%M%S")
+        out_path = HISTORY_DIR / f"lyrics_batch_{ts}.json"
+        with open(out_path, "w") as f:
+            json.dump(results, f, ensure_ascii=False, indent=2)
+        print(f"  Saved to {out_path}")
+
+
+def cmd_stats(args: list[str]):
+    from lyrics_embed_pipeline import cmd_stats as qdrant_stats
+
+    chunks_file = PROJECT_ROOT / "data" / "lyrics_chunks.json"
+    if chunks_file.exists():
+        with open(chunks_file) as f:
+            chunks = json.load(f)
+        print(f"Local lyrics chunks: {len(chunks)}")
+        by_tag = {}
+        for c in chunks:
+            tag = c["payload"]["section_tag"]
+            by_tag[tag] = by_tag.get(tag, 0) + 1
+        for tag, count in sorted(by_tag.items(), key=lambda x: -x[1]):
+            print(f"  {tag}: {count}")
+        print()
+
+    print("Qdrant collection:")
+    try:
+        qdrant_stats()
+    except Exception as e:
+        print(f"  (unavailable: {e})")
+
+
+def main():
+    args = sys.argv[1:]
+    if not args:
+        print(__doc__)
+        sys.exit(0)
+
+    cmd = args[0]
+    rest = args[1:]
+
+    commands = {
+        "search": cmd_search,
+        "match-sp": cmd_match_sp,
+        "assemble": cmd_assemble,
+        "pair": cmd_pair,
+        "batch": cmd_batch,
+        "stats": cmd_stats,
+    }
+
+    if cmd in commands:
+        commands[cmd](rest)
+    elif cmd in ("--help", "-h"):
+        print(__doc__)
+    else:
+        print(f"Unknown command: {cmd}")
+        print(f"Available: {', '.join(commands.keys())}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
