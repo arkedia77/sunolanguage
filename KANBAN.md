@@ -1,11 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **브래킷 코퍼스 설계** — bracket_entities_v3.json 4,956청크 → 장르별 브래킷 프리셋 + Intro/Interlude/Outro 자동 배치 (Leo 지시 2026-05-29, 다음 세션 즉시 착수)
-- [sunolanguage] **코퍼스 노이즈 정리** — 5,925 가사 청크 노이즈 스캔 + 인제스트 밸리데이션 게이트 (Leo 지시 2026-05-29)
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
-- [sunolanguage] **Serendipity Engine (SP + Lyrics)** — SP 10,646 + Lyrics 5,925 하이브리드 Qdrant 완료, **다음: Gate 4 성장 검증 (S_INST200 수신 후)**
-- [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26, 200곡 SP+가사 전문 전송 완료, 결과 회신 대기
+- [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 10,646 + Lyrics 5,858 + Bracket 4,956 Qdrant 가동 중, **다음: Gate 4 성장 검증 (S_INST200 수신 후)**
+- [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
 - [sunolanguage] S_PU 54곡 pump-up 판정 — songs_test_lab INSERT 완료, sunomusic WF-3 재분석 대기
@@ -36,6 +34,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **우연엔진 보강 3대 개선** — bracket_presets.py 신규(Intro/Interlude/Outro 자동 브래킷) + corpus_quality_gate.py 신규(67건 dedup→CLEAN) + coherence 0.44→0.51(+16%) + FAIL 15→10% + fallback 체인 — 2026-05-29 ✅
 - [sunolanguage] **N시리즈 파이프라인 v2 구현** — song_forms.py + title_generator.py 신규, lyrics_retriever/assembler/engine 개선, V1≠V2 100%, 7종폼/10곡, 제목 자동 생성 — 2026-05-29 ✅
 - [sunolanguage] N001/N002 코퍼스 어휘 충실도 분석 — 커버리지 98.3%, Novel 12/320 — 2026-05-29 ✅
 - [sunolanguage] N001+N002 20/20 Suno 생성 전곡 완료 — gid 20311~20330, 40클립, 통합DB UPDATE — 2026-05-29 ✅

@@ -36,7 +36,8 @@ def _get_model():
     return _model_cache
 
 
-def validate_lyrics(lyrics_text: str, sections_meta: list[dict] = None) -> dict:
+def validate_lyrics(lyrics_text: str, sections_meta: list[dict] = None,
+                    song_form: list[str] = None) -> dict:
     issues = []
 
     parsed_sections = re.findall(r"\[([^\]]+)\]\s*\n(.*?)(?=\n\[|\Z)", lyrics_text, re.DOTALL)
@@ -44,16 +45,28 @@ def validate_lyrics(lyrics_text: str, sections_meta: list[dict] = None) -> dict:
     has_verse = any("verse" in tag.lower() for tag, _ in parsed_sections)
     has_chorus = any("chorus" in tag.lower() or "hook" in tag.lower() for tag, _ in parsed_sections)
 
+    form_requires_chorus = True
+    if song_form:
+        form_requires_chorus = any(t in ("chorus", "hook") for t in song_form)
+
     if not has_verse:
         issues.append("missing verse section")
-    if not has_chorus:
+    if not has_chorus and form_requires_chorus:
         issues.append("missing chorus/hook section")
 
     total_chars = len(lyrics_text)
     if total_chars > LYRICS_CHAR_LIMIT:
         issues.append(f"exceeds {LYRICS_CHAR_LIMIT} char limit ({total_chars})")
 
-    section_texts = [text.strip() for _, text in parsed_sections if text.strip()]
+    NON_LYRIC_TAGS = {"intro", "outro", "interlude", "instrumental"}
+    section_texts = []
+    for tag, text in parsed_sections:
+        text = text.strip()
+        if not text:
+            continue
+        if tag.lower().split()[0] in NON_LYRIC_TAGS:
+            continue
+        section_texts.append(text)
 
     coherence = compute_coherence(section_texts) if len(section_texts) >= 2 else 1.0
 

@@ -1,0 +1,950 @@
+[
+  {
+    "index": 0,
+    "title": "덧칠한",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "겹칠수록",
+      "기분",
+      "주파수",
+      "우리",
+      "시간"
+    ],
+    "sp": "K-Pop acoustic ballad. K-Pop Hip-Hop track featuring a rhythmic piano loop playing syncopated jazz chords. syncopated piano chords, vinyl crackle, melodic bass enters. layered vocal harmonies, driving disco beat. The production features high-fidelity vocal processing with moderate plate reverb. The arrangement features a bright, nasal male vocal delivery in Korean. The arrangement is sparse and intimate, maintaining a consistent mid-tempo groove.",
+    "lyrics": "[Verse 1]\n시간이 덧칠한 색감이 오히려 아름다워\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n\n[Verse 2]\n각자의 밤을 품고\n각자의 이야기를 가지고\n같은 공간에 서있다\n\n[Chorus]\n겹칠수록 가까워지는 기분\n이 주파수가 우리를 연결해\n\n[Bridge]\n어렵지 않아 패턴이 있어\n받침이 뒤로 가면 연음\n뒤가 ㄱㄷㅂㅅㅈ면 된소리\n뒤가 ㄴㅁ이면 코 소리로\n세 가지만 알면 다 돼\n\n[Verse 3]\n불빛이 닿지 않는 여백에 진짜 이야기가 숨어있어\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[piano filter closes further, reducing high-end clarity]",
+    "sp_length": 450,
+    "lyrics_length": 402,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → verse → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 450,
+      "total_words": 61,
+      "meaningful_words": 30,
+      "native_count": 30,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 402,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6013,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "공간",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "불빛",
+      "여백",
+      "가장",
+      "솔직한",
+      "비어있"
+    ],
+    "sp": "K-Pop ballad with R&B influences. A clean electric guitar plays a jazz-influenced progression with seventh chords and subtle vibrato. A clean electric guitar plays a jazz-influenced progression with seventh chords and subtle vibrato. Drums consist of a tight, dry snare and a soft kick drum. vocal harmony on '이분'. The arrangement features bright, layered synthesizers including a sawtooth lead and shimmering pads. 4/4 time signature.",
+    "lyrics": "[Intro]\n[piano, bass, and light percussion]\n[heavy power chords, energetic drum beat]\n\n[Verse 1]\n대화를 다시 시작했어 그동안 못 했던 이야기들\n서운했던 것들을 꺼내놓으니 오히려 가벼워져\n\n[Chorus]\n건네는 순간 떨렸어\n받던 것보다 주는 게\n이렇게 어려운 줄 몰랐어\n\n[Interlude]\n[instrumental break with funky guitar riff]\n[distorted guitar, driving drums, bass guitar]\n\n[Verse 2]\n불빛이 닿지 않는 여백에 진짜 이야기가 숨어있어\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n\n[Bridge]\n어렵지 않아 패턴이 있어\n받침이 뒤로 가면 연음\n뒤가 ㄱㄷㅂㅅㅈ면 된소리\n뒤가 ㄴㅁ이면 코 소리로\n세 가지만 알면 다 돼\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[piano filter closes further, reducing high-end clarity]",
+    "sp_length": 435,
+    "lyrics_length": 585,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "intro",
+      "verse",
+      "chorus",
+      "interlude",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → chorus → interlude → verse → chorus → bridge → outro",
+    "bracket_sections": 3,
+    "sp_validation": {
+      "sp_length": 435,
+      "total_words": 67,
+      "meaningful_words": 31,
+      "native_count": 31,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 585,
+      "section_count": 8,
+      "has_verse": false,
+      "has_chorus": true,
+      "coherence_score": 0.6285,
+      "verdict": "FAIL",
+      "issues": [
+        "missing verse section"
+      ]
+    }
+  },
+  {
+    "index": 2,
+    "title": "의미",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "모두 같은 손잡이를",
+      "통과하는 우리",
+      "모두",
+      "손잡이",
+      "통과하"
+    ],
+    "sp": "K-Pop, City Pop. legato string pads enter. Synthesizer accents include staccato brass-like stabs and shimmering digital pads. woodblock accents. A soft, breathy male vocal performs a melodic, intimate lead. unison male and female vocals, full band energy. The track is in the key of E Major with a tempo of 120 BPM in 4/4 time.",
+    "lyrics": "[Verse 1]\n그들은 나를 본 적이 있나\n익명의 군중 속에서\n\n[Pre-Chorus]\n내일은 꼭 말할 거야\n떨리지만 이 마음\n\n[Chorus]\n남의 감정은 매일 듣고 있으면서\n내 마음은 통화 대기 중이야\n감정 상담사의 감정은 미연결\n오늘은 나한테 먼저 전화할 거야\n\n[Verse 2]\n무대 위에서 조명 받는 배우가 전부가 아냐\n그 뒤에 드리운 그림자가 진짜 드라마를 만들어\n빛이 보여주는 건 겉이고 그림자가 속을 말해\n\n[Chorus]\n이게 뭔지 모르겠어\n사랑이 되려는 건가\n네 답장 하나에\n하루가 통째로 물드는 것처럼\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜\n\n[Bridge]\n낯선 손의 체온이 손잡이를 통해\n나에게 전해진다\n지하철의 진동과\n사람들의 숨소리가 섞인다\n\n[Chorus]\n모두 같은 손잡이를\n통과하는 우리\n의미 있는지, 우연인지\n누군가에게는 운명이고\n\n[Outro]\n[bright synth lead, distorted electric guitar power chords, driving drums]\n[full band, driving bassline]",
+    "sp_length": 327,
+    "lyrics_length": 545,
+    "genre_group": "RNB",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → chorus → bridge → chorus → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 327,
+      "total_words": 56,
+      "meaningful_words": 24,
+      "native_count": 24,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 545,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4399,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 3,
+    "title": "그들",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "감정",
+      "매일",
+      "듣고",
+      "있으면서",
+      "통화"
+    ],
+    "sp": "K-Pop and City Pop fusion. K-Pop synth-pop track in G Major at 118 BPM. double bass enters with rhythmic root-fifth pattern. Drums enter with a standard backbeat on the snare and a steady kick pattern. The recording has a dry, intimate room acoustic with minimal reverb on the vocals. The production is sparse, emphasizing the natural decay of the strings and the clarity of the vocal track. The arrangement features a solo oboe and flute playing a playful, staccato melody in 3/4 time.",
+    "lyrics": "[Intro]\n[synth bass and atmospheric pads enter]\n[sub-bass enters, atmospheric synth pads]\n\n[Verse 1]\n그들은 나를 본 적이 있나\n익명의 군중 속에서\n\n[Pre-Chorus]\n내일은 꼭 말할 거야\n떨리지만 이 마음\n\n[Chorus]\n모두 같은 손잡이를\n통과하는 우리\n의미 있는지, 우연인지\n누군가에게는 운명이고\n\n[Verse 2]\n우리 역사의 챕터가 되어 빛나고 있어\n\n[Chorus]\n남의 감정은 매일 듣고 있으면서\n내 마음은 통화 대기 중이야\n감정 상담사의 감정은 미연결\n오늘은 나한테 먼저 전화할 거야\n\n[Bridge]\n낯선 손의 체온이 손잡이를 통해\n나에게 전해진다\n지하철의 진동과\n사람들의 숨소리가 섞인다\n\n[Outro]\n[driving synth bass]\n[full band, driving bassline]",
+    "sp_length": 486,
+    "lyrics_length": 446,
+    "genre_group": "RNB",
+    "song_form": [
+      "intro",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → pre_chorus → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 2,
+    "sp_validation": {
+      "sp_length": 486,
+      "total_words": 84,
+      "meaningful_words": 32,
+      "native_count": 32,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 446,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4955,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 4,
+    "title": "beat drops like",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "Caliente, caliente",
+      "The rhythm takes control",
+      "Let the bass",
+      "the bass consume",
+      "bass consume your"
+    ],
+    "sp": "Orchestral soundtrack with a focus on woodwinds and strings. A clean electric guitar provides rhythmic accents with palm-muted strums and occasional arpeggios. A clean electric guitar provides rhythmic accents with palm-muted strums and occasional arpeggios. woodblock accents. The arrangement features atmospheric synth pads and occasional vocal harmonies. The arrangement features a clean electric guitar playing a repetitive four-bar loop of jazz-influenced chords with a slight chorus effect. Key of C Major.",
+    "lyrics": "[Verse 1]\nFuego en la pista tonight\nMoving to the bassline right\nEvery beat drops like a wave\nDancing till the break of day\n\n[Chorus]\nSynth lead melody soars above\n\n[Verse 2]\nPiano keys paint pictures dark\nEvery word falls into line\n\n[Chorus]\nCaliente, caliente\nThe rhythm takes control\nCaliente, caliente\nLet the bass consume your soul\n\n[Bridge]\nBreakdown, filter sweep on bass\n\n[Verse 3]\n(soft, intimate singing)\nSunlight through the window glass\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[oboe melody over piano ostinato]",
+    "sp_length": 512,
+    "lyrics_length": 539,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → verse → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 512,
+      "total_words": 71,
+      "meaningful_words": 37,
+      "native_count": 37,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 539,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4024,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 5,
+    "title": "가까워",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "그런데 영원히 멀어",
+      "침묵",
+      "영원",
+      "설렘",
+      "두려움"
+    ],
+    "sp": "Synthwave with a focus on instructional vocal cues. percussive synth stabs. synth stabs. The arrangement alternates between dense, high-energy sections with full instrumentation and stripped-back passages focusing on the violin and percussion. female vocals with light reverb. The track maintains a consistent dynamic level with minimal structural variation, focusing on the atmospheric repetition of the core loop. Drums feature a tight snare and crisp hi-hats in a steady 4/4 groove at 105 BPM in the key of E Major.",
+    "lyrics": "[Verse 1]\nFull kit enters, bass synth joins\n\n[Chorus]\nSynth lead melody soars above\n\n[Verse 2]\n종 친다 선생님이 여기까지\n교실이 폭발한다\n이어폰 왼쪽을 꽂는다\n오른쪽은 옆자리한테 건네줘\n플리 첫 곡이 시작되면\n창밖이 뮤직비디오가 돼\n\n[Chorus]\n삼 초의 침묵이 영원이 돼\n설렘과 두려움 사이에서 떠\n네 손이 만져질 듯 가까워\n그런데 영원히 멀어\n삼 초 동안 나는 숨을 쉬지 못하고\n너는 화면에서 사라져\n이 시간이 가장 길어\n\n[Bridge]\nBreakdown, filter sweep on bass\n\n[Outro]\n[bright synth pluck, electronic drum beat, syncopated synth bass]\n[arpeggiated synth fades with delay]",
+    "sp_length": 518,
+    "lyrics_length": 435,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 518,
+      "total_words": 80,
+      "meaningful_words": 35,
+      "native_count": 35,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 435,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.3332,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 6,
+    "title": "인생이래",
+    "title_strategy": "short_punch",
+    "title_alternatives": [
+      "감정들",
+      "전부",
+      "가리켜",
+      "얼마",
+      "몰라"
+    ],
+    "sp": "K-Indie pop with a lo-fi aesthetic. vibraphone enters playing the main melody with soft mallets. A nylon-string acoustic guitar plays arpeggiated chords with prominent finger-slide noise. A driving drum kit features a consistent eighth-note hi-hat pattern and a heavy snare backbeat. A bright harmonica provides melodic fills between vocal phrases. final staccato chord from the full band. K-Pop R&B with a mid-tempo groove.",
+    "lyrics": "[Verse 1]\n야 너 얼마 낼 거야\n나도 몰라 일단 뺄게\n뺀다면서 결국 오잖아\n인연은 참 비싸더라\n\n[Chorus]\n축하한다 진심이야\n부케 던질 때 도망갔지만\n네가 행복한 거 맞잖아\n그 얼굴 보면 나도 웃게 돼\n봉투는 가볍지만 마음은 무거워\n아니 반대야 마음은 가벼워\n통장만 가벼운 거야\n\n[Verse 2]\n프로필 사진을 바꿨다 새벽에\n아무도 모르게 슬쩍 갈아치웠다\n셀카 삼백 장 중에 고른 한 장\n각도와 필터와 조명의 합작품\n\n[Chorus]\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜\n\n[Bridge]\n통장이 텅 비어도\n가야 하는 거잖아 그게 인생이래\n\n[Outro]\n[bright synth lead, distorted electric guitar power chords, driving drums]\n[bright synth pluck, electronic drum beat, syncopated synth bass]",
+    "sp_length": 424,
+    "lyrics_length": 463,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 424,
+      "total_words": 64,
+      "meaningful_words": 30,
+      "native_count": 30,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 463,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4723,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 7,
+    "title": "웃으면서",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "더 아프더라",
+      "웃고",
+      "이별인데",
+      "따라",
+      "멍청하게"
+    ],
+    "sp": "K-Pop rock with heavy punk influences. filter sweep on bass. The arrangement includes a brief swing-style jazz breakdown with walking bass and ride cymbal patterns. cymbal crash. guitar melody mimics vocal line. The mix is intimate with close-mic proximity and light room reverb on the vocals. The tempo is 105 BPM in the key of G minor.",
+    "lyrics": "[Intro]\n[distorted electric guitar power chords, driving punk drums]\n[full band enters, distorted electric guitar, driving drums]\n\n[Verse 1]\n앱스토어 열었지 AI 작사 검색했지\n키워드 입력 이별 비 창문\n세 단어면 된다잖아\n생성 버튼 눌렀지\n\n[Chorus]\n수고하셨습니다\n입술만 움직이는 빈 그릇\n수고하셨습니다\n감정 없이 채워 넣는 공기처럼\n\n[Verse 2]\n생각 없이 나오는 여섯 글자\n입만 움직이면 되는 거니까\n\n[Chorus]\n제 시장가치는 그냥 웃겨\n협상이라 쓰고 굴복이라 읽지\n그래도 내년엔 달라지겠지\n작년에도 똑같이 말했지만\n\n[Interlude]\n[distorted electric guitar, driving rock drums, male tenor vocals]\n[bright synth lead, distorted electric guitar power chords, driving drums]\n\n[Bridge]\n알람을 세 개 맞추고 누워\n내일 아침 넥타이를 맬 거야\n회의실 문 열리면\n웃으면서 네 감사합니다\n\n[Chorus]\n웃고 있잖아 왜 웃고 있어\n이별인데 왜 웃고 있어\n나도 따라 웃었어 멍청하게\n눈물이 나려는데 입꼬리가 올라갔어\n웃으면서 헤어지면 덜 아플 줄 알았어\n더 아프더라\n\n[Outro]\n[full band, distorted guitar chords, high-energy drums]\n[distorted electric guitar power chords, rapid drum fill]",
+    "sp_length": 337,
+    "lyrics_length": 805,
+    "genre_group": "ROCK",
+    "song_form": [
+      "intro",
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "interlude",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → chorus → verse → chorus → interlude → bridge → chorus → outro",
+    "bracket_sections": 3,
+    "sp_validation": {
+      "sp_length": 337,
+      "total_words": 57,
+      "meaningful_words": 29,
+      "native_count": 29,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 805,
+      "section_count": 9,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.3274,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 8,
+    "title": "하나씩",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "남겨진 것들이",
+      "고요하다",
+      "그래서",
+      "슬프다",
+      "남겨진"
+    ],
+    "sp": "K-Pop and J-Pop fusion with high-energy bubblegum pop elements. Rhodes piano layers provide harmonic warmth during transitions. Rhodes piano layers provide harmonic warmth during transitions. swing jazz breakdown: walking bass, ride cymbal, piano stabs. vocal builds in power. Soft male vocals are delivered in a breathy, intimate baritone register, transitioning into a light head voice for higher melodic leaps. K-Pop R&B track with a mid-tempo groove.",
+    "lyrics": "[Verse 1]\n지나가는 사람들의 발소리가\n에코처럼 울리는 복도\n거울은 대답하지 않고\n그냥 보여주기만 해\n\n[Pre-Chorus]\n이게 썸인 건지\n사랑인 건지 모르겠어\n\n[Chorus]\n비키세요 한마디에 깨지는\n나와의 눈 마주침\n\n[Verse 2]\n알림음에 깜짝 놀라\n이불 속에서 벌떡 일어나\n'ㅎㅎ' 두 글자에 웃다가\n혼자서 발을 구르네\n\n[Pre-Chorus]\n매일 지나치던 거울인데\n오늘은 왜 모르는 사람이 서 있어\n\n[Chorus]\n읽씹하지 마 제발\n이 마음 다 보여줄게\n이모티콘 대신에\n좋아한다 말할게요\n읽씹하지 마\n\n[Bridge]\n셀카 속 나는 웃고 있는데\n여기 이 거울은 편집이 안 돼\n이게 진짜라고 말하는 건지\n그냥 하나의 각도일 뿐인 건지\n\n[Chorus]\n고요하다, 그래서 슬프다\n남겨진 것들이\n하나씩 식어가는 소리\n그것이 이별의 속도다",
+    "sp_length": 454,
+    "lyrics_length": 424,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "bridge",
+      "chorus"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → pre_chorus → chorus → bridge → chorus",
+    "bracket_sections": 0,
+    "sp_validation": {
+      "sp_length": 454,
+      "total_words": 67,
+      "meaningful_words": 37,
+      "native_count": 37,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 424,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6455,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 9,
+    "title": "부분",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "이게 뭔지 모르겠어",
+      "사랑이 되려는 건가",
+      "네 답장 하나에",
+      "이게",
+      "되려"
+    ],
+    "sp": "K-Pop Indie Folk. melodic singing, Rhodes chords sustain. The bass is absent in this section, focusing on the interplay between the piano and the vocal melody. bass and drums continue, piano accents. Male vocals alternate between lead singing and group shouts. Bright, polyphonic synthesizer pads and staccato synth brass stabs punctuate the arrangement. Key of G Major.",
+    "lyrics": "[Verse 1]\n사진에서 밝은 부분만 보는 사람이 많지만\n나는 어두운 구석에서 의미를 찾는 사람\n부재가 존재보다 더 많은 것을 말해줄 때가 있어\n\n[Chorus]\n겹칠수록 가까워지는 기분\n이 주파수가 우리를 연결해\n\n[Verse 2]\n주말에 각자의 시간을 보내고 저녁에 만나면\n하고 싶은 이야기가 가득해져서 밤새 수다를 떨어\n적당한 거리가 만드는 건강한 그리움\n\n[Chorus]\n이게 뭔지 모르겠어\n사랑이 되려는 건가\n네 답장 하나에\n하루가 통째로 물드는 것처럼\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜\n\n[Bridge]\n너무 가까우면 보이지 않는 것들이 있어\n한 발짝 물러서야 네 전체가 보여\n\n[Outro]\n[violin fades out, solo fingerpicked acoustic guitar]\n[fingerpicked acoustic guitar]",
+    "sp_length": 370,
+    "lyrics_length": 429,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 370,
+      "total_words": 57,
+      "meaningful_words": 30,
+      "native_count": 30,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 429,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5188,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 10,
+    "title": "이런",
+    "title_strategy": "short_punch",
+    "title_alternatives": [
+      "리모컨",
+      "건네",
+      "기미",
+      "늘었다",
+      "모른"
+    ],
+    "sp": "Cinematic orchestral hybrid. percussion and cello drone drop out. concert harp glissando. piano chords, building drum roll. Male vocals are processed with light pitch correction and doubling. The arrangement features lush synthesizer pads and occasional piano accents. The track is in the key of E Major with a tempo of 120 BPM in 4/4 time.",
+    "lyrics": "[Intro]\n[filtered acoustic piano enters with a four-bar loop]\n[oboe melody over piano ostinato]\n\n[Verse 1]\n리모컨 건네는 아버지 손에\n기미가 늘었다\n모른 척 TV를 봤다\n\n[Chorus]\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜\n\n[Interlude]\n[staccato strings, piano arpeggios]\n[solo cello continues expressive melodic lines]\n\n[Verse 2]\n사직서 냈다 드디어\n하늘이 다르게 보여\n짐 싼 박스 하나 들고\n회사 앞을 걸어 나와\n\n[Chorus]\nLayered leads, maximum energy\n\n[Bridge]\n겁먹지 마 괜찮더라\n새 출발이란 게 이런 거더라\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[piano filter closes further, reducing high-end clarity]",
+    "sp_length": 340,
+    "lyrics_length": 522,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "intro",
+      "verse",
+      "chorus",
+      "interlude",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → chorus → interlude → verse → chorus → bridge → outro",
+    "bracket_sections": 3,
+    "sp_validation": {
+      "sp_length": 340,
+      "total_words": 56,
+      "meaningful_words": 26,
+      "native_count": 26,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 522,
+      "section_count": 8,
+      "has_verse": false,
+      "has_chorus": true,
+      "coherence_score": 0.387,
+      "verdict": "FAIL",
+      "issues": [
+        "missing verse section"
+      ]
+    }
+  },
+  {
+    "index": 11,
+    "title": "투명한",
+    "title_strategy": "short_punch",
+    "title_alternatives": [
+      "감정",
+      "매일",
+      "듣고",
+      "있으면서",
+      "통화"
+    ],
+    "sp": "K-Indie Pop. piano enters. piano melodic fill. clean electric guitar sixteenth-note riff, electronic kick and snare. vocalizations fade into heavy reverb. The arrangement is built around a deep, percussive log drum that plays a rhythmic, melodic pattern. Key of C Major.",
+    "lyrics": "[Verse 1]\n프로필 사진을 바꿨다 새벽에\n아무도 모르게 슬쩍 갈아치웠다\n셀카 삼백 장 중에 고른 한 장\n각도와 필터와 조명의 합작품\n\n[Pre-Chorus]\n창을 닫으면 끝인 걸\n알면서도 못 끄겠어\n\n[Chorus]\n이게 뭔지 모르겠어\n사랑이 되려는 건가\n네 답장 하나에\n하루가 통째로 물드는 것처럼\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜\n\n[Verse 2]\n사진에서 밝은 부분만 보는 사람이 많지만\n나는 어두운 구석에서 의미를 찾는 사람\n부재가 존재보다 더 많은 것을 말해줄 때가 있어\n\n[Pre-Chorus]\n느껴본다\n이 순간을\n더 분명히\n모든 것이 선명해진다\n살아있음을\n뛰어오르는 심장\n\n[Chorus]\n겹칠수록 가까워지는 기분\n이 주파수가 우리를 연결해\n\n[Bridge]\n아무것도 답을 주지 않는다\n창문도 침묵한다\n그 침묵 속에서\n나는 천천히 존재한다\n가장 투명한 방식으로\n\n[Chorus]\n남의 감정은 매일 듣고 있으면서\n내 마음은 통화 대기 중이야\n감정 상담사의 감정은 미연결\n오늘은 나한테 먼저 전화할 거야",
+    "sp_length": 270,
+    "lyrics_length": 520,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "bridge",
+      "chorus"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → pre_chorus → chorus → bridge → chorus",
+    "bracket_sections": 0,
+    "sp_validation": {
+      "sp_length": 270,
+      "total_words": 41,
+      "meaningful_words": 20,
+      "native_count": 20,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 520,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4274,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 12,
+    "title": "부장",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "창문은 나이고",
+      "나는 경계고",
+      "안과 밖을 가르는",
+      "투명한 힘으로",
+      "창문"
+    ],
+    "sp": "K-Pop and Funk Pop. fingerpicked acoustic guitar. fingerpicked acoustic guitar. piano chords, building drum roll. K-Pop ballad featuring a baritone male vocal. The arrangement includes a breakdown with filtered percussion and a build-up using a rising synth riser. Key of G Major.",
+    "lyrics": "[Verse 1]\n새벽 세 시에 눈이 떠졌어\n꿈에서 부장이 보고서를 달래\n김 대리 이거 내일까지 해\n네 알겠습니다 반사적으로 나와\n\n[Pre-Chorus]\n근데 안 들으면 불안해\n들으면 또 이상해져\n자존감 높이기 팟캐스트가\nOh 자존감을 낮추는 중\n\n[Chorus]\n우리만의 언어가 매일 새로운 단어를 만들어\n함께한 시간이 사전이 되어 쌓여가고 있어\n이 고유한 대화가 영원히 계속되기를\n\n[Verse 2]\n뜨다 사라진 세 점\n타이핑의 잔상이\n네 프사만 밝게 빛나\n화면 위 전쟁터잖아\n\n[Pre-Chorus]\n심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야\n\n[Chorus]\n겹칠수록 가까워지는 기분\n이 주파수가 우리를 연결해\n\n[Bridge]\n알겠어 보낼게 그 두 글자\n한 시간 감정 전부 담아서\n폰을 뒤집어놓고 눈 감아\n오 초 뒤에 또 보겠지만\n\n[Chorus]\n창문은 나이고\n나는 경계고\n경계는 존재의 증명이다\n안과 밖을 가르는\n투명한 힘으로",
+    "sp_length": 280,
+    "lyrics_length": 495,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "bridge",
+      "chorus"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → pre_chorus → chorus → bridge → chorus",
+    "bracket_sections": 0,
+    "sp_validation": {
+      "sp_length": 280,
+      "total_words": 42,
+      "meaningful_words": 24,
+      "native_count": 24,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 495,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4567,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 13,
+    "title": "가리켜",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "감정들",
+      "전부",
+      "현관",
+      "신발",
+      "켤레"
+    ],
+    "sp": "K-Pop Hip-Hop track featuring a blend of soulful R&B vocal hooks and rhythmic rap verses. The track features a slow-tempo guitar solo with high-gain sustain and wide vibrato. A melodic glockenspiel motif enters every eight bars, playing a descending pentatonic scale. Soft shakers provide sixteenth-note subdivision. Reverb is applied to the vocals and piano to create a sense of space. The arrangement features a bright, nasal male vocal delivery in Korean. The track maintains a steady 113 BPM in the key of G minor.",
+    "lyrics": "[Intro]\n[rap vocals, driving boom bap beat]\n[overdriven electric guitar riff, slap bass, upbeat drums]\n\n[Verse 1]\n현관에 신발이 세 켤레\n네 켤레였던 게 언제였던가\n냉장고 안에 매실액이\n아직 남아 있구나\n\n[Pre-Chorus]\n거리가 소수점이 되는 순간\n네 심장 뛰는 소리가 들려\n무섭지만 멈출 수 없는\n\n[Chorus]\n자리가 비었구나\n마음이 비었구나\n숟가락 하나의 무게가\n이렇게 무거웠던가\n\n[Verse 2]\n월급 들어온 밤 카드 내역서 열어\n넷플 멜론 배민 쿠팡 유튜브 웨이브\n합산액을 보니 치킨 열다섯 마리야\n매달 빠져나가는 자동결제의 늪\n\n[Chorus]\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜\n\n[Bridge]\n명절이 아닌 어느 일요일\n평범해서 더 아픈 저녁\n\n[Outro]\n[full band, distorted guitar chords, high-energy drums]\n[melodic vocals, bass continues driving rhythm]",
+    "sp_length": 518,
+    "lyrics_length": 541,
+    "genre_group": "RNB",
+    "song_form": [
+      "intro",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → pre_chorus → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 2,
+    "sp_validation": {
+      "sp_length": 518,
+      "total_words": 85,
+      "meaningful_words": 30,
+      "native_count": 30,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 541,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4293,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 14,
+    "title": "에코",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "읽씹하지 마 제발",
+      "이모티콘 대신에",
+      "좋아한다 말할게요",
+      "읽씹하지 마",
+      "제발"
+    ],
+    "sp": "K-Pop and J-Pop fusion with high-energy bubblegum pop elements. K-Pop Hip-Hop track featuring a prominent funk-influenced electric bassline playing syncopated sixteenth-note patterns. Occasional synth stabs and subtle atmospheric pads appear in the background. The arrangement is minimalist, featuring only the acoustic guitar and a single vocal track without additional percussion or instrumentation. vocal ad-lib: '전부거든'. The arrangement centers on a grand piano playing sustained chords and melodic fills. Key of G Major.",
+    "lyrics": "[Verse 1]\n지나가는 사람들의 발소리가\n에코처럼 울리는 복도\n거울은 대답하지 않고\n그냥 보여주기만 해\n\n[Chorus]\n비키세요 한마디에 깨지는\n나와의 눈 마주침\n\n[Verse 2]\n알림음에 깜짝 놀라\n이불 속에서 벌떡 일어나\n'ㅎㅎ' 두 글자에 웃다가\n혼자서 발을 구르네\n\n[Chorus]\n읽씹하지 마 제발\n이 마음 다 보여줄게\n이모티콘 대신에\n좋아한다 말할게요\n읽씹하지 마\n\n[Bridge]\n셀카 속 나는 웃고 있는데\n여기 이 거울은 편집이 안 돼\n이게 진짜라고 말하는 건지\n그냥 하나의 각도일 뿐인 건지\n\n[Outro]\n[bright synth lead, distorted electric guitar power chords, driving drums]\n[bright synth pluck, electronic drum beat, syncopated synth bass]",
+    "sp_length": 524,
+    "lyrics_length": 437,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 524,
+      "total_words": 72,
+      "meaningful_words": 41,
+      "native_count": 41,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 437,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6729,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 15,
+    "title": "어둠",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "바다가 웃는다",
+      "길 잃은 나한테",
+      "이게 여행이다",
+      "바다",
+      "웃는다"
+    ],
+    "sp": "K-Indie, Bossa Nova. The structure alternates between delicate harp-led passages and fuller ensemble sections with driving acoustic guitar rhythms. A dark, atmospheric synth pad provides a background layer during transitions. The arrangement features a prominent solo cello playing a melancholic, legato melody over a steady electronic beat. male melodic vocals with light harmony. The arrangement is minimalist, focusing on the interplay between the guitar and the vocal. Percussion consists of a dry, mid-tempo kick drum and a crisp snare on beats two and four, layered with a subtle shaker.",
+    "lyrics": "[Verse 1]\n조명이 하나씩 꺼진다\n다섯 시 오십오 분\n그림 속 눈동자가 깊어지는 건\n어둠 때문만은 아닌 걸\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n채워지지 않은 빈칸이 완성된 문장보다 깊어\n\n[Verse 2]\n사진에서 밝은 부분만 보는 사람이 많지만\n나는 어두운 구석에서 의미를 찾는 사람\n\n[Chorus]\n바다가 웃는다\n길 잃은 나한테\n이게 여행이다\n\n[Bridge]\n돌길이 끝났다\n모래가 밟힌다\n파도 소리가 온다\n가까워지고 있다\n\n[Outro]\n[acoustic guitar fades]\n[violin fades out, solo fingerpicked acoustic guitar]",
+    "sp_length": 593,
+    "lyrics_length": 367,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 593,
+      "total_words": 89,
+      "meaningful_words": 41,
+      "native_count": 41,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 367,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4908,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 16,
+    "title": "소리",
+    "title_strategy": "rebalanced",
+    "title_alternatives": [
+      "소리",
+      "감각",
+      "모두",
+      "함께",
+      "춘다"
+    ],
+    "sp": "K-Rock track featuring distorted electric guitars, driving acoustic drums, and a male vocal lead. arpeggiated acoustic guitar. strings enter. open hi-hat enters on off-beats. The vocal delivery alternates between rhythmic Korean rap verses and a smooth, soulful R&B chorus with light vocal layering. Bass guitar plays sparse, melodic root notes. The tempo is 92 BPM in the key of G minor.",
+    "lyrics": "[Intro]\n[full band enters, distorted electric guitar, driving drums]\n[distorted electric guitar, driving rock drums, male tenor vocals]\n\n[Verse 1]\n너와 나 사이의 공기\n소리보다 더 생생해\n한숨도 언어가 되고\n시선도 문장이 돼\n\n[Chorus]\n거울 앞에서 항복을 선언한다\n이 겹 전부가 나라고\n\n[Verse 2]\n입에서 자연스럽게 나오던 날\n첫 번째 겹이 피부에 붙었어\n\n[Chorus]\n소리 없는 대화가\n우리를 완성한다\n\n[Interlude]\n[distorted electric guitar power chords, driving punk drums]\n[bright synth lead, distorted electric guitar power chords, driving drums]\n\n[Bridge]\n더 이상 말이 필요 없어\n너는 나의 모든 걸 안다\n피부가 피부를 만날 때\n세상의 말은 다 끝난다\n\n[Chorus]\n빛과 소리 향과 감각\n모두가 함께 춤을 춘다\n\n[Outro]\n[distorted guitar, driving drums, bass guitar]\n[distorted electric guitar riff, driving drum beat]",
+    "sp_length": 388,
+    "lyrics_length": 656,
+    "genre_group": "ROCK",
+    "song_form": [
+      "intro",
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "interlude",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → chorus → verse → chorus → interlude → bridge → chorus → outro",
+    "bracket_sections": 3,
+    "sp_validation": {
+      "sp_length": 388,
+      "total_words": 62,
+      "meaningful_words": 20,
+      "native_count": 20,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 656,
+      "section_count": 9,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6801,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 17,
+    "title": "오히려",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "풍경 소리가 울리고",
+      "문이 닫혔다",
+      "마주쳤다",
+      "아무",
+      "못했다"
+    ],
+    "sp": "K-Pop acoustic ballad. piano enters. solo oboe melody, staccato strings. shaker enters. The male tenor vocals are dry and intimate with light compression and subtle plate reverb. A minimalist drum kit features a dry, tight snare and a soft kick drum playing a steady backbeat. Fingerpicked acoustic guitar in C major at 100 BPM.",
+    "lyrics": "[Verse 1]\n시간이 덧칠한 색감이 오히려 아름다워\n\n[Chorus]\n그 사람도 잘 지내요\n그 말이 기도가 되는 건\n좀 오래 걸렸어요\n\n[Verse 2]\n각자의 밤을 품고\n각자의 이야기를 가지고\n같은 공간에 서있다\n\n[Chorus]\n눈이 마주쳤다 0.5초\n아무 말도 하지 못했다\n풍경 소리가 울리고\n문이 닫혔다\n\n[Bridge]\n어렵지 않아 패턴이 있어\n받침이 뒤로 가면 연음\n뒤가 ㄱㄷㅂㅅㅈ면 된소리\n뒤가 ㄴㅁ이면 코 소리로\n세 가지만 알면 다 돼\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[piano filter closes further, reducing high-end clarity]",
+    "sp_length": 328,
+    "lyrics_length": 367,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 328,
+      "total_words": 54,
+      "meaningful_words": 26,
+      "native_count": 26,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 367,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5075,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 18,
+    "title": "솔직한",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "불빛",
+      "여백",
+      "가장",
+      "공간",
+      "비어있"
+    ],
+    "sp": "K-Pop ballad. percussion and bass drop out. sustained grand piano chords. The production uses high-frequency percussion accents and subtle synth sweeps. layered vocal harmonies, synth pads swell. Solo baritone male vocals with a warm, intimate delivery. Key of E Major.",
+    "lyrics": "[Verse 1]\n불빛이 닿지 않는 여백에 진짜 이야기가 숨어있어\n\n[Chorus]\n무엇을 버리느냐가\n무엇을 사랑하느냐였다\n가벼워진 어깨 위로\n바람이 인사를 건넨다\n\n[Verse 2]\n시간이 덧칠한 색감이 오히려 아름다워\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n\n[Bridge]\n빛이 있어야 그림자지\n빛이 나인 거지\n그림자는 덤인 거지\n오늘 처음 알았다\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[piano filter closes further, reducing high-end clarity]",
+    "sp_length": 269,
+    "lyrics_length": 347,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 269,
+      "total_words": 40,
+      "meaningful_words": 22,
+      "native_count": 22,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 347,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.7041,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 19,
+    "title": "주파수",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "겹칠수록",
+      "기분",
+      "우리",
+      "사직서",
+      "냈다"
+    ],
+    "sp": "K-Pop musical theater hybrid. The track opens with a solo tenor saxophone performing a rubato, jazz-influenced melody with heavy vibrato and breathy articulation. The production is clean with a natural room reverb on the saxophone and vocals. 16th-note hi-hats enter. vocal intensity increases, strings enter. The arrangement uses a dry, punchy drum kit with a crisp snare and tight hi-hats. 135 BPM.",
+    "lyrics": "[Verse 1]\n사직서 냈다 드디어\n하늘이 다르게 보여\n짐 싼 박스 하나 들고\n회사 앞을 걸어 나와\n\n[Chorus]\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜\n\n[Verse 2]\n리모컨 건네는 아버지 손에\n기미가 늘었다\n모른 척 TV를 봤다\n\n[Chorus]\n겹칠수록 가까워지는 기분\n이 주파수가 우리를 연결해\n\n[Bridge]\n겁먹지 마 괜찮더라\n새 출발이란 게 이런 거더라\n\n[Outro]\n[bright synth pluck, electronic drum beat, syncopated synth bass]\n[bright synth lead, distorted electric guitar power chords, driving drums]",
+    "sp_length": 400,
+    "lyrics_length": 363,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "sp_validation": {
+      "sp_length": 400,
+      "total_words": 62,
+      "meaningful_words": 29,
+      "native_count": 29,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 363,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6067,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

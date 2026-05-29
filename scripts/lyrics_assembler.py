@@ -32,6 +32,12 @@ TAG_DISPLAY = {
 LYRICS_CHAR_LIMIT = 3000
 
 
+def _is_bracket_section(payload: dict) -> bool:
+    if isinstance(payload, dict):
+        return payload.get("source") == "bracket_preset"
+    return False
+
+
 def assemble_lyrics(sections: dict[str, dict],
                     structure: list[str] = None) -> str:
     if structure is None:
@@ -53,6 +59,8 @@ def assemble_lyrics(sections: dict[str, dict],
         if not text.strip():
             continue
 
+        is_bracket = _is_bracket_section(payload)
+
         display_tag = TAG_DISPLAY.get(tag, tag.replace("_", " ").title())
         if tag == "verse":
             display_tag = f"Verse {occurrence}"
@@ -62,7 +70,10 @@ def assemble_lyrics(sections: dict[str, dict],
             display_tag = f"Hook"
 
         lines.append(f"[{display_tag}]")
-        lines.append(text.strip())
+        if is_bracket:
+            lines.append(text.strip())
+        else:
+            lines.append(text.strip())
         lines.append("")
 
     result = "\n".join(lines).strip()

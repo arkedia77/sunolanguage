@@ -211,15 +211,21 @@ def cmd_pair(args: list[str]):
     lyr_client = get_client()
     lyr_model = get_model()
     matched = match_sp_differentiated(sp_text, form=form,
-                                      client=lyr_client, model=lyr_model)
+                                      client=lyr_client, model=lyr_model,
+                                      sp_client=sp_client, sp_model=sp_model,
+                                      genre_group=genre_group)
 
     selected = {}
     metas = []
+    bracket_count = 0
     for tag, hits in matched.items():
         if hits:
             best = hits[0]["payload"]
             selected[tag] = best
-            metas.append(best)
+            if best.get("source") == "bracket_preset":
+                bracket_count += 1
+            else:
+                metas.append(best)
 
     lyrics = assemble_lyrics(selected, structure=form)
 
@@ -229,7 +235,7 @@ def cmd_pair(args: list[str]):
     if title_result["alternatives"]:
         print(f"    alt: {title_result['alternatives'][:3]}")
     print()
-    print(f"=== Lyrics ({len(lyrics)} chars) ===")
+    print(f"=== Lyrics ({len(lyrics)} chars, brackets={bracket_count}) ===")
     print(lyrics)
 
     if do_validate:
@@ -239,7 +245,7 @@ def cmd_pair(args: list[str]):
         sp_print_validation(sp_result)
 
         print("--- Lyrics Validation ---")
-        lyr_result = validate_lyrics(lyrics, sections_meta=metas)
+        lyr_result = validate_lyrics(lyrics, sections_meta=metas, song_form=form)
         lyr_print_validation(lyr_result)
 
 
@@ -303,13 +309,20 @@ def cmd_batch(args: list[str]):
         form_counts[form_key] = form_counts.get(form_key, 0) + 1
 
         matched = match_sp_differentiated(sp_text, form=form,
-                                          client=lyr_client, model=lyr_model)
+                                          client=lyr_client, model=lyr_model,
+                                          sp_client=sp_client, sp_model=sp_model,
+                                          genre_group=genre_group)
         selected = {}
         metas = []
+        bracket_count = 0
         for tag, hits in matched.items():
             if hits:
-                selected[tag] = hits[0]["payload"]
-                metas.append(hits[0]["payload"])
+                best = hits[0]["payload"]
+                selected[tag] = best
+                if best.get("source") == "bracket_preset":
+                    bracket_count += 1
+                else:
+                    metas.append(best)
 
         lyrics = assemble_lyrics(selected, structure=form)
 
@@ -327,21 +340,24 @@ def cmd_batch(args: list[str]):
             "genre_group": genre_group,
             "song_form": form,
             "song_form_type": form_key,
+            "bracket_sections": bracket_count,
         }
 
         if do_validate:
             sp_val = validate_sp(sp_text)
-            lyr_val = validate_lyrics(lyrics, sections_meta=metas)
+            lyr_val = validate_lyrics(lyrics, sections_meta=metas, song_form=form)
             entry["sp_validation"] = sp_val
             entry["lyrics_validation"] = lyr_val
+            br_label = f" br={bracket_count}" if bracket_count else ""
             print(f"  [{i + 1:3d}/{count}] \"{title_result['title'][:15]}\" "
                   f"SP={len(sp_text)}c [{sp_val['verdict']}] "
                   f"| Lyrics={len(lyrics)}c [{lyr_val['verdict']}] "
-                  f"coh={lyr_val['coherence_score']:.2f} "
+                  f"coh={lyr_val['coherence_score']:.2f}{br_label} "
                   f"| {genre_group} [{form_key[:40]}]")
         else:
+            br_label = f" br={bracket_count}" if bracket_count else ""
             print(f"  [{i + 1:3d}/{count}] \"{title_result['title'][:15]}\" "
-                  f"SP={len(sp_text)}c | Lyrics={len(lyrics)}c "
+                  f"SP={len(sp_text)}c | Lyrics={len(lyrics)}c{br_label} "
                   f"| {genre_group}")
 
         results.append(entry)

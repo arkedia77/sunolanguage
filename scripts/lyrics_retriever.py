@@ -35,6 +35,8 @@ MOOD_WORDS = {
     "energetic", "driving", "aggressive", "smooth", "groovy", "bright",
     "dark", "atmospheric", "raw", "soulful", "euphoric", "chill",
     "passionate", "gentle", "powerful", "serene", "lush", "sparse",
+    "breathy", "punchy", "crisp", "distorted", "clean", "soft", "heavy",
+    "funky", "mellow", "haunting", "uplifting", "lonely", "romantic",
 }
 
 
@@ -137,8 +139,11 @@ def match_sp(sp_text: str, sections: list[str] = None,
 
 def match_sp_differentiated(sp_text: str, form: list[str],
                             granularity: str = None, limit_per_section: int = 3,
-                            client=None, model=None) -> dict[str, list[dict]]:
-    from song_forms import get_section_query_hint
+                            client=None, model=None,
+                            sp_client=None, sp_model=None,
+                            genre_group: str = None) -> dict[str, list[dict]]:
+    from song_forms import get_section_query_hint, classify_genre_group
+    from bracket_presets import retrieve_bracket_directives, format_bracket_section
 
     if client is None:
         client = get_client()
@@ -151,23 +156,49 @@ def match_sp_differentiated(sp_text: str, form: list[str],
     if moods:
         base_query += " " + " ".join(moods)
 
+    if genre_group is None:
+        genre_group = classify_genre_group(genre)
+
+    NON_LYRIC_TAGS = {"intro", "outro", "interlude", "instrumental"}
+
     section_counts = {}
     results = {}
     used_song_ids = {}
+    used_bracket_texts = set()
 
     for tag in form:
         section_counts[tag] = section_counts.get(tag, 0) + 1
         occurrence = section_counts[tag]
         indexed_key = f"{tag}_{occurrence}"
 
-        if tag in ("intro", "outro", "interlude"):
+        if tag in NON_LYRIC_TAGS:
             if tag in results:
                 continue
-            hits = theme_search(
-                base_query, section_tag=tag, granularity=granularity,
-                limit=limit_per_section, client=client, model=model,
+            directives = retrieve_bracket_directives(
+                section_type=tag,
+                sp_text=sp_text,
+                genre_group=genre_group,
+                client=sp_client,
+                model=sp_model,
+                exclude_texts=used_bracket_texts,
             )
-            results[tag] = hits
+            if directives:
+                bracket_text = format_bracket_section(tag, directives)
+                for d in directives:
+                    used_bracket_texts.add(d["text"])
+                results[tag] = [{
+                    "score": directives[0]["score"],
+                    "payload": {
+                        "text": bracket_text,
+                        "section_tag": tag,
+                        "genre": directives[0].get("genre", ""),
+                        "song_id": 0,
+                        "source": "bracket_preset",
+                        "directives": directives,
+                    },
+                }]
+            else:
+                results[tag] = []
             continue
 
         role_hint = get_section_query_hint(tag)
@@ -184,6 +215,20 @@ def match_sp_differentiated(sp_text: str, form: list[str],
         if not hits and exclude:
             hits = theme_search(
                 section_query, section_tag=tag, granularity=granularity,
+                limit=limit_per_section, client=client, model=model,
+            )
+
+        FALLBACK_MAP = {"pre_chorus": "verse", "hook": "chorus", "drop": "chorus", "tag": "outro"}
+        if not hits and tag in FALLBACK_MAP:
+            fallback_tag = FALLBACK_MAP[tag]
+            hits = theme_search(
+                section_query, section_tag=fallback_tag, granularity=granularity,
+                limit=limit_per_section, client=client, model=model,
+            )
+
+        if not hits:
+            hits = theme_search(
+                base_query, section_tag=None, granularity=granularity,
                 limit=limit_per_section, client=client, model=model,
             )
 
