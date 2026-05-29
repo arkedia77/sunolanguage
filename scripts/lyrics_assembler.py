@@ -45,13 +45,18 @@ def assemble_lyrics(sections: dict[str, dict],
 
     lines = []
     tag_counts = {}
+    chorus_first = {}
 
     for tag in structure:
         tag_counts[tag] = tag_counts.get(tag, 0) + 1
         occurrence = tag_counts[tag]
         indexed_key = f"{tag}_{occurrence}"
 
-        payload = sections.get(indexed_key) or sections.get(tag)
+        if tag == "chorus" and occurrence > 1 and "chorus" in chorus_first:
+            payload = chorus_first["chorus"]
+        else:
+            payload = sections.get(indexed_key) or sections.get(tag)
+
         if payload is None:
             continue
 
@@ -59,21 +64,19 @@ def assemble_lyrics(sections: dict[str, dict],
         if not text.strip():
             continue
 
+        if tag == "chorus" and occurrence == 1:
+            chorus_first["chorus"] = payload
+
         is_bracket = _is_bracket_section(payload)
 
         display_tag = TAG_DISPLAY.get(tag, tag.replace("_", " ").title())
         if tag == "verse":
             display_tag = f"Verse {occurrence}"
-        elif tag == "chorus" and occurrence > 1:
-            pass
         elif tag == "hook":
             display_tag = f"Hook"
 
         lines.append(f"[{display_tag}]")
-        if is_bracket:
-            lines.append(text.strip())
-        else:
-            lines.append(text.strip())
+        lines.append(text.strip())
         lines.append("")
 
     result = "\n".join(lines).strip()

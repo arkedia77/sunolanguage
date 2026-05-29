@@ -228,12 +228,12 @@ def cmd_pair(args: list[str]):
     bracket_count = 0
     for tag, hits in matched.items():
         if hits:
-            best = hits[0]["payload"]
-            selected[tag] = best
-            if best.get("source") == "bracket_preset":
+            best_payload = hits[0]["payload"]
+            selected[tag] = best_payload
+            if best_payload.get("source") == "bracket_preset":
                 bracket_count += 1
             else:
-                metas.append(best)
+                metas.append(best_payload)
 
     lyrics = assemble_lyrics(selected, structure=form)
 
@@ -319,6 +319,8 @@ def cmd_batch(args: list[str]):
     results = []
     t0 = time.time()
     form_counts = {}
+    batch_used_ids = set()
+    batch_used_texts = set()
 
     for i in range(count):
         preset = controlled_drift(seed, drift_factor=drift,
@@ -335,18 +337,27 @@ def cmd_batch(args: list[str]):
                                           client=lyr_client, model=lyr_model,
                                           sp_client=sp_client, sp_model=sp_model,
                                           genre_group=genre_group,
-                                          theme=theme)
+                                          theme=theme,
+                                          batch_used_ids=batch_used_ids,
+                                          batch_used_texts=batch_used_texts)
         selected = {}
         metas = []
         bracket_count = 0
         for tag, hits in matched.items():
             if hits:
-                best = hits[0]["payload"]
-                selected[tag] = best
-                if best.get("source") == "bracket_preset":
+                best = hits[0]
+                pid = best.get("point_id")
+                if pid is not None:
+                    batch_used_ids.add(pid)
+                best_payload = best["payload"]
+                best_text = best_payload.get("text", "").strip()
+                if best_text and best_payload.get("source") != "bracket_preset":
+                    batch_used_texts.add(best_text)
+                selected[tag] = best_payload
+                if best_payload.get("source") == "bracket_preset":
                     bracket_count += 1
                 else:
-                    metas.append(best)
+                    metas.append(best_payload)
 
         lyrics = assemble_lyrics(selected, structure=form)
 

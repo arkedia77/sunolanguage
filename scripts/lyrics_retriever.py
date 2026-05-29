@@ -51,8 +51,9 @@ def get_model():
 
 
 def make_filter(section_tag: str = None, genre: str = None, language: str = None,
-                granularity: str = None, exclude_song_ids: set = None):
-    from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchText
+                granularity: str = None, exclude_song_ids: set = None,
+                exclude_point_ids: set = None):
+    from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchText, HasIdCondition
 
     conditions = []
     if section_tag:
@@ -68,6 +69,8 @@ def make_filter(section_tag: str = None, genre: str = None, language: str = None
     if exclude_song_ids:
         for sid in exclude_song_ids:
             must_not.append(FieldCondition(key="song_id", match=MatchValue(value=sid)))
+    if exclude_point_ids:
+        must_not.append(HasIdCondition(has_id=list(exclude_point_ids)))
 
     if not conditions and not must_not:
         return None
@@ -77,6 +80,7 @@ def make_filter(section_tag: str = None, genre: str = None, language: str = None
 def theme_search(query: str, section_tag: str = None, genre: str = None,
                  language: str = None, granularity: str = None, limit: int = 10,
                  exclude_song_ids: set = None,
+                 exclude_point_ids: set = None,
                  client=None, model=None) -> list[dict]:
     if client is None:
         client = get_client()
@@ -85,7 +89,8 @@ def theme_search(query: str, section_tag: str = None, genre: str = None,
 
     embedding = model.encode(query).tolist()
     query_filter = make_filter(section_tag, genre, language, granularity,
-                               exclude_song_ids=exclude_song_ids)
+                               exclude_song_ids=exclude_song_ids,
+                               exclude_point_ids=exclude_point_ids)
 
     response = client.query_points(
         collection_name=COLLECTION_NAME,
@@ -97,6 +102,7 @@ def theme_search(query: str, section_tag: str = None, genre: str = None,
     return [{
         "score": hit.score,
         "payload": hit.payload,
+        "point_id": hit.id,
     } for hit in response.points]
 
 
@@ -137,12 +143,24 @@ def match_sp(sp_text: str, sections: list[str] = None,
     return results
 
 
+def _detect_language(text: str) -> str:
+    korean_chars = len(re.findall(r'[가-힯]', text))
+    ascii_chars = len(re.findall(r'[a-zA-Z]', text))
+    if korean_chars > ascii_chars:
+        return "Korean"
+    if ascii_chars > korean_chars:
+        return "English"
+    return ""
+
+
 def match_sp_differentiated(sp_text: str, form: list[str],
-                            granularity: str = None, limit_per_section: int = 3,
+                            granularity: str = None, limit_per_section: int = 5,
                             client=None, model=None,
                             sp_client=None, sp_model=None,
                             genre_group: str = None,
-                            theme: str = None) -> dict[str, list[dict]]:
+                            theme: str = None,
+                            batch_used_ids: set = None,
+                            batch_used_texts: set = None) -> dict[str, list[dict]]:
     from song_forms import get_section_query_hint, classify_genre_group
     from bracket_presets import retrieve_bracket_directives, format_bracket_section
 
@@ -172,6 +190,10 @@ def match_sp_differentiated(sp_text: str, form: list[str],
     results = {}
     used_song_ids = {}
     used_bracket_texts = set()
+    song_point_ids = set(batch_used_ids) if batch_used_ids else set()
+    used_texts = set(batch_used_texts) if batch_used_texts else set()
+    detected_lang = None
+    prev_verse_text = None
 
     for tag in form:
         section_counts[tag] = section_counts.get(tag, 0) + 1
@@ -208,43 +230,91 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                 results[tag] = []
             continue
 
+        if tag == "chorus" and occurrence > 1:
+            first_key = "chorus_1"
+            if first_key in results and results[first_key]:
+                results[indexed_key] = results[first_key]
+                continue
+
         role_hint = get_section_query_hint(tag)
         section_query = f"{base_query} {role_hint}".strip()
 
+        if tag == "verse" and occurrence > 1 and prev_verse_text:
+            keywords = prev_verse_text[:60]
+            section_query = f"{section_query} {keywords}"
+
         exclude = used_song_ids.get(tag, set()) if occurrence > 1 else set()
+
+        lang_filter = detected_lang if detected_lang else None
+
+        def _pick_novel(candidates):
+            for h in candidates:
+                t = h["payload"].get("text", "").strip()
+                if t and t not in used_texts:
+                    return [h]
+            return candidates[:1] if candidates else []
 
         hits = theme_search(
             section_query, section_tag=tag, granularity=granularity,
-            limit=limit_per_section, exclude_song_ids=exclude if exclude else None,
+            language=lang_filter,
+            limit=limit_per_section,
+            exclude_song_ids=exclude if exclude else None,
+            exclude_point_ids=song_point_ids if song_point_ids else None,
             client=client, model=model,
         )
+        hits = _pick_novel(hits)
+
+        if not hits and (song_point_ids or lang_filter):
+            candidates = theme_search(
+                section_query, section_tag=tag, granularity=granularity,
+                limit=limit_per_section,
+                exclude_song_ids=exclude if exclude else None,
+                client=client, model=model,
+            )
+            hits = _pick_novel(candidates)
 
         if not hits and exclude:
-            hits = theme_search(
+            candidates = theme_search(
                 section_query, section_tag=tag, granularity=granularity,
                 limit=limit_per_section, client=client, model=model,
             )
+            hits = _pick_novel(candidates)
 
         FALLBACK_MAP = {"pre_chorus": "verse", "hook": "chorus", "drop": "chorus", "tag": "outro"}
         if not hits and tag in FALLBACK_MAP:
             fallback_tag = FALLBACK_MAP[tag]
-            hits = theme_search(
+            candidates = theme_search(
                 section_query, section_tag=fallback_tag, granularity=granularity,
                 limit=limit_per_section, client=client, model=model,
             )
+            hits = _pick_novel(candidates)
 
         if not hits:
-            hits = theme_search(
+            candidates = theme_search(
                 base_query, section_tag=None, granularity=granularity,
                 limit=limit_per_section, client=client, model=model,
             )
+            hits = _pick_novel(candidates)
 
         results[indexed_key] = hits
 
-        if hits and hits[0]["payload"].get("song_id"):
-            if tag not in used_song_ids:
-                used_song_ids[tag] = set()
-            used_song_ids[tag].add(hits[0]["payload"]["song_id"])
+        if hits:
+            best = hits[0]
+            pid = best.get("point_id")
+            if pid is not None:
+                song_point_ids.add(pid)
+            best_text = best["payload"].get("text", "").strip()
+            if best_text:
+                used_texts.add(best_text)
+            sid = best["payload"].get("song_id")
+            if sid:
+                if tag not in used_song_ids:
+                    used_song_ids[tag] = set()
+                used_song_ids[tag].add(sid)
+            if detected_lang is None and tag == "verse" and occurrence == 1:
+                detected_lang = _detect_language(best_text) or None
+            if tag == "verse":
+                prev_verse_text = best_text
 
     return results
 

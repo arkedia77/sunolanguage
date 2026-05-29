@@ -43,6 +43,26 @@ def clean_text(text: str) -> str:
     return text
 
 
+def _dedup_sentences(sentences: list[str]) -> list[str]:
+    seen_normalized = set()
+    result = []
+    for s in sentences:
+        norm = re.sub(r'[^a-z0-9\s]', '', s.lower()).strip()
+        norm = re.sub(r'\s+', ' ', norm)
+        if norm in seen_normalized:
+            continue
+        is_substring = False
+        for existing in list(seen_normalized):
+            if len(norm) > 10 and (norm in existing or existing in norm):
+                is_substring = True
+                break
+        if is_substring:
+            continue
+        seen_normalized.add(norm)
+        result.append(s)
+    return result
+
+
 def assemble_sp(preset: dict, bracket_overlay: list[dict] | None = None) -> str:
     sentences = []
 
@@ -62,6 +82,8 @@ def assemble_sp(preset: dict, bracket_overlay: list[dict] | None = None) -> str:
             text = clean_text(text)
             if text and text != ".":
                 sentences.append(text)
+
+    sentences = _dedup_sentences(sentences)
 
     if bracket_overlay:
         for br in bracket_overlay:
