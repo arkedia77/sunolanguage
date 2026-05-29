@@ -1,8 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **N시리즈 파이프라인 개선** — Plan 모드: leomusic2 참조, 송폼 다양성/가사 차별화/제목 생성 프리셋화 (Leo 지시 2026-05-29)
-- [sunolanguage] **N001/N002 재분석** — 20곡 Suno 생성 완료, Echo Jaccard 측정 대기
+- [sunolanguage] **브래킷 코퍼스 설계** — bracket_entities_v3.json 4,956청크 → 장르별 브래킷 프리셋 + Intro/Interlude/Outro 자동 배치 (Leo 지시 2026-05-29, 다음 세션 즉시 착수)
+- [sunolanguage] **코퍼스 노이즈 정리** — 5,925 가사 청크 노이즈 스캔 + 인제스트 밸리데이션 게이트 (Leo 지시 2026-05-29)
+- [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **Serendipity Engine (SP + Lyrics)** — SP 10,646 + Lyrics 5,925 하이브리드 Qdrant 완료, **다음: Gate 4 성장 검증 (S_INST200 수신 후)**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26, 200곡 SP+가사 전문 전송 완료, 결과 회신 대기
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
@@ -35,6 +36,8 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **N시리즈 파이프라인 v2 구현** — song_forms.py + title_generator.py 신규, lyrics_retriever/assembler/engine 개선, V1≠V2 100%, 7종폼/10곡, 제목 자동 생성 — 2026-05-29 ✅
+- [sunolanguage] N001/N002 코퍼스 어휘 충실도 분석 — 커버리지 98.3%, Novel 12/320 — 2026-05-29 ✅
 - [sunolanguage] N001+N002 20/20 Suno 생성 전곡 완료 — gid 20311~20330, 40클립, 통합DB UPDATE — 2026-05-29 ✅
 - [sunolanguage] 가사 커플릿 하이브리드 청킹 구현 — section 2,478 + couplet 3,447 = 5,925, 코러스 dedup 61건, 3모드 E2E PASS — 2026-05-28 ✅
 - [sunolanguage] Lyrics Corpus 시스템 E2E 완주 — 2,539 섹션 다국어 임베딩, pair 5/5 PASS, coherence 0.55 — 2026-05-28 ✅

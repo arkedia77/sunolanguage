@@ -38,26 +38,28 @@ def assemble_lyrics(sections: dict[str, dict],
         structure = DEFAULT_STRUCTURE
 
     lines = []
-    verse_count = 0
-    chorus_count = 0
+    tag_counts = {}
 
     for tag in structure:
-        if tag not in sections:
+        tag_counts[tag] = tag_counts.get(tag, 0) + 1
+        occurrence = tag_counts[tag]
+        indexed_key = f"{tag}_{occurrence}"
+
+        payload = sections.get(indexed_key) or sections.get(tag)
+        if payload is None:
             continue
 
-        payload = sections[tag]
         text = payload.get("text", "") if isinstance(payload, dict) else str(payload)
         if not text.strip():
             continue
 
         display_tag = TAG_DISPLAY.get(tag, tag.replace("_", " ").title())
         if tag == "verse":
-            verse_count += 1
-            display_tag = f"Verse {verse_count}"
-        elif tag == "chorus" and chorus_count > 0:
-            chorus_count += 1
-        elif tag == "chorus":
-            chorus_count += 1
+            display_tag = f"Verse {occurrence}"
+        elif tag == "chorus" and occurrence > 1:
+            pass
+        elif tag == "hook":
+            display_tag = f"Hook"
 
         lines.append(f"[{display_tag}]")
         lines.append(text.strip())

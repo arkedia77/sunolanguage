@@ -49,7 +49,7 @@ def get_model():
 
 
 def make_filter(section_tag: str = None, genre: str = None, language: str = None,
-                granularity: str = None):
+                granularity: str = None, exclude_song_ids: set = None):
     from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchText
 
     conditions = []
@@ -61,11 +61,20 @@ def make_filter(section_tag: str = None, genre: str = None, language: str = None
         conditions.append(FieldCondition(key="language", match=MatchValue(value=language)))
     if granularity:
         conditions.append(FieldCondition(key="granularity", match=MatchValue(value=granularity)))
-    return Filter(must=conditions) if conditions else None
+
+    must_not = []
+    if exclude_song_ids:
+        for sid in exclude_song_ids:
+            must_not.append(FieldCondition(key="song_id", match=MatchValue(value=sid)))
+
+    if not conditions and not must_not:
+        return None
+    return Filter(must=conditions or None, must_not=must_not or None)
 
 
 def theme_search(query: str, section_tag: str = None, genre: str = None,
                  language: str = None, granularity: str = None, limit: int = 10,
+                 exclude_song_ids: set = None,
                  client=None, model=None) -> list[dict]:
     if client is None:
         client = get_client()
@@ -73,7 +82,8 @@ def theme_search(query: str, section_tag: str = None, genre: str = None,
         model = get_model()
 
     embedding = model.encode(query).tolist()
-    query_filter = make_filter(section_tag, genre, language, granularity)
+    query_filter = make_filter(section_tag, genre, language, granularity,
+                               exclude_song_ids=exclude_song_ids)
 
     response = client.query_points(
         collection_name=COLLECTION_NAME,
@@ -121,6 +131,68 @@ def match_sp(sp_text: str, sections: list[str] = None,
             limit=limit_per_section, client=client, model=model,
         )
         results[section] = hits
+
+    return results
+
+
+def match_sp_differentiated(sp_text: str, form: list[str],
+                            granularity: str = None, limit_per_section: int = 3,
+                            client=None, model=None) -> dict[str, list[dict]]:
+    from song_forms import get_section_query_hint
+
+    if client is None:
+        client = get_client()
+    if model is None:
+        model = get_model()
+
+    genre = extract_sp_genre(sp_text)
+    moods = extract_sp_mood(sp_text)
+    base_query = genre
+    if moods:
+        base_query += " " + " ".join(moods)
+
+    section_counts = {}
+    results = {}
+    used_song_ids = {}
+
+    for tag in form:
+        section_counts[tag] = section_counts.get(tag, 0) + 1
+        occurrence = section_counts[tag]
+        indexed_key = f"{tag}_{occurrence}"
+
+        if tag in ("intro", "outro", "interlude"):
+            if tag in results:
+                continue
+            hits = theme_search(
+                base_query, section_tag=tag, granularity=granularity,
+                limit=limit_per_section, client=client, model=model,
+            )
+            results[tag] = hits
+            continue
+
+        role_hint = get_section_query_hint(tag)
+        section_query = f"{base_query} {role_hint}".strip()
+
+        exclude = used_song_ids.get(tag, set()) if occurrence > 1 else set()
+
+        hits = theme_search(
+            section_query, section_tag=tag, granularity=granularity,
+            limit=limit_per_section, exclude_song_ids=exclude if exclude else None,
+            client=client, model=model,
+        )
+
+        if not hits and exclude:
+            hits = theme_search(
+                section_query, section_tag=tag, granularity=granularity,
+                limit=limit_per_section, client=client, model=model,
+            )
+
+        results[indexed_key] = hits
+
+        if hits and hits[0]["payload"].get("song_id"):
+            if tag not in used_song_ids:
+                used_song_ids[tag] = set()
+            used_song_ids[tag].add(hits[0]["payload"]["song_id"])
 
     return results
 

@@ -167,14 +167,18 @@ def cmd_pair(args: list[str]):
     from serendipity import get_client as sp_get_client, get_model as sp_get_model
     from slot_assembler import assemble_sp
     from preset_validator import validate_sp, print_validation as sp_print_validation
-    from lyrics_retriever import match_sp, get_client, get_model
+    from lyrics_retriever import (match_sp_differentiated, extract_sp_genre,
+                                  get_client, get_model)
     from lyrics_assembler import assemble_lyrics
     from lyrics_validator import validate_lyrics, print_validation as lyr_print_validation
+    from song_forms import classify_genre_group, select_form, form_to_arrow
+    from title_generator import generate_title
 
     seed = "acoustic guitar"
     drift = 0.5
     do_validate = False
-    sections = ["verse", "pre_chorus", "chorus", "bridge", "outro"]
+    genre_group_override = None
+    form_variant = None
 
     for a in args:
         if a.startswith("--seed="):
@@ -183,8 +187,10 @@ def cmd_pair(args: list[str]):
             drift = float(a.split("=")[1])
         elif a == "--validate":
             do_validate = True
-        elif a.startswith("--sections="):
-            sections = a.split("=")[1].split(",")
+        elif a.startswith("--genre-group="):
+            genre_group_override = a.split("=")[1]
+        elif a.startswith("--form="):
+            form_variant = a.split("=")[1]
 
     print(f"Pair: seed='{seed}', drift={drift}")
     print()
@@ -194,14 +200,18 @@ def cmd_pair(args: list[str]):
     preset = controlled_drift(seed, drift_factor=drift, client=sp_client, model=sp_model)
     sp_text = assemble_sp(preset)
 
+    genre_group = genre_group_override or classify_genre_group(extract_sp_genre(sp_text))
+    form = select_form(genre_group, variant=form_variant)
+
     print(f"=== SP ({len(sp_text)} chars) ===")
     print(sp_text)
+    print(f"\nGenre Group: {genre_group} | Form: {form_to_arrow(form)}")
     print()
 
     lyr_client = get_client()
     lyr_model = get_model()
-    matched = match_sp(sp_text, sections=sections,
-                       client=lyr_client, model=lyr_model)
+    matched = match_sp_differentiated(sp_text, form=form,
+                                      client=lyr_client, model=lyr_model)
 
     selected = {}
     metas = []
@@ -211,7 +221,14 @@ def cmd_pair(args: list[str]):
             selected[tag] = best
             metas.append(best)
 
-    lyrics = assemble_lyrics(selected)
+    lyrics = assemble_lyrics(selected, structure=form)
+
+    title_result = generate_title(lyrics, sp_text, genre_group=genre_group)
+
+    print(f"=== Title: \"{title_result['title']}\" [{title_result['strategy']}] ===")
+    if title_result["alternatives"]:
+        print(f"    alt: {title_result['alternatives'][:3]}")
+    print()
     print(f"=== Lyrics ({len(lyrics)} chars) ===")
     print(lyrics)
 
@@ -231,15 +248,20 @@ def cmd_batch(args: list[str]):
     from serendipity import get_client as sp_get_client, get_model as sp_get_model
     from slot_assembler import assemble_sp
     from preset_validator import validate_sp
-    from lyrics_retriever import match_sp, get_client, get_model
+    from lyrics_retriever import (match_sp_differentiated, extract_sp_genre,
+                                  get_client, get_model)
     from lyrics_assembler import assemble_lyrics
     from lyrics_validator import validate_lyrics
+    from song_forms import classify_genre_group, select_form, form_to_arrow
+    from title_generator import generate_title, batch_titles
 
     count = 5
     seed = "acoustic guitar"
     drift = 0.5
     do_validate = True
     save = False
+    genre_group_override = None
+    form_variant = None
 
     for a in args:
         if a.startswith("--count="):
@@ -252,6 +274,10 @@ def cmd_batch(args: list[str]):
             save = True
         elif a == "--no-validate":
             do_validate = False
+        elif a.startswith("--genre-group="):
+            genre_group_override = a.split("=")[1]
+        elif a.startswith("--form="):
+            form_variant = a.split("=")[1]
 
     print(f"Batch: {count} SP+lyrics packages, seed='{seed}', drift={drift}")
     print()
@@ -263,14 +289,21 @@ def cmd_batch(args: list[str]):
 
     results = []
     t0 = time.time()
+    form_counts = {}
 
     for i in range(count):
         preset = controlled_drift(seed, drift_factor=drift,
                                   client=sp_client, model=sp_model)
         sp_text = assemble_sp(preset)
 
-        matched = match_sp(sp_text, sections=["verse", "chorus", "bridge"],
-                           client=lyr_client, model=lyr_model)
+        genre_group = genre_group_override or classify_genre_group(
+            extract_sp_genre(sp_text))
+        form = select_form(genre_group, variant=form_variant)
+        form_key = form_to_arrow(form)
+        form_counts[form_key] = form_counts.get(form_key, 0) + 1
+
+        matched = match_sp_differentiated(sp_text, form=form,
+                                          client=lyr_client, model=lyr_model)
         selected = {}
         metas = []
         for tag, hits in matched.items():
@@ -278,14 +311,22 @@ def cmd_batch(args: list[str]):
                 selected[tag] = hits[0]["payload"]
                 metas.append(hits[0]["payload"])
 
-        lyrics = assemble_lyrics(selected)
+        lyrics = assemble_lyrics(selected, structure=form)
+
+        title_result = generate_title(lyrics, sp_text, genre_group=genre_group)
 
         entry = {
             "index": i,
+            "title": title_result["title"],
+            "title_strategy": title_result["strategy"],
+            "title_alternatives": title_result["alternatives"],
             "sp": sp_text,
             "lyrics": lyrics,
             "sp_length": len(sp_text),
             "lyrics_length": len(lyrics),
+            "genre_group": genre_group,
+            "song_form": form,
+            "song_form_type": form_key,
         }
 
         if do_validate:
@@ -293,16 +334,25 @@ def cmd_batch(args: list[str]):
             lyr_val = validate_lyrics(lyrics, sections_meta=metas)
             entry["sp_validation"] = sp_val
             entry["lyrics_validation"] = lyr_val
-            print(f"  [{i + 1:3d}/{count}] SP={len(sp_text)}c [{sp_val['verdict']}] "
+            print(f"  [{i + 1:3d}/{count}] \"{title_result['title'][:15]}\" "
+                  f"SP={len(sp_text)}c [{sp_val['verdict']}] "
                   f"| Lyrics={len(lyrics)}c [{lyr_val['verdict']}] "
-                  f"coherence={lyr_val['coherence_score']:.2f}")
+                  f"coh={lyr_val['coherence_score']:.2f} "
+                  f"| {genre_group} [{form_key[:40]}]")
         else:
-            print(f"  [{i + 1:3d}/{count}] SP={len(sp_text)}c | Lyrics={len(lyrics)}c")
+            print(f"  [{i + 1:3d}/{count}] \"{title_result['title'][:15]}\" "
+                  f"SP={len(sp_text)}c | Lyrics={len(lyrics)}c "
+                  f"| {genre_group}")
 
         results.append(entry)
 
+    results = batch_titles(results)
+
     elapsed = time.time() - t0
     print(f"\nGenerated {count} packages in {elapsed:.1f}s")
+    print(f"  Forms used: {len(form_counts)} distinct")
+    for fk, fc in sorted(form_counts.items(), key=lambda x: -x[1]):
+        print(f"    {fc}x  {fk[:60]}")
 
     if do_validate:
         sp_pass = sum(1 for r in results if r["sp_validation"]["verdict"] == "PASS")

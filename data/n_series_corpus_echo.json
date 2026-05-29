@@ -1,0 +1,288 @@
+{
+  "summary": {
+    "n_songs": 20,
+    "corpus_songs": 437,
+    "corpus_unique_tokens": 1210,
+    "n_series_unique_tokens": 320,
+    "avg_coverage": 0.9833,
+    "min_coverage": 0.9062,
+    "max_coverage": 1.0,
+    "avg_nearest_jaccard": 0.2708,
+    "novel_token_count": 12,
+    "novel_tokens": [
+      "becomes",
+      "closes",
+      "continues",
+      "energy",
+      "fades",
+      "hit",
+      "increases",
+      "mimics",
+      "ostinato",
+      "re-enter",
+      "reducing",
+      "remain"
+    ]
+  },
+  "per_song": [
+    {
+      "batch_line": "N001_01",
+      "genre": "Cinematic orchestral fusion with electro",
+      "sp_tokens": 49,
+      "in_corpus": 49,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2763,
+      "nearest_title": "서사 없는 사랑",
+      "nearest_genre": "Synth Pop",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N001_02",
+      "genre": "K-Pop educational pop track",
+      "sp_tokens": 40,
+      "in_corpus": 40,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2958,
+      "nearest_title": "끊고 나서",
+      "nearest_genre": "Korean Ballad",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N001_03",
+      "genre": "Bossa Nova",
+      "sp_tokens": 34,
+      "in_corpus": 34,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2295,
+      "nearest_title": "돋보기 두 개",
+      "nearest_genre": "Acoustic Indie / Singer-Songwr",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N001_04",
+      "genre": "K-Indie R&B ballad",
+      "sp_tokens": 32,
+      "in_corpus": 30,
+      "novel": 2,
+      "coverage": 0.9375,
+      "nearest_jaccard": 0.1944,
+      "nearest_title": "NeonDriveRetro",
+      "nearest_genre": "Synthwave",
+      "novel_words": [
+        "closes",
+        "reducing"
+      ]
+    },
+    {
+      "batch_line": "N001_05",
+      "genre": "Orchestral soundtrack with a focus on wo",
+      "sp_tokens": 42,
+      "in_corpus": 42,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2466,
+      "nearest_title": "Cello and Piano Conversation",
+      "nearest_genre": "Classical Crossover / Chamber",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N001_06",
+      "genre": "K-Pop inspired Pop Rock",
+      "sp_tokens": 43,
+      "in_corpus": 41,
+      "novel": 2,
+      "coverage": 0.9535,
+      "nearest_jaccard": 0.3056,
+      "nearest_title": "낙엽 한 장",
+      "nearest_genre": "Electronic Funk",
+      "novel_words": [
+        "continues",
+        "re-enter"
+      ]
+    },
+    {
+      "batch_line": "N001_07",
+      "genre": "K-Pop, J-Pop, upbeat pop-rock",
+      "sp_tokens": 42,
+      "in_corpus": 41,
+      "novel": 1,
+      "coverage": 0.9762,
+      "nearest_jaccard": 0.2676,
+      "nearest_title": "String Orchestra: Texture Lab",
+      "nearest_genre": "",
+      "novel_words": [
+        "mimics"
+      ]
+    },
+    {
+      "batch_line": "N001_08",
+      "genre": "K-Pop R&B ballad",
+      "sp_tokens": 32,
+      "in_corpus": 31,
+      "novel": 1,
+      "coverage": 0.9688,
+      "nearest_jaccard": 0.3448,
+      "nearest_title": "살 만해요",
+      "nearest_genre": "TROT",
+      "novel_words": [
+        "hit"
+      ]
+    },
+    {
+      "batch_line": "N001_09",
+      "genre": "K-Pop ballad",
+      "sp_tokens": 35,
+      "in_corpus": 35,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2537,
+      "nearest_title": "Folk Garden",
+      "nearest_genre": "Acoustic Folk / Indie Folk",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N001_10",
+      "genre": "Lo-fi hip hop track at 85 BPM in C minor",
+      "sp_tokens": 39,
+      "in_corpus": 39,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.25,
+      "nearest_title": "주름진 손",
+      "nearest_genre": "Waltz / Chamber Waltz",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N002_01",
+      "genre": "K-Pop Hip-Hop track featuring a prominen",
+      "sp_tokens": 46,
+      "in_corpus": 46,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.3492,
+      "nearest_title": "댕댕이 인스타",
+      "nearest_genre": "Electro Pop",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N002_02",
+      "genre": "K-Pop educational pop track",
+      "sp_tokens": 33,
+      "in_corpus": 33,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2319,
+      "nearest_title": "닳는 말",
+      "nearest_genre": "Industrial / Dark Electronic",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N002_03",
+      "genre": "K-Rock with pop-punk influences",
+      "sp_tokens": 39,
+      "in_corpus": 39,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2771,
+      "nearest_title": "발밑 무지개",
+      "nearest_genre": "Neo-Soul / Jazzy Pop",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N002_04",
+      "genre": "K-Pop and Future Bass fusion",
+      "sp_tokens": 34,
+      "in_corpus": 33,
+      "novel": 1,
+      "coverage": 0.9706,
+      "nearest_jaccard": 0.25,
+      "nearest_title": "캘리포니아...산타페",
+      "nearest_genre": "Blues Rock",
+      "novel_words": [
+        "ostinato"
+      ]
+    },
+    {
+      "batch_line": "N002_05",
+      "genre": "Bossa Nova",
+      "sp_tokens": 33,
+      "in_corpus": 33,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2424,
+      "nearest_title": "서류 위의 눈물",
+      "nearest_genre": "Alternative",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N002_06",
+      "genre": "Bossa Nova",
+      "sp_tokens": 53,
+      "in_corpus": 53,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.321,
+      "nearest_title": "네 마디",
+      "nearest_genre": "Jazz Pop",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N002_07",
+      "genre": "K-Rock with high-energy punk influences",
+      "sp_tokens": 31,
+      "in_corpus": 31,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2319,
+      "nearest_title": "같은 천장",
+      "nearest_genre": "Lo-fi R&B / Neo Soul",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N002_08",
+      "genre": "K-Pop Indie Rock track in E Major at 115",
+      "sp_tokens": 42,
+      "in_corpus": 40,
+      "novel": 2,
+      "coverage": 0.9524,
+      "nearest_jaccard": 0.2857,
+      "nearest_title": "천만 원",
+      "nearest_genre": "Indie Soul",
+      "novel_words": [
+        "energy",
+        "increases"
+      ]
+    },
+    {
+      "batch_line": "N002_09",
+      "genre": "K-Pop Hip-Hop track featuring a male rap",
+      "sp_tokens": 51,
+      "in_corpus": 51,
+      "novel": 0,
+      "coverage": 1.0,
+      "nearest_jaccard": 0.2903,
+      "nearest_title": "Flauta na Praia",
+      "nearest_genre": "",
+      "novel_words": []
+    },
+    {
+      "batch_line": "N002_10",
+      "genre": "K-Pop Rock with a driving pop-punk influ",
+      "sp_tokens": 32,
+      "in_corpus": 29,
+      "novel": 3,
+      "coverage": 0.9062,
+      "nearest_jaccard": 0.2727,
+      "nearest_title": "찜 목록",
+      "nearest_genre": "City Pop",
+      "novel_words": [
+        "becomes",
+        "fades",
+        "remain"
+      ]
+    }
+  ]
+}

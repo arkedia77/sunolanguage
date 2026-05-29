@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N003 Batch Simulation — sunolanguage</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; background: #0a0a0f; color: #e0e0e0; padding: 20px; }
+  .header { text-align: center; padding: 40px 20px; margin-bottom: 30px; }
+  .header h1 { font-size: 2em; color: #fff; margin-bottom: 10px; }
+  .header p { color: #888; font-size: 0.95em; }
+  .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; max-width: 800px; margin: 20px auto 40px; }
+  .stat-box { background: #1a1a2e; border-radius: 12px; padding: 16px; text-align: center; }
+  .stat-box .val { font-size: 1.8em; font-weight: 700; color: #00e676; }
+  .stat-box .label { font-size: 0.75em; color: #888; margin-top: 4px; }
+  .card { background: #12121a; border: 1px solid #2a2a3a; border-radius: 16px; margin-bottom: 24px; overflow: hidden; max-width: 800px; margin-left: auto; margin-right: auto; }
+  .card-header { display: flex; align-items: center; gap: 12px; padding: 20px 24px 12px; flex-wrap: wrap; }
+  .num { font-size: 1.4em; font-weight: 800; color: #444; min-width: 40px; }
+  .title-area { flex: 1; }
+  .title-area h2 { font-size: 1.3em; color: #fff; display: inline; margin-right: 8px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.7em; font-weight: 600; color: #fff; }
+  .strat { background: #333; color: #aaa; }
+  .stats { font-size: 0.75em; color: #666; display: flex; gap: 12px; }
+  .meta { padding: 8px 24px 16px; font-size: 0.82em; color: #888; line-height: 1.8; }
+  .alt { background: #1e1e2e; padding: 2px 8px; border-radius: 8px; font-size: 0.9em; margin-right: 4px; }
+  .sp-details { padding: 0 24px 8px; }
+  .sp-details summary { cursor: pointer; color: #666; font-size: 0.8em; }
+  .sp-text { background: #0d0d14; padding: 12px; border-radius: 8px; font-size: 0.78em; color: #7a7a9a; white-space: pre-wrap; word-break: break-word; margin-top: 8px; }
+  .lyrics { padding: 16px 24px 24px; font-size: 0.95em; line-height: 1.85; color: #d0d0e0; }
+  .lyrics p { margin-bottom: 12px; }
+  .lyrics br + br { display: none; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>N003 Batch Simulation</h1>
+  <p>sunolanguage Serendipity Engine v2 · seed: "K-Pop dance synth groove" · drift: 0.65</p>
+</div>
+<div class="summary">
+  <div class="stat-box"><div class="val">10/10</div><div class="label">SP PASS</div></div>
+  <div class="stat-box"><div class="val">10/10</div><div class="label">Lyrics PASS</div></div>
+  <div class="stat-box"><div class="val">100%</div><div class="label">V1≠V2</div></div>
+  <div class="stat-box"><div class="val">7</div><div class="label">폼 다양성</div></div>
+  <div class="stat-box"><div class="val">0.54</div><div class="label">avg coherence</div></div>
+  <div class="stat-box"><div class="val">400c</div><div class="label">avg SP length</div></div>
+</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#01</div>
+        <div class="title-area">
+          <h2>「대신」</h2>
+          <span class="badge" style="background:#e91e63">POP</span>
+          <span class="badge strat">chorus_phrase</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.73</span>
+          <span>SP 316c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> K-Pop and J-Pop fusion with high-energy bubblegum pop elemen</div>
+        <div><strong>폼:</strong> verse → chorus → verse → chorus → bridge → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">읽씹하지 마 제발</span>, <span class="alt">이모티콘 대신에</span>, <span class="alt">좋아한다 말할게요</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">K-Pop and J-Pop fusion with high-energy bubblegum pop elements. two acoustic guitars, fingerpicked arpeggios. Two acoustic guitars perform interlocking fingerstyle patterns. bass slides, building drum fill. male rap vocals, syncopated bassline. K-Pop Punk with a high-energy pop-rock arrangement. The key is G Major.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Verse 1]<br>지나가는 사람들의 발소리가<br>에코처럼 울리는 복도<br>거울은 대답하지 않고<br>그냥 보여주기만 해</p><p>[Chorus]<br>비키세요 한마디에 깨지는<br>나와의 눈 마주침</p><p>[Verse 2]<br>프로필 사진 백 번째 봐<br>이 사람 뭐가 좋은 건지<br>답장은 안 오는데 자꾸<br>화면만 켜보는 바보야</p><p>[Chorus]<br>읽씹하지 마 제발<br>이 마음 다 보여줄게<br>이모티콘 대신에<br>좋아한다 말할게요<br>읽씹하지 마</p><p>[Bridge]<br>셀카 속 나는 웃고 있는데<br>여기 이 거울은 편집이 안 돼<br>이게 진짜라고 말하는 건지<br>그냥 하나의 각도일 뿐인 건지</p><p>[Outro]<br>다시 걷는다 환승통로<br>사람들 사이로 미끄러지듯<br>근데 아까 그 얼굴이<br>자꾸 뒤통수를 두드린다</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#02</div>
+        <div class="title-area">
+          <h2>「that feels like」</h2>
+          <span class="badge" style="background:#4caf50">ACOUSTIC</span>
+          <span class="badge strat">verse_noun</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.45</span>
+          <span>SP 304c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> Bossa Nova</div>
+        <div><strong>폼:</strong> verse → chorus → verse → chorus → verse → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">(gentle, never belting)</span>, <span class="alt">Afternoon, you move</span>, <span class="alt">you move so</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">Bossa Nova. distorted guitar solo with heavy spring reverb and tremolo picking. clean arpeggiated electric guitar with chorus. Subtle digital percussion includes a soft rimshot on the backbeat and a muted kick drum. melodic rap vocals. full band re-enters, high energy. K-Pop R&amp;B with a mid-tempo groove.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Verse 1]<br>A borrowed hour that feels like mine</p><p>[Chorus]<br>한 글자 한 글자<br>내가 아닌 사람이 쓴 것 같다<br>꿈꾸던 것들<br>다 어디로 갔을까</p><p>[Verse 2]<br>그 시절의 울음과 기쁨이<br>낯설게 느껴진다<br>잉크가 번진 자리마다<br>눈물이 마른 흔적</p><p>[Chorus]<br>(gentle, never belting)<br>Afternoon, you move so slow</p><p>[Verse 3]<br>해산물 냄새<br>골목을 채운다<br>배가 고프다<br>길을 잃은 배도</p><p>[Outro]<br>책을 덮는다<br>안전하게 보관해야겠다<br>내가 놓친 것들을 위해<br>조용히 기억하자</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#03</div>
+        <div class="title-area">
+          <h2>「정확한」</h2>
+          <span class="badge" style="background:#e91e63">POP</span>
+          <span class="badge strat">chorus_phrase</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.58</span>
+          <span>SP 383c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> K-Pop track with elements of funk and bubblegum pop</div>
+        <div><strong>폼:</strong> chorus → verse → chorus → verse → bridge → chorus → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">달력</span>, <span class="alt">빗물</span>, <span class="alt">다음</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">K-Pop track with elements of funk and bubblegum pop. A clean electric guitar provides occasional muted staccato plucks. A clean electric guitar provides occasional muted staccato plucks. open hi-hat enters on off-beats. K-Pop ballad featuring a female vocalist. The arrangement features environmental foley sounds including water droplets and a low-frequency hum. 4/4 time signature.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Chorus]<br>고요하다, 그래서 슬프다<br>남겨진 것들이<br>하나씩 식어가는 소리<br>그것이 이별의 속도다</p><p>[Verse 1]<br>창틈으로 스며드는<br>새벽 공기가 차갑다<br>네가 매일 열어두던 창<br>아직 닫지 못했다</p><p>[Chorus]<br>지하철 승강장에 살고 있어<br>모두가 어딘가로 향하는데<br>난 그냥 흐름 속에<br>버티고만 있어</p><p>[Verse 2]<br>사 계절 비가 그린 지도가<br>이 유리창 위에 완성돼 가고 있어</p><p>[Bridge]<br>빈자리에 손을 얹는다<br>아직 따뜻할 것 같아서<br>매일 밤 확인한다</p><p>[Chorus]<br>달력보다 정확한 이 빗물 지도<br>다음 비는 어떤 선을 그어줄까</p><p>[Outro]<br>커피 한 잔 들고 창가에 앉아<br>비가 한 줄 더 긋는 걸 봐<br>오늘의 비는 어떤 기억이 될까</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#04</div>
+        <div class="title-area">
+          <h2>「무엇을 버리느냐가」</h2>
+          <span class="badge" style="background:#9c27b0">BALLAD</span>
+          <span class="badge strat">chorus_phrase</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.65</span>
+          <span>SP 609c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> K-Pop ballad</div>
+        <div><strong>폼:</strong> intro → verse → chorus → interlude → verse → chorus → bridge → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">가벼워진 어깨 위로</span>, <span class="alt">무엇</span>, <span class="alt">버리느냐</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">K-Pop ballad. The arrangement centers on a clean, fingerpicked acoustic guitar playing a steady eighth-note pattern. The arrangement centers on a clean, fingerpicked acoustic guitar playing a steady eighth-note pattern. bass and percussion maintain steady groove. K-Pop R&amp;B track featuring a male vocalist. The arrangement features a prominent upright bass playing walking lines and syncopated rhythms, a grand piano providing harmonic accompaniment with jazz voicings, and a muted trumpet performing melodic fills and a solo. The arrangement is sparse and intimate, maintaining a consistent mid-tempo groove.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Intro]<br>폐관 안내 방송이 울린다<br>마지막 발소리가 멀어진다</p><p>[Verse 1]<br>불빛이 닿지 않는 여백에 진짜 이야기가 숨어있어</p><p>[Chorus]<br>불빛이 닿지 않는 여백이 가장 솔직한 공간<br>비어있는 곳에서 가장 깊은 감정이 흘러나와</p><p>[Interlude]<br>조용함이 깊어지고<br>가장 깊은 곳에서 울리는 소리</p><p>[Verse 2]<br>스토리에 올린 건<br>용기 3초짜리 고백<br>프로필 사진을 번갈아 보며<br>새로고침을 누르지</p><p>[Chorus]<br>무엇을 버리느냐가<br>무엇을 사랑하느냐였다<br>가벼워진 어깨 위로<br>바람이 인사를 건넨다</p><p>[Bridge]<br>어렵지 않아 패턴이 있어<br>받침이 뒤로 가면 연음<br>뒤가 ㄱㄷㅂㅅㅈ면 된소리<br>뒤가 ㄴㅁ이면 코 소리로<br>세 가지만 알면 다 돼</p><p>[Outro]<br>오늘도 그림자가<br>나보다 길지<br>그래도 괜찮지<br>나는 나니까</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#05</div>
+        <div class="title-area">
+          <h2>「자리가 비었구나」</h2>
+          <span class="badge" style="background:#2196f3">RNB</span>
+          <span class="badge strat">rebalanced</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.51</span>
+          <span>SP 474c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> K-Hip Hop with a smooth R&amp;B influence</div>
+        <div><strong>폼:</strong> intro → verse → pre_chorus → chorus → verse → chorus → bridge → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">자리가 비었구나</span>, <span class="alt">자리가 줄었구나</span>, <span class="alt">밥이 식는 동안에도</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">K-Hip Hop with a smooth R&amp;B influence. Clean electric guitar plays a syncopated four-bar loop using jazz-influenced seventh chords. Clean electric guitar plays a syncopated four-bar loop using jazz-influenced seventh chords. drums enter with soft kick and snare. A bright, percussive synth pluck enters during the chorus, doubling the vocal melody. The arrangement maintains a consistent 4/4 time signature at 120 BPM in the key of C Major. The tempo is 132 BPM in 4/4 time.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Intro]<br>형광등이 밤을 먹어<br>새벽 다섯 시, 헬스장의 숨</p><p>[Verse 1]<br>또 어색해질 것 같아<br>그래서 안 써</p><p>[Pre-Chorus]<br>거리가 소수점이 되는 순간<br>네 심장 뛰는 소리가 들려<br>무섭지만 멈출 수 없는</p><p>[Chorus]<br>연락하기 애매한 거야<br>그 거리가 맞는 거야<br>지금 이대로도 괜찮은 거야<br>보고 싶은 채로 있는 거야<br>그게 지금 관계잖아</p><p>[Verse 2]<br>내가 버는 돈<br>처음이다<br>작은 금액이<br>무거워 느껴진다</p><p>[Chorus]<br>자리가 비었구나<br>자리가 줄었구나<br>밥이 식는 동안에도<br>시간은 흐르는구나</p><p>[Bridge]<br>알림 없이 폰 내려놨어<br>내일 하지 뭐<br>내일도 이럴 것 같아<br>그게 지금 우리야</p><p>[Outro]<br>작지만 확실한 나의 증명<br>누군가는 나를 본다<br>나는 여기 있다</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#06</div>
+        <div class="title-area">
+          <h2>「떨어지다」</h2>
+          <span class="badge" style="background:#f44336">ROCK</span>
+          <span class="badge strat">chorus_phrase</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.39</span>
+          <span>SP 486c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> K-Rock with heavy metal influences</div>
+        <div><strong>폼:</strong> intro → verse → chorus → verse → chorus → interlude → bridge → chorus → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">추락</span>, <span class="alt">직전</span>, <span class="alt">심장</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">K-Rock with heavy metal influences. K-Pop acoustic ballad featuring a bright, fingerstyle acoustic guitar and a warm, melodic male vocal. K-Pop acoustic ballad featuring a bright, fingerstyle acoustic guitar and a warm, melodic male vocal. sudden orchestral hit with crash cymbal. The vocal performance is intimate, utilizing breathy delivery in the lower register and transitioning to a more resonant chest voice. full band, high-energy distorted guitars, crash cymbals. Tempo 128 BPM.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Intro]<br>무게가 있다는 것.<br>존재한다는 증명.</p><p>[Verse 1]<br>생각 없이 나오는 여섯 글자<br>입만 움직이면 되는 거니까</p><p>[Chorus]<br>오백 번이 영점일 초가 됐어<br>영점일 초가 내 전부가 됐어<br>까진 무릎이 값어치를 했어<br>갈라진 손이 증명을 했어</p><p>[Verse 2]<br>오백 번째 머리가 사라졌어<br>몸이 먼저 반응했어<br>생각보다 빠른 게 몸이었어</p><p>[Chorus]<br>수고하셨습니다<br>입술만 움직이는 빈 그릇<br>수고하셨습니다<br>감정 없이 채워 넣는 공기처럼</p><p>[Interlude]<br>호흡, 맥박, 체온.<br>작은 신호들.</p><p>[Bridge]<br>전광판을 봤어<br>숫자가 바뀌어 있었어<br>영점일 초 줄었어<br>고작 영점일 초</p><p>[Chorus]<br>추락 직전에 눈을 떠<br>심장이 터질 것 같은 이 순간<br>떨어지다 멈추는 그 일 초가<br>오늘 하루 중 가장 살아있는 순간<br>몸이 기억하는 공포의 리듬<br>추락 직전이 가장 생생해</p><p>[Outro]<br>무게, 무게, 무게.<br>그것이 증명이고,<br>그것이 삶이고,<br>그것이 나다.</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#07</div>
+        <div class="title-area">
+          <h2>「십오」</h2>
+          <span class="badge" style="background:#ff9800">HIPHOP</span>
+          <span class="badge strat">chorus_phrase</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.44</span>
+          <span>SP 430c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> K-Hip Hop track featuring a male rapper</div>
+        <div><strong>폼:</strong> intro → verse → hook → verse → hook → verse → hook → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">전부</span>, <span class="alt">불편</span>, <span class="alt">자유</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">K-Hip Hop track featuring a male rapper. drums build with snare rolls, guitar distortion increases. A fretless bass provides melodic counterpoint with sliding transitions. The drums use a soft snare with high reverb and a muted kick drum. A melodic electric bass follows the vocal melody with syncopated slides. full synth arrangement, driving percussion. Acoustic rhythm guitar plays percussive la pompe style chords in 4/4 time.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Intro]<br>책상 위 펜<br>창문 앞 먼지<br>계단 모서리 새 날개<br>할머니 손 주름<br>냉장고 불빛</p><p>[Verse 1]<br>300미터 코너에서 다리가 풀려<br>젖산이 차올라 근육이 불타<br>시야가 좁아져 터널 속 같아<br>옆 레인 어깨가 내 시야에 들어와</p><p>[Hook]<br>마지막 직선이야 다리야 버텨<br>포기하면 편해 근데 그건 내가 아니거든<br>이 고통은 잠깐이야 멈추면 영원해<br>달려 달려 결승선이 보여</p><p>[Verse 2]<br>세상이 멈추는 이 순간에<br>심장이 영화 같이 뛰어가고<br>네 손가락이 내 턱을 타고 올라와</p><p>[Hook]<br>동전을 넣고 버튼을 누른다.<br>이 골목 구석에서 가장 솔직한 연결.</p><p>[Verse 3]<br>눈물인지 물인지 모르게<br>냉수도 따뜻하게 느껴진다</p><p>[Hook]<br>해지 해지 전부 해지<br>불편이 자유를 데려왔다<br>광고 십오 초가 별거냐<br>내 시간은 내가 쓴다<br>알고리즘이 골라준 인생 말고<br>내가 걸어서 찾은 인생</p><p>[Outro]<br>너의 눈이 자꾸 내 입술을 쫓아가고<br>숨이 섞인다<br>이 프레임 속에 우리가 남길</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#08</div>
+        <div class="title-area">
+          <h2>「불빛」</h2>
+          <span class="badge" style="background:#9c27b0">BALLAD</span>
+          <span class="badge strat">verse_noun</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.61</span>
+          <span>SP 342c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> K-Pop R&amp;B ballad</div>
+        <div><strong>폼:</strong> verse → chorus → verse → chorus → bridge → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">스스로에게</span>, <span class="alt">건넨다</span>, <span class="alt">여백</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">K-Pop R&amp;B ballad. filtered acoustic piano enters with a four-bar loop. piano loop fades out with increasing reverb. claps. vocal ad-libs continue. The arrangement features a prominent string section playing staccato ostinatos and soaring legato melodies. A high-energy trance beat drives the rhythm with a 160 BPM tempo in the key of G minor.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Verse 1]<br>불빛이 닿지 않는 여백에 진짜 이야기가 숨어있어</p><p>[Chorus]<br>감각의 언어로 말해, 이게 우리의 노래.</p><p>[Verse 2]<br>아프다고 칭얼대는 네가 오히려 귀여워 보여</p><p>[Chorus]<br>스스로에게 말을 건넨다<br>믿어지지 않아도 말한다</p><p>[Bridge]<br>집에 와서 가방 열었는데<br>봉투가 다시 들어가 있었어<br>아 또 이러셨네</p><p>[Outro]<br>다음 주에도 전화할게요 괜찮다고 말할게요</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#09</div>
+        <div class="title-area">
+          <h2>「시절」</h2>
+          <span class="badge" style="background:#4caf50">ACOUSTIC</span>
+          <span class="badge strat">verse_noun</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.52</span>
+          <span>SP 366c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> K-Indie Bossa Nova</div>
+        <div><strong>폼:</strong> verse → chorus → verse → chorus → verse → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">이게 뭔지 모르겠어</span>, <span class="alt">사랑이 되려는 건가</span>, <span class="alt">네 답장 하나에</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">K-Indie Bossa Nova. A soft, rounded synth bass enters on the downbeat of the first verse. A soft, rounded synth bass enters on the downbeat of the first verse. full drum kit, syncopated bass line. A soft, breathy male vocal performs a melodic, intimate lead. Female vocals are delivered in a breathy, intimate head voice with minimal vibrato. Key of G minor, 95 BPM.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Verse 1]<br>그 시절의 울음과 기쁨이<br>낯설게 느껴진다<br>잉크가 번진 자리마다<br>눈물이 마른 흔적</p><p>[Chorus]<br>한 글자 한 글자<br>내가 아닌 사람이 쓴 것 같다<br>꿈꾸던 것들<br>다 어디로 갔을까</p><p>[Verse 2]<br>문이 열려 있다<br>작은 바<br>들어가지 않는다<br>밖에서 듣는다</p><p>[Chorus]<br>이게 뭔지 모르겠어<br>사랑이 되려는 건가<br>네 답장 하나에<br>하루가 통째로 물드는 것처럼<br>확인되지 않은 감정들이<br>전부 네 쪽을 가리켜</p><p>[Verse 3]<br>조명이 하나씩 꺼진다<br>다섯 시 오십오 분<br>그림 속 눈동자가 깊어지는 건<br>어둠 때문만은 아닌 걸</p><p>[Outro]<br>책을 덮는다<br>안전하게 보관해야겠다<br>내가 놓친 것들을 위해<br>조용히 기억하자</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="num">#10</div>
+        <div class="title-area">
+          <h2>「감정들」</h2>
+          <span class="badge" style="background:#e91e63">POP</span>
+          <span class="badge strat">rebalanced</span>
+        </div>
+        <div class="stats">
+          <span>coh 0.50</span>
+          <span>SP 291c</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><strong>장르:</strong> Indie pop with a funk-influenced groove</div>
+        <div><strong>폼:</strong> chorus → verse → chorus → verse → bridge → chorus → outro</div>
+        <div><strong>대안 제목:</strong> <span class="alt">감정들</span>, <span class="alt">전부</span>, <span class="alt">가리켜</span></div>
+      </div>
+      <details class="sp-details">
+        <summary>SP 전문 보기</summary>
+        <pre class="sp-text">Indie pop with a funk-influenced groove. harmonica melody, arpeggiated clean electric guitar. harmonica melody, arpeggiated clean electric guitar. guitar feedback fades out, final kick drum hit. Cumbia with English and Spanish vocals. final staccato chord from the full band. Key of G minor.</pre>
+      </details>
+      <div class="lyrics">
+        <p>[Chorus]<br>열기가 감추는 한여름의 비밀<br>녹아봐야 진짜 형태를 안다</p><p>[Verse 1]<br>신호등이 녹을 것 같은 온도<br>그림자마저 증발하는 거리<br>아지랑이가 도시를 감싸면<br>현실과 신기루 사이가 사라진다</p><p>[Chorus]<br>이 고유한 사랑의 언어를 평생 써가자</p><p>[Verse 2]<br>아파트 지하 세탁실 문을 열면<br>형광등이 지직거리며 맞아준다<br>건조기 세 대 중 하나만 돌고 있어<br>내 빨래가 둥글게 춤을 추고 있다</p><p>[Bridge]<br>소나기가 한 번 쏟아지면<br>아지랑이는 순식간에 사라지겠지<br>그래서 더 아름다운 건지도<br>사라질 걸 알면서 피어나니까</p><p>[Chorus]<br>확인되지 않은 감정들이<br>전부 네 쪽을 가리켜</p><p>[Outro]<br>바람이 분다 아지랑이가 흩어진다<br>아스팔트가 다시 딱딱해진다</p>
+      </div>
+    </div>
+    
+</body>
+</html>

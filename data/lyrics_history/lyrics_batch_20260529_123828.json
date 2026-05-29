@@ -1,0 +1,230 @@
+[
+  {
+    "index": 0,
+    "title": "Full kit enters,",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "겹칠수록",
+      "기분",
+      "주파수",
+      "우리",
+      "kit enters, bass"
+    ],
+    "sp": "Synthwave with a focus on instructional vocal cues. sustained bass notes on the root of each chord change. A subtle, warm electric bass enters with long, sustained root notes. A bright, digital synthesizer lead plays a syncopated melody over a heavy sub-bass and a crisp electronic drum kit. melodic singing, bass deepens. The arrangement uses a dry, punchy drum kit with a crisp snare and tight hi-hats. K-Pop City Pop track at 115 BPM in E Major.",
+    "lyrics": "[Verse 1]\nFull kit enters, bass synth joins\n\n[Chorus]\nSynth lead melody soars above\n\n[Verse 2]\n종 친다 선생님이 여기까지\n교실이 폭발한다\n이어폰 왼쪽을 꽂는다\n오른쪽은 옆자리한테 건네줘\n플리 첫 곡이 시작되면\n창밖이 뮤직비디오가 돼\n\n[Chorus]\n겹칠수록 가까워지는 기분\n이 주파수가 우리를 연결해\n\n[Bridge]\nBreakdown, filter sweep on bass\n\n[Outro]\nArpeggio fades with delay",
+    "sp_length": 448,
+    "lyrics_length": 287,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "sp_validation": {
+      "sp_length": 448,
+      "total_words": 77,
+      "meaningful_words": 33,
+      "native_count": 33,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 287,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.2382,
+      "verdict": "WARN",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "마비",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "감각",
+      "이게",
+      "우리",
+      "노래",
+      "느낀다"
+    ],
+    "sp": "K-Pop R&B ballad featuring a male baritone vocalist. The arrangement features a nylon-string acoustic guitar playing syncopated jazz chords and a walking upright bass. The arrangement features a nylon-string acoustic guitar playing syncopated jazz chords and a walking upright bass. upright bass maintains two-beat feel. group vocals. The arrangement includes subtle synth pads in the background. The tempo is a fast 185 BPM in 4/4 time.",
+    "lyrics": "[Intro]\n네 어머니가 해주시던 그 손길을 기억해\n\n[Verse 1]\n같은 것을 또 느낀다\n마비와 강박의 경계\n\n[Chorus]\n반복이 안정이다\n반복이 답답이다\n반복이 나다\n\n[Interlude]\n냉장고의 윙윙거림, 도시의 잔잔한 맥박.\n\n[Verse 2]\n아직 거기 있었어\n그 세계에서\n\n[Chorus]\n감각의 언어로 말해, 이게 우리의 노래.\n\n[Bridge]\n고기반복이 고기가 되다\n감각이 감각을 먹는다\n손가락이 손가락을 누른다\n침묵이 침묵을 부른다\n\n[Outro]\n누르고 누르고 또 누른다\n끝나지 않는 손가락\n끝나지 않는 나",
+    "sp_length": 437,
+    "lyrics_length": 299,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "intro",
+      "verse",
+      "chorus",
+      "interlude",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → chorus → interlude → verse → chorus → bridge → outro",
+    "sp_validation": {
+      "sp_length": 437,
+      "total_words": 68,
+      "meaningful_words": 37,
+      "native_count": 37,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 299,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5376,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 2,
+    "title": "Caliente, caliente",
+    "title_strategy": "rebalanced",
+    "title_alternatives": [
+      "Caliente, caliente",
+      "The rhythm takes control",
+      "건네",
+      "기미",
+      "늘었다"
+    ],
+    "sp": "Orchestral film score with a focus on dramatic, fast-paced string arrangements. Clean electric guitar plays rhythmic muted scratches and staccato chords. Clean electric guitar plays rhythmic muted scratches and staccato chords. fingerpicked acoustic guitar, soft kick drum. K-Pop Hip-Hop track featuring a male rapper with a rhythmic, laid-back delivery. The arrangement includes a prominent synth-brass lead melody during the intro and transitions. A clean, fingerpicked acoustic guitar plays a repetitive arpeggiated pattern in 4/4 time.",
+    "lyrics": "[Verse 1]\n리모컨 건네는 아버지 손에\n기미가 늘었다\n모른 척 TV를 봤다\n\n[Chorus]\nLayered leads, maximum energy\n\n[Verse 2]\n사직서 냈다 드디어\n하늘이 다르게 보여\n짐 싼 박스 하나 들고\n회사 앞을 걸어 나와\n\n[Chorus]\nCaliente, caliente\nThe rhythm takes control\n\n[Bridge]\nBreakdown, filter sweep on bass\n\n[Outro]\nRhythm fades, accordion trail",
+    "sp_length": 539,
+    "lyrics_length": 277,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "sp_validation": {
+      "sp_length": 539,
+      "total_words": 76,
+      "meaningful_words": 38,
+      "native_count": 38,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 277,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.1798,
+      "verdict": "FAIL",
+      "issues": []
+    }
+  },
+  {
+    "index": 3,
+    "title": "나가면",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "아니 알아줘",
+      "아니",
+      "담긴",
+      "처리할",
+      "그게"
+    ],
+    "sp": "K-Pop ballad featuring a male tenor vocal. The bass guitar follows the kick drum with a groovy, staccato feel. The bass guitar follows the kick drum with a groovy, staccato feel. bright brass fanfare, slap bass, drum fill. vocal ad-lib. The arrangement features a clean electric guitar playing jazz-influenced chords with a slight chorus effect, a warm synth bass, and a drum machine beat with a crisp snare and tight hi-hats. K-Pop R&B track with a mid-tempo groove.",
+    "lyrics": "[Verse 1]\n나가면 안 되는 말이었거든요\n삐 처리할 틈도 없었어요\n\n[Chorus]\n이제는 그게\n세상에서 가장\n그리운 냄새다\n현관문을 열 때마다\n\n[Verse 2]\n진지한 사랑만큼 함께 노는 시간도 소중해\n\n[Chorus]\n아니 알아줘\n이 한 장에 담긴 마음\n\n[Bridge]\n지워지지 않는 게 있는 거다\n그게 사람이다\n\n[Verse 3]\n결국 10% 됐어\n어떻게 된 거야\n\n[Outro]\n문이 열린다\n불이 켜진다\n따뜻한 공기가 밀려와\n차가운 세계와 만나는",
+    "sp_length": 467,
+    "lyrics_length": 258,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → verse → outro",
+    "sp_validation": {
+      "sp_length": 467,
+      "total_words": 79,
+      "meaningful_words": 40,
+      "native_count": 40,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 258,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.7027,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 4,
+    "title": "남아서",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "사랑이 깊어져가고",
+      "손을 더 꼭 잡으며",
+      "시간",
+      "새긴",
+      "주름"
+    ],
+    "sp": "Bossa Nova with a modern jazz fusion influence. A solo cello performs a mournful, legato melody in the upper register, accompanied by a plucked acoustic guitar playing arpeggiated minor chords. The track features a syncopated slap bass line, clean-toned rhythmic electric guitar scratching, and a bright acoustic piano playing staccato chords. vocal doubling, fuller percussion. The production is polished with heavy compression on the drums and shimmering reverb on the vocal tracks. The arrangement begins with a solo grand piano playing arpeggiated chords and a melodic top line. The arrangement uses a 4/4 time signature.",
+    "lyrics": "[Verse 1]\n낯선 향이 손목에 남아서\n모르는 사람이 된 기분이었어요\n\n[Chorus]\n세 시간의 무소속이에요\n어디에도 속하지 않는 자유요\n창가 벤치에 앉아서 봐요\n비행기가 하나씩 떠오르잖아요\n\n[Verse 2]\n그 시절의 울음과 기쁨이\n낯설게 느껴진다\n잉크가 번진 자리마다\n눈물이 마른 흔적\n\n[Chorus]\n이 손은 내 손의 지도\n시간이 새긴 주름 속에\n사랑이 깊어져가고\n손을 더 꼭 잡으며\n\n[Verse 3]\n기타 소리가 새어 나온다\n어딘가에서\n파두인 것 같다\n슬픈 건 어디서나 같은 멜로디\n\n[Outro]\n비행기가 활주로를 달려요\n저도 다시 어딘가로 갑니다",
+    "sp_length": 625,
+    "lyrics_length": 317,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → verse → outro",
+    "sp_validation": {
+      "sp_length": 625,
+      "total_words": 96,
+      "meaningful_words": 48,
+      "native_count": 48,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 317,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5719,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]
