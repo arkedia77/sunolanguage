@@ -1,0 +1,98 @@
+[
+  {
+    "index": 0,
+    "title": "흘러간",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "이어폰 빈 한쪽으로",
+      "바람이 들어와",
+      "강물",
+      "계속",
+      "그렇게"
+    ],
+    "sp": "K-Pop ballad featuring a male tenor vocalist. The track features a bright, percussive acoustic guitar strumming syncopated rhythms. Acoustic guitar plays syncopated strumming patterns in 4/4 time at 105 BPM in the key of G Major. The arrangement is sparse, focusing on the interplay between the syncopated guitar strumming and the vocal phrasing. The arrangement is sparse, focusing on the interplay between the rhythmic guitar strumming and the vocal melody. The arrangement is sparse, focusing on the interplay between the rhythmic guitar strumming and the vocal phrasing. breathy female vocals, electronic kick and rimshot enter. Production includes subtle record scratch effects and vocal doubling on the hook. final staccato chord from the full band. Key is G Major.",
+    "lyrics": "[Verse 1]\n한강 벤치에 앉아 보니\n노을이 참 곱기도 해요\n스물에 꿈꿨던 것들이\n바람에 흩어진 것 같아\n나이 마흔 가을 저녁이\n이렇게 조용하더라\n\n[Chorus]\n강물이 흐르잖아 계속\n너도 그렇게 흘러간 거야\n이어폰 빈 한쪽으로\n바람이 들어와\n\n[Verse 2]\n건조대에 걸린 순간\n겹겹이 밟혔던 것들\n하나둘 펼쳐지고\n햇빛은 어디를 향할까\n\n[Chorus]\n강물이 흐르잖아 계속\n너도 그렇게 흘러간 거야\n이어폰 빈 한쪽으로\n바람이 들어와\n\n[Bridge]\n지워지지 않는 게 있는 거다\n그게 사람이다\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[electric guitar arpeggio fades]",
+    "sp_length": 771,
+    "lyrics_length": 371,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 771,
+      "total_words": 119,
+      "meaningful_words": 47,
+      "native_count": 47,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 371,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.7063,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "풍경",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "아지랑이",
+      "지운다",
+      "뜨거운",
+      "숨결",
+      "출렁여"
+    ],
+    "sp": "Orchestral soundtrack with a focus on woodwinds and strings. Electric bass follows a consistent two-beat bossa nova pattern. alternating bass notes with melodic top line. offbeat electric guitar chops. The bassline uses a syncopated sixteenth-note pattern during the verses, shifting to sustained root notes in the chorus. brass section unison stabs. strings fade out. drums enter with soft kick and snare. High-frequency air is prominent in the vocal mix, with a short room reverb. The arrangement alternates between driving punk-influenced sections and traditional swing-style shuffles. 4/4 time signature. The arrangement is sparse and intimate. The production is intimate with a close-mic vocal technique and a wide stereo field for the instrumental elements.",
+    "lyrics": "[Verse 1]\n해가 진다\n항구 쪽에서\n비릿한 바람이 불어온다\n어부가 그물을 정리한다\n\n[Chorus]\n아지랑이가 세상을 지운다\n뜨거운 숨결 위에 풍경이 출렁여\n단단한 것들이 물렁해지는 시간\n아스팔트 위에 피어나는 바다\n열기가 만드는 한낮의 환상\n녹아야만 보이는 것들이 있다\n\n[Verse 2]\nConcrete jungle after dark\nSliding through the city streets\nEvery corner tells a story\nBass hits heavy on repeat\n\n[Chorus]\n아지랑이가 세상을 지운다\n뜨거운 숨결 위에 풍경이 출렁여\n단단한 것들이 물렁해지는 시간\n아스팔트 위에 피어나는 바다\n열기가 만드는 한낮의 환상\n녹아야만 보이는 것들이 있다\n\n[Bridge]\n같은 위도 같은 경도인데\n중력이 달라졌다\n그 사람이 앉았던 자리 쪽으로\n모든 게 기울어진다\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[oboe melody over piano ostinato]",
+    "sp_length": 763,
+    "lyrics_length": 536,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 763,
+      "total_words": 113,
+      "meaningful_words": 53,
+      "native_count": 53,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 536,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4104,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

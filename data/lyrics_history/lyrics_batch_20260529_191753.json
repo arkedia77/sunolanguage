@@ -1,0 +1,98 @@
+[
+  {
+    "index": 0,
+    "title": "이름",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "죽음",
+      "앞에서",
+      "잡고",
+      "마지막",
+      "그날"
+    ],
+    "sp": "K-Pop ballad featuring a female vocalist. Distorted electric guitars play slow, down-tuned power chords and dissonant intervals. Distorted electric guitars provide power chords during the chorus. Distorted electric guitars play palm-muted power chords in the verses and open, ringing chords in the chorus. Distorted electric guitars enter during the crescendo with sustained power chords. Distorted electric guitars play palm-muted eighth-note power chords in the verses, opening up to sustained chords in the chorus. The drum kit consists of a punchy kick, sharp claps on the backbeat, and rapid-fire closed hi-hat rolls. A wordless female soprano vocal performs ethereal, operatic vocalizations with heavy hall reverb. The arrangement is sparse and minimalist. The tempo is a brisk 145 BPM in the key of G minor.",
+    "lyrics": "[Verse 1]\n나뭇결 사이 새겨진 이름 위로\n손끝이 천천히 더듬는 걸\n\n[Chorus]\n죽음 앞에서도 네 손을 잡고 있을 거야\n마지막 숨을 쉬는 그날까지 변하지 않는 맹세\n이 사랑은 생사를 넘어 영원한 약속이야\n\n[Verse 2]\n눈이 같이 못 웃었잖아 그건 감점이야\n집중도 2점 — 회의 중에 딴생각 들킬 뻔했어\n\n[Chorus]\n죽음 앞에서도 네 손을 잡고 있을 거야\n마지막 숨을 쉬는 그날까지 변하지 않는 맹세\n이 사랑은 생사를 넘어 영원한 약속이야\n\n[Bridge]\n10년이 무거웠던 게 아니라\n3년이 가벼워진 거였어\n미안한 것도 아니고\n슬픈 것도 아니고\n그냥 계절이 하나 더 간 것 같아\n\n기도를 잘 안 하는데\n오늘은 좀 했어\n네가 행복했으면\n그 옆에 있는 사람이 따뜻했으면\n그걸 비는 내가 좀 괜찮았으면\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[electric guitar melody fades]",
+    "sp_length": 814,
+    "lyrics_length": 489,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "성장",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 814,
+      "total_words": 123,
+      "meaningful_words": 55,
+      "native_count": 55,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 489,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5115,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "박스",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "사직서",
+      "냈다",
+      "다르게",
+      "보여",
+      "들고"
+    ],
+    "sp": "Orchestral film score with a focus on dramatic, fast-paced string arrangements. Amapiano track featuring a log drum bassline and syncopated percussion. percussion continues, guitar plays melodic flourishes. guitar palm-muting stops, sustained chords. overdriven electric guitar power chords, steady drum beat. piano chords, building drum roll. Rhodes piano layers provide harmonic warmth during transitions. muffled kick drum, crisp snare, eighth-note hi-hats. Female vocals are present, characterized by repetitive, rhythmic phrasing and melodic ad-libs with light reverb. The track begins with a solo tin whistle melody before transitioning into a full ensemble arrangement. Key of E Major, 145 BPM. The arrangement features a prominent orchestral swell. Male vocals alternate between a smooth tenor chest voice and airy falsetto during melodic leaps.",
+    "lyrics": "[Verse 1]\n사직서 냈다 드디어\n하늘이 다르게 보여\n짐 싼 박스 하나 들고\n회사 앞을 걸어 나와\n\n[Chorus]\nLayered leads, maximum energy\n\n[Verse 2]\n리모컨 건네는 아버지 손에\n기미가 늘었다\n모른 척 TV를 봤다\n\n[Chorus]\nLayered leads, maximum energy\n\n[Bridge]\n겁먹지 마 괜찮더라\n새 출발이란 게 이런 거더라\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[staccato strings, piano arpeggios]",
+    "sp_length": 853,
+    "lyrics_length": 312,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "성장",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 853,
+      "total_words": 119,
+      "meaningful_words": 63,
+      "native_count": 63,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 312,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.3473,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

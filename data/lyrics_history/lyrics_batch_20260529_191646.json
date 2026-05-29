@@ -1,0 +1,102 @@
+[
+  {
+    "index": 0,
+    "title": "한여름",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "열기",
+      "감추",
+      "비밀",
+      "형태",
+      "안다"
+    ],
+    "sp": "Indie pop with a funk-influenced groove. A legato string section provides harmonic support with sustained pads. A legato string section provides harmonic support with slow-moving pads. A Rhodes-style electric piano provides sustained harmonic pads in the background. Acoustic piano providing harmonic support. Orchestral string pads provide sustained harmonic support. Rhodes piano layers provide harmonic warmth during transitions. The drummer uses brushes on the snare drum to create a continuous, soft swishing texture. male melodic vocals with light harmony. A string section provides rhythmic staccato ostinatos and lush melodic support. The arrangement uses a 4/4 time signature. full band, power chords. Female vocals are processed with light compression and a subtle chorus effect, delivered in a rhythmic, conversational style in the verses and a melodic, airy tone in the pre-chorus.",
+    "lyrics": "[Verse 1]\n신호등이 녹을 것 같은 온도\n그림자마저 증발하는 거리\n아지랑이가 도시를 감싸면\n현실과 신기루 사이가 사라진다\n\n[Pre-Chorus]\n숨이 하얀 연기가 된다\n냉기가 얼굴을 때린다\n\n[Chorus]\n열기가 감추는 한여름의 비밀\n녹아봐야 진짜 형태를 안다\n\n[Verse 2]\n각자의 밤을 품고\n각자의 이야기를 가지고\n같은 공간에 서있다\n\n[Pre-Chorus]\n그 불확실성이 춤을 춘다\n\n[Chorus]\n열기가 감추는 한여름의 비밀\n녹아봐야 진짜 형태를 안다\n\n[Bridge]\n소나기가 한 번 쏟아지면\n아지랑이는 순식간에 사라지겠지\n그래서 더 아름다운 건지도\n사라질 걸 알면서 피어나니까\n\n[Chorus]\n열기가 감추는 한여름의 비밀\n녹아봐야 진짜 형태를 안다",
+    "sp_length": 893,
+    "lyrics_length": 377,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "bridge",
+      "chorus"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → pre_chorus → chorus → bridge → chorus",
+    "bracket_sections": 0,
+    "theme": "사랑",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 893,
+      "total_words": 130,
+      "meaningful_words": 64,
+      "native_count": 64,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 377,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6021,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "하나씩",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "남겨진 것들이",
+      "고요하다",
+      "그래서",
+      "슬프다",
+      "남겨진"
+    ],
+    "sp": "K-Pop track with elements of funk and bubblegum pop. The arrangement features a prominent accordion playing melodic hooks and rhythmic stabs. The arrangement builds with a string section providing sustained legato pads. sidechained synth pads create pumping effect. sustained synth pads, cello enters with long legato notes. legato string pads enter. Polished synth pads and staccato brass-style synth stabs punctuate the transitions. full band enters, driving kick drum. male tenor vocals, intimate tone. full band, high energy. Key is G Major. full band intensity. Cumbia with English and Spanish vocals.",
+    "lyrics": "[Verse 1]\n창틈으로 스며드는\n새벽 공기가 차갑다\n네가 매일 열어두던 창\n아직 닫지 못했다\n\n[Pre-Chorus]\n카톡 창 열어두고\n지웠다 다시 쳤어\n그냥 보내면 돼 그냥\n어렵지 않잖아\n\n[Chorus]\n고요하다, 그래서 슬프다\n남겨진 것들이\n하나씩 식어가는 소리\n그것이 이별의 속도다\n\n[Verse 2]\n내 슬라이드 차례가 와\n발표를 시작하는데\n이불을 마이크처럼 잡고 있어\n몸은 침대 입은 회의 중\n\n[Pre-Chorus]\n근데 영상이 끝나면\n광고가 시작되잖아\n\n[Chorus]\n고요하다, 그래서 슬프다\n남겨진 것들이\n하나씩 식어가는 소리\n그것이 이별의 속도다\n\n[Bridge]\n빈자리에 손을 얹는다\n아직 따뜻할 것 같아서\n매일 밤 확인한다\n\n[Chorus]\n고요하다, 그래서 슬프다\n남겨진 것들이\n하나씩 식어가는 소리\n그것이 이별의 속도다",
+    "sp_length": 606,
+    "lyrics_length": 419,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "bridge",
+      "chorus"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → pre_chorus → chorus → bridge → chorus",
+    "bracket_sections": 0,
+    "theme": "사랑",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 606,
+      "total_words": 90,
+      "meaningful_words": 48,
+      "native_count": 48,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 419,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.492,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

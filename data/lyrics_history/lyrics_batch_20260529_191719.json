@@ -1,0 +1,101 @@
+[
+  {
+    "index": 0,
+    "title": "가만히",
+    "title_strategy": "short_punch",
+    "title_alternatives": [
+      "(soft, intimate singing)",
+      "Sunlight through the",
+      "through the window",
+      "the window glass",
+      "window glass"
+    ],
+    "sp": "Synthwave with a focus on instructional vocal cues. harmonica enters playing the main melody with vibrato. Soft, atmospheric synth pads provide a subtle harmonic wash in the background. The cello performs long, sustained notes with moderate vibrato. A prominent synth lead plays a bright, sawtooth-based melody. solo violin melody with heavy vibrato. full band arrangement, driving piano chords. A subtle shaker and light percussion accents appear in the background. male vocals, humming. full band re-enters, high energy. The track is in the key of B Minor at 115 BPM. The track begins with a solo tin whistle melody before transitioning into a full ensemble arrangement. The recording has a dry, intimate room acoustic with minimal reverb on the vocals.",
+    "lyrics": "[Chorus]\nLayered leads, maximum energy\n\n[Verse 1]\n(soft, intimate singing)\nSunlight through the window glass\n\n[Chorus]\nLayered leads, maximum energy\n\n[Verse 2]\n창밖의 어두운 골목과 카페 안의 따뜻한 조명\n안과 밖의 대비가 이 공간을 특별하게 만들어\n검은 벽에 걸린 흰 그림 하나가 눈길을 잡아\n\n[Bridge]\n목요일 밤 늦은 야근\n빈 사무실에 불빛 하나 남아\n이어폰을 빼봤다 처음으로\n시계 초침 소리가 들린다\n에어컨 돌아가는 소리\n키보드 위에 먼지 내려앉는 소리\n처음 듣는 소리들이었다\n여기에도 소리가 있었구나\n세상이 조용한 게 아니었구나\n그는 가만히 귀를 기울였다\n\n[Chorus]\nLayered leads, maximum energy\n\n[Outro]\n[bright synth pluck, electronic drum beat, syncopated synth bass]\n[arpeggiated synth fades with delay]",
+    "sp_length": 755,
+    "lyrics_length": 540,
+    "genre_group": "POP",
+    "song_form": [
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "chorus → verse → chorus → verse → bridge → chorus → outro",
+    "bracket_sections": 1,
+    "theme": "밤",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 755,
+      "total_words": 119,
+      "meaningful_words": 54,
+      "native_count": 54,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 540,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.3682,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "누워",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "머리",
+      "움직여",
+      "오늘",
+      "관성",
+      "간다"
+    ],
+    "sp": "K-Pop Funk with a heavy emphasis on slap bass and syncopated guitar scratching. A mandolin or bouzouki provides rhythmic accompaniment with constant eighth-note strumming. Violin performs virtuosic runs and arpeggios. strings fade out. flute fades out. brass stab. piano melody continues. cowbell melody continues, drums re-enter. vocal ad-lib: '전부거든'. A string section provides rhythmic staccato ostinatos and lush melodic support. Phonk house track at 126 BPM in G minor. The dynamics utilize gradual crescendos and decrescendos throughout the arrangement. rhythmic rap delivery.",
+    "lyrics": "[Verse 1]\n매일 밤 이 순간이 찾아와\n의식과 무의식의 경계선 위\n몸은 침대에 누워 있는데\n뇌는 절벽 끝에 서 있어\n\n[Pre-Chorus]\n한잔이 두잔 되어도\n내일 걱정은 내일 해\n\n[Chorus]\n머리는 멍해 손만 움직여\n오늘도 관성으로 간다\n\n[Verse 2]\n각자의 밤을 품고\n각자의 이야기를 가지고\n같은 공간에 서있다\n\n[Pre-Chorus]\n손끝의 전기처럼\n우린 연결되어 있어\n\n[Chorus]\n머리는 멍해 손만 움직여\n오늘도 관성으로 간다\n\n[Bridge]\n아이러니하지 않나\n잠드는 게 이렇게 폭력적이라니\n가장 편안한 자세로\n가장 극적인 추락을 겪는 밤\n\n[Chorus]\n머리는 멍해 손만 움직여\n오늘도 관성으로 간다",
+    "sp_length": 581,
+    "lyrics_length": 355,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "bridge",
+      "chorus"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → pre_chorus → chorus → bridge → chorus",
+    "bracket_sections": 0,
+    "theme": "밤",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 581,
+      "total_words": 82,
+      "meaningful_words": 51,
+      "native_count": 51,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 355,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5311,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

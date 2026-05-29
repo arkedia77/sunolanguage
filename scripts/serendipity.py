@@ -32,9 +32,9 @@ QDRANT_PORT = int(os.environ.get("QDRANT_PORT", "6333"))
 QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY", None)
 
 SP_SLOTS = ["genre", "instrument", "drums", "vocal_main", "arrangement", "tempo_key_time"]
-INSTRUMENT_COUNT = 3
+INSTRUMENT_COUNT = 5
 BOOST_SLOTS = ["instrument", "arrangement", "vocal_main"]
-MIN_SP_LENGTH = 450
+MIN_SP_LENGTH = 650
 
 
 def get_client():
