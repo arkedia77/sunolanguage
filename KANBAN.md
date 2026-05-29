@@ -1,7 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **N003 '우연의 시작' sunomusic 생성 대기** — 10곡 핸드오프 발송 (2026-05-29), songs INSERT + Suno 생성 요청
+- [sunolanguage] **N003 핸드오프 재생성 필요** — 패치 전 엔진으로 생성됨, 5대패치+DB dedup+SP부스트 적용 후 재생성 → sunomusic 교체 핸드오프 발송 (gid 20341~20350, Suno 미착수)
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 10,646 + Lyrics 5,858 + Bracket 4,956 Qdrant 가동 중, **다음: Gate 4 성장 검증 (S_INST200 수신 후)**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
