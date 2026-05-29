@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 """
-lyrics_chunk_builder.py — Parse lyrics into section-level chunks for Qdrant.
+lyrics_chunk_builder.py — Parse lyrics into hybrid chunks for Qdrant.
 
-Reads merged_4values.json, splits each song's lyrics by [SectionTag],
-normalizes tags, and produces embeddable chunks with metadata.
+Two granularity levels (single collection, granularity field):
+  - section:  full [SectionTag] block (existing)
+  - couplet:  2-line pairs within each section (new)
+
+Features:
+  - Couplet: 2-line sliding pairs, merge lines under 20 chars
+  - Chorus dedup: identical chorus text collapsed, repeat_count metadata
+  - Genre augmentation in embed_text
 
 Usage:
-    python scripts/lyrics_chunk_builder.py build           # build chunks JSON
+    python scripts/lyrics_chunk_builder.py build           # build hybrid chunks
     python scripts/lyrics_chunk_builder.py build --augment  # include genre in embed text
     python scripts/lyrics_chunk_builder.py stats            # show chunk statistics
 """
@@ -51,6 +57,7 @@ VALID_TAGS = {
 }
 
 MIN_SECTION_CHARS = 10
+MIN_COUPLET_CHARS = 20
 
 
 def normalize_tag(raw_tag: str) -> str | None:
@@ -106,6 +113,56 @@ def parse_lyrics_sections(lyrics: str) -> list[dict]:
     return sections
 
 
+def dedup_chorus(sections: list[dict]) -> list[dict]:
+    """Collapse identical chorus sections, adding repeat_count."""
+    seen_chorus: dict[str, int] = {}
+    deduped = []
+    for sec in sections:
+        if sec["tag"] == "chorus":
+            normalized_text = sec["text"].strip()
+            if normalized_text in seen_chorus:
+                seen_chorus[normalized_text] += 1
+                continue
+            seen_chorus[normalized_text] = 1
+            sec = {**sec, "_chorus_key": normalized_text}
+        deduped.append(sec)
+    for sec in deduped:
+        if "_chorus_key" in sec:
+            sec["repeat_count"] = seen_chorus[sec.pop("_chorus_key")]
+        else:
+            sec["repeat_count"] = 1
+    return deduped
+
+
+def split_couplets(text: str) -> list[str]:
+    """Split section text into 2-line couplet pairs, merging short lines."""
+    raw_lines = [l for l in text.split("\n") if l.strip()]
+    if len(raw_lines) < 2:
+        return []
+    merged = []
+    buf = ""
+    for line in raw_lines:
+        if buf:
+            buf = buf + "\n" + line
+            merged.append(buf)
+            buf = ""
+        elif len(line.strip()) < MIN_COUPLET_CHARS:
+            buf = line
+        else:
+            merged.append(line)
+    if buf:
+        if merged:
+            merged[-1] = merged[-1] + "\n" + buf
+        else:
+            merged.append(buf)
+
+    couplets = []
+    for i in range(0, len(merged), 2):
+        pair = merged[i:i + 2]
+        couplets.append("\n".join(pair))
+    return couplets
+
+
 def build_structure_string(sections: list[dict]) -> str:
     return "|".join(s["tag"] for s in sections)
 
@@ -130,7 +187,8 @@ def build_chunks(augment: bool = True) -> list[dict]:
         songs = json.load(f)
 
     chunks = []
-    seq_counter: dict[tuple, int] = {}
+    sec_counter: dict[tuple, int] = {}
+    coup_counter: dict[tuple, int] = {}
 
     for song in songs:
         lyrics = song.get("leomusic_original", {}).get("lyrics", "")
@@ -143,13 +201,15 @@ def build_chunks(augment: bool = True) -> list[dict]:
         if not sections:
             continue
 
+        sections = dedup_chorus(sections)
         structure = build_structure_string(sections)
         language = detect_language(lyrics)
 
         for sec in sections:
+            # --- section-level chunk ---
             key = (song_id, sec["tag"])
-            seq = seq_counter.get(key, 0)
-            seq_counter[key] = seq + 1
+            seq = sec_counter.get(key, 0)
+            sec_counter[key] = seq + 1
 
             chunk_id = build_chunk_id(song_id, sec["tag"], seq)
             embed_text = build_embed_text(sec["text"], sec["tag"], genre, augment)
@@ -171,8 +231,44 @@ def build_chunks(augment: bool = True) -> list[dict]:
                     "line_count": len(sec["text"].strip().split("\n")),
                     "char_count": len(sec["text"]),
                     "structure": structure,
+                    "granularity": "section",
+                    "repeat_count": sec.get("repeat_count", 1),
                 },
             })
+
+            # --- couplet-level chunks ---
+            couplets = split_couplets(sec["text"])
+            for ci, couplet_text in enumerate(couplets):
+                ckey = (song_id, sec["tag"], "couplet")
+                cseq = coup_counter.get(ckey, 0)
+                coup_counter[ckey] = cseq + 1
+
+                c_id = f"lyrics_couplet_{song_id}_{sec['tag']}_{cseq:03d}"
+                c_embed = build_embed_text(couplet_text, sec["tag"], genre, augment)
+
+                chunks.append({
+                    "chunk_id": c_id,
+                    "text": couplet_text,
+                    "embed_text": c_embed,
+                    "payload": {
+                        "chunk_id": c_id,
+                        "song_id": song_id,
+                        "section_tag": sec["tag"],
+                        "section_tag_raw": sec["tag_raw"],
+                        "section_index": sec["index"],
+                        "couplet_index": ci,
+                        "parent_chunk_id": chunk_id,
+                        "text": couplet_text,
+                        "embed_text": c_embed,
+                        "genre": genre,
+                        "language": language,
+                        "line_count": len(couplet_text.strip().split("\n")),
+                        "char_count": len(couplet_text),
+                        "structure": structure,
+                        "granularity": "couplet",
+                        "repeat_count": sec.get("repeat_count", 1),
+                    },
+                })
 
     return chunks
 
@@ -196,14 +292,34 @@ def cmd_stats():
 
 def print_stats(chunks: list[dict]):
     print(f"\nTotal chunks: {len(chunks)}")
-    by_tag = Counter(c["payload"]["section_tag"] for c in chunks)
-    print(f"\nBy section tag:")
-    for tag, count in by_tag.most_common():
-        print(f"  {tag}: {count}")
+
+    by_gran = Counter(c["payload"]["granularity"] for c in chunks)
+    print(f"\nBy granularity:")
+    for g, count in by_gran.most_common():
+        print(f"  {g}: {count}")
+
+    for gran in ["section", "couplet"]:
+        subset = [c for c in chunks if c["payload"]["granularity"] == gran]
+        if not subset:
+            continue
+        print(f"\n--- {gran} ---")
+        by_tag = Counter(c["payload"]["section_tag"] for c in subset)
+        print(f"  By section tag:")
+        for tag, count in by_tag.most_common():
+            print(f"    {tag}: {count}")
+        text_lens = [c["payload"]["char_count"] for c in subset]
+        print(f"  Length: min={min(text_lens)}, max={max(text_lens)}, avg={sum(text_lens) // len(text_lens)}")
+
+    deduped_chorus = [c for c in chunks
+                      if c["payload"]["granularity"] == "section"
+                      and c["payload"]["section_tag"] == "chorus"
+                      and c["payload"].get("repeat_count", 1) > 1]
+    if deduped_chorus:
+        total_saved = sum(c["payload"]["repeat_count"] - 1 for c in deduped_chorus)
+        print(f"\nChorus dedup: {len(deduped_chorus)} unique chorus with repeats, {total_saved} duplicates removed")
+
     by_lang = Counter(c["payload"]["language"] for c in chunks)
     print(f"\nBy language: {dict(by_lang)}")
-    text_lens = [c["payload"]["char_count"] for c in chunks]
-    print(f"\nSection length: min={min(text_lens)}, max={max(text_lens)}, avg={sum(text_lens) // len(text_lens)}")
     songs = set(c["payload"]["song_id"] for c in chunks)
     print(f"Unique songs: {len(songs)}")
     genres = set(c["payload"]["genre"] for c in chunks if c["payload"]["genre"])

@@ -48,7 +48,8 @@ def get_model():
     return SentenceTransformer(EMBEDDING_MODEL)
 
 
-def make_filter(section_tag: str = None, genre: str = None, language: str = None):
+def make_filter(section_tag: str = None, genre: str = None, language: str = None,
+                granularity: str = None):
     from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchText
 
     conditions = []
@@ -58,11 +59,13 @@ def make_filter(section_tag: str = None, genre: str = None, language: str = None
         conditions.append(FieldCondition(key="genre", match=MatchText(text=genre)))
     if language:
         conditions.append(FieldCondition(key="language", match=MatchValue(value=language)))
+    if granularity:
+        conditions.append(FieldCondition(key="granularity", match=MatchValue(value=granularity)))
     return Filter(must=conditions) if conditions else None
 
 
 def theme_search(query: str, section_tag: str = None, genre: str = None,
-                 language: str = None, limit: int = 10,
+                 language: str = None, granularity: str = None, limit: int = 10,
                  client=None, model=None) -> list[dict]:
     if client is None:
         client = get_client()
@@ -70,7 +73,7 @@ def theme_search(query: str, section_tag: str = None, genre: str = None,
         model = get_model()
 
     embedding = model.encode(query).tolist()
-    query_filter = make_filter(section_tag, genre, language)
+    query_filter = make_filter(section_tag, genre, language, granularity)
 
     response = client.query_points(
         collection_name=COLLECTION_NAME,
@@ -95,7 +98,7 @@ def extract_sp_genre(sp_text: str) -> str:
 
 
 def match_sp(sp_text: str, sections: list[str] = None,
-             limit_per_section: int = 3,
+             granularity: str = None, limit_per_section: int = 3,
              client=None, model=None) -> dict[str, list[dict]]:
     if client is None:
         client = get_client()
@@ -114,8 +117,8 @@ def match_sp(sp_text: str, sections: list[str] = None,
     results = {}
     for section in sections:
         hits = theme_search(
-            query, section_tag=section, limit=limit_per_section,
-            client=client, model=model,
+            query, section_tag=section, granularity=granularity,
+            limit=limit_per_section, client=client, model=model,
         )
         results[section] = hits
 
@@ -193,8 +196,13 @@ def format_results(results: list[dict], max_lines: int = 4) -> str:
     lines = []
     for i, r in enumerate(results):
         p = r["payload"]
-        lines.append(f"  [{i + 1}] score={r['score']:.4f} [{p.get('section_tag_raw', '')}] "
-                     f"song={p.get('song_id', '?')}")
+        gran = p.get("granularity", "section")
+        repeat = p.get("repeat_count", 1)
+        header = (f"  [{i + 1}] score={r['score']:.4f} [{p.get('section_tag_raw', '')}] "
+                  f"song={p.get('song_id', '?')} ({gran})")
+        if repeat > 1:
+            header += f" ×{repeat}"
+        lines.append(header)
         text_lines = p.get("text", "").split("\n")
         for tl in text_lines[:max_lines]:
             lines.append(f"      {tl}")
@@ -216,29 +224,42 @@ if __name__ == "__main__":
         query = args[1] if len(args) > 1 else "사랑"
         section = None
         genre = None
+        granularity = None
         limit = 5
         for a in args[2:]:
             if a.startswith("--section="):
                 section = a.split("=")[1]
             elif a.startswith("--genre="):
                 genre = a.split("=")[1]
+            elif a.startswith("--granularity="):
+                granularity = a.split("=")[1]
             elif a.startswith("--limit="):
                 limit = int(a.split("=")[1])
 
-        print(f"Theme Search: '{query}'" +
-              (f" section={section}" if section else "") +
-              (f" genre={genre}" if genre else ""))
-        results = theme_search(query, section_tag=section, genre=genre, limit=limit)
+        label = f"Theme Search: '{query}'"
+        if section:
+            label += f" section={section}"
+        if granularity:
+            label += f" granularity={granularity}"
+        if genre:
+            label += f" genre={genre}"
+        print(label)
+        results = theme_search(query, section_tag=section, genre=genre,
+                               granularity=granularity, limit=limit)
         print(format_results(results))
 
     elif mode == "match-sp":
         sp = args[1] if len(args) > 1 else ""
         sections = ["verse", "chorus", "bridge"]
+        granularity = None
         for a in args[2:]:
             if a.startswith("--sections="):
                 sections = a.split("=")[1].split(",")
-        print(f"SP Match: '{sp[:60]}...'")
-        results = match_sp(sp, sections=sections)
+            elif a.startswith("--granularity="):
+                granularity = a.split("=")[1]
+        print(f"SP Match: '{sp[:60]}...'" +
+              (f" granularity={granularity}" if granularity else ""))
+        results = match_sp(sp, sections=sections, granularity=granularity)
         for section, hits in results.items():
             print(f"\n--- {section} ---")
             print(format_results(hits))

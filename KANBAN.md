@@ -1,7 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **Serendipity Engine (SP + Lyrics)** — SP 10,646 + Lyrics 2,539 Qdrant 완료, pair 5/5 PASS, **다음: 가사 2행 커플릿 하이브리드 구현** (전문가 4인 자문 합의)
+- [sunolanguage] **N시리즈 파이프라인 개선** — Plan 모드: leomusic2 참조, 송폼 다양성/가사 차별화/제목 생성 프리셋화 (Leo 지시 2026-05-29)
+- [sunolanguage] **N001/N002 재분석** — 20곡 Suno 생성 완료, Echo Jaccard 측정 대기
+- [sunolanguage] **Serendipity Engine (SP + Lyrics)** — SP 10,646 + Lyrics 5,925 하이브리드 Qdrant 완료, **다음: Gate 4 성장 검증 (S_INST200 수신 후)**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26, 200곡 SP+가사 전문 전송 완료, 결과 회신 대기
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
@@ -33,6 +35,8 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] N001+N002 20/20 Suno 생성 전곡 완료 — gid 20311~20330, 40클립, 통합DB UPDATE — 2026-05-29 ✅
+- [sunolanguage] 가사 커플릿 하이브리드 청킹 구현 — section 2,478 + couplet 3,447 = 5,925, 코러스 dedup 61건, 3모드 E2E PASS — 2026-05-28 ✅
 - [sunolanguage] Lyrics Corpus 시스템 E2E 완주 — 2,539 섹션 다국어 임베딩, pair 5/5 PASS, coherence 0.55 — 2026-05-28 ✅
 - [sunolanguage] Serendipity Engine E2E 완주 — Qdrant 10,646 청크 임베딩, 20/20 PASS (drift 0.5+0.8 네이티브 100%), Gate 1~3 통과 — 2026-05-28 ✅
 - [sunolanguage] Serendipity Engine 6개 스크립트 작성 — chunk_builder/embed_pipeline/serendipity/slot_assembler/preset_validator/preset_engine — 2026-05-28 ✅
