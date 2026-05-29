@@ -230,8 +230,8 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                 results[tag] = []
             continue
 
-        if tag == "chorus" and occurrence > 1:
-            first_key = "chorus_1"
+        if tag in ("chorus", "hook") and occurrence > 1:
+            first_key = f"{tag}_1"
             if first_key in results and results[first_key]:
                 results[indexed_key] = results[first_key]
                 continue

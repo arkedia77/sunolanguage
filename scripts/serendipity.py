@@ -32,7 +32,9 @@ QDRANT_PORT = int(os.environ.get("QDRANT_PORT", "6333"))
 QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY", None)
 
 SP_SLOTS = ["genre", "instrument", "drums", "vocal_main", "arrangement", "tempo_key_time"]
-INSTRUMENT_COUNT = 2
+INSTRUMENT_COUNT = 3
+BOOST_SLOTS = ["instrument", "arrangement", "vocal_main"]
+MIN_SP_LENGTH = 450
 
 
 def get_client():
@@ -85,6 +87,35 @@ def controlled_drift(seed_text: str, drift_factor: float = 0.5,
                 preset[slot] = [hit.payload for hit in response.points]
             else:
                 preset[slot] = response.points[0].payload
+
+    from slot_assembler import assemble_sp
+    trial = assemble_sp(preset)
+    if len(trial) < MIN_SP_LENGTH:
+        used_texts = {p.get("text", "") for p in (
+            preset.get("instrument", []) if isinstance(preset.get("instrument"), list)
+            else [preset.get("instrument", {})]
+        )}
+        for slot in BOOST_SLOTS:
+            noise = np.random.normal(0, drift_factor * 1.2, VECTOR_DIM)
+            perturbed = normalize(seed_vec + noise)
+            response = client.query_points(
+                collection_name=COLLECTION_NAME,
+                query=perturbed.tolist(),
+                query_filter=make_filter(slot),
+                limit=3,
+            )
+            for hit in response.points:
+                t = hit.payload.get("text", "")
+                if t not in used_texts:
+                    used_texts.add(t)
+                    if slot == "instrument":
+                        if not isinstance(preset.get(slot), list):
+                            preset[slot] = [preset[slot]] if slot in preset else []
+                        preset[slot].append(hit.payload)
+                    else:
+                        key = f"{slot}_boost"
+                        preset[key] = hit.payload
+                    break
 
     return preset
 

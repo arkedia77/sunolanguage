@@ -30,6 +30,9 @@ TOP_ANCHOR_SLOTS = [
     "vocal_main",
     "arrangement",
     "tempo_key_time",
+    "instrument_boost",
+    "arrangement_boost",
+    "vocal_main_boost",
 ]
 
 SP_CHAR_LIMIT = 1000
