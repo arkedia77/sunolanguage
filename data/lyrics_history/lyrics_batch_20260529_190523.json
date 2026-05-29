@@ -1,0 +1,98 @@
+[
+  {
+    "index": 0,
+    "title": "창밖",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "그런데 영원히 멀어",
+      "침묵",
+      "영원",
+      "설렘",
+      "두려움"
+    ],
+    "sp": "K-Ballad featuring a baritone male vocal. The production is clean and organic, emphasizing the natural timbre of the wooden guitar body. guitar and piano trade short phrases. Subtle electric piano chords provide harmonic depth in the background. hi-hats become more prominent. The vocal melody follows a stepwise motion with gentle vibrato on sustained notes. The arrangement uses sudden dynamic shifts from pianissimo to fortissimo. Acoustic pop with a relaxed, mid-tempo swing.",
+    "lyrics": "[Verse 1]\n창밖의 어두운 골목과 카페 안의 따뜻한 조명\n안과 밖의 대비가 이 공간을 특별하게 만들어\n\n[Chorus]\n삼 초의 침묵이 영원이 돼\n설렘과 두려움 사이에서 떠\n네 손이 만져질 듯 가까워\n그런데 영원히 멀어\n\n[Verse 2]\n퇴근 종 울리고 한 시간째야\n다 간 사무실에 나만 남았잖아\n유튜브 알고리즘이 날 안다\n아이돌 안무 추천이 또 뜨거든\n모니터 불빛만 남은 이 사무실\n카펫 위의 그림자가 내 관객이야\n\n[Chorus]\n삼 초의 침묵이 영원이 돼\n설렘과 두려움 사이에서 떠\n네 손이 만져질 듯 가까워\n그런데 영원히 멀어\n\n[Bridge]\n새벽 네 시\n냉각기가 멈춘다\n오 분간의 정적\n냉장고 안이 처음으로 완전히 조용해\n\n심장 같던 웅 소리가 사라지니까\n이게 진짜 어둠이구나\n이게 진짜 조용함이구나\n\n물방울이 또르륵 떨어져\n내 표면에서 선반으로\n이게 내 눈물인지\n결로인지\n지금은 몰라도 괜찮아\n어둠 속에서는\n모든 게 같은 색이니까\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[electric guitar arpeggio fades]",
+    "sp_length": 479,
+    "lyrics_length": 565,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "밤",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 479,
+      "total_words": 71,
+      "meaningful_words": 40,
+      "native_count": 40,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 565,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4397,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "깊어",
+    "title_strategy": "short_punch",
+    "title_alternatives": [
+      "불빛",
+      "여백",
+      "가장",
+      "솔직한",
+      "공간"
+    ],
+    "sp": "Cinematic orchestral folk fusion. A prominent sidechain compression effect creates a pumping sensation on the synth pads. low strings enter with sustained root notes. Production includes heavy sidechain compression on the pads and vocal tuning effects. driving pop beat. A soft, breathy female vocal performs a melodic line with gentle vibrato and intimate proximity. The arrangement is sparse and intimate. The track is in the key of E Major with a tempo of 120 BPM in 4/4 time.",
+    "lyrics": "[Verse 1]\n(soft, intimate singing)\nSunlight through the window glass\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n채워지지 않은 빈칸이 완성된 문장보다 깊어\n\n[Verse 2]\n어둠 속에서 혼자 울고 있었어\n조용한 극장 안에서\n훌쩍이는 소리가 내 것인 줄 알았어\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n채워지지 않은 빈칸이 완성된 문장보다 깊어\n\n[Bridge]\n아무것도 답을 주지 않는다\n창문도 침묵한다\n그 침묵 속에서\n나는 천천히 존재한다\n가장 투명한 방식으로\n\n[Outro]\n[violin fades out, solo fingerpicked acoustic guitar]\n[acoustic guitar fades]",
+    "sp_length": 479,
+    "lyrics_length": 445,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "밤",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 479,
+      "total_words": 79,
+      "meaningful_words": 30,
+      "native_count": 30,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 445,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6236,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "index": 0,
+    "title": "특별한",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "도시락",
+      "뚜껑",
+      "순간",
+      "인생",
+      "가장"
+    ],
+    "sp": "K-Pop acoustic ballad featuring a bright, fingerstyle acoustic guitar and a warm, melodic male vocal. Violin and lead guitar play in unison. The track features a prominent acoustic violin playing virtuosic, gypsy-jazz inspired lead melodies with rapid trills and staccato runs. solo violin enters with rapid ascending scale. log drum enters with rhythmic melodic pattern. Male vocals are smooth and conversational, transitioning into a melodic chorus with light vocal layering. full band arrangement. 115 BPM, 4/4 time signature, Key of C Major.",
+    "lyrics": "[Intro]\n[acoustic guitar strumming, light vocalizing]\n[soft piano arpeggio, acoustic guitar enters]\n\n[Verse 1]\n놀이공원 벤치에 도시락을 펼치면\n옆 반 애들이 부러워하던 엄마 김밥\n햄이 두 줄에 계란이 두 줄\n특별한 건 없는데 특별했던 맛\n\n[Chorus]\n도시락 뚜껑을 여는 그 순간이\n내 인생에서 가장 행복한 식사\n\n[Interlude]\n[arpeggiated acoustic guitar]\n[fingerpicked acoustic guitar, solo cello melody]\n\n[Verse 2]\n결국 10% 됐어\n어떻게 된 거야\n\n[Chorus]\n도시락 뚜껑을 여는 그 순간이\n내 인생에서 가장 행복한 식사\n\n[Bridge]\n이제 엄마도 김밥을 안 싸신다\n내가 사드리면 \"그냥 사 먹자\" 하시고\n그 말에 섭섭한 건 나인데\n한 번만 더 싸달라는 말이 안 나온다\n\n[Outro]\n[electric guitar arpeggio fades]\n[electric guitar melody fades]",
+    "sp_length": 545,
+    "lyrics_length": 550,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "intro",
+      "verse",
+      "chorus",
+      "interlude",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → chorus → interlude → verse → chorus → bridge → outro",
+    "bracket_sections": 3,
+    "theme": "성장",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 545,
+      "total_words": 83,
+      "meaningful_words": 35,
+      "native_count": 35,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 550,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.61,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "있으면",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "기울인",
+      "각도",
+      "거울",
+      "확인",
+      "싶다"
+    ],
+    "sp": "K-Indie pop track featuring a clean electric guitar playing jazz-influenced seventh chords with a light chorus effect. The production is clean with a natural room reverb on the saxophone and vocals. shakers, syncopated rimshot, soft synth pad. brass section unison stabs. woodblock accents. Occasional record scratches and vocal shouts punctuate the transitions. The arrangement features a sudden dynamic shift from a relatively sparse verse to a dense, wall-of-sound chorus. Key of G Major.",
+    "lyrics": "[Verse 1]\n기울인 각도가 자연스러운지\n거울이 있으면 확인하고 싶다\n\n[Verse 2]\n발끝이 허공을 더듬는 감각\n떨어지는 건 나인지 세상인지\n붙잡을 난간이 없는 그 일 초\n어둠이 나를 삼키려는 찰나\n\n[Bridge]\n실망이 구체적이다\n그게 무섭다\n이름도 모르는 사람 안 왔다고\n아메리카노 맛이 달라지면\n\n[Verse 3]\n테이블 위의 물잔\n얼음이 녹는다\n소리가 있다 아주 작은\n그것들을 듣는다\n그것이 삶이다\n여린 것들의 움직임",
+    "sp_length": 491,
+    "lyrics_length": 242,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "verse",
+      "bridge",
+      "verse"
+    ],
+    "song_form_type": "verse → verse → bridge → verse",
+    "bracket_sections": 0,
+    "theme": "성장",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 491,
+      "total_words": 73,
+      "meaningful_words": 35,
+      "native_count": 35,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 242,
+      "section_count": 4,
+      "has_verse": true,
+      "has_chorus": false,
+      "coherence_score": 0.5419,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

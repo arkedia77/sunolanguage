@@ -1,0 +1,100 @@
+[
+  {
+    "index": 0,
+    "title": "회사",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "조용히 눈 감으면",
+      "조용히",
+      "감으면",
+      "엔진",
+      "소리"
+    ],
+    "sp": "K-Pop musical theater hybrid. piano filter closes further, reducing high-end clarity. cello plays sustained low notes. solo cello enters with long, sustained notes. The arrangement builds with a subtle shaker and a soft, mid-range kick drum. A male baritone vocal performs with a breathy, intimate delivery in the lower register, transitioning to a powerful, resonant chest voice in the higher register. full band, open power chords. Key of E Major, 105 BPM.",
+    "lyrics": "[Chorus]\n조용히 눈 감으면\n엔진 소리가 심장 소리 같아\n\n[Verse 1]\n사직서 냈다 드디어\n하늘이 다르게 보여\n짐 싼 박스 하나 들고\n회사 앞을 걸어 나와\n\n[Chorus]\n조용히 눈 감으면\n엔진 소리가 심장 소리 같아\n\n[Verse 2]\n리모컨 건네는 아버지 손에\n기미가 늘었다\n모른 척 TV를 봤다\n\n[Bridge]\n겁먹지 마 괜찮더라\n새 출발이란 게 이런 거더라\n\n[Chorus]\n조용히 눈 감으면\n엔진 소리가 심장 소리 같아\n\n[Outro]\n[bright synth pluck, electronic drum beat, syncopated synth bass]\n[bright digital piano, syncopated synth bass, electronic drums]",
+    "sp_length": 458,
+    "lyrics_length": 386,
+    "genre_group": "POP",
+    "song_form": [
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "chorus → verse → chorus → verse → bridge → chorus → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 458,
+      "total_words": 72,
+      "meaningful_words": 31,
+      "native_count": 31,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 386,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.7668,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "불어온다",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "멈추면 다시 모여",
+      "흔들리",
+      "자연스러워",
+      "불면",
+      "일그러지고"
+    ],
+    "sp": "Orchestral fanfare and march. concert harp glissando. Choral vocalizations consist of operatic staccato chants and sustained pads. The harp performs rapid glissandos and arpeggiated patterns, while the acoustic guitar provides rhythmic strumming and fingerpicked accents. Drums consist of a tight, dry snare and a soft kick drum playing a steady backbeat. Male vocals are delivered with a melodic, energetic belt, shifting to a higher register in the chorus. The track begins with a solo tin whistle melody before transitioning into a full ensemble arrangement. Phonk house track at 126 BPM in G minor.",
+    "lyrics": "[Verse 1]\n해가 진다\n항구 쪽에서\n비릿한 바람이 불어온다\n어부가 그물을 정리한다\n\n[Chorus]\n물 위의 나는 흔들리는 게 자연스러워\n바람이 불면 일그러지고\n멈추면 다시 모여\n\n[Verse 2]\n(same soft tone)\nPeople passing by outside\nConversations floating, side by side\n\n[Chorus]\n물 위의 나는 흔들리는 게 자연스러워\n바람이 불면 일그러지고\n멈추면 다시 모여\n\n[Bridge]\n등을 돌리고 걸어\n발걸음이 왈츠처럼 느려\n하나 둘 셋\n멀어지는 게 이렇게 우아할 줄은\n\n[Verse 3]\n버스 지나가는 바람 소리\n누군가의 통화 목소리\n발밑 낙엽 밟히는 소리\n전부 들린다\n천천히 걸었다\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[oboe melody over piano ostinato]",
+    "sp_length": 602,
+    "lyrics_length": 461,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → verse → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 602,
+      "total_words": 93,
+      "meaningful_words": 42,
+      "native_count": 42,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 461,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5369,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

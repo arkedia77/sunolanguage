@@ -1,0 +1,100 @@
+[
+  {
+    "index": 0,
+    "title": "숨소리",
+    "title_strategy": "short_punch",
+    "title_alternatives": [
+      "무거울",
+      "침묵",
+      "아무것",
+      "함께",
+      "있다"
+    ],
+    "sp": "K-Pop and City Pop fusion. drums drop out, soft synth chords. Percussion solo with filtered synth stabs. Orchestral strings provide legato accompaniment. saxophone trill. snare hit. A male vocalist sings in a soft, breathy baritone, transitioning into a clear, emotive chest voice. final staccato chord from the full band. Key of D Major. half-time feel, rhythmic breathing. vocalizations become more rhythmic and percussive.",
+    "lyrics": "[Intro]\n[synth bass and atmospheric pads enter]\n[sub-bass enters, atmospheric synth pads]\n\n[Verse 1]\n그들은 나를 본 적이 있나\n익명의 군중 속에서\n\n[Pre-Chorus]\n돌아가고 싶다\n서가 사이 그 먼지 냄새로\n모르니까 겁이 없던 손가락으로\n\n[Chorus]\n마음이 무거울 때 네 옆의 침묵이 선물이야\n아무것도 하지 않아도 함께 있다는 것만으로\n침묵이 말해주는 사랑이 가장 진실한 사랑\n\n[Verse 2]\n우리 역사의 챕터가 되어 빛나고 있어\n\n[Chorus]\n마음이 무거울 때 네 옆의 침묵이 선물이야\n아무것도 하지 않아도 함께 있다는 것만으로\n침묵이 말해주는 사랑이 가장 진실한 사랑\n\n[Bridge]\n낯선 손의 체온이 손잡이를 통해\n나에게 전해진다\n지하철의 진동과\n사람들의 숨소리가 섞인다\n\n[Outro]\n[driving synth bass]\n[bright plucked synth bass, four-on-the-floor kick]",
+    "sp_length": 425,
+    "lyrics_length": 516,
+    "genre_group": "RNB",
+    "song_form": [
+      "intro",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → pre_chorus → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 2,
+    "theme": "사랑",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 425,
+      "total_words": 63,
+      "meaningful_words": 37,
+      "native_count": 37,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 516,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4922,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "문장",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "우린 목소리 없이",
+      "서로를 본다",
+      "피부의 온도로",
+      "말한다",
+      "소리 없는 대화가"
+    ],
+    "sp": "K-Rock track featuring distorted electric guitars, driving acoustic drums, and a male vocal lead. The primary accompaniment is a clean, electric piano playing jazz-influenced chords with a subtle tremolo effect. Orchestral string pads enter during the second half of the verse to provide harmonic density. The piano provides a rhythmic and harmonic accompaniment with staccato chords and occasional melodic counterpoint. Bright cowbells and metallic percussion accents punctuate the groove. A baritone male vocal performs with a breathy, emotive delivery, utilizing wide vibrato on sustained notes. A lush string section provides legato accompaniment, with cellos and violins entering in the second phrase. Key of B Major.",
+    "lyrics": "[Verse 1]\n너와 나 사이의 공기\n소리보다 더 생생해\n한숨도 언어가 되고\n시선도 문장이 돼\n\n[Chorus]\n우린 목소리 없이\n서로를 본다\n피부의 온도로\n말한다\n소리 없는 대화가\n우리를 완성한다\n\n[Verse 2]\n입에서 자연스럽게 나오던 날\n첫 번째 겹이 피부에 붙었어\n\n[Bridge]\n더 이상 말이 필요 없어\n너는 나의 모든 걸 안다\n피부가 피부를 만날 때\n세상의 말은 다 끝난다\n\n[Chorus]\n우린 목소리 없이\n서로를 본다\n피부의 온도로\n말한다\n소리 없는 대화가\n우리를 완성한다\n\n[Outro]\n[distorted electric guitar, driving rock drums, male tenor vocals]\n[distorted electric guitar power chords, driving punk drums]",
+    "sp_length": 722,
+    "lyrics_length": 413,
+    "genre_group": "ROCK",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → bridge → chorus → outro",
+    "bracket_sections": 1,
+    "theme": "사랑",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 722,
+      "total_words": 105,
+      "meaningful_words": 46,
+      "native_count": 46,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 413,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5644,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]
