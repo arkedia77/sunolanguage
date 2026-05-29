@@ -1,0 +1,98 @@
+[
+  {
+    "index": 0,
+    "title": "일곱",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "경계가 흐려진다",
+      "공기",
+      "무늬",
+      "있고",
+      "그리고"
+    ],
+    "sp": "Bossa Nova jazz. banjo solo. Banjo, fiddle, acoustic guitar, and upright bass. The arrangement is built around a deep, percussive log drum that plays a rhythmic, melodic pattern. K-Pop ballad featuring a baritone male vocal. The arrangement features a delicate piano playing sustained chords and melodic fills. Key of E Major, 85 BPM.",
+    "lyrics": "[Verse 1]\n다국어 안내 방송 사이로\n엔진 소리가 노래하고 있어요\n이륙하는 궤적을 하나씩\n세어보았어요 일곱 대째예요\n\n[Chorus]\n세 시간의 무소속이에요\n어디에도 속하지 않는 자유요\n창가 벤치에 앉아서 봐요\n비행기가 하나씩 떠오르잖아요\n\n[Verse 2]\n계단을 올라간다\n돌이 미끄럽다\n난간에 빨래가 걸려 있다\n바람에 흔들린다\n\n[Chorus]\n공기 속에 무늬가 있고\n그 무늬는 나를 그리고\n나는 공기 속에 섞인다\n존재와 부재 사이에서\n경계가 흐려진다\n\n[Bridge]\n자유와 소속 사이를\n오가는 게 여행인 거겠죠\n\n[Outro]\n[acoustic guitar fades]\n[violin fades out, solo fingerpicked acoustic guitar]",
+    "sp_length": 334,
+    "lyrics_length": 379,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 334,
+      "total_words": 53,
+      "meaningful_words": 24,
+      "native_count": 24,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 379,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.524,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "터질",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "읽씹하지 마 제발",
+      "이모티콘 하나에도",
+      "읽씹하지 마",
+      "제발",
+      "심장"
+    ],
+    "sp": "K-Pop and J-Pop fusion with high-energy bubblegum pop elements. Atmospheric synth pads and filtered vocal chops are used for transitions. Atmospheric synth pads and filtered vocal chops are used for transitions. claps. The arrangement is minimalist, focusing on the vocal performance and piano accompaniment without percussion. half-time feel, rhythmic breathing. 4/4 time signature.",
+    "lyrics": "[Verse 1]\n지나가는 사람들의 발소리가\n에코처럼 울리는 복도\n거울은 대답하지 않고\n그냥 보여주기만 해\n\n[Chorus]\n비키세요 한마디에 깨지는\n나와의 눈 마주침\n\n[Verse 2]\n프로필 사진 백 번째 봐\n이 사람 뭐가 좋은 건지\n답장은 안 오는데 자꾸\n화면만 켜보는 바보야\n\n[Chorus]\n읽씹하지 마 제발\n심장이 터질 것 같아\n이모티콘 하나에도\n세상을 다 가진 기분\n읽씹하지 마\n\n[Bridge]\n셀카 속 나는 웃고 있는데\n여기 이 거울은 편집이 안 돼\n이게 진짜라고 말하는 건지\n그냥 하나의 각도일 뿐인 건지\n\n[Outro]\n[bright synth lead, distorted electric guitar power chords, driving drums]\n[bright synth pluck, electronic drum beat, syncopated synth bass]",
+    "sp_length": 383,
+    "lyrics_length": 442,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 383,
+      "total_words": 54,
+      "meaningful_words": 31,
+      "native_count": 31,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 442,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6951,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

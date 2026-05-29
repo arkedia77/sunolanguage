@@ -1,0 +1,101 @@
+[
+  {
+    "index": 0,
+    "title": "깨져있고",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "감정들",
+      "전부",
+      "가리켜",
+      "규칙",
+      "가장자리"
+    ],
+    "sp": "K-Pop dance-pop track featuring bright female vocals and heavy electronic production. A clean electric guitar occasionally adds melodic counterpoint and arpeggiated fills. A clean electric guitar occasionally adds melodic counterpoint and arpeggiated fills. bass and percussion maintain steady bossa nova groove. falsetto. A female vocalist sings in a breathy, intimate chest voice, transitioning to a light head voice for higher melodic leaps. Key of G Major.",
+    "lyrics": "[Verse 1]\n규칙은 깨져있고\n가장자리는 흐릿하다\n\n[Pre-Chorus]\n이 시간에 여기 서있는 나는\n뭘 기다리고 있는 걸까\n\n[Chorus]\n혼란, 혼란, 혼란\n모두가 비명을 지르고\n규칙은 없는 거리에서\n우리는 서로를 밀쳐낸다\n밀쳐내고 또 밀쳐낸다\n이것이 생존이라고 부르는 것\n\n[Verse 2]\n5분이다\n이 색이 머무는 시간은 5분이다\n더 잡으려 하면 사라진다\n보고 있으면 된다 그냥\n\n[Pre-Chorus]\n고속도로 위 빨간 불빛\n하나 둘 셋\n점점 멀어진다\n신호 잃는 것처럼\n\n[Chorus]\nBlue Hour다\n매일 온다는 게 기적이잖아\n사라지기 때문에 다시 오는 것이다\n이건 그런 시간이다\n\n[Bridge]\n기준점이 사라지면\n우리가 무너진다\n아니면 우리가 강해진다\n아무도 모른다\n\n[Chorus]\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜",
+    "sp_length": 460,
+    "lyrics_length": 422,
+    "genre_group": "POP",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "bridge",
+      "chorus"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → pre_chorus → chorus → bridge → chorus",
+    "bracket_sections": 0,
+    "theme": "사랑",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 460,
+      "total_words": 66,
+      "meaningful_words": 31,
+      "native_count": 31,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 422,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4752,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "물리학",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "심장만 시끄러웠다",
+      "0.5초의 물리학",
+      "카페",
+      "심장",
+      "시끄러웠다"
+    ],
+    "sp": "Orchestral soundtrack with a focus on woodwinds and strings. muted trumpet enters. muted trumpet enters. woodblock accents on the off-beats. A warm, melodic electric bass enters to provide counterpoint to the vocal melody. full arrangement, sidechained bass, driving hi-hats. The piece is in the key of D minor with a 3/4 time signature, moving at a tempo of 120 BPM.",
+    "lyrics": "[Verse 1]\n(soft, intimate singing)\nSunlight through the window glass\n\n[Chorus]\n추락 직전에 눈을 떠\n심장이 터질 것 같은 이 순간\n떨어지다 멈추는 그 일 초가\n오늘 하루 중 가장 살아있는 순간\n몸이 기억하는 공포의 리듬\n추락 직전이 가장 생생해\n\n[Verse 2]\n기타 소리가 새어 나온다\n어딘가에서\n파두인 것 같다\n슬픈 건 어디서나 같은 멜로디\n문이 열려 있다\n작은 바\n들어가지 않는다\n밖에서 듣는다\n\n[Chorus]\n카페는 다시 조용해졌는데\n심장만 시끄러웠다\n0.5초의 물리학\n질량은 없는데 무게가 있다\n\n[Bridge]\n우산 하나를 들어본다\n손잡이가 차갑다\n이걸 두고 간 날 어땠을지\n그 사람도 잠깐 생각했겠지\n\n[Verse 3]\n따뜻한 밥 위의 김, 입안에서 녹아내리는 버터.\n해가 넘어가는 골목 언덕의 경사, 허벅지의 긴장.\n음악이 아니어도 리듬은 어디든 흐른다.\n내 몸 안의 악기들을 깨워줘.\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[oboe melody over piano ostinato]",
+    "sp_length": 367,
+    "lyrics_length": 575,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → verse → outro",
+    "bracket_sections": 1,
+    "theme": "사랑",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 367,
+      "total_words": 61,
+      "meaningful_words": 23,
+      "native_count": 23,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 575,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4234,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

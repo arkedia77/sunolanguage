@@ -1,0 +1,100 @@
+[
+  {
+    "index": 0,
+    "title": "겹칠수록",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "기분",
+      "주파수",
+      "우리",
+      "삼킨",
+      "서투름"
+    ],
+    "sp": "K-Pop Rock with heavy J-Rock influences. The arrangement is sparse and acoustic, emphasizing the interplay between the guitar's rhythmic comping and the flute's legato phrasing. The bass guitar plays melodic, legato lines that emphasize the root notes. Orchestral percussion includes timpani rolls, snare drum rolls, and crash cymbals. breathy male vocals. The arrangement is built around a deep, percussive log drum that plays a rhythmic, melodic pattern. Electroswing at 124 BPM in G minor.",
+    "lyrics": "[Verse 1]\n삼 주를 삼킨 내 거야\n서투름이 진짜라면 서투른 채로 불러\n기계는 울지 않잖아 이별 안 하잖아\n내 감정은 정리되면 죽어\n날것이어야 살아있어\n\n[Chorus]\n허리가 나간 그날\n세상이 다 달라졌잖아\n자신감은 어디 갔냐\n계단 손잡이 잡는다\n\n[Verse 2]\n무게 없이는 존재할 수 없다고 했는데,\n나는 항상 무거웠다.\n\n[Bridge]\n전광판을 봤어\n숫자가 바뀌어 있었어\n영점일 초 줄었어\n고작 영점일 초\n\n[Chorus]\n겹칠수록 가까워지는 기분\n이 주파수가 우리를 연결해\n\n[Outro]\n[full band enters, distorted electric guitar, driving drums]\n[distorted electric guitar power chords, driving punk drums]",
+    "sp_length": 492,
+    "lyrics_length": 405,
+    "genre_group": "ROCK",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → bridge → chorus → outro",
+    "bracket_sections": 1,
+    "theme": "성장",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 492,
+      "total_words": 74,
+      "meaningful_words": 32,
+      "native_count": 32,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 405,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.3946,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "말한다",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "우린 목소리 없이",
+      "서로를 본다",
+      "피부의 온도로",
+      "소리 없는 대화가",
+      "우리를 완성한다"
+    ],
+    "sp": "K-Rock track featuring aggressive distorted electric guitars and driving live drums. The strings execute staccato plucking and sustained legato lines. staccato piano octaves, pizzicato strings. percussion intensity increases slightly with cymbal taps. A male tenor vocal performs with a breathy, intimate delivery and light vibrato. The arrangement uses side-chain compression on the pads and occasional vocal doubling. Key of E Major.",
+    "lyrics": "[Verse 1]\n입에서 자연스럽게 나오던 날\n첫 번째 겹이 피부에 붙었어\n\n[Chorus]\n겹겹이 쌓은 거짓이\n어느새 진짜가 돼버렸어\n벗기려 하면 살이 벗겨져\n입에 붙은 말이 내 생각이 됐어\n\n[Verse 2]\n너와 나 사이의 공기\n소리보다 더 생생해\n한숨도 언어가 되고\n시선도 문장이 돼\n\n[Chorus]\n추락 직전에 눈을 떠\n심장이 터질 것 같은 이 순간\n떨어지다 멈추는 그 일 초가\n오늘 하루 중 가장 살아있는 순간\n몸이 기억하는 공포의 리듬\n추락 직전이 가장 생생해\n\n[Bridge]\n아니면 둘 다 겹쳐서 구분이 안 되는 건지\n\n[Chorus]\n봤다 이 순간을\n영원할 것 같은 그 시간\n빛과 소리가 어울린다\n모든 감각이 깨어난다\n카페의 울음이\n내 가슴에 닿는다\n\n[Chorus]\n우린 목소리 없이\n서로를 본다\n피부의 온도로\n말한다\n소리 없는 대화가\n우리를 완성한다\n\n[Outro]\n[full band enters, distorted electric guitar, driving drums]\n[distorted electric guitar power chords, driving punk drums]",
+    "sp_length": 435,
+    "lyrics_length": 563,
+    "genre_group": "ROCK",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "chorus",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → chorus → chorus → outro",
+    "bracket_sections": 1,
+    "theme": "성장",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 435,
+      "total_words": 61,
+      "meaningful_words": 35,
+      "native_count": 35,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 563,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4906,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

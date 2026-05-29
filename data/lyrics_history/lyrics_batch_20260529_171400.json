@@ -1,0 +1,100 @@
+[
+  {
+    "index": 0,
+    "title": "되려",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "이게 뭔지 모르겠어",
+      "사랑이 되려는 건가",
+      "네 답장 하나에",
+      "이게",
+      "답장"
+    ],
+    "sp": "K-Pop R&B with a mid-tempo groove. flute motif enters, echoing cello phrases. flute motif enters, echoing cello phrases. fingerstyle acoustic guitar, upright bass, brushed snare. Choral vocalizations consist of operatic staccato chants and sustained pads. The production is intimate with close-mic positioning on both the vocals and the guitar, featuring a short room reverb. The arrangement is sparse and intimate, maintaining a consistent mid-tempo groove.",
+    "lyrics": "[Verse 1]\n사진에서 밝은 부분만 보는 사람이 많지만\n나는 어두운 구석에서 의미를 찾는 사람\n\n[Pre-Chorus]\n밤이 깊어질수록\n네 목소리는 더 생생해\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n채워지지 않은 빈칸이 완성된 문장보다 깊어\n\n[Verse 2]\n각자의 밤을 품고\n각자의 이야기를 가지고\n같은 공간에 서있다\n\n[Chorus]\n아무도 찾지 않는 길 위에\n비로소 내가 나를 만났어\n꺼진 화면 너머 펼쳐진\n석양빛 하나로 충분한 밤\n\n[Bridge]\n그래도 넌 여기 있어, 이 소음 속에서 숨을 고르고.\n작은 창문으로 빛이 들어오는 경험.\n한 줄의 글귀, 낯선 사람의 눈인사.\n이 틈새가 전부는 아니야.\n\n[Chorus]\n이게 뭔지 모르겠어\n사랑이 되려는 건가\n네 답장 하나에\n하루가 통째로 물드는 것처럼\n확인되지 않은 감정들이\n전부 네 쪽을 가리켜\n\n[Outro]\n[full band, driving bassline]\n[bright synth lead, distorted electric guitar power chords, driving drums]",
+    "sp_length": 458,
+    "lyrics_length": 575,
+    "genre_group": "RNB",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → chorus → bridge → chorus → outro",
+    "bracket_sections": 1,
+    "theme": "밤",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 458,
+      "total_words": 66,
+      "meaningful_words": 39,
+      "native_count": 39,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 575,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5294,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "hour, a little",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "(same gentle energy)",
+      "This is all",
+      "is all I",
+      "all I need",
+      "I need today"
+    ],
+    "sp": "Folk-pop instrumental featuring a lead violin and acoustic guitar. Fingerpicked acoustic guitar plays a repetitive arpeggiated pattern in eighth notes. Fingerpicked acoustic guitar plays a repetitive arpeggiated pattern in eighth notes. Drums feature a crisp snare and a steady eighth-note hi-hat pattern. A subtle, warm reverb is applied to the vocals to create a sense of space. The arrangement features a clean electric guitar playing sparse, jazz-influenced chords with a light chorus effect. 4/4 time signature.",
+    "lyrics": "[Verse 1]\n(soft, intimate singing)\nSunlight through the window glass\n\n[Chorus]\n추락 직전에 깨어나\n온몸이 전기처럼 떨리는 순간\n바닥 없는 어둠을 지나\n다시 이불 위로 돌아온 나\n\n[Verse 2]\n기타 소리가 새어 나온다\n어딘가에서\n파두인 것 같다\n슬픈 건 어디서나 같은 멜로디\n문이 열려 있다\n작은 바\n들어가지 않는다\n밖에서 듣는다\n\n[Chorus]\n(same gentle energy)\nThis is all I need today\nA quiet hour, a little break\n\n[Bridge]\n실망이 구체적이다\n그게 무섭다\n이름도 모르는 사람 안 왔다고\n아메리카노 맛이 달라지면\n이건 감정이잖아\n카페 문 열릴 때마다 고개를 드는 나\n안녕이라는 말을 한 번도 안 했는데\n안 보면 보고 싶은 사람이 생겼다\n\n[Outro]\n[violin fades out, solo fingerpicked acoustic guitar]\n[fingerpicked acoustic guitar, solo cello melody]",
+    "sp_length": 516,
+    "lyrics_length": 546,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "밤",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 516,
+      "total_words": 77,
+      "meaningful_words": 35,
+      "native_count": 35,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 546,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4329,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]
