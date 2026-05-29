@@ -35,6 +35,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **가사 품질 5대 패치** — 코러스복사(0→10/10) + 크로스곡배제(19→4) + 서사체이닝 + 언어필터 + SP중복제거(매곡→0) — 2026-05-29 ✅
 - [sunolanguage] **N003 '우연의 시작' 10곡 생성 + 핸드오프** — SE v2 첫 정식, 5테마×2곡, 5장르그룹, 7송폼, SP 10/10 PASS, Lyrics 10/10 PASS, coh 0.50, br 13 — 2026-05-29 ✅
 - [sunolanguage] **우연엔진 보강 3대 개선** — bracket_presets.py 신규(Intro/Interlude/Outro 자동 브래킷) + corpus_quality_gate.py 신규(67건 dedup→CLEAN) + coherence 0.44→0.51(+16%) + FAIL 15→10% + fallback 체인 — 2026-05-29 ✅
 - [sunolanguage] **N시리즈 파이프라인 v2 구현** — song_forms.py + title_generator.py 신규, lyrics_retriever/assembler/engine 개선, V1≠V2 100%, 7종폼/10곡, 제목 자동 생성 — 2026-05-29 ✅
