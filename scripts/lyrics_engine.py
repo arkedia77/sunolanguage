@@ -179,6 +179,8 @@ def cmd_pair(args: list[str]):
     do_validate = False
     genre_group_override = None
     form_variant = None
+    theme = None
+    do_refine = False
 
     for a in args:
         if a.startswith("--seed="):
@@ -191,8 +193,13 @@ def cmd_pair(args: list[str]):
             genre_group_override = a.split("=")[1]
         elif a.startswith("--form="):
             form_variant = a.split("=")[1]
+        elif a.startswith("--theme="):
+            theme = a.split("=")[1]
+        elif a == "--refine":
+            do_refine = True
 
-    print(f"Pair: seed='{seed}', drift={drift}")
+    theme_label = f", theme='{theme}'" if theme else ""
+    print(f"Pair: seed='{seed}', drift={drift}{theme_label}")
     print()
 
     sp_client = sp_get_client()
@@ -213,7 +220,8 @@ def cmd_pair(args: list[str]):
     matched = match_sp_differentiated(sp_text, form=form,
                                       client=lyr_client, model=lyr_model,
                                       sp_client=sp_client, sp_model=sp_model,
-                                      genre_group=genre_group)
+                                      genre_group=genre_group,
+                                      theme=theme)
 
     selected = {}
     metas = []
@@ -228,6 +236,13 @@ def cmd_pair(args: list[str]):
                 metas.append(best)
 
     lyrics = assemble_lyrics(selected, structure=form)
+
+    if do_refine and theme:
+        from lyrics_refiner import refine_lyrics
+        lyrics_before = lyrics
+        lyrics = refine_lyrics(lyrics, theme=theme)
+        if lyrics != lyrics_before:
+            print(f"[Refined: theme='{theme}']")
 
     title_result = generate_title(lyrics, sp_text, genre_group=genre_group)
 
@@ -268,6 +283,8 @@ def cmd_batch(args: list[str]):
     save = False
     genre_group_override = None
     form_variant = None
+    theme = None
+    do_refine = False
 
     for a in args:
         if a.startswith("--count="):
@@ -284,8 +301,14 @@ def cmd_batch(args: list[str]):
             genre_group_override = a.split("=")[1]
         elif a.startswith("--form="):
             form_variant = a.split("=")[1]
+        elif a.startswith("--theme="):
+            theme = a.split("=")[1]
+        elif a == "--refine":
+            do_refine = True
 
-    print(f"Batch: {count} SP+lyrics packages, seed='{seed}', drift={drift}")
+    theme_label = f", theme='{theme}'" if theme else ""
+    refine_label = " +refine" if do_refine else ""
+    print(f"Batch: {count} SP+lyrics packages, seed='{seed}', drift={drift}{theme_label}{refine_label}")
     print()
 
     sp_client = sp_get_client()
@@ -311,7 +334,8 @@ def cmd_batch(args: list[str]):
         matched = match_sp_differentiated(sp_text, form=form,
                                           client=lyr_client, model=lyr_model,
                                           sp_client=sp_client, sp_model=sp_model,
-                                          genre_group=genre_group)
+                                          genre_group=genre_group,
+                                          theme=theme)
         selected = {}
         metas = []
         bracket_count = 0
@@ -325,6 +349,10 @@ def cmd_batch(args: list[str]):
                     metas.append(best)
 
         lyrics = assemble_lyrics(selected, structure=form)
+
+        if do_refine and theme:
+            from lyrics_refiner import refine_lyrics
+            lyrics = refine_lyrics(lyrics, theme=theme)
 
         title_result = generate_title(lyrics, sp_text, genre_group=genre_group)
 
@@ -341,6 +369,8 @@ def cmd_batch(args: list[str]):
             "song_form": form,
             "song_form_type": form_key,
             "bracket_sections": bracket_count,
+            "theme": theme or "",
+            "refined": do_refine and theme is not None,
         }
 
         if do_validate:

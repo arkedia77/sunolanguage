@@ -141,7 +141,8 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                             granularity: str = None, limit_per_section: int = 3,
                             client=None, model=None,
                             sp_client=None, sp_model=None,
-                            genre_group: str = None) -> dict[str, list[dict]]:
+                            genre_group: str = None,
+                            theme: str = None) -> dict[str, list[dict]]:
     from song_forms import get_section_query_hint, classify_genre_group
     from bracket_presets import retrieve_bracket_directives, format_bracket_section
 
@@ -155,6 +156,12 @@ def match_sp_differentiated(sp_text: str, form: list[str],
     base_query = genre
     if moods:
         base_query += " " + " ".join(moods)
+
+    if theme:
+        from lyrics_themes import get_theme_query
+        theme_query = get_theme_query(theme)
+        if theme_query:
+            base_query = f"{theme_query} {base_query}"
 
     if genre_group is None:
         genre_group = classify_genre_group(genre)

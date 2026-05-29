@@ -36,11 +36,45 @@ def _get_model():
     return _model_cache
 
 
+KNOWN_SECTION_TAGS = {
+    "verse", "chorus", "bridge", "pre-chorus", "hook",
+    "intro", "outro", "interlude", "instrumental", "drop", "tag", "coda",
+}
+
+
+def _is_section_tag(tag: str) -> bool:
+    normalized = re.sub(r"\s*\d+$", "", tag.strip().lower())
+    return normalized in KNOWN_SECTION_TAGS
+
+
+def _parse_sections(lyrics_text: str) -> list[tuple[str, str]]:
+    lines = lyrics_text.split("\n")
+    sections = []
+    current_tag = None
+    current_lines = []
+
+    for line in lines:
+        stripped = line.strip()
+        m = re.match(r"^\[([^\]]+)\]$", stripped)
+        if m and _is_section_tag(m.group(1)):
+            if current_tag is not None:
+                sections.append((current_tag, "\n".join(current_lines)))
+            current_tag = m.group(1)
+            current_lines = []
+        elif current_tag is not None:
+            current_lines.append(line)
+
+    if current_tag is not None:
+        sections.append((current_tag, "\n".join(current_lines)))
+
+    return sections
+
+
 def validate_lyrics(lyrics_text: str, sections_meta: list[dict] = None,
                     song_form: list[str] = None) -> dict:
     issues = []
 
-    parsed_sections = re.findall(r"\[([^\]]+)\]\s*\n(.*?)(?=\n\[|\Z)", lyrics_text, re.DOTALL)
+    parsed_sections = _parse_sections(lyrics_text)
 
     has_verse = any("verse" in tag.lower() for tag, _ in parsed_sections)
     has_chorus = any("chorus" in tag.lower() or "hook" in tag.lower() for tag, _ in parsed_sections)
@@ -86,7 +120,9 @@ def validate_lyrics(lyrics_text: str, sections_meta: list[dict] = None,
     else:
         verdict = "PASS"
 
-    if not has_verse or not has_chorus:
+    if not has_verse:
+        verdict = "FAIL"
+    if not has_chorus and form_requires_chorus:
         verdict = "FAIL"
 
     return {
