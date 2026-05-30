@@ -1,0 +1,99 @@
+[
+  {
+    "index": 0,
+    "title": "완성된",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "불빛",
+      "여백",
+      "가장",
+      "솔직한",
+      "공간"
+    ],
+    "sp": "K-Indie pop ballad. palm-muted guitar chugging. palm-muted distorted electric guitar riff. Distorted electric guitars play palm-muted chugging riffs and power chords. distorted electric guitar riff, record scratch. sustained guitar chords, crash cymbals. percussion continues, guitar plays melodic flourishes. cymbal swell. A mellow male vocal performs in a rhythmic, melodic rap-singing style. The arrangement is sparse and intimate. 65 BPM. The dynamics utilize gradual crescendos and decrescendos throughout the arrangement. Production includes rapid vocal layering and a clean, compressed mix typical of modern idol rock.",
+    "lyrics": "[Verse 1]\n각자의 밤을 품고\n각자의 이야기를 가지고\n같은 공간에 서있다\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n채워지지 않은 빈칸이 완성된 문장보다 깊어\n\n[Verse 2]\n알림이 없는 새벽은 넓었어\n창틈으로 들어온 바람이 차갑고\n냉장고 위의 시계 초침 소리가\n이렇게 선명한 밤은 처음이야\n발가락 끝까지 내가 느껴져\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n채워지지 않은 빈칸이 완성된 문장보다 깊어\n\n[Bridge]\n빛이 있어야 그림자지\n빛이 나인 거지\n그림자는 덤인 거지\n오늘 처음 알았다\n\n[Verse 3]\n베개에 얼굴을 묻었다\n어둠 속에서 손가락이 멈춘다\n잠이 드는 순간에만 조용해지는\n이게 내 하루의 엔딩이야\n\n[Outro]\n[electric guitar melody fades]\n[electric guitar arpeggio fades]",
+    "sp_length": 625,
+    "lyrics_length": 493,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → verse → outro",
+    "bracket_sections": 1,
+    "theme": "밤",
+    "sub_theme": "새벽",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 625,
+      "total_words": 84,
+      "meaningful_words": 54,
+      "native_count": 54,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 493,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5706,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "해두자",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "아니면",
+      "뭐라",
+      "경찰",
+      "신고당하기",
+      "직전"
+    ],
+    "sp": "K-Indie pop track featuring a clean electric guitar playing jazz-influenced seventh chords with a light chorus effect. synth bass enters, melodic eighth-note pattern. shakers, syncopated rimshot, soft synth pad. piano melody continues. synth stabs. rapid woodwind runs, rising brass intensity. Drum kit features a prominent snare with a tight, high-tuned crack and frequent rimshots. Occasional vocal ad-libs and layered harmonies appear in the background. The arrangement alternates between dense rhythmic sections and melodic lead passages. The track is in the key of G Major at 118 BPM in 4/4 time. The arrangement features a prominent string section playing staccato ostinatos and soaring legato melodies. The vocal delivery is intimate and breathy, utilizing a mix of chest voice and light head voice.",
+    "lyrics": "[Verse 1]\n아니면 뭐라 불러야 하나\n경찰에 신고당하기 직전의\n아슬아슬한 관심이라고 해두자\n\n[Verse 2]\n매일 밤 이 순간이 찾아와\n의식과 무의식의 경계선 위\n몸은 침대에 누워 있는데\n뇌는 절벽 끝에 서 있어\n\n[Bridge]\n실망이 구체적이다\n그게 무섭다\n이름도 모르는 사람 안 왔다고\n아메리카노 맛이 달라지면\n이건 감정이잖아\n카페 문 열릴 때마다 고개를 드는 나\n안녕이라는 말을 한 번도 안 했는데\n안 보면 보고 싶은 사람이 생겼다\n\n[Verse 3]\n화면을 끄자 천장이 보였어\n헤드라이트가 벽을 스치며 지나가\n옆집 기타 소리 한 줄이\n이불 위로 천천히 내려앉았어\n한 달 만에 듣는 내 숨소리",
+    "sp_length": 806,
+    "lyrics_length": 339,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "verse",
+      "bridge",
+      "verse"
+    ],
+    "song_form_type": "verse → verse → bridge → verse",
+    "bracket_sections": 0,
+    "theme": "밤",
+    "sub_theme": "도시",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 806,
+      "total_words": 122,
+      "meaningful_words": 57,
+      "native_count": 57,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 339,
+      "section_count": 4,
+      "has_verse": true,
+      "has_chorus": false,
+      "coherence_score": 0.3777,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "index": 0,
+    "title": "죽음",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "네 미래는 나 없이",
+      "거짓말처럼 중얼거려",
+      "설렘",
+      "미래",
+      "거라고"
+    ],
+    "sp": "K-Indie folk ballad. Clean electric guitar plays staccato muted scratches and rhythmic chords. acoustic guitar plays final staccato chord. staccato electric guitar chords. final staccato guitar chord. Clean electric guitar performs rhythmic muted scratches and staccato chords. piano enters, subtle kick drum and shaker. snare rolls and filter sweeps. Female vocals are delivered in a breathy, intimate style with close-mic proximity. The arrangement uses sudden dynamic shifts from pianissimo to fortissimo. The track is in the key of E Major at 128 BPM in 4/4 time. The arrangement uses sudden stops and dramatic builds. The production is polished with modern compression and slight saturation on the vocals.",
+    "lyrics": "[Verse 1]\n말이 많지 않다\n그래도 들려온다\n당신의 숨소리\n빗소리 사이사이에\n따뜻한 호흡\n\n[Chorus]\n사랑이라서 떠나야 해\n이 설렘을 죽여야 해\n네 미래는 나 없이\n더 밝을 거라고 믿으면서\n거짓말처럼 중얼거려\n너를 해방시키기 위해\n내가 죽음이 돼야 해\n\n[Verse 2]\n숨을 들이쉴 때마다\n누군가의 입술을 거쳐\n누군가의 폐를 지나\n내게 도달한다\n\n[Chorus]\n사랑이라서 떠나야 해\n이 설렘을 죽여야 해\n네 미래는 나 없이\n더 밝을 거라고 믿으면서\n거짓말처럼 중얼거려\n너를 해방시키기 위해\n내가 죽음이 돼야 해\n\n[Bridge]\n서툰 글자들의 흔적\n누군가는 중요해\n지우고 또 지우는\n그 반복 속에\n\n혼자가 아니란 생각이\n따뜻해\n\n[Verse 3]\n더 이상 볼 수 없는 나를\n왜 지켜야 하는지 몰라\n상처만 남길 사랑보다\n떠나는 게 낫지 않을까\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[piano filter closes further, reducing high-end clarity]",
+    "sp_length": 710,
+    "lyrics_length": 536,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → verse → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "sub_theme": "탈출",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 710,
+      "total_words": 108,
+      "meaningful_words": 54,
+      "native_count": 54,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 536,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6296,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "무늬",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "경계가 흐려진다",
+      "공기",
+      "있고",
+      "그리고",
+      "섞인다"
+    ],
+    "sp": "K-Indie folk ballad. The tempo is 145 BPM in 4/4 time, modulating through various minor keys including D minor and G minor. percussive rhythm guitar continues. solo violin enters with rapid ascending scale. The tempo is 115 BPM in 4/4 time, modulating through various minor keys including D minor and G minor. A tenor saxophone leads with melodic improvisations. Drums feature a tight snare and consistent hi-hat eighth notes. The vocals are delivered with a melodic but gritty punk-rock belt. The track maintains a consistent dynamic level with minimal structural variation, focusing on the atmospheric repetition of the core loop. Tempo is 210 BPM.",
+    "lyrics": "[Verse 1]\n해가 진다\n항구 쪽에서\n비릿한 바람이 불어온다\n어부가 그물을 정리한다\n\n[Chorus]\n공기 속에 무늬가 있고\n그 무늬는 나를 그리고\n나는 공기 속에 섞인다\n존재와 부재 사이에서\n경계가 흐려진다\n\n[Verse 2]\n네 프로필 사진은 그대로다\n웃고 있는 그 여름 바다\n카톡창 위에 뜬 시간\n수요일 밤 열한 시 오십이 분\n\n[Chorus]\n공기 속에 무늬가 있고\n그 무늬는 나를 그리고\n나는 공기 속에 섞인다\n존재와 부재 사이에서\n경계가 흐려진다\n\n[Bridge]\n내일도 해는 질 텐데\n왜 오늘은 달랐을까\n같은 하늘인데 눈이 달라졌거든\n멈춰 서야 보이는 거였어\n\n[Outro]\n[electric guitar melody fades]\n[acoustic guitar fades out]",
+    "sp_length": 650,
+    "lyrics_length": 389,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "sub_theme": "방랑",
+    "refined": false,
+    "sp_validation": {
+      "sp_length": 650,
+      "total_words": 106,
+      "meaningful_words": 44,
+      "native_count": 44,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 389,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4814,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]
