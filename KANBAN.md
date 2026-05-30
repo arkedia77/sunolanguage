@@ -1,9 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **N003 핸드오프 재생성 필요** — 패치 전 엔진으로 생성됨, 5대패치+DB dedup+SP부스트 적용 후 재생성 → sunomusic 교체 핸드오프 발송 (gid 20341~20350, Suno 미착수)
+- [sunolanguage] **N003~N005 자체 분석** — 30곡 SP/가사 품질 비교 분석 (다음 세션 착수)
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
-- [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 10,646 + Lyrics 5,858 + Bracket 4,956 Qdrant 가동 중, **다음: Gate 4 성장 검증 (S_INST200 수신 후)**
+- [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
@@ -35,6 +35,11 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **N005 10곡 생성 + 핸드오프** — 3대 패치(브래킷일치+서브테마+행수게이트) 적용, SP avg 698c, coh 0.52, gid 20361~20370, 10/10 Suno 성공 — 2026-05-30 ✅
+- [sunolanguage] **3대 패치 적용** — bracket_presets SP악기일치 + lyrics_themes 서브테마이중키워드 + lyrics_retriever 최소3행게이트 — 2026-05-30 ✅
+- [sunolanguage] **N004 10곡 생성 + 핸드오프** — SP부스트(INST5/MIN650), SP avg 750c, coh 0.51, gid 20351~20360, 10/10 Suno 성공 — 2026-05-30 ✅
+- [sunolanguage] **SP 부스트 강화** — INSTRUMENT_COUNT 3→5, MIN_SP_LENGTH 450→650 — 2026-05-30 ✅
+- [sunolanguage] **N003 v2 재생성 + 핸드오프** — 5대패치+dedup+SP부스트, SP avg 550c, coh 0.57, gid 20341~20350, 10/10 Suno 성공 — 2026-05-30 ✅
 - [sunolanguage] **Qdrant dedup + SP 부스트** — presets 10,646→3,707(-65%) + lyrics 5,858→4,620(-21%) + SP 426→543c + Hook 코러스 복사 — 2026-05-29 ✅
 - [sunolanguage] **가사 품질 5대 패치** — 코러스복사(0→10/10) + 크로스곡배제(19→4) + 서사체이닝 + 언어필터 + SP중복제거(매곡→0) — 2026-05-29 ✅
 - [sunolanguage] **N003 '우연의 시작' 10곡 생성 + 핸드오프** — SE v2 첫 정식, 5테마×2곡, 5장르그룹, 7송폼, SP 10/10 PASS, Lyrics 10/10 PASS, coh 0.50, br 13 — 2026-05-29 ✅
