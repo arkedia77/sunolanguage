@@ -367,6 +367,15 @@ def cmd_batch(args: list[str]):
 
         title_result = generate_title(lyrics, sp_text, genre_group=genre_group)
 
+        sub_theme_used = ""
+        if matched and isinstance(matched, dict):
+            for _k, _v in matched.items():
+                if _v and isinstance(_v, list) and _v[0]:
+                    _payload = _v[0].get("payload", {})
+                    sub_theme_used = _payload.get("_sub_theme", "")
+                    if sub_theme_used:
+                        break
+
         entry = {
             "index": i,
             "title": title_result["title"],
@@ -381,6 +390,7 @@ def cmd_batch(args: list[str]):
             "song_form_type": form_key,
             "bracket_sections": bracket_count,
             "theme": theme or "",
+            "sub_theme": sub_theme_used,
             "refined": do_refine and theme is not None,
         }
 

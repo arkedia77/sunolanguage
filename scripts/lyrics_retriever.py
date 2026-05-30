@@ -30,6 +30,8 @@ QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY", None)
 
 DEFAULT_STRUCTURE = ["verse", "pre_chorus", "chorus", "verse", "bridge", "chorus", "outro"]
 
+MIN_VERSE_LINES = 3
+
 MOOD_WORDS = {
     "intimate", "emotional", "warm", "melancholic", "dreamy", "nostalgic",
     "energetic", "driving", "aggressive", "smooth", "groovy", "bright",
@@ -175,11 +177,15 @@ def match_sp_differentiated(sp_text: str, form: list[str],
     if moods:
         base_query += " " + " ".join(moods)
 
+    sub_theme = None
     if theme:
-        from lyrics_themes import get_theme_query
-        theme_query = get_theme_query(theme)
+        from lyrics_themes import get_theme_query, pick_sub_theme
+        sub_theme = pick_sub_theme(theme)
+        theme_query = get_theme_query(theme, sub_theme=sub_theme)
         if theme_query:
             base_query = f"{theme_query} {base_query}"
+
+    _sub_theme_tag = sub_theme or ""
 
     if genre_group is None:
         genre_group = classify_genre_group(genre)
@@ -247,7 +253,19 @@ def match_sp_differentiated(sp_text: str, form: list[str],
 
         lang_filter = detected_lang if detected_lang else None
 
+        def _count_lyric_lines(text: str) -> int:
+            lines = [l.strip() for l in text.strip().split("\n") if l.strip()]
+            return sum(1 for l in lines if not l.startswith("[") and not l.startswith("("))
+
         def _pick_novel(candidates):
+            needs_min_lines = tag in ("verse", "pre_chorus", "bridge")
+            for h in candidates:
+                t = h["payload"].get("text", "").strip()
+                if not t or t in used_texts:
+                    continue
+                if needs_min_lines and _count_lyric_lines(t) < MIN_VERSE_LINES:
+                    continue
+                return [h]
             for h in candidates:
                 t = h["payload"].get("text", "").strip()
                 if t and t not in used_texts:
@@ -300,6 +318,7 @@ def match_sp_differentiated(sp_text: str, form: list[str],
 
         if hits:
             best = hits[0]
+            best["payload"]["_sub_theme"] = _sub_theme_tag
             pid = best.get("point_id")
             if pid is not None:
                 song_point_ids.add(pid)

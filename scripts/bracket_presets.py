@@ -71,6 +71,27 @@ GENRE_GROUP_HINTS = {
     "POP": "synth bass drum bright energetic electronic",
 }
 
+INSTRUMENT_KEYWORDS = [
+    "piano", "guitar", "bass", "drum", "violin", "cello", "strings",
+    "synth", "saxophone", "sax", "trumpet", "flute", "harp", "organ",
+    "harmonica", "banjo", "ukulele", "mandolin", "accordion", "oboe",
+    "clarinet", "trombone", "horn", "percussion", "timpani", "marimba",
+    "vibraphone", "xylophone", "glockenspiel", "bells", "tambourine",
+    "shaker", "congas", "bongos", "djembe", "tabla", "sitar", "erhu",
+    "koto", "gayageum", "guzheng", "berimbau", "balalaika", "whistle",
+    "fiddle", "viola", "contrabass", "double bass", "rhodes", "wurlitzer",
+    "mellotron", "theremin", "kalimba", "steel drum", "bagpipe",
+]
+
+
+def extract_sp_instruments(sp_text: str) -> set[str]:
+    sp_lower = sp_text.lower()
+    found = set()
+    for kw in INSTRUMENT_KEYWORDS:
+        if kw in sp_lower:
+            found.add(kw)
+    return found
+
 
 def get_client():
     from qdrant_client import QdrantClient
@@ -145,8 +166,21 @@ def retrieve_bracket_directives(
             "action_match": action_ok,
         })
 
+    sp_instruments = extract_sp_instruments(sp_text)
+
+    for c in candidates:
+        c_text_lower = c["text"].lower()
+        matched_inst = sum(1 for inst in sp_instruments if inst in c_text_lower)
+        c["instrument_match"] = matched_inst
+
     action_matched = [c for c in candidates if c["action_match"]]
     pool = action_matched if action_matched else candidates
+
+    if sp_instruments:
+        inst_matched = [c for c in pool if c["instrument_match"] > 0]
+        pool = inst_matched if inst_matched else pool
+
+    pool.sort(key=lambda c: (-c["instrument_match"], -c["score"]))
 
     max_d = profile["max_directives"]
     selected = pool[:max_d]
