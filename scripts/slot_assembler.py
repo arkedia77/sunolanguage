@@ -36,6 +36,7 @@ TOP_ANCHOR_SLOTS = [
 ]
 
 SP_CHAR_LIMIT = 1000
+MAX_SENTENCES = 9
 
 
 def clean_text(text: str) -> str:
@@ -87,6 +88,9 @@ def assemble_sp(preset: dict, bracket_overlay: list[dict] | None = None) -> str:
                 sentences.append(text)
 
     sentences = _dedup_sentences(sentences)
+
+    if len(sentences) > MAX_SENTENCES:
+        sentences = sentences[:MAX_SENTENCES]
 
     if bracket_overlay:
         for br in bracket_overlay:

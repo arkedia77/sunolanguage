@@ -321,6 +321,8 @@ def cmd_batch(args: list[str]):
     form_counts = {}
     batch_used_ids = set()
     batch_used_texts = set()
+    batch_used_song_ids = set()
+    batch_used_forms = []
 
     for i in range(count):
         preset = controlled_drift(seed, drift_factor=drift,
@@ -329,9 +331,11 @@ def cmd_batch(args: list[str]):
 
         genre_group = genre_group_override or classify_genre_group(
             extract_sp_genre(sp_text))
-        form = select_form(genre_group, variant=form_variant)
+        form = select_form(genre_group, variant=form_variant,
+                           avoid_forms=batch_used_forms)
         form_key = form_to_arrow(form)
         form_counts[form_key] = form_counts.get(form_key, 0) + 1
+        batch_used_forms.append(form)
 
         matched = match_sp_differentiated(sp_text, form=form,
                                           client=lyr_client, model=lyr_model,
@@ -339,7 +343,8 @@ def cmd_batch(args: list[str]):
                                           genre_group=genre_group,
                                           theme=theme,
                                           batch_used_ids=batch_used_ids,
-                                          batch_used_texts=batch_used_texts)
+                                          batch_used_texts=batch_used_texts,
+                                          batch_used_song_ids=batch_used_song_ids)
         selected = {}
         metas = []
         bracket_count = 0
@@ -353,6 +358,9 @@ def cmd_batch(args: list[str]):
                 best_text = best_payload.get("text", "").strip()
                 if best_text and best_payload.get("source") != "bracket_preset":
                     batch_used_texts.add(best_text)
+                best_sid = best_payload.get("song_id")
+                if best_sid and best_payload.get("source") != "bracket_preset":
+                    batch_used_song_ids.add(best_sid)
                 selected[tag] = best_payload
                 if best_payload.get("source") == "bracket_preset":
                     bracket_count += 1

@@ -111,11 +111,18 @@ def classify_genre_group(sp_genre: str) -> str:
     return "POP"
 
 
-def select_form(genre_group: str, variant: str = None) -> list[str]:
+def select_form(genre_group: str, variant: str = None,
+                avoid_forms: list[list[str]] = None) -> list[str]:
     forms = GENRE_FORMS.get(genre_group, GENRE_FORMS["POP"])
     if variant and variant in forms:
         return list(forms[variant])
-    return list(random.choice(list(forms.values())))
+    candidates = list(forms.values())
+    if avoid_forms:
+        avoid_set = {tuple(f) for f in avoid_forms}
+        preferred = [f for f in candidates if tuple(f) not in avoid_set]
+        if preferred:
+            return list(random.choice(preferred))
+    return list(random.choice(candidates))
 
 
 def get_required_sections(form: list[str]) -> list[str]:

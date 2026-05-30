@@ -28,6 +28,28 @@ VALID_SECTION_TAGS = {
 }
 VALID_GRANULARITIES = {"section", "couplet"}
 
+SP_DIRECTIVE_KEYWORDS = {
+    "layered leads", "maximum energy", "builds to", "crescendo to",
+    "palm muted", "power chords", "instrumental break", "solo section",
+    "key change", "double time feel", "half time feel", "tempo change",
+    "stacked synths", "stacked pads", "full intensity", "heavy distortion",
+    "fade in", "fade out slowly", "drop section", "breakdown section",
+}
+
+
+def is_sp_directive(text: str) -> bool:
+    clean_lines = [l.strip() for l in text.strip().split("\n")
+                   if l.strip() and not l.strip().startswith("[")]
+    if not clean_lines:
+        return False
+    combined = " ".join(clean_lines).lower()
+    has_korean = bool(re.search(r"[가-힯]", combined))
+    if not has_korean and len(combined) < 80:
+        for kw in SP_DIRECTIVE_KEYWORDS:
+            if kw in combined:
+                return True
+    return False
+
 
 def validate_chunk(chunk: dict) -> list[str]:
     issues = []
@@ -66,6 +88,9 @@ def validate_chunk(chunk: dict) -> list[str]:
         unique = set(lines)
         if len(unique) == 1:
             issues.append("repetitive_single_line")
+
+    if is_sp_directive(text):
+        issues.append("sp_directive")
 
     return issues
 

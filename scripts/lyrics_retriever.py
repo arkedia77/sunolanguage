@@ -162,7 +162,8 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                             genre_group: str = None,
                             theme: str = None,
                             batch_used_ids: set = None,
-                            batch_used_texts: set = None) -> dict[str, list[dict]]:
+                            batch_used_texts: set = None,
+                            batch_used_song_ids: set = None) -> dict[str, list[dict]]:
     from song_forms import get_section_query_hint, classify_genre_group
     from bracket_presets import retrieve_bracket_directives, format_bracket_section
 
@@ -198,6 +199,7 @@ def match_sp_differentiated(sp_text: str, form: list[str],
     used_bracket_texts = set()
     song_point_ids = set(batch_used_ids) if batch_used_ids else set()
     used_texts = set(batch_used_texts) if batch_used_texts else set()
+    exclude_song_ids = set(batch_used_song_ids) if batch_used_song_ids else set()
     detected_lang = None
     prev_verse_text = None
 
@@ -258,25 +260,30 @@ def match_sp_differentiated(sp_text: str, form: list[str],
             return sum(1 for l in lines if not l.startswith("[") and not l.startswith("("))
 
         def _pick_novel(candidates):
+            from corpus_quality_gate import is_sp_directive
             needs_min_lines = tag in ("verse", "pre_chorus", "bridge")
             for h in candidates:
                 t = h["payload"].get("text", "").strip()
                 if not t or t in used_texts:
+                    continue
+                if is_sp_directive(t):
                     continue
                 if needs_min_lines and _count_lyric_lines(t) < MIN_VERSE_LINES:
                     continue
                 return [h]
             for h in candidates:
                 t = h["payload"].get("text", "").strip()
-                if t and t not in used_texts:
+                if t and t not in used_texts and not is_sp_directive(t):
                     return [h]
             return candidates[:1] if candidates else []
+
+        combined_exclude = exclude | exclude_song_ids if exclude else (exclude_song_ids or None)
 
         hits = theme_search(
             section_query, section_tag=tag, granularity=granularity,
             language=lang_filter,
             limit=limit_per_section,
-            exclude_song_ids=exclude if exclude else None,
+            exclude_song_ids=combined_exclude if combined_exclude else None,
             exclude_point_ids=song_point_ids if song_point_ids else None,
             client=client, model=model,
         )
@@ -286,7 +293,7 @@ def match_sp_differentiated(sp_text: str, form: list[str],
             candidates = theme_search(
                 section_query, section_tag=tag, granularity=granularity,
                 limit=limit_per_section,
-                exclude_song_ids=exclude if exclude else None,
+                exclude_song_ids=combined_exclude if combined_exclude else None,
                 client=client, model=model,
             )
             hits = _pick_novel(candidates)
@@ -294,7 +301,9 @@ def match_sp_differentiated(sp_text: str, form: list[str],
         if not hits and exclude:
             candidates = theme_search(
                 section_query, section_tag=tag, granularity=granularity,
-                limit=limit_per_section, client=client, model=model,
+                limit=limit_per_section,
+                exclude_song_ids=exclude_song_ids if exclude_song_ids else None,
+                client=client, model=model,
             )
             hits = _pick_novel(candidates)
 
@@ -303,7 +312,9 @@ def match_sp_differentiated(sp_text: str, form: list[str],
             fallback_tag = FALLBACK_MAP[tag]
             candidates = theme_search(
                 section_query, section_tag=fallback_tag, granularity=granularity,
-                limit=limit_per_section, client=client, model=model,
+                limit=limit_per_section,
+                exclude_song_ids=exclude_song_ids if exclude_song_ids else None,
+                client=client, model=model,
             )
             hits = _pick_novel(candidates)
 
@@ -330,6 +341,7 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                 if tag not in used_song_ids:
                     used_song_ids[tag] = set()
                 used_song_ids[tag].add(sid)
+                exclude_song_ids.add(sid)
             if detected_lang is None and tag == "verse" and occurrence == 1:
                 detected_lang = _detect_language(best_text) or None
             if tag == "verse":
