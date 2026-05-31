@@ -1,7 +1,8 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **DB-direct 전환 (최우선)** — Leo 승인. admin songs GRANT 요청 + leomusic2 pg_insert_helper 공유 요청 발송(2026-05-31). 회신 수신 시 N008부터 생성→songs 직접 INSERT→sunomusic 통지만. 핸드오프/serializer 은퇴. role_sunolanguage 현재 songs 권한 0(검증)
+- [sunolanguage] **DB-direct 전환 — admin GRANT 대기 (BLOCKED 직전)** — Leo 승인. `db_insert.py` 작성+dry-run 검증 완료(40컬럼 leomusic2 미러링, gid=global_id `--gid-start` 사전배정). GRANT 수신 즉시 `--execute`로 N008 첫 적재. leomusic2 helper 패턴 확보. role_sunolanguage 현재 songs 권한 0(검증) → admin GRANT + gid 범위 사전배정 필요
+- [sunolanguage] **N008 생성 완료·전달 보류** — Leo 결정 GRANT 때까지 보류. theme10/10·sub_theme10/10·refined10/10, SP·가사 10/10 PASS, coh 0.53, 8종폼. n008_handoff.json + db_insert 양형식 준비완료. GRANT 오면 DB-direct 적재
 - [sunolanguage] **N007 sunomusic 결과 대기** — gid 20381~20390, Suno 2클립/곡 생성 중, uuid UPDATE 회신 대기
 - [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B(컬럼신설), sunomusic→admin 중계 완료. admin ALTER 적용 후 적재 — 2026-05-31
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
@@ -37,6 +38,8 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **엔진 버그 2건 픽스** — `--refine`이 `--theme` 종속돼 침묵 무효화 + theme/sub_theme 공란 버그. theme 8종 곡별 로테이션 + refine 분리. N008 검증 theme/sub_theme/refined 10/10 — 2026-05-31 ✅
+- [sunolanguage] **`db_insert.py` DB-direct 적재 스크립트** — songs 40컬럼(leomusic2 정본 미러링), build_handoff 매핑 재사용, gid=global_id 사전배정, --dry-run 검증/--execute 분리. GRANT 대기 — 2026-05-31 ✅
 - [sunolanguage] **N007 10곡 생성 + serializer 첫 실전** — city pop seed/--refine, RNB4/ROCK2/POP2/BALLAD1/HIPHOP1(발라드편중 탈피), coh 0.54, 8종폼, 크로스곡0, 제목10/10고유. sunomusic INSERT 완료(gid 20381~20390), optionA_v1 E2E 파싱 검증 — 2026-05-31 ✅
 - [sunolanguage] **serializer 필요여부 문의** — leomusic·leomusic2 양쪽 (B)불필요 회신(둘 다 DB-direct 구조). sunolanguage만 JSON 핸드오프 → DB-direct 전환 결정 — 2026-05-31 ✅
 - [sunolanguage] **핸드오프 정규 serializer `build_handoff.py`** — 엔진 raw→Option A(N005형) 28키 고정. N006 raw 재변환 검증: N005 스키마 키·순서 완전일치, coh 0.538/char 566 일치, 필수키 게이트. N006 스키마 드리프트(DB필드 누락) 회귀 종결 — 2026-05-31 ✅
