@@ -89,7 +89,7 @@ def song_to_row(opt_a: dict, gid: int, now) -> dict:
         "creator": CREATOR,
         "label": SOURCE_PROJECT,             # leomusic2는 "KR2"였으나 의미상 프로젝트명 사용
         "music_engine": MUSIC_ENGINE,
-        "created_date": now,
+        "created_date": now.strftime("%Y-%m-%d %H:%M:%S"),  # varchar(20) — 19자 문자열
         "theme_id": 0,                       # self_generated (themebank 미사용)
         "created_by": CREATED_BY,
         "created_at": now,

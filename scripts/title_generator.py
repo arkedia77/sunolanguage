@@ -65,19 +65,46 @@ def _strip_particle(word: str) -> str:
     return PARTICLES.sub("", word)
 
 
+_KIWI = None
+_NOUN_TAGS = {"NNG", "NNP"}  # 일반명사 / 고유명사
+
+
+def _get_kiwi():
+    """Lazy Kiwi 싱글턴. kiwipiepy 미설치 시 None 반환 → 정규식 폴백.
+    (제목 짤림 근본수정 2026-05-31: 동사/형용사 활용형을 명사로 오인하던 문제)"""
+    global _KIWI
+    if _KIWI is None:
+        try:
+            from kiwipiepy import Kiwi
+            _KIWI = Kiwi()
+        except Exception:
+            _KIWI = False  # 폴백 신호 (재시도 방지)
+    return _KIWI or None
+
+
 def _extract_korean_nouns(text: str) -> list[str]:
+    """Kiwi 형태소 분석으로 명사(NNG/NNP)만 추출 → '관조하/떠나/올린' 류 어간 짤림 방지.
+    kiwipiepy 미설치 환경(이사 직후 등)에서는 구 정규식 방식으로 자동 폴백."""
+    kiwi = _get_kiwi()
     candidates = []
     for line in text.split("\n"):
         line = line.strip()
         if not line or not _is_korean(line):
             continue
-        words = re.findall(r"[가-힣]+", line)
-        for w in words:
-            noun = _strip_particle(w)
-            if VERB_ENDINGS.search(noun):
-                continue
-            if 2 <= len(noun) <= 5 and noun not in BANNED_TITLE_WORDS and noun not in BANNED_ADVERBS:
-                candidates.append(noun)
+        if kiwi is not None:
+            for tok in kiwi.tokenize(line):
+                noun = tok.form
+                if (tok.tag in _NOUN_TAGS and 2 <= len(noun) <= 5
+                        and noun not in BANNED_TITLE_WORDS
+                        and noun not in BANNED_ADVERBS):
+                    candidates.append(noun)
+        else:  # 폴백: 정규식 (덜 정확)
+            for w in re.findall(r"[가-힣]+", line):
+                noun = _strip_particle(w)
+                if VERB_ENDINGS.search(noun):
+                    continue
+                if 2 <= len(noun) <= 5 and noun not in BANNED_TITLE_WORDS and noun not in BANNED_ADVERBS:
+                    candidates.append(noun)
     return candidates
 
 
@@ -150,11 +177,7 @@ def strategy_short_punch(sections: dict[str, str]) -> list[str]:
             if 2 <= len(last) <= 6:
                 candidates.append(last)
             if _is_korean(last):
-                words = re.findall(r"[가-힣]+", last)
-                for w in words:
-                    noun = _strip_particle(w)
-                    if 2 <= len(noun) <= 4 and noun not in BANNED_TITLE_WORDS:
-                        candidates.append(noun)
+                candidates.extend(n for n in _extract_korean_nouns(last) if len(n) <= 4)
     return candidates
 
 
