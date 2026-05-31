@@ -1,7 +1,8 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **N006 sunomusic 생성 대기** — gid 20371~20380 요청 (2026-05-30), P0/P1 6건 패치 적용
+- [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B(컬럼신설), sunomusic→admin 중계 완료. admin ALTER 적용 후 N007부터 적재 — 2026-05-31
+- [sunolanguage] **N007+ 배치 생성** — P0/P1 패치 유지, 다른 테마/seed 시도. 핸드오프는 `build_handoff.py`로 발송
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
@@ -35,6 +36,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **핸드오프 정규 serializer `build_handoff.py`** — 엔진 raw→Option A(N005형) 28키 고정. N006 raw 재변환 검증: N005 스키마 키·순서 완전일치, coh 0.538/char 566 일치, 필수키 게이트. N006 스키마 드리프트(DB필드 누락) 회귀 종결 — 2026-05-31 ✅
 - [sunolanguage] **P0/P1 6건 패치 + N006 10곡 생성** — batch_used_song_ids/디렉티브필터/INST4+MIN550/MAX9문장/avoid_forms, 10/10 PASS, coh 0.54, 8종폼 — 2026-05-30 ✅
 - [sunolanguage] **N003~N005 자체 분석 + 근본 원인 추적** — 30곡 6축 분석, 코드 레벨 10건 추적, 수정/제한/운 3분류 — 2026-05-30 ✅
 - [sunolanguage] **N005 10곡 생성 + 핸드오프** — 3대 패치(브래킷일치+서브테마+행수게이트) 적용, SP avg 698c, coh 0.52, gid 20361~20370, 10/10 Suno 성공 — 2026-05-30 ✅
