@@ -275,6 +275,7 @@ def cmd_batch(args: list[str]):
     from lyrics_validator import validate_lyrics
     from song_forms import classify_genre_group, select_form, form_to_arrow
     from title_generator import generate_title, batch_titles
+    from lyrics_themes import list_themes
 
     count = 5
     seed = "acoustic guitar"
@@ -323,8 +324,11 @@ def cmd_batch(args: list[str]):
     batch_used_texts = set()
     batch_used_song_ids = set()
     batch_used_forms = []
+    # --theme 미지정 시 테마 풀에서 곡별 로테이션 (theme/sub_theme 공란 + refine 무효 방지)
+    theme_pool = list_themes()
 
     for i in range(count):
+        song_theme = theme if theme else theme_pool[i % len(theme_pool)]
         preset = controlled_drift(seed, drift_factor=drift,
                                   client=sp_client, model=sp_model)
         sp_text = assemble_sp(preset)
@@ -341,7 +345,7 @@ def cmd_batch(args: list[str]):
                                           client=lyr_client, model=lyr_model,
                                           sp_client=sp_client, sp_model=sp_model,
                                           genre_group=genre_group,
-                                          theme=theme,
+                                          theme=song_theme,
                                           batch_used_ids=batch_used_ids,
                                           batch_used_texts=batch_used_texts,
                                           batch_used_song_ids=batch_used_song_ids)
@@ -369,9 +373,9 @@ def cmd_batch(args: list[str]):
 
         lyrics = assemble_lyrics(selected, structure=form)
 
-        if do_refine and theme:
+        if do_refine:
             from lyrics_refiner import refine_lyrics
-            lyrics = refine_lyrics(lyrics, theme=theme)
+            lyrics = refine_lyrics(lyrics, theme=song_theme)
 
         title_result = generate_title(lyrics, sp_text, genre_group=genre_group)
 
@@ -397,9 +401,9 @@ def cmd_batch(args: list[str]):
             "song_form": form,
             "song_form_type": form_key,
             "bracket_sections": bracket_count,
-            "theme": theme or "",
+            "theme": song_theme,
             "sub_theme": sub_theme_used,
-            "refined": do_refine and theme is not None,
+            "refined": do_refine,
         }
 
         if do_validate:
