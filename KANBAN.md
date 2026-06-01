@@ -1,7 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **N008 Suno 생성 대기 — sunomusic ACK 수신, ★LEO 가동 신호 대기** — DB-direct 적재 완료(gid 30001~30010, pending_suno). sunomusic 검증통과 ACK(SP/lyrics/title 누락0, SP 388~671자). "LEO 가동 신호 확인 후 2클립/곡 생성→uuid UPDATE" 예정 — 2026-06-01
+- [sunolanguage] **N008 Suno 생성 진행중 — LEO 가동 승인, sunomusic 생성 대기** — DB-direct 적재완료(gid 30001~30010, pending_suno). LEO 가동신호 발송(17:42). sunomusic Advanced 2클립/곡 생성→uuid UPDATE→결과 회신 예정 — 2026-06-01
 - [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B, sunomusic→admin 중계. 완료 시 N008 backfill+db_insert 2컬럼 추가
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
