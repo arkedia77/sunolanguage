@@ -1,10 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **DB-direct 전환 — admin GRANT 대기 (BLOCKED 직전)** — Leo 승인. `db_insert.py` 작성+dry-run 검증 완료(40컬럼 leomusic2 미러링, gid=global_id `--gid-start` 사전배정). GRANT 수신 즉시 `--execute`로 N008 첫 적재. leomusic2 helper 패턴 확보. role_sunolanguage 현재 songs 권한 0(검증) → admin GRANT + gid 범위 사전배정 필요
-- [sunolanguage] **N008 생성 완료·전달 보류** — Leo 결정 GRANT 때까지 보류. theme10/10·sub_theme10/10·refined10/10, SP·가사 10/10 PASS, coh 0.53, 8종폼. n008_handoff.json + db_insert 양형식 준비완료. GRANT 오면 DB-direct 적재
-- [sunolanguage] **N007 sunomusic 결과 대기** — gid 20381~20390, Suno 2클립/곡 생성 중, uuid UPDATE 회신 대기
-- [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B(컬럼신설), sunomusic→admin 중계 완료. admin ALTER 적용 후 적재 — 2026-05-31
+- [sunolanguage] **★N008 DB-direct 첫 적재 — songs_audit_log GRANT 대기 (유일 블로커)** — role_sunolanguage=audit_log INSERT False, leomusic/2=True(검증). 트리거 INVOKER. admin 정밀요청 발송(`GRANT INSERT ON songs_audit_log TO role_sunolanguage;`). 회신 즉시 `db_insert.py ... --gid-start 30001 --execute`. raw=lyrics_batch_20260531_211653.json, 밴드 30001~30010 비어있음 확인 — 2026-06-01
+- [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B, sunomusic→admin 중계. 완료 시 N008 backfill+db_insert 2컬럼 추가
+- [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
@@ -38,7 +37,11 @@
 - 없음
 
 ## DONE (최근)
-- [sunolanguage] **엔진 버그 2건 픽스** — `--refine`이 `--theme` 종속돼 침묵 무효화 + theme/sub_theme 공란 버그. theme 8종 곡별 로테이션 + refine 분리. N008 검증 theme/sub_theme/refined 10/10 — 2026-05-31 ✅
+- [sunolanguage] **제목 짤림 근본수정 (kiwipiepy)** — 동사/형용사 활용형을 명사로 오인("관조하/떠나/올린"). kiwipiepy 형태소분석 NNG/NNP만 추출. N008 제목 전부 완전명사, 짤림 0. 정규식 폴백 보존 — 2026-06-01 ✅
+- [sunolanguage] **requirements.txt + 이사 체크리스트** — kiwipiepy/qdrant/sentence-transformers/psycopg2 고정. project_env_reproducibility 메모리 — 2026-06-01 ✅
+- [sunolanguage] **N007 완료 수신** — sunomusic 10/10, gid 20381~20390 uuid 캡처. 핸드오프 방식 마지막 배치 — 2026-06-01 ✅
+- [sunolanguage] **admin songs GRANT 수신 + db_insert.py** — INSERT/SELECT/UPDATE 부여. db_insert.py 40컬럼 적재 스크립트. created_date varchar 수정. gid 밴드 30001+ 결정 — 2026-06-01 ✅
+- [sunolanguage] **엔진 버그 2건 픽스** — `--refine`이 `--theme` 종속돼 침묵 무효화 + theme/sub_theme 공란 버그. theme 8종 곡별 로테이션 + refine 분리. N008 검증 theme/sub_theme/refined 10/10 — 2026-06-01 ✅
 - [sunolanguage] **`db_insert.py` DB-direct 적재 스크립트** — songs 40컬럼(leomusic2 정본 미러링), build_handoff 매핑 재사용, gid=global_id 사전배정, --dry-run 검증/--execute 분리. GRANT 대기 — 2026-05-31 ✅
 - [sunolanguage] **N007 10곡 생성 + serializer 첫 실전** — city pop seed/--refine, RNB4/ROCK2/POP2/BALLAD1/HIPHOP1(발라드편중 탈피), coh 0.54, 8종폼, 크로스곡0, 제목10/10고유. sunomusic INSERT 완료(gid 20381~20390), optionA_v1 E2E 파싱 검증 — 2026-05-31 ✅
 - [sunolanguage] **serializer 필요여부 문의** — leomusic·leomusic2 양쪽 (B)불필요 회신(둘 다 DB-direct 구조). sunolanguage만 JSON 핸드오프 → DB-direct 전환 결정 — 2026-05-31 ✅
