@@ -1,7 +1,6 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **N008 Suno 생성 진행중 — LEO 가동 승인, sunomusic 생성 대기** — DB-direct 적재완료(gid 30001~30010, pending_suno). LEO 가동신호 발송(17:42). sunomusic Advanced 2클립/곡 생성→uuid UPDATE→결과 회신 예정 — 2026-06-01
 - [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B, sunomusic→admin 중계. 완료 시 N008 backfill+db_insert 2컬럼 추가
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
@@ -37,6 +36,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **★N008 DB-direct E2E 완주** — sunolanguage INSERT(audit_log 트리거 통과) → sunomusic Suno 생성 → uuid UPDATE까지 끝까지 정상. SELECT 재확인 10/10곡 status=generated, suno_uuid1/uuid2 양쪽 전부 채움. gid 30001~30010. admin E2E완주 통지 발송. DB-direct 파이프라인 검증 완료 — 2026-06-01 ✅
 - [sunolanguage] **★N008 DB-direct 첫 적재 성공** — audit_log GRANT+시퀀스 USAGE 보강(admin) 후 SECURITY INVOKER 트리거 통과. db_insert.py --execute gid 30001~30010 10곡 INSERT, SELECT 10행 확인. creator=sunolanguage. DB-direct 라인 정상 가동 개시. admin/sunomusic 회신 발송 — 2026-06-01 ✅
 - [sunolanguage] **제목 짤림 근본수정 (kiwipiepy)** — 동사/형용사 활용형을 명사로 오인("관조하/떠나/올린"). kiwipiepy 형태소분석 NNG/NNP만 추출. N008 제목 전부 완전명사, 짤림 0. 정규식 폴백 보존 — 2026-06-01 ✅
 - [sunolanguage] **requirements.txt + 이사 체크리스트** — kiwipiepy/qdrant/sentence-transformers/psycopg2 고정. project_env_reproducibility 메모리 — 2026-06-01 ✅
