@@ -1,7 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **N009~N011 sunomusic 생성 대기** — N009 gid 30011~30020 / N010 gid 30021~30030 / N011 gid 30031~30040, 30곡 DB INSERT 완료, Chrome CDP 복구 후 순차 생성
+- [sunolanguage] **Wave T entity 초안** — leomusic-trot 요청. 기존 코퍼스 trot entity 추출 + T5/T9 서브장르 BPM·리듬 매핑 (근거자료 노션 위치 수신 완료)
 - [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B, sunomusic→admin 중계. 완료 시 N008 backfill+db_insert 2컬럼 추가
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
@@ -36,8 +36,7 @@
 - 없음
 
 ## DONE (최근)
-- [sunolanguage] **N010+N011 20곡 DB INSERT 완료** — N010 gid 30021~30030(dreamy synth pad, coh 0.52, 9종폼) + N011 gid 30031~30040(driving rock guitar, coh 0.56, 7종폼). sunomusic 생성 요청 발송 — 2026-06-03 ✅
-- [sunolanguage] **N009 10곡 DB INSERT 완료** — gid 30011~30020, seed "funky bass groove" drift 0.7 +refine, SP 10/10 PASS, coh 0.54, 9종폼, 5장르그룹(ACOUSTIC4/BALLAD2/HIPHOP2/POP1/RNB1). sunomusic 생성 요청 발송, kimsecretary 완료 회신 — 2026-06-02 ✅
+- [sunolanguage] **N009~N011 30곡 생성 완료 24/30(80%)** — N009 8/10 + N010 7/10 + N011 9/10. 실패 6곡 전부 자가점검 문제곡 일치. 크로스배치 오염 방지 `--exclude-history` 패치 적용 — 2026-06-03 ✅
 - [sunolanguage] **흥이야 윤스ver 2종 작업 (LEO 지시)** — ①형태·글자수 고정 변주 가사 10곡(원곡 65줄/유효56줄 동일, 1217~1256자 근접)+제목 후보 10개 ②맥락유지 변주 가사 10곡(정서·흐름 유지, 훅10종 변주, 1256~1287자). 생성기 2종(gen_heungiya_variants/context.py), sunomusic 우편함 회신 2건 — 2026-06-01 ✅
 - [sunolanguage] **★N008 DB-direct E2E 완주** — sunolanguage INSERT(audit_log 트리거 통과) → sunomusic Suno 생성 → uuid UPDATE까지 끝까지 정상. SELECT 재확인 10/10곡 status=generated, suno_uuid1/uuid2 양쪽 전부 채움. gid 30001~30010. admin E2E완주 통지 발송. DB-direct 파이프라인 검증 완료 — 2026-06-01 ✅
 - [sunolanguage] **★N008 DB-direct 첫 적재 성공** — audit_log GRANT+시퀀스 USAGE 보강(admin) 후 SECURITY INVOKER 트리거 통과. db_insert.py --execute gid 30001~30010 10곡 INSERT, SELECT 10행 확인. creator=sunolanguage. DB-direct 라인 정상 가동 개시. admin/sunomusic 회신 발송 — 2026-06-01 ✅
