@@ -1,0 +1,502 @@
+[
+  {
+    "index": 0,
+    "title": "서울",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "기억",
+      "축하",
+      "가슴",
+      "한쪽",
+      "감나무"
+    ],
+    "sp": "Korean Lo-fi Hip Hop. synth pads swell, bass becomes more melodic. Synthesizer pads provide sustained harmonic support in the background, while occasional brass stabs accent the transitions. A Rhodes-style electric piano provides sustained harmonic pads in the background. bass becomes more melodic, piano chords. The drum kit features a crisp, high-tuned snare and a tight, punchy kick drum. The mix is characterized by high-end clarity and a wide stereo field for the backing vocals. The track maintains a consistent dynamic level with minimal structural variation, focusing on the atmospheric repetition of the core loop. 140 BPM, D minor.",
+    "lyrics": "[Intro]\n[soft synth bass enters]\n[warm synth bass enters]\n\n[Verse 1]\n감나무 아래서 기다리시던\n어머니 모습이 떠오릅니다\n떠나는 날 대문 앞에\n하얗게 서 계셨지요\n서울 가면 잘 되겠지 하며\n등 떠미셨습니다\n\n[Hook]\n눈물이 거야 앞에서 내 기억하는 선명해\n축하하면서도 가슴 한쪽이 시리게 아려와\n\n[Verse 2]\n누군가는 마지막 있으니까 때려\n멈추면 숨 쉴 수 있어 달콤한 거짓말\n그 순간 관중석에서 내 이름이 터져\n귀가 아닌 몸이 먼저 반응해\n\n[Hook]\n사람이 있어 앞에서 내 아무것도 선명해\n축하하면서도 가슴 한쪽이 시리게 아려와\n\n[Verse 3]\n기억하고 나는 시간이\n두 개일 수는 없으니\n기차역의 대기실에 앉고\n어디도 아닌 곳을 응시한다\n밤이 더 편하다\n\n[Hook]\n기억이 내가 앞에서 내 누군가의 선명해\n축하하면서도 가슴 한쪽이 시리게 아려와\n\n[Outro]\n[distorted 808 bass, staccato synth lead]\n[bass continues, synth lead drops out]",
+    "sp_length": 642,
+    "lyrics_length": 546,
+    "genre_group": "HIPHOP",
+    "song_form": [
+      "intro",
+      "verse",
+      "hook",
+      "verse",
+      "hook",
+      "verse",
+      "hook",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → hook → verse → hook → verse → hook → outro",
+    "bracket_sections": 2,
+    "theme": "이별",
+    "sub_theme": "연인",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 642,
+      "total_words": 98,
+      "meaningful_words": 52,
+      "native_count": 52,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 546,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5583,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "title": "카페",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "심장만 시끄러웠다",
+      "0.5초의 물리학",
+      "심장",
+      "물리학",
+      "질량"
+    ],
+    "sp": "Cinematic orchestral score. Rhodes piano enters with soft pads. The tempo is 145 BPM in 4/4 time, modulating through various minor keys including D minor and G minor. A Rhodes-style electric piano adds harmonic texture with jazz-influenced voicings. The tempo is 115 BPM in 4/4 time, modulating through various minor keys including D minor and G minor. breathy female vocals, electronic kick and rimshot enter. A deep, processed male voice provides spoken-word cues throughout the arrangement. The arrangement features a prominent orchestral swell. 4/4 time signature.",
+    "lyrics": "[Verse 1]\n어둠 속에서 혼자 울고 있었어\n조용한 함께 안에서\n누군가는 소리가 내 거야 줄 알았어\n\n[Chorus]\n카페는 다시 조용해졌는데\n심장만 시끄러웠다\n0.5초의 물리학\n질량은 없는데 무게가 있다\n\n[Verse 2]\n너를 소리가 새어 사랑이\n누군가의\n파두인 것 같다\n슬픈 건 어디서나 같은 멜로디\n문이 열려 있다\n작은 바\n들어가지 않는다\n밖에서 듣는다\n\n[Chorus]\n카페는 다시 조용해졌는데\n심장만 시끄러웠다\n0.5초의 물리학\n질량은 없는데 무게가 있다\n\n[Bridge]\n병원 불빛 아래서\n나는 이미 죽어가고\n너는 아직 살아있어\n그것이 바로 차이야\n\n[Outro]\n[strings fade to pianissimo, final piano chord]\n[piano filter closes further, reducing high-end clarity]",
+    "sp_length": 568,
+    "lyrics_length": 429,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "사랑",
+    "sub_theme": "그리움",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 568,
+      "total_words": 89,
+      "meaningful_words": 35,
+      "native_count": 35,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 429,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4961,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 2,
+    "title": "슬리퍼",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "불빛",
+      "여백",
+      "공간",
+      "감정",
+      "엘리베이터"
+    ],
+    "sp": "K-Pop R&B with jazz-pop influences. A prominent slap bass guitar performs syncopated sixteenth-note patterns. A slap bass guitar performs syncopated sixteenth-note patterns. A nylon-string acoustic guitar provides rhythmic accompaniment with bossa nova comping patterns. A syncopated electric bass guitar follows a groovy, funk-inspired pattern. flute motif enters, echoing cello phrases. crash cymbal accents. falsetto ad-lib. full band, high-energy.",
+    "lyrics": "[Verse 1]\n슬리퍼를 끌고 나왔어\n엘리베이터 혼자 타는 밤\n로비 불빛이 꺼져 있어\n나만 깨어 있는 거야\n가로등이 셋 켜져 있어\n첫 번째를 지나면서\n그림자가 앞서간다\n나보다 먼저 걷는 걸\n\n[Pre-Chorus]\n한 사람이 앉아 본 것들\n이렇게 아무것도 걸\n침묵이 나서야 아는 법\n낙엽이 누군가는 알려준다\n그의 자리에서 본 세상\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n\n[Verse 2]\n이어폰 빼니까 들렸어\n덜컹 덜컹 레일 위의 리듬\n창밖에 뭐가 있는지 모르겠는데\n어둠이 빠르게 지나가\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n\n[Bridge]\n달성은 또 다시 시작된다\n우리는 멈출 수 없다\n계단은 계속되고\n문은 계속 열린다\n앞은 어둠이다\n하지만 걸어간다\n\n[Chorus]\n불빛이 닿지 않는 여백이 가장 솔직한 공간\n비어있는 곳에서 가장 깊은 감정이 흘러나와\n\n[Outro]\n[bright synth-brass melody, slap bass, funk guitar, steady drum beat]\n[full band groove, driving bassline]",
+    "sp_length": 451,
+    "lyrics_length": 614,
+    "genre_group": "RNB",
+    "song_form": [
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "verse → pre_chorus → chorus → verse → chorus → bridge → chorus → outro",
+    "bracket_sections": 1,
+    "theme": "밤",
+    "sub_theme": "고독",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 451,
+      "total_words": 59,
+      "meaningful_words": 43,
+      "native_count": 43,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 614,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6045,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 3,
+    "title": "내일",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "시작",
+      "숙소",
+      "골목",
+      "생각",
+      "공존"
+    ],
+    "sp": "K-Pop City Pop track featuring a male tenor vocal. The arrangement is minimalist, focusing on the interplay between the rhythmic guitar strumming and the vocal delivery. clean electric guitar enters with melodic fills. The arrangement centers on a fingerpicked acoustic guitar with a warm, natural tone. The arrangement is sparse and clean, emphasizing the interplay between the rhythmic guitar scratching and the vocal melody. snare drum roll. Soft, airy female vocals occupy the center of the mix with moderate plate reverb. The arrangement maintains a sparse, lounge-like texture. 4/4 time signature.",
+    "lyrics": "[Intro]\n[full drum kit enters, powerful vocals]\n[bass guitar enters, syncopated groove]\n\n[Verse 1]\n숙소 불 꺼진 골목\n걸어가면서 생각했어\n내일은 뭘 먹을까\n일찍 일어날 수 있을까\n\n[Pre-Chorus]\n저기 그 사람이 세상이\n아니면 내가 본 세상에서\n거야 시간이 우릴 속이고 있는 걸까\n\n[Chorus]\n누군가의 오늘 괜찮아\n찜 누군가는 나 여기 있을 거야\n\n[Verse 2]\n냉동실 뒤 얼음이 새로운 내일도 만든다.\n누군가는 있어 그림자가 하는데.\n나는 여전히 어떤 책임을 분담하지 못하고 있다.\n밤 두 시 집의 호흡을 나 혼자 듣고 있다.\n\n[Chorus]\n시작이다 오늘 괜찮아\n찜 일어나지 나 여기 있을 거야\n\n[Bridge]\n불빛이 천천히 아무것도\n온기는 손가락이\n손가락으로 만져보는\n온기는 남아있어\n이것이 공존이라고 불리는 것\n\n[Outro]\n[distorted electric guitar, driving rock drums, male tenor vocals]\n[male vocals, driving bass and drums]",
+    "sp_length": 603,
+    "lyrics_length": 570,
+    "genre_group": "RNB",
+    "song_form": [
+      "intro",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → pre_chorus → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 2,
+    "theme": "성장",
+    "sub_theme": "도전",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 603,
+      "total_words": 92,
+      "meaningful_words": 40,
+      "native_count": 40,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 570,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4843,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 4,
+    "title": "형광등",
+    "title_strategy": "rebalanced",
+    "title_alternatives": [
+      "형광등",
+      "편의점",
+      "새벽",
+      "알바",
+      "하품"
+    ],
+    "sp": "Bossa Nova. A bright, staccato synth lead plays a repetitive four-note motif. The arrangement centers on a grand piano playing rubato chords and arpeggios. A grand piano plays a rubato introduction before settling into a steady 4/4 rhythm. The arrangement centers on a grand piano playing rubato chords in the intro before settling into a steady 4/4 rhythm. filtered acoustic piano enters with a four-bar loop. A soft, muffled kick drum enters on the downbeats. vocalizations become more rhythmic and percussive. full band energy, open power chords.",
+    "lyrics": "[Verse 1]\n형광등 하나 꺼진 편의점\n새벽 알바의 조용한 하품\n비닐봉지 바스락거리며\n이 거리의 맥박이 뛴다\n택시 지나가는 불빛이\n커튼 사이로 잠깐 들어와\n그 한 줄기 빛이\n내 방을 쓸고 지나가는 밤\n\n[Verse 2]\n퇴근길 지하철 안에서\n지도를 켰어 습관처럼\n빨간 핀 하나 남아 있어\n우리가 저장한 그 카페\n\n[Bridge]\n점심 때 오는 아메리카노 다르다\n우리는 밤의 누군가의\n하지만 여기서 누군가는\n형광등 아래 숨을 쉬고 있다\n\n[Verse 3]\n(soft, conversational, not performing)\nThe menu hasn't changed since May\nBut I keep coming back this way\nThe window seat, the bread, the wine\nA borrowed hour that feels like mine",
+    "sp_length": 549,
+    "lyrics_length": 434,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "verse",
+      "bridge",
+      "verse"
+    ],
+    "song_form_type": "verse → verse → bridge → verse",
+    "bracket_sections": 0,
+    "theme": "일상",
+    "sub_theme": "퇴근",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 549,
+      "total_words": 89,
+      "meaningful_words": 41,
+      "native_count": 41,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 434,
+      "section_count": 4,
+      "has_verse": true,
+      "has_chorus": false,
+      "coherence_score": 0.4638,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 5,
+    "title": "심장",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "그런데 영원히 멀어",
+      "화가",
+      "두려움",
+      "사이",
+      "거짓말"
+    ],
+    "sp": "Jazz trio ballad featuring a baritone male vocalist. electric guitar plays syncopated melody with slides and vibrato. electric bass enters with slides. bass slides. bass guitar enters with a slide. A solo cello plays a counter-melody in the lower register. Percussion consists of a shaker, a woodblock playing a 3-2 clave pattern, and a drum kit featuring a rimshot on the snare and light ride cymbal work. The vocal performance is intimate with breathy delivery and subtle vibrato. The arrangement uses sudden dynamic shifts from pianissimo to fortissimo.",
+    "lyrics": "[Intro]\n[clean chorused electric guitar playing jazz chords]\n[acoustic guitar 2 enters with melodic lead line]\n\n[Verse 1]\n닫아버린다 같은 거짓말이\n세 번째야 또 지운 거지\n이불 속에서 심장이 뛰는 건\n알림음 때문만은 아닌 걸\n\n[Chorus]\n삼 내가 지내요 대화가 돼\n설렘과 두려움 사이에서 떠\n네 손이 만져질 듯 가까워\n그런데 영원히 멀어\n\n[Interlude]\n[electric piano playing jazz chords, soft shaker]\n[clean electric guitar playing jazz chords with chorus]\n\n[Verse 2]\n나는 영화가 않는다 찍는다\n두 번은 너무 웃었고\n세 번은 너무 안 웃었고\n한 번은 각도가 이상하고\n네 장이 남았는데\n고르는 데 이십 분\n취업 면접보다 어려운 거\n이게 뭐라고 이러고 있는 건지\n\n[Chorus]\n삼 화가 것이다 변하지 돼\n설렘과 두려움 사이에서 떠\n네 손이 만져질 듯 가까워\n그런데 영원히 멀어\n\n[Bridge]\n이 진짜 말이 아니야 울음이 있고\n이 빛 속에 누군가의 기도가 있다\n옷은 인간이고 세탁소는 성역이고\n나는 여기 관조하는 목격자다\n\n[Outro]\n[fade out on acoustic guitar chords]\n[lead acoustic guitar chromatic melody]",
+    "sp_length": 556,
+    "lyrics_length": 716,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "intro",
+      "verse",
+      "chorus",
+      "interlude",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → chorus → interlude → verse → chorus → bridge → outro",
+    "bracket_sections": 3,
+    "theme": "분노",
+    "sub_theme": "억울",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 556,
+      "total_words": 88,
+      "meaningful_words": 47,
+      "native_count": 47,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 716,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4732,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 6,
+    "title": "그때",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "동안",
+      "아무것",
+      "시간",
+      "파도",
+      "종이"
+    ],
+    "sp": "Bossa Nova. The tempo is 145 BPM in 4/4 time, modulating through various minor keys including D minor and G minor. male rap vocals, sliding 808 bass enters. The tempo is 115 BPM in 4/4 time, modulating through various minor keys including D minor and G minor. electric guitar soloing with faster eighth-note runs. full band energy increases, crash cymbal. A male tenor vocal performs with a breathy, intimate delivery in the verses, transitioning to a powerful, belted chest voice in the chorus. The arrangement uses sudden dynamic shifts from pianissimo to fortissimo. The tempo is 85 BPM in the key of C Major.",
+    "lyrics": "[Verse 1]\n손으로 날아간다 바람이\n낯선 거야\n종이에서 나는 냄새가\n그때의 방을 불러온다\n\n[Chorus]\n해 같은 동안 달려가요\n너와 나의 시간이 멈춘다\n파도는 같은 것이다 흐르고\n우리는 그 속에 있다\n이 따뜻함이 사라지지 않기를\n\n[Verse 2]\n다국어 안내 방송 사이로\n엔진 소리가 노래하고 있어요\n이륙하는 궤적을 하나씩\n세어보았어요 일곱 대째예요\n아무 약속도 없는 오후가\n이렇게 넉넉한 줄 몰랐네요\n이 벤치가 세상에서 제일\n자유로운 자리인 것 같아요\n\n[Chorus]\n해 나는 동안 아무것도\n너와 나의 시간이 멈춘다\n파도는 같은 하늘이 흐르고\n우리는 그 속에 있다\n이 따뜻함이 사라지지 않기를\n\n[Verse 3]\n있어 시작이다 있었어 가득해\n세탁기 백 번은 넘게 돌았을 거야\n새 옷이 열 벌이나 있는데\n손이 자꾸만 여기로 가\n\n[Outro]\n[acoustic guitar fades]\n[violin fades out, solo fingerpicked acoustic guitar]",
+    "sp_length": 612,
+    "lyrics_length": 500,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → verse → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "sub_theme": "탈출",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 612,
+      "total_words": 106,
+      "meaningful_words": 37,
+      "native_count": 37,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 500,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5094,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 7,
+    "title": "문제",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "엄마",
+      "사람",
+      "아무것",
+      "증명",
+      "논리"
+    ],
+    "sp": "K-Pop City Pop track in G Major at 110 BPM. grand piano playing sustained chords, soft synth pad. piano fills. The piano performs sparse, jazz-chord voicings and melodic fills between vocal phrases. jazzy piano loop, vinyl crackle, light percussion. filtered acoustic piano enters with a four-bar loop. full band energy, heavy crash cymbals. The vocal melody features gentle downward phrasing and subtle vibrato at the end of lines. final staccato chord from the full band.",
+    "lyrics": "[Intro]\n[synth bass and atmospheric pads enter]\n[soft percussion enters]\n\n[Verse 1]\n그림 거야 전에\n내가 나를\n아직 쓸 것도 아닌데\n물에 담갔다 뺐어\n\n[Pre-Chorus]\n기억하니까 다들 기억하는\n이게 괜찮아요 나 좀 줄어들고 싶어\n웃기지도 않지 뭐\n\n[Chorus]\n그때의 시간이 누군가의\n답이 나오지 않는 문제였어\n풀수록 멀어졌어 증명할수록 무너졌어\n논리의 끝에 네가 없었어\n\n[Verse 2]\n것이다 흐른다\n냄새가 기억하고\n내 맥박이 튄다\n부스럭거린다\n\n[Chorus]\n엄마가 사람이 아무것도\n답이 나오지 않는 문제였어\n풀수록 멀어졌어 증명할수록 무너졌어\n논리의 끝에 네가 없었어\n\n[Bridge]\n아무도 이렇게 그때 보여\n빗물 사이로 흐릿하게 번지는 불빛\n선명하지 않아서 더 좋은 풍경이 있어\n\n[Outro]\n[bright synth melody, electronic drums]\n[bass continues, synth lead drops out]",
+    "sp_length": 473,
+    "lyrics_length": 518,
+    "genre_group": "RNB",
+    "song_form": [
+      "intro",
+      "verse",
+      "pre_chorus",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "intro → verse → pre_chorus → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 2,
+    "theme": "회상",
+    "sub_theme": "어린시절",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 473,
+      "total_words": 75,
+      "meaningful_words": 39,
+      "native_count": 39,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 518,
+      "section_count": 8,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4966,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 8,
+    "title": "시간",
+    "title_strategy": "chorus_phrase",
+    "title_alternatives": [
+      "침묵이 흐른다",
+      "아무것",
+      "침묵",
+      "마지막",
+      "흑백"
+    ],
+    "sp": "Jazz trio ballad featuring a baritone male vocalist. lead acoustic guitar enters with fast chromatic runs and arpeggios. Lead acoustic guitar performs rapid chromatic runs, arpeggios, and vibrato-heavy melodies. electric guitar arpeggio fades. fingerstyle acoustic guitar arpeggio. A subtle shaker and light percussion enter to maintain a steady 4/4 pulse. The production is dry with minimal reverb on the vocals and instruments, maintaining an intimate, close-mic sound. The arrangement uses sudden dynamic shifts from pianissimo to fortissimo. The harmonic structure follows a diatonic progression in the key of C Major.",
+    "lyrics": "[Verse 1]\n눈물이 마지막 거야 흑백 사진\n무뚝뚝한 표정 뒤에 숨긴\n이 한 줄의 고백을 아무도 몰랐어\n할머니는 알고 있었을까\n이 봉투를 왜 버리지 않았을까\n\n[Chorus]\n우린 기억하는 사람이 누군가는\n시간을 맞추는 것도 벅차고\n사랑이라고 말해야 할 때\n침묵이 흐른다\n침묵이 우리를 더 채운다\n\n[Verse 2]\n담요를 덮고 눈을 감으면\n떠나온 곳이 꿈처럼 멀어져\n좌석벨트가 허리를 누르는 게\n현실로 돌아가는 신호 같아\n\n[Chorus]\n우린 있으니까 시간이 아무것도\n시간을 맞추는 것도 벅차고\n사랑이라고 말해야 할 때\n침묵이 흐른다\n침묵이 우리를 더 채운다\n\n[Bridge]\n침묵 속의 소리\n소음 속의 고요함\n둘 다 나를 감싼다\n언젠가는 이 소리들을\n그리워하게 될 날이 올까\n그러면 나는 여기 없을까\n\n[Verse 3]\n있어 나는 내가 난다\n약사 아주머니 목소리는 항상 같다\n\"이거 복용하실래요?\"\n뒷목이 뻐근해진다\n같은 대사 같은 침묵\n\n감각이 감각을 모욕한다\n같은 것을 또 맛본다\n같은 것을 또 본다\n같은 것을 또 느낀다\n마비와 강박의 경계\n\n[Outro]\n[fade out on acoustic guitar chords]\n[clean chorused electric guitar playing jazz chords]",
+    "sp_length": 622,
+    "lyrics_length": 632,
+    "genre_group": "BALLAD",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → verse → outro",
+    "bracket_sections": 1,
+    "theme": "이별",
+    "sub_theme": "가족",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 622,
+      "total_words": 91,
+      "meaningful_words": 51,
+      "native_count": 51,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 632,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5225,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 9,
+    "title": "다리미",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "다시, 나를, 같은",
+      "모두",
+      "비명",
+      "규칙",
+      "거리"
+    ],
+    "sp": "K-pop dance-pop track in G major at 124 BPM. The arrangement features a prominent piano playing rhythmic block chords and melodic flourishes. The arrangement centers on a grand piano playing sustained chords and melodic fills. Electric piano plays jazz-influenced seventh chords with a soft attack. melodic male vocals, high-pitched synth lead enters. filtered synth sweeps and atmospheric textures. snare hit. High-frequency clarity on the vocal track emphasizes breath sounds and sibilance. Minimalist arrangement.",
+    "lyrics": "[Chorus]\n함께, 거야, 너를\n모두가 비명을 지르고\n규칙은 없는 거리에서\n우리는 서로를 밀쳐낸다\n밀쳐내고 또 밀쳐낸다\n이것이 생존이라고 부르는 것\n\n[Verse 1]\n사랑이 심장이 누군가는\n아버지의 손가락 다리미\n팽팽한 침묵이 가득하다\n\n[Chorus]\n있어, 가장, 나는\n모두가 비명을 지르고\n규칙은 없는 거리에서\n우리는 서로를 밀쳐낸다\n밀쳐내고 또 밀쳐낸다\n이것이 생존이라고 부르는 것\n\n[Verse 2]\n좋아요 네가 때마다 배워가\n내 시간이 우리의 그려가\n슬플 때 슬픈 노래 틀어주고\n신날 때 비트를 올려놓잖아\n\n[Bridge]\n연결됨이라는 세 글자가\n사람 마음을 흔드는 거야\n와이파이가 뭐라고\n이러는 거야 진짜야\n\n[Chorus]\n다시, 나를, 같은\n모두가 비명을 지르고\n규칙은 없는 거리에서\n우리는 서로를 밀쳐낸다\n밀쳐내고 또 밀쳐낸다\n이것이 생존이라고 부르는 것\n\n[Outro]\n[bright synth melody, electronic drums]\n[bright synth pluck, electronic drum beat, syncopated synth bass]",
+    "sp_length": 516,
+    "lyrics_length": 550,
+    "genre_group": "POP",
+    "song_form": [
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "bridge",
+      "chorus",
+      "outro"
+    ],
+    "song_form_type": "chorus → verse → chorus → verse → bridge → chorus → outro",
+    "bracket_sections": 1,
+    "theme": "사랑",
+    "sub_theme": "그리움",
+    "refined": true,
+    "sp_validation": {
+      "sp_length": 516,
+      "total_words": 73,
+      "meaningful_words": 36,
+      "native_count": 36,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 550,
+      "section_count": 7,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5448,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]

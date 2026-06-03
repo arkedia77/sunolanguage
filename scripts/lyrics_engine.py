@@ -31,6 +31,25 @@ sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 HISTORY_DIR = PROJECT_ROOT / "data" / "lyrics_history"
 
 
+def _load_history_song_ids() -> set:
+    """이전 배치 파일에서 사용된 song_id를 모두 수집 (크로스 배치 오염 방지)."""
+    sids = set()
+    if not HISTORY_DIR.exists():
+        return sids
+    for p in sorted(HISTORY_DIR.glob("lyrics_batch_*.json")):
+        try:
+            with open(p) as f:
+                data = json.load(f)
+            if not isinstance(data, list):
+                continue
+            for entry in data:
+                for sid in entry.get("_source_song_ids", []):
+                    sids.add(sid)
+        except (json.JSONDecodeError, KeyError):
+            continue
+    return sids
+
+
 def cmd_search(args: list[str]):
     from lyrics_retriever import theme_search, format_results, get_client, get_model
 
@@ -286,6 +305,7 @@ def cmd_batch(args: list[str]):
     form_variant = None
     theme = None
     do_refine = False
+    exclude_history = False
 
     for a in args:
         if a.startswith("--count="):
@@ -306,10 +326,13 @@ def cmd_batch(args: list[str]):
             theme = a.split("=")[1]
         elif a == "--refine":
             do_refine = True
+        elif a == "--exclude-history":
+            exclude_history = True
 
     theme_label = f", theme='{theme}'" if theme else ""
     refine_label = " +refine" if do_refine else ""
-    print(f"Batch: {count} SP+lyrics packages, seed='{seed}', drift={drift}{theme_label}{refine_label}")
+    excl_label = " +exclude-history" if exclude_history else ""
+    print(f"Batch: {count} SP+lyrics packages, seed='{seed}', drift={drift}{theme_label}{refine_label}{excl_label}")
     print()
 
     sp_client = sp_get_client()
@@ -326,6 +349,12 @@ def cmd_batch(args: list[str]):
     batch_used_forms = []
     # --theme 미지정 시 테마 풀에서 곡별 로테이션 (theme/sub_theme 공란 + refine 무효 방지)
     theme_pool = list_themes()
+
+    if exclude_history:
+        prev_sids = _load_history_song_ids()
+        batch_used_song_ids.update(prev_sids)
+        print(f"  [exclude-history] {len(prev_sids)} song_ids loaded from previous batches")
+        print()
 
     for i in range(count):
         song_theme = theme if theme else theme_pool[i % len(theme_pool)]
@@ -388,6 +417,14 @@ def cmd_batch(args: list[str]):
                     if sub_theme_used:
                         break
 
+        song_source_ids = []
+        for tag, hits in matched.items():
+            if hits:
+                sid = hits[0].get("payload", {}).get("song_id")
+                if sid and hits[0].get("payload", {}).get("source") != "bracket_preset":
+                    song_source_ids.append(sid)
+        song_source_ids = sorted(set(song_source_ids))
+
         entry = {
             "index": i,
             "title": title_result["title"],
@@ -404,6 +441,7 @@ def cmd_batch(args: list[str]):
             "theme": song_theme,
             "sub_theme": sub_theme_used,
             "refined": do_refine,
+            "_source_song_ids": song_source_ids,
         }
 
         if do_validate:
