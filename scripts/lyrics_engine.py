@@ -423,7 +423,7 @@ def cmd_batch(args: list[str]):
                 sid = hits[0].get("payload", {}).get("song_id")
                 if sid and hits[0].get("payload", {}).get("source") != "bracket_preset":
                     song_source_ids.append(sid)
-        song_source_ids = sorted(set(song_source_ids))
+        song_source_ids = sorted(set(song_source_ids), key=lambda x: str(x))
 
         entry = {
             "index": i,
