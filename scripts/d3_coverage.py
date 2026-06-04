@@ -6,9 +6,9 @@ import subprocess
 from collections import defaultdict
 from pathlib import Path
 
-V1 = json.loads(Path("/Users/leo/sunolanguage/rag/suno_dictionary.json").read_text())
-NEW = json.loads(Path("/Users/leo/sunolanguage/data/reanalysis_v2/d2_new_candidates.json").read_text())
-OUT = Path("/Users/leo/sunolanguage/data/reanalysis_v2/d3_coverage.json")
+V1 = json.loads(Path(__file__).resolve().parent.parent / "rag/suno_dictionary.json".read_text())
+NEW = json.loads(Path(__file__).resolve().parent.parent / "data/reanalysis_v2/d2_new_candidates.json".read_text())
+OUT = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/d3_coverage.json"
 
 CATS = ["instrument_phrases","technique_patterns","production_vocab",
         "mood_emotion","vocal_expressions","timbre_texture",

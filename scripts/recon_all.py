@@ -11,8 +11,8 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-MERGED = Path("/Users/leo/sunolanguage/data/reanalysis_v2/merged_4values.json")
-OUT_DIR = Path("/Users/leo/sunolanguage/data/reanalysis_v2")
+MERGED = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/merged_4values.json"
+OUT_DIR = Path(__file__).resolve().parent.parent / "data/reanalysis_v2"
 merged = json.loads(MERGED.read_text())
 
 # ---------- SP 정찰 ----------

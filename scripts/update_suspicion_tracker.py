@@ -14,7 +14,7 @@ from __future__ import annotations
 import argparse, json, sqlite3
 from pathlib import Path
 
-ROOT = Path("/Users/leo/sunolanguage")
+ROOT = Path(__file__).resolve().parent.parent
 TRACKER = ROOT / "docs" / "reviews" / "suspicion_tracker.json"
 LEXICAL_DB = ROOT / "data" / "reanalysis_v2" / "lexical_index.sqlite"
 

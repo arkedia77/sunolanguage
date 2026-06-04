@@ -5,7 +5,9 @@ import subprocess
 from collections import Counter, defaultdict
 
 # 현재 265곡 장르
-merged = json.load(open('/Users/leo/sunolanguage/data/reanalysis_v2/merged_4values.json'))
+from pathlib import Path
+_ROOT = Path(__file__).resolve().parent.parent
+merged = json.load(open(_ROOT / "data/reanalysis_v2/merged_4values.json"))
 existing_genres = Counter(s.get("genre") or "미정" for s in merged)
 
 cmd = ["ssh", "mushin@172.30.1.77",
@@ -49,6 +51,6 @@ out = {
     "reinforce_count": len(reinforced),
     "songs": selected,
 }
-open('/Users/leo/sunolanguage/data/reanalysis_v2/instrumental_selection.json','w').write(
+open(_ROOT / "data/reanalysis_v2/instrumental_selection.json",'w').write(
     json.dumps(out, ensure_ascii=False, indent=2))
 print("out: data/reanalysis_v2/instrumental_selection.json")

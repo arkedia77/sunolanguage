@@ -24,7 +24,7 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
-ROOT = Path("/Users/leo/sunolanguage")
+ROOT = Path(__file__).resolve().parent.parent
 V3 = ROOT / "data" / "reanalysis_v2"
 SP_ENT = V3 / "sp_entities_v3.json"
 BR_ENT = V3 / "bracket_entities_v3.json"

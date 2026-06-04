@@ -15,8 +15,8 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-MERGED = Path("/Users/leo/sunolanguage/data/reanalysis_v2/merged_4values.json")
-OUT = Path("/Users/leo/sunolanguage/data/reanalysis_v2/suno_sp_slot_grammar.json")
+MERGED = Path(__file__).resolve().parent.parent.parent / "data/reanalysis_v2/merged_4values.json"
+OUT = Path(__file__).resolve().parent.parent.parent / "data/reanalysis_v2/suno_sp_slot_grammar.json"
 merged = json.loads(MERGED.read_text())
 
 # --- 문장 분리 ---
@@ -296,7 +296,7 @@ for slot in SLOT_ORDER:
     result["slots"][slot] = d
 
 # --- 가사 브래킷도 포함 (leomusic2 가사 생성 시 참조) ---
-brackets_file = Path("/Users/leo/sunolanguage/data/reanalysis_v2/recon_lyrics_brackets.json")
+brackets_file = Path(__file__).resolve().parent.parent.parent / "data/reanalysis_v2/recon_lyrics_brackets.json"
 if brackets_file.exists():
     bdata = json.loads(brackets_file.read_text())
     bracket_summary = {

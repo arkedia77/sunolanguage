@@ -5,12 +5,12 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-DIR = Path("/Users/leo/sunolanguage/data/reanalysis_v2")
+DIR = Path(__file__).resolve().parent.parent / "data/reanalysis_v2"
 merged = json.loads((DIR / "merged_4values.json").read_text())
 brackets = json.loads((DIR / "recon_lyrics_brackets.json").read_text())
-OUT_MAP = Path("/Users/leo/sunolanguage/docs/coverage_map.md")
-OUT_A = Path("/Users/leo/sunolanguage/docs/manual_A_sp_sample.md")
-OUT_B = Path("/Users/leo/sunolanguage/docs/manual_B_lyrics_sample.md")
+OUT_MAP = Path(__file__).resolve().parent.parent / "docs/coverage_map.md"
+OUT_A = Path(__file__).resolve().parent.parent / "docs/manual_A_sp_sample.md"
+OUT_B = Path(__file__).resolve().parent.parent / "docs/manual_B_lyrics_sample.md"
 OUT_MAP.parent.mkdir(exist_ok=True)
 
 # ---------- 장르 정규화 ----------

@@ -4,8 +4,8 @@ import json
 import subprocess
 from pathlib import Path
 
-UPLOAD_DIR = Path("/Users/leo/sunolanguage/data/reanalysis_v2/upload_results")
-OUT_PATH = Path("/Users/leo/sunolanguage/data/reanalysis_v2/merged_4values.json")
+UPLOAD_DIR = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/upload_results"
+OUT_PATH = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/merged_4values.json"
 SSH_HOST = "mushin@172.30.1.77"
 DB_PATH = "~/projects/leomusic-cli/leomusic.db"
 

@@ -5,11 +5,11 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-MERGED = Path("/Users/leo/sunolanguage/data/reanalysis_v2/merged_4values.json")
-V1_DICT = Path("/Users/leo/sunolanguage/rag/suno_dictionary.json")
-OUT_COUNTS = Path("/Users/leo/sunolanguage/data/reanalysis_v2/d2_category_counts.json")
-OUT_NEW = Path("/Users/leo/sunolanguage/data/reanalysis_v2/d2_new_candidates.json")
-OUT_DIFF = Path("/Users/leo/sunolanguage/data/reanalysis_v2/d2_song_diff.json")
+MERGED = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/merged_4values.json"
+V1_DICT = Path(__file__).resolve().parent.parent / "rag/suno_dictionary.json"
+OUT_COUNTS = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/d2_category_counts.json"
+OUT_NEW = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/d2_new_candidates.json"
+OUT_DIFF = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/d2_song_diff.json"
 
 merged = json.loads(MERGED.read_text())
 v1 = json.loads(V1_DICT.read_text())

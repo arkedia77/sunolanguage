@@ -13,9 +13,9 @@ import json, re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path("/Users/leo/sunolanguage")
+ROOT = Path(__file__).resolve().parent.parent
 B192_PATH = Path("/tmp/b192_sp.json")
-PILOT_PATH = Path("/Users/leo/leomusic/06_GENERATION/B192_STEP6_7_8_pilot_v3.json")
+PILOT_PATH = Path.home() / "leomusic/06_GENERATION/B192_STEP6_7_8_pilot_v3.json"
 V3_VOCAB_PATH = Path("/tmp/v3_vocab_all.json")
 OUT = ROOT / "docs" / "b192_sp_review.md"
 
