@@ -680,7 +680,7 @@ for sess in range(5):
           f"({len(batch)} songs, {v_count} vocal, {non44} non-4/4, {genres_in_batch} genres)")
 
 # Write JSON
-output_path = Path("/Users/leo/sunolanguage/data/s_inst200/s_inst200_plan.json")
+output_path = Path(__file__).resolve().parent / "s_inst200_plan.json"
 with open(output_path, "w") as f:
     json.dump({
         "series": "S_INST200",

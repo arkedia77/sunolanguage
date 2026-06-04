@@ -4,9 +4,11 @@
 
 set -e
 
-MP3_DIR="/Users/leo/sunolanguage/data/mp3_phase5"
-STEMS_DIR="/Users/leo/sunolanguage/data/stems_phase5"
-DATA_FILE="/Users/leo/sunolanguage/data/phase5_genre_expansion.json"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(dirname "$SCRIPT_DIR")"
+MP3_DIR="$ROOT/data/mp3_phase5"
+STEMS_DIR="$ROOT/data/stems_phase5"
+DATA_FILE="$ROOT/data/phase5_genre_expansion.json"
 
 mkdir -p "$MP3_DIR" "$STEMS_DIR"
 
