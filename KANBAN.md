@@ -1,8 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
+- [sunolanguage] **★D139 이사 reklcli→purple** — Phase 0 완료(경로전환12파일+requirements+checkpoint+체크리스트). 21:00 reklcli freeze 진입, purple go-live Leo 직접 챙김. 다음 세션은 purple에서 기동 확인 필수
 - [sunolanguage] **Wave T entity 초안** — leomusic-trot 요청. 기존 코퍼스 trot entity 추출 + T5/T9 서브장르 BPM·리듬 매핑 (근거자료 노션 위치 수신 완료)
-- [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B, sunomusic→admin 중계. 완료 시 N008 backfill+db_insert 2컬럼 추가
+- [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B, sunomusic→admin 중계. 완료 시 N008~N012 backfill+db_insert 2컬럼 추가
 - [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
@@ -36,70 +37,13 @@
 - 없음
 
 ## DONE (최근)
-- [sunolanguage] **N009~N011 30곡 생성 완료 24/30(80%)** — N009 8/10 + N010 7/10 + N011 9/10. 실패 6곡 전부 자가점검 문제곡 일치. 크로스배치 오염 방지 `--exclude-history` 패치 적용 — 2026-06-03 ✅
-- [sunolanguage] **흥이야 윤스ver 2종 작업 (LEO 지시)** — ①형태·글자수 고정 변주 가사 10곡(원곡 65줄/유효56줄 동일, 1217~1256자 근접)+제목 후보 10개 ②맥락유지 변주 가사 10곡(정서·흐름 유지, 훅10종 변주, 1256~1287자). 생성기 2종(gen_heungiya_variants/context.py), sunomusic 우편함 회신 2건 — 2026-06-01 ✅
-- [sunolanguage] **★N008 DB-direct E2E 완주** — sunolanguage INSERT(audit_log 트리거 통과) → sunomusic Suno 생성 → uuid UPDATE까지 끝까지 정상. SELECT 재확인 10/10곡 status=generated, suno_uuid1/uuid2 양쪽 전부 채움. gid 30001~30010. admin E2E완주 통지 발송. DB-direct 파이프라인 검증 완료 — 2026-06-01 ✅
-- [sunolanguage] **★N008 DB-direct 첫 적재 성공** — audit_log GRANT+시퀀스 USAGE 보강(admin) 후 SECURITY INVOKER 트리거 통과. db_insert.py --execute gid 30001~30010 10곡 INSERT, SELECT 10행 확인. creator=sunolanguage. DB-direct 라인 정상 가동 개시. admin/sunomusic 회신 발송 — 2026-06-01 ✅
-- [sunolanguage] **제목 짤림 근본수정 (kiwipiepy)** — 동사/형용사 활용형을 명사로 오인("관조하/떠나/올린"). kiwipiepy 형태소분석 NNG/NNP만 추출. N008 제목 전부 완전명사, 짤림 0. 정규식 폴백 보존 — 2026-06-01 ✅
-- [sunolanguage] **requirements.txt + 이사 체크리스트** — kiwipiepy/qdrant/sentence-transformers/psycopg2 고정. project_env_reproducibility 메모리 — 2026-06-01 ✅
-- [sunolanguage] **N007 완료 수신** — sunomusic 10/10, gid 20381~20390 uuid 캡처. 핸드오프 방식 마지막 배치 — 2026-06-01 ✅
-- [sunolanguage] **admin songs GRANT 수신 + db_insert.py** — INSERT/SELECT/UPDATE 부여. db_insert.py 40컬럼 적재 스크립트. created_date varchar 수정. gid 밴드 30001+ 결정 — 2026-06-01 ✅
-- [sunolanguage] **엔진 버그 2건 픽스** — `--refine`이 `--theme` 종속돼 침묵 무효화 + theme/sub_theme 공란 버그. theme 8종 곡별 로테이션 + refine 분리. N008 검증 theme/sub_theme/refined 10/10 — 2026-06-01 ✅
-- [sunolanguage] **`db_insert.py` DB-direct 적재 스크립트** — songs 40컬럼(leomusic2 정본 미러링), build_handoff 매핑 재사용, gid=global_id 사전배정, --dry-run 검증/--execute 분리. GRANT 대기 — 2026-05-31 ✅
-- [sunolanguage] **N007 10곡 생성 + serializer 첫 실전** — city pop seed/--refine, RNB4/ROCK2/POP2/BALLAD1/HIPHOP1(발라드편중 탈피), coh 0.54, 8종폼, 크로스곡0, 제목10/10고유. sunomusic INSERT 완료(gid 20381~20390), optionA_v1 E2E 파싱 검증 — 2026-05-31 ✅
-- [sunolanguage] **serializer 필요여부 문의** — leomusic·leomusic2 양쪽 (B)불필요 회신(둘 다 DB-direct 구조). sunolanguage만 JSON 핸드오프 → DB-direct 전환 결정 — 2026-05-31 ✅
-- [sunolanguage] **핸드오프 정규 serializer `build_handoff.py`** — 엔진 raw→Option A(N005형) 28키 고정. N006 raw 재변환 검증: N005 스키마 키·순서 완전일치, coh 0.538/char 566 일치, 필수키 게이트. N006 스키마 드리프트(DB필드 누락) 회귀 종결 — 2026-05-31 ✅
-- [sunolanguage] **P0/P1 6건 패치 + N006 10곡 생성** — batch_used_song_ids/디렉티브필터/INST4+MIN550/MAX9문장/avoid_forms, 10/10 PASS, coh 0.54, 8종폼 — 2026-05-30 ✅
-- [sunolanguage] **N003~N005 자체 분석 + 근본 원인 추적** — 30곡 6축 분석, 코드 레벨 10건 추적, 수정/제한/운 3분류 — 2026-05-30 ✅
-- [sunolanguage] **N005 10곡 생성 + 핸드오프** — 3대 패치(브래킷일치+서브테마+행수게이트) 적용, SP avg 698c, coh 0.52, gid 20361~20370, 10/10 Suno 성공 — 2026-05-30 ✅
-- [sunolanguage] **3대 패치 적용** — bracket_presets SP악기일치 + lyrics_themes 서브테마이중키워드 + lyrics_retriever 최소3행게이트 — 2026-05-30 ✅
-- [sunolanguage] **N004 10곡 생성 + 핸드오프** — SP부스트(INST5/MIN650), SP avg 750c, coh 0.51, gid 20351~20360, 10/10 Suno 성공 — 2026-05-30 ✅
-- [sunolanguage] **SP 부스트 강화** — INSTRUMENT_COUNT 3→5, MIN_SP_LENGTH 450→650 — 2026-05-30 ✅
-- [sunolanguage] **N003 v2 재생성 + 핸드오프** — 5대패치+dedup+SP부스트, SP avg 550c, coh 0.57, gid 20341~20350, 10/10 Suno 성공 — 2026-05-30 ✅
-- [sunolanguage] **Qdrant dedup + SP 부스트** — presets 10,646→3,707(-65%) + lyrics 5,858→4,620(-21%) + SP 426→543c + Hook 코러스 복사 — 2026-05-29 ✅
-- [sunolanguage] **가사 품질 5대 패치** — 코러스복사(0→10/10) + 크로스곡배제(19→4) + 서사체이닝 + 언어필터 + SP중복제거(매곡→0) — 2026-05-29 ✅
-- [sunolanguage] **N003 '우연의 시작' 10곡 생성 + 핸드오프** — SE v2 첫 정식, 5테마×2곡, 5장르그룹, 7송폼, SP 10/10 PASS, Lyrics 10/10 PASS, coh 0.50, br 13 — 2026-05-29 ✅
-- [sunolanguage] **우연엔진 보강 3대 개선** — bracket_presets.py 신규(Intro/Interlude/Outro 자동 브래킷) + corpus_quality_gate.py 신규(67건 dedup→CLEAN) + coherence 0.44→0.51(+16%) + FAIL 15→10% + fallback 체인 — 2026-05-29 ✅
-- [sunolanguage] **N시리즈 파이프라인 v2 구현** — song_forms.py + title_generator.py 신규, lyrics_retriever/assembler/engine 개선, V1≠V2 100%, 7종폼/10곡, 제목 자동 생성 — 2026-05-29 ✅
-- [sunolanguage] N001/N002 코퍼스 어휘 충실도 분석 — 커버리지 98.3%, Novel 12/320 — 2026-05-29 ✅
-- [sunolanguage] N001+N002 20/20 Suno 생성 전곡 완료 — gid 20311~20330, 40클립, 통합DB UPDATE — 2026-05-29 ✅
-- [sunolanguage] 가사 커플릿 하이브리드 청킹 구현 — section 2,478 + couplet 3,447 = 5,925, 코러스 dedup 61건, 3모드 E2E PASS — 2026-05-28 ✅
-- [sunolanguage] Lyrics Corpus 시스템 E2E 완주 — 2,539 섹션 다국어 임베딩, pair 5/5 PASS, coherence 0.55 — 2026-05-28 ✅
-- [sunolanguage] Serendipity Engine E2E 완주 — Qdrant 10,646 청크 임베딩, 20/20 PASS (drift 0.5+0.8 네이티브 100%), Gate 1~3 통과 — 2026-05-28 ✅
-- [sunolanguage] Serendipity Engine 6개 스크립트 작성 — chunk_builder/embed_pipeline/serendipity/slot_assembler/preset_validator/preset_engine — 2026-05-28 ✅
-- [sunolanguage] chunks.json 10,646건 빌드 — SP 5,690 + Bracket 4,956, 437곡 192장르 — 2026-05-27 ✅
-- [sunolanguage] Notion 설계 문서 게시 — 아키텍처+Gate 워크플로우+기술스택+CLI — 2026-05-27 ✅
-- [sunolanguage] W002 균등화 프로토콜+녹음목록 설계 — 7장르 60곡 비례 배분 — 2026-05-25 ✅
-- [sunolanguage] sunolang DDL 설계 + json_to_db.py — 4테이블 스키마 + 적재 스크립트 + admin 요청 — 2026-05-25 ✅
-- [sunolanguage] sunolang 코퍼스 DB 독립 테이블 결정 ACK — leomusic2 경유 Leo 결정 수신 — 2026-05-25 ✅
-- [sunolanguage] ch5 보강 — §5.7 BPM 재해석 + §5.8 구조 제어 데드존 + §5.9 장르 데드존 (164→283행) — 2026-05-25 ✅
-- [sunolanguage] S_BP 21곡 sunomusic 발주 — [] vs () 비교 테스트, SP+가사 7종 전문 포함 — 2026-05-25 ✅
-- [sunolanguage] Moonlit Sleep 자문 회신 — 코퍼스 385행 기반 Q1~Q6 답변 (BPM 하한/lo-fi 패턴/ambient/instrumental/장르토큰/loop) — 2026-05-25 ✅
-- [sunolanguage] S_PU 54곡 songs_test_lab INSERT — 6장르×3조건×3rep, test_id 1~54 — 2026-05-24 ✅
-- [sunolanguage] songs_test_lab 신설 + role_sunolanguage LOGIN 활성화 — LEO 결정, admin 구현 — 2026-05-24 ✅
-- [sunolanguage] sp_builder.py §1.10/§1.11 준수 수정 — 오프닝/7문장/drums/보컬 5건 수정 — 2026-05-24 ✅
-- [sunolanguage] lexical_index.sqlite 재빌드 — 15,509 entries, 5,496 unique words — 2026-05-24 ✅
-- [sunolanguage] 디스크 오프로드 43GB → /Volumes/LEO + symlink — admin 요청 — 2026-05-24 ✅
-- [sunolanguage] SP 구조 심층 분석 — 7문장 공식, 동사 체계, 수식어 클러스터, 악기 기본 수식어, 장르 프로파일 — 2026-05-14 ✅
-- [sunolanguage] ch1 §1.11 추가 — SP 7문장 공식 + 핵심 동사 6개 + 문장 시작 패턴 — 2026-05-14 ✅
-- [sunolanguage] ch3 §3.15~3.16 추가 — 수식어 공기 클러스터 (서정/선명/범용) + 악기별 기본 수식어 — 2026-05-14 ✅
-- [sunolanguage] ch4 §4.7 추가 — 장르별 수식어 프로파일 + 감별 수식어 5종 — 2026-05-14 ✅
-- [sunolanguage] [] vs () 비교 테스트 설계 — S_BP 시리즈 7가사×3회=21곡 프로토콜 완성 — 2026-05-12 ✅
-- [sunolanguage] ch1 §1.10 추가 — SP 오프닝 문법 (445곡 분석: 55.7% Genre only, 83.4% K-접두어) — 2026-05-12 ✅
-- [sunolanguage] ch2 §2.6~2.7 추가 — 브래킷 시퀀스 문법 + () 사용 빈도·위치 분석 — 2026-05-12 ✅
-- [sunolanguage] v5.5 pump-up modulation 테스트 설계 — S_PU 시리즈 18 SP, 54곡 프로토콜 완성 — 2026-05-12 ✅
-- [sunolanguage] genre_frontier v1.3 — 25개 미검증 장르 must_have Suno 네이티브 재작성 — 2026-05-12 ✅
-- [sunolanguage] SP Builder 신규 — 29개 대장르, 121개 서브장르, Top-Anchor 자동 배치 — 2026-05-12 ✅
-- [sunolanguage] ch3 업데이트 — §3.14 K-장르별 악기 수식어 패턴 추가 — 2026-05-12 ✅
-- [sunolanguage] ch4 업데이트 — §4.4 K-장르 슬롯 비교, §4.5 SP 길이, §4.6 장르 경계 추가 — 2026-05-12 ✅
-- [sunolanguage] 비-Ballad K-장르 심층 분석 (K-Indie 76행, K-Funk 33행, K-Rock 40행) — 2026-05-11 ✅
-- [sunolanguage] SP 길이 vs 장르 상관관계 분석 (385행, Pearson r=0.33) — 2026-05-11 ✅
-- [sunolanguage] ch1 업데이트 (서브타입 비교, SP 길이, 장르 경계, 배타적 어휘) — 2026-05-11 ✅
-- [sunolanguage] W1 reanalysis_genre UPDATE 326행 sunomusic 실행 확인 — 2026-05-11 ✅
-- [sunolanguage] K-Ballad 10개 서브타입 심층 분석 (163행, 악기·보컬·주법 시그니처) — 2026-05-10 ✅
-- [sunolanguage] v5.5 key change (pump-up modulation) 발견 + 사전 등록 + leomusic/2 알림 — 2026-05-09 ✅
-- [sunolanguage] DB 385행 교차분석 + 장르별 네이티브 어휘 대조 — 2026-05-09 ✅
-- [sunolanguage] W1 326행 장르 추출 + UPDATE SQL 생성 + sunomusic 전달 — 2026-05-09~10 ✅
-- [sunolanguage] 사전 v3.0→v3.1 업데이트 (미등재 27개 + key change) — 2026-05-09 ✅
-- [sunolanguage] genre_frontier v1.1→v1.2 (15개 장르 must_have 네이티브 재작성) — 2026-05-09 ✅
-- [sunolanguage] 책 1·2·5장 재작성 (곡 인용 제거, DB 데이터 반영) — 2026-05-09 ✅
+- [sunolanguage] **N012 10곡 생성 + 가사 일관성 검사 + 전곡 성공** — seed "warm Rhodes piano" drift 0.7, 3곡 교체(coh↑), coh avg 0.56, gid 30041~30050, sunomusic 10/10 — 2026-06-04 ✅
+- [sunolanguage] **D139 이사 Phase 0 완료** — requirements 54줄 일치, SQLite checkpoint, 절대경로→상대경로 12파일, 체크리스트+5건 확인→admin 전부 OK, reklcli freeze 진입 — 2026-06-04 ✅
+- [sunolanguage] **N009~N011 최종 전곡 성공 확인** — sunomusic 재생성으로 30/30 (자가점검 24/30→전곡 성공). 자가점검 기준 보수적 확인 — 2026-06-04 ✅
+- [sunolanguage] **lyrics_engine.py 버그 수정** — song_source_ids str/int 혼합 TypeError 수정 — 2026-06-04 ✅
+- [sunolanguage] **leomusic-base 가사붙임조직 거시 51종 수신** — KN-MACRO-TEXT-SETTING, text-setting 조직축 — 2026-06-04 ✅
+- [sunolanguage] **N009~N011 30곡 생성 완료 24/30(→30/30)** — 크로스배치 오염 방지 `--exclude-history` 패치 적용 — 2026-06-03 ✅
+- [sunolanguage] **흥이야 윤스ver 2종 작업 (LEO 지시)** — ①형태·글자수 고정 변주 10곡+제목 10개 ②맥락유지 변주 10곡. 생성기 2종, sunomusic 회신 — 2026-06-01 ✅
+- [sunolanguage] **★N008 DB-direct E2E 완주** — INSERT→트리거→생성→uuid UPDATE 전구간 검증. gid 30001~30010 — 2026-06-01 ✅
+- [sunolanguage] **제목 짤림 근본수정 (kiwipiepy)** — 형태소분석 NNG/NNP만 추출, 짤림 0 — 2026-06-01 ✅
+- [sunolanguage] **P0/P1 6건 패치 + N006 10곡 생성** — 10/10 PASS, coh 0.54, 8종폼 — 2026-05-30 ✅
