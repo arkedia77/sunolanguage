@@ -6,9 +6,10 @@ import subprocess
 from collections import defaultdict
 from pathlib import Path
 
-V1 = json.loads(Path(__file__).resolve().parent.parent / "rag/suno_dictionary.json".read_text())
-NEW = json.loads(Path(__file__).resolve().parent.parent / "data/reanalysis_v2/d2_new_candidates.json".read_text())
-OUT = Path(__file__).resolve().parent.parent / "data/reanalysis_v2/d3_coverage.json"
+ROOT = Path(__file__).resolve().parent.parent
+V1 = json.loads((ROOT / "rag/suno_dictionary.json").read_text())
+NEW = json.loads((ROOT / "data/reanalysis_v2/d2_new_candidates.json").read_text())
+OUT = ROOT / "data/reanalysis_v2/d3_coverage.json"
 
 CATS = ["instrument_phrases","technique_patterns","production_vocab",
         "mood_emotion","vocal_expressions","timbre_texture",
@@ -25,6 +26,7 @@ v2_terms = v1_terms | new_terms
 print(f"[D3] v1 terms: {len(v1_terms)}, new(freq>=3): {len(new_terms)}, v2 total: {len(v2_terms)}")
 
 # leomusic 전곡 style_prompt 샘플링 (phase별 분포 확인 위해 Phase 태그 대신 batch prefix 기준)
+# TODO(migration): 아래 SSH 호스트 mushin@172.30.1.77 는 구머신(reklcli) 경로 — purple 이사 후 미이전. 실행 전 호스트/DB 경로 마이그레이션 필요.
 cmd = ["ssh", "mushin@172.30.1.77",
        "sqlite3 -json ~/projects/leomusic-cli/leomusic.db "
        "\"SELECT global_id, batch, genre, style_prompt FROM songs "

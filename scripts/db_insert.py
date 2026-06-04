@@ -7,16 +7,17 @@ leomusic/leomusic2와 동일한 DB-direct 구조로 통일 → 핸드오프 변�
 (2026-05-31, Leo 승인 DB-direct 전환. [[project_handoff_schema_drift]])
 
 전제:
-  - admin이 role_sunolanguage에 songs INSERT(+SELECT) GRANT (요청발송, 대기)
+  - role_sunolanguage 에 songs INSERT/SELECT/UPDATE GRANT 완료 (라이브 DB 확인,
+    감사(audit) 트리거도 존재). 더 이상 GRANT 대기 아님.
   - gid는 자동채번 아님 → admin이 배치별 gid 범위 사전배정 → --gid-start 로 전달
   - songs 컬럼셋/값패턴은 leomusic2 insert_k030_to_pg.py 정본을 미러링
 
 매핑은 build_handoff.map_song(Option A) 재사용 → 단일 진실원 유지.
 
 사용법:
-  # 검증 (기본, DB 연결 없음 — GRANT 전에도 가능):
+  # 검증 (기본, DB 연결 없음):
   python3 scripts/db_insert.py data/lyrics_history/lyrics_batch_*.json --batch N008 --gid-start 20391
-  # 실제 적재 (GRANT 후):
+  # 실제 적재 (GRANT 완료 상태 — --execute 로 실적재):
   python3 scripts/db_insert.py <raw> --batch N008 --gid-start 20391 --execute
 """
 import argparse
@@ -173,7 +174,7 @@ def main():
         print(f"\ngenre_group 분포:",
               {g: sum(1 for _, r in rows if r['genre_group'] == g)
                for g in sorted({r['genre_group'] for _, r in rows})})
-        print("→ GRANT 수신 후 --execute 로 실적재. (gid 범위는 admin 사전배정값 사용)")
+        print("→ --execute 로 실적재 (GRANT 완료). (gid 범위는 admin 사전배정값 사용)")
         return
 
     # 실제 적재

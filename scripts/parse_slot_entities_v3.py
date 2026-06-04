@@ -14,7 +14,9 @@ import json, re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-DATA = json.loads(Path("data/reanalysis_v2/merged_4values.json").read_text())
+# 모듈 임포트 시에는 입력 데이터를 읽지 않는다. (extract_templates 등 importer는
+# 정적 엔티티 사전 INSTRUMENT_ENTITIES/DRUM_ENTITIES/VOCAL_ENTITIES/ALL_MODIFIERS 만 사용)
+# 실제 데이터 로드/분석/파일출력/콘솔출력은 모두 아래 main() 안에서만 수행.
 
 # ─────────────────────────────────────────
 # 엔티티 사전
@@ -859,210 +861,217 @@ def parse_bracket(text):
 # ─────────────────────────────────────────
 # 전체 실행
 # ─────────────────────────────────────────
-all_sp_entries = []
-all_bracket_entries = []
-sp_slot_counts = Counter()
-br_slot_counts = Counter()
-instrument_details = defaultdict(lambda: {
+def main():
+  DATA = json.loads(Path("data/reanalysis_v2/merged_4values.json").read_text())
+
+  all_sp_entries = []
+  all_bracket_entries = []
+  sp_slot_counts = Counter()
+  br_slot_counts = Counter()
+  instrument_details = defaultdict(lambda: {
     "count": 0, "modifiers": Counter(), "patterns": Counter(),
     "effects": Counter(), "chords": Counter()
-})
-drum_details = defaultdict(lambda: {"count": 0, "modifiers": Counter()})
-vocal_details = {"modifiers": Counter(), "delivery": Counter(), "effects": Counter()}
+  })
+  drum_details = defaultdict(lambda: {"count": 0, "modifiers": Counter()})
+  vocal_details = {"modifiers": Counter(), "delivery": Counter(), "effects": Counter()}
 
-# 브래킷용 통계
-br_instrument_details = defaultdict(lambda: {
+  # 브래킷용 통계
+  br_instrument_details = defaultdict(lambda: {
     "count": 0, "modifiers": Counter(), "actions": Counter()
-})
-br_drum_details = defaultdict(lambda: {"count": 0, "modifiers": Counter()})
+  })
+  br_drum_details = defaultdict(lambda: {"count": 0, "modifiers": Counter()})
 
-for song in DATA:
-    sid = song.get("song_id", 0)
-    genre = song.get("genre", "")
+  for song in DATA:
+      sid = song.get("song_id", 0)
+      genre = song.get("genre", "")
 
-    for sr in song.get("suno_reanalysis", []):
-        # ── SP 파싱 ──
-        sp = sr.get("sp", "")
-        if sp:
-            sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+", sp.strip()) if x.strip()]
-            for i, sent in enumerate(sents):
-                entries = parse_sp_sentence(sent, i, len(sents))
-                for e in entries:
-                    e["song_id"] = sid
-                    e["genre"] = genre
-                    e["source"] = "sp"
-                    all_sp_entries.append(e)
-                    sp_slot_counts[e["slot"]] += 1
+      for sr in song.get("suno_reanalysis", []):
+          # ── SP 파싱 ──
+          sp = sr.get("sp", "")
+          if sp:
+              sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+", sp.strip()) if x.strip()]
+              for i, sent in enumerate(sents):
+                  entries = parse_sp_sentence(sent, i, len(sents))
+                  for e in entries:
+                      e["song_id"] = sid
+                      e["genre"] = genre
+                      e["source"] = "sp"
+                      all_sp_entries.append(e)
+                      sp_slot_counts[e["slot"]] += 1
 
-                    if e["slot"] == "instrument":
-                        inst = e["entity"]
-                        d = instrument_details[inst]
-                        d["count"] += 1
-                        for m in e.get("modifiers", []):
-                            d["modifiers"][m] += 1
-                        if e.get("pattern"):
-                            d["patterns"][e["pattern"][:60]] += 1
-                        for ef in e.get("effects", []):
-                            d["effects"][ef] += 1
-                        for ch in e.get("chords", []):
-                            d["chords"][ch] += 1
-                    elif e["slot"] == "drums":
-                        for dp in e.get("entity", []):
-                            drum_details[dp]["count"] += 1
-                            for m in e.get("modifiers", []):
-                                drum_details[dp]["modifiers"][m] += 1
-                    elif e["slot"] == "vocal_main":
-                        for m in e.get("modifiers", []):
-                            vocal_details["modifiers"][m] += 1
-                        for dl in e.get("delivery", []):
-                            vocal_details["delivery"][dl] += 1
-                        for ef in e.get("effects", []):
-                            vocal_details["effects"][ef] += 1
+                      if e["slot"] == "instrument":
+                          inst = e["entity"]
+                          d = instrument_details[inst]
+                          d["count"] += 1
+                          for m in e.get("modifiers", []):
+                              d["modifiers"][m] += 1
+                          if e.get("pattern"):
+                              d["patterns"][e["pattern"][:60]] += 1
+                          for ef in e.get("effects", []):
+                              d["effects"][ef] += 1
+                          for ch in e.get("chords", []):
+                              d["chords"][ch] += 1
+                      elif e["slot"] == "drums":
+                          for dp in e.get("entity", []):
+                              drum_details[dp]["count"] += 1
+                              for m in e.get("modifiers", []):
+                                  drum_details[dp]["modifiers"][m] += 1
+                      elif e["slot"] == "vocal_main":
+                          for m in e.get("modifiers", []):
+                              vocal_details["modifiers"][m] += 1
+                          for dl in e.get("delivery", []):
+                              vocal_details["delivery"][dl] += 1
+                          for ef in e.get("effects", []):
+                              vocal_details["effects"][ef] += 1
 
-        # ── 가사 브래킷 파싱 ──
-        lyr = sr.get("lyrics", "")
-        if lyr:
-            for m in re.finditer(r"\[([^\]]{1,200})\]", lyr):
-                bt = m.group(1).strip()
-                entries = parse_bracket(bt)
-                for e in entries:
-                    e["song_id"] = sid
-                    e["genre"] = genre
-                    e["source"] = "lyrics"
-                    all_bracket_entries.append(e)
-                    br_slot_counts[e["slot"]] += 1
+          # ── 가사 브래킷 파싱 ──
+          lyr = sr.get("lyrics", "")
+          if lyr:
+              for m in re.finditer(r"\[([^\]]{1,200})\]", lyr):
+                  bt = m.group(1).strip()
+                  entries = parse_bracket(bt)
+                  for e in entries:
+                      e["song_id"] = sid
+                      e["genre"] = genre
+                      e["source"] = "lyrics"
+                      all_bracket_entries.append(e)
+                      br_slot_counts[e["slot"]] += 1
 
-                    if e["slot"] == "instrument":
-                        inst = e["entity"]
-                        bd = br_instrument_details[inst]
-                        bd["count"] += 1
-                        for mod in e.get("modifiers", []):
-                            bd["modifiers"][mod] += 1
-                        if e.get("action"):
-                            bd["actions"][e["action"]] += 1
-                    elif e["slot"] == "drums":
-                        for dp in e.get("entity", []):
-                            br_drum_details[dp]["count"] += 1
-                            for mod in e.get("modifiers", []):
-                                br_drum_details[dp]["modifiers"][mod] += 1
+                      if e["slot"] == "instrument":
+                          inst = e["entity"]
+                          bd = br_instrument_details[inst]
+                          bd["count"] += 1
+                          for mod in e.get("modifiers", []):
+                              bd["modifiers"][mod] += 1
+                          if e.get("action"):
+                              bd["actions"][e["action"]] += 1
+                      elif e["slot"] == "drums":
+                          for dp in e.get("entity", []):
+                              br_drum_details[dp]["count"] += 1
+                              for mod in e.get("modifiers", []):
+                                  br_drum_details[dp]["modifiers"][mod] += 1
 
-# ─────────────────────────────────────────
-# 출력
-# ─────────────────────────────────────────
-OUT = Path("data/reanalysis_v2")
+  # ─────────────────────────────────────────
+  # 출력
+  # ─────────────────────────────────────────
+  OUT = Path("data/reanalysis_v2")
 
-# 1. SP 엔트리
-(OUT / "sp_entities_v3.json").write_text(
-    json.dumps(all_sp_entries, ensure_ascii=False, indent=2))
+  # 1. SP 엔트리
+  (OUT / "sp_entities_v3.json").write_text(
+      json.dumps(all_sp_entries, ensure_ascii=False, indent=2))
 
-# 2. 브래킷 엔트리
-(OUT / "bracket_entities_v3.json").write_text(
-    json.dumps(all_bracket_entries, ensure_ascii=False, indent=2))
+  # 2. 브래킷 엔트리
+  (OUT / "bracket_entities_v3.json").write_text(
+      json.dumps(all_bracket_entries, ensure_ascii=False, indent=2))
 
-# 3. 악기별 상세 (SP)
-inst_summary = {}
-for inst, d in sorted(instrument_details.items(), key=lambda x: -x[1]["count"]):
-    inst_summary[inst] = {
-        "count": d["count"],
-        "top_modifiers": d["modifiers"].most_common(10),
-        "top_patterns": d["patterns"].most_common(5),
-        "top_effects": d["effects"].most_common(5),
-        "top_chords": d["chords"].most_common(5),
-    }
-(OUT / "instrument_details_v3.json").write_text(
-    json.dumps(inst_summary, ensure_ascii=False, indent=2))
+  # 3. 악기별 상세 (SP)
+  inst_summary = {}
+  for inst, d in sorted(instrument_details.items(), key=lambda x: -x[1]["count"]):
+      inst_summary[inst] = {
+          "count": d["count"],
+          "top_modifiers": d["modifiers"].most_common(10),
+          "top_patterns": d["patterns"].most_common(5),
+          "top_effects": d["effects"].most_common(5),
+          "top_chords": d["chords"].most_common(5),
+      }
+  (OUT / "instrument_details_v3.json").write_text(
+      json.dumps(inst_summary, ensure_ascii=False, indent=2))
 
-# 4. 악기별 상세 (브래킷)
-br_inst_summary = {}
-for inst, d in sorted(br_instrument_details.items(), key=lambda x: -x[1]["count"]):
-    br_inst_summary[inst] = {
-        "count": d["count"],
-        "top_modifiers": d["modifiers"].most_common(10),
-        "top_actions": d["actions"].most_common(10),
-    }
-(OUT / "bracket_instrument_details_v3.json").write_text(
-    json.dumps(br_inst_summary, ensure_ascii=False, indent=2))
+  # 4. 악기별 상세 (브래킷)
+  br_inst_summary = {}
+  for inst, d in sorted(br_instrument_details.items(), key=lambda x: -x[1]["count"]):
+      br_inst_summary[inst] = {
+          "count": d["count"],
+          "top_modifiers": d["modifiers"].most_common(10),
+          "top_actions": d["actions"].most_common(10),
+      }
+  (OUT / "bracket_instrument_details_v3.json").write_text(
+      json.dumps(br_inst_summary, ensure_ascii=False, indent=2))
 
-# 5. 드럼 상세 (SP)
-drum_summary = {}
-for dp, d in sorted(drum_details.items(), key=lambda x: -x[1]["count"]):
-    drum_summary[dp] = {
-        "count": d["count"],
-        "top_modifiers": d["modifiers"].most_common(10),
-    }
-(OUT / "drum_details_v3.json").write_text(
-    json.dumps(drum_summary, ensure_ascii=False, indent=2))
+  # 5. 드럼 상세 (SP)
+  drum_summary = {}
+  for dp, d in sorted(drum_details.items(), key=lambda x: -x[1]["count"]):
+      drum_summary[dp] = {
+          "count": d["count"],
+          "top_modifiers": d["modifiers"].most_common(10),
+      }
+  (OUT / "drum_details_v3.json").write_text(
+      json.dumps(drum_summary, ensure_ascii=False, indent=2))
 
-# 6. 드럼 상세 (브래킷)
-br_drum_summary = {}
-for dp, d in sorted(br_drum_details.items(), key=lambda x: -x[1]["count"]):
-    br_drum_summary[dp] = {
-        "count": d["count"],
-        "top_modifiers": d["modifiers"].most_common(10),
-    }
-(OUT / "bracket_drum_details_v3.json").write_text(
-    json.dumps(br_drum_summary, ensure_ascii=False, indent=2))
+  # 6. 드럼 상세 (브래킷)
+  br_drum_summary = {}
+  for dp, d in sorted(br_drum_details.items(), key=lambda x: -x[1]["count"]):
+      br_drum_summary[dp] = {
+          "count": d["count"],
+          "top_modifiers": d["modifiers"].most_common(10),
+      }
+  (OUT / "bracket_drum_details_v3.json").write_text(
+      json.dumps(br_drum_summary, ensure_ascii=False, indent=2))
 
-# 7. 보컬 상세 (SP)
-vocal_summary = {
-    "top_modifiers": vocal_details["modifiers"].most_common(20),
-    "top_delivery": vocal_details["delivery"].most_common(20),
-    "top_effects": vocal_details["effects"].most_common(10),
-}
-(OUT / "vocal_details_v3.json").write_text(
-    json.dumps(vocal_summary, ensure_ascii=False, indent=2))
+  # 7. 보컬 상세 (SP)
+  vocal_summary = {
+      "top_modifiers": vocal_details["modifiers"].most_common(20),
+      "top_delivery": vocal_details["delivery"].most_common(20),
+      "top_effects": vocal_details["effects"].most_common(10),
+  }
+  (OUT / "vocal_details_v3.json").write_text(
+      json.dumps(vocal_summary, ensure_ascii=False, indent=2))
 
-# 콘솔 출력
-print(f"SP 엔트리: {len(all_sp_entries)} / 브래킷 엔트리: {len(all_bracket_entries)}")
-print()
-print("=== SP 슬롯 분포 ===")
-for s, c in sp_slot_counts.most_common():
-    print(f"  {c:4d}  {s}")
-print()
-print("=== 브래킷 슬롯 분포 ===")
-for s, c in br_slot_counts.most_common():
-    print(f"  {c:4d}  {s}")
+  # 콘솔 출력
+  print(f"SP 엔트리: {len(all_sp_entries)} / 브래킷 엔트리: {len(all_bracket_entries)}")
+  print()
+  print("=== SP 슬롯 분포 ===")
+  for s, c in sp_slot_counts.most_common():
+      print(f"  {c:4d}  {s}")
+  print()
+  print("=== 브래킷 슬롯 분포 ===")
+  for s, c in br_slot_counts.most_common():
+      print(f"  {c:4d}  {s}")
 
-print()
-print("=== SP 악기 entity + modifier TOP 10 ===")
-for inst, d in sorted(instrument_details.items(), key=lambda x: -x[1]["count"])[:10]:
-    mods = ", ".join(f"{m}({c})" for m, c in d["modifiers"].most_common(5))
-    effs = ", ".join(f"{e}({c})" for e, c in d["effects"].most_common(3))
-    print(f"  {d['count']:3d}x {inst}")
-    if mods: print(f"       mod: {mods}")
-    if effs: print(f"       eff: {effs}")
+  print()
+  print("=== SP 악기 entity + modifier TOP 10 ===")
+  for inst, d in sorted(instrument_details.items(), key=lambda x: -x[1]["count"])[:10]:
+      mods = ", ".join(f"{m}({c})" for m, c in d["modifiers"].most_common(5))
+      effs = ", ".join(f"{e}({c})" for e, c in d["effects"].most_common(3))
+      print(f"  {d['count']:3d}x {inst}")
+      if mods: print(f"       mod: {mods}")
+      if effs: print(f"       eff: {effs}")
 
-print()
-print("=== 브래킷 악기 entity + action TOP 10 ===")
-for inst, d in sorted(br_instrument_details.items(), key=lambda x: -x[1]["count"])[:10]:
-    mods = ", ".join(f"{m}({c})" for m, c in d["modifiers"].most_common(3))
-    acts = ", ".join(f"{a}({c})" for a, c in d["actions"].most_common(3))
-    print(f"  {d['count']:3d}x {inst}")
-    if mods: print(f"       mod: {mods}")
-    if acts: print(f"       act: {acts}")
+  print()
+  print("=== 브래킷 악기 entity + action TOP 10 ===")
+  for inst, d in sorted(br_instrument_details.items(), key=lambda x: -x[1]["count"])[:10]:
+      mods = ", ".join(f"{m}({c})" for m, c in d["modifiers"].most_common(3))
+      acts = ", ".join(f"{a}({c})" for a, c in d["actions"].most_common(3))
+      print(f"  {d['count']:3d}x {inst}")
+      if mods: print(f"       mod: {mods}")
+      if acts: print(f"       act: {acts}")
 
-print()
-print("=== SP 드럼 modifier ===")
-for dp, d in sorted(drum_details.items(), key=lambda x: -x[1]["count"])[:8]:
-    mods = ", ".join(f"{m}({c})" for m, c in d["modifiers"].most_common(5))
-    print(f"  {d['count']:3d}x {dp}: {mods}")
+  print()
+  print("=== SP 드럼 modifier ===")
+  for dp, d in sorted(drum_details.items(), key=lambda x: -x[1]["count"])[:8]:
+      mods = ", ".join(f"{m}({c})" for m, c in d["modifiers"].most_common(5))
+      print(f"  {d['count']:3d}x {dp}: {mods}")
 
-print()
-print("=== 브래킷 드럼 modifier ===")
-for dp, d in sorted(br_drum_details.items(), key=lambda x: -x[1]["count"])[:8]:
-    mods = ", ".join(f"{m}({c})" for m, c in d["modifiers"].most_common(3))
-    print(f"  {d['count']:3d}x {dp}: {mods}")
+  print()
+  print("=== 브래킷 드럼 modifier ===")
+  for dp, d in sorted(br_drum_details.items(), key=lambda x: -x[1]["count"])[:8]:
+      mods = ", ".join(f"{m}({c})" for m, c in d["modifiers"].most_common(3))
+      print(f"  {d['count']:3d}x {dp}: {mods}")
 
-print()
-print("=== 보컬 delivery TOP 10 ===")
-for d, c in vocal_details["delivery"].most_common(10):
-    print(f"  {c:3d}x {d}")
+  print()
+  print("=== 보컬 delivery TOP 10 ===")
+  for d, c in vocal_details["delivery"].most_common(10):
+      print(f"  {c:3d}x {d}")
 
-print()
-print("=== 미분류 ===")
-for e in all_sp_entries:
-    if e["slot"] == "unclassified":
-        print(f"  [SP] [{e['song_id']}] {e['sentence'][:100]}")
-for e in all_bracket_entries:
-    if e["slot"] == "unclassified":
-        print(f"  [BR] [{e['song_id']}] [{e['bracket'][:80]}]")
+  print()
+  print("=== 미분류 ===")
+  for e in all_sp_entries:
+      if e["slot"] == "unclassified":
+          print(f"  [SP] [{e['song_id']}] {e['sentence'][:100]}")
+  for e in all_bracket_entries:
+      if e["slot"] == "unclassified":
+          print(f"  [BR] [{e['song_id']}] [{e['bracket'][:80]}]")
+
+
+if __name__ == "__main__":
+    main()
