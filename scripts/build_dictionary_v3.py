@@ -6,6 +6,32 @@ Suno Native Vocabulary Dictionary v3.0 빌더
 - S003/S004/S016-S017/S018 재분석 결과 수신 시 corpus 자동 확장
 """
 
+# ============================================================
+# ⚠️  WARNING — BORYU (보류 / DO NOT RUN AS-IS) — LEO decision
+# ============================================================
+# This builder is RETIRED. Running it now REGRESSES the curated dictionary.
+# rag/suno_dictionary_v3.json is currently the hand-curated **v3.1**, NOT the
+# v3.0 this script emits. Re-running build() will OVERWRITE v3.1 with v3.0 and:
+#
+#   (a) Stamp the output back to "version": "3.0" (see line ~540), dropping
+#       the v3.1 designation entirely.
+#   (b) DELETE the v3.1 hand-curation: update_notes, the DB cross-reference,
+#       and the ~25 manually enriched entries — none of these are reproduced
+#       by build() and all are lost on overwrite of OUT_PATH.
+#   (c) NOT actually produce a v3.2. vocab_expansion_v3.2.json is DEAD-LOADED:
+#       V32_EXP_PATH is read into `v32_exp` inside build() (the
+#       `with open(V32_EXP_PATH) ...` line) but that variable is never consumed
+#       anywhere in build() — it has zero effect on the assembled dictionary.
+#
+# A genuine v3.2 build would require CODE CHANGES, not just a re-run:
+#   - consume `v32_exp` (vocab_expansion) into the assembled dictionary, and
+#   - merge/preserve the existing v3.1 enrichments (update_notes, db-crossref,
+#     the ~25 enriched entries) instead of overwriting them.
+#
+# Until that work is done: DO NOT execute build(). Importing this module is safe
+# (no writes happen at import time — writing only occurs inside build()).
+# ============================================================
+
 import json
 import sqlite3
 import collections

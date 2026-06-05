@@ -13,6 +13,12 @@ GENRE_GROUPS = {
     "BALLAD": [
         "ballad", "piano ballad", "orchestral ballad", "k-ballad",
         "korean ballad", "power ballad", "slow ballad",
+        # cinematic / orchestral / soundtrack cluster — these film-score
+        # genres previously classified only via the weak genre_signals
+        # "orchestral" heuristic; explicit keywords route them to BALLAD
+        # intentionally (BALLAD forms suit dramatic, score-style structure).
+        "cinematic", "soundtrack", "film score", "score", "orchestral",
+        "fanfare", "march", "trailer",
     ],
     "RNB": [
         "r&b", "rnb", "neo-soul", "neo soul", "city pop", "lo-fi r&b",
