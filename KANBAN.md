@@ -39,7 +39,7 @@
 - 없음
 
 ## DONE (최근)
-- [sunolanguage] **N013+N014 실전배치 20곡 DB-direct 적재 + sunomusic 발주** — N013(soulful neo-soul keys, gid 30051~30060, coh0.56, 8폼) + N014(bright indie folk strum, gid 30061~30070, coh0.57, 10폼). 크로스배치 오염0, 20/20 PASS, status=pending_suno. uuid UPDATE 대기 — 2026-06-05 ✅
+- [sunolanguage] **N013+N014 실전배치 20곡 DB-direct E2E 완주** — N013(gid 30051~30060, coh0.56, 8폼) + N014(gid 30061~30070, coh0.57, 10폼). 크로스배치 오염0, 자가점검 완료(정량 PASS·저-coh 4곡 서사단절 식별), **sunomusic 생성 20/20 generated**. 가설검증 청취세트 준비(저-coh vs 고-coh) — 2026-06-05 ✅
 - [sunolanguage] **N012 10곡 생성 + 가사 일관성 검사 + 전곡 성공** — seed "warm Rhodes piano" drift 0.7, 3곡 교체(coh↑), coh avg 0.56, gid 30041~30050, sunomusic 10/10 — 2026-06-04 ✅
 - [sunolanguage] **D139 이사 Phase 0 완료** — requirements 54줄 일치, SQLite checkpoint, 절대경로→상대경로 12파일, 체크리스트+5건 확인→admin 전부 OK, reklcli freeze 진입 — 2026-06-04 ✅
 - [sunolanguage] **N009~N011 최종 전곡 성공 확인** — sunomusic 재생성으로 30/30 (자가점검 24/30→전곡 성공). 자가점검 기준 보수적 확인 — 2026-06-04 ✅
