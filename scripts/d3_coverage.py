@@ -43,20 +43,6 @@ CATS = ["instrument_phrases","technique_patterns","production_vocab",
         "mood_emotion","vocal_expressions","timbre_texture",
         "harmony_vocab","tempo_rhythm","dynamics_structure"]
 
-v1_terms = set()
-for c in CATS:
-    v1_terms.update(k.lower() for k in V1.get(c, {}).keys())
-
-# 신규: Suno 재분석 빈도 3+ 만 채택 (노이즈 컷)
-new_terms = {k.lower() for k, v in NEW.items() if v >= 3 and len(k) >= 3}
-v2_terms = v1_terms | new_terms
-
-print(f"[D3] v1 terms: {len(v1_terms)}, new(freq>=3): {len(new_terms)}, v2 total: {len(v2_terms)}")
-
-# leomusic 전곡 style_prompt 샘플링 (phase별 분포 확인 위해 Phase 태그 대신 batch prefix 기준)
-rows = fetch_leomusic_sps()
-print(f"[D3] leomusic SPs: {len(rows)}")
-
 def phase_of(batch):
     if not batch: return "unknown"
     b = batch.upper()
@@ -67,39 +53,60 @@ def phase_of(batch):
     if b.startswith("B"): return "B"
     return "other"
 
+
 def coverage(text, terms):
     t = text.lower()
     return sum(1 for term in terms if term in t)
 
-stats = defaultdict(lambda: {"songs": 0, "v1_hits": 0, "v2_hits": 0,
-                             "v1_nonzero": 0, "v2_nonzero": 0})
-for r in rows:
-    sp = r["style_prompt"] or ""
-    ph = phase_of(r.get("batch", ""))
-    v1h = coverage(sp, v1_terms)
-    v2h = coverage(sp, v2_terms)
-    for bucket in (ph, "ALL"):
-        s = stats[bucket]
-        s["songs"] += 1
-        s["v1_hits"] += v1h
-        s["v2_hits"] += v2h
-        s["v1_nonzero"] += 1 if v1h > 0 else 0
-        s["v2_nonzero"] += 1 if v2h > 0 else 0
 
-out = {}
-for bucket, s in stats.items():
-    n = max(s["songs"], 1)
-    out[bucket] = {
-        "songs": s["songs"],
-        "v1_avg_hits": round(s["v1_hits"]/n, 2),
-        "v2_avg_hits": round(s["v2_hits"]/n, 2),
-        "delta_avg": round((s["v2_hits"] - s["v1_hits"])/n, 2),
-        "v1_coverage_pct": round(s["v1_nonzero"]/n*100, 1),
-        "v2_coverage_pct": round(s["v2_nonzero"]/n*100, 1),
-    }
-OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2))
-print(f"[D3] 결과:")
-for k in sorted(out.keys()):
-    v = out[k]
-    print(f"  {k:6} n={v['songs']:5}  v1_avg={v['v1_avg_hits']:6.2f}  v2_avg={v['v2_avg_hits']:6.2f}  Δ={v['delta_avg']:+6.2f}  cov {v['v1_coverage_pct']:5.1f}%→{v['v2_coverage_pct']:5.1f}%")
-print(f"[D3] out: {OUT}")
+def main():
+    v1_terms = set()
+    for c in CATS:
+        v1_terms.update(k.lower() for k in V1.get(c, {}).keys())
+
+    # 신규: Suno 재분석 빈도 3+ 만 채택 (노이즈 컷)
+    new_terms = {k.lower() for k, v in NEW.items() if v >= 3 and len(k) >= 3}
+    v2_terms = v1_terms | new_terms
+
+    print(f"[D3] v1 terms: {len(v1_terms)}, new(freq>=3): {len(new_terms)}, v2 total: {len(v2_terms)}")
+
+    # leomusic 전곡 style_prompt 샘플링 (phase별 분포 확인 위해 Phase 태그 대신 batch prefix 기준)
+    rows = fetch_leomusic_sps()
+    print(f"[D3] leomusic SPs: {len(rows)}")
+
+    stats = defaultdict(lambda: {"songs": 0, "v1_hits": 0, "v2_hits": 0,
+                                 "v1_nonzero": 0, "v2_nonzero": 0})
+    for r in rows:
+        sp = r["style_prompt"] or ""
+        ph = phase_of(r.get("batch", ""))
+        v1h = coverage(sp, v1_terms)
+        v2h = coverage(sp, v2_terms)
+        for bucket in (ph, "ALL"):
+            s = stats[bucket]
+            s["songs"] += 1
+            s["v1_hits"] += v1h
+            s["v2_hits"] += v2h
+            s["v1_nonzero"] += 1 if v1h > 0 else 0
+            s["v2_nonzero"] += 1 if v2h > 0 else 0
+
+    out = {}
+    for bucket, s in stats.items():
+        n = max(s["songs"], 1)
+        out[bucket] = {
+            "songs": s["songs"],
+            "v1_avg_hits": round(s["v1_hits"]/n, 2),
+            "v2_avg_hits": round(s["v2_hits"]/n, 2),
+            "delta_avg": round((s["v2_hits"] - s["v1_hits"])/n, 2),
+            "v1_coverage_pct": round(s["v1_nonzero"]/n*100, 1),
+            "v2_coverage_pct": round(s["v2_nonzero"]/n*100, 1),
+        }
+    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2))
+    print(f"[D3] 결과:")
+    for k in sorted(out.keys()):
+        v = out[k]
+        print(f"  {k:6} n={v['songs']:5}  v1_avg={v['v1_avg_hits']:6.2f}  v2_avg={v['v2_avg_hits']:6.2f}  Δ={v['delta_avg']:+6.2f}  cov {v['v1_coverage_pct']:5.1f}%→{v['v2_coverage_pct']:5.1f}%")
+    print(f"[D3] out: {OUT}")
+
+
+if __name__ == "__main__":
+    main()

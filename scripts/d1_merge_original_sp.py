@@ -35,57 +35,62 @@ def fetch_leomusic_rows(ids):
     conn.close()
     return rows
 
-files = sorted(UPLOAD_DIR.glob("*.json"))
-print(f"[D1] found {len(files)} Suno 재분석 JSON")
+def main():
+    files = sorted(UPLOAD_DIR.glob("*.json"))
+    print(f"[D1] found {len(files)} Suno 재분석 JSON")
 
-records = {}
-for fp in files:
-    d = json.loads(fp.read_text())
-    sid = d.get("song_id")
-    if sid is None:
-        continue
-    records.setdefault(sid, []).append(d)
+    records = {}
+    for fp in files:
+        d = json.loads(fp.read_text())
+        sid = d.get("song_id")
+        if sid is None:
+            continue
+        records.setdefault(sid, []).append(d)
 
-ids = sorted(records.keys())
-print(f"[D1] unique song_id: {len(ids)}")
+    ids = sorted(records.keys())
+    print(f"[D1] unique song_id: {len(ids)}")
 
-rows = fetch_leomusic_rows(ids)
-print(f"[D1] leomusic DB rows: {len(rows)}")
+    rows = fetch_leomusic_rows(ids)
+    print(f"[D1] leomusic DB rows: {len(rows)}")
 
-by_id = {r["global_id"]: r for r in rows}
+    by_id = {r["global_id"]: r for r in rows}
 
-merged = []
-missing = []
-for sid in ids:
-    leo = by_id.get(sid)
-    suno_entries = records[sid]
-    if not leo:
-        missing.append(sid)
-        continue
-    merged.append({
-        "song_id": sid,
-        "title": leo["title"],
-        "genre": leo.get("genre"),
-        "subgenre": leo.get("subgenre"),
-        "bpm": leo.get("bpm"),
-        "key_signature": leo.get("key_signature"),
-        "leomusic_original": {
-            "sp": leo.get("style_prompt"),
-            "lyrics": leo.get("lyrics"),
-        },
-        "suno_reanalysis": [
-            {
-                "uuid": s.get("suno_uuid"),
-                "sp": s.get("suno_analysis_sp"),
-                "lyrics": s.get("suno_analysis_lyrics"),
-                "file": s.get("file"),
-                "captured_at": s.get("captured_at"),
-            }
-            for s in suno_entries
-        ],
-    })
+    merged = []
+    missing = []
+    for sid in ids:
+        leo = by_id.get(sid)
+        suno_entries = records[sid]
+        if not leo:
+            missing.append(sid)
+            continue
+        merged.append({
+            "song_id": sid,
+            "title": leo["title"],
+            "genre": leo.get("genre"),
+            "subgenre": leo.get("subgenre"),
+            "bpm": leo.get("bpm"),
+            "key_signature": leo.get("key_signature"),
+            "leomusic_original": {
+                "sp": leo.get("style_prompt"),
+                "lyrics": leo.get("lyrics"),
+            },
+            "suno_reanalysis": [
+                {
+                    "uuid": s.get("suno_uuid"),
+                    "sp": s.get("suno_analysis_sp"),
+                    "lyrics": s.get("suno_analysis_lyrics"),
+                    "file": s.get("file"),
+                    "captured_at": s.get("captured_at"),
+                }
+                for s in suno_entries
+            ],
+        })
 
-OUT_PATH.write_text(json.dumps(merged, ensure_ascii=False, indent=2))
-print(f"[D1] 머지 완료: {len(merged)}곡 → {OUT_PATH}")
-if missing:
-    print(f"[D1] leomusic DB 누락 song_id: {missing}")
+    OUT_PATH.write_text(json.dumps(merged, ensure_ascii=False, indent=2))
+    print(f"[D1] 머지 완료: {len(merged)}곡 → {OUT_PATH}")
+    if missing:
+        print(f"[D1] leomusic DB 누락 song_id: {missing}")
+
+
+if __name__ == "__main__":
+    main()
