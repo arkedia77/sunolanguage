@@ -43,7 +43,7 @@ SONGS_COLUMNS = [
     "title", "lyrics", "style_prompt", "status",
     "theme", "episode", "category", "lyricist", "genre", "genre_mode",
     "energy", "song_form", "song_form_name", "voicing", "char_count",
-    "voice_perspective_type", "bpm", "genre_group",
+    "voice_perspective_type", "bpm", "genre_group", "sub_theme", "coherence",
     "intro_bars", "interlude_bars", "outro_bars",
     "mood", "instrumentation", "production_direction",
     "key_signature", "scale_type", "modulation",
@@ -79,6 +79,8 @@ def song_to_row(opt_a: dict, gid: int, now) -> dict:
         "voice_perspective_type": "",
         "bpm": opt_a.get("bpm") or 0,
         "genre_group": opt_a.get("genre_group") or "",
+        "sub_theme": opt_a.get("sub_theme") or "",      # live songs 컬럼 존재(2026-06-05 확인)
+        "coherence": opt_a.get("coherence"),            # float, 없으면 NULL
         "intro_bars": 0, "interlude_bars": 0, "outro_bars": 0,
         "mood": "",
         "instrumentation": "",
