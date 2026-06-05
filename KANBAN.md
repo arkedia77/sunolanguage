@@ -1,6 +1,8 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
+- [sunolanguage] **★뮤직메이커 업그레이드 제안서** (rag→sunolanguage, LEO 지시 2026-06-05) — Suno Style Prompt Generator(`~/sites/musicmaker/` Vite SPA). 원소스 위치 파악 + 코퍼스 최신화(현 빌드 437/5,070 → Qdrant 10,646 미반영 의심) + SP최신문법 + UX. 접수 ACK 완료. **다음 세션 착수**
+- [sunolanguage] **가사 워크플로우 보강** — `docs/lyrics_workflow_reinforcement_plan.md` 작성완료(3-tier). T1-1 재랭킹+T1-2 게이트밴드부터, 베이스라인 측정 후 캘리브레이션. **다음 세션**
 - [sunolanguage] **★D139 이사 reklcli→purple** — Phase 0 완료(경로전환12파일+requirements+checkpoint+체크리스트). 21:00 reklcli freeze 진입, purple go-live Leo 직접 챙김. 다음 세션은 purple에서 기동 확인 필수
 - [sunolanguage] **Wave T entity 초안** — leomusic-trot 요청. 기존 코퍼스 trot entity 추출 + T5/T9 서브장르 BPM·리듬 매핑 (근거자료 노션 위치 수신 완료)
 - [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B, sunomusic→admin 중계. 완료 시 N008~N012 backfill+db_insert 2컬럼 추가
@@ -37,6 +39,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **N013+N014 실전배치 20곡 DB-direct 적재 + sunomusic 발주** — N013(soulful neo-soul keys, gid 30051~30060, coh0.56, 8폼) + N014(bright indie folk strum, gid 30061~30070, coh0.57, 10폼). 크로스배치 오염0, 20/20 PASS, status=pending_suno. uuid UPDATE 대기 — 2026-06-05 ✅
 - [sunolanguage] **N012 10곡 생성 + 가사 일관성 검사 + 전곡 성공** — seed "warm Rhodes piano" drift 0.7, 3곡 교체(coh↑), coh avg 0.56, gid 30041~30050, sunomusic 10/10 — 2026-06-04 ✅
 - [sunolanguage] **D139 이사 Phase 0 완료** — requirements 54줄 일치, SQLite checkpoint, 절대경로→상대경로 12파일, 체크리스트+5건 확인→admin 전부 OK, reklcli freeze 진입 — 2026-06-04 ✅
 - [sunolanguage] **N009~N011 최종 전곡 성공 확인** — sunomusic 재생성으로 30/30 (자가점검 24/30→전곡 성공). 자가점검 기준 보수적 확인 — 2026-06-04 ✅
