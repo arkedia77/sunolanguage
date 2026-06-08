@@ -1,7 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
-- [sunolanguage] **★뮤직메이커 업그레이드 제안서** (rag→sunolanguage, LEO 지시 2026-06-05) — Suno Style Prompt Generator(`~/sites/musicmaker/` Vite SPA). 원소스 위치 파악 + 코퍼스 최신화(현 빌드 437/5,070 → Qdrant 10,646 미반영 의심) + SP최신문법 + UX. 접수 ACK 완료. **다음 세션 착수**
+- [sunolanguage] **★뮤직메이커2 업그레이드 제안서** (rag→sunolanguage, LEO 지시 2026-06-05) — **제안서 초안 작성완료** `docs/musicmaker2_upgrade_proposal.md`(2026-06-07). 원소스=repo `webapp/`(suno-sp-builder Vite SPA) 확정. 진단: 사전 v2.0(437)→v3.1(496) 미반영·엔진 단절. 3-Tier 제안(T1 드롭인+자동화+문법정정 / T2 영속화·게이트 / T3 시맨틱 엔진연결=뮤직메이커2). **대기: LEO 결정 Q1(T1 착수)·Q2(T3 A/B)·Q3(회신경로)**
 - [sunolanguage] **가사 워크플로우 보강** — `docs/lyrics_workflow_reinforcement_plan.md` 작성완료(3-tier). T1-1 재랭킹+T1-2 게이트밴드부터, 베이스라인 측정 후 캘리브레이션. **다음 세션**
 - [sunolanguage] **★D139 이사 reklcli→purple** — Phase 0 완료(경로전환12파일+requirements+checkpoint+체크리스트). 21:00 reklcli freeze 진입, purple go-live Leo 직접 챙김. 다음 세션은 purple에서 기동 확인 필수
 - [sunolanguage] **Wave T entity 초안** — leomusic-trot 요청. 기존 코퍼스 trot entity 추출 + T5/T9 서브장르 BPM·리듬 매핑 (근거자료 노션 위치 수신 완료)
