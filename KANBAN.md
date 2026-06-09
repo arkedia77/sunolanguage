@@ -15,6 +15,8 @@
 - [sunolanguage] S002 12곡 분석 — UUID/재분석 sunomusic에서 수령 필요
 - [sunolanguage] 사전 v3.1 — S시리즈 추가 수신 시 재빌드
 
+- [sunolanguage] **★코퍼스셋 확장 2026Q2** — 계획 `docs/corpus_expansion_plan_2026Q2.md`. 목표 +100곡(496→~600). **Phase 0 단독수행분 완료(2026-06-09)**: D1 장르정규화(`rag/genre_aliases.json`) + D2 갭재선별(`scripts/rank_gap_candidates.py`→`upload_queue_gap.json`, 갭적중72/100) + D3 외부수집배치(`data/collection/batch_A_external.json`, 40샘플). **다음: Batch A·C sunomusic 발주 / Batch B(W002) Leo 녹음 / Phase2 인제스트(L5)**
+
 ## TODO
 ### v5.5 검증
 - [sunolanguage] S_PU 시리즈 sunomusic 발주 — `data/v55_pumpup_test_protocol.md` 참조

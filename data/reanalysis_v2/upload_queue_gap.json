@@ -1,0 +1,1804 @@
+{
+  "generated_at": "2026-06-09",
+  "source": "upload_queue.json (DB mining top 100)",
+  "method": "novel_words × GAP_KEYWORDS 적중수 재가중",
+  "gap_hit_candidates": 72,
+  "area_coverage": {
+    "orchestral_cinematic": 37,
+    "jazz": 16,
+    "non_western_instrument": 6,
+    "effects": 58,
+    "tier1_genre": 9
+  },
+  "items": [
+    {
+      "gid": 1724,
+      "batch": "B186",
+      "title": "다른 책",
+      "sp_len": 1959,
+      "novel_unique": 100,
+      "gap_score": 18,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "arco",
+          "bow",
+          "cathedral",
+          "cathedral-like",
+          "choir",
+          "dignified",
+          "gospel",
+          "hymn-like",
+          "leslie",
+          "organ",
+          "pizzicato",
+          "reverence",
+          "rosin",
+          "sacred",
+          "stately"
+        ],
+        "jazz": [
+          "cross-stick",
+          "voicing"
+        ],
+        "effects": [
+          "sfx"
+        ]
+      }
+    },
+    {
+      "gid": 1732,
+      "batch": "B187",
+      "title": "같은 노래 다른 계절",
+      "sp_len": 1422,
+      "novel_unique": 73,
+      "gap_score": 15,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "arco",
+          "cathedral",
+          "choir",
+          "gospel",
+          "hymn",
+          "hymn-like",
+          "leslie",
+          "organ",
+          "pizzicato",
+          "reverence",
+          "rosin",
+          "stately"
+        ],
+        "jazz": [
+          "cross-stick",
+          "voicing"
+        ],
+        "effects": [
+          "sfx"
+        ]
+      }
+    },
+    {
+      "gid": 1506,
+      "batch": "B165",
+      "title": "알림 999+",
+      "sp_len": 2701,
+      "novel_unique": 104,
+      "gap_score": 10,
+      "gap_areas": [
+        "effects",
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "effects": [
+          "bitcrushed",
+          "chops",
+          "detuned",
+          "dropout",
+          "fono",
+          "pitch-shifted",
+          "sp-404",
+          "stutters",
+          "vinyl-crackle"
+        ],
+        "tier1_genre": [
+          "trap"
+        ]
+      }
+    },
+    {
+      "gid": 1712,
+      "batch": "B185",
+      "title": "이츠마이월드",
+      "sp_len": 1066,
+      "novel_unique": 76,
+      "gap_score": 9,
+      "gap_areas": [
+        "effects",
+        "non_western_instrument"
+      ],
+      "gap_hits": {
+        "non_western_instrument": [
+          "cloud"
+        ],
+        "effects": [
+          "bitcrush",
+          "bitcrushed",
+          "detuned",
+          "granular",
+          "hiss",
+          "tape",
+          "tape-warped",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1719,
+      "batch": "B186",
+      "title": "저기요,",
+      "sp_len": 1751,
+      "novel_unique": 97,
+      "gap_score": 8,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "pizzicato",
+          "swelling"
+        ],
+        "effects": [
+          "detuned",
+          "reverse",
+          "reversed",
+          "sfx",
+          "stutter",
+          "stuttered"
+        ]
+      }
+    },
+    {
+      "gid": 1727,
+      "batch": "B187",
+      "title": "사실은",
+      "sp_len": 1512,
+      "novel_unique": 86,
+      "gap_score": 8,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "pizzicato",
+          "swelling"
+        ],
+        "effects": [
+          "detuned",
+          "reverse",
+          "reversed",
+          "sfx",
+          "stutter",
+          "stuttered"
+        ]
+      }
+    },
+    {
+      "gid": 1510,
+      "batch": "B165",
+      "title": "7시 23분의 사람",
+      "sp_len": 2589,
+      "novel_unique": 111,
+      "gap_score": 7,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "orchestral_cinematic",
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "cathedral-like"
+        ],
+        "jazz": [
+          "ride"
+        ],
+        "effects": [
+          "field",
+          "reverse",
+          "textural"
+        ],
+        "tier1_genre": [
+          "phrygian",
+          "post-rock"
+        ]
+      }
+    },
+    {
+      "gid": 1720,
+      "batch": "B186",
+      "title": "인데요,",
+      "sp_len": 1715,
+      "novel_unique": 97,
+      "gap_score": 7,
+      "gap_areas": [
+        "effects",
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "effects": [
+          "bitcrusher",
+          "chopped",
+          "chops",
+          "detuned",
+          "pitch-shifted",
+          "sfx"
+        ],
+        "tier1_genre": [
+          "trap"
+        ]
+      }
+    },
+    {
+      "gid": 1372,
+      "batch": "B149",
+      "title": "아무도 모르는 출발",
+      "sp_len": 1836,
+      "novel_unique": 96,
+      "gap_score": 7,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "crackle",
+          "field",
+          "hiss",
+          "tape",
+          "tape-saturated",
+          "vinyl",
+          "vinyl-crackle"
+        ]
+      }
+    },
+    {
+      "gid": 1728,
+      "batch": "B187",
+      "title": "쿵쿵",
+      "sp_len": 1327,
+      "novel_unique": 75,
+      "gap_score": 7,
+      "gap_areas": [
+        "effects",
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "effects": [
+          "bitcrusher",
+          "chopped",
+          "chops",
+          "detuned",
+          "pitch-shifted",
+          "sfx"
+        ],
+        "tier1_genre": [
+          "trap"
+        ]
+      }
+    },
+    {
+      "gid": 10016,
+      "batch": "K002",
+      "title": "균열의 표정",
+      "sp_len": 1423,
+      "novel_unique": 70,
+      "gap_score": 7,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "non_western_instrument",
+        "orchestral_cinematic",
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "bows",
+          "choir",
+          "nail-on-string"
+        ],
+        "jazz": [
+          "ride"
+        ],
+        "non_western_instrument": [
+          "mellotron"
+        ],
+        "effects": [
+          "tape"
+        ],
+        "tier1_genre": [
+          "phrygian"
+        ]
+      }
+    },
+    {
+      "gid": 1714,
+      "batch": "B185",
+      "title": "빈 칸",
+      "sp_len": 1203,
+      "novel_unique": 69,
+      "gap_score": 7,
+      "gap_areas": [
+        "effects",
+        "non_western_instrument",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "choir",
+          "cinematic"
+        ],
+        "non_western_instrument": [
+          "mellotron"
+        ],
+        "effects": [
+          "crackle",
+          "tape",
+          "vinyl",
+          "vinyl-filtered"
+        ]
+      }
+    },
+    {
+      "gid": 1524,
+      "batch": "B166",
+      "title": "운동화",
+      "sp_len": 1814,
+      "novel_unique": 82,
+      "gap_score": 6,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "dignified"
+        ],
+        "effects": [
+          "chopped",
+          "crackle",
+          "hiss",
+          "tape",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1477,
+      "batch": "B162",
+      "title": "두 번째 좌표",
+      "sp_len": 1698,
+      "novel_unique": 80,
+      "gap_score": 6,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "crackle",
+          "field",
+          "hiss",
+          "tape",
+          "textural",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1511,
+      "batch": "B165",
+      "title": "회전목마 불빛 아래서",
+      "sp_len": 1498,
+      "novel_unique": 69,
+      "gap_score": 6,
+      "gap_areas": [
+        "effects",
+        "jazz"
+      ],
+      "gap_hits": {
+        "jazz": [
+          "sax"
+        ],
+        "effects": [
+          "crackle",
+          "field",
+          "hiss",
+          "tape",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1726,
+      "batch": "B187",
+      "title": "화요일 세 시",
+      "sp_len": 1307,
+      "novel_unique": 68,
+      "gap_score": 6,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "bitcrushed",
+          "chops",
+          "detuned",
+          "glitchy",
+          "granular",
+          "sfx"
+        ]
+      }
+    },
+    {
+      "gid": 1373,
+      "batch": "B149",
+      "title": "번호 5번, 3명이 남았다",
+      "sp_len": 1904,
+      "novel_unique": 91,
+      "gap_score": 5,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "crackle",
+          "hiss",
+          "tape",
+          "tape-saturated",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1505,
+      "batch": "B165",
+      "title": "거울 앞의 유전자",
+      "sp_len": 2279,
+      "novel_unique": 80,
+      "gap_score": 5,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "arco",
+          "cinematic",
+          "pizzicato",
+          "viola"
+        ],
+        "effects": [
+          "tape"
+        ]
+      }
+    },
+    {
+      "gid": 1722,
+      "batch": "B186",
+      "title": "세 정거장",
+      "sp_len": 1696,
+      "novel_unique": 70,
+      "gap_score": 5,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "choir-like"
+        ],
+        "jazz": [
+          "cross-stick",
+          "ride"
+        ],
+        "effects": [
+          "hiss",
+          "sfx"
+        ]
+      }
+    },
+    {
+      "gid": 10015,
+      "batch": "K002",
+      "title": "뭐 어때 여기 좋은데",
+      "sp_len": 1456,
+      "novel_unique": 66,
+      "gap_score": 5,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "leslie-rotary",
+          "organ"
+        ],
+        "jazz": [
+          "modal"
+        ],
+        "effects": [
+          "field",
+          "sweeps"
+        ]
+      }
+    },
+    {
+      "gid": 1393,
+      "batch": "B152",
+      "title": "쿨한 척 삼 분",
+      "sp_len": 1505,
+      "novel_unique": 58,
+      "gap_score": 5,
+      "gap_areas": [
+        "effects",
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "effects": [
+          "crackle",
+          "lo-fi-room",
+          "vinyl",
+          "vinyl-crackle"
+        ],
+        "tier1_genre": [
+          "dorian"
+        ]
+      }
+    },
+    {
+      "gid": 1723,
+      "batch": "B186",
+      "title": "이어폰 반쪽",
+      "sp_len": 1746,
+      "novel_unique": 92,
+      "gap_score": 4,
+      "gap_areas": [
+        "effects",
+        "jazz"
+      ],
+      "gap_hits": {
+        "jazz": [
+          "sax"
+        ],
+        "effects": [
+          "chops",
+          "sfx",
+          "tape"
+        ]
+      }
+    },
+    {
+      "gid": 1522,
+      "batch": "B166",
+      "title": "액자 자리",
+      "sp_len": 1687,
+      "novel_unique": 79,
+      "gap_score": 4,
+      "gap_areas": [
+        "effects",
+        "jazz"
+      ],
+      "gap_hits": {
+        "jazz": [
+          "ride",
+          "voicing"
+        ],
+        "effects": [
+          "impact",
+          "textural"
+        ]
+      }
+    },
+    {
+      "gid": 1731,
+      "batch": "B187",
+      "title": "반쪽짜리 우주",
+      "sp_len": 1303,
+      "novel_unique": 79,
+      "gap_score": 4,
+      "gap_areas": [
+        "effects",
+        "jazz"
+      ],
+      "gap_hits": {
+        "jazz": [
+          "sax"
+        ],
+        "effects": [
+          "chops",
+          "sfx",
+          "tape"
+        ]
+      }
+    },
+    {
+      "gid": 1730,
+      "batch": "B187",
+      "title": "재회",
+      "sp_len": 1156,
+      "novel_unique": 63,
+      "gap_score": 4,
+      "gap_areas": [
+        "effects",
+        "jazz"
+      ],
+      "gap_hits": {
+        "jazz": [
+          "cross-stick",
+          "ride"
+        ],
+        "effects": [
+          "hiss",
+          "sfx"
+        ]
+      }
+    },
+    {
+      "gid": 1709,
+      "batch": "B185",
+      "title": "그냥 짠",
+      "sp_len": 1085,
+      "novel_unique": 63,
+      "gap_score": 4,
+      "gap_areas": [
+        "jazz",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "gospel",
+          "leslie",
+          "organ"
+        ],
+        "jazz": [
+          "cross-stick"
+        ]
+      }
+    },
+    {
+      "gid": 1268,
+      "batch": "B139",
+      "title": "새벽 2시 단골",
+      "sp_len": 1209,
+      "novel_unique": 59,
+      "gap_score": 4,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "crackle",
+          "hiss",
+          "tape",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1271,
+      "batch": "B139",
+      "title": "복도에서 그냥 지나쳐",
+      "sp_len": 1280,
+      "novel_unique": 56,
+      "gap_score": 4,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "crackle",
+          "hiss",
+          "tape",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1721,
+      "batch": "B186",
+      "title": "읽지 않음",
+      "sp_len": 1839,
+      "novel_unique": 95,
+      "gap_score": 3,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "bow"
+        ],
+        "jazz": [
+          "overrides"
+        ],
+        "effects": [
+          "sfx"
+        ]
+      }
+    },
+    {
+      "gid": 1725,
+      "batch": "B187",
+      "title": "같은 책이었다",
+      "sp_len": 1695,
+      "novel_unique": 91,
+      "gap_score": 3,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "organically"
+        ],
+        "effects": [
+          "sfx",
+          "tape"
+        ]
+      }
+    },
+    {
+      "gid": 1464,
+      "batch": "B160",
+      "title": "카메라 오프",
+      "sp_len": 1783,
+      "novel_unique": 86,
+      "gap_score": 3,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "cinematic"
+        ],
+        "effects": [
+          "impact",
+          "reversed"
+        ]
+      }
+    },
+    {
+      "gid": 1456,
+      "batch": "B160",
+      "title": "먼지 낀 날개",
+      "sp_len": 1544,
+      "novel_unique": 77,
+      "gap_score": 3,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "arco",
+          "pizzicato",
+          "viola"
+        ]
+      }
+    },
+    {
+      "gid": 1455,
+      "batch": "B160",
+      "title": "멈춘 프로필",
+      "sp_len": 1586,
+      "novel_unique": 76,
+      "gap_score": 3,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "crackle",
+          "tape-saturated",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1494,
+      "batch": "B163",
+      "title": "채널권",
+      "sp_len": 1518,
+      "novel_unique": 66,
+      "gap_score": 3,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "sweeping",
+          "swelling"
+        ],
+        "effects": [
+          "sweeping"
+        ]
+      }
+    },
+    {
+      "gid": 1764,
+      "batch": "B191",
+      "title": "실밥",
+      "sp_len": 864,
+      "novel_unique": 66,
+      "gap_score": 3,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "pizzicato"
+        ],
+        "effects": [
+          "detuned",
+          "tape"
+        ]
+      }
+    },
+    {
+      "gid": 1276,
+      "batch": "B140",
+      "title": "1년 후 후배가 생겼어",
+      "sp_len": 1167,
+      "novel_unique": 59,
+      "gap_score": 3,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "sweeping"
+        ],
+        "jazz": [
+          "brushes"
+        ],
+        "effects": [
+          "sweeping"
+        ]
+      }
+    },
+    {
+      "gid": 1519,
+      "batch": "B166",
+      "title": "이유 없는 꽃다발",
+      "sp_len": 1644,
+      "novel_unique": 57,
+      "gap_score": 3,
+      "gap_areas": [
+        "effects",
+        "jazz",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "gospel-inflected"
+        ],
+        "jazz": [
+          "voicing"
+        ],
+        "effects": [
+          "vinyl-warm"
+        ]
+      }
+    },
+    {
+      "gid": 1509,
+      "batch": "B165",
+      "title": "건배사가 끝나면",
+      "sp_len": 2268,
+      "novel_unique": 98,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "effects": [
+          "tape"
+        ],
+        "tier1_genre": [
+          "trap"
+        ]
+      }
+    },
+    {
+      "gid": 1370,
+      "batch": "B149",
+      "title": "나무 끝에 물기가 돌 때",
+      "sp_len": 1736,
+      "novel_unique": 89,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "non_western_instrument"
+      ],
+      "gap_hits": {
+        "non_western_instrument": [
+          "aloud"
+        ],
+        "effects": [
+          "field"
+        ]
+      }
+    },
+    {
+      "gid": 1374,
+      "batch": "B149",
+      "title": "다 왔잖아요, 결국은",
+      "sp_len": 1994,
+      "novel_unique": 82,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "field",
+          "riser"
+        ]
+      }
+    },
+    {
+      "gid": 1458,
+      "batch": "B160",
+      "title": "이름 없는 불안",
+      "sp_len": 1639,
+      "novel_unique": 80,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "cathedral-of-silence"
+        ],
+        "effects": [
+          "reverse"
+        ]
+      }
+    },
+    {
+      "gid": 1368,
+      "batch": "B149",
+      "title": "자동문이 열릴 때마다",
+      "sp_len": 1867,
+      "novel_unique": 79,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "organ"
+        ],
+        "effects": [
+          "vinyl-warm"
+        ]
+      }
+    },
+    {
+      "gid": 1729,
+      "batch": "B187",
+      "title": "포기",
+      "sp_len": 1297,
+      "novel_unique": 72,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "bow"
+        ],
+        "effects": [
+          "sfx"
+        ]
+      }
+    },
+    {
+      "gid": 1479,
+      "batch": "B162",
+      "title": "민낯 리포트",
+      "sp_len": 1850,
+      "novel_unique": 71,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "field",
+          "riser"
+        ]
+      }
+    },
+    {
+      "gid": 10019,
+      "batch": "K002",
+      "title": "삼각김밥",
+      "sp_len": 1450,
+      "novel_unique": 70,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "organ"
+        ],
+        "effects": [
+          "tape"
+        ]
+      }
+    },
+    {
+      "gid": 1518,
+      "batch": "B166",
+      "title": "나야 알고리즘이야",
+      "sp_len": 1584,
+      "novel_unique": 69,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "swelling"
+        ],
+        "effects": [
+          "glitch"
+        ]
+      }
+    },
+    {
+      "gid": 1493,
+      "batch": "B163",
+      "title": "밑창 지도",
+      "sp_len": 1405,
+      "novel_unique": 66,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "hiss",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1710,
+      "batch": "B185",
+      "title": "두려운 그 노란 글씨",
+      "sp_len": 1091,
+      "novel_unique": 64,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "sweep",
+          "textural"
+        ]
+      }
+    },
+    {
+      "gid": 1480,
+      "batch": "B162",
+      "title": "하늘색 우산",
+      "sp_len": 1643,
+      "novel_unique": 62,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "sweeping"
+        ],
+        "effects": [
+          "sweeping"
+        ]
+      }
+    },
+    {
+      "gid": 10018,
+      "batch": "K002",
+      "title": "이름을 삼켰어",
+      "sp_len": 1292,
+      "novel_unique": 60,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "field",
+          "textural"
+        ]
+      }
+    },
+    {
+      "gid": 1392,
+      "batch": "B152",
+      "title": "빨간 점",
+      "sp_len": 1510,
+      "novel_unique": 59,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "choir"
+        ],
+        "effects": [
+          "field"
+        ]
+      }
+    },
+    {
+      "gid": 1034,
+      "batch": "B114",
+      "title": "별다줄",
+      "sp_len": 1366,
+      "novel_unique": 59,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "effects": [
+          "chops"
+        ],
+        "tier1_genre": [
+          "afrobeats"
+        ]
+      }
+    },
+    {
+      "gid": 1713,
+      "batch": "B185",
+      "title": "벽지 자국",
+      "sp_len": 1115,
+      "novel_unique": 58,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "cathedral"
+        ],
+        "effects": [
+          "reverse"
+        ]
+      }
+    },
+    {
+      "gid": 1491,
+      "batch": "B163",
+      "title": "아직 거기 있어?",
+      "sp_len": 1324,
+      "novel_unique": 57,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects",
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "gospel-inflected"
+        ],
+        "effects": [
+          "vinyl-warm"
+        ]
+      }
+    },
+    {
+      "gid": 1328,
+      "batch": "B145",
+      "title": "아무것도 안 해도 되는 날",
+      "sp_len": 992,
+      "novel_unique": 56,
+      "gap_score": 2,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "crackle",
+          "vinyl"
+        ]
+      }
+    },
+    {
+      "gid": 1484,
+      "batch": "B162",
+      "title": "열두 분",
+      "sp_len": 1878,
+      "novel_unique": 85,
+      "gap_score": 1,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "field"
+        ]
+      }
+    },
+    {
+      "gid": 1369,
+      "batch": "B149",
+      "title": "세 시간째 빨간 불",
+      "sp_len": 1822,
+      "novel_unique": 81,
+      "gap_score": 1,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "cinematic"
+        ]
+      }
+    },
+    {
+      "gid": 1367,
+      "batch": "B149",
+      "title": "자정 두 시간 전",
+      "sp_len": 1838,
+      "novel_unique": 77,
+      "gap_score": 1,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "field"
+        ]
+      }
+    },
+    {
+      "gid": 1459,
+      "batch": "B160",
+      "title": "연결이 해제되었습니다",
+      "sp_len": 1582,
+      "novel_unique": 75,
+      "gap_score": 1,
+      "gap_areas": [
+        "tier1_genre"
+      ],
+      "gap_hits": {
+        "tier1_genre": [
+          "dorian"
+        ]
+      }
+    },
+    {
+      "gid": 1481,
+      "batch": "B162",
+      "title": "창문이 처음이야",
+      "sp_len": 1661,
+      "novel_unique": 70,
+      "gap_score": 1,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "textural"
+        ]
+      }
+    },
+    {
+      "gid": 1711,
+      "batch": "B185",
+      "title": "김치찌개",
+      "sp_len": 1089,
+      "novel_unique": 67,
+      "gap_score": 1,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "organ"
+        ]
+      }
+    },
+    {
+      "gid": 1394,
+      "batch": "B152",
+      "title": "두 번째 단추",
+      "sp_len": 1822,
+      "novel_unique": 65,
+      "gap_score": 1,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "graduation-choir"
+        ]
+      }
+    },
+    {
+      "gid": 1520,
+      "batch": "B166",
+      "title": "뭐 해 두 글자",
+      "sp_len": 1617,
+      "novel_unique": 64,
+      "gap_score": 1,
+      "gap_areas": [
+        "non_western_instrument"
+      ],
+      "gap_hits": {
+        "non_western_instrument": [
+          "louder"
+        ]
+      }
+    },
+    {
+      "gid": 1283,
+      "batch": "B140",
+      "title": "조회수 27",
+      "sp_len": 1350,
+      "novel_unique": 64,
+      "gap_score": 1,
+      "gap_areas": [
+        "non_western_instrument"
+      ],
+      "gap_hits": {
+        "non_western_instrument": [
+          "proud"
+        ]
+      }
+    },
+    {
+      "gid": 10017,
+      "batch": "K002",
+      "title": "금요일 밤 열 시",
+      "sp_len": 1320,
+      "novel_unique": 64,
+      "gap_score": 1,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "sacred"
+        ]
+      }
+    },
+    {
+      "gid": 1390,
+      "batch": "B152",
+      "title": "하나 둘 셋",
+      "sp_len": 1591,
+      "novel_unique": 62,
+      "gap_score": 1,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "pizzicato"
+        ]
+      }
+    },
+    {
+      "gid": 1031,
+      "batch": "B114",
+      "title": "같이 가치",
+      "sp_len": 1450,
+      "novel_unique": 61,
+      "gap_score": 1,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "chopped"
+        ]
+      }
+    },
+    {
+      "gid": 1708,
+      "batch": "B185",
+      "title": "휴...",
+      "sp_len": 1140,
+      "novel_unique": 60,
+      "gap_score": 1,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "organ"
+        ]
+      }
+    },
+    {
+      "gid": 1329,
+      "batch": "B145",
+      "title": "천천히 가도 돼",
+      "sp_len": 1018,
+      "novel_unique": 59,
+      "gap_score": 1,
+      "gap_areas": [
+        "jazz"
+      ],
+      "gap_hits": {
+        "jazz": [
+          "stride"
+        ]
+      }
+    },
+    {
+      "gid": 1489,
+      "batch": "B163",
+      "title": "회색이 다 달라?",
+      "sp_len": 1407,
+      "novel_unique": 58,
+      "gap_score": 1,
+      "gap_areas": [
+        "effects"
+      ],
+      "gap_hits": {
+        "effects": [
+          "field"
+        ]
+      }
+    },
+    {
+      "gid": 1492,
+      "batch": "B163",
+      "title": "벽까지 간다",
+      "sp_len": 1368,
+      "novel_unique": 56,
+      "gap_score": 1,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "sharply"
+        ]
+      }
+    },
+    {
+      "gid": 1401,
+      "batch": "B153",
+      "title": "라면 국물",
+      "sp_len": 1292,
+      "novel_unique": 56,
+      "gap_score": 1,
+      "gap_areas": [
+        "orchestral_cinematic"
+      ],
+      "gap_hits": {
+        "orchestral_cinematic": [
+          "friendship-choir"
+        ]
+      }
+    },
+    {
+      "gid": 487,
+      "batch": "B059",
+      "title": "읽씹 3분",
+      "sp_len": 1993,
+      "novel_unique": 96,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 10020,
+      "batch": "K002",
+      "title": "딱 10초",
+      "sp_len": 1493,
+      "novel_unique": 79,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1482,
+      "batch": "B162",
+      "title": "석 달 전 파일",
+      "sp_len": 1951,
+      "novel_unique": 78,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1483,
+      "batch": "B162",
+      "title": "오늘 밤이야",
+      "sp_len": 1828,
+      "novel_unique": 78,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1462,
+      "batch": "B160",
+      "title": "반티 3반",
+      "sp_len": 1560,
+      "novel_unique": 78,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1461,
+      "batch": "B160",
+      "title": "자석들의 세계지도",
+      "sp_len": 1617,
+      "novel_unique": 76,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1478,
+      "batch": "B162",
+      "title": "그냥 서 있어",
+      "sp_len": 1624,
+      "novel_unique": 75,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1282,
+      "batch": "B140",
+      "title": "삼각김밥으로 실감했어",
+      "sp_len": 1454,
+      "novel_unique": 73,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1371,
+      "batch": "B149",
+      "title": "5교시 내내 뒤집어둔 폰",
+      "sp_len": 1772,
+      "novel_unique": 70,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1460,
+      "batch": "B160",
+      "title": "바랜 영수증",
+      "sp_len": 1535,
+      "novel_unique": 70,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1523,
+      "batch": "B166",
+      "title": "소파 한 자리",
+      "sp_len": 1604,
+      "novel_unique": 69,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1270,
+      "batch": "B139",
+      "title": "냥냥, 같이 찾자",
+      "sp_len": 1259,
+      "novel_unique": 67,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1490,
+      "batch": "B163",
+      "title": "깍두기 스티커",
+      "sp_len": 1450,
+      "novel_unique": 66,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1404,
+      "batch": "B153",
+      "title": "닳은 운동화",
+      "sp_len": 1319,
+      "novel_unique": 65,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1274,
+      "batch": "B139",
+      "title": "몇 번이에요?",
+      "sp_len": 1309,
+      "novel_unique": 65,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1515,
+      "batch": "B166",
+      "title": "앞치마 끈",
+      "sp_len": 1672,
+      "novel_unique": 64,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1280,
+      "batch": "B140",
+      "title": "혼자 예약했어",
+      "sp_len": 1211,
+      "novel_unique": 64,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1517,
+      "batch": "B166",
+      "title": "식당 앞 두리번",
+      "sp_len": 1458,
+      "novel_unique": 63,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1521,
+      "batch": "B166",
+      "title": "집에 간다",
+      "sp_len": 1554,
+      "novel_unique": 62,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1397,
+      "batch": "B153",
+      "title": "캔맥주 한 걸음",
+      "sp_len": 1159,
+      "novel_unique": 62,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1284,
+      "batch": "B140",
+      "title": "혼자 산 치킨",
+      "sp_len": 1379,
+      "novel_unique": 61,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1325,
+      "batch": "B145",
+      "title": "울어도 돼",
+      "sp_len": 1083,
+      "novel_unique": 60,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 10014,
+      "batch": "K002",
+      "title": "조회수 33",
+      "sp_len": 1334,
+      "novel_unique": 59,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1277,
+      "batch": "B140",
+      "title": "합격 문자",
+      "sp_len": 1229,
+      "novel_unique": 59,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1267,
+      "batch": "B139",
+      "title": "어느 날부터 안 오셨네요",
+      "sp_len": 1183,
+      "novel_unique": 59,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1030,
+      "batch": "B114",
+      "title": "소리 도둑 ㅎ",
+      "sp_len": 1346,
+      "novel_unique": 58,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1333,
+      "batch": "B145",
+      "title": "버텨왔잖아",
+      "sp_len": 1121,
+      "novel_unique": 57,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    },
+    {
+      "gid": 1403,
+      "batch": "B153",
+      "title": "모퉁이",
+      "sp_len": 1243,
+      "novel_unique": 56,
+      "gap_score": 0,
+      "gap_areas": [],
+      "gap_hits": {}
+    }
+  ]
+}

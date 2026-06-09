@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "created_at": "2026-06-09",
+  "purpose": "장르명 표기 정규화 (case/hyphen 충돌 해소). 비파괴 — 소비자(musicmaker/retriever/coverage)가 조회 시 적용. v3.1 사전 정본은 미변경(build_dictionary_v3 은퇴 상태 보호).",
+  "scope_note": "v3.1 genre_vocabulary_map은 복합 라벨(예: 'Hip-Hop / Lo-fi Boom Bap')로 이미 큐레이션됨. 복합 라벨 과병합 금지. 본 맵은 동일 장르의 case/hyphen 변형만 통합한다.",
+  "canonical_map": {
+    "K-Pop": ["K-POP", "K-Pop", "k-pop", "kpop", "k pop"],
+    "Amapiano": ["amapiano", "Amapiano"],
+    "Synth Pop": ["Synth Pop", "Synth-Pop", "synth pop", "synthpop"],
+    "Electro Pop": ["Electro Pop", "Electro-Pop", "electro pop", "electropop"],
+    "Drum and Bass": ["drum and bass", "Drum and Bass", "drum & bass", "dnb", "d&b"]
+  },
+  "normalization_rule": "조회 키를 lower() + 하이픈/언더스코어→공백 + 다중공백 축약 후 canonical_map의 variants와 매칭. 미스 시 원문 유지(보수적).",
+  "deferred": "lo-fi/hip-hop/boom-bap/pop-rock 변형 통합은 supplement_plan(v2 기준) 잔재 — v3.1에선 복합 라벨로 이미 분화되어 추가 통합 보류. 신규 수집 후 재검토."
+}

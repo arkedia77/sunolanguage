@@ -1,0 +1,92 @@
+{
+  "batch": "A_external",
+  "generated_at": "2026-06-09",
+  "owner": "sunolanguage",
+  "executor": "sunomusic (Suno 앱 업로드·분석)",
+  "purpose": "비서구 전통악기 + 특이 서구악기 + 이펙트 — 문서화된 어휘 갭을 net-new 네이티브 데이터로 직격. external_source_leads.md 큐레이션을 구체 파일 선별로 확정.",
+  "pipeline": "다운로드 → 10초 슬라이스(악기 단독 패시지 우선) → Suno 앱 업로드 → 생성 SP+가사 4값 수집 → parse_slot_entities_v3 → curated merge",
+  "slice_rule": "단일 악기/이펙트가 또렷한 10초 구간. 보컬·드럼 혼입 최소화(순수 음색 어휘 유도). 이펙트는 transient 포함 구간.",
+  "target_count": 40,
+  "license_note": "freesound CC / Mixkit·Pixabay royalty-free 위주. Splice·Noiiz 유료는 보유 시에만. 업로드 전 라이선스 재확인.",
+  "categories": [
+    {
+      "category": "korean_traditional", "target_gap": "non_western_instrument", "priority": "high",
+      "instruments": ["gayageum", "haegeum", "geomungo", "janggu", "daegeum"],
+      "sources": [
+        {"label": "freesound 직접검색", "query": ["gayageum", "haegeum", "daegeum", "janggu", "buk"], "url": "https://freesound.org/", "note": "태그검색 희박 → 사용자명/팩 우선"},
+        {"label": "YouTube Echoes of Korea (퓨전, 구간추출)", "url": "https://www.youtube.com/watch?v=r7fmFPunFgY"},
+        {"label": "Splice Gayageum Live (유료, 보유시)", "url": "https://splice.com/sounds/packs/sonic-collective/gayageum/samples"}
+      ], "slices": 5
+    },
+    {
+      "category": "chinese_traditional", "target_gap": "non_western_instrument", "priority": "high",
+      "instruments": ["erhu", "pipa", "guzheng"],
+      "sources": [
+        {"label": "freesound tarane468 Erhu pack", "url": "https://freesound.org/people/tarane468/packs/26451/"},
+        {"label": "Noiiz Sounds of China (유료, 보유시)", "url": "https://www.noiiz.com/sounds/packs/1126"}
+      ], "slices": 4
+    },
+    {
+      "category": "japanese_traditional", "target_gap": "non_western_instrument", "priority": "medium",
+      "instruments": ["koto", "shamisen"],
+      "sources": [
+        {"label": "freesound zagi2 koto+shamisen loop", "url": "https://freesound.org/people/zagi2/sounds/222655/"}
+      ], "slices": 3
+    },
+    {
+      "category": "indian_traditional", "target_gap": "non_western_instrument", "priority": "medium",
+      "instruments": ["sitar", "tabla", "tanpura"],
+      "sources": [
+        {"label": "freesound cmlooi sitar/tabla", "url": "https://freesound.org/people/cmlooi/sounds/330350/"},
+        {"label": "freesound sitar 태그", "url": "https://freesound.org/browse/tags/sitar/"}
+      ], "slices": 4
+    },
+    {
+      "category": "theremin", "target_gap": "non_western_instrument", "priority": "medium",
+      "instruments": ["theremin"],
+      "sources": [
+        {"label": "freesound realtheremin (genuine)", "url": "https://freesound.org/people/realtheremin/"},
+        {"label": "freesound NoiseCollector Virtual Theremin", "url": "https://freesound.org/people/NoiseCollector/packs/423/"}
+      ], "slices": 3
+    },
+    {
+      "category": "hurdy_gurdy", "target_gap": "non_western_instrument", "priority": "low",
+      "instruments": ["hurdy gurdy"],
+      "sources": [
+        {"label": "freesound fallbackcrush Hurdy Gurdy", "url": "https://freesound.org/people/fallbackcrush/sounds/365190/"},
+        {"label": "freesound missionariojose Hurdy Gurdy Textures", "url": "https://freesound.org/people/missionariojose/sounds/205623/"}
+      ], "slices": 2
+    },
+    {
+      "category": "fx_riser_sweep", "target_gap": "effects", "priority": "high",
+      "items": ["riser", "sweep", "whoosh", "impact"],
+      "sources": [
+        {"label": "freesound MikeOscarFoxtrot Risers/Sweeps/Drops", "url": "https://freesound.org/people/MikeOscarFoxtrot/packs/27382/"},
+        {"label": "Mixkit Whoosh (무료)", "url": "https://mixkit.co/free-sound-effects/whoosh/"},
+        {"label": "Pixabay risers (무료)", "url": "https://pixabay.com/sound-effects/search/riser/"}
+      ], "slices": 5
+    },
+    {
+      "category": "fx_vinyl_tape", "target_gap": "effects", "priority": "high",
+      "items": ["vinyl crackle", "tape hiss"],
+      "sources": [
+        {"label": "freesound Anthousai Vinyl Crackle", "url": "https://freesound.org/people/Anthousai/packs/22442/"},
+        {"label": "99Sounds Free Vinyl Noise (CC)", "url": "https://99sounds.org/vinyl-noise-sfx/"}
+      ], "slices": 4
+    },
+    {
+      "category": "fx_bitcrush_granular", "target_gap": "effects", "priority": "medium",
+      "items": ["bitcrush", "granular", "lo-fi texture"],
+      "sources": [
+        {"label": "Sample Focus Bitcrushed 태그", "url": "https://samplefocus.com/tag/bitcrushed"},
+        {"label": "freesound 직접검색", "query": ["bitcrush", "granular", "lo-fi texture"], "url": "https://freesound.org/"}
+      ], "slices": 5
+    }
+  ],
+  "next_actions": [
+    "1. 각 category sources에서 slices 수만큼 구체 파일 확정 (다운로드 가능·라이선스 OK)",
+    "2. 10초 슬라이스 추출 (ffmpeg/Audacity)",
+    "3. sunomusic 발주: 파일 + 슬라이스 → Suno 업로드 → SP+가사 회신",
+    "4. 회신 → parse → curated merge → Qdrant rebuild"
+  ]
+}
