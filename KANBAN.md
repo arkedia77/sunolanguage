@@ -5,8 +5,8 @@
 - [sunolanguage] **가사 워크플로우 보강** — `docs/lyrics_workflow_reinforcement_plan.md` 작성완료(3-tier). T1-1 재랭킹+T1-2 게이트밴드부터, 베이스라인 측정 후 캘리브레이션. **다음 세션**
 - [sunolanguage] **★D139 이사 reklcli→purple** — **purple 기동 확인 완료(2026-06-10)**: venv import OK / PG legion 접속 OK(songs 3,227) / Qdrant 원격(100.90.35.121) sunolang_presets+lyrics 정상. go-live 검증 종결
 - [sunolanguage] **Wave T entity** — **1차분 발송 완료(2026-06-10)**: GT 트로트 12곡 4값 세트 + 앵커 SP(gid20010, Suno 유일 native 'Trot' 라벨) + 치환표 GT diff 3건(`leomusic-trot_sunolanguage_20260610_200305_치환표수락_WaveT1차분.json`). 치환표 공동관리 수락 — GT 갱신 시 diff 발신 의무. **2차분: T5/T9 노션 서브장르 13종 매핑 + Batch A/C 합류분 반영**
-- [sunolanguage] **★N008~N014 sub_theme/coherence backfill — 착수 가능(차단 해제)** — songs ALTER는 admin이 2026-05-31 실행 완료 확인(information_schema 직접 검증 2026-06-10). db_insert 42컬럼 매핑 완료 상태
-- [sunolanguage] **N001/N002 재분석** — 재분석 요청 발송 2026-05-29 12:11, **회신 미수신 12일 경과 → 독촉 대상**. 수신 후 `measure_echo_n_series.py` 실행 (주의: 05-29 00시대 메시지는 생성결과, 재분석 아님)
+- [sunolanguage] **N001/N002 재분석** — 재분석 요청 05-29 12:11 발송, 회신 미수신. **상태확인 배치 발송(06-10, 항목5)**. 수신 후 `measure_echo_n_series.py` 실행 (주의: 05-29 00시대 메시지는 생성결과, 재분석 아님)
+- [sunolanguage] **sunomusic 상태확인 배치 6건 회신 대기** — `sunomusic_sunolanguage_20260610_203609_상태확인배치_6건.json` 발송(06-10): ①S_INST200 ②S_BP 2단계 ③S_PU ④S002 ⑤N001/N002 재분석 ⑥55Best 재요청. **7일 무응답 시(06-17) 재독촉**
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
@@ -43,6 +43,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **sub_theme/coherence backfill 종결 판정** — DB 직접 검증(2026-06-10): N005~N014 + S_PU 등 150행 중 채울 수 있는 행 전부 채워짐(06-05 backfill이 커버). 잔여 NULL 60행은 **원본 데이터 부재**(N001/N002 theme키 자체 없음, N003/N004 sub_theme 미도입, N007 공란버그 Leo 수용, S001 클래식 가사 없음) — 의도된 공백, 조작 backfill 금지 — 2026-06-10 ✅
 - [sunolanguage] **N013+N014 실전배치 20곡 DB-direct E2E 완주** — N013(gid 30051~30060, coh0.56, 8폼) + N014(gid 30061~30070, coh0.57, 10폼). 크로스배치 오염0, 자가점검 완료(정량 PASS·저-coh 4곡 서사단절 식별), **sunomusic 생성 20/20 generated**. 가설검증 청취세트 준비(저-coh vs 고-coh) — 2026-06-05 ✅
 - [sunolanguage] **N012 10곡 생성 + 가사 일관성 검사 + 전곡 성공** — seed "warm Rhodes piano" drift 0.7, 3곡 교체(coh↑), coh avg 0.56, gid 30041~30050, sunomusic 10/10 — 2026-06-04 ✅
 - [sunolanguage] **D139 이사 Phase 0 완료** — requirements 54줄 일치, SQLite checkpoint, 절대경로→상대경로 12파일, 체크리스트+5건 확인→admin 전부 OK, reklcli freeze 진입 — 2026-06-04 ✅
