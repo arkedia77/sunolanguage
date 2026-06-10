@@ -4,7 +4,7 @@
 - [sunolanguage] **★뮤직메이커2 업그레이드 제안서** (rag→sunolanguage, LEO 지시 2026-06-05) — **제안서 초안 작성완료** `docs/musicmaker2_upgrade_proposal.md`(2026-06-07). 원소스=repo `webapp/`(suno-sp-builder Vite SPA) 확정. 진단: 사전 v2.0(437)→v3.1(496) 미반영·엔진 단절. 3-Tier 제안(T1 드롭인+자동화+문법정정 / T2 영속화·게이트 / T3 시맨틱 엔진연결=뮤직메이커2). **대기: LEO 결정 Q1(T1 착수)·Q2(T3 A/B)·Q3(회신경로)**
 - [sunolanguage] **가사 워크플로우 보강** — `docs/lyrics_workflow_reinforcement_plan.md` 작성완료(3-tier). T1-1 재랭킹+T1-2 게이트밴드부터, 베이스라인 측정 후 캘리브레이션. **다음 세션**
 - [sunolanguage] **★D139 이사 reklcli→purple** — **purple 기동 확인 완료(2026-06-10)**: venv import OK / PG legion 접속 OK(songs 3,227) / Qdrant 원격(100.90.35.121) sunolang_presets+lyrics 정상. go-live 검증 종결
-- [sunolanguage] **Wave T entity 초안** — leomusic-trot 요청. 기존 코퍼스 trot entity 추출 + T5/T9 서브장르 BPM·리듬 매핑 (근거자료 노션 위치 수신 완료)
+- [sunolanguage] **Wave T entity** — **1차분 발송 완료(2026-06-10)**: GT 트로트 12곡 4값 세트 + 앵커 SP(gid20010, Suno 유일 native 'Trot' 라벨) + 치환표 GT diff 3건(`leomusic-trot_sunolanguage_20260610_200305_치환표수락_WaveT1차분.json`). 치환표 공동관리 수락 — GT 갱신 시 diff 발신 의무. **2차분: T5/T9 노션 서브장르 13종 매핑 + Batch A/C 합류분 반영**
 - [sunolanguage] **★N008~N014 sub_theme/coherence backfill — 착수 가능(차단 해제)** — songs ALTER는 admin이 2026-05-31 실행 완료 확인(information_schema 직접 검증 2026-06-10). db_insert 42컬럼 매핑 완료 상태
 - [sunolanguage] **N001/N002 재분석** — 재분석 요청 발송 2026-05-29 12:11, **회신 미수신 12일 경과 → 독촉 대상**. 수신 후 `measure_echo_n_series.py` 실행 (주의: 05-29 00시대 메시지는 생성결과, 재분석 아님)
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
