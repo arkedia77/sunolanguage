@@ -5,14 +5,14 @@
 - [sunolanguage] **가사 워크플로우 보강** — `docs/lyrics_workflow_reinforcement_plan.md` 작성완료(3-tier). T1-1 재랭킹+T1-2 게이트밴드부터, 베이스라인 측정 후 캘리브레이션. **다음 세션**
 - [sunolanguage] **★D139 이사 reklcli→purple** — **purple 기동 확인 완료(2026-06-10)**: venv import OK / PG legion 접속 OK(songs 3,227) / Qdrant 원격(100.90.35.121) sunolang_presets+lyrics 정상. go-live 검증 종결
 - [sunolanguage] **Wave T entity** — **1차분 발송 완료(2026-06-10)**: GT 트로트 12곡 4값 세트 + 앵커 SP(gid20010, Suno 유일 native 'Trot' 라벨) + 치환표 GT diff 3건(`leomusic-trot_sunolanguage_20260610_200305_치환표수락_WaveT1차분.json`). 치환표 공동관리 수락 — GT 갱신 시 diff 발신 의무. **2차분: T5/T9 노션 서브장르 13종 매핑 + Batch A/C 합류분 반영**
-- [sunolanguage] **N001/N002 재분석** — 재분석 요청 05-29 12:11 발송, 회신 미수신. **상태확인 배치 발송(06-10, 항목5)**. 수신 후 `measure_echo_n_series.py` 실행 (주의: 05-29 00시대 메시지는 생성결과, 재분석 아님)
-- [sunolanguage] **sunomusic 상태확인 배치 6건 회신 대기** — `sunomusic_sunolanguage_20260610_203609_상태확인배치_6건.json` 발송(06-10): ①S_INST200 ②S_BP 2단계 ③S_PU ④S002 ⑤N001/N002 재분석 ⑥55Best 재요청. **7일 무응답 시(06-17) 재독촉**
+- [sunolanguage] **N001/N002 재분석 — 막힘 확정(LEO 대기)** — sunomusic 06-10 회신: 재분석DB 미적재=미생성, 큐 미등재, LEO 우선순위 지시 대기(sunomusic이 에스컬레이션). 수신 즉시 `measure_echo_n_series.py` 실행
+- [sunolanguage] **★상태확인 배치 6건 — 전건 회신 수신(06-10 20:38)** — ①S_INST200 보류유지(LEO 해제 확인 요청됨) ②S_BP 2단계 막힘 ③S_PU 막힘 ④**S002 생성완료, UUID 재송부 요청 발송(06-10)** ⑤N001/N002 막힘 ⑥55Best LEO만 확정가능. **②③⑤⑥ 전부 LEO 우선순위 지시로 수렴 — sunomusic이 LEO 에스컬레이션 완료, 중복 에스컬레이션 생략. 06-17 재점검**
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
-- [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
-- [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
+- [sunolanguage] **S_INST200 200곡** — 보류 유지 확인(06-10). LEO 해제 시 batch_data 153MB 무결성 재검증 후 착수 (sunomusic이 LEO에 해제 확인 요청)
+- [sunolanguage] S_BP 21곡 2단계 재분석 — **막힘 확정(06-10)**: 재분석 큐 미등재, LEO 우선순위 지시 대기 (1단계 UUID 21/21 보유)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
-- [sunolanguage] S_PU 54곡 pump-up 판정 — songs_test_lab INSERT 완료, sunomusic WF-3 재분석 대기
-- [sunolanguage] S002 12곡 분석 — UUID/재분석 sunomusic에서 수령 필요
+- [sunolanguage] S_PU 54곡 pump-up 판정 — **막힘 확정(06-10)**: 재분석DB 미적재, LEO 우선순위 지시 대기 (skiplist 정책 반영 예정 확인)
+- [sunolanguage] S002 12곡 — **생성완료 확인(06-10, s002_v2)**. UUID 목록 재송부 요청 발송, 재분석은 LEO 우선순위 대기
 - [sunolanguage] 사전 v3.1 — S시리즈 추가 수신 시 재빌드
 
 - [sunolanguage] **★코퍼스셋 확장 2026Q2** — 계획 `docs/corpus_expansion_plan_2026Q2.md`. 목표 +100곡(496→~600). **Phase 0 단독수행분 완료(2026-06-09)**: D1 장르정규화(`rag/genre_aliases.json`) + D2 갭재선별(`scripts/rank_gap_candidates.py`→`upload_queue_gap.json`, 갭적중72/100) + D3 외부수집배치(`data/collection/batch_A_external.json`, 40샘플). **Batch A·C sunomusic 발주 완료(2026-06-09 14:38) 회신 대기. 다음: Batch B(W002) 목록 작성→Leo 녹음 / Phase2 선행 스크립트(sanitizer·merge·qdrant증분) / Phase2 인제스트(L5)**
@@ -33,7 +33,7 @@
 ### 검증 대기
 - [sunolanguage] W002 Wave 2 장르 균등화 60곡 — 프로토콜+녹음목록 완성 (2026-05-25), Leo 녹음 착수 필요
 - [sunolanguage] S007-S015 82곡 — sunomusic 미착수, Leo 우선순위 결정 필요
-- [sunolanguage] 55 Best 출처 확인 대기 — sunomusic 회신 후 corpus 합류 여부 결정
+- [sunolanguage] 55 Best 출처 확인 — sunomusic 미보유 정보 확인(06-10), **LEO만 확정 가능** (sunomusic이 LEO에 확인 요청). 회신 후 corpus 합류 여부 결정
 
 ### 책 본문
 - [sunolanguage] 3·4장 W002+S007-S015 데이터 반영 (현재 K-장르+SP 길이까지 반영 완료)
