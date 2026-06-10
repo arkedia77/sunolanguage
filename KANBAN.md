@@ -3,10 +3,10 @@
 ## IN PROGRESS
 - [sunolanguage] **★뮤직메이커2 업그레이드 제안서** (rag→sunolanguage, LEO 지시 2026-06-05) — **제안서 초안 작성완료** `docs/musicmaker2_upgrade_proposal.md`(2026-06-07). 원소스=repo `webapp/`(suno-sp-builder Vite SPA) 확정. 진단: 사전 v2.0(437)→v3.1(496) 미반영·엔진 단절. 3-Tier 제안(T1 드롭인+자동화+문법정정 / T2 영속화·게이트 / T3 시맨틱 엔진연결=뮤직메이커2). **대기: LEO 결정 Q1(T1 착수)·Q2(T3 A/B)·Q3(회신경로)**
 - [sunolanguage] **가사 워크플로우 보강** — `docs/lyrics_workflow_reinforcement_plan.md` 작성완료(3-tier). T1-1 재랭킹+T1-2 게이트밴드부터, 베이스라인 측정 후 캘리브레이션. **다음 세션**
-- [sunolanguage] **★D139 이사 reklcli→purple** — Phase 0 완료(경로전환12파일+requirements+checkpoint+체크리스트). 21:00 reklcli freeze 진입, purple go-live Leo 직접 챙김. 다음 세션은 purple에서 기동 확인 필수
+- [sunolanguage] **★D139 이사 reklcli→purple** — **purple 기동 확인 완료(2026-06-10)**: venv import OK / PG legion 접속 OK(songs 3,227) / Qdrant 원격(100.90.35.121) sunolang_presets+lyrics 정상. go-live 검증 종결
 - [sunolanguage] **Wave T entity 초안** — leomusic-trot 요청. 기존 코퍼스 trot entity 추출 + T5/T9 서브장르 BPM·리듬 매핑 (근거자료 노션 위치 수신 완료)
-- [sunolanguage] **songs.sub_theme/coherence ALTER 대기** — Leo 결정 B, sunomusic→admin 중계. 완료 시 N008~N012 backfill+db_insert 2컬럼 추가
-- [sunolanguage] **N001/N002 재분석** — sunomusic 재분석 요청 발송 (2026-05-29), 결과 수신 후 `measure_echo_n_series.py` 실행
+- [sunolanguage] **★N008~N014 sub_theme/coherence backfill — 착수 가능(차단 해제)** — songs ALTER는 admin이 2026-05-31 실행 완료 확인(information_schema 직접 검증 2026-06-10). db_insert 42컬럼 매핑 완료 상태
+- [sunolanguage] **N001/N002 재분석** — 재분석 요청 발송 2026-05-29 12:11, **회신 미수신 12일 경과 → 독촉 대상**. 수신 후 `measure_echo_n_series.py` 실행 (주의: 05-29 00시대 메시지는 생성결과, 재분석 아님)
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
 - [sunolanguage] **S_INST200 200곡 sunomusic 생성 대기** — 발주 완료 2026-05-26 (생성 보류 — Leo 지시 2026-05-29)
 - [sunolanguage] S_BP 21곡 — sunomusic 생성 대기 (LEO 가동 승인 완료 2026-05-25)
@@ -15,7 +15,9 @@
 - [sunolanguage] S002 12곡 분석 — UUID/재분석 sunomusic에서 수령 필요
 - [sunolanguage] 사전 v3.1 — S시리즈 추가 수신 시 재빌드
 
-- [sunolanguage] **★코퍼스셋 확장 2026Q2** — 계획 `docs/corpus_expansion_plan_2026Q2.md`. 목표 +100곡(496→~600). **Phase 0 단독수행분 완료(2026-06-09)**: D1 장르정규화(`rag/genre_aliases.json`) + D2 갭재선별(`scripts/rank_gap_candidates.py`→`upload_queue_gap.json`, 갭적중72/100) + D3 외부수집배치(`data/collection/batch_A_external.json`, 40샘플). **다음: Batch A·C sunomusic 발주 / Batch B(W002) Leo 녹음 / Phase2 인제스트(L5)**
+- [sunolanguage] **★코퍼스셋 확장 2026Q2** — 계획 `docs/corpus_expansion_plan_2026Q2.md`. 목표 +100곡(496→~600). **Phase 0 단독수행분 완료(2026-06-09)**: D1 장르정규화(`rag/genre_aliases.json`) + D2 갭재선별(`scripts/rank_gap_candidates.py`→`upload_queue_gap.json`, 갭적중72/100) + D3 외부수집배치(`data/collection/batch_A_external.json`, 40샘플). **Batch A·C sunomusic 발주 완료(2026-06-09 14:38) 회신 대기. 다음: Batch B(W002) 목록 작성→Leo 녹음 / Phase2 선행 스크립트(sanitizer·merge·qdrant증분) / Phase2 인제스트(L5)**
+
+- [sunolanguage] **★자가점검+보강안 (2026-06-10)** — `docs/self_audit_reinforcement_20260610.md`. 통합 우선순위 9건: ①sunomusic 상태확인 배치 1통(S_INST200 15일·S_PU 24일·S_BP·S002·N001/N002·55Best재발송) ②backfill ③dict_v3 가드 ④T3-1 배치감사 ⑤Batch B 목록 ⑥Wave T ⑦가사 T1 ⑧Phase2 선행 3스크립트 ⑨저-coh 청취검증
 
 ## TODO
 ### v5.5 검증
