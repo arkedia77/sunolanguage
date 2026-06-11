@@ -12,7 +12,7 @@
 - [sunolanguage] S_BP 21곡 2단계 재분석 — **막힘 확정(06-10)**: 재분석 큐 미등재, LEO 우선순위 지시 대기 (1단계 UUID 21/21 보유)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, 437곡+11K엔티티)
 - [sunolanguage] S_PU 54곡 pump-up 판정 — **막힘 확정(06-10)**: 재분석DB 미적재, LEO 우선순위 지시 대기 (skiplist 정책 반영 예정 확인)
-- [sunolanguage] S002 12곡 — **생성완료 확인(06-10, s002_v2)**. UUID 목록 재송부 요청 발송, 재분석은 LEO 우선순위 대기
+- [sunolanguage] S002 12곡 — **UUID 24개 수령·검증·적재 완료(06-10)** `data/test_s002/s002_uuid_list.json`. 재분석은 LEO 우선순위 지시 시 본 목록으로 즉시 발주
 - [sunolanguage] 사전 v3.1 — S시리즈 추가 수신 시 재빌드
 
 - [sunolanguage] **★코퍼스셋 확장 2026Q2** — 계획 `docs/corpus_expansion_plan_2026Q2.md`. 목표 +100곡(496→~600). **Phase 0 단독수행분 완료(2026-06-09)**: D1 장르정규화(`rag/genre_aliases.json`) + D2 갭재선별(`scripts/rank_gap_candidates.py`→`upload_queue_gap.json`, 갭적중72/100) + D3 외부수집배치(`data/collection/batch_A_external.json`, 40샘플). **Batch A·C sunomusic 발주 완료(2026-06-09 14:38) 회신 대기. 다음: Batch B(W002) 목록 작성→Leo 녹음 / Phase2 선행 스크립트(sanitizer·merge·qdrant증분) / Phase2 인제스트(L5)**
