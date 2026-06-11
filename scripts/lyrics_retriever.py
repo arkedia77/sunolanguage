@@ -32,6 +32,33 @@ DEFAULT_STRUCTURE = ["verse", "pre_chorus", "chorus", "verse", "bridge", "chorus
 
 MIN_VERSE_LINES = 3
 
+# T1-3 Jaccard 단편중복 인루프 가드 (가사워크플로우 보강안):
+# song_id dedup 사각지대 — id가 달라도 동일/유사 코러스 텍스트 존재.
+# 후보 vs 이미 선택된 섹션 토큰 Jaccard > 0.5 → reject.
+# 임계 0.5는 echo 측정 평균(7.6%) 대비 충분히 보수적.
+JACCARD_REJECT = 0.5
+
+
+def _token_set(text: str) -> frozenset:
+    """한/영/숫자 토큰셋 — 한국어 가사 호환 (measure_echo의 영문 전용 토큰화 일반화)."""
+    return frozenset(re.findall(r"[가-힣a-zA-Z0-9]+", text.lower()))
+
+
+def _max_jaccard(text: str, used_texts: set) -> float:
+    """후보 텍스트 vs 기선택 섹션들 최대 토큰 Jaccard."""
+    toks = _token_set(text)
+    if not toks:
+        return 0.0
+    best = 0.0
+    for u in used_texts:
+        ut = _token_set(u)
+        if not ut:
+            continue
+        inter = len(toks & ut)
+        if inter:
+            best = max(best, inter / len(toks | ut))
+    return best
+
 MOOD_WORDS = {
     "intimate", "emotional", "warm", "melancholic", "dreamy", "nostalgic",
     "energetic", "driving", "aggressive", "smooth", "groovy", "bright",
@@ -270,10 +297,14 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                     continue
                 if needs_min_lines and _count_lyric_lines(t) < MIN_VERSE_LINES:
                     continue
+                # T1-3: song_id가 달라도 유사 텍스트(동일 코러스 변형 등) reject
+                if _max_jaccard(t, used_texts) > JACCARD_REJECT:
+                    continue
                 return [h]
             for h in candidates:
                 t = h["payload"].get("text", "").strip()
-                if t and t not in used_texts and not is_sp_directive(t):
+                if (t and t not in used_texts and not is_sp_directive(t)
+                        and _max_jaccard(t, used_texts) <= JACCARD_REJECT):
                     return [h]
             return candidates[:1] if candidates else []
 

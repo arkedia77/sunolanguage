@@ -140,3 +140,38 @@ def test_get_theme_query_never_empty_for_known_themes():
 
 def test_get_theme_query_unknown_is_empty():
     assert lyrics_themes.get_theme_query("__no_such_theme__") == ""
+
+
+# --- (e) lyrics_retriever: T1-3 Jaccard 단편중복 인루프 가드 ----------------
+
+import lyrics_retriever
+
+
+def test_token_set_korean_and_english():
+    toks = lyrics_retriever._token_set("밤하늘 아래 Moonlight 123!")
+    assert "밤하늘" in toks and "moonlight" in toks and "123" in toks
+
+
+def test_max_jaccard_identical_text_is_one():
+    used = {"밤하늘 아래 너와 나"}
+    assert lyrics_retriever._max_jaccard("밤하늘 아래 너와 나", used) == 1.0
+
+
+def test_max_jaccard_near_duplicate_exceeds_reject():
+    # song_id가 달라도 거의 같은 코러스 변형 — 가드가 잡아야 하는 케이스
+    used = {"밤하늘 아래 너와 나 함께 걷던 그 길"}
+    cand = "밤하늘 아래 너와 나 함께 걷던 길"
+    assert (lyrics_retriever._max_jaccard(cand, used)
+            > lyrics_retriever.JACCARD_REJECT)
+
+
+def test_max_jaccard_distinct_text_below_reject():
+    used = {"밤하늘 아래 너와 나 함께 걷던 그 길"}
+    cand = "아침 햇살이 창문을 두드리면 커피 향이 번져"
+    assert (lyrics_retriever._max_jaccard(cand, used)
+            <= lyrics_retriever.JACCARD_REJECT)
+
+
+def test_max_jaccard_empty_inputs_are_zero():
+    assert lyrics_retriever._max_jaccard("", {"가사"}) == 0.0
+    assert lyrics_retriever._max_jaccard("가사", set()) == 0.0
