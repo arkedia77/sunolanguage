@@ -493,7 +493,18 @@ def build_dead_budget_findings():
 # 메인 빌드
 # ============================================================
 
-def build():
+def build(allow_regress: bool = False):
+    # 하드 가드 — 보류(LEO 결정) 상태에서 실수 실행 차단. 상단 WARNING 참조.
+    # 재실행 시 hand-curated v3.1(rag/suno_dictionary_v3.json)을 v3.0으로 REGRESS.
+    if not allow_regress:
+        raise RuntimeError(
+            "build_dictionary_v3.build() is RETIRED (BORYU/보류 — LEO decision). "
+            "Running it OVERWRITES hand-curated v3.1 with v3.0 (REGRESS). "
+            "Dictionary updates must go through incremental curated merge instead. "
+            "If you truly intend to regress, call build(allow_regress=True) "
+            "or run with --force-regress. See the WARNING block at the top of this file."
+        )
+
     if not DB_PATH.exists():
         print(f"❌ DB not found: {DB_PATH}")
         return
@@ -629,4 +640,5 @@ def build():
 
 
 if __name__ == "__main__":
-    build()
+    import sys
+    build(allow_regress="--force-regress" in sys.argv[1:])
