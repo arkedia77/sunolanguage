@@ -17,7 +17,7 @@
 
 - [sunolanguage] **★코퍼스셋 확장 2026Q2** — 계획 `docs/corpus_expansion_plan_2026Q2.md`. 목표 +100곡(496→~600). **Phase 0 단독수행분 완료(2026-06-09)**: D1 장르정규화(`rag/genre_aliases.json`) + D2 갭재선별(`scripts/rank_gap_candidates.py`→`upload_queue_gap.json`, 갭적중72/100) + D3 외부수집배치(`data/collection/batch_A_external.json`, 40샘플). **Batch B(W002) 60곡 목록 v2 완성(2026-06-11)**: `data/w002_recording_list_v2.md` — thin 장르 직격 재배분(Orch/Cine 14·Jazz 10·Tier-1 18·Tier-2 16·Trot 2), Leo 가용 시 전달. **Batch A·C sunomusic 발주 완료(2026-06-09 14:38) 회신 대기. 다음: Batch B 목록 Leo 전달 / Phase2 선행 스크립트(sanitizer·merge·qdrant증분) / Phase2 인제스트(L5)**
 
-- [sunolanguage] **★자가점검+보강안 (2026-06-10)** — `docs/self_audit_reinforcement_20260610.md`. 통합 우선순위 9건: ①✅상태확인 배치(06-10) ②✅backfill 종결판정(06-10) ③✅dict_v3 가드(06-11) ④✅T3-1 배치감사 하니스(06-11) ⑤✅Batch B 목록 v2(06-11) ⑥✅Wave T 1차분(06-10, 2차분 대기) ⑦가사 T1-3→T1-1→T1-2 ⑧Phase2 선행 3스크립트(lyrics_sanitizer·merge_batch_reanalysis·qdrant_incremental_upsert) ⑨저-coh 청취검증(Leo)
+- [sunolanguage] **★자가점검+보강안 (2026-06-10)** — `docs/self_audit_reinforcement_20260610.md`. 통합 우선순위 9건: ①✅상태확인 배치(06-10) ②✅backfill 종결판정(06-10) ③✅dict_v3 가드(06-11) ④✅T3-1 배치감사 하니스(06-11) ⑤✅Batch B 목록 v2(06-11) ⑥✅Wave T 1차분(06-10, 2차분 대기) ⑦가사 T1: ✅T1-3 Jaccard가드(06-11) / T1-1·T1-2는 Leo 청취검증 대기 ⑧✅Phase2 선행 3스크립트(06-11) ⑨저-coh 청취검증(Leo)
 
 ## TODO
 ### v5.5 검증
@@ -43,6 +43,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **T1-3 Jaccard 인루프 가드 + Phase2 선행 3스크립트** — ①`lyrics_retriever._pick_novel`에 토큰 Jaccard>0.5 reject(한국어 호환 토큰화, 테스트 5종, 라이브 스모크 PASS) ②`lyrics_sanitizer.py`(NFC·zero-width·전각·스마트쿼트·공백 정규화 + 외국어혼입/기호 검수 리포트, 멱등) ③`merge_batch_reanalysis.py`(Batch A/C 회신→merged_4values 병합, 별칭 키 허용·sanitizer 인라인·dry-run 기본, 모의회신 검증) ④`qdrant_incremental_upsert.py`(point_id 연속성 전제 증분 적재, 정렬 표본검증·축소 가드, 라이브 양 컬렉션 동기 확인). 회귀 57/57 — 2026-06-11 ✅
 - [sunolanguage] **자체작업 3건 (보강안 ③④⑤)** — ①build_dictionary_v3 RuntimeError 하드가드(--force-regress 명시 없이는 실행 차단, v3.1 무손상 확인) ②**T3-1 배치감사 하니스 `scripts/lyrics_batch_audit.py` 신규**: audit(coh밴드/크로스곡·크로스배치 Jaccard/SP디렉티브/V1=V2/1행섹션/폼·제목·브래킷일치, fail-list+exit code) + retro(DB 소급) — N012~N014 출고분 PASS로 수동 자가점검과 캘리브레이션 일치, **N001~N014 coh분포 소급 완료**(140행, 전체 avg 0.5562, `data/n_series_coherence_retro.json`) ③Batch B(W002) 60곡 목록 v2 `data/w002_recording_list_v2.md`(thin 직격: Orch14/Jazz10/T1 18/T2 16/Trot2). 회귀 52/52 — 2026-06-11 ✅
 - [sunolanguage] **sub_theme/coherence backfill 종결 판정** — DB 직접 검증(2026-06-10): N005~N014 + S_PU 등 150행 중 채울 수 있는 행 전부 채워짐(06-05 backfill이 커버). 잔여 NULL 60행은 **원본 데이터 부재**(N001/N002 theme키 자체 없음, N003/N004 sub_theme 미도입, N007 공란버그 Leo 수용, S001 클래식 가사 없음) — 의도된 공백, 조작 backfill 금지 — 2026-06-10 ✅
 - [sunolanguage] **N013+N014 실전배치 20곡 DB-direct E2E 완주** — N013(gid 30051~30060, coh0.56, 8폼) + N014(gid 30061~30070, coh0.57, 10폼). 크로스배치 오염0, 자가점검 완료(정량 PASS·저-coh 4곡 서사단절 식별), **sunomusic 생성 20/20 generated**. 가설검증 청취세트 준비(저-coh vs 고-coh) — 2026-06-05 ✅
