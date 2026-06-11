@@ -60,6 +60,8 @@ def find_items(reply: dict | list, batch: str) -> list[dict]:
     """회신 JSON에서 결과 항목 리스트를 찾는다 (래핑 키 표기 흔들림 허용)."""
     if isinstance(reply, list):
         return reply
+    if isinstance(reply.get("body"), dict):   # agent-comm 표준 봉투(body) 언래핑
+        reply = reply["body"]
     for key in (f"batch_{batch}", f"batch_{batch.lower()}", "results", "songs",
                 "items", "samples", "tracks"):
         v = reply.get(key)

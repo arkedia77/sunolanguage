@@ -1,42 +1,42 @@
 {
   "drums": {
-    "count": 302,
+    "count": 400,
     "top_modifiers": [
       [
-        "clean",
-        45
-      ],
-      [
         "driving",
-        44
+        61
       ],
       [
-        "soft",
-        33
+        "clean",
+        51
       ],
       [
         "full",
-        26
+        45
+      ],
+      [
+        "soft",
+        38
       ],
       [
         "steady",
-        17
+        24
       ],
       [
         "bright",
-        17
+        18
       ],
       [
         "tight",
-        13
-      ],
-      [
-        "muted",
-        9
+        15
       ],
       [
         "punchy",
-        8
+        10
+      ],
+      [
+        "muted",
+        10
       ],
       [
         "funky",
@@ -45,19 +45,19 @@
     ]
   },
   "kick drum": {
-    "count": 116,
+    "count": 130,
     "top_modifiers": [
       [
         "soft",
-        32
+        36
       ],
       [
         "clean",
-        10
+        12
       ],
       [
         "steady",
-        7
+        8
       ],
       [
         "full",
@@ -73,6 +73,10 @@
       ],
       [
         "crisp",
+        4
+      ],
+      [
+        "punchy",
         3
       ],
       [
@@ -82,19 +86,15 @@
       [
         "dry",
         2
-      ],
-      [
-        "bright",
-        2
       ]
     ]
   },
   "snare drum": {
-    "count": 94,
+    "count": 102,
     "top_modifiers": [
       [
         "soft",
-        7
+        8
       ],
       [
         "full",
@@ -102,11 +102,11 @@
       ],
       [
         "crisp",
-        4
+        5
       ],
       [
         "clean",
-        3
+        4
       ],
       [
         "heavy",
@@ -115,6 +115,10 @@
       [
         "rapid",
         3
+      ],
+      [
+        "tight",
+        2
       ],
       [
         "steady",
@@ -127,39 +131,43 @@
       [
         "compressed",
         1
-      ],
-      [
-        "punchy",
-        1
       ]
     ]
   },
   "beat": {
-    "count": 50,
+    "count": 63,
     "top_modifiers": [
       [
         "driving",
-        23
+        28
       ],
       [
         "clean",
-        10
+        11
       ],
       [
         "full",
-        9
+        11
       ],
       [
         "steady",
-        6
+        10
       ],
       [
         "bright",
-        4
+        5
       ],
       [
         "soft",
         3
+      ],
+      [
+        "muted",
+        2
+      ],
+      [
+        "tight",
+        2
       ],
       [
         "jazzy",
@@ -168,19 +176,56 @@
       [
         "funky",
         1
+      ]
+    ]
+  },
+  "percussion": {
+    "count": 54,
+    "top_modifiers": [
+      [
+        "light",
+        20
       ],
       [
-        "heavy",
+        "clean",
+        8
+      ],
+      [
+        "full",
+        6
+      ],
+      [
+        "driving",
+        4
+      ],
+      [
+        "soft",
+        3
+      ],
+      [
+        "jazzy",
+        2
+      ],
+      [
+        "bright",
+        2
+      ],
+      [
+        "steady",
+        2
+      ],
+      [
+        "digital",
         1
       ],
       [
-        "energetic",
+        "heavy",
         1
       ]
     ]
   },
   "shaker": {
-    "count": 49,
+    "count": 52,
     "top_modifiers": [
       [
         "soft",
@@ -188,7 +233,7 @@
       ],
       [
         "light",
-        4
+        5
       ],
       [
         "steady",
@@ -204,56 +249,19 @@
       ]
     ]
   },
-  "percussion": {
-    "count": 43,
+  "hi-hat": {
+    "count": 30,
     "top_modifiers": [
       [
-        "light",
-        12
-      ],
-      [
         "full",
-        6
-      ],
-      [
-        "clean",
-        4
+        3
       ],
       [
         "driving",
         3
       ],
       [
-        "bright",
-        2
-      ],
-      [
-        "soft",
-        2
-      ],
-      [
         "steady",
-        2
-      ],
-      [
-        "jazzy",
-        1
-      ],
-      [
-        "digital",
-        1
-      ],
-      [
-        "heavy",
-        1
-      ]
-    ]
-  },
-  "hi-hat": {
-    "count": 27,
-    "top_modifiers": [
-      [
-        "full",
         3
       ],
       [
@@ -261,19 +269,11 @@
         2
       ],
       [
-        "driving",
-        2
-      ],
-      [
-        "steady",
+        "clean",
         2
       ],
       [
         "prominent",
-        1
-      ],
-      [
-        "clean",
         1
       ],
       [
@@ -287,7 +287,7 @@
     ]
   },
   "crash cymbal": {
-    "count": 23,
+    "count": 24,
     "top_modifiers": [
       [
         "full",
@@ -295,7 +295,7 @@
       ],
       [
         "heavy",
-        3
+        4
       ],
       [
         "driving",
@@ -312,15 +312,19 @@
     ]
   },
   "drum kit": {
-    "count": 21,
+    "count": 23,
     "top_modifiers": [
       [
         "full",
-        7
+        9
       ],
       [
         "clean",
         5
+      ],
+      [
+        "driving",
+        4
       ],
       [
         "tight",
@@ -328,10 +332,6 @@
       ],
       [
         "bright",
-        3
-      ],
-      [
-        "driving",
         3
       ],
       [
@@ -357,7 +357,7 @@
     ]
   },
   "rimshot": {
-    "count": 18,
+    "count": 19,
     "top_modifiers": [
       [
         "soft",
@@ -370,8 +370,21 @@
     ]
   },
   "cymbal": {
-    "count": 14,
-    "top_modifiers": []
+    "count": 17,
+    "top_modifiers": [
+      [
+        "frequent",
+        1
+      ],
+      [
+        "light",
+        1
+      ],
+      [
+        "full",
+        1
+      ]
+    ]
   },
   "woodblock": {
     "count": 12,
@@ -407,11 +420,11 @@
     "count": 4,
     "top_modifiers": []
   },
-  "ride cymbal": {
-    "count": 2,
+  "finger snap": {
+    "count": 3,
     "top_modifiers": []
   },
-  "finger snap": {
+  "ride cymbal": {
     "count": 2,
     "top_modifiers": []
   },

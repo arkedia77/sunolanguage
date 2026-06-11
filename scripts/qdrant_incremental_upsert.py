@@ -2,12 +2,17 @@
 """
 qdrant_incremental_upsert.py — Qdrant 증분 적재 (DROP+REBUILD 없이 신규 청크만)
 
-전제(현 빌드 구조): point_id = 청크파일 내 순번(0..N-1). 코퍼스 병합은 항상
-append라 신규 곡 청크는 청크파일 말미에 추가됨 → 컬렉션 K개 / 파일 N개(K<N)면
-chunks[K:]를 id K..N-1로 upsert하면 전체 rebuild와 동일 결과.
+방식: chunk_id 집합 diff (순서 무관 — v1의 '파일 순번=point_id' 전제는
+chunk_builder의 [SP 전곡][bracket 전곡] 2단 구조 때문에 신규 곡이 중간 삽입되어
+폐기. 2026-06-11 Batch C 실전에서 확인).
 
-안전 가드: 기존 구간 정렬 검증 — 위치 0/중간/K-1의 라이브 payload chunk_id가
-파일과 일치해야 진행. 불일치=기존 구간이 변했다는 뜻 → 증분 불가, rebuild 안내.
+  1. 라이브 전체 scroll → {chunk_id: point_id} 인덱스
+  2. 파일 청크 중 라이브에 없는 chunk_id = 신규 → max(point_id)+1 부터 채번 upsert
+  3. 라이브에만 있고 파일에 없는 chunk_id 발견 시 중단 (코퍼스 축소/드리프트
+     의심 — 의도된 축소라면 rebuild 사용)
+
+전제: chunk_id는 파일 내 고유 + 결정적(`{source}_{slot}_{song_id}_{seq}`).
+검색은 point_id에 의존하지 않으므로 채번 순서는 무관.
 
 사용법:
   # 코퍼스 병합 후 청크 재빌드(chunk_builder/lyrics_chunk_builder) 먼저, 그 다음:
@@ -16,7 +21,6 @@ chunks[K:]를 id K..N-1로 upsert하면 전체 rebuild와 동일 결과.
   python3 scripts/qdrant_incremental_upsert.py --target lyrics --execute
 """
 import argparse
-import json
 import sys
 import time
 from pathlib import Path
@@ -24,7 +28,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 TARGETS = {
-    # target: (모듈명) — COLLECTION_NAME/CHUNKS_FILE/클라이언트/모델 재사용(단일 진실원)
+    # target: 모듈명 — COLLECTION_NAME/CHUNKS_FILE/클라이언트/모델 재사용(단일 진실원)
     "presets": "embed_pipeline",
     "lyrics": "lyrics_embed_pipeline",
 }
@@ -32,29 +36,28 @@ TARGETS = {
 
 def load_target(name: str):
     import importlib
-    mod = importlib.import_module(TARGETS[name])
-    return mod
+    return importlib.import_module(TARGETS[name])
 
 
-def verify_alignment(client, collection: str, chunks: list[dict], k: int) -> bool:
-    """라이브 0..K-1 구간이 청크파일과 정렬돼 있는지 표본 검증."""
-    if k == 0:
-        return True
-    probes = sorted({0, k // 2, k - 1})
-    points = client.retrieve(collection_name=collection, ids=list(probes),
-                             with_payload=True, with_vectors=False)
-    live = {p.id: (p.payload or {}).get("chunk_id") for p in points}
-    for p in probes:
-        expected = chunks[p]["chunk_id"]
-        got = live.get(p)
-        if got != expected:
-            print(f"❌ 정렬 불일치 @point {p}: live={got!r} file={expected!r}")
-            return False
-    return True
+def scroll_live_index(client, collection: str) -> dict:
+    """라이브 전체 {chunk_id: point_id}."""
+    index = {}
+    offset = None
+    while True:
+        points, offset = client.scroll(
+            collection_name=collection, limit=1000, offset=offset,
+            with_payload=["chunk_id"], with_vectors=False)
+        for p in points:
+            cid = (p.payload or {}).get("chunk_id")
+            if cid is not None:
+                index[cid] = p.id
+        if offset is None:
+            break
+    return index
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Qdrant 증분 적재")
+    ap = argparse.ArgumentParser(description="Qdrant 증분 적재 (chunk_id diff)")
     ap.add_argument("--target", required=True, choices=list(TARGETS))
     ap.add_argument("--execute", action="store_true", help="실적재 (기본 dry-run)")
     ap.add_argument("--batch-size", type=int, default=500)
@@ -65,29 +68,32 @@ def main():
     chunks = mod.load_chunks()
     client = mod.get_qdrant_client()
 
-    info = client.get_collection(collection)
-    k = info.points_count
-    n = len(chunks)
-    print(f"[incr] {collection}: live {k} points / 청크파일 {n} chunks")
-
-    if n == k:
-        if verify_alignment(client, collection, chunks, k):
-            print("[incr] 추가분 없음 — 이미 동기화 상태 ✅")
-        sys.exit(0)
-    if n < k:
-        print("❌ 청크파일이 라이브보다 작음 — 청크 재빌드 누락이거나 코퍼스 축소. "
-              "증분 불가, 의도된 축소라면 rebuild 사용.")
+    file_ids = [c["chunk_id"] for c in chunks]
+    if len(file_ids) != len(set(file_ids)):
+        print("❌ 청크파일 내 chunk_id 중복 — 빌더 점검 필요")
         sys.exit(1)
 
-    if not verify_alignment(client, collection, chunks, k):
-        print("❌ 기존 구간 변경 감지 — 증분 불가. "
-              f"`{TARGETS[args.target]}.py rebuild` 필요 (Leo 승인 후).")
+    print(f"[incr] {collection}: 라이브 인덱스 scroll 중...")
+    live = scroll_live_index(client, collection)
+    print(f"[incr] live {len(live)} points / 청크파일 {len(chunks)} chunks")
+
+    file_set = set(file_ids)
+    live_only = set(live) - file_set
+    if live_only:
+        print(f"❌ 라이브에만 존재하는 chunk_id {len(live_only)}개 "
+              f"(표본 {sorted(live_only)[:3]}) — 코퍼스 축소/드리프트 의심. "
+              "증분 불가, 의도된 변경이면 rebuild 사용.")
         sys.exit(1)
 
-    new_chunks = chunks[k:]
-    print(f"[incr] 신규 {len(new_chunks)} chunks → point_id {k}..{n - 1}")
-    sample_ids = [c["chunk_id"] for c in new_chunks[:3]]
-    print(f"[incr] 선두 표본: {sample_ids}")
+    new_chunks = [c for c in chunks if c["chunk_id"] not in live]
+    if not new_chunks:
+        print("[incr] 추가분 없음 — 이미 동기화 상태 ✅")
+        return
+
+    next_id = (max(live.values()) + 1) if live else 0
+    print(f"[incr] 신규 {len(new_chunks)} chunks → point_id {next_id}.."
+          f"{next_id + len(new_chunks) - 1}")
+    print(f"[incr] 선두 표본: {[c['chunk_id'] for c in new_chunks[:3]]}")
 
     if not args.execute:
         print("[incr] dry-run — 적재 없음. 적재 시 --execute")
@@ -107,16 +113,18 @@ def main():
             payload["chunk_id"] = chunk["chunk_id"]
             payload["text"] = chunk["text"]
             payload["embed_text"] = chunk["embed_text"]
-            points.append(PointStruct(id=k + i + j, vector=emb.tolist(),
+            points.append(PointStruct(id=next_id + i + j, vector=emb.tolist(),
                                       payload=payload))
         client.upsert(collection_name=collection, points=points)
         done += len(batch)
         print(f"  upserted {done}/{len(new_chunks)}")
 
+    expected = len(chunks)
     info = client.get_collection(collection)
+    ok = info.points_count == expected
     print(f"[incr] 완료 {time.time() - t0:.1f}s — live {info.points_count} points "
-          f"(기대 {n}) {'✅' if info.points_count == n else '❌ 불일치!'}")
-    if info.points_count != n:
+          f"(기대 {expected}) {'✅' if ok else '❌ 불일치!'}")
+    if not ok:
         sys.exit(1)
 
 
