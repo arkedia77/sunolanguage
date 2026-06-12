@@ -48,13 +48,23 @@
 
 ---
 
+## 사전 갱신 정식 경로 (B1 실행 절차)
+
+`build_dictionary_v3.py`는 RETIRED (재실행 = v3.1 큐레이션 퇴행). 정식 절차:
+
+1. `python3 scripts/lexical_search_cli.py build` — lexical_index.sqlite 풀 재빌드 (소스: sp/bracket_entities_v3 + merged_4values + prompts/, 사전 백업 권장)
+2. `python3 scripts/dictionary_incremental_merge.py` — dry-run으로 큐레이션 보존 확인
+3. `--apply --version X.Y --note "..."` — 적용 (사전 자동 백업 + 축소 가드 내장)
+4. `.venv/bin/pytest tests/ -q` 회귀 + 검색기 스모크
+
 ## 현재 카운터 (전파 수행 시마다 갱신)
 
 | 항목 | 값 |
 |---|---|
 | 파일 코퍼스 | **497곡** (Batch C 반영, 2026-06-11) |
+| lexical_index | **556트랙 / 17,822 entries / 263장르** (2026-06-12 재빌드, 백업 `lexical_index.sqlite.bak_v31_496`) |
 | Qdrant presets | 12,818 (497곡과 동기) |
-| 사전 최신 | **v3.1 (2026-05-09, 496트랙 기준)** — Batch C +60 **미반영** |
-| 사전 재빌드 카운터 | **+60곡 → B1-① 임계(30) 초과** |
-| 재빌드 판단 | Batch A 회신 대기 중 → 합류 시 v3.2 1회로 묶음. **2026-06-26까지 미회신이면 Batch C만으로 v3.2 선행** |
+| 사전 최신 | **v3.2 (2026-06-12, 556트랙 기준)** — Batch C 반영 완료, 큐레이션 27건 보존 |
+| 사전 재빌드 카운터 | **0곡** (v3.2 기준 리셋) — 다음 트리거: Batch A 합류 등 누적 ≥30곡 |
 | DB 테이블 | 0 (admin DDL 대기, A5 보류 중) |
+| webapp 사전 | v2.0 (B2 종속 — LEO Q1 결정 후 v3.2 드롭인) |

@@ -13,7 +13,7 @@
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, merged_4values 현행 497곡 자동 반영)
 - [sunolanguage] S_PU 54곡 pump-up 판정 — **막힘 확정(06-10)**: 재분석DB 미적재, LEO 우선순위 지시 대기 (skiplist 정책 반영 예정 확인)
 - [sunolanguage] S002 12곡 — **UUID 24개 수령·검증·적재 완료(06-10)** `data/test_s002/s002_uuid_list.json`. 재분석은 LEO 우선순위 지시 시 본 목록으로 즉시 발주
-- [sunolanguage] **사전 v3.2 재빌드 — 임계 초과 상태** — 전파정책(`docs/corpus_propagation_policy.md`) B1 기준 누적 +60곡(Batch C, v3.1=496트랙 기준 05-09). Batch A 합류 시 묶어서 1회, **06-26까지 미회신이면 C만으로 선행 재빌드**
+- [sunolanguage] 사전 v3.2 완료(06-12) — 다음 재빌드는 전파정책 B1 트리거(누적 ≥30곡, Batch A 합류 등) 충족 시 `dictionary_incremental_merge.py`로
 
 - [sunolanguage] **★코퍼스셋 확장 2026Q2** — 계획 `docs/corpus_expansion_plan_2026Q2.md`. 목표 +100곡(496→~600). **Phase 0 단독수행분 완료(2026-06-09)**: D1 장르정규화(`rag/genre_aliases.json`) + D2 갭재선별(`scripts/rank_gap_candidates.py`→`upload_queue_gap.json`, 갭적중72/100) + D3 외부수집배치(`data/collection/batch_A_external.json`, 40샘플). **Batch B(W002) 60곡 목록 v2 완성(2026-06-11)**: `data/w002_recording_list_v2.md` — thin 장르 직격 재배분(Orch/Cine 14·Jazz 10·Tier-1 18·Tier-2 16·Trot 2), Leo 가용 시 전달. **★Batch C 60/60 수신·인제스트 완료(2026-06-11, `8b3d2ad`)**: corpus 437→497 + Qdrant presets 10,646→12,818 증분 + coverage_map Jazz 9→14·Orch 2→6. 단 C곡 재분석은 Suno가 원곡 성격(K-ballad)대로 라벨링 — 장르 갭 직격은 Batch A(외부)·B(녹음) 몫 실증. **Batch A 회신 대기 / ★Batch B 목록 v2 LEO 전달 발송(2026-06-12, kimsecretary 경유 `kimsecretary_sunolanguage_20260612_202308_BatchB_녹음목록v2_LEO전달.json`, 60곡 전문 포함) — Leo 녹음 착수 대기**
 
@@ -43,6 +43,7 @@
 - 없음
 
 ## DONE (최근)
+- [sunolanguage] **★사전 v3.2 — Batch C 전파 완료 (Leo 지시로 B1 선행 실행)** — ①lexical_index 풀 재빌드 496→556트랙/17,822entries/263장르(`lexical_search_cli.py build`, 백업 `.bak_v31_496`) ②**`dictionary_incremental_merge.py` 신규** = RETIRED 빌더(WARNING: 재실행 시 v3.1 퇴행)가 요구한 incremental curated merge 구현(재계산 베이스+큐레이션 보존+축소 가드+dry-run 기본) ③v3.1→v3.2: 코퍼스 496→556, 수작업 큐레이션 27건 전량 보존 검증(instrument 6·technique 11·mood 3·timbre 3·tempo 4 외), genre_map 217→264(Korean Ballad 계열 등 Batch C 유입) ④회귀 57/57 + 검색기 스모크 PASS. 04-24 vocab_expansion 스냅샷은 재빌드 인덱스로 대체. webapp 드롭인은 B2 종속(LEO Q1 대기) — 2026-06-12 ✅
 - [sunolanguage] **코퍼스 전파 정책 제정** — `docs/corpus_propagation_policy.md`. A=매 인제스트 원자전파(병합→파싱→Qdrant→coverage→DB→회귀, 부분전파 금지) / B=임계전파(사전 재빌드: 누적≥30곡 OR thin장르 ≥5 돌파 OR 90일+10곡; webapp은 사전에 종속) / C=이벤트전파(Wave T diff 즉시, 책=집필 시점). 현행 카운터: 코퍼스 497·사전 v3.1(496) 대비 +60 임계 초과 → Batch A 합류 대기(상한 06-26) — 2026-06-12 ✅
 - [sunolanguage] **★Batch C 60곡 인제스트 E2E (Phase2 파이프라인 첫 실전)** — sunomusic 60/60 회신(발주 gid 완전일치) → merge(437→497, gap_areas 조인 60/60) → parse_slot_entities_v3 → 청크 재빌드 → **qdrant_incremental_upsert 집합 diff 재설계 후 presets +2,172 증분(12,818)** → 회귀 57/57 → coverage_map(Jazz 9→14·Orch 2→6). 가사 컬렉션 무변경=설계 정상(가사 코퍼스는 원곡 가사, C곡 원곡가사 미보유). admin·sunomusic ACK 발송. **sunomusic 노트: Suno Describe UI 카피변경이 백로그 4건(S_BP/S_PU/N001·N002) 막힘의 근본원인이었을 가능성 — 패치 완료, LEO 지시 시 즉시 발주** — 2026-06-11 ✅
 - [sunolanguage] **T1-3 Jaccard 인루프 가드 + Phase2 선행 3스크립트** — ①`lyrics_retriever._pick_novel`에 토큰 Jaccard>0.5 reject(한국어 호환 토큰화, 테스트 5종, 라이브 스모크 PASS) ②`lyrics_sanitizer.py`(NFC·zero-width·전각·스마트쿼트·공백 정규화 + 외국어혼입/기호 검수 리포트, 멱등) ③`merge_batch_reanalysis.py`(Batch A/C 회신→merged_4values 병합, 별칭 키 허용·sanitizer 인라인·dry-run 기본, 모의회신 검증) ④`qdrant_incremental_upsert.py`(point_id 연속성 전제 증분 적재, 정렬 표본검증·축소 가드, 라이브 양 컬렉션 동기 확인). 회귀 57/57 — 2026-06-11 ✅
