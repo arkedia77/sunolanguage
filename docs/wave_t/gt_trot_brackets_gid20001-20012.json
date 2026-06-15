@@ -1,0 +1,486 @@
+{
+ "_meta": {
+  "source": "sunolang lexical_index v3.2 bracket_entity (merged_4values 재분석 가사필드 브라켓)",
+  "gt_songs": "gid20001~20012 (Wave T GT 트로트 12곡)",
+  "total_brackets": 156,
+  "anchor": "gid20010 = Suno 유일 native Trot 라벨, 식별3종 브라켓 정본",
+  "categories": "section/instrument/voicing/dynamic/other (매뉴얼 B 분류)",
+  "category_distribution": {
+   "section": 33,
+   "instrument": 41,
+   "voicing": 18,
+   "other": 8,
+   "dynamic": 2
+  }
+ },
+ "songs": {
+  "gid20001": {
+   "bracket_count": 6,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "bright synth-brass melody, slap bass, funk guitar, steady drum beat",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "male tenor vocals",
+     "category": "voicing"
+    },
+    {
+     "bracket": "staccato synth stabs",
+     "category": "instrument"
+    },
+    {
+     "bracket": "bass fills",
+     "category": "instrument"
+    }
+   ]
+  },
+  "gid20002": {
+   "bracket_count": 9,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "bright electric guitar scratches, slap bass, punchy drums",
+     "category": "instrument"
+    },
+    {
+     "bracket": "brass stabs",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "clean rhythmic guitar, driving bassline",
+     "category": "instrument"
+    },
+    {
+     "bracket": "snare rolls",
+     "category": "other"
+    },
+    {
+     "bracket": "Chorus",
+     "category": "section"
+    },
+    {
+     "bracket": "full band, brass section accents",
+     "category": "instrument"
+    },
+    {
+     "bracket": "vocal slide up",
+     "category": "voicing"
+    }
+   ]
+  },
+  "gid20003": {
+   "bracket_count": 6,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "clean electric guitar arpeggio with chorus, soft synth pad",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "breathy male vocals",
+     "category": "voicing"
+    },
+    {
+     "bracket": "shaker enters",
+     "category": "dynamic"
+    },
+    {
+     "bracket": "bass guitar enters",
+     "category": "instrument"
+    }
+   ]
+  },
+  "gid20004": {
+   "bracket_count": 8,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "sustained grand piano chords",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "baritone male vocals",
+     "category": "voicing"
+    },
+    {
+     "bracket": "fretless bass enters with a slide",
+     "category": "instrument"
+    },
+    {
+     "bracket": "piano melodic fill",
+     "category": "instrument"
+    },
+    {
+     "bracket": "string pads enter",
+     "category": "other"
+    },
+    {
+     "bracket": "snare hit with long reverb",
+     "category": "other"
+    }
+   ]
+  },
+  "gid20005": {
+   "bracket_count": 8,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "acoustic piano eighth-note pattern, clean electric guitar arpeggio",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "baritone male vocals",
+     "category": "voicing"
+    },
+    {
+     "bracket": "bass guitar enters with slide",
+     "category": "instrument"
+    },
+    {
+     "bracket": "snare drum with reverb",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Chorus",
+     "category": "section"
+    },
+    {
+     "bracket": "piano chords sustain",
+     "category": "instrument"
+    }
+   ]
+  },
+  "gid20006": {
+   "bracket_count": 8,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "clean electric guitar arpeggio with chorus effect",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "breathy female vocals",
+     "category": "voicing"
+    },
+    {
+     "bracket": "fretless bass enters with a slide",
+     "category": "instrument"
+    },
+    {
+     "bracket": "string pads swell",
+     "category": "dynamic"
+    },
+    {
+     "bracket": "soft rimshot on beat 2 and 4",
+     "category": "other"
+    },
+    {
+     "bracket": "kick drum enters",
+     "category": "instrument"
+    }
+   ]
+  },
+  "gid20007": {
+   "bracket_count": 8,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "grand piano arpeggios, legato strings",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "baritone male vocals, breathy delivery",
+     "category": "voicing"
+    },
+    {
+     "bracket": "clean electric guitar fills",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Chorus",
+     "category": "section"
+    },
+    {
+     "bracket": "kick drum and rimshot enter",
+     "category": "instrument"
+    },
+    {
+     "bracket": "vocal vibrato",
+     "category": "voicing"
+    }
+   ]
+  },
+  "gid20008": {
+   "bracket_count": 5,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "harmonica melody, arpeggiated clean electric guitar",
+     "category": "voicing"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "baritone male vocals enter",
+     "category": "voicing"
+    },
+    {
+     "bracket": "melodic electric bass enters",
+     "category": "instrument"
+    }
+   ]
+  },
+  "gid20009": {
+   "bracket_count": 15,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "distorted electric guitar riff, driving drum beat, slap bass",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "male vocals",
+     "category": "voicing"
+    },
+    {
+     "bracket": "palm-muted guitar",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 2",
+     "category": "section"
+    },
+    {
+     "bracket": "female vocals",
+     "category": "voicing"
+    },
+    {
+     "bracket": "bass slides",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Chorus",
+     "category": "section"
+    },
+    {
+     "bracket": "unison male and female vocals, full band energy",
+     "category": "voicing"
+    },
+    {
+     "bracket": "electric guitar power chords, cymbal crashes",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Outro",
+     "category": "section"
+    },
+    {
+     "bracket": "guitar solo, fading drum beat",
+     "category": "instrument"
+    },
+    {
+     "bracket": "vocal ad-libs",
+     "category": "voicing"
+    },
+    {
+     "bracket": "final cymbal crash",
+     "category": "other"
+    }
+   ]
+  },
+  "gid20010": {
+   "bracket_count": 8,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "accordion melody, clean electric guitar arpeggios, bass, and drums",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "baritone male vocals with vibrato",
+     "category": "voicing"
+    },
+    {
+     "bracket": "accordion stabs",
+     "category": "instrument"
+    },
+    {
+     "bracket": "piano enters",
+     "category": "instrument"
+    },
+    {
+     "bracket": "accordion counter-melody",
+     "category": "instrument"
+    },
+    {
+     "bracket": "bass root-fifth pattern",
+     "category": "instrument"
+    }
+   ]
+  },
+  "gid20011": {
+   "bracket_count": 12,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "bright synth pads, electronic drum fill",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "slap bass enters, staccato electric guitar",
+     "category": "instrument"
+    },
+    {
+     "bracket": "shimmering synth lead",
+     "category": "instrument"
+    },
+    {
+     "bracket": "snare roll",
+     "category": "other"
+    },
+    {
+     "bracket": "Pre-Chorus",
+     "category": "section"
+    },
+    {
+     "bracket": "drums drop out, soft synth chords",
+     "category": "instrument"
+    },
+    {
+     "bracket": "vocal swell",
+     "category": "voicing"
+    },
+    {
+     "bracket": "Chorus",
+     "category": "section"
+    },
+    {
+     "bracket": "full band enters, driving kick drum",
+     "category": "instrument"
+    },
+    {
+     "bracket": "vocal harmony",
+     "category": "voicing"
+    }
+   ]
+  },
+  "gid20012": {
+   "bracket_count": 9,
+   "brackets": [
+    {
+     "bracket": "Intro",
+     "category": "section"
+    },
+    {
+     "bracket": "staccato strings, driving drum beat, electric bass",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Verse 1",
+     "category": "section"
+    },
+    {
+     "bracket": "male tenor vocals",
+     "category": "voicing"
+    },
+    {
+     "bracket": "brass stabs",
+     "category": "instrument"
+    },
+    {
+     "bracket": "distorted electric guitar enters",
+     "category": "instrument"
+    },
+    {
+     "bracket": "Chorus",
+     "category": "section"
+    },
+    {
+     "bracket": "full band, power chords",
+     "category": "other"
+    },
+    {
+     "bracket": "cymbal crash",
+     "category": "other"
+    }
+   ]
+  }
+ }
+}
