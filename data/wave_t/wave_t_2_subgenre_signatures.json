@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "title": "Wave T 2차분 — 신규 Trot 서브장르 시그니처 (GT-attested)",
+    "from": "sunolanguage",
+    "to": "leomusic-trot",
+    "created_at": "2026-06-15",
+    "purpose": "leomusic-trot genre_signature_slots.json _future_genres가 명시 대기한 City Pop Trot / R&B Trot 외 W001 실증 서브장르 5종의 Suno-렌더러-레이어 시그니처. canon key는 leomusic-trot 소유(엔진 독립) 유지 — sunolang은 match_patterns/fallback_prose(=Suno SP 영어 방언)만 GT-attested 값으로 제공.",
+    "base": "sunolang corpus 556트랙/17,822 entries (Batch C 반영 v3.2, 2026-06-12 재빌드). leomusic 자작 SP 제외 Suno 네이티브 소스만으로 attestation 산출. GT 트로트 12곡(gid20001~20012) 포함, 앵커 gid20010.",
+    "source_review": "W001 10곡 SP 검토회신 (leomusic-trot_sunolanguage_20260613_100055)",
+    "registration_rule": "required_items는 그대로 drop-in 가능. _gt_source는 감사용 메타(언더스코어 = leomusic-trot _meta/_notes 관례와 동일, 로더 무시 전제). Latin Trot는 provisional — 등재 보류 권장."
+  },
+
+  "_critical_gt_diff": {
+    "target": "기존 모든 Trot 엔트리 공유 canon item: kkeokk_ki",
+    "finding": "현 kkeokk_ki match_patterns(kkeokk/kkeong/note-bending/note bending/Korean vocal ornament)는 Suno corpus 전건 0건. Suno는 한국식 꺾기·노트벤딩 개념을 절대 이 어휘로 렌더하지 않음 → enforce_signature.py 검출기가 Suno SP 출력에서 100% false-negative, 매번 fallback_prose 주입. 그 fallback_prose('kkeokk-ki vocal bends')도 0건 dead-zone 어휘라 SP 오염.",
+    "suno_attested_equivalent": "slides 305건/69장르, vibrato 247건/71장르, heavy vibrato 8건/4장르, traditional phrasing 2건(앵커 gid20010 포함)",
+    "layer_note": "_meta.layer_model_trot 원칙 준수 — canon KEY(kkeokk_ki)는 엔진 독립이므로 유지. match_patterns/fallback_prose만 Suno 렌더러 방언으로 치환 권고.",
+    "recommended_item": {
+      "key": "kkeokk_ki",
+      "label": "꺾기 (한국식) — Suno 렌더 = heavy vibrato/slides/traditional phrasing",
+      "match_patterns": ["heavy vibrato", "vibrato", "slides", "traditional phrasing", "kkeokk", "note-bending"],
+      "anti_patterns": ["kobushi", "enka"],
+      "fallback_prose": "The vocal carries heavy vibrato and slides with traditional Korean phrasing ornamenting each phrase turn — the distinctly Korean note-bending idiom, not Japanese kobushi.",
+      "_gt_source": "canon kkeokk/note-bending=0건(보존하되 후순위) → 선두 4패턴이 GT-attested. fallback도 'heavy vibrato and slides'(앵커 gid20010 원문 어휘)로 교체."
+    },
+    "recommendation_principle": "finding(0건 실증)은 채택, recommended_item(치환안)은 재분석으로 검증 후 반영 — 치환표 v3 원칙."
+  },
+
+  "subgenres": {
+    "City Pop Trot": {
+      "_notes": "rag v2 축2 신스 DNA + W001-01~03 실증. 시티팝 슬랩그루브 위에 트로트 보이싱(heavy vibrato+traditional phrasing) 결합. _future_genres가 'sunolanguage Wave T entity 수신 후 정의'로 명시 대기한 장르.",
+      "_status": "ready",
+      "_gt_source": "slap bass 594/53g · Rhodes 109/19g · electric piano 155/39g · ninth chord 20/8g · synth brass 21/4g · brass stab 119/27g · syncopated 1445/172g. GT 직접근거 gid20001(K-Pop with City Pop influences + slap-style electric bass + synth-brass stabs).",
+      "required_items": [
+        {
+          "key": "slap_citypop_bass",
+          "label": "슬랩 시티팝 베이스",
+          "match_patterns": ["slap bass", "slap electric bass", "slap-style bass", "syncopated bass"],
+          "fallback_prose": "A slap electric bass drives a syncopated city-pop groove with percussive off-beat pops."
+        },
+        {
+          "key": "rhodes_jazz_harmony",
+          "label": "로즈 + 재즈 7·9화음",
+          "match_patterns": ["Rhodes", "electric piano", "seventh", "ninth chord", "jazz chords"],
+          "fallback_prose": "A warm Rhodes electric piano lays jazz-tinged seventh and ninth chords. (Suno 미인식 'Fender Rhodes' 브랜드명=0건 → 'Rhodes electric piano'로.)"
+        },
+        {
+          "key": "synth_brass_stabs",
+          "label": "신스 브라스 스탭",
+          "match_patterns": ["synth brass", "brass stab", "staccato brass", "brass section"],
+          "fallback_prose": "Synth-brass stabs punch staccato accents on the off-beats."
+        }
+      ]
+    },
+
+    "R&B Trot": {
+      "_notes": "rag v2 축4(김추자·조관우 선례) + W001-04~05 실증. 슬로우 하프타임 R&B 그루브 위 트로트 보이싱. 멜리스마+고스트노트. _future_genres '미정의' 해소.",
+      "_status": "ready",
+      "_gt_source": "R&B 154/52g · half-time 27/14g · saxophone 55/13g(tenor saxophone 6/2g 희귀→saxophone 병기) · fingerstyle 211/41g · sub-bass 289/46g · melisma 6/3g(희귀) · ghost note 33/11g · brushes 30/10g · backbeat 244/73g.",
+      "required_items": [
+        {
+          "key": "rnb_halftime_groove",
+          "label": "R&B 하프타임 그루브",
+          "match_patterns": ["half-time", "R&B groove", "soulful", "soul", "backbeat"],
+          "fallback_prose": "A slow half-time R&B groove with a soulful pocket and a soft backbeat."
+        },
+        {
+          "key": "fingerstyle_subbass",
+          "label": "핑거스타일 베이스 + 서브로우",
+          "match_patterns": ["fingerstyle", "finger-style bass", "sub-bass", "syncopated bass"],
+          "fallback_prose": "A fingerstyle electric bass with sub-bass support sits in a syncopated R&B pocket. (Suno 미인식 'finger-style'(0건)/'sub-low'(0건) → 'fingerstyle'/'sub-bass'로.)"
+        },
+        {
+          "key": "tenor_sax_counterline",
+          "label": "테너 색소폰 카운터라인",
+          "match_patterns": ["tenor saxophone", "saxophone", "sax counter-line"],
+          "fallback_prose": "A tenor saxophone answers the vocal with a warm late-night counter-line."
+        },
+        {
+          "key": "rnb_melisma_ghostnote",
+          "label": "멜리스마 + 고스트노트",
+          "match_patterns": ["melisma", "ghost note", "soulful runs", "brushes"],
+          "fallback_prose": "Soulful melisma in the chorus over ghost-note hi-hats and brushed snare."
+        }
+      ]
+    },
+
+    "Synth Trot": {
+      "_notes": "W001-06~07 실증. 80s 신스 DNA(아날로그신스+게이트리버브) 위 트로트 보이싱. retro(3건)·80s(0건)는 약어휘라 제외하고 악기 시그니처로 고정.",
+      "_status": "ready",
+      "_gt_source": "analog synth 11/5g · gated reverb 20/8g · supersaw 13/2g · sidechain 53/12g · synth pad 599/85g · arpeggiated 487/86g.",
+      "required_items": [
+        {
+          "key": "analog_synth_gated",
+          "label": "아날로그 신스 + 게이트 리버브",
+          "match_patterns": ["analog synth", "gated reverb", "supersaw", "synth pad"],
+          "fallback_prose": "An analog synth lead and supersaw pads sit in gated reverb for an 80s sheen."
+        },
+        {
+          "key": "sidechain_pulse",
+          "label": "사이드체인 펌프",
+          "match_patterns": ["sidechain", "pumping", "ducking", "arpeggiated"],
+          "fallback_prose": "A sidechained synth pad pumps against the kick under an arpeggiated synth line."
+        }
+      ]
+    },
+
+    "Trap Trot": {
+      "_notes": "W001-09 실증. 808+하이햇롤 트랩 그루브 위 sax+accordion으로 trot color 유지(앵커 패턴 정합). 발라드 아닌 하프타임 댄스. 단 trot color anchor(accordion/sax)가 SP 앞순위 유지돼야 댄스 드리프트 방지.",
+      "_status": "ready",
+      "_gt_source": "808 56/5g · hi-hat roll 29/8g · half-time 27/14g · triplet 11/6g · sub-bass 289/46g · accordion 28/3g(trot color) · saxophone 55/13g.",
+      "required_items": [
+        {
+          "key": "trap_808_hatrolls",
+          "label": "808 + 하이햇 롤",
+          "match_patterns": ["808", "hi-hat roll", "half-time", "triplet", "sub-bass"],
+          "fallback_prose": "An 808 sub-bass with slides anchors a half-time trap groove with stuttering hi-hat rolls and triplets. (glide 4건 희귀 → slides 305건.)"
+        },
+        {
+          "key": "trot_color_anchor",
+          "label": "트로트 컬러 앵커 (드리프트 방지)",
+          "match_patterns": ["accordion", "saxophone"],
+          "fallback_prose": "A warm accordion sustains a melodic pad and a smoky tenor saxophone weaves a counter-line, keeping the trot color intact over the trap groove."
+        }
+      ]
+    },
+
+    "Latin Trot": {
+      "_notes": "W001-08 후보. ★PROVISIONAL — 등재 보류 권장. 라틴 전문어(tumbao/montuno/timbales/latin percussion)가 Suno corpus 전건 0~2건 dead-zone이라, 그대로 SP에 넣으면 Suno가 무시하고 일반 댄스로 렌더할 위험. W001-08 생성 후 Suno 재분석으로 라틴 어휘 실증 확보 시 등재.",
+      "_status": "provisional_hold",
+      "_gt_source": "🚨 tumbao 0/0g · montuno 0/0g · timbales 0/0g · latin percussion 0/0g · congas 2/1g(희귀). vs GT-safe: syncopated 1445/172g · brass stab 119/27g · clave 10/4g · shaker 270/52g.",
+      "required_items_provisional": [
+        {
+          "key": "latin_syncopated_groove",
+          "label": "라틴 싱코페이션 그루브 (GT-safe 치환)",
+          "match_patterns": ["syncopated", "Latin groove", "clave", "shaker", "congas"],
+          "fallback_prose": "A festive syncopated Latin groove with congas and shakers drives a hot summer feel. (dead-zone 'tumbao/montuno/timbales' 회피 — congas/shaker로 지지.)"
+        },
+        {
+          "key": "latin_brass_stabs",
+          "label": "라틴 브라스 스탭",
+          "match_patterns": ["brass stab", "brass section", "horn section"],
+          "fallback_prose": "Bright brass stabs punch syncopated accents over the Latin arrangement."
+        }
+      ]
+    }
+  },
+
+  "shared_canon_reuse": {
+    "_note": "신규 서브장르 5종 전부에 아래 canon 항목을 leomusic-trot 기존 엔트리에서 verbatim 재사용 권장. 단 kkeokk_ki는 위 _critical_gt_diff의 recommended_item으로 교체.",
+    "items": ["gradual_vibrato (verbatim)", "kkeokk_ki (→ _critical_gt_diff.recommended_item)", "anti_sr_korean (verbatim)", "traditional_instruments (City Pop/R&B/Latin은 accordion+sax 앞순위 강조 _notes 추가 권장)"]
+  }
+}
