@@ -258,3 +258,28 @@
     > K-Pop ballad with jazz-pop and soul influences.
   - #0012 *빈 밥상* · `7ff0271c` · [Contemporary R&B]
     > K-Pop ballad with R&B influences.
+
+---
+
+## SP 작성 형식 표준 v1 (2026-06-16, explore 벤치마크 반영)
+
+> **근거**: Suno explore 산문형 4곡 비교(`reviews/explore4_sp_format_comparison_20260616.md`) + UK Garage 태그식 분석. LEO 채택 지시(sunomusic 경유, 2026-06-16). 본 표준은 leomusic/leomusic2/leomusic3 SP 빌더 라인 공통 적용.
+
+**전제 — 우리 형식 정체성(불변)**: Suno-native 영어 **산문 멀티문장**(콤마 태그나열·라벨형 아님). 순서: 장르·무드 → 악기 → 보컬 → 프로덕션 → BPM/키. 가사필드는 구조 브래킷 + **instrument-cue 브래킷**(`[muted trumpet cry]` 등)으로 시간축 통제 — ★우리 고유 강점, 유지가 표준의 대전제.
+
+### A. 압축 산문 길이 타깃 (Você/PACO 벤치마크)
+- 목표 **~500자 밀도 산문** (현 700자대에서 압축). 상한 1000자 유지하되 과장황 지양.
+- BPM/키는 `Tempo is X BPM in the key of Y.` 식 **1문장 마감** 유지(또는 `X BPM, 4/4, key of Y.` 자체 행).
+- 근거: explore 최상위 산문곡 Você가 ~480자로 우리와 동일 구조 — 짧고 밀도 높은 산문이 최적(4장 4.5 SP 길이, 6장 6.5 과포화 회피와 일치).
+
+### B. 꼬리 장르태그 시딩 (Lucid/Varletine, 선택적)
+- **다(多)장르·퓨전 곡에 한해** SP 말미에 CSV 장르태그 시딩 허용. 단일 장르 곡엔 불요.
+- ★**attested 어휘만**(lexical_index v3.2 검증 의무): glitch(22)·phonk(2) 등 OK / `reverse swell`·`riddim`·`doubled`·`autotuned` 등 **0건 어휘 금지**.
+- 검증 경로: `scripts/batch_sp_review.py --json` 또는 lexical_index 직접 조회로 0건 태그 reject.
+
+### C. 무드 산문 흡수 (float/WorriedChart 발상, 라벨형 미채택)
+- float.의 Mood 필드 발상을 **라벨이 아닌 '무드 산문 1줄'**로 흡수. 라벨형(`Genre:`/`Mood:`) 구조 자체는 미채택(작성 보조 템플릿으로만, 최종 출력은 산문 변환).
+
+### 미채택
+- stay(melø) 불릿 강조 → 우리 Top-Anchor 첫줄 배치로 이미 커버.
+- float 라벨 구조 → 작성 보조용만, 산출 SP는 산문.
