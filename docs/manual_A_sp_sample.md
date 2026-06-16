@@ -263,7 +263,7 @@
 
 ## SP 작성 형식 표준 v1 (2026-06-16, explore 벤치마크 반영) — ⚠️ 전체 HOLD (미발효)
 
-> **상태 (2026-06-16, LEO 지시)**: **A·B·C 전부 HOLD — 아직 발효 안 함.** ★배포 주체 = **sunolanguage**(형식 주체). sunomusic이 배포하지 않는다. **sunolanguage가 충분히 검토해 '문제없음' 확정한 뒤에만 sunolanguage가 직접 전파**한다(LEO 지시 2026-06-16). 현 단계 = 코퍼스 체크 완료, 자체 최종 검토 진행 중. 검토 완료 전 어느 라인도 적용 금지.
+> **상태 (2026-06-16, LEO 지시)**: **A·B·C 전부 HOLD — 아직 발효 안 함.** ★배포 메커니즘 = **DB-pull-on-signal**: sunolanguage 표준/코퍼스는 inbox push가 아니라, sunolanguage가 자체검토 '문제없음' 확정 후 **'정식 업데이트' 시그널을 발신할 때 각 라인(leomusic/2/3)이 DB에서 각자 pull**한다. sunomusic·타 라인이 배포 주관하지 않는다. 현 단계 = 코퍼스 체크 완료, 자체 최종 검토 진행 중. 시그널 전 어느 라인도 적용 금지(inbox 전파분은 롤백됨).
 >
 > **근거**: Suno explore 산문형 4곡 비교(`reviews/explore4_sp_format_comparison_20260616.md`) + UK Garage 태그식 분석. 코퍼스 체크 결과: A PASS · B PASS(빌더 0건태그 reject 조건) · C 조건부(무드 화이트리스트 한정).
 >
