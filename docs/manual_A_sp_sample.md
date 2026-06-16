@@ -261,9 +261,11 @@
 
 ---
 
-## SP 작성 형식 표준 v1 (2026-06-16, explore 벤치마크 반영)
+## SP 작성 형식 표준 v1 (2026-06-16, explore 벤치마크 반영) — ⚠️ LEO 검증 대기(HOLD)
 
-> **근거**: Suno explore 산문형 4곡 비교(`reviews/explore4_sp_format_comparison_20260616.md`) + UK Garage 태그식 분석. LEO 채택 지시(sunomusic 경유, 2026-06-16). 본 표준은 leomusic/leomusic2/leomusic3 SP 빌더 라인 공통 적용.
+> **⚠️ HOLD (2026-06-16)**: 본 표준은 아직 **발효 전**이다. 절차 = [sunolanguage 코퍼스 체크 → sunomusic 검증 → LEO 게이트 → 그 후 전파/발효]. 현재 코퍼스 체크 완료·검증 대기 단계이며, leomusic/2/3 전파는 회수됨. **게이트 통과 전 적용 금지.** 코퍼스 체크 결과: A PASS · B PASS · C 조건부(무드 register 제한 — dreamy/nostalgic/tender/bittersweet/moody는 Suno 재분석 0건이라 제외, warm/intimate/atmospheric/smooth/lush/soulful/mellow/melancholic만 사용).
+>
+> **근거**: Suno explore 산문형 4곡 비교(`reviews/explore4_sp_format_comparison_20260616.md`) + UK Garage 태그식 분석. LEO 채택 지시(sunomusic 경유, 2026-06-16) → 절차 정정으로 검증 게이트 선행. 발효 시 leomusic/leomusic2/leomusic3 SP 빌더 라인 공통 적용 예정.
 
 **전제 — 우리 형식 정체성(불변)**: Suno-native 영어 **산문 멀티문장**(콤마 태그나열·라벨형 아님). 순서: 장르·무드 → 악기 → 보컬 → 프로덕션 → BPM/키. 가사필드는 구조 브래킷 + **instrument-cue 브래킷**(`[muted trumpet cry]` 등)으로 시간축 통제 — ★우리 고유 강점, 유지가 표준의 대전제.
 
