@@ -261,11 +261,13 @@
 
 ---
 
-## SP 작성 형식 표준 v1 (2026-06-16, explore 벤치마크 반영) — ⚠️ LEO 검증 대기(HOLD)
+## SP 작성 형식 표준 v1 (2026-06-16, explore 벤치마크 반영) — ⚠️ 전체 HOLD (미발효)
 
-> **⚠️ HOLD (2026-06-16)**: 본 표준은 아직 **발효 전**이다. 절차 = [sunolanguage 코퍼스 체크 → sunomusic 검증 → LEO 게이트 → 그 후 전파/발효]. 현재 코퍼스 체크 완료·검증 대기 단계이며, leomusic/2/3 전파는 회수됨. **게이트 통과 전 적용 금지.** 코퍼스 체크 결과: A PASS · B PASS · C 조건부(무드 register 제한 — dreamy/nostalgic/tender/bittersweet/moody는 Suno 재분석 0건이라 제외, warm/intimate/atmospheric/smooth/lush/soulful/mellow/melancholic만 사용).
+> **상태 (2026-06-16, LEO 지시)**: **A·B·C 전부 HOLD — 아직 발효 안 함.** ★배포 주체 = **sunolanguage**(형식 주체). sunomusic이 배포하지 않는다. **sunolanguage가 충분히 검토해 '문제없음' 확정한 뒤에만 sunolanguage가 직접 전파**한다(LEO 지시 2026-06-16). 현 단계 = 코퍼스 체크 완료, 자체 최종 검토 진행 중. 검토 완료 전 어느 라인도 적용 금지.
 >
-> **근거**: Suno explore 산문형 4곡 비교(`reviews/explore4_sp_format_comparison_20260616.md`) + UK Garage 태그식 분석. LEO 채택 지시(sunomusic 경유, 2026-06-16) → 절차 정정으로 검증 게이트 선행. 발효 시 leomusic/leomusic2/leomusic3 SP 빌더 라인 공통 적용 예정.
+> **근거**: Suno explore 산문형 4곡 비교(`reviews/explore4_sp_format_comparison_20260616.md`) + UK Garage 태그식 분석. 코퍼스 체크 결과: A PASS · B PASS(빌더 0건태그 reject 조건) · C 조건부(무드 화이트리스트 한정).
+>
+> **C 무드 화이트리스트 정본**: `reviews/mood_register_whitelist_20260616.md` (SAFE 28 / FORBIDDEN 22).
 
 **전제 — 우리 형식 정체성(불변)**: Suno-native 영어 **산문 멀티문장**(콤마 태그나열·라벨형 아님). 순서: 장르·무드 → 악기 → 보컬 → 프로덕션 → BPM/키. 가사필드는 구조 브래킷 + **instrument-cue 브래킷**(`[muted trumpet cry]` 등)으로 시간축 통제 — ★우리 고유 강점, 유지가 표준의 대전제.
 
@@ -279,8 +281,9 @@
 - ★**attested 어휘만**(lexical_index v3.2 검증 의무): glitch(22)·phonk(2) 등 OK / `reverse swell`·`riddim`·`doubled`·`autotuned` 등 **0건 어휘 금지**.
 - 검증 경로: `scripts/batch_sp_review.py --json` 또는 lexical_index 직접 조회로 0건 태그 reject.
 
-### C. 무드 산문 흡수 (float/WorriedChart 발상, 라벨형 미채택)
+### C. 무드 산문 흡수 (float/WorriedChart 발상, 라벨형 미채택) — ⚠️ HOLD (화이트리스트 확정 후 발효)
 - float.의 Mood 필드 발상을 **라벨이 아닌 '무드 산문 1줄'**로 흡수. 라벨형(`Genre:`/`Mood:`) 구조 자체는 미채택(작성 보조 템플릿으로만, 최종 출력은 산문 변환).
+- ★**무드어는 화이트리스트 한정**(`reviews/mood_register_whitelist_20260616.md`): SAFE(warm·intimate·atmospheric·smooth·lush·soulful·gritty·airy·cinematic·melancholic·ethereal 등) / FORBIDDEN(dreamy·nostalgic·tender·bittersweet·moody·wistful·sultry·haunting·longing·serene 등 — 우리는 쓰나 Suno 재분석 0건).
 
 ### 미채택
 - stay(melø) 불릿 강조 → 우리 Top-Anchor 첫줄 배치로 이미 커버.
