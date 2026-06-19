@@ -47,11 +47,15 @@ def get_model():
     return SentenceTransformer(EMBEDDING_MODEL)
 
 
-def make_filter(slot: str, genre: str = None):
-    from qdrant_client.models import Filter, FieldCondition, MatchValue
+def make_filter(slot: str, genre: str = None, genre_text: str = None):
+    from qdrant_client.models import (Filter, FieldCondition,
+                                      MatchValue, MatchText)
     conditions = [FieldCondition(key="slot", match=MatchValue(value=slot))]
     if genre:
         conditions.append(FieldCondition(key="genre", match=MatchValue(value=genre)))
+    if genre_text:
+        # 부분일치 — "jazz"가 "Jazz trio ballad" 등 전체 장르라벨에 매칭. 2026-06-19.
+        conditions.append(FieldCondition(key="genre", match=MatchText(text=genre_text)))
     return Filter(must=conditions)
 
 
@@ -62,7 +66,7 @@ def normalize(vec):
 
 def controlled_drift(seed_text: str, drift_factor: float = 0.5,
                      n_instruments: int = INSTRUMENT_COUNT,
-                     client=None, model=None) -> dict:
+                     client=None, model=None, genre_filter: str = None) -> dict:
     if client is None:
         client = get_client()
     if model is None:
@@ -79,10 +83,14 @@ def controlled_drift(seed_text: str, drift_factor: float = 0.5,
         # tempo_key_time는 후보를 넉넉히 받아 key+BPM 둘 다 든 청크를 우선 선택
         # (코퍼스 tempo 청크의 ~47%만 둘 다 명시 — Leo 지적 키/BPM 누락 보정). 2026-06-19.
         limit = 12 if slot == "tempo_key_time" else n
+        # genre_filter 지정 시 genre 슬롯을 해당 장르로 고정(코퍼스 K-pop 우세로
+        # seed만으론 비-팝 장르 앵커가 안 잡힘 — Leo '비-팝 전환' 대응). 2026-06-19.
+        gt = genre_filter if (genre_filter and slot == "genre") else None
+        slot_filter = make_filter(slot, genre_text=gt)
         response = client.query_points(
             collection_name=COLLECTION_NAME,
             query=perturbed.tolist(),
-            query_filter=make_filter(slot),
+            query_filter=slot_filter,
             limit=limit,
         )
         if response.points:

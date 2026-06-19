@@ -306,6 +306,7 @@ def cmd_batch(args: list[str]):
     theme = None
     do_refine = False
     exclude_history = False
+    genre_filter = None
 
     for a in args:
         if a.startswith("--count="):
@@ -328,10 +329,13 @@ def cmd_batch(args: list[str]):
             do_refine = True
         elif a == "--exclude-history":
             exclude_history = True
+        elif a.startswith("--genre-filter="):
+            genre_filter = a.split("=", 1)[1]
 
     theme_label = f", theme='{theme}'" if theme else ""
     refine_label = " +refine" if do_refine else ""
     excl_label = " +exclude-history" if exclude_history else ""
+    excl_label += f" +genre-filter={genre_filter}" if genre_filter else ""
     print(f"Batch: {count} SP+lyrics packages, seed='{seed}', drift={drift}{theme_label}{refine_label}{excl_label}")
     print()
 
@@ -359,7 +363,8 @@ def cmd_batch(args: list[str]):
     for i in range(count):
         song_theme = theme if theme else theme_pool[i % len(theme_pool)]
         preset = controlled_drift(seed, drift_factor=drift,
-                                  client=sp_client, model=sp_model)
+                                  client=sp_client, model=sp_model,
+                                  genre_filter=genre_filter)
         sp_text = assemble_sp(preset)
 
         genre_group = genre_group_override or classify_genre_group(
