@@ -320,9 +320,14 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                         return [h]
             for h in candidates:
                 t = h["payload"].get("text", "").strip()
-                if (t and t not in used_texts and not is_sp_directive(t)
+                if not (t and t not in used_texts and not is_sp_directive(t)
                         and _max_jaccard(t, used_texts) <= JACCARD_REJECT):
-                    return [h]
+                    continue
+                # 코어섹션은 이 폴백에서도 누출/1행 거부(영어 악기서술 가로채기 방지). 2026-06-19.
+                if needs_min_lines and (_is_lyric_leak(t)
+                                        or _count_lyric_lines(t) < MIN_VERSE_LINES):
+                    continue
+                return [h]
             # 최종 폴백: 코어섹션은 누출/1행을 절대 반환 안 함. 정상(한글+최소행)
             # 비중복 섹션이 없으면 빈 반환(악기누출/1행/V1=V2 < 빈 섹션). 2026-06-19.
             if needs_min_lines:
