@@ -23,13 +23,16 @@ import re
 import sys
 from pathlib import Path
 
+# tempo_key_time는 genre 바로 뒤(2번째)에 고정 — Suno-native 순서이자
+# MAX_SENTENCES=9 컷에서 키·BPM이 잘려나가는 것을 방지(instrument 부스트가
+# 문장수를 9까지 채워도 tempo_key_time는 앞쪽이라 항상 살아남음). 2026-06-19.
 TOP_ANCHOR_SLOTS = [
     "genre",
+    "tempo_key_time",
     "instrument",
     "drums",
     "vocal_main",
     "arrangement",
-    "tempo_key_time",
     "instrument_boost",
     "arrangement_boost",
     "vocal_main_boost",

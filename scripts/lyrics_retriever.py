@@ -286,6 +286,12 @@ def match_sp_differentiated(sp_text: str, form: list[str],
             lines = [l.strip() for l in text.strip().split("\n") if l.strip()]
             return sum(1 for l in lines if not l.startswith("[") and not l.startswith("("))
 
+        def _is_lyric_leak(text: str) -> bool:
+            # 코어 가사섹션(verse/pre_chorus/bridge)에 한글이 전혀 없으면 영어 악기
+            # 디렉티브 누출로 간주("Synth lead melody soars above" 류). is_sp_directive가
+            # 못 잡는 영어 악기서술을 차단 — N시리즈는 한국어 가사. 2026-06-19.
+            return re.search(r"[가-힣]", text) is None
+
         def _pick_novel(candidates):
             from corpus_quality_gate import is_sp_directive
             needs_min_lines = tag in ("verse", "pre_chorus", "bridge")
@@ -297,15 +303,36 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                     continue
                 if needs_min_lines and _count_lyric_lines(t) < MIN_VERSE_LINES:
                     continue
+                if needs_min_lines and _is_lyric_leak(t):
+                    continue
                 # T1-3: song_id가 달라도 유사 텍스트(동일 코러스 변형 등) reject
                 if _max_jaccard(t, used_texts) > JACCARD_REJECT:
                     continue
                 return [h]
+            # 코어섹션 중간 폴백: 최소행은 유지한 채 유사도(Jaccard)만 완화.
+            # 1순위가 모두 걸러져도 1행/악기누출 섹션으로 떨어지지 않게 함. 2026-06-19.
+            if needs_min_lines:
+                for h in candidates:
+                    t = h["payload"].get("text", "").strip()
+                    if (t and t not in used_texts and not is_sp_directive(t)
+                            and not _is_lyric_leak(t)
+                            and _count_lyric_lines(t) >= MIN_VERSE_LINES):
+                        return [h]
             for h in candidates:
                 t = h["payload"].get("text", "").strip()
                 if (t and t not in used_texts and not is_sp_directive(t)
                         and _max_jaccard(t, used_texts) <= JACCARD_REJECT):
                     return [h]
+            # 최종 폴백: 코어섹션은 누출/1행을 절대 반환 안 함. 정상(한글+최소행)
+            # 비중복 섹션이 없으면 빈 반환(악기누출/1행/V1=V2 < 빈 섹션). 2026-06-19.
+            if needs_min_lines:
+                for h in candidates:
+                    t = h["payload"].get("text", "").strip()
+                    if (t and t not in used_texts and not is_sp_directive(t)
+                            and not _is_lyric_leak(t)
+                            and _count_lyric_lines(t) >= MIN_VERSE_LINES):
+                        return [h]
+                return []
             return candidates[:1] if candidates else []
 
         combined_exclude = exclude | exclude_song_ids if exclude else (exclude_song_ids or None)

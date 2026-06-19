@@ -76,15 +76,24 @@ def controlled_drift(seed_text: str, drift_factor: float = 0.5,
         perturbed = normalize(seed_vec + noise)
 
         n = n_instruments if slot == "instrument" else 1
+        # tempo_key_time는 후보를 넉넉히 받아 key+BPM 둘 다 든 청크를 우선 선택
+        # (코퍼스 tempo 청크의 ~47%만 둘 다 명시 — Leo 지적 키/BPM 누락 보정). 2026-06-19.
+        limit = 12 if slot == "tempo_key_time" else n
         response = client.query_points(
             collection_name=COLLECTION_NAME,
             query=perturbed.tolist(),
             query_filter=make_filter(slot),
-            limit=n,
+            limit=limit,
         )
         if response.points:
             if slot == "instrument":
                 preset[slot] = [hit.payload for hit in response.points]
+            elif slot == "tempo_key_time":
+                def _score(p):
+                    t = (p.payload.get("text", "") or "").lower()
+                    return ("key of" in t) + ("bpm" in t)
+                best = max(response.points, key=_score)
+                preset[slot] = best.payload
             else:
                 preset[slot] = response.points[0].payload
 
