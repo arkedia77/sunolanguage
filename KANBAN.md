@@ -1,6 +1,9 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
+- [sunolanguage] **★W005 SP 검토 (leomusic-trot, 06-19 22:03 수신 → 차기 세션 1순위)** — '장마,도시' 10곡, 실험축 E=gang vocals/call-and-response **떼창 브라켓 인라인** GT정합. 배치 `~/leomusic-trot/batches/trot/W005/`. ★가사 브라켓 코퍼스(8,978)+lexical_index v3.2 대조 → `docs/reviews/W005_sp_review.md`(W004 워크플로). 수신확인 발송완료, 본 검토 인계
+- [sunolanguage] **N019 생성결과 검증 대기** — sunomusic 큐 B255→B256→N019. 도착 시 DB로 gid 30111~30120 10/10 직접 검증
+- [sunolanguage] **엔진 미해결 후보 3건** — ①title_generator 폴백버그(가사빈약 시 장르명을 제목으로, gid30120 사례) ②genre-filter 무매칭 robustness("&"등 0매칭 시 앵커소실) ③genre-lock 변주저하(코퍼스 비-팝 thin 의존). 메모리 참조
 - [sunolanguage] **★뮤직메이커2 업그레이드 제안서** (rag→sunolanguage, LEO 지시 2026-06-05) — **제안서 초안 작성완료** `docs/musicmaker2_upgrade_proposal.md`(2026-06-07). 원소스=repo `webapp/`(suno-sp-builder Vite SPA) 확정. 진단: 사전 v2.0(437)→v3.1(496) 미반영·엔진 단절. 3-Tier 제안(T1 드롭인+자동화+문법정정 / T2 영속화·게이트 / T3 시맨틱 엔진연결=뮤직메이커2). **대기: LEO 결정 Q1(T1 착수)·Q2(T3 A/B)·Q3(회신경로)**
 - [sunolanguage] **가사 워크플로우 보강** — `docs/lyrics_workflow_reinforcement_plan.md` (3-tier). **T3-1 배치감사 하니스 완료(06-11)** + 베이스라인(N001~N014 coh분포) 소급 측정 완료 → **다음: T1-3 Jaccard가드 → T1-1 재랭킹 → T1-2 게이트밴드** (T1/T2 파라미터 확정은 Leo 저-coh 청취검증 결과 반영)
 - [sunolanguage] **★D139 이사 reklcli→purple** — **purple 기동 확인 완료(2026-06-10)**: venv import OK / PG legion 접속 OK(songs 3,227) / Qdrant 원격(100.90.35.121) sunolang_presets+lyrics 정상. go-live 검증 종결
