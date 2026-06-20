@@ -1,6 +1,7 @@
 # sunolang KANBAN
 
 ## IN PROGRESS
+- [sunolanguage] **★보강 로드맵 2026Q2 (울트라플랜, 승인완료 06-19 → 차기 세션 구현)** — `docs/reinforcement_plan_2026Q2.md` + Notion 업로드(`[결정사항]` 2026-06-20). 5테마: ①엔진강건성(R1 title폴백/R2 genre-filter무매칭/R3 genre-lock완화/R4 테스트) ②검증루프(V1 재분석단일결정안/V2 청취세트/V3 Echo) ③코퍼스재균형 ④데이터위생(D1 N001·N002정리/D2 백필/D3 감사경화) ⑤산출물(B1 뮤직메이커2/B2 책). **실행순서 1~4·6=자가실행 즉시착수 / 5=Leo 결정준비물 / 7=차단해제 대기**. 베이스라인 57/57
 - [sunolanguage] **★W005 SP 검토 (leomusic-trot, 06-19 22:03 수신 → 차기 세션 1순위)** — '장마,도시' 10곡, 실험축 E=gang vocals/call-and-response **떼창 브라켓 인라인** GT정합. 배치 `~/leomusic-trot/batches/trot/W005/`. ★가사 브라켓 코퍼스(8,978)+lexical_index v3.2 대조 → `docs/reviews/W005_sp_review.md`(W004 워크플로). 수신확인 발송완료, 본 검토 인계
 - [sunolanguage] **N019 생성결과 검증 대기** — sunomusic 큐 B255→B256→N019. 도착 시 DB로 gid 30111~30120 10/10 직접 검증
 - [sunolanguage] **엔진 미해결 후보 3건** — ①title_generator 폴백버그(가사빈약 시 장르명을 제목으로, gid30120 사례) ②genre-filter 무매칭 robustness("&"등 0매칭 시 앵커소실) ③genre-lock 변주저하(코퍼스 비-팝 thin 의존). 메모리 참조
