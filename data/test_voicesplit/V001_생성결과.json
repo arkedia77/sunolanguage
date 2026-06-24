@@ -1,0 +1,57 @@
+{
+  "batch": "V001",
+  "from": "sunomusic",
+  "to": "sunolanguage",
+  "type": "generation_result",
+  "status": "completed",
+  "generated_at": "2026-06-21T19:37:05",
+  "summary": "3/3 성공 — 다중보컬 분리 실험(듀엣/트리플/4중창)",
+  "note": "songs_test_lab test_id 255~257 writeback(suno_uuid1/2+suno_generated=true, ★status 미변경). 섹션태그/디렉티브 가사 보존 입력. Leo 청취 대기.",
+  "songs": [
+    {
+      "id": "v001a",
+      "title": "네 차례야 (Duet)",
+      "test_id": 255,
+      "full_track": {
+        "status": "generated",
+        "uuid": "dc841669-4810-4822-8388-05cf0e2a1f50",
+        "uuid2": "e655d240-268b-4212-847d-d2ec3357aa11",
+        "url1": "https://suno.com/song/dc841669-4810-4822-8388-05cf0e2a1f50",
+        "url2": "https://suno.com/song/e655d240-268b-4212-847d-d2ec3357aa11",
+        "tags": "K-pop duet, mid-tempo emotional pop with full instrumental backing — piano, warm synth pad, soft 808 and clap beat. 92 BPM, key of C major. Two clearly distinct lead voices that alternate and stay identifiable, blending only in the chorus: Voice 1 is a bright, clear young female with a light head voice; Voice 2 is a warm, husky male baritone with a soft chesty tone. Verses trade line by line in a call-and-response format — the female sings a line, the male answers. The pre-chorus stacks the two in close two-part harmony. The final chorus opens in unison then splits into a third-apart harmony. Keep the two timbres separated and identifiable throughout — do not merge them into one voice. Korean lyrics, intimate and encouraging mood, late-night phone-call warmth.",
+        "prompt": "[Intro]\n[Verse 1: bright female vocals]\n(female) 새벽 두 시 너의 목소리\n잠긴 듯 낮게 떨려\n[Verse 1 answer: warm male vocals enter]\n(male) 괜찮아 다 지나갈 거야\n내가 여기 있잖아\n[Pre-Chorus: female and male close two-part harmony]\n한 줄씩 주고받은 말이\n어느새 노래가 돼\n[Chorus: both voices, unison then third-apart harmony]\n네 차례야 이제 네 차례야\n무대 위 조명은 너를 기다려\n(female lead) 높이 (male harmony) 더 높이\n같이 부르면 안 무서워\n[Verse 2: warm male vocals]\n(male) 떨리는 손 내가 잡을게\n박자 놓쳐도 괜찮아\n[Verse 2 answer: bright female vocals enter]\n(female) 그럼 너도 같이 틀려줘\n우리 둘이면 괜찮아\n[Bridge: call and response]\n(call: male) 준비됐어?\n(response: female) 준비됐어\n(both) 하나 둘 셋\n[Final Chorus: both voices, third-apart harmony]\n네 차례야 이제 우리 차례야\n무대 위 조명은 우릴 기다려\n(unison) 같이 같이\n끝까지 같이 부르자\n[Outro]"
+      },
+      "generation_status": "success"
+    },
+    {
+      "id": "v001b",
+      "title": "네 차례야 (Triple)",
+      "test_id": 256,
+      "full_track": {
+        "status": "generated",
+        "uuid": "a6e63516-a6a9-4819-85f5-bc91a60c18b2",
+        "uuid2": "37f50a86-0135-4c49-be0b-622366e01261",
+        "url1": "https://suno.com/song/a6e63516-a6a9-4819-85f5-bc91a60c18b2",
+        "url2": "https://suno.com/song/37f50a86-0135-4c49-be0b-622366e01261",
+        "tags": "K-pop girl-group track, three distinct female voices, energetic pop with full instrumental backing — bright synth, punchy 808, snappy clap beat. 100 BPM, key of A minor. Three clearly separable female timbres that must stay identifiable: Voice 1 is a bright, high belting lead carrying the main melody; Voice 2 is a husky, low chest-voice female who raps with a rhythmic spoken-flow; Voice 3 is an airy, breathy mid-range female for the hook and ad-libs. Verse 1 is sung by Voice 1; Verse 2 is rapped by Voice 2; the hook is led by Voice 3 with the others stacking three-part harmony. The bridge is a call-and-response between the rapper and the main. Keep the three voices distinct by pitch register and delivery — do not blend them into a single choir. Korean lyrics, confident hype-each-other-up mood.",
+        "prompt": "[Intro: airy breathy female ad-lib]\n(woo, yeah)\n[Verse 1: bright high female vocals]\n거울 앞에 선 너\n어깨를 펴 봐\n숨을 크게 들이쉬고\n한 발 앞으로\n[Verse 2: husky low female rap vocals, rhythmic flow]\n(rap) 떨지 마 네 무대 네 박자\n누가 뭐래도 네가 주인공이야\n가사 틀려도 그냥 밀고 가\n시선 다 가져가 그게 너야\n[Pre-Chorus: bright high female and husky low female trade lines]\n(bright) 자 이제 (husky) 네 차례\n(bright) 망설임은 (husky) 버려\n[Hook: airy breathy female lead over three-part female harmony]\n네 차례야 반짝여 봐\n불빛보다 더 환하게\n(ad-lib: airy) shine, shine\n세 목소리 하나로\n[Verse 3: husky low female rap vocals]\n(rap) 무대 끝까지 다 씹어먹어\n숨 고를 틈 없이 몰아쳐\n[Bridge: call and response]\n(call: bright high female) 준비됐어?\n(response: husky low female) 태어날 때부터\n(all three) 가자\n[Final Hook: three-part female harmony, airy lead on top]\n네 차례야 반짝여 봐\n우리 셋이 하나로\n(ad-lib: airy) higher, higher\n끝까지 빛나\n[Outro]"
+      },
+      "generation_status": "success"
+    },
+    {
+      "id": "v001c",
+      "title": "네 차례야 (Quartet)",
+      "test_id": 257,
+      "full_track": {
+        "status": "generated",
+        "uuid": "754eaf69-42b2-4aed-b030-58f0537754b0",
+        "uuid2": "db496cc4-fd4f-4f17-a0fb-89d94cd228d7",
+        "url1": "https://suno.com/song/754eaf69-42b2-4aed-b030-58f0537754b0",
+        "url2": "https://suno.com/song/db496cc4-fd4f-4f17-a0fb-89d94cd228d7",
+        "tags": "K-pop girl-group anthem, four distinct female voices, high-energy pop with full instrumental backing — bright synths, heavy 808, festival clap beat. 105 BPM, key of B-flat major. Four clearly separable female timbres, each identifiable by register and delivery: Voice 1 bright high belting soprano (main melody); Voice 2 husky low chest-voice alto (rap, rhythmic spoken-flow); Voice 3 airy breathy mid-range (hook lead and ad-libs); Voice 4 warm round lower-mid (harmony anchor, lowest sung part). Verse 1 sung by V1; Verse 2 rapped by V2; the pre-chorus trades V3 and V1 line by line; the hook is led by V3 over a four-part female harmony stack with V1 on top and V4 on the bottom. The bridge is a four-way call-and-response, each voice entering one at a time. Keep all four distinct — do not collapse them into a unison choir. Korean lyrics, empowering girl-group hype mood.",
+        "prompt": "[Intro: four female voices enter one at a time]\n(V1 ah) (V3 ooh) (V4 mmm) (V2 yeah)\n[Verse 1: bright high female vocals]\n거울 속 네 눈빛\n오늘은 좀 다르네\n숨을 크게 들이쉬어\n이제 시작이야\n[Verse 2: husky low female rap vocals, rhythmic flow]\n(rap) 라이트 켜 카메라 돌아가\n네 이름 부르는 소리 안 들려? 자\n한 박자도 놓치지 마 다 네 거야\n무대 위 중심 거긴 네 자리야\n[Pre-Chorus: airy mid female and bright high female trade lines]\n(airy) 자 이제 (bright) 네 차례\n(airy) 망설이지 마 (bright) 빛나\n[Hook: airy breathy female lead over four-part female harmony, bright on top warm on bottom]\n네 차례야 반짝여 봐\n넷이 모여 하나의 빛\n(ad-lib: airy) shine bright\n어둠도 우릴 못 막아\n[Verse 3: husky low female rap vocals]\n(rap) 뒤돌아보지 마 앞만 봐\n우리 넷이면 세상도 좁아\n[Bridge: four-way call and response, one voice at a time]\n(call: husky low) 준비됐어?\n(response: bright high) 언제나\n(add: airy mid) 같이 가\n(anchor: warm low) 끝까지\n[Final Hook: four-part female harmony, airy lead, key lift up a semitone]\n네 차례야 반짝여 봐\n넷이 모여 더 큰 빛\n(ad-lib: airy) higher\n우리가 무대야\n[Outro: four-part female harmony fade]"
+      },
+      "generation_status": "success"
+    }
+  ]
+}
