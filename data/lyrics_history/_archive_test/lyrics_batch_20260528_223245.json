@@ -1,0 +1,54 @@
+[
+  {
+    "index": 0,
+    "sp": "K-Pop ballad. Digital synthesizers provide bright, bell-like pads and staccato brass-style stabs. piano enters. woodblock hits on upbeats. The vocal arrangement includes layered harmonies and rhythmic ad-libs during transitions. full band enters, driving drum beat. A steady mid-tempo drum kit provides a crisp backbeat with prominent hi-hat work.",
+    "lyrics": "[Verse 1]\n불을 끄고 걷기로\n이 거리를 다시 본다\n매일 지나치던 길\n\n[Chorus]\n헬멧 안에서는요\n아무 소리 없어요\n내 숨소리 하나만요\n전부예요 지금은\n새벽빛이 스며도요\n저는 달려가요\n아무도 모르는 이 길\n저만 알고 있어요\n\n[Verse 2]\n불을 끄고 걷기로\n이 거리를 다시 본다\n매일 지나치던 길\n\n[Bridge]\n따뜻한 손이 되고 싶다\n진흙처럼 거칠지만\n\n[Chorus]\n헬멧 안에서는요\n아무 소리 없어요\n내 숨소리 하나만요\n전부예요 지금은\n새벽빛이 스며도요\n저는 달려가요\n아무도 모르는 이 길\n저만 알고 있어요",
+    "sp_length": 347,
+    "lyrics_length": 295,
+    "sp_validation": {
+      "sp_length": 347,
+      "total_words": 48,
+      "meaningful_words": 24,
+      "native_count": 24,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 295,
+      "section_count": 5,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6722,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 1,
+    "sp": "Orchestral soundtrack with a focus on woodwinds and strings. The guitar maintains a steady eighth-note arpeggio pattern throughout. arpeggiated synth fades with delay. reese bass modulates, half-time drum feel. Female vocals are clear and melodic, following the whistle's initial theme. A clean electric guitar provides sparse, arpeggiated accompaniment with light chorus and reverb. A clean, fingerpicked acoustic guitar plays a repetitive arpeggiated pattern in 4/4 time.",
+    "lyrics": "[Verse 1]\nFuego en la pista tonight\nMoving to the bassline right\nEvery beat drops like a wave\nDancing till the break of day\n\n[Chorus]\n(vocals barely audible over guitars)\nSwirling, swirling, lost in sound\nDrowning in the beautiful\n\n[Verse 2]\nFuego en la pista tonight\nMoving to the bassline right\nEvery beat drops like a wave\nDancing till the break of day\n\n[Bridge]\nBreakdown, filter sweep on bass\n\n[Chorus]\n(vocals barely audible over guitars)\nSwirling, swirling, lost in sound\nDrowning in the beautiful",
+    "sp_length": 473,
+    "lyrics_length": 504,
+    "sp_validation": {
+      "sp_length": 473,
+      "total_words": 67,
+      "meaningful_words": 33,
+      "native_count": 33,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 504,
+      "section_count": 5,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.6012,
+      "verdict": "PASS",
+      "issues": []
+    }
+  }
+]
