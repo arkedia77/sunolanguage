@@ -29,14 +29,27 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 
 HISTORY_DIR = PROJECT_ROOT / "data" / "lyrics_history"
+LYRICS_CORPUS_FILE = PROJECT_ROOT / "data" / "lyrics_chunks.json"
+
+# 완화 가드 파라미터 (2026-06-24 자가점검: exclude-history가 코퍼스 source song의
+# 97.7%(337/345)를 배제 → 잔여 8곡 → N017~N019 폴백/누출 연쇄의 근본원인).
+# 잔여 가용 source song이 하한 밑이면 "전체 history 배제"를 풀어 최근 배치만 배제하고
+# (오래된 source 재활용 허용) jaccard 임계를 강화해 근사중복을 막는다.
+MIN_FRESH_POOL = 40       # 잔여 가용 source song 하한
+RECENCY_WINDOW = 6        # 고갈 시 최근 N개 배치 파일만 배제
+RELAXED_JACCARD = 0.35    # 재사용 허용 시 텍스트 유사도 가드 강화 (기본 0.5 → 0.35)
 
 
 def _load_history_song_ids() -> set:
     """이전 배치 파일에서 사용된 song_id를 모두 수집 (크로스 배치 오염 방지)."""
+    return _collect_history_song_ids(sorted(HISTORY_DIR.glob("lyrics_batch_*.json"))
+                                     if HISTORY_DIR.exists() else [])
+
+
+def _collect_history_song_ids(paths) -> set:
+    """주어진 배치 파일 목록에서 _source_song_ids 수집."""
     sids = set()
-    if not HISTORY_DIR.exists():
-        return sids
-    for p in sorted(HISTORY_DIR.glob("lyrics_batch_*.json")):
+    for p in paths:
         try:
             with open(p) as f:
                 data = json.load(f)
@@ -45,9 +58,49 @@ def _load_history_song_ids() -> set:
             for entry in data:
                 for sid in entry.get("_source_song_ids", []):
                     sids.add(sid)
-        except (json.JSONDecodeError, KeyError):
+        except (json.JSONDecodeError, KeyError, OSError):
             continue
     return sids
+
+
+def _corpus_song_count() -> int:
+    """가사 코퍼스의 distinct source song 수 (풀 고갈 판정 기준)."""
+    try:
+        with open(LYRICS_CORPUS_FILE) as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return 0
+    chunks = data if isinstance(data, list) else data.get("chunks", [])
+    sids = set()
+    for ch in chunks:
+        if not isinstance(ch, dict):
+            continue
+        sid = ch.get("song_id")
+        if sid is None and isinstance(ch.get("payload"), dict):
+            sid = ch["payload"].get("song_id")
+        if sid is not None:
+            sids.add(sid)
+    return len(sids)
+
+
+def _resolve_history_exclusion(default_jaccard: float):
+    """exclude-history 적용 song_id와 jaccard 임계를 풀 잔여량에 따라 결정.
+
+    잔여 가용 source song(코퍼스 - 누적배제)이 MIN_FRESH_POOL 미만이면 완화모드:
+    전체 history 대신 최근 RECENCY_WINDOW개 배치만 배제하고 jaccard를 강화해
+    오래된 source song 재사용을 허용한다. 반환: (exclude_sids, jaccard, relaxed, info).
+    """
+    all_paths = (sorted(HISTORY_DIR.glob("lyrics_batch_*.json"))
+                 if HISTORY_DIR.exists() else [])
+    all_sids = _collect_history_song_ids(all_paths)
+    corpus_n = _corpus_song_count()
+    fresh = (corpus_n - len(all_sids)) if corpus_n else None
+    info = {"corpus_n": corpus_n, "excluded_all": len(all_sids), "fresh": fresh}
+    if corpus_n and fresh is not None and fresh < MIN_FRESH_POOL:
+        win_sids = _collect_history_song_ids(all_paths[-RECENCY_WINDOW:])
+        info["windowed"] = len(win_sids)
+        return win_sids, RELAXED_JACCARD, True, info
+    return all_sids, default_jaccard, False, info
 
 
 def cmd_search(args: list[str]):
@@ -354,10 +407,20 @@ def cmd_batch(args: list[str]):
     # --theme 미지정 시 테마 풀에서 곡별 로테이션 (theme/sub_theme 공란 + refine 무효 방지)
     theme_pool = list_themes()
 
+    import lyrics_retriever
+    jaccard_reject = lyrics_retriever.JACCARD_REJECT
     if exclude_history:
-        prev_sids = _load_history_song_ids()
-        batch_used_song_ids.update(prev_sids)
-        print(f"  [exclude-history] {len(prev_sids)} song_ids loaded from previous batches")
+        excl_sids, jaccard_reject, relaxed, info = _resolve_history_exclusion(
+            lyrics_retriever.JACCARD_REJECT)
+        batch_used_song_ids.update(excl_sids)
+        if relaxed:
+            print(f"  [exclude-history] ⚠ 풀 고갈 — 코퍼스 {info['corpus_n']}곡 중 "
+                  f"{info['excluded_all']} 배제 → 잔여 {info['fresh']} < {MIN_FRESH_POOL}. "
+                  f"완화모드: 최근 {RECENCY_WINDOW}배치 {info['windowed']}곡만 배제 + "
+                  f"jaccard {lyrics_retriever.JACCARD_REJECT}→{jaccard_reject}")
+        else:
+            print(f"  [exclude-history] {len(excl_sids)} song_ids loaded "
+                  f"(잔여 가용 source {info['fresh']}곡)")
         print()
 
     for i in range(count):
@@ -382,7 +445,8 @@ def cmd_batch(args: list[str]):
                                           theme=song_theme,
                                           batch_used_ids=batch_used_ids,
                                           batch_used_texts=batch_used_texts,
-                                          batch_used_song_ids=batch_used_song_ids)
+                                          batch_used_song_ids=batch_used_song_ids,
+                                          jaccard_reject=jaccard_reject)
         selected = {}
         metas = []
         bracket_count = 0

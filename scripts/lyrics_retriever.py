@@ -190,7 +190,8 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                             theme: str = None,
                             batch_used_ids: set = None,
                             batch_used_texts: set = None,
-                            batch_used_song_ids: set = None) -> dict[str, list[dict]]:
+                            batch_used_song_ids: set = None,
+                            jaccard_reject: float = None) -> dict[str, list[dict]]:
     from song_forms import get_section_query_hint, classify_genre_group
     from bracket_presets import retrieve_bracket_directives, format_bracket_section
 
@@ -198,6 +199,11 @@ def match_sp_differentiated(sp_text: str, form: list[str],
         client = get_client()
     if model is None:
         model = get_model()
+
+    # jaccard_reject 미지정 시 모듈 기본값. 완화모드(풀 고갈)에선 lyrics_engine이
+    # 더 낮은 값(예: 0.35)을 주입 — source song 재사용 허용을 텍스트 유사도 가드
+    # 강화로 보상(재사용 곡이 근사중복 텍스트를 내는 것 차단). 2026-06-24.
+    jr = JACCARD_REJECT if jaccard_reject is None else jaccard_reject
 
     genre = extract_sp_genre(sp_text)
     moods = extract_sp_mood(sp_text)
@@ -306,7 +312,7 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                 if needs_min_lines and _is_lyric_leak(t):
                     continue
                 # T1-3: song_id가 달라도 유사 텍스트(동일 코러스 변형 등) reject
-                if _max_jaccard(t, used_texts) > JACCARD_REJECT:
+                if _max_jaccard(t, used_texts) > jr:
                     continue
                 return [h]
             # 코어섹션 중간 폴백: 최소행은 유지한 채 유사도(Jaccard)만 완화.
@@ -321,7 +327,7 @@ def match_sp_differentiated(sp_text: str, form: list[str],
             for h in candidates:
                 t = h["payload"].get("text", "").strip()
                 if not (t and t not in used_texts and not is_sp_directive(t)
-                        and _max_jaccard(t, used_texts) <= JACCARD_REJECT):
+                        and _max_jaccard(t, used_texts) <= jr):
                     continue
                 # 코어섹션은 이 폴백에서도 누출/1행 거부(영어 악기서술 가로채기 방지). 2026-06-19.
                 if needs_min_lines and (_is_lyric_leak(t)

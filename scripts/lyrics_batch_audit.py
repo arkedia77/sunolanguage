@@ -192,6 +192,34 @@ def check_thin_sections(songs: list[dict]) -> list[dict]:
     return hits
 
 
+def check_core_english_leak(songs: list[dict]) -> list[dict]:
+    """코어섹션(verse/pre_chorus/bridge)에 한글이 전혀 없으면 영어 악기서술 누출
+    의심 — N017류 버그 소급 검출.
+
+    언어인식: 곡 전체에 한글이 있을 때만(=한국어곡인데 그 섹션만 영어로 샌 경우)
+    플래그. 곡 전체에 한글이 없으면 정상 외국어곡(이탈리아 벨칸토·스페인어 등)으로
+    보고 오탐 제외. 2026-06-24 재점검 정밀화."""
+    def content_lines(text: str) -> list[str]:
+        # 괄호전용 보컬디렉션 "(soft, breathy)"은 정상 지시 — 가사내용 아님이라 제외.
+        # [[project_suno_paren_directive]]. 실제 가사행만 누출판정 대상.
+        return [l for l in vocal_lines(text) if not re.fullmatch(r"\(.*\)", l)]
+
+    hits = []
+    for s in songs:
+        all_content = content_lines(s.get("lyrics", ""))
+        song_has_korean = any(re.search(r"[가-힣]", l) for l in all_content)
+        if not song_has_korean:
+            continue  # 외국어곡 — 누출 아님
+        for tag, text in _parse_sections(s.get("lyrics", "")):
+            if section_base(tag) not in CORE_SECTIONS:
+                continue
+            clines = content_lines(text)
+            if clines and not any(re.search(r"[가-힣]", l) for l in clines):
+                hits.append({"index": s.get("index"), "title": s.get("title"),
+                             "section": tag, "sample": clines[0][:60]})
+    return hits
+
+
 def check_self_repeat(songs: list[dict]) -> list[dict]:
     """서로 다른 섹션타입에 같은 라인 재출현 (코러스 계열 제외) — WARN."""
     hits = []
@@ -386,6 +414,88 @@ def print_retro(r: dict):
               f"{s['null']:>5}")
 
 
+# ---------------------------------------------------------------- recheck (DB)
+
+def recheck_fetch(gid_from: int = None, gid_to: int = None,
+                  batch: str = None) -> list[dict]:
+    """DB의 완성(status='generated') 가사를 감사용 곡 리스트로 적재.
+    무가사(인스트루멘탈) 곡은 제외. index=global_id로 매핑."""
+    conn = get_conn()
+    cur = conn.cursor()
+    q = ("SELECT global_id, batch, title, lyrics, coherence FROM songs "
+         "WHERE creator = 'sunolanguage' AND status = 'generated' "
+         "AND lyrics IS NOT NULL AND length(trim(lyrics)) > 0")
+    params = []
+    if gid_from is not None:
+        q += " AND global_id >= %s"; params.append(gid_from)
+    if gid_to is not None:
+        q += " AND global_id <= %s"; params.append(gid_to)
+    if batch:
+        q += " AND batch = %s"; params.append(batch)
+    q += " ORDER BY global_id"
+    cur.execute(q, params)
+    rows = cur.fetchall()
+    conn.close()
+    return [{"index": g, "gid": g, "batch": b, "title": t, "lyrics": ly,
+             "coherence": float(c) if c is not None else None}
+            for g, b, t, ly, c in rows]
+
+
+def recheck_audit(songs: list[dict], limit: float) -> dict:
+    """완성 가사 소급 구조감사 — 누출/1행/V1=V2/영어누출/곡간오염 게이트."""
+    sp_leak = check_sp_directive(songs)
+    v_ident = check_verse_identity(songs)
+    thin = check_thin_sections(songs)
+    eng_leak = check_core_english_leak(songs)
+    cross_song = check_cross_song(songs, limit)
+
+    fail_idx = sorted(
+        {h["index"] for hits in (sp_leak, v_ident, thin, eng_leak) for h in hits}
+        | {i for h in cross_song for i in h["pair"]})
+
+    by_batch = Counter(s["batch"] for s in songs)
+    return {
+        "songs": len(songs),
+        "batches": dict(by_batch),
+        "jaccard_limit": limit,
+        "sp_directive_leak": sp_leak,
+        "core_english_leak": eng_leak,
+        "identical_repeat_sections": v_ident,
+        "thin_core_sections": thin,
+        "cross_song_contamination": cross_song,
+        "self_repeat_warn": check_self_repeat(songs),
+        "fail_list": fail_idx,
+        "verdict": "FAIL" if fail_idx else "PASS",
+    }
+
+
+def print_recheck(r: dict):
+    print(f"🔁 완성가사 재점검 (DB status=generated) — {r['songs']}곡 → "
+          f"**{r['verdict']}**")
+    bs = ", ".join(f"{k}:{v}" for k, v in sorted(r["batches"].items()))
+    print(f"  대상 배치: {bs}")
+    gates = [
+        ("SP 디렉티브 누출", r["sp_directive_leak"]),
+        ("코어 영어누출(N017류)", r["core_english_leak"]),
+        ("동일반복 섹션(V1=V2류)", r["identical_repeat_sections"]),
+        ("1행 코어섹션", r["thin_core_sections"]),
+        ("곡간 오염", r["cross_song_contamination"]),
+    ]
+    for name, hits in gates:
+        print(f"  {name}: " + ("✅ 0건" if not hits else f"❌ {len(hits)}건"))
+        for h in hits[:8]:
+            print(f"      {json.dumps(h, ensure_ascii=False)[:150]}")
+    warns = r["self_repeat_warn"]
+    if warns:
+        print(f"  ⚠️ 곡내 자기반복 {len(warns)}곡 (WARN)")
+        for h in warns[:5]:
+            print(f"      gid {h['index']} «{h['title']}» {h['lines']}")
+    if r["fail_list"]:
+        print(f"  🔧 보강대상 gid: {r['fail_list']}")
+    else:
+        print("  ✅ 완성 가사 전건 구조 클린 — 보강 불필요")
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -402,6 +512,14 @@ def main():
 
     rt = sub.add_parser("retro", help="N001~N014 coherence 분포 소급 (DB)")
     rt.add_argument("--json", type=Path)
+
+    rc = sub.add_parser("recheck",
+                        help="완성(generated) 가사 소급 구조감사 (DB)")
+    rc.add_argument("--gid-from", type=int, help="global_id 하한")
+    rc.add_argument("--gid-to", type=int, help="global_id 상한")
+    rc.add_argument("--batch", help="특정 배치명만 (예: N015)")
+    rc.add_argument("--jaccard", type=float, default=JACCARD_LIMIT)
+    rc.add_argument("--json", type=Path)
 
     args = ap.parse_args()
 
@@ -420,6 +538,18 @@ def main():
         if args.json:
             args.json.write_text(json.dumps(report, ensure_ascii=False, indent=2))
             print(f"  💾 {args.json}")
+
+    if args.cmd == "recheck":
+        songs = recheck_fetch(args.gid_from, args.gid_to, args.batch)
+        if not songs:
+            print("대상 곡 없음 (status=generated, 가사 보유 조건)")
+            sys.exit(0)
+        report = recheck_audit(songs, args.jaccard)
+        print_recheck(report)
+        if args.json:
+            args.json.write_text(json.dumps(report, ensure_ascii=False, indent=2))
+            print(f"  💾 {args.json}")
+        sys.exit(1 if report["fail_list"] else 0)
 
 
 if __name__ == "__main__":

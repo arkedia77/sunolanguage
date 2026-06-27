@@ -61,6 +61,23 @@ def _is_korean(text: str) -> bool:
     return bool(re.search(r"[가-힣]", text))
 
 
+def _first_lyric_line(lyrics: str) -> str:
+    """가사 본문의 첫 가창 행(브래킷 [..]/괄호 (..) 섹션태그 제외, 한글 포함).
+
+    title 폴백버그 수정용 — 어떤 title 전략도 후보를 못 내는 가사 빈약 케이스에서
+    장르명(SP) 대신 실제 가사 한 줄을 제목 근사치로 쓴다(최대 20자). 없으면 "".
+    """
+    if not lyrics:
+        return ""
+    for line in lyrics.split("\n"):
+        s = line.strip()
+        if not s or s.startswith("[") or s.startswith("("):
+            continue
+        if _is_korean(s):
+            return s[:20].strip()
+    return ""
+
+
 def _strip_particle(word: str) -> str:
     return PARTICLES.sub("", word)
 
@@ -205,12 +222,20 @@ def generate_title(lyrics: str, sp_text: str = "",
     weighted_candidates = []
     for name, candidates in strategies.items():
         w = weights.get(name, 1)
+        # 가중치 0 전략(전 장르 sp_mood=0)은 "비활성" 의도 — 후보에서 제외.
+        # 종전엔 유일 후보일 때 가중치0이어도 당첨돼 장르명이 제목이 됨(gid30120
+        # 폴백버그의 실제 누출원). 제외하면 가사 빈약 시 _first_lyric_line 폴백으로 라우팅.
+        if w <= 0:
+            continue
         for c in candidates:
             weighted_candidates.append((c, name, w))
 
     if not weighted_candidates:
+        # 폴백버그 수정(2026-06-24 자가점검): 종전엔 sp_text.split(".")[0](=장르명)을
+        # 제목으로 써서 가사 빈약 시 "K-Pop R&B ballad" 류가 제목이 됨(gid30120 사례).
+        # 장르명 대신 실제 가창 첫 행(한글 포함, 브래킷/괄호 제외)으로 대체.
         return {
-            "title": sp_text.split(".")[0].strip()[:20] if sp_text else "Untitled",
+            "title": _first_lyric_line(lyrics) or "Untitled",
             "strategy": "fallback",
             "alternatives": [],
         }

@@ -114,6 +114,50 @@ def test_load_history_song_ids_skips_bad_json(monkeypatch):
     assert ids == {7}
 
 
+# --- (c2) 완화 가드: 풀 고갈 시 최근배치만 배제 + jaccard 강화 (2026-06-24) ----
+
+def _write_history(tmpdir, n_batches, songs_per_batch):
+    """배치별로 서로 겹치지 않는 source song_id를 가진 history 파일 생성."""
+    sid = 0
+    for b in range(n_batches):
+        batch = []
+        for _ in range(songs_per_batch):
+            batch.append({"_source_song_ids": [sid]})
+            sid += 1
+        (tmpdir / f"lyrics_batch_2099{b:04d}_000000.json").write_text(
+            json.dumps(batch, ensure_ascii=False))
+    return sid  # 총 distinct song 수
+
+
+def test_resolve_exclusion_healthy_pool_uses_all(monkeypatch):
+    # 코퍼스가 충분히 크면(잔여 >= MIN_FRESH_POOL) 전체 history 배제 유지
+    with tempfile.TemporaryDirectory() as td:
+        tmpdir = Path(td)
+        total = _write_history(tmpdir, n_batches=3, songs_per_batch=5)  # 15곡 사용
+        monkeypatch.setattr(lyrics_engine, "HISTORY_DIR", tmpdir)
+        monkeypatch.setattr(lyrics_engine, "_corpus_song_count", lambda: 200)
+        excl, jr, relaxed, info = lyrics_engine._resolve_history_exclusion(0.5)
+    assert relaxed is False
+    assert len(excl) == total == 15
+    assert jr == 0.5
+    assert info["fresh"] == 200 - 15
+
+
+def test_resolve_exclusion_exhausted_pool_relaxes(monkeypatch):
+    # 잔여 가용곡이 하한 밑이면 완화모드: 최근 RECENCY_WINDOW배치만 배제 + jaccard 강화
+    with tempfile.TemporaryDirectory() as td:
+        tmpdir = Path(td)
+        total = _write_history(tmpdir, n_batches=10, songs_per_batch=5)  # 50곡 사용
+        monkeypatch.setattr(lyrics_engine, "HISTORY_DIR", tmpdir)
+        monkeypatch.setattr(lyrics_engine, "_corpus_song_count", lambda: 52)
+        excl, jr, relaxed, info = lyrics_engine._resolve_history_exclusion(0.5)
+    assert relaxed is True                       # 잔여 52-50=2 < 40
+    assert jr == lyrics_engine.RELAXED_JACCARD    # 0.35로 강화
+    # 최근 RECENCY_WINDOW(6)배치 × 5곡 = 30곡만 배제 (전체 50 < 보다 적음)
+    assert len(excl) == lyrics_engine.RECENCY_WINDOW * 5
+    assert len(excl) < total
+
+
 # --- (d) lyrics_themes integrity ---------------------------------------------
 
 def test_every_theme_has_required_fields():
