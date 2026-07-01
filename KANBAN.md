@@ -25,7 +25,7 @@
 
 ## TODO
 ### 크로스프로젝트 deliverable
-- [sunolanguage] **leomusic3 chaser goldset — ★v0 전달완료(07-01), sanity-check 대기** — direct/blend 임계(0.78/0.62 휴리스틱) 캘리브레이션용. **v0 100트리플 저작·전달**: `data/goldset/chaser_calib_goldset_v0.json`(+README 라벨기준), label match45/partial35/no_match20, 20장르축, candidate 전건 v3.2 attested, proposal_text 합성(1차캘리·한계고지), CN 미포함. agent-comm 회신 첨부(옵션a). **다음: leomusic3 sanity-check(형식/score분포 3구간분리/partial경계) 피드백 → v1(200~300) 확장**
+- [sunolanguage] **leomusic3 chaser goldset — ★v0 검증완료(07-01), v1 taxonomy 대기** — v0 100트리플(`data/goldset/chaser_calib_goldset_v0.json`) 전달→leomusic3 sanity-check: ✅형식 OK, ★**밴드 중심 단조분리 확인**(match .682/partial .590/no_match .472, 간격 ~0.10) 라벨스킴 타당. 발견 2건 채택: ⓐ짧은토큰 저평가(terse 후보 length asymmetry로 score↓→v1 짧은구 정규화) ⓑno_match 실악기 잔존(→v1 dead-zone/foley/추상 우선). **v1 블로커: leomusic3 프로덕션 컬렉션 taxonomy(country×genre) 수령 필요**(target_collection 태그로 top1 재캘리). 대안=v3.2 lexicon 벡터 제공(★Leo 배포결정 필요, 옵션2). 비긴급. **다음: taxonomy 수령+Leo 슬롯→v1(200~300)**
 
 ### v5.5 검증
 - [sunolanguage] S_PU 시리즈 sunomusic 발주 — `data/v55_pumpup_test_protocol.md` 참조
