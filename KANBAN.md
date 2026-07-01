@@ -25,7 +25,7 @@
 
 ## TODO
 ### 크로스프로젝트 deliverable
-- [sunolanguage] **leomusic3 chaser goldset — ★v0 검증완료(07-01), v1 taxonomy 대기** — v0 100트리플(`data/goldset/chaser_calib_goldset_v0.json`) 전달→leomusic3 sanity-check: ✅형식 OK, ★**밴드 중심 단조분리 확인**(match .682/partial .590/no_match .472, 간격 ~0.10) 라벨스킴 타당. 발견 2건 채택: ⓐ짧은토큰 저평가(terse 후보 length asymmetry로 score↓→v1 짧은구 정규화) ⓑno_match 실악기 잔존(→v1 dead-zone/foley/추상 우선). **v1 블로커: leomusic3 프로덕션 컬렉션 taxonomy(country×genre) 수령 필요**(target_collection 태그로 top1 재캘리). 대안=v3.2 lexicon 벡터 제공(★Leo 배포결정 필요, 옵션2). 비긴급. **다음: taxonomy 수령+Leo 슬롯→v1(200~300)**
+- [sunolanguage] **leomusic3 chaser goldset — ★v0 검증완료(07-01), v1 taxonomy 대기** — v0 100트리플(`data/goldset/chaser_calib_goldset_v0.json`) 전달→leomusic3 sanity-check: ✅형식 OK, ★**밴드 중심 단조분리 확인**(match .682/partial .590/no_match .472, 간격 ~0.10) 라벨스킴 타당. 발견 2건 채택: ⓐ짧은토큰 저평가(terse 후보 length asymmetry로 score↓→v1 짧은구 정규화) ⓑno_match 실악기 잔존(→v1 dead-zone/foley/추상 우선). **★v1 완전 언블록(07-01)** — leomusic3 taxonomy 수령(KR 견고 8축 매핑: ballad/rnb/hiphop/rock/pop/kpop/trot/folk→music_kr_*), 전 설계결정 해소. **v1 스펙확정**: 200~300, ⓐ candidate 짧은구 정규화, ⓑ no_match=dead-zone/foley/추상만(실악기 오답페어→partial 재분류), target_collection=KR견고축, 무매핑11축=v2이월(옵션A). lexicon 배포는 v1 불필요→Leo결정 해제. 비긴급. **다음: Leo 슬롯→v1 빌드(v0의 2~3배 규모)**
 
 ### v5.5 검증
 - [sunolanguage] S_PU 시리즈 sunomusic 발주 — `data/v55_pumpup_test_protocol.md` 참조
