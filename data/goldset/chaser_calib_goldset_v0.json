@@ -1,0 +1,850 @@
+{
+  "goldset_id": "sunolang_chaser_calib_v0",
+  "version": "v0",
+  "size": 100,
+  "generated_by": "sunolanguage",
+  "for": "leomusic3",
+  "purpose": "chaser normalize direct/blend/fallback 임계값 캘리브레이션(현 0.78/0.62 휴리스틱 재설정)",
+  "source_authority": "sunolang lexical_index v3.2(496곡) attested native tokens",
+  "label_scheme": {
+    "match": "proposal 지배적 음향의도의 정확한 네이티브 대응=candidate. top1 HIGH score 기대(direct).",
+    "partial": "proposal이 candidate와 의미중첩하나 비정확(상위/하위·형제·한 면·thin근사). MEDIUM(blend).",
+    "no_match": "무관, 또는 네이티브 대응없는 개념(dead-zone 컴파운드·foley·추상). LOW(fallback)."
+  },
+  "usage": "proposal_text를 chaser retrieve에 투입→top1 candidate score 측정→label과 대조해 direct|blend|fallback 임계 재설정. no_match는 attested 토큰과의 '오답 페어'라 리트리버 오검출 시 score도 함께 관찰 가능.",
+  "caveats": [
+    "proposal_text는 sunolang 합성(실 프로덕션 로그 아님) — 1차 캘리 용도. 확정 전 leomusic3 자체 chaser 로그로 2차 검증 권장.",
+    "candidate 전부 v3.2 attested(no_match도 attested 토큰과의 오답 페어).",
+    "CN 미포함(합의). KR 우세 코퍼스 기준.",
+    "partial 경계는 주관 개입 — note에 판정근거 명시. v0 sanity-check 후 v1(200~300)로 확장."
+  ],
+  "label_distribution": {
+    "match": 45,
+    "partial": 35,
+    "no_match": 20
+  },
+  "genre_distribution": {
+    "edm": 11,
+    "hiphop": 8,
+    "lofi": 2,
+    "rnb": 8,
+    "jazz": 11,
+    "rock": 7,
+    "ballad": 3,
+    "cinematic": 5,
+    "citypop": 6,
+    "disco": 2,
+    "trot": 5,
+    "folk": 10,
+    "bossa": 2,
+    "amapiano": 2,
+    "dreampop": 5,
+    "latin": 2,
+    "kpop": 3,
+    "funk": 3,
+    "ambient": 4,
+    "pop": 1
+  },
+  "triples": [
+    {
+      "id": "v0-001",
+      "proposal_text": "detuned euphoric supersaw stacks screaming over a festival drop",
+      "candidate_native_entity": "supersaw",
+      "label": "match",
+      "genre_axis": "edm",
+      "note": ""
+    },
+    {
+      "id": "v0-002",
+      "proposal_text": "a pumping sidechained pad breathing against the four-on-the-floor kick",
+      "candidate_native_entity": "sidechain",
+      "label": "match",
+      "genre_axis": "edm",
+      "note": ""
+    },
+    {
+      "id": "v0-003",
+      "proposal_text": "glittering sixteenth-note synth arpeggio bouncing across the field",
+      "candidate_native_entity": "synth arpeggio",
+      "label": "match",
+      "genre_axis": "edm",
+      "note": ""
+    },
+    {
+      "id": "v0-004",
+      "proposal_text": "warm analog pad washing lush sustained chords",
+      "candidate_native_entity": "synth pad",
+      "label": "match",
+      "genre_axis": "edm",
+      "note": ""
+    },
+    {
+      "id": "v0-005",
+      "proposal_text": "a steady disco kick thumping on every single beat",
+      "candidate_native_entity": "four-on-the-floor",
+      "label": "match",
+      "genre_axis": "edm",
+      "note": ""
+    },
+    {
+      "id": "v0-006",
+      "proposal_text": "deep rolling sub frequencies you feel more than hear",
+      "candidate_native_entity": "sub bass",
+      "label": "match",
+      "genre_axis": "edm",
+      "note": ""
+    },
+    {
+      "id": "v0-007",
+      "proposal_text": "euphoric melodic future-bass drop with pitched vocal chops",
+      "candidate_native_entity": "future bass",
+      "label": "match",
+      "genre_axis": "edm",
+      "note": ""
+    },
+    {
+      "id": "v0-008",
+      "proposal_text": "crisp rapid-fire trap hi-hats stuttering in triplet rolls",
+      "candidate_native_entity": "trap hi-hat",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "note": ""
+    },
+    {
+      "id": "v0-009",
+      "proposal_text": "a dusty boom-bap drum loop with vinyl warmth",
+      "candidate_native_entity": "boom bap",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "note": ""
+    },
+    {
+      "id": "v0-010",
+      "proposal_text": "crackling vinyl record surface noise under a mellow loop",
+      "candidate_native_entity": "vinyl crackle",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "note": ""
+    },
+    {
+      "id": "v0-011",
+      "proposal_text": "a booming 808 bass gliding between notes",
+      "candidate_native_entity": "808 bass",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "note": ""
+    },
+    {
+      "id": "v0-012",
+      "proposal_text": "old cassette tape hiss layered beneath lo-fi drums",
+      "candidate_native_entity": "tape hiss",
+      "label": "match",
+      "genre_axis": "lofi",
+      "note": ""
+    },
+    {
+      "id": "v0-013",
+      "proposal_text": "warm Rhodes electric piano with mellow seventh chords",
+      "candidate_native_entity": "rhodes",
+      "label": "match",
+      "genre_axis": "rnb",
+      "note": ""
+    },
+    {
+      "id": "v0-014",
+      "proposal_text": "a smooth neo-soul groove with jazzy extended chords",
+      "candidate_native_entity": "neo-soul",
+      "label": "match",
+      "genre_axis": "rnb",
+      "note": ""
+    },
+    {
+      "id": "v0-015",
+      "proposal_text": "airy falsetto floating high above the hook",
+      "candidate_native_entity": "falsetto",
+      "label": "match",
+      "genre_axis": "rnb",
+      "note": ""
+    },
+    {
+      "id": "v0-016",
+      "proposal_text": "melismatic vocal runs curling at the end of every line",
+      "candidate_native_entity": "melisma",
+      "label": "match",
+      "genre_axis": "rnb",
+      "note": ""
+    },
+    {
+      "id": "v0-017",
+      "proposal_text": "soft brushed snare swishing on a laid-back groove",
+      "candidate_native_entity": "brushed snare",
+      "label": "match",
+      "genre_axis": "jazz",
+      "note": ""
+    },
+    {
+      "id": "v0-018",
+      "proposal_text": "an upright bass walking note by note through the changes",
+      "candidate_native_entity": "walking bass",
+      "label": "match",
+      "genre_axis": "jazz",
+      "note": ""
+    },
+    {
+      "id": "v0-019",
+      "proposal_text": "a smoky tenor saxophone solo swelling at the peak",
+      "candidate_native_entity": "tenor saxophone",
+      "label": "match",
+      "genre_axis": "jazz",
+      "note": ""
+    },
+    {
+      "id": "v0-020",
+      "proposal_text": "a swung shuffle groove with a loose triplet feel",
+      "candidate_native_entity": "swing",
+      "label": "match",
+      "genre_axis": "jazz",
+      "note": ""
+    },
+    {
+      "id": "v0-021",
+      "proposal_text": "chugging palm-muted distorted guitar riffs",
+      "candidate_native_entity": "palm-muted",
+      "label": "match",
+      "genre_axis": "rock",
+      "note": ""
+    },
+    {
+      "id": "v0-022",
+      "proposal_text": "a wall of overdriven distorted guitars",
+      "candidate_native_entity": "distorted guitar",
+      "label": "match",
+      "genre_axis": "rock",
+      "note": ""
+    },
+    {
+      "id": "v0-023",
+      "proposal_text": "big open power chords ringing out",
+      "candidate_native_entity": "power chords",
+      "label": "match",
+      "genre_axis": "rock",
+      "note": ""
+    },
+    {
+      "id": "v0-024",
+      "proposal_text": "a delicate grand piano carrying the entire ballad",
+      "candidate_native_entity": "grand piano",
+      "label": "match",
+      "genre_axis": "ballad",
+      "note": ""
+    },
+    {
+      "id": "v0-025",
+      "proposal_text": "a sweeping cinematic string section swelling in the chorus",
+      "candidate_native_entity": "strings",
+      "label": "match",
+      "genre_axis": "cinematic",
+      "note": ""
+    },
+    {
+      "id": "v0-026",
+      "proposal_text": "expressive rubato piano phrasing freely bending the tempo",
+      "candidate_native_entity": "rubato",
+      "label": "match",
+      "genre_axis": "ballad",
+      "note": ""
+    },
+    {
+      "id": "v0-027",
+      "proposal_text": "a springy slap-and-pop electric bass driving the groove",
+      "candidate_native_entity": "slap bass",
+      "label": "match",
+      "genre_axis": "citypop",
+      "note": ""
+    },
+    {
+      "id": "v0-028",
+      "proposal_text": "a four-on-the-floor disco groove with bright handclaps",
+      "candidate_native_entity": "handclaps",
+      "label": "match",
+      "genre_axis": "disco",
+      "note": ""
+    },
+    {
+      "id": "v0-029",
+      "proposal_text": "a bright accordion riffing melodic counter-lines and stabs",
+      "candidate_native_entity": "accordion",
+      "label": "match",
+      "genre_axis": "trot",
+      "note": ""
+    },
+    {
+      "id": "v0-030",
+      "proposal_text": "a male lead with heavy vibrato on sustained notes",
+      "candidate_native_entity": "heavy vibrato",
+      "label": "match",
+      "genre_axis": "trot",
+      "note": "thin(2) 직결"
+    },
+    {
+      "id": "v0-031",
+      "proposal_text": "deliberate old-school Korean phrasing weighting each syllable",
+      "candidate_native_entity": "traditional phrasing",
+      "label": "match",
+      "genre_axis": "trot",
+      "note": "thin(1) 직결"
+    },
+    {
+      "id": "v0-032",
+      "proposal_text": "gently fingerpicked acoustic guitar arpeggios",
+      "candidate_native_entity": "fingerpicked",
+      "label": "match",
+      "genre_axis": "folk",
+      "note": ""
+    },
+    {
+      "id": "v0-033",
+      "proposal_text": "a warm strummed acoustic guitar driving the verse",
+      "candidate_native_entity": "acoustic guitar",
+      "label": "match",
+      "genre_axis": "folk",
+      "note": ""
+    },
+    {
+      "id": "v0-034",
+      "proposal_text": "a plaintive harmonica wailing over the campfire",
+      "candidate_native_entity": "harmonica",
+      "label": "match",
+      "genre_axis": "folk",
+      "note": ""
+    },
+    {
+      "id": "v0-035",
+      "proposal_text": "a nylon-string classical guitar with soft round tone",
+      "candidate_native_entity": "nylon guitar",
+      "label": "match",
+      "genre_axis": "folk",
+      "note": ""
+    },
+    {
+      "id": "v0-036",
+      "proposal_text": "a soft nylon guitar playing a gentle bossa-nova rhythm",
+      "candidate_native_entity": "bossa nova",
+      "label": "match",
+      "genre_axis": "bossa",
+      "note": ""
+    },
+    {
+      "id": "v0-037",
+      "proposal_text": "a deep resonant log-drum bassline bouncing in amapiano style",
+      "candidate_native_entity": "log drum",
+      "label": "match",
+      "genre_axis": "amapiano",
+      "note": ""
+    },
+    {
+      "id": "v0-038",
+      "proposal_text": "a twinkling glockenspiel motif like music-box bells",
+      "candidate_native_entity": "glockenspiel",
+      "label": "match",
+      "genre_axis": "dreampop",
+      "note": ""
+    },
+    {
+      "id": "v0-039",
+      "proposal_text": "a reverb-drenched dreamy guitar swimming in the mix",
+      "candidate_native_entity": "reverb-drenched",
+      "label": "match",
+      "genre_axis": "dreampop",
+      "note": ""
+    },
+    {
+      "id": "v0-040",
+      "proposal_text": "a booming distorted 808 kick knocking hard",
+      "candidate_native_entity": "808",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "note": ""
+    },
+    {
+      "id": "v0-041",
+      "proposal_text": "intimate breathy lead vocal almost whispered",
+      "candidate_native_entity": "breathy vocals",
+      "label": "match",
+      "genre_axis": "rnb",
+      "note": "thin(1) 직결"
+    },
+    {
+      "id": "v0-042",
+      "proposal_text": "an octave-hopping bass bouncing between root and octave",
+      "candidate_native_entity": "octave bass",
+      "label": "match",
+      "genre_axis": "citypop",
+      "note": "thin(1) 직결"
+    },
+    {
+      "id": "v0-043",
+      "proposal_text": "a mellow Rhodes with tremolo shimmer",
+      "candidate_native_entity": "rhodes",
+      "label": "match",
+      "genre_axis": "rnb",
+      "note": ""
+    },
+    {
+      "id": "v0-044",
+      "proposal_text": "a warm brushed-snare jazz-ballad groove",
+      "candidate_native_entity": "brushed snare",
+      "label": "match",
+      "genre_axis": "jazz",
+      "note": ""
+    },
+    {
+      "id": "v0-045",
+      "proposal_text": "wide layered saw-synth lead with pitch-bent risers",
+      "candidate_native_entity": "supersaw",
+      "label": "partial",
+      "genre_axis": "edm",
+      "note": "saw lead≈supersaw이나 명시 아님"
+    },
+    {
+      "id": "v0-046",
+      "proposal_text": "a growling wobbling reese bass under the beat",
+      "candidate_native_entity": "sub bass",
+      "label": "partial",
+      "genre_axis": "edm",
+      "note": "reese≈sub 별개 음색"
+    },
+    {
+      "id": "v0-047",
+      "proposal_text": "a plucky pizzicato-style synth stab on the offbeat",
+      "candidate_native_entity": "synth arpeggio",
+      "label": "partial",
+      "genre_axis": "edm",
+      "note": "pluck stab≈arp계열 근사"
+    },
+    {
+      "id": "v0-048",
+      "proposal_text": "turntablist record-scratch cuts between phrases",
+      "candidate_native_entity": "vinyl crackle",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "note": "scratch≈vinyl 표면음, 기법 다름"
+    },
+    {
+      "id": "v0-049",
+      "proposal_text": "bebop acoustic piano comping with dense voicings",
+      "candidate_native_entity": "grand piano",
+      "label": "partial",
+      "genre_axis": "jazz",
+      "note": "bebop 어쿠스틱≈grand 명시 아님"
+    },
+    {
+      "id": "v0-050",
+      "proposal_text": "a woody double bass plucked with warm tone",
+      "candidate_native_entity": "upright bass",
+      "label": "partial",
+      "genre_axis": "jazz",
+      "note": "double bass≈upright(사실상 동의어, 경계표본)"
+    },
+    {
+      "id": "v0-051",
+      "proposal_text": "a screaming guitar solo with heavy whammy dives",
+      "candidate_native_entity": "distorted guitar",
+      "label": "partial",
+      "genre_axis": "rock",
+      "note": "solo≈distorted guitar 한 면"
+    },
+    {
+      "id": "v0-052",
+      "proposal_text": "driving rock drums pounding a relentless pulse",
+      "candidate_native_entity": "four-on-the-floor",
+      "label": "partial",
+      "genre_axis": "rock",
+      "note": "driving≈4온플 특정패턴 아님"
+    },
+    {
+      "id": "v0-053",
+      "proposal_text": "a lone cello line beneath a hushed vocal",
+      "candidate_native_entity": "strings",
+      "label": "partial",
+      "genre_axis": "cinematic",
+      "note": "cello⊂strings 상위개념"
+    },
+    {
+      "id": "v0-054",
+      "proposal_text": "a plucked pizzicato string section staccato",
+      "candidate_native_entity": "strings",
+      "label": "partial",
+      "genre_axis": "cinematic",
+      "note": "pizzicato⊂strings 주법한정"
+    },
+    {
+      "id": "v0-055",
+      "proposal_text": "a smoky alto saxophone breathy and tender",
+      "candidate_native_entity": "tenor saxophone",
+      "label": "partial",
+      "genre_axis": "jazz",
+      "note": "alto≈tenor 형제토큰"
+    },
+    {
+      "id": "v0-056",
+      "proposal_text": "a whole rooftop crowd chanting the hook in unison",
+      "candidate_native_entity": "gang vocals",
+      "label": "partial",
+      "genre_axis": "trot",
+      "note": "gang vocals(1)≈이나 chant 컴파운드는 dead"
+    },
+    {
+      "id": "v0-057",
+      "proposal_text": "a banjo rolling a bright bluegrass pattern",
+      "candidate_native_entity": "fingerpicked",
+      "label": "partial",
+      "genre_axis": "folk",
+      "note": "banjo롤≈fingerpicked 기법 근사"
+    },
+    {
+      "id": "v0-058",
+      "proposal_text": "a fast flamenco rasgueado strum",
+      "candidate_native_entity": "nylon guitar",
+      "label": "partial",
+      "genre_axis": "latin",
+      "note": "flamenco≈nylon guitar 다른 주법"
+    },
+    {
+      "id": "v0-059",
+      "proposal_text": "a bright marimba melody over the log drum",
+      "candidate_native_entity": "log drum",
+      "label": "partial",
+      "genre_axis": "amapiano",
+      "note": "marimba 별개, 문맥 근접"
+    },
+    {
+      "id": "v0-060",
+      "proposal_text": "mellow lo-fi keys with a dusty low-pass filter",
+      "candidate_native_entity": "electric piano",
+      "label": "partial",
+      "genre_axis": "lofi",
+      "note": "lofi keys≈electric piano 근사"
+    },
+    {
+      "id": "v0-061",
+      "proposal_text": "a glossy polished K-pop production with layered vocals",
+      "candidate_native_entity": "vocals",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "note": "broad — vocals 상위매칭"
+    },
+    {
+      "id": "v0-062",
+      "proposal_text": "a big anthemic stadium-crowd chant",
+      "candidate_native_entity": "gang vocals",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "note": "stadium/crowd=0이나 gang vocals 근사"
+    },
+    {
+      "id": "v0-063",
+      "proposal_text": "a fingerstyle nylon guitar with warm intimacy",
+      "candidate_native_entity": "fingerpicked",
+      "label": "partial",
+      "genre_axis": "folk",
+      "note": "fingerstyle≈fingerpicked, 악기특정 다름"
+    },
+    {
+      "id": "v0-064",
+      "proposal_text": "a warm upright piano in a jazzy trio",
+      "candidate_native_entity": "grand piano",
+      "label": "partial",
+      "genre_axis": "jazz",
+      "note": "upright piano≈grand 근사(별개)"
+    },
+    {
+      "id": "v0-065",
+      "proposal_text": "a bright bell-like celesta twinkle",
+      "candidate_native_entity": "glockenspiel",
+      "label": "partial",
+      "genre_axis": "cinematic",
+      "note": "celesta≈glockenspiel 형제"
+    },
+    {
+      "id": "v0-066",
+      "proposal_text": "a distorted gritty bass fuzz growl",
+      "candidate_native_entity": "sub bass",
+      "label": "partial",
+      "genre_axis": "rock",
+      "note": "fuzz bass≈sub 음색 다름"
+    },
+    {
+      "id": "v0-067",
+      "proposal_text": "a shimmering 12-string acoustic guitar jangle",
+      "candidate_native_entity": "acoustic guitar",
+      "label": "partial",
+      "genre_axis": "folk",
+      "note": "12-string≈acoustic 한정변형"
+    },
+    {
+      "id": "v0-068",
+      "proposal_text": "a hazy wash of shoegaze reverb blurring everything",
+      "candidate_native_entity": "reverb-drenched",
+      "label": "partial",
+      "genre_axis": "dreampop",
+      "note": "shoegaze wash≈reverb-drenched 근사"
+    },
+    {
+      "id": "v0-069",
+      "proposal_text": "a syncopated funky electric-piano clav-like riff",
+      "candidate_native_entity": "electric piano",
+      "label": "partial",
+      "genre_axis": "funk",
+      "note": "clav-like≈electric piano 근사"
+    },
+    {
+      "id": "v0-070",
+      "proposal_text": "brushed drums and shaker on a laid-back samba pulse",
+      "candidate_native_entity": "shaker",
+      "label": "partial",
+      "genre_axis": "bossa",
+      "note": "shaker⊂percussion 한 요소"
+    },
+    {
+      "id": "v0-071",
+      "proposal_text": "a punchy syncopated slap bassline with thumb pops",
+      "candidate_native_entity": "slap bass",
+      "label": "partial",
+      "genre_axis": "funk",
+      "note": "기법 세부(thumb pop)까지는 부분"
+    },
+    {
+      "id": "v0-072",
+      "proposal_text": "a wide reverby ambient synth swell",
+      "candidate_native_entity": "synth pad",
+      "label": "partial",
+      "genre_axis": "ambient",
+      "note": "ambient swell≈synth pad 근사"
+    },
+    {
+      "id": "v0-073",
+      "proposal_text": "a heavy half-time trap groove sitting slow and wide",
+      "candidate_native_entity": "trap hi-hat",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "note": "half-time groove≈trap hats 한 면"
+    },
+    {
+      "id": "v0-074",
+      "proposal_text": "a jazzy walking upright bassline in a swing trio",
+      "candidate_native_entity": "walking bass",
+      "label": "partial",
+      "genre_axis": "jazz",
+      "note": "walking≈walking bass(문맥충분, 경계)"
+    },
+    {
+      "id": "v0-075",
+      "proposal_text": "a bright disco string-section stab hitting the chorus",
+      "candidate_native_entity": "strings",
+      "label": "partial",
+      "genre_axis": "disco",
+      "note": "disco strings stab⊂strings 한정"
+    },
+    {
+      "id": "v0-076",
+      "proposal_text": "a warm analog synth bass pulsing a slow heartbeat",
+      "candidate_native_entity": "sub bass",
+      "label": "partial",
+      "genre_axis": "citypop",
+      "note": "analog synth bass≈sub 근사(음색 다름)"
+    },
+    {
+      "id": "v0-077",
+      "proposal_text": "a gentle music-box lullaby melody",
+      "candidate_native_entity": "glockenspiel",
+      "label": "partial",
+      "genre_axis": "dreampop",
+      "note": "music-box≈glockenspiel 근사(별개)"
+    },
+    {
+      "id": "v0-078",
+      "proposal_text": "a soulful organ-like electric piano swell",
+      "candidate_native_entity": "rhodes",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "note": "organ-like≈rhodes 근사(별개)"
+    },
+    {
+      "id": "v0-079",
+      "proposal_text": "the whir of a kitchen blender used as rhythmic percussion",
+      "candidate_native_entity": "shaker",
+      "label": "no_match",
+      "genre_axis": "edm",
+      "note": "foley(kitchen=0) 대응없음"
+    },
+    {
+      "id": "v0-080",
+      "proposal_text": "a marching brass-band fanfare intro",
+      "candidate_native_entity": "trap hi-hat",
+      "label": "no_match",
+      "genre_axis": "hiphop",
+      "note": "무관 페어(리트리버 오답)"
+    },
+    {
+      "id": "v0-081",
+      "proposal_text": "a swelling gospel organ with drawbar shimmer",
+      "candidate_native_entity": "electric piano",
+      "label": "no_match",
+      "genre_axis": "rnb",
+      "note": "organ≠electric piano 별개악기"
+    },
+    {
+      "id": "v0-082",
+      "proposal_text": "a muted trumpet playing a mournful late-night line",
+      "candidate_native_entity": "tenor saxophone",
+      "label": "no_match",
+      "genre_axis": "jazz",
+      "note": "trumpet≠sax 오답"
+    },
+    {
+      "id": "v0-083",
+      "proposal_text": "a folky tin-whistle jig melody",
+      "candidate_native_entity": "distorted guitar",
+      "label": "no_match",
+      "genre_axis": "rock",
+      "note": "무관 페어"
+    },
+    {
+      "id": "v0-084",
+      "proposal_text": "the abstract feeling of nostalgia with no specific instrument",
+      "candidate_native_entity": "grand piano",
+      "label": "no_match",
+      "genre_axis": "ballad",
+      "note": "추상개념 대응없음"
+    },
+    {
+      "id": "v0-085",
+      "proposal_text": "a funky clipped rhythm-guitar laying chord stabs",
+      "candidate_native_entity": "slap bass",
+      "label": "no_match",
+      "genre_axis": "citypop",
+      "note": "funky guitar 의도, slap bass 오답"
+    },
+    {
+      "id": "v0-086",
+      "proposal_text": "shimmering wet-neon nightdrive synth atmosphere",
+      "candidate_native_entity": "synth pad",
+      "label": "partial",
+      "genre_axis": "citypop",
+      "note": "'city pop synth' 컴파운드는 GT 0건 dead-zone; 렌더형 synth pad 근사(경계)"
+    },
+    {
+      "id": "v0-087",
+      "proposal_text": "a funky wah-guitar cutting sixteenths between beats",
+      "candidate_native_entity": "wah guitar",
+      "label": "match",
+      "genre_axis": "citypop",
+      "note": "wah guitar attested(9) — 'funky guitar' 컴파운드는 dead지만 wah guitar는 렌더"
+    },
+    {
+      "id": "v0-088",
+      "proposal_text": "a foxtrot disco-bass shuffle with sax stabs",
+      "candidate_native_entity": "accordion",
+      "label": "no_match",
+      "genre_axis": "trot",
+      "note": "무관 페어(트로트지만 accordion 아님)"
+    },
+    {
+      "id": "v0-089",
+      "proposal_text": "a fiddle reel sawing a lively country dance",
+      "candidate_native_entity": "harmonica",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "note": "fiddle≠harmonica 오답"
+    },
+    {
+      "id": "v0-090",
+      "proposal_text": "an elevator door chime as a melodic motif",
+      "candidate_native_entity": "glockenspiel",
+      "label": "no_match",
+      "genre_axis": "dreampop",
+      "note": "foley(elevator=0) 대응없음"
+    },
+    {
+      "id": "v0-091",
+      "proposal_text": "the sound of ocean waves as ambient texture",
+      "candidate_native_entity": "synth pad",
+      "label": "no_match",
+      "genre_axis": "ambient",
+      "note": "자연 foley 대응없음"
+    },
+    {
+      "id": "v0-092",
+      "proposal_text": "punchy brass stabs hitting on the off-beats",
+      "candidate_native_entity": "strings",
+      "label": "no_match",
+      "genre_axis": "kpop",
+      "note": "brass≠strings 오답"
+    },
+    {
+      "id": "v0-093",
+      "proposal_text": "a clean chorus-effect electric guitar arpeggio",
+      "candidate_native_entity": "distorted guitar",
+      "label": "no_match",
+      "genre_axis": "pop",
+      "note": "clean≠distorted 상반"
+    },
+    {
+      "id": "v0-094",
+      "proposal_text": "a rubbery envelope-filtered funk clavinet",
+      "candidate_native_entity": "electric piano",
+      "label": "no_match",
+      "genre_axis": "funk",
+      "note": "clavinet≠electric piano 별개"
+    },
+    {
+      "id": "v0-095",
+      "proposal_text": "a lonely whistling melody over wind ambience",
+      "candidate_native_entity": "harmonica",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "note": "whistle≠harmonica 오답"
+    },
+    {
+      "id": "v0-096",
+      "proposal_text": "a storybook fairground carousel calliope",
+      "candidate_native_entity": "glockenspiel",
+      "label": "no_match",
+      "genre_axis": "cinematic",
+      "note": "fairground foley(0) 대응없음"
+    },
+    {
+      "id": "v0-097",
+      "proposal_text": "a didgeridoo drone humming underneath",
+      "candidate_native_entity": "sub bass",
+      "label": "no_match",
+      "genre_axis": "ambient",
+      "note": "didgeridoo≠sub bass 오답"
+    },
+    {
+      "id": "v0-098",
+      "proposal_text": "a bagpipe skirl over a highland march",
+      "candidate_native_entity": "accordion",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "note": "bagpipe≠accordion 오답"
+    },
+    {
+      "id": "v0-099",
+      "proposal_text": "the hum of an air conditioner as background drone",
+      "candidate_native_entity": "synth pad",
+      "label": "no_match",
+      "genre_axis": "ambient",
+      "note": "기기 foley 대응없음"
+    },
+    {
+      "id": "v0-100",
+      "proposal_text": "a bright steel-drum calypso melody",
+      "candidate_native_entity": "glockenspiel",
+      "label": "no_match",
+      "genre_axis": "latin",
+      "note": "steel-drum≠glockenspiel 오답"
+    }
+  ]
+}
