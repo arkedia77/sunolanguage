@@ -25,7 +25,7 @@
 
 ## TODO
 ### 크로스프로젝트 deliverable
-- [sunolanguage] **leomusic3 chaser goldset 200~300쌍** (요청 06-24, 접수·수락·스펙확정 06-27) — direct/blend 임계값(현 0.78/0.62 휴리스틱) 캘리브레이션용. 구성: lexical_index v3.2 attested native_entity ↔ 합성 proposal_text ↔ label(match/partial/no_match) 트리플. **2단계: v0(100쌍, 장르축 일부)→sanity-check→200~300 풀셋**. CN 불필요(KR 우세 OK), 합성 proposal 합의(한계 고지). 배포=회신 첨부(옵션a). **우선순위 비긴급**(현 생산 비블로커), Leo 슬롯 진입 시 착수. 라벨기준 문서 동봉
+- [sunolanguage] **leomusic3 chaser goldset — ★v0 전달완료(07-01), sanity-check 대기** — direct/blend 임계(0.78/0.62 휴리스틱) 캘리브레이션용. **v0 100트리플 저작·전달**: `data/goldset/chaser_calib_goldset_v0.json`(+README 라벨기준), label match45/partial35/no_match20, 20장르축, candidate 전건 v3.2 attested, proposal_text 합성(1차캘리·한계고지), CN 미포함. agent-comm 회신 첨부(옵션a). **다음: leomusic3 sanity-check(형식/score분포 3구간분리/partial경계) 피드백 → v1(200~300) 확장**
 
 ### v5.5 검증
 - [sunolanguage] S_PU 시리즈 sunomusic 발주 — `data/v55_pumpup_test_protocol.md` 참조
