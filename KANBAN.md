@@ -29,6 +29,8 @@
 
 - [sunolanguage] **패션필름 2곡 Suno 네이티브 SP 수령·교차검증 완료(07-02)** — sunomusic 공유(D&G/Fever, 실오디오 업로드 분석). v3.2 교차검증: 신규 원자어휘 0(4 novel 전부 attested 구성어 컴파운드), cinematic/industrial 커버리지 견고. `data/collection/fashion_film_ref_sp_2tracks_20260702.json` 예제 보존, 어휘사전 갱신 불요. 커버 생성분 4클립(`fashion_film_covers_20260702.json`) 렌더정합 대조=**sunomusic CDP hang으로 생성SP 추출 다음세션 이월**(보너스, 비긴급)
 
+- [sunolanguage] **leomusic3 chaser goldset v1 — ★전달완료(07-02), 프로덕션 top1 재캘리 대기** — fable5 서브에이전트 저작+본검수. 240트리플(`data/goldset/chaser_calib_goldset_v1.json`), 라벨 96/96/48, KR견고 8축 각30 + target_collection 태그. v0피드백 반영: ⓐcandidate 짧은구 정규화(+atomic_token), ⓑno_match=dead-zone/foley/추상만(실악기 오답페어→partial). attestation 496→현행 556곡 정정. **다음: leomusic3 프로덕션 retrieve top1 재캘리→direct/blend 임계 확정회신. 필요시 v2(무매핑 11축)**
+
 ### v5.5 검증
 - [sunolanguage] S_PU 시리즈 sunomusic 발주 — `data/v55_pumpup_test_protocol.md` 참조
 - [sunolanguage] Top-Anchor A/B 테스트 (S018에 내장)
