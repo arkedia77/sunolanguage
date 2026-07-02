@@ -27,6 +27,8 @@
 ### 크로스프로젝트 deliverable
 - [sunolanguage] **leomusic3 chaser goldset — ★v0 검증완료(07-01), v1 taxonomy 대기** — v0 100트리플(`data/goldset/chaser_calib_goldset_v0.json`) 전달→leomusic3 sanity-check: ✅형식 OK, ★**밴드 중심 단조분리 확인**(match .682/partial .590/no_match .472, 간격 ~0.10) 라벨스킴 타당. 발견 2건 채택: ⓐ짧은토큰 저평가(terse 후보 length asymmetry로 score↓→v1 짧은구 정규화) ⓑno_match 실악기 잔존(→v1 dead-zone/foley/추상 우선). **★v1 완전 언블록(07-01)** — leomusic3 taxonomy 수령(KR 견고 8축 매핑: ballad/rnb/hiphop/rock/pop/kpop/trot/folk→music_kr_*), 전 설계결정 해소. **v1 스펙확정**: 200~300, ⓐ candidate 짧은구 정규화, ⓑ no_match=dead-zone/foley/추상만(실악기 오답페어→partial 재분류), target_collection=KR견고축, 무매핑11축=v2이월(옵션A). lexicon 배포는 v1 불필요→Leo결정 해제. 비긴급. **다음: Leo 슬롯→v1 빌드(v0의 2~3배 규모)**
 
+- [sunolanguage] **패션필름 2곡 Suno 네이티브 SP 수령·교차검증 완료(07-02)** — sunomusic 공유(D&G/Fever, 실오디오 업로드 분석). v3.2 교차검증: 신규 원자어휘 0(4 novel 전부 attested 구성어 컴파운드), cinematic/industrial 커버리지 견고. `data/collection/fashion_film_ref_sp_2tracks_20260702.json` 예제 보존, 어휘사전 갱신 불요. 커버 생성분 4클립(`fashion_film_covers_20260702.json`) 렌더정합 대조=**sunomusic CDP hang으로 생성SP 추출 다음세션 이월**(보너스, 비긴급)
+
 ### v5.5 검증
 - [sunolanguage] S_PU 시리즈 sunomusic 발주 — `data/v55_pumpup_test_protocol.md` 참조
 - [sunolanguage] Top-Anchor A/B 테스트 (S018에 내장)
