@@ -1,6 +1,8 @@
-# chaser_calib_goldset_v0 — leomusic3 chaser 임계값 캘리브레이션 goldset
+# chaser_calib_goldset — leomusic3 chaser 임계값 캘리브레이션 goldset
 
-**생성**: sunolanguage · **수요자**: leomusic3 · **v0**: 100 트리플 (2026-07-01)
+**생성**: sunolanguage · **수요자**: leomusic3
+- **v0**: 100 트리플 (2026-07-01) — `chaser_calib_goldset_v0.json`. 라벨 45/35/20, 20장르축, target_collection 미태깅.
+- **v1**: 240 트리플 (2026-07-02) — `chaser_calib_goldset_v1.json`. 라벨 96/96/48(40/40/20), **KR 견고 8축 집중** + target_collection 태그. v0 sanity-check 피드백(ⓐ짧은구 정규화·ⓑno_match 정제) 반영.
 
 ## 목적
 leomusic3 chaser normalize의 direct/blend/fallback 임계값(현 휴리스틱 direct 0.78 /
@@ -39,5 +41,12 @@ no_match도 candidate는 attested 토큰(리트리버가 오검출할 법한 '�
 2. partial 경계는 주관 개입 여지 — `note`에 판정근거 명시.
 3. v0 sanity-check(형식·score 분포 확인) 통과 후 **v1(200~300)** 확장.
 
+## v1 신규 (v0 대비)
+- **candidate 짧은구 정규화**(ⓐ) — terse 단일토큰을 2~4단어 구로(예: `supersaw`→`detuned supersaw lead`), 구성어 attested 유지 + `atomic_token` 병기. proposal 문장과의 length asymmetry 완화.
+- **no_match 정제**(ⓑ) — dead-zone 컴파운드/foley/추상만. v0의 실악기 중간유사도 오답페어는 partial로 재분류.
+- **target_collection 태그** — KR 견고 8축만: ballad→music_kr_ballad, rnb→music_kr_rnb, hiphop→music_kr_hiphop, rock→music_kr_rock, pop·kpop→music_kr_pop, trot→music_kr_trot, folk→music_kr_acoustic. 무매핑 11축은 v2 이월.
+- **attestation 기준 정정** — 현행 lexical_index distinct song 556(v3.2 사전 496곡에서 배치 적재로 성장). v0의 '496' 표기는 사전버전 기준이었음.
+
 ## 파일
-- `chaser_calib_goldset_v0.json` — 트리플 100 + 메타(label_scheme/usage/caveats 임베드)
+- `chaser_calib_goldset_v0.json` — 트리플 100 + 메타
+- `chaser_calib_goldset_v1.json` — 트리플 240 + 메타(+atomic_token/target_collection 필드)

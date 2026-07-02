@@ -1,0 +1,2450 @@
+{
+  "goldset_id": "sunolang_chaser_calib_v1",
+  "version": "v1",
+  "size": 240,
+  "generated_by": "sunolanguage",
+  "for": "leomusic3",
+  "purpose": "chaser normalize direct/blend/fallback 임계값 캘리브레이션(현 0.78/0.62 휴리스틱 재설정). v1은 partial 증량으로 blend 경계 튜닝 표본 강화 + candidate 짧은구 정규화로 length-asymmetry score 왜곡 제거.",
+  "source_authority": "sunolang lexical_index 현행 556곡(v3.2 사전 기반 확장) attested native tokens",
+  "label_scheme": {
+    "match": "proposal 지배적 음향의도의 정확한 네이티브 대응=candidate. top1 HIGH score 기대(direct).",
+    "partial": "proposal이 candidate와 의미중첩하나 비정확(상위/하위·형제·한 면·thin근사·실악기 중간유사도). MEDIUM(blend).",
+    "no_match": "무관, 또는 네이티브 대응없는 개념(dead-zone 컴파운드·foley·추상). LOW(fallback)."
+  },
+  "usage": "proposal_text를 chaser retrieve에 투입→top1 candidate score 측정→label과 대조해 direct|blend|fallback 임계 재설정. candidate_native_entity는 정규화된 2~4단어 짧은 구(구성어 전부 v3.2 attested), atomic_token은 원자 네이티브 토큰. no_match는 dead-zone/foley/추상 소재로 리트리버 오검출 시 score도 함께 관찰 가능.",
+  "caveats": [
+    "proposal_text는 sunolang 합성(실 프로덕션 로그 아님) — 1차 캘리 용도. 확정 전 leomusic3 자체 chaser 로그로 2차 검증 권장.",
+    "match/partial candidate는 구성어 전부 v3.2 attested. atomic_token도 attested.",
+    "no_match는 dead-zone 컴파운드·foley·추상만(실악기 중간유사도 오답페어는 v1에서 partial로 재분류).",
+    "partial 경계는 주관 개입 — note에 판정근거 명시.",
+    "CN 미포함(합의). KR 우세 코퍼스 기준.",
+    "v1은 KR 견고 8축(ballad/rnb/hiphop/rock/pop/kpop/trot/folk = 7 collections) 집중, 무매핑축(edm/jazz/cinematic/disco/bossa/amapiano/dreampop/latin/funk/ambient/lofi 등) v2 이월.",
+    "attestation은 현행 lexical_index(distinct song_id 556, v3.2 사전 빌드 496곡에서 배치 적재로 성장) 기준 실측. v0 표기 '496'은 사전버전 기준이었고 v1은 실카운트로 정정."
+  ],
+  "label_distribution": {
+    "match": 96,
+    "partial": 96,
+    "no_match": 48
+  },
+  "genre_distribution": {
+    "ballad": 30,
+    "rnb": 30,
+    "hiphop": 30,
+    "rock": 30,
+    "pop": 30,
+    "kpop": 30,
+    "trot": 30,
+    "folk": 30
+  },
+  "collection_distribution": {
+    "music_kr_ballad": 30,
+    "music_kr_rnb": 30,
+    "music_kr_hiphop": 30,
+    "music_kr_rock": 30,
+    "music_kr_pop": 60,
+    "music_kr_trot": 30,
+    "music_kr_acoustic": 30
+  },
+  "triples": [
+    {
+      "id": "v1-001",
+      "proposal_text": "a delicate grand piano carrying the entire ballad",
+      "candidate_native_entity": "delicate grand piano",
+      "atomic_token": "grand piano",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "grand piano attested(65); direct instrument match"
+    },
+    {
+      "id": "v1-002",
+      "proposal_text": "expressive rubato piano phrasing freely bending the tempo",
+      "candidate_native_entity": "expressive rubato piano",
+      "atomic_token": "rubato",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "rubato attested(56); tempo-technique direct match"
+    },
+    {
+      "id": "v1-003",
+      "proposal_text": "a sweeping cinematic string section swelling in the chorus",
+      "candidate_native_entity": "sweeping string section",
+      "atomic_token": "string section",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "string section attested(38); direct"
+    },
+    {
+      "id": "v1-004",
+      "proposal_text": "an intimate breathy lead vocal almost whispered",
+      "candidate_native_entity": "intimate breathy vocal",
+      "atomic_token": "breathy",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "breathy attested(232); dominant vocal texture"
+    },
+    {
+      "id": "v1-005",
+      "proposal_text": "a soaring falsetto floating above the final chorus",
+      "candidate_native_entity": "soaring falsetto",
+      "atomic_token": "falsetto",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "falsetto attested(94); direct vocal register"
+    },
+    {
+      "id": "v1-006",
+      "proposal_text": "a warm soft piano opening the first verse alone",
+      "candidate_native_entity": "warm soft piano",
+      "atomic_token": "soft piano",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "soft piano attested(9) thin but direct"
+    },
+    {
+      "id": "v1-007",
+      "proposal_text": "a lone cello line beneath a hushed vocal",
+      "candidate_native_entity": "warm cello",
+      "atomic_token": "cello",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "cello attested(90); direct instrument"
+    },
+    {
+      "id": "v1-008",
+      "proposal_text": "a swelling orchestral backdrop lifting the bridge",
+      "candidate_native_entity": "orchestral swell",
+      "atomic_token": "orchestral",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "orchestral attested(44); direct arrangement"
+    },
+    {
+      "id": "v1-009",
+      "proposal_text": "a dramatic key change lifting the last chorus a step up",
+      "candidate_native_entity": "key change modulation",
+      "atomic_token": "key change",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "key change attested(12); v5.5 pump-up modulation staple"
+    },
+    {
+      "id": "v1-010",
+      "proposal_text": "a tender head-voice line held softly at the top",
+      "candidate_native_entity": "warm head voice",
+      "atomic_token": "head voice",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "head voice attested(33); direct register"
+    },
+    {
+      "id": "v1-011",
+      "proposal_text": "emotional layered vocal harmonies swelling under the hook",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocal harmonies",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "vocal harmonies attested(35); direct"
+    },
+    {
+      "id": "v1-012",
+      "proposal_text": "a warm sustained synth pad cushioning the piano",
+      "candidate_native_entity": "lush synth pad",
+      "atomic_token": "synth pad",
+      "label": "match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "synth pad attested(170); direct pad texture"
+    },
+    {
+      "id": "v1-013",
+      "proposal_text": "a bebop-flavored acoustic grand comping dense voicings",
+      "candidate_native_entity": "delicate grand piano",
+      "atomic_token": "grand piano",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "acoustic comping overlaps grand piano but jazz idiom, not explicit ballad grand"
+    },
+    {
+      "id": "v1-014",
+      "proposal_text": "a warm upright piano in an intimate room",
+      "candidate_native_entity": "delicate grand piano",
+      "atomic_token": "grand piano",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "upright piano approx grand piano; distinct instrument, mid-similarity"
+    },
+    {
+      "id": "v1-015",
+      "proposal_text": "free tempo phrasing with expressive push and pull",
+      "candidate_native_entity": "expressive rubato piano",
+      "atomic_token": "rubato",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "rubato feel implied but no piano/instrument specified; one facet only"
+    },
+    {
+      "id": "v1-016",
+      "proposal_text": "a lone cello carrying the melody with warm bowing",
+      "candidate_native_entity": "sweeping string section",
+      "atomic_token": "string section",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "cello is subset of strings; hypernym mismatch"
+    },
+    {
+      "id": "v1-017",
+      "proposal_text": "a plucked pizzicato string figure under the verse",
+      "candidate_native_entity": "sweeping string section",
+      "atomic_token": "string section",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "pizzicato is a technique-limited subset of strings"
+    },
+    {
+      "id": "v1-018",
+      "proposal_text": "a soft breathy whisper delivery on the intro",
+      "candidate_native_entity": "soaring falsetto",
+      "atomic_token": "falsetto",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "breathy whisper overlaps but falsetto is a distinct register; sibling-ish"
+    },
+    {
+      "id": "v1-019",
+      "proposal_text": "gentle head-voice runs decorating the line",
+      "candidate_native_entity": "soaring falsetto",
+      "atomic_token": "falsetto",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "head voice near falsetto; sibling register, not identical"
+    },
+    {
+      "id": "v1-020",
+      "proposal_text": "a soulful gospel-organ swell under the ballad",
+      "candidate_native_entity": "warm rhodes",
+      "atomic_token": "rhodes",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "organ-like keys approx rhodes; distinct keyboard, mid-similarity"
+    },
+    {
+      "id": "v1-021",
+      "proposal_text": "a subtle string pad shimmering behind the piano",
+      "candidate_native_entity": "lush synth pad",
+      "atomic_token": "synth pad",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "string-pad hybrid approx synth pad; timbre differs"
+    },
+    {
+      "id": "v1-022",
+      "proposal_text": "a modulation lifting the energy near the end",
+      "candidate_native_entity": "key change modulation",
+      "atomic_token": "key change",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "modulation broad; overlaps key change but generic, one facet"
+    },
+    {
+      "id": "v1-023",
+      "proposal_text": "emotional double-tracked lead vocal thickening the hook",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocal harmonies",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "doubling approx harmonies but unison-double, not true harmony"
+    },
+    {
+      "id": "v1-024",
+      "proposal_text": "a warm wurlitzer chord bed under the verse",
+      "candidate_native_entity": "warm rhodes",
+      "atomic_token": "rhodes",
+      "label": "partial",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "wurlitzer approx rhodes; sibling electric piano, distinct"
+    },
+    {
+      "id": "v1-025",
+      "proposal_text": "the abstract feeling of nostalgia with no specific instrument",
+      "candidate_native_entity": "delicate grand piano",
+      "atomic_token": "grand piano",
+      "label": "no_match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "abstract concept; no native sonic correspondence"
+    },
+    {
+      "id": "v1-026",
+      "proposal_text": "the emotional weight of loss expressed without sound cues",
+      "candidate_native_entity": "sweeping string section",
+      "atomic_token": "string section",
+      "label": "no_match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "abstract emotion; no instrument correspondence"
+    },
+    {
+      "id": "v1-027",
+      "proposal_text": "distant church-bell tolling as an intro texture",
+      "candidate_native_entity": "bright glockenspiel",
+      "atomic_token": "glockenspiel",
+      "label": "no_match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "foley church bell; glockenspiel is mispair, no true native match"
+    },
+    {
+      "id": "v1-028",
+      "proposal_text": "a bagpipe drone under a slow lament",
+      "candidate_native_entity": "warm cello",
+      "atomic_token": "cello",
+      "label": "no_match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "bagpipe unrelated to cello; foley-ish exotic instrument, no KR-ballad native"
+    },
+    {
+      "id": "v1-029",
+      "proposal_text": "the hush of a quiet empty concert hall as ambience",
+      "candidate_native_entity": "lush synth pad",
+      "atomic_token": "synth pad",
+      "label": "no_match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "room-ambience foley; no native pad correspondence"
+    },
+    {
+      "id": "v1-030",
+      "proposal_text": "the sense of longing conveyed purely through lyrics",
+      "candidate_native_entity": "soaring falsetto",
+      "atomic_token": "falsetto",
+      "label": "no_match",
+      "genre_axis": "ballad",
+      "target_collection": "music_kr_ballad",
+      "note": "abstract lyric-driven concept; no vocal-technique native match"
+    },
+    {
+      "id": "v1-031",
+      "proposal_text": "warm Rhodes electric piano with mellow seventh chords",
+      "candidate_native_entity": "warm rhodes",
+      "atomic_token": "rhodes",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "rhodes attested(65); signature R&B keys"
+    },
+    {
+      "id": "v1-032",
+      "proposal_text": "a smooth neo-soul groove with jazzy extended chords",
+      "candidate_native_entity": "smooth neo-soul groove",
+      "atomic_token": "neo-soul",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "neo-soul attested(21); direct subgenre texture"
+    },
+    {
+      "id": "v1-033",
+      "proposal_text": "airy falsetto floating high above the hook",
+      "candidate_native_entity": "airy falsetto",
+      "atomic_token": "falsetto",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "falsetto attested(94); direct register"
+    },
+    {
+      "id": "v1-034",
+      "proposal_text": "melismatic vocal runs curling at the end of every line",
+      "candidate_native_entity": "melismatic vocal runs",
+      "atomic_token": "melisma",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "melisma attested(5) thin; melismatic attested(5); direct ornament"
+    },
+    {
+      "id": "v1-035",
+      "proposal_text": "a mellow electric piano with tremolo shimmer",
+      "candidate_native_entity": "warm electric piano",
+      "atomic_token": "electric piano",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "electric piano attested(67); direct keys"
+    },
+    {
+      "id": "v1-036",
+      "proposal_text": "intimate breathy lead vocal almost spoken",
+      "candidate_native_entity": "intimate breathy vocal",
+      "atomic_token": "breathy",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "breathy attested(232); dominant texture"
+    },
+    {
+      "id": "v1-037",
+      "proposal_text": "smooth soulful vocal runs riffing over the chords",
+      "candidate_native_entity": "soulful vocal runs",
+      "atomic_token": "runs",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "runs attested(41); direct vocal ornament"
+    },
+    {
+      "id": "v1-038",
+      "proposal_text": "a deep rolling sub bass you feel more than hear",
+      "candidate_native_entity": "deep sub bass",
+      "atomic_token": "sub bass",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "sub bass attested(7) thin; direct low-end"
+    },
+    {
+      "id": "v1-039",
+      "proposal_text": "finger snaps keeping time on the two and four",
+      "candidate_native_entity": "finger snap groove",
+      "atomic_token": "snap",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "snap attested(28); direct rhythmic element"
+    },
+    {
+      "id": "v1-040",
+      "proposal_text": "layered background vocal harmonies wrapping the lead",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocal harmonies",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "vocal harmonies attested(35); direct"
+    },
+    {
+      "id": "v1-041",
+      "proposal_text": "a smooth saxophone line answering the vocal",
+      "candidate_native_entity": "warm saxophone",
+      "atomic_token": "saxophone",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "saxophone attested(16); direct instrument"
+    },
+    {
+      "id": "v1-042",
+      "proposal_text": "a warm wurlitzer keys pattern under the verse",
+      "candidate_native_entity": "warm wurlitzer",
+      "atomic_token": "wurlitzer",
+      "label": "match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "wurlitzer attested(9); direct keys"
+    },
+    {
+      "id": "v1-043",
+      "proposal_text": "a soulful gospel organ swelling with drawbar shimmer",
+      "candidate_native_entity": "warm rhodes",
+      "atomic_token": "rhodes",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "organ approx rhodes but distinct keyboard; mid-similarity"
+    },
+    {
+      "id": "v1-044",
+      "proposal_text": "a syncopated funk clavinet riff bubbling underneath",
+      "candidate_native_entity": "warm electric piano",
+      "atomic_token": "electric piano",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "clavinet approx electric piano family; distinct timbre"
+    },
+    {
+      "id": "v1-045",
+      "proposal_text": "a jazzy extended-chord comp on acoustic piano",
+      "candidate_native_entity": "smooth neo-soul groove",
+      "atomic_token": "neo-soul",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "jazzy comp overlaps neo-soul harmony but acoustic, one facet"
+    },
+    {
+      "id": "v1-046",
+      "proposal_text": "gentle head-voice ad-libs floating over the hook",
+      "candidate_native_entity": "airy falsetto",
+      "atomic_token": "falsetto",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "head voice near falsetto; sibling register"
+    },
+    {
+      "id": "v1-047",
+      "proposal_text": "light vocal ad-libs decorating the tail of phrases",
+      "candidate_native_entity": "melismatic vocal runs",
+      "atomic_token": "melisma",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "ad-libs overlap runs but not necessarily melismatic; approx"
+    },
+    {
+      "id": "v1-048",
+      "proposal_text": "a booming 808 bass gliding between notes",
+      "candidate_native_entity": "deep sub bass",
+      "atomic_token": "sub bass",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "808 glide approx sub bass; distinct source timbre"
+    },
+    {
+      "id": "v1-049",
+      "proposal_text": "a warm analog synth bass pulsing a slow heartbeat",
+      "candidate_native_entity": "deep sub bass",
+      "atomic_token": "sub bass",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "analog synth bass approx sub; timbre differs"
+    },
+    {
+      "id": "v1-050",
+      "proposal_text": "soft handclaps layered with the snap",
+      "candidate_native_entity": "finger snap groove",
+      "atomic_token": "snap",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "handclaps near finger snaps; sibling percussion, distinct"
+    },
+    {
+      "id": "v1-051",
+      "proposal_text": "a smoky muted trumpet answering the vocal",
+      "candidate_native_entity": "warm saxophone",
+      "atomic_token": "saxophone",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "trumpet is a brass sibling to sax; mid-similarity mispair"
+    },
+    {
+      "id": "v1-052",
+      "proposal_text": "double-tracked lead vocal thickening the chorus",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocal harmonies",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "doubling approx harmonies; unison not true harmony"
+    },
+    {
+      "id": "v1-053",
+      "proposal_text": "a mellow vibraphone comping jazzy chords",
+      "candidate_native_entity": "warm electric piano",
+      "atomic_token": "electric piano",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "vibraphone approx keys role; distinct instrument"
+    },
+    {
+      "id": "v1-054",
+      "proposal_text": "a warm tremolo guitar chord bed under the verse",
+      "candidate_native_entity": "warm rhodes",
+      "atomic_token": "rhodes",
+      "label": "partial",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "tremolo guitar fills keys role approx rhodes; distinct"
+    },
+    {
+      "id": "v1-055",
+      "proposal_text": "the whir of a kitchen blender used as rhythmic texture",
+      "candidate_native_entity": "finger snap groove",
+      "atomic_token": "snap",
+      "label": "no_match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "foley (kitchen appliance); no native percussion match"
+    },
+    {
+      "id": "v1-056",
+      "proposal_text": "a didgeridoo drone humming under the groove",
+      "candidate_native_entity": "deep sub bass",
+      "atomic_token": "sub bass",
+      "label": "no_match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "didgeridoo unrelated to sub bass; exotic-instrument mispair, no native"
+    },
+    {
+      "id": "v1-057",
+      "proposal_text": "the abstract vibe of late-night loneliness",
+      "candidate_native_entity": "smooth neo-soul groove",
+      "atomic_token": "neo-soul",
+      "label": "no_match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "abstract mood; no native correspondence"
+    },
+    {
+      "id": "v1-058",
+      "proposal_text": "ocean waves washing as an ambient bed",
+      "candidate_native_entity": "warm electric piano",
+      "atomic_token": "electric piano",
+      "label": "no_match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "nature foley; no keys correspondence"
+    },
+    {
+      "id": "v1-059",
+      "proposal_text": "the hum of an air conditioner as background drone",
+      "candidate_native_entity": "warm wurlitzer",
+      "atomic_token": "wurlitzer",
+      "label": "no_match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "appliance foley; no native match"
+    },
+    {
+      "id": "v1-060",
+      "proposal_text": "a soul-food-warmth feeling with no instrument named",
+      "candidate_native_entity": "warm rhodes",
+      "atomic_token": "rhodes",
+      "label": "no_match",
+      "genre_axis": "rnb",
+      "target_collection": "music_kr_rnb",
+      "note": "abstract concept; no sonic native match"
+    },
+    {
+      "id": "v1-061",
+      "proposal_text": "a dusty boom-bap drum loop with vinyl warmth",
+      "candidate_native_entity": "dusty boom bap loop",
+      "atomic_token": "boom bap",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "boom bap attested(11); direct drum idiom"
+    },
+    {
+      "id": "v1-062",
+      "proposal_text": "crisp rapid-fire trap hi-hats stuttering in triplet rolls",
+      "candidate_native_entity": "crisp trap hi-hat",
+      "atomic_token": "trap hi-hat",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "trap hi-hat attested(5) thin; direct percussion"
+    },
+    {
+      "id": "v1-063",
+      "proposal_text": "a booming 808 bass gliding between notes",
+      "candidate_native_entity": "booming 808 bass",
+      "atomic_token": "808 bass",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "808 bass attested(12); direct low-end"
+    },
+    {
+      "id": "v1-064",
+      "proposal_text": "crackling vinyl surface noise under a mellow loop",
+      "candidate_native_entity": "vinyl crackle texture",
+      "atomic_token": "vinyl crackle",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "vinyl crackle attested(36); direct texture"
+    },
+    {
+      "id": "v1-065",
+      "proposal_text": "a confident rap verse riding the pocket",
+      "candidate_native_entity": "tight rap verse",
+      "atomic_token": "rap verse",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "rap verse attested(8); direct vocal delivery"
+    },
+    {
+      "id": "v1-066",
+      "proposal_text": "a chopped-up vocal sample flipped into the hook",
+      "candidate_native_entity": "chopped vocal sample",
+      "atomic_token": "chopped",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "chopped attested(8); direct sampling technique"
+    },
+    {
+      "id": "v1-067",
+      "proposal_text": "a tight snare roll building into the drop",
+      "candidate_native_entity": "tight snare roll",
+      "atomic_token": "snare roll",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "snare roll attested(23); direct fill"
+    },
+    {
+      "id": "v1-068",
+      "proposal_text": "layered ad-libs answering every rap line",
+      "candidate_native_entity": "rap ad-libs",
+      "atomic_token": "ad-libs",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "ad-libs attested(42); direct"
+    },
+    {
+      "id": "v1-069",
+      "proposal_text": "a punchy kick knocking hard on the one",
+      "candidate_native_entity": "punchy kick",
+      "atomic_token": "kick",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "kick attested(364); direct"
+    },
+    {
+      "id": "v1-070",
+      "proposal_text": "a dark synth lead line looping the hook",
+      "candidate_native_entity": "dark synth lead",
+      "atomic_token": "synth",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "synth attested(315); direct"
+    },
+    {
+      "id": "v1-071",
+      "proposal_text": "autotuned melodic rap floating over the beat",
+      "candidate_native_entity": "autotune vocal",
+      "atomic_token": "autotune",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "autotune attested(4) thin; direct vocal effect"
+    },
+    {
+      "id": "v1-072",
+      "proposal_text": "a lo-fi vinyl-flavored beat with tape warmth",
+      "candidate_native_entity": "lo-fi tape texture",
+      "atomic_token": "tape",
+      "label": "match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "tape attested(50); direct lo-fi texture"
+    },
+    {
+      "id": "v1-073",
+      "proposal_text": "turntablist record-scratch cuts between phrases",
+      "candidate_native_entity": "vinyl crackle texture",
+      "atomic_token": "vinyl crackle",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "scratch approx vinyl surface noise; different technique"
+    },
+    {
+      "id": "v1-074",
+      "proposal_text": "a half-time trap groove sitting slow and wide",
+      "candidate_native_entity": "crisp trap hi-hat",
+      "atomic_token": "trap hi-hat",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "half-time groove approx trap; one facet of the idiom"
+    },
+    {
+      "id": "v1-075",
+      "proposal_text": "a distorted 808 kick knocking hard",
+      "candidate_native_entity": "booming 808 bass",
+      "atomic_token": "808 bass",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "808 kick overlaps 808 bass but drum vs sustained bass; one facet"
+    },
+    {
+      "id": "v1-076",
+      "proposal_text": "a spoken-word verse delivered in cadence",
+      "candidate_native_entity": "tight rap verse",
+      "atomic_token": "rap verse",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "spoken-word approx rap; distinct delivery"
+    },
+    {
+      "id": "v1-077",
+      "proposal_text": "a pitched vocal chop bouncing on the offbeat",
+      "candidate_native_entity": "chopped vocal sample",
+      "atomic_token": "chopped",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "vocal chop approx chopped sample; pitched-render variant"
+    },
+    {
+      "id": "v1-078",
+      "proposal_text": "a rolling hi-hat pattern accelerating into fills",
+      "candidate_native_entity": "tight snare roll",
+      "atomic_token": "snare roll",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "hat roll approx snare roll; different drum"
+    },
+    {
+      "id": "v1-079",
+      "proposal_text": "layered gang shouts backing the hook",
+      "candidate_native_entity": "rap ad-libs",
+      "atomic_token": "ad-libs",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "gang shouts approx ad-libs; group vs solo"
+    },
+    {
+      "id": "v1-080",
+      "proposal_text": "a deep sub bass sitting under the 808",
+      "candidate_native_entity": "booming 808 bass",
+      "atomic_token": "808 bass",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "sub bass overlaps 808 low-end; distinct source"
+    },
+    {
+      "id": "v1-081",
+      "proposal_text": "a warbly vocoder-treated vocal hook",
+      "candidate_native_entity": "autotune vocal",
+      "atomic_token": "autotune",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "vocoder approx autotune pitch-treatment; distinct process"
+    },
+    {
+      "id": "v1-082",
+      "proposal_text": "a warm dusty jazz-sample loop chopped for the beat",
+      "candidate_native_entity": "dusty boom bap loop",
+      "atomic_token": "boom bap",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "jazz-sample loop approx boom bap but sample not drum-idiom; one facet"
+    },
+    {
+      "id": "v1-083",
+      "proposal_text": "a wide crunchy lo-fi filter smearing the drums",
+      "candidate_native_entity": "lo-fi tape texture",
+      "atomic_token": "tape",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "lo-fi filter approx tape texture; distinct processing"
+    },
+    {
+      "id": "v1-084",
+      "proposal_text": "a plucky synth arpeggio ghosting under the verse",
+      "candidate_native_entity": "dark synth lead",
+      "atomic_token": "synth",
+      "label": "partial",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "arpeggio approx synth-lead role; different function"
+    },
+    {
+      "id": "v1-085",
+      "proposal_text": "a marching brass-band fanfare intro",
+      "candidate_native_entity": "crisp trap hi-hat",
+      "atomic_token": "trap hi-hat",
+      "label": "no_match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "brass band unrelated; mispair, no native trap match to fanfare"
+    },
+    {
+      "id": "v1-086",
+      "proposal_text": "the beeping of a microwave used as a rhythmic hit",
+      "candidate_native_entity": "punchy kick",
+      "atomic_token": "kick",
+      "label": "no_match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "kitchen foley; no native drum match"
+    },
+    {
+      "id": "v1-087",
+      "proposal_text": "the swagger of confidence with no specific sound",
+      "candidate_native_entity": "tight rap verse",
+      "atomic_token": "rap verse",
+      "label": "no_match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "abstract attitude; no sonic native correspondence"
+    },
+    {
+      "id": "v1-088",
+      "proposal_text": "a tin-whistle folk jig over the beat",
+      "candidate_native_entity": "dark synth lead",
+      "atomic_token": "synth",
+      "label": "no_match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "tin whistle unrelated to synth lead; mispair, no native"
+    },
+    {
+      "id": "v1-089",
+      "proposal_text": "city traffic and car horns as a field-recording bed",
+      "candidate_native_entity": "lo-fi tape texture",
+      "atomic_token": "tape",
+      "label": "no_match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "street foley; no native texture match"
+    },
+    {
+      "id": "v1-090",
+      "proposal_text": "the abstract idea of street resilience",
+      "candidate_native_entity": "chopped vocal sample",
+      "atomic_token": "chopped",
+      "label": "no_match",
+      "genre_axis": "hiphop",
+      "target_collection": "music_kr_hiphop",
+      "note": "abstract concept; no native correspondence"
+    },
+    {
+      "id": "v1-091",
+      "proposal_text": "chugging palm-muted distorted guitar riffs",
+      "candidate_native_entity": "palm-muted distorted guitar",
+      "atomic_token": "palm-muted",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "palm-muted attested(88); direct technique"
+    },
+    {
+      "id": "v1-092",
+      "proposal_text": "a wall of overdriven distorted guitars",
+      "candidate_native_entity": "overdriven distorted guitar",
+      "atomic_token": "distorted guitar",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "distorted guitar attested(15); overdriven attested(78); direct"
+    },
+    {
+      "id": "v1-093",
+      "proposal_text": "big open power chords ringing out",
+      "candidate_native_entity": "ringing power chords",
+      "atomic_token": "power chord",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "power chord attested(80); direct"
+    },
+    {
+      "id": "v1-094",
+      "proposal_text": "driving rock drums pounding a relentless pulse",
+      "candidate_native_entity": "driving rock drums",
+      "atomic_token": "drums",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "drums attested(455); direct"
+    },
+    {
+      "id": "v1-095",
+      "proposal_text": "a screaming distorted guitar solo at the peak",
+      "candidate_native_entity": "distorted guitar solo",
+      "atomic_token": "guitar solo",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "guitar solo attested(16); direct"
+    },
+    {
+      "id": "v1-096",
+      "proposal_text": "a crunchy overdriven rhythm guitar tone",
+      "candidate_native_entity": "crunchy overdriven guitar",
+      "atomic_token": "overdrive",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "overdrive attested(94); crunchy attested(4); direct"
+    },
+    {
+      "id": "v1-097",
+      "proposal_text": "a bright crash cymbal punctuating the downbeat",
+      "candidate_native_entity": "bright crash cymbal",
+      "atomic_token": "crash",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "crash attested(76); direct"
+    },
+    {
+      "id": "v1-098",
+      "proposal_text": "a fuzzy fuzz-guitar riff snarling through the verse",
+      "candidate_native_entity": "fuzz distorted guitar",
+      "atomic_token": "fuzz",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "fuzz attested(7); direct tone"
+    },
+    {
+      "id": "v1-099",
+      "proposal_text": "a thundering tom fill rolling into the chorus",
+      "candidate_native_entity": "tom drum fill",
+      "atomic_token": "tom",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "tom attested(38); direct"
+    },
+    {
+      "id": "v1-100",
+      "proposal_text": "a gritty riff powering the main hook",
+      "candidate_native_entity": "gritty distorted riff",
+      "atomic_token": "riff",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "riff attested(114); direct"
+    },
+    {
+      "id": "v1-101",
+      "proposal_text": "a clean electric guitar arpeggio in the intro",
+      "candidate_native_entity": "clean electric guitar",
+      "atomic_token": "clean guitar",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "clean guitar attested(8); clean electric guitar attested(289); direct"
+    },
+    {
+      "id": "v1-102",
+      "proposal_text": "an anthemic gang-vocal chorus shouting along",
+      "candidate_native_entity": "anthemic gang vocals",
+      "atomic_token": "gang vocals",
+      "label": "match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "gang vocals attested(1) thin; anthemic attested(8); direct"
+    },
+    {
+      "id": "v1-103",
+      "proposal_text": "a screaming guitar solo with heavy whammy dives",
+      "candidate_native_entity": "overdriven distorted guitar",
+      "atomic_token": "distorted guitar",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "solo is one facet of distorted guitar; technique focus"
+    },
+    {
+      "id": "v1-104",
+      "proposal_text": "a slightly overdriven blues-guitar shuffle",
+      "candidate_native_entity": "overdriven distorted guitar",
+      "atomic_token": "distorted guitar",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "light overdrive approx full distortion; degree differs"
+    },
+    {
+      "id": "v1-105",
+      "proposal_text": "driving four-on-the-floor rock beat",
+      "candidate_native_entity": "driving rock drums",
+      "atomic_token": "drums",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "four-on-the-floor is a specific pattern subset of rock drums"
+    },
+    {
+      "id": "v1-106",
+      "proposal_text": "chunky muted single-note guitar chugs",
+      "candidate_native_entity": "ringing power chords",
+      "atomic_token": "power chord",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "muted single-note chug approx power chords; voicing differs"
+    },
+    {
+      "id": "v1-107",
+      "proposal_text": "a distorted bass fuzz growling under the riff",
+      "candidate_native_entity": "fuzz distorted guitar",
+      "atomic_token": "fuzz",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "fuzz bass approx fuzz guitar; different instrument"
+    },
+    {
+      "id": "v1-108",
+      "proposal_text": "a shimmering 12-string acoustic jangle in the bridge",
+      "candidate_native_entity": "clean electric guitar",
+      "atomic_token": "clean guitar",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "12-string acoustic approx clean guitar; acoustic vs electric"
+    },
+    {
+      "id": "v1-109",
+      "proposal_text": "a splashy ride cymbal riding the groove",
+      "candidate_native_entity": "bright crash cymbal",
+      "atomic_token": "crash",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "ride approx crash; sibling cymbal, distinct role"
+    },
+    {
+      "id": "v1-110",
+      "proposal_text": "a double-kick pattern galloping under the riff",
+      "candidate_native_entity": "driving rock drums",
+      "atomic_token": "drums",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "double-kick is a specialized subset of rock drums"
+    },
+    {
+      "id": "v1-111",
+      "proposal_text": "a wah-pedal guitar wailing over the chorus",
+      "candidate_native_entity": "distorted guitar solo",
+      "atomic_token": "guitar solo",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "wah lead approx solo; effect-focused, one facet"
+    },
+    {
+      "id": "v1-112",
+      "proposal_text": "layered stadium crowd chants under the hook",
+      "candidate_native_entity": "anthemic gang vocals",
+      "atomic_token": "gang vocals",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "crowd chant approx gang vocals; crowd render, near-match"
+    },
+    {
+      "id": "v1-113",
+      "proposal_text": "a tremolo-picked tremolo lead sustaining the note",
+      "candidate_native_entity": "gritty distorted riff",
+      "atomic_token": "riff",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "tremolo picking approx riff phrasing; technique-limited"
+    },
+    {
+      "id": "v1-114",
+      "proposal_text": "a slide-guitar wail bending across the strings",
+      "candidate_native_entity": "distorted guitar solo",
+      "atomic_token": "guitar solo",
+      "label": "partial",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "slide guitar approx lead solo; distinct technique"
+    },
+    {
+      "id": "v1-115",
+      "proposal_text": "a folky tin-whistle jig melody",
+      "candidate_native_entity": "overdriven distorted guitar",
+      "atomic_token": "distorted guitar",
+      "label": "no_match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "tin whistle unrelated; mispair, no native"
+    },
+    {
+      "id": "v1-116",
+      "proposal_text": "a clean chorus-effect guitar with no distortion at all",
+      "candidate_native_entity": "overdriven distorted guitar",
+      "atomic_token": "distorted guitar",
+      "label": "no_match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "clean is opposite of distorted; contradictory"
+    },
+    {
+      "id": "v1-117",
+      "proposal_text": "the raw feeling of teenage rebellion",
+      "candidate_native_entity": "ringing power chords",
+      "atomic_token": "power chord",
+      "label": "no_match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "abstract emotion; no native correspondence"
+    },
+    {
+      "id": "v1-118",
+      "proposal_text": "a squeaky door slam used as a percussive hit",
+      "candidate_native_entity": "bright crash cymbal",
+      "atomic_token": "crash",
+      "label": "no_match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "door-slam foley; no native cymbal match"
+    },
+    {
+      "id": "v1-119",
+      "proposal_text": "a bagpipe skirl over a highland march",
+      "candidate_native_entity": "gritty distorted riff",
+      "atomic_token": "riff",
+      "label": "no_match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "bagpipe unrelated; exotic-instrument mispair, no native"
+    },
+    {
+      "id": "v1-120",
+      "proposal_text": "the smell-of-rain nostalgia rendered without sound",
+      "candidate_native_entity": "driving rock drums",
+      "atomic_token": "drums",
+      "label": "no_match",
+      "genre_axis": "rock",
+      "target_collection": "music_kr_rock",
+      "note": "abstract cross-sense concept; no native match"
+    },
+    {
+      "id": "v1-121",
+      "proposal_text": "bright crisp handclaps snapping on the backbeat",
+      "candidate_native_entity": "bright handclaps",
+      "atomic_token": "handclap",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "handclap attested(12); handclaps attested(7); direct"
+    },
+    {
+      "id": "v1-122",
+      "proposal_text": "a glittery sixteenth-note synth arpeggio bouncing along",
+      "candidate_native_entity": "bright synth arpeggio",
+      "atomic_token": "synth arpeggio",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "synth arpeggio attested(9); direct"
+    },
+    {
+      "id": "v1-123",
+      "proposal_text": "a lush warm synth pad washing sustained chords",
+      "candidate_native_entity": "lush synth pad",
+      "atomic_token": "synth pad",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "synth pad attested(170); direct"
+    },
+    {
+      "id": "v1-124",
+      "proposal_text": "a plucky synth pluck riff hooking the chorus",
+      "candidate_native_entity": "bright synth pluck",
+      "atomic_token": "pluck",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "pluck attested(44); direct"
+    },
+    {
+      "id": "v1-125",
+      "proposal_text": "a steady four-on-the-floor kick driving the dance-pop beat",
+      "candidate_native_entity": "four-on-the-floor kick",
+      "atomic_token": "four-on-the-floor",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "four-on-the-floor attested(37); direct"
+    },
+    {
+      "id": "v1-126",
+      "proposal_text": "stacked layered lead vocals thickening the hook",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocal harmonies",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "vocal harmonies attested(35); direct"
+    },
+    {
+      "id": "v1-127",
+      "proposal_text": "a bright catchy topline soaring over the chorus",
+      "candidate_native_entity": "bright lead vocal",
+      "atomic_token": "lead vocal",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "lead vocal attested(16); direct"
+    },
+    {
+      "id": "v1-128",
+      "proposal_text": "a punchy kick and clap driving the groove",
+      "candidate_native_entity": "punchy kick",
+      "atomic_token": "kick",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "kick attested(364); direct"
+    },
+    {
+      "id": "v1-129",
+      "proposal_text": "a shimmering tambourine ringing on the offbeats",
+      "candidate_native_entity": "bright tambourine",
+      "atomic_token": "tambourine",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "tambourine attested(13); direct"
+    },
+    {
+      "id": "v1-130",
+      "proposal_text": "a sidechained pad pumping against the kick",
+      "candidate_native_entity": "sidechained pad",
+      "atomic_token": "sidechain",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "sidechain attested(35); sidechained attested(7); direct"
+    },
+    {
+      "id": "v1-131",
+      "proposal_text": "a warm polished vocal-chop hook fluttering in the drop",
+      "candidate_native_entity": "chopped vocal sample",
+      "atomic_token": "vocal chops",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "vocal chops attested(7); chopped attested(8); direct"
+    },
+    {
+      "id": "v1-132",
+      "proposal_text": "a bright pop synth lead carrying the melody",
+      "candidate_native_entity": "bright synth lead",
+      "atomic_token": "synth",
+      "label": "match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "synth attested(315); direct"
+    },
+    {
+      "id": "v1-133",
+      "proposal_text": "a plucky pizzicato-style synth stab on the offbeat",
+      "candidate_native_entity": "bright synth arpeggio",
+      "atomic_token": "synth arpeggio",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "pluck stab approx arpeggio family; different figure"
+    },
+    {
+      "id": "v1-134",
+      "proposal_text": "a wide reverby ambient synth swell",
+      "candidate_native_entity": "lush synth pad",
+      "atomic_token": "synth pad",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "ambient swell approx synth pad; near-render"
+    },
+    {
+      "id": "v1-135",
+      "proposal_text": "soft finger snaps keeping the backbeat",
+      "candidate_native_entity": "bright handclaps",
+      "atomic_token": "handclap",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "finger snaps near handclaps; sibling percussion"
+    },
+    {
+      "id": "v1-136",
+      "proposal_text": "a glossy K-pop-style stacked vocal wall",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocal harmonies",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "stacked vocal broad; overlaps harmonies but generic layering"
+    },
+    {
+      "id": "v1-137",
+      "proposal_text": "a driving disco groove pushing the beat forward",
+      "candidate_native_entity": "four-on-the-floor kick",
+      "atomic_token": "four-on-the-floor",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "driving groove approx 4-on-floor; not explicitly specified"
+    },
+    {
+      "id": "v1-138",
+      "proposal_text": "a bright bell-like glockenspiel twinkle in the hook",
+      "candidate_native_entity": "bright synth pluck",
+      "atomic_token": "pluck",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "glockenspiel twinkle approx pluck role; distinct instrument"
+    },
+    {
+      "id": "v1-139",
+      "proposal_text": "a warm double-tracked lead thickening the topline",
+      "candidate_native_entity": "bright lead vocal",
+      "atomic_token": "lead vocal",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "double-tracking overlaps lead vocal; production facet"
+    },
+    {
+      "id": "v1-140",
+      "proposal_text": "a pumping compressed pad breathing with the beat",
+      "candidate_native_entity": "sidechained pad",
+      "atomic_token": "sidechain",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "pumping compression approx sidechain; technique implied not explicit"
+    },
+    {
+      "id": "v1-141",
+      "proposal_text": "a shaker ticking sixteenths through the verse",
+      "candidate_native_entity": "bright tambourine",
+      "atomic_token": "tambourine",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "shaker near tambourine; sibling percussion, distinct"
+    },
+    {
+      "id": "v1-142",
+      "proposal_text": "a saw-synth lead with pitch-bent risers",
+      "candidate_native_entity": "bright synth lead",
+      "atomic_token": "synth",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "saw lead approx synth-lead; overlaps but timbre-specific"
+    },
+    {
+      "id": "v1-143",
+      "proposal_text": "a warm electric-piano chord bed under the pre-chorus",
+      "candidate_native_entity": "lush synth pad",
+      "atomic_token": "synth pad",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "electric piano fills pad role approx; distinct instrument"
+    },
+    {
+      "id": "v1-144",
+      "proposal_text": "a punchy programmed clap layered on the snare",
+      "candidate_native_entity": "punchy kick",
+      "atomic_token": "kick",
+      "label": "partial",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "clap approx kick as a rhythmic hit; different drum element"
+    },
+    {
+      "id": "v1-145",
+      "proposal_text": "a marching brass-band fanfare hook",
+      "candidate_native_entity": "bright synth lead",
+      "atomic_token": "synth",
+      "label": "no_match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "brass band unrelated to synth lead; mispair, no native"
+    },
+    {
+      "id": "v1-146",
+      "proposal_text": "the elevator door chime as a melodic motif",
+      "candidate_native_entity": "bright synth arpeggio",
+      "atomic_token": "synth arpeggio",
+      "label": "no_match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "elevator foley; no native arpeggio match"
+    },
+    {
+      "id": "v1-147",
+      "proposal_text": "the feeling of summer freedom with no instrument",
+      "candidate_native_entity": "bright handclaps",
+      "atomic_token": "handclap",
+      "label": "no_match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "abstract mood; no native correspondence"
+    },
+    {
+      "id": "v1-148",
+      "proposal_text": "the hum of a refrigerator as a drone bed",
+      "candidate_native_entity": "lush synth pad",
+      "atomic_token": "synth pad",
+      "label": "no_match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "appliance foley; no native pad match"
+    },
+    {
+      "id": "v1-149",
+      "proposal_text": "a bright steel-drum calypso melody",
+      "candidate_native_entity": "bright synth pluck",
+      "atomic_token": "pluck",
+      "label": "no_match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "steel drum unrelated; mispair, no native pluck match"
+    },
+    {
+      "id": "v1-150",
+      "proposal_text": "the abstract idea of a fresh start",
+      "candidate_native_entity": "bright lead vocal",
+      "atomic_token": "lead vocal",
+      "label": "no_match",
+      "genre_axis": "pop",
+      "target_collection": "music_kr_pop",
+      "note": "abstract concept; no native correspondence"
+    },
+    {
+      "id": "v1-151",
+      "proposal_text": "a glossy polished K-pop production with layered vocals",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocals",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "vocals attested(471); vocal harmonies attested(35); direct"
+    },
+    {
+      "id": "v1-152",
+      "proposal_text": "a bright pop synth lead hooking the chorus",
+      "candidate_native_entity": "bright synth lead",
+      "atomic_token": "synth",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "synth attested(315); direct"
+    },
+    {
+      "id": "v1-153",
+      "proposal_text": "a punchy 808 bass sliding under the drop",
+      "candidate_native_entity": "booming 808 bass",
+      "atomic_token": "808 bass",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "808 bass attested(12); direct"
+    },
+    {
+      "id": "v1-154",
+      "proposal_text": "crisp trap hi-hats rolling in the rap break",
+      "candidate_native_entity": "crisp trap hi-hat",
+      "atomic_token": "trap hi-hat",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "trap hi-hat attested(5) thin; direct"
+    },
+    {
+      "id": "v1-155",
+      "proposal_text": "a confident rap verse in the bridge break",
+      "candidate_native_entity": "tight rap verse",
+      "atomic_token": "rap verse",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "rap verse attested(8); direct"
+    },
+    {
+      "id": "v1-156",
+      "proposal_text": "bright handclaps snapping through the pre-chorus",
+      "candidate_native_entity": "bright handclaps",
+      "atomic_token": "handclap",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "handclap attested(12); direct"
+    },
+    {
+      "id": "v1-157",
+      "proposal_text": "a sidechained pad pumping under the beat",
+      "candidate_native_entity": "sidechained pad",
+      "atomic_token": "sidechain",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "sidechain attested(35); direct"
+    },
+    {
+      "id": "v1-158",
+      "proposal_text": "stacked ad-libs answering the main topline",
+      "candidate_native_entity": "rap ad-libs",
+      "atomic_token": "ad-libs",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "ad-libs attested(42); direct"
+    },
+    {
+      "id": "v1-159",
+      "proposal_text": "a plucky synth pluck riff carrying the hook",
+      "candidate_native_entity": "bright synth pluck",
+      "atomic_token": "pluck",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "pluck attested(44); direct"
+    },
+    {
+      "id": "v1-160",
+      "proposal_text": "a deep sub bass anchoring the chorus",
+      "candidate_native_entity": "deep sub bass",
+      "atomic_token": "sub bass",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "sub bass attested(7) thin; direct"
+    },
+    {
+      "id": "v1-161",
+      "proposal_text": "a four-on-the-floor kick driving the dance section",
+      "candidate_native_entity": "four-on-the-floor kick",
+      "atomic_token": "four-on-the-floor",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "four-on-the-floor attested(37); direct"
+    },
+    {
+      "id": "v1-162",
+      "proposal_text": "a bright airy falsetto lift on the final hook",
+      "candidate_native_entity": "airy falsetto",
+      "atomic_token": "falsetto",
+      "label": "match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "falsetto attested(94); direct"
+    },
+    {
+      "id": "v1-163",
+      "proposal_text": "a big anthemic stadium-crowd chant on the hook",
+      "candidate_native_entity": "anthemic gang vocals",
+      "atomic_token": "gang vocals",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "stadium crowd approx gang vocals; crowd render near-match"
+    },
+    {
+      "id": "v1-164",
+      "proposal_text": "a glossy vocoder-processed vocal hook",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocals",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "vocoder overlaps processed vocals but effect-specific; one facet"
+    },
+    {
+      "id": "v1-165",
+      "proposal_text": "a saw-synth lead riser sweeping into the drop",
+      "candidate_native_entity": "bright synth lead",
+      "atomic_token": "synth",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "saw lead approx synth-lead; timbre-specific"
+    },
+    {
+      "id": "v1-166",
+      "proposal_text": "a booming 808 kick knocking on the one",
+      "candidate_native_entity": "booming 808 bass",
+      "atomic_token": "808 bass",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "808 kick approx 808 bass; drum vs bass, one facet"
+    },
+    {
+      "id": "v1-167",
+      "proposal_text": "a half-time trap section widening the bridge",
+      "candidate_native_entity": "crisp trap hi-hat",
+      "atomic_token": "trap hi-hat",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "half-time groove approx trap; one facet"
+    },
+    {
+      "id": "v1-168",
+      "proposal_text": "a melodic spoken-rap flow over the beat",
+      "candidate_native_entity": "tight rap verse",
+      "atomic_token": "rap verse",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "melodic spoken-rap approx rap verse; hybrid delivery"
+    },
+    {
+      "id": "v1-169",
+      "proposal_text": "soft finger snaps ticking in the verse",
+      "candidate_native_entity": "bright handclaps",
+      "atomic_token": "handclap",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "finger snaps near handclaps; sibling percussion"
+    },
+    {
+      "id": "v1-170",
+      "proposal_text": "a pumping compressed pad breathing under the beat",
+      "candidate_native_entity": "sidechained pad",
+      "atomic_token": "sidechain",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "pumping compression approx sidechain; not explicit"
+    },
+    {
+      "id": "v1-171",
+      "proposal_text": "layered gang shouts backing the rap line",
+      "candidate_native_entity": "rap ad-libs",
+      "atomic_token": "ad-libs",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "gang shouts approx ad-libs; group vs solo"
+    },
+    {
+      "id": "v1-172",
+      "proposal_text": "a bright glockenspiel bell twinkle in the hook",
+      "candidate_native_entity": "bright synth pluck",
+      "atomic_token": "pluck",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "glockenspiel approx pluck role; distinct instrument"
+    },
+    {
+      "id": "v1-173",
+      "proposal_text": "a warm analog synth bass under the pre-chorus",
+      "candidate_native_entity": "deep sub bass",
+      "atomic_token": "sub bass",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "analog synth bass approx sub; timbre differs"
+    },
+    {
+      "id": "v1-174",
+      "proposal_text": "a gentle head-voice ad-lib floating above the hook",
+      "candidate_native_entity": "airy falsetto",
+      "atomic_token": "falsetto",
+      "label": "partial",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "head voice near falsetto; sibling register"
+    },
+    {
+      "id": "v1-175",
+      "proposal_text": "punchy brass stabs hitting on the off-beats",
+      "candidate_native_entity": "bright synth lead",
+      "atomic_token": "synth",
+      "label": "no_match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "brass unrelated to synth lead; mispair, no native"
+    },
+    {
+      "id": "v1-176",
+      "proposal_text": "the concept of youthful ambition with no sound cue",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocals",
+      "label": "no_match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "abstract concept; no native correspondence"
+    },
+    {
+      "id": "v1-177",
+      "proposal_text": "a school-bell ring sampled as a motif",
+      "candidate_native_entity": "bright synth pluck",
+      "atomic_token": "pluck",
+      "label": "no_match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "school-bell foley; no native pluck match"
+    },
+    {
+      "id": "v1-178",
+      "proposal_text": "crowd noise from a stadium as an ambient bed",
+      "candidate_native_entity": "anthemic gang vocals",
+      "atomic_token": "gang vocals",
+      "label": "no_match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "raw crowd-noise foley (not sung chant); no native vocal match"
+    },
+    {
+      "id": "v1-179",
+      "proposal_text": "the shimmer of neon-city aesthetics with no instrument",
+      "candidate_native_entity": "bright synth lead",
+      "atomic_token": "synth",
+      "label": "no_match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "abstract visual concept; no native match"
+    },
+    {
+      "id": "v1-180",
+      "proposal_text": "a didgeridoo drone humming under the drop",
+      "candidate_native_entity": "deep sub bass",
+      "atomic_token": "sub bass",
+      "label": "no_match",
+      "genre_axis": "kpop",
+      "target_collection": "music_kr_pop",
+      "note": "didgeridoo unrelated to sub bass; exotic mispair, no native"
+    },
+    {
+      "id": "v1-181",
+      "proposal_text": "a bright accordion riffing melodic counter-lines and stabs",
+      "candidate_native_entity": "bright accordion riff",
+      "atomic_token": "accordion",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "accordion attested(9); signature trot instrument"
+    },
+    {
+      "id": "v1-182",
+      "proposal_text": "a male lead with heavy vibrato on sustained notes",
+      "candidate_native_entity": "heavy vibrato vocal",
+      "atomic_token": "heavy vibrato",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "heavy vibrato attested(2) thin; direct trot vocal trait"
+    },
+    {
+      "id": "v1-183",
+      "proposal_text": "deliberate old-school Korean phrasing weighting each syllable",
+      "candidate_native_entity": "traditional korean phrasing",
+      "atomic_token": "traditional phrasing",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "traditional phrasing attested(1) thin; korean attested(330); direct"
+    },
+    {
+      "id": "v1-184",
+      "proposal_text": "a bright brass stab punctuating the chorus",
+      "candidate_native_entity": "bright brass stab",
+      "atomic_token": "brass stab",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "brass stab attested(38); direct"
+    },
+    {
+      "id": "v1-185",
+      "proposal_text": "a shuffling foxtrot groove swinging under the verse",
+      "candidate_native_entity": "shuffle groove",
+      "atomic_token": "shuffle",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "shuffle attested(17); direct rhythmic feel"
+    },
+    {
+      "id": "v1-186",
+      "proposal_text": "a smoky saxophone line answering the vocal",
+      "candidate_native_entity": "warm saxophone",
+      "atomic_token": "saxophone",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "saxophone attested(16); direct"
+    },
+    {
+      "id": "v1-187",
+      "proposal_text": "a warm strummed acoustic guitar backing the verse",
+      "candidate_native_entity": "warm strummed acoustic guitar",
+      "atomic_token": "strummed",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "strummed attested(11); acoustic guitar attested(202); direct"
+    },
+    {
+      "id": "v1-188",
+      "proposal_text": "a bright trumpet fanfare opening the intro",
+      "candidate_native_entity": "bright trumpet",
+      "atomic_token": "trumpet",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "trumpet attested(33); direct"
+    },
+    {
+      "id": "v1-189",
+      "proposal_text": "a swung shuffle drum groove with a loose triplet feel",
+      "candidate_native_entity": "swing shuffle groove",
+      "atomic_token": "swing",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "swing attested(60); direct feel"
+    },
+    {
+      "id": "v1-190",
+      "proposal_text": "a wide vibrato-laden vocal wail on the hook",
+      "candidate_native_entity": "heavy vibrato vocal",
+      "atomic_token": "vibrato",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "vibrato attested(126); direct vocal trait"
+    },
+    {
+      "id": "v1-191",
+      "proposal_text": "a punchy syncopated bass walking the trot groove",
+      "candidate_native_entity": "walking bass",
+      "atomic_token": "walking bass",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "walking attested(66); direct bass motion"
+    },
+    {
+      "id": "v1-192",
+      "proposal_text": "an emotional belting vocal climax at the bridge",
+      "candidate_native_entity": "emotional belt vocal",
+      "atomic_token": "belt",
+      "label": "match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "belt attested(38); direct vocal delivery"
+    },
+    {
+      "id": "v1-193",
+      "proposal_text": "a warm bandoneon squeezing a tango-like line",
+      "candidate_native_entity": "bright accordion riff",
+      "atomic_token": "accordion",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "bandoneon near accordion; sibling free-reed, distinct"
+    },
+    {
+      "id": "v1-194",
+      "proposal_text": "a bright harmonica riffing a folky counter-line",
+      "candidate_native_entity": "bright accordion riff",
+      "atomic_token": "accordion",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "harmonica approx accordion reed timbre; distinct instrument"
+    },
+    {
+      "id": "v1-195",
+      "proposal_text": "a gentle natural vibrato coloring the sustained notes",
+      "candidate_native_entity": "heavy vibrato vocal",
+      "atomic_token": "heavy vibrato",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "light vibrato approx heavy vibrato; degree differs"
+    },
+    {
+      "id": "v1-196",
+      "proposal_text": "a modern K-pop-trot topline over the beat",
+      "candidate_native_entity": "traditional korean phrasing",
+      "atomic_token": "traditional phrasing",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "kpop-trot phrasing overlaps traditional but modernized; one facet"
+    },
+    {
+      "id": "v1-197",
+      "proposal_text": "a punchy synth-brass stab hitting the chorus",
+      "candidate_native_entity": "bright brass stab",
+      "atomic_token": "brass stab",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "synth brass approx real brass stab; synthetic timbre"
+    },
+    {
+      "id": "v1-198",
+      "proposal_text": "a foxtrot disco-bass shuffle driving the beat",
+      "candidate_native_entity": "shuffle groove",
+      "atomic_token": "shuffle",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "foxtrot disco-bass overlaps shuffle feel but bass-focused; one facet"
+    },
+    {
+      "id": "v1-199",
+      "proposal_text": "a smoky muted trumpet answering the vocal",
+      "candidate_native_entity": "warm saxophone",
+      "atomic_token": "saxophone",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "trumpet is brass sibling to sax; mid-similarity mispair"
+    },
+    {
+      "id": "v1-200",
+      "proposal_text": "a bright fingerpicked acoustic pattern under the verse",
+      "candidate_native_entity": "warm strummed acoustic guitar",
+      "atomic_token": "strummed",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "fingerpicked approx strummed; different right-hand technique"
+    },
+    {
+      "id": "v1-201",
+      "proposal_text": "a warm muted-trumpet line over the shuffle",
+      "candidate_native_entity": "bright trumpet",
+      "atomic_token": "trumpet",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "muted trumpet approx open trumpet; timbre altered, one facet"
+    },
+    {
+      "id": "v1-202",
+      "proposal_text": "a triplet-swing organ comp under the chorus",
+      "candidate_native_entity": "swing shuffle groove",
+      "atomic_token": "swing",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "triplet-swing overlaps swing but organ-focused; one facet"
+    },
+    {
+      "id": "v1-203",
+      "proposal_text": "a plucked pizzicato bass bouncing under the verse",
+      "candidate_native_entity": "walking bass",
+      "atomic_token": "walking bass",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "pizzicato plucked bass approx walking bass; motion differs"
+    },
+    {
+      "id": "v1-204",
+      "proposal_text": "a raspy powerful vocal push on the climax",
+      "candidate_native_entity": "emotional belt vocal",
+      "atomic_token": "belt",
+      "label": "partial",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "raspy push approx belt; texture-focused, near-match"
+    },
+    {
+      "id": "v1-205",
+      "proposal_text": "a rowdy stadium crowd chanting the hook in unison",
+      "candidate_native_entity": "gang chant vocals",
+      "atomic_token": "gang vocals",
+      "label": "no_match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "chant compound is dead-zone (0); crowd-chant no reliable native render"
+    },
+    {
+      "id": "v1-206",
+      "proposal_text": "a bagpipe skirl over a marching beat",
+      "candidate_native_entity": "bright accordion riff",
+      "atomic_token": "accordion",
+      "label": "no_match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "bagpipe unrelated to accordion; exotic mispair, no native"
+    },
+    {
+      "id": "v1-207",
+      "proposal_text": "the nostalgic feeling of an old market street",
+      "candidate_native_entity": "traditional korean phrasing",
+      "atomic_token": "traditional phrasing",
+      "label": "no_match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "abstract nostalgia; no native correspondence"
+    },
+    {
+      "id": "v1-208",
+      "proposal_text": "clinking soju glasses recorded as a percussion loop",
+      "candidate_native_entity": "shuffle groove",
+      "atomic_token": "shuffle",
+      "label": "no_match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "glass-clink foley; no native groove match"
+    },
+    {
+      "id": "v1-209",
+      "proposal_text": "a fiddle reel sawing a lively country dance",
+      "candidate_native_entity": "bright trumpet",
+      "atomic_token": "trumpet",
+      "label": "no_match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "fiddle unrelated to trumpet; mispair, no native"
+    },
+    {
+      "id": "v1-210",
+      "proposal_text": "the abstract warmth of hometown longing",
+      "candidate_native_entity": "warm saxophone",
+      "atomic_token": "saxophone",
+      "label": "no_match",
+      "genre_axis": "trot",
+      "target_collection": "music_kr_trot",
+      "note": "abstract emotion; no native correspondence"
+    },
+    {
+      "id": "v1-211",
+      "proposal_text": "gently fingerpicked acoustic guitar arpeggios",
+      "candidate_native_entity": "fingerpicked acoustic guitar",
+      "atomic_token": "fingerpicked",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "fingerpicked attested(111); acoustic guitar attested(202); direct"
+    },
+    {
+      "id": "v1-212",
+      "proposal_text": "a warm strummed acoustic guitar driving the verse",
+      "candidate_native_entity": "warm strummed acoustic guitar",
+      "atomic_token": "acoustic guitar",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "acoustic guitar attested(202); direct"
+    },
+    {
+      "id": "v1-213",
+      "proposal_text": "a plaintive harmonica wailing over the campfire",
+      "candidate_native_entity": "plaintive harmonica",
+      "atomic_token": "harmonica",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "harmonica attested(15); direct"
+    },
+    {
+      "id": "v1-214",
+      "proposal_text": "a nylon-string classical guitar with soft round tone",
+      "candidate_native_entity": "soft nylon guitar",
+      "atomic_token": "nylon guitar",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "nylon guitar attested(17); direct"
+    },
+    {
+      "id": "v1-215",
+      "proposal_text": "a warm intimate fingerstyle guitar figure",
+      "candidate_native_entity": "warm fingerstyle guitar",
+      "atomic_token": "fingerstyle",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "fingerstyle attested(63); direct technique"
+    },
+    {
+      "id": "v1-216",
+      "proposal_text": "a bright tambourine shaking on the offbeats",
+      "candidate_native_entity": "bright tambourine",
+      "atomic_token": "tambourine",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "tambourine attested(13); direct"
+    },
+    {
+      "id": "v1-217",
+      "proposal_text": "a soft breathy folk vocal telling the story",
+      "candidate_native_entity": "intimate breathy vocal",
+      "atomic_token": "breathy",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "breathy attested(232); direct texture"
+    },
+    {
+      "id": "v1-218",
+      "proposal_text": "layered vocal harmonies wrapping the acoustic verse",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocal harmonies",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "vocal harmonies attested(35); direct"
+    },
+    {
+      "id": "v1-219",
+      "proposal_text": "a warm shaker ticking a gentle pulse",
+      "candidate_native_entity": "warm shaker",
+      "atomic_token": "shaker",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "shaker attested(80); direct"
+    },
+    {
+      "id": "v1-220",
+      "proposal_text": "a bright glockenspiel motif twinkling over the guitar",
+      "candidate_native_entity": "bright glockenspiel motif",
+      "atomic_token": "glockenspiel",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "glockenspiel attested(18); direct"
+    },
+    {
+      "id": "v1-221",
+      "proposal_text": "a delicate grand piano supporting the folk ballad",
+      "candidate_native_entity": "delicate grand piano",
+      "atomic_token": "grand piano",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "grand piano attested(65); direct"
+    },
+    {
+      "id": "v1-222",
+      "proposal_text": "a whistled melody drifting over the acoustic bed",
+      "candidate_native_entity": "soft whistle melody",
+      "atomic_token": "whistle",
+      "label": "match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "whistle attested(6) thin; direct"
+    },
+    {
+      "id": "v1-223",
+      "proposal_text": "a banjo rolling a bright bluegrass pattern",
+      "candidate_native_entity": "fingerpicked acoustic guitar",
+      "atomic_token": "fingerpicked",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "banjo roll approx fingerpicked technique; different instrument"
+    },
+    {
+      "id": "v1-224",
+      "proposal_text": "a shimmering 12-string acoustic guitar jangle",
+      "candidate_native_entity": "warm strummed acoustic guitar",
+      "atomic_token": "acoustic guitar",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "12-string is a limited variant of acoustic guitar"
+    },
+    {
+      "id": "v1-225",
+      "proposal_text": "a lonely whistling melody over wind ambience",
+      "candidate_native_entity": "plaintive harmonica",
+      "atomic_token": "harmonica",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "whistle approx harmonica lead role; distinct source"
+    },
+    {
+      "id": "v1-226",
+      "proposal_text": "a fast flamenco rasgueado nylon strum",
+      "candidate_native_entity": "soft nylon guitar",
+      "atomic_token": "nylon guitar",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "flamenco rasgueado approx nylon guitar; different technique/idiom"
+    },
+    {
+      "id": "v1-227",
+      "proposal_text": "a warm fingerpicked mandolin tremolo figure",
+      "candidate_native_entity": "warm fingerstyle guitar",
+      "atomic_token": "fingerstyle",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "mandolin tremolo approx fingerstyle; different instrument"
+    },
+    {
+      "id": "v1-228",
+      "proposal_text": "a bright shaker ticking sixteenths through the verse",
+      "candidate_native_entity": "bright tambourine",
+      "atomic_token": "tambourine",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "shaker near tambourine; sibling percussion"
+    },
+    {
+      "id": "v1-229",
+      "proposal_text": "a gentle head-voice folk melody floating softly",
+      "candidate_native_entity": "intimate breathy vocal",
+      "atomic_token": "breathy",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "head voice approx breathy; distinct register facet"
+    },
+    {
+      "id": "v1-230",
+      "proposal_text": "a double-tracked lead vocal thickening the chorus",
+      "candidate_native_entity": "layered vocal harmonies",
+      "atomic_token": "vocal harmonies",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "doubling approx harmonies; unison not true harmony"
+    },
+    {
+      "id": "v1-231",
+      "proposal_text": "bongos tapping a soft hand-drum pulse",
+      "candidate_native_entity": "warm shaker",
+      "atomic_token": "shaker",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "bongos near shaker as hand percussion; distinct instrument"
+    },
+    {
+      "id": "v1-232",
+      "proposal_text": "a music-box lullaby melody chiming softly",
+      "candidate_native_entity": "bright glockenspiel motif",
+      "atomic_token": "glockenspiel",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "music-box approx glockenspiel timbre; distinct instrument"
+    },
+    {
+      "id": "v1-233",
+      "proposal_text": "a warm upright piano in an intimate folk trio",
+      "candidate_native_entity": "delicate grand piano",
+      "atomic_token": "grand piano",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "upright piano approx grand; distinct instrument, mid-similarity"
+    },
+    {
+      "id": "v1-234",
+      "proposal_text": "a pan-flute line drifting over the guitar",
+      "candidate_native_entity": "soft whistle melody",
+      "atomic_token": "whistle",
+      "label": "partial",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "pan-flute approx whistle timbre; distinct instrument"
+    },
+    {
+      "id": "v1-235",
+      "proposal_text": "a bagpipe skirl over a highland march",
+      "candidate_native_entity": "plaintive harmonica",
+      "atomic_token": "harmonica",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "bagpipe unrelated to harmonica; mispair, no native"
+    },
+    {
+      "id": "v1-236",
+      "proposal_text": "a fiddle reel sawing a lively country dance",
+      "candidate_native_entity": "plaintive harmonica",
+      "atomic_token": "harmonica",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "fiddle unrelated to harmonica; mispair, no native"
+    },
+    {
+      "id": "v1-237",
+      "proposal_text": "crackling campfire and cricket ambience as a bed",
+      "candidate_native_entity": "warm shaker",
+      "atomic_token": "shaker",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "nature foley; no native percussion match"
+    },
+    {
+      "id": "v1-238",
+      "proposal_text": "the abstract feeling of homesickness at dusk",
+      "candidate_native_entity": "warm strummed acoustic guitar",
+      "atomic_token": "acoustic guitar",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "abstract emotion; no native correspondence"
+    },
+    {
+      "id": "v1-239",
+      "proposal_text": "a didgeridoo drone humming beneath the guitar",
+      "candidate_native_entity": "soft nylon guitar",
+      "atomic_token": "nylon guitar",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "didgeridoo unrelated to nylon guitar; exotic mispair, no native"
+    },
+    {
+      "id": "v1-240",
+      "proposal_text": "wind chimes tinkling in a gentle breeze as texture",
+      "candidate_native_entity": "bright glockenspiel motif",
+      "atomic_token": "glockenspiel",
+      "label": "no_match",
+      "genre_axis": "folk",
+      "target_collection": "music_kr_acoustic",
+      "note": "wind-chime foley; no native glockenspiel match"
+    }
+  ]
+}
