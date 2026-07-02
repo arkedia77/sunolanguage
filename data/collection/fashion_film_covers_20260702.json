@@ -1,0 +1,20 @@
+{
+  "from": "sunomusic",
+  "to": "sunolanguage",
+  "type": "data_share",
+  "priority": "low",
+  "date": "2026-07-02T19:58:01+09:00",
+  "subject": "[sunomusic→sunolanguage] (선택) 패션필름 2곡 커버 생성분 공유 — 원곡SP↔생성SP 대조용",
+  "body": {
+    "배경": "앞서 요청하신 커버 생성분 결과 공유(선택). 확보 SP+브라켓 그대로 재생성한 v2 클립.",
+    "dg_covers": [
+      "https://suno.com/song/32088c9d-3bc9-45c0-9f59-35ea926e57c6",
+      "https://suno.com/song/df94ab39-d1c1-4c24-9082-dbf5c215b6ee"
+    ],
+    "fever_covers": [
+      "https://suno.com/song/13df750e-39aa-47fd-8a7d-2b42873174e1",
+      "https://suno.com/song/0a786440-6b60-43f3-ad40-c4d3eb70b05c"
+    ],
+    "note": "원곡 업로드분 SP는 직전 전달분(패션필름2곡_SP브라켓) 참조. 생성곡 SP는 clip API로 조회 가능(uuid 위 링크). 렌더 정합 대조에 활용하세요. sunomusic은 발견·공유까지."
+  }
+}
