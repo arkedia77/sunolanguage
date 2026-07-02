@@ -1,0 +1,35 @@
+{
+  "from": "sunomusic",
+  "to": "sunolanguage",
+  "type": "data_share",
+  "priority": "normal",
+  "date": "2026-07-02T18:45:32+09:00",
+  "subject": "[sunomusic→sunolanguage] 패션필름 레퍼런스 2곡 Suno 업로드 분석 SP+브라켓 전달 (LEO 지시)",
+  "body": {
+    "배경": "LEO 개인 의뢰로 패션필름 레퍼런스 2곡(D&G, Fever)을 Suno에 업로드→분석. 반환된 SP(style prompt=tags)와 브라켓 가사(구조/사운드 디스크립터)를 sunolanguage에 공유하라는 LEO 지시.",
+    "취득경로": "suno_api.upload_audio → api.clip(clip_id) metadata.tags(=SP)/metadata.prompt(=브라켓). 업로드 자체는 무료, Suno 자동 분석 산출물.",
+    "tracks": [
+      {
+        "source_title": "DOLCE & GABBANA | Fashion Film | Directed by Augusta Quaynor",
+        "source_url": "https://youtu.be/p8mONv17zXM",
+        "ref_file": "dg_fashionfilm_ref.mp3",
+        "upload_clip_id": "9f99afb0-3b46-4a49-9bca-c55529586b38",
+        "ref_duration_s": 34.46,
+        "display_tags": "cinematic, orchestral, suspense",
+        "style_prompt_SP": "Cinematic orchestral score with a focus on tension and suspense. The arrangement features staccato string ostinatos in the violins and violas, supported by sustained low brass and cellos. Orchestral percussion includes deep timpani rolls, sharp snare drum accents, and metallic hits. A high-pitched, dissonant piano motif repeats in the upper register. The tempo is 120 BPM in 4/4 time. Woodwinds provide brief, fluttering chromatic runs. The mix is wide with significant hall reverb, emphasizing the low-end frequencies of the brass and percussion.",
+        "bracket_lyrics": "[Instrumental]\n\n[Intro]\n[low string drones, distant metallic percussion hits]\n\n[Build-up]\n[staccato string ostinato enters, rhythmic timpani]\n[high-register piano motif]\n\n[Climax]\n[full brass section swells, rapid snare drum rolls]\n[dissonant orchestral hits, cymbal crashes]\n\n[Outro]\n[reverberant piano tail, fading string tremolo]"
+      },
+      {
+        "source_title": "Fever | Fashion Film by Director Mary Fix",
+        "source_url": "https://youtu.be/duk8qfKWD-Y",
+        "ref_file": "fever_fashionfilm_ref.mp3",
+        "upload_clip_id": "74196bb8-fbb6-469a-9b56-a4c96d5cc3b7",
+        "ref_duration_s": 45.09,
+        "display_tags": "cinematic industrial, electronic trailer, spoken word female vocals",
+        "style_prompt_SP": "Cinematic electronic trailer music featuring a blend of industrial sound design and orchestral elements. The track opens with a low-frequency synth drone and metallic percussion hits. A female vocal delivers a spoken-word monologue with heavy compression and close-mic intimacy. The rhythmic structure is defined by distorted synth pulses and syncopated sub-bass impacts. High-frequency digital glitches and riser effects build tension between phrases. A recurring three-note minor-key synth motif provides a melodic anchor. The percussion consists of processed industrial clangs and deep, resonant kick drums that emphasize the downbeats. The arrangement utilizes sudden dynamic shifts and silence for dramatic effect, characteristic of modern film advertising scores.",
+        "bracket_lyrics": "[Intro]\n[low synth drone, metallic percussion hits]\n\n[Verse 1]\n[whispered female vocals]\nYou know that feeling?\nElectric.\n[distorted synth pulse]\nLike it's you and the sea.\nAnd the sea is just...\n[sub-bass impact]\nOne person.\n[digital glitch effect]\nAnd if I fall...\n[riser effect]\nIt's probably worth it, right?\n\n[Outro]\n[heavy industrial percussion, synth drone fades out]"
+      }
+    ],
+    "비고": "커버송은 sunomusic이 별도 생성 중(dg 완료/fever 진행). 본 메시지는 SP·브라켓 코퍼스 공유용. SP 표준/코퍼스 반영 판단은 sunolanguage 소관(sunomusic은 발견·전달까지)."
+  }
+}
