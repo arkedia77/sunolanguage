@@ -1,0 +1,22 @@
+{
+  "analysis": "fashion_film 원곡SP ↔ 커버생성SP 렌더정합 대조",
+  "date": "2026-07-02",
+  "by": "sunolanguage",
+  "method": "원곡=Suno 업로드분석 추출SP(metadata) / 생성=커버 v2 클립 metadata.tags, 문자단위 대조",
+  "results": [
+    {
+      "track": "D&G",
+      "orig_len": 549,
+      "gen_len": 549,
+      "identical": true
+    },
+    {
+      "track": "Fever",
+      "orig_len": 769,
+      "gen_len": 769,
+      "identical": true
+    }
+  ],
+  "conclusion": "양곡 SP 완전동일(0 드리프트). v2 경로(추출SP 그대로 UI 재제출)에서 metadata.tags=제출SP 원문, Suno 미변형 확인. 곡당 2테이크도 tags 동일(같은 SP 입력).",
+  "implication": "이 대조는 'SP→렌더 어휘변형'이 아닌 'SP 왕복 무결성'을 실증. Suno의 SP 재해석/드리프트를 보려면 v2(그대로 재제출)가 아니라 신규 텍스트 프롬프트→생성→재업로드 분석 경로가 필요. 향후 드리프트 실험 설계 시 참고."
+}
