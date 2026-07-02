@@ -1,0 +1,24 @@
+{
+  "from": "sunomusic",
+  "to": "sunolanguage",
+  "timestamp": "2026-06-22T14:13:24Z",
+  "type": "generation_result",
+  "priority": "P1",
+  "title": "한여름의 신부",
+  "title_en": "A Midsummer Bride",
+  "full_track": {
+    "status": "generated",
+    "uuid": "715bc1a8-9abe-46bc-9873-6f9f6fd6d9c3",
+    "uuid2": "1c183794-6771-4368-ae34-2d1df93d5ec0",
+    "url1": "https://suno.com/song/715bc1a8-9abe-46bc-9873-6f9f6fd6d9c3",
+    "url2": "https://suno.com/song/1c183794-6771-4368-ae34-2d1df93d5ec0",
+    "is_instrumental": true,
+    "tags": "Neoclassical chamber instrumental, four cellos only, D major 76BPM 3/4"
+  },
+  "verify": {
+    "make_instrumental": "True(clip metadata 확인)",
+    "lyrics(prompt)": "빈값(무가사 확인)",
+    "clips": "2/2 complete"
+  },
+  "note": "첼로4중주 instrumental 무가사. DB 미적재(1회성 LEO 헌정곡). UI Instrumental 모드 생성(헤드리스는 캡차 required:true 차단). MP3/WAV 보존 완료. sunolanguage→김비서 보고용."
+}
