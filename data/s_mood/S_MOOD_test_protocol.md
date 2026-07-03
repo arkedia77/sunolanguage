@@ -54,6 +54,12 @@ Suno 분석출력에 **감정의 결을 나타내는 형용사가 거의 없음*
 - 결과 → `docs/suno_mood_vocabulary_map.md` D절 갱신 + 책 5장(감성어휘 전략) 실증 근거
 - probe_word 6종 → suspicion_tracker 등재(Echo 추적)
 
+## 7. 진행 로그
+
+- **2026-07-03 생성 완료** (sunomusic) — 12/12 success, test_id 259~270 DB writeback(suno_generated=true·uuid1/2 채움 12/12 검증). 제출SP==생성tags **무변형 확인**(어휘효과 측정 조건 무결). 곡당 2테이크 uuid 확보. A/B 무드어 전건 tags 반영.
+  - **1차 관찰(생성 tags = 제출SP 왕복)**: SP 무변형이라 A곡 dead-word가 tags에 그대로 존속 → 이는 '제출SP 보존'이지 H2(재분석 Echo)가 아님. H2는 **오디오 재분석 필요**.
+  - **다음 대기**: ①Leo 청취(H1·H3 — A vs B 무드 동등성/구분가능성) ②Suno 앱 오디오 재분석(H2 — dead-word가 Suno 분석출력으로 되돌아오나 vs 대체어 치환). 재분석 대상 uuid는 batch json에 반영됨.
+
 ## 파일
-- `data/s_mood/S_MOOD_batch.json` — 12곡 SP 전문 (A/B 프레임 통제 검증 PASS)
+- `data/s_mood/S_MOOD_batch.json` — 12곡 SP 전문 + 생성 uuid/url (A/B 프레임 통제 PASS, 무변형 검증)
 - 빌더: `/tmp/build_smood.py`
