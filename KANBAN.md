@@ -30,7 +30,7 @@
 - [sunolanguage] **패션필름 2곡 Suno 네이티브 SP 수령·교차검증 완료(07-02)** — sunomusic 공유(D&G/Fever, 실오디오 업로드 분석). v3.2 교차검증: 신규 원자어휘 0(4 novel 전부 attested 구성어 컴파운드), cinematic/industrial 커버리지 견고. `data/collection/fashion_film_ref_sp_2tracks_20260702.json` 예제 보존, 어휘사전 갱신 불요. 커버 생성분 4클립(`fashion_film_covers_20260702.json`) 렌더정합 대조=**sunomusic CDP hang으로 생성SP 추출 다음세션 이월**(보너스, 비긴급)
 
 ### 감정어휘 실험
-- [sunolanguage] **★S_MOOD 감정어휘 dead-zone A/B 실험 — 발주완료(07-03), 생성·청취·재분석 대기** — 패션필름 `suspense` 관찰서 출발. 심리·분위기 어휘 전수채굴(`docs/suno_mood_vocabulary_map.md`): 기능어 CORE(tension84/dark55/bright336) vs 감정의 결 dead-zone(suspenseful/sinister/sensual/foreboding/desolate 전부 0곡). **S_MOOD 12곡 6쌍 A/B**(A=dead-word 직접/B=attested 대체, 무드어만 다르고 통제, 무가사): H1 렌더이해·H2 Echo비대칭·H3 등가성. songs_test_lab 259~270. sunomusic 발주→대기. **다음: 생성→Leo 청취(A≈B?)→Suno 재분석 Echo 측정→vocab_map D절+책5장 반영, dead-word 6종 suspicion_tracker 등재**
+- [sunolanguage] **★S_MOOD 감정어휘 dead-zone A/B 실험 — ★생성완료(07-03), 청취·재분석 대기** — 패션필름 `suspense` 관찰서 출발. 심리·분위기 어휘 전수채굴(`docs/suno_mood_vocabulary_map.md`): 기능어 CORE(tension84/dark55/bright336) vs 감정의 결 dead-zone(suspenseful/sinister/sensual/foreboding/desolate 전부 0곡). **S_MOOD 12곡 6쌍 A/B**(A=dead-word 직접/B=attested 대체, 무드어만 다르고 통제, 무가사): H1 렌더이해·H2 Echo비대칭·H3 등가성. songs_test_lab 259~270. **sunomusic 생성 12/12 완료(DB검증: suno_generated·uuid1/2 12/12, 제출SP==생성tags 무변형)**. **다음: ①Leo 청취(A≈B 무드 동등?)②Suno 앱 오디오 재분석(H2 Echo — dead-word 되돌아오나) → vocab_map D절+책5장 반영, dead-word 6종 suspicion_tracker 등재**
 
 ### v5.5 검증
 - [sunolanguage] S_PU 시리즈 sunomusic 발주 — `data/v55_pumpup_test_protocol.md` 참조
