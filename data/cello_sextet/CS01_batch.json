@@ -23,7 +23,11 @@
       "sp_length": 593,
       "form": "Intro → Theme → Cellos 2 and 3 add warm sustained inner harmony, Cello 1 continues the calm melody → Interlude → Theme → Outro",
       "has_tutti": true,
-      "test_id": 271
+      "test_id": 271,
+      "suno_uuid1": "88a71d35-d88f-41fb-beca-824ea19e4a2a",
+      "suno_uuid2": "8c5e5071-bf24-4aa4-9dd2-8aa82f151fdd",
+      "generated": true,
+      "sp_unchanged": true
     },
     {
       "pos": 2,
@@ -39,7 +43,11 @@
       "sp_length": 676,
       "form": "Intro → Build → Cello 2 enters with countermelody, Cellos 3 and 4 add sustained harmony, slow crescendo → Theme → Cello 1 melody soars, Cello 5 joins inner harmony, Cello 6 walks measured pizzicato, full and warm → Climax → Outro",
       "has_tutti": true,
-      "test_id": 272
+      "test_id": 272,
+      "suno_uuid1": "2b6ba461-cb85-48c0-8274-5c6572f8b1de",
+      "suno_uuid2": "fb7c477c-cb50-4434-a7f3-e22701096eed",
+      "generated": true,
+      "sp_unchanged": true
     },
     {
       "pos": 3,
@@ -55,7 +63,11 @@
       "sp_length": 640,
       "form": "Intro → Theme → Cello 1 and Cello 2 in gentle call-and-response, muted legato, Cellos 3-5 sustain inner harmony, Cello 6 deep still bowed notes → Climax → Outro",
       "has_tutti": true,
-      "test_id": 273
+      "test_id": 273,
+      "suno_uuid1": "286a3488-63b3-4bbf-a153-1311c4bf8fc2",
+      "suno_uuid2": "1717d773-2790-4f35-94cc-3095d1c461cf",
+      "generated": true,
+      "sp_unchanged": true
     },
     {
       "pos": 4,
@@ -71,7 +83,11 @@
       "sp_length": 600,
       "form": "Intro → Cello 6 buoyant pizzicato bassline, Cello 5 off-beat pizzicato sparks, light and bouncing → Theme → Cello 1 lilting joyful melody in airy arco, Cellos 3 and 4 trade playful spiccato counterpoint → Refrain → Interlude → Climax → Outro",
       "has_tutti": true,
-      "test_id": 274
+      "test_id": 274,
+      "suno_uuid1": "f2d8b62a-35d9-4a85-ae08-cf8146faf468",
+      "suno_uuid2": "09a67aca-9ea2-4359-abad-91992d0e3b66",
+      "generated": true,
+      "sp_unchanged": true
     },
     {
       "pos": 5,
@@ -87,8 +103,20 @@
       "sp_length": 678,
       "form": "Intro → Cello 1 warm generous melody in full legato, Cello 6 striding pizzicato, forward momentum → Build → Cello 2 tender countermelody with double stops, Cellos 3 and 4 add lush sustained harmony, crescendo → Theme → Cello 1 soars, Cello 5 joins inner voice, Cello 6 striding pizzicato foundation, full and warm → Climax → Outro",
       "has_tutti": true,
-      "test_id": 275
+      "test_id": 275,
+      "suno_uuid1": "f920e232-18a3-4710-9b96-4e8e5dace2c0",
+      "suno_uuid2": "ba7bd8ee-e23d-4eed-9ac4-ea760b290d3c",
+      "generated": true,
+      "sp_unchanged": true
     }
   ],
-  "test_id_range": "271-275"
+  "test_id_range": "271-275",
+  "generation": {
+    "generated_at": "2026-07-03T19:16:16",
+    "n": 5,
+    "all_generated": true,
+    "sp_unchanged": true,
+    "ui_workaround": "Instrumental OFF + bracket을 lyrics에(토글ON시 lyrics칸 소멸 제약 우회)",
+    "pending": "Leo 청음 — (1)무가사 렌더 확인 (2)브라켓 길이/구간 제어 반영 확인"
+  }
 }
