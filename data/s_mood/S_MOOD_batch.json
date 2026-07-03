@@ -5,7 +5,7 @@
   "purpose": "dead-zone 감정어휘 A(직접)/B(attested대체) 렌더·Echo 측정",
   "songs": [
     {
-      "test_id": 258,
+      "test_id": 259,
       "batch": "S_MOOD",
       "arm": "A",
       "pair_id": "P1",
@@ -21,7 +21,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 259,
+      "test_id": 260,
       "batch": "S_MOOD",
       "arm": "B",
       "pair_id": "P1",
@@ -37,7 +37,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 260,
+      "test_id": 261,
       "batch": "S_MOOD",
       "arm": "A",
       "pair_id": "P2",
@@ -53,7 +53,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 261,
+      "test_id": 262,
       "batch": "S_MOOD",
       "arm": "B",
       "pair_id": "P2",
@@ -69,7 +69,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 262,
+      "test_id": 263,
       "batch": "S_MOOD",
       "arm": "A",
       "pair_id": "P3",
@@ -85,7 +85,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 263,
+      "test_id": 264,
       "batch": "S_MOOD",
       "arm": "B",
       "pair_id": "P3",
@@ -101,7 +101,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 264,
+      "test_id": 265,
       "batch": "S_MOOD",
       "arm": "A",
       "pair_id": "P4",
@@ -117,7 +117,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 265,
+      "test_id": 266,
       "batch": "S_MOOD",
       "arm": "B",
       "pair_id": "P4",
@@ -133,7 +133,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 266,
+      "test_id": 267,
       "batch": "S_MOOD",
       "arm": "A",
       "pair_id": "P5",
@@ -149,7 +149,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 267,
+      "test_id": 268,
       "batch": "S_MOOD",
       "arm": "B",
       "pair_id": "P5",
@@ -165,7 +165,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 268,
+      "test_id": 269,
       "batch": "S_MOOD",
       "arm": "A",
       "pair_id": "P6",
@@ -181,7 +181,7 @@
       "status": "pending_suno"
     },
     {
-      "test_id": 269,
+      "test_id": 270,
       "batch": "S_MOOD",
       "arm": "B",
       "pair_id": "P6",
@@ -196,5 +196,7 @@
       "instrumental": true,
       "status": "pending_suno"
     }
-  ]
+  ],
+  "test_id_range": "259-270 (DB 정본)",
+  "_note": "test_id는 DB songs_test_lab 정본(259~270). 초기 빌드 임베드값 258~269는 max_test_id 오가정 오류였음, 07-03 정정."
 }
