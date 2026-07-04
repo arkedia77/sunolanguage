@@ -1,0 +1,279 @@
+{
+  "batch": "V_PILOT",
+  "command": "variations",
+  "regenerate": 0,
+  "n": 30,
+  "gate": "cosine 0.70~0.985 주 / jaccard>=0.9 컷 보조",
+  "seeds": [
+    {
+      "seed_id": "vp-001",
+      "source_song_id": 62,
+      "source_chunk_id": "lyrics_verse_62_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "\".\" 하나만 찍었다 의미심장하게"
+    },
+    {
+      "seed_id": "vp-002",
+      "source_song_id": 1255,
+      "source_chunk_id": "lyrics_outro_1255_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "그 말도 조용해졌어"
+    },
+    {
+      "seed_id": "vp-003",
+      "source_song_id": 186,
+      "source_chunk_id": "lyrics_outro_186_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "끝나지 않는 나"
+    },
+    {
+      "seed_id": "vp-004",
+      "source_song_id": 1385,
+      "source_chunk_id": "lyrics_bridge_1385_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "네가 떠난 자리에"
+    },
+    {
+      "seed_id": "vp-005",
+      "source_song_id": 163,
+      "source_chunk_id": "lyrics_verse_163_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "떨어지는 빗소리처럼"
+    },
+    {
+      "seed_id": "vp-006",
+      "source_song_id": 71,
+      "source_chunk_id": "lyrics_verse_71_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "발바닥이 타들어 가는 줄도 모르고"
+    },
+    {
+      "seed_id": "vp-007",
+      "source_song_id": 1395,
+      "source_chunk_id": "lyrics_verse_1395_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "생각이라는 게 원래 그런 거야"
+    },
+    {
+      "seed_id": "vp-008",
+      "source_song_id": 1716,
+      "source_chunk_id": "lyrics_bridge_1716_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "아마도요"
+    },
+    {
+      "seed_id": "vp-009",
+      "source_song_id": 1024,
+      "source_chunk_id": "lyrics_verse_1024_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "영점삼 초 역명도 못 읽을 만큼"
+    },
+    {
+      "seed_id": "vp-010",
+      "source_song_id": 154,
+      "source_chunk_id": "lyrics_bridge_154_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "이 틈새가 전부는 아니야."
+    },
+    {
+      "seed_id": "vp-011",
+      "source_song_id": 194,
+      "source_chunk_id": "lyrics_verse_194_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "종이 소리가 시작이다"
+    },
+    {
+      "seed_id": "vp-012",
+      "source_song_id": 151,
+      "source_chunk_id": "lyrics_verse_151_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "텀블러 속 커피는 다 식었어"
+    },
+    {
+      "seed_id": "vp-013",
+      "source_song_id": 183,
+      "source_chunk_id": "lyrics_pre_chorus_183_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "\"가족이 최고다\""
+    },
+    {
+      "seed_id": "vp-014",
+      "source_song_id": 1197,
+      "source_chunk_id": "lyrics_chorus_1197_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그 사람 동의 없이"
+    },
+    {
+      "seed_id": "vp-015",
+      "source_song_id": 1675,
+      "source_chunk_id": "lyrics_chorus_1675_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "나는 논리 안에서 혼자 남았어"
+    },
+    {
+      "seed_id": "vp-016",
+      "source_song_id": 20007,
+      "source_chunk_id": "lyrics_chorus_20007_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "네 이름을 부르고 또 불러"
+    },
+    {
+      "seed_id": "vp-017",
+      "source_song_id": 1278,
+      "source_chunk_id": "lyrics_hook_1278_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "chorus",
+      "text": "드디어 맛있어"
+    },
+    {
+      "seed_id": "vp-018",
+      "source_song_id": 973,
+      "source_chunk_id": "lyrics_chorus_973_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "바쁜 도시가 잠깐 숨을 고르는 틈에서"
+    },
+    {
+      "seed_id": "vp-019",
+      "source_song_id": 1606,
+      "source_chunk_id": "lyrics_chorus_1606_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "사진 한 장이 무겁다"
+    },
+    {
+      "seed_id": "vp-020",
+      "source_song_id": 1582,
+      "source_chunk_id": "lyrics_chorus_1582_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "실전 활용 영 분 그게 나야"
+    },
+    {
+      "seed_id": "vp-021",
+      "source_song_id": 139,
+      "source_chunk_id": "lyrics_chorus_139_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "여덟 번째 알람에 겨우 일어나"
+    },
+    {
+      "seed_id": "vp-022",
+      "source_song_id": 20011,
+      "source_chunk_id": "lyrics_chorus_20011_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이 마음 다 보여줄게"
+    },
+    {
+      "seed_id": "vp-023",
+      "source_song_id": 1620,
+      "source_chunk_id": "lyrics_pre_chorus_1620_001",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "자존감 높이기 팟캐스트가"
+    },
+    {
+      "seed_id": "vp-024",
+      "source_song_id": 179,
+      "source_chunk_id": "lyrics_chorus_179_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "추억도 아니다"
+    },
+    {
+      "seed_id": "vp-025",
+      "source_song_id": 183,
+      "source_chunk_id": "lyrics_pre_chorus_183_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "hook",
+      "text": "\"가족이 최고다\""
+    },
+    {
+      "seed_id": "vp-026",
+      "source_song_id": 1675,
+      "source_chunk_id": "lyrics_chorus_1675_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "나는 논리 안에서 혼자 남았어"
+    },
+    {
+      "seed_id": "vp-027",
+      "source_song_id": 1278,
+      "source_chunk_id": "lyrics_hook_1278_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "hook",
+      "text": "드디어 맛있어"
+    },
+    {
+      "seed_id": "vp-028",
+      "source_song_id": 1606,
+      "source_chunk_id": "lyrics_chorus_1606_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "사진 한 장이 무겁다"
+    },
+    {
+      "seed_id": "vp-029",
+      "source_song_id": 139,
+      "source_chunk_id": "lyrics_chorus_139_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "여덟 번째 알람에 겨우 일어나"
+    },
+    {
+      "seed_id": "vp-030",
+      "source_song_id": 1620,
+      "source_chunk_id": "lyrics_pre_chorus_1620_001",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "hook",
+      "text": "자존감 높이기 팟캐스트가"
+    }
+  ]
+}

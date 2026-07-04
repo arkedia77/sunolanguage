@@ -19,7 +19,11 @@ Suno 가사에디터의 Variations/Rhymes/Reference는 ★**Suno의 오디오 �
 ### A. Variations — 원문↔변형 패러프레이즈 페어 (주력)
 - **방식**: 본 코퍼스 가사행 N개를 시드 → 각 행 드래그선택 → Variations 4후보 하베스트 → (원문, 변형[4], 소스행, 라벨) 로우 적재. 재생성(↻)으로 행당 최대 8~12후보까지 증량 가능.
 - **용도**: lyrics_retriever의 패러프레이즈 풀. 현재 풀 고갈(97.7%, [[project_lyrics_pool_exhaustion]])의 **의미보존 증량책** — source song은 그대로지만 표현 variant를 늘려 exclude-history 압박 완화.
-- **주의**: 변형이 원문과 과유사(단어 1개만 교체)면 무가치 → jaccard 게이트(원문 대비 0.4~0.85 밴드만 채택: 너무 같으면 중복, 너무 다르면 의미이탈).
+- **★게이트 (2026-07-04 한국어 파일럿으로 정정 — 중요)**: 애초 jaccard 0.4~0.85 밴드로 설계했으나 **한국어 파일럿 실측 결과 부적합**. 한국어는 교착어(조사·어미)라 좋은 패러프레이즈도 표면 토큰이 크게 달라 jaccard가 낮게 나옴(파일럿 11후보 중 jaccard 밴드내 2/11인데 육안·임베딩으론 10/11 양호). → **주 지표를 임베딩 코사인(의미보존)으로 교체**:
+  - **채택 밴드: 임베딩 코사인 0.70 ≤ cos < 0.985** (paraphrase-multilingual 모델). cos≥0.985=near-dup(무가치), cos<0.70=의미이탈.
+  - **jaccard는 보조**(near-dup 상단컷 백업, ≥0.9 즉시 reject)로만.
+  - 파일럿 검증: 코사인 밴드로 10/11 채택(sunomusic 육안 HIGH와 일치), jaccard 밴드는 2/11(과폐기).
+  - 누출검사(is_lyric_leak, 영어 악기서술 배제)·최소행·중복 검사는 유지.
 
 ### B. Rhymes — 운율 사전 코퍼스
 - **방식**: 코퍼스 고빈도 행말 단어 시드 → Rhymes 세트 하베스트 → (단어, 운율단어[]) 적재. 한국어는 이 기능이 영어 위주라 **영어 가사/후렴 훅에 한정** 적용(한국어 운율은 kiwipiepy 음절 기반 별도).
@@ -44,7 +48,8 @@ CREATE TABLE lyric_variations (
   variant_rank  INT,                  -- 팝업 내 순번(1~4, 재생성분은 5+)
   lang          TEXT,                 -- 'ko' | 'en'
   section_tag   TEXT,                 -- verse/chorus/hook (시드 섹션)
-  jaccard_to_src REAL,                -- 원문 대비 토큰 자카드(게이트용)
+  cosine_to_src REAL,                 -- ★원문 대비 임베딩 코사인(주 게이트, 0.70~0.985 채택)
+  jaccard_to_src REAL,                -- 원문 대비 토큰 자카드(보조, near-dup ≥0.9 컷)
   gen_model     TEXT DEFAULT 'suno_lyrics_assist_v5.5',
   gate_status   TEXT DEFAULT 'pending', -- pending|accepted|rejected(과유사/이탈/누출)
   harvested_at  TIMESTAMPTZ DEFAULT now(),
