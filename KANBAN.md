@@ -1,5 +1,7 @@
 # sunolang KANBAN
 
+> **세션 종료 갈무리 2026-07-04**: ★가사 AI어시스트 코퍼스확장 파이프라인 완주(설계→게이트정정 jaccard→코사인→V_PILOT 73→V_BATCH1 954 = **lyric_variations 누적 1027 적재**, 187 source songs) · S_MOOD 감정어휘 dead-zone A/B 12곡 생성+재분석발주 · CS01 첼로6중주 결혼식BGM 5곡 생성(UI제약 발견) · leomusic3 goldset v1→임계확정(0.76/0.59) · leomusic-trot W005/W006-W008 교차검증 · 패션필름 SP교차검증 · reklcli이사종결 · W-네임스페이스 규약. **차기 1순위: variations Qdrant승격 / S_MOOD재분석 결과 / CS01·S_MOOD 청음(Leo)**. 인계: agent-comm `..._세션종료_인계_20260704.json`
+
 ## IN PROGRESS
 - [sunolanguage] **★보강 로드맵 2026Q2 (울트라플랜, 승인완료 06-19 → 차기 세션 구현)** — `docs/reinforcement_plan_2026Q2.md` + Notion 업로드(`[결정사항]` 2026-06-20). 5테마: ①엔진강건성(R1 title폴백/R2 genre-filter무매칭/R3 genre-lock완화/R4 테스트) ②검증루프(V1 재분석단일결정안/V2 청취세트/V3 Echo) ③코퍼스재균형 ④데이터위생(D1 N001·N002정리/D2 백필/D3 감사경화) ⑤산출물(B1 뮤직메이커2/B2 책). **실행순서 1~4·6=자가실행 즉시착수 / 5=Leo 결정준비물 / 7=차단해제 대기**. 베이스라인 **67/67**(자가점검 06-24로 R1 title폴백 완료·완화가드 추가). 비고: D1 N001/N002정리=재점검으로 잠재이슈 실측됨(TEMP타이틀/V1=V2/누출 다수, 재분석 막힘 상태)
 - [sunolanguage] **★leomusic-trot/W005 SP 정밀검토 — 회신완료(06-30)** — '장마,도시' 10곡 축E 떼창. 4관점 곡별(song01~10) 검토 → `docs/reviews/trot_W005_sp_review.md`. **조건부 PASS**: 골격·악기·서브장르앵커 GT정합. findings 3건(①떼창 dead-zone [gang vocals chant]/[crowd singalong] 컴파운드 0건→분리/하이픈, 곡01·04·10 ②song06 'Gen4' 비GT토큰 제거 ③SP 910~950자 과포화근접, ≥945 3곡 트림). ①이식정합: call-and-response 산문·브라켓 양형 클린, gang/crowd singalong은 W001 산문부터 0건(어휘층 수정). 재생성 불요·핀포인트 수정. leomusic-trot 회신+admin ACK 발송
