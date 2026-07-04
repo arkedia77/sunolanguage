@@ -1,0 +1,2711 @@
+{
+  "batch": "V_BATCH1",
+  "command": "variations",
+  "regenerate": 0,
+  "n": 300,
+  "gate": "cosine0.70-0.985(주)+lang가드+near-dup컷",
+  "lang_guard": true,
+  "note": "REGEN=0 1차→저수확행만 REGEN 추가. 중복시드 dedup됨. 단어급 배제.",
+  "seeds": [
+    {
+      "seed_id": "vb-001",
+      "source_song_id": 1008,
+      "source_chunk_id": "lyrics_verse_1008_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "\"ㅋㅋㅋㅋ 미쳤어 진짜\" 내가 쓴 거"
+    },
+    {
+      "seed_id": "vb-002",
+      "source_song_id": 12,
+      "source_chunk_id": "lyrics_verse_12_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "\"이제 다 커버렸다\""
+    },
+    {
+      "seed_id": "vb-003",
+      "source_song_id": 1241,
+      "source_chunk_id": "lyrics_verse_1241_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "5분 더 지났어"
+    },
+    {
+      "seed_id": "vb-004",
+      "source_song_id": 1725,
+      "source_chunk_id": "lyrics_verse_1725_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "가방 내려놓고 책을 꺼냈거든"
+    },
+    {
+      "seed_id": "vb-005",
+      "source_song_id": 1160,
+      "source_chunk_id": "lyrics_verse_1160_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "간격이 정확하다"
+    },
+    {
+      "seed_id": "vb-006",
+      "source_song_id": 112,
+      "source_chunk_id": "lyrics_verse_112_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "같은 돋보기가 하나 더 있어"
+    },
+    {
+      "seed_id": "vb-007",
+      "source_song_id": 1209,
+      "source_chunk_id": "lyrics_verse_1209_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "거기 감정이 있었어"
+    },
+    {
+      "seed_id": "vb-008",
+      "source_song_id": 417,
+      "source_chunk_id": "lyrics_verse_417_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "거울 앞에 서서 얼굴을 본다"
+    },
+    {
+      "seed_id": "vb-009",
+      "source_song_id": 260,
+      "source_chunk_id": "lyrics_verse_260_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "걷는 속도가 느려진다"
+    },
+    {
+      "seed_id": "vb-010",
+      "source_song_id": 182,
+      "source_chunk_id": "lyrics_intro_182_000",
+      "lang": "ko",
+      "section_tag": "intro",
+      "seed_group": "verse",
+      "text": "계단 모서리 새 날개"
+    },
+    {
+      "seed_id": "vb-011",
+      "source_song_id": 1759,
+      "source_chunk_id": "lyrics_bridge_1759_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "고작 영점일 초"
+    },
+    {
+      "seed_id": "vb-012",
+      "source_song_id": 1466,
+      "source_chunk_id": "lyrics_verse_1466_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "괜찮다 시작할 수 있다"
+    },
+    {
+      "seed_id": "vb-013",
+      "source_song_id": 954,
+      "source_chunk_id": "lyrics_verse_954_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "권태기라고 불렀던 시간 속에서 방황했어"
+    },
+    {
+      "seed_id": "vb-014",
+      "source_song_id": 1508,
+      "source_chunk_id": "lyrics_verse_1508_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "그 말이 사실이면 좋겠는데"
+    },
+    {
+      "seed_id": "vb-015",
+      "source_song_id": 42,
+      "source_chunk_id": "lyrics_verse_42_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "그 습관이 벽이 된 줄 몰랐어"
+    },
+    {
+      "seed_id": "vb-016",
+      "source_song_id": 62,
+      "source_chunk_id": "lyrics_bridge_62_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "그 침묵이 답인 걸 안다"
+    },
+    {
+      "seed_id": "vb-017",
+      "source_song_id": 144,
+      "source_chunk_id": "lyrics_verse_144_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "그것만으로 충분하다"
+    },
+    {
+      "seed_id": "vb-018",
+      "source_song_id": 1244,
+      "source_chunk_id": "lyrics_bridge_1244_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "그게 맞는 거야"
+    },
+    {
+      "seed_id": "vb-019",
+      "source_song_id": 1571,
+      "source_chunk_id": "lyrics_verse_1571_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "그날 밤 공항 바닥에서 잤지"
+    },
+    {
+      "seed_id": "vb-020",
+      "source_song_id": 1223,
+      "source_chunk_id": "lyrics_verse_1223_003",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "그냥 인수한 거라서"
+    },
+    {
+      "seed_id": "vb-021",
+      "source_song_id": 1620,
+      "source_chunk_id": "lyrics_verse_1620_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "그래 맞아 나 충분해"
+    },
+    {
+      "seed_id": "vb-022",
+      "source_song_id": 415,
+      "source_chunk_id": "lyrics_bridge_415_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "그런데도 나는 혼자"
+    },
+    {
+      "seed_id": "vb-023",
+      "source_song_id": 1550,
+      "source_chunk_id": "lyrics_bridge_1550_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "근데 네가 먼저 하지 그랬어"
+    },
+    {
+      "seed_id": "vb-024",
+      "source_song_id": 1198,
+      "source_chunk_id": "lyrics_bridge_1198_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "근처에 카페 있어"
+    },
+    {
+      "seed_id": "vb-025",
+      "source_song_id": 1024,
+      "source_chunk_id": "lyrics_verse_1024_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "기차 소리 자체가 음악인 것 같아서"
+    },
+    {
+      "seed_id": "vb-026",
+      "source_song_id": 146,
+      "source_chunk_id": "lyrics_bridge_146_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "끊기지 말아 제발"
+    },
+    {
+      "seed_id": "vb-027",
+      "source_song_id": 414,
+      "source_chunk_id": "lyrics_verse_414_003",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "나는 똑같은 자리에"
+    },
+    {
+      "seed_id": "vb-028",
+      "source_song_id": 417,
+      "source_chunk_id": "lyrics_outro_417_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "나는 집이 부서지는 소리를 듣는다"
+    },
+    {
+      "seed_id": "vb-029",
+      "source_song_id": 252,
+      "source_chunk_id": "lyrics_verse_252_003",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "나를 버릴 건가"
+    },
+    {
+      "seed_id": "vb-030",
+      "source_song_id": 1200,
+      "source_chunk_id": "lyrics_bridge_1200_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "나올 때 나오는 거야"
+    },
+    {
+      "seed_id": "vb-031",
+      "source_song_id": 1513,
+      "source_chunk_id": "lyrics_verse_1513_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "낮에 도착한다"
+    },
+    {
+      "seed_id": "vb-032",
+      "source_song_id": 171,
+      "source_chunk_id": "lyrics_verse_171_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "내 손가락이 닿고"
+    },
+    {
+      "seed_id": "vb-033",
+      "source_song_id": 1063,
+      "source_chunk_id": "lyrics_verse_1063_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "내가 봤는지 궁금해 하면"
+    },
+    {
+      "seed_id": "vb-034",
+      "source_song_id": 1008,
+      "source_chunk_id": "lyrics_verse_1008_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "내일 회사에서 이 얘기 해야 해"
+    },
+    {
+      "seed_id": "vb-035",
+      "source_song_id": 1126,
+      "source_chunk_id": "lyrics_verse_1126_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "냄새가 벌써 변했다"
+    },
+    {
+      "seed_id": "vb-036",
+      "source_song_id": 158,
+      "source_chunk_id": "lyrics_outro_158_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "너라는 언어 속에서."
+    },
+    {
+      "seed_id": "vb-037",
+      "source_song_id": 261,
+      "source_chunk_id": "lyrics_verse_261_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "너의 손이 나를 지탱하는 힘"
+    },
+    {
+      "seed_id": "vb-038",
+      "source_song_id": 1573,
+      "source_chunk_id": "lyrics_verse_1573_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "네 알겠습니다 반사적으로 나와"
+    },
+    {
+      "seed_id": "vb-039",
+      "source_song_id": 209,
+      "source_chunk_id": "lyrics_verse_209_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "네가 있는 곳이"
+    },
+    {
+      "seed_id": "vb-040",
+      "source_song_id": 125,
+      "source_chunk_id": "lyrics_verse_125_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "누가 보면 그냥 헌 옷인데"
+    },
+    {
+      "seed_id": "vb-041",
+      "source_song_id": 189,
+      "source_chunk_id": "lyrics_verse_189_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "누군가는 미래를 본다"
+    },
+    {
+      "seed_id": "vb-042",
+      "source_song_id": 222,
+      "source_chunk_id": "lyrics_verse_222_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "누군가의 짐, 누군가의 한숨"
+    },
+    {
+      "seed_id": "vb-043",
+      "source_song_id": 172,
+      "source_chunk_id": "lyrics_intro_172_000",
+      "lang": "ko",
+      "section_tag": "intro",
+      "seed_group": "verse",
+      "text": "느껴져, 도시의 체온"
+    },
+    {
+      "seed_id": "vb-044",
+      "source_song_id": 210,
+      "source_chunk_id": "lyrics_verse_210_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "다시 돌아온다"
+    },
+    {
+      "seed_id": "vb-045",
+      "source_song_id": 1743,
+      "source_chunk_id": "lyrics_bridge_1743_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "다투기 전으로 돌아가고 싶은 게 아냐"
+    },
+    {
+      "seed_id": "vb-046",
+      "source_song_id": 930,
+      "source_chunk_id": "lyrics_drop_930_001",
+      "lang": "ko",
+      "section_tag": "drop",
+      "seed_group": "verse",
+      "text": "당신의 약함을 알게 된 이 순간부터"
+    },
+    {
+      "seed_id": "vb-047",
+      "source_song_id": 150,
+      "source_chunk_id": "lyrics_verse_150_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "더 많은 것을 담고 있어"
+    },
+    {
+      "seed_id": "vb-048",
+      "source_song_id": 1399,
+      "source_chunk_id": "lyrics_verse_1399_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "돌길이 울린다"
+    },
+    {
+      "seed_id": "vb-049",
+      "source_song_id": 178,
+      "source_chunk_id": "lyrics_verse_178_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "두 개일 수는 없으니"
+    },
+    {
+      "seed_id": "vb-050",
+      "source_song_id": 1247,
+      "source_chunk_id": "lyrics_bridge_1247_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "등 피는 것도 천천히 한다"
+    },
+    {
+      "seed_id": "vb-051",
+      "source_song_id": 260,
+      "source_chunk_id": "lyrics_verse_260_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "떨림과 함께"
+    },
+    {
+      "seed_id": "vb-052",
+      "source_song_id": 1465,
+      "source_chunk_id": "lyrics_verse_1465_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "뜨다 사라진 세 점"
+    },
+    {
+      "seed_id": "vb-053",
+      "source_song_id": 936,
+      "source_chunk_id": "lyrics_verse_936_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "마음이 무거운 날 소파에 나란히 앉아"
+    },
+    {
+      "seed_id": "vb-054",
+      "source_song_id": 162,
+      "source_chunk_id": "lyrics_verse_162_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "말을 고르는 것도"
+    },
+    {
+      "seed_id": "vb-055",
+      "source_song_id": 414,
+      "source_chunk_id": "lyrics_bridge_414_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "매년 같은 벚꽃이"
+    },
+    {
+      "seed_id": "vb-056",
+      "source_song_id": 12,
+      "source_chunk_id": "lyrics_verse_12_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "먹는 것도 혼자다"
+    },
+    {
+      "seed_id": "vb-057",
+      "source_song_id": 183,
+      "source_chunk_id": "lyrics_drop_183_002",
+      "lang": "ko",
+      "section_tag": "drop",
+      "seed_group": "verse",
+      "text": "명절이 올 때마다"
+    },
+    {
+      "seed_id": "vb-058",
+      "source_song_id": 1607,
+      "source_chunk_id": "lyrics_bridge_1607_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "모르겠어 둘 다야"
+    },
+    {
+      "seed_id": "vb-059",
+      "source_song_id": 160,
+      "source_chunk_id": "lyrics_intro_160_000",
+      "lang": "ko",
+      "section_tag": "intro",
+      "seed_group": "verse",
+      "text": "무게가 있다는 것."
+    },
+    {
+      "seed_id": "vb-060",
+      "source_song_id": 1436,
+      "source_chunk_id": "lyrics_verse_1436_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "문장이 아니라 마음을 고르는 거야"
+    },
+    {
+      "seed_id": "vb-061",
+      "source_song_id": 166,
+      "source_chunk_id": "lyrics_verse_166_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "뭔가 밝은 곳이 있어"
+    },
+    {
+      "seed_id": "vb-062",
+      "source_song_id": 1576,
+      "source_chunk_id": "lyrics_verse_1576_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "바람의 온도가 한 칸 내려갔어"
+    },
+    {
+      "seed_id": "vb-063",
+      "source_song_id": 12,
+      "source_chunk_id": "lyrics_verse_12_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "반찬 개수를 세어본다"
+    },
+    {
+      "seed_id": "vb-064",
+      "source_song_id": 161,
+      "source_chunk_id": "lyrics_outro_161_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "밤의 편의점에서"
+    },
+    {
+      "seed_id": "vb-065",
+      "source_song_id": 111,
+      "source_chunk_id": "lyrics_verse_111_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "배고프지도 않은데"
+    },
+    {
+      "seed_id": "vb-066",
+      "source_song_id": 178,
+      "source_chunk_id": "lyrics_bridge_178_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "법은 경계를 그었고"
+    },
+    {
+      "seed_id": "vb-067",
+      "source_song_id": 251,
+      "source_chunk_id": "lyrics_verse_251_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "변함없으면 초조해진다"
+    },
+    {
+      "seed_id": "vb-068",
+      "source_song_id": 195,
+      "source_chunk_id": "lyrics_verse_195_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "봄부터 가을까지의 손"
+    },
+    {
+      "seed_id": "vb-069",
+      "source_song_id": 51,
+      "source_chunk_id": "lyrics_verse_51_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "붙잡을 난간이 없는 그 일 초"
+    },
+    {
+      "seed_id": "vb-070",
+      "source_song_id": 1056,
+      "source_chunk_id": "lyrics_bridge_1056_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "빈 입국신고서에 적을래"
+    },
+    {
+      "seed_id": "vb-071",
+      "source_song_id": 1555,
+      "source_chunk_id": "lyrics_verse_1555_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "빨래 사이를 지나갔어"
+    },
+    {
+      "seed_id": "vb-072",
+      "source_song_id": 20006,
+      "source_chunk_id": "lyrics_bridge_20006_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "사랑은 끝이 있더라"
+    },
+    {
+      "seed_id": "vb-073",
+      "source_song_id": 1606,
+      "source_chunk_id": "lyrics_verse_1606_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "삼 년 전 사진 하나"
+    },
+    {
+      "seed_id": "vb-074",
+      "source_song_id": 1167,
+      "source_chunk_id": "lyrics_bridge_1167_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "새 집 벽은 아직 낯설고"
+    },
+    {
+      "seed_id": "vb-075",
+      "source_song_id": 1100,
+      "source_chunk_id": "lyrics_verse_1100_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "새벽 세 시에"
+    },
+    {
+      "seed_id": "vb-076",
+      "source_song_id": 128,
+      "source_chunk_id": "lyrics_verse_128_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "서랍이 알겠지 뭐가 더 무거운지"
+    },
+    {
+      "seed_id": "vb-077",
+      "source_song_id": 147,
+      "source_chunk_id": "lyrics_interlude_147_000",
+      "lang": "ko",
+      "section_tag": "interlude",
+      "seed_group": "verse",
+      "text": "설렘은 남아있어"
+    },
+    {
+      "seed_id": "vb-078",
+      "source_song_id": 1446,
+      "source_chunk_id": "lyrics_verse_1446_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "세상이 다 알더라도"
+    },
+    {
+      "seed_id": "vb-079",
+      "source_song_id": 131,
+      "source_chunk_id": "lyrics_verse_131_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "소리 없는 영화 속을 걷는 것 같아"
+    },
+    {
+      "seed_id": "vb-080",
+      "source_song_id": 31,
+      "source_chunk_id": "lyrics_verse_31_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "손가락—화면, 손가락—화면, 손가락—화면"
+    },
+    {
+      "seed_id": "vb-081",
+      "source_song_id": 180,
+      "source_chunk_id": "lyrics_verse_180_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "손바닥을 마주 대면 온기가 전해진다"
+    },
+    {
+      "seed_id": "vb-082",
+      "source_song_id": 1466,
+      "source_chunk_id": "lyrics_verse_1466_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "수도꼭지가 먼저 연다"
+    },
+    {
+      "seed_id": "vb-083",
+      "source_song_id": 208,
+      "source_chunk_id": "lyrics_verse_208_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "숨을 쉰다 처음으로"
+    },
+    {
+      "seed_id": "vb-084",
+      "source_song_id": 1513,
+      "source_chunk_id": "lyrics_verse_1513_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "슬리퍼 끌고 바다 쪽으로 걷는다"
+    },
+    {
+      "seed_id": "vb-085",
+      "source_song_id": 10009,
+      "source_chunk_id": "lyrics_bridge_10009_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "시계 초침 소리가 들린다"
+    },
+    {
+      "seed_id": "vb-086",
+      "source_song_id": 178,
+      "source_chunk_id": "lyrics_verse_178_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "신분증에 써진 주소가"
+    },
+    {
+      "seed_id": "vb-087",
+      "source_song_id": 982,
+      "source_chunk_id": "lyrics_verse_982_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "십 년 전 사진의 색이 노르스름하게 바뀌었어"
+    },
+    {
+      "seed_id": "vb-088",
+      "source_song_id": 1696,
+      "source_chunk_id": "lyrics_bridge_1696_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "아니면 추천이 채워준 내가 진짜야"
+    },
+    {
+      "seed_id": "vb-089",
+      "source_song_id": 128,
+      "source_chunk_id": "lyrics_outro_128_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "아무것도 잊지 않으니까"
+    },
+    {
+      "seed_id": "vb-090",
+      "source_song_id": 112,
+      "source_chunk_id": "lyrics_outro_112_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "아버지의 세상이 놓여 있다"
+    },
+    {
+      "seed_id": "vb-091",
+      "source_song_id": 1206,
+      "source_chunk_id": "lyrics_verse_1206_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "아직 모르는데"
+    },
+    {
+      "seed_id": "vb-092",
+      "source_song_id": 1718,
+      "source_chunk_id": "lyrics_bridge_1718_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "안 보면 보고 싶은 사람이 생겼다"
+    },
+    {
+      "seed_id": "vb-093",
+      "source_song_id": 251,
+      "source_chunk_id": "lyrics_verse_251_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "알림이 울릴 때마다 심장이 뛴다"
+    },
+    {
+      "seed_id": "vb-094",
+      "source_song_id": 131,
+      "source_chunk_id": "lyrics_verse_131_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "양쪽 다 꽂으면 세상이 꺼져"
+    },
+    {
+      "seed_id": "vb-095",
+      "source_song_id": 1513,
+      "source_chunk_id": "lyrics_bridge_1513_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "어디서 왔냐고"
+    },
+    {
+      "seed_id": "vb-096",
+      "source_song_id": 1554,
+      "source_chunk_id": "lyrics_verse_1554_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "어제는 못 들던 걸 오늘은 들어"
+    },
+    {
+      "seed_id": "vb-097",
+      "source_song_id": 124,
+      "source_chunk_id": "lyrics_outro_124_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "언젠가 딱 한 번은"
+    },
+    {
+      "seed_id": "vb-098",
+      "source_song_id": 1145,
+      "source_chunk_id": "lyrics_verse_1145_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "엔진 소리만 있고요"
+    },
+    {
+      "seed_id": "vb-099",
+      "source_song_id": 52,
+      "source_chunk_id": "lyrics_verse_52_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "여기엔 내 이름 없는 자리가 있어"
+    },
+    {
+      "seed_id": "vb-100",
+      "source_song_id": 1547,
+      "source_chunk_id": "lyrics_verse_1547_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "열 해 전 갈림길이 보여"
+    },
+    {
+      "seed_id": "vb-101",
+      "source_song_id": 1682,
+      "source_chunk_id": "lyrics_bridge_1682_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "옆에 가방을 놨어요 자리를 막는 것처럼"
+    },
+    {
+      "seed_id": "vb-102",
+      "source_song_id": 139,
+      "source_chunk_id": "lyrics_verse_139_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "오늘 밤에도 여덟 개 맞추겠지"
+    },
+    {
+      "seed_id": "vb-103",
+      "source_song_id": 1103,
+      "source_chunk_id": "lyrics_tag_1103_000",
+      "lang": "ko",
+      "section_tag": "tag",
+      "seed_group": "verse",
+      "text": "오늘은 산책이다"
+    },
+    {
+      "seed_id": "vb-104",
+      "source_song_id": 92,
+      "source_chunk_id": "lyrics_verse_92_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "오십 년을 함께 걸어온"
+    },
+    {
+      "seed_id": "vb-105",
+      "source_song_id": 1539,
+      "source_chunk_id": "lyrics_bridge_1539_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "와이파이가 뭐라고"
+    },
+    {
+      "seed_id": "vb-106",
+      "source_song_id": 22,
+      "source_chunk_id": "lyrics_verse_22_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "욕망은 상자 속 어딘가"
+    },
+    {
+      "seed_id": "vb-107",
+      "source_song_id": 210,
+      "source_chunk_id": "lyrics_verse_210_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "우리도 같은 길을 간다"
+    },
+    {
+      "seed_id": "vb-108",
+      "source_song_id": 20006,
+      "source_chunk_id": "lyrics_verse_20006_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "울지 않으려 이를 악물어"
+    },
+    {
+      "seed_id": "vb-109",
+      "source_song_id": 133,
+      "source_chunk_id": "lyrics_outro_133_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "월요일 아침이 왔어"
+    },
+    {
+      "seed_id": "vb-110",
+      "source_song_id": 12,
+      "source_chunk_id": "lyrics_bridge_12_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "이 감각을 뭐라 부를까"
+    },
+    {
+      "seed_id": "vb-111",
+      "source_song_id": 1167,
+      "source_chunk_id": "lyrics_verse_1167_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "이 무게를 어디에 두면 되는 건지"
+    },
+    {
+      "seed_id": "vb-112",
+      "source_song_id": 222,
+      "source_chunk_id": "lyrics_bridge_222_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "이 순간 누군가와 마주쳤는데"
+    },
+    {
+      "seed_id": "vb-113",
+      "source_song_id": 1405,
+      "source_chunk_id": "lyrics_verse_1405_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "이 정적이 가을인 걸까"
+    },
+    {
+      "seed_id": "vb-114",
+      "source_song_id": 178,
+      "source_chunk_id": "lyrics_bridge_178_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "이것도 하나의 삶이고"
+    },
+    {
+      "seed_id": "vb-115",
+      "source_song_id": 1366,
+      "source_chunk_id": "lyrics_verse_1366_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "이게 왜 이렇게 진지한 문제냐"
+    },
+    {
+      "seed_id": "vb-116",
+      "source_song_id": 1547,
+      "source_chunk_id": "lyrics_verse_1547_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "이름 모를 거리에서 신고 있겠지"
+    },
+    {
+      "seed_id": "vb-117",
+      "source_song_id": 1022,
+      "source_chunk_id": "lyrics_verse_1022_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "이불 속에서 셀카를 찍는다"
+    },
+    {
+      "seed_id": "vb-118",
+      "source_song_id": 1219,
+      "source_chunk_id": "lyrics_verse_1219_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "이웃 발소리도 알아"
+    },
+    {
+      "seed_id": "vb-119",
+      "source_song_id": 154,
+      "source_chunk_id": "lyrics_intro_154_000",
+      "lang": "ko",
+      "section_tag": "intro",
+      "seed_group": "verse",
+      "text": "일곱 시간의 불빛."
+    },
+    {
+      "seed_id": "vb-120",
+      "source_song_id": 930,
+      "source_chunk_id": "lyrics_drop_930_001",
+      "lang": "ko",
+      "section_tag": "drop",
+      "seed_group": "verse",
+      "text": "있는 그대로의 서로를 품에 안는 밤"
+    },
+    {
+      "seed_id": "vb-121",
+      "source_song_id": 71,
+      "source_chunk_id": "lyrics_verse_71_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "자판기 앞에 서면 동전이 뜨겁고"
+    },
+    {
+      "seed_id": "vb-122",
+      "source_song_id": 1273,
+      "source_chunk_id": "lyrics_verse_1273_003",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "잠깐 눈이 마주쳤어"
+    },
+    {
+      "seed_id": "vb-123",
+      "source_song_id": 1149,
+      "source_chunk_id": "lyrics_verse_1149_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "저녁 산책 나왔지"
+    },
+    {
+      "seed_id": "vb-124",
+      "source_song_id": 195,
+      "source_chunk_id": "lyrics_verse_195_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "절임 물에 잠긴 초록색"
+    },
+    {
+      "seed_id": "vb-125",
+      "source_song_id": 143,
+      "source_chunk_id": "lyrics_bridge_143_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "조금 어두운 이 설렘"
+    },
+    {
+      "seed_id": "vb-126",
+      "source_song_id": 10021,
+      "source_chunk_id": "lyrics_verse_10021_002",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "종이컵을 들어 올린다"
+    },
+    {
+      "seed_id": "vb-127",
+      "source_song_id": 202,
+      "source_chunk_id": "lyrics_intro_202_000",
+      "lang": "ko",
+      "section_tag": "intro",
+      "seed_group": "verse",
+      "text": "주차장 계단 위에 서 있다"
+    },
+    {
+      "seed_id": "vb-128",
+      "source_song_id": 1554,
+      "source_chunk_id": "lyrics_bridge_1554_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "지금 이 일 초가 증명이야"
+    },
+    {
+      "seed_id": "vb-129",
+      "source_song_id": 1607,
+      "source_chunk_id": "lyrics_bridge_1607_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "지출 일 위가 절약 카테고리야"
+    },
+    {
+      "seed_id": "vb-130",
+      "source_song_id": 1432,
+      "source_chunk_id": "lyrics_bridge_1432_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "집에 와서 가방 열었는데"
+    },
+    {
+      "seed_id": "vb-131",
+      "source_song_id": 207,
+      "source_chunk_id": "lyrics_outro_207_000",
+      "lang": "ko",
+      "section_tag": "outro",
+      "seed_group": "verse",
+      "text": "창가의 빛이 진다"
+    },
+    {
+      "seed_id": "vb-132",
+      "source_song_id": 1491,
+      "source_chunk_id": "lyrics_verse_1491_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "채널은 아직 거기 있어"
+    },
+    {
+      "seed_id": "vb-133",
+      "source_song_id": 1405,
+      "source_chunk_id": "lyrics_verse_1405_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "천장 위 에어컨이 잠들었어"
+    },
+    {
+      "seed_id": "vb-134",
+      "source_song_id": 1579,
+      "source_chunk_id": "lyrics_verse_1579_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "총성이 터지면 생각은 꺼져"
+    },
+    {
+      "seed_id": "vb-135",
+      "source_song_id": 1491,
+      "source_chunk_id": "lyrics_bridge_1491_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "친구라는 말"
+    },
+    {
+      "seed_id": "vb-136",
+      "source_song_id": 1508,
+      "source_chunk_id": "lyrics_intro_1508_000",
+      "lang": "ko",
+      "section_tag": "intro",
+      "seed_group": "verse",
+      "text": "카페 문을 열었을 뿐인데"
+    },
+    {
+      "seed_id": "vb-137",
+      "source_song_id": 1508,
+      "source_chunk_id": "lyrics_verse_1508_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "커피는 따뜻하고 햇살은 비추니까"
+    },
+    {
+      "seed_id": "vb-138",
+      "source_song_id": 166,
+      "source_chunk_id": "lyrics_verse_166_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "타오르는 게 살아있는 거니까"
+    },
+    {
+      "seed_id": "vb-139",
+      "source_song_id": 1445,
+      "source_chunk_id": "lyrics_verse_1445_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "퇴근 지하철 끝 칸에"
+    },
+    {
+      "seed_id": "vb-140",
+      "source_song_id": 1466,
+      "source_chunk_id": "lyrics_verse_1466_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "파이프 안에서 기다린 물인 걸"
+    },
+    {
+      "seed_id": "vb-141",
+      "source_song_id": 41,
+      "source_chunk_id": "lyrics_verse_41_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "포장지 사이로 빛나는 밑창"
+    },
+    {
+      "seed_id": "vb-142",
+      "source_song_id": 415,
+      "source_chunk_id": "lyrics_verse_415_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "피로하게 만들어"
+    },
+    {
+      "seed_id": "vb-143",
+      "source_song_id": 138,
+      "source_chunk_id": "lyrics_verse_138_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "하얀 벽지 아래 하늘색이 있었어"
+    },
+    {
+      "seed_id": "vb-144",
+      "source_song_id": 1508,
+      "source_chunk_id": "lyrics_bridge_1508_000",
+      "lang": "ko",
+      "section_tag": "bridge",
+      "seed_group": "verse",
+      "text": "한 모금도 안 마셨다"
+    },
+    {
+      "seed_id": "vb-145",
+      "source_song_id": 1733,
+      "source_chunk_id": "lyrics_verse_1733_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "할머니 마당의 양철 대야 위로"
+    },
+    {
+      "seed_id": "vb-146",
+      "source_song_id": 1508,
+      "source_chunk_id": "lyrics_verse_1508_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "핸드폰 내려놓고 창밖 보는 게"
+    },
+    {
+      "seed_id": "vb-147",
+      "source_song_id": 124,
+      "source_chunk_id": "lyrics_verse_124_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "혀끝까지 올라왔다가 삼켰어"
+    },
+    {
+      "seed_id": "vb-148",
+      "source_song_id": 1105,
+      "source_chunk_id": "lyrics_verse_1105_001",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "형아 현실을 모르는구나"
+    },
+    {
+      "seed_id": "vb-149",
+      "source_song_id": 20011,
+      "source_chunk_id": "lyrics_verse_20011_000",
+      "lang": "ko",
+      "section_tag": "verse",
+      "seed_group": "verse",
+      "text": "화면만 켜보는 바보야"
+    },
+    {
+      "seed_id": "vb-150",
+      "source_song_id": 154,
+      "source_chunk_id": "lyrics_intro_154_000",
+      "lang": "ko",
+      "section_tag": "intro",
+      "seed_group": "verse",
+      "text": "회사 출입 카드 삑,"
+    },
+    {
+      "seed_id": "vb-151",
+      "source_song_id": 181,
+      "source_chunk_id": "lyrics_chorus_181_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "\"괜찮아?\" \"응, 괜찮아\""
+    },
+    {
+      "seed_id": "vb-152",
+      "source_song_id": 1508,
+      "source_chunk_id": "lyrics_chorus_1508_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "3초 만에 돌아갔다"
+    },
+    {
+      "seed_id": "vb-153",
+      "source_song_id": 1395,
+      "source_chunk_id": "lyrics_chorus_1395_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "가로등이 데려다줄 거야"
+    },
+    {
+      "seed_id": "vb-154",
+      "source_song_id": 133,
+      "source_chunk_id": "lyrics_chorus_133_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "가짜가 진짜를 이긴 밤"
+    },
+    {
+      "seed_id": "vb-155",
+      "source_song_id": 124,
+      "source_chunk_id": "lyrics_chorus_124_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "같은 건물 같은 시간인데"
+    },
+    {
+      "seed_id": "vb-156",
+      "source_song_id": 1682,
+      "source_chunk_id": "lyrics_chorus_1682_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "같이 올 수 없었으니까요"
+    },
+    {
+      "seed_id": "vb-157",
+      "source_song_id": 1676,
+      "source_chunk_id": "lyrics_chorus_1676_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "거울을 봤어 웃고 있더라"
+    },
+    {
+      "seed_id": "vb-158",
+      "source_song_id": 1046,
+      "source_chunk_id": "lyrics_chorus_1046_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "검정에서 갈색으로"
+    },
+    {
+      "seed_id": "vb-159",
+      "source_song_id": 1111,
+      "source_chunk_id": "lyrics_chorus_1111_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "경계 위에 서 있어"
+    },
+    {
+      "seed_id": "vb-160",
+      "source_song_id": 1281,
+      "source_chunk_id": "lyrics_hook_1281_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "chorus",
+      "text": "고무장갑 끼고"
+    },
+    {
+      "seed_id": "vb-161",
+      "source_song_id": 1457,
+      "source_chunk_id": "lyrics_chorus_1457_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "관계가 숫자가 되는 거잖아"
+    },
+    {
+      "seed_id": "vb-162",
+      "source_song_id": 251,
+      "source_chunk_id": "lyrics_chorus_251_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "구독자가 나의 가치인 양"
+    },
+    {
+      "seed_id": "vb-163",
+      "source_song_id": 1716,
+      "source_chunk_id": "lyrics_chorus_1716_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그 말이 거짓말이었던 날이"
+    },
+    {
+      "seed_id": "vb-164",
+      "source_song_id": 150,
+      "source_chunk_id": "lyrics_chorus_150_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그 순간 우린 설렘이 돼"
+    },
+    {
+      "seed_id": "vb-165",
+      "source_song_id": 1273,
+      "source_chunk_id": "lyrics_chorus_1273_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그 한 편의 영화 안에서"
+    },
+    {
+      "seed_id": "vb-166",
+      "source_song_id": 1045,
+      "source_chunk_id": "lyrics_chorus_1045_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그것이 전부였다"
+    },
+    {
+      "seed_id": "vb-167",
+      "source_song_id": 1513,
+      "source_chunk_id": "lyrics_chorus_1513_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그게 여행인 것이다"
+    },
+    {
+      "seed_id": "vb-168",
+      "source_song_id": 153,
+      "source_chunk_id": "lyrics_chorus_153_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그냥 창을 닫아버렸다"
+    },
+    {
+      "seed_id": "vb-169",
+      "source_song_id": 20004,
+      "source_chunk_id": "lyrics_chorus_20004_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그래도 살 만해요 인생"
+    },
+    {
+      "seed_id": "vb-170",
+      "source_song_id": 1244,
+      "source_chunk_id": "lyrics_chorus_1244_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그러니까 지금이 소중한 거야"
+    },
+    {
+      "seed_id": "vb-171",
+      "source_song_id": 985,
+      "source_chunk_id": "lyrics_chorus_985_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "그림자가 주인공인 구성을 사랑하는 이유"
+    },
+    {
+      "seed_id": "vb-172",
+      "source_song_id": 1426,
+      "source_chunk_id": "lyrics_chorus_1426_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "근데 왜 계산기를 켜고 있지"
+    },
+    {
+      "seed_id": "vb-173",
+      "source_song_id": 1241,
+      "source_chunk_id": "lyrics_chorus_1241_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "기다리는 시간이 긴 거야"
+    },
+    {
+      "seed_id": "vb-174",
+      "source_song_id": 81,
+      "source_chunk_id": "lyrics_chorus_81_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "김밥 냄새가 시간을 되감는다"
+    },
+    {
+      "seed_id": "vb-175",
+      "source_song_id": 164,
+      "source_chunk_id": "lyrics_pre_chorus_164_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "끝이 보이지 않는데"
+    },
+    {
+      "seed_id": "vb-176",
+      "source_song_id": 122,
+      "source_chunk_id": "lyrics_chorus_122_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "나는 대체 뭘 하고 있었을까"
+    },
+    {
+      "seed_id": "vb-177",
+      "source_song_id": 154,
+      "source_chunk_id": "lyrics_pre_chorus_154_001",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "나는 자꾸만 흘러간다."
+    },
+    {
+      "seed_id": "vb-178",
+      "source_song_id": 1558,
+      "source_chunk_id": "lyrics_chorus_1558_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "나란히 떨고 있던 이 밤이"
+    },
+    {
+      "seed_id": "vb-179",
+      "source_song_id": 138,
+      "source_chunk_id": "lyrics_chorus_138_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "나만은 아니었다는 게 묘하게 위로가 돼"
+    },
+    {
+      "seed_id": "vb-180",
+      "source_song_id": 166,
+      "source_chunk_id": "lyrics_chorus_166_003",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "날개가 검게 타면"
+    },
+    {
+      "seed_id": "vb-181",
+      "source_song_id": 1102,
+      "source_chunk_id": "lyrics_chorus_1102_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "내 노래가 울려요"
+    },
+    {
+      "seed_id": "vb-182",
+      "source_song_id": 125,
+      "source_chunk_id": "lyrics_chorus_125_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "내 이십 대가 전부 묻어 있어"
+    },
+    {
+      "seed_id": "vb-183",
+      "source_song_id": 1513,
+      "source_chunk_id": "lyrics_chorus_1513_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "내가 떠나도 남는다"
+    },
+    {
+      "seed_id": "vb-184",
+      "source_song_id": 1513,
+      "source_chunk_id": "lyrics_chorus_1513_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "내가 찍든 안 찍든"
+    },
+    {
+      "seed_id": "vb-185",
+      "source_song_id": 20004,
+      "source_chunk_id": "lyrics_chorus_20004_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "내일도 해는 뜨니까요"
+    },
+    {
+      "seed_id": "vb-186",
+      "source_song_id": 920,
+      "source_chunk_id": "lyrics_hook_920_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "chorus",
+      "text": "너 결혼했어 라는 한마디에 세상이 멈춰"
+    },
+    {
+      "seed_id": "vb-187",
+      "source_song_id": 171,
+      "source_chunk_id": "lyrics_chorus_171_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "너의 양말, 내 청바지"
+    },
+    {
+      "seed_id": "vb-188",
+      "source_song_id": 141,
+      "source_chunk_id": "lyrics_pre_chorus_141_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "네 심장 뛰는 소리가 들려"
+    },
+    {
+      "seed_id": "vb-189",
+      "source_song_id": 1545,
+      "source_chunk_id": "lyrics_chorus_1545_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "네가 웃던 그 가을 오후를"
+    },
+    {
+      "seed_id": "vb-190",
+      "source_song_id": 1024,
+      "source_chunk_id": "lyrics_chorus_1024_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "놓아둔 것들이 떠올라"
+    },
+    {
+      "seed_id": "vb-191",
+      "source_song_id": 252,
+      "source_chunk_id": "lyrics_chorus_252_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "누군가 다른 것이다"
+    },
+    {
+      "seed_id": "vb-192",
+      "source_song_id": 20006,
+      "source_chunk_id": "lyrics_pre_chorus_20006_001",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "눈물이 먼저 나네"
+    },
+    {
+      "seed_id": "vb-193",
+      "source_song_id": 1241,
+      "source_chunk_id": "lyrics_chorus_1241_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "느리게 가는 게 설레는 거잖아"
+    },
+    {
+      "seed_id": "vb-194",
+      "source_song_id": 179,
+      "source_chunk_id": "lyrics_chorus_179_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "다만 이 장소만 남았다"
+    },
+    {
+      "seed_id": "vb-195",
+      "source_song_id": 1607,
+      "source_chunk_id": "lyrics_chorus_1607_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "다음 달도 이럴 거잖아 알잖아"
+    },
+    {
+      "seed_id": "vb-196",
+      "source_song_id": 1004,
+      "source_chunk_id": "lyrics_chorus_1004_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "달려 달려 멈추지 마 (Go!)"
+    },
+    {
+      "seed_id": "vb-197",
+      "source_song_id": 12,
+      "source_chunk_id": "lyrics_chorus_12_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "당신의 손은 더 작아진다"
+    },
+    {
+      "seed_id": "vb-198",
+      "source_song_id": 166,
+      "source_chunk_id": "lyrics_chorus_166_003",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "더 빠르게 날아간다"
+    },
+    {
+      "seed_id": "vb-199",
+      "source_song_id": 1008,
+      "source_chunk_id": "lyrics_chorus_1008_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "돌려돌려 여기가 내 자리"
+    },
+    {
+      "seed_id": "vb-200",
+      "source_song_id": 134,
+      "source_chunk_id": "lyrics_chorus_134_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "두 겹의 하루를 붙여주는"
+    },
+    {
+      "seed_id": "vb-201",
+      "source_song_id": 982,
+      "source_chunk_id": "lyrics_pre_chorus_982_001",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "디지털 사진은 영원히 변하지 않지만"
+    },
+    {
+      "seed_id": "vb-202",
+      "source_song_id": 51,
+      "source_chunk_id": "lyrics_chorus_51_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "떨어지다 멈추는 그 일 초가"
+    },
+    {
+      "seed_id": "vb-203",
+      "source_song_id": 195,
+      "source_chunk_id": "lyrics_chorus_195_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "마늘 다지는 리듬"
+    },
+    {
+      "seed_id": "vb-204",
+      "source_song_id": 1399,
+      "source_chunk_id": "lyrics_chorus_1399_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "만나는 밤이 있다"
+    },
+    {
+      "seed_id": "vb-205",
+      "source_song_id": 1716,
+      "source_chunk_id": "lyrics_chorus_1716_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "말하면 진짜가 되니까"
+    },
+    {
+      "seed_id": "vb-206",
+      "source_song_id": 1200,
+      "source_chunk_id": "lyrics_chorus_1200_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "매일 재고 정리해"
+    },
+    {
+      "seed_id": "vb-207",
+      "source_song_id": 1554,
+      "source_chunk_id": "lyrics_hook_1554_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "chorus",
+      "text": "멈추지 마 밀어 올려"
+    },
+    {
+      "seed_id": "vb-208",
+      "source_song_id": 207,
+      "source_chunk_id": "lyrics_chorus_207_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "모두가 함께 춤을 춘다"
+    },
+    {
+      "seed_id": "vb-209",
+      "source_song_id": 1209,
+      "source_chunk_id": "lyrics_chorus_1209_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "모르던 나를 발견하는 거야"
+    },
+    {
+      "seed_id": "vb-210",
+      "source_song_id": 51,
+      "source_chunk_id": "lyrics_chorus_51_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "몸이 기억하는 공포의 리듬"
+    },
+    {
+      "seed_id": "vb-211",
+      "source_song_id": 1036,
+      "source_chunk_id": "lyrics_chorus_1036_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "무언의 신호"
+    },
+    {
+      "seed_id": "vb-212",
+      "source_song_id": 1582,
+      "source_chunk_id": "lyrics_chorus_1582_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "미러링이 뭔지 검색하다가"
+    },
+    {
+      "seed_id": "vb-213",
+      "source_song_id": 922,
+      "source_chunk_id": "lyrics_chorus_922_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "바라보는 것만으로 위로가 되는 사이"
+    },
+    {
+      "seed_id": "vb-214",
+      "source_song_id": 186,
+      "source_chunk_id": "lyrics_chorus_186_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "반복이 나다"
+    },
+    {
+      "seed_id": "vb-215",
+      "source_song_id": 968,
+      "source_chunk_id": "lyrics_chorus_968_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "밝은 쪽도 어두운 쪽도 전부 사랑해"
+    },
+    {
+      "seed_id": "vb-216",
+      "source_song_id": 1100,
+      "source_chunk_id": "lyrics_chorus_1100_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "방석 하나에 담긴다"
+    },
+    {
+      "seed_id": "vb-217",
+      "source_song_id": 1135,
+      "source_chunk_id": "lyrics_chorus_1135_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "버스 문이 열리고"
+    },
+    {
+      "seed_id": "vb-218",
+      "source_song_id": 1404,
+      "source_chunk_id": "lyrics_chorus_1404_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "변해가는 내가 선다"
+    },
+    {
+      "seed_id": "vb-219",
+      "source_song_id": 170,
+      "source_chunk_id": "lyrics_chorus_170_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "보이지 않지만"
+    },
+    {
+      "seed_id": "vb-220",
+      "source_song_id": 171,
+      "source_chunk_id": "lyrics_chorus_171_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "분리할 수 없게 섞여있는 우리"
+    },
+    {
+      "seed_id": "vb-221",
+      "source_song_id": 1125,
+      "source_chunk_id": "lyrics_chorus_1125_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "비로소 내 걸음이 가벼워"
+    },
+    {
+      "seed_id": "vb-222",
+      "source_song_id": 1539,
+      "source_chunk_id": "lyrics_chorus_1539_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "빈 자리가 알려줬는데"
+    },
+    {
+      "seed_id": "vb-223",
+      "source_song_id": 10046,
+      "source_chunk_id": "lyrics_chorus_10046_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "빛이 먼저 도착해"
+    },
+    {
+      "seed_id": "vb-224",
+      "source_song_id": 1580,
+      "source_chunk_id": "lyrics_chorus_1580_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "사라져도 다시 올릴 고백"
+    },
+    {
+      "seed_id": "vb-225",
+      "source_song_id": 1063,
+      "source_chunk_id": "lyrics_chorus_1063_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "사랑이 되려는 건가"
+    },
+    {
+      "seed_id": "vb-226",
+      "source_song_id": 204,
+      "source_chunk_id": "lyrics_chorus_204_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "사회가 호출한다"
+    },
+    {
+      "seed_id": "vb-227",
+      "source_song_id": 209,
+      "source_chunk_id": "lyrics_pre_chorus_209_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "상자에 우리를 담는다"
+    },
+    {
+      "seed_id": "vb-228",
+      "source_song_id": 208,
+      "source_chunk_id": "lyrics_chorus_208_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "새벽이 온다 또 다른 시작이 온다"
+    },
+    {
+      "seed_id": "vb-229",
+      "source_song_id": 1125,
+      "source_chunk_id": "lyrics_chorus_1125_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "석양빛 하나로 충분한 밤"
+    },
+    {
+      "seed_id": "vb-230",
+      "source_song_id": 1426,
+      "source_chunk_id": "lyrics_chorus_1426_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "세 번째는 봉투 두께가 먼저야"
+    },
+    {
+      "seed_id": "vb-231",
+      "source_song_id": 260,
+      "source_chunk_id": "lyrics_hook_260_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "chorus",
+      "text": "세상이 느려진다"
+    },
+    {
+      "seed_id": "vb-232",
+      "source_song_id": 1,
+      "source_chunk_id": "lyrics_chorus_1_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "소음의 끝에서 나를 만났어"
+    },
+    {
+      "seed_id": "vb-233",
+      "source_song_id": 260,
+      "source_chunk_id": "lyrics_chorus_260_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "손만 들었다 내렸다"
+    },
+    {
+      "seed_id": "vb-234",
+      "source_song_id": 1618,
+      "source_chunk_id": "lyrics_pre_chorus_1618_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "수습이니까 봐주는 거잖아"
+    },
+    {
+      "seed_id": "vb-235",
+      "source_song_id": 1025,
+      "source_chunk_id": "lyrics_hook_1025_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "chorus",
+      "text": "쉬는 시간 열 분!"
+    },
+    {
+      "seed_id": "vb-236",
+      "source_song_id": 1767,
+      "source_chunk_id": "lyrics_chorus_1767_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "슬라이드 일곱 번은 살아 있어"
+    },
+    {
+      "seed_id": "vb-237",
+      "source_song_id": 1745,
+      "source_chunk_id": "lyrics_chorus_1745_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "시간이 아는 거야"
+    },
+    {
+      "seed_id": "vb-238",
+      "source_song_id": 152,
+      "source_chunk_id": "lyrics_chorus_152_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "신호등이 이렇게 멀었구나"
+    },
+    {
+      "seed_id": "vb-239",
+      "source_song_id": 944,
+      "source_chunk_id": "lyrics_chorus_944_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "싸워도 헤어지지 않는 건 아이 때문만은 아냐"
+    },
+    {
+      "seed_id": "vb-240",
+      "source_song_id": 1717,
+      "source_chunk_id": "lyrics_chorus_1717_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "아메리카노 얼음이 녹는 동안"
+    },
+    {
+      "seed_id": "vb-241",
+      "source_song_id": 1125,
+      "source_chunk_id": "lyrics_chorus_1125_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "아무도 기다리지 않는 밤"
+    },
+    {
+      "seed_id": "vb-242",
+      "source_song_id": 1125,
+      "source_chunk_id": "lyrics_chorus_1125_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "아무도 찾지 않는 길 위에"
+    },
+    {
+      "seed_id": "vb-243",
+      "source_song_id": 1491,
+      "source_chunk_id": "lyrics_chorus_1491_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "아직 거기 있을게"
+    },
+    {
+      "seed_id": "vb-244",
+      "source_song_id": 1396,
+      "source_chunk_id": "lyrics_chorus_1396_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "안 올 거라는"
+    },
+    {
+      "seed_id": "vb-245",
+      "source_song_id": 62,
+      "source_chunk_id": "lyrics_chorus_62_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "알아봐 주길 기도하는 밤"
+    },
+    {
+      "seed_id": "vb-246",
+      "source_song_id": 1575,
+      "source_chunk_id": "lyrics_pre_chorus_1575_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "어느 아침 눈을 뜨니"
+    },
+    {
+      "seed_id": "vb-247",
+      "source_song_id": 138,
+      "source_chunk_id": "lyrics_chorus_138_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "어떤 밤에 이 벽을 보며 잠들었을까"
+    },
+    {
+      "seed_id": "vb-248",
+      "source_song_id": 1415,
+      "source_chunk_id": "lyrics_chorus_1415_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "어차피 기다리는 사람 없잖아"
+    },
+    {
+      "seed_id": "vb-249",
+      "source_song_id": 1685,
+      "source_chunk_id": "lyrics_chorus_1685_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "엄지손가락이 사랑을 대신하고 있어"
+    },
+    {
+      "seed_id": "vb-250",
+      "source_song_id": 102,
+      "source_chunk_id": "lyrics_chorus_102_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "여기가 내 자리라는 걸 알겠다"
+    },
+    {
+      "seed_id": "vb-251",
+      "source_song_id": 1544,
+      "source_chunk_id": "lyrics_chorus_1544_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "여행의 제일 좋은 부분으로요"
+    },
+    {
+      "seed_id": "vb-252",
+      "source_song_id": 955,
+      "source_chunk_id": "lyrics_chorus_955_003",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "영원히 너와 함께라는 게 내 인생의 답이야"
+    },
+    {
+      "seed_id": "vb-253",
+      "source_song_id": 1008,
+      "source_chunk_id": "lyrics_chorus_1008_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "오늘 밤은 이 채널이 전부"
+    },
+    {
+      "seed_id": "vb-254",
+      "source_song_id": 20001,
+      "source_chunk_id": "lyrics_pre_chorus_20001_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "chorus",
+      "text": "오늘은 말 걸어볼까"
+    },
+    {
+      "seed_id": "vb-255",
+      "source_song_id": 1745,
+      "source_chunk_id": "lyrics_chorus_1745_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "오십 년이 들어 있는 손끝을"
+    },
+    {
+      "seed_id": "vb-256",
+      "source_song_id": 1508,
+      "source_chunk_id": "lyrics_chorus_1508_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "왜 나는 여기 서 있지"
+    },
+    {
+      "seed_id": "vb-257",
+      "source_song_id": 179,
+      "source_chunk_id": "lyrics_hook_179_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "chorus",
+      "text": "우리가 뭐했지"
+    },
+    {
+      "seed_id": "vb-258",
+      "source_song_id": 157,
+      "source_chunk_id": "lyrics_chorus_157_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "우리는 자꾸만 헷갈린다."
+    },
+    {
+      "seed_id": "vb-259",
+      "source_song_id": 161,
+      "source_chunk_id": "lyrics_hook_161_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "chorus",
+      "text": "우린 자정을 지나가고 있어"
+    },
+    {
+      "seed_id": "vb-260",
+      "source_song_id": 1676,
+      "source_chunk_id": "lyrics_chorus_1676_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "웃으면서 헤어진 사람은"
+    },
+    {
+      "seed_id": "vb-261",
+      "source_song_id": 1071,
+      "source_chunk_id": "lyrics_chorus_1071_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "유한하다는 것은 잔인하다"
+    },
+    {
+      "seed_id": "vb-262",
+      "source_song_id": 136,
+      "source_chunk_id": "lyrics_chorus_136_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이 구조를 다 알면서도 반복해"
+    },
+    {
+      "seed_id": "vb-263",
+      "source_song_id": 142,
+      "source_chunk_id": "lyrics_chorus_142_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이 따뜻함을 놓치고 싶지 않아"
+    },
+    {
+      "seed_id": "vb-264",
+      "source_song_id": 1545,
+      "source_chunk_id": "lyrics_chorus_1545_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이 벤치가 아직 기억하겠지"
+    },
+    {
+      "seed_id": "vb-265",
+      "source_song_id": 122,
+      "source_chunk_id": "lyrics_chorus_122_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이 손이 아플 때 이마를 짚던 손"
+    },
+    {
+      "seed_id": "vb-266",
+      "source_song_id": 1067,
+      "source_chunk_id": "lyrics_chorus_1067_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이 온도를 기억해 주세요"
+    },
+    {
+      "seed_id": "vb-267",
+      "source_song_id": 197,
+      "source_chunk_id": "lyrics_chorus_197_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이 페이지를 넘을 수 없다"
+    },
+    {
+      "seed_id": "vb-268",
+      "source_song_id": 194,
+      "source_chunk_id": "lyrics_chorus_194_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이것이 전부가 아니라"
+    },
+    {
+      "seed_id": "vb-269",
+      "source_song_id": 184,
+      "source_chunk_id": "lyrics_chorus_184_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이게 연애다"
+    },
+    {
+      "seed_id": "vb-270",
+      "source_song_id": 955,
+      "source_chunk_id": "lyrics_chorus_955_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "chorus",
+      "text": "이렇게 깊이 사랑할 수 있다는 게 축복이야"
+    },
+    {
+      "seed_id": "vb-271",
+      "source_song_id": 1146,
+      "source_chunk_id": "lyrics_chorus_1146_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "이미 닮았구나"
+    },
+    {
+      "seed_id": "vb-272",
+      "source_song_id": 124,
+      "source_chunk_id": "lyrics_chorus_124_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "이웃보다 먼 사이가 돼버렸어"
+    },
+    {
+      "seed_id": "vb-273",
+      "source_song_id": 909,
+      "source_chunk_id": "lyrics_chorus_909_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "이혼 서류 위에 떨어진 눈물이 번져"
+    },
+    {
+      "seed_id": "vb-274",
+      "source_song_id": 1759,
+      "source_chunk_id": "lyrics_chorus_1759_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "일주일 뒤를 위해"
+    },
+    {
+      "seed_id": "vb-275",
+      "source_song_id": 1003,
+      "source_chunk_id": "lyrics_pre_chorus_1003_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "hook",
+      "text": "자 이제 시작이야"
+    },
+    {
+      "seed_id": "vb-276",
+      "source_song_id": 207,
+      "source_chunk_id": "lyrics_chorus_207_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "작은 것들이 노래한다"
+    },
+    {
+      "seed_id": "vb-277",
+      "source_song_id": 179,
+      "source_chunk_id": "lyrics_chorus_179_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "장소도 우리를 기억하지 못한다"
+    },
+    {
+      "seed_id": "vb-278",
+      "source_song_id": 1607,
+      "source_chunk_id": "lyrics_chorus_1607_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "절약을 위해 삼만이천칠백 원"
+    },
+    {
+      "seed_id": "vb-279",
+      "source_song_id": 1416,
+      "source_chunk_id": "lyrics_pre_chorus_1416_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "hook",
+      "text": "제발 이번엔 진짜 답장이길"
+    },
+    {
+      "seed_id": "vb-280",
+      "source_song_id": 926,
+      "source_chunk_id": "lyrics_chorus_926_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "존중이 만든 신뢰 위에 우리의 사랑이 자라"
+    },
+    {
+      "seed_id": "vb-281",
+      "source_song_id": 1507,
+      "source_chunk_id": "lyrics_chorus_1507_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "주인의 손을 기다렸어"
+    },
+    {
+      "seed_id": "vb-282",
+      "source_song_id": 1186,
+      "source_chunk_id": "lyrics_chorus_1186_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "지금 이 5분이 지나면"
+    },
+    {
+      "seed_id": "vb-283",
+      "source_song_id": 1590,
+      "source_chunk_id": "lyrics_pre_chorus_1590_001",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "hook",
+      "text": "지우면 진짜 끝이잖아"
+    },
+    {
+      "seed_id": "vb-284",
+      "source_song_id": 1446,
+      "source_chunk_id": "lyrics_chorus_1446_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "진짜 너 왜 이래"
+    },
+    {
+      "seed_id": "vb-285",
+      "source_song_id": 1590,
+      "source_chunk_id": "lyrics_chorus_1590_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "찍고 지우고 또 찍고"
+    },
+    {
+      "seed_id": "vb-286",
+      "source_song_id": 1485,
+      "source_chunk_id": "lyrics_hook_1485_000",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "hook",
+      "text": "창가 한 자리가 남아 있다"
+    },
+    {
+      "seed_id": "vb-287",
+      "source_song_id": 122,
+      "source_chunk_id": "lyrics_chorus_122_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "천천히, 꼼꼼히, 빠짐없이"
+    },
+    {
+      "seed_id": "vb-288",
+      "source_song_id": 51,
+      "source_chunk_id": "lyrics_chorus_51_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "추락 직전에 눈을 떠"
+    },
+    {
+      "seed_id": "vb-289",
+      "source_song_id": 1544,
+      "source_chunk_id": "lyrics_pre_chorus_1544_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "hook",
+      "text": "출발지를 떠났고"
+    },
+    {
+      "seed_id": "vb-290",
+      "source_song_id": 1576,
+      "source_chunk_id": "lyrics_pre_chorus_1576_001",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "hook",
+      "text": "카메라가 못 담는 것을"
+    },
+    {
+      "seed_id": "vb-291",
+      "source_song_id": 1734,
+      "source_chunk_id": "lyrics_hook_1734_001",
+      "lang": "ko",
+      "section_tag": "hook",
+      "seed_group": "hook",
+      "text": "타다다닥 잠들 때까지"
+    },
+    {
+      "seed_id": "vb-292",
+      "source_song_id": 1513,
+      "source_chunk_id": "lyrics_chorus_1513_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "파도는 매일"
+    },
+    {
+      "seed_id": "vb-293",
+      "source_song_id": 20009,
+      "source_chunk_id": "lyrics_chorus_20009_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "포장마차 불빛 아래서"
+    },
+    {
+      "seed_id": "vb-294",
+      "source_song_id": 1110,
+      "source_chunk_id": "lyrics_chorus_1110_002",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "하나씩 식어가는 소리"
+    },
+    {
+      "seed_id": "vb-295",
+      "source_song_id": 1485,
+      "source_chunk_id": "lyrics_chorus_1485_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "한 모금만 더 있을게"
+    },
+    {
+      "seed_id": "vb-296",
+      "source_song_id": 1028,
+      "source_chunk_id": "lyrics_pre_chorus_1028_000",
+      "lang": "ko",
+      "section_tag": "pre_chorus",
+      "seed_group": "hook",
+      "text": "한국어가 원래 그래"
+    },
+    {
+      "seed_id": "vb-297",
+      "source_song_id": 1028,
+      "source_chunk_id": "lyrics_chorus_1028_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "합니다 함니다 으막은 음악"
+    },
+    {
+      "seed_id": "vb-298",
+      "source_song_id": 1036,
+      "source_chunk_id": "lyrics_chorus_1036_001",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "현실은 준비 없이 찾아온 걸"
+    },
+    {
+      "seed_id": "vb-299",
+      "source_song_id": 1445,
+      "source_chunk_id": "lyrics_chorus_1445_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "혼자인 걸 숨겨줘"
+    },
+    {
+      "seed_id": "vb-300",
+      "source_song_id": 168,
+      "source_chunk_id": "lyrics_chorus_168_000",
+      "lang": "ko",
+      "section_tag": "chorus",
+      "seed_group": "hook",
+      "text": "환상을 본 것 같아"
+    }
+  ]
+}
