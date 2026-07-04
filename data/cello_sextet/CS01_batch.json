@@ -127,7 +127,21 @@
       "suno_uuid1": "e4d985e9-9c5a-41bc-a071-17cc766fc9d3",
       "suno_uuid2": "48a835bb-e6c5-4816-b57f-1186a3902754",
       "generated": true,
-      "sp_unchanged": true
+      "sp_unchanged": true,
+      "takes": {
+        "take1": {
+          "uuid": "e4d985e9",
+          "len": "2:40"
+        },
+        "take2": {
+          "uuid": "48a835bb",
+          "len": "1:35(짧음)"
+        }
+      },
+      "ab_listen": {
+        "원곡_273": "286a3488(엄숙 G con sordino)",
+        "밝은_276": "e4d985e9 take1 권장/48a835bb take2 짧음"
+      }
     }
   ],
   "test_id_range": "271-275",
