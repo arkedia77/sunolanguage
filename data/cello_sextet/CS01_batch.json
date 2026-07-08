@@ -67,7 +67,8 @@
       "suno_uuid1": "286a3488-63b3-4bbf-a153-1311c4bf8fc2",
       "suno_uuid2": "1717d773-2790-4f35-94cc-3095d1c461cf",
       "generated": true,
-      "sp_unchanged": true
+      "sp_unchanged": true,
+      "leo_verdict": "★음악성 우위(2026-07-08 청음) — 밝은버전276 대비 원곡(엄숙 con sordino)이 음악성 높음. 정식승격 후보"
     },
     {
       "pos": 4,
@@ -141,7 +142,8 @@
       "ab_listen": {
         "원곡_273": "286a3488(엄숙 G con sordino)",
         "밝은_276": "e4d985e9 take1 권장/48a835bb take2 짧음"
-      }
+      },
+      "leo_verdict": "밝은버전 — 원곡273이 음악성 우위로 판정됨(2026-07-08). 대비군으로 보존, 미승격"
     }
   ],
   "test_id_range": "271-275",
@@ -152,5 +154,6 @@
     "sp_unchanged": true,
     "ui_workaround": "Instrumental OFF + bracket을 lyrics에(토글ON시 lyrics칸 소멸 제약 우회)",
     "pending": "Leo 청음 — (1)무가사 렌더 확인 (2)브라켓 길이/구간 제어 반영 확인"
-  }
+  },
+  "ab_verdict_서약": "원곡273(엄숙 G major con sordino) > 밝은276(화사 D major) — Leo 음악성 판정 2026-07-08. 교훈: 첼로6중주 예식곡은 절제/뮤트가 화사보다 음악성↑"
 }
