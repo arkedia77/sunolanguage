@@ -51,3 +51,23 @@ Suno 앱에 실제 음악을 녹음(~10초)하면 Suno가 자동 분석하여 �
 - sunolang RAG → LeoMusic2 SP 작성 시 참조
 - 단, sunolang은 독립 프로젝트 (leomusic2 코드 직접 수정 X)
 - 데이터 흐름: sunolang(어휘 사전) → leomusic2(SP 생성)
+
+---
+
+## 컨텍스트·메모리 구조 (킷 v0.2 — 전문: agent-comm/projects/fableself/exchange/context-memory-kit-v01.md)
+
+**3층 상한제**: L0 항시로드(이 파일 + memory/MEMORY.md, **합계 ≤6KB**) = 트리거+포인터만 / L1 진입 다이제스트 / L2 온디맨드(memory/_HUB_INDEX_L2·개별 memory·notes·KANBAN — 무제한 성장). L0 초과 시 병합·L2 강등으로만 해소.
+
+### 추론 수칙 (§2)
+- **R-P1 전제 감사**: 사실 전제(수치·담당·상태)는 **작성 전** 정본 grep 1회 대조, 본문에 `근거:{파일}` 표기. 미확인은 명기.
+- **R-P2 부분 Read**: 전체 재독 금지 — grep 위치확인 후 해당 절만 Read.
+- **R-P3 결정 하나씩 닫기**: 열린 결정 병렬 금지. 닫히면 같은 턴에 정본 기록(Action-then-Record).
+- **R-P4 양자택일 금지**: 배타 아니면 "둘 다 보유(코어+어댑터)"가 기본값. 진짜 배타일 때만 택일.
+
+### 세션 종료 루틴 (지식 수명주기 §3)
+- **G-K1 승격**: 사건 1건=session_log까지. 2회↑ 재발/타도메인 재사용만 룰 승격(단발 룰화 금지).
+- **G-K2 은퇴**: 월1회/허브 15건↑ 시 병합·archive. 통합판 생성 = 같은 턴에 구판 은퇴.
+- **G-K3 활성 태스크**: 링크는 KANBAN. MEMORY.md엔 "활성=칸반참조" 1줄만.
+- **G-K4 단일 기재**: 룰 전문 1곳만. CLAUDE.md·MEMORY.md엔 트리거+포인터 1줄(3중 기재 금지).
+- **G-K5 커밋 후 HEAD 검증**: repo 정본 변경은 push 후 `git show HEAD:{파일}` 실물 대조까지 done(공유클론 race 방지). write→add→commit 최소창.
+- 종료 시 push 자동(확인 없이).
