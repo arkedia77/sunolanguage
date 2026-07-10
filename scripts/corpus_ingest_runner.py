@@ -302,6 +302,9 @@ def cmd_ingest(args) -> None:
     ).fetchone()
     if prev_fail and not args.force:
         raise SystemExit(f"직전 run {prev_fail['id']}가 failed 상태(미롤백) — rollback 후 재시도 또는 --force")
+    health = state_get(conn, "health_status", "")
+    if health.startswith("FAIL") and not args.force:
+        raise SystemExit(f"health_check FAIL 상태({health}) — corpus_health_check.py로 원인 해소 후 재시도 또는 --force")
 
     LOCK.write_text(now())
     cur = conn.execute(
