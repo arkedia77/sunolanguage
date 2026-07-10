@@ -14,6 +14,8 @@
 채널:
     M1 벡터   Qdrant sunolang_presets (all-MiniLM-L6-v2, 서빙과 동일 모델) — 의미 유사
     M2 렉시컬 lexical_index.sqlite entries_fts (FTS5 bm25) — 표현 실존
+    M3 사전   suno_dictionary_v3 (악기/무드/주법 카운트 근거) — 검증 어휘
+    음수필터  suno_does_not_use — 코드명/진행표기/다이나믹마킹 감지 시 SP 사용금지 경고
     융합      RRF(k=60), 프래그먼트별 → 곡 단위 집계
 
 gap: 프래그먼트가 두 채널 모두에서 임계 미달이면 코퍼스 공백 → gap_candidates 등록.
@@ -172,6 +174,61 @@ def m2_lexical_search(frags: list[str], top: int) -> list[list[dict]]:
     return results
 
 
+DICT_V3 = ROOT / "rag" / "suno_dictionary_v3.json"
+_dict_cache: dict | None = None
+
+
+def load_dict() -> dict:
+    global _dict_cache
+    if _dict_cache is None:
+        _dict_cache = json.loads(DICT_V3.read_text())
+    return _dict_cache
+
+
+def m3_dict_search(frags: list[str], top: int) -> list[list[dict]]:
+    """사전 v3 직조회 — 프래그먼트 내 등장하는 검증 어휘를 코퍼스 출현수 순으로."""
+    d = load_dict()
+    vocab: list[tuple[str, str, int]] = []  # (term, slot, count)
+    for term, info in d.get("instrument_phrases", {}).items():
+        vocab.append((term, "instrument", int(info.get("count", 0))))
+    for term, info in d.get("mood_emotion", {}).items():
+        vocab.append((term, "mood", int(info.get("count", 0))))
+    for term, info in d.get("technique_patterns", {}).items():
+        vocab.append((term, "technique", int(info.get("count", 0))))
+    results = []
+    for f in frags:
+        low = " " + " ".join(FTS_TOKEN.findall(f.lower())) + " "
+        hits = [
+            {"expr": term, "slot": slot, "song_id": "dict_v3", "score": float(count)}
+            for term, slot, count in vocab
+            if len(term) >= 3 and f" {term.strip()} " in low
+        ]
+        results.append(sorted(hits, key=lambda x: -x["score"])[:top])
+    return results
+
+
+# suno_does_not_use 음수필터 — Suno가 0회 사용하는 표기 (rag/suno_dictionary_v3.json 근거)
+NEGATIVE_PATTERNS = [
+    (re.compile(r"\b[A-G](?:#|b)?(?:maj|min|dim|aug|sus)\d?\b|\b[A-G](?:#|b)?m?7\b"),
+     "구체적 코드명(Am, Dm7, Cmaj7…) — Suno 0회. 'key of X'만 유효"),
+    (re.compile(r"\b(?:[IViv]+)\s*[-–]\s*(?:[IViv]+)\s*[-–]\s*(?:[IViv]+)\b"),
+     "코드 진행 표기(II-V-I…) — Suno 0회"),
+    (re.compile(r"(?<![A-Za-z])(?:pp|mp|mf|ff|fff|ppp)(?![A-Za-z])"),
+     "다이나믹 마킹(p/mf/ff…) — Suno 0회"),
+    (re.compile(r"\bmaster(?:ing|ed)\b", re.I),
+     "mastering 계열 — 전체 코퍼스 2건, SP 예산 낭비"),
+]
+
+
+def negative_scan(text: str) -> list[str]:
+    warns = []
+    for pat, msg in NEGATIVE_PATTERNS:
+        m = pat.search(text)
+        if m:
+            warns.append(f"`{m.group(0)}` → {msg}")
+    return warns
+
+
 def rrf_fuse(per_channel: list[list[dict]]) -> list[dict]:
     """채널별 랭킹 리스트 → RRF 융합 (expr 단위)."""
     scores: dict[str, dict] = {}
@@ -233,20 +290,22 @@ def cmd_match(args) -> None:
     item_id = cur.lastrowid
     cur = conn.execute(
         "INSERT INTO match_runs(reference_item_id, corpus_version, channel_weights) VALUES (?,?,?)",
-        (item_id, corpus_version(conn), json.dumps({"m1": 1.0, "m2": 1.0})))
+        (item_id, corpus_version(conn), json.dumps({"m1": 1.0, "m2": 1.0, "m3": 1.0})))
     run_id = cur.lastrowid
     conn.commit()
 
     m1 = m1_vector_search(frags, args.top)
     m2 = m2_lexical_search(frags, args.top)
+    m3 = m3_dict_search(frags, args.top)
+    neg_warns = negative_scan(text)
 
     song_rrf: dict[str, float] = {}
     frag_reports = []
     gaps = []
     for i, frag in enumerate(frags):
-        fused = rrf_fuse([m1[i], m2[i]])
+        fused = rrf_fuse([m1[i], m2[i], m3[i]])
         best_vec = m1[i][0]["score"] if m1[i] else 0.0
-        is_gap = best_vec < GAP_VECTOR_TAU and len(m2[i]) < GAP_LEX_MIN_HITS
+        is_gap = best_vec < GAP_VECTOR_TAU and len(m2[i]) < GAP_LEX_MIN_HITS and not m3[i]
         top3 = fused[:3]
         for item in top3:
             conn.execute(
@@ -266,7 +325,8 @@ def cmd_match(args) -> None:
                 (frag.lower(), slot, run_id, now()))
             gaps.append((frag, best_vec))
         for item in fused[:10]:
-            song_rrf[item["song_id"]] = song_rrf.get(item["song_id"], 0.0) + item["rrf"]
+            if item["song_id"] != "dict_v3":  # 사전 채널은 곡 집계에서 제외
+                song_rrf[item["song_id"]] = song_rrf.get(item["song_id"], 0.0) + item["rrf"]
         frag_reports.append({"frag": frag, "top": top3, "is_gap": is_gap, "best_vec": best_vec})
     conn.commit()
 
@@ -279,7 +339,7 @@ def cmd_match(args) -> None:
     report_path = REPORT_DIR / f"match_run_{run_id}.md"
     lines = [f"# 매칭 리포트 — run {run_id} ({now()})", "",
              f"- 입력({kind}): {text[:300]}{'…' if len(text) > 300 else ''}",
-             f"- 코퍼스 버전: {corpus_version(conn)} · 채널: M1벡터+M2렉시컬 RRF(k={RRF_K})",
+             f"- 코퍼스 버전: {corpus_version(conn)} · 채널: M1벡터+M2렉시컬+M3사전 RRF(k={RRF_K})",
              f"- τ(잠정): vector<{GAP_VECTOR_TAU} & lexical hit<{GAP_LEX_MIN_HITS} → gap", "",
              "## (a) 최근접 코퍼스 곡 top-5", "",
              "| song_id | 제목 | 장르 | RRF합 |", "|---|---|---|---:|"]
@@ -307,6 +367,8 @@ def cmd_match(args) -> None:
             lines.append(f"- `{frag}` (best vector {vec:.3f}) → gap_candidates 등록")
     else:
         lines.append("- 없음")
+    lines += ["", "## (e) 음수필터 경고 (suno_does_not_use — SP에 넣지 말 것)", ""]
+    lines += [f"- ⚠️ {w}" for w in neg_warns] if neg_warns else ["- 없음"]
     report_path.write_text("\n".join(lines))
     conn.execute("UPDATE match_runs SET report_path=? WHERE id=?", (str(report_path), run_id))
     conn.commit()
