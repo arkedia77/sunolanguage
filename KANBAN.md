@@ -2,6 +2,7 @@
 
 > **세션 종료 갈무리 2026-07-04**: ★가사 AI어시스트 코퍼스확장 파이프라인 완주(설계→게이트정정 jaccard→코사인→V_PILOT 73→V_BATCH1 954 = **lyric_variations 누적 1027 적재**, 187 source songs) · S_MOOD 감정어휘 dead-zone A/B 12곡 생성+재분석발주 · CS01 첼로6중주 결혼식BGM 5곡 생성(UI제약 발견) · leomusic3 goldset v1→임계확정(0.76/0.59) · leomusic-trot W005/W006-W008 교차검증 · 패션필름 SP교차검증 · reklcli이사종결 · W-네임스페이스 규약. **차기 1순위: variations Qdrant승격 / S_MOOD재분석 결과 / CS01·S_MOOD 청음(Leo)**. 인계: agent-comm `..._세션종료_인계_20260704.json`
 > **후속(07-04~08)**: leomusic-trot W010 female/절제창법 교차검증(회피목록 정정, findings→게이트코드화) · CS01 서약 밝은버전(276) 제작→★Leo 청음판정 **원곡273 음악성 우위**(교훈: 첼로예식곡 절제/뮤트>화사) · radiant dead-zone 발견
+> **세션 종료 갈무리 2026-07-10**: ★컨텍스트·메모리 킷 v0.2 L0 재편 완주(ari 발주 Wave3) — L0 항시로드 **8,862→5,377B(-39.3%, ≤6KB)**, MEMORY.md 43줄→허브7 지도(`memory/_HUB_INDEX_L2.md` 신규, 개별 44건 전수보존+고아 1건 편입), CLAUDE.md에 R-P1~P4·G-K1~K5·3층상한제 편입(commit 5dbaf25, G-K5 HEAD검증 PASS), ari 검수 PASS. **차기 1순위: ★연주(인스트루멘탈)배치 1건 착수(대상 Leo 확정) / CS01 전곡 Leo 청음→정식승격 / S_MOOD 재분석·청취 / variations Qdrant승격**. 인계: agent-comm `..._세션종료_인계_20260710.json`
 
 ## IN PROGRESS
 - [sunolanguage] **★보강 로드맵 2026Q2 (울트라플랜, 승인완료 06-19 → 차기 세션 구현)** — `docs/reinforcement_plan_2026Q2.md` + Notion 업로드(`[결정사항]` 2026-06-20). 5테마: ①엔진강건성(R1 title폴백/R2 genre-filter무매칭/R3 genre-lock완화/R4 테스트) ②검증루프(V1 재분석단일결정안/V2 청취세트/V3 Echo) ③코퍼스재균형 ④데이터위생(D1 N001·N002정리/D2 백필/D3 감사경화) ⑤산출물(B1 뮤직메이커2/B2 책). **실행순서 1~4·6=자가실행 즉시착수 / 5=Leo 결정준비물 / 7=차단해제 대기**. 베이스라인 **67/67**(자가점검 06-24로 R1 title폴백 완료·완화가드 추가). 비고: D1 N001/N002정리=재점검으로 잠재이슈 실측됨(TEMP타이틀/V1=V2/누출 다수, 재분석 막힘 상태)
