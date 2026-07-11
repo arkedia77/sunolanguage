@@ -401,6 +401,15 @@ def cmd_ingest(args) -> None:
         conn.commit()
         mark_step(conn, run_id, "A7", steps)
 
+        # A7.5 gap 자동 해소 (매칭 시스템 gap_candidates 재확인 — 실패해도 인제스트는 성립)
+        try:
+            has_gaps = conn.execute(
+                "SELECT count(*) FROM gap_candidates WHERE status='open'").fetchone()[0]
+            if has_gaps:
+                run_cmd("A7.5", [PY, "scripts/reference_matcher.py", "recheck-gaps"])
+        except Exception as exc:  # noqa: BLE001 — 후행 단계, 비치명
+            print(f"[A7.5] ⚠️ gap 재확인 생략: {exc}")
+
         print(f"\n=== run {run_id} {status.upper()} ===")
         print(f"코퍼스 {len(corpus_before)}→{len(corpus_after)}곡 (+{songs_added}) / 신규 청크 {len(new_ids)}")
         print(f"재빌드 카운터 {counter}/{B1_SONGS}")

@@ -10,6 +10,8 @@
     python3 scripts/reference_matcher.py match --track-id 42                      # tracks(reklcli) 기존 분석
     python3 scripts/reference_matcher.py report --run 3                           # 리포트 재출력
     python3 scripts/reference_matcher.py gaps                                     # 열린 gap 목록
+    python3 scripts/reference_matcher.py calibrate                                # tracks 전량 스코어 분포 → τ 제안+파일럿10
+    python3 scripts/reference_matcher.py recheck-gaps                             # 인제스트 후 open gap 재매칭·해소
 
 채널:
     M1 벡터   Qdrant sunolang_presets (all-MiniLM-L6-v2, 서빙과 동일 모델) — 의미 유사
@@ -124,21 +126,26 @@ def fragments(text: str) -> list[str]:
     return out
 
 
-FTS_TOKEN = re.compile(r"[A-Za-z0-9']+")
+FTS_TOKEN = re.compile(r"[A-Za-z0-9]+")
 
 
 def fts_query(fragment: str) -> str:
-    """FTS5 질의: 안전 토큰만 OR 결합 (unicode61 토크나이저 대응)."""
+    """FTS5 질의: 안전 토큰만 인용해 OR 결합 (unicode61 토크나이저 대응)."""
     toks = [t.lower() for t in FTS_TOKEN.findall(fragment) if len(t) >= 3]
-    return " OR ".join(dict.fromkeys(toks))  # 순서 보존 dedup
+    return " OR ".join(f'"{t}"' for t in dict.fromkeys(toks))  # 순서 보존 dedup
 
 
 # ─────────────────────────── 채널 ───────────────────────────
 
+_m1_cache: dict = {}
+
+
 def m1_vector_search(frags: list[str], top: int) -> list[list[dict]]:
     import embed_pipeline
-    model = embed_pipeline.get_embedding_model()
-    client = embed_pipeline.get_qdrant_client()
+    if "model" not in _m1_cache:
+        _m1_cache["model"] = embed_pipeline.get_embedding_model()
+        _m1_cache["client"] = embed_pipeline.get_qdrant_client()
+    model, client = _m1_cache["model"], _m1_cache["client"]
     vectors = model.encode(frags, show_progress_bar=False)
     results = []
     for vec in vectors:
@@ -380,6 +387,105 @@ def cmd_match(args) -> None:
     print(f"  치환표 {sum(0 if f['is_gap'] else 1 for f in frag_reports)}행 / gap {len(gaps)}건")
 
 
+def is_gap_frag(m1_hits, m2_hits, m3_hits) -> tuple[bool, float]:
+    best_vec = m1_hits[0]["score"] if m1_hits else 0.0
+    return (best_vec < GAP_VECTOR_TAU and len(m2_hits) < GAP_LEX_MIN_HITS
+            and not m3_hits), best_vec
+
+
+def cmd_calibrate(args) -> None:
+    """tracks(reklcli) 전량 매칭 스코어 분포 → τ 제안 + 파일럿 10건 선정 (gap 미등록)."""
+    conn = db()
+    rows = conn.execute(
+        "SELECT id, title, artist, genre, texture_description FROM tracks "
+        "WHERE texture_description IS NOT NULL AND texture_description != '' ORDER BY id").fetchall()
+    print(f"[calibrate] 대상 {len(rows)}곡 (gap 미등록 모드)")
+    track_stats = []
+    all_scores: list[float] = []
+    for row in rows:
+        frags = fragments(row["texture_description"])
+        if not frags:
+            continue
+        m1 = m1_vector_search(frags, 5)
+        m2 = m2_lexical_search(frags, 5)
+        m3 = m3_dict_search(frags, 5)
+        scores = [is_gap_frag(m1[i], m2[i], m3[i])[1] for i in range(len(frags))]
+        lex_cov = sum(1 for h in m2 if h) / len(frags)
+        all_scores += scores
+        track_stats.append({
+            "id": row["id"], "title": row["title"], "artist": row["artist"],
+            "genre": row["genre"], "n_frags": len(frags),
+            "mean_vec": sum(scores) / len(scores), "min_vec": min(scores),
+            "lex_cov": lex_cov,
+        })
+        print(f"  #{row['id']:3d} {row['title'][:28]:30s} frags={len(frags):2d} "
+              f"mean={track_stats[-1]['mean_vec']:.3f} min={min(scores):.3f}")
+
+    all_scores.sort()
+    def pct(p): return all_scores[int(len(all_scores) * p)] if all_scores else 0.0
+    taus = [0.35, 0.40, 0.45, 0.50, 0.55]
+    gap_rates = [(t, sum(1 for s in all_scores if s < t) / len(all_scores)) for t in taus]
+
+    # 파일럿 10: 스코어 층화 4(최저2+최고2) + 장르 다양성 6
+    by_mean = sorted(track_stats, key=lambda x: x["mean_vec"])
+    pilot = by_mean[:2] + by_mean[-2:]
+    seen_genres = {t["genre"] for t in pilot}
+    for t in by_mean[len(by_mean) // 4: -2]:
+        if len(pilot) >= 10:
+            break
+        if t["genre"] not in seen_genres:
+            pilot.append(t)
+            seen_genres.add(t["genre"])
+
+    REPORT_DIR.mkdir(exist_ok=True)
+    out = REPORT_DIR / "tau_calibration_report.md"
+    lines = [f"# τ 캘리브레이션 데이터셋 — reklcli {len(track_stats)}곡 ({now()})", "",
+             f"- 프래그먼트 총 {len(all_scores)}개 · M1 best-vector 분포: "
+             f"p10={pct(.10):.3f} p25={pct(.25):.3f} p50={pct(.50):.3f} p75={pct(.75):.3f}", "",
+             "## τ 후보별 gap율 (vector 단독 기준)", "",
+             "| τ | gap율 |", "|---|---:|"]
+    lines += [f"| {t:.2f} | {r:.1%} |" for t, r in gap_rates]
+    lines += ["", f"현행 잠정 τ={GAP_VECTOR_TAU} (M2·M3 무적중 동시조건이라 실제 gap율은 위보다 낮음)", "",
+              "## 파일럿 10건 (Leo 검토·청음 대상 — 층화: 최저2+최고2+장르다양 6)", "",
+              "| track_id | 제목 | 아티스트 | 장르 | mean_vec | 판정 포인트 |", "|---|---|---|---|---:|---|"]
+    for t in pilot[:10]:
+        point = "저스코어(코퍼스 공백 의심)" if t["mean_vec"] < pct(.25) else (
+            "고스코어(매칭 신뢰 확인용)" if t["mean_vec"] > pct(.75) else "중간대(경계 판정용)")
+        lines.append(f"| {t['id']} | {t['title']} | {t['artist']} | {t['genre']} | "
+                     f"{t['mean_vec']:.3f} | {point} |")
+    lines += ["", "판정 방법: 각 곡 `match --track-id N` 리포트의 치환표를 Leo가 검토 — "
+              "\"이 치환이 원곡 뉘앙스를 담는가\" Y/N → Y/N 경계의 vec 스코어로 τ 확정."]
+    out.write_text("\n".join(lines))
+    print(f"\n[calibrate] → {out}")
+    for t, r in gap_rates:
+        print(f"  τ={t:.2f} → gap율 {r:.1%}")
+
+
+def cmd_recheck_gaps(args) -> None:
+    """open gap을 현 코퍼스로 재매칭 — τ 통과 시 ingested 마킹 (러너 인제스트 후행)."""
+    conn = db()
+    rows = conn.execute("SELECT * FROM gap_candidates WHERE status='open'").fetchall()
+    if not rows:
+        print("[recheck-gaps] open gap 없음")
+        return
+    frags = [r["expr"] for r in rows]
+    m1 = m1_vector_search(frags, 5)
+    m2 = m2_lexical_search(frags, 5)
+    m3 = m3_dict_search(frags, 5)
+    resolved = 0
+    for i, r in enumerate(rows):
+        gap, best_vec = is_gap_frag(m1[i], m2[i], m3[i])
+        if not gap:
+            best = m1[i][0]["expr"] if m1[i] else (m2[i][0]["expr"] if m2[i] else m3[i][0]["expr"])
+            conn.execute(
+                "UPDATE gap_candidates SET status='ingested', resolution_note=?, updated_at=? WHERE id=?",
+                (f"재매칭 해소 vec={best_vec:.3f} → {best[:80]}", now(), r["id"]))
+            resolved += 1
+            print(f"  ✅ #{r['id']} [{r['slot'] or '?'}] {r['expr'][:50]} → 해소 (vec {best_vec:.3f})")
+    conn.commit()
+    print(f"[recheck-gaps] {len(rows)}건 중 {resolved}건 해소, {len(rows) - resolved}건 유지")
+
+
 def cmd_report(args) -> None:
     conn = db()
     row = conn.execute("SELECT report_path FROM match_runs WHERE id=?", (args.run,)).fetchone()
@@ -414,6 +520,12 @@ def main() -> None:
 
     p = sub.add_parser("gaps", help="열린 gap 목록")
     p.set_defaults(func=cmd_gaps)
+
+    p = sub.add_parser("calibrate", help="tracks 전량 스코어 분포 → τ 제안 + 파일럿10 (gap 미등록)")
+    p.set_defaults(func=cmd_calibrate)
+
+    p = sub.add_parser("recheck-gaps", help="open gap 재매칭 — 해소 시 ingested 마킹")
+    p.set_defaults(func=cmd_recheck_gaps)
 
     args = ap.parse_args()
     args.func(args)
