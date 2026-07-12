@@ -1,0 +1,70 @@
+{
+  "batch": "TAU10",
+  "designed": "2026-07-12",
+  "n": 10,
+  "concept": "τ 캘리브레이션 파일럿 10곡 — 외부 레퍼런스 매칭(run 6~15) 산출 SP재료로 조립한 인스트루멘탈. 원곡 대비 청음 Y/N → τ 확정",
+  "assembly_rule": "매처 산출 표현만 사용(창작 보정 금지). 보컬 슬롯 제외(인스트루멘탈), 문장 스티칭 최소 글루만. 브라켓=lyrics 우회(Instrumental 토글 OFF, CS01 제약 준용)",
+  "judgment_question": "생성곡이 원곡 계열의 뉘앙스를 담는가 Y/N (매칭 시스템 실효성 = τ 경계 판정)",
+  "songs": [
+    {
+      "pos": 1, "run": 6, "track_id": 77, "original": "Raga Jog — Ravi Shankar (World Music)", "mean_vec": 0.445, "stratum": "저스코어(코퍼스 공백 의심)",
+      "title": "TAU06 라가의 재구성",
+      "sp": "Classical chamber music featuring a violin and piano duo. Tempo is 72 BPM. 4/4 time signature. A clean, fingerpicked acoustic guitar and a warm electric bass provide the harmonic core. A secondary cello layer provides a low-frequency drone. Clean electric guitar plays syncopated, jazzy chords with a slight chorus effect. Subtle digital percussion clicks and shakers provide high-frequency texture. The arrangement is sparse and intimate. The production is clean with minimal reverb, emphasizing the intimate, live-band feel. Instrumental.",
+      "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+    },
+    {
+      "pos": 2, "run": 7, "track_id": 96, "original": "Nangs — Tame Impala (Contemporary Instrumental)", "mean_vec": 0.447, "stratum": "저스코어(코퍼스 공백 의심)",
+      "title": "TAU07 녹아드는 시간",
+      "sp": "K-Pop ballad with jazz-pop influences. 4/4 time signature. Subtle, atmospheric synth pads provide harmonic depth in the background. Half-time feel, filtered synth. Synth pads with sidechain compression. A prominent sidechain compression effect creates a pumping sensation on the synth pads. The production features long-tail plate reverb, creating a wide stereo image. Vinyl crackle and tape hiss. Arpeggiated synth fades with delay. Instrumental.",
+      "bracket": "[Intro]\n\n[Interlude]\n\n[Instrumental]\n\n[Outro]"
+    },
+    {
+      "pos": 3, "run": 8, "track_id": 25, "original": "Chariots of Fire — Vangelis (Film Score/OST)", "mean_vec": 0.698, "stratum": "고스코어(매칭 신뢰 확인용)",
+      "title": "TAU08 승리의 슬로모션",
+      "sp": "Cinematic orchestral score. A steady, mechanical metronome-like click or woodblock sound provides a rhythmic pulse at 72 BPM in 4/4 time. Digital piano and bright synth pads provide harmonic layers. Synthesizer layers include bright, percussive pads and subtle melodic bells. Bright, polyphonic synthesizer pads and staccato synth brass stabs punctuate the arrangement. A steady electronic kick drum provides a rhythmic pulse. A soft, muffled kick drum and subtle electronic percussion provide a steady pulse. Full arrangement, synth brass accents. Triumphant brass fanfare, snare drum rolls, cymbal crashes. Instrumental.",
+      "bracket": "[Intro]\n\n[Theme]\n\n[Bridge]\n\n[Chorus]\n\n[Outro]"
+    },
+    {
+      "pos": 4, "run": 9, "track_id": 27, "original": "Heart of Courage — Two Steps From Hell (Hybrid/Cinematic)", "mean_vec": 0.705, "stratum": "고스코어(매칭 신뢰 확인용)",
+      "title": "TAU09 용기의 불꽃",
+      "sp": "Cinematic orchestral score. 4/4 time signature. The arrangement features staccato violin and viola patterns playing rhythmic ostinatos. Staccato string ostinato enters. Full orchestra, heavy brass, thunderous percussion. Orchestral percussion includes timpani rolls and concert bass drum hits. A cinematic percussion ensemble includes taiko drums, orchestral snares, and metallic hits. Brass hits, driving percussion. Choir sustained pads. The structure is characterized by call-and-response between brass and woodwinds, building to a full orchestral crescendo with sustained brass chords and rapid percussion flourishes. Instrumental.",
+      "bracket": "[Intro]\n\n[Build]\n\n[Climax]\n\n[Outro]"
+    },
+    {
+      "pos": 5, "run": 10, "track_id": 1, "original": "Clair de Lune — Debussy (Classical/Orchestral)", "mean_vec": 0.545, "stratum": "중간대(경계 판정용)",
+      "title": "TAU10 달빛의 몽환",
+      "sp": "Bossa Nova. 4/4 time signature. Key of E Major. The arrangement centers on a grand piano playing rubato block chords and arpeggios. Grand piano playing sustained chords, soft synth pad. A Rhodes-style electric piano provides sustained harmonic pads in the background. The dynamics utilize gradual crescendos and decrescendos throughout the arrangement. The arrangement is sparse and intimate. The production is clean and dry with minimal reverb, emphasizing the acoustic transients of the plucked and bowed strings. Instrumental.",
+      "bracket": "[Intro]\n\n[Theme]\n\n[Bridge]\n\n[Outro]"
+    },
+    {
+      "pos": 6, "run": 11, "track_id": 84, "original": "Solitude — Jinsang (Lo-fi/Neo-classical/Piano)", "mean_vec": 0.545, "stratum": "중간대(경계 판정용)",
+      "title": "TAU11 비 오는 밤의 고독",
+      "sp": "K-Pop Hip-Hop track featuring a rhythmic piano loop playing syncopated jazz chords. 4/4 time signature. Jazzy piano loop, vinyl crackle, light percussion. Atmospheric vinyl crackle and ambient city street noise are layered throughout the arrangement. A soft, muffled kick drum enters on the downbeats. Rhodes piano enters with soft pads. Strings enter, soft legato pads. The arrangement is sparse and intimate. Piano loop fades out with increasing reverb. Instrumental.",
+      "bracket": "[Intro]\n\n[Verse 1]\n\n[Chorus]\n\n[Outro]"
+    },
+    {
+      "pos": 7, "run": 12, "track_id": 37, "original": "Silk Road (Theme) — Kitaro (New Age)", "mean_vec": 0.548, "stratum": "중간대(경계 판정용)",
+      "title": "TAU12 실크로드의 황혼",
+      "sp": "K-Pop and Synth-pop fusion. Key of G Major, 88 BPM, 4/4 time signature. Clean electric guitar, atmospheric synth pads. The arrangement features lush synth pads and subtle string-like textures in the background. Shimmering synth pads and occasional electronic sweeps provide harmonic texture. Filtered synth pads, bass becomes more melodic. The arrangement includes distinct sections marked by filter sweeps and the addition of layered synth leads. A high-pass filter sweep occurs during the transition to the chorus. Filter sweep on bass. Staccato strings, taiko drums enter. Instrumental.",
+      "bracket": "[Intro]\n\n[Verse 1]\n\n[Bridge]\n\n[Outro]"
+    },
+    {
+      "pos": 8, "run": 13, "track_id": 54, "original": "Watermelon Man — Herbie Hancock (Jazz/Funk)", "mean_vec": 0.551, "stratum": "중간대(경계 판정용)",
+      "title": "TAU13 수박 장수의 흥",
+      "sp": "K-Pop Funk-Pop. 4/4 time signature. Funky clean electric guitar, slap bass, tight drums. Slap bass, funk guitar, electronic drums. The arrangement features a clean electric guitar playing bluesy licks and rhythmic chords, a warm electric bass, and a standard drum kit with a crisp snare and prominent hi-hats. Clean electric guitar with light overdrive plays melodic bluesy riff. The bass guitar follows the kick drum with a groovy, staccato feel. Flute motif enters, echoing cello phrases. Full band, driving rhythm. Instrumental.",
+      "bracket": "[Intro]\n\n[Main Riff]\n\n[Bridge]\n\n[Outro]"
+    },
+    {
+      "pos": 9, "run": 14, "track_id": 66, "original": "Love on a Real Train — Tangerine Dream (Electronic/Ambient)", "mean_vec": 0.565, "stratum": "중간대(경계 판정용)",
+      "title": "TAU14 기차 안의 사랑",
+      "sp": "Cinematic orchestral fusion with electronic elements. A synth bass performs a melodic, walking line with a rounded, analog tone. The arrangement features bright, layered synthesizers including a sawtooth lead and shimmering pads. Minimalist arrangement with subtle, atmospheric synth pads providing a low-frequency bed. A legato string section provides harmonic support with slow-moving pads. Distorted synth bass, electronic percussion. Instrumental.",
+      "bracket": "[Intro]\n\n[Verse 1]\n\n[Chorus]\n\n[Bridge]\n\n[Outro]"
+    },
+    {
+      "pos": 10, "run": 15, "track_id": 72, "original": "Surfing with the Alien — Joe Satriani (Guitar Instrumental)", "mean_vec": 0.574, "stratum": "중간대(경계 판정용)",
+      "title": "TAU15 외계인과 서핑",
+      "sp": "Key of G Major, 95 BPM. Distorted electric guitars play palm-muted power chords and syncopated rhythmic riffs. Lead electric guitar enters with high-gain distortion. Distorted electric guitar enters with sustained power chords and feedback swells. Atmospheric synth pads provide harmonic texture in the background. Fast slap bass, driving drum beat, distorted surf guitar riff. Rapid hi-hat rolls. Full band, high-energy distorted guitars, crash cymbals. Feedback swell, rapid drum fill. Instrumental.",
+      "bracket": "[Intro]\n\n[Chorus]\n\n[Bridge]\n\n[Instrumental]\n\n[Outro]"
+    }
+  ]
+}
