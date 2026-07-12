@@ -127,6 +127,41 @@ def fragments(text: str) -> list[str]:
 
 
 FTS_TOKEN = re.compile(r"[A-Za-z0-9]+")
+HANGUL_RE = re.compile(r"[가-힣]")
+KO_GLOSSARY_PATH = ROOT / "data" / "ko_en_mood_glossary.json"
+
+
+def hangul_ratio(s: str) -> float:
+    return len(HANGUL_RE.findall(s)) / max(len(s.replace(" ", "")), 1)
+
+
+def ko_mood_translate(text: str, existing_en: set[str]) -> tuple[list[str], list[str]]:
+    """한국어 무드 텍스트 → 영역변환 (curated 글로서리, attested 타깃만).
+
+    임베딩(all-MiniLM-L6-v2)·FTS 모두 영어 전용이라 한국어 프래그먼트는
+    구조적 저스코어 → 정크 gap. 변환 가능 명사만 영어 무드어로 투입하고
+    나머지는 미등재(NOT_COMPARED)로 반환 — 정직 표기용.
+    """
+    if not KO_GLOSSARY_PATH.exists():
+        return [], []
+    glossary = json.loads(KO_GLOSSARY_PATH.read_text())["map"]
+    try:
+        from kiwipiepy import Kiwi
+    except ImportError:
+        return [], []
+    kiwi = Kiwi()
+    terms, unmapped, seen = [], [], set()
+    for t in kiwi.tokenize(text):
+        if t.tag not in ("NNG", "NNP", "XR", "VA") or len(t.form) < 2 or t.form in seen:
+            continue
+        seen.add(t.form)
+        if t.form in glossary:
+            for en in glossary[t.form]:
+                if en.lower() not in existing_en and en not in terms:
+                    terms.append(en)
+        else:
+            unmapped.append(t.form)
+    return terms, unmapped
 
 
 def fts_query(fragment: str) -> str:
@@ -268,11 +303,23 @@ def load_input(args, conn) -> tuple[str, str, str | None, int | None]:
         row = conn.execute("SELECT * FROM tracks WHERE id=?", (args.track_id,)).fetchone()
         if not row:
             raise SystemExit(f"tracks id {args.track_id} 없음")
-        parts = [row["texture_description"] or "", row["overall_mood"] or ""]
+        # overall_mood(한국어 시놉시스)는 프래그먼트 채널 제외 — 영어전용 임베딩/FTS에서
+        # 구조적 저스코어 → 정크 gap 원인(07-12 실측: 100/100 한국어, EN 등가는 mood_keywords 기보유).
+        # 글로서리 영역변환으로 mood_keywords에 없는 무드어만 보충 투입.
+        parts = [row["texture_description"] or ""]
+        kws: list[str] = []
         try:
-            parts += json.loads(row["mood_keywords"] or "[]")
+            kws = [str(k) for k in json.loads(row["mood_keywords"] or "[]")]
         except json.JSONDecodeError:
             pass
+        parts += kws
+        ko_synopsis = row["overall_mood"] or ""
+        if ko_synopsis and HANGUL_RE.search(ko_synopsis):
+            terms, unmapped = ko_mood_translate(ko_synopsis, {k.lower() for k in kws})
+            parts += terms
+            print(f"[영역변환] overall_mood 시놉시스 제외 · 보충 {len(terms)}어{terms} · 미등재 {len(unmapped)}어{unmapped[:8]}")
+        elif ko_synopsis:
+            parts.append(ko_synopsis)
         for it in conn.execute(
                 "SELECT instrument_name, technique, tone_character FROM instrument_textures "
                 "WHERE track_id=?", (args.track_id,)):
@@ -309,10 +356,15 @@ def cmd_match(args) -> None:
     song_rrf: dict[str, float] = {}
     frag_reports = []
     gaps = []
+    not_compared = []  # 한국어 우세 프래그먼트 — 영역변환 대상, gap 등록 금지
     for i, frag in enumerate(frags):
         fused = rrf_fuse([m1[i], m2[i], m3[i]])
         best_vec = m1[i][0]["score"] if m1[i] else 0.0
         is_gap = best_vec < GAP_VECTOR_TAU and len(m2[i]) < GAP_LEX_MIN_HITS and not m3[i]
+        if is_gap and hangul_ratio(frag) > 0.3:
+            # 영어전용 모델 저스코어는 어휘 공백 증거가 아님 → NOT_COMPARED 정직 표기
+            is_gap = False
+            not_compared.append(frag)
         top3 = fused[:3]
         for item in top3:
             conn.execute(
@@ -374,6 +426,10 @@ def cmd_match(args) -> None:
             lines.append(f"- `{frag}` (best vector {vec:.3f}) → gap_candidates 등록")
     else:
         lines.append("- 없음")
+    if not_compared:
+        lines += ["", "### NOT_COMPARED — 한국어 프래그먼트 (영역변환 미등재, gap 아님)", ""]
+        lines += [f"- `{f}` — 영어전용 임베딩 저스코어는 어휘 공백 증거 아님 (글로서리 등재 검토 대상)"
+                  for f in not_compared]
     lines += ["", "## (e) 음수필터 경고 (suno_does_not_use — SP에 넣지 말 것)", ""]
     lines += [f"- ⚠️ {w}" for w in neg_warns] if neg_warns else ["- 없음"]
     report_path.write_text("\n".join(lines))
