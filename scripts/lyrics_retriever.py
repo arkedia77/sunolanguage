@@ -22,6 +22,9 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 COLLECTION_NAME = "sunolang_lyrics"
+# 별도 계보 — 가사변형(패러프레이즈) 코퍼스. 본코퍼스 불혼입, opt-in 참조 전용.
+# 승격: scripts/promote_lyric_variants_qdrant.py (동일 384dim 다국어 공간)
+VARIANTS_COLLECTION = "sunolang_lyric_variants"
 EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 
 QDRANT_HOST = os.environ.get("QDRANT_HOST", "100.90.35.121")
@@ -130,6 +133,56 @@ def theme_search(query: str, section_tag: str = None, genre: str = None,
 
     return [{
         "score": hit.score,
+        "payload": hit.payload,
+        "point_id": hit.id,
+    } for hit in response.points]
+
+
+def variant_search(query: str, section_tag: str = None, limit: int = 10,
+                   exclude_song_ids: set = None, min_cosine_to_src: float = None,
+                   client=None, model=None) -> list[dict]:
+    """opt-in 가사변형(패러프레이즈) 검색 — 풀고갈(exclude-history 고갈) 완화용 다양성 소스.
+
+    본코퍼스(sunolang_lyrics)와 분리된 별도 계보. 기본 리트리버 경로는 호출하지 않음
+    (엔진이 잔여 풀 고갈 시에만 명시적으로 참조). 반환 dict엔 source='variation'과
+    변형↔원문 추적(source_song_id/original_text)을 붙여 하류가 비-네이티브임을 구분.
+
+    section_tag=변형의 섹션(verse/chorus 등), exclude_song_ids=원곡 song_id 배제,
+    min_cosine_to_src=변형-원문 의미보존 하한(저보존 변형 컷).
+    """
+    from qdrant_client.models import Filter, FieldCondition, MatchValue, Range
+
+    if client is None:
+        client = get_client()
+    if model is None:
+        model = get_model()
+
+    conditions = []
+    if section_tag:
+        conditions.append(FieldCondition(key="section_tag", match=MatchValue(value=section_tag)))
+    if min_cosine_to_src is not None:
+        conditions.append(FieldCondition(key="cosine_to_src", range=Range(gte=min_cosine_to_src)))
+    must_not = []
+    if exclude_song_ids:
+        for sid in exclude_song_ids:
+            must_not.append(FieldCondition(key="source_song_id", match=MatchValue(value=sid)))
+    query_filter = Filter(must=conditions or None, must_not=must_not or None) \
+        if (conditions or must_not) else None
+
+    response = client.query_points(
+        collection_name=VARIANTS_COLLECTION,
+        query=model.encode(query).tolist(),
+        query_filter=query_filter,
+        limit=limit,
+    )
+    return [{
+        "score": hit.score,
+        "source": "variation",
+        "text": hit.payload.get("variant_text"),
+        "source_song_id": hit.payload.get("source_song_id"),
+        "original_text": hit.payload.get("original_text"),
+        "section_tag": hit.payload.get("section_tag"),
+        "cosine_to_src": hit.payload.get("cosine_to_src"),
         "payload": hit.payload,
         "point_id": hit.id,
     } for hit in response.points]
