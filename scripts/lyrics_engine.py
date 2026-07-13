@@ -409,6 +409,7 @@ def cmd_batch(args: list[str]):
 
     import lyrics_retriever
     jaccard_reject = lyrics_retriever.JACCARD_REJECT
+    relaxed = False
     if exclude_history:
         excl_sids, jaccard_reject, relaxed, info = _resolve_history_exclusion(
             lyrics_retriever.JACCARD_REJECT)
@@ -417,7 +418,8 @@ def cmd_batch(args: list[str]):
             print(f"  [exclude-history] ⚠ 풀 고갈 — 코퍼스 {info['corpus_n']}곡 중 "
                   f"{info['excluded_all']} 배제 → 잔여 {info['fresh']} < {MIN_FRESH_POOL}. "
                   f"완화모드: 최근 {RECENCY_WINDOW}배치 {info['windowed']}곡만 배제 + "
-                  f"jaccard {lyrics_retriever.JACCARD_REJECT}→{jaccard_reject}")
+                  f"jaccard {lyrics_retriever.JACCARD_REJECT}→{jaccard_reject} + "
+                  f"가사변형 폴백 무장(빈 섹션 한정)")
         else:
             print(f"  [exclude-history] {len(excl_sids)} song_ids loaded "
                   f"(잔여 가용 source {info['fresh']}곡)")
@@ -446,7 +448,8 @@ def cmd_batch(args: list[str]):
                                           batch_used_ids=batch_used_ids,
                                           batch_used_texts=batch_used_texts,
                                           batch_used_song_ids=batch_used_song_ids,
-                                          jaccard_reject=jaccard_reject)
+                                          jaccard_reject=jaccard_reject,
+                                          use_variants=relaxed)
         selected = {}
         metas = []
         bracket_count = 0

@@ -244,7 +244,9 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                             batch_used_ids: set = None,
                             batch_used_texts: set = None,
                             batch_used_song_ids: set = None,
-                            jaccard_reject: float = None) -> dict[str, list[dict]]:
+                            jaccard_reject: float = None,
+                            use_variants: bool = False,
+                            variant_min_cosine: float = 0.85) -> dict[str, list[dict]]:
     from song_forms import get_section_query_hint, classify_genre_group
     from bracket_presets import retrieve_bracket_directives, format_bracket_section
 
@@ -399,6 +401,40 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                 return []
             return candidates[:1] if candidates else []
 
+        def _variant_fill(needs_min_lines: bool):
+            # 풀 고갈 최종 폴백 — 별도 계보(가사변형) 참조. 정규 코퍼스가 신규 라인을
+            # 못 내는 섹션에 한해, 의미보존(cosine_to_src≥임계) 변형을 조립해 빈 섹션을
+            # 방지. song_id=0·source='variation'으로 비-네이티브 표기(원장 오염 없음).
+            from corpus_quality_gate import is_sp_directive
+            cands = variant_search(
+                section_query, section_tag=tag, limit=25,
+                exclude_song_ids=exclude_song_ids or None,
+                min_cosine_to_src=variant_min_cosine, client=client, model=model,
+            )
+            picked, picked_texts = [], set(used_texts)
+            for h in cands:
+                t = (h.get("text") or "").strip()
+                if not t or t in picked_texts or is_sp_directive(t) or _is_lyric_leak(t):
+                    continue
+                if _max_jaccard(t, picked_texts) > jr:
+                    continue
+                picked.append(h)
+                picked_texts.add(t)
+                if not needs_min_lines or len(picked) >= MIN_VERSE_LINES:
+                    break
+            if not picked or (needs_min_lines and len(picked) < MIN_VERSE_LINES):
+                return []  # 코어섹션 1행 방지 불변 유지
+            block = "\n".join((h.get("text") or "").strip() for h in picked)
+            return [{
+                "score": picked[0]["score"],
+                "point_id": None,
+                "payload": {
+                    "text": block, "section_tag": tag, "genre": genre,
+                    "song_id": 0, "source": "variation",
+                    "variant_source_song_ids": [h.get("source_song_id") for h in picked],
+                },
+            }]
+
         combined_exclude = exclude | exclude_song_ids if exclude else (exclude_song_ids or None)
 
         hits = theme_search(
@@ -446,6 +482,10 @@ def match_sp_differentiated(sp_text: str, form: list[str],
                 limit=limit_per_section, client=client, model=model,
             )
             hits = _pick_novel(candidates)
+
+        # 정규 코퍼스 전 폴백 소진 후에도 빈 섹션이면, 완화모드 한정 가사변형 폴백.
+        if not hits and use_variants:
+            hits = _variant_fill(tag in ("verse", "pre_chorus", "bridge"))
 
         results[indexed_key] = hits
 
