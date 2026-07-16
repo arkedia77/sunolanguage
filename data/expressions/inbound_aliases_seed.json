@@ -1,0 +1,703 @@
+{
+ "_provenance": "인바운드 별칭 시드 v0 (2026-07-16). 소스: ①무드맵 C절 치환규칙 ②ko_en_mood_glossary(2026-07-12) ③사전 suno_does_not_use. extra_concepts=별칭 타깃 중 사전 v3.2 상위 원자 밖이지만 lexical index attested 확인분(카운트 근거 명기).",
+ "extra_concepts": [
+  {
+   "suno_term": "tension",
+   "category": "mood",
+   "attested_count": 84,
+   "source": "docs/suno_mood_vocabulary_map.md 실측"
+  },
+  {
+   "suno_term": "aching",
+   "category": "mood",
+   "attested_count": 3,
+   "source": "docs/suno_mood_vocabulary_map.md 실측"
+  },
+  {
+   "suno_term": "smoky",
+   "category": "mood",
+   "attested_count": 3,
+   "source": "docs/suno_mood_vocabulary_map.md 실측"
+  },
+  {
+   "suno_term": "hazy",
+   "category": "mood",
+   "attested_count": 5,
+   "source": "docs/suno_mood_vocabulary_map.md 실측"
+  },
+  {
+   "suno_term": "cold",
+   "category": "mood",
+   "attested_count": 11,
+   "source": "docs/suno_mood_vocabulary_map.md 실측"
+  },
+  {
+   "suno_term": "solitary",
+   "category": "mood",
+   "attested_count": 4,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "lonely",
+   "category": "mood",
+   "attested_count": 2,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "stillness",
+   "category": "mood",
+   "attested_count": 9,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "warmth",
+   "category": "mood",
+   "attested_count": 134,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "love",
+   "category": "mood",
+   "attested_count": 24,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "tears",
+   "category": "mood",
+   "attested_count": 4,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "joyful",
+   "category": "mood",
+   "attested_count": 9,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "peaceful",
+   "category": "mood",
+   "attested_count": 6,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "inner",
+   "category": "mood",
+   "attested_count": 11,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "memory",
+   "category": "mood",
+   "attested_count": 18,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "future",
+   "category": "mood",
+   "attested_count": 11,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "journey",
+   "category": "mood",
+   "attested_count": 5,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "pure",
+   "category": "mood",
+   "attested_count": 14,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "vast",
+   "category": "mood",
+   "attested_count": 3,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "soul",
+   "category": "mood",
+   "attested_count": 48,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "groove",
+   "category": "mood",
+   "attested_count": 321,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "grand",
+   "category": "mood",
+   "attested_count": 242,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "meditative",
+   "category": "mood",
+   "attested_count": 23,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "hopeful",
+   "category": "mood",
+   "attested_count": 5,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "tender",
+   "category": "mood",
+   "attested_count": 41,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "gentle",
+   "category": "mood",
+   "attested_count": 135,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "hypnotic",
+   "category": "mood",
+   "attested_count": 7,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "triumphant",
+   "category": "mood",
+   "attested_count": 12,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "longing",
+   "category": "mood",
+   "attested_count": 10,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "blues",
+   "category": "genre",
+   "attested_count": 5,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "jazz",
+   "category": "genre",
+   "attested_count": 466,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  },
+  {
+   "suno_term": "sacred",
+   "category": "mood",
+   "attested_count": 2,
+   "source": "ko_en_mood_glossary _target_attestation (lexical_index v3.2)"
+  }
+ ],
+ "aliases": [
+  {
+   "alias_text": "suspenseful",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "tension",
+   "replacement_note": "tension(84) + dissonant / ominous(2) drone",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "foreboding",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "tension",
+   "replacement_note": "tension(84) + dissonant / ominous(2) drone",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "sinister",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "dark",
+   "replacement_note": "dark(55) + menacing(2) / minor key",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "grim",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "dark",
+   "replacement_note": "dark(55) + menacing(2) / minor key",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "bleak",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "dark",
+   "replacement_note": "dark(55) + menacing(2) / minor key",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "desperate",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "aching",
+   "replacement_note": "aching(3) + urgent(7) / despairing(2)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "hopeless",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "aching",
+   "replacement_note": "aching(3) + urgent(7) / despairing(2)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "sorrowful",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "melancholic",
+   "replacement_note": "melancholic(32) + grief(8) / mournful(2)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "heartbroken",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "melancholic",
+   "replacement_note": "melancholic(32) + grief(8) / mournful(2)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "desolate",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "melancholic",
+   "replacement_note": "melancholic(32) + grief(8) / mournful(2)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "lonesome",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "melancholic",
+   "replacement_note": "melancholic(32) + grief(8) / mournful(2)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "sensual",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "smoky",
+   "replacement_note": "smoky(3) 음색 + sultry(1)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "seductive",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "smoky",
+   "replacement_note": "smoky(3) 음색 + sultry(1)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "misty",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "hazy",
+   "replacement_note": "hazy(5) + atmospheric",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "foggy",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "hazy",
+   "replacement_note": "hazy(5) + atmospheric",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "tranquil",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "serene",
+   "replacement_note": "serene(14)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "icy",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "cold",
+   "replacement_note": "cold(11)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "dystopian",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "industrial + dark electronic (장르·질감 우회, 직접 대응 attested 원자 없음)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "futuristic",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "industrial + dark electronic (장르·질감 우회, 직접 대응 attested 원자 없음)",
+   "source": "suno_mood_vocabulary_map.md C절"
+  },
+  {
+   "alias_text": "고독",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "solitary",
+   "replacement_note": "대응 attested: solitary(4), lonely(2)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "고요",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "serene",
+   "replacement_note": "대응 attested: serene(13), stillness(9)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "따뜻",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "warmth",
+   "replacement_note": "대응 attested: warmth(134), gentle(135)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "사랑",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "love",
+   "replacement_note": "대응 attested: love(24)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "슬픔",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "melancholic",
+   "replacement_note": "대응 attested: melancholic(32)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "눈물",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "tears",
+   "replacement_note": "대응 attested: tears(4)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "환희",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "joyful",
+   "replacement_note": "대응 attested: joyful(9)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "기쁨",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "joyful",
+   "replacement_note": "대응 attested: joyful(9)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "평화",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "peaceful",
+   "replacement_note": "대응 attested: peaceful(6)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "어둠",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "dark",
+   "replacement_note": "대응 attested: dark(55)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "내면",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "inner",
+   "replacement_note": "대응 attested: inner(11)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "기억",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "memory",
+   "replacement_note": "대응 attested: memory(18)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "추억",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "nostalgic",
+   "replacement_note": "대응 attested: nostalgic(40)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "향수",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "nostalgic",
+   "replacement_note": "대응 attested: nostalgic(40)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "미래",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "future",
+   "replacement_note": "대응 attested: future(11)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "여정",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "journey",
+   "replacement_note": "대응 attested: journey(5)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "순수",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "pure",
+   "replacement_note": "대응 attested: pure(14)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "광활",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "vast",
+   "replacement_note": "대응 attested: vast(3)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "영혼",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "soul",
+   "replacement_note": "대응 attested: soul(48)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "그루브",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "groove",
+   "replacement_note": "대응 attested: groove(321)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "장엄",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "grand",
+   "replacement_note": "대응 attested: grand(242)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "명상",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "meditative",
+   "replacement_note": "대응 attested: meditative(23)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "몽환",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "dreamy",
+   "replacement_note": "대응 attested: dreamy(19), ethereal(31)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "희망",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "hopeful",
+   "replacement_note": "대응 attested: hopeful(5)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "다정",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "tender",
+   "replacement_note": "대응 attested: tender(41)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "부드러움",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "gentle",
+   "replacement_note": "대응 attested: gentle(135)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "최면",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "hypnotic",
+   "replacement_note": "대응 attested: hypnotic(7)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "승리",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "triumphant",
+   "replacement_note": "대응 attested: triumphant(12)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "그리움",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "longing",
+   "replacement_note": "대응 attested: longing(10)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "블루스",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "blues",
+   "replacement_note": "대응 attested: blues(5)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "재즈",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "jazz",
+   "replacement_note": "대응 attested: jazz(466)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "소울",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "soul",
+   "replacement_note": "대응 attested: soul(48)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "성스러움",
+   "alias_lang": "ko",
+   "kind": "ko_glossary",
+   "target_suno_term": "sacred",
+   "replacement_note": "대응 attested: sacred(2)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "달빛",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "직접 대응 attested 어휘 0건 (glossary NOT_COMPARED — dead-zone 타깃 배제 정책)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "우주",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "직접 대응 attested 어휘 0건 (glossary NOT_COMPARED — dead-zone 타깃 배제 정책)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "마법",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "직접 대응 attested 어휘 0건 (glossary NOT_COMPARED — dead-zone 타깃 배제 정책)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "전투",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "직접 대응 attested 어휘 0건 (glossary NOT_COMPARED — dead-zone 타깃 배제 정책)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "불꽃",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "직접 대응 attested 어휘 0건 (glossary NOT_COMPARED — dead-zone 타깃 배제 정책)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "초월",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "직접 대응 attested 어휘 0건 (glossary NOT_COMPARED — dead-zone 타깃 배제 정책)",
+   "source": "ko_en_mood_glossary.json"
+  },
+  {
+   "alias_text": "구체 코드명 (Am, Dm7, Cmaj7 등)",
+   "alias_lang": "ko",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "코드명 Suno 0회. 'key of X'만 유효(652회)",
+   "source": "suno_dictionary_v3.suno_does_not_use"
+  },
+  {
+   "alias_text": "코드 진행 표기 (II-V-I, I-IV-V 등)",
+   "alias_lang": "ko",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "진행 표기 Suno 0회",
+   "source": "suno_dictionary_v3.suno_does_not_use"
+  },
+  {
+   "alias_text": "다이나믹 마킹 (p/mp/mf/f/ff)",
+   "alias_lang": "ko",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "다이나믹 마킹 Suno 0회",
+   "source": "suno_dictionary_v3.suno_does_not_use"
+  },
+  {
+   "alias_text": "mastering 용어",
+   "alias_lang": "ko",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "mastering 슬롯 전체 corpus 2건. SP에 넣지 말 것",
+   "source": "suno_dictionary_v3.suno_does_not_use"
+  },
+  {
+   "alias_text": "감정 브래킷 태그 ([기분],[감정] 등)",
+   "alias_lang": "ko",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "브래킷은 악기/보컬/섹션만. 감정 브래킷 Suno 0회",
+   "source": "suno_dictionary_v3.suno_does_not_use"
+  }
+ ]
+}

@@ -1,0 +1,672 @@
+{
+ "group": "g1_instrument_drums",
+ "authored_at": "2026-07-16",
+ "entries": [
+  {
+   "suno_term": "electric bass",
+   "music_theory_en": "electric bass guitar (solid-body bass guitar, typically 4-string, foundational low-register rhythm section instrument)",
+   "plain_ko": "일렉트릭 베이스 기타 — 곡의 낮은 음역을 묵직하게 받치는 저음 현악기",
+   "plain_en": "electric bass guitar — the deep low-end instrument holding down the groove",
+   "llm_prompt": "electric bass",
+   "tags": ["instrument", "bass", "electric", "rhythm-section"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "electric guitar",
+   "music_theory_en": "electric guitar (amplified solid- or hollow-body guitar, six-string, core instrument of rock/pop/blues idioms)",
+   "plain_ko": "일렉트릭 기타 — 앰프로 소리를 키워 연주하는 전기 기타, 록·팝의 대표 악기",
+   "plain_en": "electric guitar — the amplified guitar sound at the heart of rock and pop",
+   "llm_prompt": "electric guitar",
+   "tags": ["instrument", "guitar", "electric"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "clean electric guitar",
+   "music_theory_en": "clean electric guitar (electric guitar with an undistorted amplifier tone, clear and transparent timbre)",
+   "plain_ko": "클린 톤 일렉트릭 기타 — 왜곡 없이 맑고 투명하게 울리는 전기 기타 소리",
+   "plain_en": "clean electric guitar — a clear, crisp electric guitar tone with no distortion",
+   "llm_prompt": "clean electric guitar",
+   "tags": ["instrument", "guitar", "electric", "clean-tone"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "acoustic guitar",
+   "music_theory_en": "acoustic guitar (hollow-body guitar producing sound acoustically, steel- or nylon-string)",
+   "plain_ko": "어쿠스틱 기타 — 전기 없이 울림통으로 소리를 내는 따뜻하고 자연스러운 통기타",
+   "plain_en": "acoustic guitar — the warm, natural, unplugged guitar sound",
+   "llm_prompt": "acoustic guitar",
+   "tags": ["instrument", "guitar", "acoustic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "synthesizer",
+   "music_theory_en": "synthesizer (electronic instrument generating sound via oscillators/samples, analog or digital synthesis)",
+   "plain_ko": "신시사이저 — 전자 회로로 다양한 음색을 만들어내는 전자 건반 악기",
+   "plain_en": "synthesizer — an electronic keyboard instrument creating a wide range of artificial sounds",
+   "llm_prompt": "synthesizer",
+   "tags": ["instrument", "synth", "electronic", "keys"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "guitar",
+   "music_theory_en": "guitar (six-string fretted chordophone, unspecified whether acoustic or electric)",
+   "plain_ko": "기타 — 여섯 줄을 튕겨 연주하는 대표적인 현악기 (통기타/전기 기타 구분 없음)",
+   "plain_en": "guitar — the familiar six-string strummed or picked instrument",
+   "llm_prompt": "guitar",
+   "tags": ["instrument", "guitar", "strings"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "piano",
+   "music_theory_en": "piano (acoustic keyboard instrument with hammered strings, 88-key standard range)",
+   "plain_ko": "피아노 — 건반을 누르면 해머가 현을 때려 울리는 익숙한 건반 악기",
+   "plain_en": "piano — the classic keyboard instrument with hammered strings",
+   "llm_prompt": "piano",
+   "tags": ["instrument", "piano", "keys", "acoustic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "bass guitar",
+   "music_theory_en": "bass guitar (electric bass, low-register four-string guitar-family instrument anchoring harmony and rhythm)",
+   "plain_ko": "베이스 기타 — 곡의 밑바닥을 두툼하게 채우는 낮은 음의 기타",
+   "plain_en": "bass guitar — the low, thick-toned guitar that anchors the rhythm",
+   "llm_prompt": "bass guitar",
+   "tags": ["instrument", "bass", "guitar", "rhythm-section"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "synth pad",
+   "music_theory_en": "synth pad (sustained, slowly-evolving synthesizer texture used as harmonic bed/background layer)",
+   "plain_ko": "신스 패드 — 배경에 은은하게 깔리는 길고 부드러운 신시사이저 화음",
+   "plain_en": "synth pad — a soft, sustained synthesizer wash filling the background",
+   "llm_prompt": "warm synth pad",
+   "tags": ["instrument", "synth", "pad", "texture", "electronic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "synth bass",
+   "music_theory_en": "synth bass (bass line produced by a synthesizer, common in electronic, funk, and pop production)",
+   "plain_ko": "신스 베이스 — 신시사이저로 만든 전자적인 저음 베이스 소리",
+   "plain_en": "synth bass — a deep electronic bass sound made with a synthesizer",
+   "llm_prompt": "synth bass",
+   "tags": ["instrument", "synth", "bass", "electronic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "slap bass",
+   "music_theory_en": "slap bass (electric bass played with slap-and-pop technique — thumb strikes and finger pops producing percussive attack)",
+   "plain_ko": "슬랩 베이스 — 엄지로 줄을 때리고 손가락으로 튕겨 통통 튀는 타악기 같은 베이스 주법",
+   "plain_en": "slap bass — a funky, percussive bass style with thumb slaps and finger pops",
+   "llm_prompt": "funky slap bass",
+   "tags": ["instrument", "bass", "technique", "funk"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "fingerpicked acoustic guitar",
+   "music_theory_en": "fingerpicked acoustic guitar (acoustic guitar played fingerstyle, plucking individual strings rather than strumming)",
+   "plain_ko": "핑거피킹 어쿠스틱 기타 — 피크 없이 손가락으로 줄을 하나하나 뜯어 섬세하게 연주하는 통기타",
+   "plain_en": "fingerpicked acoustic guitar — an acoustic guitar plucked gently string by string with the fingers",
+   "llm_prompt": "fingerpicked acoustic guitar",
+   "tags": ["instrument", "guitar", "acoustic", "fingerstyle"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "strings",
+   "music_theory_en": "strings (bowed string section — violins, violas, cellos, basses — as ensemble or sampled/synthesized string layer)",
+   "plain_ko": "스트링(현악) — 바이올린·첼로 등 활로 켜는 현악기들이 함께 울리는 풍성한 소리",
+   "plain_en": "strings — the lush, sweeping sound of bowed instruments like violins and cellos",
+   "llm_prompt": "string section",
+   "tags": ["instrument", "strings", "orchestral", "ensemble"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "pad",
+   "music_theory_en": "pad (sustained ambient harmonic layer, typically synthesized, providing background texture)",
+   "plain_ko": "패드 — 곡 뒤에 안개처럼 깔리는 길고 부드러운 배경 음향",
+   "plain_en": "pad — a soft, sustained background layer of sound, like a sonic cushion",
+   "llm_prompt": "ambient pad",
+   "tags": ["instrument", "pad", "texture", "synth"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "grand piano",
+   "music_theory_en": "grand piano (full-size horizontal-frame acoustic piano with rich resonance and wide dynamic range)",
+   "plain_ko": "그랜드 피아노 — 콘서트홀에서 쓰는 크고 웅장한 울림의 피아노",
+   "plain_en": "grand piano — the big, rich-sounding concert piano",
+   "llm_prompt": "grand piano",
+   "tags": ["instrument", "piano", "keys", "acoustic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "brass section",
+   "music_theory_en": "brass section (ensemble of brass instruments — trumpets, trombones, saxophones in horn-section usage — playing arranged parts)",
+   "plain_ko": "브라스 섹션 — 트럼펫·트롬본 등 금관 악기들이 함께 빵빵하게 터뜨리는 소리",
+   "plain_en": "brass section — a group of horns punching out bright, powerful bursts together",
+   "llm_prompt": "brass section",
+   "tags": ["instrument", "brass", "horns", "ensemble"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "distorted electric guitar",
+   "music_theory_en": "distorted electric guitar (electric guitar through distortion/high-gain amplification, saturated and aggressive timbre)",
+   "plain_ko": "디스토션 일렉트릭 기타 — 소리를 일부러 찌그러뜨려 거칠고 강렬하게 울리는 전기 기타",
+   "plain_en": "distorted electric guitar — a gritty, aggressive, fuzzed-up electric guitar sound",
+   "llm_prompt": "distorted electric guitar",
+   "tags": ["instrument", "guitar", "electric", "distortion", "rock"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "violin",
+   "music_theory_en": "violin (highest-pitched bowed string instrument of the orchestral string family)",
+   "plain_ko": "바이올린 — 활로 켜서 높고 가늘게 노래하듯 우는 현악기",
+   "plain_en": "violin — the high, singing bowed string instrument",
+   "llm_prompt": "violin",
+   "tags": ["instrument", "strings", "orchestral", "bowed"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "cello",
+   "music_theory_en": "cello (violoncello — tenor/bass-register bowed string instrument, warm and vocal in character)",
+   "plain_ko": "첼로 — 사람 목소리처럼 깊고 따뜻하게 울리는 큰 현악기",
+   "plain_en": "cello — the deep, warm bowed string instrument close to a human voice",
+   "llm_prompt": "cello",
+   "tags": ["instrument", "strings", "orchestral", "bowed"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "sub-bass",
+   "music_theory_en": "sub-bass (very low frequency content, roughly 20–60 Hz, felt as physical rumble beneath the bass line)",
+   "plain_ko": "서브 베이스 — 귀보다 몸으로 먼저 느껴지는 아주 낮게 웅웅 울리는 초저음",
+   "plain_en": "sub-bass — the ultra-low rumble you feel in your chest more than hear",
+   "llm_prompt": "deep sub-bass",
+   "tags": ["instrument", "bass", "sub", "electronic", "low-end"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "upright bass",
+   "music_theory_en": "upright bass (double bass / contrabass played standing, typically pizzicato in jazz, woody acoustic low end)",
+   "plain_ko": "업라이트 베이스(콘트라베이스) — 재즈에서 손가락으로 뚱뚱 튕기는 크고 나무 울림이 있는 저음 현악기",
+   "plain_en": "upright bass — the big standing acoustic bass with a woody, plucked jazz sound",
+   "llm_prompt": "upright bass",
+   "tags": ["instrument", "bass", "acoustic", "jazz"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "electric piano",
+   "music_theory_en": "electric piano (electromechanical keyboard, e.g. Rhodes/Wurlitzer, bell-like mellow tone distinct from acoustic piano)",
+   "plain_ko": "일렉트릭 피아노 — 일반 피아노보다 몽글몽글하고 종소리 같은 느낌의 전기 건반",
+   "plain_en": "electric piano — a mellow, bell-like keyboard sound, softer than a regular piano",
+   "llm_prompt": "electric piano",
+   "tags": ["instrument", "keys", "electric", "piano"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "nylon-string acoustic guitar",
+   "music_theory_en": "nylon-string acoustic guitar (classical/Spanish guitar with nylon strings, soft rounded attack, common in bossa nova and classical repertoire)",
+   "plain_ko": "나일론 줄 어쿠스틱 기타(클래식 기타) — 부드럽고 동그란 음색의 통기타, 보사노바에서 자주 들리는 소리",
+   "plain_en": "nylon-string acoustic guitar — the soft, rounded classical guitar sound heard in bossa nova",
+   "llm_prompt": "nylon-string classical guitar",
+   "tags": ["instrument", "guitar", "acoustic", "nylon", "classical"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "acoustic piano",
+   "music_theory_en": "acoustic piano (unamplified piano — grand or upright — as opposed to electric or digital piano)",
+   "plain_ko": "어쿠스틱 피아노 — 전자음이 아닌 진짜 현이 울리는 자연스러운 피아노 소리",
+   "plain_en": "acoustic piano — the natural sound of a real piano, not an electronic one",
+   "llm_prompt": "acoustic piano",
+   "tags": ["instrument", "piano", "keys", "acoustic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "fretless bass",
+   "music_theory_en": "fretless bass (electric bass without frets, allowing continuous glissando and a singing 'mwah' articulation)",
+   "plain_ko": "프렛리스 베이스 — 지판에 칸막이(프렛)가 없어 음이 미끄러지듯 노래하는 부드러운 베이스",
+   "plain_en": "fretless bass — a smooth bass that slides between notes with a singing, gliding tone",
+   "llm_prompt": "fretless bass",
+   "tags": ["instrument", "bass", "electric", "fretless"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "brass",
+   "music_theory_en": "brass (brass instrument family — trumpet, trombone, horn, tuba — collectively or as arranged layer)",
+   "plain_ko": "브라스(금관) — 트럼펫·트롬본처럼 금속 관을 불어 내는 밝고 힘찬 소리",
+   "plain_en": "brass — the bright, bold sound of horns like trumpets and trombones",
+   "llm_prompt": "brass",
+   "tags": ["instrument", "brass", "horns"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "string pad",
+   "music_theory_en": "string pad (sustained string-ensemble texture, often synthesized or sampled, used as harmonic background)",
+   "plain_ko": "스트링 패드 — 현악기 소리가 배경에 길게 은은하게 깔리는 음향",
+   "plain_en": "string pad — a soft, sustained bed of string sounds in the background",
+   "llm_prompt": "lush string pad",
+   "tags": ["instrument", "strings", "pad", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rhodes",
+   "music_theory_en": "Rhodes electric piano (Fender Rhodes — tine-based electromechanical keyboard with warm bell-like tone, staple of jazz/soul/R&B)",
+   "plain_ko": "로즈 (일렉트릭 피아노) — 재즈·소울에서 자주 쓰는, 따뜻하고 몽환적인 종소리 느낌의 전기 건반",
+   "plain_en": "Rhodes — the warm, dreamy bell-like electric piano heard in jazz and soul",
+   "llm_prompt": "Rhodes electric piano",
+   "tags": ["instrument", "keys", "electric", "rhodes", "jazz"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "fingerstyle acoustic guitar",
+   "music_theory_en": "fingerstyle acoustic guitar (acoustic guitar played with fingers/thumb rather than a pick, combining bass, harmony and melody)",
+   "plain_ko": "핑거스타일 어쿠스틱 기타 — 손가락만으로 반주와 멜로디를 동시에 엮어 연주하는 통기타",
+   "plain_en": "fingerstyle acoustic guitar — an acoustic guitar played with the fingers, weaving melody and accompaniment together",
+   "llm_prompt": "fingerstyle acoustic guitar",
+   "tags": ["instrument", "guitar", "acoustic", "fingerstyle"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "flute",
+   "music_theory_en": "flute (transverse concert flute — high-register woodwind with airy, pure tone)",
+   "plain_ko": "플루트 — 맑고 투명하게 바람이 스치듯 울리는 높은 음의 관악기",
+   "plain_en": "flute — the airy, pure, high woodwind sound",
+   "llm_prompt": "flute",
+   "tags": ["instrument", "woodwind", "flute"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "arpeggiated electric guitar",
+   "music_theory_en": "arpeggiated electric guitar (electric guitar playing broken chords note-by-note, ringing arpeggio figures)",
+   "plain_ko": "아르페지오 일렉트릭 기타 — 화음을 한 음씩 또르르 펼쳐 반짝이듯 연주하는 전기 기타",
+   "plain_en": "arpeggiated electric guitar — an electric guitar rippling through chords one note at a time",
+   "llm_prompt": "arpeggiated electric guitar",
+   "tags": ["instrument", "guitar", "electric", "arpeggio"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "saxophone",
+   "music_theory_en": "saxophone (single-reed conical woodwind, alto/tenor most common, expressive vocal-like timbre central to jazz)",
+   "plain_ko": "색소폰 — 재즈에서 흐느끼듯 감미롭게 노래하는 금빛 관악기",
+   "plain_en": "saxophone — the smooth, expressive horn that sings in jazz",
+   "llm_prompt": "saxophone",
+   "tags": ["instrument", "woodwind", "saxophone", "jazz"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "palm-muted electric guitar",
+   "music_theory_en": "palm-muted electric guitar (picking-hand palm dampens strings at the bridge, producing tight percussive 'chug')",
+   "plain_ko": "팜 뮤트 일렉트릭 기타 — 손바닥으로 줄을 살짝 막아 둔탁하게 척척 끊어 치는 전기 기타 주법",
+   "plain_en": "palm-muted electric guitar — a tight, chugging guitar sound made by damping the strings with the palm",
+   "llm_prompt": "palm-muted electric guitar",
+   "tags": ["instrument", "guitar", "electric", "palm-mute", "technique"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "harmonica",
+   "music_theory_en": "harmonica (free-reed mouth organ, diatonic or chromatic, idiomatic in blues, folk and country)",
+   "plain_ko": "하모니카 — 입으로 불고 빨아 애잔하게 우는 작은 관악기, 블루스·포크의 단골 소리",
+   "plain_en": "harmonica — the small mouth-blown reed instrument with a wailing blues sound",
+   "llm_prompt": "harmonica",
+   "tags": ["instrument", "harmonica", "blues", "folk"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "vibraphone",
+   "music_theory_en": "vibraphone (metal-bar mallet percussion with motor-driven vibrato and sustain pedal, cool jazz staple)",
+   "plain_ko": "비브라폰 — 금속 건반을 채로 두드려 몽롱하게 울렁이며 반짝이는 소리를 내는 타악기",
+   "plain_en": "vibraphone — shimmering, dreamy metal bars struck with mallets, a cool jazz sound",
+   "llm_prompt": "vibraphone",
+   "tags": ["instrument", "percussion", "mallet", "jazz"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "trumpet",
+   "music_theory_en": "trumpet (highest-register standard brass instrument, brilliant and piercing tone)",
+   "plain_ko": "트럼펫 — 높고 화려하게 쭉 뻗어 나가는 금관 악기",
+   "plain_en": "trumpet — the bright, bold, high brass horn",
+   "llm_prompt": "trumpet",
+   "tags": ["instrument", "brass", "trumpet"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "808 bass",
+   "music_theory_en": "808 bass (sustained sub-bass derived from the Roland TR-808 kick drum, tuned and elongated; foundation of trap/hip-hop low end)",
+   "plain_ko": "808 베이스 — 힙합·트랩에서 쿵 하고 길게 웅웅 늘어지는 전자 초저음",
+   "plain_en": "808 bass — the long, booming electronic sub-bass that drives trap and hip-hop",
+   "llm_prompt": "booming 808 bass",
+   "tags": ["instrument", "bass", "808", "electronic", "hip-hop"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "clarinet",
+   "music_theory_en": "clarinet (single-reed cylindrical woodwind with wide range, dark chalumeau to bright clarion registers)",
+   "plain_ko": "클라리넷 — 부드럽고 둥글게, 때로는 구슬프게 울리는 검은 목관 악기",
+   "plain_en": "clarinet — the smooth, rounded woodwind with a warm, sometimes mournful voice",
+   "llm_prompt": "clarinet",
+   "tags": ["instrument", "woodwind", "clarinet"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "accordion",
+   "music_theory_en": "accordion (bellows-driven free-reed keyboard instrument, idiomatic in folk, tango and musette)",
+   "plain_ko": "아코디언 — 주름상자를 밀고 당기며 구성지게 울리는 손풍금",
+   "plain_en": "accordion — the squeezebox with a nostalgic, folky wheeze",
+   "llm_prompt": "accordion",
+   "tags": ["instrument", "accordion", "folk", "reed"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "steel-string acoustic guitar",
+   "music_theory_en": "steel-string acoustic guitar (flat-top acoustic guitar with steel strings, bright ringing tone; standard folk/pop acoustic)",
+   "plain_ko": "스틸 줄 어쿠스틱 기타 — 쇠줄 특유의 쨍하고 밝게 울리는, 흔히 떠올리는 통기타 소리",
+   "plain_en": "steel-string acoustic guitar — the bright, ringing acoustic guitar sound of folk and pop",
+   "llm_prompt": "steel-string acoustic guitar",
+   "tags": ["instrument", "guitar", "acoustic", "steel-string"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "orchestral strings",
+   "music_theory_en": "orchestral strings (full orchestral string section — violins I/II, violas, cellos, double basses — in ensemble writing)",
+   "plain_ko": "오케스트라 현악 — 영화음악처럼 웅장하고 풍성하게 물결치는 대규모 현악 합주",
+   "plain_en": "orchestral strings — the grand, sweeping sound of a full string orchestra",
+   "llm_prompt": "orchestral strings",
+   "tags": ["instrument", "strings", "orchestral", "ensemble", "cinematic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "harp",
+   "music_theory_en": "harp (concert pedal harp — plucked multi-string instrument, characteristic glissandi and arpeggios)",
+   "plain_ko": "하프 — 수많은 줄을 손끝으로 쓸어내려 물방울처럼 반짝이는 소리를 내는 큰 현악기",
+   "plain_en": "harp — the sparkling, cascading plucked strings, like ripples of sound",
+   "llm_prompt": "harp",
+   "tags": ["instrument", "harp", "strings", "orchestral"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "overdriven electric guitar",
+   "music_theory_en": "overdriven electric guitar (electric guitar with moderate tube-style overdrive — warm saturation, less extreme than distortion)",
+   "plain_ko": "오버드라이브 일렉트릭 기타 — 디스토션보다 부드럽게, 따뜻하게 살짝 찌그러진 전기 기타 소리",
+   "plain_en": "overdriven electric guitar — a warm, slightly gritty electric guitar tone, milder than full distortion",
+   "llm_prompt": "overdriven electric guitar",
+   "tags": ["instrument", "guitar", "electric", "overdrive", "rock"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "glockenspiel",
+   "music_theory_en": "glockenspiel (small metal-bar mallet percussion, very high register, bright bell-like tone)",
+   "plain_ko": "글로켄슈필(철금) — 작은 쇠 건반을 두드려 딸랑딸랑 맑은 종소리를 내는 타악기",
+   "plain_en": "glockenspiel — tiny metal bars that ring out high, twinkling bell tones",
+   "llm_prompt": "glockenspiel",
+   "tags": ["instrument", "percussion", "mallet", "bells"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "fiddle",
+   "music_theory_en": "fiddle (violin in folk/country/bluegrass idiom — same instrument, vernacular playing style with drones and slides)",
+   "plain_ko": "피들 — 컨트리·포크에서 흥겹게 켜는 민속풍 바이올린",
+   "plain_en": "fiddle — the violin played in a lively folk or country style",
+   "llm_prompt": "fiddle",
+   "tags": ["instrument", "strings", "fiddle", "folk", "country"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "muted trumpet",
+   "music_theory_en": "muted trumpet (trumpet with mute — harmon, cup or straight — producing softened, buzzy or distant timbre; noir-jazz idiom)",
+   "plain_ko": "뮤트 트럼펫 — 나팔 입구를 막아 가늘고 아련하게 우는 트럼펫, 고전 재즈의 밤 분위기 소리",
+   "plain_en": "muted trumpet — a trumpet softened by a mute, giving a thin, distant, smoky-jazz sound",
+   "llm_prompt": "muted trumpet",
+   "tags": ["instrument", "brass", "trumpet", "muted", "jazz"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "mandolin",
+   "music_theory_en": "mandolin (small plucked chordophone with four double courses, tremolo picking idiomatic; folk/bluegrass staple)",
+   "plain_ko": "만돌린 — 작은 몸통에서 또랑또랑 트레몰로로 떨리며 울리는 현악기",
+   "plain_en": "mandolin — the small, bright plucked instrument with a fluttering tremolo sound",
+   "llm_prompt": "mandolin",
+   "tags": ["instrument", "strings", "mandolin", "folk"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "log drum",
+   "music_theory_en": "log drum (slit drum — hollowed wooden idiophone; in modern production, the deep pitched percussive bass of amapiano)",
+   "plain_ko": "로그 드럼 — 속을 판 나무통을 두드리는 둥둥 울리는 타악기, 아마피아노 장르의 통통 튀는 저음으로 유명",
+   "plain_en": "log drum — a hollow wooden drum with a deep, bouncy pitched thump, famous in amapiano",
+   "llm_prompt": "amapiano log drum",
+   "tags": ["instrument", "percussion", "drums", "amapiano"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "banjo",
+   "music_theory_en": "banjo (round-bodied fretted string instrument with drum-like membrane head, bright twangy attack; bluegrass/folk staple)",
+   "plain_ko": "밴조 — 컨트리·블루그래스에서 챙챙 튀는 금속성 울림으로 빠르게 튕기는 현악기",
+   "plain_en": "banjo — the twangy, rattling plucked instrument of bluegrass and country",
+   "llm_prompt": "banjo",
+   "tags": ["instrument", "strings", "banjo", "bluegrass", "folk"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "whistle",
+   "music_theory_en": "whistle (either human whistling as melodic element, or tin/penny whistle — simple high-pitched duct flute of Celtic folk)",
+   "plain_ko": "휘슬 — 휘파람 소리 혹은 켈트 음악의 가늘고 높은 피리 소리",
+   "plain_en": "whistle — a light, high whistling sound, either human whistling or a small folk flute",
+   "llm_prompt": "whistle melody",
+   "tags": ["instrument", "whistle", "woodwind", "folk"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "keys",
+   "music_theory_en": "keys (keyboard instruments collectively — piano, electric piano, organ, synths — as a generic rhythm-section role)",
+   "plain_ko": "키보드 계열 악기 — 피아노·전자 건반 등을 뭉뚱그려 부르는 말",
+   "plain_en": "keys — a catch-all for keyboard instruments like piano and electric keyboards",
+   "llm_prompt": "keyboards",
+   "tags": ["instrument", "keys", "keyboard", "generic"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "bodhrán",
+   "music_theory_en": "bodhrán (Irish frame drum played with a double-ended tipper/beater, pitch modulated by hand pressure on the skin)",
+   "plain_ko": "바우런 — 아일랜드 민속 음악에서 한 손으로 채를 굴려 둥둥 치는 납작한 북",
+   "plain_en": "bodhrán — the Irish frame drum with a rolling, earthy thump",
+   "llm_prompt": "bodhrán frame drum",
+   "tags": ["instrument", "percussion", "drums", "celtic", "folk"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "strummed acoustic guitar",
+   "music_theory_en": "strummed acoustic guitar (acoustic guitar playing full chords with rhythmic strumming patterns)",
+   "plain_ko": "스트러밍 어쿠스틱 기타 — 줄을 위아래로 쓸어내려 착착 리듬을 만드는 통기타 반주",
+   "plain_en": "strummed acoustic guitar — an acoustic guitar sweeping rhythmic chords up and down",
+   "llm_prompt": "strummed acoustic guitar",
+   "tags": ["instrument", "guitar", "acoustic", "strumming"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "guiro",
+   "music_theory_en": "guiro (Latin percussion — notched gourd scraped with a stick, producing ratchet-like rasp; idiomatic in cumbia/salsa)",
+   "plain_ko": "귀로 — 홈이 파인 통을 막대로 긁어 드르륵드르륵 소리를 내는 라틴 타악기",
+   "plain_en": "guiro — the Latin percussion scraper making a ribbed 'zzzt-zzzt' rasp",
+   "llm_prompt": "guiro",
+   "tags": ["instrument", "percussion", "latin", "scraper"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "reese bass",
+   "music_theory_en": "Reese bass (detuned-sawtooth synth bass with thick phasing movement, originated by Kevin 'Reese' Saunderson; staple of drum & bass and dubstep)",
+   "plain_ko": "리스 베이스 — 드럼앤베이스에서 쓰는, 여러 겹이 서로 어긋나며 으르렁대듯 꿈틀거리는 전자 저음",
+   "plain_en": "Reese bass — a thick, growling, swirling electronic bass heard in drum & bass",
+   "llm_prompt": "reese bass",
+   "tags": ["instrument", "bass", "synth", "electronic", "dnb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "drums",
+   "music_theory_en": "drums (drum kit / drum set — combined kick, snare, toms, hi-hat and cymbals played by one drummer; core rhythm foundation)",
+   "plain_ko": "드럼 — 곡의 박자를 이끄는 북과 심벌즈 세트",
+   "plain_en": "drums — the drum kit driving the beat of the song",
+   "llm_prompt": "drums",
+   "tags": ["instrument", "drums", "percussion", "rhythm-section"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "kick drum",
+   "music_theory_en": "kick drum (bass drum of the kit, played with a foot pedal; lowest drum, marks the primary pulse)",
+   "plain_ko": "킥 드럼(베이스 드럼) — 쿵쿵 가슴을 치는 드럼의 가장 낮은 북소리",
+   "plain_en": "kick drum — the deep 'boom' of the drum kit you feel in your chest",
+   "llm_prompt": "punchy kick drum",
+   "tags": ["instrument", "drums", "kick", "percussion"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "snare drum",
+   "music_theory_en": "snare drum (drum with metal snare wires against the bottom head, sharp cracking backbeat voice of the kit)",
+   "plain_ko": "스네어 드럼 — 딱! 하고 날카롭게 끊어 치는, 박자의 2·4박을 담당하는 북",
+   "plain_en": "snare drum — the sharp 'crack' that hits on the backbeat",
+   "llm_prompt": "snare drum",
+   "tags": ["instrument", "drums", "snare", "percussion"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "percussion",
+   "music_theory_en": "percussion (auxiliary percussion instruments beyond the drum kit — shakers, congas, tambourine, etc.)",
+   "plain_ko": "퍼커션 — 드럼 세트 외에 잘그락·통통 다양한 잔소리를 더하는 타악기들",
+   "plain_en": "percussion — the extra rhythmic instruments beyond the drum kit, adding shakes and taps",
+   "llm_prompt": "percussion",
+   "tags": ["instrument", "percussion", "drums", "rhythm"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "hi-hat",
+   "music_theory_en": "hi-hat (pair of cymbals on a pedal-operated stand, played closed/open; primary timekeeping voice of the kit)",
+   "plain_ko": "하이햇 — 칙칙칙 잘게 박자를 새기는 드럼의 겹심벌즈",
+   "plain_en": "hi-hat — the 'tss-tss-tss' cymbals keeping steady time in the beat",
+   "llm_prompt": "hi-hat",
+   "tags": ["instrument", "drums", "cymbal", "hi-hat"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "drum kit",
+   "music_theory_en": "drum kit (drum set — integrated setup of kick, snare, toms, hi-hat and cymbals for one player)",
+   "plain_ko": "드럼 키트 — 킥·스네어·심벌즈가 한 세트로 갖춰진 드럼 세트",
+   "plain_en": "drum kit — the full drum set with kick, snare and cymbals",
+   "llm_prompt": "drum kit",
+   "tags": ["instrument", "drums", "percussion", "rhythm-section"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "shaker",
+   "music_theory_en": "shaker (handheld percussion filled with granular material, producing steady sixteenth-note 'chick' patterns)",
+   "plain_ko": "셰이커 — 흔들면 착착착 모래알 굴리는 소리로 잔박자를 채우는 타악기",
+   "plain_en": "shaker — the soft 'chick-chick-chick' of sand or beads shaken in rhythm",
+   "llm_prompt": "shaker",
+   "tags": ["instrument", "percussion", "shaker", "rhythm"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "beat",
+   "music_theory_en": "beat (the rhythmic pattern/groove of a track — in production contexts, the programmed drum track as a whole)",
+   "plain_ko": "비트 — 곡 전체를 끌고 가는 리듬 패턴, 흔히 힙합·전자음악의 드럼 리듬을 뜻함",
+   "plain_en": "beat — the rhythmic groove driving the track, often a programmed drum pattern",
+   "llm_prompt": "drum beat",
+   "tags": ["drums", "rhythm", "groove", "generic"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "crash cymbal",
+   "music_theory_en": "crash cymbal (accent cymbal producing an explosive wash of sound, marks section transitions and downbeats)",
+   "plain_ko": "크래시 심벌 — 콰앙! 하고 터지듯 울려 곡의 전환을 알리는 큰 심벌즈",
+   "plain_en": "crash cymbal — the big 'crash!' that explodes at dramatic moments",
+   "llm_prompt": "crash cymbal",
+   "tags": ["instrument", "drums", "cymbal", "crash"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rimshot",
+   "music_theory_en": "rimshot (snare stroke hitting head and rim simultaneously, producing a loud sharp crack; also loosely used for rim-click sounds)",
+   "plain_ko": "림샷 — 스네어 북면과 테두리를 동시에 때려 딱! 하고 유난히 날카롭게 튀는 소리",
+   "plain_en": "rimshot — an extra-sharp 'crack!' from striking the drum head and rim together",
+   "llm_prompt": "rimshot snare",
+   "tags": ["instrument", "drums", "snare", "technique"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "woodblock",
+   "music_theory_en": "woodblock (slotted hardwood idiophone struck with a stick, dry high-pitched 'tock')",
+   "plain_ko": "우드블록 — 나무토막을 두드려 딱딱 마른 소리를 내는 타악기",
+   "plain_en": "woodblock — a dry, hollow 'tock-tock' from a struck block of wood",
+   "llm_prompt": "woodblock",
+   "tags": ["instrument", "percussion", "woodblock"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "cymbal",
+   "music_theory_en": "cymbal (metal plate idiophone — generic reference covering crash, ride, hi-hat and effects cymbals)",
+   "plain_ko": "심벌즈 — 챙- 하고 금속성으로 길게 울리는 둥근 금속판 타악기",
+   "plain_en": "cymbal — the shimmering metallic 'crash' or 'ping' of a metal disc",
+   "llm_prompt": "cymbal",
+   "tags": ["instrument", "drums", "cymbal", "percussion"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "clap",
+   "music_theory_en": "clap (handclap sample or ensemble handclaps used as backbeat/accent, ubiquitous in electronic and pop production)",
+   "plain_ko": "클랩 — 짝짝 손뼉 치는 소리, 전자음악에서 스네어 대신 박자를 짚는 데 자주 쓰임",
+   "plain_en": "clap — the 'clap-clap' handclap sound marking the beat",
+   "llm_prompt": "handclap",
+   "tags": ["instrument", "percussion", "clap", "electronic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "cowbell",
+   "music_theory_en": "cowbell (handheld or mounted metal bell struck with a stick, dry clanking tone; Latin and funk idiom)",
+   "plain_ko": "카우벨 — 깡깡 울리는 금속 방울 타악기, 라틴·펑크 리듬의 감초",
+   "plain_en": "cowbell — the metallic 'clank-clank' bell that spices up a groove",
+   "llm_prompt": "cowbell",
+   "tags": ["instrument", "percussion", "cowbell", "latin"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "finger snap",
+   "music_theory_en": "finger snap (snapped-finger percussion sound used as a light backbeat, often in place of a snare or clap)",
+   "plain_ko": "핑거 스냅 — 딱딱 손가락 튕기는 소리로 가볍게 박자를 맞추는 효과",
+   "plain_en": "finger snap — the light 'snap-snap' of fingers keeping the beat",
+   "llm_prompt": "finger snaps",
+   "tags": ["instrument", "percussion", "snap", "body-percussion"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "ride cymbal",
+   "music_theory_en": "ride cymbal (large cymbal played with continuous stick patterns, sustained 'ping' timekeeping; jazz ride patterns)",
+   "plain_ko": "라이드 심벌 — 팅-팅-팅 은은하게 이어 치며 박자를 끌고 가는 큰 심벌즈",
+   "plain_en": "ride cymbal — the steady 'ping-ping-ping' cymbal riding along with the beat",
+   "llm_prompt": "ride cymbal",
+   "tags": ["instrument", "drums", "cymbal", "ride"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "tambourine",
+   "music_theory_en": "tambourine (frame drum with metal jingles, shaken or struck; adds bright rhythmic sparkle)",
+   "plain_ko": "탬버린 — 찰랑찰랑 방울 소리로 리듬에 반짝임을 더하는 타악기",
+   "plain_en": "tambourine — the jingling 'ch-ch-ch' shake adding sparkle to the rhythm",
+   "llm_prompt": "tambourine",
+   "tags": ["instrument", "percussion", "tambourine"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "tom",
+   "music_theory_en": "tom (tom-tom — cylindrical drum of the kit without snares, tuned high to low, used for fills and rolling patterns)",
+   "plain_ko": "탐(탐탐) — 두둥두둥 굴러가듯 울리는 드럼 세트의 중간 북들",
+   "plain_en": "tom — the rolling 'doom-doom' drums used for fills on a drum kit",
+   "llm_prompt": "tom drums",
+   "tags": ["instrument", "drums", "tom", "percussion"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "cross-stick",
+   "music_theory_en": "cross-stick (side-stick — stick laid across the snare head striking the rim, producing a dry woody click; bossa nova and ballad idiom)",
+   "plain_ko": "크로스 스틱 — 스틱을 스네어에 눕혀 테두리를 딱딱 치는 마른 나무 소리, 보사노바에서 자주 들림",
+   "plain_en": "cross-stick — a dry, woody 'tick' made by tapping the drum rim with the stick laid flat",
+   "llm_prompt": "cross-stick snare",
+   "tags": ["instrument", "drums", "snare", "technique", "bossa-nova"],
+   "confidence": "high"
+  }
+ ]
+}

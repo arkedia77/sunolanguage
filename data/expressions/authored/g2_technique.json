@@ -1,0 +1,1086 @@
+{
+ "group": "g2_technique",
+ "authored_at": "2026-07-16",
+ "entries": [
+  {
+   "suno_term": "enters",
+   "music_theory_en": "instrument entrance/entry (a part joining the arrangement at a given point)",
+   "plain_ko": "악기나 목소리가 곡에 새로 등장하는 순간",
+   "plain_en": "the moment an instrument or voice joins the song",
+   "llm_prompt": "gradual instrument entrance",
+   "tags": ["technique", "arrangement", "entrance", "structure"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "enter",
+   "music_theory_en": "instrument entrance/entry (a part joining the arrangement)",
+   "plain_ko": "악기가 연주에 합류해 들어오는 것",
+   "plain_en": "an instrument coming into the mix",
+   "llm_prompt": "instruments enter one by one",
+   "tags": ["technique", "arrangement", "entrance", "structure"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "scratches",
+   "music_theory_en": "muted percussive guitar scratches (fret-hand muted rhythmic strums, funk 'chika' strokes) or DJ scratching",
+   "plain_ko": "기타 줄을 살짝 눌러 음 없이 '착착' 긁듯 내는 리듬 소리",
+   "plain_en": "percussive scratchy strums on muted guitar strings, like funk rhythm 'chicka' sounds",
+   "llm_prompt": "muted funk guitar scratches",
+   "tags": ["technique", "guitar", "percussive", "funk", "muting"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "drop",
+   "music_theory_en": "drop (a sudden dynamic release point where the full beat/bass re-enters after a build-up, common in EDM)",
+   "plain_ko": "긴장을 끌어올린 뒤 비트와 베이스가 한꺼번에 터져 나오는 순간",
+   "plain_en": "the moment the full beat and bass slam back in after a build-up",
+   "llm_prompt": "explosive bass drop after the build-up",
+   "tags": ["technique", "structure", "dynamics", "edm", "drop"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "swell",
+   "music_theory_en": "swell (a gradual crescendo, e.g. volume swell or cymbal swell)",
+   "plain_ko": "소리가 서서히 부풀어 오르며 커지는 것",
+   "plain_en": "a sound gradually rising in volume, like a wave building",
+   "llm_prompt": "slow atmospheric swell",
+   "tags": ["technique", "dynamics", "crescendo", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "continues",
+   "music_theory_en": "continuation of a part (an instrument sustaining its pattern across sections)",
+   "plain_ko": "악기가 하던 연주를 다음 구간까지 그대로 이어가는 것",
+   "plain_en": "an instrument keeping its pattern going into the next section",
+   "llm_prompt": "the groove continues steadily throughout",
+   "tags": ["technique", "arrangement", "continuity", "structure"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the kick drum pattern",
+   "music_theory_en": "kick drum pattern (the rhythmic figure played by the bass drum; often the anchor the bass locks onto)",
+   "plain_ko": "쿵쿵 울리는 큰북(킥 드럼)이 반복하는 리듬 패턴",
+   "plain_en": "the repeating rhythm played by the bass drum",
+   "llm_prompt": "bass locked to the kick drum pattern",
+   "tags": ["technique", "drums", "rhythm", "kick", "groove"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "fades",
+   "music_theory_en": "fade (a gradual decrease in volume, e.g. fade-out)",
+   "plain_ko": "소리가 서서히 작아지며 사라지는 것",
+   "plain_en": "a sound gradually getting quieter until it disappears",
+   "llm_prompt": "instruments fade out gently at the end",
+   "tags": ["technique", "dynamics", "fade", "transition"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "slides",
+   "music_theory_en": "slides/glissando (pitch gliding smoothly from one note to another, e.g. guitar or bass slides)",
+   "plain_ko": "음과 음 사이를 끊지 않고 미끄러지듯 이어서 내는 주법",
+   "plain_en": "gliding smoothly from one note to another without a break",
+   "llm_prompt": "expressive guitar slides between notes",
+   "tags": ["technique", "guitar", "slide", "glissando", "expression"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "counterpoint",
+   "music_theory_en": "counterpoint (two or more independent melodic lines played simultaneously)",
+   "plain_ko": "주 멜로디와는 다른 별개의 멜로디가 동시에 얽혀 흐르는 것",
+   "plain_en": "a second independent melody weaving around the main one",
+   "llm_prompt": "melodic counterpoint between lead and accompaniment",
+   "tags": ["technique", "melody", "counterpoint", "arrangement"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "strumming",
+   "music_theory_en": "strumming (sweeping across multiple strings to sound a chord rhythmically)",
+   "plain_ko": "기타 줄 여러 개를 한 번에 쓸어내리며 코드를 치는 주법",
+   "plain_en": "sweeping across guitar strings to play chords rhythmically",
+   "llm_prompt": "steady acoustic guitar strumming",
+   "tags": ["technique", "guitar", "strumming", "rhythm"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "walking",
+   "music_theory_en": "walking bass (a bass line moving in steady quarter notes through scale and chord tones, typical of jazz)",
+   "plain_ko": "베이스가 한 박자마다 한 음씩 걸어가듯 차례로 움직이는 재즈식 주법",
+   "plain_en": "a bass line that steps note by note on every beat, like walking",
+   "llm_prompt": "jazz walking bass line",
+   "tags": ["technique", "bass", "jazz", "walking-bass", "rhythm"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "continue",
+   "music_theory_en": "continuation of a part (an instrument sustaining its pattern across sections)",
+   "plain_ko": "연주 패턴이 끊기지 않고 계속 이어지는 것",
+   "plain_en": "a musical pattern carrying on without stopping",
+   "llm_prompt": "rhythm section continues unchanged",
+   "tags": ["technique", "arrangement", "continuity"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "fade",
+   "music_theory_en": "fade (gradual volume decrease or increase; fade-out/fade-in)",
+   "plain_ko": "소리가 점점 작아지거나 점점 커지며 자연스럽게 이어지는 처리",
+   "plain_en": "a gradual volume change in or out",
+   "llm_prompt": "slow fade out ending",
+   "tags": ["technique", "dynamics", "fade", "transition"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "syncopated sixteenth-note patterns",
+   "music_theory_en": "syncopated sixteenth-note rhythmic patterns (fast subdivided rhythms accenting off-beats)",
+   "plain_ko": "아주 잘게 쪼갠 빠른 리듬을 정박이 아닌 엇박에 강세를 주며 치는 패턴",
+   "plain_en": "fast, finely chopped rhythms with accents landing off the main beats",
+   "llm_prompt": "syncopated sixteenth-note funk rhythm",
+   "tags": ["technique", "rhythm", "syncopation", "sixteenth-notes", "funk"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "on a grand piano playing sustained chords and melodic fills",
+   "music_theory_en": "grand piano accompaniment: sustained (held) chords plus melodic fills between phrases",
+   "plain_ko": "그랜드 피아노가 화음을 길게 눌러 깔면서 사이사이 짧은 멜로디를 채워 넣는 연주",
+   "plain_en": "a grand piano holding long chords and adding short melodic runs between phrases",
+   "llm_prompt": "grand piano with sustained chords and melodic fills",
+   "tags": ["technique", "piano", "accompaniment", "fills", "sustain"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "the root notes of the guitar progression",
+   "music_theory_en": "root notes of the chord progression (the fundamental pitch of each guitar chord, typically doubled by the bass)",
+   "plain_ko": "기타 코드마다의 가장 기본이 되는 낮은 음(뿌리음)을 따라가는 것",
+   "plain_en": "the lowest, fundamental note of each guitar chord, usually followed by the bass",
+   "llm_prompt": "bass following the root notes of the guitar progression",
+   "tags": ["technique", "bass", "harmony", "root-notes", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "arpeggios",
+   "music_theory_en": "arpeggios (chord tones played one note at a time in sequence rather than together)",
+   "plain_ko": "화음을 한꺼번에 치지 않고 음을 하나씩 차례로 펼쳐 연주하는 것",
+   "plain_en": "playing the notes of a chord one after another instead of all at once",
+   "llm_prompt": "flowing arpeggios",
+   "tags": ["technique", "arpeggio", "harmony", "pattern"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "swells",
+   "music_theory_en": "swells (gradual crescendos, e.g. volume swells or cymbal swells)",
+   "plain_ko": "소리가 파도처럼 부풀었다 가라앉는 볼륨 변화",
+   "plain_en": "sounds that rise and fall in volume like waves",
+   "llm_prompt": "ambient pad swells",
+   "tags": ["technique", "dynamics", "crescendo", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "runs",
+   "music_theory_en": "runs (rapid scalar passages, quick successions of notes up or down a scale)",
+   "plain_ko": "음계를 따라 빠르게 오르내리는 짧은 속주 구절",
+   "plain_en": "quick bursts of notes racing up or down a scale",
+   "llm_prompt": "fast melodic runs",
+   "tags": ["technique", "melody", "runs", "virtuosic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "increases",
+   "music_theory_en": "intensification/crescendo (a gradual increase in dynamics, density, or energy)",
+   "plain_ko": "소리의 크기나 에너지가 점점 커지는 것",
+   "plain_en": "the volume, density, or energy gradually growing",
+   "llm_prompt": "energy gradually increases toward the chorus",
+   "tags": ["technique", "dynamics", "build", "crescendo"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "harmonic depth in the background",
+   "music_theory_en": "background harmonic support (pads or sustained voicings adding harmonic richness behind the foreground parts)",
+   "plain_ko": "뒤쪽에 깔린 화음이 곡을 두툼하고 풍성하게 받쳐 주는 것",
+   "plain_en": "background chords quietly making the harmony feel rich and full",
+   "llm_prompt": "sustained pads adding harmonic depth in the background",
+   "tags": ["technique", "harmony", "texture", "background", "pads"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "leaps",
+   "music_theory_en": "melodic leaps (disjunct motion; intervals larger than a step between consecutive notes)",
+   "plain_ko": "멜로디가 옆 음으로 가지 않고 멀리 있는 음으로 훌쩍 건너뛰는 것",
+   "plain_en": "the melody jumping to a distant note instead of stepping to the next one",
+   "llm_prompt": "wide melodic leaps",
+   "tags": ["technique", "melody", "interval", "leap"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords",
+   "music_theory_en": "fingerstyle guitar with alternating-bass (Travis picking): thumb alternates bass notes while fingers arpeggiate the chord",
+   "plain_ko": "엄지로 낮은 음을 번갈아 짚으며 나머지 손가락으로 화음을 하나씩 펼쳐 뜯는 통기타 주법",
+   "plain_en": "fingerpicked guitar where the thumb bounces between bass notes while the fingers pick out the chord",
+   "llm_prompt": "steady fingerstyle guitar with alternating bass and arpeggiated chords",
+   "tags": ["technique", "guitar", "fingerstyle", "travis-picking", "folk"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "the guitar's root notes with occasional melodic fills",
+   "music_theory_en": "bass doubling the guitar's chord roots, interspersed with short melodic fills",
+   "plain_ko": "베이스가 기타 코드의 기본음을 따라가다가 틈틈이 짧은 멜로디를 끼워 넣는 연주",
+   "plain_en": "the bass following the guitar's chord roots with little melodic runs slipped in between",
+   "llm_prompt": "bass anchoring the root notes with occasional melodic fills",
+   "tags": ["technique", "bass", "root-notes", "fills", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "subtle arpeggiated textures in the background",
+   "music_theory_en": "quiet background arpeggiation (soft broken-chord figures providing textural fill)",
+   "plain_ko": "뒤쪽에서 화음을 한 음씩 잔잔하게 펼치며 은은한 결을 만드는 연주",
+   "plain_en": "soft, gently rippling broken chords filling out the background",
+   "llm_prompt": "subtle background arpeggiated textures",
+   "tags": ["technique", "arpeggio", "texture", "background"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "melodic counterpoint with light chorus and reverb",
+   "music_theory_en": "melodic counterpoint (independent counter-melody) processed with light chorus and reverb effects",
+   "plain_ko": "주 멜로디에 얽히는 별도 멜로디를 은은한 울림과 퍼지는 효과를 입혀 연주하는 것",
+   "plain_en": "a counter-melody weaving around the main tune, softened with shimmer and echo effects",
+   "llm_prompt": "melodic guitar counterpoint with light chorus and reverb",
+   "tags": ["technique", "counterpoint", "effects", "chorus", "reverb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a steady eighth-note pattern",
+   "music_theory_en": "steady eighth-note rhythmic pattern (constant subdivision at two notes per beat)",
+   "plain_ko": "한 박을 둘로 나눈 음을 일정하게 계속 치는 리듬 패턴",
+   "plain_en": "an even, driving rhythm with two notes on every beat",
+   "llm_prompt": "steady driving eighth-note pattern",
+   "tags": ["technique", "rhythm", "eighth-notes", "groove"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "hammer-ons",
+   "music_theory_en": "hammer-ons (sounding a higher note by tapping a fret-hand finger onto the string without re-picking)",
+   "plain_ko": "기타 줄을 다시 튕기지 않고 손가락으로 지판을 두드려 다음 음을 내는 주법",
+   "plain_en": "sounding a new guitar note by tapping the string with a fretting finger instead of picking again",
+   "llm_prompt": "fluid hammer-ons and pull-offs",
+   "tags": ["technique", "guitar", "legato", "hammer-on"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rolls",
+   "music_theory_en": "rolls (rapid repeated strokes on a drum, e.g. snare roll, or banjo roll picking patterns)",
+   "plain_ko": "드럼을 아주 빠르게 연타해 드르륵 이어지는 소리를 내는 주법",
+   "plain_en": "very fast repeated drum hits blending into a rumble",
+   "llm_prompt": "snare drum rolls building tension",
+   "tags": ["technique", "drums", "roll", "fill"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "harmonic density in the background",
+   "music_theory_en": "background harmonic density (thick layered chord voicings filling the backdrop)",
+   "plain_ko": "뒤쪽에 여러 겹의 화음이 촘촘히 깔려 소리가 빽빽하게 차 있는 것",
+   "plain_en": "many layered chords packing the background with thick harmony",
+   "llm_prompt": "layered pads adding harmonic density in the background",
+   "tags": ["technique", "harmony", "texture", "background", "layering"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "arpeggiated chords with light chorus and delay",
+   "music_theory_en": "arpeggiated (broken) chords processed with light chorus and delay effects",
+   "plain_ko": "화음을 한 음씩 펼쳐 치면서 은은한 떨림과 메아리 효과를 입힌 연주",
+   "plain_en": "broken chords played note by note with a shimmering, echoing effect",
+   "llm_prompt": "arpeggiated clean guitar chords with light chorus and delay",
+   "tags": ["technique", "arpeggio", "effects", "chorus", "delay"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a jazz-influenced progression with seventh chords and subtle vibrato",
+   "music_theory_en": "jazz-influenced chord progression using seventh chords, played with subtle vibrato",
+   "plain_ko": "재즈 느낌의 풍부한 코드(7화음)를 쓰면서 음을 살짝 떨어 감정을 더한 진행",
+   "plain_en": "jazzy, rich chords with a gentle wobble in the notes for expression",
+   "llm_prompt": "jazz-influenced seventh chord progression with subtle vibrato",
+   "tags": ["technique", "harmony", "jazz", "seventh-chords", "vibrato"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "the kick pattern",
+   "music_theory_en": "kick drum pattern (the bass drum's rhythmic figure)",
+   "plain_ko": "큰북(킥 드럼)이 반복하는 리듬",
+   "plain_en": "the bass drum's repeating rhythm",
+   "llm_prompt": "bass locked with the kick pattern",
+   "tags": ["technique", "drums", "kick", "rhythm", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "slide",
+   "music_theory_en": "slide/glissando (gliding between pitches; also slide guitar playing with a bottleneck)",
+   "plain_ko": "음 사이를 미끄러지듯 이어 연주하는 주법",
+   "plain_en": "gliding from one note into another",
+   "llm_prompt": "smooth slide into the note",
+   "tags": ["technique", "guitar", "slide", "glissando"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "returns",
+   "music_theory_en": "return/reprise (a previously heard part or theme re-entering the arrangement)",
+   "plain_ko": "앞서 나왔던 악기나 멜로디가 다시 돌아와 등장하는 것",
+   "plain_en": "an earlier instrument or theme coming back into the song",
+   "llm_prompt": "the main theme returns in the final chorus",
+   "tags": ["technique", "arrangement", "structure", "reprise"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "melodic slides and syncopated fills",
+   "music_theory_en": "melodic slides (glissandi between notes) combined with syncopated fills (off-beat ornamental runs)",
+   "plain_ko": "음을 미끄러지듯 잇는 멜로디에 엇박으로 끼어드는 짧은 채움 연주를 곁들인 것",
+   "plain_en": "gliding melodic notes mixed with off-beat little runs filling the gaps",
+   "llm_prompt": "bass with melodic slides and syncopated fills",
+   "tags": ["technique", "slide", "fills", "syncopation", "bass"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "low-end weight on the downbeats",
+   "music_theory_en": "bass emphasis on downbeats (low-frequency weight anchoring beat one of each measure)",
+   "plain_ko": "마디의 첫 박마다 묵직한 저음을 눌러 곡의 무게중심을 잡는 것",
+   "plain_en": "heavy bass landing on the first beat of each bar to anchor the groove",
+   "llm_prompt": "bass providing low-end weight on the downbeats",
+   "tags": ["technique", "bass", "downbeat", "groove", "low-end"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "flourish",
+   "music_theory_en": "flourish (a brief ornamental, showy melodic figure or embellishment)",
+   "plain_ko": "장식처럼 화려하게 스쳐 지나가는 짧은 꾸밈 연주",
+   "plain_en": "a short, showy decorative burst of notes",
+   "llm_prompt": "an expressive piano flourish",
+   "tags": ["technique", "ornament", "embellishment", "fill"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "arpeggiated chords with light chorus and reverb",
+   "music_theory_en": "arpeggiated (broken) chords processed with light chorus and reverb effects",
+   "plain_ko": "화음을 한 음씩 펼쳐 치며 은은한 떨림과 공간 울림을 입힌 연주",
+   "plain_en": "broken chords played note by note with a soft shimmer and roomy echo",
+   "llm_prompt": "arpeggiated clean guitar with light chorus and reverb",
+   "tags": ["technique", "arpeggio", "effects", "chorus", "reverb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a prominent slap bass line, syncopated electric guitar scratches",
+   "music_theory_en": "slap bass (thumb-slap/pop funk bass technique) paired with syncopated muted guitar scratches",
+   "plain_ko": "손가락으로 줄을 튕기고 때리는 펑키한 슬랩 베이스에 엇박으로 긁는 기타 소리를 얹은 것",
+   "plain_en": "punchy slapped funk bass with off-beat scratchy muted guitar strokes",
+   "llm_prompt": "prominent slap bass with syncopated funk guitar scratches",
+   "tags": ["technique", "bass", "slap", "funk", "guitar"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a busy, percussive line with frequent slides and pops",
+   "music_theory_en": "busy percussive bass line featuring frequent slides (glissandi) and pops (snapped strings, slap technique)",
+   "plain_ko": "쉼 없이 움직이며 줄을 미끄러뜨리고 튕겨 때리는, 타악기처럼 통통 튀는 베이스 연주",
+   "plain_en": "a fast-moving, drum-like bass part full of slides and snappy popped notes",
+   "llm_prompt": "busy percussive slap bass with frequent slides and pops",
+   "tags": ["technique", "bass", "slap", "funk", "percussive"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "the kick drum patterns",
+   "music_theory_en": "kick drum patterns (the bass drum's rhythmic figures)",
+   "plain_ko": "큰북(킥 드럼)이 치는 여러 리듬 패턴",
+   "plain_en": "the bass drum's rhythmic patterns",
+   "llm_prompt": "bass synced to the kick drum patterns",
+   "tags": ["technique", "drums", "kick", "rhythm", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "rhythmic muted scratches and staccato chords",
+   "music_theory_en": "muted percussive guitar scratches combined with staccato (short, detached) chord stabs",
+   "plain_ko": "줄을 눌러 긁는 리듬 소리와 짧게 끊어 치는 코드를 섞은 펑키한 기타 연주",
+   "plain_en": "scratchy muted guitar rhythms mixed with short, clipped chord hits",
+   "llm_prompt": "funk guitar with rhythmic muted scratches and staccato chords",
+   "tags": ["technique", "guitar", "funk", "staccato", "muting"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "palm-muted power chords in the verses and open, ringing chords in the chorus",
+   "music_theory_en": "palm-muted power chords (damped chugging) in verses contrasted with open, ringing (undamped, sustained) chords in choruses",
+   "plain_ko": "절에서는 손바닥으로 줄을 눌러 둔탁하게 치다가 후렴에서 손을 떼고 시원하게 울리도록 치는 록 기타 대비",
+   "plain_en": "tight, chugging muted guitar in the verses that opens up into big ringing chords in the chorus",
+   "llm_prompt": "palm-muted power chords in verses, open ringing chords in the chorus",
+   "tags": ["technique", "guitar", "palm-mute", "power-chords", "rock"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a syncopated, palm-muted rhythmic pattern",
+   "music_theory_en": "syncopated palm-muted rhythm guitar pattern (damped strokes accenting off-beats)",
+   "plain_ko": "손바닥으로 줄을 눌러 둔탁한 소리를 엇박 강세로 치는 리듬 기타 패턴",
+   "plain_en": "a chugging, damped guitar rhythm with accents landing off the beat",
+   "llm_prompt": "syncopated palm-muted rhythm guitar pattern",
+   "tags": ["technique", "guitar", "palm-mute", "syncopation", "rhythm"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a syncopated, jazzy chord progression with light chorus and reverb",
+   "music_theory_en": "syncopated jazz-flavored chord progression (extended chords, off-beat comping) with light chorus and reverb",
+   "plain_ko": "재즈풍의 세련된 코드를 엇박으로 치며 은은한 울림 효과를 입힌 진행",
+   "plain_en": "jazzy chords played off the beat with a soft shimmering echo",
+   "llm_prompt": "syncopated jazzy chord progression with light chorus and reverb",
+   "tags": ["technique", "harmony", "jazz", "syncopation", "effects"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a repetitive arpeggiated pattern in 4/4 time",
+   "music_theory_en": "repeating arpeggiated (broken-chord) ostinato pattern in 4/4 meter",
+   "plain_ko": "4박자 안에서 화음을 한 음씩 펼치는 패턴을 계속 반복하는 연주",
+   "plain_en": "a broken-chord pattern looping steadily in common 4/4 time",
+   "llm_prompt": "repetitive arpeggiated pattern in 4/4 time",
+   "tags": ["technique", "arpeggio", "ostinato", "meter", "pattern"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rings out",
+   "music_theory_en": "let ring / sustained decay (a note or chord left to sustain and decay naturally)",
+   "plain_ko": "친 음이나 화음을 끊지 않고 자연스럽게 울려 퍼지게 두는 것",
+   "plain_en": "a note or chord left to ring and fade away naturally",
+   "llm_prompt": "final chord rings out",
+   "tags": ["technique", "sustain", "decay", "dynamics"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "harmonic padding in the background",
+   "music_theory_en": "background harmonic pad (sustained chords providing a soft harmonic bed behind the mix)",
+   "plain_ko": "뒤쪽에 길게 깔린 화음이 곡을 폭신하게 받쳐 주는 것",
+   "plain_en": "soft sustained chords cushioning the background of the song",
+   "llm_prompt": "warm synth pads providing harmonic padding in the background",
+   "tags": ["technique", "harmony", "pads", "background", "texture"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "harmonic accents",
+   "music_theory_en": "harmonic accents (chordal stabs or emphases marking key points in the harmony)",
+   "plain_ko": "중요한 순간마다 화음을 짧고 또렷하게 눌러 강조하는 것",
+   "plain_en": "chords punched in at key moments to highlight the harmony",
+   "llm_prompt": "punchy harmonic accents on key beats",
+   "tags": ["technique", "harmony", "accent", "arrangement"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "flourishes",
+   "music_theory_en": "flourishes (brief ornamental melodic embellishments)",
+   "plain_ko": "곳곳에 끼어드는 화려하고 짧은 꾸밈 연주들",
+   "plain_en": "little decorative bursts of notes scattered through the music",
+   "llm_prompt": "elegant melodic flourishes",
+   "tags": ["technique", "ornament", "embellishment", "fill"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "between the vocal melody and the rhythmic guitar strumming",
+   "music_theory_en": "interplay between the vocal melody and the rhythmic guitar strumming (call-and-response or textural dialogue)",
+   "plain_ko": "노래 멜로디와 기타 스트로크 리듬이 서로 주고받으며 어우러지는 것",
+   "plain_en": "the singing and the strummed guitar trading off and weaving together",
+   "llm_prompt": "interplay between the vocal melody and rhythmic guitar strumming",
+   "tags": ["technique", "interplay", "vocals", "guitar", "fragment"],
+   "confidence": "low"
+  },
+  {
+   "suno_term": "between the acoustic guitar and the vocal melody",
+   "music_theory_en": "interplay between the acoustic guitar and the vocal melody (dialogue/counterpoint between the two parts)",
+   "plain_ko": "통기타 연주와 노래 멜로디가 서로 대화하듯 얽히는 것",
+   "plain_en": "the acoustic guitar and the vocals answering and weaving around each other",
+   "llm_prompt": "interplay between the acoustic guitar and the vocal melody",
+   "tags": ["technique", "interplay", "guitar", "vocals", "fragment"],
+   "confidence": "low"
+  },
+  {
+   "suno_term": "with sustained root notes",
+   "music_theory_en": "sustained root notes (long held fundamental pitches of each chord, usually in the bass)",
+   "plain_ko": "각 코드의 기본이 되는 낮은 음을 길게 끌어 받쳐 주는 것",
+   "plain_en": "long, held low notes anchoring each chord",
+   "llm_prompt": "bass with sustained root notes",
+   "tags": ["technique", "bass", "sustain", "root-notes", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "with melodic, legato lines",
+   "music_theory_en": "melodic legato lines (smoothly connected melodic phrases without gaps between notes)",
+   "plain_ko": "음 사이를 끊지 않고 부드럽게 이어 노래하듯 연주하는 멜로디",
+   "plain_en": "smooth, flowing melodies with no gaps between the notes",
+   "llm_prompt": "melodic legato lines",
+   "tags": ["technique", "legato", "melody", "phrasing", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the root notes of the acoustic guitar with a warm, rounded tone",
+   "music_theory_en": "bass doubling the acoustic guitar's chord roots with a warm, rounded (soft-attack, mellow) tone",
+   "plain_ko": "베이스가 통기타 코드의 기본음을 따뜻하고 부드러운 소리로 받쳐 주는 것",
+   "plain_en": "the bass following the acoustic guitar's chord roots with a soft, warm sound",
+   "llm_prompt": "warm rounded bass following the acoustic guitar's root notes",
+   "tags": ["technique", "bass", "root-notes", "tone", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the kick drum with a warm, rounded tone",
+   "music_theory_en": "bass locking with the kick drum, played with a warm, rounded (mellow, soft-attack) tone",
+   "plain_ko": "베이스가 큰북 리듬에 맞물리며 따뜻하고 둥근 소리로 연주되는 것",
+   "plain_en": "the bass locking in with the kick drum using a soft, warm sound",
+   "llm_prompt": "warm rounded bass locked with the kick drum",
+   "tags": ["technique", "bass", "kick", "tone", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the kick drum with a thick, overdriven tone",
+   "music_theory_en": "bass locking with the kick drum, played with a thick, overdriven (distorted, saturated) tone",
+   "plain_ko": "베이스가 큰북 리듬에 맞물리며 두껍고 지글거리는 왜곡된 소리로 연주되는 것",
+   "plain_en": "the bass locking with the kick drum using a fat, gritty distorted sound",
+   "llm_prompt": "thick overdriven bass locked with the kick drum",
+   "tags": ["technique", "bass", "kick", "distortion", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the kick drum with a consistent eighth-note pulse",
+   "music_theory_en": "bass locking with the kick drum in a constant eighth-note pulse (steady two-notes-per-beat drive)",
+   "plain_ko": "베이스가 큰북에 맞춰 한 박을 둘로 나눈 리듬을 일정하게 계속 치는 것",
+   "plain_en": "the bass driving along with the kick in a steady, even pulse",
+   "llm_prompt": "bass locked with the kick drum in a consistent eighth-note pulse",
+   "tags": ["technique", "bass", "kick", "eighth-notes", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "syncopated jazz-influenced chords with light chorus and reverb",
+   "music_theory_en": "syncopated jazz-influenced chord voicings (extended harmonies comped off the beat) with light chorus and reverb",
+   "plain_ko": "재즈풍의 풍부한 코드를 엇박으로 치며 은은한 울림 효과를 입힌 연주",
+   "plain_en": "jazzy chords hitting off the beat with a gentle shimmer and echo",
+   "llm_prompt": "syncopated jazz-influenced chords with light chorus and reverb",
+   "tags": ["technique", "harmony", "jazz", "syncopation", "effects"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "syncopated funk-style muted strums and arpeggiated chords",
+   "music_theory_en": "funk-style syncopated muted strumming (percussive damped strokes) alternated with arpeggiated chords",
+   "plain_ko": "펑크 스타일로 줄을 눌러 엇박으로 긁는 소리와 화음을 펼쳐 치는 연주를 오가는 기타",
+   "plain_en": "funky scratchy off-beat strums mixed with rippling broken chords",
+   "llm_prompt": "syncopated funk muted strums with arpeggiated chords",
+   "tags": ["technique", "guitar", "funk", "muting", "arpeggio"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "sustained low-end notes on the downbeats",
+   "music_theory_en": "sustained bass notes placed on downbeats (long low tones anchoring beat one)",
+   "plain_ko": "마디 첫 박마다 낮은 음을 길게 눌러 곡의 바닥을 받치는 것",
+   "plain_en": "long, deep bass notes landing on the first beat of each bar",
+   "llm_prompt": "sustained low bass notes on the downbeats",
+   "tags": ["technique", "bass", "sustain", "downbeat", "low-end"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "scratch",
+   "music_theory_en": "muted guitar scratch stroke (percussive damped strum) or DJ scratch",
+   "plain_ko": "음정 없이 긁는 듯한 짧은 리듬 소리",
+   "plain_en": "a short, pitchless scratchy rhythmic stroke",
+   "llm_prompt": "percussive guitar scratch strokes",
+   "tags": ["technique", "guitar", "percussive", "muting", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "low-end weight with sustained notes",
+   "music_theory_en": "low-frequency weight from sustained bass notes (long-held low tones giving the mix heaviness)",
+   "plain_ko": "낮은 음을 길게 끌어 곡 전체에 묵직한 무게감을 주는 것",
+   "plain_en": "long, deep held notes giving the music a heavy, grounded feel",
+   "llm_prompt": "bass adding low-end weight with sustained notes",
+   "tags": ["technique", "bass", "sustain", "low-end", "weight"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "jazz-influenced seventh chords with a light chorus effect",
+   "music_theory_en": "jazz-influenced seventh chord voicings processed with a light chorus effect",
+   "plain_ko": "재즈 특유의 풍부한 7화음을 은은하게 일렁이는 효과와 함께 치는 것",
+   "plain_en": "rich jazzy chords with a soft shimmering wobble on the sound",
+   "llm_prompt": "jazz-influenced seventh chords with light chorus",
+   "tags": ["technique", "harmony", "jazz", "seventh-chords", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "harmonic texture in the background",
+   "music_theory_en": "background harmonic texture (sustained or layered chordal material filling the backdrop)",
+   "plain_ko": "뒤쪽에 깔린 화음이 곡의 배경 결을 채워 주는 것",
+   "plain_en": "background chords filling out the song's backdrop",
+   "llm_prompt": "soft harmonic texture in the background",
+   "tags": ["technique", "harmony", "texture", "background"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "harmonic density",
+   "music_theory_en": "harmonic density (thickness of simultaneous chord voicings/layers)",
+   "plain_ko": "동시에 울리는 화음 층이 얼마나 두툼하고 촘촘한지의 정도",
+   "plain_en": "how thick and full the layered chords sound",
+   "llm_prompt": "rich harmonic density",
+   "tags": ["technique", "harmony", "texture", "layering"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "during the chorus",
+   "music_theory_en": "chorus section placement (an event occurring within the chorus of the song form)",
+   "plain_ko": "곡에서 가장 귀에 남는 후렴 구간 동안 일어나는 일을 가리키는 말",
+   "plain_en": "something happening in the chorus (the catchiest, repeated section)",
+   "llm_prompt": "energy lifts during the chorus",
+   "tags": ["technique", "structure", "chorus", "fragment"],
+   "confidence": "low"
+  },
+  {
+   "suno_term": "distorted electric guitars, driving acoustic drums",
+   "music_theory_en": "distorted electric guitars paired with a driving acoustic (live) drum kit — a rock band texture",
+   "plain_ko": "지글거리게 왜곡된 일렉 기타와 힘 있게 몰아치는 실제 드럼이 함께하는 록 사운드",
+   "plain_en": "gritty distorted guitars over powerful, pushing live drums",
+   "llm_prompt": "distorted electric guitars with driving acoustic drums",
+   "tags": ["technique", "guitar", "drums", "rock", "distortion"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a syncopated folk-style pattern in G Major at 84 BPM",
+   "music_theory_en": "syncopated folk-style accompaniment pattern in the key of G major at 84 BPM (moderate tempo)",
+   "plain_ko": "사장조, 느긋한 빠르기(84 BPM)로 엇박 리듬을 살린 포크풍 반주 패턴",
+   "plain_en": "a folky, gently off-beat accompaniment in G major at a relaxed 84 beats per minute",
+   "llm_prompt": "syncopated folk-style guitar pattern in G major at 84 BPM",
+   "tags": ["technique", "folk", "syncopation", "key", "tempo"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a rhythmic, syncopated chord progression with light chorus and reverb",
+   "music_theory_en": "rhythmically syncopated chord progression (off-beat comping) with light chorus and reverb processing",
+   "plain_ko": "코드를 엇박 리듬으로 치며 은은한 울림 효과를 입힌 진행",
+   "plain_en": "chords played in a bouncy off-beat rhythm with soft shimmer and echo",
+   "llm_prompt": "rhythmic syncopated chord progression with light chorus and reverb",
+   "tags": ["technique", "harmony", "syncopation", "effects", "rhythm"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a repetitive arpeggiated pattern with light chorus and delay",
+   "music_theory_en": "repeating arpeggiated ostinato processed with light chorus and delay effects",
+   "plain_ko": "화음을 한 음씩 펼치는 패턴을 반복하며 은은한 떨림과 메아리를 입힌 연주",
+   "plain_en": "a looping broken-chord pattern with a shimmering, echoing tail",
+   "llm_prompt": "repetitive arpeggiated pattern with light chorus and delay",
+   "tags": ["technique", "arpeggio", "ostinato", "chorus", "delay"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a repetitive arpeggiated pattern in 4/4 time at 72 BPM in the key of G Major",
+   "music_theory_en": "repeating arpeggiated ostinato in 4/4 meter at 72 BPM (slow tempo) in the key of G major",
+   "plain_ko": "사장조, 느린 빠르기(72 BPM)의 4박자 안에서 화음을 한 음씩 펼치는 패턴을 반복하는 연주",
+   "plain_en": "a slow, looping broken-chord pattern in G major, 4/4 time at 72 beats per minute",
+   "llm_prompt": "repetitive arpeggiated pattern in 4/4 at 72 BPM in G major",
+   "tags": ["technique", "arpeggio", "ostinato", "tempo", "key"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a jazz-influenced chord progression with subtle chorus and reverb",
+   "music_theory_en": "jazz-influenced chord progression (extended harmonies) with subtle chorus and reverb processing",
+   "plain_ko": "재즈 느낌의 풍부한 코드 진행에 은은한 울림 효과를 살짝 입힌 것",
+   "plain_en": "jazzy, rich chords with a faint shimmer and gentle echo",
+   "llm_prompt": "jazz-influenced chord progression with subtle chorus and reverb",
+   "tags": ["technique", "harmony", "jazz", "effects"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a fingerpicked acoustic guitar, a clean electric guitar with light chorus",
+   "music_theory_en": "fingerpicked acoustic guitar layered with a clean (undistorted) electric guitar treated with light chorus",
+   "plain_ko": "손가락으로 뜯는 통기타 위에 맑은 일렉 기타를 은은한 일렁임 효과와 함께 겹친 것",
+   "plain_en": "fingerpicked acoustic guitar layered with a clean, softly shimmering electric guitar",
+   "llm_prompt": "fingerpicked acoustic guitar with clean chorus electric guitar",
+   "tags": ["technique", "guitar", "fingerpicking", "layering", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "melodic counterpoint with slides and vibrato",
+   "music_theory_en": "melodic counterpoint (independent counter-melody) featuring slides (glissandi) and vibrato",
+   "plain_ko": "주 멜로디에 얽히는 별도 멜로디를 음을 미끄러뜨리고 떨면서 표현력 있게 연주하는 것",
+   "plain_en": "a counter-melody sliding between notes and wobbling them for expression",
+   "llm_prompt": "melodic counterpoint with expressive slides and vibrato",
+   "tags": ["technique", "counterpoint", "slide", "vibrato", "expression"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "intensifies",
+   "music_theory_en": "intensification (a gradual increase in dynamics, density, or rhythmic drive; building energy)",
+   "plain_ko": "연주가 점점 더 세지고 격해지며 긴장이 올라가는 것",
+   "plain_en": "the music getting steadily stronger and more urgent",
+   "llm_prompt": "the drumming intensifies toward the climax",
+   "tags": ["technique", "dynamics", "build", "energy"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "harmonic texture",
+   "music_theory_en": "harmonic texture (the overall fabric created by chordal layers and voicings)",
+   "plain_ko": "여러 화음 층이 어우러져 만드는 소리의 결",
+   "plain_en": "the overall fabric woven by the layered chords",
+   "llm_prompt": "lush harmonic texture",
+   "tags": ["technique", "harmony", "texture"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "harmonic depth during the transitions",
+   "music_theory_en": "added harmonic depth at sectional transitions (richer voicings smoothing the passage between sections)",
+   "plain_ko": "구간이 바뀌는 순간에 화음을 두툼하게 채워 자연스럽게 이어 주는 것",
+   "plain_en": "richer chords filling in the moments where sections change",
+   "llm_prompt": "pads adding harmonic depth during the transitions",
+   "tags": ["technique", "harmony", "transition", "arrangement"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "between the guitar and the vocal melody",
+   "music_theory_en": "interplay between the guitar and the vocal melody (dialogue/counterpoint between the two parts)",
+   "plain_ko": "기타 연주와 노래 멜로디가 서로 주고받으며 얽히는 것",
+   "plain_en": "the guitar and the vocals answering and weaving around each other",
+   "llm_prompt": "interplay between the guitar and the vocal melody",
+   "tags": ["technique", "interplay", "guitar", "vocals", "fragment"],
+   "confidence": "low"
+  },
+  {
+   "suno_term": "a syncopated slap bass line, clean electric guitar scratches on the off-beats",
+   "music_theory_en": "syncopated slap bass line paired with clean electric guitar muted scratches placed on the off-beats",
+   "plain_ko": "엇박으로 튕기는 슬랩 베이스에, 맑은 일렉 기타가 뒷박마다 긁는 소리를 얹은 펑키한 조합",
+   "plain_en": "off-beat slapped funk bass with clean guitar scratches landing between the beats",
+   "llm_prompt": "syncopated slap bass with clean guitar scratches on the off-beats",
+   "tags": ["technique", "bass", "slap", "funk", "off-beat"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "a sense of space",
+   "music_theory_en": "spaciousness (openness created by sparse arrangement, reverb, or wide stereo imaging)",
+   "plain_ko": "소리 사이에 여백을 두어 넓고 탁 트인 공간감이 느껴지게 하는 것",
+   "plain_en": "an open, airy feeling created by leaving room between the sounds",
+   "llm_prompt": "sparse arrangement creating a sense of space",
+   "tags": ["technique", "texture", "space", "arrangement", "reverb"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "a clean electric guitar playing syncopated 16th-note rhythms, a slap bass guitar",
+   "music_theory_en": "clean electric guitar playing syncopated sixteenth-note rhythm figures alongside slap bass — a funk rhythm-section texture",
+   "plain_ko": "맑은 일렉 기타가 잘게 쪼갠 엇박 리듬을 치고 그 아래 슬랩 베이스가 튕기는 펑키한 리듬 조합",
+   "plain_en": "a clean guitar chopping out fast off-beat rhythms over punchy slapped bass",
+   "llm_prompt": "clean guitar with syncopated 16th-note rhythms over slap bass",
+   "tags": ["technique", "guitar", "bass", "funk", "sixteenth-notes"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "ostinatos",
+   "music_theory_en": "ostinatos (short musical figures persistently repeated throughout a passage)",
+   "plain_ko": "짧은 멜로디나 리듬 조각을 계속 반복해 곡의 뼈대를 만드는 것",
+   "plain_en": "short musical phrases repeated over and over as a backbone",
+   "llm_prompt": "hypnotic repeating ostinatos",
+   "tags": ["technique", "ostinato", "repetition", "pattern"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "with melodic slides and sustained notes",
+   "music_theory_en": "melodic slides (glissandi) combined with sustained (long-held) notes",
+   "plain_ko": "음을 미끄러지듯 이으면서 중요한 음은 길게 끌어 주는 표현",
+   "plain_en": "gliding between notes and letting key ones ring long",
+   "llm_prompt": "melodic slides and sustained notes",
+   "tags": ["technique", "slide", "sustain", "expression", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the vocal phrasing",
+   "music_theory_en": "vocal phrasing (how the singer shapes lines — timing, breath points, note placement relative to the beat)",
+   "plain_ko": "가수가 가사를 어디서 끊고 밀고 당기며 부르는지의 호흡과 타이밍",
+   "plain_en": "the way the singer times, stretches, and breaks up the lines",
+   "llm_prompt": "expressive vocal phrasing",
+   "tags": ["technique", "vocals", "phrasing", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the root notes of the progression",
+   "music_theory_en": "root notes of the chord progression (each chord's fundamental pitch, typically outlined by the bass)",
+   "plain_ko": "코드 진행에서 각 코드의 가장 기본이 되는 낮은 음",
+   "plain_en": "the fundamental low note of each chord in the progression",
+   "llm_prompt": "bass outlining the root notes of the progression",
+   "tags": ["technique", "bass", "harmony", "root-notes", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the root notes of the piano",
+   "music_theory_en": "root notes of the piano's chords (the fundamental pitches of the piano harmony, usually doubled by bass)",
+   "plain_ko": "피아노가 치는 코드의 기본이 되는 낮은 음",
+   "plain_en": "the fundamental low notes of the piano's chords",
+   "llm_prompt": "bass following the root notes of the piano",
+   "tags": ["technique", "bass", "piano", "root-notes", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the root notes of the guitar progression with a warm, rounded tone",
+   "music_theory_en": "bass doubling the guitar progression's chord roots with a warm, rounded (mellow) tone",
+   "plain_ko": "베이스가 기타 코드의 기본음을 따뜻하고 부드러운 소리로 따라가는 것",
+   "plain_en": "the bass tracing the guitar's chord roots with a soft, warm sound",
+   "llm_prompt": "warm rounded bass following the guitar progression's root notes",
+   "tags": ["technique", "bass", "root-notes", "tone", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the root notes of the guitar progression with a picked attack",
+   "music_theory_en": "bass doubling the guitar progression's chord roots played with a picked attack (plectrum, brighter and punchier onset)",
+   "plain_ko": "베이스가 기타 코드의 기본음을 피크로 쳐서 또렷하고 단단한 소리로 따라가는 것",
+   "plain_en": "the bass tracing the guitar's chord roots with a bright, punchy pick attack",
+   "llm_prompt": "picked bass following the guitar progression's root notes",
+   "tags": ["technique", "bass", "root-notes", "pick", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the root notes of the guitar chords with a warm, rounded tone",
+   "music_theory_en": "bass doubling the guitar chords' roots with a warm, rounded (mellow) tone",
+   "plain_ko": "베이스가 기타 화음의 기본음을 따뜻하고 둥근 소리로 받쳐 주는 것",
+   "plain_en": "the bass underpinning the guitar chords' roots with a soft, warm sound",
+   "llm_prompt": "warm rounded bass on the guitar chords' root notes",
+   "tags": ["technique", "bass", "root-notes", "tone", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the root notes of the guitar",
+   "music_theory_en": "root notes of the guitar's chords (fundamental pitches of the guitar harmony)",
+   "plain_ko": "기타가 치는 코드의 기본이 되는 낮은 음",
+   "plain_en": "the fundamental low notes of the guitar's chords",
+   "llm_prompt": "bass following the root notes of the guitar",
+   "tags": ["technique", "bass", "guitar", "root-notes", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the kick drum with sustained root notes",
+   "music_theory_en": "bass locking with the kick drum while holding sustained root notes",
+   "plain_ko": "베이스가 큰북 리듬에 맞물리며 각 코드의 기본음을 길게 끌어 주는 것",
+   "plain_en": "the bass locking with the kick drum while holding long root notes",
+   "llm_prompt": "bass locked with the kick drum, sustaining root notes",
+   "tags": ["technique", "bass", "kick", "sustain", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the kick drum with melodic fills",
+   "music_theory_en": "bass locking with the kick drum, adding melodic fills between phrases",
+   "plain_ko": "베이스가 큰북에 맞물리다 틈틈이 짧은 멜로디를 끼워 넣는 것",
+   "plain_en": "the bass locking with the kick and slipping in little melodic runs",
+   "llm_prompt": "bass locked with the kick drum, adding melodic fills",
+   "tags": ["technique", "bass", "kick", "fills", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the kick drum pattern with a thick, overdriven tone",
+   "music_theory_en": "bass locking to the kick drum pattern with a thick, overdriven (distorted, saturated) tone",
+   "plain_ko": "베이스가 큰북 패턴에 맞물리며 두껍고 지글거리는 왜곡된 소리로 연주되는 것",
+   "plain_en": "the bass following the kick pattern with a fat, gritty distorted sound",
+   "llm_prompt": "thick overdriven bass locked to the kick drum pattern",
+   "tags": ["technique", "bass", "kick", "distortion", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "the guitar's rhythmic pattern",
+   "music_theory_en": "the guitar's rhythmic figure (the strumming/comping pattern that another part follows or interlocks with)",
+   "plain_ko": "기타가 치는 리듬 패턴, 다른 악기가 이에 맞물려 연주함",
+   "plain_en": "the rhythm the guitar plays, which other parts lock into",
+   "llm_prompt": "locked in with the guitar's rhythmic pattern",
+   "tags": ["technique", "guitar", "rhythm", "groove", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "syncopated, jazzy seventh chords with a light chorus effect",
+   "music_theory_en": "syncopated jazz seventh-chord comping treated with a light chorus effect",
+   "plain_ko": "재즈풍 7화음을 엇박으로 치며 은은한 일렁임 효과를 입힌 연주",
+   "plain_en": "jazzy rich chords hit off the beat with a soft shimmering wobble",
+   "llm_prompt": "syncopated jazzy seventh chords with light chorus",
+   "tags": ["technique", "harmony", "jazz", "syncopation", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "syncopated sixteenth-note muted scratches and staccato chords",
+   "music_theory_en": "syncopated sixteenth-note muted guitar scratches combined with staccato chord stabs — classic funk rhythm guitar",
+   "plain_ko": "잘게 쪼갠 엇박 리듬으로 줄을 긁는 소리와 짧게 끊어 치는 코드를 섞은 펑크 기타",
+   "plain_en": "fast off-beat scratchy muted strokes mixed with short, clipped chord hits",
+   "llm_prompt": "syncopated 16th-note muted scratches with staccato chords",
+   "tags": ["technique", "guitar", "funk", "staccato", "sixteenth-notes"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "syncopated funk-style muted strums and rhythmic chords",
+   "music_theory_en": "funk-style syncopated muted strumming alternated with rhythmic chord hits",
+   "plain_ko": "펑크 스타일로 줄을 눌러 엇박으로 긁으며 사이사이 리듬감 있게 코드를 치는 기타",
+   "plain_en": "funky off-beat scratchy strums mixed with punchy rhythmic chords",
+   "llm_prompt": "syncopated funk muted strums with rhythmic chords",
+   "tags": ["technique", "guitar", "funk", "muting", "rhythm"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "syncopated funk-style muted strums and ninth chords",
+   "music_theory_en": "funk-style syncopated muted strumming combined with ninth chords (extended funk harmony, e.g. E9)",
+   "plain_ko": "펑크 스타일로 줄을 눌러 엇박으로 긁으며 펑크 특유의 화려한 9화음을 치는 기타",
+   "plain_en": "funky off-beat scratchy strums using rich, colorful funk chords",
+   "llm_prompt": "syncopated funk muted strums with ninth chords",
+   "tags": ["technique", "guitar", "funk", "ninth-chords", "muting"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "sustained chords and melodic fills",
+   "music_theory_en": "sustained (held) chords alternated with melodic fills between phrases",
+   "plain_ko": "화음을 길게 눌러 깔면서 사이사이 짧은 멜로디로 여백을 채우는 연주",
+   "plain_en": "long held chords with short melodic runs filling the gaps",
+   "llm_prompt": "sustained chords with melodic fills",
+   "tags": ["technique", "sustain", "fills", "accompaniment"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "subtle melodic fills with light chorus and delay",
+   "music_theory_en": "understated melodic fills (short interstitial phrases) processed with light chorus and delay",
+   "plain_ko": "은은한 울림 효과를 입힌 짧은 멜로디를 눈에 띄지 않게 사이사이 채워 넣는 것",
+   "plain_en": "quiet little melodic runs with a soft shimmer and echo tucked between phrases",
+   "llm_prompt": "subtle melodic fills with light chorus and delay",
+   "tags": ["technique", "fills", "chorus", "delay", "melody"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "subtle arpeggiated textures",
+   "music_theory_en": "understated arpeggiated textures (soft broken-chord figuration as textural fill)",
+   "plain_ko": "화음을 한 음씩 잔잔하게 펼쳐 은은한 결을 만드는 연주",
+   "plain_en": "soft, gently rippling broken-chord textures",
+   "llm_prompt": "subtle arpeggiated textures",
+   "tags": ["technique", "arpeggio", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "stops",
+   "music_theory_en": "stop/break (an abrupt halt of a part or the full band, creating a dramatic pause)",
+   "plain_ko": "연주가 갑자기 뚝 멈춰 극적인 여백을 만드는 순간",
+   "plain_en": "the music suddenly cutting off for a dramatic pause",
+   "llm_prompt": "a sudden full-band stop",
+   "tags": ["technique", "dynamics", "break", "arrangement"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "sparse, melodic root notes",
+   "music_theory_en": "sparse melodic root-note bass line (few, well-placed root notes with melodic contour)",
+   "plain_ko": "베이스가 음을 아껴 가며 코드 기본음을 멜로디처럼 띄엄띄엄 짚는 것",
+   "plain_en": "a bass playing just a few well-chosen root notes with a melodic touch",
+   "llm_prompt": "sparse melodic root-note bass line",
+   "tags": ["technique", "bass", "root-notes", "sparse", "melody"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rhythmic muted scratches and staccato ninth chords",
+   "music_theory_en": "rhythmic muted guitar scratches combined with staccato ninth-chord stabs (funk rhythm guitar)",
+   "plain_ko": "줄을 눌러 긁는 리듬 소리와 짧게 끊어 치는 화려한 9화음을 섞은 펑크 기타",
+   "plain_en": "scratchy muted guitar rhythms with short, clipped, colorful funk chords",
+   "llm_prompt": "rhythmic muted scratches with staccato ninth chords",
+   "tags": ["technique", "guitar", "funk", "ninth-chords", "staccato"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rhythmic accompaniment with bossa nova comping patterns",
+   "music_theory_en": "rhythmic accompaniment using bossa nova comping patterns (syncopated Brazilian guitar/piano chord rhythms)",
+   "plain_ko": "보사노바 특유의 살랑거리는 엇박 코드 리듬으로 반주하는 것",
+   "plain_en": "accompaniment in the gently swaying off-beat chord rhythm of bossa nova",
+   "llm_prompt": "bossa nova comping accompaniment",
+   "tags": ["technique", "comping", "bossa-nova", "rhythm", "accompaniment"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "palm-muted eighth notes in the verses and open power chords in the chorus",
+   "music_theory_en": "palm-muted eighth-note chugging in verses contrasted with open (ringing) power chords in choruses",
+   "plain_ko": "절에서는 손바닥으로 줄을 눌러 둔탁하게 규칙적으로 치다가 후렴에서 손을 떼고 파워 코드를 시원하게 울리는 록 기타 대비",
+   "plain_en": "tight muted chugging in the verses that opens into big ringing power chords in the chorus",
+   "llm_prompt": "palm-muted eighth notes in verses, open power chords in the chorus",
+   "tags": ["technique", "guitar", "palm-mute", "power-chords", "rock"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "muted staccato chords on the off-beats",
+   "music_theory_en": "muted staccato chord stabs placed on the off-beats (short damped hits between the main beats, ska/funk style)",
+   "plain_ko": "정박 사이사이 뒷박마다 줄을 눌러 짧게 끊어 치는 코드",
+   "plain_en": "short, damped chord hits landing between the main beats",
+   "llm_prompt": "muted staccato chords on the off-beats",
+   "tags": ["technique", "guitar", "staccato", "off-beat", "muting"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "melodic movement in the low end",
+   "music_theory_en": "melodic motion in the bass register (the low end moving melodically rather than holding static roots)",
+   "plain_ko": "베이스 저음이 한자리에 머물지 않고 멜로디처럼 움직이는 것",
+   "plain_en": "the low bass moving around like a melody instead of sitting still",
+   "llm_prompt": "melodic movement in the low end",
+   "tags": ["technique", "bass", "melody", "low-end"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "melodic lines and syncopated chordal stabs",
+   "music_theory_en": "single-note melodic lines alternated with syncopated chordal stabs (short off-beat chord hits)",
+   "plain_ko": "한 음씩 흐르는 멜로디와 엇박으로 짧게 찍는 코드를 번갈아 연주하는 것",
+   "plain_en": "flowing melodic lines mixed with sharp off-beat chord punches",
+   "llm_prompt": "melodic lines with syncopated chordal stabs",
+   "tags": ["technique", "melody", "stabs", "syncopation"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "melodic counterpoint with single-note lines and light vibrato",
+   "music_theory_en": "melodic counterpoint played as single-note lines with light vibrato",
+   "plain_ko": "주 멜로디에 얽히는 별도 멜로디를 한 음씩, 살짝 떨어 주며 연주하는 것",
+   "plain_en": "a counter-melody in single notes with a gentle wobble for warmth",
+   "llm_prompt": "single-note melodic counterpoint with light vibrato",
+   "tags": ["technique", "counterpoint", "vibrato", "melody"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "melodic counterpoint with frequent slides",
+   "music_theory_en": "melodic counterpoint featuring frequent slides (glissandi between notes)",
+   "plain_ko": "주 멜로디에 얽히는 별도 멜로디를 음 사이를 자주 미끄러뜨리며 연주하는 것",
+   "plain_en": "a counter-melody that keeps gliding smoothly between its notes",
+   "llm_prompt": "melodic counterpoint with frequent slides",
+   "tags": ["technique", "counterpoint", "slide", "melody"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "melodic accents",
+   "music_theory_en": "melodic accents (emphasized melodic notes or short figures highlighting key moments)",
+   "plain_ko": "중요한 순간마다 멜로디 음을 또렷하게 강조해 주는 것",
+   "plain_en": "melodic notes punched out to highlight key moments",
+   "llm_prompt": "bright melodic accents",
+   "tags": ["technique", "melody", "accent", "arrangement"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "legato pads and counter-melodies",
+   "music_theory_en": "legato synth/string pads (smooth sustained chords) combined with counter-melodies",
+   "plain_ko": "부드럽게 이어지는 패드 화음 위에 주 멜로디와 다른 보조 멜로디를 얹는 것",
+   "plain_en": "smooth sustained background chords with secondary melodies floating over them",
+   "llm_prompt": "legato pads with gentle counter-melodies",
+   "tags": ["technique", "pads", "counter-melody", "legato", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "jazz-inflected chords with light chorus and reverb",
+   "music_theory_en": "jazz-inflected chord voicings (extended/colorful harmonies) with light chorus and reverb processing",
+   "plain_ko": "재즈 색채가 밴 세련된 코드에 은은한 울림 효과를 입힌 것",
+   "plain_en": "jazzy, colorful chords with a soft shimmer and echo",
+   "llm_prompt": "jazz-inflected chords with light chorus and reverb",
+   "tags": ["technique", "harmony", "jazz", "effects"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "harmonic sustain",
+   "music_theory_en": "harmonic sustain (chords held/ringing to maintain continuous harmonic support)",
+   "plain_ko": "화음을 길게 유지해 곡의 배경을 끊김 없이 받쳐 주는 것",
+   "plain_en": "chords held long so the harmony never drops out",
+   "llm_prompt": "warm harmonic sustain",
+   "tags": ["technique", "harmony", "sustain", "texture"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "harmonic fill in the background",
+   "music_theory_en": "background harmonic fill (chordal material filling out the harmony behind the foreground parts)",
+   "plain_ko": "뒤쪽에서 화음을 채워 곡이 비어 보이지 않게 하는 것",
+   "plain_en": "background chords quietly filling out the sound",
+   "llm_prompt": "soft harmonic fill in the background",
+   "tags": ["technique", "harmony", "background", "texture"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "comping",
+   "music_theory_en": "comping (accompanying with rhythmic chords behind a melody or soloist, from 'accompanying', jazz term)",
+   "plain_ko": "멜로디나 솔로 뒤에서 코드를 리듬감 있게 받쳐 주는 재즈식 반주",
+   "plain_en": "playing rhythmic chords behind a melody or soloist, jazz-style accompaniment",
+   "llm_prompt": "jazz piano comping",
+   "tags": ["technique", "comping", "jazz", "accompaniment", "rhythm"],
+   "confidence": "high"
+  }
+ ]
+}

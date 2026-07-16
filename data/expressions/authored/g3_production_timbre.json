@@ -1,0 +1,780 @@
+{
+ "group": "g3_production_timbre",
+ "authored_at": "2026-07-16",
+ "entries": [
+  {
+   "suno_term": "reverb",
+   "music_theory_en": "reverberation (artificial or natural room reflections adding a decaying tail after the direct sound)",
+   "plain_ko": "소리 뒤에 울림 여운이 남아 공간감이 느껴지는 리버브 효과",
+   "plain_en": "an echoing tail that makes the sound feel like it is in a room or hall",
+   "llm_prompt": "with reverb, spacious ambience",
+   "tags": ["production", "effect", "space", "reverb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "light chorus",
+   "music_theory_en": "light chorus effect (subtle pitch/time-modulated doubling for gentle width and shimmer)",
+   "plain_ko": "소리가 은은하게 겹쳐 살짝 넓고 일렁이게 들리는 옅은 코러스 효과",
+   "plain_en": "a subtle doubling effect that makes the sound gently wider and shimmery",
+   "llm_prompt": "subtle chorus effect, gentle stereo shimmer",
+   "tags": ["production", "effect", "modulation", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "plate reverb",
+   "music_theory_en": "plate reverb (metal-plate-based artificial reverberation, dense smooth tail with fast onset)",
+   "plain_ko": "잔향이 매끈하고 촘촘하게 퍼지는 스튜디오풍 리버브",
+   "plain_en": "a smooth, dense studio reverb with a silky tail",
+   "llm_prompt": "plate reverb, smooth dense tail",
+   "tags": ["production", "effect", "space", "reverb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "with chorus",
+   "music_theory_en": "chorus effect applied (modulated short-delay doubling creating width and slight detune shimmer)",
+   "plain_ko": "코러스 이펙트가 걸려 소리가 겹쳐 넓고 살짝 일렁이는 느낌",
+   "plain_en": "processed with a chorus effect so the sound feels doubled and wider",
+   "llm_prompt": "chorus effect, detuned width",
+   "tags": ["production", "effect", "modulation", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "compression",
+   "music_theory_en": "dynamic range compression (attenuating peaks to even out loudness and add density/punch)",
+   "plain_ko": "큰 소리와 작은 소리 차이를 눌러 고르고 단단하게 만드는 컴프레션",
+   "plain_en": "evening out loud and quiet parts so the sound feels tight and consistent",
+   "llm_prompt": "compressed dynamics, punchy and even",
+   "tags": ["production", "dynamics", "mixing"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "delay",
+   "music_theory_en": "delay (discrete time-shifted echo repeats, often tempo-synced)",
+   "plain_ko": "소리가 메아리처럼 일정 간격으로 반복되는 딜레이 효과",
+   "plain_en": "distinct echo repeats trailing after the sound",
+   "llm_prompt": "delay echoes, rhythmic repeats",
+   "tags": ["production", "effect", "delay", "space"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "overdriven",
+   "music_theory_en": "overdriven (soft-clipping saturation from a pushed amp/circuit, warm harmonic distortion)",
+   "plain_ko": "앰프를 세게 밀어붙인 듯 소리가 따뜻하게 지글지글 찌그러진 상태",
+   "plain_en": "pushed into a warm, gritty crunch like a cranked amp",
+   "llm_prompt": "overdriven tone, warm amp crunch",
+   "tags": ["production", "timbre", "distortion", "saturation"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "close-mic",
+   "music_theory_en": "close-miking (microphone placed very near the source; dry, detailed, intimate capture with proximity bass boost)",
+   "plain_ko": "마이크를 바짝 대고 녹음한 듯 숨결까지 들리는 가깝고 또렷한 소리",
+   "plain_en": "recorded with the mic very close, so it sounds intimate and detailed",
+   "llm_prompt": "close-miked, intimate detailed recording",
+   "tags": ["production", "recording", "space", "intimacy"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "room reverb",
+   "music_theory_en": "room reverb (short natural-room reverberation, modest early reflections, realistic small-space ambience)",
+   "plain_ko": "작은 방에서 울리는 듯 짧고 자연스러운 잔향",
+   "plain_en": "a short, natural echo like being in a normal room",
+   "llm_prompt": "room reverb, natural small-space ambience",
+   "tags": ["production", "effect", "space", "reverb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "processed",
+   "music_theory_en": "processed (audibly treated with studio effects/signal processing rather than left natural)",
+   "plain_ko": "이펙트를 거쳐 자연음이 아닌 가공된 느낌이 나는 소리",
+   "plain_en": "clearly treated with studio effects rather than sounding natural",
+   "llm_prompt": "processed sound, studio effects",
+   "tags": ["production", "effect", "timbre"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "chorus effect",
+   "music_theory_en": "chorus effect (modulated short delays layered with the dry signal, creating ensemble-like width and shimmer)",
+   "plain_ko": "한 소리가 여러 명이 함께 연주하는 것처럼 넓고 일렁이게 들리는 코러스 이펙트",
+   "plain_en": "an effect that makes one sound feel like several playing together, wide and shimmering",
+   "llm_prompt": "chorus effect, lush ensemble width",
+   "tags": ["production", "effect", "modulation", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "vinyl crackle",
+   "music_theory_en": "vinyl crackle (surface-noise pops and crackles of a vinyl record, used as lo-fi texture)",
+   "plain_ko": "LP판을 틀 때 나는 지직거리는 잡음 질감",
+   "plain_en": "the crackling, popping noise of an old vinyl record",
+   "llm_prompt": "vinyl crackle texture, lo-fi warmth",
+   "tags": ["production", "texture", "lo-fi", "noise"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "hall reverb",
+   "music_theory_en": "hall reverb (long concert-hall-style reverberation with slow diffuse decay)",
+   "plain_ko": "큰 공연장에서 울리는 듯 길고 웅장하게 퍼지는 잔향",
+   "plain_en": "a long, grand echo like being in a concert hall",
+   "llm_prompt": "hall reverb, long lush decay",
+   "tags": ["production", "effect", "space", "reverb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "high-fidelity",
+   "music_theory_en": "high-fidelity (full-bandwidth, low-noise, low-distortion reproduction; clean modern production quality)",
+   "plain_ko": "잡음 없이 맑고 세밀한, 음질이 아주 좋은 소리",
+   "plain_en": "very clean, detailed, high-quality sound with no noise",
+   "llm_prompt": "high-fidelity, pristine modern production",
+   "tags": ["production", "quality", "timbre"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "overdrive",
+   "music_theory_en": "overdrive (soft-clipping gain-stage saturation, warm crunchy harmonic distortion)",
+   "plain_ko": "기타 앰프를 세게 튼 듯 따뜻하게 찌그러지는 오버드라이브",
+   "plain_en": "a warm, crunchy distortion like a cranked guitar amp",
+   "llm_prompt": "overdrive, warm crunchy saturation",
+   "tags": ["production", "effect", "distortion", "saturation"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "proximity",
+   "music_theory_en": "proximity (perceived closeness of a source; often proximity effect — bass boost from close directional miking)",
+   "plain_ko": "소리가 귀 바로 앞에 있는 것처럼 가깝고 밀착되게 들리는 느낌",
+   "plain_en": "the sound feels very close and intimate, right next to your ear",
+   "llm_prompt": "close intimate presence, upfront in the mix",
+   "tags": ["production", "space", "recording", "intimacy"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "subtle chorus",
+   "music_theory_en": "subtle chorus (low-depth/low-mix chorus modulation adding faint width without obvious warble)",
+   "plain_ko": "티 나지 않을 만큼 살짝만 걸어 은은하게 넓어지는 코러스",
+   "plain_en": "a barely noticeable chorus that adds faint width and shimmer",
+   "llm_prompt": "subtle chorus, faint stereo widening",
+   "tags": ["production", "effect", "modulation", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "pitch correction",
+   "music_theory_en": "pitch correction (automatic retuning of vocal/instrument pitch to the scale; Auto-Tune-style processing)",
+   "plain_ko": "목소리 음정을 기계로 정확히 맞춘, 매끈하거나 로봇 같은 보정 효과",
+   "plain_en": "vocals digitally tuned to perfect pitch, smooth or robotic sounding",
+   "llm_prompt": "pitch-corrected vocals, auto-tuned sheen",
+   "tags": ["production", "vocal", "effect", "tuning"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "muffled",
+   "music_theory_en": "muffled (high frequencies attenuated, as if heard through a barrier; dull low-passed timbre)",
+   "plain_ko": "이불이나 벽 너머로 듣는 것처럼 먹먹하고 둔한 소리",
+   "plain_en": "dull and smothered, like hearing music through a wall",
+   "llm_prompt": "muffled low-passed sound, behind-the-wall feel",
+   "tags": ["production", "timbre", "filter"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "long reverb",
+   "music_theory_en": "long reverb (extended decay-time reverberation, washy sustained tail)",
+   "plain_ko": "여운이 오래도록 길게 남아 퍼지는 잔향",
+   "plain_en": "an echo tail that lingers for a long time",
+   "llm_prompt": "long reverb tail, washy sustained ambience",
+   "tags": ["production", "effect", "space", "reverb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "wah",
+   "music_theory_en": "wah (sweeping band-pass/resonant filter effect, e.g. wah-wah pedal, vowel-like \"wah\" sweep)",
+   "plain_ko": "기타 소리가 '와우와우' 하고 입을 여닫듯 변하는 와우 페달 효과",
+   "plain_en": "a \"wah-wah\" sweeping effect that makes the sound open and close like a mouth",
+   "llm_prompt": "wah-wah filter sweep, funky vowel tone",
+   "tags": ["production", "effect", "filter", "guitar"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "stereo image",
+   "music_theory_en": "stereo image (perceived left-right placement and width of sources in the stereo field)",
+   "plain_ko": "소리들이 좌우로 어떻게 배치되고 얼마나 넓게 퍼지는지의 공간 배치감",
+   "plain_en": "how the sounds are spread and placed between the left and right speakers",
+   "llm_prompt": "wide stereo image, clear left-right placement",
+   "tags": ["production", "mixing", "space", "stereo"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "distortion",
+   "music_theory_en": "distortion (hard-clipping nonlinear saturation adding aggressive harmonics and grit)",
+   "plain_ko": "소리가 거칠고 강하게 찌그러지는 디스토션",
+   "plain_en": "an aggressive, gritty crunch that roughens the sound",
+   "llm_prompt": "distortion, aggressive gritty tone",
+   "tags": ["production", "effect", "distortion", "timbre"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "and chorus",
+   "music_theory_en": "chorus effect (fragment: \"...and chorus\", listed alongside other effects; modulated doubling for width)",
+   "plain_ko": "다른 이펙트와 함께 코러스도 걸렸다는 뜻의 표현 조각",
+   "plain_en": "a phrase fragment meaning a chorus effect is also applied",
+   "llm_prompt": "chorus effect, modulated width",
+   "tags": ["production", "effect", "chorus", "fragment"],
+   "confidence": "low"
+  },
+  {
+   "suno_term": "sidechain",
+   "music_theory_en": "sidechain compression (ducking one signal — often pads/bass — in rhythm with another, typically the kick; pumping effect)",
+   "plain_ko": "킥 드럼에 맞춰 다른 소리가 숨 쉬듯 눌렸다 커지는 펌핑 효과",
+   "plain_en": "the music \"pumps\" in and out in time with the kick drum",
+   "llm_prompt": "sidechain pumping, kick-ducked pads",
+   "tags": ["production", "dynamics", "mixing", "electronic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "short reverb",
+   "music_theory_en": "short reverb (brief decay-time reverberation adding subtle space without wash)",
+   "plain_ko": "여운이 짧게 끊겨 살짝만 공간감을 주는 잔향",
+   "plain_en": "a quick, tight echo that adds a hint of space",
+   "llm_prompt": "short tight reverb, subtle room",
+   "tags": ["production", "effect", "space", "reverb"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "feedback swell",
+   "music_theory_en": "feedback swell (controlled amplifier feedback rising gradually into a sustained singing tone)",
+   "plain_ko": "기타 피드백이 서서히 커지며 길게 우는 듯 차오르는 소리",
+   "plain_en": "a guitar feedback note that slowly swells into a sustained wail",
+   "llm_prompt": "guitar feedback swell, rising sustained wail",
+   "tags": ["production", "effect", "guitar", "dynamics"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "eq",
+   "music_theory_en": "EQ / equalization (boosting or cutting specific frequency bands to shape tone)",
+   "plain_ko": "저음·고음 같은 특정 음역을 키우거나 줄여 음색을 다듬는 이퀄라이저",
+   "plain_en": "adjusting bass, mids, and treble to shape the tone",
+   "llm_prompt": "carefully EQ'd, balanced frequency spectrum",
+   "tags": ["production", "mixing", "filter"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "in the mix",
+   "music_theory_en": "in the mix (describing an element's placement/level within the overall mix balance)",
+   "plain_ko": "전체 사운드 안에서 그 소리가 어디쯤에 어느 크기로 자리하는지를 말하는 표현",
+   "plain_en": "describing where a sound sits in the overall balance of the track",
+   "llm_prompt": "well balanced in the mix",
+   "tags": ["production", "mixing", "fragment"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "processing",
+   "music_theory_en": "signal processing (application of effects/dynamics/EQ treatment to a sound)",
+   "plain_ko": "소리에 이펙트나 보정을 입히는 가공 작업 전반",
+   "plain_en": "the studio treatment and effects applied to a sound",
+   "llm_prompt": "polished studio processing",
+   "tags": ["production", "effect", "mixing"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "mechanical",
+   "music_theory_en": "mechanical (machine-like, rigidly quantized or robotic character in timbre/performance)",
+   "plain_ko": "기계가 내는 듯 딱딱하고 규칙적인 느낌의 소리",
+   "plain_en": "stiff and machine-like, robotic in feel",
+   "llm_prompt": "mechanical robotic character, rigid precision",
+   "tags": ["production", "timbre", "character"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "sound effect",
+   "music_theory_en": "sound effect (non-musical SFX element layered into the track, e.g. ambience, hits, foley)",
+   "plain_ko": "음악 사이에 들어간 효과음",
+   "plain_en": "a non-musical sound (like ambience or a hit) added to the track",
+   "llm_prompt": "with sound effects layered in",
+   "tags": ["production", "sfx", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "foley",
+   "music_theory_en": "foley (recorded real-world everyday sounds — footsteps, rustles, objects — used as texture)",
+   "plain_ko": "발소리·부스럭거림 같은 실제 생활 소음을 녹음해 넣은 효과음",
+   "plain_en": "recorded everyday real-world noises (footsteps, rustling) used as texture",
+   "llm_prompt": "foley textures, real-world everyday sounds",
+   "tags": ["production", "sfx", "texture", "recording"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "sits forward",
+   "music_theory_en": "sits forward (mixed prominently up front, louder/drier so it feels close to the listener)",
+   "plain_ko": "그 소리가 믹스에서 앞으로 나와 또렷하게 들리는 상태",
+   "plain_en": "the sound is placed up front in the mix, close and prominent",
+   "llm_prompt": "vocals sit forward, upfront and present",
+   "tags": ["production", "mixing", "space"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "forward in the mix",
+   "music_theory_en": "forward in the mix (element placed prominently at the front of the mix depth-wise)",
+   "plain_ko": "믹스에서 앞쪽에 배치되어 도드라지게 들리는 것",
+   "plain_en": "placed prominently at the front of the sound picture",
+   "llm_prompt": "forward in the mix, prominent and present",
+   "tags": ["production", "mixing", "space"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "white noise",
+   "music_theory_en": "white noise (broadband noise with equal energy per frequency; hissing texture, common in risers/sweeps)",
+   "plain_ko": "라디오 빈 채널처럼 '쉬-' 하는 고른 잡음 소리",
+   "plain_en": "a steady \"shhh\" hiss like radio static",
+   "llm_prompt": "white noise texture, hissing sweep",
+   "tags": ["production", "noise", "texture", "electronic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "sweep",
+   "music_theory_en": "sweep (gradual frequency/filter movement across the spectrum, often as a transition effect)",
+   "plain_ko": "소리가 낮은 데서 높은 데로(또는 반대로) 쓸어 올라가듯 변하는 효과",
+   "plain_en": "a sound gliding upward or downward across the frequency range",
+   "llm_prompt": "filter sweep transition, rising whoosh",
+   "tags": ["production", "effect", "transition", "filter"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "record scratch",
+   "music_theory_en": "record scratch (turntable vinyl scratch sound, DJ-style rhythmic friction effect)",
+   "plain_ko": "DJ가 LP판을 손으로 긁을 때 나는 '직직' 스크래치 소리",
+   "plain_en": "the \"zig-zig\" sound of a DJ scratching a vinyl record",
+   "llm_prompt": "DJ record scratch, turntablism accent",
+   "tags": ["production", "sfx", "hip-hop", "turntable"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "centered in the mix",
+   "music_theory_en": "centered in the mix (panned to the stereo center, anchoring the element in the middle)",
+   "plain_ko": "그 소리가 좌우 치우침 없이 한가운데에서 들리는 것",
+   "plain_en": "the sound comes from the exact middle, not left or right",
+   "llm_prompt": "centered in the mix, anchored middle placement",
+   "tags": ["production", "mixing", "stereo", "space"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "tape hiss",
+   "music_theory_en": "tape hiss (high-frequency noise floor of analog magnetic tape, vintage lo-fi texture)",
+   "plain_ko": "옛날 카세트테이프에서 나는 '스-' 하는 배경 잡음",
+   "plain_en": "the faint background hiss of an old cassette tape",
+   "llm_prompt": "tape hiss, vintage analog noise floor",
+   "tags": ["production", "noise", "lo-fi", "analog"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "tremolo effect",
+   "music_theory_en": "tremolo effect (periodic amplitude modulation, volume pulsing at a steady rate)",
+   "plain_ko": "소리 크기가 일정하게 떨리듯 커졌다 작아졌다 하는 트레몰로 효과",
+   "plain_en": "the volume pulses rhythmically, like the sound is trembling",
+   "llm_prompt": "tremolo effect, pulsing amplitude wobble",
+   "tags": ["production", "effect", "modulation"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "riser",
+   "music_theory_en": "riser (rising sweep/noise build-up used to create tension before a drop or section change)",
+   "plain_ko": "하이라이트 직전에 긴장감을 끌어올리며 치솟는 상승 효과음",
+   "plain_en": "a rising whoosh that builds tension right before a big moment",
+   "llm_prompt": "riser build-up, tension sweep into the drop",
+   "tags": ["production", "sfx", "transition", "electronic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "polished production",
+   "music_theory_en": "polished production (refined commercial-grade mixing/mastering; clean, balanced, radio-ready sound)",
+   "plain_ko": "잡티 없이 매끈하게 다듬어진 상업 음반 수준의 완성도 높은 사운드",
+   "plain_en": "slick, radio-ready sound quality with everything cleanly balanced",
+   "llm_prompt": "polished production, radio-ready mix",
+   "tags": ["production", "quality", "mixing"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "master bus",
+   "music_theory_en": "master bus (the final stereo output channel where whole-mix processing like glue compression is applied)",
+   "plain_ko": "곡 전체 소리가 마지막으로 한데 모여 다듬어지는 최종 출력 단계",
+   "plain_en": "the final stage where the whole song's sound is glued and polished together",
+   "llm_prompt": "glued master bus processing, cohesive mix",
+   "tags": ["production", "mixing", "mastering"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "spring reverb",
+   "music_theory_en": "spring reverb (spring-tank reverberation with boingy, metallic drip; classic guitar-amp/surf sound)",
+   "plain_ko": "옛날 기타 앰프 특유의 '통-' 하고 튕기는 금속성 잔향",
+   "plain_en": "a boingy, metallic echo typical of vintage guitar amps",
+   "llm_prompt": "spring reverb, vintage boingy amp echo",
+   "tags": ["production", "effect", "reverb", "vintage"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "clock-ticking",
+   "music_theory_en": "clock-ticking (ticking-clock SFX or metronomic tick texture layered in the track)",
+   "plain_ko": "시계 초침이 째깍거리는 소리를 효과음으로 넣은 것",
+   "plain_en": "the tick-tock of a clock used as a sound in the track",
+   "llm_prompt": "clock ticking sound, metronomic tick texture",
+   "tags": ["production", "sfx", "texture", "rhythm"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "water droplet",
+   "music_theory_en": "water droplet (single water-drop SFX or drop-like plucky percussive timbre)",
+   "plain_ko": "물방울이 '똑' 떨어지는 듯한 소리",
+   "plain_en": "a sound like a single water drop falling",
+   "llm_prompt": "water droplet sound, plucky drip texture",
+   "tags": ["production", "sfx", "texture"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "water droplets",
+   "music_theory_en": "water droplets (multiple water-drip SFX or dripping plucky textures)",
+   "plain_ko": "물방울이 여러 번 똑똑 떨어지는 듯한 소리 질감",
+   "plain_en": "sounds like water dripping repeatedly",
+   "llm_prompt": "water droplet textures, dripping ambience",
+   "tags": ["production", "sfx", "texture"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "hum",
+   "music_theory_en": "hum (steady low-frequency tonal drone/noise, e.g. electrical hum or a sustained low murmur)",
+   "plain_ko": "전기 기기나 낮은 웅웅거림처럼 일정하게 깔리는 저음의 웅웅 소리",
+   "plain_en": "a steady low droning buzz, like electrical hum",
+   "llm_prompt": "low hum drone, steady background buzz",
+   "tags": ["production", "noise", "texture", "drone"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "stereo imaging",
+   "music_theory_en": "stereo imaging (control of width and left-right placement of elements in the stereo field)",
+   "plain_ko": "소리들을 좌우로 배치해 넓이와 위치감을 만드는 작업",
+   "plain_en": "shaping how wide and where sounds sit between left and right",
+   "llm_prompt": "precise stereo imaging, wide spatial placement",
+   "tags": ["production", "mixing", "stereo", "space"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "mono",
+   "music_theory_en": "mono (monophonic single-channel audio; no stereo width, everything centered)",
+   "plain_ko": "좌우 구분 없이 한 채널로만 들리는 모노 사운드",
+   "plain_en": "single-channel sound with no left-right separation",
+   "llm_prompt": "mono sound, centered single-channel",
+   "tags": ["production", "stereo", "mixing"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "shutter",
+   "music_theory_en": "shutter (likely camera-shutter click SFX or gated stutter texture; ambiguous fragment)",
+   "plain_ko": "카메라 셔터 '찰칵' 같은 효과음(또는 뚝뚝 끊기는 질감)으로 추정되는 표현",
+   "plain_en": "probably a camera-shutter click sound effect, or a chopped stuttering texture",
+   "llm_prompt": "camera shutter click sfx",
+   "tags": ["production", "sfx", "fragment"],
+   "confidence": "low"
+  },
+  {
+   "suno_term": "slapback delay",
+   "music_theory_en": "slapback delay (single short echo ~60-150ms, classic rockabilly/50s vocal effect)",
+   "plain_ko": "소리 바로 뒤에 한 번만 짧게 '탁' 되울리는 옛 로큰롤풍 에코",
+   "plain_en": "one quick single echo right after the sound, like 1950s rock'n'roll vocals",
+   "llm_prompt": "slapback delay, short single rockabilly echo",
+   "tags": ["production", "effect", "delay", "vintage"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "low-pass filter",
+   "music_theory_en": "low-pass filter (attenuates frequencies above a cutoff, leaving lows; darkens/muffles the sound)",
+   "plain_ko": "고음을 깎아내 소리를 어둡고 먹먹하게 만드는 필터",
+   "plain_en": "a filter that cuts the highs, making the sound darker and muffled",
+   "llm_prompt": "low-pass filtered, dark muffled tone",
+   "tags": ["production", "filter", "effect"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "panned",
+   "music_theory_en": "panned (positioned toward one side of the stereo field via pan control)",
+   "plain_ko": "소리를 왼쪽이나 오른쪽 한쪽으로 치우쳐 배치한 것",
+   "plain_en": "the sound is placed toward the left or right speaker",
+   "llm_prompt": "panned to one side, off-center placement",
+   "tags": ["production", "mixing", "stereo", "space"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "high-pass filter",
+   "music_theory_en": "high-pass filter (attenuates frequencies below a cutoff, removing lows; thins/brightens the sound)",
+   "plain_ko": "저음을 깎아내 소리를 얇고 가볍게 만드는 필터",
+   "plain_en": "a filter that cuts the bass, making the sound thin and light",
+   "llm_prompt": "high-pass filtered, thin airy tone",
+   "tags": ["production", "filter", "effect"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "fuzz",
+   "music_theory_en": "fuzz (extreme square-wave-like clipping distortion; woolly, buzzy 60s pedal tone)",
+   "plain_ko": "벌이 윙윙대듯 보풀보풀하게 심하게 찌그러진 퍼즈 톤",
+   "plain_en": "a woolly, buzzing, heavily broken-up distortion like a 60s fuzz pedal",
+   "llm_prompt": "fuzz distortion, woolly buzzing 60s tone",
+   "tags": ["production", "effect", "distortion", "vintage"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "dripping",
+   "music_theory_en": "dripping (drip-like SFX texture, or descriptive of an effect-drenched sound; ambiguous fragment)",
+   "plain_ko": "물이 뚝뚝 떨어지는 듯한 소리 질감(또는 이펙트가 뚝뚝 흐를 만큼 짙다는 묘사)",
+   "plain_en": "a dripping-water texture, or a sound soaked in effects",
+   "llm_prompt": "dripping water texture",
+   "tags": ["production", "sfx", "texture", "fragment"],
+   "confidence": "low"
+  },
+  {
+   "suno_term": "filter sweep",
+   "music_theory_en": "filter sweep (gradual movement of a filter cutoff across the spectrum, opening or closing the sound)",
+   "plain_ko": "필터가 서서히 열리거나 닫히며 소리가 밝아졌다 어두워졌다 변하는 효과",
+   "plain_en": "the sound gradually opens up or closes down as a filter moves",
+   "llm_prompt": "filter sweep, gradually opening cutoff",
+   "tags": ["production", "filter", "effect", "transition"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "clean production",
+   "music_theory_en": "clean production (uncluttered, low-noise, well-separated modern mix quality)",
+   "plain_ko": "잡음 없이 각 소리가 깔끔하게 분리되어 들리는 정돈된 프로덕션",
+   "plain_en": "a tidy, noise-free mix where every sound is clear and separated",
+   "llm_prompt": "clean production, clear uncluttered mix",
+   "tags": ["production", "quality", "mixing"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "autotune",
+   "music_theory_en": "Auto-Tune (real-time pitch correction; at strong settings, the signature robotic vocal warble)",
+   "plain_ko": "음정을 기계로 딱딱 맞춰 로봇처럼 매끈하게 들리는 오토튠 보컬 효과",
+   "plain_en": "vocals snapped to perfect pitch with that robotic Auto-Tune sound",
+   "llm_prompt": "autotuned vocals, robotic pitch-snapped effect",
+   "tags": ["production", "vocal", "effect", "tuning"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "clean",
+   "music_theory_en": "clean (undistorted, low-noise timbre; e.g. clean guitar tone without overdrive)",
+   "plain_ko": "찌그러짐이나 잡음 없이 맑고 깨끗한 소리",
+   "plain_en": "pure and clear, with no distortion or noise",
+   "llm_prompt": "clean undistorted tone",
+   "tags": ["timbre", "production", "clarity"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "distorted",
+   "music_theory_en": "distorted (clipped/saturated timbre with added rough harmonics)",
+   "plain_ko": "거칠게 찌그러져 지글거리는 소리",
+   "plain_en": "gritty and crunchy, roughened by distortion",
+   "llm_prompt": "distorted gritty tone",
+   "tags": ["timbre", "production", "distortion"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "soft",
+   "music_theory_en": "soft (low-intensity, gentle attack and subdued dynamics/timbre)",
+   "plain_ko": "부드럽고 여린, 자극 없이 살며시 들리는 소리",
+   "plain_en": "gentle and quiet, easy on the ears",
+   "llm_prompt": "soft gentle tone, subdued dynamics",
+   "tags": ["timbre", "dynamics", "character"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "heavy",
+   "music_theory_en": "heavy (dense, powerful, often low-frequency-weighted and aggressive timbre)",
+   "plain_ko": "묵직하고 강하게 짓누르는 듯한 소리",
+   "plain_en": "thick, powerful, and weighty sounding",
+   "llm_prompt": "heavy powerful sound, weighty low end",
+   "tags": ["timbre", "dynamics", "character"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "crisp",
+   "music_theory_en": "crisp (clear high-frequency detail with sharp, well-defined transients)",
+   "plain_ko": "과자 부서지듯 또렷하고 바삭바삭하게 선명한 소리",
+   "plain_en": "sharp and clear with snappy, well-defined edges",
+   "llm_prompt": "crisp sharp transients, clear high end",
+   "tags": ["timbre", "clarity", "transient"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "breathy",
+   "music_theory_en": "breathy (audible breath/air noise mixed into the tone, especially in vocals or flutes)",
+   "plain_ko": "숨소리가 섞여 바람이 스치듯 속삭이는 느낌의 소리",
+   "plain_en": "airy with audible breath, like a whispering voice",
+   "llm_prompt": "breathy airy vocals, audible breath texture",
+   "tags": ["timbre", "vocal", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "metallic",
+   "music_theory_en": "metallic (inharmonic overtone-rich timbre reminiscent of struck or resonating metal)",
+   "plain_ko": "쇠붙이를 두드리거나 울릴 때 나는 듯한 차갑고 쨍한 소리",
+   "plain_en": "cold and clangy, like ringing metal",
+   "llm_prompt": "metallic clangy timbre",
+   "tags": ["timbre", "texture", "character"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "resonant",
+   "music_theory_en": "resonant (strong sustained resonance; ringing body or emphasized formant/filter peak)",
+   "plain_ko": "울림통이 우렁우렁 울리듯 여운 있게 공명하는 소리",
+   "plain_en": "ringing and full, with a strong lingering resonance",
+   "llm_prompt": "resonant ringing tone, rich sustain",
+   "tags": ["timbre", "resonance", "sustain"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "lo-fi",
+   "music_theory_en": "lo-fi (low-fidelity aesthetic: band-limited, noisy, degraded texture used intentionally)",
+   "plain_ko": "일부러 오래된 라디오처럼 지직거리고 뭉툭하게 만든 빈티지 음질",
+   "plain_en": "intentionally degraded, fuzzy old-radio sound quality",
+   "llm_prompt": "lo-fi degraded texture, dusty vintage quality",
+   "tags": ["timbre", "production", "lo-fi", "aesthetic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "analog",
+   "music_theory_en": "analog (warm, slightly saturated character of analog circuitry/tape, as opposed to clinical digital)",
+   "plain_ko": "옛 장비 특유의 따뜻하고 살짝 뭉근한 아날로그 질감",
+   "plain_en": "warm and slightly rounded, like vintage tape and hardware",
+   "llm_prompt": "warm analog character, vintage tape saturation",
+   "tags": ["timbre", "production", "analog", "vintage"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "shimmering",
+   "music_theory_en": "shimmering (sparkling high-frequency movement; glistening, gently modulating brightness)",
+   "plain_ko": "빛이 반짝이듯 고음이 잘게 일렁이며 빛나는 소리",
+   "plain_en": "sparkling and glistening, like light dancing on water",
+   "llm_prompt": "shimmering sparkling highs",
+   "tags": ["timbre", "texture", "brightness"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "airy",
+   "music_theory_en": "airy (open, light timbre with emphasized very-high 'air' band and spacious feel)",
+   "plain_ko": "공기처럼 가볍고 탁 트여 산뜻하게 퍼지는 소리",
+   "plain_en": "light and open, as if there is air and space around the sound",
+   "llm_prompt": "airy open texture, light spacious highs",
+   "tags": ["timbre", "space", "brightness"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rounded",
+   "music_theory_en": "rounded (smooth timbre with softened attack and tamed high frequencies; no harsh edges)",
+   "plain_ko": "모서리가 없이 둥글둥글 부드럽게 다듬어진 소리",
+   "plain_en": "smooth and mellow, with no sharp edges",
+   "llm_prompt": "rounded mellow tone, softened edges",
+   "tags": ["timbre", "character", "smoothness"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "compressed",
+   "music_theory_en": "compressed (dynamics-flattened timbre: dense, even, punchy from compression)",
+   "plain_ko": "소리 크기 기복이 눌려 빽빽하고 단단하게 들리는 상태",
+   "plain_en": "dense and even, with the loud-quiet swings squashed flat",
+   "llm_prompt": "compressed dense sound, flattened dynamics",
+   "tags": ["timbre", "production", "dynamics"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "saturated",
+   "music_theory_en": "saturated (harmonically enriched by gentle overload of tape/tube/circuit; warm thickened tone)",
+   "plain_ko": "테이프나 진공관을 적당히 밀어붙인 듯 배음이 더해져 뭉근하고 진한 소리",
+   "plain_en": "warmly thickened and enriched, like tape pushed just past its limit",
+   "llm_prompt": "saturated warm harmonics, tape-driven thickness",
+   "tags": ["timbre", "production", "saturation", "warmth"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "thick",
+   "music_theory_en": "thick (dense, full-bodied timbre with strong low-mid weight or heavy layering)",
+   "plain_ko": "여러 겹 쌓인 듯 빽빽하고 살집 있는 두툼한 소리",
+   "plain_en": "full and dense, like many layers stacked together",
+   "llm_prompt": "thick layered sound, full-bodied low mids",
+   "tags": ["timbre", "density", "character"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "sub-heavy",
+   "music_theory_en": "sub-heavy (dominant sub-bass energy below ~60Hz; chest-shaking low end)",
+   "plain_ko": "몸이 울릴 만큼 아주 낮은 초저음이 강하게 깔린 소리",
+   "plain_en": "loaded with deep bass you feel in your chest",
+   "llm_prompt": "sub-heavy bass, deep chest-rattling low end",
+   "tags": ["timbre", "bass", "low-end", "electronic"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "low-end",
+   "music_theory_en": "low-end (the bass/sub-bass frequency region of the mix)",
+   "plain_ko": "곡에서 베이스와 저음이 차지하는 낮은 음역대",
+   "plain_en": "the bass region of the sound, the deep low frequencies",
+   "llm_prompt": "solid low-end, well-defined bass foundation",
+   "tags": ["timbre", "bass", "mixing", "low-end"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "glassy",
+   "music_theory_en": "glassy (clear, bright, smooth timbre with bell-like transparent highs, e.g. clean FM/Rhodes tones)",
+   "plain_ko": "유리알처럼 맑고 투명하게 반짝이는 고운 소리",
+   "plain_en": "clear and glass-like, smooth transparent brightness",
+   "llm_prompt": "glassy transparent tone, bell-like clarity",
+   "tags": ["timbre", "brightness", "clarity"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "woody",
+   "music_theory_en": "woody (warm, hollow, wood-resonant timbre typical of acoustic bodies, marimba, upright bass)",
+   "plain_ko": "나무통이 울리는 듯 따뜻하고 구수하게 통통한 소리",
+   "plain_en": "warm and hollow like resonating wood",
+   "llm_prompt": "woody resonant timbre, warm acoustic body",
+   "tags": ["timbre", "acoustic", "warmth", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "nasal",
+   "music_theory_en": "nasal (midrange-honky timbre with emphasized ~800Hz-2kHz formants, pinched 'through the nose' quality)",
+   "plain_ko": "코가 막힌 듯 콧소리 섞인 답답한 중음의 소리",
+   "plain_en": "pinched and honky, like singing through your nose",
+   "llm_prompt": "nasal honky midrange tone",
+   "tags": ["timbre", "vocal", "midrange", "character"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "thin",
+   "music_theory_en": "thin (lacking low-frequency body; lightweight, small-sounding timbre)",
+   "plain_ko": "저음의 받침 없이 얇고 가냘프게 들리는 소리",
+   "plain_en": "lightweight and small, missing bass body",
+   "llm_prompt": "thin lightweight tone, reduced body",
+   "tags": ["timbre", "character", "brightness"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "fuzzy",
+   "music_theory_en": "fuzzy (soft-edged, blurry saturated texture; woolly fuzz-like grain)",
+   "plain_ko": "보풀이 인 것처럼 윤곽이 흐릿하고 지글거리는 소리",
+   "plain_en": "blurry and woolly, with a soft buzzing grain",
+   "llm_prompt": "fuzzy woolly texture, soft saturated grain",
+   "tags": ["timbre", "distortion", "texture"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "hollow",
+   "music_theory_en": "hollow (scooped midrange or tube-like resonance giving an empty, cavernous quality)",
+   "plain_ko": "속이 텅 빈 통을 두드리는 듯 공허하게 울리는 소리",
+   "plain_en": "empty and tube-like, as if from inside a hollow container",
+   "llm_prompt": "hollow scooped tone, cavernous quality",
+   "tags": ["timbre", "resonance", "character"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "hi-fi",
+   "music_theory_en": "hi-fi (high-fidelity: full-range, clean, detailed modern reproduction quality)",
+   "plain_ko": "잡음 없이 또렷하고 풍부한, 음질 좋은 하이파이 사운드",
+   "plain_en": "clean, detailed, top-quality sound reproduction",
+   "llm_prompt": "hi-fi pristine sound, detailed full-range quality",
+   "tags": ["timbre", "production", "quality"],
+   "confidence": "high"
+  }
+ ]
+}

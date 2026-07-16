@@ -1,0 +1,357 @@
+{
+ "group": "g5_vocal_harmony",
+ "authored_at": "2026-07-16",
+ "entries": [
+  {
+   "suno_term": "male vocals",
+   "music_theory_en": "male lead vocals (a male voice carrying the melodic line of the song)",
+   "plain_ko": "남자 목소리가 노래를 부르는 소리",
+   "plain_en": "a man's voice singing the song",
+   "llm_prompt": "male vocals",
+   "tags": ["vocal", "male", "lead"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "vocals",
+   "music_theory_en": "vocals (sung human voice as a musical part, gender/register unspecified)",
+   "plain_ko": "사람이 노래하는 목소리가 들어간 소리",
+   "plain_en": "human singing voice in the track",
+   "llm_prompt": "vocals",
+   "tags": ["vocal", "voice"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "female vocals",
+   "music_theory_en": "female lead vocals (a female voice carrying the melodic line of the song)",
+   "plain_ko": "여자 목소리가 노래를 부르는 소리",
+   "plain_en": "a woman's voice singing the song",
+   "llm_prompt": "female vocals",
+   "tags": ["vocal", "female", "lead"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "voice",
+   "music_theory_en": "voice (the human vocal instrument; may refer to sung or spoken presence in the mix)",
+   "plain_ko": "사람 목소리 소리 그 자체, 노래일 수도 말일 수도 있음",
+   "plain_en": "a human voice, sung or spoken",
+   "llm_prompt": "human voice",
+   "tags": ["vocal", "voice"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "male baritone vocals",
+   "music_theory_en": "male baritone vocals (male voice in the baritone range, between tenor and bass, roughly A2–A4)",
+   "plain_ko": "너무 높지도 낮지도 않은, 묵직하고 중저음인 남자 목소리의 노래",
+   "plain_en": "a deep, mid-low male singing voice",
+   "llm_prompt": "deep male baritone vocals",
+   "tags": ["vocal", "male", "baritone", "register"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "falsetto",
+   "music_theory_en": "falsetto (a light head-voice register above the natural chest range, typically breathy and flute-like)",
+   "plain_ko": "가수가 일부러 얇고 높게 내는 가성 목소리",
+   "plain_en": "a light, airy high voice above the singer's normal range",
+   "llm_prompt": "falsetto vocals",
+   "tags": ["vocal", "register", "falsetto", "high"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "male tenor vocals",
+   "music_theory_en": "male tenor vocals (male voice in the tenor range, the higher male register, roughly C3–C5)",
+   "plain_ko": "남자 목소리 중에서도 높고 시원하게 뻗는 음역의 노래",
+   "plain_en": "a high, bright male singing voice",
+   "llm_prompt": "high male tenor vocals",
+   "tags": ["vocal", "male", "tenor", "register"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rap delivery",
+   "music_theory_en": "rap delivery (rhythmic spoken-word vocal performance emphasizing flow and cadence over sung pitch)",
+   "plain_ko": "멜로디 없이 리듬을 타며 말하듯 내뱉는 랩 창법",
+   "plain_en": "rhythmic spoken rapping instead of singing",
+   "llm_prompt": "rap vocals, rhythmic flow",
+   "tags": ["vocal", "rap", "delivery", "rhythm"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "vocalist",
+   "music_theory_en": "vocalist (the singer performing the vocal part)",
+   "plain_ko": "노래를 부르는 사람, 즉 가수의 목소리",
+   "plain_en": "the singer performing the song",
+   "llm_prompt": "solo vocalist",
+   "tags": ["vocal", "performer"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "singing",
+   "music_theory_en": "singing (melodic sung vocal performance, as opposed to spoken or rapped delivery)",
+   "plain_ko": "말이 아니라 멜로디를 붙여 노래하는 목소리",
+   "plain_en": "melodic singing with the voice",
+   "llm_prompt": "sung vocals",
+   "tags": ["vocal", "melody"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "male vocalist",
+   "music_theory_en": "male vocalist (a male singer performing the vocal part)",
+   "plain_ko": "노래를 부르는 남자 가수의 목소리",
+   "plain_en": "a male singer performing the song",
+   "llm_prompt": "male vocalist",
+   "tags": ["vocal", "male", "performer"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "vocalizing",
+   "music_theory_en": "vocalizing (wordless vocal sounds such as 'ooh'/'aah' or melodic humming rather than lyrics)",
+   "plain_ko": "가사 없이 '우~', '아~' 같은 소리로 멜로디를 내는 목소리",
+   "plain_en": "wordless 'ooh' and 'aah' vocal sounds",
+   "llm_prompt": "wordless vocalizing, oohs and aahs",
+   "tags": ["vocal", "wordless", "texture"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "male rapper",
+   "music_theory_en": "male rapper (a male vocalist performing rap: rhythmic spoken delivery)",
+   "plain_ko": "리듬에 맞춰 랩을 하는 남자 목소리",
+   "plain_en": "a man rapping over the beat",
+   "llm_prompt": "male rap vocals",
+   "tags": ["vocal", "rap", "male"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "rapper",
+   "music_theory_en": "rapper (a vocalist performing rap: rhythmic spoken-word delivery over the beat)",
+   "plain_ko": "비트 위에서 말하듯 리듬을 타며 랩하는 목소리",
+   "plain_en": "someone rapping over the beat",
+   "llm_prompt": "rap vocals",
+   "tags": ["vocal", "rap"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "female vocalist",
+   "music_theory_en": "female vocalist (a female singer performing the vocal part)",
+   "plain_ko": "노래를 부르는 여자 가수의 목소리",
+   "plain_en": "a female singer performing the song",
+   "llm_prompt": "female vocalist",
+   "tags": ["vocal", "female", "performer"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "singer",
+   "music_theory_en": "singer (the person performing the sung vocal line)",
+   "plain_ko": "노래를 부르는 사람의 목소리",
+   "plain_en": "a person singing the song",
+   "llm_prompt": "lead singer vocals",
+   "tags": ["vocal", "performer"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "female soprano vocals",
+   "music_theory_en": "female soprano vocals (female voice in the soprano range, the highest common voice type, roughly C4–C6)",
+   "plain_ko": "맑고 아주 높게 올라가는 여자 목소리의 노래",
+   "plain_en": "a very high, clear female singing voice",
+   "llm_prompt": "high female soprano vocals",
+   "tags": ["vocal", "female", "soprano", "register"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "harmonies",
+   "music_theory_en": "vocal harmonies (additional vocal lines sung at consonant intervals above or below the lead melody)",
+   "plain_ko": "주 멜로디 위아래로 다른 음을 함께 불러 화음을 쌓는 소리",
+   "plain_en": "extra voices singing different notes that blend with the main melody",
+   "llm_prompt": "vocal harmonies",
+   "tags": ["vocal", "harmony", "chorus", "layering"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "doubling",
+   "music_theory_en": "vocal doubling (recording the same line twice and layering the takes for thickness and width)",
+   "plain_ko": "같은 보컬 라인을 겹쳐 녹음해 소리를 두껍게 만드는 기법",
+   "plain_en": "the same vocal line layered on itself to sound thicker",
+   "llm_prompt": "doubled vocals, thick layered voice",
+   "tags": ["vocal", "layering", "production", "doubling"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "ad-libs",
+   "music_theory_en": "ad-libs (improvised vocal interjections and fills placed around the main vocal line, common in R&B/hip-hop)",
+   "plain_ko": "노래 사이사이에 즉흥으로 넣는 '예~', '오~' 같은 추임새 목소리",
+   "plain_en": "improvised vocal shouts and fills between the main lines",
+   "llm_prompt": "vocal ad-libs",
+   "tags": ["vocal", "adlib", "improvisation", "fill"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "layered vocal",
+   "music_theory_en": "layered vocals (multiple stacked vocal tracks — doubles, harmonies, pads — creating a dense vocal texture)",
+   "plain_ko": "여러 목소리 트랙을 겹겹이 쌓아 풍성하게 만든 보컬 소리",
+   "plain_en": "many vocal tracks stacked together for a rich, full sound",
+   "llm_prompt": "layered stacked vocals",
+   "tags": ["vocal", "layering", "texture", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "call-and-response",
+   "music_theory_en": "call and response (an antiphonal structure where one voice or part states a phrase and another answers it)",
+   "plain_ko": "한 목소리가 부르면 다른 목소리가 대답하듯 주고받는 형식",
+   "plain_en": "one voice sings a line and another answers back",
+   "llm_prompt": "call and response vocals",
+   "tags": ["vocal", "structure", "antiphony", "interaction"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "unison",
+   "music_theory_en": "unison (two or more voices or instruments performing the exact same pitch/line together)",
+   "plain_ko": "여러 목소리나 악기가 같은 음을 똑같이 함께 내는 소리",
+   "plain_en": "several voices singing the exact same notes together",
+   "llm_prompt": "unison vocals",
+   "tags": ["vocal", "harmony", "ensemble", "unison"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "ad-lib",
+   "music_theory_en": "ad-lib (a single improvised vocal interjection or fill outside the written melody)",
+   "plain_ko": "정해진 가사 밖에서 즉흥으로 내지르는 짧은 추임새 목소리",
+   "plain_en": "a short improvised vocal shout or fill",
+   "llm_prompt": "vocal ad-lib",
+   "tags": ["vocal", "adlib", "improvisation"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "vocal harmonies",
+   "music_theory_en": "vocal harmonies (supporting vocal lines sung at intervals such as 3rds or 5ths against the lead melody)",
+   "plain_ko": "주 멜로디에 3도·5도 같은 다른 음을 겹쳐 불러 화음을 만드는 소리",
+   "plain_en": "backing voices singing notes that blend in chords with the melody",
+   "llm_prompt": "vocal harmonies",
+   "tags": ["vocal", "harmony", "chorus", "backing"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "vocal harmony",
+   "music_theory_en": "vocal harmony (a harmony vocal part sung against the lead melody at a consonant interval)",
+   "plain_ko": "주 멜로디에 다른 음 하나를 겹쳐 불러 화음을 이루는 소리",
+   "plain_en": "a second voice singing a blending note against the melody",
+   "llm_prompt": "vocal harmony",
+   "tags": ["vocal", "harmony", "backing"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "choir",
+   "music_theory_en": "choir (a large ensemble of singers performing in multiple parts, e.g. SATB)",
+   "plain_ko": "여러 사람이 함께 파트를 나눠 부르는 합창단 소리",
+   "plain_en": "a large group of people singing together in parts",
+   "llm_prompt": "choir vocals",
+   "tags": ["vocal", "choir", "ensemble", "chorus"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "double-tracking",
+   "music_theory_en": "double-tracking (recording a second near-identical performance of the same vocal line and layering it for width and thickness)",
+   "plain_ko": "같은 노래를 두 번 녹음해 겹쳐서 목소리를 넓고 두껍게 만드는 녹음 기법",
+   "plain_en": "the same vocal recorded twice and layered for a fuller sound",
+   "llm_prompt": "double-tracked vocals",
+   "tags": ["vocal", "production", "layering", "doubling"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "adlibs",
+   "music_theory_en": "ad-libs (improvised vocal interjections and fills around the main vocal; alternate spelling of 'ad-libs')",
+   "plain_ko": "노래 사이사이에 즉흥으로 넣는 짧은 추임새 목소리들",
+   "plain_en": "improvised vocal shouts and fills between the main lines",
+   "llm_prompt": "vocal ad-libs",
+   "tags": ["vocal", "adlib", "improvisation", "fill"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "choral",
+   "music_theory_en": "choral (in the style or texture of a choir; multi-part massed voices)",
+   "plain_ko": "합창단처럼 여러 목소리가 웅장하게 어우러지는 느낌의 소리",
+   "plain_en": "voices blended together like a choir",
+   "llm_prompt": "choral vocals, massed voices",
+   "tags": ["vocal", "choir", "texture", "ensemble"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "call and response",
+   "music_theory_en": "call and response (an antiphonal exchange where a lead phrase is answered by another voice or group)",
+   "plain_ko": "한쪽이 선창하면 다른 쪽이 이어받아 대답하듯 부르는 형식",
+   "plain_en": "one voice leads and another answers back and forth",
+   "llm_prompt": "call and response vocals",
+   "tags": ["vocal", "structure", "antiphony", "interaction"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "chord progression",
+   "music_theory_en": "chord progression (an ordered sequence of chords that underpins the harmony of a passage, e.g. I–V–vi–IV)",
+   "plain_ko": "곡의 분위기를 만드는, 코드(화음)가 순서대로 바뀌어 가는 흐름",
+   "plain_en": "the sequence of chords the song moves through",
+   "llm_prompt": "clear chord progression",
+   "tags": ["harmony", "chords", "structure"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "cadence",
+   "music_theory_en": "cadence (a harmonic formula that closes a phrase, e.g. authentic V–I or half cadence, giving a sense of resolution or pause)",
+   "plain_ko": "악구 끝에서 마무리되거나 쉬어 가는 느낌을 주는 화성의 매듭",
+   "plain_en": "the chord move at the end of a phrase that feels like a landing or a pause",
+   "llm_prompt": "resolving cadence",
+   "tags": ["harmony", "cadence", "resolution", "phrase"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "minor seventh",
+   "music_theory_en": "minor seventh chord (a minor triad with a minor 7th added, e.g. Am7; also the m7 interval — soft, mellow, jazzy color)",
+   "plain_ko": "재즈나 알앤비에서 자주 쓰는, 부드럽고 살짝 쓸쓸한 느낌의 화음",
+   "plain_en": "a soft, mellow jazzy chord with a slightly wistful color",
+   "llm_prompt": "minor seventh chords, mellow jazzy harmony",
+   "tags": ["harmony", "chords", "jazz", "color"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "harmonic progression",
+   "music_theory_en": "harmonic progression (the functional movement of harmony from chord to chord over time; synonym of chord progression)",
+   "plain_ko": "화음이 하나에서 다음으로 자연스럽게 이어져 가는 흐름",
+   "plain_en": "how the chords flow from one to the next",
+   "llm_prompt": "smooth harmonic progression",
+   "tags": ["harmony", "chords", "movement"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "modulation",
+   "music_theory_en": "modulation (a key change: the music shifts its tonal center to a new key, often for lift or contrast)",
+   "plain_ko": "곡 중간에 조(키)가 바뀌어 분위기가 확 올라가거나 달라지는 변화",
+   "plain_en": "the song shifts to a new key, often lifting the energy",
+   "llm_prompt": "key modulation, uplifting key change",
+   "tags": ["harmony", "key", "modulation", "structure"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "harmonic movement",
+   "music_theory_en": "harmonic movement (the sense of motion created as harmonies change; the pacing and direction of chord changes)",
+   "plain_ko": "화음이 바뀌면서 곡이 앞으로 나아가는 듯한 움직임의 느낌",
+   "plain_en": "the feeling of motion as the chords change under the melody",
+   "llm_prompt": "active harmonic movement",
+   "tags": ["harmony", "movement", "chords"],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "diatonic",
+   "music_theory_en": "diatonic (using only the notes and chords of the prevailing key/scale, with no chromatic alterations)",
+   "plain_ko": "그 곡의 조 안에 있는 음만 써서 어긋남 없이 자연스럽게 들리는 화성",
+   "plain_en": "notes and chords that stay neatly inside the song's key",
+   "llm_prompt": "diatonic harmony, consonant chords",
+   "tags": ["harmony", "scale", "key", "theory"],
+   "confidence": "high"
+  },
+  {
+   "suno_term": "key change",
+   "music_theory_en": "key change (a modulation to a new tonal center, commonly a step up in a final chorus for added lift)",
+   "plain_ko": "마지막 후렴 등에서 조가 한 단계 올라가며 분위기가 고조되는 변화",
+   "plain_en": "the song jumps to a higher key, making the ending feel bigger",
+   "llm_prompt": "key change, final chorus lift",
+   "tags": ["harmony", "key", "modulation", "structure"],
+   "confidence": "high"
+  }
+ ]
+}
