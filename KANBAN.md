@@ -22,7 +22,7 @@
 - [sunolanguage] **★상태확인 배치 6건 — 전건 회신 수신(06-10 20:38)** — ①S_INST200 보류유지(LEO 해제 확인 요청됨) ②S_BP 2단계 막힘 ③S_PU 막힘 ④**S002 생성완료, UUID 재송부 요청 발송(06-10)** ⑤N001/N002 막힘 ⑥55Best LEO만 확정가능. **②③⑤⑥ 전부 LEO 우선순위 지시로 수렴 — sunomusic이 LEO 에스컬레이션 완료, 중복 에스컬레이션 생략. 06-17 재점검**
 - [sunolanguage] **Serendipity Engine (SP + Lyrics + Bracket)** — SP 3,707 + Lyrics 4,620 Qdrant 가동 중 (dedup 후), INST5+MIN650+3대패치 적용, **다음: Gate 4 성장 검증**
 - [sunolanguage] **S_INST200 200곡** — 보류 유지 확인(06-10). LEO 해제 시 batch_data 153MB 무결성 재검증 후 착수 (sunomusic이 LEO에 해제 확인 요청)
-- [sunolanguage] S_BP 21곡 2단계 재분석 — ✅**발주됨(07-16, LEO 우선순위 승인)** sunomusic 통합발주(3배치87곡 묶음, `..._141916_막힌재분석...`), UUID 매니페스트 동봉. 완료 회신→corpus_ingest. (구: 막힘 확정 06-10)
+- [sunolanguage] S_BP 21곡 2단계 재분석 — ✅**회신 수신 21/21(07-16, 1회차 무결)** 정규화·보존 `data/reanalysis_v2/incoming/S_BP_reanalysis_20260716.json`, dry-run **+21/리젝0**. 인제스트 보류(Legion 안정+묶음 대기). 누적 S002+S_BP=33곡(B1≥30 돌파). (구: 발주됨 07-16)
 - [sunolanguage] sunolang DDL 적재 대기 — admin DDL 실행 후 `json_to_db.py load` (4테이블, merged_4values 현행 497곡 자동 반영)
 - [sunolanguage] S_PU 54곡 pump-up 판정 — ✅**재분석 발주됨(07-16, LEO 우선순위)** sunomusic 통합발주(위 묶음). 재분석 후 pump-up 판정. 완료 회신→corpus_ingest. (구: 막힘 확정 06-10)
 - [sunolanguage] S002 12곡 — ✅**재분석 회신 수신 12/12(07-16)** sunomusic 발주→완료. 정규화·보존 `data/reanalysis_v2/incoming/S002_reanalysis_20260716.json`(uuid→no id매핑), merge dry-run **+12/리젝0 검증**. ★**인제스트 보류**: Legion(PG 호스트) 다운 신호 → 인프라 안정 확인 + S_BP/S_PU 합류 후 묶음 전파(Class A per-batch, B1 v3.3는 ≥30 누적 1회). (구: 발주됨 07-16)
