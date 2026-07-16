@@ -300,8 +300,10 @@ def query(args):
         where.append("e.slot = ?")
         params.append(args.slot)
     if args.source:
-        where.append("e.source = ?")
-        params.append(args.source)
+        # 그룹명(sp/bracket/stems_sp/stems_bracket)이면 SOURCE_COL 역매핑으로 확장, 아니면 원값(raw) 매칭
+        raws = [r for r, g in SOURCE_COL.items() if g == args.source] or [args.source]
+        where.append(f"e.source IN ({','.join('?' * len(raws))})")
+        params.extend(raws)
     if args.genre:
         where.append("e.genre LIKE ?")
         params.append(f"%{args.genre}%")
