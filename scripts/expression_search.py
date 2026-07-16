@@ -61,9 +61,24 @@ def print_bundle(b, verbose=True):
         print(f"  {'← inbound':16s} {ins}")
 
 
+# 한국어 조사 제거 휴리스틱 (교착어 토큰 불일치 완화 — '승리의'→'승리')
+KO_JOSA = ["으로", "에서", "부터", "까지", "처럼", "보다", "과", "와", "의", "을", "를",
+           "이", "가", "은", "는", "에", "로", "도", "만"]
+
+
+def ko_strip_josa(tok):
+    for j in sorted(KO_JOSA, key=len, reverse=True):
+        if tok.endswith(j) and len(tok) - len(j) >= 1:
+            return tok[: -len(j)]
+    return tok
+
+
 def check_aliases(conn, query):
+    toks = {query} | {t for t in query.split() if t} | {ko_strip_josa(t) for t in query.split() if t}
+    marks = ",".join("?" * len(toks))
     rows = conn.execute(
-        "SELECT * FROM expr_inbound_aliases WHERE alias_text = ? COLLATE NOCASE", (query,)).fetchall()
+        f"SELECT * FROM expr_inbound_aliases WHERE alias_text COLLATE NOCASE IN ({marks})",
+        sorted(toks)).fetchall()
     for r in rows:
         tag = {"dead_zone": "⚠ DEAD-ZONE", "blocked": "⛔ 차단 규칙", "ko_glossary": "↔ 글로서리"}[r["kind"]]
         print(f"{tag}: '{r['alias_text']}' — {r['replacement_note'] or ''} (근거: {r['source']})")
@@ -74,21 +89,38 @@ def check_aliases(conn, query):
     return bool(rows)
 
 
-def fts_query(q):
-    # FTS5 특수문자 방어: 토큰별 따옴표 감싸기
-    toks = [t.replace('"', '') for t in q.split() if t.strip()]
-    return " ".join(f'"{t}"' for t in toks)
+def _fts_toks(q):
+    return [t.replace('"', '') for t in q.split() if t.strip()]
+
+
+def fts_ladder(q):
+    """완화 사다리: ①전 토큰 AND ②OR ③조사제거+prefix OR. (mode, match_expr) 순서 반환."""
+    toks = _fts_toks(q)
+    if not toks:
+        return
+    yield ("AND", " ".join(f'"{t}"' for t in toks))
+    if len(toks) > 1:
+        yield ("OR", " OR ".join(f'"{t}"' for t in toks))
+    stripped = [ko_strip_josa(t) for t in toks]
+    if stripped != toks:
+        yield ("조사제거 OR", " OR ".join(f'"{t}" OR "{t}"*' for t in stripped))
 
 
 def cmd_search(query, limit):
     conn = connect()
     hit = check_aliases(conn, query)
-    rows = conn.execute(
-        "SELECT DISTINCT concept_id, register FROM expr_fts WHERE expr_fts MATCH ?"
-        " AND concept_id != '' ORDER BY rank LIMIT ?", (fts_query(query), limit)).fetchall()
+    rows, mode = [], None
+    for mode, expr in fts_ladder(query):
+        rows = conn.execute(
+            "SELECT DISTINCT concept_id, register FROM expr_fts WHERE expr_fts MATCH ?"
+            " AND concept_id != '' ORDER BY rank LIMIT ?", (expr, limit)).fetchall()
+        if rows:
+            break
     if not rows and not hit:
         print(f"매칭 없음: '{query}'")
         return
+    if rows and mode != "AND":
+        print(f"(완화 매칭: {mode} — 전체 구 일치는 없음)")
     seen = set()
     for r in rows:
         if r["concept_id"] in seen:

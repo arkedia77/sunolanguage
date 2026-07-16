@@ -2719,6 +2719,12 @@
      "alias_lang": "ko",
      "kind": "ko_glossary",
      "replacement_note": "대응 attested: triumphant(12)"
+    },
+    {
+     "alias_text": "환호",
+     "alias_lang": "ko",
+     "kind": "dead_zone",
+     "replacement_note": "환호 분위기는 triumphant(12)로 우회 (직접 군중음성 원자 없음)"
     }
    ]
   },
@@ -7922,6 +7928,33 @@
    "target_concept_id": null,
    "replacement_note": "브래킷은 악기/보컬/섹션만. 감정 브래킷 Suno 0회",
    "source": "suno_dictionary_v3.suno_does_not_use"
+  },
+  {
+   "id": 64,
+   "alias_text": "함성",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_concept_id": null,
+   "replacement_note": "직접 대응 원자 0건(shout/chant/crowd/gang 전부 사전 v3.2 부재) — W005 findings: 컴파운드 [gang vocals chant]/[crowd singalong] dead-zone(0곡), 분리·하이픈형 우회 권장",
+   "source": "docs/reviews/trot_W005_sp_review.md + expr v0 검색 실측(2026-07-16)"
+  },
+  {
+   "id": 65,
+   "alias_text": "떼창",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_concept_id": null,
+   "replacement_note": "직접 대응 원자 0건(shout/chant/crowd/gang 전부 사전 v3.2 부재) — W005 findings: 컴파운드 [gang vocals chant]/[crowd singalong] dead-zone(0곡), 분리·하이픈형 우회 권장",
+   "source": "docs/reviews/trot_W005_sp_review.md + expr v0 검색 실측(2026-07-16)"
+  },
+  {
+   "id": 66,
+   "alias_text": "환호",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_concept_id": "mood:triumphant",
+   "replacement_note": "환호 분위기는 triumphant(12)로 우회 (직접 군중음성 원자 없음)",
+   "source": "docs/reviews/trot_W005_sp_review.md + expr v0 검색 실측(2026-07-16)"
   }
  ]
 }
