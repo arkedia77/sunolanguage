@@ -1,26 +1,26 @@
 {
   "drums": {
-    "count": 400,
+    "count": 440,
     "top_modifiers": [
       [
         "driving",
-        61
-      ],
-      [
-        "clean",
-        51
+        70
       ],
       [
         "full",
-        45
+        54
+      ],
+      [
+        "clean",
+        52
       ],
       [
         "soft",
-        38
+        41
       ],
       [
         "steady",
-        24
+        26
       ],
       [
         "bright",
@@ -39,17 +39,17 @@
         10
       ],
       [
-        "funky",
-        7
+        "light",
+        8
       ]
     ]
   },
   "kick drum": {
-    "count": 130,
+    "count": 134,
     "top_modifiers": [
       [
         "soft",
-        36
+        39
       ],
       [
         "clean",
@@ -57,7 +57,7 @@
       ],
       [
         "steady",
-        8
+        9
       ],
       [
         "full",
@@ -90,7 +90,7 @@
     ]
   },
   "snare drum": {
-    "count": 102,
+    "count": 109,
     "top_modifiers": [
       [
         "soft",
@@ -117,25 +117,25 @@
         3
       ],
       [
+        "steady",
+        2
+      ],
+      [
+        "driving",
+        2
+      ],
+      [
         "tight",
         2
       ],
       [
-        "steady",
-        1
-      ],
-      [
         "dry",
-        1
-      ],
-      [
-        "compressed",
         1
       ]
     ]
   },
   "beat": {
-    "count": 63,
+    "count": 66,
     "top_modifiers": [
       [
         "driving",
@@ -180,7 +180,7 @@
     ]
   },
   "percussion": {
-    "count": 54,
+    "count": 56,
     "top_modifiers": [
       [
         "light",
@@ -215,17 +215,17 @@
         2
       ],
       [
-        "digital",
-        1
+        "heavy",
+        2
       ],
       [
-        "heavy",
-        1
+        "frequent",
+        2
       ]
     ]
   },
   "shaker": {
-    "count": 52,
+    "count": 55,
     "top_modifiers": [
       [
         "soft",
@@ -287,15 +287,15 @@
     ]
   },
   "crash cymbal": {
-    "count": 24,
+    "count": 29,
     "top_modifiers": [
       [
         "full",
-        8
+        9
       ],
       [
         "heavy",
-        4
+        7
       ],
       [
         "driving",
@@ -308,15 +308,19 @@
       [
         "sudden",
         1
+      ],
+      [
+        "frequent",
+        1
       ]
     ]
   },
   "drum kit": {
-    "count": 23,
+    "count": 27,
     "top_modifiers": [
       [
         "full",
-        9
+        11
       ],
       [
         "clean",
@@ -324,7 +328,7 @@
       ],
       [
         "driving",
-        4
+        5
       ],
       [
         "tight",
@@ -356,21 +360,8 @@
       ]
     ]
   },
-  "rimshot": {
-    "count": 19,
-    "top_modifiers": [
-      [
-        "soft",
-        4
-      ],
-      [
-        "dry",
-        1
-      ]
-    ]
-  },
   "cymbal": {
-    "count": 17,
+    "count": 23,
     "top_modifiers": [
       [
         "frequent",
@@ -386,9 +377,26 @@
       ]
     ]
   },
-  "woodblock": {
-    "count": 12,
+  "rimshot": {
+    "count": 21,
     "top_modifiers": [
+      [
+        "soft",
+        5
+      ],
+      [
+        "dry",
+        1
+      ]
+    ]
+  },
+  "woodblock": {
+    "count": 17,
+    "top_modifiers": [
+      [
+        "steady",
+        2
+      ],
       [
         "upbeat",
         2
@@ -398,7 +406,7 @@
         1
       ],
       [
-        "steady",
+        "frequent",
         1
       ]
     ]
