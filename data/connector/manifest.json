@@ -1,0 +1,55 @@
+{
+  "_provenance": "코퍼스 커넥터 매니페스트 — 정본: docs/corpus_connector_design.md",
+  "corpus_snapshot": {
+    "snapshot_id": "cs-3.2-556-20260612",
+    "dict_version": "3.2",
+    "corpus_tracks": 556,
+    "expr_concepts": 437,
+    "captured_at": "2026-07-17T21:26:10+09:00"
+  },
+  "interface_version": "0.1",
+  "ports": [
+    {
+      "port": "out",
+      "direction": "outbound",
+      "status": "live",
+      "payload_schema": "data/connector/schemas/out_crosswalk.schema.json",
+      "artifact": "data/connector/out/crosswalk_v0.1.json",
+      "artifact_sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c",
+      "consumers": [
+        "leomusic",
+        "leomusic2",
+        "leomusic3",
+        "leomusic-trot"
+      ],
+      "blocker": null,
+      "bundles": [
+        "data/connector/out/bundle_leomusic.json",
+        "data/connector/out/bundle_leomusic2.json",
+        "data/connector/out/bundle_leomusic3.json",
+        "data/connector/out/bundle_leomusic-trot.json"
+      ]
+    },
+    {
+      "port": "in",
+      "direction": "inbound",
+      "status": "blocked",
+      "producers": [
+        "external_reference_songs"
+      ],
+      "artifact": null,
+      "blocker": "v1 F1~F5 구조피처 재설계 = leomusic3 기계귀 협의 게이트(kee 순번 대기)"
+    },
+    {
+      "port": "consume",
+      "direction": "outbound",
+      "status": "blocked",
+      "consumers": [
+        "encore"
+      ],
+      "artifact": null,
+      "blocker": "경로C fresh run 대기(회신스키마 발신완료 07-16)"
+    }
+  ],
+  "runs_log": "sunolang.db:connector_runs"
+}

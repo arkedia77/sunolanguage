@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "corpus-connector OUT crosswalk payload",
+  "description": "표현 레이어 crosswalk 발행 계약 — 정본: docs/corpus_connector_design.md §6.1. 소비자(4팀)는 _manifest로 버전·드리프트 감지.",
+  "type": "object",
+  "required": ["_manifest", "registers", "concepts", "inbound_aliases"],
+  "properties": {
+    "_manifest": {
+      "type": "object",
+      "required": ["snapshot_id", "interface_version", "sha256", "concepts", "inbound_aliases"],
+      "properties": {
+        "snapshot_id": {"type": "string", "description": "cs-<dict_version>-<tracks>-<yyyymmdd>"},
+        "interface_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+        "sha256": {"type": "string", "description": "콘텐츠 해시(타임스탬프 제외) — 드리프트 감지 기준"},
+        "generated_at": {"type": "string"},
+        "source_exporter": {"type": "string"},
+        "design": {"type": "string"},
+        "concepts": {"type": "integer"},
+        "inbound_aliases": {"type": "integer"}
+      }
+    },
+    "registers": {
+      "type": "object",
+      "description": "레지스터 정의(suno_native/music_theory_en/plain_ko/plain_en/llm_prompt/tags)",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {"audience": {"type": "string"}, "description": {"type": "string"}}
+      }
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["concept_id", "category", "suno_term", "registers"],
+        "properties": {
+          "concept_id": {"type": "string", "description": "{category}:{slug}"},
+          "category": {"type": "string"},
+          "suno_term": {"type": "string"},
+          "attested_count": {"type": "integer"},
+          "origin": {"type": "string", "enum": ["dictionary", "alias_seed"]},
+          "registers": {"type": "object", "description": "레지스터→표현 텍스트 매핑"}
+        }
+      }
+    },
+    "inbound_aliases": {
+      "type": "array",
+      "description": "외부어→attested 안내 / 차단 규칙",
+      "items": {
+        "type": "object",
+        "required": ["alias_text", "kind"],
+        "properties": {
+          "alias_text": {"type": "string"},
+          "alias_lang": {"type": "string", "enum": ["ko", "en"]},
+          "kind": {"type": "string", "enum": ["dead_zone", "ko_glossary", "blocked"]},
+          "target_concept_id": {"type": ["string", "null"]},
+          "replacement_note": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

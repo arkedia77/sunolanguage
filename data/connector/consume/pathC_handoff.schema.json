@@ -1,0 +1,20 @@
+{
+  "_provenance": "encore 경로C handoff 스키마 — sunolang CONSUME 포트 출력 계약",
+  "_status": "scaffold — encore fresh run 대기",
+  "snapshot_id": "cs-3.2-556-20260612",
+  "interface_version": "0.1",
+  "handoff": {
+    "request_id": "<encore가 부여>",
+    "corpus_assets": [
+      {
+        "asset_type": "reference_asset|catalog_track|rag_external_track",
+        "asset_id": "<id>",
+        "suno_terms": [
+          "<attested>"
+        ],
+        "crosswalk_ref": "data/connector/out/crosswalk_latest.json"
+      }
+    ],
+    "text_channel_note": "sunolang=text 어휘 번역 채널. 오디오 정밀부는 leomusic3 기계귀 위임."
+  }
+}

@@ -1,0 +1,2642 @@
+{
+ "_for": "leomusic3",
+ "_manifest": {
+  "snapshot_id": "cs-3.2-556-20260612",
+  "interface_version": "0.1",
+  "generated_at": "2026-07-17T21:26:10+09:00",
+  "source_exporter": "scripts/expression_search.py --export",
+  "design": "docs/corpus_connector_design.md",
+  "concepts": 437,
+  "inbound_aliases": 66,
+  "sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c"
+ },
+ "crosswalk_artifact": {
+  "path": "data/connector/out/crosswalk_v0.1.json",
+  "sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c"
+ },
+ "activation_points": "tags 레지스터(파셋) + taxonomy 정렬 파생을 기계귀 임베딩 라벨공간 정렬에 활용.",
+ "taxonomy_sorted": [
+  {
+   "concept_id": "drums:beat",
+   "category": "drums",
+   "suno_term": "beat",
+   "tags": "[\"drums\", \"rhythm\", \"groove\", \"generic\"]"
+  },
+  {
+   "concept_id": "drums:clap",
+   "category": "drums",
+   "suno_term": "clap",
+   "tags": "[\"instrument\", \"percussion\", \"clap\", \"electronic\"]"
+  },
+  {
+   "concept_id": "drums:cowbell",
+   "category": "drums",
+   "suno_term": "cowbell",
+   "tags": "[\"instrument\", \"percussion\", \"cowbell\", \"latin\"]"
+  },
+  {
+   "concept_id": "drums:crash_cymbal",
+   "category": "drums",
+   "suno_term": "crash cymbal",
+   "tags": "[\"instrument\", \"drums\", \"cymbal\", \"crash\"]"
+  },
+  {
+   "concept_id": "drums:cross_stick",
+   "category": "drums",
+   "suno_term": "cross-stick",
+   "tags": "[\"instrument\", \"drums\", \"snare\", \"technique\", \"bossa-nova\"]"
+  },
+  {
+   "concept_id": "drums:cymbal",
+   "category": "drums",
+   "suno_term": "cymbal",
+   "tags": "[\"instrument\", \"drums\", \"cymbal\", \"percussion\"]"
+  },
+  {
+   "concept_id": "drums:drum_kit",
+   "category": "drums",
+   "suno_term": "drum kit",
+   "tags": "[\"instrument\", \"drums\", \"percussion\", \"rhythm-section\"]"
+  },
+  {
+   "concept_id": "drums:drums",
+   "category": "drums",
+   "suno_term": "drums",
+   "tags": "[\"instrument\", \"drums\", \"percussion\", \"rhythm-section\"]"
+  },
+  {
+   "concept_id": "drums:finger_snap",
+   "category": "drums",
+   "suno_term": "finger snap",
+   "tags": "[\"instrument\", \"percussion\", \"snap\", \"body-percussion\"]"
+  },
+  {
+   "concept_id": "drums:hi_hat",
+   "category": "drums",
+   "suno_term": "hi-hat",
+   "tags": "[\"instrument\", \"drums\", \"cymbal\", \"hi-hat\"]"
+  },
+  {
+   "concept_id": "drums:kick_drum",
+   "category": "drums",
+   "suno_term": "kick drum",
+   "tags": "[\"instrument\", \"drums\", \"kick\", \"percussion\"]"
+  },
+  {
+   "concept_id": "drums:percussion",
+   "category": "drums",
+   "suno_term": "percussion",
+   "tags": "[\"instrument\", \"percussion\", \"drums\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "drums:ride_cymbal",
+   "category": "drums",
+   "suno_term": "ride cymbal",
+   "tags": "[\"instrument\", \"drums\", \"cymbal\", \"ride\"]"
+  },
+  {
+   "concept_id": "drums:rimshot",
+   "category": "drums",
+   "suno_term": "rimshot",
+   "tags": "[\"instrument\", \"drums\", \"snare\", \"technique\"]"
+  },
+  {
+   "concept_id": "drums:shaker",
+   "category": "drums",
+   "suno_term": "shaker",
+   "tags": "[\"instrument\", \"percussion\", \"shaker\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "drums:snare_drum",
+   "category": "drums",
+   "suno_term": "snare drum",
+   "tags": "[\"instrument\", \"drums\", \"snare\", \"percussion\"]"
+  },
+  {
+   "concept_id": "drums:tambourine",
+   "category": "drums",
+   "suno_term": "tambourine",
+   "tags": "[\"instrument\", \"percussion\", \"tambourine\"]"
+  },
+  {
+   "concept_id": "drums:tom",
+   "category": "drums",
+   "suno_term": "tom",
+   "tags": "[\"instrument\", \"drums\", \"tom\", \"percussion\"]"
+  },
+  {
+   "concept_id": "drums:woodblock",
+   "category": "drums",
+   "suno_term": "woodblock",
+   "tags": "[\"instrument\", \"percussion\", \"woodblock\"]"
+  },
+  {
+   "concept_id": "dynamics:arrangement",
+   "category": "dynamics",
+   "suno_term": "arrangement",
+   "tags": "[\"structure\", \"dynamics\", \"descriptor\"]"
+  },
+  {
+   "concept_id": "dynamics:crescendo",
+   "category": "dynamics",
+   "suno_term": "crescendo",
+   "tags": "[\"dynamics\", \"structure\"]"
+  },
+  {
+   "concept_id": "dynamics:dense",
+   "category": "dynamics",
+   "suno_term": "dense",
+   "tags": "[\"dynamics\", \"texture\"]"
+  },
+  {
+   "concept_id": "dynamics:focusing_on",
+   "category": "dynamics",
+   "suno_term": "focusing on",
+   "tags": "[\"structure\", \"descriptor\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_arrangement_layered_vocals",
+   "category": "dynamics",
+   "suno_term": "full arrangement, layered vocals",
+   "tags": "[\"dynamics\", \"structure\", \"vocal\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_arrangement_synth_pads_swell",
+   "category": "dynamics",
+   "suno_term": "full arrangement, synth pads swell",
+   "tags": "[\"dynamics\", \"structure\", \"synth\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_arrangement",
+   "category": "dynamics",
+   "suno_term": "full band arrangement",
+   "tags": "[\"dynamics\", \"structure\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_arrangement_driving_rhythm",
+   "category": "dynamics",
+   "suno_term": "full band arrangement, driving rhythm",
+   "tags": "[\"dynamics\", \"structure\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_brass_section_accents",
+   "category": "dynamics",
+   "suno_term": "full band, brass section accents",
+   "tags": "[\"dynamics\", \"structure\", \"brass\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_driving_drums_soaring_strings",
+   "category": "dynamics",
+   "suno_term": "full band, driving drums, soaring strings",
+   "tags": "[\"dynamics\", \"structure\", \"strings\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_driving_rhythm",
+   "category": "dynamics",
+   "suno_term": "full band, driving rhythm",
+   "tags": "[\"dynamics\", \"structure\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_energy_open_power_chords",
+   "category": "dynamics",
+   "suno_term": "full band energy, open power chords",
+   "tags": "[\"dynamics\", \"structure\", \"guitar\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_enters",
+   "category": "dynamics",
+   "suno_term": "full band enters",
+   "tags": "[\"dynamics\", \"structure\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_enters_driving_drum_beat",
+   "category": "dynamics",
+   "suno_term": "full band enters, driving drum beat",
+   "tags": "[\"dynamics\", \"structure\", \"drums\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_enters_driving_drums",
+   "category": "dynamics",
+   "suno_term": "full band enters, driving drums",
+   "tags": "[\"dynamics\", \"structure\", \"drums\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_enters_driving_rhythm",
+   "category": "dynamics",
+   "suno_term": "full band enters, driving rhythm",
+   "tags": "[\"dynamics\", \"structure\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_enters_strings_swell_belted_vocals",
+   "category": "dynamics",
+   "suno_term": "full band enters, strings swell, belted vocals",
+   "tags": "[\"dynamics\", \"structure\", \"vocal\", \"strings\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_high_energy",
+   "category": "dynamics",
+   "suno_term": "full band, high energy",
+   "tags": "[\"dynamics\", \"structure\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_layered_vocal_harmonies",
+   "category": "dynamics",
+   "suno_term": "full band, layered vocal harmonies",
+   "tags": "[\"dynamics\", \"structure\", \"vocal\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_open_power_chords",
+   "category": "dynamics",
+   "suno_term": "full band, open power chords",
+   "tags": "[\"dynamics\", \"structure\", \"guitar\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:fuller_arrangement_electric_piano_pads",
+   "category": "dynamics",
+   "suno_term": "fuller arrangement, electric piano pads",
+   "tags": "[\"dynamics\", \"structure\", \"keys\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:fuller_arrangement_light_percussion",
+   "category": "dynamics",
+   "suno_term": "fuller arrangement, light percussion",
+   "tags": "[\"dynamics\", \"structure\", \"percussion\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:fuller_arrangement_synth_pads_enter",
+   "category": "dynamics",
+   "suno_term": "fuller arrangement, synth pads enter",
+   "tags": "[\"dynamics\", \"structure\", \"synth\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:half_time_feel",
+   "category": "dynamics",
+   "suno_term": "half-time feel",
+   "tags": "[\"rhythm\", \"tempo\", \"drums\"]"
+  },
+  {
+   "concept_id": "dynamics:half_time_feel_rhythmic_breathing",
+   "category": "dynamics",
+   "suno_term": "half-time feel, rhythmic breathing",
+   "tags": "[\"rhythm\", \"dynamics\", \"texture\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:interplay",
+   "category": "dynamics",
+   "suno_term": "interplay",
+   "tags": "[\"structure\", \"texture\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "dynamics:minimalist",
+   "category": "dynamics",
+   "suno_term": "minimalist",
+   "tags": "[\"dynamics\", \"texture\", \"style\"]"
+  },
+  {
+   "concept_id": "dynamics:reese_bass_modulates_half_time_drum_feel",
+   "category": "dynamics",
+   "suno_term": "reese bass modulates, half-time drum feel",
+   "tags": "[\"dynamics\", \"rhythm\", \"bass\", \"electronic\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:sparse",
+   "category": "dynamics",
+   "suno_term": "sparse",
+   "tags": "[\"dynamics\", \"texture\", \"structure\"]"
+  },
+  {
+   "concept_id": "dynamics:transition_from",
+   "category": "dynamics",
+   "suno_term": "transition from",
+   "tags": "[\"structure\", \"descriptor\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:transition_to",
+   "category": "dynamics",
+   "suno_term": "transition to",
+   "tags": "[\"structure\", \"descriptor\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:transitions_from",
+   "category": "dynamics",
+   "suno_term": "transitions from",
+   "tags": "[\"structure\", \"descriptor\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:transitions_into",
+   "category": "dynamics",
+   "suno_term": "transitions into",
+   "tags": "[\"structure\", \"descriptor\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:unison_male_and_female_vocals_full_band_energy",
+   "category": "dynamics",
+   "suno_term": "unison male and female vocals, full band energy",
+   "tags": "[\"dynamics\", \"vocal\", \"structure\", \"fragment\"]"
+  },
+  {
+   "concept_id": "genre:blues",
+   "category": "genre",
+   "suno_term": "blues",
+   "tags": "[\"genre\", \"mood\"]"
+  },
+  {
+   "concept_id": "genre:jazz",
+   "category": "genre",
+   "suno_term": "jazz",
+   "tags": "[\"genre\"]"
+  },
+  {
+   "concept_id": "harmony:cadence",
+   "category": "harmony",
+   "suno_term": "cadence",
+   "tags": "[\"harmony\", \"cadence\", \"resolution\", \"phrase\"]"
+  },
+  {
+   "concept_id": "harmony:chord_progression",
+   "category": "harmony",
+   "suno_term": "chord progression",
+   "tags": "[\"harmony\", \"chords\", \"structure\"]"
+  },
+  {
+   "concept_id": "harmony:diatonic",
+   "category": "harmony",
+   "suno_term": "diatonic",
+   "tags": "[\"harmony\", \"scale\", \"key\", \"theory\"]"
+  },
+  {
+   "concept_id": "harmony:harmonic_movement",
+   "category": "harmony",
+   "suno_term": "harmonic movement",
+   "tags": "[\"harmony\", \"movement\", \"chords\"]"
+  },
+  {
+   "concept_id": "harmony:harmonic_progression",
+   "category": "harmony",
+   "suno_term": "harmonic progression",
+   "tags": "[\"harmony\", \"chords\", \"movement\"]"
+  },
+  {
+   "concept_id": "harmony:key_change",
+   "category": "harmony",
+   "suno_term": "key change",
+   "tags": "[\"harmony\", \"key\", \"modulation\", \"structure\"]"
+  },
+  {
+   "concept_id": "harmony:minor_seventh",
+   "category": "harmony",
+   "suno_term": "minor seventh",
+   "tags": "[\"harmony\", \"chords\", \"jazz\", \"color\"]"
+  },
+  {
+   "concept_id": "harmony:modulation",
+   "category": "harmony",
+   "suno_term": "modulation",
+   "tags": "[\"harmony\", \"key\", \"modulation\", \"structure\"]"
+  },
+  {
+   "concept_id": "instrument:808_bass",
+   "category": "instrument",
+   "suno_term": "808 bass",
+   "tags": "[\"instrument\", \"bass\", \"808\", \"electronic\", \"hip-hop\"]"
+  },
+  {
+   "concept_id": "instrument:accordion",
+   "category": "instrument",
+   "suno_term": "accordion",
+   "tags": "[\"instrument\", \"accordion\", \"folk\", \"reed\"]"
+  },
+  {
+   "concept_id": "instrument:acoustic_guitar",
+   "category": "instrument",
+   "suno_term": "acoustic guitar",
+   "tags": "[\"instrument\", \"guitar\", \"acoustic\"]"
+  },
+  {
+   "concept_id": "instrument:acoustic_piano",
+   "category": "instrument",
+   "suno_term": "acoustic piano",
+   "tags": "[\"instrument\", \"piano\", \"keys\", \"acoustic\"]"
+  },
+  {
+   "concept_id": "instrument:arpeggiated_electric_guitar",
+   "category": "instrument",
+   "suno_term": "arpeggiated electric guitar",
+   "tags": "[\"instrument\", \"guitar\", \"electric\", \"arpeggio\"]"
+  },
+  {
+   "concept_id": "instrument:banjo",
+   "category": "instrument",
+   "suno_term": "banjo",
+   "tags": "[\"instrument\", \"strings\", \"banjo\", \"bluegrass\", \"folk\"]"
+  },
+  {
+   "concept_id": "instrument:bass_guitar",
+   "category": "instrument",
+   "suno_term": "bass guitar",
+   "tags": "[\"instrument\", \"bass\", \"guitar\", \"rhythm-section\"]"
+  },
+  {
+   "concept_id": "instrument:bodhr_n",
+   "category": "instrument",
+   "suno_term": "bodhrán",
+   "tags": "[\"instrument\", \"percussion\", \"drums\", \"celtic\", \"folk\"]"
+  },
+  {
+   "concept_id": "instrument:brass",
+   "category": "instrument",
+   "suno_term": "brass",
+   "tags": "[\"instrument\", \"brass\", \"horns\"]"
+  },
+  {
+   "concept_id": "instrument:brass_section",
+   "category": "instrument",
+   "suno_term": "brass section",
+   "tags": "[\"instrument\", \"brass\", \"horns\", \"ensemble\"]"
+  },
+  {
+   "concept_id": "instrument:cello",
+   "category": "instrument",
+   "suno_term": "cello",
+   "tags": "[\"instrument\", \"strings\", \"orchestral\", \"bowed\"]"
+  },
+  {
+   "concept_id": "instrument:clarinet",
+   "category": "instrument",
+   "suno_term": "clarinet",
+   "tags": "[\"instrument\", \"woodwind\", \"clarinet\"]"
+  },
+  {
+   "concept_id": "instrument:clean_electric_guitar",
+   "category": "instrument",
+   "suno_term": "clean electric guitar",
+   "tags": "[\"instrument\", \"guitar\", \"electric\", \"clean-tone\"]"
+  },
+  {
+   "concept_id": "instrument:distorted_electric_guitar",
+   "category": "instrument",
+   "suno_term": "distorted electric guitar",
+   "tags": "[\"instrument\", \"guitar\", \"electric\", \"distortion\", \"rock\"]"
+  },
+  {
+   "concept_id": "instrument:electric_bass",
+   "category": "instrument",
+   "suno_term": "electric bass",
+   "tags": "[\"instrument\", \"bass\", \"electric\", \"rhythm-section\"]"
+  },
+  {
+   "concept_id": "instrument:electric_guitar",
+   "category": "instrument",
+   "suno_term": "electric guitar",
+   "tags": "[\"instrument\", \"guitar\", \"electric\"]"
+  },
+  {
+   "concept_id": "instrument:electric_piano",
+   "category": "instrument",
+   "suno_term": "electric piano",
+   "tags": "[\"instrument\", \"keys\", \"electric\", \"piano\"]"
+  },
+  {
+   "concept_id": "instrument:fiddle",
+   "category": "instrument",
+   "suno_term": "fiddle",
+   "tags": "[\"instrument\", \"strings\", \"fiddle\", \"folk\", \"country\"]"
+  },
+  {
+   "concept_id": "instrument:fingerpicked_acoustic_guitar",
+   "category": "instrument",
+   "suno_term": "fingerpicked acoustic guitar",
+   "tags": "[\"instrument\", \"guitar\", \"acoustic\", \"fingerstyle\"]"
+  },
+  {
+   "concept_id": "instrument:fingerstyle_acoustic_guitar",
+   "category": "instrument",
+   "suno_term": "fingerstyle acoustic guitar",
+   "tags": "[\"instrument\", \"guitar\", \"acoustic\", \"fingerstyle\"]"
+  },
+  {
+   "concept_id": "instrument:flute",
+   "category": "instrument",
+   "suno_term": "flute",
+   "tags": "[\"instrument\", \"woodwind\", \"flute\"]"
+  },
+  {
+   "concept_id": "instrument:fretless_bass",
+   "category": "instrument",
+   "suno_term": "fretless bass",
+   "tags": "[\"instrument\", \"bass\", \"electric\", \"fretless\"]"
+  },
+  {
+   "concept_id": "instrument:glockenspiel",
+   "category": "instrument",
+   "suno_term": "glockenspiel",
+   "tags": "[\"instrument\", \"percussion\", \"mallet\", \"bells\"]"
+  },
+  {
+   "concept_id": "instrument:grand_piano",
+   "category": "instrument",
+   "suno_term": "grand piano",
+   "tags": "[\"instrument\", \"piano\", \"keys\", \"acoustic\"]"
+  },
+  {
+   "concept_id": "instrument:guiro",
+   "category": "instrument",
+   "suno_term": "guiro",
+   "tags": "[\"instrument\", \"percussion\", \"latin\", \"scraper\"]"
+  },
+  {
+   "concept_id": "instrument:guitar",
+   "category": "instrument",
+   "suno_term": "guitar",
+   "tags": "[\"instrument\", \"guitar\", \"strings\"]"
+  },
+  {
+   "concept_id": "instrument:harmonica",
+   "category": "instrument",
+   "suno_term": "harmonica",
+   "tags": "[\"instrument\", \"harmonica\", \"blues\", \"folk\"]"
+  },
+  {
+   "concept_id": "instrument:harp",
+   "category": "instrument",
+   "suno_term": "harp",
+   "tags": "[\"instrument\", \"harp\", \"strings\", \"orchestral\"]"
+  },
+  {
+   "concept_id": "instrument:keys",
+   "category": "instrument",
+   "suno_term": "keys",
+   "tags": "[\"instrument\", \"keys\", \"keyboard\", \"generic\"]"
+  },
+  {
+   "concept_id": "instrument:log_drum",
+   "category": "instrument",
+   "suno_term": "log drum",
+   "tags": "[\"instrument\", \"percussion\", \"drums\", \"amapiano\"]"
+  },
+  {
+   "concept_id": "instrument:mandolin",
+   "category": "instrument",
+   "suno_term": "mandolin",
+   "tags": "[\"instrument\", \"strings\", \"mandolin\", \"folk\"]"
+  },
+  {
+   "concept_id": "instrument:muted_trumpet",
+   "category": "instrument",
+   "suno_term": "muted trumpet",
+   "tags": "[\"instrument\", \"brass\", \"trumpet\", \"muted\", \"jazz\"]"
+  },
+  {
+   "concept_id": "instrument:nylon_string_acoustic_guitar",
+   "category": "instrument",
+   "suno_term": "nylon-string acoustic guitar",
+   "tags": "[\"instrument\", \"guitar\", \"acoustic\", \"nylon\", \"classical\"]"
+  },
+  {
+   "concept_id": "instrument:orchestral_strings",
+   "category": "instrument",
+   "suno_term": "orchestral strings",
+   "tags": "[\"instrument\", \"strings\", \"orchestral\", \"ensemble\", \"cinematic\"]"
+  },
+  {
+   "concept_id": "instrument:overdriven_electric_guitar",
+   "category": "instrument",
+   "suno_term": "overdriven electric guitar",
+   "tags": "[\"instrument\", \"guitar\", \"electric\", \"overdrive\", \"rock\"]"
+  },
+  {
+   "concept_id": "instrument:pad",
+   "category": "instrument",
+   "suno_term": "pad",
+   "tags": "[\"instrument\", \"pad\", \"texture\", \"synth\"]"
+  },
+  {
+   "concept_id": "instrument:palm_muted_electric_guitar",
+   "category": "instrument",
+   "suno_term": "palm-muted electric guitar",
+   "tags": "[\"instrument\", \"guitar\", \"electric\", \"palm-mute\", \"technique\"]"
+  },
+  {
+   "concept_id": "instrument:piano",
+   "category": "instrument",
+   "suno_term": "piano",
+   "tags": "[\"instrument\", \"piano\", \"keys\", \"acoustic\"]"
+  },
+  {
+   "concept_id": "instrument:reese_bass",
+   "category": "instrument",
+   "suno_term": "reese bass",
+   "tags": "[\"instrument\", \"bass\", \"synth\", \"electronic\", \"dnb\"]"
+  },
+  {
+   "concept_id": "instrument:rhodes",
+   "category": "instrument",
+   "suno_term": "rhodes",
+   "tags": "[\"instrument\", \"keys\", \"electric\", \"rhodes\", \"jazz\"]"
+  },
+  {
+   "concept_id": "instrument:saxophone",
+   "category": "instrument",
+   "suno_term": "saxophone",
+   "tags": "[\"instrument\", \"woodwind\", \"saxophone\", \"jazz\"]"
+  },
+  {
+   "concept_id": "instrument:slap_bass",
+   "category": "instrument",
+   "suno_term": "slap bass",
+   "tags": "[\"instrument\", \"bass\", \"technique\", \"funk\"]"
+  },
+  {
+   "concept_id": "instrument:steel_string_acoustic_guitar",
+   "category": "instrument",
+   "suno_term": "steel-string acoustic guitar",
+   "tags": "[\"instrument\", \"guitar\", \"acoustic\", \"steel-string\"]"
+  },
+  {
+   "concept_id": "instrument:string_pad",
+   "category": "instrument",
+   "suno_term": "string pad",
+   "tags": "[\"instrument\", \"strings\", \"pad\", \"texture\"]"
+  },
+  {
+   "concept_id": "instrument:strings",
+   "category": "instrument",
+   "suno_term": "strings",
+   "tags": "[\"instrument\", \"strings\", \"orchestral\", \"ensemble\"]"
+  },
+  {
+   "concept_id": "instrument:strummed_acoustic_guitar",
+   "category": "instrument",
+   "suno_term": "strummed acoustic guitar",
+   "tags": "[\"instrument\", \"guitar\", \"acoustic\", \"strumming\"]"
+  },
+  {
+   "concept_id": "instrument:sub_bass",
+   "category": "instrument",
+   "suno_term": "sub-bass",
+   "tags": "[\"instrument\", \"bass\", \"sub\", \"electronic\", \"low-end\"]"
+  },
+  {
+   "concept_id": "instrument:synth_bass",
+   "category": "instrument",
+   "suno_term": "synth bass",
+   "tags": "[\"instrument\", \"synth\", \"bass\", \"electronic\"]"
+  },
+  {
+   "concept_id": "instrument:synth_pad",
+   "category": "instrument",
+   "suno_term": "synth pad",
+   "tags": "[\"instrument\", \"synth\", \"pad\", \"texture\", \"electronic\"]"
+  },
+  {
+   "concept_id": "instrument:synthesizer",
+   "category": "instrument",
+   "suno_term": "synthesizer",
+   "tags": "[\"instrument\", \"synth\", \"electronic\", \"keys\"]"
+  },
+  {
+   "concept_id": "instrument:trumpet",
+   "category": "instrument",
+   "suno_term": "trumpet",
+   "tags": "[\"instrument\", \"brass\", \"trumpet\"]"
+  },
+  {
+   "concept_id": "instrument:upright_bass",
+   "category": "instrument",
+   "suno_term": "upright bass",
+   "tags": "[\"instrument\", \"bass\", \"acoustic\", \"jazz\"]"
+  },
+  {
+   "concept_id": "instrument:vibraphone",
+   "category": "instrument",
+   "suno_term": "vibraphone",
+   "tags": "[\"instrument\", \"percussion\", \"mallet\", \"jazz\"]"
+  },
+  {
+   "concept_id": "instrument:violin",
+   "category": "instrument",
+   "suno_term": "violin",
+   "tags": "[\"instrument\", \"strings\", \"orchestral\", \"bowed\"]"
+  },
+  {
+   "concept_id": "instrument:whistle",
+   "category": "instrument",
+   "suno_term": "whistle",
+   "tags": "[\"instrument\", \"whistle\", \"woodwind\", \"folk\"]"
+  },
+  {
+   "concept_id": "mood:aching",
+   "category": "mood",
+   "suno_term": "aching",
+   "tags": "[\"mood\", \"emotion\", \"expression\"]"
+  },
+  {
+   "concept_id": "mood:aggressive",
+   "category": "mood",
+   "suno_term": "aggressive",
+   "tags": "[\"mood\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:atmospheric",
+   "category": "mood",
+   "suno_term": "atmospheric",
+   "tags": "[\"mood\", \"texture\", \"space\"]"
+  },
+  {
+   "concept_id": "mood:bright",
+   "category": "mood",
+   "suno_term": "bright",
+   "tags": "[\"mood\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:brooding",
+   "category": "mood",
+   "suno_term": "brooding",
+   "tags": "[\"mood\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:cinematic",
+   "category": "mood",
+   "suno_term": "cinematic",
+   "tags": "[\"mood\", \"genre\", \"scale\"]"
+  },
+  {
+   "concept_id": "mood:cold",
+   "category": "mood",
+   "suno_term": "cold",
+   "tags": "[\"mood\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:dark",
+   "category": "mood",
+   "suno_term": "dark",
+   "tags": "[\"mood\", \"harmony\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:delicate",
+   "category": "mood",
+   "suno_term": "delicate",
+   "tags": "[\"mood\", \"dynamics\", \"articulation\"]"
+  },
+  {
+   "concept_id": "mood:dramatic",
+   "category": "mood",
+   "suno_term": "dramatic",
+   "tags": "[\"mood\", \"dynamics\", \"structure\"]"
+  },
+  {
+   "concept_id": "mood:dreamy",
+   "category": "mood",
+   "suno_term": "dreamy",
+   "tags": "[\"mood\", \"texture\"]"
+  },
+  {
+   "concept_id": "mood:emotional",
+   "category": "mood",
+   "suno_term": "emotional",
+   "tags": "[\"mood\", \"expression\"]"
+  },
+  {
+   "concept_id": "mood:energetic",
+   "category": "mood",
+   "suno_term": "energetic",
+   "tags": "[\"mood\", \"tempo\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:ethereal",
+   "category": "mood",
+   "suno_term": "ethereal",
+   "tags": "[\"mood\", \"texture\", \"space\"]"
+  },
+  {
+   "concept_id": "mood:euphoric",
+   "category": "mood",
+   "suno_term": "euphoric",
+   "tags": "[\"mood\", \"dynamics\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:future",
+   "category": "mood",
+   "suno_term": "future",
+   "tags": "[\"mood\", \"theme\"]"
+  },
+  {
+   "concept_id": "mood:gentle",
+   "category": "mood",
+   "suno_term": "gentle",
+   "tags": "[\"mood\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:grand",
+   "category": "mood",
+   "suno_term": "grand",
+   "tags": "[\"mood\", \"dynamics\", \"scale\"]"
+  },
+  {
+   "concept_id": "mood:gritty",
+   "category": "mood",
+   "suno_term": "gritty",
+   "tags": "[\"mood\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:groove",
+   "category": "mood",
+   "suno_term": "groove",
+   "tags": "[\"mood\", \"rhythm\", \"feel\"]"
+  },
+  {
+   "concept_id": "mood:haunting",
+   "category": "mood",
+   "suno_term": "haunting",
+   "tags": "[\"mood\", \"emotion\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:hazy",
+   "category": "mood",
+   "suno_term": "hazy",
+   "tags": "[\"mood\", \"texture\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:high_energy",
+   "category": "mood",
+   "suno_term": "high-energy",
+   "tags": "[\"mood\", \"tempo\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:hopeful",
+   "category": "mood",
+   "suno_term": "hopeful",
+   "tags": "[\"mood\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:hypnotic",
+   "category": "mood",
+   "suno_term": "hypnotic",
+   "tags": "[\"mood\", \"rhythm\", \"texture\"]"
+  },
+  {
+   "concept_id": "mood:inner",
+   "category": "mood",
+   "suno_term": "inner",
+   "tags": "[\"mood\", \"theme\"]"
+  },
+  {
+   "concept_id": "mood:intimate",
+   "category": "mood",
+   "suno_term": "intimate",
+   "tags": "[\"mood\", \"dynamics\", \"space\"]"
+  },
+  {
+   "concept_id": "mood:jazz_influenced",
+   "category": "mood",
+   "suno_term": "jazz-influenced",
+   "tags": "[\"mood\", \"genre\", \"harmony\"]"
+  },
+  {
+   "concept_id": "mood:journey",
+   "category": "mood",
+   "suno_term": "journey",
+   "tags": "[\"mood\", \"theme\", \"structure\"]"
+  },
+  {
+   "concept_id": "mood:joyful",
+   "category": "mood",
+   "suno_term": "joyful",
+   "tags": "[\"mood\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:lonely",
+   "category": "mood",
+   "suno_term": "lonely",
+   "tags": "[\"mood\", \"emotion\", \"texture\"]"
+  },
+  {
+   "concept_id": "mood:longing",
+   "category": "mood",
+   "suno_term": "longing",
+   "tags": "[\"mood\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:love",
+   "category": "mood",
+   "suno_term": "love",
+   "tags": "[\"mood\", \"theme\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:lush",
+   "category": "mood",
+   "suno_term": "lush",
+   "tags": "[\"mood\", \"texture\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:meditative",
+   "category": "mood",
+   "suno_term": "meditative",
+   "tags": "[\"mood\", \"tempo\", \"texture\"]"
+  },
+  {
+   "concept_id": "mood:melancholic",
+   "category": "mood",
+   "suno_term": "melancholic",
+   "tags": "[\"mood\", \"emotion\", \"harmony\"]"
+  },
+  {
+   "concept_id": "mood:mellow",
+   "category": "mood",
+   "suno_term": "mellow",
+   "tags": "[\"mood\", \"tempo\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:memory",
+   "category": "mood",
+   "suno_term": "memory",
+   "tags": "[\"mood\", \"theme\"]"
+  },
+  {
+   "concept_id": "mood:moody",
+   "category": "mood",
+   "suno_term": "moody",
+   "tags": "[\"mood\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:nostalgic",
+   "category": "mood",
+   "suno_term": "nostalgic",
+   "tags": "[\"mood\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:peaceful",
+   "category": "mood",
+   "suno_term": "peaceful",
+   "tags": "[\"mood\", \"tempo\"]"
+  },
+  {
+   "concept_id": "mood:playful",
+   "category": "mood",
+   "suno_term": "playful",
+   "tags": "[\"mood\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "mood:powerful",
+   "category": "mood",
+   "suno_term": "powerful",
+   "tags": "[\"mood\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:punchy",
+   "category": "mood",
+   "suno_term": "punchy",
+   "tags": "[\"mood\", \"timbre\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:pure",
+   "category": "mood",
+   "suno_term": "pure",
+   "tags": "[\"mood\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:sacred",
+   "category": "mood",
+   "suno_term": "sacred",
+   "tags": "[\"mood\", \"genre\", \"space\"]"
+  },
+  {
+   "concept_id": "mood:serene",
+   "category": "mood",
+   "suno_term": "serene",
+   "tags": "[\"mood\", \"tempo\"]"
+  },
+  {
+   "concept_id": "mood:smoky",
+   "category": "mood",
+   "suno_term": "smoky",
+   "tags": "[\"mood\", \"timbre\", \"space\"]"
+  },
+  {
+   "concept_id": "mood:smooth",
+   "category": "mood",
+   "suno_term": "smooth",
+   "tags": "[\"mood\", \"articulation\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:solitary",
+   "category": "mood",
+   "suno_term": "solitary",
+   "tags": "[\"mood\", \"texture\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:somber",
+   "category": "mood",
+   "suno_term": "somber",
+   "tags": "[\"mood\", \"emotion\", \"harmony\"]"
+  },
+  {
+   "concept_id": "mood:soul",
+   "category": "mood",
+   "suno_term": "soul",
+   "tags": "[\"mood\", \"genre\", \"vocal\"]"
+  },
+  {
+   "concept_id": "mood:soulful",
+   "category": "mood",
+   "suno_term": "soulful",
+   "tags": "[\"mood\", \"vocal\", \"expression\"]"
+  },
+  {
+   "concept_id": "mood:stillness",
+   "category": "mood",
+   "suno_term": "stillness",
+   "tags": "[\"mood\", \"texture\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:sultry",
+   "category": "mood",
+   "suno_term": "sultry",
+   "tags": "[\"mood\", \"vocal\", \"feel\"]"
+  },
+  {
+   "concept_id": "mood:tears",
+   "category": "mood",
+   "suno_term": "tears",
+   "tags": "[\"mood\", \"theme\", \"emotion\"]"
+  },
+  {
+   "concept_id": "mood:tender",
+   "category": "mood",
+   "suno_term": "tender",
+   "tags": "[\"mood\", \"dynamics\", \"expression\"]"
+  },
+  {
+   "concept_id": "mood:tension",
+   "category": "mood",
+   "suno_term": "tension",
+   "tags": "[\"mood\", \"harmony\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "mood:triumphant",
+   "category": "mood",
+   "suno_term": "triumphant",
+   "tags": "[\"mood\", \"dynamics\", \"structure\"]"
+  },
+  {
+   "concept_id": "mood:upbeat",
+   "category": "mood",
+   "suno_term": "upbeat",
+   "tags": "[\"mood\", \"tempo\"]"
+  },
+  {
+   "concept_id": "mood:vast",
+   "category": "mood",
+   "suno_term": "vast",
+   "tags": "[\"mood\", \"space\", \"scale\"]"
+  },
+  {
+   "concept_id": "mood:warm",
+   "category": "mood",
+   "suno_term": "warm",
+   "tags": "[\"mood\", \"timbre\"]"
+  },
+  {
+   "concept_id": "mood:warmth",
+   "category": "mood",
+   "suno_term": "warmth",
+   "tags": "[\"mood\", \"timbre\"]"
+  },
+  {
+   "concept_id": "production:and_chorus",
+   "category": "production",
+   "suno_term": "and chorus",
+   "tags": "[\"production\", \"effect\", \"chorus\", \"fragment\"]"
+  },
+  {
+   "concept_id": "production:autotune",
+   "category": "production",
+   "suno_term": "autotune",
+   "tags": "[\"production\", \"vocal\", \"effect\", \"tuning\"]"
+  },
+  {
+   "concept_id": "production:centered_in_the_mix",
+   "category": "production",
+   "suno_term": "centered in the mix",
+   "tags": "[\"production\", \"mixing\", \"stereo\", \"space\"]"
+  },
+  {
+   "concept_id": "production:chorus_effect",
+   "category": "production",
+   "suno_term": "chorus effect",
+   "tags": "[\"production\", \"effect\", \"modulation\", \"chorus\"]"
+  },
+  {
+   "concept_id": "production:clean_production",
+   "category": "production",
+   "suno_term": "clean production",
+   "tags": "[\"production\", \"quality\", \"mixing\"]"
+  },
+  {
+   "concept_id": "production:clock_ticking",
+   "category": "production",
+   "suno_term": "clock-ticking",
+   "tags": "[\"production\", \"sfx\", \"texture\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "production:close_mic",
+   "category": "production",
+   "suno_term": "close-mic",
+   "tags": "[\"production\", \"recording\", \"space\", \"intimacy\"]"
+  },
+  {
+   "concept_id": "production:compression",
+   "category": "production",
+   "suno_term": "compression",
+   "tags": "[\"production\", \"dynamics\", \"mixing\"]"
+  },
+  {
+   "concept_id": "production:delay",
+   "category": "production",
+   "suno_term": "delay",
+   "tags": "[\"production\", \"effect\", \"delay\", \"space\"]"
+  },
+  {
+   "concept_id": "production:distortion",
+   "category": "production",
+   "suno_term": "distortion",
+   "tags": "[\"production\", \"effect\", \"distortion\", \"timbre\"]"
+  },
+  {
+   "concept_id": "production:dripping",
+   "category": "production",
+   "suno_term": "dripping",
+   "tags": "[\"production\", \"sfx\", \"texture\", \"fragment\"]"
+  },
+  {
+   "concept_id": "production:eq",
+   "category": "production",
+   "suno_term": "eq",
+   "tags": "[\"production\", \"mixing\", \"filter\"]"
+  },
+  {
+   "concept_id": "production:feedback_swell",
+   "category": "production",
+   "suno_term": "feedback swell",
+   "tags": "[\"production\", \"effect\", \"guitar\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "production:filter_sweep",
+   "category": "production",
+   "suno_term": "filter sweep",
+   "tags": "[\"production\", \"filter\", \"effect\", \"transition\"]"
+  },
+  {
+   "concept_id": "production:foley",
+   "category": "production",
+   "suno_term": "foley",
+   "tags": "[\"production\", \"sfx\", \"texture\", \"recording\"]"
+  },
+  {
+   "concept_id": "production:forward_in_the_mix",
+   "category": "production",
+   "suno_term": "forward in the mix",
+   "tags": "[\"production\", \"mixing\", \"space\"]"
+  },
+  {
+   "concept_id": "production:fuzz",
+   "category": "production",
+   "suno_term": "fuzz",
+   "tags": "[\"production\", \"effect\", \"distortion\", \"vintage\"]"
+  },
+  {
+   "concept_id": "production:hall_reverb",
+   "category": "production",
+   "suno_term": "hall reverb",
+   "tags": "[\"production\", \"effect\", \"space\", \"reverb\"]"
+  },
+  {
+   "concept_id": "production:high_fidelity",
+   "category": "production",
+   "suno_term": "high-fidelity",
+   "tags": "[\"production\", \"quality\", \"timbre\"]"
+  },
+  {
+   "concept_id": "production:high_pass_filter",
+   "category": "production",
+   "suno_term": "high-pass filter",
+   "tags": "[\"production\", \"filter\", \"effect\"]"
+  },
+  {
+   "concept_id": "production:hum",
+   "category": "production",
+   "suno_term": "hum",
+   "tags": "[\"production\", \"noise\", \"texture\", \"drone\"]"
+  },
+  {
+   "concept_id": "production:in_the_mix",
+   "category": "production",
+   "suno_term": "in the mix",
+   "tags": "[\"production\", \"mixing\", \"fragment\"]"
+  },
+  {
+   "concept_id": "production:light_chorus",
+   "category": "production",
+   "suno_term": "light chorus",
+   "tags": "[\"production\", \"effect\", \"modulation\", \"chorus\"]"
+  },
+  {
+   "concept_id": "production:long_reverb",
+   "category": "production",
+   "suno_term": "long reverb",
+   "tags": "[\"production\", \"effect\", \"space\", \"reverb\"]"
+  },
+  {
+   "concept_id": "production:low_pass_filter",
+   "category": "production",
+   "suno_term": "low-pass filter",
+   "tags": "[\"production\", \"filter\", \"effect\"]"
+  },
+  {
+   "concept_id": "production:master_bus",
+   "category": "production",
+   "suno_term": "master bus",
+   "tags": "[\"production\", \"mixing\", \"mastering\"]"
+  },
+  {
+   "concept_id": "production:mechanical",
+   "category": "production",
+   "suno_term": "mechanical",
+   "tags": "[\"production\", \"timbre\", \"character\"]"
+  },
+  {
+   "concept_id": "production:mono",
+   "category": "production",
+   "suno_term": "mono",
+   "tags": "[\"production\", \"stereo\", \"mixing\"]"
+  },
+  {
+   "concept_id": "production:muffled",
+   "category": "production",
+   "suno_term": "muffled",
+   "tags": "[\"production\", \"timbre\", \"filter\"]"
+  },
+  {
+   "concept_id": "production:overdrive",
+   "category": "production",
+   "suno_term": "overdrive",
+   "tags": "[\"production\", \"effect\", \"distortion\", \"saturation\"]"
+  },
+  {
+   "concept_id": "production:overdriven",
+   "category": "production",
+   "suno_term": "overdriven",
+   "tags": "[\"production\", \"timbre\", \"distortion\", \"saturation\"]"
+  },
+  {
+   "concept_id": "production:panned",
+   "category": "production",
+   "suno_term": "panned",
+   "tags": "[\"production\", \"mixing\", \"stereo\", \"space\"]"
+  },
+  {
+   "concept_id": "production:pitch_correction",
+   "category": "production",
+   "suno_term": "pitch correction",
+   "tags": "[\"production\", \"vocal\", \"effect\", \"tuning\"]"
+  },
+  {
+   "concept_id": "production:plate_reverb",
+   "category": "production",
+   "suno_term": "plate reverb",
+   "tags": "[\"production\", \"effect\", \"space\", \"reverb\"]"
+  },
+  {
+   "concept_id": "production:polished_production",
+   "category": "production",
+   "suno_term": "polished production",
+   "tags": "[\"production\", \"quality\", \"mixing\"]"
+  },
+  {
+   "concept_id": "production:processed",
+   "category": "production",
+   "suno_term": "processed",
+   "tags": "[\"production\", \"effect\", \"timbre\"]"
+  },
+  {
+   "concept_id": "production:processing",
+   "category": "production",
+   "suno_term": "processing",
+   "tags": "[\"production\", \"effect\", \"mixing\"]"
+  },
+  {
+   "concept_id": "production:proximity",
+   "category": "production",
+   "suno_term": "proximity",
+   "tags": "[\"production\", \"space\", \"recording\", \"intimacy\"]"
+  },
+  {
+   "concept_id": "production:record_scratch",
+   "category": "production",
+   "suno_term": "record scratch",
+   "tags": "[\"production\", \"sfx\", \"hip-hop\", \"turntable\"]"
+  },
+  {
+   "concept_id": "production:reverb",
+   "category": "production",
+   "suno_term": "reverb",
+   "tags": "[\"production\", \"effect\", \"space\", \"reverb\"]"
+  },
+  {
+   "concept_id": "production:riser",
+   "category": "production",
+   "suno_term": "riser",
+   "tags": "[\"production\", \"sfx\", \"transition\", \"electronic\"]"
+  },
+  {
+   "concept_id": "production:room_reverb",
+   "category": "production",
+   "suno_term": "room reverb",
+   "tags": "[\"production\", \"effect\", \"space\", \"reverb\"]"
+  },
+  {
+   "concept_id": "production:short_reverb",
+   "category": "production",
+   "suno_term": "short reverb",
+   "tags": "[\"production\", \"effect\", \"space\", \"reverb\"]"
+  },
+  {
+   "concept_id": "production:shutter",
+   "category": "production",
+   "suno_term": "shutter",
+   "tags": "[\"production\", \"sfx\", \"fragment\"]"
+  },
+  {
+   "concept_id": "production:sidechain",
+   "category": "production",
+   "suno_term": "sidechain",
+   "tags": "[\"production\", \"dynamics\", \"mixing\", \"electronic\"]"
+  },
+  {
+   "concept_id": "production:sits_forward",
+   "category": "production",
+   "suno_term": "sits forward",
+   "tags": "[\"production\", \"mixing\", \"space\"]"
+  },
+  {
+   "concept_id": "production:slapback_delay",
+   "category": "production",
+   "suno_term": "slapback delay",
+   "tags": "[\"production\", \"effect\", \"delay\", \"vintage\"]"
+  },
+  {
+   "concept_id": "production:sound_effect",
+   "category": "production",
+   "suno_term": "sound effect",
+   "tags": "[\"production\", \"sfx\", \"texture\"]"
+  },
+  {
+   "concept_id": "production:spring_reverb",
+   "category": "production",
+   "suno_term": "spring reverb",
+   "tags": "[\"production\", \"effect\", \"reverb\", \"vintage\"]"
+  },
+  {
+   "concept_id": "production:stereo_image",
+   "category": "production",
+   "suno_term": "stereo image",
+   "tags": "[\"production\", \"mixing\", \"space\", \"stereo\"]"
+  },
+  {
+   "concept_id": "production:stereo_imaging",
+   "category": "production",
+   "suno_term": "stereo imaging",
+   "tags": "[\"production\", \"mixing\", \"stereo\", \"space\"]"
+  },
+  {
+   "concept_id": "production:subtle_chorus",
+   "category": "production",
+   "suno_term": "subtle chorus",
+   "tags": "[\"production\", \"effect\", \"modulation\", \"chorus\"]"
+  },
+  {
+   "concept_id": "production:sweep",
+   "category": "production",
+   "suno_term": "sweep",
+   "tags": "[\"production\", \"effect\", \"transition\", \"filter\"]"
+  },
+  {
+   "concept_id": "production:tape_hiss",
+   "category": "production",
+   "suno_term": "tape hiss",
+   "tags": "[\"production\", \"noise\", \"lo-fi\", \"analog\"]"
+  },
+  {
+   "concept_id": "production:tremolo_effect",
+   "category": "production",
+   "suno_term": "tremolo effect",
+   "tags": "[\"production\", \"effect\", \"modulation\"]"
+  },
+  {
+   "concept_id": "production:vinyl_crackle",
+   "category": "production",
+   "suno_term": "vinyl crackle",
+   "tags": "[\"production\", \"texture\", \"lo-fi\", \"noise\"]"
+  },
+  {
+   "concept_id": "production:wah",
+   "category": "production",
+   "suno_term": "wah",
+   "tags": "[\"production\", \"effect\", \"filter\", \"guitar\"]"
+  },
+  {
+   "concept_id": "production:water_droplet",
+   "category": "production",
+   "suno_term": "water droplet",
+   "tags": "[\"production\", \"sfx\", \"texture\"]"
+  },
+  {
+   "concept_id": "production:water_droplets",
+   "category": "production",
+   "suno_term": "water droplets",
+   "tags": "[\"production\", \"sfx\", \"texture\"]"
+  },
+  {
+   "concept_id": "production:white_noise",
+   "category": "production",
+   "suno_term": "white noise",
+   "tags": "[\"production\", \"noise\", \"texture\", \"electronic\"]"
+  },
+  {
+   "concept_id": "production:with_chorus",
+   "category": "production",
+   "suno_term": "with chorus",
+   "tags": "[\"production\", \"effect\", \"modulation\", \"chorus\"]"
+  },
+  {
+   "concept_id": "technique:a_busy_percussive_line_with_frequent_slides_and_pops",
+   "category": "technique",
+   "suno_term": "a busy, percussive line with frequent slides and pops",
+   "tags": "[\"technique\", \"bass\", \"slap\", \"funk\", \"percussive\"]"
+  },
+  {
+   "concept_id": "technique:a_clean_electric_guitar_playing_syncopated_16th_note_rhythms_a_slap_bass_guitar",
+   "category": "technique",
+   "suno_term": "a clean electric guitar playing syncopated 16th-note rhythms, a slap bass guitar",
+   "tags": "[\"technique\", \"guitar\", \"bass\", \"funk\", \"sixteenth-notes\"]"
+  },
+  {
+   "concept_id": "technique:a_fingerpicked_acoustic_guitar_a_clean_electric_guitar_with_light_chorus",
+   "category": "technique",
+   "suno_term": "a fingerpicked acoustic guitar, a clean electric guitar with light chorus",
+   "tags": "[\"technique\", \"guitar\", \"fingerpicking\", \"layering\", \"chorus\"]"
+  },
+  {
+   "concept_id": "technique:a_jazz_influenced_chord_progression_with_subtle_chorus_and_reverb",
+   "category": "technique",
+   "suno_term": "a jazz-influenced chord progression with subtle chorus and reverb",
+   "tags": "[\"technique\", \"harmony\", \"jazz\", \"effects\"]"
+  },
+  {
+   "concept_id": "technique:a_jazz_influenced_progression_with_seventh_chords_and_subtle_vibrato",
+   "category": "technique",
+   "suno_term": "a jazz-influenced progression with seventh chords and subtle vibrato",
+   "tags": "[\"technique\", \"harmony\", \"jazz\", \"seventh-chords\", \"vibrato\"]"
+  },
+  {
+   "concept_id": "technique:a_prominent_slap_bass_line_syncopated_electric_guitar_scratches",
+   "category": "technique",
+   "suno_term": "a prominent slap bass line, syncopated electric guitar scratches",
+   "tags": "[\"technique\", \"bass\", \"slap\", \"funk\", \"guitar\"]"
+  },
+  {
+   "concept_id": "technique:a_repetitive_arpeggiated_pattern_in_4_4_time",
+   "category": "technique",
+   "suno_term": "a repetitive arpeggiated pattern in 4/4 time",
+   "tags": "[\"technique\", \"arpeggio\", \"ostinato\", \"meter\", \"pattern\"]"
+  },
+  {
+   "concept_id": "technique:a_repetitive_arpeggiated_pattern_in_4_4_time_at_72_bpm_in_the_key_of_g_major",
+   "category": "technique",
+   "suno_term": "a repetitive arpeggiated pattern in 4/4 time at 72 BPM in the key of G Major",
+   "tags": "[\"technique\", \"arpeggio\", \"ostinato\", \"tempo\", \"key\"]"
+  },
+  {
+   "concept_id": "technique:a_repetitive_arpeggiated_pattern_with_light_chorus_and_delay",
+   "category": "technique",
+   "suno_term": "a repetitive arpeggiated pattern with light chorus and delay",
+   "tags": "[\"technique\", \"arpeggio\", \"ostinato\", \"chorus\", \"delay\"]"
+  },
+  {
+   "concept_id": "technique:a_rhythmic_syncopated_chord_progression_with_light_chorus_and_reverb",
+   "category": "technique",
+   "suno_term": "a rhythmic, syncopated chord progression with light chorus and reverb",
+   "tags": "[\"technique\", \"harmony\", \"syncopation\", \"effects\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "technique:a_sense_of_space",
+   "category": "technique",
+   "suno_term": "a sense of space",
+   "tags": "[\"technique\", \"texture\", \"space\", \"arrangement\", \"reverb\"]"
+  },
+  {
+   "concept_id": "technique:a_steady_eighth_note_pattern",
+   "category": "technique",
+   "suno_term": "a steady eighth-note pattern",
+   "tags": "[\"technique\", \"rhythm\", \"eighth-notes\", \"groove\"]"
+  },
+  {
+   "concept_id": "technique:a_steady_fingerstyle_pattern_with_alternating_bass_notes_and_arpeggiated_chords",
+   "category": "technique",
+   "suno_term": "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords",
+   "tags": "[\"technique\", \"guitar\", \"fingerstyle\", \"travis-picking\", \"folk\"]"
+  },
+  {
+   "concept_id": "technique:a_syncopated_folk_style_pattern_in_g_major_at_84_bpm",
+   "category": "technique",
+   "suno_term": "a syncopated folk-style pattern in G Major at 84 BPM",
+   "tags": "[\"technique\", \"folk\", \"syncopation\", \"key\", \"tempo\"]"
+  },
+  {
+   "concept_id": "technique:a_syncopated_jazzy_chord_progression_with_light_chorus_and_reverb",
+   "category": "technique",
+   "suno_term": "a syncopated, jazzy chord progression with light chorus and reverb",
+   "tags": "[\"technique\", \"harmony\", \"jazz\", \"syncopation\", \"effects\"]"
+  },
+  {
+   "concept_id": "technique:a_syncopated_palm_muted_rhythmic_pattern",
+   "category": "technique",
+   "suno_term": "a syncopated, palm-muted rhythmic pattern",
+   "tags": "[\"technique\", \"guitar\", \"palm-mute\", \"syncopation\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "technique:a_syncopated_slap_bass_line_clean_electric_guitar_scratches_on_the_off_beats",
+   "category": "technique",
+   "suno_term": "a syncopated slap bass line, clean electric guitar scratches on the off-beats",
+   "tags": "[\"technique\", \"bass\", \"slap\", \"funk\", \"off-beat\"]"
+  },
+  {
+   "concept_id": "technique:arpeggiated_chords_with_light_chorus_and_delay",
+   "category": "technique",
+   "suno_term": "arpeggiated chords with light chorus and delay",
+   "tags": "[\"technique\", \"arpeggio\", \"effects\", \"chorus\", \"delay\"]"
+  },
+  {
+   "concept_id": "technique:arpeggiated_chords_with_light_chorus_and_reverb",
+   "category": "technique",
+   "suno_term": "arpeggiated chords with light chorus and reverb",
+   "tags": "[\"technique\", \"arpeggio\", \"effects\", \"chorus\", \"reverb\"]"
+  },
+  {
+   "concept_id": "technique:arpeggios",
+   "category": "technique",
+   "suno_term": "arpeggios",
+   "tags": "[\"technique\", \"arpeggio\", \"harmony\", \"pattern\"]"
+  },
+  {
+   "concept_id": "technique:between_the_acoustic_guitar_and_the_vocal_melody",
+   "category": "technique",
+   "suno_term": "between the acoustic guitar and the vocal melody",
+   "tags": "[\"technique\", \"interplay\", \"guitar\", \"vocals\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:between_the_guitar_and_the_vocal_melody",
+   "category": "technique",
+   "suno_term": "between the guitar and the vocal melody",
+   "tags": "[\"technique\", \"interplay\", \"guitar\", \"vocals\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:between_the_vocal_melody_and_the_rhythmic_guitar_strumming",
+   "category": "technique",
+   "suno_term": "between the vocal melody and the rhythmic guitar strumming",
+   "tags": "[\"technique\", \"interplay\", \"vocals\", \"guitar\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:comping",
+   "category": "technique",
+   "suno_term": "comping",
+   "tags": "[\"technique\", \"comping\", \"jazz\", \"accompaniment\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "technique:continue",
+   "category": "technique",
+   "suno_term": "continue",
+   "tags": "[\"technique\", \"arrangement\", \"continuity\"]"
+  },
+  {
+   "concept_id": "technique:continues",
+   "category": "technique",
+   "suno_term": "continues",
+   "tags": "[\"technique\", \"arrangement\", \"continuity\", \"structure\"]"
+  },
+  {
+   "concept_id": "technique:counterpoint",
+   "category": "technique",
+   "suno_term": "counterpoint",
+   "tags": "[\"technique\", \"melody\", \"counterpoint\", \"arrangement\"]"
+  },
+  {
+   "concept_id": "technique:distorted_electric_guitars_driving_acoustic_drums",
+   "category": "technique",
+   "suno_term": "distorted electric guitars, driving acoustic drums",
+   "tags": "[\"technique\", \"guitar\", \"drums\", \"rock\", \"distortion\"]"
+  },
+  {
+   "concept_id": "technique:drop",
+   "category": "technique",
+   "suno_term": "drop",
+   "tags": "[\"technique\", \"structure\", \"dynamics\", \"edm\", \"drop\"]"
+  },
+  {
+   "concept_id": "technique:during_the_chorus",
+   "category": "technique",
+   "suno_term": "during the chorus",
+   "tags": "[\"technique\", \"structure\", \"chorus\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:enter",
+   "category": "technique",
+   "suno_term": "enter",
+   "tags": "[\"technique\", \"arrangement\", \"entrance\", \"structure\"]"
+  },
+  {
+   "concept_id": "technique:enters",
+   "category": "technique",
+   "suno_term": "enters",
+   "tags": "[\"technique\", \"arrangement\", \"entrance\", \"structure\"]"
+  },
+  {
+   "concept_id": "technique:fade",
+   "category": "technique",
+   "suno_term": "fade",
+   "tags": "[\"technique\", \"dynamics\", \"fade\", \"transition\"]"
+  },
+  {
+   "concept_id": "technique:fades",
+   "category": "technique",
+   "suno_term": "fades",
+   "tags": "[\"technique\", \"dynamics\", \"fade\", \"transition\"]"
+  },
+  {
+   "concept_id": "technique:flourish",
+   "category": "technique",
+   "suno_term": "flourish",
+   "tags": "[\"technique\", \"ornament\", \"embellishment\", \"fill\"]"
+  },
+  {
+   "concept_id": "technique:flourishes",
+   "category": "technique",
+   "suno_term": "flourishes",
+   "tags": "[\"technique\", \"ornament\", \"embellishment\", \"fill\"]"
+  },
+  {
+   "concept_id": "technique:hammer_ons",
+   "category": "technique",
+   "suno_term": "hammer-ons",
+   "tags": "[\"technique\", \"guitar\", \"legato\", \"hammer-on\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_accents",
+   "category": "technique",
+   "suno_term": "harmonic accents",
+   "tags": "[\"technique\", \"harmony\", \"accent\", \"arrangement\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_density",
+   "category": "technique",
+   "suno_term": "harmonic density",
+   "tags": "[\"technique\", \"harmony\", \"texture\", \"layering\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_density_in_the_background",
+   "category": "technique",
+   "suno_term": "harmonic density in the background",
+   "tags": "[\"technique\", \"harmony\", \"texture\", \"background\", \"layering\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_depth_during_the_transitions",
+   "category": "technique",
+   "suno_term": "harmonic depth during the transitions",
+   "tags": "[\"technique\", \"harmony\", \"transition\", \"arrangement\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_depth_in_the_background",
+   "category": "technique",
+   "suno_term": "harmonic depth in the background",
+   "tags": "[\"technique\", \"harmony\", \"texture\", \"background\", \"pads\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_fill_in_the_background",
+   "category": "technique",
+   "suno_term": "harmonic fill in the background",
+   "tags": "[\"technique\", \"harmony\", \"background\", \"texture\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_padding_in_the_background",
+   "category": "technique",
+   "suno_term": "harmonic padding in the background",
+   "tags": "[\"technique\", \"harmony\", \"pads\", \"background\", \"texture\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_sustain",
+   "category": "technique",
+   "suno_term": "harmonic sustain",
+   "tags": "[\"technique\", \"harmony\", \"sustain\", \"texture\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_texture",
+   "category": "technique",
+   "suno_term": "harmonic texture",
+   "tags": "[\"technique\", \"harmony\", \"texture\"]"
+  },
+  {
+   "concept_id": "technique:harmonic_texture_in_the_background",
+   "category": "technique",
+   "suno_term": "harmonic texture in the background",
+   "tags": "[\"technique\", \"harmony\", \"texture\", \"background\"]"
+  },
+  {
+   "concept_id": "technique:increases",
+   "category": "technique",
+   "suno_term": "increases",
+   "tags": "[\"technique\", \"dynamics\", \"build\", \"crescendo\"]"
+  },
+  {
+   "concept_id": "technique:intensifies",
+   "category": "technique",
+   "suno_term": "intensifies",
+   "tags": "[\"technique\", \"dynamics\", \"build\", \"energy\"]"
+  },
+  {
+   "concept_id": "technique:jazz_inflected_chords_with_light_chorus_and_reverb",
+   "category": "technique",
+   "suno_term": "jazz-inflected chords with light chorus and reverb",
+   "tags": "[\"technique\", \"harmony\", \"jazz\", \"effects\"]"
+  },
+  {
+   "concept_id": "technique:jazz_influenced_seventh_chords_with_a_light_chorus_effect",
+   "category": "technique",
+   "suno_term": "jazz-influenced seventh chords with a light chorus effect",
+   "tags": "[\"technique\", \"harmony\", \"jazz\", \"seventh-chords\", \"chorus\"]"
+  },
+  {
+   "concept_id": "technique:leaps",
+   "category": "technique",
+   "suno_term": "leaps",
+   "tags": "[\"technique\", \"melody\", \"interval\", \"leap\"]"
+  },
+  {
+   "concept_id": "technique:legato_pads_and_counter_melodies",
+   "category": "technique",
+   "suno_term": "legato pads and counter-melodies",
+   "tags": "[\"technique\", \"pads\", \"counter-melody\", \"legato\", \"texture\"]"
+  },
+  {
+   "concept_id": "technique:low_end_weight_on_the_downbeats",
+   "category": "technique",
+   "suno_term": "low-end weight on the downbeats",
+   "tags": "[\"technique\", \"bass\", \"downbeat\", \"groove\", \"low-end\"]"
+  },
+  {
+   "concept_id": "technique:low_end_weight_with_sustained_notes",
+   "category": "technique",
+   "suno_term": "low-end weight with sustained notes",
+   "tags": "[\"technique\", \"bass\", \"sustain\", \"low-end\", \"weight\"]"
+  },
+  {
+   "concept_id": "technique:melodic_accents",
+   "category": "technique",
+   "suno_term": "melodic accents",
+   "tags": "[\"technique\", \"melody\", \"accent\", \"arrangement\"]"
+  },
+  {
+   "concept_id": "technique:melodic_counterpoint_with_frequent_slides",
+   "category": "technique",
+   "suno_term": "melodic counterpoint with frequent slides",
+   "tags": "[\"technique\", \"counterpoint\", \"slide\", \"melody\"]"
+  },
+  {
+   "concept_id": "technique:melodic_counterpoint_with_light_chorus_and_reverb",
+   "category": "technique",
+   "suno_term": "melodic counterpoint with light chorus and reverb",
+   "tags": "[\"technique\", \"counterpoint\", \"effects\", \"chorus\", \"reverb\"]"
+  },
+  {
+   "concept_id": "technique:melodic_counterpoint_with_single_note_lines_and_light_vibrato",
+   "category": "technique",
+   "suno_term": "melodic counterpoint with single-note lines and light vibrato",
+   "tags": "[\"technique\", \"counterpoint\", \"vibrato\", \"melody\"]"
+  },
+  {
+   "concept_id": "technique:melodic_counterpoint_with_slides_and_vibrato",
+   "category": "technique",
+   "suno_term": "melodic counterpoint with slides and vibrato",
+   "tags": "[\"technique\", \"counterpoint\", \"slide\", \"vibrato\", \"expression\"]"
+  },
+  {
+   "concept_id": "technique:melodic_lines_and_syncopated_chordal_stabs",
+   "category": "technique",
+   "suno_term": "melodic lines and syncopated chordal stabs",
+   "tags": "[\"technique\", \"melody\", \"stabs\", \"syncopation\"]"
+  },
+  {
+   "concept_id": "technique:melodic_movement_in_the_low_end",
+   "category": "technique",
+   "suno_term": "melodic movement in the low end",
+   "tags": "[\"technique\", \"bass\", \"melody\", \"low-end\"]"
+  },
+  {
+   "concept_id": "technique:melodic_slides_and_syncopated_fills",
+   "category": "technique",
+   "suno_term": "melodic slides and syncopated fills",
+   "tags": "[\"technique\", \"slide\", \"fills\", \"syncopation\", \"bass\"]"
+  },
+  {
+   "concept_id": "technique:muted_staccato_chords_on_the_off_beats",
+   "category": "technique",
+   "suno_term": "muted staccato chords on the off-beats",
+   "tags": "[\"technique\", \"guitar\", \"staccato\", \"off-beat\", \"muting\"]"
+  },
+  {
+   "concept_id": "technique:on_a_grand_piano_playing_sustained_chords_and_melodic_fills",
+   "category": "technique",
+   "suno_term": "on a grand piano playing sustained chords and melodic fills",
+   "tags": "[\"technique\", \"piano\", \"accompaniment\", \"fills\", \"sustain\"]"
+  },
+  {
+   "concept_id": "technique:ostinatos",
+   "category": "technique",
+   "suno_term": "ostinatos",
+   "tags": "[\"technique\", \"ostinato\", \"repetition\", \"pattern\"]"
+  },
+  {
+   "concept_id": "technique:palm_muted_eighth_notes_in_the_verses_and_open_power_chords_in_the_chorus",
+   "category": "technique",
+   "suno_term": "palm-muted eighth notes in the verses and open power chords in the chorus",
+   "tags": "[\"technique\", \"guitar\", \"palm-mute\", \"power-chords\", \"rock\"]"
+  },
+  {
+   "concept_id": "technique:palm_muted_power_chords_in_the_verses_and_open_ringing_chords_in_the_chorus",
+   "category": "technique",
+   "suno_term": "palm-muted power chords in the verses and open, ringing chords in the chorus",
+   "tags": "[\"technique\", \"guitar\", \"palm-mute\", \"power-chords\", \"rock\"]"
+  },
+  {
+   "concept_id": "technique:returns",
+   "category": "technique",
+   "suno_term": "returns",
+   "tags": "[\"technique\", \"arrangement\", \"structure\", \"reprise\"]"
+  },
+  {
+   "concept_id": "technique:rhythmic_accompaniment_with_bossa_nova_comping_patterns",
+   "category": "technique",
+   "suno_term": "rhythmic accompaniment with bossa nova comping patterns",
+   "tags": "[\"technique\", \"comping\", \"bossa-nova\", \"rhythm\", \"accompaniment\"]"
+  },
+  {
+   "concept_id": "technique:rhythmic_muted_scratches_and_staccato_chords",
+   "category": "technique",
+   "suno_term": "rhythmic muted scratches and staccato chords",
+   "tags": "[\"technique\", \"guitar\", \"funk\", \"staccato\", \"muting\"]"
+  },
+  {
+   "concept_id": "technique:rhythmic_muted_scratches_and_staccato_ninth_chords",
+   "category": "technique",
+   "suno_term": "rhythmic muted scratches and staccato ninth chords",
+   "tags": "[\"technique\", \"guitar\", \"funk\", \"ninth-chords\", \"staccato\"]"
+  },
+  {
+   "concept_id": "technique:rings_out",
+   "category": "technique",
+   "suno_term": "rings out",
+   "tags": "[\"technique\", \"sustain\", \"decay\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "technique:rolls",
+   "category": "technique",
+   "suno_term": "rolls",
+   "tags": "[\"technique\", \"drums\", \"roll\", \"fill\"]"
+  },
+  {
+   "concept_id": "technique:runs",
+   "category": "technique",
+   "suno_term": "runs",
+   "tags": "[\"technique\", \"melody\", \"runs\", \"virtuosic\"]"
+  },
+  {
+   "concept_id": "technique:scratch",
+   "category": "technique",
+   "suno_term": "scratch",
+   "tags": "[\"technique\", \"guitar\", \"percussive\", \"muting\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:scratches",
+   "category": "technique",
+   "suno_term": "scratches",
+   "tags": "[\"technique\", \"guitar\", \"percussive\", \"funk\", \"muting\"]"
+  },
+  {
+   "concept_id": "technique:slide",
+   "category": "technique",
+   "suno_term": "slide",
+   "tags": "[\"technique\", \"guitar\", \"slide\", \"glissando\"]"
+  },
+  {
+   "concept_id": "technique:slides",
+   "category": "technique",
+   "suno_term": "slides",
+   "tags": "[\"technique\", \"guitar\", \"slide\", \"glissando\", \"expression\"]"
+  },
+  {
+   "concept_id": "technique:sparse_melodic_root_notes",
+   "category": "technique",
+   "suno_term": "sparse, melodic root notes",
+   "tags": "[\"technique\", \"bass\", \"root-notes\", \"sparse\", \"melody\"]"
+  },
+  {
+   "concept_id": "technique:stops",
+   "category": "technique",
+   "suno_term": "stops",
+   "tags": "[\"technique\", \"dynamics\", \"break\", \"arrangement\"]"
+  },
+  {
+   "concept_id": "technique:strumming",
+   "category": "technique",
+   "suno_term": "strumming",
+   "tags": "[\"technique\", \"guitar\", \"strumming\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "technique:subtle_arpeggiated_textures",
+   "category": "technique",
+   "suno_term": "subtle arpeggiated textures",
+   "tags": "[\"technique\", \"arpeggio\", \"texture\"]"
+  },
+  {
+   "concept_id": "technique:subtle_arpeggiated_textures_in_the_background",
+   "category": "technique",
+   "suno_term": "subtle arpeggiated textures in the background",
+   "tags": "[\"technique\", \"arpeggio\", \"texture\", \"background\"]"
+  },
+  {
+   "concept_id": "technique:subtle_melodic_fills_with_light_chorus_and_delay",
+   "category": "technique",
+   "suno_term": "subtle melodic fills with light chorus and delay",
+   "tags": "[\"technique\", \"fills\", \"chorus\", \"delay\", \"melody\"]"
+  },
+  {
+   "concept_id": "technique:sustained_chords_and_melodic_fills",
+   "category": "technique",
+   "suno_term": "sustained chords and melodic fills",
+   "tags": "[\"technique\", \"sustain\", \"fills\", \"accompaniment\"]"
+  },
+  {
+   "concept_id": "technique:sustained_low_end_notes_on_the_downbeats",
+   "category": "technique",
+   "suno_term": "sustained low-end notes on the downbeats",
+   "tags": "[\"technique\", \"bass\", \"sustain\", \"downbeat\", \"low-end\"]"
+  },
+  {
+   "concept_id": "technique:swell",
+   "category": "technique",
+   "suno_term": "swell",
+   "tags": "[\"technique\", \"dynamics\", \"crescendo\", \"texture\"]"
+  },
+  {
+   "concept_id": "technique:swells",
+   "category": "technique",
+   "suno_term": "swells",
+   "tags": "[\"technique\", \"dynamics\", \"crescendo\", \"texture\"]"
+  },
+  {
+   "concept_id": "technique:syncopated_funk_style_muted_strums_and_arpeggiated_chords",
+   "category": "technique",
+   "suno_term": "syncopated funk-style muted strums and arpeggiated chords",
+   "tags": "[\"technique\", \"guitar\", \"funk\", \"muting\", \"arpeggio\"]"
+  },
+  {
+   "concept_id": "technique:syncopated_funk_style_muted_strums_and_ninth_chords",
+   "category": "technique",
+   "suno_term": "syncopated funk-style muted strums and ninth chords",
+   "tags": "[\"technique\", \"guitar\", \"funk\", \"ninth-chords\", \"muting\"]"
+  },
+  {
+   "concept_id": "technique:syncopated_funk_style_muted_strums_and_rhythmic_chords",
+   "category": "technique",
+   "suno_term": "syncopated funk-style muted strums and rhythmic chords",
+   "tags": "[\"technique\", \"guitar\", \"funk\", \"muting\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "technique:syncopated_jazz_influenced_chords_with_light_chorus_and_reverb",
+   "category": "technique",
+   "suno_term": "syncopated jazz-influenced chords with light chorus and reverb",
+   "tags": "[\"technique\", \"harmony\", \"jazz\", \"syncopation\", \"effects\"]"
+  },
+  {
+   "concept_id": "technique:syncopated_jazzy_seventh_chords_with_a_light_chorus_effect",
+   "category": "technique",
+   "suno_term": "syncopated, jazzy seventh chords with a light chorus effect",
+   "tags": "[\"technique\", \"harmony\", \"jazz\", \"syncopation\", \"chorus\"]"
+  },
+  {
+   "concept_id": "technique:syncopated_sixteenth_note_muted_scratches_and_staccato_chords",
+   "category": "technique",
+   "suno_term": "syncopated sixteenth-note muted scratches and staccato chords",
+   "tags": "[\"technique\", \"guitar\", \"funk\", \"staccato\", \"sixteenth-notes\"]"
+  },
+  {
+   "concept_id": "technique:syncopated_sixteenth_note_patterns",
+   "category": "technique",
+   "suno_term": "syncopated sixteenth-note patterns",
+   "tags": "[\"technique\", \"rhythm\", \"syncopation\", \"sixteenth-notes\", \"funk\"]"
+  },
+  {
+   "concept_id": "technique:the_guitar_s_rhythmic_pattern",
+   "category": "technique",
+   "suno_term": "the guitar's rhythmic pattern",
+   "tags": "[\"technique\", \"guitar\", \"rhythm\", \"groove\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_guitar_s_root_notes_with_occasional_melodic_fills",
+   "category": "technique",
+   "suno_term": "the guitar's root notes with occasional melodic fills",
+   "tags": "[\"technique\", \"bass\", \"root-notes\", \"fills\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_drum_pattern",
+   "category": "technique",
+   "suno_term": "the kick drum pattern",
+   "tags": "[\"technique\", \"drums\", \"rhythm\", \"kick\", \"groove\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_drum_pattern_with_a_thick_overdriven_tone",
+   "category": "technique",
+   "suno_term": "the kick drum pattern with a thick, overdriven tone",
+   "tags": "[\"technique\", \"bass\", \"kick\", \"distortion\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_drum_patterns",
+   "category": "technique",
+   "suno_term": "the kick drum patterns",
+   "tags": "[\"technique\", \"drums\", \"kick\", \"rhythm\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_drum_with_a_consistent_eighth_note_pulse",
+   "category": "technique",
+   "suno_term": "the kick drum with a consistent eighth-note pulse",
+   "tags": "[\"technique\", \"bass\", \"kick\", \"eighth-notes\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_drum_with_a_thick_overdriven_tone",
+   "category": "technique",
+   "suno_term": "the kick drum with a thick, overdriven tone",
+   "tags": "[\"technique\", \"bass\", \"kick\", \"distortion\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_drum_with_a_warm_rounded_tone",
+   "category": "technique",
+   "suno_term": "the kick drum with a warm, rounded tone",
+   "tags": "[\"technique\", \"bass\", \"kick\", \"tone\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_drum_with_melodic_fills",
+   "category": "technique",
+   "suno_term": "the kick drum with melodic fills",
+   "tags": "[\"technique\", \"bass\", \"kick\", \"fills\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_drum_with_sustained_root_notes",
+   "category": "technique",
+   "suno_term": "the kick drum with sustained root notes",
+   "tags": "[\"technique\", \"bass\", \"kick\", \"sustain\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_kick_pattern",
+   "category": "technique",
+   "suno_term": "the kick pattern",
+   "tags": "[\"technique\", \"drums\", \"kick\", \"rhythm\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_root_notes_of_the_acoustic_guitar_with_a_warm_rounded_tone",
+   "category": "technique",
+   "suno_term": "the root notes of the acoustic guitar with a warm, rounded tone",
+   "tags": "[\"technique\", \"bass\", \"root-notes\", \"tone\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_root_notes_of_the_guitar",
+   "category": "technique",
+   "suno_term": "the root notes of the guitar",
+   "tags": "[\"technique\", \"bass\", \"guitar\", \"root-notes\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_root_notes_of_the_guitar_chords_with_a_warm_rounded_tone",
+   "category": "technique",
+   "suno_term": "the root notes of the guitar chords with a warm, rounded tone",
+   "tags": "[\"technique\", \"bass\", \"root-notes\", \"tone\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_root_notes_of_the_guitar_progression",
+   "category": "technique",
+   "suno_term": "the root notes of the guitar progression",
+   "tags": "[\"technique\", \"bass\", \"harmony\", \"root-notes\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_root_notes_of_the_guitar_progression_with_a_picked_attack",
+   "category": "technique",
+   "suno_term": "the root notes of the guitar progression with a picked attack",
+   "tags": "[\"technique\", \"bass\", \"root-notes\", \"pick\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_root_notes_of_the_guitar_progression_with_a_warm_rounded_tone",
+   "category": "technique",
+   "suno_term": "the root notes of the guitar progression with a warm, rounded tone",
+   "tags": "[\"technique\", \"bass\", \"root-notes\", \"tone\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_root_notes_of_the_piano",
+   "category": "technique",
+   "suno_term": "the root notes of the piano",
+   "tags": "[\"technique\", \"bass\", \"piano\", \"root-notes\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_root_notes_of_the_progression",
+   "category": "technique",
+   "suno_term": "the root notes of the progression",
+   "tags": "[\"technique\", \"bass\", \"harmony\", \"root-notes\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:the_vocal_phrasing",
+   "category": "technique",
+   "suno_term": "the vocal phrasing",
+   "tags": "[\"technique\", \"vocals\", \"phrasing\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:walking",
+   "category": "technique",
+   "suno_term": "walking",
+   "tags": "[\"technique\", \"bass\", \"jazz\", \"walking-bass\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "technique:with_melodic_legato_lines",
+   "category": "technique",
+   "suno_term": "with melodic, legato lines",
+   "tags": "[\"technique\", \"legato\", \"melody\", \"phrasing\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:with_melodic_slides_and_sustained_notes",
+   "category": "technique",
+   "suno_term": "with melodic slides and sustained notes",
+   "tags": "[\"technique\", \"slide\", \"sustain\", \"expression\", \"fragment\"]"
+  },
+  {
+   "concept_id": "technique:with_sustained_root_notes",
+   "category": "technique",
+   "suno_term": "with sustained root notes",
+   "tags": "[\"technique\", \"bass\", \"sustain\", \"root-notes\", \"fragment\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:arpeggiated",
+   "category": "tempo_rhythm",
+   "suno_term": "arpeggiated",
+   "tags": "[\"rhythm\", \"technique\", \"harmony\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:downbeats",
+   "category": "tempo_rhythm",
+   "suno_term": "downbeats",
+   "tags": "[\"rhythm\", \"meter\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:driving",
+   "category": "tempo_rhythm",
+   "suno_term": "driving",
+   "tags": "[\"rhythm\", \"tempo\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:fingerpicked",
+   "category": "tempo_rhythm",
+   "suno_term": "fingerpicked",
+   "tags": "[\"rhythm\", \"technique\", \"guitar\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:four_bar",
+   "category": "tempo_rhythm",
+   "suno_term": "four-bar",
+   "tags": "[\"rhythm\", \"structure\", \"meter\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:four_on_the_floor",
+   "category": "tempo_rhythm",
+   "suno_term": "four-on-the-floor",
+   "tags": "[\"rhythm\", \"drums\", \"genre\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:legato",
+   "category": "tempo_rhythm",
+   "suno_term": "legato",
+   "tags": "[\"rhythm\", \"articulation\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:mid_tempo",
+   "category": "tempo_rhythm",
+   "suno_term": "mid-tempo",
+   "tags": "[\"tempo\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:palm_muted",
+   "category": "tempo_rhythm",
+   "suno_term": "palm-muted",
+   "tags": "[\"rhythm\", \"technique\", \"guitar\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:pizzicato",
+   "category": "tempo_rhythm",
+   "suno_term": "pizzicato",
+   "tags": "[\"rhythm\", \"technique\", \"strings\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:rubato",
+   "category": "tempo_rhythm",
+   "suno_term": "rubato",
+   "tags": "[\"tempo\", \"expression\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:shuffle",
+   "category": "tempo_rhythm",
+   "suno_term": "shuffle",
+   "tags": "[\"rhythm\", \"feel\", \"genre\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:spiccato",
+   "category": "tempo_rhythm",
+   "suno_term": "spiccato",
+   "tags": "[\"rhythm\", \"technique\", \"strings\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:staccato",
+   "category": "tempo_rhythm",
+   "suno_term": "staccato",
+   "tags": "[\"rhythm\", \"articulation\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:steady",
+   "category": "tempo_rhythm",
+   "suno_term": "steady",
+   "tags": "[\"rhythm\", \"tempo\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:strummed",
+   "category": "tempo_rhythm",
+   "suno_term": "strummed",
+   "tags": "[\"rhythm\", \"technique\", \"guitar\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:swung",
+   "category": "tempo_rhythm",
+   "suno_term": "swung",
+   "tags": "[\"rhythm\", \"feel\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:syncopated",
+   "category": "tempo_rhythm",
+   "suno_term": "syncopated",
+   "tags": "[\"rhythm\", \"tempo\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:tremolo",
+   "category": "tempo_rhythm",
+   "suno_term": "tremolo",
+   "tags": "[\"rhythm\", \"technique\"]"
+  },
+  {
+   "concept_id": "tempo_rhythm:trill",
+   "category": "tempo_rhythm",
+   "suno_term": "trill",
+   "tags": "[\"rhythm\", \"ornament\", \"technique\"]"
+  },
+  {
+   "concept_id": "timbre:airy",
+   "category": "timbre",
+   "suno_term": "airy",
+   "tags": "[\"timbre\", \"space\", \"brightness\"]"
+  },
+  {
+   "concept_id": "timbre:analog",
+   "category": "timbre",
+   "suno_term": "analog",
+   "tags": "[\"timbre\", \"production\", \"analog\", \"vintage\"]"
+  },
+  {
+   "concept_id": "timbre:breathy",
+   "category": "timbre",
+   "suno_term": "breathy",
+   "tags": "[\"timbre\", \"vocal\", \"texture\"]"
+  },
+  {
+   "concept_id": "timbre:clean",
+   "category": "timbre",
+   "suno_term": "clean",
+   "tags": "[\"timbre\", \"production\", \"clarity\"]"
+  },
+  {
+   "concept_id": "timbre:compressed",
+   "category": "timbre",
+   "suno_term": "compressed",
+   "tags": "[\"timbre\", \"production\", \"dynamics\"]"
+  },
+  {
+   "concept_id": "timbre:crisp",
+   "category": "timbre",
+   "suno_term": "crisp",
+   "tags": "[\"timbre\", \"clarity\", \"transient\"]"
+  },
+  {
+   "concept_id": "timbre:distorted",
+   "category": "timbre",
+   "suno_term": "distorted",
+   "tags": "[\"timbre\", \"production\", \"distortion\"]"
+  },
+  {
+   "concept_id": "timbre:fuzzy",
+   "category": "timbre",
+   "suno_term": "fuzzy",
+   "tags": "[\"timbre\", \"distortion\", \"texture\"]"
+  },
+  {
+   "concept_id": "timbre:glassy",
+   "category": "timbre",
+   "suno_term": "glassy",
+   "tags": "[\"timbre\", \"brightness\", \"clarity\"]"
+  },
+  {
+   "concept_id": "timbre:heavy",
+   "category": "timbre",
+   "suno_term": "heavy",
+   "tags": "[\"timbre\", \"dynamics\", \"character\"]"
+  },
+  {
+   "concept_id": "timbre:hi_fi",
+   "category": "timbre",
+   "suno_term": "hi-fi",
+   "tags": "[\"timbre\", \"production\", \"quality\"]"
+  },
+  {
+   "concept_id": "timbre:hollow",
+   "category": "timbre",
+   "suno_term": "hollow",
+   "tags": "[\"timbre\", \"resonance\", \"character\"]"
+  },
+  {
+   "concept_id": "timbre:lo_fi",
+   "category": "timbre",
+   "suno_term": "lo-fi",
+   "tags": "[\"timbre\", \"production\", \"lo-fi\", \"aesthetic\"]"
+  },
+  {
+   "concept_id": "timbre:low_end",
+   "category": "timbre",
+   "suno_term": "low-end",
+   "tags": "[\"timbre\", \"bass\", \"mixing\", \"low-end\"]"
+  },
+  {
+   "concept_id": "timbre:metallic",
+   "category": "timbre",
+   "suno_term": "metallic",
+   "tags": "[\"timbre\", \"texture\", \"character\"]"
+  },
+  {
+   "concept_id": "timbre:nasal",
+   "category": "timbre",
+   "suno_term": "nasal",
+   "tags": "[\"timbre\", \"vocal\", \"midrange\", \"character\"]"
+  },
+  {
+   "concept_id": "timbre:resonant",
+   "category": "timbre",
+   "suno_term": "resonant",
+   "tags": "[\"timbre\", \"resonance\", \"sustain\"]"
+  },
+  {
+   "concept_id": "timbre:rounded",
+   "category": "timbre",
+   "suno_term": "rounded",
+   "tags": "[\"timbre\", \"character\", \"smoothness\"]"
+  },
+  {
+   "concept_id": "timbre:saturated",
+   "category": "timbre",
+   "suno_term": "saturated",
+   "tags": "[\"timbre\", \"production\", \"saturation\", \"warmth\"]"
+  },
+  {
+   "concept_id": "timbre:shimmering",
+   "category": "timbre",
+   "suno_term": "shimmering",
+   "tags": "[\"timbre\", \"texture\", \"brightness\"]"
+  },
+  {
+   "concept_id": "timbre:soft",
+   "category": "timbre",
+   "suno_term": "soft",
+   "tags": "[\"timbre\", \"dynamics\", \"character\"]"
+  },
+  {
+   "concept_id": "timbre:sub_heavy",
+   "category": "timbre",
+   "suno_term": "sub-heavy",
+   "tags": "[\"timbre\", \"bass\", \"low-end\", \"electronic\"]"
+  },
+  {
+   "concept_id": "timbre:thick",
+   "category": "timbre",
+   "suno_term": "thick",
+   "tags": "[\"timbre\", \"density\", \"character\"]"
+  },
+  {
+   "concept_id": "timbre:thin",
+   "category": "timbre",
+   "suno_term": "thin",
+   "tags": "[\"timbre\", \"character\", \"brightness\"]"
+  },
+  {
+   "concept_id": "timbre:woody",
+   "category": "timbre",
+   "suno_term": "woody",
+   "tags": "[\"timbre\", \"acoustic\", \"warmth\", \"texture\"]"
+  },
+  {
+   "concept_id": "vocal:falsetto",
+   "category": "vocal",
+   "suno_term": "falsetto",
+   "tags": "[\"vocal\", \"register\", \"falsetto\", \"high\"]"
+  },
+  {
+   "concept_id": "vocal:female_soprano_vocals",
+   "category": "vocal",
+   "suno_term": "female soprano vocals",
+   "tags": "[\"vocal\", \"female\", \"soprano\", \"register\"]"
+  },
+  {
+   "concept_id": "vocal:female_vocalist",
+   "category": "vocal",
+   "suno_term": "female vocalist",
+   "tags": "[\"vocal\", \"female\", \"performer\"]"
+  },
+  {
+   "concept_id": "vocal:female_vocals",
+   "category": "vocal",
+   "suno_term": "female vocals",
+   "tags": "[\"vocal\", \"female\", \"lead\"]"
+  },
+  {
+   "concept_id": "vocal:male_baritone_vocals",
+   "category": "vocal",
+   "suno_term": "male baritone vocals",
+   "tags": "[\"vocal\", \"male\", \"baritone\", \"register\"]"
+  },
+  {
+   "concept_id": "vocal:male_rapper",
+   "category": "vocal",
+   "suno_term": "male rapper",
+   "tags": "[\"vocal\", \"rap\", \"male\"]"
+  },
+  {
+   "concept_id": "vocal:male_tenor_vocals",
+   "category": "vocal",
+   "suno_term": "male tenor vocals",
+   "tags": "[\"vocal\", \"male\", \"tenor\", \"register\"]"
+  },
+  {
+   "concept_id": "vocal:male_vocalist",
+   "category": "vocal",
+   "suno_term": "male vocalist",
+   "tags": "[\"vocal\", \"male\", \"performer\"]"
+  },
+  {
+   "concept_id": "vocal:male_vocals",
+   "category": "vocal",
+   "suno_term": "male vocals",
+   "tags": "[\"vocal\", \"male\", \"lead\"]"
+  },
+  {
+   "concept_id": "vocal:rap_delivery",
+   "category": "vocal",
+   "suno_term": "rap delivery",
+   "tags": "[\"vocal\", \"rap\", \"delivery\", \"rhythm\"]"
+  },
+  {
+   "concept_id": "vocal:rapper",
+   "category": "vocal",
+   "suno_term": "rapper",
+   "tags": "[\"vocal\", \"rap\"]"
+  },
+  {
+   "concept_id": "vocal:singer",
+   "category": "vocal",
+   "suno_term": "singer",
+   "tags": "[\"vocal\", \"performer\"]"
+  },
+  {
+   "concept_id": "vocal:singing",
+   "category": "vocal",
+   "suno_term": "singing",
+   "tags": "[\"vocal\", \"melody\"]"
+  },
+  {
+   "concept_id": "vocal:vocalist",
+   "category": "vocal",
+   "suno_term": "vocalist",
+   "tags": "[\"vocal\", \"performer\"]"
+  },
+  {
+   "concept_id": "vocal:vocalizing",
+   "category": "vocal",
+   "suno_term": "vocalizing",
+   "tags": "[\"vocal\", \"wordless\", \"texture\"]"
+  },
+  {
+   "concept_id": "vocal:vocals",
+   "category": "vocal",
+   "suno_term": "vocals",
+   "tags": "[\"vocal\", \"voice\"]"
+  },
+  {
+   "concept_id": "vocal:voice",
+   "category": "vocal",
+   "suno_term": "voice",
+   "tags": "[\"vocal\", \"voice\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:ad_lib",
+   "category": "vocal_chorus",
+   "suno_term": "ad-lib",
+   "tags": "[\"vocal\", \"adlib\", \"improvisation\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:ad_libs",
+   "category": "vocal_chorus",
+   "suno_term": "ad-libs",
+   "tags": "[\"vocal\", \"adlib\", \"improvisation\", \"fill\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:adlibs",
+   "category": "vocal_chorus",
+   "suno_term": "adlibs",
+   "tags": "[\"vocal\", \"adlib\", \"improvisation\", \"fill\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:call_and_response",
+   "category": "vocal_chorus",
+   "suno_term": "call-and-response",
+   "tags": "[\"vocal\", \"structure\", \"antiphony\", \"interaction\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:choir",
+   "category": "vocal_chorus",
+   "suno_term": "choir",
+   "tags": "[\"vocal\", \"choir\", \"ensemble\", \"chorus\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:choral",
+   "category": "vocal_chorus",
+   "suno_term": "choral",
+   "tags": "[\"vocal\", \"choir\", \"texture\", \"ensemble\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:double_tracking",
+   "category": "vocal_chorus",
+   "suno_term": "double-tracking",
+   "tags": "[\"vocal\", \"production\", \"layering\", \"doubling\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:doubling",
+   "category": "vocal_chorus",
+   "suno_term": "doubling",
+   "tags": "[\"vocal\", \"layering\", \"production\", \"doubling\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:harmonies",
+   "category": "vocal_chorus",
+   "suno_term": "harmonies",
+   "tags": "[\"vocal\", \"harmony\", \"chorus\", \"layering\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:layered_vocal",
+   "category": "vocal_chorus",
+   "suno_term": "layered vocal",
+   "tags": "[\"vocal\", \"layering\", \"texture\", \"chorus\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:unison",
+   "category": "vocal_chorus",
+   "suno_term": "unison",
+   "tags": "[\"vocal\", \"harmony\", \"ensemble\", \"unison\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:vocal_harmonies",
+   "category": "vocal_chorus",
+   "suno_term": "vocal harmonies",
+   "tags": "[\"vocal\", \"harmony\", \"chorus\", \"backing\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:vocal_harmony",
+   "category": "vocal_chorus",
+   "suno_term": "vocal harmony",
+   "tags": "[\"vocal\", \"harmony\", \"backing\"]"
+  }
+ ]
+}
