@@ -5,14 +5,18 @@
   "interface_version": "0.1",
   "handoff": {
     "request_id": "<encore가 부여>",
+    "crosswalk_ref": {
+      "path": "data/connector/out/crosswalk_v0.1.json",
+      "sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c",
+      "note": "crosswalk_latest.json은 인간 편의 심볼릭 전용 — 계약은 버전드+sha로 앵커"
+    },
     "corpus_assets": [
       {
         "asset_type": "reference_asset|catalog_track|rag_external_track",
         "asset_id": "<id>",
         "suno_terms": [
           "<attested>"
-        ],
-        "crosswalk_ref": "data/connector/out/crosswalk_latest.json"
+        ]
       }
     ],
     "text_channel_note": "sunolang=text 어휘 번역 채널. 오디오 정밀부는 leomusic3 기계귀 위임."

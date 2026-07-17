@@ -11,7 +11,7 @@
     "dict_version": "3.2",
     "corpus_tracks": 556,
     "expr_concepts": 437,
-    "captured_at": "2026-07-17T21:36:32+09:00"
+    "dict_created_at": "2026-06-12"
   },
   "interface_version": "0.1",
   "ports": [
@@ -76,5 +76,6 @@
       }
     }
   ],
-  "runs_log": "sunolang.db:connector_runs"
+  "runs_log": "sunolang.db:connector_runs",
+  "manifest_generated_at": "2026-07-17T21:44:39+09:00"
 }

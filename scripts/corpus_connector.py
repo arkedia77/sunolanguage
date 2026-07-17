@@ -97,12 +97,13 @@ def corpus_snapshot(conn) -> dict:
     tracks = int(d.get("corpus", {}).get("tracks_count", 0))
     n_concepts = conn.execute("SELECT COUNT(*) FROM expr_concepts").fetchone()[0]
     created = str(d.get("created_at", "")).replace("-", "")[:8] or "unknown"
+    # v0.2(fableself 경미②): 스냅샷 객체엔 스냅샷 고유 시각(dict_created)만 — 매니페스트 생성시각은 최상위 manifest_generated_at로 분리
     return {
         "snapshot_id": f"cs-{dict_version}-{tracks}-{created}",
         "dict_version": dict_version,
         "corpus_tracks": tracks,
         "expr_concepts": n_concepts,
-        "captured_at": _now_iso(),
+        "dict_created_at": str(d.get("created_at", "")),
     }
 
 
@@ -340,6 +341,7 @@ def cmd_out_publish(dry_run: bool, major: bool):
     # 매니페스트 갱신
     m["corpus_snapshot"] = snapshot
     m["interface_version"] = iv
+    m["manifest_generated_at"] = _now_iso()   # v0.2 경미② — 매니페스트 생성시각(스냅샷 시각과 분리)
     port = get_port(m, "out")
     port.update({"status": "live", "artifact": artifact_rel, "artifact_sha256": sha,
                  "breaking_content": breaking, "bundles": bundles,
@@ -376,6 +378,7 @@ def cmd_consume(args):
     snapshot = corpus_snapshot(conn)
     m = load_manifest()
     port = get_port(m, "consume")
+    out_port = get_port(m, "out")   # 발행된 버전드 crosswalk 앵커 참조용
     # 경로C handoff 스키마 정본(재사용 serializer의 출력 계약) — encore 회신스키마 정합
     schema = {
         "_provenance": "encore 경로C handoff 스키마 — sunolang CONSUME 포트 출력 계약",
@@ -384,10 +387,12 @@ def cmd_consume(args):
         "interface_version": m.get("interface_version", "0.0"),
         "handoff": {
             "request_id": "<encore가 부여>",
+            # v0.2(fableself 경미①): 계약 참조는 **버전드 경로+sha** 고정 — latest 포인터 참조 금지(breaking_content 재검증 게이트 우회 방지)
+            "crosswalk_ref": {"path": out_port.get("artifact"), "sha256": out_port.get("artifact_sha256"),
+                              "note": "crosswalk_latest.json은 인간 편의 심볼릭 전용 — 계약은 버전드+sha로 앵커"},
             "corpus_assets": [
                 {"asset_type": "reference_asset|catalog_track|rag_external_track",
-                 "asset_id": "<id>", "suno_terms": ["<attested>"],
-                 "crosswalk_ref": "data/connector/out/crosswalk_latest.json"}
+                 "asset_id": "<id>", "suno_terms": ["<attested>"]}
             ],
             "text_channel_note": "sunolang=text 어휘 번역 채널. 오디오 정밀부는 leomusic3 기계귀 위임.",
         },

@@ -8,6 +8,7 @@
 **전제 대조**: `docs/expression_layer_design.md` · `docs/matching_feature_redesign_v1.md` · `docs/corpus_update_reference_matching_design.md` · encore 3채널 합의(07-16)
 
 **v0.1 개정(07-17, fableself 점검 반영)**: ①blocker 구조화(gate_owner·release_condition·on_release{transition,version_bump}·status enum) ②버전 규약에 `breaking_content` 플래그(삭제·재타깃=소비자 재검증 트리거) ③게이트 해제 시 소유 명기(피처 정의=도메인 오너 / 배선=커넥터) ④번들 파생=무손실만, 소비팀이 구독 레지스트리에 선언·커넥터는 기계 적용.
+**v0.2 개정(07-17, fableself ①항 조건부 PASS 경미 2건)**: ⓐpathC handoff `crosswalk_ref`=버전드 경로+sha 고정(latest 포인터 계약 참조 금지 — breaking_content 게이트 우회 차단) ⓑ매니페스트 생성시각을 `manifest_generated_at`(최상위)로 분리, 스냅샷 객체엔 스냅샷 고유 시각(dict_created_at)만(R-P5 시각 실측 정합). → **설계 점검 4항 전건 종결(fableself, LEO 위임 완료).**
 
 ---
 
