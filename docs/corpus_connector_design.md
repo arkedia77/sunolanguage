@@ -1,4 +1,4 @@
-# 코퍼스 커넥터 (Corpus Connector) 정본 설계 v0
+# 코퍼스 커넥터 (Corpus Connector) 정본 설계 v0.1
 
 **목적**: sunolang 코퍼스(Suno 네이티브 어휘)의 **외부 인터페이스를 하나의 시스템으로 통합**한다.
 지금까지 방향별로 따로 만들어진 세 고리(표현 레이어 발신 / 레퍼런스 매칭 수신 / encore 소비 핸드오프)를
@@ -6,6 +6,8 @@
 
 **작성일**: 2026-07-17 | **발주**: LEO('셋 다 시스템화', 07-17) | **설계 점검**: fableself(위임)
 **전제 대조**: `docs/expression_layer_design.md` · `docs/matching_feature_redesign_v1.md` · `docs/corpus_update_reference_matching_design.md` · encore 3채널 합의(07-16)
+
+**v0.1 개정(07-17, fableself 점검 반영)**: ①blocker 구조화(gate_owner·release_condition·on_release{transition,version_bump}·status enum) ②버전 규약에 `breaking_content` 플래그(삭제·재타깃=소비자 재검증 트리거) ③게이트 해제 시 소유 명기(피처 정의=도메인 오너 / 배선=커넥터) ④번들 파생=무손실만, 소비팀이 구독 레지스트리에 선언·커넥터는 기계 적용.
 
 ---
 
@@ -60,11 +62,18 @@ IN/CONSUME의 오디오 정밀부는 leomusic3 기계귀(CLAP)와의 하이브�
     },
     { "port": "in", "direction": "inbound", "status": "blocked",
       "producers": ["external_reference_songs"],
-      "blocker": "v1 F1~F5 구조피처 재설계 = leomusic3 기계귀 협의 게이트(kee 순번 대기)" },
+      "blocker": {                        // 구조화(v0.1 항1) — 문자열 아님
+        "gate_owner": "leomusic3",
+        "release_condition": "기계귀 협의 통과 → F1~F5 배선",
+        "on_release": {"transition": "blocked→live", "version_bump": "minor (신 채널=additive)"},
+        "ownership_on_release": "피처 정의·개정=leomusic3 / 소비·배선=커넥터" } },
     { "port": "consume", "direction": "outbound", "status": "blocked",
       "consumers": ["encore"],
-      "blocker": "경로C fresh run 대기(회신스키마 발신완료 07-16)" }
+      "blocker": { "gate_owner": "encore", "release_condition": "encore fresh run 신호",
+        "on_release": {"transition": "blocked→live", "version_bump": "minor"},
+        "ownership_on_release": "소비 스키마·요청=encore / serializer 실행=커넥터" } }
   ],
+  "status_enum": ["live", "blocked", "deprecated", "scaffold"],
   "runs_log": "sunolang.db:connector_runs"
 }
 ```
@@ -72,10 +81,12 @@ IN/CONSUME의 오디오 정밀부는 leomusic3 기계귀(CLAP)와의 하이브�
 ## 4. 버전 규약 (코퍼스 스냅샷 ↔ 인터페이스 버전)
 
 - **corpus_snapshot**은 코어의 관측 상태(사전 버전·트랙수·개념수)를 고정한다. publish/ingest/handoff는 실행 시점의 스냅샷을 각인한다.
-- **interface_version = {major}.{minor}**
-  - **major**: payload 스키마 하위호환 깨짐(필드 제거/의미 변경). 소비자 재계약 필요.
-  - **minor**: 내용 증분(신규 원자·별칭·레지스터 추가), 스키마 하위호환 유지. 소비자 무중단 pull.
-- 모든 산출물은 `_manifest`(snapshot_id·interface_version·sha256·생성시각·소스 커밋)를 동봉 → 소비자가 **버전 드리프트를 감지**.
+- **interface_version = {major}.{minor} + `breaking_content` 플래그** (v0.1 항2 — 버전은 2단 유지, 플래그 1개만 추가)
+  - **major**: payload 스키마 하위호환 깨짐(필드 제거/구조 변경). 소비자 재계약 필요.
+  - **minor + breaking_content=true**: 스키마 무손상이나 **삭제·별칭 재타깃**(매칭 결과 변동) → 소비자 **재검증 트리거**.
+  - **minor + breaking_content=false**: additive(신규 원자·별칭·레지스터 추가). 소비자 무중단 pull, 재계약 불요.
+  - 감지: 발행 시 직전 발행분 대비 개념/별칭 삭제·재타깃을 자동 검출(`detect_breaking`). 레지스터 텍스트 편집은 concept 해소 불변이라 breaking 아님(정직 명기).
+- 모든 산출물은 `_manifest`(snapshot_id·interface_version·sha256·breaking_content·생성시각·소스)를 동봉 → 소비자가 **버전 드리프트를 감지**. sha256=콘텐츠 해시(벽시계 제외)로 스냅샷↔버전 앵커 무결.
 - 재빌드(v3.3 등) 시: 스냅샷 갱신 → OUT 재발행은 minor 증분(신규 원자만 저작 워크리스트), 스키마 불변이면 major 고정.
 
 ## 5. 파이프라인 골격 (공용 러너 패턴)
@@ -105,15 +116,19 @@ CREATE TABLE IF NOT EXISTS connector_runs (
 
 ### 6.1 OUT — 표현 레이어 publish (status: **live**, 이번 구현)
 - 소스: `expr_*` (빌드 `build_expression_db.py`). 발행: `corpus_connector.py out publish`.
-- 산출: ① 버전드 crosswalk(전체) ② 팀별 번들(leomusic·2·3·trot 맞춤 — leomusic3엔 taxonomy 정렬 파생) ③ `_manifest` 동봉.
+- 산출: ① 버전드 crosswalk(전체) ② 팀별 번들 ③ `_manifest` 동봉.
+- **번들 파생 경계(v0.1 항4)**: 커넥터 번들 = **무손실 파생만**(sort/filter/subset). 의미 변환은 소비 측 어댑터 몫.
+  파생 로직 **소유 = 선언한 팀**(구독 레지스트리 `derivations`에 정렬 키 등 등록), **실행 = 커넥터**(기계 적용, `apply_derivation`). 비무손실 kind는 거부(`rejected_nonlossless`).
+  예: leomusic3 taxonomy 정렬 = leomusic3가 `subscribers.json`에 선언한 sort 스펙을 커넥터가 적용. → R-P4 '둘 다 보유'가 실구조로 성립.
 - 재빌드 훅: 사전 재빌드 감지(dict_version 변화) → `build_expression_db --coverage`로 신규 원자 워크리스트 → minor 증분.
-- 구독 레지스트리: `data/connector/subscribers.json`(팀·포맷·마지막 수신 버전) — 재발행 시 드리프트 팀 자동 식별.
+- 구독 레지스트리: `data/connector/subscribers.json`(팀·포맷·선언 파생·마지막 수신 버전·last_breaking) — 재발행 시 드리프트 팀 자동 식별.
 - 대체: 기존 4팀 수동 1회 발신(07-17) → 표준 반복 발행.
 
 ### 6.2 IN — 레퍼런스 매칭 (status: **blocked**, 스캐폴드+게이트)
 - 소스: 외부 레퍼런스 곡/SP → `reference_matcher`(v0 텍스트공간, run1~15='검증전').
 - 스캐폴드: `corpus_connector.py in match` = ingest_runner 헬스 → matcher → gap 등록 → recheck 루프를 **하나의 엔트리**로 배선.
 - 게이트: v1(F1~F5 구조피처, `matching_feature_redesign_v1.md`)은 **leomusic3 기계귀 협의 통과 시에만** 활성. 그전까지 v0 산출은 매니페스트에 `status: blocked / 검증전` 각인, 90곡 일괄매칭 보류 유지.
+- **해제 시 소유(v0.1 항3)**: 피처 정의·개정 = **leomusic3**(기계귀 도메인 오너) / 소비·배선 = **커넥터**. rag 오너십 판정과 동형(콘텐츠 오너 vs 배선 오너 분리) — 해제 후 소유 분쟁 예방.
 
 ### 6.3 CONSUME — encore 경로C handoff (status: **blocked**, 스캐폴드)
 - 소스: 코퍼스 자산(레퍼자산·카탈로그·rag 외부트랙) → encore 소비 스키마(회신스키마 정본, 발신 07-16).
@@ -126,9 +141,9 @@ CREATE TABLE IF NOT EXISTS connector_runs (
 - 사전 재빌드(v3.3) → OUT minor 증분 자동. IN v1 승격 → 매니페스트 status live 전환(기계귀 게이트 해제 시). CONSUME → encore fresh run 신호 시 live.
 - 세션 지식: 사건 1건은 KANBAN까지, 2회↑ 재발 시 룰 승격(G-K1).
 
-## 8. 열린 결정 (fableself 점검 대상)
+## 8. 점검 결과 (fableself, 07-17 — ②③④ 판정·보강 반영 완료 / ①은 실물 사본 후 잔여 판정 1회)
 
-1. **공용 매니페스트 스키마**가 세 포트를 과부족 없이 표현하는가(특히 IN/CONSUME의 blocker·게이트 표현).
-2. **버전 규약**의 major/minor 경계 — 소비자(4팀) 재계약 트리거로 충분·과하지 않은가.
-3. **경계 배치** — 텍스트층/기계귀층 분담이 encore 3채널 합의와 정합하는가(IN v1·CONSUME 정밀부).
-4. 팀별 번들 커스터마이즈를 커넥터가 소유할지, 소비 측 어댑터로 넘길지(R-P4: 기본은 코어+어댑터 양자보유).
+1. **공용 매니페스트 스키마** — fableself 예고 기준(blocker의 ⓐ게이트 주체·해제조건 ⓑ해제 시 전이·버전 bump ⓒ소비자 상태 enum + sha 앵커) **선반영**: blocker 구조화·`status_enum`·`_manifest.sha256` 콘텐츠앵커. 실물 사본 도착 시 잔여 판정.
+2. ✅**버전 규약** — `breaking_content` 플래그 도입(삭제·재타깃=재검증 트리거). 버전 2단 유지·플래그 1개 최소 개정.
+3. ✅**경계 배치** — IN v1/CONSUME 해제 시 소유 명기(도메인 오너 vs 배선 오너). encore 3채널 정합.
+4. ✅**번들 소유** — 무손실 파생만·소비팀 선언·커넥터 기계 적용으로 명문화(§6.1).

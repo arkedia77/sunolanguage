@@ -3,16 +3,19 @@
  "_manifest": {
   "snapshot_id": "cs-3.2-556-20260612",
   "interface_version": "0.1",
-  "generated_at": "2026-07-17T21:26:10+09:00",
+  "generated_at": "2026-07-17T21:36:32+09:00",
   "source_exporter": "scripts/expression_search.py --export",
   "design": "docs/corpus_connector_design.md",
   "concepts": 437,
   "inbound_aliases": 66,
-  "sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c"
+  "sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c",
+  "breaking_content": false,
+  "breaking_detail": null
  },
  "crosswalk_artifact": {
   "path": "data/connector/out/crosswalk_v0.1.json",
   "sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c"
  },
- "activation_points": "장르 특화 어휘 대조. W008/W012 '로컬0≠전코퍼스' 회피목록 검증에 attested_count 병용."
+ "activation_points": "장르 특화 어휘 대조. W008/W012 '로컬0≠전코퍼스' 회피목록 검증에 attested_count 병용.",
+ "derivations_applied": []
 }
