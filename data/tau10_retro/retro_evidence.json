@@ -1,0 +1,814 @@
+{
+ "provenance": "retro_rematch_tau10.py — 코퍼스=lexical_index v3.2(496곡, run6~15 동일 스냅샷), 레퍼런스=tracks 테이블 실측 필드. 가중=v1 잠정(F3 .3/F4 .3/F5a .2/F5b .2), F5a/F5b=텍스트 프록시(실청감 아님) 정직 표기.",
+ "runs": {
+  "TAU06": {
+   "run_id": 6,
+   "reference": {
+    "title": "Raga Jog",
+    "artist": "Ravi Shankar",
+    "key_raw": "Raga Jog (C-based, night raga)",
+    "mode": null,
+    "bpm": null,
+    "genre": "World Music Indian classical / raga",
+    "curve": "rising_peak",
+    "instruments": [
+     "sitar",
+     "strings",
+     "sympathetic strings",
+     "tabla",
+     "tanpura"
+    ],
+    "prod": [
+     "drone",
+     "intimate",
+     "saturated"
+    ]
+   },
+   "leo_note": "시타르 안 씀·스케일(라가) 다름",
+   "goal": "배제",
+   "old_top5_gated": [
+    {
+     "old_rank": 1,
+     "song_id": "C_1728",
+     "old_rrf": 0.5384,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 92,
+      "genre": "K-Pop Indie Pop track with a laid-back",
+      "curve": "unknown",
+      "n_instruments": 6
+     },
+     "gates": {
+      "f1": "REF_UNKNOWN_BUCKET",
+      "f2": "REF_NO_TEMPO_CLASS",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "sitar",
+        "tanpura",
+        "tabla",
+        "sympathetic strings"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.06,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 2,
+     "song_id": "C_1481",
+     "old_rrf": 0.3813,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 115,
+      "genre": "K-Pop",
+      "curve": "unknown",
+      "n_instruments": 9
+     },
+     "gates": {
+      "f1": "REF_UNKNOWN_BUCKET",
+      "f2": "REF_NO_TEMPO_CLASS",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "sitar",
+        "tanpura",
+        "tabla",
+        "sympathetic strings"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.06,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 3,
+     "song_id": "C_1720",
+     "old_rrf": 0.3428,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 115,
+      "genre": "K-Pop City Pop with elements of Funk and Jazz Fusion",
+      "curve": "unknown",
+      "n_instruments": 6
+     },
+     "gates": {
+      "f1": "REF_UNKNOWN_BUCKET",
+      "f2": "REF_NO_TEMPO_CLASS",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "sitar",
+        "tanpura",
+        "tabla",
+        "sympathetic strings"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.06,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 4,
+     "song_id": "S018_16",
+     "old_rrf": 0.3233,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 138,
+      "genre": "Trance",
+      "curve": "rising_peak",
+      "n_instruments": 4
+     },
+     "gates": {
+      "f1": "REF_UNKNOWN_BUCKET",
+      "f2": "REF_NO_TEMPO_CLASS",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "sitar",
+        "tanpura",
+        "tabla",
+        "sympathetic strings"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 1.0,
+      "f5b_production": 0.0,
+      "soft_composite": 0.2,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 5,
+     "song_id": "C_1373",
+     "old_rrf": 0.2941,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 95,
+      "genre": "Indie pop with a laid-back",
+      "curve": "rising",
+      "n_instruments": 7
+     },
+     "gates": {
+      "f1": "REF_UNKNOWN_BUCKET",
+      "f2": "REF_NO_TEMPO_CLASS",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "sitar",
+        "tanpura",
+        "tabla",
+        "sympathetic strings"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.6,
+      "f5b_production": 0.0,
+      "soft_composite": 0.12,
+      "hard_pass": false
+     }
+    }
+   ],
+   "new_top3": [],
+   "n_hard_pass_candidates": 0,
+   "achieved": true,
+   "verdict_note": "F1 REF_UNKNOWN_BUCKET(라가=서양 모드 미상) → 전 코퍼스 매칭 보류=배제 달성"
+  },
+  "TAU07": {
+   "run_id": 7,
+   "reference": {
+    "title": "Nangs",
+    "artist": "Tame Impala",
+    "key_raw": "F# minor",
+    "mode": "minor",
+    "bpm": 112,
+    "genre": "Contemporary Instrumental psychedelic pop / synth-driven",
+    "curve": "falling",
+    "instruments": [
+     "synth"
+    ],
+    "prod": [
+     "analog",
+     "compression",
+     "flanger",
+     "flanging",
+     "modulation",
+     "panning",
+     "phaser",
+     "psychedelic",
+     "tape",
+     "vintage",
+     "warm"
+    ]
+   },
+   "leo_note": "믹싱·이펙팅이 분위기 자체를 바꿈(사이키델릭→시티팝)",
+   "goal": "강등",
+   "old_top5_gated": [
+    {
+     "old_rank": 1,
+     "song_id": "C_1481",
+     "old_rrf": 0.3386,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 115,
+      "genre": "K-Pop",
+      "curve": "unknown",
+      "n_instruments": 9
+     },
+     "gates": {
+      "f1": "EXCLUDE(모드 major≠minor)",
+      "f2": "PASS",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.298,
+      "f4_detail": {
+       "missing_signature_instruments": [],
+       "penalty": 0.0
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.1494,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 2,
+     "song_id": "71",
+     "old_rrf": 0.3057,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 105,
+      "genre": "Surf Rock / Psychedelic Surf",
+      "curve": "flat",
+      "n_instruments": 5
+     },
+     "gates": {
+      "f1": "EXCLUDE(모드 major≠minor)",
+      "f2": "PASS",
+      "f3_genre": 0.143,
+      "f4_instruments": 0.795,
+      "f4_detail": {
+       "missing_signature_instruments": [],
+       "penalty": 0.0
+      },
+      "f5a_curve": 0.0,
+      "f5b_production": 0.133,
+      "soft_composite": 0.308,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 3,
+     "song_id": "S004_03",
+     "old_rrf": 0.2856,
+     "cand_profile": {
+      "mode": "minor",
+      "bpm": 85,
+      "genre": "",
+      "curve": "flat",
+      "n_instruments": 5
+     },
+     "gates": {
+      "f1": "PASS",
+      "f2": "EXCLUDE(BPM 85∉[101,123])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "synth"
+       ],
+       "penalty": 0.15
+      },
+      "f5a_curve": 0.0,
+      "f5b_production": 0.056,
+      "soft_composite": 0.0112,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 4,
+     "song_id": "C_1720",
+     "old_rrf": 0.2856,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 115,
+      "genre": "K-Pop City Pop with elements of Funk and Jazz Fusion",
+      "curve": "unknown",
+      "n_instruments": 6
+     },
+     "gates": {
+      "f1": "EXCLUDE(모드 major≠minor)",
+      "f2": "PASS",
+      "f3_genre": 0.083,
+      "f4_instruments": 0.407,
+      "f4_detail": {
+       "missing_signature_instruments": [],
+       "penalty": 0.0
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.207,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 5,
+     "song_id": "S004_08",
+     "old_rrf": 0.2692,
+     "cand_profile": {
+      "mode": null,
+      "bpm": 115,
+      "genre": "",
+      "curve": "unknown",
+      "n_instruments": 3
+     },
+     "gates": {
+      "f1": "HOLD(코퍼스 모드 미상)",
+      "f2": "PASS",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "synth"
+       ],
+       "penalty": 0.15
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.06,
+      "hard_pass": false
+     }
+    }
+   ],
+   "new_top3": [
+    {
+     "song_id": "S018_03",
+     "soft": 0.2985,
+     "f3": 0.0,
+     "f4": 0.795,
+     "f5a": 0.3,
+     "f5b": 0.0
+    },
+    {
+     "song_id": "1255",
+     "soft": 0.2884,
+     "f3": 0.0,
+     "f4": 0.678,
+     "f5a": 0.3,
+     "f5b": 0.125
+    },
+    {
+     "song_id": "1628",
+     "soft": 0.271,
+     "f3": 0.167,
+     "f4": 0.489,
+     "f5a": 0.3,
+     "f5b": 0.071
+    }
+   ],
+   "n_hard_pass_candidates": 14,
+   "achieved": true,
+   "verdict_note": "구 top-5 전건: 하드게이트 탈락 또는 신 순위 하락"
+  },
+  "TAU08": {
+   "run_id": 8,
+   "reference": {
+    "title": "Chariots of Fire",
+    "artist": "Vangelis",
+    "key_raw": "Db major",
+    "mode": "major",
+    "bpm": 126,
+    "genre": "Film Score / OST electronic / synth-pop cinematic",
+    "curve": "rising_peak",
+    "instruments": [
+     "brass",
+     "drum machine",
+     "electronic percussion",
+     "pad",
+     "synth",
+     "synthesizer"
+    ],
+    "prod": [
+     "analog",
+     "warm"
+    ]
+   },
+   "leo_note": "점진 고조·강한 모티브 강조가 다름",
+   "goal": "강등",
+   "old_top5_gated": [
+    {
+     "old_rank": 1,
+     "song_id": "C_1491",
+     "old_rrf": 0.6004,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 85,
+      "genre": "K-Pop ballad with jazz-pop influences",
+      "curve": "unknown",
+      "n_instruments": 5
+     },
+     "gates": {
+      "f1": "PASS",
+      "f2": "EXCLUDE(BPM 85∉[113,139])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "synth",
+        "brass",
+        "electronic percussion",
+        "drum machine"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.06,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 2,
+     "song_id": "C_1732",
+     "old_rrf": 0.5062,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 115,
+      "genre": "K-Pop and Funk-Pop fusion",
+      "curve": "unknown",
+      "n_instruments": 6
+     },
+     "gates": {
+      "f1": "PASS",
+      "f2": "PASS",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.18,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "electronic percussion",
+        "drum machine"
+       ],
+       "penalty": 0.3
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.114,
+      "hard_pass": true
+     }
+    },
+    {
+     "old_rank": 3,
+     "song_id": "C_1477",
+     "old_rrf": 0.2856,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 145,
+      "genre": "K-Rock track with pop-punk and alternative rock influences",
+      "curve": "unknown",
+      "n_instruments": 7
+     },
+     "gates": {
+      "f1": "PASS",
+      "f2": "EXCLUDE(BPM 145∉[113,139])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "brass",
+        "electronic percussion",
+        "drum machine"
+       ],
+       "penalty": 0.45
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.06,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 4,
+     "song_id": "C_1369",
+     "old_rrf": 0.2856,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 72,
+      "genre": "K-Pop ballad",
+      "curve": "rising_peak",
+      "n_instruments": 6
+     },
+     "gates": {
+      "f1": "PASS",
+      "f2": "EXCLUDE(BPM 72∉[113,139])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "synth",
+        "brass",
+        "electronic percussion",
+        "drum machine"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 1.0,
+      "f5b_production": 0.0,
+      "soft_composite": 0.2,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 5,
+     "song_id": "C_1764",
+     "old_rrf": 0.2729,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 72,
+      "genre": "K-Pop ballad",
+      "curve": "rising",
+      "n_instruments": 6
+     },
+     "gates": {
+      "f1": "PASS",
+      "f2": "EXCLUDE(BPM 72∉[113,139])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "synth",
+        "brass",
+        "electronic percussion",
+        "drum machine"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.6,
+      "f5b_production": 0.0,
+      "soft_composite": 0.12,
+      "hard_pass": false
+     }
+    }
+   ],
+   "new_top3": [
+    {
+     "song_id": "41",
+     "soft": 0.3026,
+     "f3": 0.0,
+     "f4": 0.12,
+     "f5a": 1.0,
+     "f5b": 0.333
+    },
+    {
+     "song_id": "S016_04",
+     "soft": 0.28,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.4
+    },
+    {
+     "song_id": "936",
+     "soft": 0.25,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.25
+    }
+   ],
+   "n_hard_pass_candidates": 102,
+   "achieved": true,
+   "verdict_note": "구 top-5 전건: 하드게이트 탈락 또는 신 순위 하락"
+  },
+  "TAU09": {
+   "run_id": 9,
+   "reference": {
+    "title": "Heart of Courage",
+    "artist": "Two Steps From Hell (Thomas Bergersen)",
+    "key_raw": "D minor",
+    "mode": "minor",
+    "bpm": 140,
+    "genre": "Hybrid / Cinematic hybrid cinematic / trailer music",
+    "curve": "rising_peak",
+    "instruments": [
+     "brass",
+     "choir",
+     "orchestra",
+     "ostinato",
+     "pad",
+     "timpani"
+    ],
+    "prod": [
+     "cinematic risers",
+     "compressed",
+     "sub-bass"
+    ]
+   },
+   "leo_note": "그나마 유사(오케스트럴)",
+   "goal": "최상위 유지",
+   "old_top5_gated": [
+    {
+     "old_rank": 1,
+     "song_id": "C_1368",
+     "old_rrf": 0.4961,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 72,
+      "genre": "K-Pop ballad featuring a tenor male vocal",
+      "curve": "rising",
+      "n_instruments": 6
+     },
+     "gates": {
+      "f1": "EXCLUDE(모드 major≠minor)",
+      "f2": "EXCLUDE(BPM 72∉[126,154])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "choir",
+        "ostinato",
+        "brass",
+        "orchestra",
+        "timpani"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.6,
+      "f5b_production": 0.0,
+      "soft_composite": 0.12,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 2,
+     "song_id": "C_1725",
+     "old_rrf": 0.4549,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 72,
+      "genre": "K-Pop power ballad featuring male tenor vocals and a rock-influenced arrangement",
+      "curve": "rising",
+      "n_instruments": 7
+     },
+     "gates": {
+      "f1": "EXCLUDE(모드 major≠minor)",
+      "f2": "EXCLUDE(BPM 72∉[126,154])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "choir",
+        "ostinato",
+        "brass",
+        "orchestra",
+        "timpani"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.6,
+      "f5b_production": 0.0,
+      "soft_composite": 0.12,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 3,
+     "song_id": "C_1369",
+     "old_rrf": 0.3484,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 72,
+      "genre": "K-Pop ballad",
+      "curve": "rising_peak",
+      "n_instruments": 6
+     },
+     "gates": {
+      "f1": "EXCLUDE(모드 major≠minor)",
+      "f2": "EXCLUDE(BPM 72∉[126,154])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "choir",
+        "ostinato",
+        "brass",
+        "orchestra",
+        "timpani"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 1.0,
+      "f5b_production": 0.0,
+      "soft_composite": 0.2,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 4,
+     "song_id": "C_1271",
+     "old_rrf": 0.3166,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 78,
+      "genre": "K-Pop ballad with soft rock influences",
+      "curve": "rising_peak",
+      "n_instruments": 5
+     },
+     "gates": {
+      "f1": "EXCLUDE(모드 major≠minor)",
+      "f2": "EXCLUDE(BPM 78∉[126,154])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "choir",
+        "ostinato",
+        "brass",
+        "orchestra",
+        "timpani"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 1.0,
+      "f5b_production": 0.0,
+      "soft_composite": 0.2,
+      "hard_pass": false
+     }
+    },
+    {
+     "old_rank": 5,
+     "song_id": "C_1481",
+     "old_rrf": 0.3025,
+     "cand_profile": {
+      "mode": "major",
+      "bpm": 115,
+      "genre": "K-Pop",
+      "curve": "unknown",
+      "n_instruments": 9
+     },
+     "gates": {
+      "f1": "EXCLUDE(모드 major≠minor)",
+      "f2": "EXCLUDE(BPM 115∉[126,154])",
+      "f3_genre": 0.0,
+      "f4_instruments": 0.0,
+      "f4_detail": {
+       "missing_signature_instruments": [
+        "choir",
+        "ostinato",
+        "orchestra",
+        "timpani"
+       ],
+       "penalty": 0.5
+      },
+      "f5a_curve": 0.3,
+      "f5b_production": 0.0,
+      "soft_composite": 0.06,
+      "hard_pass": false
+     }
+    }
+   ],
+   "new_top3": [
+    {
+     "song_id": "S004_01",
+     "soft": 0.2666,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.333
+    },
+    {
+     "song_id": "1579",
+     "soft": 0.2286,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.143
+    },
+    {
+     "song_id": "133",
+     "soft": 0.2,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.0
+    }
+   ],
+   "n_hard_pass_candidates": 10,
+   "achieved": false,
+   "verdict_note": "구 1위 C_1368 → 신 순위 None (top-3 이내=False)"
+  }
+ },
+ "all_pass": false
+}
