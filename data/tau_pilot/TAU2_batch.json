@@ -1,0 +1,531 @@
+{
+ "batch": "TAU2",
+ "designed": "2026-07-17",
+ "n": 10,
+ "concept": "τ 파일럿 2호 — 신 파이프라인(F1~F5, 재설계 v1) 매칭 산출 SP 조립 인스트루멘탈. kee 2호 GO 조건 4 반영(공백라벨 1곡 모수분리·Y율≥5/9·앵커Y 필수·문항 2개 SPEC)",
+ "assembly_rule": "1호 준용 — 매처 산출 표현만(top-3 매칭곡 네이티브 SP 문장), 창작 보정 금지, 보컬 문장 제외, 템포·키=top1(F1 모드일치·F2 ±10% 보장), 브라켓 lyrics 우회",
+ "strata_stats": {
+  "q25": 0.2,
+  "q75": 0.3377,
+  "n_candidates": 74
+ },
+ "success_criteria": "공백라벨 제외 9곡 중 Y≥5 + 고스코어 앵커 3곡 중 Y 필수(재붕괴 시 즉시 중단)",
+ "songs": [
+  {
+   "pos": 1,
+   "test_id": 287,
+   "tau": "TAU16",
+   "track_id": 69,
+   "original": "Svefn-g-englar — Sigur Rós (Post-Rock)",
+   "stratum": "고스코어 앵커",
+   "top_soft": 0.625,
+   "n_hard_pass": 169,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "148",
+     "soft": 0.625,
+     "f3": 0.25,
+     "f4": 1.0,
+     "f5a": 1.0,
+     "f5b": 0.25
+    },
+    {
+     "song_id": "1414",
+     "soft": 0.5334,
+     "f3": 0.0,
+     "f4": 1.0,
+     "f5a": 1.0,
+     "f5b": 0.167
+    },
+    {
+     "song_id": "1476",
+     "soft": 0.5286,
+     "f3": 0.0,
+     "f4": 1.0,
+     "f5a": 1.0,
+     "f5b": 0.143
+    }
+   ],
+   "ref_axes": {
+    "mode": "major",
+    "bpm": 78,
+    "curve": "rising_peak",
+    "instruments": [
+     "electric",
+     "electric guitar",
+     "guitar",
+     "string"
+    ]
+   },
+   "title": "TAU16 떠오르는 잔향",
+   "sp": "K-Indie acoustic ballad. A single steel-string acoustic guitar performs a fingerstyle arrangement with steady thumb-plucked bass notes on the downbeats and syncopated melodic fills. The arrangement centers on a fingerpicked acoustic guitar playing a steady eighth-note pattern with occasional percussive slaps on the strings. A clean electric guitar provides ambient melodic fills and subtle slides in the background. A nylon-string acoustic guitar plays a fingerstyle pattern with prominent bass notes and steady arpeggiation. The tempo is 72 BPM in 4/4 time, likely in the key of E Major.",
+   "sp_len": 590,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 2,
+   "test_id": 288,
+   "tau": "TAU17",
+   "track_id": 20,
+   "original": "Cinema Paradiso (Love Theme) — Ennio Morricone (Film Score / OST)",
+   "stratum": "고스코어 앵커",
+   "top_soft": 0.5666,
+   "n_hard_pass": 114,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "1547",
+     "soft": 0.5666,
+     "f3": 0.0,
+     "f4": 0.822,
+     "f5a": 1.0,
+     "f5b": 0.6
+    },
+    {
+     "song_id": "72",
+     "soft": 0.5564,
+     "f3": 0.143,
+     "f4": 0.867,
+     "f5a": 0.6,
+     "f5b": 0.667
+    },
+    {
+     "song_id": "10046",
+     "soft": 0.4393,
+     "f3": 0.0,
+     "f4": 0.731,
+     "f5a": 0.6,
+     "f5b": 0.5
+    }
+   ],
+   "ref_axes": {
+    "mode": "major",
+    "bpm": 66,
+    "curve": "rising_peak",
+    "instruments": [
+     "orchestra",
+     "piano",
+     "string"
+    ]
+   },
+   "title": "TAU17 오래된 영사기",
+   "sp": "K-Pop Ballad. A clean acoustic guitar plays arpeggiated chords in the intro and verses. A grand piano enters with sustained chords and melodic fills. Orchestral strings provide legato accompaniment. The bass guitar plays melodic lines with a warm, rounded tone. The tempo is 72 BPM in 4/4 time, in the key of E Major.",
+   "sp_len": 317,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 3,
+   "test_id": 289,
+   "tau": "TAU18",
+   "track_id": 86,
+   "original": "River Flows in You — Yiruma (Lo-fi / Neo-classical / Piano)",
+   "stratum": "고스코어 앵커",
+   "top_soft": 0.5628,
+   "n_hard_pass": 120,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "1451",
+     "soft": 0.5628,
+     "f3": 0.2,
+     "f4": 0.926,
+     "f5a": 1.0,
+     "f5b": 0.125
+    },
+    {
+     "song_id": "191",
+     "soft": 0.4565,
+     "f3": 0.0,
+     "f4": 0.633,
+     "f5a": 1.0,
+     "f5b": 0.333
+    },
+    {
+     "song_id": "1756",
+     "soft": 0.4542,
+     "f3": 0.0,
+     "f4": 0.792,
+     "f5a": 1.0,
+     "f5b": 0.083
+    }
+   ],
+   "ref_axes": {
+    "mode": "major",
+    "bpm": 68,
+    "curve": "rising_peak",
+    "instruments": [
+     "clean",
+     "piano"
+    ]
+   },
+   "title": "TAU18 흐르는 건반",
+   "sp": "The arrangement centers on a grand piano playing sustained chords and melodic fills. A clean electric guitar provides subtle arpeggiated textures in the background. Acoustic piano plays a steady quarter-note rhythm with occasional melodic flourishes in the upper register. A clean electric guitar provides sparse, palm-muted rhythmic accents and subtle arpeggios. The tempo is 72 BPM in 4/4 time. Key of D major modulating to F major on the climax chorus.",
+   "sp_len": 455,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 4,
+   "test_id": 290,
+   "tau": "TAU19",
+   "track_id": 50,
+   "original": "Mercy, Mercy, Mercy — Cannonball Adderley Quintet (Jazz)",
+   "stratum": "중간대",
+   "top_soft": 0.3369,
+   "n_hard_pass": 48,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "52",
+     "soft": 0.3369,
+     "f3": 0.0,
+     "f4": 0.361,
+     "f5a": 1.0,
+     "f5b": 0.143
+    },
+    {
+     "song_id": "S017_04",
+     "soft": 0.3347,
+     "f3": 0.25,
+     "f4": 0.499,
+     "f5a": 0.3,
+     "f5b": 0.25
+    },
+    {
+     "song_id": "1639",
+     "soft": 0.3133,
+     "f3": 0.25,
+     "f4": 0.499,
+     "f5a": 0.3,
+     "f5b": 0.143
+    }
+   ],
+   "ref_axes": {
+    "mode": "major",
+    "bpm": 104,
+    "curve": "rising_peak",
+    "instruments": [
+     "electric",
+     "electric piano",
+     "piano",
+     "saxophone"
+    ]
+   },
+   "title": "TAU19 오후의 그루브",
+   "sp": "K-Pop Indie Pop with a light funk influence. Clean electric guitar plays syncopated, palm-muted rhythmic patterns and staccato chords. A melodic electric bassline moves in eighth notes, locking with a tight, dry drum kit featuring a crisp snare and subtle hi-hat embellishments. A subtle acoustic piano provides harmonic support in the background. Clean electric guitar leads with a warm, rounded tone perform melodic lines and syncopated chordal stabs. The track is in the key of E Major at 95 BPM in 4/4 time.",
+   "sp_len": 511,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 5,
+   "test_id": 291,
+   "tau": "TAU20",
+   "track_id": 64,
+   "original": "Archangel — Burial (Electronic / Ambient)",
+   "stratum": "중간대",
+   "top_soft": 0.3346,
+   "n_hard_pass": 15,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "S018_02",
+     "soft": 0.3346,
+     "f3": 0.143,
+     "f4": 0.439,
+     "f5a": 0.3,
+     "f5b": 0.5
+    },
+    {
+     "song_id": "S018_12",
+     "soft": 0.2836,
+     "f3": 0.0,
+     "f4": 0.65,
+     "f5a": 0.3,
+     "f5b": 0.143
+    },
+    {
+     "song_id": "S018_11",
+     "soft": 0.2682,
+     "f3": 0.0,
+     "f4": 0.472,
+     "f5a": 0.3,
+     "f5b": 0.333
+    }
+   ],
+   "ref_axes": {
+    "mode": "minor",
+    "bpm": 130,
+    "curve": "unknown",
+    "instruments": [
+     "bass",
+     "sub-bass"
+    ]
+   },
+   "title": "TAU20 새벽 도시의 맥박",
+   "sp": "UK Drill. Features a dark, atmospheric piano melody playing minor chords in a syncopated rhythm. A sliding 808 bass provides the melodic low end with long glides between notes. A distant, high-pitched siren sample and atmospheric pads create a cinematic urban texture. Roland TB-303 bassline with high resonance and automated filter cutoff sweeps. 140 BPM, D minor.",
+   "sp_len": 365,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 6,
+   "test_id": 292,
+   "tau": "TAU21",
+   "track_id": 2,
+   "original": "Boléro — Maurice Ravel (Classical / Orchestral)",
+   "stratum": "중간대",
+   "top_soft": 0.323,
+   "n_hard_pass": 136,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "1547",
+     "soft": 0.323,
+     "f3": 0.0,
+     "f4": 0.188,
+     "f5a": 1.0,
+     "f5b": 0.333
+    },
+    {
+     "song_id": "1451",
+     "soft": 0.2858,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.429
+    },
+    {
+     "song_id": "10021",
+     "soft": 0.2858,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.429
+    }
+   ],
+   "ref_axes": {
+    "mode": "major",
+    "bpm": 72,
+    "curve": "rising_peak",
+    "instruments": [
+     "acoustic",
+     "bass",
+     "brass",
+     "clarinet",
+     "flute",
+     "orchestra",
+     "orchestral",
+     "string",
+     "strings"
+    ]
+   },
+   "title": "TAU21 반복의 축적",
+   "sp": "K-Pop Ballad. A clean acoustic guitar plays arpeggiated chords in the intro and verses. A grand piano enters with sustained chords and melodic fills. Orchestral strings provide legato accompaniment. The bass guitar plays melodic lines with a warm, rounded tone. The tempo is 72 BPM in 4/4 time, in the key of E Major.",
+   "sp_len": 317,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 7,
+   "test_id": 293,
+   "tau": "TAU22",
+   "track_id": 35,
+   "original": "Watermark — Enya (New Age)",
+   "stratum": "중간대",
+   "top_soft": 0.3196,
+   "n_hard_pass": 192,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "1046",
+     "soft": 0.3196,
+     "f3": 0.0,
+     "f4": 0.208,
+     "f5a": 1.0,
+     "f5b": 0.286
+    },
+    {
+     "song_id": "1278",
+     "soft": 0.2542,
+     "f3": 0.0,
+     "f4": 0.014,
+     "f5a": 1.0,
+     "f5b": 0.25
+    },
+    {
+     "song_id": "1153",
+     "soft": 0.2461,
+     "f3": 0.0,
+     "f4": 0.509,
+     "f5a": 0.3,
+     "f5b": 0.167
+    }
+   ],
+   "ref_axes": {
+    "mode": "major",
+    "bpm": 80,
+    "curve": "falling",
+    "instruments": [
+     "acoustic",
+     "choir",
+     "pad",
+     "piano",
+     "synth",
+     "synth pad"
+    ]
+   },
+   "title": "TAU22 잔잔한 파문",
+   "sp": "The arrangement centers on a grand piano playing sustained chords and melodic fills. A legato string section provides harmonic density with slow-moving pads. The bass is a warm, sub-heavy synth pad that follows the root notes of the piano. Grand piano plays sustained chords and melodic fills. The tempo is 72 BPM in the key of C major.",
+   "sp_len": 336,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 8,
+   "test_id": 294,
+   "tau": "TAU23",
+   "track_id": 13,
+   "original": "Time — Hans Zimmer (Inception OST) (Film Score / OST)",
+   "stratum": "중간대",
+   "top_soft": 0.2855,
+   "n_hard_pass": 2,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "10464",
+     "soft": 0.2855,
+     "f3": 0.167,
+     "f4": 0.118,
+     "f5a": 1.0,
+     "f5b": 0.0
+    },
+    {
+     "song_id": "S018_05",
+     "soft": 0.12,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 0.6,
+     "f5b": 0.0
+    }
+   ],
+   "ref_axes": {
+    "mode": "minor",
+    "bpm": 60,
+    "curve": "rising_peak",
+    "instruments": [
+     "bass",
+     "brass",
+     "ostinato",
+     "piano",
+     "string"
+    ]
+   },
+   "title": "TAU23 느린 상승",
+   "sp": "Cinematic orchestral score. Solo cello performs a melancholic, legato melody in the tenor register. Sustained string pads in the violins and violas provide harmonic support with slow, gradual volume swells. A secondary cello or double bass enters later to provide low-frequency root notes. The arrangement is sparse and minimalist, focusing on the interplay between the solo cello and the ensemble textures. 65 BPM. D minor.",
+   "sp_len": 424,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 9,
+   "test_id": 295,
+   "tau": "TAU24",
+   "track_id": 95,
+   "original": "Maria Tambien — Khruangbin (Contemporary Instrumental)",
+   "stratum": "중간대",
+   "top_soft": 0.2772,
+   "n_hard_pass": 9,
+   "in_success_denominator": true,
+   "matched_songs": [
+    {
+     "song_id": "141",
+     "soft": 0.2772,
+     "f3": 0.0,
+     "f4": 0.702,
+     "f5a": 0.0,
+     "f5b": 0.333
+    },
+    {
+     "song_id": "1255",
+     "soft": 0.1976,
+     "f3": 0.0,
+     "f4": 0.292,
+     "f5a": 0.3,
+     "f5b": 0.25
+    },
+    {
+     "song_id": "S003_03",
+     "soft": 0.1843,
+     "f3": 0.0,
+     "f4": 0.281,
+     "f5a": 0.3,
+     "f5b": 0.2
+    }
+   ],
+   "ref_axes": {
+    "mode": "minor",
+    "bpm": 102,
+    "curve": "falling",
+    "instruments": [
+     "bass",
+     "clean",
+     "guitar"
+    ]
+   },
+   "title": "TAU24 사막의 산책",
+   "sp": "K-Hip Hop track featuring a male rapper with a laid-back, rhythmic flow. The beat is built around a jazzy, sampled piano loop playing minor seventh chords and a syncopated boom-bap drum pattern. A melodic electric bass follows the kick drum with occasional slides. Clean electric guitar plays arpeggiated chords with light chorus and reverb. A sub-heavy synth bass provides melodic movement in the low end. The tempo is 92 BPM in the key of C minor.",
+   "sp_len": 449,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  },
+  {
+   "pos": 10,
+   "test_id": 296,
+   "tau": "TAU25",
+   "track_id": 22,
+   "original": "Summer — Joe Hisaishi (Kikujiro OST) (Film Score / OST)",
+   "stratum": "공백검증(편성 F4=0)",
+   "top_soft": 0.28,
+   "n_hard_pass": 102,
+   "in_success_denominator": false,
+   "matched_songs": [
+    {
+     "song_id": "S016_02",
+     "soft": 0.28,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.4
+    },
+    {
+     "song_id": "151",
+     "soft": 0.2666,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.333
+    },
+    {
+     "song_id": "C_1713",
+     "soft": 0.2666,
+     "f3": 0.0,
+     "f4": 0.0,
+     "f5a": 1.0,
+     "f5b": 0.333
+    }
+   ],
+   "ref_axes": {
+    "mode": "major",
+    "bpm": 126,
+    "curve": "rising",
+    "instruments": [
+     "clean",
+     "orchestra",
+     "orchestral",
+     "piano",
+     "string",
+     "strings"
+    ]
+   },
+   "title": "TAU25 초록 바람",
+   "sp": "Folk-pop instrumental featuring a lead violin and acoustic guitar. The arrangement centers on a fingerpicked acoustic guitar pattern in 4/4 time at 115 BPM in the key of G Major. A violin performs the primary melody using a mix of legato bowing and occasional double stops. A second acoustic guitar provides rhythmic strumming and harmonic support. The bass is provided by a double bass playing root notes on the downbeats. The arrangement centers on a fingerpicked acoustic guitar pattern in 4/4 time at 115 BPM in the key of G Major.",
+   "sp_len": 535,
+   "bracket": "[Intro]\n\n[Instrumental]\n\n[Outro]"
+  }
+ ]
+}
