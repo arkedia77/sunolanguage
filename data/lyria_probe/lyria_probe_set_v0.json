@@ -1,0 +1,79 @@
+{
+  "spec_id": "lyria_probe_set_v0",
+  "authored_by": "sunolanguage",
+  "for": "leomusic3 CDP 실행 (Flow Music / Lyria3)",
+  "created_at": "2026-07-17",
+  "purpose": "Lyria 네이티브 어휘 attestation을 통제 minimal-pair로 채굴. 각 페어는 프로브어 1개만 변주하고 나머지 전 디스크립터 통제. 2채널 관측(restatement_delta 어휘층 + clap_delta 렌더층)으로 2층 게이트 판정.",
+  "핵심원칙": {
+    "1_어휘층_1차신호": "재진술(restatement)은 Lyria 어휘 attestation 1차 신호 — confidence med 상한. CLAP 렌더게이트 통과 전 attested 선언 금지(거짓 attestation 방지).",
+    "2_함정_말만바꿈": "재진술이 어휘를 유지/증강해도 페어 오디오가 CLAP로 분리 안 되면 위양성(성별드리프트형 '말은 하되 못 지킴'). 이게 최우선 검출 대상.",
+    "3_boilerplate_통제": "Lyria는 입력 무관 무드접두사(Atmospheric/Mood-driven/Intimate 등)를 자동부가함(K3018 10쌍 전건 관찰). 이는 attestation 아닌 대화형 긍정편향 → 신호 추출 전 상수 스트립 필수.",
+    "4_로컬0금지": "소표본 dead-zone 단정 금지. 재진술 드롭 + CLAP 무분리가 함께여야 dead-zone 후보."
+  },
+  "프롬프트_템플릿": {
+    "형식": "Lyria 산문형(슬롯표기 vocal:/lead: 금지). 베이스 문장 고정, {PROBE} 자리만 A/B 교체.",
+    "base_example": "Korean R&B, 81 bpm, F# minor, mid-low energy. Soft breathy female vocals, close-mic'd. {PROBE}. Rhodes electric piano, dry boom-bap drums with crisp snare, rounded synth bass.",
+    "통제규칙": "BPM·key·energy·장르라벨·나머지 편성 전부 동일. {PROBE}만 probe_term(A) ↔ control_term(B). A/B 각 오디오 생성 → 재진술 회수 → 페어 CLAP 델타."
+  },
+  "관측_출력스키마": {
+    "pair_id": "축_페어번호 (예: mood_p3)",
+    "axis": "instrument_technique | mood_emotion | voicing_vocal | structure | genre_drift",
+    "probe_term": "테스트 대상 어휘 (A)",
+    "control_term": "attested 통제 어휘 (B)",
+    "prompt_A": "치환 완성 프롬프트",
+    "prompt_B": "치환 완성 프롬프트",
+    "restatement_delta": {
+      "status": "echo | augment | drop | substitute",
+      "observed": "Lyria가 probe_term을 되돌려준 실제 문구",
+      "substituted_to": "drop/substitute 시 Lyria가 대신 쓴 어휘(있으면)"
+    },
+    "clap_delta": {
+      "pair_distance": "A/B 오디오 F00 CLAP 512d 임베딩 거리(코사인 또는 L2)",
+      "separated": "bool — 임계 이상 음향 분리 여부",
+      "threshold_note": "leomusic3 goldset 캘리 임계 재사용 권장(direct/blend 유사 스케일)"
+    },
+    "boilerplate_control": {
+      "repeat_n": "동일 입력 반복 횟수(권장 3)",
+      "restatement_variance": "반복 간 재진술 어휘 분산",
+      "constant_prefix_stripped": ["Atmospheric", "Mood-driven", "Intimate", "sophisticated"]
+    },
+    "verdict": {
+      "enum": ["attested_render", "attested_lexical_only", "renders_but_not_native", "dead_zone", "false_positive_말만바꿈"],
+      "게이트로직": {
+        "attested_render": "재진술 echo/augment AND clap separated (confidence high)",
+        "attested_lexical_only": "재진술 echo/augment, clap 미측정/미확정 (confidence med, 렌더게이트 대기)",
+        "false_positive_말만바꿈": "재진술 echo/augment BUT clap NOT separated (★핵심함정)",
+        "renders_but_not_native": "재진술 drop/substitute BUT clap separated (렌더는 되나 Lyria 자기보고 안 함 — 흥미로운 어휘층 공백)",
+        "dead_zone": "재진술 drop/substitute AND clap NOT separated"
+      }
+    }
+  },
+  "어휘축_5_minimal_pairs": {
+    "note": "각 축 예시 2~3페어 = 템플릿. leomusic3가 축당 N으로 확장. probe_term은 Suno에서 dead-zone/드리프트 실증된 것 우선 이식(이질성 프로브).",
+    "instrument_technique": [
+      { "pair_id": "inst_p1", "probe_term": "con sordino muted cello", "control_term": "muted cello", "가설": "con sordino(이탈리아 주법명)=Suno dead-zone. Lyria 이식 전이 여부." },
+      { "pair_id": "inst_p2", "probe_term": "clavinet funk comping", "control_term": "electric piano funk comping", "가설": "clavinet=Suno 0건 dead-zone(Funk Trot 실증). Lyria가 clavinet 음색 렌더하는지." },
+      { "pair_id": "inst_p3", "probe_term": "gayageum plucked melody", "control_term": "plucked string melody", "가설": "국악기 명명태그=Suno 사실상 0(gayageum 근사치 1곡). Lyria 국악기 attestation 상이 여부." }
+    ],
+    "mood_emotion": [
+      { "pair_id": "mood_p1", "probe_term": "suspenseful atmosphere", "control_term": "tense atmosphere", "가설": "suspenseful=Suno dead-zone(map 5회 언급되나 코퍼스 0건). Lyria 렌더 이해 여부." },
+      { "pair_id": "mood_p2", "probe_term": "sinister undertone", "control_term": "dark undertone", "가설": "sinister=Suno dead-zone. 무드 결 전이." },
+      { "pair_id": "mood_p3", "probe_term": "desolate, foreboding mood", "control_term": "sparse, empty mood", "가설": "desolate/foreboding=Suno dead-zone. Lyria 감정어 그라디언트 채굴." }
+    ],
+    "voicing_vocal": [
+      { "pair_id": "voc_p1", "probe_term": "whispered-close female vocal", "control_term": "soft breathy female vocal", "가설": "K3018서 Lyria가 whispered-close→'breathy, close-mic'd' 확장 관찰. 증강이 attestation인지 boilerplate인지 CLAP로 판정." },
+      { "pair_id": "voc_p2", "probe_term": "deep male bass vocal, chest register", "control_term": "male tenor vocal", "가설": "★성별/음역 드리프트(Suno F0 281Hz 실패 재현 테스트). 재진술이 'bass'라 해도 CLAP F0가 낮은지 = 말만바꿈 최우선 검출." },
+      { "pair_id": "voc_p3", "probe_term": "wall-of-sound layered chorus", "control_term": "layered vocal harmonies", "가설": "K3018서 wall-of-sound 유지 관찰. 밀도 차 CLAP 분리 여부." }
+    ],
+    "structure": [
+      { "pair_id": "struct_p1", "probe_term": "false ending then reprise", "control_term": "outro fade", "가설": "구조 디렉티브(false ending)=Suno 종종 무시. Lyria 대화형이 구조 지시 렌더하는지." },
+      { "pair_id": "struct_p2", "probe_term": "key change up a step at final chorus", "control_term": "steady key throughout", "가설": "전조 지시 렌더 여부(CLAP로 조성이동 검출 난이→구조는 재진술 위주 판정)." }
+    ],
+    "genre_drift": [
+      { "pair_id": "drift_p1", "probe_term": "UK Drill, sliding 808 bass, dark", "control_term": "Boom-bap hip-hop, dark", "가설": "★Suno 'UK Drill→Industrial techno/EBM' 드리프트(사운드앵커>장르명) 실증. Lyria 재진술이 'UK Drill' 라벨 유지하는지 vs 드리프트하는지." },
+      { "pair_id": "drift_p2", "probe_term": "Gukak, Korean traditional, gukak percussion", "control_term": "Korean folk, acoustic", "가설": "Gukak 명칭=Suno 0건(carry는 'Korean adult contemporary'). Lyria 장르명 attestation 상이." },
+      { "pair_id": "drift_p3", "probe_term": "Bossa nova, nylon guitar", "control_term": "Bossa nova, nylon guitar", "가설": "통제/앵커 페어(동일). Lyria 안정 장르 baseline — 드리프트 없어야 정상(K3018서 bossa nova 안정 관찰)." }
+    ]
+  },
+  "다음스텝": "leomusic3 = 축당 N 확장·CDP 순차생성·재진술 회수·페어 CLAP 델타 산출 → 관측 스키마로 회신. sunolang = 회신 수신 후 2층 게이트 판정·Lyria 코퍼스 v0·suno_native↔lyria_native crosswalk 초판. 커넥터 IN 게이트 해제 전까지 별도 실험트랙."
+}
