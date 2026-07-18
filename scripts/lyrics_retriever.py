@@ -476,16 +476,19 @@ def match_sp_differentiated(sp_text: str, form: list[str],
             )
             hits = _pick_novel(candidates)
 
+        # 완화모드(풀 고갈) 한정: 무제한 base_query 재사용(배제곡 포함) 전에 가사변형 폴백을
+        # 우선 시도 — 신규 다양성을 stale 재사용보다 앞세운다. base_query가 배제 무시로 항상
+        # 채워 variant를 선점하던 문제 수정(2026-07-18, Leo 승인). variant 실패 시 아래 base_query가
+        # 최종 net으로 1행/빈섹션 방지(코어섹션 min-lines 불변 유지).
+        if not hits and use_variants:
+            hits = _variant_fill(tag in ("verse", "pre_chorus", "bridge"))
+
         if not hits:
             candidates = theme_search(
                 base_query, section_tag=None, granularity=granularity,
                 limit=limit_per_section, client=client, model=model,
             )
             hits = _pick_novel(candidates)
-
-        # 정규 코퍼스 전 폴백 소진 후에도 빈 섹션이면, 완화모드 한정 가사변형 폴백.
-        if not hits and use_variants:
-            hits = _variant_fill(tag in ("verse", "pre_chorus", "bridge"))
 
         results[indexed_key] = hits
 

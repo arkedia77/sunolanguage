@@ -453,6 +453,7 @@ def cmd_batch(args: list[str]):
         selected = {}
         metas = []
         bracket_count = 0
+        variant_sections = []  # 완화모드 가사변형 폴백(_variant_fill)이 채운 섹션 관측
         for tag, hits in matched.items():
             if hits:
                 best = hits[0]
@@ -460,6 +461,8 @@ def cmd_batch(args: list[str]):
                 if pid is not None:
                     batch_used_ids.add(pid)
                 best_payload = best["payload"]
+                if best_payload.get("source") == "variation":
+                    variant_sections.append(tag)
                 best_text = best_payload.get("text", "").strip()
                 if best_text and best_payload.get("source") != "bracket_preset":
                     batch_used_texts.add(best_text)
@@ -514,6 +517,7 @@ def cmd_batch(args: list[str]):
             "sub_theme": sub_theme_used,
             "refined": do_refine,
             "_source_song_ids": song_source_ids,
+            "_variant_sections": variant_sections,
         }
 
         if do_validate:
@@ -522,10 +526,11 @@ def cmd_batch(args: list[str]):
             entry["sp_validation"] = sp_val
             entry["lyrics_validation"] = lyr_val
             br_label = f" br={bracket_count}" if bracket_count else ""
+            var_label = f" var={','.join(variant_sections)}" if variant_sections else ""
             print(f"  [{i + 1:3d}/{count}] \"{title_result['title'][:15]}\" "
                   f"SP={len(sp_text)}c [{sp_val['verdict']}] "
                   f"| Lyrics={len(lyrics)}c [{lyr_val['verdict']}] "
-                  f"coh={lyr_val['coherence_score']:.2f}{br_label} "
+                  f"coh={lyr_val['coherence_score']:.2f}{br_label}{var_label} "
                   f"| {genre_group} [{form_key[:40]}]")
         else:
             br_label = f" br={bracket_count}" if bracket_count else ""
@@ -550,6 +555,9 @@ def cmd_batch(args: list[str]):
         print(f"  SP: {sp_pass}/{count} PASS")
         print(f"  Lyrics: {lyr_pass}/{count} PASS")
         print(f"  Avg coherence: {avg_coh:.2f}")
+        var_songs = sum(1 for r in results if r.get("_variant_sections"))
+        var_secs = sum(len(r.get("_variant_sections", [])) for r in results)
+        print(f"  가사변형 폴백 발화: {var_songs}/{count} 곡 ({var_secs} 섹션)")
 
     if save:
         HISTORY_DIR.mkdir(parents=True, exist_ok=True)
