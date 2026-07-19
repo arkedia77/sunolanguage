@@ -1,0 +1,77 @@
+{
+  "spec_id": "layer2_fidelity_spec_v0",
+  "authored_by": "sunolanguage",
+  "for": "leomusic3 dual-run 파일럿 (Suno / Lyria / ACE-Step 3엔진 가사 word-level 충실도)",
+  "created_at": "2026-07-19",
+  "owns": "프로브 방법론·지표 규격·crosswalk 대조 = sunolanguage. 지표 계산 파이프라인 빌드 = leomusic3.",
+  "purpose": "3엔진 스템 ASR 전사 L↔전사 정렬의 Layer2 규격. Layer1(문자열 CER/WER/bigram)에서 플래그된 세그먼트를 음소PER + 의미보존 코사인으로 재판정하여 'ASR 측정 아티팩트'와 '엔진 실충실도 손실'을 분리. 우리 불변항 = 표면 문자열 지표를 렌더검증 전 attested 승격 금지.",
+
+  "핵심원칙": {
+    "1_1차신호_상한": "CER/WER(Layer1)=어휘층 1차신호, confidence med 상한. Layer2 통과 전 '엔진 누락/할루시네이션' 확정 금지.",
+    "2_아티팩트_분리": "faster-whisper ko는 동음이의·받침·연음을 체계적 오전사 → syllable-CER이 오차를 과대계상. jamo-PER가 낮으면 '엔진은 옳게 불렀고 ASR이 음소를 잘못 들음' = asr_artifact(엔진 무책). 이게 우리 2층게이트 false_positive_말만바꿈 검출의 직접 이식.",
+    "3_패러프레이즈_보존": "WER은 sub/패러프레이즈를 전부오류로 벌함. 의미코사인이 높으면 '단어는 바뀌었으나 의미 보존' = 부분크레딧. 크로스워크(6레지스터 등가) 정렬로 알려진 허용치환은 오차 제외.",
+    "4_confidence_게이트": "모든 Layer2 판정 confidence med 상한 유지. 렌더 청취(가청) 확인 전 attested 승격 금지 = lyria_probe_set_v0 원칙과 동일."
+  },
+
+  "Q1_g2pk_음소정규화_규격": {
+    "도구": "g2pk (한국어 grapheme→phoneme). 대안 g2pkC/g2pk2 허용 — 단 3엔진 동일 impl·버전 핀 고정.",
+    "전처리_파이프라인": [
+      "1) 구조태그·마크업 제거: [Verse]/[Chorus]/(...) 등 섹션·디렉션 토큰 스트립",
+      "2) 문장부호·이모지 제거, 연속공백 1칸 정규화",
+      "3) 숫자 정규화: L·전사 양측 모두 num2ko로 한국어 발음 표기 통일(예 '3'→'삼'). 엔진이 옳게 불렀는데 표기차로 오차나는 것 방지",
+      "4) 영어 차용어: 로마자 토큰은 loanword_table(별첨) 우선, 미등재는 g2pk 로마자→한글 근사 → 음소화. 양측 동일 규칙 적용",
+      "5) g2pk 옵션 핀: descriptive=False(표준발음 규범), group_vowels=False, to_syllable=False"
+    ],
+    "음소_grain": "g2pk 출력 음절열을 초성·중성·종성 jamo로 분해(jamo 단위=음소 grain). 편집거리 정렬 대상 = jamo 시퀀스.",
+    "출력": "라인·세그먼트별 jamo 음소 시퀀스 2종(L, 전사)."
+  },
+
+  "Q1_PER_산식": {
+    "정의": "PER = (S + D + I) / N_ref. S/D/I = jamo 시퀀스 Levenshtein 정렬의 대치·삭제·삽입 수, N_ref = 참조(L) 음소 총수. WER과 동형이나 토큰=jamo 음소.",
+    "정렬": "표준 편집거리, 정렬 ops 보존 → drop(D)/sub(S)/hallucination(I) 카테고리화(word-level diff에 연결).",
+    "집계": "세그먼트별 + 마이크로평균(전체 음소 기준). 매크로평균 병기(세그먼트 균등가중).",
+    "아티팩트_플래그": "syllable-CER > τ_cer 이나 jamo-PER ≤ τ_per(권장 τ_per=0.08)이면 asr_artifact_suspected=True → 엔진 충실도 손실 집계 제외(측정노이즈).",
+    "CER_대비": "CER=음절grapheme 유지(Layer1), PER=jamo음소(Layer2). Δ=CER−PER 크면 ASR 동음이의/받침 아티팩트 강함."
+  },
+
+  "Q1_의미보존_임베딩_스키마": {
+    "모델": "다국어 문장임베딩. 권장 primary=BAAI/bge-m3(ko 강건·긴문장·1024d), fallback=intfloat/multilingual-e5-large. revision(commit hash) 핀 고정 필수, 3엔진 동일 모델.",
+    "granularity": "세그먼트(라인 또는 [섹션]) 단위. L-세그먼트 ↔ 전사-세그먼트 코사인.",
+    "산식": "임베딩 L2정규화 후 코사인 유사도. e5 계열 사용 시 'query:'/'passage:' 프리픽스 규칙 준수(양측 동일 프리픽스).",
+    "임계_provisional": {
+      "preserved": "cos ≥ 0.85 = 의미보존(sub/패러프레이즈 허용)",
+      "partial": "0.70 ≤ cos < 0.85 = 부분(플래그)",
+      "drift": "cos < 0.70 = 의미드리프트/내용손실"
+    },
+    "캘리주의": "임계는 잠정값 — K3018 베이스라인 + 인간판정 앵커셋으로 재캘리 필요. 절대임계 단정 금지(로컬0금지 원칙)."
+  },
+
+  "Layer2_판정매트릭스": {
+    "적용": "Layer1에서 WER > τ_w(권장 0.15) 세그먼트에만 Layer2 계산.",
+    "matrix": {
+      "PER_low_COS_high": "asr_artifact — 측정노이즈, 엔진 무책. 충실도 손실 집계 제외.",
+      "PER_high_COS_high": "paraphrase_preserved — 단어변경·의미보존, 부분크레딧.",
+      "PER_high_COS_low": "content_drift — 실충실도 손실(drop/sub/hallucination), 엔진 감점.",
+      "PER_low_COS_low": "inconsistent — 드묾, 수동검토 큐."
+    },
+    "confidence": "전 verdict med 상한, 렌더 가청확인 전 attested 금지."
+  },
+
+  "crosswalk_대조_정렬": {
+    "역할": "분별토큰 5카테고리(고유명사/숫자/영어차용어/저빈도어/동음이의) 중 알려진 허용치환(로마자변이·표기변이)을 crosswalk 6레지스터 등가표로 정규화 → 오차 오계상 방지.",
+    "crosswalk_ref": "버전드 경로+sha 고정 참조(커넥터 v0.2 규약: latest 계약참조 금지). 대상 = data/expressions/crosswalk_v0.json (스냅샷 sha는 발행분 고정). 3엔진 공통 등가층.",
+    "주도": "sunolanguage. leomusic3 Layer2 훅에 등가표를 path+sha로 주입."
+  },
+
+  "인계_규약": {
+    "빌드_leomusic3": "UVR/demucs 스템분리, Layer1(CER/WER/bigram) 스템+풀믹스, 자연분포 5카테고리 계측기, Layer2 훅(세그먼트 선별·이 스펙 연결).",
+    "저작_sunolang": "이 스펙(g2pk규격·PER산식·의미임베딩·판정매트릭스·crosswalk 등가표). 베이스라인 데이터 회신 오면 2층 판정 + 임계 재캘리 + suno↔lyria↔ace crosswalk 초판.",
+    "핀고정_공유": "whisper=faster-whisper model=small/lang=ko/beam=5/vad=True/int8/temp=0 (leomusic3 선언). 세팅 변경 시 3엔진 전량 재전사. g2pk·임베딩 모델 revision도 동일 핀."
+  },
+
+  "버전": {
+    "interface_version": "0.1",
+    "status": "draft_delivered",
+    "재캘리_대기": "임계 provisional — K3018 3곡 베이스라인 + 앵커셋 수신 후 v0.1 확정"
+  }
+}
