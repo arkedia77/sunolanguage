@@ -16,7 +16,18 @@
   "artist_ref": "玉置浩二 (Kōji Tamaki), 안전지대(Anzen Chitai) 프론트맨 — 압도적 감정 열창·풍부한 비브라토·넓은 다이내믹·웅장한 오케스트라 발라드. SP엔 실명 미기재(스타일만 서술).",
   "based_on": "JMOM01 gid30171 (동일가사)",
   "dual_run": {
-    "suno": {"status": "queued", "note": "sunomusic 생성 큐(JMOM01 스템분리 뒤 순차, 07-23 215720 접수ACK). gid30172 pending_suno."},
+    "suno": {
+      "status": "done",
+      "engine": "Suno",
+      "via": "sunomusic (07-23 220654 생성결과)",
+      "generated_at": "2026-07-23T22:06:54",
+      "db_status": "generated (uuid1/2 writeback 검증)",
+      "clips": [
+        {"take": 1, "suno_uuid": "bd2116e3-0df0-4e08-9112-051db7fb0a67", "url": "https://suno.com/song/bd2116e3-0df0-4e08-9112-051db7fb0a67", "mp3": "https://cdn1.suno.ai/bd2116e3-0df0-4e08-9112-051db7fb0a67.mp3"},
+        {"take": 2, "suno_uuid": "3a9c0988-6c06-40c2-a17a-3735768c1a97", "url": "https://suno.com/song/3a9c0988-6c06-40c2-a17a-3735768c1a97", "mp3": "https://cdn1.suno.ai/3a9c0988-6c06-40c2-a17a-3735768c1a97.mp3"}
+      ],
+      "mp3_note": "mp3=cdn1.suno.ai/{uuid}.mp3 패턴(JMOM01 동일패턴 HTTP206 검증분). sunomusic mp3 보충 회신 오면 갱신."
+    },
     "lyria": {
       "status": "done",
       "engine": "Google Lyria / Flow Music",
