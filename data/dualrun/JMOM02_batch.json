@@ -26,7 +26,7 @@
         {"take": 1, "suno_uuid": "bd2116e3-0df0-4e08-9112-051db7fb0a67", "url": "https://suno.com/song/bd2116e3-0df0-4e08-9112-051db7fb0a67", "mp3": "https://cdn1.suno.ai/bd2116e3-0df0-4e08-9112-051db7fb0a67.mp3"},
         {"take": 2, "suno_uuid": "3a9c0988-6c06-40c2-a17a-3735768c1a97", "url": "https://suno.com/song/3a9c0988-6c06-40c2-a17a-3735768c1a97", "mp3": "https://cdn1.suno.ai/3a9c0988-6c06-40c2-a17a-3735768c1a97.mp3"}
       ],
-      "mp3_note": "mp3=cdn1.suno.ai/{uuid}.mp3 패턴(JMOM01 동일패턴 HTTP206 검증분). sunomusic mp3 보충 회신 오면 갱신."
+      "mp3_note": "mp3 CDN 직링크 sunomusic 보충 회신(07-23 220820)으로 HTTP206 실재 검증 완료."
     },
     "lyria": {
       "status": "done",
