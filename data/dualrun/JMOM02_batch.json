@@ -16,8 +16,23 @@
   "artist_ref": "玉置浩二 (Kōji Tamaki), 안전지대(Anzen Chitai) 프론트맨 — 압도적 감정 열창·풍부한 비브라토·넓은 다이내믹·웅장한 오케스트라 발라드. SP엔 실명 미기재(스타일만 서술).",
   "based_on": "JMOM01 gid30171 (동일가사)",
   "dual_run": {
-    "suno": "sunomusic 생성",
-    "lyria": "leomusic3 경유 Google Lyria 동일가사 명시투입 재생성"
+    "suno": {"status": "queued", "note": "sunomusic 생성 큐(JMOM01 스템분리 뒤 순차, 07-23 215720 접수ACK). gid30172 pending_suno."},
+    "lyria": {
+      "status": "done",
+      "engine": "Google Lyria / Flow Music",
+      "via": "leomusic3 (07-23 215841 회신)",
+      "session": "d5b7116f-d136-4cc7-8924-b42261469c8e",
+      "input": "SP 969자·가사 573자(JMOM01 동일) 원문 무변형 명시투입",
+      "tracks": [
+        {"take": 1, "song_id": "e687ef39-5a84-4d74-b3f6-4748400b509b", "link": "https://www.flowmusic.app/song/e687ef39-5a84-4d74-b3f6-4748400b509b", "gcs_wav": "https://storage.googleapis.com/producer-app-public/clips/e687ef39-5a84-4d74-b3f6-4748400b509b.wav"},
+        {"take": 2, "song_id": "25720e4e-c3d4-4b04-829e-19611cdf7366", "link": "https://www.flowmusic.app/song/25720e4e-c3d4-4b04-829e-19611cdf7366", "gcs_wav": "https://storage.googleapis.com/producer-app-public/clips/25720e4e-c3d4-4b04-829e-19611cdf7366.wav"}
+      ],
+      "조성_관심": "지정 Bb major 유지/전조 여부 — 채보/restatement 회수 시 확인.",
+      "restatement": "세션 d5b7116f DOM에서 별도 회수 예정(leomusic3 후속).",
+      "leomusic3_산출물": "eval/lyria_motif/out_JMOM02_30172.json"
+    },
+    "3중비교_연계": "JMOM01(존메이어)·JMOM02(玉置浩二)=동일가사 다른편성 → 편성/보컬 변수 통제 대조. 각 Suno/Lyria로 Layer2(dcd5760) word-level 충실도 substrate.",
+    "layer2_판정": "Suno측 렌더 완료 후 Suno gid30172 ↔ Lyria 2트랙 word-level 충실도 Layer2 적용 예정."
   },
   "style_prompt": "A grand, deeply emotional Japanese ballad in a classic Showa-era J-ballad and city-pop ballad style, cinematic and heartbreaking. Slow, spacious tempo around 66 BPM in B-flat major, a 6/8 feel with a stately, swelling sway. Lush orchestral arrangement: sweeping legato string section, warm grand piano leading the harmony, soft sustained synth pads, gentle rounded electric bass, brushed drums that build with the song, and a distant, tender electric guitar with warm chorus. A powerful, soul-stirring male tenor leads, intimate, breathy and almost whispered in the verses, then blooming into soaring, passionate belted climaxes with rich, wide vibrato and delicate falsetto touches. Immense dynamic range, from a near-a-cappella hush to a grand, tearful crescendo backed by full strings. Sincere, sorrowful, nostalgic and overwhelming, the arrangement breathing and rising with the emotion. Timeless Japanese ballad grandeur, orchestral swells, heartfelt and dramatic.",
   "sp_length": 969,
