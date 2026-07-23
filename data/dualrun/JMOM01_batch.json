@@ -13,7 +13,17 @@
   "is_instrumental": false,
   "origin": "LEO 직지시 07-23: 존메이어 느낌 SP→Suno 생성 + leomusic3 경유 Lyria dual-run 재생성. 가사=어머니 미움·그리움(어릴적 버림).",
   "dual_run": {
-    "suno": {"status": "queued", "note": "sunomusic 생성 큐(K047 뒤 순차 대기, 07-23 213203 접수ACK). gid30171 pending_suno."},
+    "suno": {
+      "status": "done",
+      "engine": "Suno",
+      "via": "sunomusic (07-23 214446 생성결과)",
+      "generated_at": "2026-07-23T21:44:46",
+      "db_status": "generated (uuid1/2 writeback 검증)",
+      "clips": [
+        {"take": 1, "suno_uuid": "5d6d8c05-65f3-47b7-b99f-8dab2a5124d4", "url": "https://suno.com/song/5d6d8c05-65f3-47b7-b99f-8dab2a5124d4"},
+        {"take": 2, "suno_uuid": "4df84555-a9a6-42fd-8b41-97939b2b43c8", "url": "https://suno.com/song/4df84555-a9a6-42fd-8b41-97939b2b43c8"}
+      ]
+    },
     "lyria": {
       "status": "done",
       "engine": "Google Lyria / Flow Music",
