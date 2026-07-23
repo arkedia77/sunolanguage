@@ -13,8 +13,22 @@
   "is_instrumental": false,
   "origin": "LEO 직지시 07-23: 존메이어 느낌 SP→Suno 생성 + leomusic3 경유 Lyria dual-run 재생성. 가사=어머니 미움·그리움(어릴적 버림).",
   "dual_run": {
-    "suno": "sunomusic 생성",
-    "lyria": "leomusic3 경유 Google Lyria 동일가사 명시투입 재생성"
+    "suno": {"status": "queued", "note": "sunomusic 생성 큐(K047 뒤 순차 대기, 07-23 213203 접수ACK). gid30171 pending_suno."},
+    "lyria": {
+      "status": "done",
+      "engine": "Google Lyria / Flow Music",
+      "via": "leomusic3 (07-23 213650 회신)",
+      "session": "71b8beaa-806f-437e-a1c4-82e7ba75140a",
+      "input": "SP 990자·가사 573자 원문 무변형 명시투입",
+      "tracks": [
+        {"take": 1, "song_id": "c97e807b-8a00-4683-9484-b10c9dd5e9f4", "link": "https://www.flowmusic.app/song/c97e807b-8a00-4683-9484-b10c9dd5e9f4", "gcs_wav": "https://storage.googleapis.com/producer-app-public/clips/c97e807b-8a00-4683-9484-b10c9dd5e9f4.wav"},
+        {"take": 2, "song_id": "ab6f197a-dfd9-468c-9481-6b6d90156ca2", "link": "https://www.flowmusic.app/song/ab6f197a-dfd9-468c-9481-6b6d90156ca2", "gcs_wav": "https://storage.googleapis.com/producer-app-public/clips/ab6f197a-dfd9-468c-9481-6b6d90156ca2.wav"}
+      ],
+      "관심지표": "Lyria 지정조성 유지/전조 여부(별건 모티프곡서 C→Eb 전조 선례). JMOM01 지정=Bb major — 채보 회수 시 확인.",
+      "restatement": "세션 71b8beaa DOM에서 별도 회수 예정(leomusic3 후속).",
+      "leomusic3_산출물": "eval/lyria_motif/out_JMOM01_30171.json"
+    },
+    "layer2_판정": "Suno측 렌더 완료 후 Suno gid30171 ↔ Lyria 2트랙 word-level 충실도 = Layer2 규격(dcd5760) 적용 예정."
   },
   "style_prompt": "Soulful neo-soul blues ballad, modern singer-songwriter guitar, warm, intimate and aching. Slow 12/8 groove at 68 BPM in B-flat major, relaxed swung-triplet pocket. A warm, clean Fender Stratocaster leads with light tube overdrive and spring reverb, played fingerstyle with hybrid picking: string bends, wide slow-hand vibrato, sliding double-stops and blues licks answering the voice between lines. Lush neo-soul voicings carry the progression, extended major-9 and dominant-13 shapes through ii-V-I motion with borrowed minor-iv color and chromatic passing chords. A tender, breathy male vocal, smoky and emotional, close-mic'd and conversational in the verses, rising into a raw, pleading chorus with soulful runs and soft falsetto. A tight in-the-pocket trio backs it: soft behind-the-beat drums, round warm bass on the kick, subtle Rhodes comping. It builds from sparse, whispered verses into a soaring guitar-and-voice climax. Late-night, confessional, heartbroken, organic and human.",
   "sp_length": 990,
