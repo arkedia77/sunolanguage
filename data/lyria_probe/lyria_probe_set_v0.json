@@ -35,10 +35,21 @@
     "boilerplate_control": {
       "repeat_n": "동일 입력 반복 횟수(권장 3)",
       "restatement_variance": "반복 간 재진술 어휘 분산",
-      "constant_prefix_stripped": ["Atmospheric", "Mood-driven", "Intimate", "sophisticated"]
+      "constant_prefix_stripped": [
+        "Atmospheric",
+        "Mood-driven",
+        "Intimate",
+        "sophisticated"
+      ]
     },
     "verdict": {
-      "enum": ["attested_render", "attested_lexical_only", "renders_but_not_native", "dead_zone", "false_positive_말만바꿈"],
+      "enum": [
+        "attested_render",
+        "attested_lexical_only",
+        "renders_but_not_native",
+        "dead_zone",
+        "false_positive_말만바꿈"
+      ],
       "게이트로직": {
         "attested_render": "재진술 echo/augment AND clap separated (confidence high)",
         "attested_lexical_only": "재진술 echo/augment, clap 미측정/미확정 (confidence med, 렌더게이트 대기)",
@@ -51,29 +62,129 @@
   "어휘축_5_minimal_pairs": {
     "note": "각 축 예시 2~3페어 = 템플릿. leomusic3가 축당 N으로 확장. probe_term은 Suno에서 dead-zone/드리프트 실증된 것 우선 이식(이질성 프로브).",
     "instrument_technique": [
-      { "pair_id": "inst_p1", "probe_term": "con sordino muted cello", "control_term": "muted cello", "가설": "con sordino(이탈리아 주법명)=Suno dead-zone. Lyria 이식 전이 여부." },
-      { "pair_id": "inst_p2", "probe_term": "clavinet funk comping", "control_term": "electric piano funk comping", "가설": "clavinet=Suno 0건 dead-zone(Funk Trot 실증). Lyria가 clavinet 음색 렌더하는지." },
-      { "pair_id": "inst_p3", "probe_term": "gayageum plucked melody", "control_term": "plucked string melody", "가설": "국악기 명명태그=Suno 사실상 0(gayageum 근사치 1곡). Lyria 국악기 attestation 상이 여부." }
+      {
+        "pair_id": "inst_p1",
+        "probe_term": "con sordino muted cello",
+        "control_term": "muted cello",
+        "가설": "con sordino(이탈리아 주법명)=Suno dead-zone. Lyria 이식 전이 여부."
+      },
+      {
+        "pair_id": "inst_p2",
+        "probe_term": "clavinet funk comping",
+        "control_term": "electric piano funk comping",
+        "가설": "clavinet=Suno 0건 dead-zone(Funk Trot 실증). Lyria가 clavinet 음색 렌더하는지."
+      },
+      {
+        "pair_id": "inst_p3",
+        "probe_term": "gayageum plucked melody",
+        "control_term": "plucked string melody",
+        "가설": "국악기 명명태그=Suno 사실상 0(gayageum 근사치 1곡). Lyria 국악기 attestation 상이 여부."
+      }
     ],
     "mood_emotion": [
-      { "pair_id": "mood_p1", "probe_term": "suspenseful atmosphere", "control_term": "tense atmosphere", "가설": "suspenseful=Suno dead-zone(map 5회 언급되나 코퍼스 0건). Lyria 렌더 이해 여부." },
-      { "pair_id": "mood_p2", "probe_term": "sinister undertone", "control_term": "dark undertone", "가설": "sinister=Suno dead-zone. 무드 결 전이." },
-      { "pair_id": "mood_p3", "probe_term": "desolate, foreboding mood", "control_term": "sparse, empty mood", "가설": "desolate/foreboding=Suno dead-zone. Lyria 감정어 그라디언트 채굴." }
+      {
+        "pair_id": "mood_p1",
+        "probe_term": "suspenseful atmosphere",
+        "control_term": "tense atmosphere",
+        "가설": "suspenseful=Suno dead-zone(map 5회 언급되나 코퍼스 0건). Lyria 렌더 이해 여부."
+      },
+      {
+        "pair_id": "mood_p2",
+        "probe_term": "sinister undertone",
+        "control_term": "dark undertone",
+        "가설": "sinister=Suno dead-zone. 무드 결 전이."
+      },
+      {
+        "pair_id": "mood_p3",
+        "probe_term": "desolate, foreboding mood",
+        "control_term": "sparse, empty mood",
+        "가설": "desolate/foreboding=Suno dead-zone. Lyria 감정어 그라디언트 채굴."
+      }
     ],
     "voicing_vocal": [
-      { "pair_id": "voc_p1", "probe_term": "whispered-close female vocal", "control_term": "soft breathy female vocal", "가설": "K3018서 Lyria가 whispered-close→'breathy, close-mic'd' 확장 관찰. 증강이 attestation인지 boilerplate인지 CLAP로 판정." },
-      { "pair_id": "voc_p2", "probe_term": "deep male bass vocal, chest register", "control_term": "male tenor vocal", "가설": "★성별/음역 드리프트(Suno F0 281Hz 실패 재현 테스트). 재진술이 'bass'라 해도 CLAP F0가 낮은지 = 말만바꿈 최우선 검출." },
-      { "pair_id": "voc_p3", "probe_term": "wall-of-sound layered chorus", "control_term": "layered vocal harmonies", "가설": "K3018서 wall-of-sound 유지 관찰. 밀도 차 CLAP 분리 여부." }
+      {
+        "pair_id": "voc_p1",
+        "probe_term": "whispered-close female vocal",
+        "control_term": "soft breathy female vocal",
+        "가설": "K3018서 Lyria가 whispered-close→'breathy, close-mic'd' 확장 관찰. 증강이 attestation인지 boilerplate인지 CLAP로 판정."
+      },
+      {
+        "pair_id": "voc_p2",
+        "probe_term": "deep male bass vocal, chest register",
+        "control_term": "male tenor vocal",
+        "가설": "★성별/음역 드리프트(Suno F0 281Hz 실패 재현 테스트). 재진술이 'bass'라 해도 CLAP F0가 낮은지 = 말만바꿈 최우선 검출."
+      },
+      {
+        "pair_id": "voc_p3",
+        "probe_term": "wall-of-sound layered chorus",
+        "control_term": "layered vocal harmonies",
+        "가설": "K3018서 wall-of-sound 유지 관찰. 밀도 차 CLAP 분리 여부."
+      }
     ],
     "structure": [
-      { "pair_id": "struct_p1", "probe_term": "false ending then reprise", "control_term": "outro fade", "가설": "구조 디렉티브(false ending)=Suno 종종 무시. Lyria 대화형이 구조 지시 렌더하는지." },
-      { "pair_id": "struct_p2", "probe_term": "key change up a step at final chorus", "control_term": "steady key throughout", "가설": "전조 지시 렌더 여부(CLAP로 조성이동 검출 난이→구조는 재진술 위주 판정)." }
+      {
+        "pair_id": "struct_p1",
+        "probe_term": "false ending then reprise",
+        "control_term": "outro fade",
+        "가설": "구조 디렉티브(false ending)=Suno 종종 무시. Lyria 대화형이 구조 지시 렌더하는지."
+      },
+      {
+        "pair_id": "struct_p2",
+        "probe_term": "key change up a step at final chorus",
+        "control_term": "steady key throughout",
+        "가설": "전조 지시 렌더 여부(CLAP로 조성이동 검출 난이→구조는 재진술 위주 판정)."
+      }
     ],
     "genre_drift": [
-      { "pair_id": "drift_p1", "probe_term": "UK Drill, sliding 808 bass, dark", "control_term": "Boom-bap hip-hop, dark", "가설": "★Suno 'UK Drill→Industrial techno/EBM' 드리프트(사운드앵커>장르명) 실증. Lyria 재진술이 'UK Drill' 라벨 유지하는지 vs 드리프트하는지." },
-      { "pair_id": "drift_p2", "probe_term": "Gukak, Korean traditional, gukak percussion", "control_term": "Korean folk, acoustic", "가설": "Gukak 명칭=Suno 0건(carry는 'Korean adult contemporary'). Lyria 장르명 attestation 상이." },
-      { "pair_id": "drift_p3", "probe_term": "Bossa nova, nylon guitar", "control_term": "Bossa nova, nylon guitar", "가설": "통제/앵커 페어(동일). Lyria 안정 장르 baseline — 드리프트 없어야 정상(K3018서 bossa nova 안정 관찰)." }
+      {
+        "pair_id": "drift_p1",
+        "probe_term": "UK Drill, sliding 808 bass, dark",
+        "control_term": "Boom-bap hip-hop, dark",
+        "가설": "★Suno 'UK Drill→Industrial techno/EBM' 드리프트(사운드앵커>장르명) 실증. Lyria 재진술이 'UK Drill' 라벨 유지하는지 vs 드리프트하는지."
+      },
+      {
+        "pair_id": "drift_p2",
+        "probe_term": "Gukak, Korean traditional, gukak percussion",
+        "control_term": "Korean folk, acoustic",
+        "가설": "Gukak 명칭=Suno 0건(carry는 'Korean adult contemporary'). Lyria 장르명 attestation 상이."
+      },
+      {
+        "pair_id": "drift_p3",
+        "probe_term": "Bossa nova, nylon guitar",
+        "control_term": "Bossa nova, nylon guitar",
+        "가설": "통제/앵커 페어(동일). Lyria 안정 장르 baseline — 드리프트 없어야 정상(K3018서 bossa nova 안정 관찰)."
+      }
     ]
   },
-  "다음스텝": "leomusic3 = 축당 N 확장·CDP 순차생성·재진술 회수·페어 CLAP 델타 산출 → 관측 스키마로 회신. sunolang = 회신 수신 후 2층 게이트 판정·Lyria 코퍼스 v0·suno_native↔lyria_native crosswalk 초판. 커넥터 IN 게이트 해제 전까지 별도 실험트랙."
+  "다음스텝": "leomusic3 = 축당 N 확장·CDP 순차생성·재진술 회수·페어 CLAP 델타 산출 → 관측 스키마로 회신. sunolang = 회신 수신 후 2층 게이트 판정·Lyria 코퍼스 v0·suno_native↔lyria_native crosswalk 초판. 커넥터 IN 게이트 해제 전까지 별도 실험트랙. | [07-24 편입] restatement 3세션 앵커·key uptake finding 등재(structure축 restatement_delta.key 3중대조). Lyria 코퍼스 v0에 'absolute key=weak' 반영 예정.",
+  "★structure_finding_20260724_key_uptake": {
+    "source": "leomusic3 restatement(Producer 'Sound' 자기보고) 회수 3세션, 07-24. 정본 leomusic3 eval/lyria_motif/restatements.json.",
+    "finding": "★Lyria 절대조성(key)=약한 시민권. restatement에서 echo돼도 렌더는 전조·드롭, 또는 아예 미재진술. 반면 BPM·groove·화성어휘(ii-V-I, maj9/dom13)·편성·다이내믹=강한 echo. self-report≠actual render 분기.",
+    "관측필드_restatement_delta_key_3중대조": "structure 축 minimal-pair 관측필드로 편입: key = [입력 key토큰, restatement key토큰(echo/누락), 렌더 검출 key] 3중 대조.",
+    "anchors": [
+      {
+        "session": "돌아오는길 gid70124",
+        "입력_key": "C major",
+        "restatement": "'Key of C Major' echo O",
+        "렌더": "E♭ major(내부 E♭→B♭→E♭ 전조)",
+        "판정": "텍스트수용·오디오드롭(전조)"
+      },
+      {
+        "session": "JMOM01 gid30171",
+        "입력_key": "B-flat major",
+        "restatement": "key토큰 누락",
+        "렌더": "미채보(회수만)",
+        "판정": "텍스트에서도 드롭 — BPM68·12/8·ii-V-I·maj9/dom13은 echo"
+      },
+      {
+        "session": "JMOM02 gid30172",
+        "입력_key": "B-flat major",
+        "restatement": "key토큰 누락",
+        "렌더": "미채보(회수만)",
+        "판정": "동일 — 6/8·편성·다이내믹 풍부 echo, 절대조성 텍스트 드롭"
+      }
+    ],
+    "SP작성_함의": "★Lyria SP에서 절대조성 지시는 신뢰 낮음(원하는 조성 미보장). 상대 화성어휘(ii-V-I·maj9/dom13·modal)·BPM·groove·편성으로 유도 권장. suno_native↔lyria_native crosswalk에 'key directive = lyria weak citizenship' 플래그 등재 예정.",
+    "역루프_정합": "1회전 +7전조·2회전 dom7밀도·Take1 내부전조와 일관 — 조성지시 드롭+조성이동 자발산출 경향."
+  }
 }
