@@ -70,4 +70,5 @@ Suno 앱에 실제 음악을 녹음(~10초)하면 Suno가 자동 분석하여 �
 - **G-K3 활성 태스크**: 링크는 KANBAN. MEMORY.md엔 "활성=칸반참조" 1줄만.
 - **G-K4 단일 기재**: 룰 전문 1곳만. CLAUDE.md·MEMORY.md엔 트리거+포인터 1줄(3중 기재 금지).
 - **G-K5 커밋 후 HEAD 검증**: repo 정본 변경은 push 후 `git show HEAD:{파일}` 실물 대조까지 done(공유클론 race 방지). write→add→commit 최소창.
+- **G-K6 커밋 author 병기**(ari 지시 07-27): 커밋은 반드시 `AGENT_ID=sunolanguage git -c user.name=sunolanguage -c user.email=sunolanguage@leomusic.os commit …` 로 한다. ★`AGENT_ID`는 pre-commit 스코프 훅 트리거일 뿐 git author를 바꾸지 않는다 — `-c` 미병기 시 머신 전역 config(arkedia77 등)로 찍혀 ARI 활동판정에서 '무활동' 오독됨. ★머신 전역 `git config user.*`는 절대 변경 금지(타 슬롯 공용). 커밋 후 `git log -1 --format=%an`=sunolanguage 확인.
 - 종료 시 push 자동(확인 없이).
