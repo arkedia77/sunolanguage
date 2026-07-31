@@ -4,6 +4,8 @@
 **작성일**: 2026-07-16 | **소스 정본**: `rag/suno_dictionary_v3.json` (v3.2, 코퍼스 556트랙 기준)
 **위치**: `sunolang.db` `expr_*` 4테이블 + FTS5 (기존 테이블 불변, 독립 네임스페이스)
 
+> ★2026-07-31: 분류 *기준*의 현행 정본은 `docs/corpus_classification_criteria_v1.md`로 통합됨(4층 모델·blocked 7종·passive 승격 경로 등). 이 문서는 v0 설계 사료 — 기준 충돌 시 현행판 우선.
+
 ---
 
 ## 1. 문제와 구조 (코어+어댑터, R-P4)
