@@ -119,6 +119,8 @@ Suno는 정확한 BPM을 SP에 명시한다. `at {BPM} BPM` 또는 `Tempo is {BP
 
 `key of X` 패턴은 652회 출현하지만, 구체적 코드명(Am7, Cmaj7)은 **0건**, 코드 진행 표기(I-IV-V)도 **0건**이다. Suno의 화성 인식은 조성(key) 수준에서 멈춘다.
 
+**전조(key change) — v5.5 버전 종속 행동**: `key change`는 코퍼스에서 v5.5 곡 1건뿐(S018_16 Trance, v5.0 Wave1은 0건)인 v5.5 신규 어휘다. 동시에 v5.5부터 **마지막 코러스의 pump-up modulation이 자동 생성**된다(2026-05-09 Leo 실청취, 발라드+록 확인 — 지시 없이도 발생). 한국 음악 클리셰(마지막 코러스 반음/온음 상승)와 부합하므로 한국 타깃은 그대로 활용하고, 서양 팝 타깃은 `no key change` 네거티브 지시 테스트가 필요하다. Suno 표현형: SP `"A key change occurs in the final section"`, 가사 `[key change]`.
+
 ### 박자 선언
 
 `{N}/{N} time` 형식으로 박자를 명시한다. 4/4가 압도적이며, 3/4(왈츠), 6/8(셀틱/바로크) 등이 장르별로 고정적이다.
