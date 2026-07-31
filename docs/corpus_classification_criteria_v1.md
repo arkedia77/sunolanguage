@@ -45,6 +45,8 @@ DB 실측 분포(2026-07-31, `expr_concepts`): technique 120 · mood 63 · produ
 
 **genre 예외(2건: jazz·blues)**: 설계상 genre는 원자화 제외(장르명은 시스템 간 공용어, `genre_vocabulary_map` 264로 별도 관리)이나, **인바운드 별칭 타깃용 시드**(origin='alias_seed')로만 2건 존재. 신규 genre 개념 추가 금지 — 장르는 사전의 genre_vocabulary_map이 정본.
 
+**origin 구분**: dictionary 405(사전 v3.2 원자 추출) + alias_seed 32(별칭 타깃용 시드 = mood 30 + genre 2, 실측 2026-07-31). 설계문서의 카테고리 수치(mood 33 등)와 DB 실측(mood 63)의 차이는 alias_seed 시드분 — attestation 판정 시 origin='dictionary'만 원천 코퍼스 근거로 취급.
+
 **장르 분류의 알려진 한계 (기준에 편입)**:
 - **드리프트**: Suno는 사운드앵커>장르명 — UK Drill→Industrial techno/EBM 드리프트, native 'Trot' 라벨 1/12(W001 GT 재분석 06-13), Gukak 0건. 비서양 장르는 편성·질감 어휘로 우회(별칭 테이블 등재).
 - **크로스오버 유효**: 'Classical-X Crossover' 계열 10종 생성 10/10 성공(JIOBD01 07-27) — 복합 구문형 장르 라벨(manual_v3 Type B~D)은 생성 방향으로도 유효.
