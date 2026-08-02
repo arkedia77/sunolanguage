@@ -1,7 +1,8 @@
 {
-  "handoff": "VD 성악가 부부 듀엣 3곡 — 생성 핸드오프 v1",
+  "handoff": "VD 성악가 부부 듀엣 3곡 — 생성 핸드오프 v1.1",
   "authored_by": "sunolanguage",
   "created_at": "2026-08-03T01:50:00+0900",
+  "revised_at": "2026-08-03T02:20:00+0900 — 페블 가스펠 검수 반영(v1.1): 가스펠 응답연 3행·아웃트로 3행 교체, 발라드 브리지 1행 복원. 근거=VD_LYRICS_v3.json(행별 실물검증 포함)",
   "발주근거": "LEO 직지시(08-03 세션 '다 하면 핸드오프까지 진행해') + kee 전체개방 GO + 페블 검수 반영(v2 개정 2건). ★생성 착수 게이트=VD01 프로브 결과 회수 후(kee 00:55 §0) — 핸드오프 선전달, 생성 트리거는 별도 신호.",
   "공통_파라미터": {
     "model": "v5.5 (default)",
@@ -27,14 +28,14 @@
       "title": "그대만 바라보며 (Korean Ballad Duet)",
       "sp": "Korean ballad duet with classical crossover color. Trained operatic vocal tone with soft legato phrasing and warm classical resonance - restrained and intimate in the verses, soaring in the final chorus. Male baritone and female soprano vocals alternating verse by verse, uniting in the chorus. Grand piano foundation with a string ensemble swell; subtle bass and soft drums enter at the second chorus. The bridge starts low and quiet, building into an uplifted final chorus. Sincere, devoted, emotional mood. 68 BPM in C Major, 4/4 time signature.",
       "sp_chars": 548,
-      "lyrics": "[Male Vocal]\n(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[Female Vocal]\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Chorus - Duet]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Verse - Duet]\n(남녀 함께) 지나간 계절들이 창밖에 쌓여가도\n마주 잡은 두 손엔 온기가 남아요\n나란히 걷던 걸음 골목을 지나\n주름진 손등 위에 아침이 와요\n\n[Bridge - Duet]\n많은 말은 필요 없죠\n그저 곁에 있으면 돼요\n이제 남은 모든 날에\n그대 이름 하나만\n\n[Final Chorus - Duet]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람"
+      "lyrics": "[Male Vocal]\n(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[Female Vocal]\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Chorus - Duet]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Verse - Duet]\n(남녀 함께) 지나간 계절들이 창밖에 쌓여가도\n마주 잡은 두 손엔 온기가 남아요\n나란히 걷던 걸음 골목을 지나\n주름진 손등 위에 아침이 와요\n\n[Bridge - Duet]\n말하지 않아도 알죠\n그저 곁에 있으면 돼요\n이제 남은 모든 날에\n그대 이름 하나만\n\n[Final Chorus - Duet]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람"
     },
     {
       "no": 3,
       "title": "그대만 바라보며 (Gospel Duet)",
       "sp": "Gospel duet with full choir. Powerful soulful vocals with warm expressive ad-libs and gospel phrasing - soul delivery, not operatic. Male and female lead vocals trading lines in call-and-response, with the choir echoing the refrain. Warm organ, piano, electric bass, hand claps and tambourine on the backbeat. The final chorus repeats with a key change lift and a call-and-response outro between the leads and choir. Joyful, grateful, uplifting mood. 92 BPM in E-flat Major, 12/8 time signature.",
       "sp_chars": 495,
-      "lyrics": "[Male Vocal]\n(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[Call and Response - Duet]\n(남) 이 만남은 선물이었죠\n(여) 감사해요 그 모든 시간\n(남) 두 사람 지나온 자리마다\n(여) 축복이 내려와요\n(남녀 함께) 은혜로 여기까지 왔어요\n\n[Female Vocal]\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Verse - Duet]\n(남녀 함께) 지나간 계절들이 창밖에 쌓여가도\n마주 잡은 두 손엔 온기가 남아요\n나란히 걷던 걸음 골목을 지나\n주름진 손등 위에 아침이 와요\n\n[Chorus - Duet with Choir]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Key Change]\n\n[Final Chorus - Duet with Choir]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Outro - Call and Response]\n(여) 사랑해요 (남) 사랑해요 (ad-libs)\n(여) 고마워요 (남) 고마워요 (melismatic runs)\n(남녀 함께) 은혜였죠 처음부터 지금까지"
+      "lyrics": "[Male Vocal]\n(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[Call and Response - Duet]\n(남) 이 만남은 선물이었죠\n(여) 감사해요 그 모든 시간\n(남) 우리 서 있는 자리마다\n(여) 축복이 내려와요\n(남녀 함께) 은혜로 여기까지 왔어요\n\n[Female Vocal]\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Verse - Duet]\n(남녀 함께) 지나간 계절들이 창밖에 쌓여가도\n마주 잡은 두 손엔 온기가 남아요\n나란히 걷던 걸음 골목을 지나\n주름진 손등 위에 아침이 와요\n\n[Chorus - Duet with Choir]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Key Change]\n\n[Final Chorus - Duet with Choir]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Outro - Call and Response]\n(여) 사랑해요 (남) 사랑해요 (ad-libs)\n(여) 고마워요 (남) 고마워요 (melismatic runs)\n(남녀 함께) 모든 것이 은혜였죠"
     }
   ],
   "잠금검증": "코어 3연(12행)=3곡 모두 정본 원문 그대로(한 글자 무변경·줄바꿈·(남)/(여) 표기 유지). 어댑터는 코어 앞뒤·사이에만. 대시(—)는 조립본 전체에서 미사용(쉼표/공백 처리).",
