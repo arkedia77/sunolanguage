@@ -1,0 +1,48 @@
+{
+  "probe_id": "VD01",
+  "authored_by": "sunolanguage",
+  "created_at": "2026-08-02T22:53:16+0900",
+  "발주근거": "kee 선실측 발주(sunolanguage_kee_20260802_233500) — LEO 성악가 부부 듀엣 3곡 기획의 1단계. ★선실측 2건만: ①성악(클래식) 발성 재현 가부 ②(남)/(여) 듀엣 화자 분리 통제 가부. 작사·본생성 아님.",
+  "설계": "미니멀 페어 3암 — A vs C = 성악 발성 지시 문장 유무(①판정), A vs B = 화자 통제층 유무(②판정). 총 3 Create(기본 2클립씩=6클립). 실험 트랙이므로 정식 gid 미부여(songs_test_lab 관행).",
+  "선행근거": {
+    "operatic_L2실증": "Dead Budget 04-24: 'Bel canto + Italian lyrics'→'Classical crossover and operatic pop' 장르 반응 / 'Operatic soprano coloratura'→'Symphonic power metal'. 수동 이해 실증 — 단 한국어 가사·실발성(레가토/비브라토/공명) 재현은 미검증(이번 프로브의 물음)",
+    "duet_성립실증": "07-11 K3016: duet(male-female) 정상 성립(동일 배치 단일 성부 지정은 프라이어 표류로 실패). 'duet' 어휘 Suno 출력 0건·call-and-response 23건 네이티브 — 화자 순서 통제가 미검증(이번 프로브의 물음)",
+    "리스크_L4": "프라이어 종속(교본 5장 4층) — 서정 서약 가사 정서가 발성을 팝 벨팅으로 끌 개연. C암이 이 베이스라인을 드러냄"
+  },
+  "가사_공통": {
+    "잠금준수": "kee §4 정본 원문 그대로 사용·한 글자 무변경(줄바꿈·(남)/(여) 표기 포함). B암의 브래킷은 본문 텍스트가 아닌 Suno 구조태그 층 추가 — kee §3 '작사 문제가 아니라 프롬프트 설계 문제' 범위 내",
+    "본문": "(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람"
+  },
+  "arms": [
+    {
+      "arm": "A_성악듀엣",
+      "물음": "①+② 동시 관측 (성악 발성 + 화자 분리, SP 서술만으로)",
+      "sp": "Classical crossover duet. Operatic vocal technique with bel canto phrasing, sustained legato lines, controlled vibrato, and rich classical resonance in both voices. Male baritone and female soprano vocals alternating in call-and-response, then merging in unison for the final chorus. Grand piano and string ensemble accompaniment, warm concert hall reverb. Tender, devotional mood. 72 BPM in D Major, 4/4 time signature.",
+      "sp_chars": 433,
+      "lyrics": "가사_공통.본문 그대로 (브래킷 없음, (남)/(여) 한글 표기 유지)",
+      "instrumental": "OFF",
+      "vocal_gender_toggle": "미사용(듀엣이라 단일 지정 불가 — 미사용 자체도 기록)"
+    },
+    {
+      "arm": "B_브래킷화자태그",
+      "물음": "② 화자 통제 강화층 — 구조태그가 (남)/(여) 분리를 더 확실히 잡는가 + 한글 화자표기 가창 누출이 줄어드는가",
+      "sp": "A와 동일 (433자)",
+      "lyrics": "[Male Vocal]\n(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[Female Vocal]\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Duet]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람",
+      "instrumental": "OFF"
+    },
+    {
+      "arm": "C_대조_발성지시제거",
+      "물음": "① 미니멀 페어 대조 — 성악 발성 문장 없을 때 베이스라인(팝 벨팅으로 가는지). A와 차이=둘째 문장 삭제뿐",
+      "sp": "Classical crossover duet. Male baritone and female soprano vocals alternating in call-and-response, then merging in unison for the final chorus. Grand piano and string ensemble accompaniment, warm concert hall reverb. Tender, devotional mood. 72 BPM in D Major, 4/4 time signature.",
+      "sp_chars": 305,
+      "lyrics": "A와 동일 (브래킷 없음)",
+      "instrumental": "OFF"
+    }
+  ],
+  "관측_스키마": {
+    "회수물": "arm별 uuid 2클립 + sunomusic 1차 청취 소감(성악/팝 벨팅 판별, 화자 순서 준수, (남)(여) 한글 가창 누출 여부)",
+    "우리측_판정": "①성악: 레가토 지속·비브라토 레이트·공명(포먼트) — 스펙트럼 분석 + 필요 시 Suno 무료 분석 API ②듀엣: 연별 화자 일치(1연=남/2연=여/3연=혼성), 누출: '(남)','(여)' 문자 가창 여부",
+    "판정원칙": "표면지표는 confidence med 상한 — 가청 확인 전 attested 승격 금지(분류기준 v1.0 §5). '안 된다'도 유효 산출로 kee 보고"
+  },
+  "비용": "3 Create = 6클립 (프로브 비용만, 소액 — 생성 크레딧은 sunomusic 라인)"
+}
