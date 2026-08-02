@@ -1,0 +1,44 @@
+{
+  "batch": "VD (성악가 부부 듀엣 3곡 — 3단계 전체개방분: 가스펠 어댑터 + 3곡 프롬프트·발성·키 설계)",
+  "authored_by": "sunolanguage",
+  "created_at": "2026-08-03T01:15:00+0900",
+  "발주근거": "kee 상충해소·전체개방 GO(sunolanguage_kee_20260803_005500) — ⓑ신앙어휘 넣음(보편 수위)·ⓒ완성곡 기준(LEO 직지시 경유·kee 채택). 3곡 생성=VD01 결과 회수 후.",
+
+  "1_가스펠_어댑터_작사": {
+    "구성": "①응답형(call & response) 1연 ②후렴 반복(+전조)은 구조 지시 ③아웃트로 응창",
+    "본문_응답연": "(남) 이 만남은 선물이었죠\n(여) 감사해요 그 모든 시간\n(남) 두 사람 지나온 자리마다\n(여) 축복이 내려와요\n(남녀 함께) 은혜로 여기까지 왔어요",
+    "본문_아웃트로_응창": "(여) 사랑해요 — (남) 사랑해요 (ad-libs)\n(여) 고마워요 — (남) 고마워요 (melismatic runs)\n(남녀 함께) 은혜였죠 처음부터 지금까지",
+    "신앙어휘_수위": "선물·감사·축복·은혜 4어 — 보편 수위, 특정 교리·교파·고유명사 0 (ⓑ 한정 준수). 코어 '고귀한 사람'과 자연 연결.",
+    "중복관리": "확장 1연 명사군(계절~아침)·코어 서약 어휘대와 비중복. 아웃트로의 '사랑해요/고마워요'는 코어 후렴 첫 어절의 가스펠 에코 응창(반복이지 변경 아님 — 코어 무변경).",
+    "괄호디렉션_근거": "(ad-libs)·(melismatic runs) = Dead Budget 04-25 괄호 보컬 디렉션 4/4 실증(DB08 melismatic runs 실현). ad-libs=native 44건.",
+    "배치": "코어1(남) → 응답연 → 코어2(여) → 공통 확장 → 후렴(코어3) → 후렴 반복(+key change) → 아웃트로 응창"
+  },
+
+  "2_프롬프트_설계_3곡": {
+    "공통_원칙": [
+      "발성=키와 별도 항목(kee §5①). 3곡 발성 차등 — 복사 금지: 뮤지컬=operatic+씨어터 / 발라드=operatic 절제형 / 가스펠=소울(not operatic 명시)",
+      "듀엣 분리 3층: ①SP 서술(alternating/trading lines in call-and-response — native 23건) ②가사 태그층 [Male Vocal]/[Female Vocal]/[Duet](VD01 B암 검증 중, 기본값 채택) ③원문 (남)/(여) 표기 유지(잠금) — ㉰누출·B암 결과로 조정",
+      "대사(spoken) 구간(뮤지컬): [Spoken] 태그 + (spoken) 디렉션 — DB10 4/4 실증. ㉱등재분의 설계 단계 처리",
+      "키=음역 상한 해제 허용이되 키 상향 자체가 목적 아님 — 장르 정합 키 선택. 완성곡 기준(ⓒ)이므로 화자 분리 정면 돌파",
+      "발라드 전조 지시 생략 — v5.5 자동 pump-up modulation(마지막 코러스) 활용. 가스펠만 명시적 key change(장르 관용)"
+    ],
+    "ⓐ_뮤지컬": {
+      "sp": "Musical theatre duet with Broadway-style orchestration. Operatic vocal technique with classical resonance, sustained legato phrasing, and controlled vibrato in both voices; the spoken dialogue intro transitions naturally into song. Male baritone and female soprano vocals alternating in call-and-response, merging in unison before the final chorus. Sweeping strings, grand piano, French horn swells, and light brushed percussion. Warm theatre hall ambience. Tender, devotional, celebratory mood. 76 BPM in D Major, 4/4 time signature.",
+      "sp_chars": 534,
+      "키_설계": "D Major 76 BPM — 바리톤/소프라노 듀엣 공통 안정권. 어휘노트: theatre/Broadway=코퍼스 0건(사운드앵커 병기로 드리프트 방어 — 장르명<앵커 원칙), operatic=L2 실증(DeadBudget)"
+    },
+    "ⓑ_발라드": {
+      "sp": "Korean ballad duet with classical crossover color. Trained operatic vocal tone with soft legato phrasing and warm classical resonance - restrained and intimate in the verses, soaring in the final chorus. Male baritone and female soprano vocals alternating verse by verse, uniting in the chorus. Grand piano foundation with a string ensemble swell; subtle bass and soft drums enter at the second chorus. The bridge starts low and quiet, building into an uplifted final chorus. Sincere, devoted, emotional mood. 68 BPM in C Major, 4/4 time signature.",
+      "sp_chars": 548,
+      "키_설계": "C Major 68 BPM — 브리지 최저점('말하지 않아도')의 저역 여유 확보. 확장 최소 원칙과 동형으로 편성도 점층(피아노→스트링→리듬)"
+    },
+    "ⓒ_가스펠": {
+      "sp": "Gospel duet with full choir. Powerful soulful vocals with warm expressive ad-libs and gospel phrasing - soul delivery, not operatic. Male and female lead vocals trading lines in call-and-response, with the choir echoing the refrain. Warm organ, piano, electric bass, hand claps and tambourine on the backbeat. The final chorus repeats with a key change lift and a call-and-response outro between the leads and choir. Joyful, grateful, uplifting mood. 92 BPM in E-flat Major, 12/8 time signature.",
+      "sp_chars": 495,
+      "키_설계": "E♭ Major 92 BPM 12/8 — 가스펠 관용. key change lift 명시(E♭→E/F). 어휘노트: gospel/organ=사전 0건이나 생성 실증 보유(JIOBD01 Classical-Gospel Crossover 10/10·MOM10 가스펠·AWARE03 카드 'Gospel Soul Organ') — attested 0≠데드존(교본 6.9). soulful 22·choir 4+생성검증·ad-libs 44·call-and-response 23·tambourine 4=native 앵커. ★'not operatic' 명시로 발성 복사 방지(kee §5 '가스펠=소울 정합')"
+    }
+  },
+
+  "3_VD01_결과_반영_여지": "①A/C 결과→operatic 발성 항목 유지/교체 ②B암 결과→태그층 채택 확정/철회 ③㉰결과→(남)(여) 표기 대응 ④㉱ spoken은 본생성 전 1 Create 미니 프로브 옵션. 결과 회수 시 본 파일 v2로 개정.",
+  "4_생성_대기": "3곡 생성 발주=VD01 결과 회수 후(kee §0). 생성 시 곡별 [SP+가사 조립본] 핸드오프 작성 예정."
+}
