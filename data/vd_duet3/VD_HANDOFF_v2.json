@@ -1,0 +1,48 @@
+{
+  "handoff": "VD 성악가 부부 듀엣 3곡 — 생성 핸드오프 v2 (LEO 지적 3건+율격 요건 반영 전면 개정)",
+  "authored_by": "sunolanguage",
+  "created_at": "2026-08-03T03:20:00+0900",
+  "개정근거": "페블 발주 개정 v2(장르 전층 분화·가사 증량 상한해제·제목 신설)+v2 보강(율격 9/12/12/9·10/13/15/14)+VD01 판정(발성=프레임 주도, 태그층 유효, 누출 0). v1.1 생성분(LEO 직지시 선행)과 별개의 개정 재생성판.",
+  "공통_파라미터": {
+    "model": "v5.5", "instrumental": "OFF", "vocal_gender_toggle": "미사용(듀엣)", "duration": "Auto", "take": "곡당 2클립",
+    "제목": "실제 곡 제목 사용(아래 songs[].title — LEO 지적 ③ 반영)"
+  },
+  "세트_제목": "그대만 바라보며 (3곡 세트 — 코어 첫 행에서)",
+  "율격_검증": "코어 절=9/12/12/9(1·2연 완전 일치=같은 멜로디 구조)·후렴=10/13/15/14 실측 재현. 증량분 전행 음절수 아래 각 곡 lyrics_syllables에 열거 — '준수 서술' 아닌 숫자 실물.",
+
+  "songs": [
+    {
+      "no": 1,
+      "title": "그날도 오늘 같았죠",
+      "genre_label": "Musical Theatre Duet",
+      "adapter_축": "관계의 시작 — 장면·대사성(디에게시스)",
+      "sp": "Musical theatre duet with Broadway-style orchestration. Theatrical vocal projection with crisp diction and dramatic sustained notes; spoken dialogue scenes transition into song. Male baritone and female soprano trade lines in quick call-and-response, building to unison ensemble swells. Sweeping strings, bold brass fanfares, grand piano, timpani rolls. Scene changes shift dynamics from intimate dialogue to full ensemble. Warm theatre hall ambience. Celebratory, heartfelt mood. 82 BPM in D Major, 4/4 time signature.",
+      "sp_chars": 519,
+      "lyrics": "[Spoken Intro]\n(남) (spoken) 여보, 우리 처음 만나던 날 기억해요?\n(여) (spoken) 그럼요, 그날도 꼭 오늘 같았죠\n\n[Verse - Duet]\n(남) 떨리는 목소리로\n(여) 수줍은 눈빛으로\n(남) 그대 앞에 섰던 날\n(여) 내게 와준 그날\n\n[Male Vocal]\n(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[Female Vocal]\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Spoken Bridge]\n(여) (spoken) 그때 그 마음, 지금도 같아요?\n(남) (spoken) 아니요, 그때보다 더 커졌어요\n\n[Scene - Duet]\n(남) 박수 소리 가득했던 날\n(여) 눈물이 반짝거리던 날\n(남) 반지를 건네던 그 순간\n(여) 평생을 약속하던 순간\n(남녀 함께) 그날의 우리가 여기 서 있죠\n\n[Verse - Duet]\n(남녀 함께) 창밖에 계절이 쌓여도\n마주 잡은 손엔 온기가 남아요\n나란히 걷던 걸음 골목을 지나\n주름 위에 아침이 와요\n\n[Duet]\n(남녀 함께) 그 하루가 오늘까지 이어져 왔죠\n\n[Chorus - Duet]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Finale - Duet]\n(남녀 함께) 막이 내려도 우리 노래는 계속되죠",
+      "lyrics_syllables": {"교차연": [7,7,7,6], "결혼장면(남녀쌍)": "9=9, 9=9, 합11", "확장(절율격)": [9,12,12,9], "피날레": 14}
+    },
+    {
+      "no": 2,
+      "title": "그대 이름 하나만",
+      "genre_label": "Korean Ballad Duet",
+      "adapter_축": "결심의 응축 — 단선 점층",
+      "sp": "Korean ballad duet. Breathy, intimate vocal delivery with tender legato phrasing and warm resonance, close-mic softness in the verses. Male baritone and female soprano alternate verse by verse, uniting quietly in the chorus. Solo grand piano and cello foundation; strings swell gently from the second chorus, soft drums enter late. A quiet bridge sinks low before the soaring final chorus. Sincere, devoted, tearful mood. 64 BPM in C Major, 4/4 time signature.",
+      "sp_chars": 460,
+      "lyrics": "[Male Vocal]\n(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[Female Vocal]\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Chorus - Duet]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Verse - Duet]\n(남녀 함께) 흔들리는 날에도 알죠\n우리가 서로의 자리라는 것을\n말없이 기대어 쉴 곳 있다는 걸\n그거면 충분하니까요\n\n[Verse - Duet]\n(남녀 함께) 창밖에 계절이 쌓여도\n마주 잡은 손엔 온기가 남아요\n나란히 걷던 걸음 골목을 지나\n주름 위에 아침이 와요\n\n[Bridge - Duet]\n말하지 않아도 알죠\n그저 곁에 있으면 돼요\n이제 남은 모든 날에\n그대 이름 하나만\n\n[Final Chorus - Duet]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람",
+      "lyrics_syllables": {"신규벌스(절율격)": [9,12,12,9], "확장(절율격)": [9,12,12,9], "브리지(유지)": [8,9,8,7]}
+    },
+    {
+      "no": 3,
+      "title": "모든 것이 은혜였죠",
+      "genre_label": "Gospel Duet",
+      "adapter_축": "감사와 축복 — 주고받음·응창",
+      "sp": "Gospel duet with full choir. Powerful soulful vocals with expressive ad-libs and gospel phrasing - soul delivery, not operatic. Male and female leads trade lines in call-and-response over choir echoes; a vamp section builds repetition with hand claps and tambourine on the backbeat. Warm organ, piano, electric bass. The final chorus repeats with a key change lift into a choir-and-leads outro. Joyful, grateful, uplifting mood. 92 BPM in E-flat Major, 12/8 time signature.",
+      "sp_chars": 473,
+      "lyrics": "[Male Vocal]\n(남) 그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[Call and Response - Duet]\n(남) 이 만남은 선물이었죠\n(여) 감사해요 그 모든 시간\n(남) 우리 서 있는 자리마다\n(여) 축복이 내려와요\n(남녀 함께) 은혜로 여기까지 왔어요\n\n[Female Vocal]\n(여) 나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Verse - Duet]\n(남녀 함께) 창밖에 계절이 쌓여도\n마주 잡은 손엔 온기가 남아요\n나란히 걷던 걸음 골목을 지나\n주름 위에 아침이 와요\n\n[Chorus - Duet with Choir]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Vamp - Call and Response]\n(남) 받은 사랑 셀 수 없고\n(여) 받은 복도 셀 수 없어\n(남) 갚을 길이 없어서\n(여) 서로를 안았어요\n(남녀 함께) 이 노래로 감사를 드려요\n\n[Choir]\n은혜 위에 은혜\n축복 위에 축복\n\n[Key Change]\n\n[Final Chorus - Duet with Choir]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Outro - Call and Response]\n(여) 사랑해요 (남) 사랑해요 (ad-libs)\n(여) 고마워요 (남) 고마워요 (melismatic runs)\n(남녀 함께) 모든 것이 은혜였죠",
+      "lyrics_syllables": {"응답연(유지)": [9,9,9,7,10], "확장(절율격)": [9,12,12,9], "벤프(남녀쌍)": "8=8, 7=7, 합10", "콰이어브릿지": [6,6]}
+    }
+  ],
+  "장르분화_판별": "장르명 제거 후 SP 상호 대조 — 뮤지컬(spoken scenes·brass fanfares·timpani·scene changes·82BPM) / 발라드(breathy·close-mic·solo piano+cello·점층·64BPM) / 가스펠(choir echoes·vamp·hand claps·12/8·92BPM) — 발성·구조·편성·리듬·템포 전층 상이, 상호 구분 성립. operatic 태그=전곡 미사용(VD01 판정: 발성 문장 독립 기여 미검출·프레임 주도 — 분화를 프레임·편성으로 구현).",
+  "가사_차이_비율": "곡별 총행 대비 공통(코어12+확장4=16행): 뮤지컬 16/33=48% 공통 / 발라드 16/32=50% / 가스펠 16/40=40% — '차이 절반 가까이' 충족.",
+  "잠금검증": "코어 12행=3곡 전부 정본 원문 무변경. (남)/(여) 표기 유지(VD01 ㉰ 누출 0/6 확정으로 안전). 어댑터는 코어 앞뒤·사이에만."
+}
