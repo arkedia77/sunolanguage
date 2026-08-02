@@ -1,0 +1,17 @@
+{
+  "remake": "「그날도 오늘 같았죠」 재제작 v1.1 — LEO 직지시 + 코퍼스 규칙 교정판(LEO 세션 지적 08-03)",
+  "authored_by": "sunolanguage",
+  "created_at": "2026-08-03T00:55:00+0900",
+  "지시_이행": {
+    "①LEO_SP_수용": "원문 그대로 + ②듀엣 전환만 최소 수정(vocal 항목: 'soft male tenor' 단독 → 듀엣 문구). 그 외 한 글자 무변경.",
+    "③적용곡": "그날도 오늘 같았죠 (구 Musical Theatre Duet — 본 재제작판이 이 곡의 최신본)",
+    "④브라켓_코퍼스화": "★한글 표기 전폐 + 코퍼스 네이티브 서술형으로 — 1차안(명찰형 [Male Vocal]/(Male))은 LEO 세션 지적('그게 코퍼스 규칙 맞아?')로 실측 대조 후 폐기(코퍼스 0건). 확정=attested 서술형 브라켓만 사용(브라켓_정비_명세 참조). ★한글 가사 본문은 무변경(잠금 유지) — 화자 표기 (남)/(여)는 태그층 판단(kee §4)+LEO 지시 우선으로 브라켓층 이관."
+  },
+  "sp": "duet, Korean Post-Rock Lyric Ballad, 71 BPM, A major, Mid energy, vocal: duet of soft male tenor and warm clear female voice, trading verses and blending in the chorus, warm and wistful, floating over the arpeggios, lead: Nylon-string acoustic guitar plays a fingerstyle pattern with prominent fret noise and a warm, intimate tone, harmony: Subtle synth pads in the background, rhythm: Soft percussion with shaker, dry brushed snare, and soft kick lock into a simple backbeat on the off-beats, bass: Fretless bass provides melodic counterpoint with sliding transitions, color: Sparse acoustic arrangement with bright acoustic piano chordal stabs on the off-beats, drums: soft mallet toms swelling into slow rock backbeat",
+  "sp_chars": 720,
+  "sp_변경_명세": "vocal 항목만: 'soft male tenor, warm and wistful, floating over the arpeggios' → 'duet of soft male tenor and warm clear female voice, trading verses and blending in the chorus, warm and wistful, floating over the arpeggios'. 나머지 전 항목 LEO 원문 그대로.",
+  "lyrics": "[Intro]\n(spoken) 여보, 우리 처음 만나던 날 기억해요?\n(spoken) 그럼요, 그날도 꼭 오늘 같았죠\n\n[male and female vocals alternate lines, call-and-response]\n떨리는 목소리로\n수줍은 눈빛으로\n그대 앞에 섰던 날\n내게 와준 그날\n\n[male tenor vocals]\n그대만 바라보며 살께\n너 하나 바라보는 그런 낙으로\n웃으며 매일 네게 행복을 줄께\n너 하나만 바라보면서\n\n[breathy female vocals]\n나도 당신만 바라보며\n변함없는 미소만 안겨줄께요\n앞에서 끌어주고 뒤에서 밀며\n변함없는 사랑 줄께요\n\n[Bridge]\n(spoken) 그때 그 마음, 지금도 같아요?\n(spoken) 아니요, 그때보다 더 커졌어요\n\n[male and female vocals alternate lines]\n박수 소리 가득했던 날\n눈물이 반짝거리던 날\n반지를 건네던 그 순간\n평생을 약속하던 순간\n그날의 우리가 여기 서 있죠\n\n[unison male and female vocals]\n창밖에 계절이 쌓여도\n마주 잡은 손엔 온기가 남아요\n나란히 걷던 걸음 골목을 지나\n주름 위에 아침이 와요\n\n[Chorus]\n[unison male and female vocals, layered vocal harmonies]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Final Chorus]\n[full band enters, strings swell, belted vocals]\n사랑해요 그댈 사랑해요\n영원토록 아껴주며 사랑할께요\n고마워요 우린 서로밖에 모르잖아요\n그댄 고귀한 사람 세상 유일한 사람\n\n[Outro]\n[unison male and female vocals]\n막이 내려도 우리 노래는 계속되죠",
+  "브라켓_정비_명세": "★코퍼스 네이티브 서술형으로 전면 교정(명찰형 [Male Vocal]/(Male)류=코퍼스 0건 확인 후 폐기): [male tenor vocals](attested·LEO SP 'soft male tenor'와 정합)/[breathy female vocals](attested)/[unison male and female vocals](attested 실증 1건+unison 16)/[layered vocal harmonies](attested)/[full band enters, strings swell, belted vocals](attested 원문형)/[call-and-response](native 23)/(spoken)(DeadBudget 4/4)/[Intro][Bridge][Chorus][Final Chorus][Outro](섹션 표준). 행내 화자 명찰 0 — 교대는 브라켓 서술+SP duet 서술로 유도(VD01 A암서 서술만으로 가사-성부 매핑 5/6 실증). 한글 브라켓·한글 괄호 잔존 0. 한글 가사 본문 무변경.",
+  "파라미터": "v5.5·Instrumental OFF·Vocal Gender 미사용(듀엣)·Duration Auto·2클립·off-DB·제목='그날도 오늘 같았죠'",
+  "타곡_범위": "지시 곡 1곡만. 발라드·가스펠 2곡은 v2.3 그대로(재생성 진행 중) — 영어 브라켓 확장 여부는 본 재제작 결과 보고 시 병기"
+}
