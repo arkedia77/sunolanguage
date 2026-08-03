@@ -71,10 +71,13 @@ Write 모드 More Options에 `[Male|Female]` 토글 등장. 단 **소프트큐 �
 | **가사 인라인 AI** | 가사 선택→Variations/Rhymes/Reference, 크레딧 0. 코퍼스 증량에 활용(V_BATCH1 1,027행) | [실측] |
 | **곡 관리** | 공개/비공개·삭제(20개 배치)·플레이리스트 | [실측] |
 | **메타 수정** | 제목·태그·표시 프롬프트. 단 **표시 수정일 뿐 재가창 아님**(재가창=infill/cover) | [실측] |
-| **Replace section(infill)** | 구간 교체 (Studio) | [미확인, 실전 미사용] |
+| **Replace section(infill)** | 구간 교체. ★API 확정: `POST /api/generate/v2-web/` `task='fixed_infill'`(+`continue_clip_id`·`infill_context_start_s`·`infill_start_s`·`prompt`·`tags`·`mv`) → 200 수락·클립 생성. **단 임의 섹션 파라미터는 `submitted` 정체**(~4분 미렌더·크레딧 미소진) → 유효 섹션경계/`stem_condition` 필요 추정. UI Studio 타임라인은 별도 경로 | [부분실측·API확정 08-03] |
 | **Remaster** | 3개 모델(chirp-flounder v5.5 / carp v5 / bass v4.5+) 전부 `can_use:false`. ★사유 확정: `free_remasters_remaining=0` — **티어 조건이 아니라 카운트 조건**(Premier도 무료분 소진 시 불가). 규명 종결 | [실측·종결] |
 | **비디오** | `POST /api/video/generate/{clip_id}/` →204 → `GET .../status/` processing→complete(~10~20초) → `cdn1.suno.ai/{clip}.mp4`. **기존 곡에 영상 부착**(신규 생성 아님)·크레딧 ≤10 | [실측 08-03] |
-| **Mashup/Voices** | 진입점 확인, 실생성 미실행 (Voices는 `free_vox_gens_remaining=0` 관측 — Remaster와 같은 카운트 게이트 가능성) | [부분확인] |
+| **Voices (Create a Voice, Beta)** | 진입점 존재. 한도 `voice_record_limits{10~240s}` / `voice_upload_limits{10~900s}`. 전용 vox API 없음(persona만 accessible). ★`free_vox_gens_remaining=0` — **Remaster와 동형 카운트 게이트**로 확정 | [게이트·미실행 08-03] |
+| **Mashup / Sample pack** | Sample: `generate_sample_pack` POST **404**. Mashup: `v4.5-all`(chirp-auk-turbo) 전용·UI ⋯→Remix▸ 2곡 피커. **표준 generate 스키마에 mashup task 미노출** → 실생성은 Radix 메뉴 JS dispatch UI 자동화(Advanced Split급) 필요 | [미실행·경로확인 08-03] |
+
+★**카운트 게이트 기능군** — Remaster(`free_remasters_remaining=0`)·Voices(`free_vox_gens_remaining=0`)가 같은 패턴이다. **티어가 아니라 무료 카운트 소진**이 잠금 사유이므로, "Premier인데 왜 안 되나"로 오진하지 말 것. 진단 순서 = `billing/info`의 `free_*_remaining` 먼저.
 
 ## 7.3 운영 제약
 
@@ -91,11 +94,13 @@ Write 모드 More Options에 `[Male|Female]` 토글 등장. 단 **소프트큐 �
 - 기능 변화는 전부 UI/워크플로: 07-09 Lyrics 에디터 개편, 07-20 Duration 슬라이더 신설.
 - 언어(어휘) 변화는 별개 축 — v5.5 자동 pump-up modulation(1장), `key change` 신규 어휘 등은 기존 장 참조.
 
-## 7.5 업로드 → 분석 (코퍼스 수집 경로) — v2 보류분
+## 7.5 업로드 → 분석 (코퍼스 수집 경로) [실측 2026-08-03]
 
-sunomusic v2 회신에서 정합 대조 예정. 현재 우리 측 기보유 실측만 요약:
 - 재분석 파이프라인: **1분 컷 → Suno 앱 업로드 → 분석 프롬프트 수집**(4값 세트).
-- **저작권 차단**: 유명 원곡은 사전 차단. ★자기 생성곡 재업로드도 content-ID 유사배치로 차단됨 — 원본데이터 판정으로 우회.
+- ★**정정 — "1분 컷"은 우리 자체 관행이지 하드 한도가 아니다.** 실측 `audio_upload_limits = {min: 6, max: 1800}`초(**30분**), `long_uploads` feature 활성. 업로드 경로 = `/api/uploads/audio/` (init → upload-finish → initialize-clip).
+  → 수집 단위를 1분에 묶어둔 근거가 **없다.** 곡 전체(≤30분) 업로드 시 Suno 분석이 어떻게 달라지는지는 **미검증** — 코퍼스 확장의 열린 레버다(§7.7 후속 후보).
+- 음성(voice) 계열은 별도 한도: record 10~240s / upload 10~900s.
+- **저작권 차단**: 유명 원곡은 사전 차단. ★자기 생성곡 재업로드도 content-ID 유사배치로 차단됨 — 원본데이터 판정으로 우회. (content-ID 차단 거동 재현은 저작권 감수성으로 미시도 — **우리 기보유 코퍼스가 이 항목의 정본**이고, sunomusic 실측분은 위 한도 수치만 반영.)
 
 ## 7.6 기능과 언어의 경계 — 이 장의 위치
 
