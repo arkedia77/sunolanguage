@@ -39,6 +39,8 @@ Create 화면 드롭다운에서 6종 선택 가능 (2026-07-07 billing 실측):
 
 Write 모드 More Options에 `[Male|Female]` 토글 등장. 단 **소프트큐 드리프트 선례 있음** — 토글+SP 하드 명시를 병행하는 것이 실운영 관행이다. 그래도 못 잡는 경우가 5장 4층(프라이어 종속): 가사 정서·에너지가 만드는 프라이어는 토글로도 못 뚫는다.
 
+→ 화자·듀엣 지시의 표기 문법과 실패 기전(코퍼스 편중 4.3:1·명찰형 데드존)은 **`docs/duet_bracket_grammar_v1.md` 정본** 참조. 위 `Exclude styles`가 이 붕괴의 파라미터층 대응 후보이나 **성별 A/B 미실시**.
+
 ### Duration 슬라이더 [실측 2026-07-23, 24클립]
 
 07-20 신설. More Options → `Duration [Custom|Auto]` → 범위 **10~360초**, 기본 180초.
@@ -51,9 +53,11 @@ Write 모드 More Options에 `[Male|Female]` 토글 등장. 단 **소프트큐 �
 
 ### 나머지
 
-- **Weirdness / Style Influence 슬라이더** [부분확인] — 존재·위치 확인, 값별 정량 실측은 v2 대기.
+- **Weirdness / Style Influence 슬라이더** [실측 2026-08-03, 10클립] — 둘 다 `aria-label`·0~100·기본 50, More Options 내. 세팅은 JS focus + CDP ArrowRight/Left(스텝 1) — **Home/End 무효**로 Duration 슬라이더와 동일 조작 규약. Weirdness 0/25/50/75/100 스윕(Style Influence 50 고정) 5점×2클립 전건 확보. **어휘 델타(귀측) 판정은 미실시.**
 - **Persona** [실측] — persona_id 지정, 5개 페르소나 운용 중.
-- **Exclude styles** [미사용] — UI 존재하나 실운영은 SP 양성 서술로 제어(5장 negative 지시 데드존과 일관된 선택).
+- **Exclude styles** [실측 2026-08-03] ★**정정** — 종전 "[미사용]·SP 양성 서술로 제어" 판단을 뒤집는다. 필드는 `INPUT[type=text]`(placeholder `Exclude styles`, More Options)이고, **입력값이 clip metadata `negative_tags`로 전달·저장**된다(`accessible_features`에 활성).
+  → ★**5장 negative 데드존의 경계가 좁혀졌다**: 데드존인 것은 **SP 산문 안의 부정 서술**(`no female vocals` 0건 비네이티브)이지, **부정 그 자체가 아니다.** 부정에는 **전용 채널**이 따로 있다.
+  A/B 대조 확보(동일 SP `saxophone solo` 명시·동일 가사, exclude만 차등 / OFF 2클립 · ON `saxophone, brass, horn` 2클립, negative_tags 저장 확인). **음향 억제 실효는 귀측 청취 판정 대기.**
 
 ## 7.2 생성 후 기능
 
@@ -68,8 +72,9 @@ Write 모드 More Options에 `[Male|Female]` 토글 등장. 단 **소프트큐 �
 | **곡 관리** | 공개/비공개·삭제(20개 배치)·플레이리스트 | [실측] |
 | **메타 수정** | 제목·태그·표시 프롬프트. 단 **표시 수정일 뿐 재가창 아님**(재가창=infill/cover) | [실측] |
 | **Replace section(infill)** | 구간 교체 (Studio) | [미확인, 실전 미사용] |
-| **Remaster** | 전용 모델 전부 can_use:false | [미확인] |
-| **Mashup/Voices/비디오** | 진입점 확인, 실생성 미실행 | [부분확인/미확인] |
+| **Remaster** | 3개 모델(chirp-flounder v5.5 / carp v5 / bass v4.5+) 전부 `can_use:false`. ★사유 확정: `free_remasters_remaining=0` — **티어 조건이 아니라 카운트 조건**(Premier도 무료분 소진 시 불가). 규명 종결 | [실측·종결] |
+| **비디오** | `POST /api/video/generate/{clip_id}/` →204 → `GET .../status/` processing→complete(~10~20초) → `cdn1.suno.ai/{clip}.mp4`. **기존 곡에 영상 부착**(신규 생성 아님)·크레딧 ≤10 | [실측 08-03] |
+| **Mashup/Voices** | 진입점 확인, 실생성 미실행 (Voices는 `free_vox_gens_remaining=0` 관측 — Remaster와 같은 카운트 게이트 가능성) | [부분확인] |
 
 ## 7.3 운영 제약
 
@@ -77,7 +82,8 @@ Write 모드 More Options에 `[Male|Female]` 토글 등장. 단 **소프트큐 �
 - **크레딧**: 수치는 실시간 조회 원칙(하드코딩 금지). Stems Advanced Split 20cr/곡이 대표 비용.
 - **산출물 접근**: `cdn1.suno.ai/{uuid}.mp3`(청음 공유 표준 — suno.com 페이지 링크는 `<audio>` 재생 불가). wav 변환 트리거 후 폴링. MP3 ID3 코멘트에 UUID 내장(역매칭 가능).
 - **처리 속도**: 곡당 ~130초(렌더 대기 포함), 직렬 처리.
-- **알려진 리스크**: 공식 셀프서브 API 부재(비공개 파트너 프로그램만) / WMG 다운로드 캡 예고(07-22까지 미시행 — 다운로드 급감 시 원인 1순위 후보) / 특수문자 제목의 silent no-submit 의심 사례.
+- **알려진 리스크**: 공식 셀프서브 API 부재(비공개 파트너 프로그램만) / WMG 다운로드 캡 예고(07-22까지 미시행 — 다운로드 급감 시 원인 1순위 후보).
+- **특수문자 제목 no-submit 의심 = [기각] 2026-08-03** — `ā/ē/ō` 포함 제목(`Tēst Ā Bōa`) 정상 Create·2클립·제목 그대로 저장. K3012 70037의 silent no-submit은 **diacritics 원인이 아니다**(다른 요인·전이적 이슈). 안전 문자셋 = 라틴 확장 diacritics 포함 정상. 이모지·CJK 확장은 미검증.
 
 ## 7.4 버전 변화 (v5.0 → v5.5, 기능 관점)
 
