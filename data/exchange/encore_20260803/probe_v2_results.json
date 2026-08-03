@@ -1,0 +1,1415 @@
+{
+ "as_of": "2026-08-03",
+ "design": "v2 confound-split",
+ "label_source": "design_intent",
+ "excerpt_s": 60,
+ "n_clips": 70,
+ "errors": [],
+ "batch_diversity": {
+  "hip-hop": 9,
+  "ballad": 4,
+  "city pop": 5,
+  "piano ballad": 10,
+  "synth pop": 8,
+  "korean ballad": 8,
+  "trot": 5
+ },
+ "summary": {
+  "centroid": {
+   "F_genre": 4.844686748343957,
+   "F_batch_within_genre_median": 2.1374955130676985,
+   "n_genres_testable_for_batch": 5,
+   "F_balladfam": 9.967965371771934,
+   "per_genre": {
+    "ballad": {
+     "mean": 2499.45,
+     "sd": 541.15,
+     "n": 10
+    },
+    "city pop": {
+     "mean": 2344.88,
+     "sd": 415.15,
+     "n": 10
+    },
+    "hip-hop": {
+     "mean": 2340.76,
+     "sd": 507.1,
+     "n": 10
+    },
+    "korean ballad": {
+     "mean": 1837.82,
+     "sd": 213.13,
+     "n": 10
+    },
+    "piano ballad": {
+     "mean": 1833.62,
+     "sd": 322.03,
+     "n": 10
+    },
+    "synth pop": {
+     "mean": 2256.22,
+     "sd": 397.09,
+     "n": 10
+    },
+    "trot": {
+     "mean": 2645.13,
+     "sd": 604.06,
+     "n": 10
+    }
+   }
+  },
+  "rolloff85": {
+   "F_genre": 5.385117990520614,
+   "F_batch_within_genre_median": 2.2969367362549438,
+   "n_genres_testable_for_batch": 5,
+   "F_balladfam": 11.907188612561585,
+   "per_genre": {
+    "ballad": {
+     "mean": 5455.34,
+     "sd": 1134.09,
+     "n": 10
+    },
+    "city pop": {
+     "mean": 5179.87,
+     "sd": 978.2,
+     "n": 10
+    },
+    "hip-hop": {
+     "mean": 5051.5,
+     "sd": 1165.0,
+     "n": 10
+    },
+    "korean ballad": {
+     "mean": 3818.72,
+     "sd": 523.77,
+     "n": 10
+    },
+    "piano ballad": {
+     "mean": 3888.55,
+     "sd": 772.72,
+     "n": 10
+    },
+    "synth pop": {
+     "mean": 4963.12,
+     "sd": 771.64,
+     "n": 10
+    },
+    "trot": {
+     "mean": 5630.88,
+     "sd": 1305.94,
+     "n": 10
+    }
+   }
+  },
+  "hp_ratio": {
+   "F_genre": 20.522950728850486,
+   "F_batch_within_genre_median": 1.0288978798498287,
+   "n_genres_testable_for_batch": 5,
+   "F_balladfam": 19.90460828800857,
+   "per_genre": {
+    "ballad": {
+     "mean": 3.64,
+     "sd": 2.2,
+     "n": 10
+    },
+    "city pop": {
+     "mean": 3.52,
+     "sd": 1.01,
+     "n": 10
+    },
+    "hip-hop": {
+     "mean": 2.41,
+     "sd": 0.87,
+     "n": 10
+    },
+    "korean ballad": {
+     "mean": 14.45,
+     "sd": 5.4,
+     "n": 10
+    },
+    "piano ballad": {
+     "mean": 14.6,
+     "sd": 5.05,
+     "n": 10
+    },
+    "synth pop": {
+     "mean": 6.01,
+     "sd": 4.88,
+     "n": 10
+    },
+    "trot": {
+     "mean": 4.16,
+     "sd": 3.11,
+     "n": 10
+    }
+   }
+  },
+  "dr_db": {
+   "F_genre": 10.659493880029276,
+   "F_batch_within_genre_median": 2.981803074789724,
+   "n_genres_testable_for_batch": 5,
+   "F_balladfam": 11.522542907776192,
+   "per_genre": {
+    "ballad": {
+     "mean": 12.96,
+     "sd": 3.76,
+     "n": 10
+    },
+    "city pop": {
+     "mean": 10.91,
+     "sd": 2.44,
+     "n": 10
+    },
+    "hip-hop": {
+     "mean": 12.77,
+     "sd": 3.81,
+     "n": 10
+    },
+    "korean ballad": {
+     "mean": 19.25,
+     "sd": 2.43,
+     "n": 10
+    },
+    "piano ballad": {
+     "mean": 18.4,
+     "sd": 3.22,
+     "n": 10
+    },
+    "synth pop": {
+     "mean": 12.35,
+     "sd": 4.0,
+     "n": 10
+    },
+    "trot": {
+     "mean": 11.2,
+     "sd": 3.06,
+     "n": 10
+    }
+   }
+  },
+  "contrast": {
+   "F_genre": 10.460136331191418,
+   "F_batch_within_genre_median": 1.7221077073832127,
+   "n_genres_testable_for_batch": 5,
+   "F_balladfam": 5.70978876964813,
+   "per_genre": {
+    "ballad": {
+     "mean": 25.01,
+     "sd": 0.95,
+     "n": 10
+    },
+    "city pop": {
+     "mean": 24.08,
+     "sd": 0.47,
+     "n": 10
+    },
+    "hip-hop": {
+     "mean": 23.86,
+     "sd": 0.95,
+     "n": 10
+    },
+    "korean ballad": {
+     "mean": 25.68,
+     "sd": 0.61,
+     "n": 10
+    },
+    "piano ballad": {
+     "mean": 26.0,
+     "sd": 0.29,
+     "n": 10
+    },
+    "synth pop": {
+     "mean": 24.04,
+     "sd": 0.9,
+     "n": 10
+    },
+    "trot": {
+     "mean": 25.06,
+     "sd": 1.23,
+     "n": 10
+    }
+   }
+  },
+  "zcr": {
+   "F_genre": 2.984115354333951,
+   "F_batch_within_genre_median": 2.162822167505286,
+   "n_genres_testable_for_batch": 5,
+   "F_balladfam": 5.416240017965302,
+   "per_genre": {
+    "ballad": {
+     "mean": 0.1,
+     "sd": 0.03,
+     "n": 10
+    },
+    "city pop": {
+     "mean": 0.09,
+     "sd": 0.02,
+     "n": 10
+    },
+    "hip-hop": {
+     "mean": 0.09,
+     "sd": 0.02,
+     "n": 10
+    },
+    "korean ballad": {
+     "mean": 0.07,
+     "sd": 0.01,
+     "n": 10
+    },
+    "piano ballad": {
+     "mean": 0.07,
+     "sd": 0.02,
+     "n": 10
+    },
+    "synth pop": {
+     "mean": 0.08,
+     "sd": 0.02,
+     "n": 10
+    },
+    "trot": {
+     "mean": 0.11,
+     "sd": 0.03,
+     "n": 10
+    }
+   }
+  },
+  "onset_density": {
+   "F_genre": 10.089292885172217,
+   "F_batch_within_genre_median": 1.6169666535010998,
+   "n_genres_testable_for_batch": 5,
+   "F_balladfam": 7.255823533916582,
+   "per_genre": {
+    "ballad": {
+     "mean": 3.15,
+     "sd": 0.68,
+     "n": 10
+    },
+    "city pop": {
+     "mean": 3.74,
+     "sd": 0.48,
+     "n": 10
+    },
+    "hip-hop": {
+     "mean": 3.67,
+     "sd": 0.56,
+     "n": 10
+    },
+    "korean ballad": {
+     "mean": 2.43,
+     "sd": 0.62,
+     "n": 10
+    },
+    "piano ballad": {
+     "mean": 2.12,
+     "sd": 0.57,
+     "n": 10
+    },
+    "synth pop": {
+     "mean": 3.42,
+     "sd": 0.54,
+     "n": 10
+    },
+    "trot": {
+     "mean": 3.26,
+     "sd": 0.79,
+     "n": 10
+    }
+   }
+  },
+  "bpm": {
+   "F_genre": 4.726083138717248,
+   "F_batch_within_genre_median": 0.8139368277704548,
+   "n_genres_testable_for_batch": 5,
+   "F_balladfam": 2.841413954679965,
+   "per_genre": {
+    "ballad": {
+     "mean": 121.06,
+     "sd": 32.45,
+     "n": 10
+    },
+    "city pop": {
+     "mean": 109.85,
+     "sd": 16.21,
+     "n": 10
+    },
+    "hip-hop": {
+     "mean": 109.59,
+     "sd": 31.84,
+     "n": 10
+    },
+    "korean ballad": {
+     "mean": 141.47,
+     "sd": 6.54,
+     "n": 10
+    },
+    "piano ballad": {
+     "mean": 135.78,
+     "sd": 8.67,
+     "n": 10
+    },
+    "synth pop": {
+     "mean": 104.68,
+     "sd": 15.92,
+     "n": 10
+    },
+    "trot": {
+     "mean": 124.56,
+     "sd": 13.75,
+     "n": 10
+    }
+   }
+  }
+ },
+ "rows": [
+  {
+   "centroid": 2937.127765107626,
+   "rolloff85": 6529.748015507087,
+   "hp_ratio": 1.2765947580337524,
+   "dr_db": 12.6485013961792,
+   "contrast": 23.468605972474204,
+   "zcr": 0.1128073299632353,
+   "onset_density": 4.183333333333334,
+   "bpm": 92.28515625,
+   "genre_design": "hip-hop",
+   "uuid": "bb697342",
+   "batch": "B118",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 3115.133810449698,
+   "rolloff85": 6726.492659152476,
+   "hp_ratio": 1.6901171207427979,
+   "dr_db": 9.886055946350098,
+   "contrast": 24.033788909832854,
+   "zcr": 0.12718460508175308,
+   "onset_density": 3.95,
+   "bpm": 92.28515625,
+   "genre_design": "hip-hop",
+   "uuid": "4c23cc1b",
+   "batch": "B118",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2147.908714767532,
+   "rolloff85": 4386.656807819756,
+   "hp_ratio": 4.092061996459961,
+   "dr_db": 16.34416961669922,
+   "contrast": 25.70537062513475,
+   "zcr": 0.08884054367018189,
+   "onset_density": 2.9,
+   "bpm": 135.99917763157896,
+   "genre_design": "hip-hop",
+   "uuid": "0c96f21f",
+   "batch": "B011",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1835.3000957707638,
+   "rolloff85": 3926.4262574375966,
+   "hp_ratio": 2.4923181533813477,
+   "dr_db": 10.353067398071289,
+   "contrast": 23.168582121069264,
+   "zcr": 0.0591330513496517,
+   "onset_density": 4.083333333333333,
+   "bpm": 95.703125,
+   "genre_design": "hip-hop",
+   "uuid": "fda5c1c1",
+   "batch": "B012",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2488.455367733237,
+   "rolloff85": 5140.498082778033,
+   "hp_ratio": 2.0342209339141846,
+   "dr_db": 9.086548805236816,
+   "contrast": 22.958067958282815,
+   "zcr": 0.09956855892027863,
+   "onset_density": 3.7333333333333334,
+   "bpm": 89.10290948275862,
+   "genre_design": "hip-hop",
+   "uuid": "8724b336",
+   "batch": "B021",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1815.7569602403305,
+   "rolloff85": 3816.5310886253146,
+   "hp_ratio": 2.3430004119873047,
+   "dr_db": 13.047359466552734,
+   "contrast": 22.564268281550987,
+   "zcr": 0.05453236110439241,
+   "onset_density": 3.7,
+   "bpm": 86.1328125,
+   "genre_design": "hip-hop",
+   "uuid": "9c3c0275",
+   "batch": "B024",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1662.9050513931973,
+   "rolloff85": 3727.1649623433873,
+   "hp_ratio": 1.6071562767028809,
+   "dr_db": 19.989063262939453,
+   "contrast": 23.78368494651039,
+   "zcr": 0.0584930325440209,
+   "onset_density": 2.933333333333333,
+   "bpm": 80.74951171875,
+   "genre_design": "hip-hop",
+   "uuid": "6fbf9e23",
+   "batch": "B033",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2181.8718957550836,
+   "rolloff85": 4459.143869500411,
+   "hp_ratio": 2.087337017059326,
+   "dr_db": 17.086261749267578,
+   "contrast": 24.714016785319394,
+   "zcr": 0.08572453832478716,
+   "onset_density": 2.8833333333333333,
+   "bpm": 172.265625,
+   "genre_design": "hip-hop",
+   "uuid": "b4af7c0c",
+   "batch": "B101",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2349.3058497850698,
+   "rolloff85": 5435.008801912007,
+   "hp_ratio": 3.116701602935791,
+   "dr_db": 9.848186492919922,
+   "contrast": 23.50464165569616,
+   "zcr": 0.08066561199932276,
+   "onset_density": 3.8833333333333333,
+   "bpm": 99.38401442307692,
+   "genre_design": "hip-hop",
+   "uuid": "4214ca8c",
+   "batch": "B102",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2873.8139270337188,
+   "rolloff85": 6367.344830870259,
+   "hp_ratio": 3.3301782608032227,
+   "dr_db": 9.456253051757812,
+   "contrast": 24.677457479220873,
+   "zcr": 0.10805017807904412,
+   "onset_density": 4.4,
+   "bpm": 151.99908088235293,
+   "genre_design": "hip-hop",
+   "uuid": "f5e3ca05",
+   "batch": "B104",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2355.781977351534,
+   "rolloff85": 5525.820752784563,
+   "hp_ratio": 4.489476680755615,
+   "dr_db": 10.196643829345703,
+   "contrast": 25.747475858566112,
+   "zcr": 0.0723807036692144,
+   "onset_density": 4.066666666666666,
+   "bpm": 129.19921875,
+   "genre_design": "ballad",
+   "uuid": "a5d01c6e",
+   "batch": "N005",
+   "source_project": "sunolanguage",
+   "src": "cdn"
+  },
+  {
+   "centroid": 3091.268136882651,
+   "rolloff85": 6648.197299260473,
+   "hp_ratio": 2.9427123069763184,
+   "dr_db": 12.522302627563477,
+   "contrast": 24.92190006026349,
+   "zcr": 0.13627903232633515,
+   "onset_density": 3.433333333333333,
+   "bpm": 103.359375,
+   "genre_design": "ballad",
+   "uuid": "ad67a2dd",
+   "batch": "N005",
+   "source_project": "sunolanguage",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2398.2000292395524,
+   "rolloff85": 5181.268669577206,
+   "hp_ratio": 1.4360097646713257,
+   "dr_db": 16.378910064697266,
+   "contrast": 24.654192153221913,
+   "zcr": 0.09372448995017414,
+   "onset_density": 4.083333333333333,
+   "bpm": 112.34714673913044,
+   "genre_design": "ballad",
+   "uuid": "96a87c6d",
+   "batch": "N004",
+   "source_project": "sunolanguage",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2343.507672196354,
+   "rolloff85": 5389.021579990446,
+   "hp_ratio": 6.940331935882568,
+   "dr_db": 16.18624496459961,
+   "contrast": 26.012344620733234,
+   "zcr": 0.0860212107560952,
+   "onset_density": 2.5,
+   "bpm": 135.99917763157896,
+   "genre_design": "ballad",
+   "uuid": "7052ae60",
+   "batch": "N004",
+   "source_project": "sunolanguage",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1619.417597078636,
+   "rolloff85": 3705.1900952224023,
+   "hp_ratio": 5.1022210121154785,
+   "dr_db": 15.601395606994629,
+   "contrast": 25.25797418718784,
+   "zcr": 0.05209019900106424,
+   "onset_density": 2.533333333333333,
+   "bpm": 64.599609375,
+   "genre_design": "ballad",
+   "uuid": "80ec26f2",
+   "batch": "N006",
+   "source_project": "sunolanguage",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2062.796271453014,
+   "rolloff85": 4342.277909506216,
+   "hp_ratio": 7.310909271240234,
+   "dr_db": 17.214601516723633,
+   "contrast": 26.268061717438417,
+   "zcr": 0.07982189072174922,
+   "onset_density": 2.1666666666666665,
+   "bpm": 135.99917763157896,
+   "genre_design": "ballad",
+   "uuid": "b43c5f38",
+   "batch": "N006",
+   "source_project": "sunolanguage",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1979.6141249083787,
+   "rolloff85": 4197.028787807783,
+   "hp_ratio": 1.5736706256866455,
+   "dr_db": 15.657938957214355,
+   "contrast": 25.39099454961383,
+   "zcr": 0.08003768684694272,
+   "onset_density": 2.5166666666666666,
+   "bpm": 86.1328125,
+   "genre_design": "ballad",
+   "uuid": "d01ab515",
+   "batch": "B033",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 3288.819596467658,
+   "rolloff85": 7127.986064710115,
+   "hp_ratio": 2.847930908203125,
+   "dr_db": 8.240303993225098,
+   "contrast": 24.55586167505538,
+   "zcr": 0.14042110856472523,
+   "onset_density": 3.4166666666666665,
+   "bpm": 129.19921875,
+   "genre_design": "ballad",
+   "uuid": "3d8ab58c",
+   "batch": "B033",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2877.1087769252176,
+   "rolloff85": 5885.931075246711,
+   "hp_ratio": 1.6129772663116455,
+   "dr_db": 6.842550277709961,
+   "contrast": 23.073282144837222,
+   "zcr": 0.13572442494678794,
+   "onset_density": 3.2666666666666666,
+   "bpm": 129.19921875,
+   "genre_design": "ballad",
+   "uuid": "656b8fff",
+   "batch": "N005",
+   "source_project": "sunolanguage",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2978.0033801343307,
+   "rolloff85": 6550.639555845467,
+   "hp_ratio": 2.1909172534942627,
+   "dr_db": 10.725699424743652,
+   "contrast": 24.17304840195059,
+   "zcr": 0.1283952931501548,
+   "onset_density": 3.533333333333333,
+   "bpm": 184.5703125,
+   "genre_design": "ballad",
+   "uuid": "ffc7f2f8",
+   "batch": "N005",
+   "source_project": "sunolanguage",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2822.620343796906,
+   "rolloff85": 6379.940588038772,
+   "hp_ratio": 2.4856112003326416,
+   "dr_db": 10.245095252990723,
+   "contrast": 23.497423910423585,
+   "zcr": 0.10613408989212461,
+   "onset_density": 3.95,
+   "bpm": 112.34714673913044,
+   "genre_design": "city pop",
+   "uuid": "ae7a1602",
+   "batch": "B105",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2020.186594841044,
+   "rolloff85": 4358.4819781890965,
+   "hp_ratio": 2.9554495811462402,
+   "dr_db": 15.59382438659668,
+   "contrast": 24.375249977226506,
+   "zcr": 0.07643188854489164,
+   "onset_density": 3.3,
+   "bpm": 92.28515625,
+   "genre_design": "city pop",
+   "uuid": "a843a932",
+   "batch": "B105",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2125.4307755805257,
+   "rolloff85": 4620.901224709148,
+   "hp_ratio": 3.49643874168396,
+   "dr_db": 9.173223495483398,
+   "contrast": 23.265364633452766,
+   "zcr": 0.07348443849167957,
+   "onset_density": 3.5,
+   "bpm": 103.359375,
+   "genre_design": "city pop",
+   "uuid": "63849b6c",
+   "batch": "B108",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2566.3111772001785,
+   "rolloff85": 5650.411666067023,
+   "hp_ratio": 2.398167848587036,
+   "dr_db": 12.380083084106445,
+   "contrast": 23.930603175424924,
+   "zcr": 0.09987373470152863,
+   "onset_density": 4.566666666666666,
+   "bpm": 103.359375,
+   "genre_design": "city pop",
+   "uuid": "b55fc9cc",
+   "batch": "B108",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2796.3396343933714,
+   "rolloff85": 6094.050650109448,
+   "hp_ratio": 2.169330358505249,
+   "dr_db": 13.572946548461914,
+   "contrast": 23.950033663764213,
+   "zcr": 0.11818579328318499,
+   "onset_density": 4.366666666666666,
+   "bpm": 107.666015625,
+   "genre_design": "city pop",
+   "uuid": "b22ca092",
+   "batch": "B109",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1801.8596852739995,
+   "rolloff85": 3965.6135204775783,
+   "hp_ratio": 4.645770072937012,
+   "dr_db": 9.126982688903809,
+   "contrast": 24.535794680959935,
+   "zcr": 0.05538553054856811,
+   "onset_density": 3.5,
+   "bpm": 117.45383522727273,
+   "genre_design": "city pop",
+   "uuid": "2d580e47",
+   "batch": "B109",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2223.7184777673565,
+   "rolloff85": 4823.150001738462,
+   "hp_ratio": 4.805126667022705,
+   "dr_db": 7.5446295738220215,
+   "contrast": 24.064782222834655,
+   "zcr": 0.0764316995815596,
+   "onset_density": 3.8666666666666667,
+   "bpm": 103.359375,
+   "genre_design": "city pop",
+   "uuid": "e638da42",
+   "batch": "B102",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2761.7532847811185,
+   "rolloff85": 6150.212810504548,
+   "hp_ratio": 3.7385780811309814,
+   "dr_db": 11.755467414855957,
+   "contrast": 23.868938428373234,
+   "zcr": 0.10462313908910603,
+   "onset_density": 3.533333333333333,
+   "bpm": 151.99908088235293,
+   "genre_design": "city pop",
+   "uuid": "884468da",
+   "batch": "B102",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1735.965140315747,
+   "rolloff85": 3782.0812969384915,
+   "hp_ratio": 4.865738391876221,
+   "dr_db": 10.664474487304688,
+   "contrast": 24.54332645614309,
+   "zcr": 0.0636043017124613,
+   "onset_density": 3.783333333333333,
+   "bpm": 103.359375,
+   "genre_design": "city pop",
+   "uuid": "bcb9d3ed",
+   "batch": "B104",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2594.5917930395244,
+   "rolloff85": 5973.88471006978,
+   "hp_ratio": 3.653517723083496,
+   "dr_db": 8.994028091430664,
+   "contrast": 24.732506422648903,
+   "zcr": 0.0931239644809404,
+   "onset_density": 2.9833333333333334,
+   "bpm": 103.359375,
+   "genre_design": "city pop",
+   "uuid": "c7f48ede",
+   "batch": "B104",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1594.4860946661568,
+   "rolloff85": 3258.9802933920278,
+   "hp_ratio": 16.8659610748291,
+   "dr_db": 17.798078536987305,
+   "contrast": 25.778518007586626,
+   "zcr": 0.06051815257352941,
+   "onset_density": 1.5666666666666667,
+   "bpm": 135.99917763157896,
+   "genre_design": "piano ballad",
+   "uuid": "a3d9fe60",
+   "batch": "B018",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1761.3302930914176,
+   "rolloff85": 3978.7342744715074,
+   "hp_ratio": 13.21830940246582,
+   "dr_db": 13.02023696899414,
+   "contrast": 26.001136438568643,
+   "zcr": 0.05042184174245356,
+   "onset_density": 3.2666666666666666,
+   "bpm": 123.046875,
+   "genre_design": "piano ballad",
+   "uuid": "fd1c2b06",
+   "batch": "B125",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1374.8581413817194,
+   "rolloff85": 2963.6779123784586,
+   "hp_ratio": 20.292226791381836,
+   "dr_db": 19.1112060546875,
+   "contrast": 26.073650322506786,
+   "zcr": 0.052324324569465945,
+   "onset_density": 1.45,
+   "bpm": 151.99908088235293,
+   "genre_design": "piano ballad",
+   "uuid": "d2414f2e",
+   "batch": "B127",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1845.93189150473,
+   "rolloff85": 3933.326215714493,
+   "hp_ratio": 5.060497283935547,
+   "dr_db": 19.14179039001465,
+   "contrast": 25.43767396983036,
+   "zcr": 0.07128263774671052,
+   "onset_density": 1.95,
+   "bpm": 135.99917763157896,
+   "genre_design": "piano ballad",
+   "uuid": "450f82dc",
+   "batch": "B159",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1673.5817421925778,
+   "rolloff85": 3647.6321099343313,
+   "hp_ratio": 22.14260482788086,
+   "dr_db": 16.2185115814209,
+   "contrast": 26.406699448179044,
+   "zcr": 0.06603607083252709,
+   "onset_density": 1.8666666666666667,
+   "bpm": 129.19921875,
+   "genre_design": "piano ballad",
+   "uuid": "5e1b166e",
+   "batch": "B197",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1958.1046042904807,
+   "rolloff85": 4212.95369151207,
+   "hp_ratio": 15.745024681091309,
+   "dr_db": 21.23503875732422,
+   "contrast": 25.99086229190234,
+   "zcr": 0.0867536326310952,
+   "onset_density": 1.8666666666666667,
+   "bpm": 143.5546875,
+   "genre_design": "piano ballad",
+   "uuid": "593192c3",
+   "batch": "B201",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2499.143823524651,
+   "rolloff85": 5501.795898059573,
+   "hp_ratio": 8.624711990356445,
+   "dr_db": 18.30382537841797,
+   "contrast": 26.267223427055512,
+   "zcr": 0.1064723342564822,
+   "onset_density": 1.8166666666666667,
+   "bpm": 143.5546875,
+   "genre_design": "piano ballad",
+   "uuid": "c3586bab",
+   "batch": "B204",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1539.1009320916535,
+   "rolloff85": 2857.9202185474314,
+   "hp_ratio": 14.312588691711426,
+   "dr_db": 23.826467514038086,
+   "contrast": 25.757377273783195,
+   "zcr": 0.06310430473587461,
+   "onset_density": 2.566666666666667,
+   "bpm": 129.19921875,
+   "genre_design": "piano ballad",
+   "uuid": "fc10985a",
+   "batch": "B220",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2032.0619911180136,
+   "rolloff85": 4271.728336109834,
+   "hp_ratio": 16.36161231994629,
+   "dr_db": 20.77162742614746,
+   "contrast": 26.298269275458765,
+   "zcr": 0.08119225280572756,
+   "onset_density": 2.066666666666667,
+   "bpm": 129.19921875,
+   "genre_design": "piano ballad",
+   "uuid": "93bbfb4c",
+   "batch": "B222",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2057.5738945807584,
+   "rolloff85": 4258.786747699182,
+   "hp_ratio": 13.360528945922852,
+   "dr_db": 14.548497200012207,
+   "contrast": 26.003905714320993,
+   "zcr": 0.08639479126354489,
+   "onset_density": 2.7333333333333334,
+   "bpm": 135.99917763157896,
+   "genre_design": "piano ballad",
+   "uuid": "0b3f623b",
+   "batch": "B225",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2656.616224246323,
+   "rolloff85": 5731.265343822562,
+   "hp_ratio": 5.496252059936523,
+   "dr_db": 15.94509506225586,
+   "contrast": 25.404622532940092,
+   "zcr": 0.1016292040562113,
+   "onset_density": 3.7666666666666666,
+   "bpm": 83.35433467741936,
+   "genre_design": "synth pop",
+   "uuid": "dec30bd0",
+   "batch": "B037",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2331.933444329034,
+   "rolloff85": 5344.363516698311,
+   "hp_ratio": 15.945175170898438,
+   "dr_db": 18.084415435791016,
+   "contrast": 24.4448750173539,
+   "zcr": 0.08285418531104877,
+   "onset_density": 2.816666666666667,
+   "bpm": 95.703125,
+   "genre_design": "synth pop",
+   "uuid": "93c95cab",
+   "batch": "B037",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1785.4499380515215,
+   "rolloff85": 3957.305237383296,
+   "hp_ratio": 6.497685432434082,
+   "dr_db": 8.749007225036621,
+   "contrast": 24.180807116092414,
+   "zcr": 0.06419689072174922,
+   "onset_density": 3.3,
+   "bpm": 117.45383522727273,
+   "genre_design": "synth pop",
+   "uuid": "e3676326",
+   "batch": "B102",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2027.8781249521173,
+   "rolloff85": 4615.7179227185325,
+   "hp_ratio": 3.4098849296569824,
+   "dr_db": 14.570584297180176,
+   "contrast": 23.610972026671657,
+   "zcr": 0.07586046342879257,
+   "onset_density": 3.433333333333333,
+   "bpm": 99.38401442307692,
+   "genre_design": "synth pop",
+   "uuid": "6db82def",
+   "batch": "B102",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2443.8247791335793,
+   "rolloff85": 5565.553845857319,
+   "hp_ratio": 3.630885124206543,
+   "dr_db": 8.406563758850098,
+   "contrast": 22.617637055909473,
+   "zcr": 0.08873566902089783,
+   "onset_density": 4.1,
+   "bpm": 99.38401442307692,
+   "genre_design": "synth pop",
+   "uuid": "de2d76fc",
+   "batch": "B021",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2111.030719961971,
+   "rolloff85": 4691.288299088139,
+   "hp_ratio": 5.800042629241943,
+   "dr_db": 7.7134246826171875,
+   "contrast": 23.656095955127117,
+   "zcr": 0.07318701020704334,
+   "onset_density": 4.466666666666667,
+   "bpm": 95.703125,
+   "genre_design": "synth pop",
+   "uuid": "b3acae0b",
+   "batch": "B024",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2280.452631979967,
+   "rolloff85": 4804.108450213453,
+   "hp_ratio": 1.4178038835525513,
+   "dr_db": 17.86932373046875,
+   "contrast": 23.829216558855883,
+   "zcr": 0.09219993378724846,
+   "onset_density": 3.1,
+   "bpm": 86.1328125,
+   "genre_design": "synth pop",
+   "uuid": "b03c858e",
+   "batch": "B059",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1760.525358414437,
+   "rolloff85": 3922.3762819272447,
+   "hp_ratio": 13.301375389099121,
+   "dr_db": 8.917850494384766,
+   "contrast": 25.55504266624579,
+   "zcr": 0.055381751281927245,
+   "onset_density": 2.8833333333333333,
+   "bpm": 129.19921875,
+   "genre_design": "synth pop",
+   "uuid": "b9cd33ed",
+   "batch": "B103",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2100.5068766134063,
+   "rolloff85": 4671.917582886876,
+   "hp_ratio": 3.0007338523864746,
+   "dr_db": 11.86129093170166,
+   "contrast": 23.38459545132155,
+   "zcr": 0.06997217703898993,
+   "onset_density": 3.216666666666667,
+   "bpm": 117.45383522727273,
+   "genre_design": "synth pop",
+   "uuid": "75c9222a",
+   "batch": "B107",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 3063.9931612161067,
+   "rolloff85": 6327.345072743325,
+   "hp_ratio": 1.60358726978302,
+   "dr_db": 11.377649307250977,
+   "contrast": 23.707361697869477,
+   "zcr": 0.13659856932082043,
+   "onset_density": 3.1166666666666667,
+   "bpm": 123.046875,
+   "genre_design": "synth pop",
+   "uuid": "2f116d1e",
+   "batch": "BONBANG01",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1575.191286003974,
+   "rolloff85": 2973.9320170399574,
+   "hp_ratio": 13.790252685546875,
+   "dr_db": 19.564355850219727,
+   "contrast": 25.515297207016495,
+   "zcr": 0.06823824950416021,
+   "onset_density": 3.4,
+   "bpm": 151.99908088235293,
+   "genre_design": "korean ballad",
+   "uuid": "f85d9ef1",
+   "batch": "K001",
+   "source_project": "leomusic2",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2092.6324958912583,
+   "rolloff85": 4197.678783877346,
+   "hp_ratio": 12.04725170135498,
+   "dr_db": 20.15646743774414,
+   "contrast": 26.55815642936845,
+   "zcr": 0.08731126342395511,
+   "onset_density": 2.8666666666666667,
+   "bpm": 143.5546875,
+   "genre_design": "korean ballad",
+   "uuid": "75ba7617",
+   "batch": "K001",
+   "source_project": "leomusic2",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1776.4730365392315,
+   "rolloff85": 4015.4590524017995,
+   "hp_ratio": 11.723549842834473,
+   "dr_db": 17.712581634521484,
+   "contrast": 26.212506506820002,
+   "zcr": 0.06501774743614551,
+   "onset_density": 2.2,
+   "bpm": 143.5546875,
+   "genre_design": "korean ballad",
+   "uuid": "192c8c91",
+   "batch": "K024",
+   "source_project": "leomusic2",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1520.9493871568266,
+   "rolloff85": 3270.42189087292,
+   "hp_ratio": 22.291425704956055,
+   "dr_db": 18.028385162353516,
+   "contrast": 26.43683682109432,
+   "zcr": 0.05893690741099071,
+   "onset_density": 1.8833333333333333,
+   "bpm": 135.99917763157896,
+   "genre_design": "korean ballad",
+   "uuid": "00345f64",
+   "batch": "K024",
+   "source_project": "leomusic2",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1899.7733851244307,
+   "rolloff85": 4044.2672115361356,
+   "hp_ratio": 19.435379028320312,
+   "dr_db": 16.274967193603516,
+   "contrast": 25.513227129036927,
+   "zcr": 0.07036937796294504,
+   "onset_density": 2.533333333333333,
+   "bpm": 143.5546875,
+   "genre_design": "korean ballad",
+   "uuid": "c04e0f3d",
+   "batch": "B103",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1974.426619368187,
+   "rolloff85": 4133.808336759868,
+   "hp_ratio": 6.9797163009643555,
+   "dr_db": 16.715852737426758,
+   "contrast": 25.6066651657801,
+   "zcr": 0.08113934307275542,
+   "onset_density": 3.2,
+   "bpm": 135.99917763157896,
+   "genre_design": "korean ballad",
+   "uuid": "8a83ac7c",
+   "batch": "B108",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2176.832367338479,
+   "rolloff85": 4747.246294051132,
+   "hp_ratio": 15.767535209655762,
+   "dr_db": 24.378509521484375,
+   "contrast": 24.528910275508135,
+   "zcr": 0.08258226707623839,
+   "onset_density": 2.5833333333333335,
+   "bpm": 151.99908088235293,
+   "genre_design": "korean ballad",
+   "uuid": "f84c950c",
+   "batch": "B109",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1656.6013046192634,
+   "rolloff85": 3342.888119346217,
+   "hp_ratio": 21.486671447753906,
+   "dr_db": 19.095985412597656,
+   "contrast": 25.819074101433507,
+   "zcr": 0.06196957992695434,
+   "onset_density": 1.7166666666666666,
+   "bpm": 135.99917763157896,
+   "genre_design": "korean ballad",
+   "uuid": "2d20dc62",
+   "batch": "B115",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1848.4600800522712,
+   "rolloff85": 3826.231029971096,
+   "hp_ratio": 7.027867794036865,
+   "dr_db": 21.827491760253906,
+   "contrast": 25.15705725640722,
+   "zcr": 0.0764273534249226,
+   "onset_density": 2.3666666666666667,
+   "bpm": 135.99917763157896,
+   "genre_design": "korean ballad",
+   "uuid": "068837ab",
+   "batch": "B122",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1856.9085262395965,
+   "rolloff85": 3635.315517744413,
+   "hp_ratio": 13.927680015563965,
+   "dr_db": 18.774383544921875,
+   "contrast": 25.47628986905896,
+   "zcr": 0.07937726000145123,
+   "onset_density": 1.5333333333333334,
+   "bpm": 135.99917763157896,
+   "genre_design": "korean ballad",
+   "uuid": "8535e0f6",
+   "batch": "B133",
+   "source_project": "leomusic",
+   "src": "cdn"
+  },
+  {
+   "centroid": 1503.4959924066536,
+   "rolloff85": 3093.643793159225,
+   "hp_ratio": 4.588143825531006,
+   "dr_db": 14.160449981689453,
+   "contrast": 26.265733351130336,
+   "zcr": 0.05414177389705882,
+   "onset_density": 2.716666666666667,
+   "bpm": 99.38401442307692,
+   "genre_design": "trot",
+   "uuid": "c3d10080",
+   "batch": "Y017",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2075.0647925456105,
+   "rolloff85": 4392.594271916723,
+   "hp_ratio": 10.456101417541504,
+   "dr_db": 12.100080490112305,
+   "contrast": 26.633475596107793,
+   "zcr": 0.08048628579721362,
+   "onset_density": 2.033333333333333,
+   "bpm": 135.99917763157896,
+   "genre_design": "trot",
+   "uuid": "e791e947",
+   "batch": "Y017",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2692.6221466766265,
+   "rolloff85": 6016.980282810081,
+   "hp_ratio": 1.7800027132034302,
+   "dr_db": 9.990960121154785,
+   "contrast": 24.209913482247707,
+   "zcr": 0.10161994485294118,
+   "onset_density": 3.65,
+   "bpm": 117.45383522727273,
+   "genre_design": "trot",
+   "uuid": "862587fa",
+   "batch": "Y018",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2914.2708573904256,
+   "rolloff85": 5980.509670009554,
+   "hp_ratio": 2.661048650741577,
+   "dr_db": 5.083054542541504,
+   "contrast": 23.61270800836165,
+   "zcr": 0.1316641698311726,
+   "onset_density": 3.95,
+   "bpm": 135.99917763157896,
+   "genre_design": "trot",
+   "uuid": "ae13dba6",
+   "batch": "Y018",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 3020.009417537331,
+   "rolloff85": 6386.528048205302,
+   "hp_ratio": 1.5714462995529175,
+   "dr_db": 11.879253387451172,
+   "contrast": 23.689532522904486,
+   "zcr": 0.12133259965170279,
+   "onset_density": 3.433333333333333,
+   "bpm": 103.359375,
+   "genre_design": "trot",
+   "uuid": "cd9e83c7",
+   "batch": "Y019",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2038.2550128039954,
+   "rolloff85": 4242.732678109278,
+   "hp_ratio": 5.437551021575928,
+   "dr_db": 11.091972351074219,
+   "contrast": 26.638825146582864,
+   "zcr": 0.07851067416070047,
+   "onset_density": 2.283333333333333,
+   "bpm": 135.99917763157896,
+   "genre_design": "trot",
+   "uuid": "29180ce3",
+   "batch": "Y019",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2632.7100272928133,
+   "rolloff85": 5760.731832309404,
+   "hp_ratio": 8.506808280944824,
+   "dr_db": 10.583209991455078,
+   "contrast": 26.209964190940145,
+   "zcr": 0.10654810855263158,
+   "onset_density": 2.6,
+   "bpm": 135.99917763157896,
+   "genre_design": "trot",
+   "uuid": "038a6e99",
+   "batch": "Y020",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 3523.3369583111134,
+   "rolloff85": 7318.405746601684,
+   "hp_ratio": 1.5754821300506592,
+   "dr_db": 8.527643203735352,
+   "contrast": 24.68419735553246,
+   "zcr": 0.15127686302728327,
+   "onset_density": 4.25,
+   "bpm": 129.19921875,
+   "genre_design": "trot",
+   "uuid": "013b4b7a",
+   "batch": "Y020",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 3099.8895646296814,
+   "rolloff85": 6668.634675678454,
+   "hp_ratio": 2.6892199516296387,
+   "dr_db": 12.27564811706543,
+   "contrast": 24.38848806402293,
+   "zcr": 0.12277684639851007,
+   "onset_density": 4.116666666666666,
+   "bpm": 129.19921875,
+   "genre_design": "trot",
+   "uuid": "b3bb25df",
+   "batch": "Y021",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  },
+  {
+   "centroid": 2951.6753632677733,
+   "rolloff85": 6447.9985098351635,
+   "hp_ratio": 2.302105188369751,
+   "dr_db": 16.343366622924805,
+   "contrast": 24.22839581976045,
+   "zcr": 0.11702631427776702,
+   "onset_density": 3.55,
+   "bpm": 123.046875,
+   "genre_design": "trot",
+   "uuid": "43beed50",
+   "batch": "Y021",
+   "source_project": "yoonnest",
+   "src": "cdn"
+  }
+ ]
+}
