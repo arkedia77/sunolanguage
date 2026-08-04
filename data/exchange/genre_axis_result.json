@@ -1,0 +1,435 @@
+{
+ "as_of": "2026-08-04",
+ "owner": "sunolanguage",
+ "purpose": "encore 16그룹의 '머리 vs 수식' 축 분리를 양 모집단에서 검정 (표본 독립성 확인)",
+ "metric": "co_head_pct = 그 그룹에 걸린 라벨 중 다른 그룹 패턴에도 동시 적중하는 비율",
+ "modifier_cut_pct": 60.0,
+ "population_A_encore_design_intent": {
+  "n_clips_declared": "sunomusic aware_clip_index_20260803 (5,754클립)",
+  "n_label_types": 734,
+  "per_group": {
+   "indie_pop": {
+    "n": 427,
+    "co_head_pct": 76.8,
+    "top_co_with": {
+     "pop_general": 176,
+     "folk_acoustic": 85,
+     "rock": 54,
+     "ballad": 23
+    }
+   },
+   "classical": {
+    "n": 202,
+    "co_head_pct": 73.8,
+    "top_co_with": {
+     "pop_general": 54,
+     "ballad": 38,
+     "ost_score": 36,
+     "folk_acoustic": 20
+    }
+   },
+   "folk_acoustic": {
+    "n": 508,
+    "co_head_pct": 66.7,
+    "top_co_with": {
+     "pop_general": 143,
+     "indie_pop": 85,
+     "ballad": 60,
+     "classical": 20
+    }
+   },
+   "kpop": {
+    "n": 295,
+    "co_head_pct": 61.7,
+    "top_co_with": {
+     "trot": 51,
+     "ballad": 46,
+     "rock": 31,
+     "rnb_soul": 22
+    }
+   },
+   "jazz": {
+    "n": 296,
+    "co_head_pct": 55.1,
+    "top_co_with": {
+     "pop_general": 75,
+     "hiphop_rap": 33,
+     "ballad": 25,
+     "trot": 15
+    }
+   },
+   "pop_general": {
+    "n": 1676,
+    "co_head_pct": 54.8,
+    "top_co_with": {
+     "indie_pop": 176,
+     "folk_acoustic": 143,
+     "electronic": 123,
+     "rock": 96
+    }
+   },
+   "ballad": {
+    "n": 510,
+    "co_head_pct": 53.5,
+    "top_co_with": {
+     "folk_acoustic": 60,
+     "pop_general": 54,
+     "rnb_soul": 47,
+     "kpop": 46
+    }
+   },
+   "ambient_lofi": {
+    "n": 320,
+    "co_head_pct": 51.6,
+    "top_co_with": {
+     "pop_general": 68,
+     "hiphop_rap": 42,
+     "rnb_soul": 23,
+     "folk_acoustic": 12
+    }
+   },
+   "ost_score": {
+    "n": 144,
+    "co_head_pct": 45.8,
+    "top_co_with": {
+     "classical": 36,
+     "ballad": 20,
+     "rock": 6,
+     "folk_acoustic": 4
+    }
+   },
+   "electronic": {
+    "n": 500,
+    "co_head_pct": 43.8,
+    "top_co_with": {
+     "pop_general": 123,
+     "trot": 48,
+     "indie_pop": 10,
+     "ambient_lofi": 8
+    }
+   },
+   "rock": {
+    "n": 467,
+    "co_head_pct": 39.2,
+    "top_co_with": {
+     "pop_general": 96,
+     "indie_pop": 54,
+     "kpop": 31,
+     "ballad": 15
+    }
+   },
+   "hiphop_rap": {
+    "n": 362,
+    "co_head_pct": 39.0,
+    "top_co_with": {
+     "ambient_lofi": 42,
+     "jazz": 33,
+     "pop_general": 24,
+     "kpop": 18
+    }
+   },
+   "world_latin": {
+    "n": 114,
+    "co_head_pct": 36.8,
+    "top_co_with": {
+     "pop_general": 21,
+     "trot": 10,
+     "jazz": 5,
+     "rnb_soul": 2
+    }
+   },
+   "rnb_soul": {
+    "n": 493,
+    "co_head_pct": 33.1,
+    "top_co_with": {
+     "pop_general": 56,
+     "ballad": 47,
+     "ambient_lofi": 23,
+     "kpop": 22
+    }
+   },
+   "trot": {
+    "n": 1006,
+    "co_head_pct": 17.9,
+    "top_co_with": {
+     "pop_general": 61,
+     "kpop": 51,
+     "electronic": 48,
+     "ballad": 18
+    }
+   },
+   "citypop": {
+    "n": 154,
+    "co_head_pct": 14.3,
+    "top_co_with": {
+     "kpop": 14,
+     "pop_general": 14,
+     "trot": 6,
+     "rock": 2
+    }
+   }
+  }
+ },
+ "population_B_sunolang_observed": {
+  "n_songs": 454,
+  "per_group": {
+   "indie_pop": {
+    "n": 105,
+    "co_head_pct": 100.0,
+    "top_co_with": {
+     "pop_general": 66,
+     "ballad": 43,
+     "folk_acoustic": 39,
+     "kpop": 23
+    }
+   },
+   "rnb_soul": {
+    "n": 64,
+    "co_head_pct": 100.0,
+    "top_co_with": {
+     "pop_general": 61,
+     "kpop": 60,
+     "ballad": 43,
+     "hiphop_rap": 6
+    }
+   },
+   "folk_acoustic": {
+    "n": 67,
+    "co_head_pct": 100.0,
+    "top_co_with": {
+     "ballad": 49,
+     "pop_general": 40,
+     "indie_pop": 39,
+     "kpop": 28
+    }
+   },
+   "citypop": {
+    "n": 23,
+    "co_head_pct": 100.0,
+    "top_co_with": {
+     "pop_general": 23,
+     "kpop": 22,
+     "indie_pop": 2,
+     "jazz": 2
+    }
+   },
+   "ambient_lofi": {
+    "n": 7,
+    "co_head_pct": 100.0,
+    "top_co_with": {
+     "hiphop_rap": 4,
+     "pop_general": 3,
+     "indie_pop": 2,
+     "kpop": 1
+    }
+   },
+   "ost_score": {
+    "n": 7,
+    "co_head_pct": 100.0,
+    "top_co_with": {
+     "classical": 7,
+     "electronic": 1,
+     "folk_acoustic": 1
+    }
+   },
+   "world_latin": {
+    "n": 1,
+    "co_head_pct": 100.0,
+    "top_co_with": {
+     "electronic": 1,
+     "pop_general": 1
+    }
+   },
+   "ballad": {
+    "n": 215,
+    "co_head_pct": 98.6,
+    "top_co_with": {
+     "pop_general": 176,
+     "kpop": 171,
+     "folk_acoustic": 49,
+     "indie_pop": 43
+    }
+   },
+   "electronic": {
+    "n": 16,
+    "co_head_pct": 93.8,
+    "top_co_with": {
+     "pop_general": 14,
+     "kpop": 13,
+     "ost_score": 1,
+     "classical": 1
+    }
+   },
+   "rock": {
+    "n": 55,
+    "co_head_pct": 92.7,
+    "top_co_with": {
+     "pop_general": 49,
+     "kpop": 39,
+     "ballad": 11,
+     "indie_pop": 8
+    }
+   },
+   "pop_general": {
+    "n": 378,
+    "co_head_pct": 87.8,
+    "top_co_with": {
+     "ballad": 176,
+     "indie_pop": 66,
+     "rnb_soul": 61,
+     "rock": 49
+    }
+   },
+   "classical": {
+    "n": 8,
+    "co_head_pct": 87.5,
+    "top_co_with": {
+     "ost_score": 7,
+     "electronic": 1,
+     "folk_acoustic": 1
+    }
+   },
+   "hiphop_rap": {
+    "n": 30,
+    "co_head_pct": 86.7,
+    "top_co_with": {
+     "kpop": 20,
+     "pop_general": 20,
+     "rnb_soul": 6,
+     "ambient_lofi": 4
+    }
+   },
+   "kpop": {
+    "n": 326,
+    "co_head_pct": 85.6,
+    "top_co_with": {
+     "ballad": 171,
+     "rnb_soul": 60,
+     "rock": 39,
+     "folk_acoustic": 28
+    }
+   },
+   "jazz": {
+    "n": 36,
+    "co_head_pct": 75.0,
+    "top_co_with": {
+     "pop_general": 23,
+     "kpop": 15,
+     "ballad": 10,
+     "indie_pop": 10
+    }
+   }
+  }
+ },
+ "rank_consistency": {
+  "groups_compared": [
+   "indie_pop",
+   "classical",
+   "folk_acoustic",
+   "kpop",
+   "jazz",
+   "pop_general",
+   "ballad",
+   "electronic",
+   "rock",
+   "hiphop_rap",
+   "rnb_soul",
+   "citypop"
+  ],
+  "rank_encore": [
+   "indie_pop",
+   "classical",
+   "folk_acoustic",
+   "kpop",
+   "jazz",
+   "pop_general",
+   "ballad",
+   "electronic",
+   "rock",
+   "hiphop_rap",
+   "rnb_soul",
+   "citypop"
+  ],
+  "rank_observed": [
+   "indie_pop",
+   "folk_acoustic",
+   "rnb_soul",
+   "citypop",
+   "ballad",
+   "electronic",
+   "rock",
+   "pop_general",
+   "classical",
+   "hiphop_rap",
+   "kpop",
+   "jazz"
+  ],
+  "top_half_overlap": "2/6"
+ },
+ "modifier_like_groups": {
+  "in_encore_population": [
+   "classical",
+   "folk_acoustic",
+   "indie_pop",
+   "kpop"
+  ],
+  "in_observed_population": [
+   "ballad",
+   "citypop",
+   "classical",
+   "electronic",
+   "folk_acoustic",
+   "hiphop_rap",
+   "indie_pop",
+   "jazz",
+   "kpop",
+   "pop_general",
+   "rnb_soul",
+   "rock"
+  ],
+  "in_both": [
+   "classical",
+   "folk_acoustic",
+   "indie_pop",
+   "kpop"
+  ]
+ },
+ "HYPOTHESIS_REJECTED": {
+  "hypothesis": "16그룹은 '장르 머리'와 '수식 슬롯' 두 축으로 갈린다 (ballad=형식슬롯 등)",
+  "verdict": "기각 — 표본 독립성 없음",
+  "evidence": [
+   "상위절반 순위 겹침 2/6 — 두 모집단에서 순위가 재현되지 않음",
+   "관측 모집단에서 12그룹 중 11그룹이 co_head 75%↑로 포화 → 변별력 없음",
+   "co_head_pct는 라벨 길이(복합성)를 재는 것이지 그룹의 '수식성'을 재는 것이 아님"
+  ],
+  "note": "split.py의 'ballad=형식슬롯' 잠정 결론도 이 기각에 함께 걸린다. ballad 98.6% 동시보유는 참이지만, 그것만으로 ballad를 '형식축'이라 부를 근거는 못 된다 — 관측 라벨은 어느 그룹이든 동시보유율이 높기 때문."
+ },
+ "SURVIVING_FINDING_compoundness": {
+  "metric": "라벨 하나가 담은 '스팬 비겹침 장르 그룹' 개수",
+  "encore_design_intent": {
+   "n": 5268,
+   "multi_genre_pct": 30.9,
+   "genres_per_label_dist": {
+    "0": 138,
+    "1": 3501,
+    "2": 1553,
+    "3": 76
+   },
+   "mean_genres_per_label": 1.3
+  },
+  "sunolang_observed": {
+   "n": 454,
+   "multi_genre_pct": 85.0,
+   "genres_per_label_dist": {
+    "1": 68,
+    "2": 218,
+    "3": 164,
+    "4": 4
+   },
+   "mean_genres_per_label": 2.23
+  },
+  "gap": "복합라벨 비율 설계 30.9% vs 관측 85.0%",
+  "implication": "encore v0의 '선언순서 첫일치 단일배정'은 설계 라벨에는 대체로 무해하나 관측 라벨에는 구조적으로 정보를 버린다. 어댑터는 단일배정이 아니라 다중배정(집합)이어야 한다. 이건 축 유형론 없이도 성립."
+ },
+ "caveat": "co_head_pct·복합성 모두 encore v0 정규식에 종속된 지표다. 패턴이 바뀌면 값도 바뀐다. 절대치가 아니라 두 층(설계/관측) 간 상대 비교로만 읽을 것."
+}

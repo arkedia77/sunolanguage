@@ -1,0 +1,416 @@
+{
+ "as_of": "2026-08-04",
+ "owner": "sunolanguage",
+ "purpose": "encore genre_design_normalize_v0를 sunolang 관측층(Suno 재분석 SP)에 대조",
+ "encore_input_ref": {
+  "version": "v0",
+  "label_source": "design_intent (SP 지정값 — 관측 아님)",
+  "coverage_pct": 91.6,
+  "n_rules": 16
+ },
+ "sunolang_source": {
+  "db": "data/reanalysis_v2/lexical_index.sqlite",
+  "label_source": "suno_sp_full 재분석 원문의 genre 문장 (관측)",
+  "requested_label_source": "entries.genre (design_intent)"
+ },
+ "M1_coverage_on_observed": {
+  "n_songs_observed_label": 454,
+  "group_counts": {
+   "ballad": 215,
+   "kpop": 56,
+   "rock": 42,
+   "hiphop_rap": 29,
+   "citypop": 22,
+   "jazz": 20,
+   "indie_pop": 17,
+   "rnb_soul": 15,
+   "folk_acoustic": 14,
+   "electronic": 13,
+   "ost_score": 7,
+   "ambient_lofi": 2,
+   "classical": 1,
+   "world_latin": 1
+  },
+  "unmapped_pct": 0.0,
+  "coverage_pct": 100.0,
+  "encore_coverage_pct_on_design_intent": 91.6,
+  "unmapped_examples": {}
+ },
+ "M2_requested_to_observed_drift": {
+  "n_pairs": 441,
+  "n_with_requested_sp_text": 383,
+  "agreement_pct": 27.2,
+  "top_drift_transitions": [
+   {
+    "from": "folk_acoustic",
+    "to": "ballad",
+    "n": 30
+   },
+   {
+    "from": "rnb_soul",
+    "to": "ballad",
+    "n": 22
+   },
+   {
+    "from": "electronic",
+    "to": "ballad",
+    "n": 20
+   },
+   {
+    "from": "indie_pop",
+    "to": "ballad",
+    "n": 16
+   },
+   {
+    "from": "electronic",
+    "to": "kpop",
+    "n": 15
+   },
+   {
+    "from": "citypop",
+    "to": "ballad",
+    "n": 12
+   },
+   {
+    "from": "pop_general",
+    "to": "ballad",
+    "n": 11
+   },
+   {
+    "from": "ambient_lofi",
+    "to": "ballad",
+    "n": 10
+   },
+   {
+    "from": "rock",
+    "to": "ballad",
+    "n": 10
+   },
+   {
+    "from": "ballad",
+    "to": "kpop",
+    "n": 6
+   },
+   {
+    "from": "jazz",
+    "to": "ballad",
+    "n": 6
+   },
+   {
+    "from": "kpop",
+    "to": "ballad",
+    "n": 6
+   },
+   {
+    "from": "trot",
+    "to": "ballad",
+    "n": 6
+   }
+  ],
+  "retention_by_requested_group": {
+   "ballad": {
+    "kept": 55,
+    "n": 71,
+    "pct": 77.5
+   },
+   "electronic": {
+    "kept": 6,
+    "n": 55,
+    "pct": 10.9
+   },
+   "folk_acoustic": {
+    "kept": 6,
+    "n": 52,
+    "pct": 11.5
+   },
+   "rnb_soul": {
+    "kept": 3,
+    "n": 38,
+    "pct": 7.9
+   },
+   "rock": {
+    "kept": 16,
+    "n": 38,
+    "pct": 42.1
+   },
+   "indie_pop": {
+    "kept": 4,
+    "n": 37,
+    "pct": 10.8
+   },
+   "citypop": {
+    "kept": 5,
+    "n": 23,
+    "pct": 21.7
+   },
+   "pop_general": {
+    "kept": 0,
+    "n": 21,
+    "pct": 0.0
+   },
+   "jazz": {
+    "kept": 7,
+    "n": 20,
+    "pct": 35.0
+   },
+   "ambient_lofi": {
+    "kept": 0,
+    "n": 17,
+    "pct": 0.0
+   },
+   "hiphop_rap": {
+    "kept": 10,
+    "n": 17,
+    "pct": 58.8
+   },
+   "kpop": {
+    "kept": 5,
+    "n": 16,
+    "pct": 31.2
+   },
+   "unmapped": {
+    "kept": 0,
+    "n": 14,
+    "pct": 0.0
+   },
+   "trot": {
+    "kept": 0,
+    "n": 11,
+    "pct": 0.0
+   },
+   "ost_score": {
+    "kept": 2,
+    "n": 6,
+    "pct": 33.3
+   },
+   "classical": {
+    "kept": 0,
+    "n": 4,
+    "pct": 0.0
+   },
+   "world_latin": {
+    "kept": 1,
+    "n": 1,
+    "pct": 100.0
+   }
+  }
+ },
+ "M3_observed_label_grammar": {
+  "n_labels": 454,
+  "slot_hit_counts": {
+   "influence": 85,
+   "voice": 68,
+   "groove": 11,
+   "function": 4
+  },
+  "slot_hit_pct": {
+   "influence": 18.7,
+   "voice": 15.0,
+   "groove": 2.4,
+   "function": 0.9
+  },
+  "k_scene_prefix_n": 421,
+  "k_scene_prefix_pct": 92.7,
+  "distinct_raw_labels": 226,
+  "distinct_cores": 171,
+  "top_cores": {
+   "k-pop ballad": 94,
+   "k-pop r&b ballad": 24,
+   "k-indie folk ballad": 20,
+   "k-pop": 17,
+   "k-pop ballad with r&b influences": 15,
+   "k-indie pop": 15,
+   "k-pop acoustic ballad": 13,
+   "k-pop funk-pop": 11,
+   "k-indie ballad": 9,
+   "k-pop indie pop": 8,
+   "bossa nova": 6,
+   "k-pop rock": 5,
+   "k-pop and synth-pop": 4,
+   "k-rock": 4,
+   "k-pop funk and disco": 4,
+   "k-pop ballad with synth-pop elements": 4,
+   "k-indie pop ballad": 4,
+   "k-pop r&b track": 3,
+   "k-indie folk pop": 3,
+   "k-ballad": 3,
+   "k-indie acoustic ballad": 3,
+   "k-pop hip-hop track": 3,
+   "k-pop ballad with acoustic pop elements": 3,
+   "k-pop pop track": 3,
+   "k-pop, city pop": 3
+  },
+  "decomposition_examples": [
+   {
+    "song_id": 2,
+    "raw": "K-Pop ballad with jazz-pop and soul influences",
+    "core": "K-Pop ballad",
+    "slots": {
+     "influence": "with jazz-pop and soul influences"
+    }
+   },
+   {
+    "song_id": 21,
+    "raw": "K-Hip Hop with a boom bap influence",
+    "core": "K-Hip Hop",
+    "slots": {
+     "influence": "with a boom bap influence"
+    }
+   },
+   {
+    "song_id": 22,
+    "raw": "K-Pop R&B track featuring a male vocalist",
+    "core": "K-Pop R&B track",
+    "slots": {
+     "voice": "featuring a male vocalist"
+    }
+   },
+   {
+    "song_id": 31,
+    "raw": "K-Pop and synth-pop fusion featuring male vocals",
+    "core": "K-Pop",
+    "slots": {
+     "voice": "featuring male vocals",
+     "influence": "and synth-pop fusion"
+    }
+   },
+   {
+    "song_id": 41,
+    "raw": "K-Pop and J-Pop fusion with elements of City Pop and Funk",
+    "core": "K-Pop with elements of City Pop and Funk",
+    "slots": {
+     "influence": "and J-Pop fusion"
+    }
+   },
+   {
+    "song_id": 42,
+    "raw": "K-Pop ballad with acoustic folk influences",
+    "core": "K-Pop ballad",
+    "slots": {
+     "influence": "with acoustic folk influences"
+    }
+   },
+   {
+    "song_id": 52,
+    "raw": "K-Pop Indie Pop with a light funk influence",
+    "core": "K-Pop Indie Pop",
+    "slots": {
+     "influence": "with a light funk influence"
+    }
+   },
+   {
+    "song_id": 61,
+    "raw": "K-Indie pop with a mid-tempo groove",
+    "core": "K-Indie pop groove",
+    "slots": {
+     "groove": "with a mid-tempo"
+    }
+   },
+   {
+    "song_id": 71,
+    "raw": "Indie pop with a funk-influenced groove",
+    "core": "Indie pop",
+    "slots": {
+     "groove": "with a funk-influenced groove"
+    }
+   },
+   {
+    "song_id": 92,
+    "raw": "K-Pop ballad featuring a male baritone vocal",
+    "core": "K-Pop ballad",
+    "slots": {
+     "voice": "featuring a male baritone vocal"
+    }
+   },
+   {
+    "song_id": 122,
+    "raw": "K-Pop ballad featuring a baritone male vocal",
+    "core": "K-Pop ballad",
+    "slots": {
+     "voice": "featuring a baritone male vocal"
+    }
+   },
+   {
+    "song_id": 123,
+    "raw": "K-Pop ballad featuring a baritone male vocal",
+    "core": "K-Pop ballad",
+    "slots": {
+     "voice": "featuring a baritone male vocal"
+    }
+   }
+  ],
+  "group_changed_after_strip": 17,
+  "group_change_examples": [
+   {
+    "song_id": 147,
+    "raw": "K-Pop and Future Bass fusion",
+    "core": "K-Pop",
+    "group_raw": "electronic",
+    "group_core": "kpop"
+   },
+   {
+    "song_id": 158,
+    "raw": "K-Pop and City Pop fusion",
+    "core": "K-Pop",
+    "group_raw": "citypop",
+    "group_core": "kpop"
+   },
+   {
+    "song_id": 1553,
+    "raw": "K-Indie pop with bossa nova influences",
+    "core": "K-Indie pop",
+    "group_raw": "jazz",
+    "group_core": "indie_pop"
+   },
+   {
+    "song_id": 1586,
+    "raw": "K-Pop with City Pop and Funk influences",
+    "core": "K-Pop",
+    "group_raw": "citypop",
+    "group_core": "kpop"
+   },
+   {
+    "song_id": 1639,
+    "raw": "K-Pop Indie Pop with City Pop influences",
+    "core": "K-Pop Indie Pop",
+    "group_raw": "citypop",
+    "group_core": "kpop"
+   },
+   {
+    "song_id": 1654,
+    "raw": "K-Pop and J-Rock fusion",
+    "core": "K-Pop",
+    "group_raw": "rock",
+    "group_core": "kpop"
+   },
+   {
+    "song_id": 1660,
+    "raw": "K-Pop and J-Rock fusion",
+    "core": "K-Pop",
+    "group_raw": "rock",
+    "group_core": "kpop"
+   },
+   {
+    "song_id": 1667,
+    "raw": "K-Pop and City Pop fusion",
+    "core": "K-Pop",
+    "group_raw": "citypop",
+    "group_core": "kpop"
+   },
+   {
+    "song_id": 1150,
+    "raw": "K-pop dance track with funk and disco influences",
+    "core": "K-pop dance track",
+    "group_raw": "electronic",
+    "group_core": "kpop"
+   },
+   {
+    "song_id": 1200,
+    "raw": "K-Indie pop with a bossa nova influence",
+    "core": "K-Indie pop",
+    "group_raw": "jazz",
+    "group_core": "indie_pop"
+   }
+  ]
+ }
+}

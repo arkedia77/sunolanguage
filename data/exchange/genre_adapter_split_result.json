@@ -1,0 +1,359 @@
+{
+ "as_of": "2026-08-04",
+ "owner": "sunolanguage",
+ "purpose": "probe M2 일치율 27.2%의 원인 분리 (순위충돌 vs 실드리프트)",
+ "V1_requested_label_provenance": {
+  "checked": 370,
+  "matched": 361,
+  "match_pct": 97.6,
+  "examples": [
+   {
+    "song_id": 1,
+    "entries_genre": "Lo-fi Indie Pop / Dream Pop",
+    "leomusic_sp_head": "Lo-fi Indie Pop, Dream Pop, K-Indie, ethereal vocals, soft and airy female vocal, gentle whisper-like delivery",
+    "token_hit": "4/4",
+    "match": true
+   },
+   {
+    "song_id": 2,
+    "entries_genre": "Contemporary R&B / Neo-Soul",
+    "leomusic_sp_head": "Contemporary R&B, Neo-Soul, Retro Soul, K-R&B, warm and groovy, soulful male vocal",
+    "token_hit": "4/4",
+    "match": true
+   },
+   {
+    "song_id": 11,
+    "entries_genre": "Indie Pop / Dream Pop",
+    "leomusic_sp_head": "Indie Pop / Dream Pop with lush instrumentation and emotional nuance, 95 BPM, Mid-High energy throughout. Breathy vocals",
+    "token_hit": "4/4",
+    "match": true
+   },
+   {
+    "song_id": 12,
+    "entries_genre": "Contemporary R&B",
+    "leomusic_sp_head": "Contemporary R&B with lush instrumentation and emotional nuance, 92 BPM, Mid energy throughout. Female vocal delivering ",
+    "token_hit": "2/2",
+    "match": true
+   },
+   {
+    "song_id": 21,
+    "entries_genre": "Electro Hip-Hop / Synth-Trap",
+    "leomusic_sp_head": "Electro Hip-Hop / Synth-Trap with lush instrumentation and emotional nuance, 96 BPM, High energy throughout. Male vocals",
+    "token_hit": "5/5",
+    "match": true
+   },
+   {
+    "song_id": 22,
+    "entries_genre": "Synth-Pop / Bedroom Pop",
+    "leomusic_sp_head": "Synth-Pop / Bedroom Pop with lush instrumentation and emotional nuance, 84 BPM, Mid-High energy throughout. Female vocal",
+    "token_hit": "4/4",
+    "match": true
+   }
+  ],
+  "note": "entries.genre가 요청 SP 머리행과 토큰 과반 일치하면 design_intent로 인정"
+ },
+ "M2_split": {
+  "n_pairs": 441,
+  "exact_agree": 120,
+  "exact_agree_pct": 27.2,
+  "A_rule_order_conflict": 58,
+  "B_real_drift": 263,
+  "adjusted_agree_pct_counting_A_as_kept": 40.4,
+  "cause_counts": {
+   "B_real_drift": 263,
+   "A_rule_order": 58
+  },
+  "B_top_transitions": [
+   {
+    "from": "electronic",
+    "to": "ballad",
+    "n": 20
+   },
+   {
+    "from": "folk_acoustic",
+    "to": "ballad",
+    "n": 19
+   },
+   {
+    "from": "rnb_soul",
+    "to": "ballad",
+    "n": 16
+   },
+   {
+    "from": "electronic",
+    "to": "kpop",
+    "n": 15
+   },
+   {
+    "from": "indie_pop",
+    "to": "ballad",
+    "n": 12
+   },
+   {
+    "from": "citypop",
+    "to": "ballad",
+    "n": 11
+   },
+   {
+    "from": "ambient_lofi",
+    "to": "ballad",
+    "n": 10
+   },
+   {
+    "from": "rock",
+    "to": "ballad",
+    "n": 9
+   },
+   {
+    "from": "ballad",
+    "to": "kpop",
+    "n": 6
+   },
+   {
+    "from": "trot",
+    "to": "ballad",
+    "n": 6
+   },
+   {
+    "from": "rock",
+    "to": "kpop",
+    "n": 5
+   },
+   {
+    "from": "electronic",
+    "to": "hiphop_rap",
+    "n": 5
+   }
+  ],
+  "A_examples": [
+   {
+    "song_id": 2,
+    "requested": "Contemporary R&B / Neo-Soul",
+    "observed": "K-Pop ballad with jazz-pop and soul influences",
+    "requested_group": "rnb_soul",
+    "assigned_group": "ballad",
+    "observed_also_hits": [
+     "ballad",
+     "jazz",
+     "kpop",
+     "pop_general",
+     "rnb_soul"
+    ]
+   },
+   {
+    "song_id": 11,
+    "requested": "Indie Pop / Dream Pop",
+    "observed": "K-Indie folk ballad",
+    "requested_group": "indie_pop",
+    "assigned_group": "ballad",
+    "observed_also_hits": [
+     "ballad",
+     "folk_acoustic",
+     "indie_pop"
+    ]
+   },
+   {
+    "song_id": 12,
+    "requested": "Contemporary R&B",
+    "observed": "K-Pop ballad with R&B influences",
+    "requested_group": "rnb_soul",
+    "assigned_group": "ballad",
+    "observed_also_hits": [
+     "ballad",
+     "kpop",
+     "pop_general",
+     "rnb_soul"
+    ]
+   },
+   {
+    "song_id": 81,
+    "requested": "Country Pop / Americana",
+    "observed": "K-Pop acoustic ballad featuring a bright, fingerstyle acoustic guitar and a warm, melodic male vocal",
+    "requested_group": "folk_acoustic",
+    "assigned_group": "ballad",
+    "observed_also_hits": [
+     "ballad",
+     "folk_acoustic",
+     "kpop",
+     "pop_general"
+    ]
+   },
+   {
+    "song_id": 132,
+    "requested": "Acoustic Indie / Folk",
+    "observed": "K-Pop acoustic ballad",
+    "requested_group": "folk_acoustic",
+    "assigned_group": "ballad",
+    "observed_also_hits": [
+     "ballad",
+     "folk_acoustic",
+     "kpop",
+     "pop_general"
+    ]
+   },
+   {
+    "song_id": 149,
+    "requested": "Emo Pop / Pop Rock",
+    "observed": "K-Pop ballad with soft rock influences",
+    "requested_group": "rock",
+    "assigned_group": "ballad",
+    "observed_also_hits": [
+     "ballad",
+     "kpop",
+     "pop_general",
+     "rock"
+    ]
+   },
+   {
+    "song_id": 156,
+    "requested": "Funk-Disco Soul",
+    "observed": "K-Pop R&B ballad",
+    "requested_group": "rnb_soul",
+    "assigned_group": "ballad",
+    "observed_also_hits": [
+     "ballad",
+     "kpop",
+     "pop_general",
+     "rnb_soul"
+    ]
+   },
+   {
+    "song_id": 162,
+    "requested": "Alt-Pop",
+    "observed": "K-Pop ballad featuring a baritone male vocal",
+    "requested_group": "pop_general",
+    "assigned_group": "ballad",
+    "observed_also_hits": [
+     "ballad",
+     "kpop",
+     "pop_general"
+    ]
+   }
+  ],
+  "B_examples": [
+   {
+    "song_id": 1,
+    "requested": "Lo-fi Indie Pop / Dream Pop",
+    "observed": "K-Pop Indie Pop ballad",
+    "requested_group": "ambient_lofi",
+    "observed_group": "ballad"
+   },
+   {
+    "song_id": 22,
+    "requested": "Synth-Pop / Bedroom Pop",
+    "observed": "K-Pop R&B track featuring a male vocalist",
+    "requested_group": "indie_pop",
+    "observed_group": "rnb_soul"
+   },
+   {
+    "song_id": 31,
+    "requested": "Hyperpop / Digital Noise",
+    "observed": "K-Pop and synth-pop fusion featuring male vocals",
+    "requested_group": "electronic",
+    "observed_group": "kpop"
+   },
+   {
+    "song_id": 32,
+    "requested": "Baroque Pop",
+    "observed": "K-Pop ballad",
+    "requested_group": "classical",
+    "observed_group": "ballad"
+   },
+   {
+    "song_id": 42,
+    "requested": "Post-Punk / New Wave",
+    "observed": "K-Pop ballad with acoustic folk influences",
+    "requested_group": "rock",
+    "observed_group": "ballad"
+   },
+   {
+    "song_id": 52,
+    "requested": "Soft Rock / Indie Pop",
+    "observed": "K-Pop Indie Pop with a light funk influence",
+    "requested_group": "rock",
+    "observed_group": "kpop"
+   },
+   {
+    "song_id": 61,
+    "requested": "Chillwave / Synthpop",
+    "observed": "K-Indie pop with a mid-tempo groove",
+    "requested_group": "electronic",
+    "observed_group": "indie_pop"
+   },
+   {
+    "song_id": 62,
+    "requested": "Electro Swing / Swing Pop",
+    "observed": "K-Pop, upbeat indie pop",
+    "requested_group": "jazz",
+    "observed_group": "kpop"
+   },
+   {
+    "song_id": 71,
+    "requested": "Surf Rock / Psychedelic Surf",
+    "observed": "Indie pop with a funk-influenced groove",
+    "requested_group": "rock",
+    "observed_group": "indie_pop"
+   },
+   {
+    "song_id": 72,
+    "requested": "Piano Ballad / Cinematic",
+    "observed": "K-Pop Ballad",
+    "requested_group": "ost_score",
+    "observed_group": "ballad"
+   }
+  ]
+ },
+ "V2_sample_bias": {
+  "sunolang_n_songs": 454,
+  "sunolang_observed_group_mix": {
+   "ballad": 215,
+   "kpop": 56,
+   "rock": 42,
+   "hiphop_rap": 29,
+   "citypop": 22,
+   "jazz": 20,
+   "indie_pop": 17,
+   "rnb_soul": 15,
+   "folk_acoustic": 14,
+   "electronic": 13,
+   "ost_score": 7,
+   "ambient_lofi": 2,
+   "classical": 1,
+   "world_latin": 1
+  },
+  "encore_population_n_clips": "sunomusic aware_clip_index_20260803 (5,754클립)",
+  "encore_design_group_mix_top": {
+   "trot": 1012,
+   "ballad": 516,
+   "rock": 471,
+   "electronic": 446,
+   "unmapped": 446,
+   "rnb_soul": 431,
+   "folk_acoustic": 403,
+   "hiphop_rap": 353
+  },
+  "caveat": "두 모집단은 다르다 — sunolang 코퍼스는 K-계열 편중(K-scene 접두 92.7%), encore 모집단은 trot 1012 최다. 일치율 수치를 encore 전 모집단에 외삽 금지."
+ },
+ "V3_ballad_is_form_slot": {
+  "n_observed_labels_containing_ballad": 215,
+  "n_also_carrying_another_genre_group": 212,
+  "pct_ballad_is_modifier_not_head": 98.6,
+  "ballad_only_examples": [
+   "K-Ballad featuring a baritone male vocal"
+  ],
+  "ballad_plus_other_examples": [
+   "Jazz trio ballad featuring a baritone male vocalist",
+   "K-Indie R&B ballad",
+   "K-Indie acoustic ballad",
+   "K-Indie acoustic folk ballad",
+   "K-Indie acoustic pop ballad",
+   "K-Indie ballad",
+   "K-Indie ballad featuring a baritone male vocal",
+   "K-Indie folk ballad",
+   "K-Indie folk ballad featuring fingerstyle acoustic guitar and soft male vocals",
+   "K-Indie pop ballad",
+   "K-Pop Ballad",
+   "K-Pop Indie Pop ballad"
+  ]
+ }
+}

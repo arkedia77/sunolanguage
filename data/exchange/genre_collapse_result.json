@@ -1,0 +1,86 @@
+{
+ "as_of": "2026-08-04",
+ "owner": "sunolanguage",
+ "purpose": "B(실드리프트 263건)를 '곡별 오청(B1)'과 '서술 어휘 수축(B2)'으로 분리",
+ "n_pairs": 441,
+ "requested_profile": {
+  "layer": "requested(design_intent)",
+  "n": 441,
+  "distinct_labels": 217,
+  "distinct_groups": 17,
+  "group_entropy_bits": 3.698,
+  "top_group": "ballad",
+  "top_group_share_pct": 16.1,
+  "top3_cumulative_pct": 40.4,
+  "k_prefix_pct": 16.3,
+  "group_mix": {
+   "ballad": 71,
+   "electronic": 55,
+   "folk_acoustic": 52,
+   "rnb_soul": 38,
+   "rock": 38,
+   "indie_pop": 37,
+   "citypop": 23,
+   "pop_general": 21,
+   "jazz": 20,
+   "ambient_lofi": 17,
+   "hiphop_rap": 17,
+   "kpop": 16,
+   "unmapped": 14,
+   "trot": 11,
+   "ost_score": 6,
+   "classical": 4,
+   "world_latin": 1
+  }
+ },
+ "observed_profile": {
+  "layer": "observed(suno reanalysis)",
+  "n": 441,
+  "distinct_labels": 212,
+  "distinct_groups": 13,
+  "group_entropy_bits": 2.601,
+  "top_group": "ballad",
+  "top_group_share_pct": 48.3,
+  "top3_cumulative_pct": 70.1,
+  "k_prefix_pct": 94.6,
+  "group_mix": {
+   "ballad": 213,
+   "kpop": 56,
+   "rock": 40,
+   "hiphop_rap": 28,
+   "citypop": 22,
+   "jazz": 18,
+   "indie_pop": 17,
+   "rnb_soul": 15,
+   "folk_acoustic": 14,
+   "electronic": 13,
+   "ambient_lofi": 2,
+   "ost_score": 2,
+   "world_latin": 1
+  }
+ },
+ "entropy_ratio_req_over_obs": 1.42,
+ "B_subset": {
+  "n": 263,
+  "observed_group_mix": {
+   "ballad": 119,
+   "kpop": 45,
+   "rock": 21,
+   "hiphop_rap": 18,
+   "citypop": 15,
+   "rnb_soul": 12,
+   "indie_pop": 12,
+   "jazz": 10,
+   "electronic": 6,
+   "folk_acoustic": 5
+  },
+  "observed_top_share_pct": 45.2,
+  "note": "B가 곡별 오청(B1)이면 이 분포는 넓어야 한다. 좁으면 수축(B2)."
+ },
+ "verdict_rule": "관측 엔트로피 < 요청 엔트로피이고 관측 최빈점유율이 크게 높으면 B2(수축) 우세",
+ "caveats": [
+  "표본=sunolang 코퍼스 441곡(K-계열 편중). encore 5,754 모집단에 외삽 금지.",
+  "그룹 정의는 encore v0 규칙을 그대로 씀 — ballad 우선순위 편향이 양 층에 동일 적용되므로 층간 비교(요청 vs 관측)는 유효하나, 그룹 절대치는 규칙에 종속.",
+  "요청/관측 모두 텍스트 라벨. 오디오 실측 아님 — 음향 검증은 encore probe_v2 소관."
+ ]
+}
