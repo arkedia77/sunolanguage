@@ -1,98 +1,11 @@
 {
- "reproduced": 5489,
- "mismatched": 225,
- "total_clips": 5714,
- "fidelity_pct": 96.06,
- "mismatch_examples": [
-  {
-   "label": "garage pop",
-   "encore_says": "ambient_lofi",
-   "mine": "pop_general",
-   "n": 2
-  },
-  {
-   "label": "world fusion",
-   "encore_says": "ambient_lofi",
-   "mine": "unmapped",
-   "n": 2
-  },
-  {
-   "label": "dream pop",
-   "encore_says": "ambient_lofi",
-   "mine": "indie_pop",
-   "n": 2
-  },
-  {
-   "label": "indie pop",
-   "encore_says": "rnb_soul",
-   "mine": "indie_pop",
-   "n": 2
-  },
-  {
-   "label": "gospel pop",
-   "encore_says": "rnb_soul",
-   "mine": "pop_general",
-   "n": 2
-  },
-  {
-   "label": "art pop",
-   "encore_says": "rnb_soul",
-   "mine": "pop_general",
-   "n": 2
-  },
-  {
-   "label": "dark pop",
-   "encore_says": "rnb_soul",
-   "mine": "pop_general",
-   "n": 1
-  },
-  {
-   "label": "funk",
-   "encore_says": "rnb_soul",
-   "mine": "unmapped",
-   "n": 1
-  },
-  {
-   "label": "synth-pop",
-   "encore_says": "electronic",
-   "mine": "pop_general",
-   "n": 4
-  },
-  {
-   "label": "chillwave",
-   "encore_says": "electronic",
-   "mine": "ambient_lofi",
-   "n": 4
-  },
-  {
-   "label": "darkwave",
-   "encore_says": "electronic",
-   "mine": "unmapped",
-   "n": 2
-  },
-  {
-   "label": "industrial",
-   "encore_says": "electronic",
-   "mine": "unmapped",
-   "n": 2
-  },
-  {
-   "label": "dream pop",
-   "encore_says": "electronic",
-   "mine": "indie_pop",
-   "n": 2
-  },
-  {
-   "label": "k-pop",
-   "encore_says": "electronic",
-   "mine": "kpop",
-   "n": 2
-  },
-  {
-   "label": "pluggnb",
-   "encore_says": "electronic",
-   "mine": "unmapped",
-   "n": 2
-  }
- ]
+ "truth_source": "label_full_to_group (v0.1 실제 함수)",
+ "unit": "label_type",
+ "path": "preprocess + rules only (lookup 미참조 — 비순환)",
+ "reproduced": 1028,
+ "mismatched": 0,
+ "total": 1028,
+ "fidelity_pct": 100.0,
+ "mismatch_examples": [],
+ "residual_unverified": "encore가 주장한 클립 단위 5,714/5,714는 라벨별 클립수가 아티팩트에 없어 독립 확인 불가. 여기서 확인한 것은 라벨타입 단위."
 }

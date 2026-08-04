@@ -33,6 +33,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ENCORE_V0 = ROOT / "data" / "exchange" / "encore_20260803" / "genre_design_normalize_v0.json"
+# v0.1(08-04 수령) — 내가 적발한 결함 2종을 encore가 전건 수용해 고친 판.
+# preprocess 절 신설 + label_full_to_group(1,028) 신설. 독립 재현 1,028/1,028 = 100.00% 확인.
+ENCORE_V01 = ROOT / "data" / "exchange" / "encore_20260803" / "genre_design_normalize_v01.json"
 
 # 부속 슬롯 — 관측 라벨에서 실제로 추출되는 스팬. 축 유형론 주장 아님(axis_test 기각분).
 SLOTS = {
@@ -55,25 +58,46 @@ SCENE = re.compile(r"\b([KJCT])[-\s]?(?=Pop|Indie|Rock|Hip|Ballad|R&B|Trot|Folk|
 
 
 class GenreAdapter:
-    def __init__(self, encore_path=ENCORE_V0):
+    def __init__(self, encore_path=None):
+        # 기본은 v0.1(재현 가능판). 없으면 v0으로 폴백하고 그 사실을 표기한다.
+        if encore_path is None:
+            encore_path = ENCORE_V01 if ENCORE_V01.exists() else ENCORE_V0
         self.meta = json.loads(Path(encore_path).read_text())
         self.rules = [(r["group"], re.compile(r["pattern"], re.I)) for r in self.meta["rules"]]
         self.version = self.meta["version"]
+        # ★v0.1 전처리 — v0에서 누락돼 독립 재현을 원리적으로 불가능하게 만들었던 단계.
+        pp = self.meta.get("preprocess")
+        self.locale_re = re.compile(pp["regex_locale_prefix"], re.I) if pp else None
+        self.lookup = self.meta.get("label_full_to_group") or {}
 
-    # ── 어댑터 A: encore v0 원본 재현 (선언순서 첫일치 단일배정) ──────────────
-    def encore_v0(self, label):
-        if not label or not label.strip():
+    def preprocess(self, s):
+        """encore v0.1 preprocess 절을 순서대로 재현. v0 아티팩트면 무연산."""
+        if not self.locale_re:
+            return s or ""
+        s = (s or "").strip().lower().replace("_", " ")
+        s = self.locale_re.sub("", s)
+        return s.replace("postrock", "post-rock").replace("altrock", "alt-rock")
+
+    # ── 어댑터 A: encore 원본 재현 (전처리 → 선언순서 첫일치 단일배정) ────────
+    def encore_v0(self, label, use_lookup=True):
+        s = self.preprocess(label)
+        if not s.strip():
             return "_no_label"
+        # encore가 실제로 쓴 배정이 있으면 그것을 정본으로 삼는다(내 재구현보다 우선).
+        # ★단 계약검증에서는 use_lookup=False로 꺼야 한다 — 정답지를 참조해 정답지를 맞히면 순환이다.
+        if use_lookup and s in self.lookup:
+            return self.lookup[s]
         for g, p in self.rules:
-            if p.search(label):
+            if p.search(s):
                 return g
         return "unmapped"
 
     # ── 어댑터 B: 다중배정 (스팬 비겹침 — 포섭 적중 제거) ─────────────────────
     def _spans(self, label):
+        s = self.preprocess(label)
         out = {}
         for g, p in self.rules:
-            m = p.search(label)
+            m = p.search(s)
             if m:
                 out[g] = (m.start(), m.end())
         return out
@@ -108,7 +132,11 @@ class GenreAdapter:
             "layer": layer,                      # requested(design_intent) | observed(suno) | unknown
             "scene": (sc.group(1).upper() if sc else None),
             "core_text": core,
-            "genres": self.encore_multi(core) or self.encore_multi(raw),
+            # ★genres는 반드시 raw에서 뽑는다. 슬롯 제거분(core)에서 뽑으면 과소계상된다 —
+            #   influence 슬롯 정규식이 유도어와 함께 **영향 내용어(장르 담지자)**까지 지우기 때문.
+            #   실피해: 08-04 encore 발신에서 '요청장르 생존율'을 37.4%가 아니라 35.1%로 보냄(10곡 누락).
+            "genres": self.encore_multi(raw),
+            "genres_core_only": self.encore_multi(core),   # 참고용 — 판정에 쓰지 말 것
             "encore_v0_group": self.encore_v0(raw),
             "slots": slots,
         }
@@ -126,8 +154,34 @@ class GenreAdapter:
 
 # ── 계약검증: 내 재구현이 encore v0 배정을 그대로 재현하는가 ───────────────────
 def verify(ad):
-    """encore가 보낸 labels_by_group을 정답지로 삼아 재현율을 잰다.
-    여기서 어긋나면 내가 encore 의미론을 오독한 것 — 개선 제안 이전에 이게 먼저다."""
+    """encore 아티팩트를 정답지로 삼아 재현율을 잰다. 개선 제안 이전에 이게 먼저다.
+
+    ★v0.1부터 정답지는 `label_full_to_group`(preprocess(원문 전체)→그룹의 실제 함수)이다.
+      `labels_by_group`은 encore 명기대로 **표시용 집계이지 매핑표가 아니다**(키=복합라벨 첫 토큰).
+      v0에서 내가 그걸 매핑표로 읽고 잰 96.06%가 결함 2종을 드러낸 경위.
+    """
+    lf = ad.meta.get("label_full_to_group")
+    if lf:
+        ok = bad = 0
+        mism = []
+        for lab, truth in lf.items():
+            # ★lookup 미사용 — preprocess + rules만으로 encore 배정을 맞히는지 본다(비순환)
+            mine = ad.encore_v0(lab, use_lookup=False)
+            if mine == truth:
+                ok += 1
+            else:
+                bad += 1
+                if len(mism) < 15:
+                    mism.append({"label": lab, "encore_says": truth, "mine": mine})
+        tot = ok + bad
+        return {"truth_source": "label_full_to_group (v0.1 실제 함수)",
+                "unit": "label_type", "path": "preprocess + rules only (lookup 미참조 — 비순환)",
+                "reproduced": ok, "mismatched": bad, "total": tot,
+                "fidelity_pct": round(100.0 * ok / tot, 2) if tot else None,
+                "mismatch_examples": mism,
+                "residual_unverified": "encore가 주장한 클립 단위 5,714/5,714는 라벨별 클립수가 "
+                                       "아티팩트에 없어 독립 확인 불가. 여기서 확인한 것은 라벨타입 단위."}
+
     ok = bad = 0
     mism = []
     for truth_group, labs in ad.meta["labels_by_group"].items():
@@ -135,10 +189,7 @@ def verify(ad):
             continue
         for lab, n in labs.items():
             mine = ad.encore_v0(lab)
-            if truth_group == "unmapped":
-                good = (mine == "unmapped")
-            else:
-                good = (mine == truth_group)
+            good = (mine == "unmapped") if truth_group == "unmapped" else (mine == truth_group)
             if good:
                 ok += n
             else:
@@ -146,7 +197,8 @@ def verify(ad):
                 if len(mism) < 15:
                     mism.append({"label": lab, "encore_says": truth_group, "mine": mine, "n": n})
     tot = ok + bad
-    return {"reproduced": ok, "mismatched": bad, "total_clips": tot,
+    return {"truth_source": "labels_by_group (v0 — 표시용 집계를 매핑표로 오독한 경로)",
+            "unit": "clip", "reproduced": ok, "mismatched": bad, "total": tot,
             "fidelity_pct": round(100.0 * ok / tot, 2) if tot else None,
             "mismatch_examples": mism}
 
@@ -155,10 +207,16 @@ def main():
     ad = GenreAdapter()
     if "--verify" in sys.argv:
         v = verify(ad)
-        print(f"[계약검증] encore v0 재현율 {v['fidelity_pct']}%  "
-              f"({v['reproduced']}/{v['total_clips']} 클립, 불일치 {v['mismatched']})")
+        print(f"[계약검증] encore {ad.version} 재현율 {v['fidelity_pct']}%  "
+              f"({v['reproduced']}/{v['total']} {v['unit']}, 불일치 {v['mismatched']})")
+        print(f"           정답지={v['truth_source']}")
+        if v.get("path"):
+            print(f"           경로={v['path']}")
+        if v.get("residual_unverified"):
+            print(f"           ★미확인 잔여: {v['residual_unverified']}")
         for m in v["mismatch_examples"]:
-            print(f"   ✗ {m['label'][:52]:<52} encore={m['encore_says']:<14} mine={m['mine']} (n={m['n']})")
+            print(f"   ✗ {m['label'][:52]:<52} encore={m['encore_says']:<14} mine={m['mine']}"
+                  + (f" (n={m['n']})" if 'n' in m else ""))
         out = ROOT / "data" / "exchange" / "genre_adapter_verify.json"
         out.write_text(json.dumps(v, ensure_ascii=False, indent=1))
         print(f"→ {out.relative_to(ROOT)}")

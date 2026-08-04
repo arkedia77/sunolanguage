@@ -1,0 +1,281 @@
+{
+ "as_of": "2026-08-04",
+ "owner": "sunolanguage",
+ "purpose": "encore v0.1 수령 후 전 지표 재계산 — 96.06% 종속조건 해제분",
+ "encore_version_used": "v0.1",
+ "contract_verification_v01": "1,028/1,028 label_type = 100.00% (preprocess+rules only, lookup 미참조=비순환)",
+ "residual_unverified": "encore 주장 클립단위 5,714/5,714는 라벨별 클립수가 아티팩트에 없어 독립 확인 불가.",
+ "labels_reassigned_by_v01": {
+  "n": 0,
+  "examples": []
+ },
+ "delta_table": {
+  "exact_agree_pct": {
+   "v0": 27.2,
+   "v0.1": 27.2,
+   "delta": 0.0
+  },
+  "survives_span_pct": {
+   "v0": 37.4,
+   "v0.1": 37.4,
+   "delta": 0.0
+  },
+  "survives_hit_pct": {
+   "v0": 40.4,
+   "v0.1": 40.4,
+   "delta": 0.0
+  },
+  "A_rule_order": {
+   "v0": 58,
+   "v0.1": 58,
+   "delta": 0
+  },
+  "B_real_drift": {
+   "v0": 263,
+   "v0.1": 263,
+   "delta": 0
+  },
+  "coverage_on_observed_pct": {
+   "v0": 100.0,
+   "v0.1": 100.0,
+   "delta": 0.0
+  },
+  "requested.entropy_bits": {
+   "v0": 3.698,
+   "v0.1": 3.698,
+   "delta": 0.0
+  },
+  "requested.top_share_pct": {
+   "v0": 16.1,
+   "v0.1": 16.1,
+   "delta": 0.0
+  },
+  "requested.k_prefix_pct": {
+   "v0": 16.3,
+   "v0.1": 16.3,
+   "delta": 0.0
+  },
+  "observed.entropy_bits": {
+   "v0": 2.601,
+   "v0.1": 2.601,
+   "delta": 0.0
+  },
+  "observed.top_share_pct": {
+   "v0": 48.3,
+   "v0.1": 48.3,
+   "delta": 0.0
+  },
+  "observed.k_prefix_pct": {
+   "v0": 94.6,
+   "v0.1": 94.6,
+   "delta": 0.0
+  }
+ },
+ "v01_full": {
+  "n_songs_observed": 454,
+  "n_pairs": 441,
+  "coverage_on_observed_pct": 100.0,
+  "unmapped_on_observed": 0,
+  "exact_agree": 120,
+  "exact_agree_pct": 27.2,
+  "A_rule_order": 58,
+  "B_real_drift": 263,
+  "survives_span_pct": 37.4,
+  "survives_hit_pct": 40.4,
+  "B_top_transitions": [
+   {
+    "from": "electronic",
+    "to": "ballad",
+    "n": 20
+   },
+   {
+    "from": "folk_acoustic",
+    "to": "ballad",
+    "n": 19
+   },
+   {
+    "from": "rnb_soul",
+    "to": "ballad",
+    "n": 16
+   },
+   {
+    "from": "electronic",
+    "to": "kpop",
+    "n": 15
+   },
+   {
+    "from": "indie_pop",
+    "to": "ballad",
+    "n": 12
+   },
+   {
+    "from": "citypop",
+    "to": "ballad",
+    "n": 11
+   },
+   {
+    "from": "ambient_lofi",
+    "to": "ballad",
+    "n": 10
+   },
+   {
+    "from": "rock",
+    "to": "ballad",
+    "n": 9
+   }
+  ],
+  "requested_profile": {
+   "distinct_labels": 217,
+   "distinct_groups": 17,
+   "entropy_bits": 3.698,
+   "top_group": "ballad",
+   "top_share_pct": 16.1,
+   "top3_pct": 40.4,
+   "k_prefix_pct": 16.3
+  },
+  "observed_profile": {
+   "distinct_labels": 212,
+   "distinct_groups": 13,
+   "entropy_bits": 2.601,
+   "top_group": "ballad",
+   "top_share_pct": 48.3,
+   "top3_pct": 70.1,
+   "k_prefix_pct": 94.6
+  },
+  "compound_observed": {
+   "multi_pct": 85.3,
+   "mean": 2.24,
+   "dist": {
+    "1": 65,
+    "2": 211,
+    "3": 161,
+    "4": 4
+   }
+  },
+  "compound_requested": {
+   "multi_pct": 51.2,
+   "mean": 1.59,
+   "dist": {
+    "0": 14,
+    "1": 201,
+    "2": 180,
+    "3": 43,
+    "4": 3
+   }
+  }
+ },
+ "v0_full": {
+  "n_songs_observed": 454,
+  "n_pairs": 441,
+  "coverage_on_observed_pct": 100.0,
+  "unmapped_on_observed": 0,
+  "exact_agree": 120,
+  "exact_agree_pct": 27.2,
+  "A_rule_order": 58,
+  "B_real_drift": 263,
+  "survives_span_pct": 37.4,
+  "survives_hit_pct": 40.4,
+  "B_top_transitions": [
+   {
+    "from": "electronic",
+    "to": "ballad",
+    "n": 20
+   },
+   {
+    "from": "folk_acoustic",
+    "to": "ballad",
+    "n": 19
+   },
+   {
+    "from": "rnb_soul",
+    "to": "ballad",
+    "n": 16
+   },
+   {
+    "from": "electronic",
+    "to": "kpop",
+    "n": 15
+   },
+   {
+    "from": "indie_pop",
+    "to": "ballad",
+    "n": 12
+   },
+   {
+    "from": "citypop",
+    "to": "ballad",
+    "n": 11
+   },
+   {
+    "from": "ambient_lofi",
+    "to": "ballad",
+    "n": 10
+   },
+   {
+    "from": "rock",
+    "to": "ballad",
+    "n": 9
+   }
+  ],
+  "requested_profile": {
+   "distinct_labels": 217,
+   "distinct_groups": 17,
+   "entropy_bits": 3.698,
+   "top_group": "ballad",
+   "top_share_pct": 16.1,
+   "top3_pct": 40.4,
+   "k_prefix_pct": 16.3
+  },
+  "observed_profile": {
+   "distinct_labels": 212,
+   "distinct_groups": 13,
+   "entropy_bits": 2.601,
+   "top_group": "ballad",
+   "top_share_pct": 48.3,
+   "top3_pct": 70.1,
+   "k_prefix_pct": 94.6
+  },
+  "compound_observed": {
+   "multi_pct": 85.3,
+   "mean": 2.24,
+   "dist": {
+    "1": 65,
+    "2": 211,
+    "3": 161,
+    "4": 4
+   }
+  },
+  "compound_requested": {
+   "multi_pct": 51.2,
+   "mean": 1.59,
+   "dist": {
+    "0": 14,
+    "1": 201,
+    "2": 180,
+    "3": 43,
+    "4": 3
+   }
+  }
+ },
+ "baseline_recorded_0804": {
+  "exact_agree_pct": 27.2,
+  "survives_span_pct": 35.1,
+  "survives_hit_pct": 40.4,
+  "A_rule_order": 58,
+  "B_real_drift": 263,
+  "req_entropy": 3.698,
+  "obs_entropy": 2.601,
+  "req_top_share": 16.1,
+  "obs_top_share": 48.3,
+  "req_k_pct": 16.3,
+  "obs_k_pct": 94.6,
+  "obs_multi_pct": 85.0,
+  "obs_mean_genres": 2.23,
+  "coverage_on_observed_pct": 100.0
+ },
+ "caveats": [
+  "표본 441곡 K-계열 편중 — encore 5,754 모집단 외삽 금지(불변).",
+  "요청·관측 모두 텍스트 라벨. 오디오 실측 아님(불변).",
+  "이제 encore 규칙 종속성은 남지만 '재현 불가' 종속성은 해제됨."
+ ]
+}
