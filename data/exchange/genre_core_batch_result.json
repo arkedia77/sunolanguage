@@ -1,0 +1,150 @@
+{
+  "generated_by": "scripts/genre_core_batch.py",
+  "preregistration": "docs/genre_core_batch_preregistration.md",
+  "verdict": "A. 생존 — 배치내 제한 순열에서도 실측이 귀무분포 아래. 코어 v0 결론 유지, 단 p는 v1로 교체(v0 p=0.0047은 폐기)",
+  "attribution": {
+    "sample": 425,
+    "attributed": 364,
+    "attributed_pct": 85.6,
+    "unattributed": 61,
+    "unattributed_reasons": {
+      "다중 batch 모호": 2,
+      "DB 제목 미매칭": 59
+    },
+    "reasons_sum_check": 61,
+    "attributed_but_bpm_uncheckable": {
+      "곡수": 22,
+      "뜻": "귀속은 됐으나 코퍼스 bpm이 없어 오조인 교차검증을 못 건 곡. 미귀속이 아니라 ★검증 약한 귀속이다 — 미귀속 칸에 넣으면 합이 안 맞는다"
+    },
+    "method": "제목 완전일치 → songs.batch, BPM(숫자) 대조로 오조인 제거, 다중 batch는 미귀속",
+    "non_lexical_note": "SP 본문·가사·어휘 유사도 미사용. DB에서 읽은 것은 title/batch/bpm/global_id뿐",
+    "distinct_batches": 103,
+    "strata_usable": 97,
+    "strata_dropped_lt2": {
+      "K001": 1,
+      "K003": 1,
+      "K005": 1,
+      "B139": 1,
+      "B033": 1,
+      "B048": 1
+    },
+    "★통제_불가_확정": {
+      "곡수": 61,
+      "판정": "「배제 못 함」이 아니라 「배제 불가임을 확인함」",
+      "시도한_근거": {
+        "suno_reanalysis uuid → DB": "0% — 재분석 클립 id지 생성곡 id가 아님",
+        "leomusic_original.source_gid/source_batch": "표본 내 0%",
+        "series / song_id 접두": "59곡(13.9%)만 보유",
+        "제목 완전일치 → DB batch": "주경로. 위 사유별 집계 참조"
+      },
+      "표본_예시": [
+        {
+          "song_id": 1219,
+          "why": "ambiguous_batch",
+          "batches": [
+            "B134",
+            "W001"
+          ]
+        },
+        {
+          "song_id": 1535,
+          "why": "ambiguous_batch",
+          "batches": [
+            "B168",
+            "B184"
+          ]
+        }
+      ]
+    }
+  },
+  "premise_check_배치가_어휘를_공유하는가": {
+    "within_pairs": 817,
+    "within_mean_jaccard": 0.2697,
+    "between_pairs": 10990,
+    "between_mean_jaccard": 0.2449,
+    "gap": 0.0248,
+    "reading": "within > between 이면 배치가 어휘를 공유한다 = 교락 전제 성립. 차이가 없으면 배치 교락 자체가 없다는 뜻이고 그것도 결론이다."
+  },
+  "restricted_permutation": {
+    "term": {
+      "level": "term",
+      "songs": 358,
+      "strata": 97,
+      "actual_addition": 0.7082,
+      "null_mean": 0.7387,
+      "null_min": 0.7296,
+      "null_max": 0.7493,
+      "n_permutations": 200,
+      "null_le_actual": 0,
+      "p_one_sided": 0.005,
+      "gap_vs_null_mean_pp": 3.06
+    },
+    "family": {
+      "level": "family",
+      "songs": 358,
+      "strata": 97,
+      "actual_addition": 0.4002,
+      "null_mean": 0.4287,
+      "null_min": 0.4173,
+      "null_max": 0.4395,
+      "n_permutations": 200,
+      "null_le_actual": 0,
+      "p_one_sided": 0.005,
+      "gap_vs_null_mean_pp": 2.85
+    },
+    "note": "배치내에서만 섞음. 배치 공유 어휘는 실측·귀무 양쪽에 들어가 상쇄되고 남는 차이만 배치 밖 신호"
+  },
+  "unrestricted_same_songs": {
+    "level": "term",
+    "songs": 358,
+    "actual_addition": 0.7082,
+    "null_mean": 0.7506,
+    "n_permutations": 357,
+    "null_le_actual": 0,
+    "p_one_sided": 0.0028,
+    "gap_vs_null_mean_pp": 4.25
+  },
+  "gap_decomposition": {
+    "v0_gap_pp_425곡_무제한": 5.33,
+    "동일곡_무제한_gap_pp": 4.25,
+    "동일곡_배치내_gap_pp": 3.06,
+    "표본변화_기여_pp": -1.08,
+    "★배치통제_기여_pp": -1.19,
+    "reading": "v0→v1 축소를 전부 배치 탓으로 돌리면 오귀속이다. 표본이 425→364로 바뀐 몫과 배치를 통제한 몫을 갈라 적는다."
+  },
+  "★민감도_순열자유도": {
+    "stratum_size_dist": {
+      "1": 6,
+      "2": 50,
+      "3": 16,
+      "4": 11,
+      "5": 5,
+      "6": 1,
+      "7": 1,
+      "9": 2,
+      "10": 11
+    },
+    "문제": "크기 2인 층은 비항등 짝짓기가 1개뿐이라 매 회차 같은 값을 낸다 → 귀무분포 분산이 줄어 p가 낙관치가 된다(코어 v0과 같은 방향의 오류)",
+    "size2_strata": 50,
+    "size2_songs": 100,
+    "min_size4_재판정": {
+      "level": "term",
+      "songs": 210,
+      "strata": 31,
+      "actual_addition": 0.7153,
+      "null_mean": 0.7627,
+      "null_min": 0.7495,
+      "null_max": 0.7789,
+      "n_permutations": 200,
+      "null_le_actual": 0,
+      "p_one_sided": 0.005,
+      "gap_vs_null_mean_pp": 4.74
+    },
+    "읽는_법": "크기≥4 층만으로도 실측이 귀무분포 아래면 결론이 자유도 부족에 기댄 게 아니다. 들어오면 주판정(min_size=2)은 자유도 부족 때문일 수 있다"
+  },
+  "v0_comparison": {
+    "v0_p": 0.0047,
+    "v0_gap_pp": 5.33,
+    "v0_note": "전체 시프트(교환가능성 가정) — 배치 구조가 섞여 귀무분포가 좁았음"
+  }
+}
