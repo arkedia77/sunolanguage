@@ -153,7 +153,7 @@ Suno 원문 SP: *"featuring a **male and female vocal duet**… The male vocal i
 
 ### R2 — 교대 진입은 **`enter` 동사형**
 
-attested: `[male vocals enter]` 17 · `[female vocals enter]` 4 · `[male tenor vocals enter]` 5
+attested: `[male vocals enter]` **18**(08-11 DB 재계수 — 종전 17은 오차 1) · `[female vocals enter]` 4 · `[male tenor vocals enter]` 5
 `enter`는 "지금 이 사람이 새로 들어온다"는 **전환 신호**다. 첫 등장과 화자 교체 지점에 쓴다.
 
 ### R3 — 동시발성은 `unison` + **에너지 동반 서술**
@@ -187,9 +187,19 @@ attested SP 원문형 3종:
 
 **결론: `narration`은 Suno 어휘가 아니다. 말하기는 `spoken-word`이며, 채널마다 유효성이 다르다.**
 
-| 표현 | 브라켓 | SP | 판정 |
+> ★**계수 단위 주의 (2026-08-11 정정)** — 아래 표의 SP 숫자는 **엔트리 행수**다. **곡 수가 아니다.**
+> `spoken-word`의 경우 23행 / 16문장형 / **관측 9곡(497곡 중)**. 22를 곡 수로 읽으면 **2.4배 과대**가 된다.
+> 계기: encore CM-2026-0001 회신(08-11) 준비 중 자기적발. 이 표를 인용할 땐 **곡 수로 환산해서** 쓸 것.
+
+> ★**dead 판정에는 채널 한정자를 반드시 붙인다 (08-11 실피해 1건)** —
+> 내가 06-15 leomusic-trot에 보낸 GT 회신은 표에 `spoken … dead`만 적고 채널 한정자를 안 붙였다.
+> 본문에 「SP/() 채널에선 다를 수 있음」 주의를 달았으나 **표만 인용되면 caveat이 안 따라간다.**
+> 2개월 뒤 encore가 그 표를 근거로 **「나레이션은 생성 불가」로 커미션 설계를 닫을 뻔했다.**
+> → **채널을 안 적은 dead는 dead가 아니라 「어느 채널에서 dead인지 안 적은 것」이다.**
+
+| 표현 | 브라켓 | SP(행수) | 판정 |
 |---|---|---|---|
-| `spoken-word` | 1건 (`[spoken-word delivery]`) | **22건 / 16형** | 브라켓 dead · **SP live** |
+| `spoken-word` | 1건 (`[spoken-word delivery]`) | **23행 / 16형 / 관측 9곡** | 브라켓 dead · **SP live** |
 | `narrative` | 0건 | 2건 | 희소 — 뜻이 다름(§5.2) |
 | `narration` / `narrator` / `voiceover` / `monologue` / `dialogue` / `recitative` / `sprechgesang` / `talk` / `speak` | **0** | **0** | **전 채널 dead** |
 | `whisper` | 1건 | 4건 | 브라켓 dead · SP 한정 live |
@@ -223,7 +233,7 @@ SP attested 2건 중 명확한 것:
 
 | 채널 | 표기 | 유효 | 용도 |
 |---|---|---|---|
-| SP | `spoken-word style transitioning into melodic singing` | ✅ 22건 | 곡·구간 성격 선언 |
+| SP | `spoken-word style transitioning into melodic singing` | ✅ 23행 / **관측 9곡** | 곡·구간 성격 선언 |
 | `()` 괄호 | `(spoken)` | ✅ 실청취 4/4 | 해당 행을 말로 |
 | `[]` 브라켓 | `[spoken]` | ❌ 1건 dead | 쓰지 말 것 |
 
