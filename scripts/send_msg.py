@@ -23,6 +23,16 @@ FROM = "sunolanguage"
 ROOT = "/Users/purple/projects/agent-comm"
 
 
+def _body_hash(body):
+    """★발신 검증은 「내가 떠올린 문구가 있나」로 하지 않는다 — 그 방식이 2026-08-11 하루에만
+    거짓음성 2건을 냈다(`안 잰 것`↔`안_잰_것`, `도달 임계`↔`임계 분량`).
+    검색어를 내가 짓는 한 못 찾은 것과 없는 것이 계속 섞인다. → **본문 해시 대조**로 바꾼다.
+    사용: 발신 시 찍힌 해시와, push 후 origin 본문의 해시가 같은지만 본다."""
+    import hashlib
+    return hashlib.sha256(json.dumps(body, ensure_ascii=False,
+                                     sort_keys=True).encode()).hexdigest()[:16]
+
+
 def send(to, keyword, body, subject, reply_needed=False, priority="P2", msg_type="report"):
     now = datetime.now().astimezone()          # ★단 1회 호출 — 여기서만 시각이 나온다
     stamp = now.strftime("%Y%m%d_%H%M%S")
@@ -40,6 +50,7 @@ def send(to, keyword, body, subject, reply_needed=False, priority="P2", msg_type
     os.makedirs(os.path.dirname(path), exist_ok=True)
     json.dump(msg, open(path, "w"), ensure_ascii=False, indent=1)
     print(f"WROTE  {rel}")
+    print(f"       body_sha256[:16]={_body_hash(body)}  ★push 후 origin 본문 해시와 대조할 것")
     print(f"       created_at={msg['created_at']}  (파일명 stamp={stamp} — 동일 now)")
     print(f"NEXT   git add \"{rel}\" && commit && push && git show origin/main:\"{rel}\" >/dev/null")
     return rel
