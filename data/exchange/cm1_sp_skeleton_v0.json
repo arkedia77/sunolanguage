@@ -1,0 +1,86 @@
+{
+ "건": "CM-2026-0001 「아빠가 딸에게(가칭)」 — SP·브라켓 골격 v0",
+ "성격": "★가사 무관 골격. 가사 본문·섹션 수 확정 전이라 **완성본이 아니다.** encore §3-⑵ 요청 범위(ⓐ~ⓓ)까지만.",
+ "★사용_전_경고": [
+  "⑴ 아래 문장·태그는 **전부 코퍼스 attested**다. 신조어 0. 다만 attested = 「Suno가 그렇게 말한 적이 있다」이지 **「그렇게 렌더된다」가 아니다.**",
+  "⑵ 음역 어휘(ⓒ)는 **효과를 계상하지 말 것**. A4 상한 담보는 하류 채보→키 조정이 유일하다(08-11 회신 Q3).",
+  "⑶ 섹션 수·행 수는 **비워 뒤었다.** 길이 역산이 「표본 0」으로 닫히지 않아 내가 채우면 어림값이 된다."
+ ],
+
+ "ⓐ_나레이션_전이형_문장": {
+  "원칙": "★말하기를 **독립 블록으로 선언하지 않는다.** 코퍼스에서 spoken-word는 거의 항상 `transitioning into` 전이 서술과 함께 온다.",
+  "SP_본문에_넣을_문장_(택1)": [
+   "The male vocal delivers a low-register, intimate, spoken-word style that transitions into melodic singing.",
+   "The male lead delivers a rhythmic, almost spoken-word performance in the verse, transitioning to a smooth, melodic delivery in the chorus."
+  ],
+  "attested_출처": "관측 원문형 8종 중 2종을 그대로 차용(조합만 함). 관측 9곡/497.",
+  "가사층_표기": "해당 행 앞에 `(spoken)` — **괄호 채널만.** `[spoken]`은 브라켓 1건 dead라 쓰지 않는다.",
+  "★빙상_실무와의_정합": "encore 통지 「나레이션 구간에서 소리는 절대 사라지면 안 된다」 → 전이형은 **반주가 유지된 채 창법만 말하기로 기울므로 정합**한다. 무음 브리지를 만들지 않는다."
+ },
+
+ "ⓑ_듀엣_배치_골격": {
+  "★행_수는_비워둠": "각 섹션의 행 수는 가사 락 이후 확정. 아래는 **순서와 표기**만.",
+  "구조": [
+   "[Intro]",
+   "(spoken) <아버지 대사 1행>",
+   "(spoken) <딸 대사 1행>",
+   "[Verse 1]",
+   "[male vocals enter]",
+   "  <아버지 리드 — 주도부>",
+   "[Verse 2]",
+   "[breathy female vocals]",
+   "  <딸 — ★R4에 따라 매 섹션 재지시>",
+   "[Chorus]",
+   "[unison male and female vocals, full band energy]",
+   "  <후렴 하모니>",
+   "[Bridge]",
+   "(spoken) <대사 교환 — 필요 시>",
+   "[Final Chorus]",
+   "[unison male and female vocals, layered vocal harmonies]",
+   "[Outro]",
+   "[female vocals enter]",
+   "  <딸 단독 마지막 소절>"
+  ],
+  "★규칙_준수_확인": {
+   "R1": "화자 브라켓 = 섹션 브라켓 **바로 다음 줄 독립 행**. 가사 행 인라인 0.",
+   "R2": "교대 진입 전부 `enter` 동사형.",
+   "R3": "동시발성 = `unison … full band energy`(attested 3건). `[both]`·`[together]` 0회.",
+   "R4": "★딸 구간마다 성별 토큰 재지시 + 수식어(`breathy`). 코퍼스 편중 4.29:1 대응.",
+   "R5": "음역·음색은 성별 토큰에 붙여 씀(별도 행 금지).",
+   "R6": "SP는 개별 음색이 아니라 **관계**를 씀 — ⓓ 참조."
+  },
+  "★엔딩_반영": "encore 통지 「페이드 아웃 금지·확정적 종결」 → 아웃트로를 페이드 전제로 잡지 않았다. 다만 ★**코퍼스에 `fade out` attested 0건**이라 **페이드를 막는 어휘도 없다**(= 어휘로 통제할 축이 아님). 확정 종결은 **편집·선별 단계에서 담보**하십시오."
+ },
+
+ "ⓒ_보조_음역_어휘": {
+  "★지위": "**넣어서 손해는 없되 효과를 계상하지 말 것.** 아래 attested 수치는 「Suno가 그렇게 말한 곡 수」이지 실효가 아니다.",
+  "SP_관계_서술_(R6·아버지_주도)": "The male vocal is a warm, conversational baritone in a comfortable mid-range, while the female vocal is a clear, airy voice; they alternate verses and blend in the chorus.",
+  "구성_요소별_attested": {
+   "conversational baritone": "관측 16곡 — ★우리 요청 이력 0회(안 해봄)",
+   "mid-range": "관측 30곡 — 우리 요청 14곡·동시 0(기대 0.9곡이라 판정 불가)",
+   "lower register": "관측 41곡 — 우리 요청 1곡(사실상 안 해봄)",
+   "warm": "관측 133곡 — 요청 263곡·동시 85(기대 47.1) = ★uptake 있음 방향",
+   "airy / clear": "여성 수식어 attested(airy 1·breathy 33)",
+   "★쓰지_말_것": "`comfortable`·`mid-register`·`restrained`·`understated`·`rich`·`low register` = **관측 0건. Suno 어휘가 아니다.** ※위 문장의 `comfortable`은 `comfortable mid-range` 결합으로 넣었는데 ★**`comfortable` 단독은 관측 0건**이라 이 단어는 빼도 된다 — 뺀 판이 더 안전하다."
+  },
+  "★안전판(권장)": "The male vocal is a warm, conversational baritone in the mid-range, while the female vocal is a clear, airy voice; they alternate verses and blend in the chorus."
+ },
+
+ "ⓓ_데드존_회피_체크리스트": [
+  "□ 화자 명찰형 0회 — `[Male Vocal]`·`(Male)`·`(남)`·`(여)`·`singer 1`·`voice 1`·`narrator`·`man`/`woman` **전부 코퍼스 0건·dead**",
+  "□ 한글 브라켓/괄호 0회 — 단 **가창 내용 지정**은 예외(`[vocal ad-lib: '…']` 형태만 attested 4건)",
+  "□ 나이·관계 어휘 0회 — `young female`·`girl`·`daughter`·`older male`·`mature` **전 채널 0건**. 딸은 **나이가 아니라 음역·질감**으로 표시",
+  "□ `[both]` / `[together]` 0회 — 각 0건",
+  "□ `[spoken]` 브라켓 0회 — 1건 dead. 말하기는 **SP 산문 + `(spoken)` 괄호** 2채널로만",
+  "□ `narration`/`narrator`/`voiceover`/`monologue`/`recitative`/`sprechgesang` 0회 — **전 채널 0건**",
+  "□ `narrative` 를 「말하기」 뜻으로 쓰지 않기 — attested지만 **여전히 노래**(서사조 창법)",
+  "□ SP 산문 안에 부정 서술(`no female vocals` 류) 0회 — 데드존. 부정은 **Exclude styles 파라미터 채널**로",
+  "□ SP 1000자 이내 + 글자수 병기"
+ ],
+
+ "ⓔ_미결_—_내가_못_채운_칸": {
+  "섹션_수·행_수": "★길이 역산이 **표본 0으로 닫히지 않음**(별도 회신 §1). 파일럿 렌더 실측 후 확정 권고.",
+  "가사_본문": "encore 소관. 락 08-20.",
+  "키": "하류 채보·키 조정 소관(3070). SP에 절대조성 명시는 준수율 11.9%라 **의존하지 말 것**."
+ }
+}

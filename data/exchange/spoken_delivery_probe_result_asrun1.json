@@ -1,0 +1,139 @@
+{
+ "사전등록": "docs/spoken_delivery_probe_preregistration.md (커밋 cbdbdd5 — 값 보기 전)",
+ "대상": "RM1·RM2 2클립 (v2.3 3곡은 (spoken) 0건 — 대상 아님)",
+ "클립": {
+  "RM1": {
+   "uuid": "70365338-0b63-4369-a5e3-83ad4de94bb0",
+   "노래극_A": {
+    "sustain_ratio": 0.5281,
+    "delta_semitone_median": 0.0436,
+    "voiced_ratio": 0.7045,
+    "voiced_frames": 15153
+   },
+   "spoken_대상_X": {
+    "sustain_ratio": 0.3674,
+    "delta_semitone_median": 0.0608,
+    "voiced_ratio": 0.1971,
+    "voiced_frames": 430
+   },
+   "spoken_행별": [
+    {
+     "구간": "0.0~7.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "sustain_ratio": 0.2963,
+     "delta_semitone_median": 0.0888,
+     "voiced_ratio": 0.3112,
+     "voiced_frames": 216
+    },
+    {
+     "구간": "13.0~24.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?"
+    },
+    {
+     "구간": "111.0~115.0s",
+     "행": "아니요, 그때보다 더 커졌어요",
+     "sustain_ratio": 0.4393,
+     "delta_semitone_median": 0.0446,
+     "voiced_ratio": 0.5431,
+     "voiced_frames": 214
+    }
+   ],
+   "spoken_행수": 3,
+   "가창_구간수": 32,
+   "게이트_주지표_분리도": 0.2569,
+   "게이트": "통과",
+   "z_정규화위치": {
+    "sustain_ratio": 0.375,
+    "delta_semitone_median": 0.776,
+    "voiced_ratio": 12.046
+   },
+   "지표별_판정": {
+    "sustain_ratio": "보류",
+    "delta_semitone_median": "노래",
+    "voiced_ratio": "노래"
+   },
+   "판정": "노래 쪽 (3지표 중 2)"
+  },
+  "RM2": {
+   "uuid": "7a028e80-b6f7-47ce-846c-cb919ef55b5f",
+   "노래극_A": {
+    "sustain_ratio": 0.5465,
+    "delta_semitone_median": 0.0406,
+    "voiced_ratio": 0.7352,
+    "voiced_frames": 15450
+   },
+   "spoken_대상_X": {
+    "sustain_ratio": 0.3608,
+    "delta_semitone_median": 0.081,
+    "voiced_ratio": 0.3609,
+    "voiced_frames": 571
+   },
+   "spoken_행별": [
+    {
+     "구간": "0.0~8.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "sustain_ratio": 0.5203,
+     "delta_semitone_median": 0.0771,
+     "voiced_ratio": 0.3098,
+     "voiced_frames": 246
+    },
+    {
+     "구간": "96.0~99.0s",
+     "행": "그때 그 마음 지금도 같아요?",
+     "sustain_ratio": 0.2663,
+     "delta_semitone_median": 0.1,
+     "voiced_ratio": 0.5748,
+     "voiced_frames": 169
+    },
+    {
+     "구간": "99.0~104.0s",
+     "행": "아니요, 그때보다 더 커졌어요",
+     "sustain_ratio": 0.2115,
+     "delta_semitone_median": 0.0695,
+     "voiced_ratio": 0.3158,
+     "voiced_frames": 156
+    }
+   ],
+   "spoken_행수": 3,
+   "가창_구간수": 31,
+   "게이트_주지표_분리도": 0.2753,
+   "게이트": "통과",
+   "z_정규화위치": {
+    "sustain_ratio": 0.326,
+    "delta_semitone_median": 0.495,
+    "voiced_ratio": 25.571
+   },
+   "지표별_판정": {
+    "sustain_ratio": "말하기",
+    "delta_semitone_median": "보류",
+    "voiced_ratio": "노래"
+   },
+   "판정": "★보류 — 3지표 중 2개 이상이 한 방향으로 모이지 않음"
+  }
+ },
+ "말극_B_TTS": {
+  "Yuna": {
+   "sustain_ratio": 0.2169,
+   "delta_semitone_median": 0.1467,
+   "voiced_ratio": 0.8269,
+   "voiced_frames": 793
+  },
+  "Suhyun": {
+   "sustain_ratio": 0.2169,
+   "delta_semitone_median": 0.1467,
+   "voiced_ratio": 0.8269,
+   "voiced_frames": 793
+  },
+  "Eddy (한국어(한국))": {
+   "sustain_ratio": 0.3797,
+   "delta_semitone_median": 0.0682,
+   "voiced_ratio": 0.5975,
+   "voiced_frames": 769
+  }
+ },
+ "말극_B_평균": {
+  "sustain_ratio": 0.2712,
+  "delta_semitone_median": 0.1205,
+  "voiced_ratio": 0.7504
+ }
+}

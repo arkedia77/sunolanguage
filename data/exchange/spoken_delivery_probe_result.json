@@ -1,0 +1,204 @@
+{
+ "사전등록": "docs/spoken_delivery_probe_preregistration.md (커밋 cbdbdd5 — 값 보기 전)",
+ "대상": "RM1·RM2 2클립 (v2.3 3곡은 (spoken) 0건 — 대상 아님)",
+ "클립": {
+  "RM1": {
+   "uuid": "70365338-0b63-4369-a5e3-83ad4de94bb0",
+   "노래극_A": {
+    "sustain_ratio": 0.531,
+    "delta_semitone_median": 0.0433,
+    "voiced_ratio": 0.7194,
+    "voiced_frames": 14762
+   },
+   "spoken_대상_X": {
+    "sustain_ratio": 0.3934,
+    "delta_semitone_median": 0.0607,
+    "voiced_ratio": 0.3955,
+    "voiced_frames": 821
+   },
+   "spoken_행별": [
+    {
+     "구간": "0.0~7.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "sustain_ratio": 0.2963,
+     "delta_semitone_median": 0.0888,
+     "voiced_ratio": 0.3112,
+     "voiced_frames": 216
+    },
+    {
+     "구간": "7.0~13.0s",
+     "행": "그러며 그 날도 꼭 오늘 같았죠",
+     "sustain_ratio": 0.2197,
+     "delta_semitone_median": 0.0875,
+     "voiced_ratio": 0.2912,
+     "voiced_frames": 173
+    },
+    {
+     "구간": "13.0~24.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "측정": "★불가 — 유성 프레임 20 미만(스템이 거의 비어 있음)"
+    },
+    {
+     "구간": "107.0~111.0s",
+     "행": "그때 그만 지금도 같아요?",
+     "sustain_ratio": 0.5826,
+     "delta_semitone_median": 0.0507,
+     "voiced_ratio": 0.5533,
+     "voiced_frames": 218
+    },
+    {
+     "구간": "111.0~115.0s",
+     "행": "아니요, 그때보다 더 커졌어요",
+     "sustain_ratio": 0.4393,
+     "delta_semitone_median": 0.0446,
+     "voiced_ratio": 0.5431,
+     "voiced_frames": 214
+    }
+   ],
+   "spoken_집계행수": 4,
+   "★측정불가_구간": [
+    {
+     "구간": "13.0~24.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "측정": "★불가 — 유성 프레임 20 미만(스템이 거의 비어 있음)"
+    }
+   ],
+   "가창_구간수": 30,
+   "게이트_주지표_분리도": 0.2216,
+   "게이트": "통과",
+   "지표별_양극분리도": {
+    "sustain_ratio": 0.2216,
+    "delta_semitone_median": 0.04,
+    "voiced_ratio": 0.0371
+   },
+   "z_정규화위치": {
+    "sustain_ratio": 0.379,
+    "delta_semitone_median": 0.565,
+    "voiced_ratio": -7.73
+   },
+   "지표별_판정": {
+    "sustain_ratio": "보류",
+    "delta_semitone_median": "보류",
+    "voiced_ratio": "말하기"
+   },
+   "판정_규칙그대로": "★보류 — 2표 이상 한 방향으로 안 모임",
+   "★사후_분리지표만": [
+    "sustain_ratio",
+    "delta_semitone_median"
+   ],
+   "★탈락지표": {
+    "voiced_ratio": "|A−B|=0.0371 — 두 극이 사실상 겹침"
+   },
+   "판정_분리지표만_post_hoc": "★보류 — 2표 이상 한 방향으로 안 모임"
+  },
+  "RM2": {
+   "uuid": "7a028e80-b6f7-47ce-846c-cb919ef55b5f",
+   "노래극_A": {
+    "sustain_ratio": 0.55,
+    "delta_semitone_median": 0.04,
+    "voiced_ratio": 0.7455,
+    "voiced_frames": 15148
+   },
+   "spoken_대상_X": {
+    "sustain_ratio": 0.3643,
+    "delta_semitone_median": 0.0788,
+    "voiced_ratio": 0.3836,
+    "voiced_frames": 873
+   },
+   "spoken_행별": [
+    {
+     "구간": "0.0~8.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "sustain_ratio": 0.5203,
+     "delta_semitone_median": 0.0771,
+     "voiced_ratio": 0.3098,
+     "voiced_frames": 246
+    },
+    {
+     "구간": "8.0~15.0s",
+     "행": "그러면 그날도 꼭 오늘 같았죠",
+     "sustain_ratio": 0.3709,
+     "delta_semitone_median": 0.0707,
+     "voiced_ratio": 0.4352,
+     "voiced_frames": 302
+    },
+    {
+     "구간": "96.0~99.0s",
+     "행": "그때 그 마음 지금도 같아요?",
+     "sustain_ratio": 0.2663,
+     "delta_semitone_median": 0.1,
+     "voiced_ratio": 0.5748,
+     "voiced_frames": 169
+    },
+    {
+     "구간": "99.0~104.0s",
+     "행": "아니요, 그때보다 더 커졌어요",
+     "sustain_ratio": 0.2115,
+     "delta_semitone_median": 0.0695,
+     "voiced_ratio": 0.3158,
+     "voiced_frames": 156
+    }
+   ],
+   "spoken_집계행수": 4,
+   "★측정불가_구간": [],
+   "가창_구간수": 30,
+   "게이트_주지표_분리도": 0.2406,
+   "게이트": "통과",
+   "지표별_양극분리도": {
+    "sustain_ratio": 0.2406,
+    "delta_semitone_median": 0.0433,
+    "voiced_ratio": 0.0632
+   },
+   "z_정규화위치": {
+    "sustain_ratio": 0.228,
+    "delta_semitone_median": 0.103,
+    "voiced_ratio": -4.726
+   },
+   "지표별_판정": {
+    "sustain_ratio": "말하기",
+    "delta_semitone_median": "말하기",
+    "voiced_ratio": "말하기"
+   },
+   "판정_규칙그대로": "말하기 쪽 (3표)",
+   "★사후_분리지표만": [
+    "sustain_ratio",
+    "delta_semitone_median"
+   ],
+   "★탈락지표": {
+    "voiced_ratio": "|A−B|=0.0632 — 두 극이 사실상 겹침"
+   },
+   "판정_분리지표만_post_hoc": "말하기 쪽 (2표)"
+  }
+ },
+ "말극_B_TTS": {
+  "Yuna": {
+   "sustain_ratio": 0.2516,
+   "delta_semitone_median": 0.1209,
+   "voiced_ratio": 0.8038,
+   "voiced_frames": 803
+  },
+  "Eddy (한국어(한국))": {
+   "sustain_ratio": 0.3797,
+   "delta_semitone_median": 0.0682,
+   "voiced_ratio": 0.5975,
+   "voiced_frames": 769
+  },
+  "Grandma (한국어(한국))": {
+   "sustain_ratio": 0.2876,
+   "delta_semitone_median": 0.0625,
+   "voiced_ratio": 0.6457,
+   "voiced_frames": 831
+  },
+  "Flo (한국어(한국))": {
+   "sustain_ratio": 0.3189,
+   "delta_semitone_median": 0.0815,
+   "voiced_ratio": 0.6822,
+   "voiced_frames": 878
+  }
+ },
+ "말극_B_평균": {
+  "sustain_ratio": 0.3095,
+  "delta_semitone_median": 0.0833,
+  "voiced_ratio": 0.6823
+ }
+}
