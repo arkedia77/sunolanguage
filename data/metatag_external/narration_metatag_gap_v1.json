@@ -1,0 +1,1656 @@
+{
+  "generated_by": "scripts/metatag_narration_gap_v1.py",
+  "context": "오너 지적(08-12) — v0의 '순증 0'은 축 오류 + 대괄호 정규식 추출 오류의 산물",
+  "axis_note": "★GAP = 우리 코퍼스에 없다. Suno가 안 뱉는다는 뜻이며, 지시형 태그의 경우 '입력하면 반응하는가'는 여전히 미검증. 단 나레이션 족은 우리 재고가 브라켓 2종뿐이라 GAP=우리 공백으로 읽는 것이 맞다.",
+  "counts": {
+    "OURS_BRACKET_PARTIAL": 11,
+    "★GAP": 85,
+    "OURS_SP_ONLY": 4,
+    "OURS_BRACKET": 3
+  },
+  "tags": {
+    "[Spoken Word]": {
+      "sources": [
+        "yt_Uy2jV0fqTPk(JP)"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "영상이 장르별 A/B 시연. 「指定範囲の歌詞をセリフにする」"
+      ],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 1,
+      "sp_songs": 8
+    },
+    "[Spoken Verse]": {
+      "sources": [
+        "yt_Uy2jV0fqTPk(JP)"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "영상이 장르별 A/B 시연. 「指定範囲の歌詞をセリフにする」"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Spoken]": {
+      "sources": [
+        "yt_zu7fhHtVAwU(PT)"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "설명란에 전체 나레이션 대본 수록"
+      ],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 1,
+      "sp_songs": 10
+    },
+    "[Whispered]": {
+      "sources": [
+        "yt_zu7fhHtVAwU(PT)"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "설명란에 전체 나레이션 대본 수록"
+      ],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 1,
+      "sp_songs": 1
+    },
+    "[Pause]": {
+      "sources": [
+        "yt_zu7fhHtVAwU(PT)"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "설명란에 전체 나레이션 대본 수록"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Dramatic Pause]": {
+      "sources": [
+        "yt_zu7fhHtVAwU(PT)"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "설명란에 전체 나레이션 대본 수록"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Deep Breath]": {
+      "sources": [
+        "yt_zu7fhHtVAwU(PT)"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "설명란에 전체 나레이션 대본 수록"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Female spoken, vocaloid, gentle]": {
+      "sources": [
+        "yt_dxG9qPPpRnI"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★괄호 안 화자+어조 서술형 — 공개곡 가사 실물"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Monster spoken, raspy, angry]": {
+      "sources": [
+        "yt_dxG9qPPpRnI"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★괄호 안 화자+어조 서술형 — 공개곡 가사 실물"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Verse 1, Man]": {
+      "sources": [
+        "yt_dxG9qPPpRnI"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★괄호 안 화자+어조 서술형 — 공개곡 가사 실물"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[laugh]": {
+      "sources": [
+        "yt_dxG9qPPpRnI"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★괄호 안 화자+어조 서술형 — 공개곡 가사 실물"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[in Latin]": {
+      "sources": [
+        "yt_dxG9qPPpRnI"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★괄호 안 화자+어조 서술형 — 공개곡 가사 실물"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[AI Automated Voice, talking]": {
+      "sources": [
+        "yt_sJnkHygvp6g"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★캐릭터명이 브라켓 안으로 들어간 형태·자유문 SFX 지시"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Tay Chatbot, talking:]": {
+      "sources": [
+        "yt_sJnkHygvp6g"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★캐릭터명이 브라켓 안으로 들어간 형태·자유문 SFX 지시"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Outro, Tay Chatbot:]": {
+      "sources": [
+        "yt_sJnkHygvp6g"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★캐릭터명이 브라켓 안으로 들어간 형태·자유문 SFX 지시"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Deadpan]": {
+      "sources": [
+        "yt_sJnkHygvp6g"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★캐릭터명이 브라켓 안으로 들어간 형태·자유문 SFX 지시"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Tay laughs]": {
+      "sources": [
+        "yt_sJnkHygvp6g"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★캐릭터명이 브라켓 안으로 들어간 형태·자유문 SFX 지시"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Old Windows error pings. A dial-up modem scream.]": {
+      "sources": [
+        "yt_sJnkHygvp6g"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★캐릭터명이 브라켓 안으로 들어간 형태·자유문 SFX 지시"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[VOICEOVER — SPOKEN, NOT SUNG]": {
+      "sources": [
+        "suno.com/s/nrhqq4oreDlBEabw"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★Suno v5 공개곡 실물 가사(음원 공개). 규칙블록형 프롬프트"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[READ NATURALLY • NO RHYMES • NO MELODY]": {
+      "sources": [
+        "suno.com/s/nrhqq4oreDlBEabw"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★Suno v5 공개곡 실물 가사(음원 공개). 규칙블록형 프롬프트"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[BACKGROUND: minimal ambient underscore only]": {
+      "sources": [
+        "suno.com/s/nrhqq4oreDlBEabw"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★Suno v5 공개곡 실물 가사(음원 공개). 규칙블록형 프롬프트"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[PERFORMANCE RULES]": {
+      "sources": [
+        "suno.com/s/nrhqq4oreDlBEabw"
+      ],
+      "grade": "A_demo",
+      "bracketed": true,
+      "notes": [
+        "★Suno v5 공개곡 실물 가사(음원 공개). 규칙블록형 프롬프트"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Narration]": {
+      "sources": [
+        "sunoaiwiki_spokenword"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Sprechgesang]": {
+      "sources": [
+        "sunoaiwiki_spokenword"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Whispering vocals]": {
+      "sources": [
+        "sunoaiwiki_production"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Screaming vocals]": {
+      "sources": [
+        "sunoaiwiki_production"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[narrator]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[announcer]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[whispers]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[whispering]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[whisper]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[laughter]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[shout]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 4,
+      "sp_songs": 0
+    },
+    "[vocalist]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "OURS_SP_ONLY",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 36
+    },
+    "[vocal-style]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[personae]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[spoken word]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 1,
+      "sp_songs": 8
+    },
+    "[rapped verse]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[sfx]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[siren]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 2,
+      "sp_songs": 1
+    },
+    "[field-recording]": {
+      "sources": [
+        "gh_stayen"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "파라미터 문법 보유(단 LLM 생성 흔적 있어 '제안'으로 취급)"
+      ],
+      "verdict": "OURS_SP_ONLY",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 1
+    },
+    "[Vocal Style: Whisper]": {
+      "sources": [
+        "openmusicprompt"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Vocal Style: Monotone]": {
+      "sources": [
+        "openmusicprompt"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Vocal Style: Shouting]": {
+      "sources": [
+        "openmusicprompt"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Vocal Style: Breathless]": {
+      "sources": [
+        "openmusicprompt"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Voice: Auto-tune]": {
+      "sources": [
+        "openmusicprompt"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Vocal Ad-libs]": {
+      "sources": [
+        "openmusicprompt"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "OURS_BRACKET",
+      "bracket_songs": 6,
+      "bracket_partial_songs": 9,
+      "sp_songs": 4
+    },
+    "[Effect: Radio Filter]": {
+      "sources": [
+        "openmusicprompt"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Persona: Pop Star]": {
+      "sources": [
+        "openmusicprompt"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Whispered lyrics]": {
+      "sources": [
+        "howtopromptsuno"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Spoken Word Narration]": {
+      "sources": [
+        "gh_daveshap"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "훈련데이터에 등장하는 형태라 주장"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Staticky Spoken Pre-Chorus]": {
+      "sources": [
+        "gh_daveshap"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "훈련데이터에 등장하는 형태라 주장"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Telephone Call]": {
+      "sources": [
+        "gh_daveshap"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "훈련데이터에 등장하는 형태라 주장"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Swanky Crooning Male]": {
+      "sources": [
+        "gh_daveshap"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "훈련데이터에 등장하는 형태라 주장"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Ethereal Female Whisper]": {
+      "sources": [
+        "gh_daveshap"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [
+        "훈련데이터에 등장하는 형태라 주장"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Man]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Woman]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Boy]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Girl]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Telephone Effect]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Clears Throat]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Sighs]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Chuckles]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Giggles]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Groaning]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Cough]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Whistling]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Audience laughing]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Applause]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 1,
+      "sp_songs": 0
+    },
+    "[Cheering]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Phone Ringing]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Static]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 2,
+      "sp_songs": 2
+    },
+    "[Record Scratch]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 2,
+      "sp_songs": 1
+    },
+    "[Silence]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "OURS_BRACKET",
+      "bracket_songs": 1,
+      "bracket_partial_songs": 15,
+      "sp_songs": 7
+    },
+    "[Censored]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "[Screams]": {
+      "sources": [
+        "musci.io"
+      ],
+      "grade": "B_recited",
+      "bracketed": true,
+      "notes": [],
+      "verdict": "OURS_SP_ONLY",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 1
+    },
+    "Female narrator": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Announcer": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Reporter": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Man": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Woman": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Boy": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Girl": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Whispers": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Sighs": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Chuckles": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Giggling": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Screams": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "OURS_SP_ONLY",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 1
+    },
+    "Clears throat": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Audience laughing": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Applause": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 1,
+      "sp_songs": 0
+    },
+    "Censored": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Silence": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "OURS_BRACKET",
+      "bracket_songs": 1,
+      "bracket_partial_songs": 15,
+      "sp_songs": 7
+    },
+    "Barking": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Squawking": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Phone ringing": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "Beeping": {
+      "sources": [
+        "sunoaiwiki_metataglist"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "★출처가 대괄호 없이 기재 — v0 정규식이 구조적으로 못 봄"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "FEMALE NARRATOR": {
+      "sources": [
+        "brunch_botongmarketer_599(KR)"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "한국어 출처. 대문자 무괄호 표기"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "WHISPERS": {
+      "sources": [
+        "brunch_botongmarketer_599(KR)"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "한국어 출처. 대문자 무괄호 표기"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "ANNOUNCER": {
+      "sources": [
+        "brunch_botongmarketer_599(KR)"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "한국어 출처. 대문자 무괄호 표기"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "AUDIENCE LAUGHING": {
+      "sources": [
+        "brunch_botongmarketer_599(KR)"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "한국어 출처. 대문자 무괄호 표기"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    },
+    "APPLAUSE": {
+      "sources": [
+        "brunch_botongmarketer_599(KR)"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "한국어 출처. 대문자 무괄호 표기"
+      ],
+      "verdict": "OURS_BRACKET_PARTIAL",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 1,
+      "sp_songs": 0
+    },
+    "PHONE RINGING": {
+      "sources": [
+        "brunch_botongmarketer_599(KR)"
+      ],
+      "grade": "B_recited",
+      "bracketed": false,
+      "notes": [
+        "한국어 출처. 대문자 무괄호 표기"
+      ],
+      "verdict": "★GAP",
+      "bracket_songs": 0,
+      "bracket_partial_songs": 0,
+      "sp_songs": 0
+    }
+  },
+  "speaker_syntax": {
+    "괄호내_화자+어조_서술": {
+      "form": "[Monster spoken, raspy, angry] / [Female spoken, vocaloid, gentle]",
+      "source": "yt_dxG9qPPpRnI (공개곡 가사)",
+      "grade": "A_demo",
+      "note": "★화자를 명찰이 아니라 '어떻게 들리는가'로 적음 — duet_bracket_grammar_v1 §0과 동형"
+    },
+    "캐릭터명_구조태그_병합": {
+      "form": "[Verse 1, Man] / [Outro, Tay Chatbot:] / [Chorus, Man]",
+      "source": "yt_dxG9qPPpRnI, yt_sJnkHygvp6g",
+      "grade": "A_demo",
+      "note": "★구조태그 뒤에 화자를 콤마로 붙임. 우리 4층 문법에 없는 형태"
+    },
+    "콜론_파라미터": {
+      "form": "[narrator: voice: female, style: documentary]",
+      "source": "gh_stayen",
+      "grade": "B_recited",
+      "note": "문법이 내부 비일관(voice: 는 콜론, volume= 는 등호)"
+    },
+    "역할_인라인_큐": {
+      "form": "[announcer: horror show host, ominous, slow delivery]",
+      "source": "gh_stayen",
+      "grade": "B_recited",
+      "note": ""
+    },
+    "파이프_표기": {
+      "form": "[spoken word | intimate, close-mic, almost whispered]",
+      "source": "gh_stayen, entrepeneur4lyf",
+      "grade": "B_recited",
+      "note": ""
+    },
+    "성별_접두_콜론": {
+      "form": "[Male: gritty baritone] / [female:]",
+      "source": "gh_stayen",
+      "grade": "B_recited",
+      "note": ""
+    },
+    "규칙블록형_프롬프트": {
+      "form": "[VOICEOVER — SPOKEN, NOT SUNG] + [PERFORMANCE RULES] + 불릿 규칙",
+      "source": "suno.com/s/nrhqq4oreDlBEabw",
+      "grade": "A_demo",
+      "note": "★태그 1개가 아니라 '규칙 블록'으로 낭독을 강제한 실물 — 가장 완성된 형태"
+    },
+    "괄호_화자힌트": {
+      "form": "(Voice A) / (Voice B)",
+      "source": "gh_stayen",
+      "grade": "B_recited",
+      "note": "★출처 스스로 '약한 힌트(soft hint)'라 명시"
+    }
+  },
+  "failure_modes": {
+    "브라켓이_노래로_불림": {
+      "source": "jackrighteous",
+      "quote": "The label is sung aloud → 원인: cue가 너무 장황/서정적 → 조치: 브라켓을 짧게",
+      "note": "★긴 나레이션 태그([announcer: horror show host, ominous, slow delivery])의 실제 실패 양식"
+    },
+    "충돌태그_적층": {
+      "source": "gh_stayen",
+      "quote": "[whisper] + [shouted vocals]를 같은 줄에 쌓지 말 것. 구간당 주 전달방식 1개",
+      "note": ""
+    },
+    "페르소나_활성시_무시": {
+      "source": "gh_stayen",
+      "quote": "Persona 선택 시 [Male Vocal]/[Female Vocal]은 중복이거나 무시될 수 있음",
+      "note": "musci는 무조건 유효하다고 적어 정면 충돌"
+    }
+  },
+  "our_sp_assets_top50": [
+    [
+      "itone male vocal delivers a rhythmic, almost spoken-word performance in the verses, transitioning to",
+      4
+    ],
+    [
+      "A male vocalist sings in a soft, conversational baritone with light breathiness and minimal",
+      3
+    ],
+    [
+      "nal slides. A male vocalist sings in a soft, conversational baritone with light breathiness and minimal",
+      3
+    ],
+    [
+      "a breathy, close-mic technique, utilizing a conversational delivery that shifts into a light head voice",
+      2
+    ],
+    [
+      "in a mid-range tenor with a rhythmic, almost conversational cadence in the verses, transitioning to a mo",
+      2
+    ],
+    [
+      "The vocal delivery alternates between a conversational chest voice and a light, airy falsetto durin",
+      2
+    ],
+    [
+      "d vocals are delivered in a rhythmic, almost spoken-word style in the verses, transitioning to a melo",
+      2
+    ],
+    [
+      "A smooth male vocal performs with a relaxed, conversational delivery in the verses, transitioning into a",
+      2
+    ],
+    [
+      "Male vocals are delivered in a conversational, mid-range tenor with light doubling in the",
+      2
+    ],
+    [
+      "Male vocals are delivered in a conversational, mid-range tenor with light compression and",
+      2
+    ],
+    [
+      "s are delivered in a low-register, intimate, spoken-word style that transitions into melodic singing.",
+      2
+    ],
+    [
+      "Male vocals are delivered in a soft, conversational baritone.",
+      2
+    ],
+    [
+      "btle chorus effect, delivered in a rhythmic, conversational style in the verses and a melodic, airy tone",
+      2
+    ],
+    [
+      "elivery is intimate and breathy, utilizing a conversational register that shifts into a light head voice",
+      2
+    ],
+    [
+      "ft, breathy female vocal performs a melodic, conversational delivery with light vibrato.",
+      2
+    ],
+    [
+      "Male vocals are delivered in a soft, conversational tenor with light doubling in the higher regi",
+      2
+    ],
+    [
+      "e vocals are delivered in a rhythmic, almost spoken-word style during verses, transitioning to a melo",
+      2
+    ],
+    [
+      "baritone male vocal delivers the melody in a conversational style, occasionally shifting into a light fa",
+      2
+    ],
+    [
+      "ime. The vocal delivery alternates between a conversational chest voice and a light, airy falsetto durin",
+      2
+    ],
+    [
+      "t flourishes. Male vocals are delivered in a conversational, mid-range tenor with light compression and",
+      2
+    ],
+    [
+      "lines. Male vocals are delivered in a soft, conversational baritone. The tempo is 72 BPM in 4/4 time, i",
+      2
+    ],
+    [
+      "ft, breathy female vocal performs a melodic, conversational delivery with light vibrato. A subtle, warm",
+      2
+    ],
+    [
+      "ckbeat. Male vocals are delivered in a soft, conversational tenor with light doubling in the higher regi",
+      2
+    ],
+    [
+      "Male vocals are delivered in a smooth, conversational baritone with light reverb.",
+      1
+    ],
+    [
+      "Male vocals are delivered in a smooth, conversational tenor with occasional breathy textures.",
+      1
+    ],
+    [
+      "itone male vocal delivers a rhythmic, almost conversational melody in Korean.",
+      1
+    ],
+    [
+      "lean with light plate reverb, delivered in a conversational, storytelling tone.",
+      1
+    ],
+    [
+      "plate reverb, delivered in a conversational, storytelling tone.",
+      1
+    ],
+    [
+      "Male vocals are delivered in a conversational, mid-range baritone with light breathiness.",
+      1
+    ],
+    [
+      "baritone male vocal performs with a relaxed, conversational delivery in the lower register.",
+      1
+    ],
+    [
+      "The vocal delivery is conversational and close-mic'd with subtle plate reverb.",
+      1
+    ],
+    [
+      "The vocal delivery is intimate and conversational, utilizing a mid-range chest voice with occa",
+      1
+    ],
+    [
+      "Male vocals are delivered in a rhythmic, conversational tenor range, transitioning into a melodic he",
+      1
+    ],
+    [
+      "A smooth male tenor vocal delivers rhythmic, conversational verses and melodic choruses.",
+      1
+    ],
+    [
+      "A male vocalist delivers a rhythmic, conversational rap in Korean with a relaxed, laid-back flow",
+      1
+    ],
+    [
+      ", intimate male vocal performs in a breathy, conversational style.",
+      1
+    ],
+    [
+      "Vocal delivery is soft and conversational, utilizing subtle vibrato and airy head voic",
+      1
+    ],
+    [
+      "Male vocals are delivered in a conversational, rhythmic style, transitioning into a smooth",
+      1
+    ],
+    [
+      "Male vocals are delivered in a smooth, conversational tenor, transitioning into a light falsetto d",
+      1
+    ],
+    [
+      "m, melodic male baritone vocal performs in a conversational, storytelling style.",
+      1
+    ],
+    [
+      "baritone vocal performs in a conversational, storytelling style.",
+      1
+    ],
+    [
+      "Vocals transition between a rhythmic, conversational delivery in the verses and a melodic, soarin",
+      1
+    ],
+    [
+      "soft, breathy delivery, transitioning into a spoken-word style.",
+      1
+    ],
+    [
+      "The vocal delivery is conversational and intimate, staying mostly in a mid-range",
+      1
+    ],
+    [
+      "The vocal performance transitions from a conversational chest voice in the verses to a layered, airy",
+      1
+    ],
+    [
+      "s are delivered in a breathy, intimate, near-whispered style with subtle plate reverb.",
+      1
+    ],
+    [
+      "Female vocals are delivered in a smooth, conversational alto range with light doubling in the chorus",
+      1
+    ],
+    [
+      "ft, breathy female vocal performs a melodic, conversational delivery.",
+      1
+    ],
+    [
+      "Male vocals are delivered in a conversational, mid-range tenor with a relaxed, rhythmic ca",
+      1
+    ],
+    [
+      "Male vocals are delivered in a relaxed, conversational tenor range with subtle doubling in the chor",
+      1
+    ]
+  ]
+}
