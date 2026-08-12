@@ -17,6 +17,7 @@
   python3 scripts/inbox_scan.py          미처리 목록
   python3 scripts/inbox_scan.py --all    역사적 잔류까지 요약
 """
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -44,6 +45,70 @@ def load(path):
         return json.loads(path.read_text())
     except Exception as e:
         return {"__error__": str(e)}
+
+
+# ─────────────────────────────────────────────────────────────
+# 해시 원장 (2026-08-11 추가)
+#
+# 왜: 워터마크는 **「새로 온 것」만 잡고 「바뀐 것」은 못 잡는다.**
+#   루트 잔류 395건·processed 90건 중 누가 수정돼도 이 스캐너는 지금 침묵한다.
+#   agent-comm은 공유 클론이라 같은 파일명으로 갱신 push가 원리적으로 가능하다(G-K5 race).
+#
+# ★단, 붙이기 전에 재봤다 — **현 데이터에서 해시로 잡히는 건 0건이다**:
+#   ⓐ루트 내 내용 중복 0 ⓑ루트↔processed 동일 내용 0
+#   ⓒ`git log --name-only` 실측 = 수신함 파일 전건 **커밋 1회 = 생성 후 수정 이력 0건**
+#   ⇒ 이건 **회고 탐지 장치가 아니라 앞으로의 변경을 잡는 장치**다. 실적 0을 실적으로 적지 않는다.
+#
+# ★첫 실행은 「변경 없음」이 아니라 **「기준선 생성 — 이번엔 변경 탐지 안 함」**으로 낸다.
+#   비교 대상이 없는 것을 「없음」으로 접으면 send_msg·컷오프에서 낸 오류형을 여기서 재현한다.
+# ─────────────────────────────────────────────────────────────
+LEDGER = Path(__file__).resolve().parent.parent / "data" / "inbox_hash_ledger.json"
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+
+
+def hash_audit(box):
+    """현재 스냅샷을 원장과 대조. (보고줄 리스트, 새 스냅샷) 반환."""
+    snap = {}
+    for p in box.glob("*.json"):
+        snap[p.name] = {"h": sha(p), "loc": "root"}
+    for p in (box / "processed").glob("*.json"):
+        snap[p.name] = {"h": sha(p), "loc": "processed"}
+
+    if not LEDGER.exists():
+        return (["★기준선 생성 — 원장이 없어 **이번 실행은 변경 탐지를 하지 않았다**",
+                 f"  (「변경 없음」이 아니라 「아직 못 봄」. 다음 실행부터 {len(snap)}건 대조)"],
+                snap)
+
+    prev = json.loads(LEDGER.read_text())
+    lines, changed, moved, moved_dirty, gone, added = [], [], [], [], [], []
+    for name, cur in snap.items():
+        old = prev.get(name)
+        if old is None:
+            added.append(name)
+        elif old["h"] != cur["h"]:
+            (moved_dirty if old["loc"] != cur["loc"] else changed).append(name)
+        elif old["loc"] != cur["loc"]:
+            moved.append(name)
+    gone = [n for n in prev if n not in snap]
+
+    if changed:
+        lines.append(f"★★내용 변경 {len(changed)}건 — **같은 파일명인데 해시가 다르다. 다시 읽을 것**")
+        lines += [f"    {n[:88]}" for n in changed[:10]]
+    if moved_dirty:
+        lines.append(f"★★이관 중 내용 변경 {len(moved_dirty)}건 — **옮기면서 바뀐 것**")
+        lines += [f"    {n[:88]}" for n in moved_dirty[:10]]
+    if gone:
+        lines.append(f"★소실 {len(gone)}건 — 원장에 있었는데 지금 없다")
+        lines += [f"    {n[:88]}" for n in gone[:10]]
+    if not (changed or moved_dirty or gone):
+        lines.append("변경·소실 0")
+    # ★평시 카운트는 이상 유무와 무관하게 **항상** 낸다 — 이상이 있을 때 정상분이 화면에서
+    #   사라지면 「몇 건을 대조했는지」를 못 보고, 그 상태의 「0건」은 신뢰할 수 없다.
+    lines.append(f"대조 {len(prev)}→{len(snap)}건 · 정상 이관 {len(moved)} · 신규 {len(added)}")
+    return lines, snap
 
 
 def main():
@@ -87,6 +152,15 @@ def main():
         print(f"\n■ 워터마크 이전 잔류 {len(old)}건 (역사적 미이관분, 최근 10)")
         for s, f, r, src, n in sorted(old, reverse=True)[:10]:
             print(f"  {s}  from={f:<14} {n[:80]}")
+
+    # ★해시 대조 — 워터마크가 못 보는 축(내용 변경·소실)
+    lines, snap = hash_audit(BOX)
+    print("\n■ 해시 대조 (워터마크는 '새 것'만 본다 — 여기는 '바뀐 것'을 본다)")
+    for l in lines:
+        print(f"  {l}")
+    if "--no-write" not in sys.argv:
+        LEDGER.parent.mkdir(parents=True, exist_ok=True)
+        LEDGER.write_text(json.dumps(snap, ensure_ascii=False, indent=1, sort_keys=True))
 
 
 if __name__ == "__main__":
