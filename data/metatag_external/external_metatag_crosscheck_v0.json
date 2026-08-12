@@ -1,0 +1,5923 @@
+{
+  "generated_by": "scripts/metatag_external_crosscheck.py",
+  "corpus": {
+    "db": "data/reanalysis_v2/lexical_index.sqlite",
+    "bracket_sources": [
+      "bracket_entity",
+      "stems_bracket"
+    ],
+    "sp_sources": [
+      "sp_entity",
+      "stems_sp",
+      "suno_sp_full"
+    ],
+    "distinct_brackets": 2869,
+    "distinct_sp_sentence_song_pairs": 5321,
+    "provenance": "merged_4values.json -> suno_reanalysis[*].lyrics = Suno 자신의 출력 브라켓"
+  },
+  "question_answered": "Suno가 이 표기를 스스로 뱉은 적이 있는가",
+  "question_NOT_answered": "이 태그를 입력하면 Suno가 반응하는가 (출력어휘 != 입력제어)",
+  "controls": {
+    "positive": {
+      "[Verse]": {
+        "normalized": "verse",
+        "verdict": "EMITTED_EXACT",
+        "bracket_exact": 1,
+        "bracket_exact_songs": 1,
+        "bracket_exact_samples": [
+          "Verse"
+        ],
+        "bracket_contains": 4,
+        "bracket_contains_songs": 458,
+        "bracket_contains_samples": [
+          "verse 1",
+          "verse 2",
+          "verse 3"
+        ],
+        "sp_contains": 45,
+        "sp_contains_songs": 23
+      },
+      "[Chorus]": {
+        "normalized": "chorus",
+        "verdict": "EMITTED_EXACT",
+        "bracket_exact": 1,
+        "bracket_exact_songs": 320,
+        "bracket_exact_samples": [
+          "Chorus"
+        ],
+        "bracket_contains": 44,
+        "bracket_contains_songs": 126,
+        "bracket_contains_samples": [
+          "arpeggiated clean electric guitar with chorus",
+          "arpeggiated clean electric guitar with chorus effect",
+          "arpeggiated clean electric guitar with chorus, soft synth pad"
+        ],
+        "sp_contains": 451,
+        "sp_contains_songs": 221
+      },
+      "[Intro]": {
+        "normalized": "intro",
+        "verdict": "EMITTED_EXACT",
+        "bracket_exact": 1,
+        "bracket_exact_songs": 548,
+        "bracket_exact_samples": [
+          "Intro"
+        ],
+        "bracket_contains": 0,
+        "bracket_contains_songs": 0,
+        "bracket_contains_samples": [],
+        "sp_contains": 25,
+        "sp_contains_songs": 13
+      },
+      "[Instrumental]": {
+        "normalized": "instrumental",
+        "verdict": "EMITTED_EXACT",
+        "bracket_exact": 1,
+        "bracket_exact_songs": 137,
+        "bracket_exact_samples": [
+          "Instrumental"
+        ],
+        "bracket_contains": 6,
+        "bracket_contains_songs": 17,
+        "bracket_contains_samples": [
+          "instrumental break",
+          "instrumental break with funky guitar riff",
+          "instrumental break, acoustic guitar and electric guitar interplay"
+        ],
+        "sp_contains": 36,
+        "sp_contains_songs": 37
+      }
+    },
+    "negative": {
+      "[zzqqxx not a real tag]": {
+        "normalized": "zzqqxx not a real tag",
+        "verdict": "ABSENT",
+        "bracket_exact": 0,
+        "bracket_exact_songs": 0,
+        "bracket_exact_samples": [],
+        "bracket_contains": 0,
+        "bracket_contains_songs": 0,
+        "bracket_contains_samples": [],
+        "sp_contains": 0,
+        "sp_contains_songs": 0
+      },
+      "[qwertyuiop asdfgh]": {
+        "normalized": "qwertyuiop asdfgh",
+        "verdict": "ABSENT",
+        "bracket_exact": 0,
+        "bracket_exact_songs": 0,
+        "bracket_exact_samples": [],
+        "bracket_contains": 0,
+        "bracket_contains_songs": 0,
+        "bracket_contains_samples": [],
+        "sp_contains": 0,
+        "sp_contains_songs": 0
+      }
+    }
+  },
+  "sources": {
+    "official_hub": {
+      "grade": "A_official",
+      "url": "https://suno.com/hub/how-to-make-a-song",
+      "note": "suno.com 도메인이나 헬프센터 아닌 마케팅/SEO 문서(저자 바이라인 있음). 갱신 2026-08-11",
+      "provenance": "first_party"
+    },
+    "official_release_notes": {
+      "grade": "A_official",
+      "url": "https://about.suno.com/release-notes",
+      "note": "제품 체인지로그(진성 1차). 2024-09-19 / 2024-10-10 항목",
+      "provenance": "first_party"
+    },
+    "yt_master_ai_fast": {
+      "grade": "B_youtube",
+      "url": "https://www.youtube.com/watch?v=40Pg2iNnWR4",
+      "note": "설명란에 'Meta Tags Used:' 블록 + 태그별 데모 챕터. 유튜브 채널 중 유일하게 시연 구조",
+      "provenance": "creator_demo"
+    },
+    "yt_ai_controversy": {
+      "grade": "B_youtube",
+      "url": "https://www.youtube.com/watch?v=D5FBP-vv72c",
+      "note": "커리큘럼 나열(암송). 검증 주장 없음",
+      "provenance": "recited"
+    },
+    "yt_ai_tune_craft": {
+      "grade": "B_youtube",
+      "url": "https://www.youtube.com/watch?v=JHd6yae77fY",
+      "note": "영상 내 시연 주장",
+      "provenance": "creator_demo"
+    },
+    "gh_stayen": {
+      "grade": "C_community",
+      "url": "https://github.com/stayen/suno-reference",
+      "note": "184개. 공개 게시글 취합 + 자체 400회 생성 교차시험 주장. ★유일하게 반증(무효 태그) 목록을 가진 출처",
+      "provenance": "compiled_plus_self_tested"
+    },
+    "blog_blakecrosley": {
+      "grade": "C_community",
+      "url": "https://blakecrosley.com/guides/suno",
+      "note": "본인 수천 트랙 테스트 주장. 요약기 경유 수집이라 누락 가능",
+      "provenance": "claims_self_tested"
+    },
+    "blog_hookgenius": {
+      "grade": "C_community",
+      "url": "https://hookgenius.app/learn/suno-metatags-complete-list/",
+      "note": "'v5의 모든 작동 태그' 주장하나 방법론 무기재. 상업 블로그",
+      "provenance": "asserted_no_method"
+    },
+    "blog_jackrighteous": {
+      "grade": "C_community",
+      "url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+      "note": "★자체 헤지: '생성 관례이지 보장된 소프트웨어 명령이 아님'",
+      "provenance": "hedged"
+    }
+  },
+  "counts": {
+    "EMITTED_EXACT": 43,
+    "EMITTED_PARTIAL": 116,
+    "ABSENT": 95,
+    "SP_ONLY": 34
+  },
+  "tags": {
+    "[Verse]": {
+      "normalized": "verse",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Verse"
+      ],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 458,
+      "bracket_contains_samples": [
+        "verse 1",
+        "verse 2",
+        "verse 3"
+      ],
+      "sp_contains": 45,
+      "sp_contains_songs": 23,
+      "sources": [
+        "official_hub",
+        "yt_ai_controversy",
+        "blog_blakecrosley"
+      ],
+      "best_grade": "A_official"
+    },
+    "[Verse 1]": {
+      "normalized": "verse 1",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 458,
+      "bracket_exact_samples": [
+        "Verse 1"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "official_hub",
+        "blog_blakecrosley"
+      ],
+      "best_grade": "A_official"
+    },
+    "[Chorus]": {
+      "normalized": "chorus",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 320,
+      "bracket_exact_samples": [
+        "Chorus"
+      ],
+      "bracket_contains": 44,
+      "bracket_contains_songs": 126,
+      "bracket_contains_samples": [
+        "arpeggiated clean electric guitar with chorus",
+        "arpeggiated clean electric guitar with chorus effect",
+        "arpeggiated clean electric guitar with chorus, soft synth pad"
+      ],
+      "sp_contains": 451,
+      "sp_contains_songs": 221,
+      "sources": [
+        "official_hub",
+        "yt_ai_controversy",
+        "blog_blakecrosley"
+      ],
+      "best_grade": "A_official"
+    },
+    "[Bridge]": {
+      "normalized": "bridge",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 94,
+      "bracket_exact_samples": [
+        "Bridge"
+      ],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "bridge section"
+      ],
+      "sp_contains": 28,
+      "sp_contains_songs": 15,
+      "sources": [
+        "official_hub",
+        "yt_ai_controversy",
+        "blog_blakecrosley"
+      ],
+      "best_grade": "A_official"
+    },
+    "[Intro]": {
+      "normalized": "intro",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 548,
+      "bracket_exact_samples": [
+        "Intro"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 25,
+      "sp_contains_songs": 13,
+      "sources": [
+        "official_hub",
+        "yt_ai_controversy",
+        "blog_blakecrosley"
+      ],
+      "best_grade": "A_official"
+    },
+    "[drum break]": {
+      "normalized": "drum break",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "dusty drum break enters",
+        "four bar drum break, dry acoustic kit",
+        "syncopated acoustic drum break enters"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 6,
+      "sources": [
+        "official_release_notes"
+      ],
+      "best_grade": "A_official"
+    },
+    "[female vocals]": {
+      "normalized": "female vocals",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 12,
+      "bracket_exact_samples": [
+        "female vocals"
+      ],
+      "bracket_contains": 14,
+      "bracket_contains_songs": 55,
+      "bracket_contains_samples": [
+        "airy female vocals",
+        "breathy female vocals",
+        "breathy female vocals with heavy plate reverb"
+      ],
+      "sp_contains": 92,
+      "sp_contains_songs": 49,
+      "sources": [
+        "official_release_notes"
+      ],
+      "best_grade": "A_official"
+    },
+    "[Angry verse]": {
+      "normalized": "angry verse",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "yt_master_ai_fast"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Crowd sings]": {
+      "normalized": "crowd sings",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "yt_master_ai_fast"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Crowd yells]": {
+      "normalized": "crowd yells",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "yt_master_ai_fast"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Chorus, modulate up a key]": {
+      "normalized": "chorus, modulate up a key",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "yt_master_ai_fast"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Chorus, modulate down a key]": {
+      "normalized": "chorus, modulate down a key",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "yt_master_ai_fast"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Interlude]": {
+      "normalized": "interlude",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Interlude"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "yt_master_ai_fast",
+        "yt_ai_controversy",
+        "blog_blakecrosley"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Guitar solo]": {
+      "normalized": "guitar solo",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 6,
+      "bracket_exact_samples": [
+        "Guitar Solo"
+      ],
+      "bracket_contains": 33,
+      "bracket_contains_songs": 34,
+      "bracket_contains_samples": [
+        "acoustic guitar solo with electric guitar arpeggios",
+        "acoustic guitar solo with percussive hits",
+        "acoustic guitar solo with rapid fire picking and syncopated phrasing"
+      ],
+      "sp_contains": 12,
+      "sp_contains_songs": 7,
+      "sources": [
+        "yt_master_ai_fast"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Hook]": {
+      "normalized": "hook",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "repetitive two bar melodic hook",
+        "staccato synth hook, syncopated bass, clean electric guitar"
+      ],
+      "sp_contains": 24,
+      "sp_contains_songs": 15,
+      "sources": [
+        "yt_ai_controversy",
+        "blog_blakecrosley"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Outro]": {
+      "normalized": "outro",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 200,
+      "bracket_exact_samples": [
+        "Outro"
+      ],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "instrumental outro"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "yt_ai_controversy",
+        "blog_blakecrosley"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[Primal Scream]": {
+      "normalized": "primal scream",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "yt_ai_tune_craft"
+      ],
+      "best_grade": "B_youtube"
+    },
+    "[track]": {
+      "normalized": "track",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 3,
+      "bracket_contains_samples": [
+        "click track count off",
+        "track fades out"
+      ],
+      "sp_contains": 342,
+      "sp_contains_songs": 192,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[accelerando]": {
+      "normalized": "accelerando",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 4,
+      "bracket_contains_samples": [
+        "accelerando drum fill",
+        "accelerando drum roll",
+        "accelerando rhythmic sequence"
+      ],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[ad-lib]": {
+      "normalized": "ad lib",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 13,
+      "bracket_contains_samples": [
+        "falsetto ad lib",
+        "shouted ad lib",
+        "vocal ad lib"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[ambient]": {
+      "normalized": "ambient",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "kick drum drops out, ambient industrial drones"
+      ],
+      "sp_contains": 23,
+      "sp_contains_songs": 17,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[announcer]": {
+      "normalized": "announcer",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[aria-rise]": {
+      "normalized": "aria rise",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[arpeggio]": {
+      "normalized": "arpeggio",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 35,
+      "bracket_contains_songs": 56,
+      "bracket_contains_samples": [
+        "acoustic guitar continues arpeggio",
+        "acoustic guitar strumming, clean electric guitar arpeggio",
+        "acoustic piano eighth note pattern, clean electric guitar arpeggio"
+      ],
+      "sp_contains": 12,
+      "sp_contains_songs": 7,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[arrangement]": {
+      "normalized": "arrangement",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 27,
+      "bracket_contains_songs": 32,
+      "bracket_contains_samples": [
+        "full arrangement",
+        "full arrangement, driving bassline",
+        "full arrangement, driving beat"
+      ],
+      "sp_contains": 818,
+      "sp_contains_songs": 441,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[articulation]": {
+      "normalized": "articulation",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 5,
+      "sp_contains_songs": 3,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[attack]": {
+      "normalized": "attack",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "distorted electric bass riff, percussive attack"
+      ],
+      "sp_contains": 32,
+      "sp_contains_songs": 29,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[background-vocals]": {
+      "normalized": "background vocals",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[bass]": {
+      "normalized": "bass",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 577,
+      "bracket_contains_songs": 453,
+      "bracket_contains_samples": [
+        "808 bass and trap drums enter",
+        "808 bass fades",
+        "808 bass slides"
+      ],
+      "sp_contains": 922,
+      "sp_contains_songs": 470,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[bass-slide]": {
+      "normalized": "bass slide",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 2,
+      "bracket_exact_samples": [
+        "bass slide"
+      ],
+      "bracket_contains": 3,
+      "bracket_contains_songs": 3,
+      "bracket_contains_samples": [
+        "bass slide down",
+        "final brass stab, bass slide down",
+        "upright bass slide"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[beat-switch]": {
+      "normalized": "beat switch",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[big finish]": {
+      "normalized": "big finish",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[bleep]": {
+      "normalized": "bleep",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[break]": {
+      "normalized": "break",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Break"
+      ],
+      "bracket_contains": 9,
+      "bracket_contains_songs": 22,
+      "bracket_contains_samples": [
+        "dusty drum break enters",
+        "four bar drum break, dry acoustic kit",
+        "instrumental break"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 6,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[breakdown]": {
+      "normalized": "breakdown",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 24,
+      "bracket_exact_samples": [
+        "Breakdown"
+      ],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "bass and guitar breakdown with rhythmic interplay",
+        "swing jazz breakdown: walking bass, ride cymbal, piano stabs"
+      ],
+      "sp_contains": 8,
+      "sp_contains_songs": 7,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[bridge]": {
+      "normalized": "bridge",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 94,
+      "bracket_exact_samples": [
+        "Bridge"
+      ],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "bridge section"
+      ],
+      "sp_contains": 28,
+      "sp_contains_songs": 15,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[build]": {
+      "normalized": "build",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 8,
+      "bracket_contains_songs": 15,
+      "bracket_contains_samples": [
+        "build up",
+        "drums build to a climax, then drop to guitar only",
+        "drums build with snare rolls, guitar distortion increases"
+      ],
+      "sp_contains": 19,
+      "sp_contains_songs": 12,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[cadence]": {
+      "normalized": "cadence",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 8,
+      "sp_contains_songs": 4,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[cadential]": {
+      "normalized": "cadential",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[call-and-response]": {
+      "normalized": "call and response",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 4,
+      "bracket_contains_samples": [
+        "call and response between stomps and claps",
+        "call and response between violin and lead acoustic guitar",
+        "guitar and bass call and response"
+      ],
+      "sp_contains": 30,
+      "sp_contains_songs": 19,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[chant]": {
+      "normalized": "chant",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[chant-loop]": {
+      "normalized": "chant loop",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[choir]": {
+      "normalized": "choir",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "choir staccato chants",
+        "choir sustained pads",
+        "full choir"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[chorus]": {
+      "normalized": "chorus",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 320,
+      "bracket_exact_samples": [
+        "Chorus"
+      ],
+      "bracket_contains": 44,
+      "bracket_contains_songs": 126,
+      "bracket_contains_samples": [
+        "arpeggiated clean electric guitar with chorus",
+        "arpeggiated clean electric guitar with chorus effect",
+        "arpeggiated clean electric guitar with chorus, soft synth pad"
+      ],
+      "sp_contains": 451,
+      "sp_contains_songs": 221,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[chromatic]": {
+      "normalized": "chromatic",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 12,
+      "bracket_contains_songs": 13,
+      "bracket_contains_samples": [
+        "bass adds chromatic slides",
+        "bass continues syncopated slap and pop pattern with chromatic slides",
+        "chromatic descending bass line"
+      ],
+      "sp_contains": 30,
+      "sp_contains_songs": 19,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[climax]": {
+      "normalized": "climax",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 8,
+      "bracket_exact_samples": [
+        "Climax"
+      ],
+      "bracket_contains": 8,
+      "bracket_contains_songs": 9,
+      "bracket_contains_samples": [
+        "climax with high notes and strings",
+        "climax, full instrumentation",
+        "climax, heavy crash cymbals"
+      ],
+      "sp_contains": 7,
+      "sp_contains_songs": 4,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[cluster]": {
+      "normalized": "cluster",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[coda]": {
+      "normalized": "coda",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[compression]": {
+      "normalized": "compression",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 3,
+      "bracket_contains_songs": 3,
+      "bracket_contains_samples": [
+        "heavy sidechain compression on synth",
+        "heavy sidechain compression pumping",
+        "synth pads with sidechain compression"
+      ],
+      "sp_contains": 92,
+      "sp_contains_songs": 55,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[control]": {
+      "normalized": "control",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[consonance]": {
+      "normalized": "consonance",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[content]": {
+      "normalized": "content",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[counterpoint]": {
+      "normalized": "counterpoint",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 6,
+      "bracket_contains_songs": 6,
+      "bracket_contains_samples": [
+        "bass counterpoint",
+        "clean electric guitar counterpoint",
+        "flute enters playing melodic counterpoint"
+      ],
+      "sp_contains": 85,
+      "sp_contains_songs": 53,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[crescendo]": {
+      "normalized": "crescendo",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Crescendo"
+      ],
+      "bracket_contains": 8,
+      "bracket_contains_songs": 9,
+      "bracket_contains_samples": [
+        "crescendo of polyrhythmic drumming",
+        "crescendo with rising brass glissandos",
+        "crescendo, strings enter"
+      ],
+      "sp_contains": 7,
+      "sp_contains_songs": 4,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[development]": {
+      "normalized": "development",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Development"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[diminuendo]": {
+      "normalized": "diminuendo",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[dissonance]": {
+      "normalized": "dissonance",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[distorted vocals]": {
+      "normalized": "distorted vocals",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[distortion]": {
+      "normalized": "distortion",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 7,
+      "bracket_contains_songs": 9,
+      "bracket_contains_samples": [
+        "bass guitar enters with heavy distortion",
+        "bass riff becomes more aggressive with increased distortion",
+        "drums build with snare rolls, guitar distortion increases"
+      ],
+      "sp_contains": 12,
+      "sp_contains_songs": 17,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[drop]": {
+      "normalized": "drop",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 7,
+      "bracket_exact_samples": [
+        "Drop"
+      ],
+      "bracket_contains": 60,
+      "bracket_contains_songs": 68,
+      "bracket_contains_samples": [
+        "bass and clean guitar stabs drop out",
+        "bass and drums drop to half time feel",
+        "bass and guitar drop to lower dynamic level"
+      ],
+      "sp_contains": 8,
+      "sp_contains_songs": 7,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[drum-fill]": {
+      "normalized": "drum fill",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 5,
+      "bracket_exact_samples": [
+        "drum fill"
+      ],
+      "bracket_contains": 22,
+      "bracket_contains_songs": 24,
+      "bracket_contains_samples": [
+        "accelerando drum fill",
+        "bass slides, building drum fill",
+        "brief drum fill with snare rolls"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[duet]": {
+      "normalized": "duet",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "male and female duet"
+      ],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[dynamics]": {
+      "normalized": "dynamics",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "fortissimo dynamics, full ensemble including woodwind trills"
+      ],
+      "sp_contains": 12,
+      "sp_contains_songs": 8,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[echo]": {
+      "normalized": "echo",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[effects]": {
+      "normalized": "effects",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 10,
+      "bracket_contains_songs": 13,
+      "bracket_contains_samples": [
+        "bit crushed industrial sound effects",
+        "bit crushed industrial sound effects with delay",
+        "bullet whiz sound effects"
+      ],
+      "sp_contains": 38,
+      "sp_contains_songs": 30,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[element]": {
+      "normalized": "element",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 5,
+      "sp_contains_songs": 3,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[emotional]": {
+      "normalized": "emotional",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "drums drop out, emotional pads only"
+      ],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[end]": {
+      "normalized": "end",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 8,
+      "bracket_contains_songs": 10,
+      "bracket_contains_samples": [
+        "acoustic guitar and shaker continue to end",
+        "bright synth stabs accenting the end of phrases",
+        "crash cymbal accents at the end of phrases"
+      ],
+      "sp_contains": 84,
+      "sp_contains_songs": 56,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[ensemble]": {
+      "normalized": "ensemble",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 22,
+      "bracket_contains_songs": 17,
+      "bracket_contains_samples": [
+        "female vocal ensemble",
+        "female vocal ensemble enters",
+        "fortissimo dynamics, full ensemble including woodwind trills"
+      ],
+      "sp_contains": 33,
+      "sp_contains_songs": 22,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[epic]": {
+      "normalized": "epic",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[episode]": {
+      "normalized": "episode",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[eq]": {
+      "normalized": "eq",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 8,
+      "sp_contains_songs": 4,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[era]": {
+      "normalized": "era",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[exposition]": {
+      "normalized": "exposition",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[extend-style]": {
+      "normalized": "extend style",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[fade]": {
+      "normalized": "fade",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 48,
+      "bracket_contains_songs": 55,
+      "bracket_contains_samples": [
+        "acoustic guitar and bass fade out",
+        "acoustic guitars fade out with final arpeggiated chord",
+        "bass and rhythm guitar fade out"
+      ],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[female]": {
+      "normalized": "female",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 22,
+      "bracket_contains_songs": 71,
+      "bracket_contains_samples": [
+        "airy female vocals",
+        "breathy female vocalizations enter, wordless melodic runs",
+        "breathy female vocals"
+      ],
+      "sp_contains": 141,
+      "sp_contains_songs": 74,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[fermata]": {
+      "normalized": "fermata",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[field-recording]": {
+      "normalized": "field recording",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[finale]": {
+      "normalized": "finale",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[focus]": {
+      "normalized": "focus",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 23,
+      "sp_contains_songs": 16,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[fragmentation]": {
+      "normalized": "fragmentation",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[fugue]": {
+      "normalized": "fugue",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[gain]": {
+      "normalized": "gain",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 5,
+      "bracket_contains_samples": [
+        "high gain electric guitar solo with bluesy bends and heavy vibrato",
+        "high gain lead guitar enters, rapid alternate picking, wah wah pedal effect",
+        "high gain lead guitar with wah wah effect"
+      ],
+      "sp_contains": 23,
+      "sp_contains_songs": 19,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[genre]": {
+      "normalized": "genre",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[glissando]": {
+      "normalized": "glissando",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 3,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "concert harp glissando",
+        "harp glissando swell",
+        "piano glissando"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[glitch]": {
+      "normalized": "glitch",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 6,
+      "bracket_contains_songs": 9,
+      "bracket_contains_samples": [
+        "digital glitch textures, high pitched synth piercing",
+        "drums drop out, digital glitch effects",
+        "glitch effects and bit crushed transitions"
+      ],
+      "sp_contains": 5,
+      "sp_contains_songs": 6,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[grind]": {
+      "normalized": "grind",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[happy]": {
+      "normalized": "happy",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[harmonics]": {
+      "normalized": "harmonics",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 5,
+      "bracket_contains_samples": [
+        "lead guitar flourish with pinch harmonics",
+        "natural harmonics at the 12th fret",
+        "pinch harmonics on lead guitar"
+      ],
+      "sp_contains": 5,
+      "sp_contains_songs": 4,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[harmonies]": {
+      "normalized": "harmonies",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 16,
+      "bracket_contains_songs": 20,
+      "bracket_contains_samples": [
+        "brass section plays sustained harmonies",
+        "climax, heavy drums, layered harmonies",
+        "female vocal harmonies: la la la la la la la"
+      ],
+      "sp_contains": 100,
+      "sp_contains_songs": 50,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[harmony]": {
+      "normalized": "harmony",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 6,
+      "bracket_contains_samples": [
+        "lead acoustic guitar and violin play in unison and harmony",
+        "male melodic vocals with light harmony",
+        "vocal harmony"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[hook]": {
+      "normalized": "hook",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "repetitive two bar melodic hook",
+        "staccato synth hook, syncopated bass, clean electric guitar"
+      ],
+      "sp_contains": 24,
+      "sp_contains_songs": 15,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[improvisation]": {
+      "normalized": "improvisation",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[inflection]": {
+      "normalized": "inflection",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[instrument]": {
+      "normalized": "instrument",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 5,
+      "sp_contains_songs": 4,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[instruments]": {
+      "normalized": "instruments",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 13,
+      "bracket_contains_songs": 20,
+      "bracket_contains_samples": [
+        "instruments fade out",
+        "instruments fade out gradually",
+        "instruments fade out individually"
+      ],
+      "sp_contains": 26,
+      "sp_contains_songs": 18,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[instrumental]": {
+      "normalized": "instrumental",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 137,
+      "bracket_exact_samples": [
+        "Instrumental"
+      ],
+      "bracket_contains": 6,
+      "bracket_contains_songs": 17,
+      "bracket_contains_samples": [
+        "instrumental break",
+        "instrumental break with funky guitar riff",
+        "instrumental break, acoustic guitar and electric guitar interplay"
+      ],
+      "sp_contains": 36,
+      "sp_contains_songs": 37,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[intensity]": {
+      "normalized": "intensity",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 35,
+      "bracket_contains_songs": 38,
+      "bracket_contains_samples": [
+        "acoustic guitar increases strumming intensity",
+        "bass increases intensity with rapid fire slap triplets",
+        "building intensity"
+      ],
+      "sp_contains": 17,
+      "sp_contains_songs": 12,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[interlude]": {
+      "normalized": "interlude",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Interlude"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[intermezzo]": {
+      "normalized": "intermezzo",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[intro]": {
+      "normalized": "intro",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 548,
+      "bracket_exact_samples": [
+        "Intro"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 25,
+      "sp_contains_songs": 13,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[inversion]": {
+      "normalized": "inversion",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[lament]": {
+      "normalized": "lament",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[language]": {
+      "normalized": "language",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[laughter]": {
+      "normalized": "laughter",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[layering]": {
+      "normalized": "layering",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "synth pads swell, fuller vocal layering",
+        "vocal layering increases"
+      ],
+      "sp_contains": 22,
+      "sp_contains_songs": 12,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[legato]": {
+      "normalized": "legato",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 32,
+      "bracket_contains_songs": 39,
+      "bracket_contains_samples": [
+        "acoustic piano, soft legato strings",
+        "bass guitar enters, legato phrasing",
+        "cello enters, legato"
+      ],
+      "sp_contains": 135,
+      "sp_contains_songs": 70,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[length]": {
+      "normalized": "length",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[loop-friendly]": {
+      "normalized": "loop friendly",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[male]": {
+      "normalized": "male",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 88,
+      "bracket_contains_songs": 344,
+      "bracket_contains_samples": [
+        "aggressive male rap vocals",
+        "baritone male vocals",
+        "baritone male vocals enter"
+      ],
+      "sp_contains": 709,
+      "sp_contains_songs": 386,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[male vocal]": {
+      "normalized": "male vocal",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "bitcrushed male vocal sample"
+      ],
+      "sp_contains": 123,
+      "sp_contains_songs": 76,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[female vocal]": {
+      "normalized": "female vocal",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 3,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "female vocal ensemble",
+        "female vocal ensemble enters",
+        "female vocal harmonies: la la la la la la la"
+      ],
+      "sp_contains": 23,
+      "sp_contains_songs": 12,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[marcato]": {
+      "normalized": "marcato",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[minuet]": {
+      "normalized": "minuet",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[modulation]": {
+      "normalized": "modulation",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 9,
+      "bracket_contains_songs": 8,
+      "bracket_contains_samples": [
+        "filter cutoff modulation on bassline increases",
+        "filtered saw wave bass modulation",
+        "filtered synth bass modulation"
+      ],
+      "sp_contains": 11,
+      "sp_contains_songs": 10,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[mood]": {
+      "normalized": "mood",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[mutation]": {
+      "normalized": "mutation",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[narrator]": {
+      "normalized": "narrator",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[no]": {
+      "normalized": "no",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 16,
+      "sp_contains_songs": 15,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[no-repeat]": {
+      "normalized": "no repeat",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[orchestra]": {
+      "normalized": "orchestra",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "full orchestra, heavy brass, thunderous percussion"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[orchestration]": {
+      "normalized": "orchestration",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[outro]": {
+      "normalized": "outro",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 200,
+      "bracket_exact_samples": [
+        "Outro"
+      ],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "instrumental outro"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[pad]": {
+      "normalized": "pad",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 26,
+      "bracket_contains_songs": 28,
+      "bracket_contains_samples": [
+        "arpeggiated clean electric guitar with chorus, soft synth pad",
+        "arpeggiated clean electric guitar, soft synth pad",
+        "atmospheric synth pad swells"
+      ],
+      "sp_contains": 75,
+      "sp_contains_songs": 43,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[pedal-point]": {
+      "normalized": "pedal point",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[personae]": {
+      "normalized": "personae",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[pizzicato]": {
+      "normalized": "pizzicato",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 3,
+      "bracket_contains_samples": [
+        "descending woodwind scale, final pizzicato string pluck",
+        "final pizzicato chord",
+        "pizzicato bass accents"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[polyphony]": {
+      "normalized": "polyphony",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[power-off drop]": {
+      "normalized": "power off drop",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[pre-chorus]": {
+      "normalized": "pre chorus",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 73,
+      "bracket_exact_samples": [
+        "Pre-Chorus"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 12,
+      "sp_contains_songs": 6,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[prelude]": {
+      "normalized": "prelude",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[pronunciation]": {
+      "normalized": "pronunciation",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[pulse]": {
+      "normalized": "pulse",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 40,
+      "bracket_contains_songs": 36,
+      "bracket_contains_samples": [
+        "closed hi hat eighth note pulse",
+        "consistent hi hat pedal pulse",
+        "distorted kick drum pulse"
+      ],
+      "sp_contains": 85,
+      "sp_contains_songs": 59,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[quiet arrangement]": {
+      "normalized": "quiet arrangement",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[rapped verse]": {
+      "normalized": "rapped verse",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[recapitulation]": {
+      "normalized": "recapitulation",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[refrain]": {
+      "normalized": "refrain",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[register]": {
+      "normalized": "register",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 25,
+      "bracket_contains_songs": 26,
+      "bracket_contains_samples": [
+        "bass plays higher register melodic fills",
+        "bass plays melodic fills in higher register",
+        "bass riff shifts to a higher register"
+      ],
+      "sp_contains": 183,
+      "sp_contains_songs": 95,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[resolution]": {
+      "normalized": "resolution",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[retrograde]": {
+      "normalized": "retrograde",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[reverb]": {
+      "normalized": "reverb",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 64,
+      "bracket_contains_songs": 60,
+      "bracket_contains_samples": [
+        "arpeggiated synth with reverb trail",
+        "breathy baritone male vocals, heavy plate reverb",
+        "breathy female vocals with heavy plate reverb"
+      ],
+      "sp_contains": 504,
+      "sp_contains_songs": 283,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[reverberate]": {
+      "normalized": "reverberate",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[rhythm]": {
+      "normalized": "rhythm",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 50,
+      "bracket_contains_songs": 50,
+      "bracket_contains_samples": [
+        "acoustic guitar continues rhythm",
+        "acoustic guitar maintains steady bossa nova rhythm",
+        "acoustic guitar plays melodic lead over bossa nova rhythm"
+      ],
+      "sp_contains": 73,
+      "sp_contains_songs": 48,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[rhythmic-motif]": {
+      "normalized": "rhythmic motif",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "cowbell and woodblock rhythmic motif enters"
+      ],
+      "sp_contains": 1,
+      "sp_contains_songs": 2,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[ritardando]": {
+      "normalized": "ritardando",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "slowing tempo, ritardando"
+      ],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[riff]": {
+      "normalized": "riff",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 130,
+      "bracket_contains_songs": 110,
+      "bracket_contains_samples": [
+        "bass continues driving fuzz riff",
+        "bass continues driving riff",
+        "bass continues repetitive riff"
+      ],
+      "sp_contains": 94,
+      "sp_contains_songs": 61,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[rise]": {
+      "normalized": "rise",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[rondo]": {
+      "normalized": "rondo",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[sad]": {
+      "normalized": "sad",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[scale]": {
+      "normalized": "scale",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 8,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "clarinet and accordion play a descending chromatic scale",
+        "clarinet plays descending chromatic scale",
+        "descending string scale"
+      ],
+      "sp_contains": 5,
+      "sp_contains_songs": 4,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[scat break]": {
+      "normalized": "scat break",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[scherzo]": {
+      "normalized": "scherzo",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[secondary theme]": {
+      "normalized": "secondary theme",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[sequence]": {
+      "normalized": "sequence",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 34,
+      "bracket_contains_songs": 25,
+      "bracket_contains_samples": [
+        "accelerando rhythmic sequence",
+        "distorted kick drum pulse, metallic percussive synth sequence",
+        "distorted kick drum with sub tail, metallic sixteenth note synth sequence"
+      ],
+      "sp_contains": 25,
+      "sp_contains_songs": 27,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[sforzando]": {
+      "normalized": "sforzando",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[sfx]": {
+      "normalized": "sfx",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[shout]": {
+      "normalized": "shout",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 4,
+      "bracket_contains_samples": [
+        "vocal builds to a shout",
+        "vocal shout"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[signal-processing]": {
+      "normalized": "signal processing",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[silence]": {
+      "normalized": "silence",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "silence"
+      ],
+      "bracket_contains": 14,
+      "bracket_contains_songs": 15,
+      "bracket_contains_samples": [
+        "bass and synth fade out, rhodes piano and vinyl crackle remain until silence",
+        "gong decay into silence",
+        "granular textures dissolve into silence"
+      ],
+      "sp_contains": 5,
+      "sp_contains_songs": 7,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[sincopation]": {
+      "normalized": "sincopation",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[siren]": {
+      "normalized": "siren",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "rising synth siren",
+        "syncopated minor piano melody, distant siren sample"
+      ],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[solo]": {
+      "normalized": "solo",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 79,
+      "bracket_contains_songs": 77,
+      "bracket_contains_samples": [
+        "accordion solo with rapid trills, percussion continues",
+        "acoustic guitar solo with electric guitar arpeggios",
+        "acoustic guitar solo with percussive hits"
+      ],
+      "sp_contains": 83,
+      "sp_contains_songs": 51,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[sonority]": {
+      "normalized": "sonority",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[spoken word]": {
+      "normalized": "spoken word",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "spoken word delivery"
+      ],
+      "sp_contains": 13,
+      "sp_contains_songs": 8,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[staccato]": {
+      "normalized": "staccato",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 85,
+      "bracket_contains_songs": 81,
+      "bracket_contains_samples": [
+        "acoustic guitar plays final staccato chord",
+        "brass section swells, trumpets playing staccato fanfares",
+        "bright staccato synth chords, syncopated synth bass"
+      ],
+      "sp_contains": 204,
+      "sp_contains_songs": 114,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[start]": {
+      "normalized": "start",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "crash cymbal accents at the start of phrases"
+      ],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[stereo]": {
+      "normalized": "stereo",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 3,
+      "bracket_contains_samples": [
+        "resonant filter sweep, stereo panning effects",
+        "stereo panned white noise"
+      ],
+      "sp_contains": 37,
+      "sp_contains_songs": 26,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[stretto]": {
+      "normalized": "stretto",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[structure]": {
+      "normalized": "structure",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 52,
+      "sp_contains_songs": 35,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[style]": {
+      "normalized": "style",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 7,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "909 style open hi hat on off beats",
+        "drums enter, boom bap style kick and snare",
+        "electric guitar performs improvisational jazz style soloing"
+      ],
+      "sp_contains": 194,
+      "sp_contains_songs": 106,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[subject]": {
+      "normalized": "subject",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[subharmonic]": {
+      "normalized": "subharmonic",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[sustain]": {
+      "normalized": "sustain",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 10,
+      "bracket_contains_songs": 11,
+      "bracket_contains_samples": [
+        "drums and bass continue, guitar chords sustain",
+        "electric guitar solo with high sustain and melodic bends",
+        "electric piano chords sustain"
+      ],
+      "sp_contains": 19,
+      "sp_contains_songs": 10,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[swell]": {
+      "normalized": "swell",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 47,
+      "bracket_contains_songs": 67,
+      "bracket_contains_samples": [
+        "airy vocal delivery, synth pads swell",
+        "atmospheric synth pads swell",
+        "bass becomes more melodic, string pads swell"
+      ],
+      "sp_contains": 12,
+      "sp_contains_songs": 8,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[syncopation]": {
+      "normalized": "syncopation",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 9,
+      "bracket_contains_songs": 13,
+      "bracket_contains_samples": [
+        "bass follows kick drum syncopation",
+        "bass guitar enters, melodic syncopation",
+        "bass syncopation increases"
+      ],
+      "sp_contains": 10,
+      "sp_contains_songs": 8,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[technique]": {
+      "normalized": "technique",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "bass solo with heavy thumb slap technique",
+        "slap and pop technique with heavy syncopation"
+      ],
+      "sp_contains": 31,
+      "sp_contains_songs": 22,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[tempo]": {
+      "normalized": "tempo",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 9,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "clean electric guitar chords, syncopated bass, mid tempo drums",
+        "fiddle enters, tempo increases to 120 bpm",
+        "full band, driving tempo"
+      ],
+      "sp_contains": 581,
+      "sp_contains_songs": 390,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[tension-release]": {
+      "normalized": "tension release",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[tenuto]": {
+      "normalized": "tenuto",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[tessitura]": {
+      "normalized": "tessitura",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[texture]": {
+      "normalized": "texture",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 6,
+      "bracket_contains_samples": [
+        "brushed snare drum provides rhythmic texture",
+        "ghost notes and dead notes for rhythmic texture",
+        "granular texture layers"
+      ],
+      "sp_contains": 79,
+      "sp_contains_songs": 54,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[theme]": {
+      "normalized": "theme",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 33,
+      "bracket_contains_samples": [
+        "harmonica returns to the primary melodic theme",
+        "lead clarinet plays fast melodic theme with trills",
+        "main theme"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[timbre]": {
+      "normalized": "timbre",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 37,
+      "sp_contains_songs": 22,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[tone]": {
+      "normalized": "tone",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 6,
+      "bracket_contains_songs": 6,
+      "bracket_contains_samples": [
+        "bass guitar enters, overdriven tone",
+        "bass guitar enters, warm tone",
+        "electric guitar solo with clean tone and chorus effect"
+      ],
+      "sp_contains": 177,
+      "sp_contains_songs": 112,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[tone-cluster]": {
+      "normalized": "tone cluster",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[transition]": {
+      "normalized": "transition",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 4,
+      "bracket_contains_samples": [
+        "drums drop out briefly for sound design transition",
+        "drums transition to full snare with reverb",
+        "vocals transition to falsetto ad libs"
+      ],
+      "sp_contains": 47,
+      "sp_contains_songs": 25,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[tremolo]": {
+      "normalized": "tremolo",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 14,
+      "bracket_contains_songs": 16,
+      "bracket_contains_samples": [
+        "clean electric piano with tremolo, steady woodblock click",
+        "dissonant violin tremolo in high register",
+        "distorted guitar solo with heavy spring reverb and tremolo picking"
+      ],
+      "sp_contains": 18,
+      "sp_contains_songs": 15,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[trio]": {
+      "normalized": "trio",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[variation]": {
+      "normalized": "variation",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 5,
+      "bracket_contains_samples": [
+        "main theme variation",
+        "slight variation in the turnaround every four bars",
+        "steady woodblock rhythm continues without variation"
+      ],
+      "sp_contains": 7,
+      "sp_contains_songs": 8,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[verse]": {
+      "normalized": "verse",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Verse"
+      ],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 458,
+      "bracket_contains_samples": [
+        "verse 1",
+        "verse 2",
+        "verse 3"
+      ],
+      "sp_contains": 45,
+      "sp_contains_songs": 23,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[vibe]": {
+      "normalized": "vibe",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[vocalist]": {
+      "normalized": "vocalist",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 62,
+      "sp_contains_songs": 36,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[vocal-style]": {
+      "normalized": "vocal style",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[vocals]": {
+      "normalized": "vocals",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 149,
+      "bracket_contains_songs": 413,
+      "bracket_contains_samples": [
+        "aggressive male rap vocals",
+        "airy female vocals",
+        "baritone male vocals"
+      ],
+      "sp_contains": 666,
+      "sp_contains_songs": 342,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[vocoder]": {
+      "normalized": "vocoder",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[voicing]": {
+      "normalized": "voicing",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[vulnerable vocals]": {
+      "normalized": "vulnerable vocals",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[whisper]": {
+      "normalized": "whisper",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[whispers]": {
+      "normalized": "whispers",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[whispering]": {
+      "normalized": "whispering",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "gh_stayen"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Verse 2]": {
+      "normalized": "verse 2",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 114,
+      "bracket_exact_samples": [
+        "Verse 2"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Pre-Chorus]": {
+      "normalized": "pre chorus",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 73,
+      "bracket_exact_samples": [
+        "Pre-Chorus"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 12,
+      "sp_contains_songs": 6,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Post-Chorus]": {
+      "normalized": "post chorus",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 4,
+      "bracket_exact_samples": [
+        "Post-Chorus"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Breakdown]": {
+      "normalized": "breakdown",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 24,
+      "bracket_exact_samples": [
+        "Breakdown"
+      ],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "bass and guitar breakdown with rhythmic interplay",
+        "swing jazz breakdown: walking bass, ride cymbal, piano stabs"
+      ],
+      "sp_contains": 8,
+      "sp_contains_songs": 7,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Build]": {
+      "normalized": "build",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 8,
+      "bracket_contains_songs": 15,
+      "bracket_contains_samples": [
+        "build up",
+        "drums build to a climax, then drop to guitar only",
+        "drums build with snare rolls, guitar distortion increases"
+      ],
+      "sp_contains": 19,
+      "sp_contains_songs": 12,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Build-Up]": {
+      "normalized": "build up",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 2,
+      "bracket_exact_songs": 6,
+      "bracket_exact_samples": [
+        "Build Up",
+        "Build-up"
+      ],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "dynamic build up",
+        "melodic build up",
+        "snare roll build up"
+      ],
+      "sp_contains": 15,
+      "sp_contains_songs": 10,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Drop]": {
+      "normalized": "drop",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 7,
+      "bracket_exact_samples": [
+        "Drop"
+      ],
+      "bracket_contains": 60,
+      "bracket_contains_songs": 68,
+      "bracket_contains_samples": [
+        "bass and clean guitar stabs drop out",
+        "bass and drums drop to half time feel",
+        "bass and guitar drop to lower dynamic level"
+      ],
+      "sp_contains": 8,
+      "sp_contains_songs": 7,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[End]": {
+      "normalized": "end",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 8,
+      "bracket_contains_songs": 10,
+      "bracket_contains_samples": [
+        "acoustic guitar and shaker continue to end",
+        "bright synth stabs accenting the end of phrases",
+        "crash cymbal accents at the end of phrases"
+      ],
+      "sp_contains": 84,
+      "sp_contains_songs": 56,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Instrumental]": {
+      "normalized": "instrumental",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 137,
+      "bracket_exact_samples": [
+        "Instrumental"
+      ],
+      "bracket_contains": 6,
+      "bracket_contains_songs": 17,
+      "bracket_contains_samples": [
+        "instrumental break",
+        "instrumental break with funky guitar riff",
+        "instrumental break, acoustic guitar and electric guitar interplay"
+      ],
+      "sp_contains": 36,
+      "sp_contains_songs": 37,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Instrumental Intro]": {
+      "normalized": "instrumental intro",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Instrumental Break]": {
+      "normalized": "instrumental break",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 12,
+      "bracket_exact_samples": [
+        "Instrumental Break"
+      ],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "instrumental break with funky guitar riff",
+        "instrumental break, acoustic guitar and electric guitar interplay"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Guitar Solo]": {
+      "normalized": "guitar solo",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 6,
+      "bracket_exact_samples": [
+        "Guitar Solo"
+      ],
+      "bracket_contains": 33,
+      "bracket_contains_songs": 34,
+      "bracket_contains_samples": [
+        "acoustic guitar solo with electric guitar arpeggios",
+        "acoustic guitar solo with percussive hits",
+        "acoustic guitar solo with rapid fire picking and syncopated phrasing"
+      ],
+      "sp_contains": 12,
+      "sp_contains_songs": 7,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Piano Solo]": {
+      "normalized": "piano solo",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "piano solo"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Drum Solo]": {
+      "normalized": "drum solo",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 4,
+      "sp_contains_songs": 7,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Bass Solo]": {
+      "normalized": "bass solo",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 3,
+      "bracket_contains_songs": 3,
+      "bracket_contains_samples": [
+        "bass solo with heavy thumb slap technique",
+        "bass solo, fading synth pads",
+        "slap bass solo, percussive thumb hits and pops"
+      ],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Saxophone Solo]": {
+      "normalized": "saxophone solo",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "saxophone solo enters, fading synth pads",
+        "saxophone solo with guitar and bass accompaniment"
+      ],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Strings Rise]": {
+      "normalized": "strings rise",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Percussion Break]": {
+      "normalized": "percussion break",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Synth Solo]": {
+      "normalized": "synth solo",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Male Vocal]": {
+      "normalized": "male vocal",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "bitcrushed male vocal sample"
+      ],
+      "sp_contains": 123,
+      "sp_contains_songs": 76,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Female Vocal]": {
+      "normalized": "female vocal",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 3,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "female vocal ensemble",
+        "female vocal ensemble enters",
+        "female vocal harmonies: la la la la la la la"
+      ],
+      "sp_contains": 23,
+      "sp_contains_songs": 12,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Duet]": {
+      "normalized": "duet",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "male and female duet"
+      ],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Choir]": {
+      "normalized": "choir",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "choir staccato chants",
+        "choir sustained pads",
+        "full choir"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Harmony]": {
+      "normalized": "harmony",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 6,
+      "bracket_contains_samples": [
+        "lead acoustic guitar and violin play in unison and harmony",
+        "male melodic vocals with light harmony",
+        "vocal harmony"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Rap]": {
+      "normalized": "rap",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 23,
+      "bracket_contains_songs": 28,
+      "bracket_contains_samples": [
+        "aggressive male rap vocals",
+        "bass continues, rhythmic rap delivery",
+        "boom bap drums enter, rhythmic rap vocals"
+      ],
+      "sp_contains": 58,
+      "sp_contains_songs": 28,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Spoken Word]": {
+      "normalized": "spoken word",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "spoken word delivery"
+      ],
+      "sp_contains": 13,
+      "sp_contains_songs": 8,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Whisper]": {
+      "normalized": "whisper",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Scream]": {
+      "normalized": "scream",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "vocal scream"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Ad-lib]": {
+      "normalized": "ad lib",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 13,
+      "bracket_contains_samples": [
+        "falsetto ad lib",
+        "shouted ad lib",
+        "vocal ad lib"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Humming]": {
+      "normalized": "humming",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 3,
+      "bracket_contains_songs": 3,
+      "bracket_contains_samples": [
+        "acoustic guitar solo with vocal humming",
+        "male vocals, humming",
+        "vocal humming"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Backing Vocals]": {
+      "normalized": "backing vocals",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "female backing vocals enter"
+      ],
+      "sp_contains": 10,
+      "sp_contains_songs": 5,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Fade In]": {
+      "normalized": "fade in",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Fade Out]": {
+      "normalized": "fade out",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 3,
+      "bracket_exact_samples": [
+        "fade out"
+      ],
+      "bracket_contains": 36,
+      "bracket_contains_songs": 44,
+      "bracket_contains_samples": [
+        "acoustic guitar and bass fade out",
+        "acoustic guitars fade out with final arpeggiated chord",
+        "bass and rhythm guitar fade out"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Silence]": {
+      "normalized": "silence",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "silence"
+      ],
+      "bracket_contains": 14,
+      "bracket_contains_songs": 15,
+      "bracket_contains_samples": [
+        "bass and synth fade out, rhodes piano and vinyl crackle remain until silence",
+        "gong decay into silence",
+        "granular textures dissolve into silence"
+      ],
+      "sp_contains": 5,
+      "sp_contains_songs": 7,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Crescendo]": {
+      "normalized": "crescendo",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Crescendo"
+      ],
+      "bracket_contains": 8,
+      "bracket_contains_songs": 9,
+      "bracket_contains_samples": [
+        "crescendo of polyrhythmic drumming",
+        "crescendo with rising brass glissandos",
+        "crescendo, strings enter"
+      ],
+      "sp_contains": 7,
+      "sp_contains_songs": 4,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Decrescendo]": {
+      "normalized": "decrescendo",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "decrescendo to pianissimo"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Key Change]": {
+      "normalized": "key change",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "key change"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_blakecrosley"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Whispered]": {
+      "normalized": "whispered",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "whispered vocals"
+      ],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Soft]": {
+      "normalized": "soft",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 78,
+      "bracket_contains_songs": 111,
+      "bracket_contains_samples": [
+        "acoustic piano, soft legato strings",
+        "arpeggiated clean electric guitar with chorus, soft synth pad",
+        "arpeggiated clean electric guitar, soft synth pad"
+      ],
+      "sp_contains": 339,
+      "sp_contains_songs": 177,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Gentle]": {
+      "normalized": "gentle",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 12,
+      "sp_contains_songs": 6,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Quiet]": {
+      "normalized": "quiet",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Spoken]": {
+      "normalized": "spoken",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "spoken word delivery"
+      ],
+      "sp_contains": 17,
+      "sp_contains_songs": 10,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Powerful]": {
+      "normalized": "powerful",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 7,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "climax, powerful vocals",
+        "full drum kit enters, powerful vocals",
+        "powerful male vocals"
+      ],
+      "sp_contains": 73,
+      "sp_contains_songs": 37,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Belted]": {
+      "normalized": "belted",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 10,
+      "bracket_contains_songs": 11,
+      "bracket_contains_samples": [
+        "belted vocals",
+        "belted vocals, high energy",
+        "full band enters, strings swell, belted vocals"
+      ],
+      "sp_contains": 30,
+      "sp_contains_songs": 15,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Shouted]": {
+      "normalized": "shouted",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 8,
+      "bracket_contains_samples": [
+        "distorted shouted male vocals",
+        "shouted ad lib",
+        "shouted male vocals"
+      ],
+      "sp_contains": 5,
+      "sp_contains_songs": 7,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Screamed]": {
+      "normalized": "screamed",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Growled]": {
+      "normalized": "growled",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "growled male vocals",
+        "growled vocals"
+      ],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Intense]": {
+      "normalized": "intense",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "dynamic shift, slightly more intense",
+        "intense vocal delivery, driving drums"
+      ],
+      "sp_contains": 3,
+      "sp_contains_songs": 3,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Falsetto]": {
+      "normalized": "falsetto",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 14,
+      "bracket_exact_samples": [
+        "falsetto"
+      ],
+      "bracket_contains": 10,
+      "bracket_contains_songs": 16,
+      "bracket_contains_samples": [
+        "ethereal vocalizing in falsetto",
+        "falsetto ad lib",
+        "falsetto ad libs"
+      ],
+      "sp_contains": 141,
+      "sp_contains_songs": 73,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Head Voice]": {
+      "normalized": "head voice",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "vocal transitions to head voice"
+      ],
+      "sp_contains": 54,
+      "sp_contains_songs": 28,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Chest Voice]": {
+      "normalized": "chest voice",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "vocals transition to soaring chest voice, guitars switch to sustained arpeggios with heavy reverb"
+      ],
+      "sp_contains": 205,
+      "sp_contains_songs": 104,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Breathy]": {
+      "normalized": "breathy",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 19,
+      "bracket_contains_songs": 141,
+      "bracket_contains_samples": [
+        "baritone male vocals, breathy delivery",
+        "breathy baritone male vocals",
+        "breathy baritone male vocals, heavy plate reverb"
+      ],
+      "sp_contains": 386,
+      "sp_contains_songs": 203,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Raspy]": {
+      "normalized": "raspy",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 8,
+      "sp_contains_songs": 8,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Smooth]": {
+      "normalized": "smooth",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 29,
+      "bracket_contains_samples": [
+        "smooth baritone male vocals",
+        "smooth male tenor vocals",
+        "smooth male vocalizations"
+      ],
+      "sp_contains": 200,
+      "sp_contains_songs": 104,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Soulful]": {
+      "normalized": "soulful",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 24,
+      "sp_contains_songs": 12,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Operatic]": {
+      "normalized": "operatic",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "operatic choir chants"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Nasal]": {
+      "normalized": "nasal",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Airy]": {
+      "normalized": "airy",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 2,
+      "bracket_contains_songs": 2,
+      "bracket_contains_samples": [
+        "airy female vocals",
+        "airy vocal delivery, synth pads swell"
+      ],
+      "sp_contains": 33,
+      "sp_contains_songs": 18,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Harmonies]": {
+      "normalized": "harmonies",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 16,
+      "bracket_contains_songs": 20,
+      "bracket_contains_samples": [
+        "brass section plays sustained harmonies",
+        "climax, heavy drums, layered harmonies",
+        "female vocal harmonies: la la la la la la la"
+      ],
+      "sp_contains": 100,
+      "sp_contains_songs": 50,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Ad-libs]": {
+      "normalized": "ad libs",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 13,
+      "bracket_contains_songs": 18,
+      "bracket_contains_samples": [
+        "falsetto ad libs",
+        "falsetto vocal ad libs, fading synth pads",
+        "full band energy, vocal ad libs"
+      ],
+      "sp_contains": 44,
+      "sp_contains_songs": 22,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Vocal Run]": {
+      "normalized": "vocal run",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "vocal run"
+      ],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Melisma]": {
+      "normalized": "melisma",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Vibrato]": {
+      "normalized": "vibrato",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 18,
+      "bracket_contains_songs": 20,
+      "bracket_contains_samples": [
+        "baritone male vocals with vibrato",
+        "bright trumpet fanfare with vibrato",
+        "cello melody moves to a higher register with increased vibrato"
+      ],
+      "sp_contains": 166,
+      "sp_contains_songs": 92,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Staccato]": {
+      "normalized": "staccato",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 85,
+      "bracket_contains_songs": 81,
+      "bracket_contains_samples": [
+        "acoustic guitar plays final staccato chord",
+        "brass section swells, trumpets playing staccato fanfares",
+        "bright staccato synth chords, syncopated synth bass"
+      ],
+      "sp_contains": 204,
+      "sp_contains_songs": 114,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Legato]": {
+      "normalized": "legato",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 32,
+      "bracket_contains_songs": 39,
+      "bracket_contains_samples": [
+        "acoustic piano, soft legato strings",
+        "bass guitar enters, legato phrasing",
+        "cello enters, legato"
+      ],
+      "sp_contains": 135,
+      "sp_contains_songs": 70,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Call and Response]": {
+      "normalized": "call and response",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 4,
+      "bracket_contains_samples": [
+        "call and response between stomps and claps",
+        "call and response between violin and lead acoustic guitar",
+        "guitar and bass call and response"
+      ],
+      "sp_contains": 30,
+      "sp_contains_songs": 19,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Chant]": {
+      "normalized": "chant",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Rapped]": {
+      "normalized": "rapped",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Fast Rap]": {
+      "normalized": "fast rap",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Slow Flow]": {
+      "normalized": "slow flow",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Melodic Rap]": {
+      "normalized": "melodic rap",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "melodic rap vocals"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Trap Flow]": {
+      "normalized": "trap flow",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Boom Bap Flow]": {
+      "normalized": "boom bap flow",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Mumble Rap]": {
+      "normalized": "mumble rap",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Double Time]": {
+      "normalized": "double time",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 6,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "accelerando, double time drums",
+        "double time feel, aggressive crash cymbal accents",
+        "double time footwork patterns"
+      ],
+      "sp_contains": 3,
+      "sp_contains_songs": 2,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Swell]": {
+      "normalized": "swell",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 47,
+      "bracket_contains_songs": 67,
+      "bracket_contains_samples": [
+        "airy vocal delivery, synth pads swell",
+        "atmospheric synth pads swell",
+        "bass becomes more melodic, string pads swell"
+      ],
+      "sp_contains": 12,
+      "sp_contains_songs": 8,
+      "sources": [
+        "blog_hookgenius"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Refrain]": {
+      "normalized": "refrain",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Violin Solo]": {
+      "normalized": "violin solo",
+      "verdict": "EMITTED_EXACT",
+      "bracket_exact": 1,
+      "bracket_exact_songs": 1,
+      "bracket_exact_samples": [
+        "Violin Solo"
+      ],
+      "bracket_contains": 1,
+      "bracket_contains_songs": 1,
+      "bracket_contains_samples": [
+        "violin solo with high register trills and slides"
+      ],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Drum Break]": {
+      "normalized": "drum break",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 5,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "dusty drum break enters",
+        "four bar drum break, dry acoustic kit",
+        "syncopated acoustic drum break enters"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 6,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[A Cappella]": {
+      "normalized": "a cappella",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Group Vocal]": {
+      "normalized": "group vocal",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 2,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Half-Time]": {
+      "normalized": "half time",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 13,
+      "bracket_contains_songs": 14,
+      "bracket_contains_samples": [
+        "bass and drums drop to half time feel",
+        "drums drop to half time feel",
+        "half time drum feel"
+      ],
+      "sp_contains": 1,
+      "sp_contains_songs": 1,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Double-Time]": {
+      "normalized": "double time",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 6,
+      "bracket_contains_songs": 7,
+      "bracket_contains_samples": [
+        "accelerando, double time drums",
+        "double time feel, aggressive crash cymbal accents",
+        "double time footwork patterns"
+      ],
+      "sp_contains": 3,
+      "sp_contains_songs": 2,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Sparse Instrumentation]": {
+      "normalized": "sparse instrumentation",
+      "verdict": "ABSENT",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 0,
+      "sp_contains_songs": 0,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Full Band]": {
+      "normalized": "full band",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 91,
+      "bracket_contains_songs": 102,
+      "bracket_contains_samples": [
+        "drums enter, full band",
+        "final staccato chord from the full band",
+        "full band arrangement"
+      ],
+      "sp_contains": 8,
+      "sp_contains_songs": 4,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Theme]": {
+      "normalized": "theme",
+      "verdict": "EMITTED_PARTIAL",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 4,
+      "bracket_contains_songs": 33,
+      "bracket_contains_samples": [
+        "harmonica returns to the primary melodic theme",
+        "lead clarinet plays fast melodic theme with trills",
+        "main theme"
+      ],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    },
+    "[Final Chorus]": {
+      "normalized": "final chorus",
+      "verdict": "SP_ONLY",
+      "bracket_exact": 0,
+      "bracket_exact_songs": 0,
+      "bracket_exact_samples": [],
+      "bracket_contains": 0,
+      "bracket_contains_songs": 0,
+      "bracket_contains_samples": [],
+      "sp_contains": 4,
+      "sp_contains_songs": 2,
+      "sources": [
+        "blog_jackrighteous"
+      ],
+      "best_grade": "C_community"
+    }
+  },
+  "external_negative_claims": {
+    "[autotune: ...]": "unsupported (gh_stayen)",
+    "[filter: ...]": "inefficient (gh_stayen)",
+    "[loop: ...]": "unsupported (gh_stayen)",
+    "[mix, mixing: ...]": "inefficient (gh_stayen)",
+    "[master: ...]": "inefficient (gh_stayen)",
+    "[pan, panning: ...]": "inefficient (gh_stayen)",
+    "[style: none]": "invalid (gh_stayen)",
+    "[end]": "빈번히 무시됨 — '[5 second fade out][end] 조차 정지 못시킴' (gh_stayen 인용)",
+    "[personae]": "사용자 시도일 뿐 공식 미지원 (gh_stayen)"
+  },
+  "partial_or_unreached_sources": {
+    "musci.io": "브라켓문자열 336건 존재 확인, 전량 미회수(표본만). https://musci.io/blog/suno-tags",
+    "entrepeneur4lyf/suno_ai_meta_tags_guide": "313건 존재 확인, 전량 미회수(표본만). 출처주장 0건(grep 검증)",
+    "reddit r/SunoAI": "★전면 접근 불가(403). 태그 실효성 논쟁의 주무대인데 표본 0",
+    "youtube 자막": "전 영상 0건 회수(봇차단). 구술 태그목록 전량 미독"
+  },
+  "corpus_only_top100": [
+    {
+      "bracket": "breathy male vocals",
+      "normalized": "breathy male vocals",
+      "songs": 75
+    },
+    {
+      "bracket": "Section A",
+      "normalized": "section a",
+      "songs": 66
+    },
+    {
+      "bracket": "Section B",
+      "normalized": "section b",
+      "songs": 64
+    },
+    {
+      "bracket": "Main Section",
+      "normalized": "main section",
+      "songs": 39
+    },
+    {
+      "bracket": "male vocals",
+      "normalized": "male vocals",
+      "songs": 35
+    },
+    {
+      "bracket": "fingerpicked acoustic guitar",
+      "normalized": "fingerpicked acoustic guitar",
+      "songs": 35
+    },
+    {
+      "bracket": "breathy female vocals",
+      "normalized": "breathy female vocals",
+      "songs": 33
+    },
+    {
+      "bracket": "Main Theme",
+      "normalized": "main theme",
+      "songs": 31
+    },
+    {
+      "bracket": "male tenor vocals",
+      "normalized": "male tenor vocals",
+      "songs": 30
+    },
+    {
+      "bracket": "bass guitar enters",
+      "normalized": "bass guitar enters",
+      "songs": 23
+    },
+    {
+      "bracket": "A Section",
+      "normalized": "a section",
+      "songs": 19
+    },
+    {
+      "bracket": "B Section",
+      "normalized": "b section",
+      "songs": 19
+    },
+    {
+      "bracket": "kick drum enters",
+      "normalized": "kick drum enters",
+      "songs": 18
+    },
+    {
+      "bracket": "Male vocals enter",
+      "normalized": "male vocals enter",
+      "songs": 18
+    },
+    {
+      "bracket": "bass enters",
+      "normalized": "bass enters",
+      "songs": 18
+    },
+    {
+      "bracket": "smooth male vocals",
+      "normalized": "smooth male vocals",
+      "songs": 17
+    },
+    {
+      "bracket": "soft kick drum enters",
+      "normalized": "soft kick drum enters",
+      "songs": 15
+    },
+    {
+      "bracket": "electric bass enters",
+      "normalized": "electric bass enters",
+      "songs": 15
+    },
+    {
+      "bracket": "soft male vocals",
+      "normalized": "soft male vocals",
+      "songs": 15
+    },
+    {
+      "bracket": "baritone male vocals",
+      "normalized": "baritone male vocals",
+      "songs": 14
+    },
+    {
+      "bracket": "shaker enters",
+      "normalized": "shaker enters",
+      "songs": 14
+    },
+    {
+      "bracket": "Main Groove",
+      "normalized": "main groove",
+      "songs": 14
+    },
+    {
+      "bracket": "fingerpicked acoustic guitar arpeggio",
+      "normalized": "fingerpicked acoustic guitar arpeggio",
+      "songs": 12
+    },
+    {
+      "bracket": "Section C",
+      "normalized": "section c",
+      "songs": 12
+    },
+    {
+      "bracket": "snare hit",
+      "normalized": "snare hit",
+      "songs": 11
+    },
+    {
+      "bracket": "brass stabs",
+      "normalized": "brass stabs",
+      "songs": 11
+    },
+    {
+      "bracket": "fingerstyle acoustic guitar",
+      "normalized": "fingerstyle acoustic guitar",
+      "songs": 10
+    },
+    {
+      "bracket": "synth bass enters",
+      "normalized": "synth bass enters",
+      "songs": 10
+    },
+    {
+      "bracket": "fretless bass enters with a slide",
+      "normalized": "fretless bass enters with a slide",
+      "songs": 9
+    },
+    {
+      "bracket": "cymbal crash",
+      "normalized": "cymbal crash",
+      "songs": 9
+    },
+    {
+      "bracket": "bass and drums enter",
+      "normalized": "bass and drums enter",
+      "songs": 9
+    },
+    {
+      "bracket": "C Section",
+      "normalized": "c section",
+      "songs": 9
+    },
+    {
+      "bracket": "crash cymbal",
+      "normalized": "crash cymbal",
+      "songs": 8
+    },
+    {
+      "bracket": "male rap vocals",
+      "normalized": "male rap vocals",
+      "songs": 8
+    },
+    {
+      "bracket": "smooth male tenor vocals",
+      "normalized": "smooth male tenor vocals",
+      "songs": 8
+    },
+    {
+      "bracket": "piano melodic fill",
+      "normalized": "piano melodic fill",
+      "songs": 8
+    },
+    {
+      "bracket": "guitar slide",
+      "normalized": "guitar slide",
+      "songs": 8
+    },
+    {
+      "bracket": "Verse 3",
+      "normalized": "verse 3",
+      "songs": 8
+    },
+    {
+      "bracket": "breathy baritone male vocals",
+      "normalized": "breathy baritone male vocals",
+      "songs": 7
+    },
+    {
+      "bracket": "vocalizing",
+      "normalized": "vocalizing",
+      "songs": 7
+    },
+    {
+      "bracket": "palm-muted guitar",
+      "normalized": "palm muted guitar",
+      "songs": 7
+    },
+    {
+      "bracket": "rhythmic male vocals",
+      "normalized": "rhythmic male vocals",
+      "songs": 7
+    },
+    {
+      "bracket": "synth pads swell",
+      "normalized": "synth pads swell",
+      "songs": 7
+    },
+    {
+      "bracket": "acoustic guitar fades out",
+      "normalized": "acoustic guitar fades out",
+      "songs": 7
+    },
+    {
+      "bracket": "clean electric guitar fills",
+      "normalized": "clean electric guitar fills",
+      "songs": 7
+    },
+    {
+      "bracket": "falsetto ad-lib",
+      "normalized": "falsetto ad lib",
+      "songs": 7
+    },
+    {
+      "bracket": "drums and bass drop out",
+      "normalized": "drums and bass drop out",
+      "songs": 7
+    },
+    {
+      "bracket": "crash cymbal accents",
+      "normalized": "crash cymbal accents",
+      "songs": 7
+    },
+    {
+      "bracket": "clean electric guitar arpeggio with chorus effect",
+      "normalized": "clean electric guitar arpeggio with chorus effect",
+      "songs": 6
+    },
+    {
+      "bracket": "kick drum and snare enter",
+      "normalized": "kick drum and snare enter",
+      "songs": 6
+    },
+    {
+      "bracket": "sub bass enters",
+      "normalized": "sub bass enters",
+      "songs": 6
+    },
+    {
+      "bracket": "clean electric guitar enters",
+      "normalized": "clean electric guitar enters",
+      "songs": 6
+    },
+    {
+      "bracket": "snare roll",
+      "normalized": "snare roll",
+      "songs": 6
+    },
+    {
+      "bracket": "sub-bass synth enters",
+      "normalized": "sub bass synth enters",
+      "songs": 6
+    },
+    {
+      "bracket": "vocal ad-libs",
+      "normalized": "vocal ad libs",
+      "songs": 6
+    },
+    {
+      "bracket": "syncopated synth bass enters",
+      "normalized": "syncopated synth bass enters",
+      "songs": 6
+    },
+    {
+      "bracket": "acoustic guitar continues rhythmic comping",
+      "normalized": "acoustic guitar continues rhythmic comping",
+      "songs": 6
+    },
+    {
+      "bracket": "Main Riff",
+      "normalized": "main riff",
+      "songs": 6
+    },
+    {
+      "bracket": "feedback swell",
+      "normalized": "feedback swell",
+      "songs": 6
+    },
+    {
+      "bracket": "final snare hit",
+      "normalized": "final snare hit",
+      "songs": 6
+    },
+    {
+      "bracket": "bass slides",
+      "normalized": "bass slides",
+      "songs": 5
+    },
+    {
+      "bracket": "fretless bass enters with melodic slides",
+      "normalized": "fretless bass enters with melodic slides",
+      "songs": 5
+    },
+    {
+      "bracket": "upright bass enters",
+      "normalized": "upright bass enters",
+      "songs": 5
+    },
+    {
+      "bracket": "clean electric guitar arpeggio",
+      "normalized": "clean electric guitar arpeggio",
+      "songs": 5
+    },
+    {
+      "bracket": "final guitar chord rings out",
+      "normalized": "final guitar chord rings out",
+      "songs": 5
+    },
+    {
+      "bracket": "clean electric guitar playing syncopated chords",
+      "normalized": "clean electric guitar playing syncopated chords",
+      "songs": 5
+    },
+    {
+      "bracket": "soft baritone male vocals",
+      "normalized": "soft baritone male vocals",
+      "songs": 5
+    },
+    {
+      "bracket": "grand piano playing sustained chords",
+      "normalized": "grand piano playing sustained chords",
+      "songs": 5
+    },
+    {
+      "bracket": "distorted electric guitar riff, driving drums",
+      "normalized": "distorted electric guitar riff, driving drums",
+      "songs": 5
+    },
+    {
+      "bracket": "clean electric guitar playing syncopated jazz chords",
+      "normalized": "clean electric guitar playing syncopated jazz chords",
+      "songs": 5
+    },
+    {
+      "bracket": "male baritone vocals",
+      "normalized": "male baritone vocals",
+      "songs": 5
+    },
+    {
+      "bracket": "unintelligible",
+      "normalized": "unintelligible",
+      "songs": 5
+    },
+    {
+      "bracket": "male vocals, rhythmic delivery",
+      "normalized": "male vocals, rhythmic delivery",
+      "songs": 5
+    },
+    {
+      "bracket": "male tenor vocals enter",
+      "normalized": "male tenor vocals enter",
+      "songs": 5
+    },
+    {
+      "bracket": "tenor male vocals",
+      "normalized": "tenor male vocals",
+      "songs": 5
+    },
+    {
+      "bracket": "bass-driven groove",
+      "normalized": "bass driven groove",
+      "songs": 5
+    },
+    {
+      "bracket": "snare hits on beats 2 and 4",
+      "normalized": "snare hits on beats 2 and 4",
+      "songs": 5
+    },
+    {
+      "bracket": "shouted male vocals",
+      "normalized": "shouted male vocals",
+      "songs": 5
+    },
+    {
+      "bracket": "clean arpeggiated electric guitar",
+      "normalized": "clean arpeggiated electric guitar",
+      "songs": 4
+    },
+    {
+      "bracket": "fingerstyle nylon-string acoustic guitar",
+      "normalized": "fingerstyle nylon string acoustic guitar",
+      "songs": 4
+    },
+    {
+      "bracket": "acoustic guitar enters",
+      "normalized": "acoustic guitar enters",
+      "songs": 4
+    },
+    {
+      "bracket": "guitar feedback swell",
+      "normalized": "guitar feedback swell",
+      "songs": 4
+    },
+    {
+      "bracket": "baritone male vocals, breathy delivery",
+      "normalized": "baritone male vocals, breathy delivery",
+      "songs": 4
+    },
+    {
+      "bracket": "rimshot on backbeat",
+      "normalized": "rimshot on backbeat",
+      "songs": 4
+    },
+    {
+      "bracket": "clean electric guitar arpeggios",
+      "normalized": "clean electric guitar arpeggios",
+      "songs": 4
+    },
+    {
+      "bracket": "vocal ad-lib",
+      "normalized": "vocal ad lib",
+      "songs": 4
+    },
+    {
+      "bracket": "female vocals enter",
+      "normalized": "female vocals enter",
+      "songs": 4
+    },
+    {
+      "bracket": "soft female vocals",
+      "normalized": "soft female vocals",
+      "songs": 4
+    },
+    {
+      "bracket": "sustained grand piano chords",
+      "normalized": "sustained grand piano chords",
+      "songs": 4
+    },
+    {
+      "bracket": "sustained guitar feedback",
+      "normalized": "sustained guitar feedback",
+      "songs": 4
+    },
+    {
+      "bracket": "full band, driving rhythm",
+      "normalized": "full band, driving rhythm",
+      "songs": 4
+    },
+    {
+      "bracket": "Staccato string ostinato enters",
+      "normalized": "staccato string ostinato enters",
+      "songs": 4
+    },
+    {
+      "bracket": "nylon string acoustic guitar playing syncopated chords",
+      "normalized": "nylon string acoustic guitar playing syncopated chords",
+      "songs": 4
+    },
+    {
+      "bracket": "Solo Section",
+      "normalized": "solo section",
+      "songs": 4
+    },
+    {
+      "bracket": "drums drop out",
+      "normalized": "drums drop out",
+      "songs": 4
+    },
+    {
+      "bracket": "syncopated electric bass enters",
+      "normalized": "syncopated electric bass enters",
+      "songs": 4
+    },
+    {
+      "bracket": "grand piano arpeggios",
+      "normalized": "grand piano arpeggios",
+      "songs": 3
+    },
+    {
+      "bracket": "strings enter, soft legato pads",
+      "normalized": "strings enter, soft legato pads",
+      "songs": 3
+    },
+    {
+      "bracket": "male baritone vocals, breathy delivery",
+      "normalized": "male baritone vocals, breathy delivery",
+      "songs": 3
+    },
+    {
+      "bracket": "legato strings enter",
+      "normalized": "legato strings enter",
+      "songs": 3
+    }
+  ],
+  "corpus_only_total": 2839
+}
