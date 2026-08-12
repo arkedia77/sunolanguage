@@ -1,0 +1,177 @@
+{
+  "질문": "kee 08-12 18:55 §3 — 자기폴더 발신 의심 14건 분류",
+  "★수량_불일치": {
+    "kee_실측": 14,
+    "내_실측_전체": 27,
+    "kee축이_보는_것(두_슬롯토큰_접두)": 14,
+    "★kee축이_구조적으로_못_보는_것": 13,
+    "못_보는_형태": [
+      "20260328_195853_mukl_sunolang_result.json",
+      "20260329_163322_mukl_reklcli_stem_test_result.json",
+      "20260329_181309_mukl_reklcli_workflow_definition.json",
+      "mukl_20260328_120000_sunolang_project_init.json",
+      "mukl_20260328_140000_db_schema_expand.json",
+      "mukl_20260329_000100_phase1_complete_batch_insert.json",
+      "mukl_20260329_011500_tracklist_100.json",
+      "mukl_20260329_013000_repo_rename.json",
+      "mukl_20260329_140038_demucs_test_plan.json",
+      "mukl_reklcli_20260402_171000_rate_limit_guide.json",
+      "reklcli_20260328_204654_sunolang_api_ready.json",
+      "reklcli_20260329_191629_demucs_plan_ack.json",
+      "reklcli_20260329_201706_wired_link_ready.json"
+    ],
+    "★대사_결과": "kee축 가시분이 **정확히 14건**으로 kee 실측과 일치 — 축 재현 성공. 따라서 불일치의 정체는 계수 오류가 아니라 **kee 축의 시야 범위**다: ⑴가시 14 중 **4건이 실은 내게 온 것**(파일명 to/from 뒤집힘) = **오탐**, ⑵**13건은 축이 구조적으로 못 봄**(단일토큰 `mukl_...` 7 · 날짜접두 3 · 기타 3) = **누락**. ⇒ kee의 전조직 122건 집계도 같은 사유로 **과소일 가능성**이 있다(내 슬롯 1건 근거이므로 일반화는 kee가 판단할 몫)."
+  },
+  "⑵_내게_온_것_파일명_규약위반": [
+    {
+      "file": "admin_sunolanguage_20260403_224200_gemma공지.json",
+      "from": "admin",
+      "정상명": "sunolanguage_admin_..."
+    },
+    {
+      "file": "leomusic-base_sunolanguage_20260404_100000_interface_ready.json",
+      "from": "leomusic-base",
+      "정상명": "sunolanguage_leomusic-base_..."
+    },
+    {
+      "file": "leomusic-base_sunolanguage_20260405_090000_interface_guide.json",
+      "from": "leomusic-base",
+      "정상명": "sunolanguage_leomusic-base_..."
+    },
+    {
+      "file": "sunomusic_sunolanguage_20260423_132000_업로드완료보고.json",
+      "from": "sunomusic",
+      "정상명": "sunolanguage_sunomusic_..."
+    }
+  ],
+  "⑴_수신자가_남": {
+    "counts": {
+      "수신폴더에_없음": 16,
+      "슬롯소멸_판정불가": 7
+    },
+    "items": [
+      {
+        "file": "20260328_195853_mukl_sunolang_result.json",
+        "to": "reklcli",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "20260329_163322_mukl_reklcli_stem_test_result.json",
+        "to": "reklcli",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "20260329_181309_mukl_reklcli_workflow_definition.json",
+        "to": "reklcli",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "leomusic-base_sunolanguage_20260402_010000_genre_selection_advice.json",
+        "to": "leomusic-base",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "leomusic-trot_sunolanguage_20260603_180100_출범_ACK_협업방식.json",
+        "to": "leomusic-trot",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "mukl_20260328_120000_sunolang_project_init.json",
+        "to": "mukl",
+        "status": "슬롯소멸_판정불가"
+      },
+      {
+        "file": "mukl_20260328_140000_db_schema_expand.json",
+        "to": "mukl",
+        "status": "슬롯소멸_판정불가"
+      },
+      {
+        "file": "mukl_20260329_000100_phase1_complete_batch_insert.json",
+        "to": "mukl",
+        "status": "슬롯소멸_판정불가"
+      },
+      {
+        "file": "mukl_20260329_011500_tracklist_100.json",
+        "to": "mukl",
+        "status": "슬롯소멸_판정불가"
+      },
+      {
+        "file": "mukl_20260329_013000_repo_rename.json",
+        "to": "mukl",
+        "status": "슬롯소멸_판정불가"
+      },
+      {
+        "file": "mukl_20260329_140038_demucs_test_plan.json",
+        "to": "mukl",
+        "status": "슬롯소멸_판정불가"
+      },
+      {
+        "file": "mukl_reklcli_20260402_171000_rate_limit_guide.json",
+        "to": "mukl",
+        "status": "슬롯소멸_판정불가"
+      },
+      {
+        "file": "rag_reklcli_20260402_170000_deepdive_v2_received.json",
+        "to": "rag",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "rag_sunolanguage_20260401_220000_deepdive_v2_delivery.json",
+        "to": "rag",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "reklcli_20260328_204654_sunolang_api_ready.json",
+        "to": "reklcli",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "reklcli_20260329_191629_demucs_plan_ack.json",
+        "to": "reklcli",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "reklcli_20260329_201706_wired_link_ready.json",
+        "to": "reklcli",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "sunomusic_sunolanguage_20260401_152000_hymn_phase2h.json",
+        "to": "sunomusic",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "sunomusic_sunolanguage_20260401_230000_prompt_data_request.json",
+        "to": "sunomusic",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "sunomusic_sunolanguage_20260401_233000_sp_truncation_issue.json",
+        "to": "sunomusic",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "sunomusic_sunolanguage_20260402_003000_data_delivery_reminder.json",
+        "to": "sunomusic",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "sunomusic_sunolanguage_20260402_020000_phase3_genre_request.json",
+        "to": "sunomusic",
+        "status": "수신폴더에_없음"
+      },
+      {
+        "file": "sunomusic_sunolanguage_20260405_185400_pending_전체_drop_완료.json",
+        "to": "sunomusic",
+        "status": "수신폴더에_없음"
+      }
+    ]
+  },
+  "판독실패": [],
+  "★A-088_이후_신규축적_판정": {
+    "최신_잔류분": "20260603",
+    "A-088_종결일": "20260804",
+    "판정": "⒝(그 뒤로 다시 쌓였다) = 기각 — 최신 잔류분이 A-088보다 앞선다",
+    "★미검증": "⒜(A-088 모집단과 다르다)인지는 A-088 모집단 정의를 안 봐서 판정 안 함"
+  }
+}
