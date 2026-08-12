@@ -1,0 +1,243 @@
+{
+  "source": "LEO 조사분 텔레그램 6262 (2026-08-12 02:05), 중계=kimsecretary",
+  "caveat": "★LEO 조사분은 도구 미상 LLM 산출로 보이며 kimsecretary 미검증. 본 파일이 실측 대조.",
+  "axis_note": "bracket_songs = Suno 자체 출력에 그 표기가 나온 곡 수. 0이라고 '입력 시 안 먹힌다'는 뜻이 아님(출력어휘≠입력제어).",
+  "report": {
+    "구조": {
+      "[Intro]": {
+        "bracket_songs": 548,
+        "sp_songs": 13
+      },
+      "[Verse 1]": {
+        "bracket_songs": 458,
+        "sp_songs": 0
+      },
+      "[Pre-Chorus]": {
+        "bracket_songs": 73,
+        "sp_songs": 6
+      },
+      "[Chorus]": {
+        "bracket_songs": 320,
+        "sp_songs": 221
+      },
+      "[Verse 2]": {
+        "bracket_songs": 114,
+        "sp_songs": 0
+      },
+      "[Bridge]": {
+        "bracket_songs": 94,
+        "sp_songs": 15
+      },
+      "[Final Chorus]": {
+        "bracket_songs": 0,
+        "sp_songs": 2
+      },
+      "[Outro]": {
+        "bracket_songs": 200,
+        "sp_songs": 2
+      },
+      "[End]": {
+        "bracket_songs": 0,
+        "sp_songs": 56
+      }
+    },
+    "편곡": {
+      "[Instrumental]": {
+        "bracket_songs": 137,
+        "sp_songs": 37
+      },
+      "[Instrumental Break]": {
+        "bracket_songs": 12,
+        "sp_songs": 0
+      },
+      "[Break]": {
+        "bracket_songs": 1,
+        "sp_songs": 6
+      },
+      "[Breakdown]": {
+        "bracket_songs": 24,
+        "sp_songs": 7
+      },
+      "[Build]": {
+        "bracket_songs": 0,
+        "sp_songs": 12
+      },
+      "[Build-Up]": {
+        "bracket_songs": 6,
+        "sp_songs": 10
+      },
+      "[Drop]": {
+        "bracket_songs": 7,
+        "sp_songs": 7
+      },
+      "[Guitar Solo]": {
+        "bracket_songs": 6,
+        "sp_songs": 7
+      },
+      "[Piano Solo]": {
+        "bracket_songs": 1,
+        "sp_songs": 0
+      },
+      "[Saxophone Solo]": {
+        "bracket_songs": 0,
+        "sp_songs": 1
+      },
+      "[Hook]": {
+        "bracket_songs": 0,
+        "sp_songs": 15
+      },
+      "[Interlude]": {
+        "bracket_songs": 1,
+        "sp_songs": 0
+      }
+    },
+    "보컬": {
+      "[Male Vocal]": {
+        "bracket_songs": 0,
+        "sp_songs": 76
+      },
+      "[Female Vocal]": {
+        "bracket_songs": 0,
+        "sp_songs": 12
+      },
+      "[Whispered]": {
+        "bracket_songs": 0,
+        "sp_songs": 1
+      },
+      "[Spoken]": {
+        "bracket_songs": 0,
+        "sp_songs": 10
+      },
+      "[Belted]": {
+        "bracket_songs": 0,
+        "sp_songs": 15
+      },
+      "[Breathy Vocal]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "[Raspy Vocal]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "[Soft Vocal]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "[Harmony]": {
+        "bracket_songs": 0,
+        "sp_songs": 2
+      },
+      "[Harmonies]": {
+        "bracket_songs": 0,
+        "sp_songs": 50
+      },
+      "[Stacked Harmonies]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "[Backing Vocals]": {
+        "bracket_songs": 0,
+        "sp_songs": 5
+      },
+      "[Ad-libs]": {
+        "bracket_songs": 0,
+        "sp_songs": 22
+      }
+    },
+    "파라미터": {
+      "[BPM: 82]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "[Key: F# minor]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "[Time Signature: 6/8]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "[BPM:120]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "[Key:Am]": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      }
+    },
+    "파라미터_형태_출현": [
+      "pizzicato strings, 3/4 time signature",
+      "fiddle enters, tempo increases to 120 BPM",
+      "key change",
+      "drums enter, steady 88 BPM beat",
+      "metallic percussive click repeats at 120 BPM",
+      "distorted kick drum enters, 130 BPM",
+      "sub-bass throb at 60 BPM",
+      "syncopated kick and snare groove, 115 BPM",
+      "distorted kick drum with sub-tail, 130 BPM",
+      "syncopated hi-hat and snare pattern, 140 BPM",
+      "syncopated hi-hat and snare pattern, 140 BPM",
+      "woodblock quarter-note pulse at 120 BPM"
+    ],
+    "다이내믹": {
+      "crescendo": {
+        "bracket_songs": 1,
+        "sp_songs": 4
+      },
+      "diminuendo": {
+        "bracket_songs": 0,
+        "sp_songs": 0
+      },
+      "forte": {
+        "bracket_songs": 0,
+        "sp_songs": 3
+      },
+      "fortissimo": {
+        "bracket_songs": 0,
+        "sp_songs": 2
+      },
+      "pianissimo": {
+        "bracket_songs": 0,
+        "sp_songs": 2
+      },
+      "staccato": {
+        "bracket_songs": 0,
+        "sp_songs": 114
+      },
+      "legato": {
+        "bracket_songs": 0,
+        "sp_songs": 70
+      },
+      "vibrato": {
+        "bracket_songs": 0,
+        "sp_songs": 92
+      },
+      "tremolo": {
+        "bracket_songs": 0,
+        "sp_songs": 15
+      }
+    },
+    "복합브라켓": {
+      "단순형": 29,
+      "복합형": 1,
+      "구분자": {
+        ",": 1
+      },
+      "예시": [
+        "instrumental break, acoustic guitar and electric guitar interplay"
+      ]
+    },
+    "C1_공식주장_대조": {
+      "[Verse]": true,
+      "[Chorus]": true,
+      "[Bridge]": true,
+      "[Intro]": true,
+      "[Outro]": false,
+      "[Pre-Chorus]": false,
+      "[Break]": false,
+      "[Hook]": false
+    }
+  }
+}
