@@ -1,0 +1,175 @@
+{
+  "_출처": {
+    "영상": "https://www.youtube.com/watch?v=OTDqev8aW0A",
+    "제목": "Suno AI: 프롬프트 한 줄로 보컬이 달라지는 기법 8가지",
+    "업로드": "2026-08-10",
+    "길이초": 665,
+    "언어": "한국어 나레이션 / 프롬프트 원문은 영어",
+    "제공자": "오너(LEO) 직접 제공 링크"
+  },
+
+  "_내가_실제로_읽은_곳": {
+    "★원칙": "여기 적힌 verbatim은 전부 내가 프레임을 떠서 화면에서 직접 읽은 것이다. STT 자막에서 옮긴 것이 아니다.",
+    "왜_화면이어야_했나": "자동자막은 영어 태그를 한글 음차로 뭉갠다 — 실측 예: 「스포큰 온」(=spoken only) · 「스포큰월드 노 멜로디」 · 「익스클루드 스타일」 · 「듀엣중 강화」. 즉 자막만 보면 철자가 원리상 회수 불가다.",
+    "회수_경로": [
+      "1) yt-dlp로 1080p 영상 회수 → data/video_OTDqev8aW0A/video.mp4",
+      "2) ffmpeg 2초 간격 프레임 333장 → data/video_OTDqev8aW0A/frames/",
+      "3) macOS Vision OCR 자체 제작(scripts/ocr_frames.swift) 전수 스윕 → data/video_OTDqev8aW0A/ocr_1280.tsv (2789줄)",
+      "4) ★기법별 대표 시점을 풀해상도로 재추출(data/video_OTDqev8aW0A/key/t*.jpg) 후 내가 직접 눈으로 판독 — 아래 verbatim의 근거는 이 4)다"
+    ],
+    "★OCR을_그대로_쓰지_않은_이유": "OCR이 실제로 틀렸다. 실측 오독: Monologue→「HonoLogue」, female→「fenale」, Solo→「SoLo」, Only→「OnLy」, cinematic→「cánematic」, 닫는 대괄호 ]→「)」·「l」·「J」. 소문자 l / 대문자 I 계열을 반복 오독한다. ⇒ OCR은 위치 탐색용이고 철자 확정은 육안 판독분이다.",
+    "★내가_확인하지_못한_것": "샘플 오디오를 나는 들을 수 없다. 「실사용 원문」 뱃지는 제작자의 주장이지 내 검증이 아니다. 단 아래 _교차검산으로 간접 분리는 했다."
+  },
+
+  "_화면_구조_★새_발견": {
+    "요지": "이 채널은 프롬프트를 2필드가 아니라 최대 3필드로 적는다.",
+    "필드": [
+      "Styles — 스타일 프롬프트(2줄 구성이 정형: 1줄=음색·편성, 2줄=제약·질감)",
+      "Exclude Styles — ★배제 필드. 8기법 중 06 아카펠라에서만 등장. 취소선 처리된 악기 목록.",
+      "메타태그 — 대괄호 태그. 기법에 따라 1~3개."
+    ],
+    "샘플_카드": "우측에 Sample 0N + 파형 + 가사가 뜨고 현재 발음 줄이 보라색 하이라이트된다. 05·08엔 구간 뱃지(「Verse 1 · 남성 솔로」 / 「Chorus · 듀엣」 / 「Wordless Hum」)가 붙는다."
+  },
+
+  "기법": [
+    {
+      "n": "01",
+      "제목_ko": "휴대폰 보이스",
+      "제목_en": "Telephone Voice",
+      "판독_프레임": "key/t78.jpg (t=1:18)",
+      "styles": ["Narrow band-pass 300Hz-3.4kHz", "Mono · Compressed · Close-mic"],
+      "exclude_styles": null,
+      "메타태그": ["[Bridge: one-sided female telephone voicemail, spoken only]"],
+      "가사_표기": ["(여보세요?....)", "(응...나야.....)", "(잠이 안 와가지구....)", "(뭐하나 싶어서....)"],
+      "구분자": "콜론",
+      "비고": "가사가 전부 소괄호로 감싸여 있다. 말줄임표 개수로 뜸 길이를 조절하는 것으로 보인다."
+    },
+    {
+      "n": "02",
+      "제목_ko": "스포큰 워드",
+      "제목_en": "Spoken Word",
+      "판독_프레임": "key/t100.jpg (t=1:40)",
+      "styles": ["4-bar Korean PBR&B Spoken-word", "No melody · No singing"],
+      "exclude_styles": null,
+      "메타태그": ["[Spoken Word: intimate, natural speech, no melody]"],
+      "가사_표기": ["(나 오늘 거기 갔어.)", "(자주 가던 카페..)", "(없어졌더라...)", "(좀 이상했어....)"],
+      "구분자": "콜론",
+      "비고": "★Styles의 「No melody」와 태그의 「no melody」가 글자 그대로 중복된다."
+    },
+    {
+      "n": "03",
+      "제목_ko": "모놀로그",
+      "제목_en": "Monologue",
+      "판독_프레임": "key/t140.jpg (t=2:20)",
+      "styles": ["Sparse Rhodes + Soft sub-bass", "Single male spoken narration"],
+      "exclude_styles": null,
+      "메타태그": ["[Monologue: dramatic cinematic narration, low restrained male voice]"],
+      "가사_표기": ["(헤어진 지 좀 됐어.)", "(처음엔 날짜를 셌는데, 이젠 안 해.)", "(가끔 생각나고, 가끔은 아니고.)", "(사진은 따로 모아뒀고.)", "(지운 건 아니야.)", "(그 정도로 정리됐어.)"],
+      "구분자": "콜론",
+      "비고": "★Styles 「Single male spoken narration」 ↔ 태그 「low restrained male voice」 — 같은 것을 두 번 지정."
+    },
+    {
+      "n": "04",
+      "제목_ko": "감정 연기",
+      "제목_en": "Emotional Acting",
+      "판독_프레임": "key/t200.jpg (t=3:20)",
+      "styles": ["Minimal dark PBR&B", "One intimate female performance"],
+      "exclude_styles": null,
+      "메타태그": ["[Spoken Word, crying but trying to hide it]", "[Spoken Word, restrained anger]", "[Mocking laughter, hurt underneath]"],
+      "가사_표기": ["(나 잘 지냈어.)", "(진짜였는데...)", "(근데 왜 또 전화해?)", "(이럴 거면 왜 헤어졌어?)", "(Ha... 친구로 지내자고?)", "(Ha... 너 참 편하다.)"],
+      "구분자": "콤마",
+      "비고": "★태그를 3개 연속 배치해 구간마다 감정을 갈아끼운다. 「Spoken Word」라는 같은 머리에 감정만 바꿔 다는 형태. ★가사 안에 「Ha...」를 직접 적어 비웃음을 유도한다."
+    },
+    {
+      "n": "05",
+      "제목_ko": "듀엣 3중 강화",
+      "제목_en": "Duet",
+      "판독_프레임": "key/t250.jpg (t=4:10), key/t290.jpg (t=4:50)",
+      "styles": ["Deep Male Baritone + Airy Female Alto", "No voice swapping · No third vocalist"],
+      "exclude_styles": null,
+      "메타태그": ["[Verse 1 — Deep Male Baritone Solo]", "[Verse 2 — Airy Female Alto Solo]", "[Chorus — Both Singing Together]"],
+      "가사_표기": ["아직 그대로야 너의 흔적들", "버리려고 했는데 손이 안 가", "정리하면 끝날까 봐", "괜히 연락하면", "네가 더 멀어질까 봐 망설여", "우리 참 별 얘길 다 하네"],
+      "구분자": "엠대시",
+      "비고": "★★「3중」의 실체 = ①Styles 1줄 음색 지정 ②Styles 2줄 부정 선언 ③구간 태그. ★음색 문자열 「Deep Male Baritone」·「Airy Female Alto」가 Styles와 태그에 글자 그대로 반복된다. ★★가사 줄에는 화자 표기가 하나도 없다 — 구간 태그가 전담한다."
+    },
+    {
+      "n": "06",
+      "제목_ko": "아카펠라",
+      "제목_en": "A Cappella",
+      "판독_프레임": "key/t340.jpg (t=5:40)",
+      "styles": ["Vocals only · Low vocal bass", "Warm stacked harmonies"],
+      "exclude_styles": ["piano", "Rhodes", "synthesizers", "drums", "strings", "guitars"],
+      "메타태그": ["[A Cappella — Warm Female Lead, Vocals Only]"],
+      "가사_표기": ["불을 끄면 더 선명해져", "남겨진 네 목소리가", "숨을 고를 때마다", "방 안에 다시 번져", "아직 여기 남아 있어", "끝난 뒤에도 울리고 있어"],
+      "구분자": "엠대시",
+      "비고": "★유일하게 Exclude Styles 필드가 뜬다. 화면에선 악기명에 취소선 + 붉은 X. ★즉 「악기 빼기」는 태그가 아니라 전용 필드로 한다 — 3중 지정(Styles 「Vocals only」 + Exclude Styles + 태그 「Vocals Only」)."
+    },
+    {
+      "n": "07",
+      "제목_ko": "멜리스마",
+      "제목_en": "Melisma / Vocal Runs",
+      "판독_프레임": "key/t380.jpg (t=6:20)",
+      "styles": ["Sustain each final syllable", "3-5-note varied vocal runs"],
+      "exclude_styles": null,
+      "메타태그": ["[Melisma — Sustain Each Final Vowel Across a 3-5-Note Run]"],
+      "가사_표기": ["왜 아직도 네가 남아", "다 끝난 줄 알았어", "아무렇지 않은 척해도", "결국 너를 찾게 돼"],
+      "구분자": "엠대시",
+      "비고": "★★태그가 명령문 규칙 한 문장이다(9단어). Styles가 같은 규칙을 소문자로 먼저 적고 태그가 Title Case로 반복한다."
+    },
+    {
+      "n": "08",
+      "제목_ko": "보컬 드론",
+      "제목_en": "Vocal Drone",
+      "판독_프레임": "key/t420.jpg (t=7:00)",
+      "styles": ["One continuous wordless drone", "Dark · Breathy · Resonant"],
+      "exclude_styles": null,
+      "메타태그": ["[Vocal Drone — One Continuous Hum Sustained Across All Four Bars]"],
+      "가사_표기": ["음—————————"],
+      "구분자": "엠대시",
+      "비고": "★★가사 필드에 「음」 한 글자 + 대시 연속을 적는다. 글자 반복이 아니라 대시로 지속을 표기. 태그는 10단어 규칙문."
+    }
+  ],
+
+  "_교차검산_★사전등록": {
+    "질문": "화면의 spoken 계열 태그가 실제로 먹혔는가? — 제작자 주장 말고 제3자 신호로 가릴 수 있는가.",
+    "★사전등록한_예측": "유튜브 자동자막(ASR)은 가창을 만나면 [노래] 마커를 넣는다. 태그가 먹혔다면 말하기 기법 01~04 샘플 구간엔 [노래]가 0이고, 가창 기법 05~07엔 나와야 한다. ★측정 전에 이 예측을 먼저 적었다.",
+    "측정": {
+      "01 전화(말)": {"노래": 0, "음악": 4},
+      "02 스포큰워드(말)": {"노래": 0, "음악": 3},
+      "03 모놀로그(말)": {"노래": 0, "음악": 4},
+      "04 감정연기(말)": {"노래": 0, "음악": 2},
+      "05 듀엣(노래)": {"노래": 6, "음악": 30},
+      "06 아카펠라(노래)": {"노래": 6, "음악": 6},
+      "07 멜리스마(노래)": {"노래": 1, "음악": 7},
+      "08 드론(무가사)": {"노래": 0, "음악": 1}
+    },
+    "판정": "예측대로 갈렸다. 말 4구간 0/0/0/0 vs 노래 3구간 6/6/1.",
+    "★구간길이_반증_점검": "「말 구간이 짧아서 마커가 안 뜬 것」이 아니다 — 03 모놀로그는 38초에 0, 06 아카펠라는 23초에 6. 긴 쪽이 0이고 짧은 쪽이 6이므로 길이로는 설명되지 않는다.",
+    "★그래도_이것이_증명하지_못하는_것": [
+      "구간 경계는 내가 눈으로 잡은 추정치다 — 나레이션이 섞여 들어간다",
+      "07이 1건뿐이라 가창 쪽 신호는 약하다",
+      "08의 0은 반례가 아니다(무가사 허밍이라 부를 가사 자체가 없다)",
+      "★무엇보다 이건 「태그가 원인」이 아니라 「결과가 말이었다」까지만 보인다. Styles에도 No singing이 적혀 있어 ★어느 필드가 먹였는지는 이 영상으로 분리 불가다 — 그것이 바로 우리 파일럿이 할 일이다"
+    ]
+  },
+
+  "_★수확": {
+    "1_오너지적_ⓐ_전건실증": "「SP가 가사 브라켓을 미리 설명한다」 — 8기법 8/8 전건에서 Styles가 태그 내용을 선행 서술한다. 문자열이 글자 그대로 겹치는 것만도 02(no melody)·05(Deep Male Baritone·Airy Female Alto)·06(Vocals Only)·07(3-5-note run)·08(continuous/wordless). ⇒ 우리 파일럿을 1×2로 잡은 것은 틀렸다. 최소 2×2(스타일 서술 유무 × 브라켓 형태).",
+    "2_★구분자가_기능별로_갈린다_신규": {
+      "콜론 :": "수행 지시 — 01·02·03. 소문자 표기.",
+      "콤마 ,": "감정·상태 부가 — 04. 소문자 표기. 같은 머리(Spoken Word)에 감정만 교체.",
+      "엠대시 —": "★구간·역할 배정 및 규칙문 — 05·06·07·08. Title Case 표기.",
+      "★관측": "구분자와 대소문자 관례가 함께 움직인다(콜론·콤마=소문자 / 엠대시=Title Case). 8/8 일관. ⇒ 단일 출처 관측이므로 가설이지 규칙 아님."
+    },
+    "3_★★긴_규칙문_브라켓이_실사용된다": "07 「[Melisma — Sustain Each Final Vowel Across a 3-5-Note Run]」(9단어) · 08 「[Vocal Drone — One Continuous Hum Sustained Across All Four Bars]」(10단어). ⇒ ★hookgenius의 「태그당 1~3단어, 긴 브라켓 문장은 노이즈로 압축된다」 주장과 정면 충돌한다. 내 [PERFORMANCE RULES] 가설 쪽에 유리한 자료다. ⚠단 양쪽 다 대조군 없는 주장이고, 이쪽은 샘플 오디오가 붙어 증거 등급이 조금 높을 뿐이다.",
+    "4_★말하기_가사는_소괄호로_감싼다_신규": "01~04(말하기 4기법) 가사 전부 ( )로 감쌌고, 05~07(가창 3기법) 가사엔 괄호가 하나도 없다. 8/8 무예외. ⇒ 소괄호가 「비가창」 신호로 쓰이는 것으로 보인다. ★우리 어휘 A층의 「괄호」 항목과 직결 — 확인 필요.",
+    "5_★듀엣_줄단위_화자표기_없음": "05 가사 6줄에 [Male]/[Female]/[Both] 줄표기가 0이다. ⇒ hookgenius의 「듀엣은 줄마다 재표기 필수·상단 1회는 불충분」 주장과 충돌. 이쪽은 구간 태그 3개 + Styles 2줄로 해결한다.",
+    "6_★악기_빼기는_태그가_아니라_전용필드": "Exclude Styles. 06에서만 등장. 태그로 [No drums] 같은 걸 쓰지 않았다.",
+    "7_★★encore_08-11_발신에_불리": "내가 08-11에 「[] 브라켓 쓰지 마십시오」로 내보냈는데, 오너 제공 1차 출처가 브라켓을 8/8 전건 사용하고 ASR 교차검산까지 갈린다. ⇒ 정정 발신 사유가 하나 더 늘었다(오너 판단 대기 중인 ⑧ 항목)."
+  },
+
+  "_★내가_틀렸던_것_자진": {
+    "「영상은_스크린샷을_받아야_본다」": "틀렸다. yt-dlp + ffmpeg + 자체 OCR로 내가 직접 열 수 있었다. 오너에게 스크린샷을 요청하려던 참이었다. ⇒ 08-13 자막 건에 이어 ★같은 오류형이 또 나왔다 — 「없음/불가」가 아니라 「안 봄」. 이번엔 요청 전에 스스로 검산해서 잡았다.",
+    "축적할_것": "링크만 있으면 영상 화면 텍스트는 전량 회수 가능하다. 도구는 scripts/ocr_frames.swift로 리포에 남긴다."
+  }
+}
