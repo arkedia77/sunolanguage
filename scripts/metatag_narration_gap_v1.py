@@ -46,6 +46,11 @@ def add(tags, source, grade, bracketed=True, note=""):
 
 
 # ── A등급: 실제 시연(음원 공개 또는 영상 A/B) ──
+# ★2026-08-13 실물 검증: 아래 유튜브 4출처를 `yt-dlp`로 **처음 실제 회수**하고
+#   주장 태그 철자를 기계 대조했다 → **18/18 verbatim 적중**(회수분 = data/metatag_external/yt/verify_v1/).
+#   ⇒ 「안 보고 인용했다」는 내 의심은 **기각**됐다.
+#   ⚠단 적중한 것은 **철자**이지 **「시연」이 아니다** — 영상 본문은 HTTP 429로 미회수.
+#     A_demo의 「A/B 시연」 근거는 아직 **설명란 기재까지**다. 이 한정을 등급 옆에 달고 다닐 것.
 add(["[Spoken Word]", "[Spoken Verse]"], "yt_Uy2jV0fqTPk(JP)", "A_demo",
     note="영상이 장르별 A/B 시연. 「指定範囲の歌詞をセリフにする」")
 add(["[Spoken]", "[Whispered]", "[Pause]", "[Dramatic Pause]", "[Deep Breath]"],
@@ -57,10 +62,16 @@ add(["[AI Automated Voice, talking]", "[Tay Chatbot, talking:]",
      "[Outro, Tay Chatbot:]", "[Deadpan]", "[Tay laughs]",
      "[Old Windows error pings. A dial-up modem scream.]"],
     "yt_sJnkHygvp6g", "A_demo", note="★캐릭터명이 브라켓 안으로 들어간 형태·자유문 SFX 지시")
+# ★2026-08-13 강등 — A_demo → 미검증. 자진 신고분.
+#   ⑴ suno.com/s/nrhqq4oreDlBEabw 는 **JS 게이트라 내가 못 읽는다**(직접 재확인). 제목만 샌다.
+#   ⑵ 그 제목이 "Righteous Report Ep 3" by **Jack Righteous** — 내 「실패양식」 출처와 **동일 인물**인데
+#      독립 출처로 셌다. 저자 수렴을 교차확인으로 계상한 것.
+#   ⑶ 내가 「음원 공개·실물 가사」라 적은 verbatim의 **원본 캐시가 리포에 없다.**
+#   ⇒ 「A_demo」는 내가 확인한 적 없는 등급이다. 등급을 내리는 것이지 표기를 지우는 것이 아니다.
 add(["[VOICEOVER — SPOKEN, NOT SUNG]", "[READ NATURALLY • NO RHYMES • NO MELODY]",
      "[BACKGROUND: minimal ambient underscore only]", "[PERFORMANCE RULES]"],
-    "suno.com/s/nrhqq4oreDlBEabw", "A_demo",
-    note="★Suno v5 공개곡 실물 가사(음원 공개). 규칙블록형 프롬프트")
+    "suno.com/s/nrhqq4oreDlBEabw", "미검증",
+    note="★08-13 A_demo→미검증 강등. JS게이트로 미열람·원본 캐시 없음·동일 저자(Jack Righteous) 중복 계상")
 
 # ── B등급: 목록에 기재(시연 없음) ──
 add(["[Narration]", "[Sprechgesang]"], "sunoaiwiki_spokenword", "B_recited")
@@ -230,9 +241,20 @@ def main():
     for k in ("OURS_BRACKET", "OURS_BRACKET_PARTIAL", "OURS_SP_ONLY", "★GAP"):
         print(f"  {k:22s} {c.get(k, 0):4d}")
 
+    grades = Counter(r["grade"] for r in results.values())
+    print("\n등급 분포 (★08-13 강등 반영)")
+    for k, v in grades.most_common():
+        print(f"  {k:22s} {v:4d}")
+
     gaps_demo = [t for t, r in results.items() if r["verdict"] == "★GAP" and r["grade"] == "A_demo"]
-    print(f"\n★그중 '외부에서 실제 시연됐는데 우리엔 전무' = {len(gaps_demo)}건")
+    gaps_unver = [t for t, r in results.items() if r["verdict"] == "★GAP" and r["grade"] == "미검증"]
+    # ★한정자를 건수 옆에 붙인다 — 이 줄만 떼어 인용돼도 등급이 따라가도록(08-11·06-15 실피해 2회).
+    print(f"\n★'외부 출처에 철자 확인 + 우리엔 전무' = {len(gaps_demo)}건"
+          f"  ※철자는 실물 대조(18/18), 「A/B 시연」 자체는 미확인(영상 본문 429)")
     for t in gaps_demo:
+        print(f"    {t}")
+    print(f"\n★미검증으로 강등 = {len(gaps_unver)}건  ※JS게이트 미열람·동일 저자 중복 계상(08-13 자진)")
+    for t in gaps_unver:
         print(f"    {t}")
 
     # ── 우리가 실제로 가진 자산 = SP 서술축 (encore Q1-a/Q1-c 답변용) ──

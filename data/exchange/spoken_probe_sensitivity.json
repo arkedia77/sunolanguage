@@ -1,0 +1,589 @@
+{
+ "무엇": "(spoken) 판정이 말 극(B) 구성에 얼마나 종속되는지 — 대조군 전수 재조합",
+ "★새_측정_없음": "측정값 출처 = data/exchange/spoken_delivery_probe_result.json (재조합만)",
+ "판정규칙": "사전등록 §5·§6 그대로 (z≤0.35 말하기 / ≥0.65 노래 / 사이 보류, 2표 이상)",
+ "대조군_후보": [
+  "Yuna",
+  "Eddy (한국어(한국))",
+  "Grandma (한국어(한국))",
+  "Flo (한국어(한국))"
+ ],
+ "요약": {
+  "RM1": {
+   "대조군_조합수": 15,
+   "게이트_기각": 0,
+   "판정분포": {
+    "노래": 2,
+    "말하기": 5,
+    "보류": 8
+   }
+  },
+  "RM2": {
+   "대조군_조합수": 15,
+   "게이트_기각": 0,
+   "판정분포": {
+    "보류": 1,
+    "말하기": 14
+   }
+  }
+ },
+ "전수": [
+  {
+   "B극_구성": [
+    "Yuna"
+   ],
+   "n": 1,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2794,
+    "z": {
+     "sustain_ratio": 0.508,
+     "delta_semitone_median": 0.776,
+     "voiced_ratio": 4.838
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "노래",
+     "voiced_ratio": "노래"
+    },
+    "판정": "노래"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2984,
+    "z": {
+     "sustain_ratio": 0.378,
+     "delta_semitone_median": 0.52,
+     "voiced_ratio": 7.208
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "노래"
+    },
+    "판정": "보류"
+   }
+  },
+  {
+   "B극_구성": [
+    "Eddy (한국어(한국))"
+   ],
+   "n": 1,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.1513,
+    "z": {
+     "sustain_ratio": 0.091,
+     "delta_semitone_median": 0.301,
+     "voiced_ratio": -1.657
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.1703,
+    "z": {
+     "sustain_ratio": -0.09,
+     "delta_semitone_median": -0.376,
+     "voiced_ratio": -1.445
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Grandma (한국어(한국))"
+   ],
+   "n": 1,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2434,
+    "z": {
+     "sustain_ratio": 0.435,
+     "delta_semitone_median": 0.094,
+     "voiced_ratio": -3.395
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2624,
+    "z": {
+     "sustain_ratio": 0.292,
+     "delta_semitone_median": -0.724,
+     "voiced_ratio": -2.626
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Flo (한국어(한국))"
+   ],
+   "n": 1,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2121,
+    "z": {
+     "sustain_ratio": 0.351,
+     "delta_semitone_median": 0.545,
+     "voiced_ratio": -7.707
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "보류"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2311,
+    "z": {
+     "sustain_ratio": 0.196,
+     "delta_semitone_median": 0.065,
+     "voiced_ratio": -4.717
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Yuna",
+    "Eddy (한국어(한국))"
+   ],
+   "n": 2,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2154,
+    "z": {
+     "sustain_ratio": 0.361,
+     "delta_semitone_median": 0.66,
+     "voiced_ratio": -16.275
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "노래",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "보류"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2344,
+    "z": {
+     "sustain_ratio": 0.208,
+     "delta_semitone_median": 0.289,
+     "voiced_ratio": -7.069
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Yuna",
+    "Grandma (한국어(한국))"
+   ],
+   "n": 2,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2614,
+    "z": {
+     "sustain_ratio": 0.474,
+     "delta_semitone_median": 0.64,
+     "voiced_ratio": 61.542
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "노래"
+    },
+    "판정": "보류"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2804,
+    "z": {
+     "sustain_ratio": 0.338,
+     "delta_semitone_median": 0.25,
+     "voiced_ratio": -16.441
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Yuna",
+    "Flo (한국어(한국))"
+   ],
+   "n": 2,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2458,
+    "z": {
+     "sustain_ratio": 0.44,
+     "delta_semitone_median": 0.699,
+     "voiced_ratio": 14.725
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "노래",
+     "voiced_ratio": "노래"
+    },
+    "판정": "노래"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2648,
+    "z": {
+     "sustain_ratio": 0.299,
+     "delta_semitone_median": 0.366,
+     "voiced_ratio": -143.76
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Eddy (한국어(한국))",
+    "Grandma (한국어(한국))"
+   ],
+   "n": 2,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.1974,
+    "z": {
+     "sustain_ratio": 0.303,
+     "delta_semitone_median": 0.211,
+     "voiced_ratio": -2.312
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2164,
+    "z": {
+     "sustain_ratio": 0.142,
+     "delta_semitone_median": -0.531,
+     "voiced_ratio": -1.921
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Eddy (한국어(한국))",
+    "Flo (한국어(한국))"
+   ],
+   "n": 2,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.1817,
+    "z": {
+     "sustain_ratio": 0.243,
+     "delta_semitone_median": 0.448,
+     "voiced_ratio": -3.072
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2007,
+    "z": {
+     "sustain_ratio": 0.075,
+     "delta_semitone_median": -0.113,
+     "voiced_ratio": -2.425
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Grandma (한국어(한국))",
+    "Flo (한국어(한국))"
+   ],
+   "n": 2,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2278,
+    "z": {
+     "sustain_ratio": 0.396,
+     "delta_semitone_median": 0.394,
+     "voiced_ratio": -4.841
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "보류"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2468,
+    "z": {
+     "sustain_ratio": 0.247,
+     "delta_semitone_median": -0.212,
+     "voiced_ratio": -3.438
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Yuna",
+    "Eddy (한국어(한국))",
+    "Grandma (한국어(한국))"
+   ],
+   "n": 3,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2247,
+    "z": {
+     "sustain_ratio": 0.388,
+     "delta_semitone_median": 0.571,
+     "voiced_ratio": -7.738
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "보류"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2437,
+    "z": {
+     "sustain_ratio": 0.238,
+     "delta_semitone_median": 0.116,
+     "voiced_ratio": -4.729
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Yuna",
+    "Eddy (한국어(한국))",
+    "Flo (한국어(한국))"
+   ],
+   "n": 3,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2143,
+    "z": {
+     "sustain_ratio": 0.358,
+     "delta_semitone_median": 0.629,
+     "voiced_ratio": -12.008
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "보류"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2333,
+    "z": {
+     "sustain_ratio": 0.204,
+     "delta_semitone_median": 0.227,
+     "voiced_ratio": -6.096
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Yuna",
+    "Grandma (한국어(한국))",
+    "Flo (한국어(한국))"
+   ],
+   "n": 3,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.245,
+    "z": {
+     "sustain_ratio": 0.438,
+     "delta_semitone_median": 0.613,
+     "voiced_ratio": -35.668
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "보류"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.264,
+    "z": {
+     "sustain_ratio": 0.297,
+     "delta_semitone_median": 0.197,
+     "voiced_ratio": -9.36
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Eddy (한국어(한국))",
+    "Grandma (한국어(한국))",
+    "Flo (한국어(한국))"
+   ],
+   "n": 3,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2023,
+    "z": {
+     "sustain_ratio": 0.32,
+     "delta_semitone_median": 0.366,
+     "voiced_ratio": -3.174
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2213,
+    "z": {
+     "sustain_ratio": 0.161,
+     "delta_semitone_median": -0.262,
+     "voiced_ratio": -2.49
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  },
+  {
+   "B극_구성": [
+    "Yuna",
+    "Eddy (한국어(한국))",
+    "Grandma (한국어(한국))",
+    "Flo (한국어(한국))"
+   ],
+   "n": 4,
+   "RM1": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2216,
+    "z": {
+     "sustain_ratio": 0.379,
+     "delta_semitone_median": 0.565,
+     "voiced_ratio": -7.73
+    },
+    "지표별": {
+     "sustain_ratio": "보류",
+     "delta_semitone_median": "보류",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "보류"
+   },
+   "RM2": {
+    "게이트": "통과",
+    "주지표_분리도": 0.2406,
+    "z": {
+     "sustain_ratio": 0.228,
+     "delta_semitone_median": 0.103,
+     "voiced_ratio": -4.726
+    },
+    "지표별": {
+     "sustain_ratio": "말하기",
+     "delta_semitone_median": "말하기",
+     "voiced_ratio": "말하기"
+    },
+    "판정": "말하기"
+   }
+  }
+ ]
+}

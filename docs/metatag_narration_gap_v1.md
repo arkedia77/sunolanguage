@@ -10,7 +10,8 @@
 ## 0. 한 줄
 
 **오너 지적이 맞다. v0의 「외부 순증 0」은 틀렸다.**
-나레이션 태그 **103개 중 85개가 우리에 없고**, 그중 **19개는 외부에서 음원까지 공개된 시연분**이다.
+나레이션 태그 **103개 중 85개가 우리에 없다**.
+~~그중 19개는 외부에서 음원까지 공개된 시연분이다.~~ → ★**08-13 정정: 15개이고, 「음원 공개 시연」이 아니라 「외부 출처에 철자가 실재함을 내가 실물 대조한 것」까지다**(§2 정정 박스). 4건은 **미검증 강등**.
 
 ---
 
@@ -47,11 +48,21 @@ v0 수집기는 `\[...\]` 기반이었다. 그래서 **태그를 대괄호 없�
 | OURS_SP_ONLY (서술축에만) | 4 |
 | **★GAP (우리에 전무)** | **85** |
 
-### ★그중 「외부에서 실제 시연됐는데 우리엔 전무」 = 19건
+### ★그중 「외부 출처에 철자 확인 + 우리엔 전무」 = ~~19건~~ **15건** (★08-13 정정)
 
-**A. 공개 음원 실물** (`suno.com/s/nrhqq4oreDlBEabw`, Suno v5 — 규칙블록형)
+> ★★**정정 2건 (2026-08-13 자진)** — 이 절의 「19건」은 틀렸다.
+>
+> **⒜ A등급 4건 → `미검증` 강등.** 아래 A항의 출처 `suno.com/s/nrhqq4oreDlBEabw`는 **JS 게이트라 내가 못 읽는다**(직접 재확인). 제목만 새는데 그게 *"Righteous Report Ep 3" by **Jack Righteous*** — **내 「실패양식」 출처와 동일 인물인데 독립 출처로 셌다.** 「음원 공개·실물 가사」라 적은 verbatim의 **원본 캐시가 리포에 없다.** ⇒ **A_demo는 내가 확인한 적 없는 등급이다.**
+>
+> **⒝ 나머지 15건은 오늘 실물 검증했다.** B·C·D항의 유튜브 4출처를 `yt-dlp`로 **처음 실제 회수**(`data/metatag_external/yt/verify_v1/`)하고 태그 철자를 기계 대조 → **18/18 verbatim 적중.** 「안 보고 인용했다」는 내 의심은 **기각**됐다.
+> ⚠**단 적중한 것은 「철자」이지 「시연」이 아니다** — 영상 본문은 HTTP 429로 미회수. **A_demo의 「A/B 시연」 근거는 아직 설명란 기재까지다.**
+>
+> 재현: `scripts/metatag_narration_gap_v1.py` → 등급 분포 `B_recited 81 / A_demo 18 / 미검증 4`.
+
+**A. ~~공개 음원 실물~~ → ★미검증** (`suno.com/s/nrhqq4oreDlBEabw`, Suno v5 — 규칙블록형)
 `[VOICEOVER — SPOKEN, NOT SUNG]` · `[READ NATURALLY • NO RHYMES • NO MELODY]` · `[BACKGROUND: minimal ambient underscore only]` · `[PERFORMANCE RULES]`
-→ style 필드: `"Make deep Spoken word voiceover, conversational narration, clear speech, no melody, no singing…"`
+→ style 필드라고 내가 적었던 것: `"Make deep Spoken word voiceover, conversational narration, clear speech, no melody, no singing…"`
+★**이 4건은 아래 15건 집계에서 빠진다.** 표기를 지우지는 않는다 — **등급만 내린다**(나중에 열리면 복원 가능하도록).
 
 **B. 공개곡 가사 — 화자+어조를 브라켓 안에 서술**
 `[Female spoken, vocaloid, gentle]` · `[Monster spoken, raspy, angry]` · `[Verse 1, Man]` · `[laugh]` · `[in Latin]`
