@@ -1,0 +1,188 @@
+{
+ "무엇": "외부 메타태그 v2 4레인 재집계 — 인용 표준 재현기",
+ "재현": "python3 scripts/metatag_lane_recount_v1.py",
+ "원자료": "data/metatag_external/v2_lanes/*.json",
+ "세는_규칙": "각 레인 tags[] + lane2 speaker_syntax[]. not_accessed·advice·precedence_statements·rule_block_prompting·target_attempts·failure_modes 제외",
+ "★자기신고_대_실물": {
+  "레인별_자기신고(extracted_count)": {
+   "lane1_phone_broadcast": 111,
+   "lane2_spoken_narrator": 99,
+   "lane3_sp_predeclaration": 5,
+   "lane4_multilingual": 108
+  },
+  "레인별_실물": {
+   "lane1_phone_broadcast": 111,
+   "lane2_spoken_narrator": 97,
+   "lane3_sp_predeclaration": 0,
+   "lane4_multilingual": 119
+  },
+  "차": {
+   "lane1_phone_broadcast": 0,
+   "lane2_spoken_narrator": -2,
+   "lane3_sp_predeclaration": -5,
+   "lane4_multilingual": 11
+  },
+  "자기신고_합": 323,
+  "실물_합": 327,
+  "해석": "★어느 쪽도 「수집 건수」의 정답이 아니다 — 자기신고는 틀렸고, 실물 합도 중복을 포함한 항목 수다. 인용은 고유 표기 수로 한다."
+ },
+ "★인용_표준": {
+  "고유_표기_엄격": 236,
+  "고유_표기_관대": 235,
+  "고유_(표기,출처)_쌍": 306,
+  "항목(중복포함)": 327,
+  "★문장": "외부 나레이션·화자 표기 **고유 235~236종** (정규화 규칙 의존 — 인용 시 규칙 병기. B_recited 99.1% = 대부분 전언). ★「323」·「332」 단독 인용 금지.",
+  "★재현_실패_기록": {
+   "대상": "docs/canonicalization_and_release_plan_v1.md §1 TEST-3의 「고유 표기 234종 / 고유 쌍 259」",
+   "결과": "★재현 안 됨. 이 스크립트로는 엄격 236종 · 관대 235종 · (표기,출처) 쌍 306. 234는 두 자 사이에 있고 259는 어느 자로도 안 나온다.",
+   "원인_판정": "★불명 — 그 수치를 낸 절차가 리포에 없다(스크립트·JSON 부재). 즉 「내가 틀렸다」도 「그때가 틀렸다」도 지금은 확정 못 한다.",
+   "처분": "★재현되는 수치로 교체한다. 재현 없는 수치는 인용 표준이 될 수 없다."
+  }
+ },
+ "등급_분포": {
+  "항목단위": {
+   "B_recited": 324,
+   "A_demo": 3
+  },
+  "고유표기단위": {
+   "B_recited": 233,
+   "A_demo": 3
+  }
+ },
+ "★중복_상위(=파생 복제 신호)": [
+  {
+   "표기": "spoken word",
+   "중복": 15,
+   "출처수": 13,
+   "레인": [
+    "lane1",
+    "lane2",
+    "lane4"
+   ]
+  },
+  {
+   "표기": "whispers",
+   "중복": 10,
+   "출처수": 6,
+   "레인": [
+    "lane1",
+    "lane2",
+    "lane4"
+   ]
+  },
+  {
+   "표기": "female narrator",
+   "중복": 8,
+   "출처수": 6,
+   "레인": [
+    "lane1",
+    "lane2",
+    "lane4"
+   ]
+  },
+  {
+   "표기": "announcer",
+   "중복": 7,
+   "출처수": 4,
+   "레인": [
+    "lane1",
+    "lane2",
+    "lane4"
+   ]
+  },
+  {
+   "표기": "reporter",
+   "중복": 6,
+   "출처수": 3,
+   "레인": [
+    "lane1",
+    "lane2",
+    "lane4"
+   ]
+  },
+  {
+   "표기": "phone ringing",
+   "중복": 5,
+   "출처수": 5,
+   "레인": [
+    "lane1",
+    "lane4"
+   ]
+  },
+  {
+   "표기": "vinyl crackle",
+   "중복": 4,
+   "출처수": 4,
+   "레인": [
+    "lane1"
+   ]
+  },
+  {
+   "표기": "spoken word narration",
+   "중복": 4,
+   "출처수": 2,
+   "레인": [
+    "lane1",
+    "lane2"
+   ]
+  },
+  {
+   "표기": "clears throat",
+   "중복": 4,
+   "출처수": 4,
+   "레인": [
+    "lane2",
+    "lane4"
+   ]
+  },
+  {
+   "표기": "beeping",
+   "중복": 3,
+   "출처수": 3,
+   "레인": [
+    "lane1"
+   ]
+  },
+  {
+   "표기": "applause",
+   "중복": 3,
+   "출처수": 3,
+   "레인": [
+    "lane1"
+   ]
+  },
+  {
+   "표기": "censored",
+   "중복": 3,
+   "출처수": 3,
+   "레인": [
+    "lane1"
+   ]
+  }
+ ],
+ "★안_센_것": {
+  "lane1_phone_broadcast": {
+   "not_accessed": 6
+  },
+  "lane2_spoken_narrator": {
+   "not_accessed": 10,
+   "failure_modes": 24
+  },
+  "lane3_sp_predeclaration": {
+   "not_accessed": 6,
+   "advice": 11,
+   "precedence_statements": 13,
+   "rule_block_prompting": 6
+  },
+  "lane4_multilingual": {
+   "not_accessed": 15,
+   "target_attempts": 5
+  }
+ },
+ "★한계": [
+  "고유 표기 수는 **수집된 문자열의 종수**이지 **유효 어휘 수가 아니다**. 유효성은 하나도 안 쟀다.",
+  "정규화는 대소문자·바깥괄호·끝구두점만 접는다. 어순·동의어(narrator/narration)는 **따로 센다**.",
+  "★고유 표기 수는 정규화 규칙에 따라 흔들린다(엄격/관대 2종을 병기하는 이유). 단일 정수로 인용하면 그 흔들림이 숨는다.",
+  "not_accessed는 제외했다 — 「없음」이 아니라 **「안 봄」**이다(합계는 ★안_센_것 참조)."
+ ]
+}
