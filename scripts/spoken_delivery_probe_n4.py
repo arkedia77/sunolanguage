@@ -143,15 +143,23 @@ def main():
         print(f"[판정] {lb} {u[:8]} …", flush=True)
         result["클립"][lb] = judge(lb, u, segs_for[lb], B)
 
-    판정 = {lb: e.get("판정_규칙그대로") for lb, e in result["클립"].items()}
-    말 = sum(1 for v in 판정.values() if v and v.startswith("말하기"))
+    # ★집계는 **게이트 통과분만** 분모로 쓴다.
+    #   1차판이 「말하기 1/4」로 냈다가 폐기했다 — 게이트가 기각한(=판정 안 한) 클립을
+    #   분모에 넣으면 **「측정 못 함」이 「아님」으로 접힌다.**
+    통과 = {lb: e.get("판정_규칙그대로") for lb, e in result["클립"].items()
+            if e.get("게이트") == "통과"}
+    기각 = [lb for lb, e in result["클립"].items() if e.get("게이트") != "통과"]
+    말 = sum(1 for v in 통과.values() if v and v.startswith("말하기"))
     result["★집계"] = {
-        "클립별_판정(규칙그대로)": 판정,
-        "N": len(대상),
-        "말하기_판정": f"{말}/{len(대상)}",
-        "★인용문": f"`(spoken)` 괄호 채널 — 기계 판정 **말하기 {말}/{len(대상)}** "
-                   f"(N={len(대상)}, 대조군=TTS {len(b_metrics)}음성). "
-                   f"★곡 수준 일반화 금지 — 곡 2편·take {len(대상)}개다.",
+        "측정_시도": len(대상),
+        "게이트_기각": {"수": len(기각), "클립": 기각 or "없음",
+                        "뜻": "★자가 말/노래를 못 가름 → **판정 안 함**(「말하기 아님」이 아니다)"},
+        "★판정_가능_표본": len(통과),
+        "통과분_판정": 통과,
+        "★인용문": f"`(spoken)` 괄호 채널 — **판정 가능 표본 {len(통과)}클립** "
+                   f"(시도 {len(대상)}·게이트 기각 {len(기각)}), 그중 **말하기 {말}**. "
+                   f"★분모는 시도가 아니라 **판정 가능 표본**이다. 곡 수준 일반화 금지.",
+        "상세_집계": "data/exchange/spoken_delivery_probe_n4_report.json",
     }
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1))
     print(json.dumps(result["★집계"], ensure_ascii=False, indent=1))

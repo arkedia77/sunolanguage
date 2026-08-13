@@ -1,0 +1,322 @@
+{
+ "사전등록": "docs/spoken_delivery_probe_preregistration.md(원판 규칙 그대로) + docs/vd_uuid_remapping_preregistration.md §7(확장 조건)",
+ "★확장_사유": "원 사전등록의 사실오류 자진 적발 — 「v2.3 3곡 (spoken) 0건」이 틀렸고 뮤지컬 v2.3은 RM과 동일한 (spoken) 4행을 쓴다. 표본은 애초에 N=4.",
+ "★대조군_아님": "M23a·M23b는 RM과 **같은 입력 조건(괄호 (spoken))**의 추가 표본이다. SP·브라켓은 다르므로 **미니멀 페어가 아니다** — 기여 분리에 쓰면 안 된다.",
+ "대상": {
+  "계상": {
+   "RM1": "70365338-0b63-4369-a5e3-83ad4de94bb0",
+   "RM2": "7a028e80-b6f7-47ce-846c-cb919ef55b5f",
+   "M23-66621da8": "66621da8-7d04-4cea-b5c7-7808dbdc659c",
+   "M23-b6cb18a6": "b6cb18a6-6212-4893-bbdc-5230b50c3d63"
+  },
+  "★제외": "없음"
+ },
+ "★라벨_주의": "뮤지컬 2 take는 **M23a/M23b 중 어느 쪽인지 미확정**이라 uuid 앞 8자로 부른다. `VD_FINAL_judgment.json` §2의 화자 순서 판정(M23a/M23b)과 **이름으로 이어 붙이지 말 것.**",
+ "★구간_출처": {
+  "RM1": "원장 VD_final_asr.json(원판과 동일)",
+  "RM2": "원장 VD_final_asr.json(원판과 동일)",
+  "M23-66621da8": "★재실행 전사(라벨 미확정이라 원장 키 사용 불가)",
+  "M23-b6cb18a6": "★재실행 전사(라벨 미확정이라 원장 키 사용 불가)"
+ },
+ "매핑_근거": "data/vd_duet3/VD_uuid_remap_v1.json(대조군 4/4 복원 통과) + VD_uuid_remap_posthoc.json(곡 수준 확정 4/4)",
+ "말극_B_TTS": {
+  "Yuna": {
+   "sustain_ratio": 0.2516,
+   "delta_semitone_median": 0.1209,
+   "voiced_ratio": 0.8038,
+   "voiced_frames": 803
+  },
+  "Eddy (한국어(한국))": {
+   "sustain_ratio": 0.3797,
+   "delta_semitone_median": 0.0682,
+   "voiced_ratio": 0.5975,
+   "voiced_frames": 769
+  },
+  "Grandma (한국어(한국))": {
+   "sustain_ratio": 0.2876,
+   "delta_semitone_median": 0.0625,
+   "voiced_ratio": 0.6457,
+   "voiced_frames": 831
+  },
+  "Flo (한국어(한국))": {
+   "sustain_ratio": 0.3189,
+   "delta_semitone_median": 0.0815,
+   "voiced_ratio": 0.6822,
+   "voiced_frames": 878
+  }
+ },
+ "말극_B_평균": {
+  "sustain_ratio": 0.3095,
+  "delta_semitone_median": 0.0833,
+  "voiced_ratio": 0.6823
+ },
+ "클립": {
+  "RM1": {
+   "uuid": "70365338-0b63-4369-a5e3-83ad4de94bb0",
+   "노래극_A": {
+    "sustain_ratio": 0.531,
+    "delta_semitone_median": 0.0433,
+    "voiced_ratio": 0.7194,
+    "voiced_frames": 14762
+   },
+   "spoken_대상_X": {
+    "sustain_ratio": 0.3934,
+    "delta_semitone_median": 0.0607,
+    "voiced_ratio": 0.3955,
+    "voiced_frames": 821
+   },
+   "spoken_행별": [
+    {
+     "구간": "0.0~7.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "sustain_ratio": 0.2963,
+     "delta_semitone_median": 0.0888,
+     "voiced_ratio": 0.3112,
+     "voiced_frames": 216
+    },
+    {
+     "구간": "7.0~13.0s",
+     "행": "그러며 그 날도 꼭 오늘 같았죠",
+     "sustain_ratio": 0.2197,
+     "delta_semitone_median": 0.0875,
+     "voiced_ratio": 0.2912,
+     "voiced_frames": 173
+    },
+    {
+     "구간": "13.0~24.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "측정": "★불가 — 유성 프레임 20 미만"
+    },
+    {
+     "구간": "107.0~111.0s",
+     "행": "그때 그만 지금도 같아요?",
+     "sustain_ratio": 0.5826,
+     "delta_semitone_median": 0.0507,
+     "voiced_ratio": 0.5533,
+     "voiced_frames": 218
+    },
+    {
+     "구간": "111.0~115.0s",
+     "행": "아니요, 그때보다 더 커졌어요",
+     "sustain_ratio": 0.4393,
+     "delta_semitone_median": 0.0446,
+     "voiced_ratio": 0.5431,
+     "voiced_frames": 214
+    }
+   ],
+   "spoken_집계행수": 4,
+   "★측정불가_구간": [
+    {
+     "구간": "13.0~24.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "측정": "★불가 — 유성 프레임 20 미만"
+    }
+   ],
+   "가창_구간수": 30,
+   "게이트_주지표_분리도": 0.2216,
+   "게이트": "통과",
+   "지표별_양극분리도": {
+    "sustain_ratio": 0.2216,
+    "delta_semitone_median": 0.04,
+    "voiced_ratio": 0.0371
+   },
+   "z_정규화위치": {
+    "sustain_ratio": 0.379,
+    "delta_semitone_median": 0.565,
+    "voiced_ratio": -7.73
+   },
+   "지표별_판정": {
+    "sustain_ratio": "보류",
+    "delta_semitone_median": "보류",
+    "voiced_ratio": "말하기"
+   },
+   "판정_규칙그대로": "★보류 — 2표 이상 한 방향으로 안 모임",
+   "★사후_분리지표만": [
+    "sustain_ratio",
+    "delta_semitone_median"
+   ],
+   "판정_분리지표만_post_hoc": "★보류 — 2표 이상 한 방향으로 안 모임"
+  },
+  "RM2": {
+   "uuid": "7a028e80-b6f7-47ce-846c-cb919ef55b5f",
+   "노래극_A": {
+    "sustain_ratio": 0.55,
+    "delta_semitone_median": 0.04,
+    "voiced_ratio": 0.7455,
+    "voiced_frames": 15148
+   },
+   "spoken_대상_X": {
+    "sustain_ratio": 0.3643,
+    "delta_semitone_median": 0.0788,
+    "voiced_ratio": 0.3836,
+    "voiced_frames": 873
+   },
+   "spoken_행별": [
+    {
+     "구간": "0.0~8.0s",
+     "행": "여보, 우리 처음 만나던 날 기억해요?",
+     "sustain_ratio": 0.5203,
+     "delta_semitone_median": 0.0771,
+     "voiced_ratio": 0.3098,
+     "voiced_frames": 246
+    },
+    {
+     "구간": "8.0~15.0s",
+     "행": "그러면 그날도 꼭 오늘 같았죠",
+     "sustain_ratio": 0.3709,
+     "delta_semitone_median": 0.0707,
+     "voiced_ratio": 0.4352,
+     "voiced_frames": 302
+    },
+    {
+     "구간": "96.0~99.0s",
+     "행": "그때 그 마음 지금도 같아요?",
+     "sustain_ratio": 0.2663,
+     "delta_semitone_median": 0.1,
+     "voiced_ratio": 0.5748,
+     "voiced_frames": 169
+    },
+    {
+     "구간": "99.0~104.0s",
+     "행": "아니요, 그때보다 더 커졌어요",
+     "sustain_ratio": 0.2115,
+     "delta_semitone_median": 0.0695,
+     "voiced_ratio": 0.3158,
+     "voiced_frames": 156
+    }
+   ],
+   "spoken_집계행수": 4,
+   "★측정불가_구간": [],
+   "가창_구간수": 30,
+   "게이트_주지표_분리도": 0.2406,
+   "게이트": "통과",
+   "지표별_양극분리도": {
+    "sustain_ratio": 0.2406,
+    "delta_semitone_median": 0.0433,
+    "voiced_ratio": 0.0632
+   },
+   "z_정규화위치": {
+    "sustain_ratio": 0.228,
+    "delta_semitone_median": 0.103,
+    "voiced_ratio": -4.726
+   },
+   "지표별_판정": {
+    "sustain_ratio": "말하기",
+    "delta_semitone_median": "말하기",
+    "voiced_ratio": "말하기"
+   },
+   "판정_규칙그대로": "말하기 쪽 (3표)",
+   "★사후_분리지표만": [
+    "sustain_ratio",
+    "delta_semitone_median"
+   ],
+   "판정_분리지표만_post_hoc": "말하기 쪽 (2표)"
+  },
+  "M23-66621da8": {
+   "uuid": "66621da8-7d04-4cea-b5c7-7808dbdc659c",
+   "노래극_A": {
+    "sustain_ratio": 0.4536,
+    "delta_semitone_median": 0.0512,
+    "voiced_ratio": 0.7279,
+    "voiced_frames": 12523
+   },
+   "spoken_대상_X": {
+    "sustain_ratio": 0.4514,
+    "delta_semitone_median": 0.0667,
+    "voiced_ratio": 0.4034,
+    "voiced_frames": 906
+   },
+   "spoken_행별": [
+    {
+     "구간": "0.0~5.2s",
+     "행": "여보 우리 처음 만나던 날 기억해요",
+     "sustain_ratio": 0.2611,
+     "delta_semitone_median": 0.1273,
+     "voiced_ratio": 0.3949,
+     "voiced_frames": 203
+    },
+    {
+     "구간": "5.2~12.6s",
+     "행": "그럼요 그날도 꼭 오늘 같았죠",
+     "sustain_ratio": 0.5424,
+     "delta_semitone_median": 0.0602,
+     "voiced_ratio": 0.4496,
+     "voiced_frames": 330
+    },
+    {
+     "구간": "69.4~72.5s",
+     "행": "그때 그 마음 지금도 같아요",
+     "sustain_ratio": 0.2339,
+     "delta_semitone_median": 0.1154,
+     "voiced_ratio": 0.4079,
+     "voiced_frames": 124
+    },
+    {
+     "구간": "72.5~79.5s",
+     "행": "아니요 그때보다 더 커졌어요",
+     "sustain_ratio": 0.5944,
+     "delta_semitone_median": 0.0413,
+     "voiced_ratio": 0.3588,
+     "voiced_frames": 249
+    }
+   ],
+   "spoken_집계행수": 4,
+   "★측정불가_구간": [],
+   "가창_구간수": 21,
+   "게이트_주지표_분리도": 0.1442,
+   "게이트": "★기각 — 지표가 말/노래를 구분 못 함. 대상 판정 안 함",
+   "지표별_양극분리도": {
+    "sustain_ratio": 0.1442,
+    "delta_semitone_median": 0.0321,
+    "voiced_ratio": 0.0456
+   }
+  },
+  "M23-b6cb18a6": {
+   "uuid": "b6cb18a6-6212-4893-bbdc-5230b50c3d63",
+   "노래극_A": {
+    "sustain_ratio": 0.4406,
+    "delta_semitone_median": 0.0575,
+    "voiced_ratio": 0.69,
+    "voiced_frames": 12986
+   },
+   "spoken_대상_X": {
+    "sustain_ratio": 0.3376,
+    "delta_semitone_median": 0.0996,
+    "voiced_ratio": 0.5338,
+    "voiced_frames": 474
+   },
+   "spoken_행별": [
+    {
+     "구간": "0.0~4.0s",
+     "행": "여보 우리 처음 만나던 날 기약해요",
+     "sustain_ratio": 0.1368,
+     "delta_semitone_median": 0.1165,
+     "voiced_ratio": 0.4822,
+     "voiced_frames": 190
+    },
+    {
+     "구간": "4.0~9.0s",
+     "행": "그러면 그날도 꼭 오늘 같았죠",
+     "sustain_ratio": 0.4718,
+     "delta_semitone_median": 0.0907,
+     "voiced_ratio": 0.5749,
+     "voiced_frames": 284
+    }
+   ],
+   "spoken_집계행수": 2,
+   "★측정불가_구간": [],
+   "가창_구간수": 30,
+   "게이트_주지표_분리도": 0.1311,
+   "게이트": "★기각 — 지표가 말/노래를 구분 못 함. 대상 판정 안 함",
+   "지표별_양극분리도": {
+    "sustain_ratio": 0.1311,
+    "delta_semitone_median": 0.0258,
+    "voiced_ratio": 0.0077
+   }
+  }
+ },
+ "★집계": {
+  "★폐기": "이 블록의 「말하기 1/4」는 게이트 기각분을 분모에 넣은 오도였다.",
+  "정본": "data/exchange/spoken_delivery_probe_n4_report.json"
+ }
+}
