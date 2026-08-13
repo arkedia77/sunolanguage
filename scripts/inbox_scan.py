@@ -20,6 +20,7 @@
 import hashlib
 import json
 import sys
+from datetime import datetime
 from pathlib import Path
 
 ME = "sunolanguage"
@@ -80,7 +81,7 @@ def hash_audit(box):
     if not LEDGER.exists():
         return (["★기준선 생성 — 원장이 없어 **이번 실행은 변경 탐지를 하지 않았다**",
                  f"  (「변경 없음」이 아니라 「아직 못 봄」. 다음 실행부터 {len(snap)}건 대조)"],
-                snap)
+                snap, set())
 
     prev = json.loads(LEDGER.read_text())
     lines, changed, moved, moved_dirty, gone, added = [], [], [], [], [], []
@@ -108,19 +109,32 @@ def hash_audit(box):
     # ★평시 카운트는 이상 유무와 무관하게 **항상** 낸다 — 이상이 있을 때 정상분이 화면에서
     #   사라지면 「몇 건을 대조했는지」를 못 보고, 그 상태의 「0건」은 신뢰할 수 없다.
     lines.append(f"대조 {len(prev)}→{len(snap)}건 · 정상 이관 {len(moved)} · 신규 {len(added)}")
-    return lines, snap
+    return lines, snap, {n for n in added if snap[n]["loc"] == "root"}
 
 
 def main():
     proc = BOX / "processed"
+
+    # ★해시 원장을 **먼저** 본다 — 시각 비의존 축이라 워터마크가 오염돼도 살아남는다.
+    #   (08-13 실피해: 아래 「워터마크 오염」 주석 참조)
+    lines, snap, fresh = hash_audit(BOX)
+
     # ⑴ 워터마크 = 처리분 중 최신 시각. 사람이 정하지 않는다.
-    marks = []
+    # ★단 **미래 시각은 워터마크로 안 쓴다** (08-13 실피해 1건) —
+    #   발신자가 `created_at`을 손기재하면 미래 시각이 들어오고, 그걸 이관하는 순간
+    #   내 워터마크가 그 미래로 점프해 **그 사이에 온 정상 메시지가 통째로 「워터마크 이전」으로 묻힌다.**
+    #   실측: leomusic2가 11:16 커밋분에 `created_at=12:30`(+80분 미래)을 적었고,
+    #   그 뒤 도착한 leomusic 11:23·leomusic3 11:27 **제출 2건이 「미처리 0」으로 찍혔다.**
+    #   ⇒ 이 스캐너가 막으려던 사고(08-09 컷오프 눈대중)를 **다른 입구로 재현**했다.
+    now = datetime.now().astimezone().isoformat(timespec="seconds")
+    marks, future = [], []
     for p in proc.glob("*.json"):
         d = load(p)
         s, _ = stamp(d, p)
-        if s:
-            marks.append(s)
-    watermark = max(marks) if marks else ""
+        if not s:
+            continue
+        (future if s > now else marks).append((s, p.name))
+    watermark = max(m[0] for m in marks) if marks else ""
 
     new, old, unparsed = [], [], []
     for p in sorted(BOX.glob("*.json")):
@@ -133,17 +147,24 @@ def main():
             unparsed.append((p.name, "시각 필드·파일명 stamp 모두 없음"))
             continue
         row = (s, d.get("from", "?"), str(d.get("reply_needed")), src, p.name)
-        (new if s > watermark else old).append(row)
+        # ★원장에 없던 파일(=신규)은 **시각과 무관하게** 미처리로 올린다.
+        #   시각 축 하나로만 판정하면 그 축이 오염될 때 통째로 눈이 먼다.
+        (new if (s > watermark or p.name in fresh) else old).append(row)
 
     print(f"워터마크(처리분 최신) = {watermark or '(없음)'}   ※기계 산출, 인자 아님")
+    if future:
+        print(f"★★미래 시각 {len(future)}건 — 워터마크에서 제외함 (지금={now})")
+        for s, n in sorted(future, reverse=True)[:5]:
+            print(f"    {s}  {n[:80]}")
     print(f"루트 잔류 {len(new)+len(old)+len(unparsed)} = 미처리 {len(new)} / "
           f"워터마크 이전 {len(old)} / ★판정불가 {len(unparsed)}")
     if new:
-        print("\n■ 미처리 (워터마크 이후)")
+        print("\n■ 미처리 (워터마크 이후 ∪ ★원장 신규)")
         for s, f, r, src, n in sorted(new):
-            print(f"  {s}  from={f:<14} reply={r:<5} [{src}]\n     {n[:100]}")
+            tag = " ★신규(원장)" if n in fresh else ""
+            print(f"  {s}  from={f:<14} reply={r:<5} [{src}]{tag}\n     {n[:100]}")
     else:
-        print("\n■ 미처리 0건 — ★워터마크 이후 기준. 이전 잔류는 위 카운트 참조(‘없음’ 아님)")
+        print("\n■ 미처리 0건 — ★워터마크 이후 ∪ 원장 신규 기준. 이전 잔류는 위 카운트 참조(‘없음’ 아님)")
     if unparsed:
         print("\n■ ★판정 불가 — 버리지 않고 올림 (직접 확인 필요)")
         for n, why in unparsed:
@@ -153,8 +174,7 @@ def main():
         for s, f, r, src, n in sorted(old, reverse=True)[:10]:
             print(f"  {s}  from={f:<14} {n[:80]}")
 
-    # ★해시 대조 — 워터마크가 못 보는 축(내용 변경·소실)
-    lines, snap = hash_audit(BOX)
+    # ★해시 대조 결과 출력 (산출은 위에서 이미 했다)
     print("\n■ 해시 대조 (워터마크는 '새 것'만 본다 — 여기는 '바뀐 것'을 본다)")
     for l in lines:
         print(f"  {l}")
