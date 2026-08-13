@@ -98,10 +98,40 @@ for uuid, (label, lyr) in CLIP2LYR.items():
         rows.append({"배치": "VD-RM", "곡": label, "언어": "ko",
                      "초": dur(f), **lyric_stats(lyr)})
 
+def population(rs):
+    """★모집단을 **기계로** 채운다.
+
+    08-13 자기적발: 이 키가 `{}`로 **비어 있었다.** 답 자체는 encore 앞 회신 본문
+    (`encore_sunolanguage_20260811_211610…` /⚠E-R7_모집단)으로 나갔으니 배달 결함은 아니나,
+    **이 JSON만 읽는 사람에게는 「모집단 없음」으로 읽힌다.** 「없음」과 「안 씀」의 혼동을
+    내 산출물이 스스로 만들고 있었다. → 빈 칸을 남기지 말고 rows에서 파생시킨다.
+    """
+    if not rs:
+        return {"n": 0, "★주의": "쌍 0건 — 원자료 경로를 확인할 것"}
+    secs = sorted(r["초"] for r in rs if r.get("초"))
+    from collections import Counter
+    return {
+        "n": len(rs),
+        "배치별": dict(Counter(r["배치"] for r in rs)),
+        "언어": dict(Counter(r["언어"] for r in rs)),
+        "초_범위": [secs[0], secs[-1]] if secs else None,
+        "음절_범위": [min(r["한글음절수"] for r in rs), max(r["한글음절수"] for r in rs)],
+        "가창행_범위": [min(r["가창행수"] for r in rs), max(r["가창행수"] for r in rs)],
+        "★이_모집단이_못_덮는_구간": "150~180초 — 표본 0건(최단 "
+                                    f"{secs[0]}s). ★이 구간 질문엔 **모른다**가 답이다.",
+        "★한계": [
+            "Duration 락 설정 여부 배치별 미확인",
+            "음절 계수는 한글 글자 기준(발음 음절과 다를 수 있음)",
+            "곡당 take 1개만 계측 — 같은 가사의 take2는 길이가 다르다",
+            "분량을 통제한 A/B가 아니다 — 관측 쌍이지 실험이 아니다",
+        ],
+    }
+
+
 result = {
     "생성": "scripts/lyric_length_mapping.py",
     "★이_수치의_지위": "관측 경향이지 담보가 아니다. 분량 통제 A/B 아님 · Duration 락 설정 여부 배치별 미확인.",
-    "모집단": {},
+    "모집단": population(rows),
     "쌍": rows,
     "v3_가사후보키": list(v3_lyrics.keys()),
 }
