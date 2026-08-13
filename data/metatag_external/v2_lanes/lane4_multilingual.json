@@ -1,0 +1,1315 @@
+{
+ "lane": "multilingual_and_unrecovered",
+ "target_attempts": [
+  {
+   "target": "sunometatagcreator.com",
+   "status": "partial",
+   "reason": "Homepage renders only category names + counts (no individual tags; tags live behind an interactive JS tool WebFetch cannot drive). Sister page /metatags-guide did render prose+tags and was read.",
+   "extracted": 248,
+   "claimed_count": "1000+ (title) / 2,596 (homepage category sum)",
+   "note": "CONFIRMED INFLATION. Homepage advertises 2,596 tags across 23 categories (Genre 729, Sound Effects 318, Instruments 303...). The guide page title claims '1000+'. Actual distinct tags written out on the readable page: ~280-300, of which I retained 248 after dedupe. Ratio roughly 10:1 advertised:real. Also note the category counts are padded with combinatorial filler (e.g. 'Chord Progressions & Harmony 148', 'Musical Keys & Tonality 69' are enumerations of every key/chord, not Suno-specific metatags). NO narration/narrator/spoken-word/phone/radio tag appears anywhere on the readable page despite the huge advertised count."
+  },
+  {
+   "target": "openmusicprompt",
+   "status": "read",
+   "reason": "openmusicprompt.com/blog/suno-ai-metatags-guide fetched successfully (HTTP 200).",
+   "extracted": 15,
+   "claimed_count": "500+ verified metatags",
+   "note": "INFLATION CONFIRMED (milder). Claims '500+ verified metatags' in both title and section 4, but only ~15 vocal/voice tags are actually written out in the readable body; the rest is prose describing categories. Distinctive house style: 'Namespace: Value' form e.g. [Vocal Style: Whisper], [Effect: Radio Filter]. Notably this site does NOT carry [Female Narrator] despite its size."
+  },
+  {
+   "target": "suno.wiki/faq/metatags/voice-tags/",
+   "status": "blocked",
+   "reason": "Direct fetch 403 Forbidden. r.jina.ai proxy returned 404 (page not found through proxy). Google cache returned only a Google error page, no content.",
+   "extracted": 0,
+   "claimed_count": null,
+   "note": "NEVER READ. Per instruction I do NOT cite [Female Narrator] to this URL. HOWEVER the tag is independently confirmed: I read it verbatim on three other pages I did fetch (brunch.co.kr Korean, note.com Japanese, sunoprompt.com/ko). So the tag is real, but its attribution to suno.wiki remains unverified by me."
+  },
+  {
+   "target": "Reddit r/SunoAI",
+   "status": "blocked",
+   "reason": "ALL routes failed. www.reddit.com and old.reddit.com are blocked at the WebFetch client level ('Claude Code is unable to fetch from ...'). r.jina.ai proxy to a reddit thread returned Reddit's 403 login/security interstitial. Redlib instance catsarch.com returned 403. Libreddit instance privacy.com.de returned ECONNREFUSED (instance dead).",
+   "extracted": 0,
+   "claimed_count": null,
+   "note": "Zero Reddit content recovered by any frontend, cache, or aggregator. Search-engine snippets referencing r/SunoAI exist but I did not treat snippets as read sources."
+  },
+  {
+   "target": "YouTube video descriptions/captions",
+   "status": "blocked",
+   "reason": "WebFetch on watch?v= URLs returns only YouTube's footer/nav/legal chrome — the description block is JS-injected and never appears in the converted markdown. Tried watch?v=Atm4qNj6FPI (English, 'Suno AI Metatags Hacks') and watch?v=y-S7uTkQqok (Korean, 'Suno AI 완벽 마스터: 4. Suno 태그 사용법').",
+   "extracted": 0,
+   "claimed_count": null,
+   "note": "Got NEITHER description NOR captions this round — strictly worse than the prior attempt, which at least confirmed caption tracks existed. WebFetch cannot execute JS, so no description text is reachable; a yt-dlp-style tool would be needed."
+  }
+ ],
+ "tags": [
+  {
+   "tag": "Narration",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리 — 창팝 관련 suno 태그 정보",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Listed unbracketed in a plain vocal-style list alongside Spoken Word / Sprechgesang / Melismatic. Korean post compiling from suno.wiki + sunoaiwiki.com, so derivative, but the UNBRACKETED verbatim form is the load-bearing observation."
+  },
+  {
+   "tag": "Spoken Word",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed, title-case, in same vocal-style list."
+  },
+  {
+   "tag": "Sprechgesang",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed. Speech-song technique — directly relevant to the narration lane and rare in English lists."
+  },
+  {
+   "tag": "Monotone",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed vocal-style tag; flat affect, adjacent to narration register."
+  },
+  {
+   "tag": "Dispassionate",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed vocal-style tag."
+  },
+  {
+   "tag": "Melismatic",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "Lounge Singer",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed persona-style vocal tag."
+  },
+  {
+   "tag": "Gregorian chant",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed, sentence-case as written."
+  },
+  {
+   "tag": "Sultry",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "Torchy",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "Vocaloid",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "Ethereal",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "Resonant",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "Arabian Ornamental",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed, title-case."
+  },
+  {
+   "tag": "Hindustani",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "A Cappella",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://gall.dcinside.com/mgallery/board/view/?id=maplereboot&no=3122281",
+   "source_label": "DCinside 메이플스토리 리부트 마이너 갤러리",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "[Female Narrator]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@botongmarketer/832",
+   "source_label": "brunch.co.kr — AI 작곡의 시크릿 코드, SUNO 메타태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Listed under a Narrator/Voice tag grouping with [Male Narrator] and [Announcer]. This is an INDEPENDENT read of [Female Narrator] that does not depend on the unreachable suno.wiki page."
+  },
+  {
+   "tag": "[Male Narrator]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@botongmarketer/832",
+   "source_label": "brunch.co.kr — SUNO 메타태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Paired with [Female Narrator]. Notably [Male Narrator] does NOT appear in the canonical Bark list (which has only 'female narrator'), so this is a Korean-side extension."
+  },
+  {
+   "tag": "[Announcer]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@botongmarketer/832",
+   "source_label": "brunch.co.kr — SUNO 메타태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Capitalized bracketed form (canonical Bark list uses lowercase [announcer])."
+  },
+  {
+   "tag": "[Whispers]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@botongmarketer/832",
+   "source_label": "brunch.co.kr — SUNO 메타태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Capitalized variant, listed among vocal tags."
+  },
+  {
+   "tag": "[Phone ringing]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@botongmarketer/832",
+   "source_label": "brunch.co.kr — SUNO 메타태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Sentence-case bracketed sound-effect tag."
+  },
+  {
+   "tag": "[Verse 1: Low-energy, Narrative]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@b953c849bbf24db/174",
+   "source_label": "brunch.co.kr — 11화 11. 구조적 메타 태그([ ]) 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "COMPOSITE descriptive tag using colon-qualifier syntax. 'Narrative' as a delivery qualifier inside a structure tag — a narration route that carries no narrator keyword and would be missed by any narrator-keyword search."
+  },
+  {
+   "tag": "[Chorus: Powerful Female Vocals, Orchestral Swell, Maximum Energy]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@b953c849bbf24db/174",
+   "source_label": "brunch.co.kr — 구조적 메타 태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Longest composite tag observed. Article's thesis is that V5 reads bracketed tags as '편곡 지시서' (arrangement instruction sheets), so descriptive stacking inside one bracket is the intended usage."
+  },
+  {
+   "tag": "[Sound FX: Rain and distant thunder]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@b953c849bbf24db/174",
+   "source_label": "brunch.co.kr — 구조적 메타 태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "'Sound FX:' namespace prefix with free-text payload."
+  },
+  {
+   "tag": "[Intro: Cinematic and Soft]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@b953c849bbf24db/174",
+   "source_label": "brunch.co.kr — 구조적 메타 태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Colon-qualifier composite."
+  },
+  {
+   "tag": "[Breakdown: Soft Piano only]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@b953c849bbf24db/174",
+   "source_label": "brunch.co.kr — 구조적 메타 태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Colon-qualifier composite with 'only' restrictor."
+  },
+  {
+   "tag": "[Guitar Solo: Melodic and Fast]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://brunch.co.kr/@b953c849bbf24db/174",
+   "source_label": "brunch.co.kr — 구조적 메타 태그 활용법",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Colon-qualifier composite."
+  },
+  {
+   "tag": "[소개]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization) — 메타 태그 사용법",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "KOREAN-LANGUAGE tag body (= Intro). Machine-localized wiki; tag text itself was translated into Korean, which is unusual — most sources insist brackets stay English."
+  },
+  {
+   "tag": "[절]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Korean-language tag body (= Verse)."
+  },
+  {
+   "tag": "[코러스]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Korean-language tag body (= Chorus)."
+  },
+  {
+   "tag": "[아웃트로]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Korean-language tag body (= Outro), transliteration not translation."
+  },
+  {
+   "tag": "[여성 보컬]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Korean-language tag body (= Female Vocal)."
+  },
+  {
+   "tag": "[기타 솔로]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Korean-language tag body (= Guitar Solo)."
+  },
+  {
+   "tag": "[감동적인 브릿지]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Korean adjective+noun composite (= Emotional Bridge)."
+  },
+  {
+   "tag": "[강렬한 아웃트로]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Korean adjective+noun composite (= Intense Outro)."
+  },
+  {
+   "tag": "[중요한 후렴구]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoaiwiki.com/ko/tips/2024-05-04-how-to-use-meta-tags-in-suno-ai-for-song-creation/",
+   "source_label": "Suno Wiki (Korean localization)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Korean adjective+noun composite (= Important Chorus/Hook)."
+  },
+  {
+   "tag": "Whispering",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://enosentra.pe.kr/62",
+   "source_label": "enosentra.pe.kr — Suno AI 스타일 및 태그 완벽 정리",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "UNBRACKETED, gerund form (not the canonical 'whispers'). Listed in a plain 'Vocal Style' word list. A bracket-only regex erases this entire page."
+  },
+  {
+   "tag": "Deep Baritone",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://enosentra.pe.kr/62",
+   "source_label": "enosentra.pe.kr — Suno AI 스타일 및 태그 완벽 정리",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed vocal-style tag; also appears as 'Deep Baritone vocals' in the same page's descriptor list."
+  },
+  {
+   "tag": "Ethereal Vocals",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://enosentra.pe.kr/62",
+   "source_label": "enosentra.pe.kr",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed."
+  },
+  {
+   "tag": "Operatic",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://enosentra.pe.kr/62",
+   "source_label": "enosentra.pe.kr",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed vocal-style tag."
+  },
+  {
+   "tag": "Phone Ringing",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://enosentra.pe.kr/62",
+   "source_label": "enosentra.pe.kr",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "UNBRACKETED and TITLE-CASED — differs from canonical lowercase bracketed [phone ringing]. Casing variance is evidence these lists are hand-retyped, not copy-pasted."
+  },
+  {
+   "tag": "Rain Sounds",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://enosentra.pe.kr/62",
+   "source_label": "enosentra.pe.kr",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed sound-effect tag; 'Sounds' suffix not in canonical list."
+  },
+  {
+   "tag": "Wind Effects",
+   "bracketed": false,
+   "language": "ko",
+   "source_url": "https://enosentra.pe.kr/62",
+   "source_label": "enosentra.pe.kr",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed; 'Effects' suffix not in canonical list."
+  },
+  {
+   "tag": "[Whisper]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://note.com/lucid_orca6191/n/n8f68192ac4b4",
+   "source_label": "note.com — 【保存版】Suno AIの「言うことを聞かない」を解決する メタタグ完全攻略ガイド",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "SINGULAR [Whisper], distinct from canonical plural [whispers]. Japanese engineer-authored guide claiming hands-on verification."
+  },
+  {
+   "tag": "[Female Narrator]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://note.com/lucid_orca6191/n/n8f68192ac4b4",
+   "source_label": "note.com — メタタグ完全攻略ガイド",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Second independent read of [Female Narrator], title-cased. Article advises separating tags with blank lines for recognition."
+  },
+  {
+   "tag": "[Shout]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://note.com/lucid_orca6191/n/n8f68192ac4b4",
+   "source_label": "note.com — メタタグ完全攻略ガイド",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Listed alongside [Scream] as a vocal-delivery pair."
+  },
+  {
+   "tag": "(Whispered)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望 — 【2026年最新】Suno AI メタタグ・記号・構成テクニック",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "PARENTHESES, not brackets. This site systematically puts VOCAL-PERFORMANCE tags in ( ) and STRUCTURE tags in [ ]. A bracket-only regex would drop the entire vocal-delivery class from this source while keeping its structure tags — the exact failure mode described in the method rules."
+  },
+  {
+   "tag": "(Spoken Word)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized spoken-delivery tag. Core narration-lane hit in a non-bracket form."
+  },
+  {
+   "tag": "(Vocal Fry)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized. Vocal-fry register is characteristic of intimate narration/ASMR delivery."
+  },
+  {
+   "tag": "(Staccato delivery)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized, lowercase 'delivery' — a speech-rhythm instruction rather than a sung style."
+  },
+  {
+   "tag": "(Ad-lib)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized."
+  },
+  {
+   "tag": "(Humming)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized."
+  },
+  {
+   "tag": "(Shouted)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized past-participle form, paralleling (Whispered)."
+  },
+  {
+   "tag": "(Falsetto)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized."
+  },
+  {
+   "tag": "(Laughing)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized."
+  },
+  {
+   "tag": "(Acapella)",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Parenthesized, single-p spelling as written."
+  },
+  {
+   "tag": "[Energy: Low]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Colon-namespace energy control; siblings [Energy: High], [Energy: Explosive]."
+  },
+  {
+   "tag": "[Energy: Explosive]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Colon-namespace energy control."
+  },
+  {
+   "tag": "[Add Tension]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Imperative-verb tag form — rare construction."
+  },
+  {
+   "tag": "[Solo: Guitar]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://mylife-blog.com/post-2810",
+   "source_label": "mylife-blog.com 春望",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "INVERTED namespace form ([Solo: Guitar]) vs the usual [Guitar Solo]."
+  },
+  {
+   "tag": "[Narration]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://gerwin.io/journal/suno-ai-instruction",
+   "source_label": "Журнал Gerwin — Разметка и промпты для Suno AI",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "BEST NARRATION-LANE HIT. Bare [Narration] as a first-class voice-delivery tag, listed beside [Spoken Word] and [Whisper] as three distinct speech options. Russian-language guide, independent of the Bark/Chirp canonical list."
+  },
+  {
+   "tag": "[Spoken Word]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://gerwin.io/journal/suno-ai-instruction",
+   "source_label": "Журнал Gerwin",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Title-cased bracketed form, distinct from [Narration] on the same page."
+  },
+  {
+   "tag": "[Whisper]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://gerwin.io/journal/suno-ai-instruction",
+   "source_label": "Журнал Gerwin",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Singular form; corroborates the Japanese note.com singular [Whisper]."
+  },
+  {
+   "tag": "[Growl]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://gerwin.io/journal/suno-ai-instruction",
+   "source_label": "Журнал Gerwin",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Voice-delivery tag."
+  },
+  {
+   "tag": "[Rap Verse]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://gerwin.io/journal/suno-ai-instruction",
+   "source_label": "Журнал Gerwin",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Composite structure+delivery tag."
+  },
+  {
+   "tag": "[Backing Vocals]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://gerwin.io/journal/suno-ai-instruction",
+   "source_label": "Журнал Gerwin",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Voice-layer tag."
+  },
+  {
+   "tag": "[Spoken word]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://habr.com/ru/articles/875340/",
+   "source_label": "Habr — Большой гайд по Suno: делаем песню с нуля",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "SENTENCE-CASE variant ('word' lowercase), listed as a STRUCTURAL tag (peer of [Intro]/[Verse]) rather than a vocal modifier — a placement distinct from Gerwin's. Author reports iterating 10 variants, so hands-on, but no tag-isolating audio demo."
+  },
+  {
+   "tag": "[Spoken words]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://habr.com/ru/articles/875340/",
+   "source_label": "Habr — Большой гайд по Suno",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "PLURAL variant appearing in the same article's prose. Article explains it makes the performer read the following text conversationally, without singing."
+  },
+  {
+   "tag": "[spoken voice]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://habr.com/ru/articles/875340/",
+   "source_label": "Habr — Большой гайд по Suno",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "ALL-LOWERCASE third variant on the same page. Three spellings of the same concept in one article — strong evidence Suno tolerates loose spelling here."
+  },
+  {
+   "tag": "[gunshots]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://habr.com/ru/articles/875340/",
+   "source_label": "Habr — Большой гайд по Suno",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Lowercase SFX tag not present in the canonical Bark list."
+  },
+  {
+   "tag": "[Vocal Style: Whisper]",
+   "bracketed": true,
+   "language": "en",
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com — Suno AI Metatags Guide",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "'Vocal Style:' namespace house-form. Named Part-1 target, read successfully."
+  },
+  {
+   "tag": "[Vocal Style: Monotone]",
+   "bracketed": true,
+   "language": "en",
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Monotone delivery via namespace form — narration-adjacent."
+  },
+  {
+   "tag": "[Vocal Style: Raspy]",
+   "bracketed": true,
+   "language": "en",
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Namespace form."
+  },
+  {
+   "tag": "[Vocal Style: Breathless]",
+   "bracketed": true,
+   "language": "en",
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Appears only in the page's FAQ section, not the main library."
+  },
+  {
+   "tag": "[Effect: Radio Filter]",
+   "bracketed": true,
+   "language": "en",
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "ONLY radio/telephone voice-effect tag recovered in this entire sweep. Described as producing a radio-speaker sound. Directly answers the 'phone/radio voice effects' part of the brief."
+  },
+  {
+   "tag": "[Voice: Auto-tune]",
+   "bracketed": true,
+   "language": "en",
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "'Voice:' namespace, distinct from 'Vocal Style:' on the same page."
+  },
+  {
+   "tag": "[Spoken Word]",
+   "bracketed": true,
+   "language": "en",
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Bare bracketed form coexisting with the namespace forms."
+  },
+  {
+   "tag": "[Whispered Vocals]",
+   "bracketed": true,
+   "language": "en",
+   "source_url": "https://sunometatagcreator.com/metatags-guide",
+   "source_label": "sunometatagcreator.com — Suno Meta Tags Guide",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "The ONLY whisper/speech-adjacent tag on a site advertising 1000-2596 tags. Notable absence of any narrator/spoken-word tag."
+  },
+  {
+   "tag": "Announcer",
+   "bracketed": false,
+   "language": "en",
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "Suno Wiki (sunoaiwiki.com) — List of Metatags",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "UNBRACKETED. This canonical list presents ALL tags without brackets in a definition table ('Announcer : Voice of an announcer'). Included as direct proof that the single most-cited metatag list is bracket-free at the source."
+  },
+  {
+   "tag": "Female narrator",
+   "bracketed": false,
+   "language": "en",
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "Suno Wiki (sunoaiwiki.com) — List of Metatags",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "UNBRACKETED, SENTENCE-CASE ('Female narrator', not '[Female Narrator]'). Definition given as 'Voice of a female narrator'. This is the likely upstream form that Korean/Japanese posts re-cased into [Female Narrator]."
+  },
+  {
+   "tag": "Reporter",
+   "bracketed": false,
+   "language": "en",
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "Suno Wiki (sunoaiwiki.com)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed. 'Voice of a reporter' — broadcast-voice register, relevant to the narration lane."
+  },
+  {
+   "tag": "Whispers",
+   "bracketed": false,
+   "language": "en",
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "Suno Wiki (sunoaiwiki.com)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Unbracketed plural, 'Sound of whispering'."
+  },
+  {
+   "tag": "[female narrator]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoprompt.com/ko/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com (Korean edition) — Suno ai Metatags Collection",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "ALL-LOWERCASE bracketed form. Third independent read of the female-narrator tag. Page is the Bark/Chirp canonical list localized to Korean UI with tag bodies kept in English."
+  },
+  {
+   "tag": "[reporter]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoprompt.com/ko/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com (Korean edition)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Lowercase bracketed."
+  },
+  {
+   "tag": "[announcer]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoprompt.com/ko/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com (Korean edition)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Lowercase bracketed — canonical Bark casing."
+  },
+  {
+   "tag": "[whispers]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoprompt.com/ko/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com (Korean edition)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Lowercase bracketed."
+  },
+  {
+   "tag": "[clears throat]",
+   "bracketed": true,
+   "language": "ko",
+   "source_url": "https://sunoprompt.com/ko/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com (Korean edition)",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Lowercase bracketed; speech-adjacent vocalization useful for narration setup."
+  },
+  {
+   "tag": "耳语",
+   "bracketed": false,
+   "language": "zh",
+   "source_url": "https://www.songshuhezi.com/suno/basic_using_metatags.html",
+   "source_label": "松鼠盒子AI — Suno AI如何使用Metatags?",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "CHINESE gloss for 'whispers', presented unbracketed in a bilingual pair table. Recorded because the Chinese term is what a zh-language searcher would actually query."
+  },
+  {
+   "tag": "女性叙述者",
+   "bracketed": false,
+   "language": "zh",
+   "source_url": "https://www.songshuhezi.com/suno/basic_using_metatags.html",
+   "source_label": "松鼠盒子AI",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Chinese gloss for 'female narrator', unbracketed bilingual table cell. Page is an explicit zh translation of Suno's official Bark/Chirp docs."
+  },
+  {
+   "tag": "主持人",
+   "bracketed": false,
+   "language": "zh",
+   "source_url": "https://www.songshuhezi.com/suno/basic_using_metatags.html",
+   "source_label": "松鼠盒子AI",
+   "grade": "B_recited",
+   "derivative": true,
+   "context": "Chinese gloss for 'announcer', unbracketed."
+  },
+  {
+   "tag": "[Smooth Voice]",
+   "bracketed": true,
+   "language": "es",
+   "source_url": "https://www.sucdepoma.org/2024/09/08/tutorial-y-recopilacion-de-meta-etiquetas-para-creacion-musical-con-suno-ai/",
+   "source_label": "SucDePoma — Tutorial y recopilación de meta etiquetas para Suno AI",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Spanish guide; tags kept in English with Spanish glosses in parentheses. Voice-timbre family ([Smooth/Raspy/Warm/Bright Voice]) not present in the canonical list."
+  },
+  {
+   "tag": "[Raspy Voice]",
+   "bracketed": true,
+   "language": "es",
+   "source_url": "https://www.sucdepoma.org/2024/09/08/tutorial-y-recopilacion-de-meta-etiquetas-para-creacion-musical-con-suno-ai/",
+   "source_label": "SucDePoma",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Voice-timbre tag."
+  },
+  {
+   "tag": "[Warm Voice]",
+   "bracketed": true,
+   "language": "es",
+   "source_url": "https://www.sucdepoma.org/2024/09/08/tutorial-y-recopilacion-de-meta-etiquetas-para-creacion-musical-con-suno-ai/",
+   "source_label": "SucDePoma",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Voice-timbre tag; warm register is the standard voiceover/narration timbre."
+  },
+  {
+   "tag": "[Bright Voice]",
+   "bracketed": true,
+   "language": "es",
+   "source_url": "https://www.sucdepoma.org/2024/09/08/tutorial-y-recopilacion-de-meta-etiquetas-para-creacion-musical-con-suno-ai/",
+   "source_label": "SucDePoma",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Voice-timbre tag."
+  },
+  {
+   "tag": "[Emotional Verse]",
+   "bracketed": true,
+   "language": "es",
+   "source_url": "https://www.sucdepoma.org/2024/09/08/tutorial-y-recopilacion-de-meta-etiquetas-para-creacion-musical-con-suno-ai/",
+   "source_label": "SucDePoma",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Adjective+structure composite (no colon), contrasting with the Korean colon style."
+  },
+  {
+   "tag": "[Exclude Styles]",
+   "bracketed": true,
+   "language": "es",
+   "source_url": "https://www.sucdepoma.org/2024/09/08/tutorial-y-recopilacion-de-meta-etiquetas-para-creacion-musical-con-suno-ai/",
+   "source_label": "SucDePoma",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Negative-prompt control tag."
+  },
+  {
+   "tag": "Chuka-chuka-chuka-chuka",
+   "bracketed": false,
+   "language": "es",
+   "source_url": "https://www.sucdepoma.org/2024/09/08/tutorial-y-recopilacion-de-meta-etiquetas-para-creacion-musical-con-suno-ai/",
+   "source_label": "SucDePoma",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "UNBRACKETED onomatopoeic vocal-percussion token typed directly into lyrics. Entire class (La la la / Na na na / Sha na na / Ja ja ja / Ohh-yeah / Chumba-chumba / Waah-Waaah-WAAH) is bracket-free and would be 100% erased by a bracket-only regex. 'Ja ja ja' is Spanish-native laughter orthography."
+  },
+  {
+   "tag": "Waah-Waaah-WAAH",
+   "bracketed": false,
+   "language": "es",
+   "source_url": "https://www.sucdepoma.org/2024/09/08/tutorial-y-recopilacion-de-meta-etiquetas-para-creacion-musical-con-suno-ai/",
+   "source_label": "SucDePoma",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed; internal caps encode a dynamic swell. Casing is load-bearing and must be preserved verbatim."
+  },
+  {
+   "tag": "epic",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://gen-ai-note.hatenablog.com/entry/suno-tags-list",
+   "source_label": "gen-ai-note.hatenablog.com えーやい実験室 — Sunoタグ一覧と実践的な使い方解説",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "ALL-LOWERCASE UNBRACKETED. This entire 32-item Japanese list is bracket-free lowercase; the article's thesis is that 3-5 tags is the stable maximum and contradictory stacking confuses the model."
+  },
+  {
+   "tag": "cinematic",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://gen-ai-note.hatenablog.com/entry/suno-tags-list",
+   "source_label": "gen-ai-note.hatenablog.com えーやい実験室",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed lowercase; 'cinematic' is the usual carrier style for narrated/trailer content."
+  },
+  {
+   "tag": "atmospheric",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://gen-ai-note.hatenablog.com/entry/suno-tags-list",
+   "source_label": "gen-ai-note.hatenablog.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed lowercase."
+  },
+  {
+   "tag": "dramatic",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://gen-ai-note.hatenablog.com/entry/suno-tags-list",
+   "source_label": "gen-ai-note.hatenablog.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed lowercase."
+  },
+  {
+   "tag": "nostalgic",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://gen-ai-note.hatenablog.com/entry/suno-tags-list",
+   "source_label": "gen-ai-note.hatenablog.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed lowercase."
+  },
+  {
+   "tag": "quirky",
+   "bracketed": false,
+   "language": "ja",
+   "source_url": "https://gen-ai-note.hatenablog.com/entry/suno-tags-list",
+   "source_label": "gen-ai-note.hatenablog.com",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Unbracketed lowercase."
+  },
+  {
+   "tag": "[Vocal Emotion: wistful, introspective]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://plaan.ai/promts-and-meta-tags-for-suno/",
+   "source_label": "Plaan.ai — Промты и теги для Suno: полное руководство",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Colon-namespace with a MULTI-WORD COMMA-SEPARATED payload — free-text emotion specification inside one tag."
+  },
+  {
+   "tag": "[Vocal Effect: auto-tune, echo]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://plaan.ai/promts-and-meta-tags-for-suno/",
+   "source_label": "Plaan.ai",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Comma-separated multi-effect payload in one bracket."
+  },
+  {
+   "tag": "[Vocalist: Male]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://plaan.ai/promts-and-meta-tags-for-suno/",
+   "source_label": "Plaan.ai",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "'Vocalist:' namespace coexisting with the plain [Male singer] on the same page."
+  },
+  {
+   "tag": "[Child voice]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://plaan.ai/promts-and-meta-tags-for-suno/",
+   "source_label": "Plaan.ai",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Sentence-case voice-type tag; more specific than canonical [boy]/[girl]."
+  },
+  {
+   "tag": "[Echoing vocals]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://plaan.ai/promts-and-meta-tags-for-suno/",
+   "source_label": "Plaan.ai",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Sentence-case; relevant to the project's existing Echo line of inquiry."
+  },
+  {
+   "tag": "[Static noise]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://plaan.ai/promts-and-meta-tags-for-suno/",
+   "source_label": "Plaan.ai",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Radio-static SFX — the nearest thing to a radio-voice effect outside openmusicprompt's [Effect: Radio Filter]."
+  },
+  {
+   "tag": "[Instrument: 808]",
+   "bracketed": true,
+   "language": "ru",
+   "source_url": "https://plaan.ai/promts-and-meta-tags-for-suno/",
+   "source_label": "Plaan.ai",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "'Instrument:' namespace with a numeric payload."
+  },
+  {
+   "tag": "[pause for a beat]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://ai.suno.jp/metatag/",
+   "source_label": "ai.suno.jp — SunoAI まとめ Wiki メタタグ",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "ALL-LOWERCASE IMPERATIVE PHRASE used as a tag — a timing/pacing instruction in natural-language form. Highly relevant to narration pacing and unlike any noun-style tag."
+  },
+  {
+   "tag": "[Fade to End]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://ai.suno.jp/metatag/",
+   "source_label": "ai.suno.jp — SunoAI まとめ Wiki",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Variant distinct from [Fade Out]/[End] listed separately on the same page."
+  },
+  {
+   "tag": "[Recapitulation]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://ai.suno.jp/metatag/",
+   "source_label": "ai.suno.jp — SunoAI まとめ Wiki",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Classical-form structure tag; page also lists [Exposition] and [Development] (sonata-form vocabulary)."
+  },
+  {
+   "tag": "[Exposition]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://ai.suno.jp/metatag/",
+   "source_label": "ai.suno.jp — SunoAI まとめ Wiki",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Sonata-form structure tag, rare in English lists."
+  },
+  {
+   "tag": "[Overture]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://ai.suno.jp/metatag/",
+   "source_label": "ai.suno.jp — SunoAI まとめ Wiki",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Classical structure tag."
+  },
+  {
+   "tag": "[modulation]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://ai.suno.jp/metatag/",
+   "source_label": "ai.suno.jp — SunoAI まとめ Wiki",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Lowercase amid otherwise title-cased neighbours — casing inconsistency preserved as written."
+  },
+  {
+   "tag": "[call]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://ai.suno.jp/metatag/",
+   "source_label": "ai.suno.jp — SunoAI まとめ Wiki",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Lowercase; call-and-response structural marker."
+  },
+  {
+   "tag": "[Cm7]",
+   "bracketed": true,
+   "language": "ja",
+   "source_url": "https://ai.suno.jp/metatag/",
+   "source_label": "ai.suno.jp — SunoAI まとめ Wiki",
+   "grade": "B_recited",
+   "derivative": false,
+   "context": "Chord-symbol tag. Page carries a full combinatorial chord table (all 7 roots x ~30 qualities) but explicitly warns 'AIの気分により無視される事も' (may be ignored depending on the AI's mood) — I counted this family as ONE representative entry rather than inflating by ~200."
+  }
+ ],
+ "not_accessed": [
+  {
+   "url": "https://suno.wiki/faq/metatags/voice-tags/",
+   "reason": "HTTP 403 Forbidden on direct fetch. r.jina.ai proxy returned 404. Google cache returned only a Google error page. Page content never read — [Female Narrator] therefore NOT cited to this URL."
+  },
+  {
+   "url": "https://www.reddit.com/r/SunoAI/ (and all subpaths)",
+   "reason": "WebFetch client-level block: 'Claude Code is unable to fetch from www.reddit.com'."
+  },
+  {
+   "url": "https://old.reddit.com/r/SunoAI/search?q=metatags+list",
+   "reason": "WebFetch client-level block on old.reddit.com."
+  },
+  {
+   "url": "https://r.jina.ai/https://www.reddit.com/r/SunoAI/comments/1e9r0ks/i_made_a_list_of_all_the_metatags_i_could_find/",
+   "reason": "Proxy fetched but Reddit served its 403 login/security interstitial instead of post content."
+  },
+  {
+   "url": "https://redlib.catsarch.com/r/SunoAI/search?q=metatags",
+   "reason": "HTTP 403 Forbidden from the Redlib instance."
+  },
+  {
+   "url": "https://libreddit.privacy.com.de/r/SunoAI/search?q=metatags",
+   "reason": "ECONNREFUSED — Libreddit instance is dead."
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Atm4qNj6FPI",
+   "reason": "Page converts to footer/nav/legal chrome only; description is JS-injected and absent from fetched markdown. Got NEITHER description nor captions."
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=y-S7uTkQqok",
+   "reason": "Korean Suno tag tutorial. Same failure: only YouTube boilerplate returned, no description text."
+  },
+  {
+   "url": "https://zhuanlan.zhihu.com/p/1968620362238505887",
+   "reason": "HTTP 403 Forbidden — Zhihu blocks non-browser clients. Title indicates a substantial Chinese vocal-timbre prompt compendium (人声终极干货: 音色+声乐提示词大全); likely high-value, unread."
+  },
+  {
+   "url": "https://zhuanlan.zhihu.com/p/2420222541",
+   "reason": "Zhihu 403 (not individually attempted after the sibling 403; 'Suno AI 写歌 100 个高质量歌词元标签分享' claims 100 lyric metatags)."
+  },
+  {
+   "url": "https://blog.csdn.net/AJHHMKYBH/article/details/139815597",
+   "reason": "HTTP 521 (origin down / Cloudflare). Title 'Suno AI 元标签(Metatags)集合' suggests a full Chinese metatag collection."
+  },
+  {
+   "url": "https://helldev.miraheze.org/wiki/Вокальные_и_структурные_теги_Suno",
+   "reason": "HTTP 403 Forbidden. Title translates to 'Suno vocal and structural tags' — directly on-lane, unread."
+  },
+  {
+   "url": "https://www.ai-sound.online/?p=1160",
+   "reason": "HTTP 403 Forbidden. Japanese 'Suno メタタグを活用した制御'."
+  },
+  {
+   "url": "https://www.toolify.ai/ko/ai-news-kr/suno-ai-3684480",
+   "reason": "HTTP 403 Forbidden. Korean Suno prompt/metatag guide (likely MT of an English article)."
+  },
+  {
+   "url": "https://sunometatagcreator.com/ (interactive tool)",
+   "reason": "Homepage renders category names and counts only; the 2,596 individual tags sit behind a JS tool that WebFetch cannot drive. Counted as partial, not read."
+  }
+ ],
+ "notes": [
+  "METHOD RULE 1 VINDICATED — decisively. Unbracketed tags were not an edge case: (a) sunoaiwiki.com's canonical 'List of Metatags', the single most-copied Suno list in existence, presents EVERY tag WITHOUT brackets in a definition table; (b) the Japanese gen-ai-note list is 32 bare lowercase words; (c) enosentra.pe.kr (ko) lists all vocal/SFX tags unbracketed; (d) the DCinside (ko) vocal-style list — the only source carrying bare 'Narration' and 'Sprechgesang' — is entirely unbracketed. A bracket-only regex would have erased all four sources completely, including the best narration hits.",
+  "NEW FAILURE MODE FOUND — PARENTHESES. mylife-blog.com (ja) systematically encodes STRUCTURE tags in [ ] but VOCAL-PERFORMANCE tags in ( ): (Whispered), (Spoken Word), (Vocal Fry), (Staccato delivery). A bracket-only regex there does something worse than fail loudly — it silently returns a plausible-looking structure-tag list while dropping 100% of the vocal-delivery class. The Spanish SucDePoma onomatopoeia class (Chuka-chuka, Waah-Waaah-WAAH) is likewise fully bracket-free.",
+  "NARRATION LANE — best result is Russian, not Korean. gerwin.io lists [Narration], [Spoken Word] and [Whisper] as three DISTINCT bracketed voice-delivery tags. Bare [Narration] appears nowhere in the canonical Bark/Chirp list, and appears in only one other source I read (DCinside, unbracketed).",
+  "SPELLING IS UNSTABLE AND THAT IS THE FINDING. One Habr article alone uses [Spoken word], [Spoken words], AND [spoken voice]. Across sources whisper appears as [Whisper] / [whispers] / [Whispers] / Whispering / (Whispered) / [Whispered Vocals]. Female narrator appears as 'Female narrator' (unbracketed sentence-case, upstream) / [Female Narrator] / [female narrator]. Any exact-string matcher will undercount badly; normalize case, strip brackets/parens, and lemmatize before deduping.",
+  "[Female Narrator] IS REAL, but I still cannot attribute it to suno.wiki. I read it verbatim on three pages I actually fetched — brunch.co.kr (ko), note.com (ja), sunoprompt.com/ko — plus its unbracketed upstream form 'Female narrator' on sunoaiwiki.com. Per the brief I make no claim about the 403'd suno.wiki page. Related: [Male Narrator] appears on brunch.co.kr but is NOT in the canonical Bark list — likely a Korean-side extrapolation, so treat as unverified.",
+  "INFLATION CONFIRMED, matching the pattern flagged in the brief. sunometatagcreator.com advertises 2,596 tags (homepage category sum) / '1000+' (guide title); ~280-300 are actually written out, and even those are padded with combinatorial filler (every key, every chord quality, every time signature) rather than Suno-specific vocabulary. openmusicprompt claims '500+ verified' but writes out ~15 vocal tags amid category prose. Roughly 10:1 advertised-to-real on the worst offender.",
+  "SIZE ANTI-CORRELATES WITH NARRATION COVERAGE. The two largest advertised sites are the weakest on this lane: sunometatagcreator (2,596 claimed) has NO narrator/spoken-word/phone/radio tag at all, only [Whispered Vocals]. openmusicprompt (500+ claimed) has no [Female Narrator]. Meanwhile a single Russian blog post and one Korean game-forum thread carry the distinctive narration vocabulary. Do not prioritize sources by advertised size.",
+  "DERIVATIVE CLUSTER — do not treat as corroboration. sunoprompt.com/ko, vozart.ai, snonlyric.com/ru, and songshuhezi.com (zh) all reproduce the SAME canonical Bark v0 + Chirp v1 list (identical 35 Bark tags, identical genre ordering including the odd trailing [Uk]). songshuhezi explicitly self-describes as a translation of Suno's official docs. These four are one source in four languages; flagged derivative:true. The DCinside post also self-declares it compiled from suno.wiki + sunoaiwiki.com.",
+  "GRADE A_demo COUNT IS ZERO. Not one source in this sweep linked publicly playable audio isolating a specific tag. The Habr author links three finished songs but they are whole compositions, not tag demos; the DCinside post links only its two wiki sources. Every tag here is B_recited. The recited-vs-demonstrated gap remains completely unclosed on the narration lane.",
+  "KOREAN-LANGUAGE TAG BODIES EXIST but are localization artifacts, not evidence Suno accepts Korean. sunoaiwiki.com/ko machine-translates the tag text itself ([소개], [절], [코러스], [여성 보컬]). Every guide that discusses the question — Spanish, Russian, Japanese — states the opposite rule: keep brackets in English, write only lyrics in the local language. Treat the Korean-bodied tags as unverified and do not seed prompts from them without a controlled test.",
+  "COLON-QUALIFIER / DESCRIPTIVE-COMPOSITE CONVERGENCE. Four mutually independent sources in three languages converge on 'namespace: free-text payload' as the expressive form: Korean brunch ([Verse 1: Low-energy, Narrative]), Japanese mylife-blog ([Energy: Explosive], [Solo: Guitar]), Russian Plaan.ai ([Vocal Emotion: wistful, introspective]), English openmusicprompt ([Vocal Style: Whisper]). The Korean article's framing — V5 reads brackets as '편곡 지시서' (arrangement instruction sheets) — is the explicit statement of it. This independently corroborates the project's existing hypothesis that descriptive/composite brackets outperform bare labels; note it is still recited, not measured.",
+  "[Verse 1: Low-energy, Narrative] is a narration route with NO narrator keyword in it. Keyword-driven collection for this lane will systematically miss narration expressed as a delivery qualifier inside a structure tag. Future sweeps should grep for 'Narrative', 'Monotone', 'Sprechgesang', 'Vocal Fry', 'Staccato delivery' and colon-payloads, not just narrator/spoken/whisper.",
+  "REDDIT IS TOTALLY UNREACHABLE from this toolchain (5 distinct routes, all failed) and YouTube descriptions are unreachable because WebFetch cannot execute JS. Both are unread, NOT empty. Recovering them needs a different mechanism (authenticated API, or yt-dlp for YT). Zhihu/CSDN (403/521) are the largest known-unread Chinese caches and are the highest-value next target."
+ ],
+ "extracted_count": 108
+}

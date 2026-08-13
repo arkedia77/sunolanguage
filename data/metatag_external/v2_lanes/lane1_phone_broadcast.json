@@ -1,0 +1,930 @@
+{
+ "lane": "phone_broadcast_filter",
+ "tags": [
+  {
+   "tag": "Phone ringing",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "Under 'Sound Effects Meta Tags'; written unbracketed with colon description: 'Phone ringing: Sound of a phone ringing.'"
+  },
+  {
+   "tag": "Ringing",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Ringing: General ringing sound.' Sound Effects Meta Tags section, unbracketed."
+  },
+  {
+   "tag": "Beeping",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Beeping: Beeping sound.' Sound Effects Meta Tags, unbracketed."
+  },
+  {
+   "tag": "Bleep",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Bleep: A short, high-pitched sound.' Censor-beep adjacent."
+  },
+  {
+   "tag": "Bell dings",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Bell dings: Sound of a bell dinging.'"
+  },
+  {
+   "tag": "Announcer",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "Under 'Vocal Expressions Meta Tags': 'Announcer: Voice of an announcer.'"
+  },
+  {
+   "tag": "Reporter",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Reporter: Voice of a reporter.' Vocal Expressions Meta Tags."
+  },
+  {
+   "tag": "Female narrator",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Female narrator: Voice of a female narrator.' Narration-adjacent voice tag."
+  },
+  {
+   "tag": "Audience laughing",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Audience laughing: Sound of an audience laughing.'"
+  },
+  {
+   "tag": "Applause",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "Listed under the section literally headed 'Static and Other Effects': 'Applause: Sound of applause.'"
+  },
+  {
+   "tag": "Cheering",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Cheering: Sound of people cheering.' Crowd SFX cue."
+  },
+  {
+   "tag": "Cheers and applause",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Cheers and applause: Sound of people cheering and clapping.'"
+  },
+  {
+   "tag": "Clapping",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Clapping: Sound of clapping.'"
+  },
+  {
+   "tag": "Whispers",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Whispers: Sound of whispering.'"
+  },
+  {
+   "tag": "Censored",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Censored: Silenced part that is censored.' Under 'Static and Other Effects'."
+  },
+  {
+   "tag": "Silence",
+   "bracketed": false,
+   "source_url": "https://sunoaiwiki.com/resources/2024-05-13-list-of-metatags/",
+   "source_label": "sunoaiwiki.com",
+   "grade": "B_recited",
+   "context": "'Silence: Complete silence, no sound.' Under 'Static and Other Effects'."
+  },
+  {
+   "tag": "[phone ringing]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Same inventory as sunoaiwiki but rendered lowercase inside square brackets — distinct written convention for the same concept."
+  },
+  {
+   "tag": "[ringing]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed variant."
+  },
+  {
+   "tag": "[beeping]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed variant."
+  },
+  {
+   "tag": "[announcer]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed; described elsewhere as 'a section with an announcer speaking'."
+  },
+  {
+   "tag": "[reporter]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed variant of the newscaster/reporter voice tag."
+  },
+  {
+   "tag": "[censored]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed censor-bleep tag."
+  },
+  {
+   "tag": "[whispers]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed variant."
+  },
+  {
+   "tag": "[applause]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed crowd cue."
+  },
+  {
+   "tag": "[audience laughing]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed crowd cue."
+  },
+  {
+   "tag": "[silence]",
+   "bracketed": true,
+   "source_url": "https://sunoprompt.com/blog/metatags-for-suno-ai-model-collection",
+   "source_label": "sunoprompt.com",
+   "grade": "B_recited",
+   "context": "Lowercase bracketed."
+  },
+  {
+   "tag": "[Telephone Effect]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Title Case bracketed tag in musci.io's tag list. Direct telephone voice-treatment tag."
+  },
+  {
+   "tag": "[Static]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Title Case bracketed; standalone static/interference tag."
+  },
+  {
+   "tag": "[Phone Ringing]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Title Case bracketed variant."
+  },
+  {
+   "tag": "[Filtered Vocals]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Generic filtered voice-treatment tag (bandpass/telephone family)."
+  },
+  {
+   "tag": "[Distorted Vocals]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Voice-treatment tag adjacent to megaphone/radio distortion."
+  },
+  {
+   "tag": "[Vocoder]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Robotic/synthesized voice treatment."
+  },
+  {
+   "tag": "[Vinyl Hiss]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Analog media texture."
+  },
+  {
+   "tag": "[Tape-Saturated]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Hyphenated tape treatment tag, exactly as written."
+  },
+  {
+   "tag": "[Lo-fi]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Lower-case 'fi' as written on musci.io."
+  },
+  {
+   "tag": "[Texture: Lo-fi]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Colon-prefixed namespaced form ('Texture:') — a distinct syntactic convention."
+  },
+  {
+   "tag": "[Spoken Word]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Narration delivery tag."
+  },
+  {
+   "tag": "[Beeping]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Title Case bracketed."
+  },
+  {
+   "tag": "[Censored]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Title Case bracketed censor bleep."
+  },
+  {
+   "tag": "[Applause]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Title Case bracketed crowd cue."
+  },
+  {
+   "tag": "[Cheers and Applause]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Title Case bracketed crowd cue."
+  },
+  {
+   "tag": "[Rain]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Ambient SFX cue."
+  },
+  {
+   "tag": "[Thunder]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Ambient SFX cue."
+  },
+  {
+   "tag": "[Wind]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Ambient SFX cue."
+  },
+  {
+   "tag": "[Whispers]",
+   "bracketed": true,
+   "source_url": "https://musci.io/blog/suno-tags",
+   "source_label": "musci.io",
+   "grade": "B_recited",
+   "context": "Title Case bracketed."
+  },
+  {
+   "tag": "[radio static]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Listed among 'media texture' SFX cues placed inline in the lyrics field."
+  },
+  {
+   "tag": "[brief radio static burst]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Longer descriptive cue form; page argues duration-qualified cues place more reliably."
+  },
+  {
+   "tag": "[brief static burst]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Descriptive static cue."
+  },
+  {
+   "tag": "[Radio transmission]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Sentence-case bracketed cue — broadcast/dispatch family. Extracted from raw HTML."
+  },
+  {
+   "tag": "[telephone filter]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Media-texture cue; page notes it 'clarifies function and duration'."
+  },
+  {
+   "tag": "[tape rewind]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Analog tape media cue."
+  },
+  {
+   "tag": "[vinyl crackle]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Media texture cue."
+  },
+  {
+   "tag": "[vinyl crackle fades in]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Verb-qualified variant showing the 'cue + motion' phrasing style."
+  },
+  {
+   "tag": "[old projector noise]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Vintage-media texture, VHS/projector adjacent."
+  },
+  {
+   "tag": "[electrical hum]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Interference/noise-floor cue."
+  },
+  {
+   "tag": "[distant crowd murmur]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Crowd cue, narration-adjacent."
+  },
+  {
+   "tag": "[single hand clap]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Applause-family cue."
+  },
+  {
+   "tag": "[soft footsteps]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Footsteps cue."
+  },
+  {
+   "tag": "[door opens slowly]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Door cue."
+  },
+  {
+   "tag": "[metal door slams]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Door cue, urban/mechanical group."
+  },
+  {
+   "tag": "*door slams*",
+   "bracketed": false,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "ASTERISK syntax, not brackets. This page's whole thesis is asterisk-wrapped SFX cues in the lyrics field."
+  },
+  {
+   "tag": "[gentle rainfall]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Rain cue."
+  },
+  {
+   "tag": "[soft rain against a window]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Extended-phrase rain cue."
+  },
+  {
+   "tag": "[distant thunder]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Thunder cue."
+  },
+  {
+   "tag": "[distant thunder, low rumble]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Comma-qualified cue variant, verbatim from raw HTML."
+  },
+  {
+   "tag": "[distant thunder, low and far away]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Comma-qualified cue variant, verbatim from raw HTML."
+  },
+  {
+   "tag": "[city traffic ambience]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Urban ambience cue."
+  },
+  {
+   "tag": "[cold wind through trees]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Wind cue."
+  },
+  {
+   "tag": "[cold wind through pine trees]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "More-specific wind variant, verbatim from raw HTML."
+  },
+  {
+   "tag": "[room tone]",
+   "bracketed": true,
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-sound-effects-asterisks",
+   "source_label": "jackrighteous.com (SFX/asterisks guide)",
+   "grade": "B_recited",
+   "context": "Broadcast/production noise-floor term used as a lyric cue."
+  },
+  {
+   "tag": "[Telephone Call]",
+   "bracketed": true,
+   "source_url": "https://github.com/daveshap/suno",
+   "source_label": "github daveshap/suno README",
+   "grade": "B_recited",
+   "context": "Listed under 'Vocal Tags'; README says these 'appear in the training data and significantly modify how the song is delivered' and can be used in lieu of verse/chorus tags."
+  },
+  {
+   "tag": "[Spoken Word Narration]",
+   "bracketed": true,
+   "source_url": "https://github.com/daveshap/suno",
+   "source_label": "github daveshap/suno README",
+   "grade": "B_recited",
+   "context": "Vocal tag; README's worked example pairs it with *static* markers for a sci-fi distress-transmission read."
+  },
+  {
+   "tag": "*static*",
+   "bracketed": false,
+   "source_url": "https://github.com/daveshap/suno",
+   "source_label": "github daveshap/suno README",
+   "grade": "B_recited",
+   "context": "Asterisk-wrapped inline cue inside the lyric body: '*static* ...final log... coordinates unknown...' and '...signing off... *static*'. NOT bracketed."
+  },
+  {
+   "tag": "[Staticky Spoken Pre-Chorus]",
+   "bracketed": true,
+   "source_url": "https://github.com/daveshap/suno",
+   "source_label": "github daveshap/suno README",
+   "grade": "B_recited",
+   "context": "Compound section+treatment tag; radio-degraded spoken delivery fused into a structural label."
+  },
+  {
+   "tag": "[spoken word narration]",
+   "bracketed": true,
+   "source_url": "https://github.com/daveshap/suno",
+   "source_label": "github daveshap/suno README",
+   "grade": "B_recited",
+   "context": "Lowercase rendering of the same tag later in the same README — recorded separately since casing is preserved verbatim."
+  },
+  {
+   "tag": "[Effect: Radio Filter]",
+   "bracketed": true,
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "context": "Namespaced 'Effect:' syntax. Described as 'Sounding like a small radio speaker'."
+  },
+  {
+   "tag": "[Effect: Bitcrusher]",
+   "bracketed": true,
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "context": "'Digital degradation, 8-bit sound'."
+  },
+  {
+   "tag": "[Effect: Lo-fi]",
+   "bracketed": true,
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "context": "'Dusty vinyl crackle and filtered sound'."
+  },
+  {
+   "tag": "[Effect: Distortion]",
+   "bracketed": true,
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "context": "'Heavy clipping for industrial or rock styles'."
+  },
+  {
+   "tag": "[Texture: Grainy]",
+   "bracketed": true,
+   "source_url": "https://openmusicprompt.com/blog/suno-ai-metatags-guide",
+   "source_label": "openmusicprompt.com",
+   "grade": "B_recited",
+   "context": "'Adds a \"cracked\" or \"analog\" feel'."
+  },
+  {
+   "tag": "[Phone Vocals]",
+   "bracketed": true,
+   "source_url": "https://learnstemlab.com/suno-ai-song-control-metatags-guide",
+   "source_label": "learnstemlab.com",
+   "grade": "B_recited",
+   "context": "'Thin, telephone-quality filtered vocals' — the clearest telephone-EQ voice-treatment tag found."
+  },
+  {
+   "tag": "[Lo-Fi Vocals]",
+   "bracketed": true,
+   "source_url": "https://learnstemlab.com/suno-ai-song-control-metatags-guide",
+   "source_label": "learnstemlab.com",
+   "grade": "B_recited",
+   "context": "'Degraded, vintage-sounding vocal quality'. Note capital 'F' here vs musci.io's '[Lo-fi]'."
+  },
+  {
+   "tag": "[Vinyl Crackle]",
+   "bracketed": true,
+   "source_url": "https://learnstemlab.com/suno-ai-song-control-metatags-guide",
+   "source_label": "learnstemlab.com",
+   "grade": "B_recited",
+   "context": "'Retro record noise texture'. Title Case variant."
+  },
+  {
+   "tag": "[Tape Hiss]",
+   "bracketed": true,
+   "source_url": "https://learnstemlab.com/suno-ai-song-control-metatags-guide",
+   "source_label": "learnstemlab.com",
+   "grade": "B_recited",
+   "context": "'Analog cassette-era background noise'."
+  },
+  {
+   "tag": "[Crowd Noise]",
+   "bracketed": true,
+   "source_url": "https://learnstemlab.com/suno-ai-song-control-metatags-guide",
+   "source_label": "learnstemlab.com",
+   "grade": "B_recited",
+   "context": "'Background audience or crowd sound'."
+  },
+  {
+   "tag": "[Auto-Tune]",
+   "bracketed": true,
+   "source_url": "https://learnstemlab.com/suno-ai-song-control-metatags-guide",
+   "source_label": "learnstemlab.com",
+   "grade": "B_recited",
+   "context": "'Pitch correction effect — robotic or smooth'. Hyphenated form as written."
+  },
+  {
+   "tag": "[City Sounds]",
+   "bracketed": true,
+   "source_url": "https://learnstemlab.com/suno-ai-song-control-metatags-guide",
+   "source_label": "learnstemlab.com",
+   "grade": "B_recited",
+   "context": "'Urban ambient environment'."
+  },
+  {
+   "tag": "[Record Scratch]",
+   "bracketed": true,
+   "source_url": "https://sunometatagcreator.com/metatags-guide",
+   "source_label": "sunometatagcreator.com",
+   "grade": "B_recited",
+   "context": "'Hip-hop classic' — analog media manipulation cue."
+  },
+  {
+   "tag": "[Vinyl Crackle]",
+   "bracketed": true,
+   "source_url": "https://sunometatagcreator.com/metatags-guide",
+   "source_label": "sunometatagcreator.com",
+   "grade": "B_recited",
+   "context": "'Vintage texture'."
+  },
+  {
+   "tag": "[Tape Hiss]",
+   "bracketed": true,
+   "source_url": "https://sunometatagcreator.com/metatags-guide",
+   "source_label": "sunometatagcreator.com",
+   "grade": "B_recited",
+   "context": "'Analog warmth'."
+  },
+  {
+   "tag": "[Doors]",
+   "bracketed": true,
+   "source_url": "https://sunometatagcreator.com/metatags-guide",
+   "source_label": "sunometatagcreator.com",
+   "grade": "B_recited",
+   "context": "'Transitional sounds' — note the plural form as written."
+  },
+  {
+   "tag": "[Footsteps]",
+   "bracketed": true,
+   "source_url": "https://sunometatagcreator.com/metatags-guide",
+   "source_label": "sunometatagcreator.com",
+   "grade": "B_recited",
+   "context": "'Human presence'."
+  },
+  {
+   "tag": "[Traffic]",
+   "bracketed": true,
+   "source_url": "https://sunometatagcreator.com/metatags-guide",
+   "source_label": "sunometatagcreator.com",
+   "grade": "B_recited",
+   "context": "'City atmosphere'."
+  },
+  {
+   "tag": "[Intro - Vinyl crackle]",
+   "bracketed": true,
+   "source_url": "https://freesongwritingtools.com/suno-metatag-explorer/",
+   "source_label": "freesongwritingtools.com Metatag Explorer (JS bundle)",
+   "grade": "B_recited",
+   "context": "Extracted from the app's JS bundle (assets/index-C7t2dEGW.js) since the HTML page renders tags client-side. Shows the 'Section - Treatment' compound convention."
+  },
+  {
+   "tag": "[Verse - Lo-fi]",
+   "bracketed": true,
+   "source_url": "https://freesongwritingtools.com/suno-metatag-explorer/",
+   "source_label": "freesongwritingtools.com Metatag Explorer (JS bundle)",
+   "grade": "B_recited",
+   "context": "Compound section+treatment tag from the JS bundle."
+  },
+  {
+   "tag": "[Chorus - Distorted]",
+   "bracketed": true,
+   "source_url": "https://freesongwritingtools.com/suno-metatag-explorer/",
+   "source_label": "freesongwritingtools.com Metatag Explorer (JS bundle)",
+   "grade": "B_recited",
+   "context": "Compound section+treatment tag from the JS bundle."
+  },
+  {
+   "tag": "[Filter sweep]",
+   "bracketed": true,
+   "source_url": "https://freesongwritingtools.com/suno-metatag-explorer/",
+   "source_label": "freesongwritingtools.com Metatag Explorer (JS bundle)",
+   "grade": "B_recited",
+   "context": "Sentence-case filter automation tag from the JS bundle."
+  },
+  {
+   "tag": "[Spoken word]",
+   "bracketed": true,
+   "source_url": "https://freesongwritingtools.com/suno-metatag-explorer/",
+   "source_label": "freesongwritingtools.com Metatag Explorer (JS bundle)",
+   "grade": "B_recited",
+   "context": "Sentence-case narration tag (contrast musci.io's '[Spoken Word]')."
+  },
+  {
+   "tag": "telephone filter",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (examples/advanced-techniques.md)",
+   "grade": "B_recited",
+   "context": "In an 'FX Vocabulary' table row labelled 'Creative | Suno Keywords' — plain unbracketed table cell, no brackets at all."
+  },
+  {
+   "tag": "bandpass filter",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (examples/advanced-techniques.md)",
+   "grade": "B_recited",
+   "context": "Same 'Creative' FX Vocabulary table cell."
+  },
+  {
+   "tag": "lo-fi filter",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (examples/advanced-techniques.md)",
+   "grade": "B_recited",
+   "context": "Same 'Creative' FX Vocabulary table cell."
+  },
+  {
+   "tag": "megaphone",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (examples/advanced-techniques.md)",
+   "grade": "B_recited",
+   "context": "Same 'Creative' FX Vocabulary table cell: 'telephone filter, bandpass filter, lo-fi filter, megaphone, vocoder, autotune, pitch-shift'. Only megaphone hit found."
+  },
+  {
+   "tag": "vocoder",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (examples/advanced-techniques.md)",
+   "grade": "B_recited",
+   "context": "Same 'Creative' FX Vocabulary table cell."
+  },
+  {
+   "tag": "[Bridge] Telephone filter (bandpass 400-3000Hz), raw emotion, cracks allowed, mono center",
+   "bracketed": true,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (examples/advanced-techniques.md)",
+   "grade": "B_recited",
+   "context": "Full line verbatim: the telephone treatment is written as prose AFTER the bracketed section tag, with an explicit Hz range. Documents the 'bracket + trailing descriptor' convention."
+  },
+  {
+   "tag": "[Bridge] Distorted megaphone effect, raw emotion",
+   "bracketed": true,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (README.md)",
+   "grade": "B_recited",
+   "context": "Verbatim README line; megaphone treatment appended after the section bracket rather than being its own tag."
+  },
+  {
+   "tag": "distorted PA system vocal announcements",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (prompts/phonk.md)",
+   "grade": "B_recited",
+   "context": "Style-prompt line in an 'Industrial Phonk' recipe. Only PA-system hit found in the whole survey; written as free prose in the style field, not as a lyric tag."
+  },
+  {
+   "tag": "crowd samples",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (examples/advanced-techniques.md)",
+   "grade": "B_recited",
+   "context": "From an '[FX]' line: 'Vinyl crackle, risers, downers, vocal chops, 1/4 delay throws, crowd samples'."
+  },
+  {
+   "tag": "lo-fi cassette saturation",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (prompts/phonk.md, packs/*.json)",
+   "grade": "B_recited",
+   "context": "Recurring style-prompt phrase across phonk recipes; the cassette-media treatment appears only as prose, never as a bracketed tag."
+  },
+  {
+   "tag": "bitcrusher (8-bit)",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (prompts/phonk.md)",
+   "grade": "B_recited",
+   "context": "'cowbell with bitcrusher (8-bit)' — bitcrush applied to an instrument, not a voice, in this source."
+  },
+  {
+   "tag": "tape hiss",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (prompts/indie.md)",
+   "grade": "B_recited",
+   "context": "'minimal acoustic guitar, tape hiss, vulnerable lyrics mood' — unbracketed style prose."
+  },
+  {
+   "tag": "vinyl crackle",
+   "bracketed": false,
+   "source_url": "https://github.com/naqashmunir21/awesome-suno-prompts",
+   "source_label": "github naqashmunir21/awesome-suno-prompts (prompts/hip-hop.md et al.)",
+   "grade": "B_recited",
+   "context": "Most frequent unbracketed media-texture phrase in the repo; appears in style prompts across hip-hop, indie, phonk."
+  }
+ ],
+ "not_accessed": [
+  {
+   "url": "https://www.reddit.com/r/SunoAI/",
+   "reason": "Reddit blocks automated fetching (403). No alternative frontend or cached mirror was successfully read, so Reddit-sourced tag spellings are entirely absent from this survey."
+  },
+  {
+   "url": "https://www.scribd.com/document/882613915/Suno-META-Tags",
+   "reason": "Scribd paywall/JS-gated document viewer; appeared in search results with a promising title ('Suno META Tags' with sound-effects category) but content could not be read."
+  },
+  {
+   "url": "https://www.scribd.com/document/859627879/suno-wiki",
+   "reason": "Scribd paywall/JS-gated; not read."
+  },
+  {
+   "url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+   "reason": "Page fetched OK but the vocal-effects tag list is explicitly paywalled: it shows only 'Auto-tuned / Distorted / Reverbed' then says 'Plus more included in Songwriting & Lyric Mastery for Suno' ($27 product). The full effects inventory behind that paywall was NOT read."
+  },
+  {
+   "url": "https://suno.com/style/spoken-word%20radio%20feature",
+   "reason": "Suno style pages render track listings client-side; fetch returned only nav chrome with no song links. Could not confirm or collect any playable demos here."
+  },
+  {
+   "url": "https://support.suno.com",
+   "reason": "Official Suno help docs never surfaced a metatag/SFX list in any search; no official first-party tag inventory was located or read."
+  }
+ ],
+ "notes": [
+  "METHOD: For sunoaiwiki.com, musci.io, jackrighteous.com and stokemctoke.com I did not trust the page-summarizer — I downloaded raw HTML with curl and ran my own bracket-agnostic regex over the stripped text. This directly caught tags the summarizer missed (e.g. [Radio transmission], [cold wind through pine trees], [distant thunder, low rumble]).",
+  "BRACKET WARNING CONFIRMED, TWICE OVER. sunoaiwiki.com — the single highest-density source in this lane — writes EVERY tag unbracketed as 'Name: description' (e.g. 'Phone ringing: Sound of a phone ringing.'). A bracket-only regex scores that entire page as zero. Separately, the naqashmunir21 GitHub repo carries its telephone/megaphone/vocoder vocabulary in a plain markdown TABLE CELL with no brackets.",
+  "THREE DISTINCT CASING CONVENTIONS exist for the same underlying concept and are recorded separately, unnormalized: unbracketed Sentence case (sunoaiwiki 'Phone ringing'), lowercase bracketed (sunoprompt '[phone ringing]'), Title Case bracketed (musci.io '[Phone Ringing]'). Do not dedupe these without deciding that casing is non-load-bearing.",
+  "FOUR SYNTACTIC FAMILIES observed: (1) plain bracket [Static]; (2) namespaced colon [Effect: Radio Filter], [Texture: Lo-fi]; (3) compound section+treatment [Verse - Lo-fi], [Staticky Spoken Pre-Chorus]; (4) asterisk-wrapped inline *static*, *door slams*. Family 4 is bracket-free by design and is the explicit thesis of the jackrighteous SFX page.",
+  "ZERO A_demo GRADES. Every single tag is B_recited. I searched specifically for suno.com/s/ links and grepped raw HTML of every page I downloaded; not one source in this lane carried a playable demo where the tag is actually used. The entire lane is unverified recitation — treat all reliability claims as unsubstantiated.",
+  "INFLATED-CLAIM CHECK CONFIRMED. sunometatagcreator.com advertises '1000+ Tags' in its title; the actual discrete bracketed tags are ~200-250, and only 9 fall in this lane. freesongwritingtools.com's explorer JS bundle yielded 211 total bracketed tokens (3 of which were JavaScript code artifacts like [e,n.queue.dispatch], excluded), not a four-figure inventory. Counts here are what I extracted, not what sites claim.",
+  "GENUINE COVERAGE GAPS — searched for and NOT found as tags anywhere: dial tone, voicemail, answering machine, shortwave, walkie-talkie, CB radio, police scanner, dispatch, intercom, bullhorn, loudspeaker, newscaster, anchor, commentator, VHS, sirens, clock/ticking, heartbeat, gunshot, glass breaking. 'megaphone' and 'PA system' each appear exactly ONCE in the whole survey, both unbracketed prose in the naqashmunir21 repo. This absence is a real search result, not an unread page — but note the four not_accessed sources above (especially the paywalled jackrighteous effects list and the two Scribd docs) could still contain some of these.",
+  "The daveshap/suno README is the only source that makes a mechanistic claim about WHY these work: it says such vocal tags 'appear in the training data and significantly modify how the song is delivered', and that they can replace verse/chorus tags outright. Still B_recited — no demo attached."
+ ],
+ "extracted_count": 111
+}

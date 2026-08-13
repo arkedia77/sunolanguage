@@ -1,0 +1,254 @@
+{
+ "lane": "sp_predeclaration",
+ "instances": [
+  {
+   "style_prompt_verbatim": "Spoken narration with ambient textures, soft harp and lullaby piano. Dreamy childlike tone, flowing like a bedtime story with no chorus or song structure.",
+   "lyric_brackets_verbatim": [
+    "[Intro — ambient, harp tones]",
+    "[Closing — gentle piano with fading chimes]"
+   ],
+   "audio_url": "https://suno.com/s/p0DaHm06qIJicA3U",
+   "verified": true,
+   "grade": "A_demo",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-word-when-the-world-was-a-whisper",
+   "note": "Closest full match found to the template pattern. Style prose pre-declares 'Spoken narration' + 'no chorus or song structure'; lyric brackets then carry descriptive, prose-laden section headers rather than bare [Verse]/[Chorus] — i.e. the same co-declaration/reinforcement shape as nrhqq4oreDlBEabw. Audio link verified as RESOLVING ONLY: fetching suno.com/s/p0DaHm06qIJicA3U returned server-rendered metadata giving title 'When the World Was a Whisper' by Jack Righteous, so the URL is real and not fabricated. I could NOT hear it or read its actual style/lyrics fields from the page itself (JS-gated) — the style and bracket text above are quoted from the author's own guide describing this track, not scraped from the song page. Settings the guide pairs with it, verbatim: 'Instrumental: Off | Weirdness: 30-40% | Style Influence: 50%'."
+  },
+  {
+   "style_prompt_verbatim": "spoken-word narration, voice-forward, minimal documentary underscore, no sung chorus",
+   "lyric_brackets_verbatim": [
+    "[Spoken narration]"
+   ],
+   "audio_url": null,
+   "verified": false,
+   "grade": "B_recited",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "note": "THE clearest explicit co-declaration instruction found in the whole lane, stated as a single paired sentence: 'Put short conversational sentences under a label such as `[Spoken narration]`. In Styles, describe `spoken-word narration, voice-forward, minimal documentary underscore, no sung chorus`.' Style prose and lyric bracket are prescribed together in one breath — exactly the hunted pattern — but no playable track accompanies it."
+  },
+  {
+   "style_prompt_verbatim": "documentary underscore, spoken narration, calm clear voice, minimal ambient bed, subtle pulse, voice-forward mix, no lead melody, no sung chorus",
+   "lyric_brackets_verbatim": [
+    "[Spoken narration]",
+    "[Monologue]",
+    "[Spoken word]"
+   ],
+   "audio_url": null,
+   "verified": false,
+   "grade": "B_recited",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "note": "Style template offered alongside the bracket labels the same guide sanctions. Note the author's own hedge, verbatim: 'Labels such as `[Spoken narration]`, `[Monologue]` or `[Spoken word]` are practical experiments. Suno does not publish a guaranteed meta-tag grammar for narration.' — i.e. he does NOT claim the brackets are reliable on their own."
+  },
+  {
+   "style_prompt_verbatim": "cinematic spoken monologue, deep restrained voice, minimal tension bed, slow controlled build, voice dominant, no singing, no chorus",
+   "lyric_brackets_verbatim": [
+    "[Spoken narration]",
+    "[Monologue]"
+   ],
+   "audio_url": null,
+   "verified": false,
+   "grade": "B_recited",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "note": "Third style template from the same guide. Structurally near-identical to the known nrhqq4oreDlBEabw style field ('deep Spoken word voiceover... no melody, no singing') — 'deep restrained voice' + 'no singing, no chorus'. Suggests the confirmed example follows this author's house formula, which is consistent with nrhqq4oreDlBEabw being titled 'Righteous Report Ep 3 by Jack Righteous' (title recovered from that page's server-rendered metadata)."
+  },
+  {
+   "style_prompt_verbatim": "Classic boom bap hip-hop, confident storytelling rap delivery, jazzy piano sample, vinyl crackle, punchy snare, deep 808 bass, BPM: 88, Key: Eb Major",
+   "lyric_brackets_verbatim": [
+    "[Bridge] (spoken word) This version of me took years to make..."
+   ],
+   "audio_url": null,
+   "verified": false,
+   "grade": "B_recited",
+   "source_url": "https://medium.com/@aitooldiscovery/suno-ai-lyric-prompts-complete-template-guide-with-section-tags-and-vocal-cues-2026-d5a87bcdd032",
+   "note": "Weaker variant of the pattern, included because the source explicitly narrates the linkage: the vocal cue in brackets is said to coordinate with the style description's 'storytelling rap delivery'. Uses parentheses (spoken word) rather than a full bracket block. No audio."
+  }
+ ],
+ "advice": [
+  {
+   "claim_verbatim": "Put short conversational sentences under a label such as `[Spoken narration]`. In Styles, describe `spoken-word narration, voice-forward, minimal documentary underscore, no sung chorus`.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "source_label": "Jack Righteous — How to Make Suno Speak Instead of Sing: 2026 Guide",
+   "stance": "supports_codeclaration"
+  },
+  {
+   "claim_verbatim": "Labels such as `[Spoken narration]`, `[Monologue]` or `[Spoken word]` are practical experiments. Suno does not publish a guaranteed meta-tag grammar for narration.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "source_label": "Jack Righteous — How to Make Suno Speak Instead of Sing: 2026 Guide",
+   "stance": "supports_codeclaration"
+  },
+  {
+   "claim_verbatim": "Use a simple spoken label such as `[Spoken narration]`. Treat labels as guidance, not commands.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "source_label": "Jack Righteous — How to Make Suno Speak Instead of Sing: 2026 Guide",
+   "stance": "supports_codeclaration"
+  },
+  {
+   "claim_verbatim": "If you say 'spoken,' Suno delivers narration.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-word-when-the-world-was-a-whisper",
+   "source_label": "Jack Righteous — When the World Was a Whisper (spoken word case study)",
+   "stance": "supports_codeclaration"
+  },
+  {
+   "claim_verbatim": "Put the song's overall sound in Styles (Style of Music). Put the words to be performed, section labels and short local performance cues in Lyrics.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/where-to-put-your-suno-prompt-guide",
+   "source_label": "Jack Righteous — Suno Prompt Guide: Styles vs Lyrics (v5.5)",
+   "stance": "against"
+  },
+  {
+   "claim_verbatim": "Do not repeat the entire Styles prompt inside every section.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/where-to-put-your-suno-prompt-guide",
+   "source_label": "Jack Righteous — Suno Prompt Guide: Styles vs Lyrics (v5.5)",
+   "stance": "against"
+  },
+  {
+   "claim_verbatim": "if it describes what the entire song should sound like, put it in Styles. If it is sung, spoken or attached to one section, put it in Lyrics.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/where-to-put-your-suno-prompt-guide",
+   "source_label": "Jack Righteous — Suno Prompt Guide: Styles vs Lyrics (v5.5)",
+   "stance": "against"
+  },
+  {
+   "claim_verbatim": "Keep structural tags out of the style field entirely. One thread suggested moving every bracketed instruction, section labels, performance notes, all of it, into the Lyrics box and leaving the Style field to describe only the sound itself.",
+   "source_url": "https://medium.com/@aitooldiscovery/suno-reddit-tips-and-prompts-what-r-sunoai-users-actually-do-65b59d51bcad",
+   "source_label": "Medium/Amara — digest of r/SunoAI threads (secondhand, not the Reddit source itself)",
+   "stance": "against"
+  },
+  {
+   "claim_verbatim": "Match the lyric mood to the style prompt mood. A melancholy lyric with an upbeat style prompt produces something incoherent.",
+   "source_url": "https://medium.com/@aitooldiscovery/suno-ai-lyric-prompts-complete-template-guide-with-section-tags-and-vocal-cues-2026-d5a87bcdd032",
+   "source_label": "Medium/Amara — Suno Lyric Prompts template guide",
+   "stance": "supports_codeclaration"
+  },
+  {
+   "claim_verbatim": "Brackets in the Styles Box are illegal characters and can cause the AI to ignore the tag entirely or hallucinate weird digital artifacts into the audio.",
+   "source_url": "https://tagasong.com/suno-guide-lyrics-styles-syntax/",
+   "source_label": "Tagasong — Simple Suno Guide (surfaced via search snippet; page not directly fetched)",
+   "stance": "against"
+  },
+  {
+   "claim_verbatim": "Pair the exclusion with a positive replacement in Styles.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/negative-prompting-suno-v5-guide",
+   "source_label": "Jack Righteous — Suno Exclude Styles & Negative Prompts: 2026 Guide",
+   "stance": "supports_codeclaration"
+  }
+ ],
+ "precedence_statements": [
+  {
+   "statement": "Suno documents the purpose of its controls, but it does not provide creators with one universal public hierarchy guaranteeing which field will always win whenever instructions compete.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions"
+  },
+  {
+   "statement": "Do Not Assume One Field Automatically Overrides the Others",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions"
+  },
+  {
+   "statement": "Treat the fields as cooperating influences—not courtroom orders where one command automatically overrules every other command.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions"
+  },
+  {
+   "statement": "Repeating an Instruction Does Not Necessarily Make It Stronger",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions"
+  },
+  {
+   "statement": "The Lyrics field is not neutral",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions"
+  },
+  {
+   "statement": "Style defines the broad sound world. Lyrics carries words, section labels and local cues. Exclude removes meaningful conflicts.",
+   "source_url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide"
+  },
+  {
+   "statement": "Personalization influences identity and preference, but it does not replace clear song direction.",
+   "source_url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide"
+  },
+  {
+   "statement": "Explicit Style field descriptors still override My Taste preferences - Creative Sliders still function independently - Persona Voices and Voice Cloning are unaffected.",
+   "source_url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide"
+  },
+  {
+   "statement": "Exclude is model guidance, not a hard rule.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/negative-prompting-suno-v5-guide"
+  },
+  {
+   "statement": "When Exclude fails, the likely cause is that 'The positive style strongly implies it' — the fix being to 'Remove the conflicting positive term and add a replacement.' (i.e. the positive Style term effectively out-weighs the Exclude field)",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/negative-prompting-suno-v5-guide"
+  },
+  {
+   "statement": "Suno reads both boxes at the same time. If they conflict, the output tries to satisfy both and fails at both.",
+   "source_url": "https://medium.com/@aitooldiscovery/suno-ai-lyric-prompts-complete-template-guide-with-section-tags-and-vocal-cues-2026-d5a87bcdd032"
+  },
+  {
+   "statement": "Put your strongest line first in every section. Suno gives the most melodic weight to the opening line of each tagged section.",
+   "source_url": "https://medium.com/@aitooldiscovery/suno-ai-lyric-prompts-complete-template-guide-with-section-tags-and-vocal-cues-2026-d5a87bcdd032"
+  },
+  {
+   "statement": "Clear the Style Prompt or add 'End' to the style description (given as the fix for when the [End] lyric tag alone fails to stop the song — a concrete case of the lyric bracket being insufficient without style-field support)",
+   "source_url": "https://howtopromptsuno.com/style-lyrics"
+  }
+ ],
+ "rule_block_prompting": [
+  {
+   "observation": "Worked example of a Style-vs-Lyrics conflict built on bracket blocks: Style says 'Restrained male solo vocal with no choir' while the Lyrics field contains '[Huge Gospel Chorus]' and '[Full Choir Enters]'. The guide's verdict is that these directly conflict and the lyric brackets actively shape phrasing and vocal density regardless of the style field's negation.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "grade": "B_recited"
+  },
+  {
+   "observation": "Direct warning against the all-caps emphatic rule-block habit: capitals and repetition such as 'NO CHOIR. ABSOLUTELY NO CHOIR.' do not strengthen a command when competing instructions elsewhere pull toward the unwanted result.",
+   "source_url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "grade": "B_recited"
+  },
+  {
+   "observation": "Guidance runs AGAINST catch-all rule blocks: 'Best practice is to shorten the bracket, remove sentence-like wording and place one concise cue directly before the intended event.' Evidence favors specific targeted tags over broad instruction containers.",
+   "source_url": "https://tagasong.com/suno-lyrics-tags-square-brackets-prompts/",
+   "grade": "B_recited"
+  },
+  {
+   "observation": "Mechanism claim underpinning why rule blocks are even attempted: 'Commands in the lyrics box require brackets. Without them, the AI will attempt to sing your instructions as lyrics.' — anything inside [ ] is read as a cue and not sung. This is the stated reason [PERFORMANCE RULES]-type blocks are 'safe' to include, though not evidence they are obeyed.",
+   "source_url": "https://tagasong.com/suno-lyrics-tags-square-brackets-prompts/",
+   "grade": "B_recited"
+  },
+  {
+   "observation": "Countervailing caution on long bracket text: 'Use the tag as a header, then write clean lyric lines underneath it, rather than putting full lyric lines inside brackets, which can cause Suno to sing command text.' Directly at odds with the multi-line [PERFORMANCE RULES] bullet-block form.",
+   "source_url": "https://tagasong.com/suno-guide-lyrics-styles-syntax/",
+   "grade": "B_recited"
+  },
+  {
+   "observation": "NEGATIVE FINDING, stated plainly: across every guide reached in this lane, I found NO source that teaches, names, or demonstrates the '[PERFORMANCE RULES] + bullet list inside lyrics' pattern seen in the known example nrhqq4oreDlBEabw. Jack Righteous's own meta-tags guide 'contains no performance rules or rule-block syntax for lyrics'. The pattern appears to be idiosyncratic to the track author rather than a taught technique, and I found no demonstration that it works.",
+   "source_url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+   "grade": "B_recited"
+  }
+ ],
+ "not_accessed": [
+  {
+   "url": "https://suno.com/s/nrhqq4oreDlBEabw",
+   "reason": "JS-gated. Static HTML returned only nav/login chrome — no style, lyrics or audio URL. Server-rendered metadata did leak the title: 'Righteous Report Ep 3 by Jack Righteous'. The style/lyric text in the task brief could NOT be independently re-verified from the page."
+  },
+  {
+   "url": "https://suno.com/s/p0DaHm06qIJicA3U",
+   "reason": "JS-gated. URL resolves and metadata yields title 'When the World Was a Whisper' + artist Jack Righteous, confirming it is a real link, but audio, style field and lyrics could not be read and the track was not heard."
+  },
+  {
+   "url": "https://sunoarchitect.com/en/guide/suno-meta-tags/spoken-word",
+   "reason": "HTTP 429 Too Many Requests on three separate attempts. Title indicates a dedicated Spoken Word vocal-tag guide — likely relevant, unread."
+  },
+  {
+   "url": "https://howtopromptsuno.com/making-music/voice-tags",
+   "reason": "Fetched but substantively paywalled — Vocal Texture, Style, Dynamics, Emotional/Mood and Timing tag tables are withheld behind 'Songwriting & Lyric Mastery for Suno'. No spoken/narration bracket examples in the free portion."
+  },
+  {
+   "url": "https://www.reddit.com/r/SunoAI/",
+   "reason": "Not fetched directly — reddit.com 403s for this tool as the brief anticipated. Reddit material here is secondhand via a Medium digest and search snippets, and is graded accordingly. No alternate frontend (libreddit/teddit instance) was reachable in the searches performed."
+  },
+  {
+   "url": "https://help.suno.com/",
+   "reason": "Suno's official help center produced no result addressing style-vs-lyric-bracket precedence in any search performed. Every precedence statement collected is third-party, not official."
+  }
+ ],
+ "notes": [
+  "BIGGEST CAVEAT: this lane returned essentially zero A_demo evidence. Only one instance carries a resolving audio URL, and even there I could not hear the audio or read the song page's real fields — the style/bracket text is quoted from the author's prose about his own track. Everything else is B_recited. No source anywhere demonstrated the pattern with both fields visible AND playable audio side by side.",
+  "The single strongest hit for the hunted pattern is one sentence in Jack Righteous's spoken-narration workflow guide that prescribes the lyric label and the style prose together. That is genuine co-declaration advice, verbatim, and it is the centerpiece of this lane's return.",
+  "STRUCTURAL FINDING worth flagging: the guide literature actively pushes AGAINST co-declaration. The dominant taught doctrine is strict field separation ('put it in its proper field once'), with explicit warnings that repetition does not strengthen an instruction. The confirmed example nrhqq4oreDlBEabw is therefore NOT the mainstream technique — it is an outlier practice by one creator. Any claim that co-declaration is standard or recommended would be unsupported by what I found.",
+  "AUTHORSHIP CONVERGENCE: nrhqq4oreDlBEabw resolves to 'Righteous Report Ep 3 by Jack Righteous', and every substantive co-declaration/precedence source in this lane is also Jack Righteous. The evidence base is close to single-author, so it should be treated as one creator's house style rather than independent corroboration.",
+  "PRECEDENCE, honest bottom line: no source states a hard rule, and the best source explicitly denies one exists ('it does not provide creators with one universal public hierarchy'). The only near-precedence claims are (a) positive Style terms effectively beat the Exclude field, and (b) lyric brackets are 'not neutral' and can defeat a style-field negation. Both are third-party inference, not documented behavior.",
+  "The [PERFORMANCE RULES] bullet-block form is undocumented and untaught as far as this search reached — and the closest adjacent advice argues against it (keep brackets short, one concise cue, avoid sentence-like wording). Treat it as unvalidated.",
+  "Reddit — the most likely home of the rule-block folklore — was inaccessible, so the negative finding on rule blocks is bounded by that gap rather than conclusive."
+ ],
+ "extracted_count": 5
+}
