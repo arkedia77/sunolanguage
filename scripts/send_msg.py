@@ -16,7 +16,7 @@
 사용:
   python3 scripts/send_msg.py <to> <키워드> <body.json경로> [--subject "..."] [--reply-needed]
 """
-import json, os, sys
+import json, os, re, sys
 from datetime import datetime
 
 FROM = "sunolanguage"
@@ -33,11 +33,30 @@ def _body_hash(body):
                                      sort_keys=True).encode()).hexdigest()[:16]
 
 
+def _schema_version():
+    """★판번호는 손으로 적지 않는다 — 정본(CHANNEL_RULES.md 1행)에서 발신 시점에 읽는다.
+
+    실피해: 이 파일이 `v5.5`를 하드코딩하고 있었고 실측은 `v5.11`이었다(6개정 스테일).
+    ⇒ 내가 보낸 모든 메시지가 틀린 판번호를 달고 나갔다. kee 08-12 §1 부수건과 동형이며,
+    「존재하고, 파싱되고, 내용만 다르다」는 가장 조용한 파손이다(킷 R-P6 ⓕ).
+
+    ★못 읽으면 옛값으로 조용히 떨어지지 않고 **발신을 멈춘다** — 그 폴백이 곧 이 결함이다.
+    """
+    src = os.path.join(ROOT, "CHANNEL_RULES.md")
+    with open(src, encoding="utf-8") as fh:
+        head = fh.readline()
+    m = re.search(r"\bv\d+\.\d+\b", head)
+    if not m:
+        raise SystemExit(f"발신 중단 — {src} 1행에서 판번호를 못 읽었다: {head!r}\n"
+                         "★임의 값으로 채우지 않는다. 정본 형식이 바뀌었으면 이 함수를 고칠 것.")
+    return m.group(0)
+
+
 def send(to, keyword, body, subject, reply_needed=False, priority="P2", msg_type="report"):
     now = datetime.now().astimezone()          # ★단 1회 호출 — 여기서만 시각이 나온다
     stamp = now.strftime("%Y%m%d_%H%M%S")
     msg = {
-        "schema_version": "v5.5", "from": FROM, "to": to, "type": msg_type,
+        "schema_version": _schema_version(), "from": FROM, "to": to, "type": msg_type,
         "status": "open", "priority": priority,
         "action_required": bool(reply_needed),
         "created_at": now.isoformat(),          # ★파일명과 동일 now에서 파생
