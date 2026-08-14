@@ -1,0 +1,1808 @@
+{
+ "생성": "scripts/w029_gukak_palette_probe_v1.py",
+ "질의": "leomusic-trot W029 선조회 (2026-08-14T23:45)",
+ "인덱스": {
+  "경로": "data/reanalysis_v2/lexical_index.sqlite",
+  "재빌드": "2026-08-14 (★직전 판본은 06-12/496곡 기준이라 스테일이었음 — 그대로 조회했으면 0건이 '없음'이 아니라 '안 봄'이 될 뻔함)",
+  "고유_song_id": 589,
+  "source별_행수": {
+   "bracket_entity": 7383,
+   "leomusic_sp_full": 425,
+   "sp_entity": 7095,
+   "stems_bracket": 2343,
+   "stems_sp": 1300,
+   "suno_sp_full": 538
+  }
+ },
+ "층_정의": {
+  "출력층": "Suno 재분석 SP — Suno가 스스로 쓴 묘사. attested의 통상 의미",
+  "입력층": "우리가 Suno에 넣은 SP — '우리가 썼다'일 뿐 렌더 성공 아님",
+  "파생": "위 두 층에서 파싱한 엔티티/브라켓 — 부분집합. 합산 금지"
+ },
+ "항목": {
+  "Q2_대금형": {
+   "질의문_원문": {
+    "a breathy bamboo flute": {},
+    "an airy wooden flute with wide vibrato": {},
+    "breathy flute with slow bends": {}
+   },
+   "구성단위": {
+    "bamboo flute": {},
+    "wooden flute": {},
+    "breathy": {
+     "파생(부분집합)": {
+      "행": 582,
+      "곡": 221,
+      "예": [
+       {
+        "song_id": 1,
+        "source": "sp_entity",
+        "문장": "Breathy, intimate female vocals are processed with moderate plate r…"
+       },
+       {
+        "song_id": 1,
+        "source": "sp_entity",
+        "문장": "Breathy, intimate female vocals are processed with moderate plate r…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 222,
+      "곡": 219,
+      "예": [
+       {
+        "song_id": 1,
+        "source": "suno_sp_full",
+        "문장": "…kick and a crisp snare with a subtle electronic clap layer. Breathy, intimate female vocals are processed with moderate plate r…"
+       },
+       {
+        "song_id": 11,
+        "source": "suno_sp_full",
+        "문장": "…with alternating bass notes and arpeggiated chords. A soft, breathy baritone male vocal sits forward in the mix with light plat…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 52,
+      "곡": 52,
+      "예": [
+       {
+        "song_id": 1,
+        "source": "leomusic_sp_full",
+        "문장": "…me accents, subtle bass guitar\n\nVocal Characteristics: soft breathy female vocal, intimate close-mic feel, gentle vibrato on su…"
+       },
+       {
+        "song_id": 11,
+        "source": "leomusic_sp_full",
+        "문장": "…n and emotional nuance, 95 BPM, Mid-High energy throughout. Breathy vocals over fingerpicked acoustic guitar delivering authent…"
+       }
+      ]
+     }
+    },
+    "airy": {
+     "파생(부분집합)": {
+      "행": 34,
+      "곡": 18,
+      "예": [
+       {
+        "song_id": 154,
+        "source": "sp_entity",
+        "문장": "…ale vocals alternate between a smooth tenor chest voice and airy falsetto during melodic leaps.…"
+       },
+       {
+        "song_id": 187,
+        "source": "sp_entity",
+        "문장": "…ry is soft and conversational, utilizing subtle vibrato and airy head voice on sustained notes.…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 20,
+      "곡": 20,
+      "예": [
+       {
+        "song_id": 1,
+        "source": "leomusic_sp_full",
+        "문장": "…fi Indie Pop, Dream Pop, K-Indie, ethereal vocals, soft and airy female vocal, gentle whisper-like delivery\n\nBPM: 88\nMood: s…"
+       },
+       {
+        "song_id": 101,
+        "source": "leomusic_sp_full",
+        "문장": "…-tempo dreamy detachment. Dreamy, detached male vocals with airy delivery over swirling synth textures. Soft bass pulse, sub…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 19,
+      "곡": 19,
+      "예": [
+       {
+        "song_id": 154,
+        "source": "suno_sp_full",
+        "문장": "…ale vocals alternate between a smooth tenor chest voice and airy falsetto during melodic leaps. Subtle vocal doubling and ha…"
+       },
+       {
+        "song_id": 187,
+        "source": "suno_sp_full",
+        "문장": "…ry is soft and conversational, utilizing subtle vibrato and airy head voice on sustained notes.…"
+       }
+      ]
+     }
+    },
+    "wide vibrato": {
+     "파생(부분집합)": {
+      "행": 17,
+      "곡": 7,
+      "예": [
+       {
+        "song_id": 72,
+        "source": "sp_entity",
+        "문장": "… vocal performs with a breathy, emotive delivery, utilizing wide vibrato on sustained notes.…"
+       },
+       {
+        "song_id": 10469,
+        "source": "sp_entity",
+        "문장": "…gh-gain lead guitar performs fast alternate-picked runs and wide vibrato.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 9,
+      "곡": 9,
+      "예": [
+       {
+        "song_id": 72,
+        "source": "suno_sp_full",
+        "문장": "… vocal performs with a breathy, emotive delivery, utilizing wide vibrato on sustained notes. Orchestral strings enter with sustained…"
+       },
+       {
+        "song_id": 10469,
+        "source": "suno_sp_full",
+        "문장": "…gh-gain lead guitar performs fast alternate-picked runs and wide vibrato. The bass guitar follows the root notes of the guitar riffs…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S003_02",
+        "source": "leomusic_sp_full",
+        "문장": "…er on the C string with a dark, resonant melody using slow, wide vibrato. The middle section ascends into thumb position on the A st…"
+       }
+      ]
+     }
+    },
+    "slow bends": {},
+    "flute": {
+     "파생(부분집합)": {
+      "행": 92,
+      "곡": 19,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "sp_entity",
+        "문장": "Woodwinds, specifically flutes and oboes, provide counter-melodies.…"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "sp_entity",
+        "문장": "The arrangement features a solo oboe and flute playing a playful, staccato melody in 3/4 time.…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 8,
+      "곡": 8,
+      "예": [
+       {
+        "song_id": 1024,
+        "source": "leomusic_sp_full",
+        "문장": "…] Voice, guitar, bass. [Verse 2 - 16 bars] Shaker, brushes, flute accent. [Chorus - 12 bars] Piano comping, bass walk, warm s…"
+       },
+       {
+        "song_id": 1067,
+        "source": "leomusic_sp_full",
+        "문장": "…hed drums with rim clicks, Rhodes, vibraphone, shaker, warm flute intro/outro. Tender farewell, weight of staying behind. See…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 20,
+      "곡": 20,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "suno_sp_full",
+        "문장": "…i rolls and concert bass drum hits. Woodwinds, specifically flutes and oboes, provide counter-melodies. The piece is in the k…"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "suno_sp_full",
+        "문장": "…winds and strings. The arrangement features a solo oboe and flute playing a playful, staccato melody in 3/4 time. A pizzicato…"
+       }
+      ]
+     }
+    }
+   },
+   "역방향_이웃": {
+    "flute": {
+     "파생(부분집합)": {
+      "행": 92,
+      "곡": 19,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "sp_entity",
+        "문장": "Woodwinds, specifically flutes and oboes, provide counter-melodies.…"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "sp_entity",
+        "문장": "The arrangement features a solo oboe and flute playing a playful, staccato melody in 3/4 time.…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 8,
+      "곡": 8,
+      "예": [
+       {
+        "song_id": 1024,
+        "source": "leomusic_sp_full",
+        "문장": "…] Voice, guitar, bass. [Verse 2 - 16 bars] Shaker, brushes, flute accent. [Chorus - 12 bars] Piano comping, bass walk, warm s…"
+       },
+       {
+        "song_id": 1067,
+        "source": "leomusic_sp_full",
+        "문장": "…hed drums with rim clicks, Rhodes, vibraphone, shaker, warm flute intro/outro. Tender farewell, weight of staying behind. See…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 20,
+      "곡": 20,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "suno_sp_full",
+        "문장": "…i rolls and concert bass drum hits. Woodwinds, specifically flutes and oboes, provide counter-melodies. The piece is in the k…"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "suno_sp_full",
+        "문장": "…winds and strings. The arrangement features a solo oboe and flute playing a playful, staccato melody in 3/4 time. A pizzicato…"
+       }
+      ]
+     }
+    },
+    "woodwind": {
+     "파생(부분집합)": {
+      "행": 39,
+      "곡": 13,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "sp_entity",
+        "문장": "Woodwinds, specifically flutes and oboes, provide counter-melodies.…"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "sp_entity",
+        "문장": "Orchestral soundtrack with a focus on woodwinds and strings.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 15,
+      "곡": 15,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "suno_sp_full",
+        "문장": "…rcussion includes timpani rolls and concert bass drum hits. Woodwinds, specifically flutes and oboes, provide counter-melodies. …"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "suno_sp_full",
+        "문장": "Orchestral soundtrack with a focus on woodwinds and strings. The arrangement features a solo oboe and flut…"
+       }
+      ]
+     }
+    },
+    "recorder": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 1555,
+        "source": "leomusic_sp_full",
+        "문장": "…s plucked warm beneath, wind chime between sections, gentle recorder on bridge. Simple major triads with pastoral open voicings,…"
+       }
+      ]
+     }
+    },
+    "pan flute": {},
+    "shakuhachi": {},
+    "breathy vocal": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 11,
+        "source": "leomusic_sp_full",
+        "문장": "…n and emotional nuance, 95 BPM, Mid-High energy throughout. Breathy vocals over fingerpicked acoustic guitar delivering authentic nar…"
+       }
+      ]
+     }
+    },
+    "airy synth": {
+     "파생(부분집합)": {
+      "행": 2,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S018_03",
+        "source": "sp_entity",
+        "문장": "A soft, airy synth pad provides harmonic backing.…"
+       },
+       {
+        "song_id": "S018_03",
+        "source": "sp_entity",
+        "문장": "A soft, airy synth pad provides harmonic backing.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S018_03",
+        "source": "suno_sp_full",
+        "문장": "…-style rimshot provide a steady, syncopated groove. A soft, airy synth pad provides harmonic backing. Female vocals are present, c…"
+       }
+      ]
+     }
+    },
+    "bamboo": {}
+   }
+  },
+  "Q3_태평소형": {
+   "질의문_원문": {
+    "a piercing double-reed": {},
+    "a reedy double-reed horn": {},
+    "nasal reed horn": {}
+   },
+   "구성단위": {
+    "double-reed": {},
+    "double reed": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S003_04",
+        "source": "leomusic_sp_full",
+        "문장": "Duet for oboe and english horn exploring double reed expression. The oboe opens with a plaintive melody using a …"
+       }
+      ]
+     }
+    },
+    "reedy": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S004_04",
+        "source": "leomusic_sp_full",
+        "문장": "…textures. The oboe plays long, sustained tones with a pure, reedy timbre that slowly morphs through granular processing into …"
+       }
+      ]
+     }
+    },
+    "piercing": {
+     "입력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": "S003_05",
+        "source": "leomusic_sp_full",
+        "문장": "…. The altissimo register pushes to the highest notes with a piercing, focused tone. A Gershwin-style portamento glissando sweeps…"
+       },
+       {
+        "song_id": "S004_07",
+        "source": "leomusic_sp_full",
+        "문장": "… play a passionate melody in parallel thirds with a bright, piercing tone and strong vibrato typical of Mexican mariachi traditi…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 27,
+        "source": "stems_sp",
+        "문장": "High-pitched, piercing synth textures and digital glitches are layered over the or…"
+       }
+      ]
+     },
+     "파생(부분집합)": {
+      "행": 3,
+      "곡": 3,
+      "예": [
+       {
+        "song_id": 27,
+        "source": "stems_bracket",
+        "문장": "digital glitch textures, high-pitched synth piercing…"
+       },
+       {
+        "song_id": 97,
+        "source": "stems_bracket",
+        "문장": "high-frequency sine wave piercing…"
+       }
+      ]
+     }
+    },
+    "nasal": {
+     "파생(부분집합)": {
+      "행": 2,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 195,
+        "source": "sp_entity",
+        "문장": "The arrangement features a bright, nasal male vocal delivery in Korean.…"
+       },
+       {
+        "song_id": 195,
+        "source": "sp_entity",
+        "문장": "The arrangement features a bright, nasal male vocal delivery in Korean.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 195,
+        "source": "suno_sp_full",
+        "문장": "… driving acoustic drums. The arrangement features a bright, nasal male vocal delivery in Korean. The bass guitar follows the …"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 8,
+      "곡": 8,
+      "예": [
+       {
+        "song_id": 1028,
+        "source": "leomusic_sp_full",
+        "문장": "…e. Concept: Korean pronunciation rules (liaison, fortition, nasalization) taught through trendy Gen-Z beats — making phonolog…"
+       },
+       {
+        "song_id": 1556,
+        "source": "leomusic_sp_full",
+        "문장": "… behind the grid, tape-saturated warmth. Dynamic vocal with nasal indie tone, casual nonchalant phrasing — rushing slightly o…"
+       }
+      ]
+     }
+    },
+    "reed horn": {}
+   },
+   "역방향_이웃": {
+    "oboe": {
+     "파생(부분집합)": {
+      "행": 24,
+      "곡": 9,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "sp_entity",
+        "문장": "Woodwinds, specifically flutes and oboes, provide counter-melodies.…"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "sp_entity",
+        "문장": "The arrangement features a solo oboe and flute playing a playful, staccato melody in 3/4 time.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 10,
+      "곡": 10,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "suno_sp_full",
+        "문장": "… concert bass drum hits. Woodwinds, specifically flutes and oboes, provide counter-melodies. The piece is in the key of D mi…"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "suno_sp_full",
+        "문장": "…s on woodwinds and strings. The arrangement features a solo oboe and flute playing a playful, staccato melody in 3/4 time. A…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": "S003_04",
+        "source": "leomusic_sp_full",
+        "문장": "Duet for oboe and english horn exploring double reed expression. The oboe…"
+       },
+       {
+        "song_id": "S004_04",
+        "source": "leomusic_sp_full",
+        "문장": "Ambient electronic piece featuring a solo oboe over synthesizer textures. The oboe plays long, sustained t…"
+       }
+      ]
+     }
+    },
+    "shawm": {},
+    "bagpipe": {},
+    "reed": {
+     "입력층": {
+      "행": 8,
+      "곡": 8,
+      "예": [
+       {
+        "song_id": 1025,
+        "source": "leomusic_sp_full",
+        "문장": "…hs, bass, dance beat, guitar, claps, bell. Mood: Explosive freedom, seventeen-year joy. Concept: Ten minutes break — share e…"
+       },
+       {
+        "song_id": 1415,
+        "source": "leomusic_sp_full",
+        "문장": "… and evolving harmonies. Mood captures nostalgia, solitary freedom, gentle motion. Korean lyrics throughout. This song must …"
+       }
+      ]
+     }
+    },
+    "horn": {
+     "파생(부분집합)": {
+      "행": 10,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": "S003_07",
+        "source": "sp_entity",
+        "문장": "…rominent brass section with trumpets, trombones, and French horns playing triumphant melodic lines.…"
+       },
+       {
+        "song_id": "S003_07",
+        "source": "sp_entity",
+        "문장": "…rominent brass section with trumpets, trombones, and French horns playing triumphant melodic lines.…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 12,
+      "곡": 12,
+      "예": [
+       {
+        "song_id": 2,
+        "source": "leomusic_sp_full",
+        "문장": "… vinyl crackle texture layer, warm analog synth pad, gentle horn section (muted trumpet) on bridge\n\nVocal Characteristics: w…"
+       },
+       {
+        "song_id": 156,
+        "source": "leomusic_sp_full",
+        "문장": "… bass lines that funky and bouncy, crisp snare hits, bright horns (trumpet, trombone) with stab articulations. Dynamic vocal…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 7,
+      "곡": 7,
+      "예": [
+       {
+        "song_id": "S003_07",
+        "source": "suno_sp_full",
+        "문장": "…rominent brass section with trumpets, trombones, and French horns playing triumphant melodic lines. Woodwinds including flut…"
+       },
+       {
+        "song_id": "A_S002_3",
+        "source": "suno_sp_full",
+        "문장": "…ent brass section including trumpets, trombones, and French horns playing triumphant fanfares and melodic themes. A woodwind…"
+       }
+      ]
+     }
+    },
+    "brass": {
+     "파생(부분집합)": {
+      "행": 281,
+      "곡": 53,
+      "예": [
+       {
+        "song_id": 41,
+        "source": "sp_entity",
+        "문장": "…tained harmonic support in the background, while occasional brass stabs accent the transitions.…"
+       },
+       {
+        "song_id": 41,
+        "source": "sp_entity",
+        "문장": "…tained harmonic support in the background, while occasional brass stabs accent the transitions.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 56,
+      "곡": 54,
+      "예": [
+       {
+        "song_id": 41,
+        "source": "suno_sp_full",
+        "문장": "…tained harmonic support in the background, while occasional brass stabs accent the transitions.…"
+       },
+       {
+        "song_id": 128,
+        "source": "suno_sp_full",
+        "문장": "…itar performs muted scratches and staccato chords. A bright brass section provides staccato stabs and melodic flourishes duri…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 31,
+      "곡": 31,
+      "예": [
+       {
+        "song_id": 62,
+        "source": "leomusic_sp_full",
+        "문장": "Electro Swing / Swing Pop with jazzy brass samples and swinging rhythmic elements. 128 BPM, mid-high e…"
+       },
+       {
+        "song_id": 129,
+        "source": "leomusic_sp_full",
+        "문장": "… atmosphere, slap bass for funk authenticity and character, brass section adding punch and sonic impact, groovy drums maintai…"
+       }
+      ]
+     }
+    },
+    "nasal": {
+     "파생(부분집합)": {
+      "행": 2,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 195,
+        "source": "sp_entity",
+        "문장": "The arrangement features a bright, nasal male vocal delivery in Korean.…"
+       },
+       {
+        "song_id": 195,
+        "source": "sp_entity",
+        "문장": "The arrangement features a bright, nasal male vocal delivery in Korean.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 195,
+        "source": "suno_sp_full",
+        "문장": "… driving acoustic drums. The arrangement features a bright, nasal male vocal delivery in Korean. The bass guitar follows the …"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 8,
+      "곡": 8,
+      "예": [
+       {
+        "song_id": 1028,
+        "source": "leomusic_sp_full",
+        "문장": "…e. Concept: Korean pronunciation rules (liaison, fortition, nasalization) taught through trendy Gen-Z beats — making phonolog…"
+       },
+       {
+        "song_id": 1556,
+        "source": "leomusic_sp_full",
+        "문장": "… behind the grid, tape-saturated warmth. Dynamic vocal with nasal indie tone, casual nonchalant phrasing — rushing slightly o…"
+       }
+      ]
+     }
+    },
+    "piercing": {
+     "입력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": "S003_05",
+        "source": "leomusic_sp_full",
+        "문장": "…. The altissimo register pushes to the highest notes with a piercing, focused tone. A Gershwin-style portamento glissando sweeps…"
+       },
+       {
+        "song_id": "S004_07",
+        "source": "leomusic_sp_full",
+        "문장": "… play a passionate melody in parallel thirds with a bright, piercing tone and strong vibrato typical of Mexican mariachi traditi…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 27,
+        "source": "stems_sp",
+        "문장": "High-pitched, piercing synth textures and digital glitches are layered over the or…"
+       }
+      ]
+     },
+     "파생(부분집합)": {
+      "행": 3,
+      "곡": 3,
+      "예": [
+       {
+        "song_id": 27,
+        "source": "stems_bracket",
+        "문장": "digital glitch textures, high-pitched synth piercing…"
+       },
+       {
+        "song_id": 97,
+        "source": "stems_bracket",
+        "문장": "high-frequency sine wave piercing…"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "Q4_장구형": {
+   "질의문_원문": {
+    "a hand-struck barrel drum": {},
+    "an hourglass hand drum": {},
+    "two-toned hand drum": {}
+   },
+   "구성단위": {
+    "hand-struck": {},
+    "barrel drum": {},
+    "hourglass": {},
+    "hand drum": {
+     "파생(부분집합)": {
+      "행": 5,
+      "곡": 3,
+      "예": [
+       {
+        "song_id": "A_S002_4",
+        "source": "sp_entity",
+        "문장": "…r, a woodblock or clave playing a steady pattern, and light hand drums.…"
+       },
+       {
+        "song_id": "A_S002_4",
+        "source": "bracket_entity",
+        "문장": "solo flute melody, light hand drums enter…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 5,
+      "곡": 3,
+      "예": [
+       {
+        "song_id": "A_S002_4",
+        "source": "suno_sp_full",
+        "문장": "…r, a woodblock or clave playing a steady pattern, and light hand drums. A clean electric bass follows the root-fifth movement typ…"
+       },
+       {
+        "song_id": 74,
+        "source": "stems_sp",
+        "문장": "Percussion ensemble piece featuring a variety of hand drums and body percussion…"
+       }
+      ]
+     }
+    },
+    "two-toned": {}
+   },
+   "역방향_이웃": {
+    "taiko": {
+     "파생(부분집합)": {
+      "행": 9,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": "S004_07",
+        "source": "sp_entity",
+        "문장": "A cinematic percussion ensemble includes taiko drums, orchestral snares, and metallic hits.…"
+       },
+       {
+        "song_id": "S004_07",
+        "source": "bracket_entity",
+        "문장": "staccato strings, taiko drums enter…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S004_06",
+        "source": "leomusic_sp_full",
+        "문장": "…in unison perform a heroic, ascending theme over thundering taiko drum hits. Timpani provides a militaristic rhythmic ostinat…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 5,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": "S004_07",
+        "source": "suno_sp_full",
+        "문장": "…end reinforcement. A cinematic percussion ensemble includes taiko drums, orchestral snares, and metallic hits. Synthesizer el…"
+       },
+       {
+        "song_id": 27,
+        "source": "stems_sp",
+        "문장": "The arrangement features deep, resonant taiko drums and orchestral bass drums performing a rhythmic patte…"
+       }
+      ]
+     }
+    },
+    "frame drum": {
+     "파생(부분집합)": {
+      "행": 3,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S004_12",
+        "source": "sp_entity",
+        "문장": "The percussion consists of a deep, resonant frame drum hitting on the downbeats and a metallic shaker providing a …"
+       },
+       {
+        "song_id": "S004_12",
+        "source": "bracket_entity",
+        "문장": "deep frame drum hits on downbeats…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 1555,
+        "source": "leomusic_sp_full",
+        "문장": "…soft mandolin doubling on chorus, light shaker with brushed frame drum, upright bass plucked warm beneath, wind chime between sect…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S004_12",
+        "source": "suno_sp_full",
+        "문장": "…vy hall reverb. The percussion consists of a deep, resonant frame drum hitting on the downbeats and a metallic shaker providing a …"
+       }
+      ]
+     }
+    },
+    "hand percussion": {
+     "입력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": 1638,
+        "source": "leomusic_sp_full",
+        "문장": "…ng tone, violin lyrical melodic weaving around vocal, cajon hand percussion live busking groove, acoustic bass guitar fingerstyle warm.…"
+       },
+       {
+        "song_id": 941,
+        "source": "leomusic_sp_full",
+        "문장": "…gh energy tempo, featuring warm piano melodies and rhythmic hand percussion that create a joyful atmosphere of documenting a relationsh…"
+       }
+      ]
+     }
+    },
+    "djembe": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S018_15",
+        "source": "leomusic_sp_full",
+        "문장": "…ing eighth-note pulse, log drum providing the bass pattern, djembe accents on offbeats, cowbell on downbeats. Brass section: t…"
+       }
+      ]
+     }
+    },
+    "conga": {
+     "입력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": "S017_04",
+        "source": "leomusic_sp_full",
+        "문장": "…lks a Latin-flavored line with occasional syncopated fills. Congas provide the rhythmic foundation with a steady tumbao patte…"
+       },
+       {
+        "song_id": "S018_13",
+        "source": "leomusic_sp_full",
+        "문장": "…s. Guira scraping pattern provides constant rhythmic pulse. Conga drums with tumbao pattern. Electric bass playing simple roo…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": 74,
+        "source": "stems_sp",
+        "문장": "…mping bass foundation, while higher-pitched hand drums like congas or bongos execute rapid, sixteenth-note patterns and sharp…"
+       },
+       {
+        "song_id": 75,
+        "source": "stems_sp",
+        "문장": "…mping bass foundation, while higher-pitched hand drums like congas or bongos execute rapid, sixteenth-note patterns and sharp…"
+       }
+      ]
+     },
+     "파생(부분집합)": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": 74,
+        "source": "stems_bracket",
+        "문장": "rapid sixteenth-note conga fills…"
+       },
+       {
+        "song_id": 75,
+        "source": "stems_bracket",
+        "문장": "rapid sixteenth-note conga fills…"
+       }
+      ]
+     }
+    },
+    "bongo": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 1513,
+        "source": "leomusic_sp_full",
+        "문장": "…razilian rhythm, upright acoustic bass walking lines, light bongos and egg shaker percussion, gentle breathy flute melodies w…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": 74,
+        "source": "stems_sp",
+        "문장": "… foundation, while higher-pitched hand drums like congas or bongos execute rapid, sixteenth-note patterns and sharp accents…"
+       },
+       {
+        "song_id": 75,
+        "source": "stems_sp",
+        "문장": "… foundation, while higher-pitched hand drums like congas or bongos execute rapid, sixteenth-note patterns and sharp accents…"
+       }
+      ]
+     }
+    },
+    "tabla": {},
+    "darbuka": {},
+    "log drum": {
+     "파생(부분집합)": {
+      "행": 30,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": "S018_03",
+        "source": "sp_entity",
+        "문장": "Amapiano track featuring a log drum bassline and syncopated percussion.…"
+       },
+       {
+        "song_id": "S018_03",
+        "source": "sp_entity",
+        "문장": "Amapiano track featuring a log drum bassline and syncopated percussion.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 10,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": "S018_03",
+        "source": "suno_sp_full",
+        "문장": "Amapiano track featuring a log drum bassline and syncopated percussion. The arrangement is buil…"
+       },
+       {
+        "song_id": "S018_15",
+        "source": "suno_sp_full",
+        "문장": "Amapiano with heavy log drum and percussion focus. Features a deep, percussive log drum …"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 3,
+      "곡": 3,
+      "예": [
+       {
+        "song_id": "S018_03",
+        "source": "leomusic_sp_full",
+        "문장": "…or. Deep rolling shaker, soft Rhodes piano chords, sub-bass log drum pattern.…"
+       },
+       {
+        "song_id": "S018_12",
+        "source": "leomusic_sp_full",
+        "문장": "…otic energy, squelchy Roland TB-303 bassline and classic analog drum machine, no vocals. 126 BPM in A minor. The entire track re…"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "Q5_가락_민요": {
+   "질의문_원문": {
+    "pentatonic melody": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 1175,
+        "source": "leomusic_sp_full",
+        "문장": "… 7th chord vocabulary — G Gsus2 Em7 Cmaj7 D, open voicings, pentatonic melody. Melancholy yet bittersweet — tired but still showing up, q…"
+       }
+      ]
+     }
+    },
+    "pentatonic phrasing": {},
+    "call and response vocals": {}
+   },
+   "구성단위": {
+    "pentatonic": {
+     "파생(부분집합)": {
+      "행": 3,
+      "곡": 3,
+      "예": [
+       {
+        "song_id": 10466,
+        "source": "sp_entity",
+        "문장": "…enspiel motif enters every eight bars, playing a descending pentatonic scale.…"
+       },
+       {
+        "song_id": 125,
+        "source": "stems_bracket",
+        "문장": "bass plays melodic minor pentatonic riff with percussive pops…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 7,
+      "곡": 7,
+      "예": [
+       {
+        "song_id": 1155,
+        "source": "leomusic_sp_full",
+        "문장": "Blues Rock, Southern Rock. 112 BPM. High energy. Major Pentatonic and Blues Scale — blue notes, bends, slides throughout. Ext…"
+       },
+       {
+        "song_id": 1165,
+        "source": "leomusic_sp_full",
+        "문장": "Acoustic Indie Pop. G Major, Major Pentatonic. 92 BPM, straight rhythm. Mid energy.\n\nVocals: Warm intimat…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 5,
+      "곡": 4,
+      "예": [
+       {
+        "song_id": 10466,
+        "source": "suno_sp_full",
+        "문장": "…enspiel motif enters every eight bars, playing a descending pentatonic scale.…"
+       },
+       {
+        "song_id": 93,
+        "source": "stems_sp",
+        "문장": "… is provided by a sampled, filtered flute that plays short, pentatonic phrases with heavy reverb and delay…"
+       }
+      ]
+     }
+    },
+    "call and response": {
+     "파생(부분집합)": {
+      "행": 4,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": "S017_07",
+        "source": "bracket_entity",
+        "문장": "call and response between violin and lead acoustic guitar…"
+       },
+       {
+        "song_id": "S017_07",
+        "source": "bracket_entity",
+        "문장": "call and response between violin and lead acoustic guitar…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 1155,
+        "source": "leomusic_sp_full",
+        "문장": "…ides throughout. Extended harmonies between guitar voices — call and response. Tension and release arc: quiet narrated intro building tow…"
+       }
+      ]
+     }
+    },
+    "call-and-response": {
+     "파생(부분집합)": {
+      "행": 59,
+      "곡": 16,
+      "예": [
+       {
+        "song_id": 1063,
+        "source": "sp_entity",
+        "문장": "Background vocals provide lush, multi-tracked harmonies and call-and-response adlibs.…"
+       },
+       {
+        "song_id": 1063,
+        "source": "sp_entity",
+        "문장": "Background vocals provide lush, multi-tracked harmonies and call-and-response adlibs.…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 11,
+      "곡": 11,
+      "예": [
+       {
+        "song_id": 156,
+        "source": "leomusic_sp_full",
+        "문장": "A vibrant funk-disco soul composition with a call-and-response structure. BPM 104, dynamic and groovy with an emphasis on …"
+       },
+       {
+        "song_id": 954,
+        "source": "leomusic_sp_full",
+        "문장": "… add emotional depth to the arrangement, the track uses the call-and-response structure to capture the dialogue of reconciliation through…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 21,
+      "곡": 21,
+      "예": [
+       {
+        "song_id": 1063,
+        "source": "suno_sp_full",
+        "문장": "…Background vocals provide lush, multi-tracked harmonies and call-and-response adlibs. A subtle Rhodes piano adds harmonic depth with sust…"
+       },
+       {
+        "song_id": 20009,
+        "source": "suno_sp_full",
+        "문장": "…ern Korean pop-rock. Male and female vocalists perform in a call-and-response and unison format, characterized by powerful chest-voice de…"
+       }
+      ]
+     }
+    }
+   },
+   "역방향_이웃": {
+    "modal": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 1197,
+        "source": "leomusic_sp_full",
+        "문장": "…key chamber arrangement with philosophical gravity. Em to G modal shifts create tension-resolution arc matching lyrical journ…"
+       }
+      ]
+     }
+    },
+    "minor pentatonic": {
+     "출력층": {
+      "행": 3,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": 104,
+        "source": "stems_sp",
+        "문장": "The riff centers on a low E root note, utilizing the minor pentatonic scale with chromatic passing tones…"
+       },
+       {
+        "song_id": 121,
+        "source": "stems_sp",
+        "문장": "The bass line utilizes the E minor pentatonic scale with occasional chromatic passing tones…"
+       }
+      ]
+     },
+     "파생(부분집합)": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": 125,
+        "source": "stems_bracket",
+        "문장": "bass plays melodic minor pentatonic riff with percussive pops…"
+       },
+       {
+        "song_id": 126,
+        "source": "stems_bracket",
+        "문장": "bass plays melodic minor pentatonic riff with percussive pops…"
+       }
+      ]
+     }
+    },
+    "antiphonal": {},
+    "response vocals": {}
+   }
+  },
+  "Q6_장단": {
+   "질의문_원문": {
+    "9/8": {},
+    "compound 9/8": {},
+    "triplet feel": {
+     "입력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": 1642,
+        "source": "leomusic_sp_full",
+        "문장": "… Smoky Jazz Trio in Db Major. 66 BPM. Low energy with swing triplet feel and brush-driven intimacy. Soft vocals intimate contemplati…"
+       }
+      ]
+     }
+    }
+   },
+   "구성단위": {
+    "9/8": {},
+    "triplet": {
+     "파생(부분집합)": {
+      "행": 7,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": 1554,
+        "source": "sp_entity",
+        "문장": "…with crisp hi-hat rolls in sixteenth and thirty-second note triplets.…"
+       },
+       {
+        "song_id": "S004_10",
+        "source": "sp_entity",
+        "문장": "…le playing rapid, ornamented melodic lines characterized by triplets and grace notes.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 4,
+      "곡": 4,
+      "예": [
+       {
+        "song_id": 1554,
+        "source": "suno_sp_full",
+        "문장": "…with crisp hi-hat rolls in sixteenth and thirty-second note triplets. A dark, minor-key piano loop provides the melodic hook, c…"
+       },
+       {
+        "song_id": "S004_10",
+        "source": "suno_sp_full",
+        "문장": "…le playing rapid, ornamented melodic lines characterized by triplets and grace notes. A mandolin or bouzouki provides rhythmic …"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 6,
+      "곡": 6,
+      "예": [
+       {
+        "song_id": 1642,
+        "source": "leomusic_sp_full",
+        "문장": "… Smoky Jazz Trio in Db Major. 66 BPM. Low energy with swing triplet feel and brush-driven intimacy. Soft vocals intimate contem…"
+       },
+       {
+        "song_id": 1761,
+        "source": "leomusic_sp_full",
+        "문장": "…ng dynamics — whispered verses erupting into massive hooks. Triplet-flow rap with raw emotional cracks, syncopated delivery. De…"
+       }
+      ]
+     }
+    },
+    "compound meter": {},
+    "swung": {
+     "파생(부분집합)": {
+      "행": 12,
+      "곡": 7,
+      "예": [
+       {
+        "song_id": 1553,
+        "source": "sp_entity",
+        "문장": "…oodblock, and a drum kit played with brushes, emphasizing a swung eighth-note feel.…"
+       },
+       {
+        "song_id": 10466,
+        "source": "sp_entity",
+        "문장": "…th a short reverb tail, and a closed hi-hat pattern playing swung eighth notes.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 9,
+      "곡": 8,
+      "예": [
+       {
+        "song_id": 1553,
+        "source": "suno_sp_full",
+        "문장": "…oodblock, and a drum kit played with brushes, emphasizing a swung eighth-note feel. The female vocals are delivered in a brea…"
+       },
+       {
+        "song_id": 10466,
+        "source": "suno_sp_full",
+        "문장": "…th a short reverb tail, and a closed hi-hat pattern playing swung eighth notes. A warm, sub-heavy electric bass follows the p…"
+       }
+      ]
+     }
+    },
+    "shuffle": {
+     "파생(부분집합)": {
+      "행": 9,
+      "곡": 4,
+      "예": [
+       {
+        "song_id": 1107,
+        "source": "sp_entity",
+        "문장": "K-Pop indie folk with a shuffle rhythm.…"
+       },
+       {
+        "song_id": 1107,
+        "source": "sp_entity",
+        "문장": "The acoustic guitar maintains a steady eighth-note shuffle pattern throughout.…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 13,
+      "곡": 13,
+      "예": [
+       {
+        "song_id": 1155,
+        "source": "leomusic_sp_full",
+        "문장": "… for harmonic depth. Heavy live drums with room-tone, blues shuffle groove. Walking electric bass with melodic fills. Harmonica…"
+       },
+       {
+        "song_id": 1427,
+        "source": "leomusic_sp_full",
+        "문장": "…3, distant TV news in verse 2, kettle whistle in intro. 6/8 shuffle. Diatonic C Major with open voicings. Bittersweet family lo…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 4,
+      "곡": 4,
+      "예": [
+       {
+        "song_id": 1107,
+        "source": "suno_sp_full",
+        "문장": "K-Pop indie folk with a shuffle rhythm. The arrangement features a prominent harmonica melo…"
+       },
+       {
+        "song_id": "S004_11",
+        "source": "suno_sp_full",
+        "문장": "…riving punk-influenced sections and traditional swing-style shuffles.…"
+       }
+      ]
+     }
+    }
+   },
+   "역방향_이웃": {
+    "6/8": {
+     "파생(부분집합)": {
+      "행": 3,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S004_10",
+        "source": "sp_entity",
+        "문장": "The piece is in 6/8 time at 120 BPM in the key of D Major.…"
+       },
+       {
+        "song_id": "S004_10",
+        "source": "bracket_entity",
+        "문장": "acoustic guitar and mandolin strumming in 6/8 time…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": 1427,
+        "source": "leomusic_sp_full",
+        "문장": "…and 3, distant TV news in verse 2, kettle whistle in intro. 6/8 shuffle. Diatonic C Major with open voicings. Bittersweet f…"
+       },
+       {
+        "song_id": 1682,
+        "source": "leomusic_sp_full",
+        "문장": "… BPM. Mid-High energy with shifting time signatures 4/4 and 6/8 and layered progressive arrangement. Narrative singing voca…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S004_10",
+        "source": "suno_sp_full",
+        "문장": "…ic guitar plays percussive chordal backing. The piece is in 6/8 time at 120 BPM in the key of D Major. The structure altern…"
+       }
+      ]
+     }
+    },
+    "12/8": {},
+    "4/4": {
+     "파생(부분집합)": {
+      "행": 354,
+      "곡": 290,
+      "예": [
+       {
+        "song_id": 2,
+        "source": "sp_entity",
+        "문장": "The track is in the key of E Major at a tempo of 82 BPM in 4/4 time.…"
+       },
+       {
+        "song_id": 11,
+        "source": "sp_entity",
+        "문장": "Tempo is 78 BPM in 4/4 time, key of G Major.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 403,
+      "곡": 348,
+      "예": [
+       {
+        "song_id": 2,
+        "source": "suno_sp_full",
+        "문장": "… The track is in the key of E Major at a tempo of 82 BPM in 4/4 time. Production is clean with natural room reverb on the a…"
+       },
+       {
+        "song_id": 11,
+        "source": "suno_sp_full",
+        "문장": "… guitar and the intimate vocal delivery. Tempo is 78 BPM in 4/4 time, key of G Major.…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 36,
+      "곡": 36,
+      "예": [
+       {
+        "song_id": 1205,
+        "source": "leomusic_sp_full",
+        "문장": "…itar melodic hook; Rhythm: strummed acoustic guitar, steady 4/4; Bass: simple walking bass, grounded; Percussion: light sna…"
+       },
+       {
+        "song_id": 1682,
+        "source": "leomusic_sp_full",
+        "문장": "…inor. 96 BPM. Mid-High energy with shifting time signatures 4/4 and 6/8 and layered progressive arrangement. Narrative sing…"
+       }
+      ]
+     }
+    },
+    "3/4": {
+     "파생(부분집합)": {
+      "행": 12,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "sp_entity",
+        "문장": "The piece is in the key of D minor with a 3/4 time signature, moving at a tempo of 120 BPM.…"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "sp_entity",
+        "문장": "…a solo oboe and flute playing a playful, staccato melody in 3/4 time.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 5,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": 10472,
+        "source": "suno_sp_full",
+        "문장": "…counter-melodies. The piece is in the key of D minor with a 3/4 time signature, moving at a tempo of 120 BPM. The dynamics …"
+       },
+       {
+        "song_id": "S003_05",
+        "source": "suno_sp_full",
+        "문장": "…a solo oboe and flute playing a playful, staccato melody in 3/4 time. A pizzicato string section provides rhythmic counterp…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 5,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": "S003_04",
+        "source": "leomusic_sp_full",
+        "문장": "…nderneath the oboe's melodic variations. 66 BPM in A minor. 3/4 time. Concert hall acoustic.…"
+       },
+       {
+        "song_id": "S004_07",
+        "source": "leomusic_sp_full",
+        "문장": "…ow pedal tones to brilliant high notes. 132 BPM in G major. 3/4 time with son jarocho rhythm. Live outdoor recording with n…"
+       }
+      ]
+     }
+    },
+    "7/8": {},
+    "5/4": {},
+    "polyrhythm": {
+     "출력층": {
+      "행": 5,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": 74,
+        "source": "stems_sp",
+        "문장": "The track is built around a syncopated, polyrhythmic structure with a steady pulse…"
+       },
+       {
+        "song_id": 75,
+        "source": "stems_sp",
+        "문장": "The track is built around a syncopated, polyrhythmic structure with a steady pulse…"
+       }
+      ]
+     },
+     "파생(부분집합)": {
+      "행": 4,
+      "곡": 4,
+      "예": [
+       {
+        "song_id": 74,
+        "source": "stems_bracket",
+        "문장": "crescendo of polyrhythmic drumming…"
+       },
+       {
+        "song_id": 75,
+        "source": "stems_bracket",
+        "문장": "crescendo of polyrhythmic drumming…"
+       }
+      ]
+     }
+    },
+    "syncopated": {
+     "파생(부분집합)": {
+      "행": 1087,
+      "곡": 312,
+      "예": [
+       {
+        "song_id": 2,
+        "source": "sp_entity",
+        "문장": "…features a prominent upright bass playing walking lines and syncopated rhythms, a grand piano providing harmonic accompaniment wit…"
+       },
+       {
+        "song_id": 2,
+        "source": "sp_entity",
+        "문장": "…features a prominent upright bass playing walking lines and syncopated rhythms, a grand piano providing harmonic accompaniment wit…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 381,
+      "곡": 310,
+      "예": [
+       {
+        "song_id": 2,
+        "source": "suno_sp_full",
+        "문장": "…features a prominent upright bass playing walking lines and syncopated rhythms, a grand piano providing harmonic accompaniment wit…"
+       },
+       {
+        "song_id": 22,
+        "source": "suno_sp_full",
+        "문장": "…nt centers on a clean, palm-muted electric guitar playing a syncopated rhythmic riff. A sub-heavy kick drum and crisp electronic s…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 26,
+      "곡": 26,
+      "예": [
+       {
+        "song_id": 181,
+        "source": "leomusic_sp_full",
+        "문장": "…ess. Vocal delivery centers on mid-energy k-r&b vocals with syncopated rhythmic delivery, conversational exchanges between vocal l…"
+       },
+       {
+        "song_id": 189,
+        "source": "leomusic_sp_full",
+        "문장": "Expressive electronic funk with syncopated rhythm and heavy bass emphasis. Conversational vocal delive…"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "기확인_대조군": {
+   "질의문_원문": {
+    "a bowed string with vocal-like glissando": {},
+    "a plucked string resembling a gayageum": {}
+   },
+   "구성단위": {
+    "resembling": {
+     "파생(부분집합)": {
+      "행": 2,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "C_1710",
+        "source": "sp_entity",
+        "문장": "…ic motif is provided by a bright, plucked string instrument resembling a gayageum, layered with atmospheric synth pads.…"
+       },
+       {
+        "song_id": "C_1710",
+        "source": "sp_entity",
+        "문장": "…ic motif is provided by a bright, plucked string instrument resembling a gayageum, layered with atmospheric synth pads.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 5,
+      "곡": 5,
+      "예": [
+       {
+        "song_id": "C_1710",
+        "source": "suno_sp_full",
+        "문장": "…ic motif is provided by a bright, plucked string instrument resembling a gayageum, layered with atmospheric synth pads. The vocals…"
+       },
+       {
+        "song_id": 23,
+        "source": "stems_sp",
+        "문장": "A rhythmic, percussive element resembling a metallic click or a ticking clock repeats at 120 BPM…"
+       }
+      ]
+     }
+    },
+    "plucked string": {
+     "파생(부분집합)": {
+      "행": 5,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": "C_1710",
+        "source": "sp_entity",
+        "문장": "A recurring melodic motif is provided by a bright, plucked string instrument resembling a gayageum, layered with atmospheric …"
+       },
+       {
+        "song_id": "C_1710",
+        "source": "sp_entity",
+        "문장": "A recurring melodic motif is provided by a bright, plucked string instrument resembling a gayageum, layered with atmospheric …"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 2,
+      "곡": 2,
+      "예": [
+       {
+        "song_id": "C_1710",
+        "source": "suno_sp_full",
+        "문장": "…pattern. A recurring melodic motif is provided by a bright, plucked string instrument resembling a gayageum, layered with atmospheric …"
+       },
+       {
+        "song_id": "A_S002_10",
+        "source": "suno_sp_full",
+        "문장": "…th minimal reverb, emphasizing the percussive nature of the plucked strings and the breathy texture of the flute.…"
+       }
+      ]
+     }
+    },
+    "bowed string": {
+     "파생(부분집합)": {
+      "행": 2,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S004_10",
+        "source": "sp_entity",
+        "문장": "…erb, emphasizing the acoustic transients of the plucked and bowed strings.…"
+       },
+       {
+        "song_id": "S004_10",
+        "source": "sp_entity",
+        "문장": "…erb, emphasizing the acoustic transients of the plucked and bowed strings.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 1,
+      "곡": 1,
+      "예": [
+       {
+        "song_id": "S004_10",
+        "source": "suno_sp_full",
+        "문장": "…erb, emphasizing the acoustic transients of the plucked and bowed strings.…"
+       }
+      ]
+     }
+    },
+    "glissando": {
+     "파생(부분집합)": {
+      "행": 16,
+      "곡": 11,
+      "예": [
+       {
+        "song_id": 1396,
+        "source": "sp_entity",
+        "문장": "…eathy, intimate style with frequent use of vibrato and soft glissandos between notes.…"
+       },
+       {
+        "song_id": 1396,
+        "source": "sp_entity",
+        "문장": "…eathy, intimate style with frequent use of vibrato and soft glissandos between notes.…"
+       }
+      ]
+     },
+     "출력층": {
+      "행": 8,
+      "곡": 8,
+      "예": [
+       {
+        "song_id": 1396,
+        "source": "suno_sp_full",
+        "문장": "…eathy, intimate style with frequent use of vibrato and soft glissandos between notes. The arrangement is sparse, focusing on the …"
+       },
+       {
+        "song_id": "S003_10",
+        "source": "suno_sp_full",
+        "문장": "…isting of violin, viola, and cello. The harp performs rapid glissandos and arpeggiated patterns, while the acoustic guitar provid…"
+       }
+      ]
+     },
+     "입력층": {
+      "행": 4,
+      "곡": 4,
+      "예": [
+       {
+        "song_id": "S003_05",
+        "source": "leomusic_sp_full",
+        "문장": "… with a piercing, focused tone. A Gershwin-style portamento glissando sweeps from the lowest to the highest note in one continuou…"
+       },
+       {
+        "song_id": "S003_08",
+        "source": "leomusic_sp_full",
+        "문장": "…ss techniques. The tenor trombone opens with a smooth slide glissando connecting notes in a portamento style. Lip trills create a…"
+       }
+      ]
+     }
+    }
+   },
+   "역방향_이웃": {}
+  }
+ }
+}
