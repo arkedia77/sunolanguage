@@ -19,12 +19,49 @@
 """
 import hashlib
 import json
+import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 ME = "sunolanguage"
 BOX = Path("/Users/purple/projects/agent-comm/projects") / ME / "messages"
+REPO = Path("/Users/purple/projects/agent-comm")
+
+
+# ─────────────────────────────────────────────────────────────
+# git 도착 시각 (2026-08-15 추가) — ★판정축에서 「남이 쓴 값」을 뺀다
+#
+# 왜: 08-13에 「내 판정이 남이 쓴 값에 의존하면 남의 손기재가 곧 내 실명이다」를 룰로 적어 놓고,
+#   워터마크는 여전히 발신자의 `created_at`에서 뽑고 있었다. 그때 붙인 방어 ⑴「미래 시각 제외」는
+#   ★**시한부였다** — 실제 시간이 그 가짜 시각을 지나가면 미래가 아니게 되어 워터마크로 채택된다.
+#   실측(08-15): leomusic-trot이 자인한 손 외삽 +45분 값(`00:40`, 실제 커밋 08-14 23:55)이
+#   다음 날 스캔에서 **정상 워터마크로 승격**돼 있었다. (이번엔 그 구간 도착분이 0건이라 실피해는 없었다 —
+#   ★막은 것은 방어 ⑴이 아니라 방어 ⑵ 해시 원장이다.)
+#
+# ⇒ 워터마크를 **git 도착 시각**(해당 경로의 최초 커밋 시각)에서 뽑는다. 이 값은 발신자가 못 쓴다.
+#   `created_at`은 **자기신고값**으로 화면에만 남기고, 둘이 크게 어긋나면 드리프트로 표시한다.
+def git_arrivals():
+    """basename → 최초 커밋 시각(ISO). 실패하면 빈 dict(폴백=created_at)."""
+    try:
+        out = subprocess.run(
+            # ★`core.quotepath=false` 필수 — 한글·★ 파일명이 8진 이스케이프로 나와
+            #   basename이 안 맞고 **조용히 폴백**한다(첫 판에서 실제로 그랬다. 화면엔 「git 도착」이
+            #   찍히는데 값은 자기신고였다 = 라벨이 거짓말을 함).
+            ["git", "-c", "core.quotepath=false", "log", "--diff-filter=A", "--reverse",
+             "--date=iso-strict", "--format=@%ad", "--name-only",
+             "--", f"projects/{ME}/messages/"],
+            cwd=REPO, capture_output=True, text=True, timeout=60, check=True).stdout
+    except Exception:
+        return {}
+    arrivals, cur = {}, None
+    for line in out.splitlines():
+        if line.startswith("@"):
+            cur = line[1:20]   # "@2026-08-14T23:54:42+09:00" → 초까지 19자
+        elif line.strip() and cur:
+            name = line.rsplit("/", 1)[-1]
+            arrivals.setdefault(name, cur)   # --reverse라 첫 등장이 최초 도착
+    return arrivals
 
 
 def stamp(d, path):
@@ -39,6 +76,16 @@ def stamp(d, path):
             t = parts[i + 1][:6]
             return f"{p[:4]}-{p[4:6]}-{p[6:]}T{t[:2]}:{t[2:4]}:{t[4:]}", "filename"
     return None, None
+
+
+def abs_min(a, b):
+    """두 ISO 시각(초 단위 문자열)의 차이를 분으로. 파싱 실패는 0(=드리프트 아님)으로 접는다."""
+    try:
+        ta = datetime.fromisoformat(a[:19])
+        tb = datetime.fromisoformat(b[:19])
+    except Exception:
+        return 0
+    return int(abs((ta - tb).total_seconds()) // 60)
 
 
 def load(path):
@@ -127,13 +174,23 @@ def main():
     #   그 뒤 도착한 leomusic 11:23·leomusic3 11:27 **제출 2건이 「미처리 0」으로 찍혔다.**
     #   ⇒ 이 스캐너가 막으려던 사고(08-09 컷오프 눈대중)를 **다른 입구로 재현**했다.
     now = datetime.now().astimezone().isoformat(timespec="seconds")
-    marks, future = [], []
+    arrivals = git_arrivals()
+
+    def axis(name, selfstamp):
+        """판정에 쓰는 시각 = git 도착 시각 우선, 없으면 자기신고 폴백."""
+        return arrivals.get(name) or selfstamp
+
+    marks, future, drift = [], [], []
     for p in proc.glob("*.json"):
         d = load(p)
         s, _ = stamp(d, p)
         if not s:
             continue
-        (future if s > now else marks).append((s, p.name))
+        g = arrivals.get(p.name)
+        if g and s > g and abs_min(s, g) >= 10:
+            drift.append((s, g, p.name))
+        t = axis(p.name, s)
+        (future if t > now else marks).append((t, p.name))
     watermark = max(m[0] for m in marks) if marks else ""
 
     new, old, unparsed = [], [], []
@@ -143,19 +200,46 @@ def main():
             unparsed.append((p.name, d["__error__"]))
             continue
         s, src = stamp(d, p)
-        if not s:
+        if not s and p.name not in arrivals:
             unparsed.append((p.name, "시각 필드·파일명 stamp 모두 없음"))
             continue
-        row = (s, d.get("from", "?"), str(d.get("reply_needed")), src, p.name)
+        g = arrivals.get(p.name)
+        if s and g and s > g and abs_min(s, g) >= 10:
+            drift.append((s, g, p.name))
+        t = axis(p.name, s)
+        row = (t, d.get("from", "?"), str(d.get("reply_needed")),
+               ("git" if g else src), p.name)
         # ★원장에 없던 파일(=신규)은 **시각과 무관하게** 미처리로 올린다.
         #   시각 축 하나로만 판정하면 그 축이 오염될 때 통째로 눈이 먼다.
-        (new if (s > watermark or p.name in fresh) else old).append(row)
+        (new if (t > watermark or p.name in fresh) else old).append(row)
 
-    print(f"워터마크(처리분 최신) = {watermark or '(없음)'}   ※기계 산출, 인자 아님")
+    # ★커버리지를 같이 낸다 — 「git 도착」이라고 찍어 놓고 실제로는 폴백인 상태를 못 보면
+    #   그 라벨이 거짓말이 된다(첫 판에서 quotepath 이스케이프로 전건 폴백했는데 라벨은 git이었다).
+    total_files = len(list(BOX.glob("*.json"))) + len(list(proc.glob("*.json")))
+    hit = sum(1 for p in list(BOX.glob("*.json")) + list(proc.glob("*.json"))
+              if p.name in arrivals)
+    src_label = f"git 도착 {hit}/{total_files}건" + ("" if hit else " ★전건 폴백=자기신고")
+    print(f"워터마크(처리분 최신·{src_label}) = {watermark or '(없음)'}   ※기계 산출, 인자 아님")
     if future:
         print(f"★★미래 시각 {len(future)}건 — 워터마크에서 제외함 (지금={now})")
         for s, n in sorted(future, reverse=True)[:5]:
             print(f"    {s}  {n[:80]}")
+    if drift:
+        # ★발신자 자기신고와 실제 도착이 10분 이상 어긋난 건. 판정엔 안 쓰지만 **보이게** 둔다 —
+        #   채널 차원의 손기재 재발을 여기서 먼저 본다(08-13 leomusic2 +80분·08-15 leomusic-trot +45분).
+        # ★방향을 건다: **자기신고 > 실제도착**(=미래로 앞당겨 적음)만 센다.
+        #   반대 방향(작성 후 나중에 커밋)은 정상이고 실제로 130건이나 되어, 방향을 안 걸면
+        #   경보가 노이즈에 묻힌다(첫 판에서 실측). 워터마크를 오염시키는 건 앞당긴 쪽뿐이다.
+        # 총건수는 **항상** 낸다. 다만 열거는 최근 14일분만 — 역사분(대부분)이 매 스캔 화면을
+        # 덮으면 오늘의 신호가 그 안에 묻힌다. 「0건」이 아니라 「역사분」이라고 적는다.
+        cut = (datetime.now().astimezone() - timedelta(days=14)).isoformat(timespec="seconds")
+        recent = [d for d in drift if d[1] >= cut]
+        print(f"★자기신고가 실제 도착보다 앞선 건 {len(drift)}건 (≥10분) — 판정은 git 도착 시각으로 함"
+              f" · 최근 14일 {len(recent)}건")
+        for s, g, n in sorted(recent or [], key=lambda x: -abs_min(x[0], x[1]))[:5]:
+            print(f"    자기신고 {s} / 실제도착 {g}  (Δ{abs_min(s, g)}분)  {n[:60]}")
+        if not recent:
+            print("    (열거 없음 = 최근 14일 0건. 나머지는 역사분 — ★「없음」 아님)")
     print(f"루트 잔류 {len(new)+len(old)+len(unparsed)} = 미처리 {len(new)} / "
           f"워터마크 이전 {len(old)} / ★판정불가 {len(unparsed)}")
     if new:
