@@ -1,0 +1,308 @@
+{
+ "_provenance": "sunolang 코퍼스 델타 v0.1→v0.2 (2026-08-15). 산출: 사전 정본 rag/suno_dictionary_v3.json vs 백업 .bak_v3.2 키 diff + sunolang.db expr_* 실조회 + data/expressions/inbound_aliases_seed.json. 커넥터 발행분 crosswalk_v0.2.json(sha256 d1c4e9ad48b4fcfb…)과 동일 스냅샷 cs-3.3-589-20260815.",
+ "snapshot": {
+  "from": {
+   "dict": "3.2",
+   "lexical_tracks": 556,
+   "entries": 17822,
+   "genres": 263,
+   "concepts": 437,
+   "expressions": 2622,
+   "aliases": 66,
+   "interface": "0.1"
+  },
+  "to": {
+   "dict": "3.3",
+   "lexical_tracks": 589,
+   "entries": 19084,
+   "genres": 283,
+   "concepts": 446,
+   "expressions": 2676,
+   "aliases": 72,
+   "interface": "0.2"
+  },
+  "★층_주의": "트랙/entries/장르=lexical_index 층(측정: entries 테이블 distinct song_id / count(*) / distinct genre). 파일 코퍼스 곡 층은 530곡으로 별개 값이다.",
+  "breaking_content": false,
+  "의미": "additive — 삭제·별칭 재타깃 0. 소비자 무중단 pull, 재검증 불요."
+ },
+ "사전_신규키_45": {
+  "drum_vocab": {
+   "added": [
+    "[\"cymbal\", \"drums\", \"percussion\"]",
+    "[\"crash cymbal\", \"percussion\"]",
+    "[\"snare drum\", \"percussion\"]",
+    "[\"snare drum\", \"hi-hat\", \"rimshot\", \"drum kit\", \"drums\"]",
+    "[\"snare drum\", \"beat\"]",
+    "[\"shaker\", \"woodblock\", \"drums\", \"percussion\"]",
+    "[\"shaker\", \"woodblock\", \"drum kit\", \"cymbal\", \"drums\", \"percussion\"]",
+    "[\"kick drum\", \"snare drum\", \"rimshot\", \"percussion\"]"
+   ],
+   "removed": []
+  },
+  "technique_patterns": {
+   "added": [
+    "sustained harmonic pads in the background",
+    "solo clarinet, acoustic rhythm guitar, upright bass",
+    "melodic movement in the lower register",
+    "a spacious acoustic environment",
+    "sustained root notes"
+   ],
+   "removed": []
+  },
+  "harmony_vocab": {
+   "added": [
+    "[\"major seventh\"]"
+   ],
+   "removed": []
+  },
+  "dynamics_structure": {
+   "added": [
+    "full band, driving drums",
+    "full band enters, drums and bass"
+   ],
+   "removed": []
+  },
+  "vocal_chorus": {
+   "added": [
+    "[\"doubled\"]",
+    "[\"adlibs\"]"
+   ],
+   "removed": []
+  },
+  "genre_vocabulary_map": {
+   "added": [
+    "K-Pop power ballad",
+    "K-Pop ballad featuring a male tenor vocalist",
+    "K-Pop power ballad featuring a male tenor vocal",
+    "Chamber folk and orchestral pop arrangement",
+    "K-Pop ballad featuring male vocals, acoustic guitar, and violin",
+    "Bossa nova and Latin jazz fusion",
+    "Bossa nova jazz with a light, playful arrangement",
+    "K-Pop ballad featuring a male tenor vocal",
+    "K-Pop ballad featuring male and female duet vocals",
+    "Chamber folk with a playful, rhythmic character",
+    "Korean ballad with orchestral elements",
+    "Operatic pop ballad with cinematic orchestral arrangements",
+    "K-Pop power ballad featuring a tenor male vocalist",
+    "Gypsy jazz quartet featuring solo clarinet, acoustic rhythm guitar, upright bass, and accordion",
+    "Orchestral cinematic score with a focus on woodwinds and strings",
+    "Tango with a chamber ensemble arrangement",
+    "Bossa nova jazz quartet",
+    "Orchestral march with a cinematic, celebratory character",
+    "Orchestral film score in 3/4 time at 100 BPM",
+    "Cinematic orchestral score"
+   ],
+   "removed": []
+  },
+  "descriptor_combos": {
+   "added": [
+    "fretless",
+    "lush",
+    "120",
+    "flute",
+    "powerful",
+    "arpeggios",
+    "second"
+   ],
+   "removed": []
+  }
+ },
+ "신규_개념_9_전체_레지스터": [
+  {
+   "concept_id": "technique:a_spacious_acoustic_environment",
+   "category": "technique",
+   "suno_term": "a spacious acoustic environment",
+   "attested_count": 5,
+   "registers": {
+    "llm_prompt": "recorded in a spacious acoustic environment, natural room reverb",
+    "music_theory_en": "spacious acoustic environment (large-room recording impression: long reverb decay, audible early reflections, wide stereo depth)",
+    "plain_en": "sounds like it was recorded in a big open room, with natural echo and depth",
+    "plain_ko": "넓은 홀에서 녹음한 듯 소리가 멀리 퍼지고 잔향이 길게 남는 공간감",
+    "suno_native": "a spacious acoustic environment",
+    "tags": "[\"technique\", \"production\", \"space\", \"reverb\", \"room\"]"
+   },
+   "confidence": "medium",
+   "notes": "사전 v3.3 신규 원자(technique, attested 5)"
+  },
+  {
+   "concept_id": "vocal_chorus:doubled",
+   "category": "vocal_chorus",
+   "suno_term": "doubled",
+   "attested_count": 2,
+   "registers": {
+    "llm_prompt": "doubled vocals",
+    "music_theory_en": "doubled (a part performed and recorded twice, then layered — most often vocals — for width and thickness)",
+    "plain_en": "the same part layered twice for a thicker, wider sound",
+    "plain_ko": "같은 파트를 두 번 겹쳐 두껍고 넓게 들리게 한 것(주로 보컬)",
+    "suno_native": "doubled",
+    "tags": "[\"vocal_chorus\", \"vocal\", \"layering\", \"doubling\"]"
+   },
+   "confidence": "high",
+   "notes": "사전 v3.3 신규 원자(vocal_chorus, attested 2). 기존 'double-tracking'과 같은 기법의 Suno 네이티브 축약형"
+  },
+  {
+   "concept_id": "dynamics:full_band_driving_drums",
+   "category": "dynamics",
+   "suno_term": "full band, driving drums",
+   "attested_count": 2,
+   "registers": {
+    "llm_prompt": "full band, driving drums",
+    "music_theory_en": "full-band tutti led by a propulsive drum groove (all instruments in, drums carrying the momentum)",
+    "plain_en": "the whole band in, with hard-driving drums pushing it forward",
+    "plain_ko": "밴드 전체가 들어오고 드럼이 힘차게 몰아가는 구간 묘사",
+    "suno_native": "full band, driving drums",
+    "tags": "[\"dynamics\", \"structure\", \"drums\", \"fragment\"]"
+   },
+   "confidence": "medium",
+   "notes": "사전 v3.3 신규 원자(dynamics, attested 2). 기존 'full band, driving rhythm' 계열"
+  },
+  {
+   "concept_id": "dynamics:full_band_enters_drums_and_bass",
+   "category": "dynamics",
+   "suno_term": "full band enters, drums and bass",
+   "attested_count": 2,
+   "registers": {
+    "llm_prompt": "full band enters, drums and bass",
+    "music_theory_en": "sectional entrance: full band joins with the rhythm section (drums and bass) foregrounded",
+    "plain_en": "the whole band comes in with drums and bass leading the charge",
+    "plain_ko": "밴드 전체가 들어오면서 드럼과 베이스가 앞으로 나서는 구간 전환 묘사",
+    "suno_native": "full band enters, drums and bass",
+    "tags": "[\"dynamics\", \"structure\", \"rhythm-section\", \"fragment\"]"
+   },
+   "confidence": "medium",
+   "notes": "사전 v3.3 신규 원자(dynamics, attested 2). 기존 'full band enters, driving drum beat' 계열"
+  },
+  {
+   "concept_id": "harmony:major_seventh",
+   "category": "harmony",
+   "suno_term": "major seventh",
+   "attested_count": 2,
+   "registers": {
+    "llm_prompt": "major seventh chords, lush jazzy harmony",
+    "music_theory_en": "major seventh chord (major triad with a major 7th, e.g. Cmaj7 — lush, floating, consonant-but-unresolved color; also the maj7 interval)",
+    "plain_en": "a dreamy, floating jazz chord — bright but never quite settling",
+    "plain_ko": "맑고 몽환적으로 붕 뜬 느낌을 주는 화음 — 재즈·보사노바에서 자주 쓰임",
+    "suno_native": "major seventh",
+    "tags": "[\"harmony\", \"chords\", \"jazz\", \"color\"]"
+   },
+   "confidence": "medium",
+   "notes": "사전 v3.3 신규 원자(harmony, attested 2). 기존 'minor seventh' 대응쌍"
+  },
+  {
+   "concept_id": "technique:melodic_movement_in_the_lower_register",
+   "category": "technique",
+   "suno_term": "melodic movement in the lower register",
+   "attested_count": 5,
+   "registers": {
+    "llm_prompt": "bass with melodic movement in the lower register",
+    "music_theory_en": "melodic motion in the low register (a bass-range part carrying melodic movement rather than static root notes)",
+    "plain_en": "the low end moves like a melody instead of just holding notes",
+    "plain_ko": "낮은 음역(주로 베이스)이 가만히 받치지 않고 선율처럼 움직이는 것",
+    "suno_native": "melodic movement in the lower register",
+    "tags": "[\"technique\", \"bass\", \"melody\", \"low-register\", \"fragment\"]"
+   },
+   "confidence": "medium",
+   "notes": "사전 v3.3 신규 원자(technique, attested 5)"
+  },
+  {
+   "concept_id": "technique:solo_clarinet_acoustic_rhythm_guitar_upright_bass",
+   "category": "technique",
+   "suno_term": "solo clarinet, acoustic rhythm guitar, upright bass",
+   "attested_count": 5,
+   "registers": {
+    "llm_prompt": "solo clarinet, acoustic rhythm guitar, upright bass",
+    "music_theory_en": "small-ensemble instrumentation fragment: lead clarinet over comping acoustic rhythm guitar and pizzicato upright bass (gypsy-jazz / manouche front line)",
+    "plain_en": "clarinet leading over strummed acoustic guitar and plucked upright bass — a gypsy-jazz small group",
+    "plain_ko": "클라리넷이 선율을 이끌고 통기타가 리듬을 치며 업라이트 베이스가 저음을 받치는 집시재즈식 소편성",
+    "suno_native": "solo clarinet, acoustic rhythm guitar, upright bass",
+    "tags": "[\"technique\", \"ensemble\", \"instrumentation\", \"gypsy-jazz\", \"fragment\"]"
+   },
+   "confidence": "medium",
+   "notes": "사전 v3.3 신규 원자(technique, attested 5). ★컴파운드 구절 — 코퍼스에 한 덩어리로 출현하며 개별 원자(clarinet·upright bass)는 g1에 별도 저작 있음"
+  },
+  {
+   "concept_id": "technique:sustained_harmonic_pads_in_the_background",
+   "category": "technique",
+   "suno_term": "sustained harmonic pads in the background",
+   "attested_count": 7,
+   "registers": {
+    "llm_prompt": "sustained harmonic pads in the background",
+    "music_theory_en": "sustained background harmonic pads (long-held chord voicings behind the lead, filling harmony without rhythmic activity)",
+    "plain_en": "long held chords sitting in the background as a soft harmonic bed",
+    "plain_ko": "뒤쪽에 화음이 길게 깔려 곡을 폭신하게 받쳐 주는 것",
+    "suno_native": "sustained harmonic pads in the background",
+    "tags": "[\"technique\", \"harmony\", \"pads\", \"background\", \"texture\"]"
+   },
+   "confidence": "medium",
+   "notes": "사전 v3.3 신규 원자(technique, attested 7). 기존 'harmonic padding in the background'의 sustained 변형 — 별개 키로 attested"
+  },
+  {
+   "concept_id": "technique:sustained_root_notes",
+   "category": "technique",
+   "suno_term": "sustained root notes",
+   "attested_count": 4,
+   "registers": {
+    "llm_prompt": "sustained root notes",
+    "music_theory_en": "sustained root notes (long-held fundamental of each chord, typically in the bass, anchoring the harmony)",
+    "plain_en": "long held low root notes anchoring each chord",
+    "plain_ko": "각 코드의 뿌리음을 길게 끌어 화음을 붙잡아 주는 것",
+    "suno_native": "sustained root notes",
+    "tags": "[\"technique\", \"bass\", \"sustain\", \"root-notes\"]"
+   },
+   "confidence": "medium",
+   "notes": "사전 v3.3 신규 원자(technique, attested 4). 기존 'with sustained root notes'의 전치사 없는 형 — 별개 키로 attested"
+  }
+ ],
+ "★신규_개념_정직고지": "9건 모두 v3.3에서 처음 attested. attested_count 2~7(낮은 표본) — 표현 저작은 코퍼스 용례 기반이나 confidence는 medium 8 / high 1로 정직 표기했다. 사용 시 attested_count를 함께 보라.",
+ "별칭_6_복원분": [
+  {
+   "alias_text": "deep voice / low voice (저음 형용사)",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "male baritone vocals",
+   "replacement_note": "저음 형용사 비네이티브(vocal_main: deep 1건·low 7건) — Suno는 저음을 성부 명칭으로만 기술(baritone, expr attested 122). 성부 명칭 사용",
+   "source": "07-11 K3016 실측 (project_vocal_gender_register_drift)"
+  },
+  {
+   "alias_text": "저음 보컬",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": "male baritone vocals",
+   "replacement_note": "저음 형용사 비네이티브 — 성부 명칭(male baritone vocals)으로 기술. 단 성부 지시는 프라이어층 종속(저에너지+독백서 무효) 주의",
+   "source": "07-11 K3016 실측"
+  },
+  {
+   "alias_text": "negative 성별 지시 (no female vocals 등)",
+   "alias_lang": "en",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "negative 성별 지시 corpus 0건 비네이티브 — 긍정형 성부 명칭으로만 지정(featuring a male... 95건 vs no female 0건)",
+   "source": "07-11 K3016 실측"
+  },
+  {
+   "alias_text": "용도성 명칭 (OST, BGM)",
+   "alias_lang": "en",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "용도성 명칭 실질 0건(OST 실질 0·BGM 0) — 용도는 메타데이터로, 콘셉트는 mood 어휘로 기술",
+   "source": "07-11 K3016 실측"
+  },
+  {
+   "alias_text": "트로트",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "Suno native Trot 라벨 1/12(W001 GT 재분석) — 나머지 11곡 K-Pop 계열 드리프트. 우회=K-pop trot(유효 확인) 또는 편성 명시(accordion 13·saxophone·disco bass). 식별3종(heavy vibrato+traditional phrasing+accordion)만으론 못 묶음",
+   "source": "06-13 W001 (project_suno_trot_mapping)"
+  },
+  {
+   "alias_text": "trot",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "Suno는 TROT을 foxtrot 계열로 해석(비서양 장르 매핑 한계) — K-pop trot 또는 foxtrot 편성 명시 권장. native Trot 라벨 1/12",
+   "source": "06-13 W001"
+  }
+ ],
+ "★별칭_정직고지": "이 6건은 신규 발견이 아니라 **정본 복원**이다. DB에만 있고 시드 정본(data/expressions/inbound_aliases_seed.json)에 없어 expr_* 재빌드 시 소실되던 것을 08-15에 정본 편입했다. 내용 자체는 07-11 K3016·06-13 W001 실측분으로 기존에 이미 유효했다."
+}

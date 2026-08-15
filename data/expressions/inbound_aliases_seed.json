@@ -1,5 +1,5 @@
 {
- "_provenance": "인바운드 별칭 시드 v0 (2026-07-16). 소스: ①무드맵 C절 치환규칙 ②ko_en_mood_glossary(2026-07-12) ③사전 suno_does_not_use. extra_concepts=별칭 타깃 중 사전 v3.2 상위 원자 밖이지만 lexical index attested 확인분(카운트 근거 명기).",
+ "_provenance": "인바운드 별칭 시드 v0 (2026-07-16). 소스: ①무드맵 C절 치환규칙 ②ko_en_mood_glossary(2026-07-12) ③사전 suno_does_not_use. extra_concepts=별칭 타깃 중 사전 v3.2 상위 원자 밖이지만 lexical index attested 확인분(카운트 근거 명기). | 2026-08-15 복원: DB에만 존재하고 시드 정본에 없던 6건(K3016 실측 4·W001 트로트 2)을 정본에 편입 — expr_* 재빌드 시 소실되던 드리프트 해소",
  "extra_concepts": [
   {
    "suno_term": "tension",
@@ -722,6 +722,54 @@
    "target_suno_term": "triumphant",
    "replacement_note": "환호 분위기는 triumphant(12)로 우회 (직접 군중음성 원자 없음)",
    "source": "docs/reviews/trot_W005_sp_review.md + expr v0 검색 실측(2026-07-16)"
+  },
+  {
+   "alias_text": "deep voice / low voice (저음 형용사)",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": "male baritone vocals",
+   "replacement_note": "저음 형용사 비네이티브(vocal_main: deep 1건·low 7건) — Suno는 저음을 성부 명칭으로만 기술(baritone, expr attested 122). 성부 명칭 사용",
+   "source": "07-11 K3016 실측 (project_vocal_gender_register_drift)"
+  },
+  {
+   "alias_text": "저음 보컬",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": "male baritone vocals",
+   "replacement_note": "저음 형용사 비네이티브 — 성부 명칭(male baritone vocals)으로 기술. 단 성부 지시는 프라이어층 종속(저에너지+독백서 무효) 주의",
+   "source": "07-11 K3016 실측"
+  },
+  {
+   "alias_text": "negative 성별 지시 (no female vocals 등)",
+   "alias_lang": "en",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "negative 성별 지시 corpus 0건 비네이티브 — 긍정형 성부 명칭으로만 지정(featuring a male... 95건 vs no female 0건)",
+   "source": "07-11 K3016 실측"
+  },
+  {
+   "alias_text": "용도성 명칭 (OST, BGM)",
+   "alias_lang": "en",
+   "kind": "blocked",
+   "target_suno_term": null,
+   "replacement_note": "용도성 명칭 실질 0건(OST 실질 0·BGM 0) — 용도는 메타데이터로, 콘셉트는 mood 어휘로 기술",
+   "source": "07-11 K3016 실측"
+  },
+  {
+   "alias_text": "트로트",
+   "alias_lang": "ko",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "Suno native Trot 라벨 1/12(W001 GT 재분석) — 나머지 11곡 K-Pop 계열 드리프트. 우회=K-pop trot(유효 확인) 또는 편성 명시(accordion 13·saxophone·disco bass). 식별3종(heavy vibrato+traditional phrasing+accordion)만으론 못 묶음",
+   "source": "06-13 W001 (project_suno_trot_mapping)"
+  },
+  {
+   "alias_text": "trot",
+   "alias_lang": "en",
+   "kind": "dead_zone",
+   "target_suno_term": null,
+   "replacement_note": "Suno는 TROT을 foxtrot 계열로 해석(비서양 장르 매핑 한계) — K-pop trot 또는 foxtrot 편성 명시 권장. native Trot 라벨 1/12",
+   "source": "06-13 W001"
   }
  ]
 }

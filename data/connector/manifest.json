@@ -7,26 +7,27 @@
     "scaffold"
   ],
   "corpus_snapshot": {
-    "snapshot_id": "cs-3.2-556-20260612",
-    "dict_version": "3.2",
-    "corpus_tracks": 556,
-    "expr_concepts": 437,
-    "dict_created_at": "2026-06-12"
+    "snapshot_id": "cs-3.3-589-20260815",
+    "dict_version": "3.3",
+    "corpus_tracks": 589,
+    "expr_concepts": 446,
+    "dict_created_at": "2026-08-15"
   },
-  "interface_version": "0.1",
+  "interface_version": "0.2",
   "ports": [
     {
       "port": "out",
       "direction": "outbound",
       "status": "live",
       "payload_schema": "data/connector/schemas/out_crosswalk.schema.json",
-      "artifact": "data/connector/out/crosswalk_v0.1.json",
-      "artifact_sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c",
+      "artifact": "data/connector/out/crosswalk_v0.2.json",
+      "artifact_sha256": "d1c4e9ad48b4fcfbd3e2ad6b5ae25e1e014066e46642a05754c9be055e6e7c51",
       "consumers": [
         "leomusic",
         "leomusic2",
         "leomusic3",
-        "leomusic-trot"
+        "leomusic-trot",
+        "encore"
       ],
       "blocker": null,
       "breaking_content": false,
@@ -34,7 +35,8 @@
         "data/connector/out/bundle_leomusic.json",
         "data/connector/out/bundle_leomusic2.json",
         "data/connector/out/bundle_leomusic3.json",
-        "data/connector/out/bundle_leomusic-trot.json"
+        "data/connector/out/bundle_leomusic-trot.json",
+        "data/connector/out/bundle_encore.json"
       ]
     },
     {
@@ -77,5 +79,5 @@
     }
   ],
   "runs_log": "sunolang.db:connector_runs",
-  "manifest_generated_at": "2026-07-17T21:44:39+09:00"
+  "manifest_generated_at": "2026-08-15T15:30:39+09:00"
 }

@@ -68,6 +68,8 @@
 | Qdrant presets | **13,950 points** (측정: `GET {QDRANT_HOST}/collections/sunolang_presets` → `points_count`. ★호스트=`100.90.35.121:6333`. `localhost:6333`은 **다른 인스턴스**라 `sunolang_presets`가 없다 — 여기서 재면 오측) |
 | 사전 최신 | **v3.3 (2026-08-15, 589트랙 기준)** — 코퍼스 +33곡 증분 반영. 병합=합집합 의미라 **현행 전용 키 69건 보존**(v3.1 수작업 큐레이션 27건은 그 부분집합) · 큐레이션 전용 9축 무변경 · 키 소실 0 (백업 `rag/suno_dictionary_v3.json.bak_v3.2`) |
 | 사전 재빌드 카운터 | **0곡** (v3.3 기준 리셋) — 다음 트리거: 누적 ≥30곡 / thin 장르 ≥5 진입 / 마지막 재빌드 후 90일+누적 ≥10곡 |
+| 표현 레이어 | **446개념 / 2,676표현 / 인바운드 별칭 72** (측정: `sunolang.db` `expr_concepts`·`expr_expressions`·`expr_inbound_aliases` 각 count(*). 08-15 v3.3 신규 원자 9건 증분 저작 = +54표현) — ★**정본은 DB가 아니라 `data/expressions/authored/*.json` + `inbound_aliases_seed.json`**. DB는 파생물이라 **DB에만 쓴 값은 재빌드로 조용히 소실된다**(08-15 별칭 6건이 실제로 그렇게 사라졌다가 정본 복원됨) |
+| 커넥터 OUT | **interface v0.2 / snapshot `cs-3.3-589-20260815` / 구독 5팀** (측정: `python3 scripts/corpus_connector.py status`. 산출 `data/connector/out/crosswalk_v0.2.json` sha256 `d1c4e9ad48b4fcfb…` · `breaking_content=false`=additive) — 소비자=leomusic·leomusic2·leomusic3·leomusic-trot·**encore**(08-15 편입) |
 | DB 테이블 | 0 (admin DDL 대기, A5 보류 중) — ★2026-06-12 기재분, 08-15 **미재확인** |
 | webapp 사전 | v2.0 (B2 종속 — LEO Q1 결정 후 **v3.3** 드롭인) |
 

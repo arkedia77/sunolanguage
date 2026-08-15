@@ -124,6 +124,8 @@ CREATE TABLE IF NOT EXISTS connector_runs (
 - 재빌드 훅: 사전 재빌드 감지(dict_version 변화) → `build_expression_db --coverage`로 신규 원자 워크리스트 → minor 증분.
 - 구독 레지스트리: `data/connector/subscribers.json`(팀·포맷·선언 파생·마지막 수신 버전·last_breaking) — 재발행 시 드리프트 팀 자동 식별.
 - 대체: 기존 4팀 수동 1회 발신(07-17) → 표준 반복 발행.
+- **소비자 5(08-15 개정)**: 4팀 + **encore**. encore=레오뮤직 소속 A&R·발주 주체(LEO 08-15 「음악발주를 하려면 어떤 게 Suno에서 표현되는지 알아야 한다」).
+  ⇒ OUT consumers는 §3 예시의 4팀이 아니라 **`SUBSCRIBER_DEFAULTS` 5키가 정본**(매니페스트 `consumers`는 발행 시 여기서 파생). encore는 OUT(어휘 참조)과 CONSUME(경로C 소비, 여전히 blocked) **양쪽 포트에 등장**하며 둘은 별개 계약이다.
 
 ### 6.2 IN — 레퍼런스 매칭 (status: **blocked**, 스캐폴드+게이트)
 - 소스: 외부 레퍼런스 곡/SP → `reference_matcher`(v0 텍스트공간, run1~15='검증전').

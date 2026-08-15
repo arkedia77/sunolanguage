@@ -50,6 +50,11 @@ SUBSCRIBER_DEFAULTS = {
                                    "fields": ["concept_id", "category", "suno_term", "reg:tags"]}]},
     "leomusic-trot": {"activation": "장르 특화 어휘 대조. W008/W012 '로컬0≠전코퍼스' 회피목록 검증에 attested_count 병용.",
                       "derivations": []},
+    # encore=레오뮤직 소속 A&R·발주 주체(LEO 08-15). 발주 前 '이 요구가 Suno에서 실제로 나오는 말인가' 판정용.
+    "encore": {"activation": "발주 前 표현 가능성 확인: plain_ko→concept→suno_native attested로 요구를 Suno 네이티브 어휘에 접지. "
+                             "dead_zone/blocked 별칭은 발주서에서 제외(미반응어 가드). "
+                             "타 엔진 발주 시 llm_prompt 레지스터를 교차 참조 — ★단 attested는 Suno 관측이며 타 엔진 uptake는 미검증(Lyria 절대조성 사례: self-report≠render).",
+               "derivations": []},
 }
 
 

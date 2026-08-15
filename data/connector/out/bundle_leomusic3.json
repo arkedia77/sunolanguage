@@ -1,27 +1,27 @@
 {
  "_for": "leomusic3",
  "_manifest": {
-  "snapshot_id": "cs-3.2-556-20260612",
-  "interface_version": "0.1",
-  "generated_at": "2026-07-17T21:44:39+09:00",
+  "snapshot_id": "cs-3.3-589-20260815",
+  "interface_version": "0.2",
+  "generated_at": "2026-08-15T15:30:39+09:00",
   "source_exporter": "scripts/expression_search.py --export",
   "design": "docs/corpus_connector_design.md",
-  "concepts": 437,
-  "inbound_aliases": 66,
-  "sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c",
+  "concepts": 446,
+  "inbound_aliases": 72,
+  "sha256": "d1c4e9ad48b4fcfbd3e2ad6b5ae25e1e014066e46642a05754c9be055e6e7c51",
   "breaking_content": false,
   "breaking_detail": null
  },
  "crosswalk_artifact": {
-  "path": "data/connector/out/crosswalk_v0.1.json",
-  "sha256": "73a2d4f8e01c42a117cccec054ef3145f281307577fcb938e6e92bc259f8336c"
+  "path": "data/connector/out/crosswalk_v0.2.json",
+  "sha256": "d1c4e9ad48b4fcfbd3e2ad6b5ae25e1e014066e46642a05754c9be055e6e7c51"
  },
  "activation_points": "tags 레지스터(파셋) + taxonomy 정렬 파생을 기계귀 임베딩 라벨공간 정렬에 활용.",
  "derivations_applied": [
   {
    "name": "taxonomy_sorted",
    "kind": "sort",
-   "rows": 437
+   "rows": 446
   }
  ],
  "taxonomy_sorted": [
@@ -194,6 +194,12 @@
    "tags": "[\"dynamics\", \"structure\", \"brass\", \"fragment\"]"
   },
   {
+   "concept_id": "dynamics:full_band_driving_drums",
+   "category": "dynamics",
+   "suno_term": "full band, driving drums",
+   "tags": "[\"dynamics\", \"structure\", \"drums\", \"fragment\"]"
+  },
+  {
    "concept_id": "dynamics:full_band_driving_drums_soaring_strings",
    "category": "dynamics",
    "suno_term": "full band, driving drums, soaring strings",
@@ -234,6 +240,12 @@
    "category": "dynamics",
    "suno_term": "full band enters, driving rhythm",
    "tags": "[\"dynamics\", \"structure\", \"fragment\"]"
+  },
+  {
+   "concept_id": "dynamics:full_band_enters_drums_and_bass",
+   "category": "dynamics",
+   "suno_term": "full band enters, drums and bass",
+   "tags": "[\"dynamics\", \"structure\", \"rhythm-section\", \"fragment\"]"
   },
   {
    "concept_id": "dynamics:full_band_enters_strings_swell_belted_vocals",
@@ -390,6 +402,12 @@
    "category": "harmony",
    "suno_term": "key change",
    "tags": "[\"harmony\", \"key\", \"modulation\", \"structure\"]"
+  },
+  {
+   "concept_id": "harmony:major_seventh",
+   "category": "harmony",
+   "suno_term": "major seventh",
+   "tags": "[\"harmony\", \"chords\", \"jazz\", \"color\"]"
   },
   {
    "concept_id": "harmony:minor_seventh",
@@ -1544,6 +1562,12 @@
    "tags": "[\"technique\", \"texture\", \"space\", \"arrangement\", \"reverb\"]"
   },
   {
+   "concept_id": "technique:a_spacious_acoustic_environment",
+   "category": "technique",
+   "suno_term": "a spacious acoustic environment",
+   "tags": "[\"technique\", \"production\", \"space\", \"reverb\", \"room\"]"
+  },
+  {
    "concept_id": "technique:a_steady_eighth_note_pattern",
    "category": "technique",
    "suno_term": "a steady eighth-note pattern",
@@ -1850,6 +1874,12 @@
    "tags": "[\"technique\", \"bass\", \"melody\", \"low-end\"]"
   },
   {
+   "concept_id": "technique:melodic_movement_in_the_lower_register",
+   "category": "technique",
+   "suno_term": "melodic movement in the lower register",
+   "tags": "[\"technique\", \"bass\", \"melody\", \"low-register\", \"fragment\"]"
+  },
+  {
    "concept_id": "technique:melodic_slides_and_syncopated_fills",
    "category": "technique",
    "suno_term": "melodic slides and syncopated fills",
@@ -1952,6 +1982,12 @@
    "tags": "[\"technique\", \"guitar\", \"slide\", \"glissando\", \"expression\"]"
   },
   {
+   "concept_id": "technique:solo_clarinet_acoustic_rhythm_guitar_upright_bass",
+   "category": "technique",
+   "suno_term": "solo clarinet, acoustic rhythm guitar, upright bass",
+   "tags": "[\"technique\", \"ensemble\", \"instrumentation\", \"gypsy-jazz\", \"fragment\"]"
+  },
+  {
    "concept_id": "technique:sparse_melodic_root_notes",
    "category": "technique",
    "suno_term": "sparse, melodic root notes",
@@ -1994,10 +2030,22 @@
    "tags": "[\"technique\", \"sustain\", \"fills\", \"accompaniment\"]"
   },
   {
+   "concept_id": "technique:sustained_harmonic_pads_in_the_background",
+   "category": "technique",
+   "suno_term": "sustained harmonic pads in the background",
+   "tags": "[\"technique\", \"harmony\", \"pads\", \"background\", \"texture\"]"
+  },
+  {
    "concept_id": "technique:sustained_low_end_notes_on_the_downbeats",
    "category": "technique",
    "suno_term": "sustained low-end notes on the downbeats",
    "tags": "[\"technique\", \"bass\", \"sustain\", \"downbeat\", \"low-end\"]"
+  },
+  {
+   "concept_id": "technique:sustained_root_notes",
+   "category": "technique",
+   "suno_term": "sustained root notes",
+   "tags": "[\"technique\", \"bass\", \"sustain\", \"root-notes\"]"
   },
   {
    "concept_id": "technique:swell",
@@ -2610,6 +2658,12 @@
    "category": "vocal_chorus",
    "suno_term": "double-tracking",
    "tags": "[\"vocal\", \"production\", \"layering\", \"doubling\"]"
+  },
+  {
+   "concept_id": "vocal_chorus:doubled",
+   "category": "vocal_chorus",
+   "suno_term": "doubled",
+   "tags": "[\"vocal_chorus\", \"vocal\", \"layering\", \"doubling\"]"
   },
   {
    "concept_id": "vocal_chorus:doubling",
