@@ -69,8 +69,9 @@
 | 사전 최신 | **v3.3 (2026-08-15, 589트랙 기준)** — 코퍼스 +33곡 증분 반영. 병합=합집합 의미라 **현행 전용 키 69건 보존**(v3.1 수작업 큐레이션 27건은 그 부분집합) · 큐레이션 전용 9축 무변경 · 키 소실 0 (백업 `rag/suno_dictionary_v3.json.bak_v3.2`) |
 | 사전 재빌드 카운터 | **0곡** (v3.3 기준 리셋) — 다음 트리거: 누적 ≥30곡 / thin 장르 ≥5 진입 / 마지막 재빌드 후 90일+누적 ≥10곡 |
 | 표현 레이어 | **446개념 / 2,676표현 / 인바운드 별칭 72** (측정: `sunolang.db` `expr_concepts`·`expr_expressions`·`expr_inbound_aliases` 각 count(*). 08-15 v3.3 신규 원자 9건 증분 저작 = +54표현) — ★**정본은 DB가 아니라 `data/expressions/authored/*.json` + `inbound_aliases_seed.json`**. DB는 파생물이라 **DB에만 쓴 값은 재빌드로 조용히 소실된다**(08-15 별칭 6건이 실제로 그렇게 사라졌다가 정본 복원됨) |
+| 표현 레이어 정본 키 | **개념 키 = `slugify(suno_term)`**(`build_expression_db.slugify`: 소문자화 후 비영숫자→`_`). concept_id=`{category}:{slug}`. 08-15 실측 **카테고리 교차 슬러그 충돌 0건/446**. ⇒ 표기 변종(하이픈/공백/대소문자)은 **다른 개념이 아니라 같은 개념**이며, `expression_search.py --term`이 이 규칙으로 접어서 조회한다(08-15 수정 전에는 원문 완전일치만 봐서 `call and response`가 「개념 없음」이었다) |
 | 커넥터 OUT | **interface v0.2 / snapshot `cs-3.3-589-20260815` / 구독 5팀** (측정: `python3 scripts/corpus_connector.py status`. 산출 `data/connector/out/crosswalk_v0.2.json` sha256 `d1c4e9ad48b4fcfb…` · `breaking_content=false`=additive) — 소비자=leomusic·leomusic2·leomusic3·leomusic-trot·**encore**(08-15 편입) |
-| DB 테이블 | 0 (admin DDL 대기, A5 보류 중) — ★2026-06-12 기재분, 08-15 **미재확인** |
+| DB 테이블 | **0개** (A5 보류 유지) — 2026-08-15 **실측 재확인**. 측정: `.venv/bin/python scripts/json_to_db.py status` → 4/4 `TABLE NOT FOUND` + 권한무관 카탈로그 `pg_class ⋈ pg_namespace where relname like 'sunolang%'` → **0행**(`information_schema`는 권한 있는 것만 보이므로 그것만으로는 「없음」을 못 세운다). 접속=`leofamily_music` @ `100.90.35.121` / role `role_sunolanguage`(role은 존재). ⚠**DDL 요청은 05-25 발신 후 82일째 무회신**(`agent-comm:projects/admin/messages/processed/admin_sunolanguage_20260525_201000_sunolang_corpus_DDL요청.json` — admin `processed/`에 있어 「처리됨」으로 보이나 실집행 0·회신 0) |
 | webapp 사전 | v2.0 (B2 종속 — LEO Q1 결정 후 **v3.3** 드롭인) |
 
 > ⚠ **이 표는 「전파 수행 시마다 갱신」이라 적어 놓고 06-12~08-15 두 달간 안 고쳤다**(문서 497곡 / 실제 530곡). A4 coverage_map은 갱신돼 있었으므로 **데이터가 아니라 문서만 늙은 것**. 실피해는 아직 없으나 **오인용 위험**이다 — 이 표를 남이 읽고 인용하면 두 달 전 수치가 현재값으로 전파된다.

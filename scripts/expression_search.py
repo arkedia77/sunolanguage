@@ -14,7 +14,11 @@
 import argparse
 import json
 import sqlite3
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_expression_db import slugify  # 정본 키 규칙 단일 기재(G-K4)
 
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "sunolang.db"
@@ -136,6 +140,13 @@ def cmd_term(term):
     conn = connect()
     row = conn.execute(
         "SELECT concept_id FROM expr_concepts WHERE suno_term = ? COLLATE NOCASE", (term,)).fetchone()
+    if not row:
+        # 정본 키는 concept_id의 슬러그다(build_expression_db.slugify가 원자 중복을 여기서 접는다).
+        # 표기 변종(하이픈/공백/대소문자)으로 들어온 조회를 같은 개념으로 붙인다 — 코퍼스에 둘 다 실재.
+        # LIKE 금지 — 슬러그의 `_`가 LIKE 단일문자 와일드카드라 오탐이 난다. 접미 정확비교로 자른다.
+        row = conn.execute(
+            "SELECT concept_id FROM expr_concepts"
+            " WHERE substr(concept_id, instr(concept_id, ':') + 1) = ?", (slugify(term),)).fetchone()
     if not row:
         print(f"개념 없음: '{term}' — --search 로 유사 검색을 시도하세요")
         if check_aliases(conn, term):
