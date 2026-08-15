@@ -34,7 +34,12 @@ from corpus_ingest_runner import (  # noqa: E402 — 단일 진실원 재사용
 
 BASELINE_SONGS = 497  # 상태DB 시드 시점(v3.2, 2026-06-12 이후 07-10 시드) 기준선
 LEXICAL_DB = ROOT / "data" / "reanalysis_v2" / "lexical_index.sqlite"
-LEXICAL_SEED_ENTRIES = 17822  # v3.2 재빌드 기준 (B1 재빌드 시에만 변동)
+# ★상수가 아니라 **상태DB의 실측 기록**을 기준선으로 쓴다 (2026-08-16).
+#   구판은 `LEXICAL_SEED_ENTRIES = 17822`를 소스에 박아 두고 "v3.2 기준"이라 찍었다.
+#   08-15 v3.3 재빌드로 19,084가 된 뒤에도 화면은 계속 "v3.2 기준 17822"였다 —
+#   ★라벨이 거짓말을 한 것이고, 고치려면 사람이 소스를 편집해야 하니 필연적으로 늙는다.
+#   ⇒ 기준선은 `record-rebuild`가 실측해 넣은 `lexical_entries`에서 읽는다.
+LEXICAL_FALLBACK_ENTRIES = 17822  # 기록 이전(v3.2 시드) 폴백 — 기록이 있으면 안 쓴다
 
 
 def check(results: list, name: str, ok: bool, detail: str, warn_only: bool = False):
@@ -81,8 +86,12 @@ def main() -> None:
             check(results, "H2", False, f"Qdrant 조회 실패: {exc}", warn_only=True)
     if LEXICAL_DB.exists():
         lex_n = sqlite3.connect(LEXICAL_DB).execute("SELECT count(*) FROM entries").fetchone()[0]
-        check(results, "H2-lex", lex_n == LEXICAL_SEED_ENTRIES,
-              f"lexical entries {lex_n} (v3.2 기준 {LEXICAL_SEED_ENTRIES}; B1 재빌드 시에만 변동)",
+        recorded = state_get(conn, "lexical_entries", "")
+        base = int(recorded) if recorded else LEXICAL_FALLBACK_ENTRIES
+        ver = state_get(conn, "dict_version", "?")
+        src = f"{ver} 기록" if recorded else f"v3.2 시드·★record-rebuild 미기록"
+        check(results, "H2-lex", lex_n == base,
+              f"lexical entries {lex_n} ({src} {base}; B1 재빌드 시에만 변동)",
               warn_only=True)
 
     # H3 사전 신선도

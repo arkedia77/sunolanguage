@@ -45,6 +45,8 @@ MERGED = V3 / "merged_4values.json"
 CHUNKS = ROOT / "data" / "chunks.json"
 LYRICS_CHUNKS = ROOT / "data" / "lyrics_chunks.json"
 STATE_DB = ROOT / "sunolang.db"
+DICT = ROOT / "rag" / "suno_dictionary_v3.json"
+LEXICAL_DB = V3 / "lexical_index.sqlite"
 BACKUP_ROOT = ROOT / "data" / "backups"
 LOCK = ROOT / "data" / ".ingest.lock"
 PY = str(ROOT / ".venv" / "bin" / "python3") if (ROOT / ".venv" / "bin" / "python3").exists() else sys.executable
@@ -283,7 +285,9 @@ def print_b1(reasons: list[str]) -> None:
         for r in reasons:
             print(f"   - {r}")
         print("   정식 경로(사람 개시): ① lexical_search_cli.py build → "
-              "② dictionary_incremental_merge.py (dry-run) → ③ --apply --version X.Y → ④ pytest")
+              "② dictionary_incremental_merge.py (dry-run) → ③ --apply --version X.Y → ④ pytest → "
+              "★⑤ corpus_ingest_runner.py record-rebuild --apply")
+        print("   ★⑤를 빠뜨리면 카운터가 안 내려가 이 경보가 영구히 켜져 있다(08-15 v3.3 실사고).")
     else:
         print("\nB1 사전 재빌드: 미도달")
 
@@ -432,6 +436,78 @@ def cmd_ingest(args) -> None:
         LOCK.unlink(missing_ok=True)
 
 
+# ──────────────────────── record-rebuild ─────────────────────
+#
+# 왜 만드나(2026-08-16 실사고 — 자력 적발):
+#   `rebuild_counter`는 인제스트에서 **증가만** 한다(cmd_ingest). 어떤 재빌드 경로도 이걸
+#   되돌리지 않고, `dict_version`·`last_rebuild_at`은 STATE_SEED 이후 **한 번도 쓰이지 않는다**
+#   (`grep state_set` 실측 = 재빌드 측 writeback 0건). `print_b1`이 안내하는 정식 경로 ①~④에도
+#   **마감 단계가 없다.**
+#   ⇒ 08-15 사전 v3.3 재빌드 후에도 상태DB는 `v3.2 / 2026-06-12 / 33`에 그대로 멈춰 있었고,
+#     H3는 「B1 도달」을, H2-lex는 「v3.2 기준 17822」를 **거짓으로** 계속 띄웠다.
+#   ★카운터가 한 방향 래치라 임계를 넘은 뒤로는 영구히 켜져 있다 —
+#     **없는 경보보다 나쁘다**(경보를 무시하는 습관을 내게 훈련시킨다).
+#
+# 설계(=`inbox_scan`·`send_msg`와 같은 사상: 규율이 아니라 경로를 막는다):
+#   ⑴ 값을 **인자로 받지 않는다.** 전부 산출물에서 **실측**한다 —
+#      버전·날짜는 사전 파일에서, 카운터는 `merged − lexical` 차집합에서.
+#      사람이 「0으로 리셋」이라고 손으로 적을 수 있으면 그 손이 곧 다음 실명이다.
+#   ⑵ 카운터를 **미포함 곡수**로 정의한다(누적 가산값이 아니라). 측정값이라 래치가 원리상 불가능하다.
+#   ⑶ 기본은 dry-run. `--apply`에서만 쓴다.
+
+
+def measure_rebuild() -> dict:
+    """현행 산출물에서 재빌드 마감 상태를 실측. 값은 전부 파일·DB에서 나온다."""
+    d = json.loads(DICT.read_text())
+    merged_ids = {str(s["song_id"]) for s in json.loads(MERGED.read_text())}
+    lex = sqlite3.connect(LEXICAL_DB)
+    lex_ids = {str(r[0]) for r in lex.execute("SELECT DISTINCT song_id FROM entries")}
+    entries = lex.execute("SELECT count(*) FROM entries").fetchone()[0]
+    lex.close()
+    # ★사전이 아직 못 본 곡 = 재빌드 대기분. 「0으로 리셋」이 아니라 **세어서 나온 값**이다.
+    uncovered = merged_ids - lex_ids
+    return {
+        "dict_version": str(d["version"]) if str(d["version"]).startswith("v") else f"v{d['version']}",
+        "last_rebuild_at": str(d["created_at"])[:10],
+        "rebuild_counter": str(len(uncovered)),
+        "lexical_entries": str(entries),
+        "_uncovered": sorted(uncovered)[:10],
+        "_merged": len(merged_ids),
+        "_lex": len(lex_ids),
+    }
+
+
+def cmd_record_rebuild(args) -> None:
+    conn = db()
+    ensure_tables(conn)
+    m = measure_rebuild()
+    print("=== 재빌드 마감 실측 ===")
+    print(f"  사전 파일   {DICT.name} → version={m['dict_version']} created_at={m['last_rebuild_at']}")
+    print(f"  곡 커버리지 merged {m['_merged']}곡 / lexical {m['_lex']}트랙 "
+          f"→ ★미포함 {m['rebuild_counter']}곡")
+    if m["_uncovered"]:
+        print(f"    미포함 예시: {', '.join(m['_uncovered'])}")
+    print(f"  lexical entries {m['lexical_entries']}")
+    print("\n=== 상태DB 대비 ===")
+    changed = False
+    for k in ("dict_version", "last_rebuild_at", "rebuild_counter", "lexical_entries"):
+        cur = state_get(conn, k, "(없음)")
+        mark = "  " if cur == m[k] else "★"
+        if cur != m[k]:
+            changed = True
+        print(f"  {mark}{k:18s} {cur:12s} → {m[k]}")
+    if not changed:
+        print("\n변경 없음 — 상태DB가 이미 현행 산출물과 일치")
+        return
+    if not args.apply:
+        print("\n[dry-run] 위 ★행을 쓰려면 --apply")
+        return
+    for k in ("dict_version", "last_rebuild_at", "rebuild_counter", "lexical_entries"):
+        state_set(conn, k, m[k])
+    conn.commit()
+    print("\n✅ 기록 완료 — 이후 H3/H2-lex는 이 실측값 기준으로 판정")
+
+
 # ─────────────────────────── status ───────────────────────────
 
 def cmd_status(_args) -> None:
@@ -465,6 +541,11 @@ def main() -> None:
 
     p = sub.add_parser("status", help="카운터 + B1 판정")
     p.set_defaults(func=cmd_status)
+
+    p = sub.add_parser("record-rebuild",
+                       help="★재빌드 마감 — 산출물 실측으로 dict_version/카운터 기록 (정식 경로 ⑤)")
+    p.add_argument("--apply", action="store_true", help="없으면 dry-run")
+    p.set_defaults(func=cmd_record_rebuild)
 
     p = sub.add_parser("rollback", help="run 스냅샷 복원 + Qdrant 신규분 삭제")
     p.add_argument("--run", type=int, required=True)
