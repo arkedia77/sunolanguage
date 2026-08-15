@@ -22,7 +22,7 @@
 
 ## Class B — 임계 전파 (누적 카운터 기반)
 
-### B1. 사전 v3.x 재빌드 (`build_dictionary_v3.py --force-regress`)
+### B1. 사전 v3.x 재빌드 (`dictionary_incremental_merge.py` — ★`build_dictionary_v3.py`는 RETIRED, 절차는 아래 §사전 갱신 정식 경로)
 
 아래 **셋 중 하나**라도 충족하면 재빌드:
 
@@ -59,12 +59,16 @@
 
 ## 현재 카운터 (전파 수행 시마다 갱신)
 
+**최종 실측 2026-08-15** — ★값에 단위·층을 붙여 쓴다(곡/트랙/entries는 서로 다른 층). 괄호 안은 **측정법**(재현 가능한 것만 적는다).
+
 | 항목 | 값 |
 |---|---|
-| 파일 코퍼스 | **497곡** (Batch C 반영, 2026-06-11) |
-| lexical_index | **556트랙 / 17,822 entries / 263장르** (2026-06-12 재빌드, 백업 `lexical_index.sqlite.bak_v31_496`) |
-| Qdrant presets | 12,818 (497곡과 동기) |
-| 사전 최신 | **v3.2 (2026-06-12, 556트랙 기준)** — Batch C 반영 완료, 큐레이션 27건 보존 |
-| 사전 재빌드 카운터 | **0곡** (v3.2 기준 리셋) — 다음 트리거: Batch A 합류 등 누적 ≥30곡 |
-| DB 테이블 | 0 (admin DDL 대기, A5 보류 중) |
-| webapp 사전 | v2.0 (B2 종속 — LEO Q1 결정 후 v3.2 드롭인) |
+| 파일 코퍼스 | **530곡** (측정: `merged_4values.json` 배열 길이 = 530. `docs/coverage_map.md` 유니크 song_id 530과 일치) |
+| lexical_index | **589트랙 / 19,084 entries / 283장르** (2026-08-14 23:39 재빌드, 백업 `lexical_index.sqlite.bak_v32_556_20260814`. 측정: `entries` 테이블 distinct song_id / count(*) / distinct genre) |
+| Qdrant presets | **13,950 points** (측정: `GET {QDRANT_HOST}/collections/sunolang_presets` → `points_count`. ★호스트=`100.90.35.121:6333`. `localhost:6333`은 **다른 인스턴스**라 `sunolang_presets`가 없다 — 여기서 재면 오측) |
+| 사전 최신 | **v3.3 (2026-08-15, 589트랙 기준)** — 코퍼스 +33곡 증분 반영. 병합=합집합 의미라 **현행 전용 키 69건 보존**(v3.1 수작업 큐레이션 27건은 그 부분집합) · 큐레이션 전용 9축 무변경 · 키 소실 0 (백업 `rag/suno_dictionary_v3.json.bak_v3.2`) |
+| 사전 재빌드 카운터 | **0곡** (v3.3 기준 리셋) — 다음 트리거: 누적 ≥30곡 / thin 장르 ≥5 진입 / 마지막 재빌드 후 90일+누적 ≥10곡 |
+| DB 테이블 | 0 (admin DDL 대기, A5 보류 중) — ★2026-06-12 기재분, 08-15 **미재확인** |
+| webapp 사전 | v2.0 (B2 종속 — LEO Q1 결정 후 **v3.3** 드롭인) |
+
+> ⚠ **이 표는 「전파 수행 시마다 갱신」이라 적어 놓고 06-12~08-15 두 달간 안 고쳤다**(문서 497곡 / 실제 530곡). A4 coverage_map은 갱신돼 있었으므로 **데이터가 아니라 문서만 늙은 것**. 실피해는 아직 없으나 **오인용 위험**이다 — 이 표를 남이 읽고 인용하면 두 달 전 수치가 현재값으로 전파된다.
