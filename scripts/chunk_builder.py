@@ -60,9 +60,17 @@ def build_payload(entity: dict, source_type: str) -> dict:
         "source": source_type,
         "modifiers": json.dumps(entity.get("modifiers", []), ensure_ascii=False),
     }
+    # ★관측층(입력/출력)은 **전달만** 한다 — 여기서 만들어내지 않는다.
+    #   파서(`parse_slot_entities_v3.py`)가 `suno_reanalysis`를 도는 지점에서 찍은 값이고,
+    #   없으면 **"unstamped"(=아직 안 봄)**로 둔다. ★"output"으로 기본값을 주면 안 된다 —
+    #   그 순간 「안 찍힌 것」이 「출력층으로 확인된 것」으로 승격되고, 이건 08-15에 층이 8주간
+    #   뒤집혀 있던 사고와 정확히 같은 형태다(라벨이 근거를 앞지름).
+    payload["observation_layer"] = entity.get("observation_layer") or "unstamped"
     if entity.get("kit"):
         payload["kit"] = entity["kit"]
     if entity.get("layer"):
+        # ★`layer`=편성 역할층(lead/rhythm/bass/pad/fill). `observation_layer`(입력/출력)와
+        #   **다른 축**이다. 이름이 비슷해 섞이기 쉬우니 소비처는 둘을 구분해 읽을 것.
         payload["layer"] = entity["layer"]
     if entity.get("role"):
         payload["role"] = entity["role"]
@@ -136,6 +144,13 @@ def print_stats(chunks: list[dict]):
     print(f"\nTotal chunks: {len(chunks)}")
     by_source = Counter(c["payload"]["source"] for c in chunks)
     print(f"By source: {dict(by_source)}")
+    # ★관측층을 **항상** 낸다 — 프리셋 소비처가 「이게 Suno가 들은 결과(출력층)인지,
+    #   우리가 써넣은 지시(입력층)인지」를 모르고 쓰면 프리셋의 의미가 뒤바뀐다.
+    by_obs = Counter(c["payload"].get("observation_layer", "(필드없음)") for c in chunks)
+    print(f"By observation_layer: {dict(by_obs)}  ★출력층=Suno가 완성곡을 듣고 서술한 것")
+    if by_obs.get("unstamped"):
+        print(f"  ⚠️ unstamped {by_obs['unstamped']}건 — 파서 재실행 전 산출분. "
+              f"「출력층으로 확인됨」이 아니라 **아직 안 봄**이다.")
     by_slot = Counter(c["payload"]["slot"] for c in chunks)
     print(f"\nBy slot:")
     for slot, count in by_slot.most_common():

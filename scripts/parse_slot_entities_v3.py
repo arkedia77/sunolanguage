@@ -885,6 +885,16 @@ def main():
       sid = song.get("song_id", 0)
       genre = song.get("genre", "")
 
+      # ★관측층은 **바로 여기**서 정해진다 — 도는 대상이 `suno_reanalysis`이므로
+      #   이 루프에서 나오는 전건은 **출력층**(Suno가 완성 오디오를 듣고 뱉은 서술)이다.
+      #   `leomusic_original`(우리가 써넣은 SP·가사=입력층)은 이 파일 어디서도 읽지 않는다.
+      #   ⇒ 사실이 알려지는 유일한 지점에서 찍는다. 하류에서 손으로 붙이면 그게 다음 오독이다.
+      #   (2026-08-15 실사고: `source="lyrics"`라는 라벨이 입력층으로 읽혀 8주간 층이 뒤집혀 있었다.
+      #    `source`는 **원천 필드명**일 뿐 층이 아니다 — 그래서 층을 별도 필드로 분리한다.)
+      # ★★이름 주의: 엔티티의 기존 `layer`는 **편성 역할층**(lead/rhythm/bass/pad/fill)이라
+      #   전혀 다른 축이다. 그래서 `observation_layer`로 이름을 분리했다(같은 「층」이라 섞이면
+      #   바로 그 오독이 재발한다).
+      OBS = "output"
       for sr in song.get("suno_reanalysis", []):
           # ── SP 파싱 ──
           sp = sr.get("sp", "")
@@ -896,6 +906,7 @@ def main():
                       e["song_id"] = sid
                       e["genre"] = genre
                       e["source"] = "sp"
+                      e["observation_layer"] = OBS
                       all_sp_entries.append(e)
                       sp_slot_counts[e["slot"]] += 1
 
@@ -933,7 +944,11 @@ def main():
                   for e in entries:
                       e["song_id"] = sid
                       e["genre"] = genre
+                      # ★`source="lyrics"`는 **`sr`의 필드명**이지 「사람이 쓴 가사」가 아니다.
+                      #   여기 `sr`=suno_reanalysis ⇒ 출력층. 라벨을 못 바꾸는 대신(하류 소비처가 씀)
+                      #   층을 별도 필드로 명시한다.
                       e["source"] = "lyrics"
+                      e["observation_layer"] = OBS
                       all_bracket_entries.append(e)
                       br_slot_counts[e["slot"]] += 1
 

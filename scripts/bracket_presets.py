@@ -164,6 +164,10 @@ def retrieve_bracket_directives(
             "genre": hit.payload.get("genre", ""),
             "action": action,
             "action_match": action_ok,
+            # ★관측층을 결과에 **동반**시킨다 — 값만 떼어 가면 층이 떨어져 나가고,
+            #   그 순간 「Suno가 완성곡을 듣고 쓴 서술」이 「이렇게 쓰면 이렇게 나온다는 지시」로
+            #   등급이 올라간다(08-15 층 뒤집힘 사고의 소비처 판). 미표기는 숨기지 않는다.
+            "observation_layer": hit.payload.get("observation_layer", "unstamped"),
         })
 
     sp_instruments = extract_sp_instruments(sp_text)
@@ -193,6 +197,30 @@ def format_bracket_section(section_tag: str, directives: list[dict]) -> str:
     for d in directives:
         lines.append(f"[{d['text']}]")
     return "\n".join(lines)
+
+
+# ★프리셋을 쓰기 전에 읽어야 하는 한정자 (2026-08-17 신설).
+#   이 인덱스는 **전량 출력층**이다 — `parse_slot_entities_v3.py`가 `suno_reanalysis`만 돌고
+#   `leomusic_original`(우리가 써넣은 입력층)은 **한 번도 읽지 않는다**(08-17 grep 실측).
+#   ⇒ 여기서 나오는 브라켓은 「Suno가 완성된 오디오를 듣고 그렇게 묘사했다」는 **관측**이지,
+#     「이렇게 써넣으면 그렇게 렌더된다」는 **처방의 실증이 아니다.**
+#   실제로 입력층 브라켓 채널(`leomusic_original.lyrics`의 3,725개·고유 922·393곡)은
+#   현재 어떤 인덱스에도 안 들어가 있어, 처방 쪽 대조군 자체가 없다.
+LAYER_CAVEAT = (
+    "★관측층=출력층(Suno가 완성곡을 듣고 쓴 서술) · 입력층 브라켓은 미인덱스 "
+    "⇒ 이 프리셋은 **관측**이지 처방의 실증이 아님"
+)
+
+
+def layer_summary(directives: list[dict]) -> str:
+    """산출물에 붙일 층 요약. ★미표기를 '출력층'으로 접지 않는다."""
+    from collections import Counter
+    c = Counter(d.get("observation_layer", "unstamped") for d in directives)
+    if not c:
+        return "(디렉티브 0건)"
+    parts = " · ".join(f"{k} {v}" for k, v in c.most_common())
+    warn = "  ⚠️unstamped 포함=아직 안 봄" if c.get("unstamped") else ""
+    return f"{parts}{warn}"
 
 
 def compose_section_brackets(
@@ -245,6 +273,7 @@ if __name__ == "__main__":
 
     print(f"Bracket Retrieval: section={section}, genre_group={genre_group}")
     print(f"  SP: {sp[:60]}...")
+    print(f"  {LAYER_CAVEAT}")
     print()
 
     directives = retrieve_bracket_directives(section, sp, genre_group=genre_group)
@@ -253,6 +282,7 @@ if __name__ == "__main__":
         for d in directives:
             print(f"    [{d['text']}]  (slot={d['slot']}, score={d['score']:.4f}, "
                   f"action={d['action'] or '-'}, genre={d['genre'][:30]})")
+        print(f"  관측층: {layer_summary(directives)}")
         print()
         print("Formatted:")
         print(format_bracket_section(section, directives))
