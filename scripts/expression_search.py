@@ -172,7 +172,11 @@ def cmd_export(path):
     conn = connect()
     out = {"_provenance": "표현 레이어 v0 crosswalk export — 정본: sunolang.db expr_* "
                           "(빌드: scripts/build_expression_db.py)",
-           "registers": {r["register"]: {"audience": r["audience"], "description": r["description"]}
+           # ★`attestation`을 반드시 같이 내보낸다 — 이게 빠지면 소비 측에서 `llm_prompt`(엔진
+           #   이름이 붙은 레지스터)를 실측치로 읽는다. 한정자는 표 밖이 아니라 행 안에.
+           "registers": {r["register"]: {"audience": r["audience"],
+                                         "attestation": r["attestation"],
+                                         "description": r["description"]}
                          for r in conn.execute("SELECT * FROM expr_registers")},
            "concepts": [], "inbound_aliases": []}
     for r in conn.execute("SELECT concept_id FROM expr_concepts ORDER BY category, attested_count DESC"):

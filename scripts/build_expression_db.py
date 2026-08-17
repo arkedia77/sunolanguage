@@ -39,13 +39,38 @@ CATEGORY_MAP = {
     "harmony_vocab": "harmony",
 }
 
+# ★4번째 열 `attestation` 신설 (2026-08-17) — **한정자를 행 안에 넣는다.**
+#
+# 왜: `llm_prompt`는 설명에 **엔진 이름이 박혀 있고**(MusicGen/Stable Audio) 446/446 전건 값이
+#   차 있으며 그중 366건은 `suno_native`와 **다른 값**이다(=타 엔진용으로 손봤다는 뜻).
+#   그런데 **타 엔진에서 재본 적이 한 번도 없다.** 게다가 같은 개념 안에 `attested_count`가
+#   나란히 있어, 소비자가 그 수를 `llm_prompt`의 근거로 읽을 수 있다 —
+#   ★**「한정자가 없으면 없는 줄 알지만, 있는데 실측이 아니면 믿는다.」**
+#   실제로 나는 「타 엔진 uptake는 미검증」이라고 **메시지에는** 적었는데 **번들에는 안 적었다.**
+#   값만 떼어 가면 그 한정자는 따라가지 않는다 — 이게 내 08-14 원칙
+#   「한정자는 표 밖이 아니라 행 안에」의 3회차 위반이다(08-15 leomusic-trot 적발이 2회차).
+#
+# 값의 뜻:
+#   attested_on_suno   = Suno 코퍼스 관측에 근거. 근거 수치 = 개념의 `attested_count`.
+#                        ★단 그 관측은 **출력층**(Suno가 완성곡을 듣고 쓴 서술)이라
+#                          「이렇게 써넣으면 그렇게 렌더된다」의 증거는 아니다.
+#   authored_reference = 사람이 읽으라고 쓴 설명. 엔진 반응 대상이 아니므로 attestation 개념 없음.
+#   ★unattested       = **엔진 이름이 붙어 있으나 그 엔진에서 잰 적 없음.** 가설로만 쓸 것.
 REGISTERS = [
-    ("suno_native", "suno", "정본 — Suno가 자기 말로 쓰는 어휘 (SP 작성용)"),
-    ("music_theory_en", "human_expert", "음악이론·실무 정식 용어 (음악가/전문가)"),
-    ("plain_ko", "human_ko", "한국어 일상어 설명 (비전공자가 소리를 떠올릴 수 있게)"),
-    ("plain_en", "human_en", "영어 일상어 설명"),
-    ("llm_prompt", "external_llm", "타 음악생성 AI 프롬프트 토큰 (MusicGen/Stable Audio류)"),
-    ("tags", "machine", "기계 교환용 파셋 태그 배열(JSON)"),
+    ("suno_native", "suno", "정본 — Suno가 자기 말로 쓰는 어휘 (SP 작성용)",
+     "attested_on_suno"),
+    ("music_theory_en", "human_expert", "음악이론·실무 정식 용어 (음악가/전문가)",
+     "authored_reference"),
+    ("plain_ko", "human_ko", "한국어 일상어 설명 (비전공자가 소리를 떠올릴 수 있게)",
+     "authored_reference"),
+    ("plain_en", "human_en", "영어 일상어 설명",
+     "authored_reference"),
+    ("llm_prompt", "external_llm",
+     "타 음악생성 AI 프롬프트 토큰 (MusicGen/Stable Audio류) "
+     "★미검증 — 타 엔진에서 잰 적 없음. 가설로만 쓸 것",
+     "unattested"),
+    ("tags", "machine", "기계 교환용 파셋 태그 배열(JSON)",
+     "authored_reference"),
 ]
 
 AUTHORED_FIELDS = ["music_theory_en", "plain_ko", "plain_en", "llm_prompt", "tags"]
@@ -182,7 +207,9 @@ def cmd_build():
     CREATE TABLE IF NOT EXISTS expr_registers (
       register TEXT PRIMARY KEY,
       audience TEXT NOT NULL,
-      description TEXT
+      description TEXT,
+      -- ★한정자는 행 안에 (2026-08-17). NOT NULL = 새 레지스터를 무표기로 못 넣는다.
+      attestation TEXT NOT NULL DEFAULT 'unattested'
     );
     CREATE TABLE IF NOT EXISTS expr_concepts (
       concept_id TEXT PRIMARY KEY,
@@ -220,13 +247,24 @@ def cmd_build():
       concept_id UNINDEXED, register, text
     );
     """)
+    # ★기존 DB 마이그레이션 — `CREATE TABLE IF NOT EXISTS`는 이미 있는 테이블을 안 고친다.
+    #   (이걸 빼먹으면 스키마는 새 열을 선언했는데 실제 DB엔 없어서, 코드와 실물이 갈린다 —
+    #    「선언했으니 있겠지」가 오늘 고치고 있는 그 형태다.)
+    cols = {r[1] for r in cur.execute("PRAGMA table_info(expr_registers)")}
+    if "attestation" not in cols:
+        cur.execute("ALTER TABLE expr_registers ADD COLUMN "
+                    "attestation TEXT NOT NULL DEFAULT 'unattested'")
+        print("[migrate] expr_registers.attestation 추가")
+
     # 재적재: 파생 테이블 비우고 정본에서 재구성 (설계 §7 — DB는 파생물)
     cur.execute("DELETE FROM expr_fts")
     cur.execute("DELETE FROM expr_expressions")
     cur.execute("DELETE FROM expr_inbound_aliases")
     cur.execute("DELETE FROM expr_concepts")
     cur.execute("DELETE FROM expr_registers")
-    cur.executemany("INSERT INTO expr_registers VALUES (?,?,?)", REGISTERS)
+    cur.executemany(
+        "INSERT INTO expr_registers(register, audience, description, attestation) "
+        "VALUES (?,?,?,?)", REGISTERS)
 
     n_expr = 0
     for norm, a in sorted(atoms.items()):
