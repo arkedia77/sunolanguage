@@ -3,18 +3,18 @@
  "_manifest": {
   "snapshot_id": "cs-3.3-589-20260815",
   "interface_version": "0.2",
-  "generated_at": "2026-08-15T15:30:39+09:00",
+  "generated_at": "2026-08-17T12:32:01+09:00",
   "source_exporter": "scripts/expression_search.py --export",
   "design": "docs/corpus_connector_design.md",
   "concepts": 446,
   "inbound_aliases": 72,
-  "sha256": "d1c4e9ad48b4fcfbd3e2ad6b5ae25e1e014066e46642a05754c9be055e6e7c51",
+  "sha256": "bb3ab29a931510be77e80357ae6bb905c13d231dadfc03961aadc3f03eddfefd",
   "breaking_content": false,
   "breaking_detail": null
  },
  "crosswalk_artifact": {
   "path": "data/connector/out/crosswalk_v0.2.json",
-  "sha256": "d1c4e9ad48b4fcfbd3e2ad6b5ae25e1e014066e46642a05754c9be055e6e7c51"
+  "sha256": "bb3ab29a931510be77e80357ae6bb905c13d231dadfc03961aadc3f03eddfefd"
  },
  "activation_points": "SP 재료 검색: plain_ko→concept→suno_native attested. llm_prompt 레지스터로 타 AI 교차.",
  "derivations_applied": []

@@ -2,12 +2,12 @@
  "_manifest": {
   "snapshot_id": "cs-3.3-589-20260815",
   "interface_version": "0.2",
-  "generated_at": "2026-08-15T15:30:39+09:00",
+  "generated_at": "2026-08-17T12:32:01+09:00",
   "source_exporter": "scripts/expression_search.py --export",
   "design": "docs/corpus_connector_design.md",
   "concepts": 446,
   "inbound_aliases": 72,
-  "sha256": "d1c4e9ad48b4fcfbd3e2ad6b5ae25e1e014066e46642a05754c9be055e6e7c51",
+  "sha256": "bb3ab29a931510be77e80357ae6bb905c13d231dadfc03961aadc3f03eddfefd",
   "breaking_content": false,
   "breaking_detail": null
  },
@@ -15,26 +15,32 @@
  "registers": {
   "suno_native": {
    "audience": "suno",
+   "attestation": "attested_on_suno",
    "description": "정본 — Suno가 자기 말로 쓰는 어휘 (SP 작성용)"
   },
   "music_theory_en": {
    "audience": "human_expert",
+   "attestation": "authored_reference",
    "description": "음악이론·실무 정식 용어 (음악가/전문가)"
   },
   "plain_ko": {
    "audience": "human_ko",
+   "attestation": "authored_reference",
    "description": "한국어 일상어 설명 (비전공자가 소리를 떠올릴 수 있게)"
   },
   "plain_en": {
    "audience": "human_en",
+   "attestation": "authored_reference",
    "description": "영어 일상어 설명"
   },
   "llm_prompt": {
    "audience": "external_llm",
-   "description": "타 음악생성 AI 프롬프트 토큰 (MusicGen/Stable Audio류)"
+   "attestation": "unattested",
+   "description": "타 음악생성 AI 프롬프트 토큰 (MusicGen/Stable Audio류) ★미검증 — 타 엔진에서 잰 적 없음. 가설로만 쓸 것"
   },
   "tags": {
    "audience": "machine",
+   "attestation": "authored_reference",
    "description": "기계 교환용 파셋 태그 배열(JSON)"
   }
  },

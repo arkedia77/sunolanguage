@@ -21,7 +21,7 @@
       "status": "live",
       "payload_schema": "data/connector/schemas/out_crosswalk.schema.json",
       "artifact": "data/connector/out/crosswalk_v0.2.json",
-      "artifact_sha256": "d1c4e9ad48b4fcfbd3e2ad6b5ae25e1e014066e46642a05754c9be055e6e7c51",
+      "artifact_sha256": "bb3ab29a931510be77e80357ae6bb905c13d231dadfc03961aadc3f03eddfefd",
       "consumers": [
         "leomusic",
         "leomusic2",
@@ -79,5 +79,5 @@
     }
   ],
   "runs_log": "sunolang.db:connector_runs",
-  "manifest_generated_at": "2026-08-15T15:30:39+09:00"
+  "manifest_generated_at": "2026-08-17T12:32:01+09:00"
 }
