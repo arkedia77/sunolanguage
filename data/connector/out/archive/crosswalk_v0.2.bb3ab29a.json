@@ -2,12 +2,12 @@
  "_manifest": {
   "snapshot_id": "cs-3.3-589-20260815",
   "interface_version": "0.2",
-  "generated_at": "2026-08-17T15:53:47+09:00",
+  "generated_at": "2026-08-17T12:32:01+09:00",
   "source_exporter": "scripts/expression_search.py --export",
   "design": "docs/corpus_connector_design.md",
   "concepts": 446,
   "inbound_aliases": 72,
-  "sha256": "b172510e1488c5bcf8c70a41e043535307fcd5d41add9fefb928727b8ed5e872",
+  "sha256": "bb3ab29a931510be77e80357ae6bb905c13d231dadfc03961aadc3f03eddfefd",
   "breaking_content": false,
   "breaking_detail": null
  },
@@ -50,7 +50,6 @@
    "category": "drums",
    "suno_term": "drums",
    "attested_count": 935,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "drums",
@@ -67,7 +66,6 @@
    "category": "drums",
    "suno_term": "kick drum",
    "attested_count": 473,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "kick drum",
@@ -84,7 +82,6 @@
    "category": "drums",
    "suno_term": "snare drum",
    "attested_count": 424,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "snare drum",
@@ -101,7 +98,6 @@
    "category": "drums",
    "suno_term": "percussion",
    "attested_count": 193,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "percussion",
@@ -118,7 +114,6 @@
    "category": "drums",
    "suno_term": "hi-hat",
    "attested_count": 180,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "hi-hat",
@@ -135,7 +130,6 @@
    "category": "drums",
    "suno_term": "drum kit",
    "attested_count": 176,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "drum kit",
@@ -152,7 +146,6 @@
    "category": "drums",
    "suno_term": "shaker",
    "attested_count": 124,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "shaker",
@@ -169,7 +162,6 @@
    "category": "drums",
    "suno_term": "beat",
    "attested_count": 102,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "beat",
@@ -186,7 +178,6 @@
    "category": "drums",
    "suno_term": "crash cymbal",
    "attested_count": 60,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "crash cymbal",
@@ -203,7 +194,6 @@
    "category": "drums",
    "suno_term": "rimshot",
    "attested_count": 50,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rimshot",
@@ -220,7 +210,6 @@
    "category": "drums",
    "suno_term": "woodblock",
    "attested_count": 33,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "woodblock",
@@ -237,7 +226,6 @@
    "category": "drums",
    "suno_term": "cymbal",
    "attested_count": 32,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "cymbal",
@@ -254,7 +242,6 @@
    "category": "drums",
    "suno_term": "clap",
    "attested_count": 10,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "clap",
@@ -271,7 +258,6 @@
    "category": "drums",
    "suno_term": "cowbell",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "cowbell",
@@ -288,7 +274,6 @@
    "category": "drums",
    "suno_term": "finger snap",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "finger snap",
@@ -305,7 +290,6 @@
    "category": "drums",
    "suno_term": "ride cymbal",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "ride cymbal",
@@ -322,7 +306,6 @@
    "category": "drums",
    "suno_term": "tambourine",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "tambourine",
@@ -339,7 +322,6 @@
    "category": "drums",
    "suno_term": "cross-stick",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "cross-stick",
@@ -356,7 +338,6 @@
    "category": "drums",
    "suno_term": "tom",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "tom",
@@ -373,7 +354,6 @@
    "category": "dynamics",
    "suno_term": "arrangement",
    "attested_count": 416,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "arrangement",
@@ -390,7 +370,6 @@
    "category": "dynamics",
    "suno_term": "sparse",
    "attested_count": 86,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sparse",
@@ -407,7 +386,6 @@
    "category": "dynamics",
    "suno_term": "focusing on",
    "attested_count": 83,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "focusing on",
@@ -424,7 +402,6 @@
    "category": "dynamics",
    "suno_term": "interplay",
    "attested_count": 79,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "interplay",
@@ -441,7 +418,6 @@
    "category": "dynamics",
    "suno_term": "minimalist",
    "attested_count": 47,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "minimalist",
@@ -458,7 +434,6 @@
    "category": "dynamics",
    "suno_term": "transitions from",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "transitions from",
@@ -475,7 +450,6 @@
    "category": "dynamics",
    "suno_term": "transition to",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "transition to",
@@ -492,7 +466,6 @@
    "category": "dynamics",
    "suno_term": "transitions into",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "transitions into",
@@ -509,7 +482,6 @@
    "category": "dynamics",
    "suno_term": "dense",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "dense",
@@ -526,7 +498,6 @@
    "category": "dynamics",
    "suno_term": "full band arrangement",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band arrangement",
@@ -543,7 +514,6 @@
    "category": "dynamics",
    "suno_term": "full band, driving rhythm",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band, driving rhythm",
@@ -560,7 +530,6 @@
    "category": "dynamics",
    "suno_term": "full band enters, driving drum beat",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band enters, driving drum beat",
@@ -577,7 +546,6 @@
    "category": "dynamics",
    "suno_term": "transition from",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "transition from",
@@ -594,7 +562,6 @@
    "category": "dynamics",
    "suno_term": "crescendo",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "crescendo",
@@ -611,7 +578,6 @@
    "category": "dynamics",
    "suno_term": "full arrangement, layered vocals",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full arrangement, layered vocals",
@@ -628,7 +594,6 @@
    "category": "dynamics",
    "suno_term": "full arrangement, synth pads swell",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full arrangement, synth pads swell",
@@ -645,7 +610,6 @@
    "category": "dynamics",
    "suno_term": "full band arrangement, driving rhythm",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band arrangement, driving rhythm",
@@ -662,7 +626,6 @@
    "category": "dynamics",
    "suno_term": "full band, brass section accents",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band, brass section accents",
@@ -679,7 +642,6 @@
    "category": "dynamics",
    "suno_term": "full band, driving drums",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band, driving drums",
@@ -696,7 +658,6 @@
    "category": "dynamics",
    "suno_term": "full band, driving drums, soaring strings",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band, driving drums, soaring strings",
@@ -713,7 +674,6 @@
    "category": "dynamics",
    "suno_term": "full band energy, open power chords",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band energy, open power chords",
@@ -730,7 +690,6 @@
    "category": "dynamics",
    "suno_term": "full band enters",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band enters",
@@ -747,7 +706,6 @@
    "category": "dynamics",
    "suno_term": "full band enters, driving drums",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band enters, driving drums",
@@ -764,7 +722,6 @@
    "category": "dynamics",
    "suno_term": "full band enters, driving rhythm",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band enters, driving rhythm",
@@ -781,7 +738,6 @@
    "category": "dynamics",
    "suno_term": "full band enters, drums and bass",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band enters, drums and bass",
@@ -798,7 +754,6 @@
    "category": "dynamics",
    "suno_term": "full band enters, strings swell, belted vocals",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band enters, strings swell, belted vocals",
@@ -815,7 +770,6 @@
    "category": "dynamics",
    "suno_term": "full band, high energy",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band, high energy",
@@ -832,7 +786,6 @@
    "category": "dynamics",
    "suno_term": "full band, layered vocal harmonies",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band, layered vocal harmonies",
@@ -849,7 +802,6 @@
    "category": "dynamics",
    "suno_term": "full band, open power chords",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "full band, open power chords",
@@ -866,7 +818,6 @@
    "category": "dynamics",
    "suno_term": "fuller arrangement, light percussion",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fuller arrangement, light percussion",
@@ -883,7 +834,6 @@
    "category": "dynamics",
    "suno_term": "fuller arrangement, electric piano pads",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fuller arrangement, electric piano pads",
@@ -900,7 +850,6 @@
    "category": "dynamics",
    "suno_term": "fuller arrangement, synth pads enter",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fuller arrangement, synth pads enter",
@@ -917,7 +866,6 @@
    "category": "dynamics",
    "suno_term": "half-time feel",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "half-time feel",
@@ -934,7 +882,6 @@
    "category": "dynamics",
    "suno_term": "half-time feel, rhythmic breathing",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "half-time feel, rhythmic breathing",
@@ -951,7 +898,6 @@
    "category": "dynamics",
    "suno_term": "reese bass modulates, half-time drum feel",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "reese bass modulates, half-time drum feel",
@@ -968,7 +914,6 @@
    "category": "dynamics",
    "suno_term": "unison male and female vocals, full band energy",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "unison male and female vocals, full band energy",
@@ -985,7 +930,6 @@
    "category": "genre",
    "suno_term": "jazz",
    "attested_count": 466,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "jazz",
@@ -1009,7 +953,6 @@
    "category": "genre",
    "suno_term": "blues",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "blues",
@@ -1033,7 +976,6 @@
    "category": "harmony",
    "suno_term": "chord progression",
    "attested_count": 31,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "chord progression",
@@ -1050,7 +992,6 @@
    "category": "harmony",
    "suno_term": "cadence",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "cadence",
@@ -1067,7 +1008,6 @@
    "category": "harmony",
    "suno_term": "harmonic progression",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic progression",
@@ -1084,7 +1024,6 @@
    "category": "harmony",
    "suno_term": "minor seventh",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "minor seventh",
@@ -1101,7 +1040,6 @@
    "category": "harmony",
    "suno_term": "major seventh",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "major seventh",
@@ -1118,7 +1056,6 @@
    "category": "harmony",
    "suno_term": "modulation",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "modulation",
@@ -1135,7 +1072,6 @@
    "category": "harmony",
    "suno_term": "diatonic",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "diatonic",
@@ -1152,7 +1088,6 @@
    "category": "harmony",
    "suno_term": "harmonic movement",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic movement",
@@ -1169,7 +1104,6 @@
    "category": "harmony",
    "suno_term": "key change",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "key change",
@@ -1186,7 +1120,6 @@
    "category": "instrument",
    "suno_term": "electric bass",
    "attested_count": 1065,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "electric bass",
@@ -1203,7 +1136,6 @@
    "category": "instrument",
    "suno_term": "electric guitar",
    "attested_count": 824,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "electric guitar",
@@ -1220,7 +1152,6 @@
    "category": "instrument",
    "suno_term": "clean electric guitar",
    "attested_count": 501,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "clean electric guitar",
@@ -1237,7 +1168,6 @@
    "category": "instrument",
    "suno_term": "acoustic guitar",
    "attested_count": 486,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "acoustic guitar",
@@ -1254,7 +1184,6 @@
    "category": "instrument",
    "suno_term": "synthesizer",
    "attested_count": 375,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "synthesizer",
@@ -1271,7 +1200,6 @@
    "category": "instrument",
    "suno_term": "guitar",
    "attested_count": 352,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "guitar",
@@ -1288,7 +1216,6 @@
    "category": "instrument",
    "suno_term": "piano",
    "attested_count": 240,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "piano",
@@ -1305,7 +1232,6 @@
    "category": "instrument",
    "suno_term": "bass guitar",
    "attested_count": 206,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "bass guitar",
@@ -1322,7 +1248,6 @@
    "category": "instrument",
    "suno_term": "synth pad",
    "attested_count": 164,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "synth pad",
@@ -1339,7 +1264,6 @@
    "category": "instrument",
    "suno_term": "strings",
    "attested_count": 140,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "strings",
@@ -1356,7 +1280,6 @@
    "category": "instrument",
    "suno_term": "fingerpicked acoustic guitar",
    "attested_count": 133,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fingerpicked acoustic guitar",
@@ -1373,7 +1296,6 @@
    "category": "instrument",
    "suno_term": "synth bass",
    "attested_count": 129,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "synth bass",
@@ -1390,7 +1312,6 @@
    "category": "instrument",
    "suno_term": "slap bass",
    "attested_count": 126,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "slap bass",
@@ -1407,7 +1328,6 @@
    "category": "instrument",
    "suno_term": "pad",
    "attested_count": 113,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "pad",
@@ -1424,7 +1344,6 @@
    "category": "instrument",
    "suno_term": "grand piano",
    "attested_count": 107,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "grand piano",
@@ -1441,7 +1360,6 @@
    "category": "instrument",
    "suno_term": "violin",
    "attested_count": 101,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "violin",
@@ -1458,7 +1376,6 @@
    "category": "instrument",
    "suno_term": "distorted electric guitar",
    "attested_count": 95,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "distorted electric guitar",
@@ -1475,7 +1392,6 @@
    "category": "instrument",
    "suno_term": "brass section",
    "attested_count": 90,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "brass section",
@@ -1492,7 +1408,6 @@
    "category": "instrument",
    "suno_term": "cello",
    "attested_count": 73,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "cello",
@@ -1509,7 +1424,6 @@
    "category": "instrument",
    "suno_term": "sub-bass",
    "attested_count": 60,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sub-bass",
@@ -1526,7 +1440,6 @@
    "category": "instrument",
    "suno_term": "upright bass",
    "attested_count": 57,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "upright bass",
@@ -1543,7 +1456,6 @@
    "category": "instrument",
    "suno_term": "fretless bass",
    "attested_count": 54,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fretless bass",
@@ -1560,7 +1472,6 @@
    "category": "instrument",
    "suno_term": "nylon-string acoustic guitar",
    "attested_count": 52,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "nylon-string acoustic guitar",
@@ -1577,7 +1488,6 @@
    "category": "instrument",
    "suno_term": "acoustic piano",
    "attested_count": 49,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "acoustic piano",
@@ -1594,7 +1504,6 @@
    "category": "instrument",
    "suno_term": "electric piano",
    "attested_count": 49,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "electric piano",
@@ -1611,7 +1520,6 @@
    "category": "instrument",
    "suno_term": "flute",
    "attested_count": 45,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "flute",
@@ -1628,7 +1536,6 @@
    "category": "instrument",
    "suno_term": "string pad",
    "attested_count": 37,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "string pad",
@@ -1645,7 +1552,6 @@
    "category": "instrument",
    "suno_term": "brass",
    "attested_count": 35,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "brass",
@@ -1662,7 +1568,6 @@
    "category": "instrument",
    "suno_term": "fingerstyle acoustic guitar",
    "attested_count": 27,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fingerstyle acoustic guitar",
@@ -1679,7 +1584,6 @@
    "category": "instrument",
    "suno_term": "rhodes",
    "attested_count": 25,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rhodes",
@@ -1696,7 +1600,6 @@
    "category": "instrument",
    "suno_term": "saxophone",
    "attested_count": 24,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "saxophone",
@@ -1713,7 +1616,6 @@
    "category": "instrument",
    "suno_term": "arpeggiated electric guitar",
    "attested_count": 22,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "arpeggiated electric guitar",
@@ -1730,7 +1632,6 @@
    "category": "instrument",
    "suno_term": "clarinet",
    "attested_count": 21,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "clarinet",
@@ -1747,7 +1648,6 @@
    "category": "instrument",
    "suno_term": "glockenspiel",
    "attested_count": 20,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "glockenspiel",
@@ -1764,7 +1664,6 @@
    "category": "instrument",
    "suno_term": "accordion",
    "attested_count": 18,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "accordion",
@@ -1781,7 +1680,6 @@
    "category": "instrument",
    "suno_term": "harmonica",
    "attested_count": 17,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonica",
@@ -1798,7 +1696,6 @@
    "category": "instrument",
    "suno_term": "palm-muted electric guitar",
    "attested_count": 17,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "palm-muted electric guitar",
@@ -1815,7 +1712,6 @@
    "category": "instrument",
    "suno_term": "orchestral strings",
    "attested_count": 16,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "orchestral strings",
@@ -1832,7 +1728,6 @@
    "category": "instrument",
    "suno_term": "808 bass",
    "attested_count": 14,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "808 bass",
@@ -1849,7 +1744,6 @@
    "category": "instrument",
    "suno_term": "trumpet",
    "attested_count": 14,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "trumpet",
@@ -1866,7 +1760,6 @@
    "category": "instrument",
    "suno_term": "vibraphone",
    "attested_count": 14,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "vibraphone",
@@ -1883,7 +1776,6 @@
    "category": "instrument",
    "suno_term": "harp",
    "attested_count": 12,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harp",
@@ -1900,7 +1792,6 @@
    "category": "instrument",
    "suno_term": "steel-string acoustic guitar",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "steel-string acoustic guitar",
@@ -1917,7 +1808,6 @@
    "category": "instrument",
    "suno_term": "overdriven electric guitar",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "overdriven electric guitar",
@@ -1934,7 +1824,6 @@
    "category": "instrument",
    "suno_term": "fiddle",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fiddle",
@@ -1951,7 +1840,6 @@
    "category": "instrument",
    "suno_term": "log drum",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "log drum",
@@ -1968,7 +1856,6 @@
    "category": "instrument",
    "suno_term": "mandolin",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "mandolin",
@@ -1985,7 +1872,6 @@
    "category": "instrument",
    "suno_term": "muted trumpet",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "muted trumpet",
@@ -2002,7 +1888,6 @@
    "category": "instrument",
    "suno_term": "banjo",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "banjo",
@@ -2019,7 +1904,6 @@
    "category": "instrument",
    "suno_term": "whistle",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "whistle",
@@ -2036,7 +1920,6 @@
    "category": "instrument",
    "suno_term": "bodhrán",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "bodhrán",
@@ -2053,7 +1936,6 @@
    "category": "instrument",
    "suno_term": "keys",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "keys",
@@ -2070,7 +1952,6 @@
    "category": "instrument",
    "suno_term": "strummed acoustic guitar",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "strummed acoustic guitar",
@@ -2087,7 +1968,6 @@
    "category": "instrument",
    "suno_term": "guiro",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "guiro",
@@ -2104,7 +1984,6 @@
    "category": "instrument",
    "suno_term": "reese bass",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "reese bass",
@@ -2121,7 +2000,6 @@
    "category": "mood",
    "suno_term": "intimate",
    "attested_count": 609,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "intimate",
@@ -2138,7 +2016,6 @@
    "category": "mood",
    "suno_term": "warm",
    "attested_count": 531,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "warm",
@@ -2155,7 +2032,6 @@
    "category": "mood",
    "suno_term": "emotional",
    "attested_count": 361,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "emotional",
@@ -2172,7 +2048,6 @@
    "category": "mood",
    "suno_term": "bright",
    "attested_count": 338,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "bright",
@@ -2189,7 +2064,6 @@
    "category": "mood",
    "suno_term": "groove",
    "attested_count": 321,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "groove",
@@ -2213,7 +2087,6 @@
    "category": "mood",
    "suno_term": "punchy",
    "attested_count": 280,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "punchy",
@@ -2230,7 +2103,6 @@
    "category": "mood",
    "suno_term": "grand",
    "attested_count": 242,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "grand",
@@ -2254,7 +2126,6 @@
    "category": "mood",
    "suno_term": "smooth",
    "attested_count": 157,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "smooth",
@@ -2271,7 +2142,6 @@
    "category": "mood",
    "suno_term": "atmospheric",
    "attested_count": 143,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "atmospheric",
@@ -2288,7 +2158,6 @@
    "category": "mood",
    "suno_term": "gentle",
    "attested_count": 135,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "gentle",
@@ -2312,7 +2181,6 @@
    "category": "mood",
    "suno_term": "warmth",
    "attested_count": 134,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "warmth",
@@ -2336,7 +2204,6 @@
    "category": "mood",
    "suno_term": "lush",
    "attested_count": 100,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "lush",
@@ -2353,7 +2220,6 @@
    "category": "mood",
    "suno_term": "tension",
    "attested_count": 84,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "tension",
@@ -2383,7 +2249,6 @@
    "category": "mood",
    "suno_term": "energetic",
    "attested_count": 81,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "energetic",
@@ -2400,7 +2265,6 @@
    "category": "mood",
    "suno_term": "cinematic",
    "attested_count": 80,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "cinematic",
@@ -2417,7 +2281,6 @@
    "category": "mood",
    "suno_term": "aggressive",
    "attested_count": 71,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "aggressive",
@@ -2434,7 +2297,6 @@
    "category": "mood",
    "suno_term": "dark",
    "attested_count": 55,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "dark",
@@ -2476,7 +2338,6 @@
    "category": "mood",
    "suno_term": "gritty",
    "attested_count": 54,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "gritty",
@@ -2493,7 +2354,6 @@
    "category": "mood",
    "suno_term": "nostalgic",
    "attested_count": 48,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "nostalgic",
@@ -2523,7 +2383,6 @@
    "category": "mood",
    "suno_term": "soul",
    "attested_count": 48,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "soul",
@@ -2553,7 +2412,6 @@
    "category": "mood",
    "suno_term": "playful",
    "attested_count": 42,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "playful",
@@ -2570,7 +2428,6 @@
    "category": "mood",
    "suno_term": "tender",
    "attested_count": 41,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "tender",
@@ -2594,7 +2451,6 @@
    "category": "mood",
    "suno_term": "ethereal",
    "attested_count": 35,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "ethereal",
@@ -2611,7 +2467,6 @@
    "category": "mood",
    "suno_term": "jazz-influenced",
    "attested_count": 35,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "jazz-influenced",
@@ -2628,7 +2483,6 @@
    "category": "mood",
    "suno_term": "dramatic",
    "attested_count": 34,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "dramatic",
@@ -2645,7 +2499,6 @@
    "category": "mood",
    "suno_term": "dreamy",
    "attested_count": 33,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "dreamy",
@@ -2669,7 +2522,6 @@
    "category": "mood",
    "suno_term": "delicate",
    "attested_count": 24,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "delicate",
@@ -2686,7 +2538,6 @@
    "category": "mood",
    "suno_term": "love",
    "attested_count": 24,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "love",
@@ -2710,7 +2561,6 @@
    "category": "mood",
    "suno_term": "meditative",
    "attested_count": 23,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "meditative",
@@ -2734,7 +2584,6 @@
    "category": "mood",
    "suno_term": "upbeat",
    "attested_count": 23,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "upbeat",
@@ -2751,7 +2600,6 @@
    "category": "mood",
    "suno_term": "powerful",
    "attested_count": 22,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "powerful",
@@ -2768,7 +2616,6 @@
    "category": "mood",
    "suno_term": "soulful",
    "attested_count": 22,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "soulful",
@@ -2785,7 +2632,6 @@
    "category": "mood",
    "suno_term": "melancholic",
    "attested_count": 20,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melancholic",
@@ -2833,7 +2679,6 @@
    "category": "mood",
    "suno_term": "memory",
    "attested_count": 18,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "memory",
@@ -2857,7 +2702,6 @@
    "category": "mood",
    "suno_term": "high-energy",
    "attested_count": 17,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "high-energy",
@@ -2874,7 +2718,6 @@
    "category": "mood",
    "suno_term": "pure",
    "attested_count": 14,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "pure",
@@ -2898,7 +2741,6 @@
    "category": "mood",
    "suno_term": "serene",
    "attested_count": 14,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "serene",
@@ -2928,7 +2770,6 @@
    "category": "mood",
    "suno_term": "triumphant",
    "attested_count": 12,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "triumphant",
@@ -2958,7 +2799,6 @@
    "category": "mood",
    "suno_term": "cold",
    "attested_count": 11,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "cold",
@@ -2982,7 +2822,6 @@
    "category": "mood",
    "suno_term": "future",
    "attested_count": 11,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "future",
@@ -3006,7 +2845,6 @@
    "category": "mood",
    "suno_term": "inner",
    "attested_count": 11,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "inner",
@@ -3030,7 +2868,6 @@
    "category": "mood",
    "suno_term": "longing",
    "attested_count": 10,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "longing",
@@ -3054,7 +2891,6 @@
    "category": "mood",
    "suno_term": "joyful",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "joyful",
@@ -3084,7 +2920,6 @@
    "category": "mood",
    "suno_term": "mellow",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "mellow",
@@ -3101,7 +2936,6 @@
    "category": "mood",
    "suno_term": "stillness",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "stillness",
@@ -3118,7 +2952,6 @@
    "category": "mood",
    "suno_term": "hypnotic",
    "attested_count": 7,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "hypnotic",
@@ -3142,7 +2975,6 @@
    "category": "mood",
    "suno_term": "euphoric",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "euphoric",
@@ -3159,7 +2991,6 @@
    "category": "mood",
    "suno_term": "peaceful",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "peaceful",
@@ -3183,7 +3014,6 @@
    "category": "mood",
    "suno_term": "hazy",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "hazy",
@@ -3213,7 +3043,6 @@
    "category": "mood",
    "suno_term": "hopeful",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "hopeful",
@@ -3237,7 +3066,6 @@
    "category": "mood",
    "suno_term": "journey",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "journey",
@@ -3261,7 +3089,6 @@
    "category": "mood",
    "suno_term": "solitary",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "solitary",
@@ -3285,7 +3112,6 @@
    "category": "mood",
    "suno_term": "tears",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "tears",
@@ -3309,7 +3135,6 @@
    "category": "mood",
    "suno_term": "aching",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "aching",
@@ -3339,7 +3164,6 @@
    "category": "mood",
    "suno_term": "smoky",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "smoky",
@@ -3369,7 +3193,6 @@
    "category": "mood",
    "suno_term": "somber",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "somber",
@@ -3386,7 +3209,6 @@
    "category": "mood",
    "suno_term": "vast",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "vast",
@@ -3410,7 +3232,6 @@
    "category": "mood",
    "suno_term": "brooding",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "brooding",
@@ -3427,7 +3248,6 @@
    "category": "mood",
    "suno_term": "lonely",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "lonely",
@@ -3444,7 +3264,6 @@
    "category": "mood",
    "suno_term": "moody",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "moody",
@@ -3461,7 +3280,6 @@
    "category": "mood",
    "suno_term": "sacred",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "alias_seed",
    "registers": {
     "suno_native": "sacred",
@@ -3485,7 +3303,6 @@
    "category": "mood",
    "suno_term": "haunting",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "haunting",
@@ -3502,7 +3319,6 @@
    "category": "mood",
    "suno_term": "sultry",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sultry",
@@ -3519,7 +3335,6 @@
    "category": "production",
    "suno_term": "reverb",
    "attested_count": 166,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "reverb",
@@ -3536,7 +3351,6 @@
    "category": "production",
    "suno_term": "light chorus",
    "attested_count": 93,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "light chorus",
@@ -3553,7 +3367,6 @@
    "category": "production",
    "suno_term": "with chorus",
    "attested_count": 62,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "with chorus",
@@ -3570,7 +3383,6 @@
    "category": "production",
    "suno_term": "plate reverb",
    "attested_count": 57,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "plate reverb",
@@ -3587,7 +3399,6 @@
    "category": "production",
    "suno_term": "delay",
    "attested_count": 56,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "delay",
@@ -3604,7 +3415,6 @@
    "category": "production",
    "suno_term": "compression",
    "attested_count": 41,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "compression",
@@ -3621,7 +3431,6 @@
    "category": "production",
    "suno_term": "overdriven",
    "attested_count": 34,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "overdriven",
@@ -3638,7 +3447,6 @@
    "category": "production",
    "suno_term": "close-mic",
    "attested_count": 33,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "close-mic",
@@ -3655,7 +3463,6 @@
    "category": "production",
    "suno_term": "room reverb",
    "attested_count": 32,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "room reverb",
@@ -3672,7 +3479,6 @@
    "category": "production",
    "suno_term": "processed",
    "attested_count": 25,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "processed",
@@ -3689,7 +3495,6 @@
    "category": "production",
    "suno_term": "chorus effect",
    "attested_count": 24,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "chorus effect",
@@ -3706,7 +3511,6 @@
    "category": "production",
    "suno_term": "hall reverb",
    "attested_count": 24,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "hall reverb",
@@ -3723,7 +3527,6 @@
    "category": "production",
    "suno_term": "vinyl crackle",
    "attested_count": 23,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "vinyl crackle",
@@ -3740,7 +3543,6 @@
    "category": "production",
    "suno_term": "overdrive",
    "attested_count": 16,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "overdrive",
@@ -3757,7 +3559,6 @@
    "category": "production",
    "suno_term": "high-fidelity",
    "attested_count": 15,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "high-fidelity",
@@ -3774,7 +3575,6 @@
    "category": "production",
    "suno_term": "proximity",
    "attested_count": 13,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "proximity",
@@ -3791,7 +3591,6 @@
    "category": "production",
    "suno_term": "pitch correction",
    "attested_count": 11,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "pitch correction",
@@ -3808,7 +3607,6 @@
    "category": "production",
    "suno_term": "subtle chorus",
    "attested_count": 11,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "subtle chorus",
@@ -3825,7 +3623,6 @@
    "category": "production",
    "suno_term": "muffled",
    "attested_count": 10,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "muffled",
@@ -3842,7 +3639,6 @@
    "category": "production",
    "suno_term": "long reverb",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "long reverb",
@@ -3859,7 +3655,6 @@
    "category": "production",
    "suno_term": "wah",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "wah",
@@ -3876,7 +3671,6 @@
    "category": "production",
    "suno_term": "stereo image",
    "attested_count": 7,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "stereo image",
@@ -3893,7 +3687,6 @@
    "category": "production",
    "suno_term": "and chorus",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "and chorus",
@@ -3910,7 +3703,6 @@
    "category": "production",
    "suno_term": "distortion",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "distortion",
@@ -3927,7 +3719,6 @@
    "category": "production",
    "suno_term": "short reverb",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "short reverb",
@@ -3944,7 +3735,6 @@
    "category": "production",
    "suno_term": "sidechain",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sidechain",
@@ -3961,7 +3751,6 @@
    "category": "production",
    "suno_term": "eq",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "eq",
@@ -3978,7 +3767,6 @@
    "category": "production",
    "suno_term": "feedback swell",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "feedback swell",
@@ -3995,7 +3783,6 @@
    "category": "production",
    "suno_term": "foley",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "foley",
@@ -4012,7 +3799,6 @@
    "category": "production",
    "suno_term": "in the mix",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "in the mix",
@@ -4029,7 +3815,6 @@
    "category": "production",
    "suno_term": "mechanical",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "mechanical",
@@ -4046,7 +3831,6 @@
    "category": "production",
    "suno_term": "processing",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "processing",
@@ -4063,7 +3847,6 @@
    "category": "production",
    "suno_term": "sound effect",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sound effect",
@@ -4080,7 +3863,6 @@
    "category": "production",
    "suno_term": "centered in the mix",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "centered in the mix",
@@ -4097,7 +3879,6 @@
    "category": "production",
    "suno_term": "forward in the mix",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "forward in the mix",
@@ -4114,7 +3895,6 @@
    "category": "production",
    "suno_term": "record scratch",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "record scratch",
@@ -4131,7 +3911,6 @@
    "category": "production",
    "suno_term": "sits forward",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sits forward",
@@ -4148,7 +3927,6 @@
    "category": "production",
    "suno_term": "sweep",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sweep",
@@ -4165,7 +3943,6 @@
    "category": "production",
    "suno_term": "white noise",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "white noise",
@@ -4182,7 +3959,6 @@
    "category": "production",
    "suno_term": "clock-ticking",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "clock-ticking",
@@ -4199,7 +3975,6 @@
    "category": "production",
    "suno_term": "hum",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "hum",
@@ -4216,7 +3991,6 @@
    "category": "production",
    "suno_term": "master bus",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "master bus",
@@ -4233,7 +4007,6 @@
    "category": "production",
    "suno_term": "polished production",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "polished production",
@@ -4250,7 +4023,6 @@
    "category": "production",
    "suno_term": "riser",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "riser",
@@ -4267,7 +4039,6 @@
    "category": "production",
    "suno_term": "spring reverb",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "spring reverb",
@@ -4284,7 +4055,6 @@
    "category": "production",
    "suno_term": "tape hiss",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "tape hiss",
@@ -4301,7 +4071,6 @@
    "category": "production",
    "suno_term": "tremolo effect",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "tremolo effect",
@@ -4318,7 +4087,6 @@
    "category": "production",
    "suno_term": "water droplet",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "water droplet",
@@ -4335,7 +4103,6 @@
    "category": "production",
    "suno_term": "water droplets",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "water droplets",
@@ -4352,7 +4119,6 @@
    "category": "production",
    "suno_term": "autotune",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "autotune",
@@ -4369,7 +4135,6 @@
    "category": "production",
    "suno_term": "clean production",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "clean production",
@@ -4386,7 +4151,6 @@
    "category": "production",
    "suno_term": "dripping",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "dripping",
@@ -4403,7 +4167,6 @@
    "category": "production",
    "suno_term": "filter sweep",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "filter sweep",
@@ -4420,7 +4183,6 @@
    "category": "production",
    "suno_term": "fuzz",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fuzz",
@@ -4437,7 +4199,6 @@
    "category": "production",
    "suno_term": "high-pass filter",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "high-pass filter",
@@ -4454,7 +4215,6 @@
    "category": "production",
    "suno_term": "low-pass filter",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "low-pass filter",
@@ -4471,7 +4231,6 @@
    "category": "production",
    "suno_term": "mono",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "mono",
@@ -4488,7 +4247,6 @@
    "category": "production",
    "suno_term": "panned",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "panned",
@@ -4505,7 +4263,6 @@
    "category": "production",
    "suno_term": "shutter",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "shutter",
@@ -4522,7 +4279,6 @@
    "category": "production",
    "suno_term": "slapback delay",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "slapback delay",
@@ -4539,7 +4295,6 @@
    "category": "production",
    "suno_term": "stereo imaging",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "stereo imaging",
@@ -4556,7 +4311,6 @@
    "category": "technique",
    "suno_term": "enters",
    "attested_count": 648,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "enters",
@@ -4573,7 +4327,6 @@
    "category": "technique",
    "suno_term": "enter",
    "attested_count": 153,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "enter",
@@ -4590,7 +4343,6 @@
    "category": "technique",
    "suno_term": "drop",
    "attested_count": 79,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "drop",
@@ -4607,7 +4359,6 @@
    "category": "technique",
    "suno_term": "scratches",
    "attested_count": 67,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "scratches",
@@ -4624,7 +4375,6 @@
    "category": "technique",
    "suno_term": "continues",
    "attested_count": 63,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "continues",
@@ -4641,7 +4391,6 @@
    "category": "technique",
    "suno_term": "swell",
    "attested_count": 61,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "swell",
@@ -4658,7 +4407,6 @@
    "category": "technique",
    "suno_term": "fades",
    "attested_count": 57,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fades",
@@ -4675,7 +4423,6 @@
    "category": "technique",
    "suno_term": "the kick drum pattern",
    "attested_count": 49,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick drum pattern",
@@ -4692,7 +4439,6 @@
    "category": "technique",
    "suno_term": "counterpoint",
    "attested_count": 40,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "counterpoint",
@@ -4709,7 +4455,6 @@
    "category": "technique",
    "suno_term": "slides",
    "attested_count": 40,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "slides",
@@ -4726,7 +4471,6 @@
    "category": "technique",
    "suno_term": "fade",
    "attested_count": 39,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fade",
@@ -4743,7 +4487,6 @@
    "category": "technique",
    "suno_term": "strumming",
    "attested_count": 30,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "strumming",
@@ -4760,7 +4503,6 @@
    "category": "technique",
    "suno_term": "continue",
    "attested_count": 29,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "continue",
@@ -4777,7 +4519,6 @@
    "category": "technique",
    "suno_term": "walking",
    "attested_count": 28,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "walking",
@@ -4794,7 +4535,6 @@
    "category": "technique",
    "suno_term": "syncopated sixteenth-note patterns",
    "attested_count": 23,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "syncopated sixteenth-note patterns",
@@ -4811,7 +4551,6 @@
    "category": "technique",
    "suno_term": "swells",
    "attested_count": 21,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "swells",
@@ -4828,7 +4567,6 @@
    "category": "technique",
    "suno_term": "on a grand piano playing sustained chords and melodic fills",
    "attested_count": 20,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "on a grand piano playing sustained chords and melodic fills",
@@ -4845,7 +4583,6 @@
    "category": "technique",
    "suno_term": "arpeggios",
    "attested_count": 19,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "arpeggios",
@@ -4862,7 +4599,6 @@
    "category": "technique",
    "suno_term": "the root notes of the guitar progression",
    "attested_count": 19,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the root notes of the guitar progression",
@@ -4879,7 +4615,6 @@
    "category": "technique",
    "suno_term": "increases",
    "attested_count": 17,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "increases",
@@ -4896,7 +4631,6 @@
    "category": "technique",
    "suno_term": "runs",
    "attested_count": 16,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "runs",
@@ -4913,7 +4647,6 @@
    "category": "technique",
    "suno_term": "harmonic depth in the background",
    "attested_count": 15,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic depth in the background",
@@ -4930,7 +4663,6 @@
    "category": "technique",
    "suno_term": "leaps",
    "attested_count": 14,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "leaps",
@@ -4947,7 +4679,6 @@
    "category": "technique",
    "suno_term": "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords",
    "attested_count": 13,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a steady fingerstyle pattern with alternating bass notes and arpeggiated chords",
@@ -4964,7 +4695,6 @@
    "category": "technique",
    "suno_term": "a steady eighth-note pattern",
    "attested_count": 12,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a steady eighth-note pattern",
@@ -4981,7 +4711,6 @@
    "category": "technique",
    "suno_term": "hammer-ons",
    "attested_count": 12,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "hammer-ons",
@@ -4998,7 +4727,6 @@
    "category": "technique",
    "suno_term": "melodic counterpoint with light chorus and reverb",
    "attested_count": 12,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic counterpoint with light chorus and reverb",
@@ -5015,7 +4743,6 @@
    "category": "technique",
    "suno_term": "rolls",
    "attested_count": 12,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rolls",
@@ -5032,7 +4759,6 @@
    "category": "technique",
    "suno_term": "subtle arpeggiated textures in the background",
    "attested_count": 12,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "subtle arpeggiated textures in the background",
@@ -5049,7 +4775,6 @@
    "category": "technique",
    "suno_term": "the guitar's root notes with occasional melodic fills",
    "attested_count": 12,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the guitar's root notes with occasional melodic fills",
@@ -5066,7 +4791,6 @@
    "category": "technique",
    "suno_term": "harmonic density in the background",
    "attested_count": 11,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic density in the background",
@@ -5083,7 +4807,6 @@
    "category": "technique",
    "suno_term": "returns",
    "attested_count": 11,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "returns",
@@ -5100,7 +4823,6 @@
    "category": "technique",
    "suno_term": "a jazz-influenced progression with seventh chords and subtle vibrato",
    "attested_count": 10,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a jazz-influenced progression with seventh chords and subtle vibrato",
@@ -5117,7 +4839,6 @@
    "category": "technique",
    "suno_term": "arpeggiated chords with light chorus and delay",
    "attested_count": 10,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "arpeggiated chords with light chorus and delay",
@@ -5134,7 +4855,6 @@
    "category": "technique",
    "suno_term": "slide",
    "attested_count": 10,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "slide",
@@ -5151,7 +4871,6 @@
    "category": "technique",
    "suno_term": "a busy, percussive line with frequent slides and pops",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a busy, percussive line with frequent slides and pops",
@@ -5168,7 +4887,6 @@
    "category": "technique",
    "suno_term": "a prominent slap bass line, syncopated electric guitar scratches",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a prominent slap bass line, syncopated electric guitar scratches",
@@ -5185,7 +4903,6 @@
    "category": "technique",
    "suno_term": "arpeggiated chords with light chorus and reverb",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "arpeggiated chords with light chorus and reverb",
@@ -5202,7 +4919,6 @@
    "category": "technique",
    "suno_term": "flourish",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "flourish",
@@ -5219,7 +4935,6 @@
    "category": "technique",
    "suno_term": "low-end weight on the downbeats",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "low-end weight on the downbeats",
@@ -5236,7 +4951,6 @@
    "category": "technique",
    "suno_term": "melodic slides and syncopated fills",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic slides and syncopated fills",
@@ -5253,7 +4967,6 @@
    "category": "technique",
    "suno_term": "rings out",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rings out",
@@ -5270,7 +4983,6 @@
    "category": "technique",
    "suno_term": "the kick pattern",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick pattern",
@@ -5287,7 +4999,6 @@
    "category": "technique",
    "suno_term": "a repetitive arpeggiated pattern in 4/4 time",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a repetitive arpeggiated pattern in 4/4 time",
@@ -5304,7 +5015,6 @@
    "category": "technique",
    "suno_term": "a syncopated, jazzy chord progression with light chorus and reverb",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a syncopated, jazzy chord progression with light chorus and reverb",
@@ -5321,7 +5031,6 @@
    "category": "technique",
    "suno_term": "a syncopated, palm-muted rhythmic pattern",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a syncopated, palm-muted rhythmic pattern",
@@ -5338,7 +5047,6 @@
    "category": "technique",
    "suno_term": "palm-muted power chords in the verses and open, ringing chords in the chorus",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "palm-muted power chords in the verses and open, ringing chords in the chorus",
@@ -5355,7 +5063,6 @@
    "category": "technique",
    "suno_term": "rhythmic muted scratches and staccato chords",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rhythmic muted scratches and staccato chords",
@@ -5372,7 +5079,6 @@
    "category": "technique",
    "suno_term": "the kick drum patterns",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick drum patterns",
@@ -5389,7 +5095,6 @@
    "category": "technique",
    "suno_term": "between the acoustic guitar and the vocal melody",
    "attested_count": 7,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "between the acoustic guitar and the vocal melody",
@@ -5406,7 +5111,6 @@
    "category": "technique",
    "suno_term": "between the vocal melody and the rhythmic guitar strumming",
    "attested_count": 7,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "between the vocal melody and the rhythmic guitar strumming",
@@ -5423,7 +5127,6 @@
    "category": "technique",
    "suno_term": "flourishes",
    "attested_count": 7,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "flourishes",
@@ -5440,7 +5143,6 @@
    "category": "technique",
    "suno_term": "harmonic accents",
    "attested_count": 7,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic accents",
@@ -5457,7 +5159,6 @@
    "category": "technique",
    "suno_term": "harmonic padding in the background",
    "attested_count": 7,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic padding in the background",
@@ -5474,7 +5175,6 @@
    "category": "technique",
    "suno_term": "sustained harmonic pads in the background",
    "attested_count": 7,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sustained harmonic pads in the background",
@@ -5491,7 +5191,6 @@
    "category": "technique",
    "suno_term": "a fingerpicked acoustic guitar, a clean electric guitar with light chorus",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a fingerpicked acoustic guitar, a clean electric guitar with light chorus",
@@ -5508,7 +5207,6 @@
    "category": "technique",
    "suno_term": "a jazz-influenced chord progression with subtle chorus and reverb",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a jazz-influenced chord progression with subtle chorus and reverb",
@@ -5525,7 +5223,6 @@
    "category": "technique",
    "suno_term": "a repetitive arpeggiated pattern in 4/4 time at 72 BPM in the key of G Major",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a repetitive arpeggiated pattern in 4/4 time at 72 BPM in the key of G Major",
@@ -5542,7 +5239,6 @@
    "category": "technique",
    "suno_term": "a repetitive arpeggiated pattern with light chorus and delay",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a repetitive arpeggiated pattern with light chorus and delay",
@@ -5559,7 +5255,6 @@
    "category": "technique",
    "suno_term": "a rhythmic, syncopated chord progression with light chorus and reverb",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a rhythmic, syncopated chord progression with light chorus and reverb",
@@ -5576,7 +5271,6 @@
    "category": "technique",
    "suno_term": "a syncopated folk-style pattern in G Major at 84 BPM",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a syncopated folk-style pattern in G Major at 84 BPM",
@@ -5593,7 +5287,6 @@
    "category": "technique",
    "suno_term": "distorted electric guitars, driving acoustic drums",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "distorted electric guitars, driving acoustic drums",
@@ -5610,7 +5303,6 @@
    "category": "technique",
    "suno_term": "during the chorus",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "during the chorus",
@@ -5627,7 +5319,6 @@
    "category": "technique",
    "suno_term": "harmonic density",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic density",
@@ -5644,7 +5335,6 @@
    "category": "technique",
    "suno_term": "harmonic texture in the background",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic texture in the background",
@@ -5661,7 +5351,6 @@
    "category": "technique",
    "suno_term": "jazz-influenced seventh chords with a light chorus effect",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "jazz-influenced seventh chords with a light chorus effect",
@@ -5678,7 +5367,6 @@
    "category": "technique",
    "suno_term": "low-end weight with sustained notes",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "low-end weight with sustained notes",
@@ -5695,7 +5383,6 @@
    "category": "technique",
    "suno_term": "scratch",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "scratch",
@@ -5712,7 +5399,6 @@
    "category": "technique",
    "suno_term": "stops",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "stops",
@@ -5729,7 +5415,6 @@
    "category": "technique",
    "suno_term": "sustained low-end notes on the downbeats",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sustained low-end notes on the downbeats",
@@ -5746,7 +5431,6 @@
    "category": "technique",
    "suno_term": "syncopated funk-style muted strums and arpeggiated chords",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "syncopated funk-style muted strums and arpeggiated chords",
@@ -5763,7 +5447,6 @@
    "category": "technique",
    "suno_term": "syncopated jazz-influenced chords with light chorus and reverb",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "syncopated jazz-influenced chords with light chorus and reverb",
@@ -5780,7 +5463,6 @@
    "category": "technique",
    "suno_term": "the kick drum with a consistent eighth-note pulse",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick drum with a consistent eighth-note pulse",
@@ -5797,7 +5479,6 @@
    "category": "technique",
    "suno_term": "the kick drum with a thick, overdriven tone",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick drum with a thick, overdriven tone",
@@ -5814,7 +5495,6 @@
    "category": "technique",
    "suno_term": "the kick drum with a warm, rounded tone",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick drum with a warm, rounded tone",
@@ -5831,7 +5511,6 @@
    "category": "technique",
    "suno_term": "the root notes of the acoustic guitar with a warm, rounded tone",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the root notes of the acoustic guitar with a warm, rounded tone",
@@ -5848,7 +5527,6 @@
    "category": "technique",
    "suno_term": "with melodic, legato lines",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "with melodic, legato lines",
@@ -5865,7 +5543,6 @@
    "category": "technique",
    "suno_term": "with sustained root notes",
    "attested_count": 6,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "with sustained root notes",
@@ -5882,7 +5559,6 @@
    "category": "technique",
    "suno_term": "a clean electric guitar playing syncopated 16th-note rhythms, a slap bass guitar",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a clean electric guitar playing syncopated 16th-note rhythms, a slap bass guitar",
@@ -5899,7 +5575,6 @@
    "category": "technique",
    "suno_term": "a sense of space",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a sense of space",
@@ -5916,7 +5591,6 @@
    "category": "technique",
    "suno_term": "a spacious acoustic environment",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a spacious acoustic environment",
@@ -5933,7 +5607,6 @@
    "category": "technique",
    "suno_term": "a syncopated slap bass line, clean electric guitar scratches on the off-beats",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "a syncopated slap bass line, clean electric guitar scratches on the off-beats",
@@ -5950,7 +5623,6 @@
    "category": "technique",
    "suno_term": "between the guitar and the vocal melody",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "between the guitar and the vocal melody",
@@ -5967,7 +5639,6 @@
    "category": "technique",
    "suno_term": "harmonic depth during the transitions",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic depth during the transitions",
@@ -5984,7 +5655,6 @@
    "category": "technique",
    "suno_term": "harmonic texture",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic texture",
@@ -6001,7 +5671,6 @@
    "category": "technique",
    "suno_term": "intensifies",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "intensifies",
@@ -6018,7 +5687,6 @@
    "category": "technique",
    "suno_term": "melodic counterpoint with slides and vibrato",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic counterpoint with slides and vibrato",
@@ -6035,7 +5703,6 @@
    "category": "technique",
    "suno_term": "melodic movement in the lower register",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic movement in the lower register",
@@ -6052,7 +5719,6 @@
    "category": "technique",
    "suno_term": "ostinatos",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "ostinatos",
@@ -6069,7 +5735,6 @@
    "category": "technique",
    "suno_term": "solo clarinet, acoustic rhythm guitar, upright bass",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "solo clarinet, acoustic rhythm guitar, upright bass",
@@ -6086,7 +5751,6 @@
    "category": "technique",
    "suno_term": "harmonic fill in the background",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic fill in the background",
@@ -6103,7 +5767,6 @@
    "category": "technique",
    "suno_term": "harmonic sustain",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonic sustain",
@@ -6120,7 +5783,6 @@
    "category": "technique",
    "suno_term": "jazz-inflected chords with light chorus and reverb",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "jazz-inflected chords with light chorus and reverb",
@@ -6137,7 +5799,6 @@
    "category": "technique",
    "suno_term": "legato pads and counter-melodies",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "legato pads and counter-melodies",
@@ -6154,7 +5815,6 @@
    "category": "technique",
    "suno_term": "melodic accents",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic accents",
@@ -6171,7 +5831,6 @@
    "category": "technique",
    "suno_term": "melodic counterpoint with frequent slides",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic counterpoint with frequent slides",
@@ -6188,7 +5847,6 @@
    "category": "technique",
    "suno_term": "melodic counterpoint with single-note lines and light vibrato",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic counterpoint with single-note lines and light vibrato",
@@ -6205,7 +5863,6 @@
    "category": "technique",
    "suno_term": "melodic lines and syncopated chordal stabs",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic lines and syncopated chordal stabs",
@@ -6222,7 +5879,6 @@
    "category": "technique",
    "suno_term": "melodic movement in the low end",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "melodic movement in the low end",
@@ -6239,7 +5895,6 @@
    "category": "technique",
    "suno_term": "muted staccato chords on the off-beats",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "muted staccato chords on the off-beats",
@@ -6256,7 +5911,6 @@
    "category": "technique",
    "suno_term": "palm-muted eighth notes in the verses and open power chords in the chorus",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "palm-muted eighth notes in the verses and open power chords in the chorus",
@@ -6273,7 +5927,6 @@
    "category": "technique",
    "suno_term": "rhythmic accompaniment with bossa nova comping patterns",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rhythmic accompaniment with bossa nova comping patterns",
@@ -6290,7 +5943,6 @@
    "category": "technique",
    "suno_term": "rhythmic muted scratches and staccato ninth chords",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rhythmic muted scratches and staccato ninth chords",
@@ -6307,7 +5959,6 @@
    "category": "technique",
    "suno_term": "sparse, melodic root notes",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sparse, melodic root notes",
@@ -6324,7 +5975,6 @@
    "category": "technique",
    "suno_term": "subtle arpeggiated textures",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "subtle arpeggiated textures",
@@ -6341,7 +5991,6 @@
    "category": "technique",
    "suno_term": "subtle melodic fills with light chorus and delay",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "subtle melodic fills with light chorus and delay",
@@ -6358,7 +6007,6 @@
    "category": "technique",
    "suno_term": "sustained chords and melodic fills",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sustained chords and melodic fills",
@@ -6375,7 +6023,6 @@
    "category": "technique",
    "suno_term": "sustained root notes",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sustained root notes",
@@ -6392,7 +6039,6 @@
    "category": "technique",
    "suno_term": "syncopated funk-style muted strums and ninth chords",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "syncopated funk-style muted strums and ninth chords",
@@ -6409,7 +6055,6 @@
    "category": "technique",
    "suno_term": "syncopated funk-style muted strums and rhythmic chords",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "syncopated funk-style muted strums and rhythmic chords",
@@ -6426,7 +6071,6 @@
    "category": "technique",
    "suno_term": "syncopated, jazzy seventh chords with a light chorus effect",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "syncopated, jazzy seventh chords with a light chorus effect",
@@ -6443,7 +6087,6 @@
    "category": "technique",
    "suno_term": "syncopated sixteenth-note muted scratches and staccato chords",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "syncopated sixteenth-note muted scratches and staccato chords",
@@ -6460,7 +6103,6 @@
    "category": "technique",
    "suno_term": "the guitar's rhythmic pattern",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the guitar's rhythmic pattern",
@@ -6477,7 +6119,6 @@
    "category": "technique",
    "suno_term": "the kick drum pattern with a thick, overdriven tone",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick drum pattern with a thick, overdriven tone",
@@ -6494,7 +6135,6 @@
    "category": "technique",
    "suno_term": "the kick drum with melodic fills",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick drum with melodic fills",
@@ -6511,7 +6151,6 @@
    "category": "technique",
    "suno_term": "the kick drum with sustained root notes",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the kick drum with sustained root notes",
@@ -6528,7 +6167,6 @@
    "category": "technique",
    "suno_term": "the root notes of the guitar",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the root notes of the guitar",
@@ -6545,7 +6183,6 @@
    "category": "technique",
    "suno_term": "the root notes of the guitar chords with a warm, rounded tone",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the root notes of the guitar chords with a warm, rounded tone",
@@ -6562,7 +6199,6 @@
    "category": "technique",
    "suno_term": "the root notes of the guitar progression with a picked attack",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the root notes of the guitar progression with a picked attack",
@@ -6579,7 +6215,6 @@
    "category": "technique",
    "suno_term": "the root notes of the guitar progression with a warm, rounded tone",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the root notes of the guitar progression with a warm, rounded tone",
@@ -6596,7 +6231,6 @@
    "category": "technique",
    "suno_term": "the root notes of the piano",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the root notes of the piano",
@@ -6613,7 +6247,6 @@
    "category": "technique",
    "suno_term": "the root notes of the progression",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the root notes of the progression",
@@ -6630,7 +6263,6 @@
    "category": "technique",
    "suno_term": "the vocal phrasing",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "the vocal phrasing",
@@ -6647,7 +6279,6 @@
    "category": "technique",
    "suno_term": "with melodic slides and sustained notes",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "with melodic slides and sustained notes",
@@ -6664,7 +6295,6 @@
    "category": "technique",
    "suno_term": "comping",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "comping",
@@ -6681,7 +6311,6 @@
    "category": "tempo_rhythm",
    "suno_term": "syncopated",
    "attested_count": 545,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "syncopated",
@@ -6698,7 +6327,6 @@
    "category": "tempo_rhythm",
    "suno_term": "steady",
    "attested_count": 326,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "steady",
@@ -6715,7 +6343,6 @@
    "category": "tempo_rhythm",
    "suno_term": "fingerpicked",
    "attested_count": 267,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fingerpicked",
@@ -6732,7 +6359,6 @@
    "category": "tempo_rhythm",
    "suno_term": "driving",
    "attested_count": 226,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "driving",
@@ -6749,7 +6375,6 @@
    "category": "tempo_rhythm",
    "suno_term": "staccato",
    "attested_count": 196,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "staccato",
@@ -6766,7 +6391,6 @@
    "category": "tempo_rhythm",
    "suno_term": "arpeggiated",
    "attested_count": 168,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "arpeggiated",
@@ -6783,7 +6407,6 @@
    "category": "tempo_rhythm",
    "suno_term": "palm-muted",
    "attested_count": 144,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "palm-muted",
@@ -6800,7 +6423,6 @@
    "category": "tempo_rhythm",
    "suno_term": "legato",
    "attested_count": 109,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "legato",
@@ -6817,7 +6439,6 @@
    "category": "tempo_rhythm",
    "suno_term": "rubato",
    "attested_count": 66,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rubato",
@@ -6834,7 +6455,6 @@
    "category": "tempo_rhythm",
    "suno_term": "tremolo",
    "attested_count": 58,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "tremolo",
@@ -6851,7 +6471,6 @@
    "category": "tempo_rhythm",
    "suno_term": "pizzicato",
    "attested_count": 27,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "pizzicato",
@@ -6868,7 +6487,6 @@
    "category": "tempo_rhythm",
    "suno_term": "downbeats",
    "attested_count": 24,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "downbeats",
@@ -6885,7 +6503,6 @@
    "category": "tempo_rhythm",
    "suno_term": "mid-tempo",
    "attested_count": 24,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "mid-tempo",
@@ -6902,7 +6519,6 @@
    "category": "tempo_rhythm",
    "suno_term": "shuffle",
    "attested_count": 21,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "shuffle",
@@ -6919,7 +6535,6 @@
    "category": "tempo_rhythm",
    "suno_term": "strummed",
    "attested_count": 15,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "strummed",
@@ -6936,7 +6551,6 @@
    "category": "tempo_rhythm",
    "suno_term": "four-bar",
    "attested_count": 13,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "four-bar",
@@ -6953,7 +6567,6 @@
    "category": "tempo_rhythm",
    "suno_term": "swung",
    "attested_count": 11,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "swung",
@@ -6970,7 +6583,6 @@
    "category": "tempo_rhythm",
    "suno_term": "spiccato",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "spiccato",
@@ -6987,7 +6599,6 @@
    "category": "tempo_rhythm",
    "suno_term": "four-on-the-floor",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "four-on-the-floor",
@@ -7004,7 +6615,6 @@
    "category": "tempo_rhythm",
    "suno_term": "trill",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "trill",
@@ -7021,7 +6631,6 @@
    "category": "timbre",
    "suno_term": "clean",
    "attested_count": 1083,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "clean",
@@ -7038,7 +6647,6 @@
    "category": "timbre",
    "suno_term": "distorted",
    "attested_count": 658,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "distorted",
@@ -7055,7 +6663,6 @@
    "category": "timbre",
    "suno_term": "soft",
    "attested_count": 422,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "soft",
@@ -7072,7 +6679,6 @@
    "category": "timbre",
    "suno_term": "heavy",
    "attested_count": 309,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "heavy",
@@ -7089,7 +6695,6 @@
    "category": "timbre",
    "suno_term": "crisp",
    "attested_count": 303,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "crisp",
@@ -7106,7 +6711,6 @@
    "category": "timbre",
    "suno_term": "breathy",
    "attested_count": 279,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "breathy",
@@ -7123,7 +6727,6 @@
    "category": "timbre",
    "suno_term": "metallic",
    "attested_count": 182,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "metallic",
@@ -7140,7 +6743,6 @@
    "category": "timbre",
    "suno_term": "resonant",
    "attested_count": 167,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "resonant",
@@ -7157,7 +6759,6 @@
    "category": "timbre",
    "suno_term": "lo-fi",
    "attested_count": 112,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "lo-fi",
@@ -7174,7 +6775,6 @@
    "category": "timbre",
    "suno_term": "analog",
    "attested_count": 65,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "analog",
@@ -7191,7 +6791,6 @@
    "category": "timbre",
    "suno_term": "shimmering",
    "attested_count": 51,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "shimmering",
@@ -7208,7 +6807,6 @@
    "category": "timbre",
    "suno_term": "airy",
    "attested_count": 40,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "airy",
@@ -7225,7 +6823,6 @@
    "category": "timbre",
    "suno_term": "rounded",
    "attested_count": 34,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rounded",
@@ -7242,7 +6839,6 @@
    "category": "timbre",
    "suno_term": "compressed",
    "attested_count": 33,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "compressed",
@@ -7259,7 +6855,6 @@
    "category": "timbre",
    "suno_term": "saturated",
    "attested_count": 33,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "saturated",
@@ -7276,7 +6871,6 @@
    "category": "timbre",
    "suno_term": "thick",
    "attested_count": 33,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "thick",
@@ -7293,7 +6887,6 @@
    "category": "timbre",
    "suno_term": "sub-heavy",
    "attested_count": 18,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "sub-heavy",
@@ -7310,7 +6903,6 @@
    "category": "timbre",
    "suno_term": "low-end",
    "attested_count": 13,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "low-end",
@@ -7327,7 +6919,6 @@
    "category": "timbre",
    "suno_term": "glassy",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "glassy",
@@ -7344,7 +6935,6 @@
    "category": "timbre",
    "suno_term": "nasal",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "nasal",
@@ -7361,7 +6951,6 @@
    "category": "timbre",
    "suno_term": "woody",
    "attested_count": 8,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "woody",
@@ -7378,7 +6967,6 @@
    "category": "timbre",
    "suno_term": "thin",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "thin",
@@ -7395,7 +6983,6 @@
    "category": "timbre",
    "suno_term": "fuzzy",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "fuzzy",
@@ -7412,7 +6999,6 @@
    "category": "timbre",
    "suno_term": "hollow",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "hollow",
@@ -7429,7 +7015,6 @@
    "category": "timbre",
    "suno_term": "hi-fi",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "hi-fi",
@@ -7446,7 +7031,6 @@
    "category": "vocal",
    "suno_term": "male vocals",
    "attested_count": 681,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "male vocals",
@@ -7463,7 +7047,6 @@
    "category": "vocal",
    "suno_term": "vocals",
    "attested_count": 586,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "vocals",
@@ -7480,7 +7063,6 @@
    "category": "vocal",
    "suno_term": "female vocals",
    "attested_count": 139,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "female vocals",
@@ -7497,7 +7079,6 @@
    "category": "vocal",
    "suno_term": "voice",
    "attested_count": 138,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "voice",
@@ -7514,7 +7095,6 @@
    "category": "vocal",
    "suno_term": "male baritone vocals",
    "attested_count": 131,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "male baritone vocals",
@@ -7544,7 +7124,6 @@
    "category": "vocal",
    "suno_term": "male tenor vocals",
    "attested_count": 112,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "male tenor vocals",
@@ -7561,7 +7140,6 @@
    "category": "vocal",
    "suno_term": "falsetto",
    "attested_count": 111,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "falsetto",
@@ -7578,7 +7156,6 @@
    "category": "vocal",
    "suno_term": "rap delivery",
    "attested_count": 61,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rap delivery",
@@ -7595,7 +7172,6 @@
    "category": "vocal",
    "suno_term": "vocalist",
    "attested_count": 40,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "vocalist",
@@ -7612,7 +7188,6 @@
    "category": "vocal",
    "suno_term": "singing",
    "attested_count": 30,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "singing",
@@ -7629,7 +7204,6 @@
    "category": "vocal",
    "suno_term": "vocalizing",
    "attested_count": 28,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "vocalizing",
@@ -7646,7 +7220,6 @@
    "category": "vocal",
    "suno_term": "male vocalist",
    "attested_count": 27,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "male vocalist",
@@ -7663,7 +7236,6 @@
    "category": "vocal",
    "suno_term": "male rapper",
    "attested_count": 10,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "male rapper",
@@ -7680,7 +7252,6 @@
    "category": "vocal",
    "suno_term": "rapper",
    "attested_count": 10,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "rapper",
@@ -7697,7 +7268,6 @@
    "category": "vocal",
    "suno_term": "female vocalist",
    "attested_count": 9,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "female vocalist",
@@ -7714,7 +7284,6 @@
    "category": "vocal",
    "suno_term": "singer",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "singer",
@@ -7731,7 +7300,6 @@
    "category": "vocal",
    "suno_term": "female soprano vocals",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "female soprano vocals",
@@ -7748,7 +7316,6 @@
    "category": "vocal_chorus",
    "suno_term": "harmonies",
    "attested_count": 61,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "harmonies",
@@ -7765,7 +7332,6 @@
    "category": "vocal_chorus",
    "suno_term": "doubling",
    "attested_count": 48,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "doubling",
@@ -7782,7 +7348,6 @@
    "category": "vocal_chorus",
    "suno_term": "ad-libs",
    "attested_count": 46,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "ad-libs",
@@ -7799,7 +7364,6 @@
    "category": "vocal_chorus",
    "suno_term": "layered vocal",
    "attested_count": 30,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "layered vocal",
@@ -7816,7 +7380,6 @@
    "category": "vocal_chorus",
    "suno_term": "call-and-response",
    "attested_count": 25,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "call-and-response",
@@ -7833,7 +7396,6 @@
    "category": "vocal_chorus",
    "suno_term": "vocal harmonies",
    "attested_count": 19,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "vocal harmonies",
@@ -7850,7 +7412,6 @@
    "category": "vocal_chorus",
    "suno_term": "ad-lib",
    "attested_count": 16,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "ad-lib",
@@ -7867,7 +7428,6 @@
    "category": "vocal_chorus",
    "suno_term": "unison",
    "attested_count": 16,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "unison",
@@ -7884,7 +7444,6 @@
    "category": "vocal_chorus",
    "suno_term": "vocal harmony",
    "attested_count": 5,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "vocal harmony",
@@ -7901,7 +7460,6 @@
    "category": "vocal_chorus",
    "suno_term": "choir",
    "attested_count": 4,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "choir",
@@ -7918,7 +7476,6 @@
    "category": "vocal_chorus",
    "suno_term": "double-tracking",
    "attested_count": 3,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "double-tracking",
@@ -7935,7 +7492,6 @@
    "category": "vocal_chorus",
    "suno_term": "adlibs",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "adlibs",
@@ -7952,7 +7508,6 @@
    "category": "vocal_chorus",
    "suno_term": "doubled",
    "attested_count": 2,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "doubled",
@@ -7969,7 +7524,6 @@
    "category": "vocal_chorus",
    "suno_term": "choral",
    "attested_count": 1,
-   "attested_count_scope": "suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — 타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님",
    "origin": "dictionary",
    "registers": {
     "suno_native": "choral",

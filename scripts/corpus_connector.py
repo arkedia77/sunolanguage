@@ -307,6 +307,20 @@ def cmd_out_publish(dry_run: bool, major: bool):
     tmp.replace(artifact)
     (OUT_DIR / "crosswalk_latest.json").write_text(payload)
 
+    # ★불변 아카이브 (2026-08-17, leomusic-trot 별건 적발) —
+    #   `crosswalk_v0.2.json`이라는 **한 이름이 3일 사이 3개 내용**을 가리켰다
+    #   (`d1c4e9ad…` 331,154B / `bb3ab29a…` 331,455B / `b172510e…` 416,195B).
+    #   파일명도 `v0.2`도 안 바뀌었고, 제자리 덮어쓰기라 직전판 실물이 **소실**됐다.
+    #   ★가설이 아니라 이미 비용이 났다 — 반증자가 「직전판과 동일한가」를 직접 대조하지 못해
+    #     연쇄 대조로 우회했고, 그만큼 증거 등급이 내려갔다.
+    #   내가 이틀에 걸쳐 고친 것이 「값에서 한정자가 떨어진다」였는데, 이건 한 층 위다 —
+    #   ★**식별자에서 내용이 떨어져 있다.** `v0.2`는 자기가 무엇인지 말하지 못한다.
+    #   ⇒ 내용 해시를 이름에 박은 사본을 남긴다. 기존 경로는 그대로 두어 소비자 무영향(additive).
+    archive = OUT_DIR / "archive" / f"crosswalk_v{iv}.{sha[:8]}.json"
+    archive.parent.mkdir(parents=True, exist_ok=True)
+    if not archive.exists():          # 같은 내용 재발행은 덮어쓰지 않는다(불변)
+        archive.write_text(payload)
+
     # 구독 레지스트리 로드 — 팀이 선언한 파생(derivations)은 구독자 소유(항4). 최초엔 기본 시드.
     subs = json.loads(SUBSCRIBERS_PATH.read_text()) if SUBSCRIBERS_PATH.exists() else {}
 
