@@ -75,6 +75,18 @@ REGISTERS = [
 
 AUTHORED_FIELDS = ["music_theory_en", "plain_ko", "plain_en", "llm_prompt", "tags"]
 
+# ★`attested_count`가 **무엇을 뒷받침하는지**를 그 숫자 옆에 붙이는 문구 (2026-08-17, 2차).
+#
+# 왜 또 고치나: 1차(같은 날)에 `attestation`을 **최상위 registers 범례에만** 넣었다.
+#   leomusic-trot 반증에서 별건으로 나왔다 — **개념 행에는 0/446**이라 행을 떼어 가면
+#   여전히 한정자가 안 따라간다. 실물 반례: `suno_term='clean'` 행에 `attested_count=1083`과
+#   `llm_prompt='clean undistorted tone'`이 **나란히** 있고, 1083이 llm_prompt를 뒷받침하지
+#   않는다는 표시가 **그 행 안에 없다.** ⇒ 내가 고치려던 오독 경로가 그대로 살아 있었다.
+#   ★「메시지 밖 → 번들 안」만 옮기고 「행 밖 → 행 안」은 못 간 반쪽 수정이었다.
+#   (조인을 한 번 더 해야 보이면 그건 아직 행 안이 아니다.)
+ATTESTED_SCOPE = ("suno_native 한정 · 출력층 관측(Suno가 완성곡을 듣고 쓴 서술) — "
+                  "타 레지스터(llm_prompt 등) 미해당 · 처방 효과의 증거 아님")
+
 # 에이전트 저작 배치 분할 (406 원자 + 시드 extras → 5그룹)
 WORKLIST_GROUPS = {
     "g1_instrument_drums": ["instrument", "drums"],

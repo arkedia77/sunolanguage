@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_expression_db import slugify  # 정본 키 규칙 단일 기재(G-K4)
+from build_expression_db import ATTESTED_SCOPE, slugify  # 정본 키 규칙 단일 기재(G-K4)
 
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "sunolang.db"
@@ -45,7 +45,11 @@ def concept_bundle(conn, concept_id):
         " WHERE target_concept_id=?", (concept_id,))]
     return {
         "concept_id": c["concept_id"], "category": c["category"], "suno_term": c["suno_term"],
-        "attested_count": c["attested_count"], "origin": c["origin"],
+        "attested_count": c["attested_count"],
+        # ★숫자 **바로 다음**에 범위를 둔다 — 행을 떼어 가도 따라가야 하므로 상수라도 행마다 싣는다.
+        #   (최상위 범례에만 두면 조인이 한 번 더 필요하고, 그게 08-17 1차 수정의 반쪽 실패였다.)
+        "attested_count_scope": ATTESTED_SCOPE,
+        "origin": c["origin"],
         "registers": {k: exprs[k] for k in REGISTER_ORDER if k in exprs},
         "inbound_aliases": aliases,
     }
@@ -54,6 +58,8 @@ def concept_bundle(conn, concept_id):
 def print_bundle(b, verbose=True):
     print(f"\n■ {b['suno_term']}  [{b['category']}]  attested≈{b['attested_count']}"
           f"{'' if b['origin'] == 'dictionary' else ' (origin:' + b['origin'] + ')'}")
+    # ★사람이 읽는 자리에도 숫자 바로 밑에 범위를 붙인다(화면도 「행」이다).
+    print(f"    └ attested 범위: {ATTESTED_SCOPE}")
     for reg in REGISTER_ORDER:
         e = b["registers"].get(reg)
         if not e:

@@ -3,18 +3,18 @@
  "_manifest": {
   "snapshot_id": "cs-3.3-589-20260815",
   "interface_version": "0.2",
-  "generated_at": "2026-08-17T12:32:01+09:00",
+  "generated_at": "2026-08-17T12:43:05+09:00",
   "source_exporter": "scripts/expression_search.py --export",
   "design": "docs/corpus_connector_design.md",
   "concepts": 446,
   "inbound_aliases": 72,
-  "sha256": "bb3ab29a931510be77e80357ae6bb905c13d231dadfc03961aadc3f03eddfefd",
+  "sha256": "b172510e1488c5bcf8c70a41e043535307fcd5d41add9fefb928727b8ed5e872",
   "breaking_content": false,
   "breaking_detail": null
  },
  "crosswalk_artifact": {
   "path": "data/connector/out/crosswalk_v0.2.json",
-  "sha256": "bb3ab29a931510be77e80357ae6bb905c13d231dadfc03961aadc3f03eddfefd"
+  "sha256": "b172510e1488c5bcf8c70a41e043535307fcd5d41add9fefb928727b8ed5e872"
  },
  "activation_points": "SP 작성 시 suno_native 정본 + plain_ko로 의도 확인. dead-zone 별칭 가드로 미반응어 차단.",
  "derivations_applied": []
