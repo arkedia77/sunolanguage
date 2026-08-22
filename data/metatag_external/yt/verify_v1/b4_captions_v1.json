@@ -1,0 +1,104 @@
+{
+ "무엇": "블로커 B-4 재시도 — A_demo 근거 영상의 자막 회수",
+ "재현": ".venv/bin/python scripts/metatag_b4_captions_v1.py",
+ "★자막의_증명력_한계": "자막은 영상 화자의 **말**이지 음원의 **태그 반응**이 아니다. 올릴 수 있는 최대치는 「태그를 넣고 결과를 틀어 보였다고 말했다」이고, 「그 태그가 작동했다」는 자막으로 증명되지 않는다. ⇒ A등급 승격 근거로 단독 사용 금지.",
+ "대상": 4,
+ "★자막_회수": 4,
+ "★여전히_못_봄": 0,
+ "결과": [
+  {
+   "video_id": "dxG9qPPpRnI",
+   "url": "https://www.youtube.com/watch?v=dxG9qPPpRnI",
+   "error": "DownloadError: ERROR: Unable to download video subtitles for 'ko': HTTP Error 429: Too Many Requests",
+   "vtt_files": [
+    "dxG9qPPpRnI.en-orig.vtt",
+    "dxG9qPPpRnI.en.vtt"
+   ],
+   "★자막_회수": true,
+   "자막_문자수": 4125,
+   "자막_내_브라켓표기": [
+    "[Music]"
+   ],
+   "시연_발화_후보": [],
+   "시연_발화_수": 0
+  },
+  {
+   "video_id": "sJnkHygvp6g",
+   "url": "https://www.youtube.com/watch?v=sJnkHygvp6g",
+   "title": "SKIT: Tay Day - Digital Miasma Tech Support  (SUNO)",
+   "channel": "Marvin Powell",
+   "manual_sub_langs": [],
+   "auto_sub_langs_n": 157,
+   "vtt_files": [
+    "sJnkHygvp6g.en-orig.vtt",
+    "sJnkHygvp6g.en.vtt",
+    "sJnkHygvp6g.ko.vtt"
+   ],
+   "★자막_회수": true,
+   "자막_문자수": 3857,
+   "자막_내_브라켓표기": [
+    "[Music]",
+    "[음악]"
+   ],
+   "시연_발화_후보": [],
+   "시연_발화_수": 0
+  },
+  {
+   "video_id": "Uy2jV0fqTPk",
+   "url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "title": "【Suno AI v4】曲にセリフを入れる[Spoken Word]と[Spoken Verse]",
+   "channel": "SunoAI Lab Notes",
+   "manual_sub_langs": [
+    "de",
+    "en",
+    "en-US",
+    "ja",
+    "ko",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+   ],
+   "auto_sub_langs_n": 1405,
+   "vtt_files": [
+    "Uy2jV0fqTPk.en.vtt",
+    "Uy2jV0fqTPk.ko.vtt"
+   ],
+   "★자막_회수": true,
+   "자막_문자수": 8163,
+   "자막_내_브라켓표기": [
+    "[Bridge]",
+    "[Chorus]",
+    "[Spoken Verse]",
+    "[Spoken Word]"
+   ],
+   "시연_발화_후보": [
+    "Next, let's listen to some examples to understand the additional effects of [Spoken Verse].",
+    "두 가지의 차이가 무엇인지 궁금하다면... 일단 몇 가지 예를 들어 들어보겠습니다.",
+    "스타일은 \"Dark, Anime\"로 선택했습니다. 어두운 느낌의 애니메이션 송을 만들어 보겠습니다.",
+    "먼저, [Spoken Word]를 시도해 보고 어떤 목소리가 만들어지는지 들어보겠습니다.",
+    "이제 [Spoken Word]와 [Spoken Verse] 둘 다 들어보셨습니다.",
+    "다음으로, [Spoken Verse]의 추가 효과를 이해하기 위해 몇 가지 예를 들어보겠습니다."
+   ],
+   "시연_발화_수": 6
+  },
+  {
+   "video_id": "zu7fhHtVAwU",
+   "url": "https://www.youtube.com/watch?v=zu7fhHtVAwU",
+   "error": "DownloadError: ERROR: Unable to download video subtitles for 'ko': HTTP Error 429: Too Many Requests",
+   "vtt_files": [
+    "zu7fhHtVAwU.en.vtt"
+   ],
+   "★자막_회수": true,
+   "자막_문자수": 9973,
+   "자막_내_브라켓표기": [
+    "[music]",
+    "[programs]"
+   ],
+   "시연_발화_후보": [
+    "is the result that",
+    "here, press play, so we can listen to this one"
+   ],
+   "시연_발화_수": 2
+  }
+ ]
+}

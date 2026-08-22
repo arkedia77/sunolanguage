@@ -1,0 +1,884 @@
+{
+ "무엇": "2단계 ⑺ 못 읽은 37건 재개방 — 경로를 바꿔 다시 열어 본 결과",
+ "재현": ".venv/bin/python scripts/metatag_reopen_v1.py",
+ "원자료": "data/metatag_external/v2_lanes/*.json 의 not_accessed",
+ "★정책_제외": {
+  "수": 7,
+  "사유": "유료벽·로그인벽은 공개물이 아니라 재시도 대상이 아니다(오너 08-11 「공개된 것만」). 우회 시도 자체를 안 했다.",
+  "목록": [
+   {
+    "lane": "lane1_phone_broadcast",
+    "url": "https://www.scribd.com/document/882613915/Suno-META-Tags",
+    "prior_reason": "Scribd paywall/JS-gated document viewer; appeared in search results with a promising title ('Suno META Tags' with sound-effects category) but content could not be read.",
+    "policy": "유료/가입벽 문서 뷰어 — 공개물이 아니다"
+   },
+   {
+    "lane": "lane1_phone_broadcast",
+    "url": "https://www.scribd.com/document/859627879/suno-wiki",
+    "prior_reason": "Scribd paywall/JS-gated; not read.",
+    "policy": "유료/가입벽 문서 뷰어 — 공개물이 아니다"
+   },
+   {
+    "lane": "lane1_phone_broadcast",
+    "url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+    "prior_reason": "Page fetched OK but the vocal-effects tag list is explicitly paywalled: it shows only 'Auto-tuned / Distorted / Reverbed' then says 'Plus more included in Songwriting & Lyric Mastery for Suno' ($27 product). The full effects inventory behind that paywall was NOT read.",
+    "policy": "보컬이펙트 표가 유료벽 — 무료 범위는 이미 읽었다"
+   },
+   {
+    "lane": "lane2_spoken_narrator",
+    "url": "https://howtopromptsuno.com/suno-voice-tags",
+    "prior_reason": "Reachable but content is a promotional gateway; multiple tag categories (Vocal Texture, Vocal Style, Dynamics, Emotional, Vocal Timing) show only 'Included in Songwriting & Lyric Mastery for Suno' — paywalled. Cannot conclude those tags are absent.",
+    "policy": "표 본문이 유료벽 — 무료로 보이는 범위만 이미 읽었다"
+   },
+   {
+    "lane": "lane2_spoken_narrator",
+    "url": "https://www.facebook.com/groups/sunocom/posts/1506949581216157/",
+    "prior_reason": "Login-walled (Facebook group). Surfaced in search for 'why does Suno ignore male/female voice tags' — not read.",
+    "policy": "로그인벽 그룹 게시물 — 공개물이 아니다"
+   },
+   {
+    "lane": "lane2_spoken_narrator",
+    "url": "https://www.facebook.com/groups/1118818620292019/posts/1173099654863915/",
+    "prior_reason": "Login-walled. Titled 'How to assign male and female vocal lines in Suno' — likely relevant to this lane, not read.",
+    "policy": "로그인벽 그룹 게시물 — 공개물이 아니다"
+   },
+   {
+    "lane": "lane3_sp_predeclaration",
+    "url": "https://howtopromptsuno.com/making-music/voice-tags",
+    "prior_reason": "Fetched but substantively paywalled — Vocal Texture, Style, Dynamics, Emotional/Mood and Timing tag tables are withheld behind 'Songwriting & Lyric Mastery for Suno'. No spoken/narration bracket examples in the free portion.",
+    "policy": "표 본문이 유료벽 — 무료로 보이는 범위만 이미 읽었다"
+   }
+  ]
+ },
+ "시도": 30,
+ "★열림": 7,
+ "★여전히_못_봄": 23,
+ "★판정_기준": "상태코드·바이트가 아니라 **가시 본문**으로 판정한다. 첫 실행에서 상태·바이트로 세어 「열림 17」이라 적었는데 실측하면 7이었다 — old.reddit은 **200에 320KB인데 가시 본문 38자**(「Welcome to Reddit」 인터스티셜)이고 suno.com SPA는 **200에 136KB인데 62자**(nav뿐)였다. 기준: 가시본문 ≥800자 · 인터스티셜 아님 · 본문에 대상 어휘 1회 이상.",
+ "★여전히_주의": "'실질열림'도 **읽을 수 있다**는 뜻이지 **새 표기가 있다**는 뜻이 아니다. 수확·대조는 별도 공정.",
+ "결과": [
+  {
+   "lane": "lane1_phone_broadcast",
+   "url": "https://www.reddit.com/r/SunoAI/",
+   "prior_reason": "Reddit blocks automated fetching (403). No alternative frontend or cached mirror was successfully read, so Reddit-sourced tag spellings are entirely absent from this survey.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://www.reddit.com/r/SunoAI/",
+   "bytes": 8402,
+   "★실질열림": false,
+   "판정사유": "200이지만 reddit JS 셸 — 가시 본문 없음",
+   "가시본문자수": 6,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_www_reddit_com_r_SunoAI_.txt"
+  },
+  {
+   "lane": "lane1_phone_broadcast",
+   "url": "https://suno.com/style/spoken-word%20radio%20feature",
+   "prior_reason": "Suno style pages render track listings client-side; fetch returned only nav chrome with no song links. Could not confirm or collect any playable demos here.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://suno.com/style/spoken-word%20radio%20feature",
+   "bytes": 119731,
+   "★실질열림": false,
+   "판정사유": "200이지만 가시 본문 136자 — JS 셸/nav만",
+   "가시본문자수": 136,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_suno_com_style_spoken_word_20radio_20feature.txt"
+  },
+  {
+   "lane": "lane1_phone_broadcast",
+   "url": "https://support.suno.com",
+   "prior_reason": "Official Suno help docs never surfaced a metatag/SFX list in any search; no official first-party tag inventory was located or read.",
+   "method": "curl",
+   "status": 0,
+   "final_url": "https://support.suno.com/",
+   "bytes": 0,
+   "★실질열림": false,
+   "판정사유": "HTTP 0",
+   "가시본문자수": 0,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane2_spoken_narrator",
+   "url": "https://www.suno.wiki/faq/metatags/voice-tags/",
+   "prior_reason": "403 Forbidden via WebFetch; direct curl with browser UA returned 404 (bot-blocked / JS-gated). Search excerpts indicate it lists Narration, Spoken Word, Sprechgesang, [Female Narrator], [Diva Solo], [Rap Verse] — NOT confirmed by direct read, so those are not entered as tags from this URL.",
+   "method": "curl",
+   "status": 404,
+   "final_url": "https://suno.wiki/faq/metatags/voice-tags/",
+   "bytes": 355,
+   "★실질열림": false,
+   "판정사유": "HTTP 404",
+   "가시본문자수": 183,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane2_spoken_narrator",
+   "url": "https://www.suno.wiki/faq/style-and-lyrics/duets/",
+   "prior_reason": "403 Forbidden. Duet-unreliability claim retained in failure_modes but flagged as search-excerpt-only.",
+   "method": "curl",
+   "status": 404,
+   "final_url": "https://suno.wiki/faq/style-and-lyrics/duets/",
+   "bytes": 355,
+   "★실질열림": false,
+   "판정사유": "HTTP 404",
+   "가시본문자수": 183,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane2_spoken_narrator",
+   "url": "https://old.reddit.com/r/SunoAI/search.json?q=spoken+word+narrator+tag",
+   "prior_reason": "HTTP body 'Blocked' page returned. Reddit blocks datacenter IPs; both old.reddit and www.reddit JSON endpoints blocked. No Reddit-native tags collected.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://old.reddit.com/r/SunoAI/search.json?q=spoken+word+narrator+tag",
+   "bytes": 320668,
+   "★실질열림": false,
+   "판정사유": "200이지만 reddit 인터스티셜(로그인 유도) — 가시 본문 없음",
+   "가시본문자수": 38,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_old_reddit_com_r_SunoAI_search_json_q_spoken_word_narrator_tag.txt"
+  },
+  {
+   "lane": "lane2_spoken_narrator",
+   "url": "https://www.reddit.com/r/SunoAI/search.json?q=narrator+spoken",
+   "prior_reason": "'Blocked' page returned.",
+   "method": "curl",
+   "status": 403,
+   "final_url": "https://www.reddit.com/r/SunoAI/search.json?q=narrator+spoken",
+   "bytes": 189908,
+   "★실질열림": false,
+   "판정사유": "HTTP 403",
+   "가시본문자수": 143,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane2_spoken_narrator",
+   "url": "https://suno.com/song/c660820d-f7f2-4080-9cd5-a61f7592b717",
+   "prior_reason": "JS-rendered SPA; only nav chrome returned. Titled 'Duet Example (v4 Tags, Structure, Prompts)' and likely contains real speaker-attribution lyrics + playable audio, but could not be read, so no A_demo claimed from it.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://suno.com/song/c660820d-f7f2-4080-9cd5-a61f7592b717",
+   "bytes": 135889,
+   "★실질열림": false,
+   "판정사유": "200이지만 가시 본문 75자 — JS 셸/nav만",
+   "가시본문자수": 75,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_suno_com_song_c660820d_f7f2_4080_9cd5_a61f7592b717.txt"
+  },
+  {
+   "lane": "lane2_spoken_narrator",
+   "url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "prior_reason": "Not fetched — '[EN subs] SUNO AI v4 Spoken Word Meta Tags Guide' video; description/transcript not retrieved this pass.",
+   "method": "yt-dlp",
+   "status": 200,
+   "bytes": 441,
+   "meta": {
+    "title": "【Suno AI v4】曲にセリフを入れる[Spoken Word]と[Spoken Verse]",
+    "channel": "SunoAI Lab Notes",
+    "duration": 453,
+    "subtitle_langs": [
+     "de",
+     "en",
+     "en-US",
+     "ja",
+     "ko",
+     "vi",
+     "zh-Hans",
+     "zh-Hant"
+    ],
+    "auto_caption_langs": [
+     "aa",
+     "ab",
+     "af",
+     "ak",
+     "am",
+     "ar",
+     "as",
+     "ay"
+    ]
+   },
+   "★실질열림": true,
+   "판정사유": "yt-dlp 메타데이터 회수 — 제목+설명 223자",
+   "가시본문자수": 221,
+   "harvest_counts": {
+    "bracket": 4,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [
+     "Spoken Word",
+     "Spoken Verse",
+     "Spoken Word",
+     "Spoken Verse"
+    ],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_www_youtube_com_watch_v_Uy2jV0fqTPk.txt"
+  },
+  {
+   "lane": "lane2_spoken_narrator",
+   "url": "https://help.suno.com/en/articles/11362369",
+   "prior_reason": "Not fetched (Voices feature article). Related Persona/voice-override behavior captured only via search excerpt of jackrighteous.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://help.suno.com/en/articles/11362369",
+   "bytes": 95766,
+   "★실질열림": true,
+   "판정사유": "가시 본문 4278자",
+   "가시본문자수": 4278,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 3,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [
+     "voice only, no backing music",
+     "e.g., beginner, intermediate, advanced",
+     "e.g., country ballad, acoustic"
+    ],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_help_suno_com_en_articles_11362369.txt"
+  },
+  {
+   "lane": "lane3_sp_predeclaration",
+   "url": "https://suno.com/s/nrhqq4oreDlBEabw",
+   "prior_reason": "JS-gated. Static HTML returned only nav/login chrome — no style, lyrics or audio URL. Server-rendered metadata did leak the title: 'Righteous Report Ep 3 by Jack Righteous'. The style/lyric text in the task brief could NOT be independently re-verified from the page.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://suno.com/s/nrhqq4oreDlBEabw",
+   "bytes": 136875,
+   "★실질열림": false,
+   "판정사유": "200이지만 가시 본문 62자 — JS 셸/nav만",
+   "가시본문자수": 62,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_suno_com_s_nrhqq4oreDlBEabw.txt"
+  },
+  {
+   "lane": "lane3_sp_predeclaration",
+   "url": "https://suno.com/s/p0DaHm06qIJicA3U",
+   "prior_reason": "JS-gated. URL resolves and metadata yields title 'When the World Was a Whisper' + artist Jack Righteous, confirming it is a real link, but audio, style field and lyrics could not be read and the track was not heard.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://suno.com/s/p0DaHm06qIJicA3U",
+   "bytes": 133434,
+   "★실질열림": false,
+   "판정사유": "200이지만 가시 본문 69자 — JS 셸/nav만",
+   "가시본문자수": 69,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_suno_com_s_p0DaHm06qIJicA3U.txt"
+  },
+  {
+   "lane": "lane3_sp_predeclaration",
+   "url": "https://sunoarchitect.com/en/guide/suno-meta-tags/spoken-word",
+   "prior_reason": "HTTP 429 Too Many Requests on three separate attempts. Title indicates a dedicated Spoken Word vocal-tag guide — likely relevant, unread.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://sunoarchitect.com/en/guide/suno-meta-tags/spoken-word",
+   "bytes": 47396,
+   "★실질열림": true,
+   "판정사유": "가시 본문 2569자",
+   "가시본문자수": 2569,
+   "harvest_counts": {
+    "bracket": 2,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [
+     "Spoken Word",
+     "Spoken Word"
+    ],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_sunoarchitect_com_en_guide_suno_meta_tags_spoken_word.txt"
+  },
+  {
+   "lane": "lane3_sp_predeclaration",
+   "url": "https://www.reddit.com/r/SunoAI/",
+   "prior_reason": "Not fetched directly — reddit.com 403s for this tool as the brief anticipated. Reddit material here is secondhand via a Medium digest and search snippets, and is graded accordingly. No alternate frontend (libreddit/teddit instance) was reachable in the searches performed.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://www.reddit.com/r/SunoAI/",
+   "bytes": 8402,
+   "★실질열림": false,
+   "판정사유": "200이지만 reddit JS 셸 — 가시 본문 없음",
+   "가시본문자수": 6,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_www_reddit_com_r_SunoAI_.txt"
+  },
+  {
+   "lane": "lane3_sp_predeclaration",
+   "url": "https://help.suno.com/",
+   "prior_reason": "Suno's official help center produced no result addressing style-vs-lyric-bracket precedence in any search performed. Every precedence statement collected is third-party, not official.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://help.suno.com/",
+   "bytes": 104630,
+   "★실질열림": false,
+   "판정사유": "200이지만 가시 본문 558자 — JS 셸/nav만",
+   "가시본문자수": 558,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_help_suno_com_.txt"
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://suno.wiki/faq/metatags/voice-tags/",
+   "prior_reason": "HTTP 403 Forbidden on direct fetch. r.jina.ai proxy returned 404. Google cache returned only a Google error page. Page content never read — [Female Narrator] therefore NOT cited to this URL.",
+   "method": "curl",
+   "status": 404,
+   "final_url": "https://suno.wiki/faq/metatags/voice-tags/",
+   "bytes": 355,
+   "★실질열림": false,
+   "판정사유": "HTTP 404",
+   "가시본문자수": 183,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://www.reddit.com/r/SunoAI/ (and all subpaths)",
+   "prior_reason": "WebFetch client-level block: 'Claude Code is unable to fetch from www.reddit.com'.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://www.reddit.com/r/SunoAI/",
+   "bytes": 8402,
+   "★실질열림": false,
+   "판정사유": "200이지만 reddit JS 셸 — 가시 본문 없음",
+   "가시본문자수": 6,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_www_reddit_com_r_SunoAI_.txt"
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://old.reddit.com/r/SunoAI/search?q=metatags+list",
+   "prior_reason": "WebFetch client-level block on old.reddit.com.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://old.reddit.com/r/SunoAI/search?q=metatags+list",
+   "bytes": 320473,
+   "★실질열림": false,
+   "판정사유": "200이지만 reddit 인터스티셜(로그인 유도) — 가시 본문 없음",
+   "가시본문자수": 38,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_old_reddit_com_r_SunoAI_search_q_metatags_list.txt"
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://r.jina.ai/https://www.reddit.com/r/SunoAI/comments/1e9r0ks/i_made_a_list_of_all_the_metatags_i_could_find/",
+   "prior_reason": "Proxy fetched but Reddit served its 403 login/security interstitial instead of post content.",
+   "method": "curl",
+   "status": 403,
+   "final_url": "https://r.jina.ai/https://www.reddit.com/r/SunoAI/comments/1e9r0ks/i_made_a_list_of_all_the_metatags_i_could_find/",
+   "bytes": 6071,
+   "★실질열림": false,
+   "판정사유": "HTTP 403",
+   "가시본문자수": 58,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://redlib.catsarch.com/r/SunoAI/search?q=metatags",
+   "prior_reason": "HTTP 403 Forbidden from the Redlib instance.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://redlib.catsarch.com/r/SunoAI/search?q=metatags",
+   "bytes": 7540,
+   "★실질열림": false,
+   "판정사유": "200·본문 1554자이나 대상 어휘(suno) 0회 — 온토픽 아님",
+   "가시본문자수": 1554,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_redlib_catsarch_com_r_SunoAI_search_q_metatags.txt"
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://libreddit.privacy.com.de/r/SunoAI/search?q=metatags",
+   "prior_reason": "ECONNREFUSED — Libreddit instance is dead.",
+   "method": "curl",
+   "status": 0,
+   "final_url": "https://libreddit.privacy.com.de/r/SunoAI/search?q=metatags",
+   "bytes": 0,
+   "★실질열림": false,
+   "판정사유": "HTTP 0",
+   "가시본문자수": 0,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://www.youtube.com/watch?v=Atm4qNj6FPI",
+   "prior_reason": "Page converts to footer/nav/legal chrome only; description is JS-injected and absent from fetched markdown. Got NEITHER description nor captions.",
+   "method": "yt-dlp",
+   "status": 200,
+   "bytes": 990,
+   "meta": {
+    "title": "Suno AI Metatags Hacks: Make Songs Sound 10x More Expressive",
+    "channel": "ChillPanic",
+    "duration": 374,
+    "subtitle_langs": [],
+    "auto_caption_langs": [
+     "aa",
+     "ab",
+     "af",
+     "ak",
+     "am",
+     "ar",
+     "as",
+     "ay"
+    ]
+   },
+   "★실질열림": true,
+   "판정사유": "yt-dlp 메타데이터 회수 — 제목+설명 990자",
+   "가시본문자수": 981,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 1,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [
+     "I get commission"
+    ],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_www_youtube_com_watch_v_Atm4qNj6FPI.txt"
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://www.youtube.com/watch?v=y-S7uTkQqok",
+   "prior_reason": "Korean Suno tag tutorial. Same failure: only YouTube boilerplate returned, no description text.",
+   "method": "yt-dlp",
+   "status": 200,
+   "bytes": 1255,
+   "meta": {
+    "title": "Suno AI 완벽 마스터: 4. Suno 태그 사용법",
+    "channel": "Easy_Ableton",
+    "duration": 511,
+    "subtitle_langs": [],
+    "auto_caption_langs": [
+     "aa",
+     "ab",
+     "af",
+     "ak",
+     "am",
+     "ar",
+     "as",
+     "ay"
+    ]
+   },
+   "★실질열림": true,
+   "판정사유": "yt-dlp 메타데이터 회수 — 제목+설명 619자",
+   "가시본문자수": 607,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 1,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [
+     "디지털 오디오 워크스테이션"
+    ],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_www_youtube_com_watch_v_y_S7uTkQqok.txt"
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://zhuanlan.zhihu.com/p/1968620362238505887",
+   "prior_reason": "HTTP 403 Forbidden — Zhihu blocks non-browser clients. Title indicates a substantial Chinese vocal-timbre prompt compendium (人声终极干货: 音色+声乐提示词大全); likely high-value, unread.",
+   "method": "curl",
+   "status": 403,
+   "final_url": "https://zhuanlan.zhihu.com/p/1968620362238505887",
+   "bytes": 650,
+   "★실질열림": false,
+   "판정사유": "HTTP 403",
+   "가시본문자수": 35,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://zhuanlan.zhihu.com/p/2420222541",
+   "prior_reason": "Zhihu 403 (not individually attempted after the sibling 403; 'Suno AI 写歌 100 个高质量歌词元标签分享' claims 100 lyric metatags).",
+   "method": "curl",
+   "status": 403,
+   "final_url": "https://zhuanlan.zhihu.com/p/2420222541",
+   "bytes": 650,
+   "★실질열림": false,
+   "판정사유": "HTTP 403",
+   "가시본문자수": 35,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://blog.csdn.net/AJHHMKYBH/article/details/139815597",
+   "prior_reason": "HTTP 521 (origin down / Cloudflare). Title 'Suno AI 元标签(Metatags)集合' suggests a full Chinese metatag collection.",
+   "method": "curl",
+   "status": 521,
+   "final_url": "https://blog.csdn.net/AJHHMKYBH/article/details/139815597",
+   "bytes": 2130,
+   "★실질열림": false,
+   "판정사유": "HTTP 521",
+   "가시본문자수": 0,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://helldev.miraheze.org/wiki/Вокальные_и_структурные_теги_Suno",
+   "prior_reason": "HTTP 403 Forbidden. Title translates to 'Suno vocal and structural tags' — directly on-lane, unread.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://helldev.miraheze.org/wiki/Вокальные_и_структурные_теги_Suno",
+   "bytes": 64338,
+   "★실질열림": true,
+   "판정사유": "가시 본문 11568자",
+   "가시본문자수": 11568,
+   "harvest_counts": {
+    "bracket": 44,
+    "paren_tagish": 24,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [
+     "Piano riff | modern jazz | smooth staccato | subtle reverb",
+     "вокал | джаз 60-х | мягкий баритон | саксофон | реверберация",
+     "Fade In",
+     "Intro",
+     "Verse",
+     "Verse 1",
+     "Verse 2",
+     "Pre-Chorus",
+     "Post-Chorus",
+     "Chorus",
+     "Chorus 2",
+     "Refrain",
+     "Hook",
+     "Bridge",
+     "Middle-Eight",
+     "Interlude",
+     "Break",
+     "Percussion Break",
+     "Drop",
+     "Ad Lib",
+     "Outro",
+     "Fade Out",
+     "Fade to End",
+     "Coda",
+     "End",
+     "Big Finish",
+     "Echo",
+     "Soft vocals",
+     "Whisper",
+     "Soft vocals",
+     "Whisper",
+     "Spoken word",
+     "Spoken word",
+     "Spoken word",
+     "Vocal Style: soulful",
+     "Vocal Style: soulful",
+     "Vocal Emotion: energetic",
+     "Vocal Emotion: energetic",
+     "Vocal Effect: reverb",
+     "Vocal Effect: reverb",
+     "Harmony: Yes",
+     "Harmony: Yes",
+     "Vocalist: Female",
+     "Vocalist: Female"
+    ],
+    "paren_tagish": [
+     "Intro, Verse, Chorus, Bridge",
+     "эмоции, тон, эффекты",
+     "Weirdness, Style Influence",
+     "Intro, Verse, Chorus, Bridge, Outro",
+     "4-5 тегов оптимально",
+     "инструмент/вокал",
+     "например «60s», «modern pop»",
+     "Intro, Verse, Chorus",
+     "«гитара»",
+     "мелодия, фраза, рифф",
+     "около 8 тактов",
+     "все буквы заглавные",
+     "гласные заглавными",
+     "Скобки",
+     "О-О-О",
+     "А-А-А",
+     "ЭХО",
+     "Echo",
+     "ЖИв-у",
+     "СВЕТ — СВЕТ",
+     "ИДти — ИДти",
+     "Cover, Persona, Upload Audio и т.п.",
+     "CC BY-SA 4.0",
+     "если не указано иное"
+    ],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_helldev_miraheze_org_wiki_Suno.txt"
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://www.ai-sound.online/?p=1160",
+   "prior_reason": "HTTP 403 Forbidden. Japanese 'Suno メタタグを活用した制御'.",
+   "method": "curl",
+   "status": 403,
+   "final_url": "https://www.ai-sound.online/?p=1160",
+   "bytes": 199,
+   "★실질열림": false,
+   "판정사유": "HTTP 403",
+   "가시본문자수": 74,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://www.toolify.ai/ko/ai-news-kr/suno-ai-3684480",
+   "prior_reason": "HTTP 403 Forbidden. Korean Suno prompt/metatag guide (likely MT of an English article).",
+   "method": "curl",
+   "status": 403,
+   "final_url": "https://www.toolify.ai/ko/ai-news-kr/suno-ai-3684480",
+   "bytes": 5769,
+   "★실질열림": false,
+   "판정사유": "HTTP 403",
+   "가시본문자수": 58,
+   "harvest_counts": {
+    "bracket": 0,
+    "paren_tagish": 0,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [],
+    "paren_tagish": [],
+    "angle": []
+   }
+  },
+  {
+   "lane": "lane4_multilingual",
+   "url": "https://sunometatagcreator.com/ (interactive tool)",
+   "prior_reason": "Homepage renders category names and counts only; the 2,596 individual tags sit behind a JS tool that WebFetch cannot drive. Counted as partial, not read.",
+   "method": "cache(curl)",
+   "status": 200,
+   "final_url": "https://sunometatagcreator.com/",
+   "bytes": 159446,
+   "★실질열림": true,
+   "판정사유": "가시 본문 5661자",
+   "가시본문자수": 5661,
+   "harvest_counts": {
+    "bracket": 1,
+    "paren_tagish": 3,
+    "angle": 0
+   },
+   "harvest_sample": {
+    "bracket": [
+     "tag"
+    ],
+    "paren_tagish": [
+     "IT, EN, ES, PT, ZH",
+     "different from general app guide",
+     "Style &amp; Mood, Lyrics, or Song Title"
+    ],
+    "angle": []
+   },
+   "raw_saved": "data/metatag_external/reopen_raw/https_sunometatagcreator_com_.txt"
+  }
+ ]
+}
