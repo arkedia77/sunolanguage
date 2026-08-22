@@ -128,6 +128,16 @@ def main():
              "레인": sorted({x["레인"][:5] for x in g})}
             for t, g in dup_top
         ],
+        "★안_센_것의_행선지": {
+            "★2026-08-22 신설": "제외 자체는 옳다(인용 표준이 「고유 **표기** 수」라 행동 주장은 여기 못 든다). "
+                            "문제는 **그 다음에 갈 자리가 없었다**는 것이었다 — 그래서 61건이 수집돼 놓고 "
+                            "집계에도 인용에도 한 번도 안 나왔다. ⇒ **지시축 대장 신설**로 해소.",
+            "advice·precedence_statements·rule_block_prompting·failure_modes":
+                "→ `data/metatag_external/directive_register_v1.json` (재현=`scripts/build_directive_register_v1.py`)",
+            "not_accessed": "→ `data/metatag_external/reopen_v1.json` (2단계 ⑺ 재개방)",
+            "target_attempts": "→ 회수 로그. reopen_v1 소관 — ★지시축 대장에 넣으면 안 된다(주장이 아님).",
+            "instances": "→ 실물 SP 예문. 표기·예문 자산 — ★지시축 대장에 넣으면 안 된다.",
+        },
         "★안_센_것": {
             f: {k: len(json.loads((LANES / f"{f}.json").read_text()).get(k, []))
                 for k in ("not_accessed", "advice", "precedence_statements",
