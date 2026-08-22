@@ -181,6 +181,60 @@ CURATED = {
 }
 
 
+KV = re.compile(r"(?<![:/])\b([A-Za-z][A-Za-z ]{2,24}):\s*([A-Za-z0-9][^,;\n]{0,30})")
+
+
+def measure_kv_form():
+    """★`corpus_now` 1건을 실제로 잰다 — 대장만 세우고 안 재면 같은 실수다.
+
+    외부 주장(hookgenius): 「`[Reverb: 30%]`·`[Bass: 80%]` 류 **콜론+숫자 파라미터 태그는 placebo**.
+    Suno는 완전히 무시한다」. ★우리가 지금 잴 수 있는 것은 **「Suno가 그 형식을 뱉는가」**뿐이다
+    (「입력하면 먹히는가」는 여전히 못 잰다 — 출력만 담으므로).
+    """
+    c = sqlite3.connect(ROOT / "data/reanalysis_v2/lexical_index.sqlite")
+    rows = c.execute("SELECT source,song_id,sentence,entity,modifiers FROM entries").fetchall()
+    brk = [r for r in rows if r[0] in ("bracket_entity", "stems_bracket")]
+    inp = [r for r in rows if r[0] == "leomusic_sp_full"]
+
+    def scan(rs):
+        hits = collections.Counter()
+        for r in rs:
+            blob = " ".join(x for x in (r[3], r[2], r[4]) if x)
+            for m in KV.finditer(blob):
+                k = m.group(1).strip().lower()
+                if k not in ("http", "https"):
+                    hits[k] += 1
+        return hits
+
+    o, i = scan(brk), scan(inp)
+    named = ["reverb:", "bass:", "vocal style:", "vocal emotion:", "vocal effect:",
+             "harmony:", "vocalist:", "bpm:", "key:"]
+    per = {}
+    for t in named:
+        pat = re.compile(re.escape(t), re.I)
+        per[t] = {
+            "출력층_브라켓": sum(1 for r in brk if pat.search(" ".join(x for x in (r[3], r[2], r[4]) if x))),
+            "입력층_SP": sum(1 for r in inp if pat.search(" ".join(x for x in (r[3], r[2], r[4]) if x))),
+        }
+    return {
+        "★무엇을_쟀나": "외부 「콜론 파라미터 태그는 placebo」 주장에 대해 **Suno가 그 형식을 뱉는가**만 쟀다.",
+        "★못_잰_것": "「입력하면 먹히는가」. 우리 코퍼스는 출력만 담아 **원리상 못 잰다** — 생성 필요(B-2).",
+        "모집단": {"Suno_출력층_브라켓_엔트리": len(brk), "입력층_SP_엔트리": len(inp)},
+        "Suno_출력층_브라켓": {"key:value 형 총": sum(o.values()), "고유 키": len(o), "상위": o.most_common(10),
+                        "★주": "상위 `libs`·`female vocal harmonies` 등은 서술문 안의 콜론이지 파라미터 태그가 아니다 — 사실상 0."},
+        "입력층_우리_SP": {"key:value 형 총": sum(i.values()), "고유 키": len(i), "상위": i.most_common(15)},
+        "외부가_지목한_형식별": per,
+        "★판정": ("외부가 이름 댄 파라미터 키(`reverb:`·`vocal style:`·`vocalist:`·`vocal emotion:`…)는 "
+                "**Suno 출력층 브라켓에서 전부 0회**다. 외부 주장과 **같은 방향**이나 "
+                "★**부재는 무반응의 근거가 아니다** — 우리는 Suno가 뱉은 것만 본다."),
+        "★★섞지_말_것": ("우리 입력층 SP에 `Mood:`·`Production:` 류가 **420건** 있지만 이것은 **다른 자리**다 — "
+                    "**SP 산문의 구조화**이고, 외부 주장의 대상은 **가사 브라켓 안의** 파라미터 태그다. "
+                    "섞으면 「우리가 placebo를 대량 쓰고 있다」는 **거짓 경보**가 된다. "
+                    "★단 `vocal style:`(우리 SP 12건)은 miraheze가 **브라켓으로** 가르치는 형식이라, "
+                    "그 형식이 브라켓으로 옮겨가면 이 주장의 사정권에 든다."),
+    }
+
+
 def main():
     claims = load_lane_claims() + load_video_claims()
     for i, c in enumerate(claims, 1):
@@ -226,6 +280,7 @@ def main():
             f"{test.get('needs_generation',0)}건은 생성이 필요하고 **B-2 「설계까지만」**에 걸려 있다. 내가 안 연다.",
             "축 분류는 키워드 자동이다(`★축_판정` 참조). 사람이 읽고 세운 것은 `curated_conflicts`뿐이다.",
         ],
+        "★corpus_now_실측": measure_kv_form(),
         "curated_conflicts": CURATED,
         "주장": claims,
     }
