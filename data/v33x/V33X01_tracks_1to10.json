@@ -1,0 +1,183 @@
+{
+ "_status": "10곡 저작 완료 — 게이트 재검 대기. DB 적재·핸드오프 미실시.",
+ "_batch": "V33X01",
+ "_album": "빈 홀에서 (In the Empty Hall)",
+ "_theme": "v3.3 신규 어휘 1차 입력층 시행 — 공연 전후의 빈 공연장, 같은 공간을 서로 다른 편성이 다르게 울린다",
+ "_gid_reserved": "30209~30218 (2026-08-18 가용 확인, 미적재)",
+ "_origin": "오너 지시(2026-08-18): 「새로 추가된 코퍼스 셋 사용을 가지고 1배치 돌려서 핸드오프해」",
+ "_★설계_핵심": "v3.3 신규분(개념 9 + 장르라벨 20)은 지금까지 **출력층 관측**으로만 존재했다(Suno가 우리 렌더를 그렇게 불렀다). 이 배치는 그 어휘를 **입력층에 처음 써넣는 시행**이다. ⇒ 생성 결과를 재분석하면 우리가 여태 갖지 못한 **처방 대조군**의 첫 쌍이 생긴다. ★단 이것은 통제 실험이 아니다(대조군 없음·1회). 관측 기록용으로만 쓸 것.",
+ "_★정직_고지": "신규 개념 9건의 attested_count는 2~7로 **저표본**이고 confidence는 medium 8 / high 1이다. 이 배치가 잘 나와도 「신규 어휘가 작동한다」의 증거가 아니다 — 곡 성패에는 프라이어층(가사 정서·에너지·구조)이 함께 걸린다(L4 prior-bound).",
+ "_어휘_배정": {
+  "1": [
+   "sustained harmonic pads in the background(7)",
+   "a spacious acoustic environment(5)"
+  ],
+  "2": [
+   "sustained root notes(4)",
+   "major seventh(2)"
+  ],
+  "3": [
+   "solo clarinet, acoustic rhythm guitar, upright bass(5)"
+  ],
+  "4": [
+   "major seventh(2)",
+   "melodic movement in the lower register(5)"
+  ],
+  "5": [
+   "doubled(2)",
+   "full band, driving drums(2)"
+  ],
+  "6": [
+   "a spacious acoustic environment(5)",
+   "sustained harmonic pads in the background(7)"
+  ],
+  "7": [
+   "melodic movement in the lower register(5)",
+   "sustained root notes(4)"
+  ],
+  "8": [
+   "full band enters, drums and bass(2)",
+   "doubled(2)"
+  ],
+  "9": [
+   "major seventh(2)",
+   "adlibs"
+  ],
+  "10": [
+   "full band, driving drums(2)",
+   "adlibs"
+  ]
+ },
+ "songs": [
+  {
+   "pos": 1,
+   "title": "먼저 도착한 사람",
+   "title_en": "The One Who Arrived First",
+   "genre": "Cinematic orchestral score",
+   "genre_group": "Orchestral/Cinematic",
+   "sub": "Sparse minimalist chamber-orchestral opener with solo cello, oboe and hall-reverb tenor vocal",
+   "bpm": 62,
+   "key": "D minor",
+   "time_sig": "4/4",
+   "sp": "Cinematic orchestral score. The piece opens with a solo cello playing a slow, legato melody in the tenor register, answered by a solo oboe carrying a bare counter-melody. A string section provides sustained harmonic pads in the background, moving in gradual volume swells with divisi violins in the upper register. Muted french horns add low, breathy swells beneath, while a grand piano places single sustained notes and sparse arpeggiated figures in the mid register. Orchestral percussion is restrained: a soft timpani roll and one suspended cymbal swell before the final section. The harmony rests on minor seventh and suspended fourth voicings, resolving late. Male tenor vocals enter in a soft, breathy delivery in the lower register, opening into a clear resonant chest voice as the strings rise. Long hall reverb on the vocal, cello and piano creates a spacious acoustic environment with a long natural decay. 62 BPM, D minor, 4/4 time.",
+   "lyrics": "[Verse 1]\n객석 문을 열면 먼지가 먼저 일어나\n삼백열두 개 의자가 등을 보이고 앉아 있다\n나는 일곱 번째 줄에 가방을 내려놓는다\n아직 아무도 오지 않았다\n\n[Verse 2]\n무대 가장자리 테이프 자국이 남아 있고\n누가 밟고 간 자리마다 마루가 조금씩 꺼졌다\n천장 조명은 꺼진 채로 매달려\n제 무게를 견디는 소리를 낸다\n\n[Pre-Chorus]\n손뼉을 한 번 친다\n돌아오는 데 이 초가 걸린다\n이 홀은 아직 나를 기억하지 못한다\n\n[Chorus]\n먼저 도착한 사람은 소리를 듣는 게 아니라\n소리가 돌아올 자리를 재는 사람\n비어 있어서 넓은 것이 아니라\n넓어서 오래 비어 있던 곳\n나는 그 한가운데 서서\n아직 오지 않은 저녁을 기다린다\n\n[Verse 3]\n조율되지 않은 피아노 뚜껑을 열어\n가운데 건반 하나를 눌러 본다\n음은 낮게 내려앉았고\n그 아래에서 마루가 같이 울린다\n\n[Bridge]\n리허설은 두 시간 뒤\n첼로 케이스가 문 앞에 도착할 것이다\n그전까지 이 공기는 내 것이다\n숨을 크게 쉬면 홀이 따라 쉰다\n말을 아끼면 잔향도 짧아진다\n\n[Chorus]\n먼저 도착한 사람은 소리를 듣는 게 아니라\n소리가 돌아올 자리를 재는 사람\n비어 있어서 넓은 것이 아니라\n넓어서 오래 비어 있던 곳\n나는 그 한가운데 서서\n아직 오지 않은 저녁을 기다린다\n\n[Outro]\n불을 켜지 않은 채로\n의자 하나를 바로 놓는다\n오늘 저녁 누군가 여기 앉을 것이다"
+  },
+  {
+   "pos": 2,
+   "title": "빈 홀에서",
+   "title_en": "In the Empty Hall",
+   "genre": "Orchestral film score in 3/4 time at 100 BPM",
+   "genre_group": "Orchestral/Cinematic",
+   "sub": "Chamber-orchestral cinematic waltz with intimate Korean male tenor vocals",
+   "bpm": 100,
+   "key": "E minor",
+   "time_sig": "3/4",
+   "sp": "Orchestral film score in 3/4 time at 100 BPM, in E minor. A chamber orchestra plays a slow waltz across an empty auditorium. Divisi cellos and double basses hold sustained root notes beneath the meter while first violins carry a legato melody with warm, unhurried vibrato. A solo harp arpeggiates upward on the third beat of each bar, and a felted upright piano marks the downbeat with soft, pedal-blurred voicings. Clarinet and french horn enter mid-arrangement with long swelling lines. The harmony leans on major seventh and added ninth colours, luminous and unresolved, drifting rather than cadencing. Timpani rolls arrive quietly under the largest phrases; no drum kit. Male tenor vocals sit close and intimate, breathy in the low register and opening to a clear head voice on high phrases, sung in Korean with gentle rubato. Production is natural and wide: hall reverb with a long decay tail, distant room mics, audible bow noise, ending on a sustained string chord fading to silence.",
+   "lyrics": "[Verse 1]\n접이의자 삼백 개가\n등을 맞대고 앉아 있다\n막은 아직 내려온 채로\n먼지만 조명을 지난다\n\n[Verse 2]\n세 박자로 문이 닫히고\n세 박자로 발이 멈춘다\n비상등 초록 불빛이\n빈 통로를 혼자 지킨다\n\n[Chorus]\n울려라, 아무도 없는 곳에\n울려라, 대답이 없어도\n천장까지 올라간 소리가\n내 이름을 돌려주도록\n빈 홀에서, 빈 홀에서\n나는 아직 서 있다\n\n[Verse 3]\n악보대는 기울어진 채\n누군가의 연필을 물고\n현 하나가 풀린 자리에\n저녁이 대신 앉아 있다\n\n[Bridge]\n박수는 어디로 갔을까\n외투 주머니 속으로\n표는 반으로 찢긴 채로\n바닥에 남아 젖어 있다\n기다림은 소리가 없고\n잔향만 나를 세어 본다\n\n[Chorus]\n울려라, 아무도 없는 곳에\n울려라, 대답이 없어도\n천장까지 올라간 소리가\n내 이름을 돌려주도록\n빈 홀에서, 빈 홀에서\n나는 아직 서 있다\n\n[Outro]\n불이 하나씩 꺼지고\n세 박자가 느려진다\n문 닫히는 소리까지\n이 곡의 마지막 마디"
+  },
+  {
+   "pos": 3,
+   "title": "접이의자 여든두 개",
+   "title_en": "Eighty-Two Folding Chairs",
+   "genre": "Gypsy jazz quartet featuring solo clarinet, acoustic rhythm guitar, upright bass, and accordion",
+   "genre_group": "Jazz",
+   "sub": "Manouche swing with accordion, minor-key and wandering",
+   "bpm": 168,
+   "key": "G minor",
+   "time_sig": "4/4",
+   "sp": "Gypsy jazz quartet featuring solo clarinet, acoustic rhythm guitar, upright bass, and accordion, recorded live in an empty hall. The acoustic rhythm guitar drives a la pompe pulse — muted staccato chords on the off-beats, dry and percussive, comping under everything. Woody pizzicato upright bass walks in steady quarter notes while the accordion breathes long legato pads and counter-melodies behind the beat. Solo clarinet leads: warm and low in the verses, bright improvised runs and flourishes over the turnarounds, with light vibrato and melodic slides. Warm female vocals, close-miked and intimate, slightly breathy, phrasing lazily behind the beat. Harmony is minor-key and restless, leaning on sweetly unresolved sevenths that slide a step downward before settling home. Swung feel in 4/4 time at 168 BPM in the key of G minor. Clean acoustic production, natural room reverb with a long empty-hall tail, warm analog tone. Nostalgic, wandering, bittersweet.",
+   "lyrics": "[Verse 1]\n접이의자 여든두 개를 포개 놓고\n비질한 마루에 분필 자국만 남아\n클라리넷 케이스에 걸린 물음표 하나\n누가 먼저 여기서 웃었더라\n\n[Verse 2]\n매표소 유리에 붙은 어제 날짜\n반쯤 뜯긴 포스터가 바람에 손을 흔들어\n콘트라베이스는 벽에 기대 졸고\n먼지가 조명 기둥을 타고 오른다\n\n[Chorus]\n울려라 빈 홀에서\n아무도 없어도 박자는 남아\n기타는 뒷박을 툭툭 치고\n아코디언이 길게 숨을 뱉는다\n울려라 빈 홀에서\n문 닫힌 뒤에도 계속\n\n[Verse 3]\n역 앞 국숫집 간판불이 꺼질 때쯤\n우리는 셋째 곡을 다시 처음부터\n활대 대신 손끝으로 줄을 뜯으면\n마룻바닥이 대신 발을 굴러준다\n\n[Bridge]\n떠도는 건 우리가 아니라 소리였다\n벽에 부딪혀 돌아오는 데 삼 초\n그 삼 초 동안 홀은 우리를 기억하고\n잊기 전에 한 번 더 불어라\n\n[Chorus]\n울려라 빈 홀에서\n아무도 없어도 박자는 남아\n기타는 뒷박을 툭툭 치고\n아코디언이 길게 숨을 뱉는다\n울려라 빈 홀에서\n불 꺼진 뒤에도 계속\n\n[Outro]\n접이의자 여든두 개\n그중 하나는 늘 비워둔다\n내일 밤 누군가 앉을 자리\n울려라, 아직"
+  },
+  {
+   "pos": 4,
+   "title": "접이의자 마지막 줄",
+   "title_en": "The Last Row of Folding Chairs",
+   "genre": "Bossa nova jazz quartet",
+   "genre_group": "Jazz",
+   "sub": "Intimate late-night bossa nova with nylon guitar, upright bass and brushed drums",
+   "bpm": 92,
+   "key": "A minor",
+   "time_sig": "4/4",
+   "sp": "Bossa nova jazz quartet recorded in a large empty hall after hours, warm and unhurried at 92 BPM in A minor, 4/4. A nylon-string acoustic guitar leads with soft rounded attack, playing rhythmic accompaniment with bossa nova comping patterns, its voicings built on major seventh chords that hang unresolved in the room. The upright bass carries melodic movement in the lower register, walking gently beneath the guitar rather than marking roots. Brushed drums stay quiet on the snare, dry woody cross-stick clicks marking the off-beats with almost no cymbal wash. Acoustic piano enters sparsely, answering the vocal with single-note lines and lush floating chord colors. Breathy female vocals sing close to the microphone in a restrained, conversational tone, slightly behind the beat, with audible breath and little vibrato. Production is intimate and analog: ribbon-microphone warmth, natural room reverb with long empty-hall decay, soft tape compression. Sparse, with silence between phrases.",
+   "lyrics": "[Verse 1]\n접이의자 마지막 줄을 접어 벽에 세운다\n바닥에 남은 물컵 자국 두 개\n누가 앉았는지 알 것 같은 온기\n아직 식지 않은 자리\n\n[Verse 2]\n비상구 초록 불빛만 깜빡이고\n피아노 뚜껑 위에 먼지가 앉는다\n조율사가 두고 간 펠트 조각\n내일 아침에야 다시 온다고\n\n[Chorus]\n빈 홀에서 나는 천천히 걷는다\n발소리가 나보다 늦게 도착하는 곳\n아무도 없는데 박수 소리가 들려\n그건 아마 어제의 것\n\n[Verse 3]\n악보대는 아직 그 각도 그대로\n누군가 급히 넘긴 페이지가 열려 있고\n베이스 케이스 지퍼가 반쯤 내려간 채\n무대 옆에 기대 있다\n\n[Bridge]\n불을 끄기 전에 한 번만\n이 공기를 마셔 두자\n잔향은 사람보다 오래 남아서\n문을 잠근 뒤에도 울린다\n\n[Chorus]\n빈 홀에서 나는 천천히 걷는다\n발소리가 나보다 늦게 도착하는 곳\n아무도 없는데 박수 소리가 들려\n그건 아마 내일의 것\n\n[Outro]\n조명 스위치 위에 손을 얹고\n잠깐, 아주 잠깐\n어둠이 자리에 앉는 걸 기다린다"
+  },
+  {
+   "pos": 5,
+   "title": "사 초짜리 메아리",
+   "title_en": "Four-Second Echo",
+   "genre": "K-Pop power ballad featuring a male tenor vocal",
+   "genre_group": "K-Ballad",
+   "sub": "cinematic piano-and-strings power ballad with late full-band climax",
+   "bpm": 72,
+   "key": "B minor",
+   "time_sig": "4/4",
+   "sp": "K-Pop power ballad featuring a male tenor vocal, 72 BPM in B minor, 4/4. Opens nearly bare: close-miked upright piano with the sustain pedal held, arpeggiated figures ringing into a wide hall reverb, room tone audible between phrases. The male tenor vocals enter soft and breathy in the lower register, conversational and rubato. A string section swells at the pre-chorus, cellos legato beneath sustained violins; fretless bass and brushed snare join, still restrained. The first chorus lifts into chest voice over shimmering clean guitar arpeggios, and the chorus vocals are doubled for width. Verse two adds palm-muted guitar and eighth-note hi-hat. The bridge strips back to piano and voice alone, then a half-time tom build. The final chorus arrives with full band, driving drums, crash cymbals, overdriven power chords, soaring strings, and a strained belt with falsetto ad-libs. Outro decays to solo piano and a long reverb tail. Korean lyrics throughout.",
+   "lyrics": "[Verse 1]\n접이식 의자 삼백 개가 아직 접힌 채로\n비상구 초록 불만 혼자 깨어 있어\n리허설 표시 은색 테이프는 바닥에 남아\n누가 어디 설지 아직 기억하고 있어\n\n[Verse 2]\n음향 콘솔 페이더는 전부 0에 내려두고\n케이블만 무대 옆에 둥글게 감겨 있어\n객석 삼열 일곱 번, 네가 앉던 자리엔\n접힌 팸플릿 한 장 그대로 놓여 있어\n\n[Pre-Chorus]\n숨을 들이켜면 이 홀이 먼저 대답해\n내 목소리보다 잔향이 더 오래 남아\n\n[Chorus]\n불러도 돌아오는 건 내 목소리뿐인데\n이 빈 홀은 그걸 노래라고 불러줘\n천장까지 올라갔다 다시 나를 덮치는\n사 초짜리 메아리에 오늘도 기대 서 있어\n\n[Verse 3]\n조명 감독은 마지막 큐를 지우지 않았고\n스물두 번 조명은 아직 네 자리를 비춰\n\n[Bridge]\n막이 내려간 게 아니라\n아직 올라가지 않은 거라고\n매일 여덟 시에 여기 서서\n나는 그렇게 우겨보는 중이야\n문을 잠그는 사람도\n이제는 나 하나뿐이지만\n\n[Final Chorus]\n불러도 돌아오는 건 내 목소리뿐이지만\n이 빈 홀이 그걸 끝까지 받아 적어줘\n천장을 밀어내고 벽을 지나 다시 오는\n사 초짜리 메아리를 오늘은 너라고 부를게\n접힌 의자 삼백 개가 전부 나를 향해 있어\n비어 있다는 건 아직 기다린다는 뜻이야\n\n[Outro]\n초록 불 하나 남기고\n나는 내일 다시 올게"
+  },
+  {
+   "pos": 6,
+   "title": "먼지가 보이는 각도",
+   "title_en": "The Angle Where Dust Is Visible",
+   "genre": "Orchestral cinematic score with a focus on woodwinds and strings",
+   "genre_group": "Orchestral/Cinematic",
+   "sub": "Woodwind-led cinematic miniature with wordless-quiet female alto and sustained string pads",
+   "bpm": 66,
+   "key": "C minor",
+   "time_sig": "4/4",
+   "sp": "Orchestral cinematic score with a focus on woodwinds and strings, 66 BPM in C minor, 4/4. A solo flute opens alone with a slow descending line, joined by clarinet in thirds and a low bassoon counter-melody. The string section provides sustained harmonic pads in the background, divisi violas and cellos moving in slow bow swells with almost no vibrato. A harp places single plucked notes at the end of phrases and a celeste answers an octave above. French horns hold soft, distant chords underneath. No drum kit: only a quiet timpani pulse and one suspended cymbal swell before the last section. The harmony moves between minor ninth and suspended second voicings and never fully resolves. Female alto vocals enter low and breathy in the middle register, restrained and almost spoken, sung in Korean with long pauses between phrases. The production is a spacious acoustic environment with a long natural decay, audible room tone between phrases, ending on woodwinds alone.",
+   "lyrics": "[Verse 1]\n세 시가 되면 서쪽 창으로\n빛이 한 줄 비스듬히 들어온다\n그 각도에서만 보이는 것이 있다\n공중에 떠 있던 것들의 이름\n\n[Verse 2]\n아무도 걷지 않았는데 먼지는 움직인다\n누가 어제 여기서 크게 웃었기 때문이다\n소리가 지나간 자리는\n한참 뒤에야 눈에 보인다\n\n[Pre-Chorus]\n나는 숨을 참는다\n그래야 그것들이 천천히 내려앉는다\n\n[Chorus]\n이 홀은 비어 있는 게 아니라\n아주 느리게 가라앉는 중이다\n어제의 박수와 마른기침과\n누군가 삼킨 말들이\n바닥에 닿기까지\n꼬박 하루가 걸린다\n\n[Verse 3]\n빗자루를 들었다가 다시 내려놓는다\n아직 다 내려오지 않았다\n\n[Bridge]\n청소는 저녁에 하기로 한다\n그때쯤이면 빛이 각도를 바꾸고\n보이던 것들은 다시\n보이지 않는 자리로 돌아갈 것이다\n없어진 게 아니라\n보이지 않게 된 것뿐\n\n[Chorus]\n이 홀은 비어 있는 게 아니라\n아주 느리게 가라앉는 중이다\n어제의 박수와 마른기침과\n누군가 삼킨 말들이\n바닥에 닿기까지\n꼬박 하루가 걸린다\n\n[Outro]\n창을 닫지 않는다\n내일 세 시에 다시 올 것이다"
+  },
+  {
+   "pos": 7,
+   "title": "마루에 남은 걸음",
+   "title_en": "Steps Left on the Floor",
+   "genre": "Tango with a chamber ensemble arrangement",
+   "genre_group": "Tango/Chamber",
+   "sub": "Bandoneon-led chamber tango, male baritone, danced alone in an empty hall",
+   "bpm": 116,
+   "key": "D minor",
+   "time_sig": "4/4",
+   "sp": "Tango with a chamber ensemble arrangement, 116 BPM in D minor, 4/4. A bandoneon leads with sharp accented attacks on the first and third beats, opening and closing into long breathy sustains. Violin answers with sliding portamento phrases and biting staccato strokes. The double bass anchors the marcato pulse with sustained root notes under each bar, while the cello takes melodic movement in the lower register, dark and singing beneath the violin. An upright piano hammers percussive block chords on the off-beats and drops chromatic runs into the turnarounds. There is no drum kit; the rhythm is carried by string and piano attacks alone. The harmony leans on minor sixth and diminished passing chords, tense and unresolved. Male baritone vocals sit close and dry, spoken-edged and rhythmic in the verses, opening into full chest voice on the refrain, sung in Korean. Recorded live in an empty hall: natural room reverb, audible bellows noise and floor creak. Dramatic, restrained, aching.",
+   "lyrics": "[Verse 1]\n무대 마루에 흰 분필 자국\n여기 서라고 누가 그어 놓은 선\n나는 아직 그 선 안에 서 있고\n너는 선 밖으로 걸어 나갔지\n\n[Verse 2]\n왼발 오른발 다시 왼발\n숫자를 세던 사람은 늘 너였는데\n이제 나는 혼자 세면서\n자꾸 여섯에서 틀린다\n\n[Pre-Chorus]\n음악이 없어도 몸은 기억해\n기억이 없어도 마루는 기억해\n\n[Chorus]\n내가 밟은 자리마다 소리가 나\n누가 여기 있었다고 마루가 말해\n지워도 지워지지 않는 건\n분필이 아니라 무게였어\n너 없이 도는 회전은\n반 바퀴에서 멈춰\n\n[Verse 3]\n스텝은 둘이 아니면 완성되지 않고\n혼자 추는 탱고는 걷는 것과 같아\n\n[Bridge]\n문을 잠그기 전에\n분필 선을 지우려고 했는데\n무릎을 꿇고 손바닥으로 문지르다가\n그냥 두기로 했다\n다음 사람이 여기 설 때\n그 선이 필요할 테니까\n\n[Final Chorus]\n내가 밟은 자리마다 소리가 나\n누가 여기 있었다고 마루가 말해\n지워지지 않는 걸 지우려던 밤에\n나는 겨우 반 바퀴를 돌았고\n그 반 바퀴가 오늘의 전부야\n\n[Outro]\n불을 끄고 나오면서\n한 번 더 왼발부터 뗀다"
+  },
+  {
+   "pos": 8,
+   "title": "사운드체크",
+   "title_en": "Soundcheck",
+   "genre": "K-Pop power ballad",
+   "genre_group": "K-Ballad",
+   "sub": "Soundcheck ballad — bare guitar opening into a full-band chorus with doubled vocals",
+   "bpm": 76,
+   "key": "F# minor",
+   "time_sig": "4/4",
+   "sp": "K-Pop power ballad, 76 BPM in F sharp minor, 4/4. Begins with a single clean electric guitar arpeggio through a wide plate reverb and a felted piano playing sparse mid-register voicings. Male tenor vocals enter close and breathy in the lower register, conversational, with audible breath between lines. A synth pad rises under the pre-chorus with soft string samples layered beneath. At the first chorus the full band enters, drums and bass, a tight kick and snare with a little room around them and a fretless bass sliding between roots, and the chorus vocals are doubled an octave apart for width with a third harmony line panned wide. Verse two adds palm-muted guitar and sixteenth-note hi-hat. The bridge drops to piano and voice, then a half-time tom build lifts into the final chorus with crash cymbals, overdriven power chords and a strained belt. The outro decays to clean guitar and a long reverb tail. Korean lyrics throughout.",
+   "lyrics": "[Verse 1]\n마이크 하나 둘 하나 둘\n내 목소리가 벽까지 갔다 돌아와\n아직 객석엔 아무도 없는데\n스피커는 벌써 다 켜져 있어\n\n[Verse 2]\n드럼 부스에 불이 들어오고\n베이스 앰프가 낮게 웅웅거려\n콘솔에서 누가 손을 들면\n이제 시작한다는 뜻이야\n\n[Pre-Chorus]\n숨을 크게 들이쉰다\n셋을 세면 전부 들어온다\n\n[Chorus]\n같이 들어와 줘 지금\n나 혼자 부르면 이 홀은 너무 커\n드럼이 들어오는 그 순간에\n빈자리가 처음으로 좁아져\n소리로 먼저 여기를 채워놓을게\n사람들이 오기 전에\n\n[Verse 3]\n모니터에서 내 목소리가\n나보다 반 박자 늦게 돌아와\n그 간격만큼이\n아직 남아 있는 시간이야\n\n[Bridge]\n리허설은 완벽하지 않아도 돼\n어차피 오늘 밤은 다르게 부를 거니까\n다만 지금 이 순간에\n너희가 뒤에 있다는 것만\n그것만 확인하면 돼\n\n[Final Chorus]\n같이 들어와 줘 지금\n나 혼자 부르면 이 홀은 너무 커\n심벌이 부서지는 그 소리에\n내 목소리를 얹어서 던질게\n오늘 밤 여기 서는 사람은\n나 혼자가 아니야\n\n[Outro]\n하나 둘 하나 둘\n이제 문을 열어도 좋아"
+  },
+  {
+   "pos": 9,
+   "title": "마지막 큐가 끝나고",
+   "title_en": "After the Last Cue",
+   "genre": "Bossa nova and Latin jazz fusion",
+   "genre_group": "Jazz",
+   "sub": "Light bossa-fusion load-out song with muted trumpet, sax trade and scat adlibs",
+   "bpm": 104,
+   "key": "F major",
+   "time_sig": "4/4",
+   "sp": "Bossa nova and Latin jazz fusion, 104 BPM in F major, 4/4. A nylon-string guitar comps syncopated bossa patterns built on major seventh and thirteenth voicings, warm and rounded, sitting slightly behind the beat. Electric piano answers with soft tremolo chords and short single-note fills. Fretless electric bass plays a light two-feel, sliding between notes. The drums stay brushed and quiet, cross-stick on the rim with shaker and woodblock keeping the pulse and the hi-hat barely opening. A muted trumpet takes the head, breathy and close-miked, then trades with a tenor saxophone solo over the turnaround. Female vocals sing soft and conversational with almost no vibrato, drifting into scat adlibs over the second chorus and the outro vamp, sung in Korean. Production is warm and analog: ribbon microphone tone, tape saturation, natural room reverb from a large empty hall, wide stereo guitar. Relaxed, sunlit, a little wistful.",
+   "lyrics": "[Verse 1]\n마지막 큐가 지나가고\n조명 감독이 헤드셋을 벗어\n케이블을 감는 손이 여덟 개\n아무도 서두르지 않아\n\n[Verse 2]\n객석엔 팸플릿 몇 장\n접힌 자국이 다 다르게 남아\n누가 어디쯤에서 울었는지\n종이가 대신 말해주네\n\n[Chorus]\n끝난 게 아니라 접히는 중\n의자도 무대도 오늘도 접히는 중\n불이 하나씩 꺼져 가는 게\n꼭 누가 잘 자라고 말하는 것 같아\n내일 또 펴면 되니까\n오늘은 이대로 둬도 돼\n\n[Verse 3]\n드럼 케이스 바퀴 소리가\n복도 끝까지 굴러가고\n누군가 휘파람을 불어\n아까 그 곡의 후렴을\n\n[Bridge]\n매점 아주머니가 문을 잠그고\n주차장 조명만 남아 있고\n우리는 아직 로비에 서서\n별로 중요하지 않은 얘기를 해\n이게 제일 좋은 시간이야\n\n[Final Chorus]\n끝난 게 아니라 접히는 중\n사람도 소리도 천천히 접히는 중\n마지막 사람이 불을 끄면\n이 홀은 다시 아침을 기다려\n내일 또 펴면 되니까\n오늘은 이대로 둬도 돼\n\n[Outro]\n비상구 초록 불만 남기고\n우리는 걸어 나가"
+  },
+  {
+   "pos": 10,
+   "title": "다시 문을 열면",
+   "title_en": "When the Doors Open Again",
+   "genre": "Operatic pop ballad with cinematic orchestral arrangements",
+   "genre_group": "Orchestral/Cinematic",
+   "sub": "Operatic finale — piano and soprano opening into full orchestra, choir and driving drums",
+   "bpm": 72,
+   "key": "C minor",
+   "time_sig": "4/4",
+   "sp": "Operatic pop ballad with cinematic orchestral arrangements, 72 BPM in C minor, 4/4. Opens on a solo grand piano in a large hall, single sustained chords ringing out with the pedal down and room tone audible between them. A female soprano enters in a soft, classically placed head voice, vibrato narrow and controlled, phrasing with rubato. Cellos and low strings swell under the first verse and a boys' choir hums beneath the pre-chorus. The chorus arrives with full band, driving drums, thunderous toms and cymbal crashes under a full string section and brass, with timpani doubling the downbeats. Verse two pulls back to piano, harp and solo violin. The bridge builds through a modulating string ostinato into a key change, and the last chorus carries a massive choir, layered soprano harmonies and soaring operatic adlibs above the melody. Ends on one orchestral hit and a long empty-hall reverb tail. Korean lyrics throughout, sung with operatic diction.",
+   "lyrics": "[Verse 1]\n언젠가 이 홀도 문을 닫겠지\n간판이 내려가고 이름이 지워지고\n그래도 벽은 남아\n여기서 났던 소리를 다 안고\n\n[Verse 2]\n삼백열두 개 의자가\n언젠가 다른 곳으로 실려 가도\n그 위에 앉았던 저녁들은\n실려 가지 않아\n\n[Pre-Chorus]\n나는 그걸 증명할 수 없지만\n증명하지 않아도 알아\n\n[Chorus]\n다시 문을 열면\n공기가 먼저 나를 알아볼 거야\n비어 있던 게 아니라\n지키고 있었다고\n돌아온 사람에게만 들리는\n아주 낮은 목소리로\n\n[Verse 3]\n무대에 올라 한가운데 서면\n발밑에서 지난 밤들이 올라와\n\n[Bridge]\n누가 여기서 처음 노래했는지\n누가 마지막으로 울었는지\n아무도 적어두지 않았지만\n이 홀은 전부 외우고 있어\n그게 이 건물이 하는 일이야\n비어 있는 채로 기억하는 일\n\n[Final Chorus]\n다시 문을 열면\n공기가 먼저 나를 알아볼 거야\n비어 있던 게 아니라\n지키고 있었다고\n오늘 밤 내가 부르는 이 노래도\n언젠가 벽이 되어 남을 거야\n그러니 크게 불러\n끝까지 남도록\n\n[Outro]\n문을 열어 둔 채로\n나는 무대에서 내려온다"
+  }
+ ]
+}
