@@ -8,7 +8,7 @@ Two granularity levels (single collection, granularity field):
 
 Features:
   - Couplet: 2-line sliding pairs, merge lines under 20 chars
-  - Chorus dedup: identical chorus text collapsed, repeat_count metadata
+  - Section dedup: identical repeated sections collapsed (tag,text), repeat_count metadata
   - Genre augmentation in embed_text
 
 Usage:
@@ -113,25 +113,37 @@ def parse_lyrics_sections(lyrics: str) -> list[dict]:
     return sections
 
 
-def dedup_chorus(sections: list[dict]) -> list[dict]:
-    """Collapse identical chorus sections, adding repeat_count."""
-    seen_chorus: dict[str, int] = {}
+def dedup_repeated_sections(sections: list[dict]) -> list[dict]:
+    """Collapse identical repeated sections within a song, adding repeat_count.
+
+    ★2026-08-22 일반화 — 종전 이름은 dedup_chorus였고 `tag == "chorus"`만 접었다.
+    그 결과 hook·pre_chorus 반복은 안 접혀서 두 가지가 동시에 생겼다:
+      ⑴ 같은 곡 안에 텍스트가 완전히 같은 청크 — 품질게이트 exact_duplicate 26건(section)
+      ⑵ ★더 큰 쪽 = **비대칭**. chorus 반복 64회는 repeat_count로 기록되는데
+         hook은 전부 repeat_count=1이었다(n=103). 「어느 섹션이 얼마나 반복되나」를
+         태그별로 비교하면 구조적으로 편향된 답이 나온다.
+    키를 (tag, text)로 잡아 태그를 가로지르지 않는다 — chorus↔drop처럼 라벨이 다른 동일
+    텍스트는 그 라벨 차이가 정보라서 남긴다(실측 1쌍).
+    드라이런 실측: 청크 6,093→6,045(-48) · 중복 초과 70→22 · verse 영향 0.
+    잔여 22 = couplet 층에서 서로 다른 chorus 섹션이 2행짜리 일부를 공유하는 건(18+2)
+    + chorus↔drop 1쌍(2). 이쪽은 실제로 다른 섹션이라 접지 않는다.
+    """
+    seen: dict[tuple, int] = {}
     deduped = []
     for sec in sections:
-        if sec["tag"] == "chorus":
-            normalized_text = sec["text"].strip()
-            if normalized_text in seen_chorus:
-                seen_chorus[normalized_text] += 1
-                continue
-            seen_chorus[normalized_text] = 1
-            sec = {**sec, "_chorus_key": normalized_text}
-        deduped.append(sec)
+        key = (sec["tag"], sec["text"].strip())
+        if key in seen:
+            seen[key] += 1
+            continue
+        seen[key] = 1
+        deduped.append({**sec, "_repeat_key": key})
     for sec in deduped:
-        if "_chorus_key" in sec:
-            sec["repeat_count"] = seen_chorus[sec.pop("_chorus_key")]
-        else:
-            sec["repeat_count"] = 1
+        sec["repeat_count"] = seen[sec.pop("_repeat_key")]
     return deduped
+
+
+# 구명 별칭 — 외부 호출자 보호(현재 저장소 내 호출자는 build_chunks 1곳뿐)
+dedup_chorus = dedup_repeated_sections
 
 
 def split_couplets(text: str) -> list[str]:
@@ -201,7 +213,7 @@ def build_chunks(augment: bool = True) -> list[dict]:
         if not sections:
             continue
 
-        sections = dedup_chorus(sections)
+        sections = dedup_repeated_sections(sections)
         structure = build_structure_string(sections)
         language = detect_language(lyrics)
 
@@ -310,13 +322,14 @@ def print_stats(chunks: list[dict]):
         text_lens = [c["payload"]["char_count"] for c in subset]
         print(f"  Length: min={min(text_lens)}, max={max(text_lens)}, avg={sum(text_lens) // len(text_lens)}")
 
-    deduped_chorus = [c for c in chunks
-                      if c["payload"]["granularity"] == "section"
-                      and c["payload"]["section_tag"] == "chorus"
-                      and c["payload"].get("repeat_count", 1) > 1]
-    if deduped_chorus:
-        total_saved = sum(c["payload"]["repeat_count"] - 1 for c in deduped_chorus)
-        print(f"\nChorus dedup: {len(deduped_chorus)} unique chorus with repeats, {total_saved} duplicates removed")
+    repeated = [c for c in chunks
+                if c["payload"]["granularity"] == "section"
+                and c["payload"].get("repeat_count", 1) > 1]
+    if repeated:
+        total_saved = sum(c["payload"]["repeat_count"] - 1 for c in repeated)
+        by_tag = Counter(c["payload"]["section_tag"] for c in repeated)
+        print(f"\nSection dedup: {len(repeated)} unique sections with repeats, {total_saved} duplicates collapsed")
+        print(f"  by tag: {dict(by_tag.most_common())}")
 
     by_lang = Counter(c["payload"]["language"] for c in chunks)
     print(f"\nBy language: {dict(by_lang)}")
