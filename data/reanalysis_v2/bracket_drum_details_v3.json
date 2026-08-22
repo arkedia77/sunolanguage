@@ -1,18 +1,18 @@
 {
   "drums": {
-    "count": 440,
+    "count": 451,
     "top_modifiers": [
       [
         "driving",
-        70
+        71
       ],
       [
         "full",
-        54
+        56
       ],
       [
         "clean",
-        52
+        54
       ],
       [
         "soft",
@@ -20,7 +20,7 @@
       ],
       [
         "steady",
-        26
+        27
       ],
       [
         "bright",
@@ -39,13 +39,13 @@
         10
       ],
       [
-        "light",
+        "funky",
         8
       ]
     ]
   },
   "kick drum": {
-    "count": 134,
+    "count": 135,
     "top_modifiers": [
       [
         "soft",
@@ -90,7 +90,7 @@
     ]
   },
   "snare drum": {
-    "count": 109,
+    "count": 112,
     "top_modifiers": [
       [
         "soft",
@@ -135,7 +135,7 @@
     ]
   },
   "beat": {
-    "count": 66,
+    "count": 68,
     "top_modifiers": [
       [
         "driving",
@@ -143,15 +143,15 @@
       ],
       [
         "clean",
+        13
+      ],
+      [
+        "steady",
         11
       ],
       [
         "full",
         11
-      ],
-      [
-        "steady",
-        10
       ],
       [
         "bright",
@@ -160,6 +160,10 @@
       [
         "soft",
         3
+      ],
+      [
+        "funky",
+        2
       ],
       [
         "muted",
@@ -172,15 +176,11 @@
       [
         "jazzy",
         1
-      ],
-      [
-        "funky",
-        1
       ]
     ]
   },
   "percussion": {
-    "count": 56,
+    "count": 58,
     "top_modifiers": [
       [
         "light",
@@ -225,7 +225,7 @@
     ]
   },
   "shaker": {
-    "count": 55,
+    "count": 56,
     "top_modifiers": [
       [
         "soft",
@@ -245,7 +245,36 @@
       ],
       [
         "subtle",
-        2
+        3
+      ]
+    ]
+  },
+  "crash cymbal": {
+    "count": 32,
+    "top_modifiers": [
+      [
+        "full",
+        9
+      ],
+      [
+        "heavy",
+        7
+      ],
+      [
+        "driving",
+        1
+      ],
+      [
+        "high-energy",
+        1
+      ],
+      [
+        "sudden",
+        1
+      ],
+      [
+        "frequent",
+        1
       ]
     ]
   },
@@ -282,35 +311,6 @@
       ],
       [
         "crisp",
-        1
-      ]
-    ]
-  },
-  "crash cymbal": {
-    "count": 29,
-    "top_modifiers": [
-      [
-        "full",
-        9
-      ],
-      [
-        "heavy",
-        7
-      ],
-      [
-        "driving",
-        1
-      ],
-      [
-        "high-energy",
-        1
-      ],
-      [
-        "sudden",
-        1
-      ],
-      [
-        "frequent",
         1
       ]
     ]

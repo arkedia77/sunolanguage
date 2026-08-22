@@ -46,6 +46,9 @@ GENRE_KEYS = ("suno_genre", "reanalysis_genre", "genre")
 TITLE_KEYS = ("suno_title", "reanalysis_title", "title")
 UUID_KEYS = ("suno_uuid", "reanalysis_uuid", "uuid")
 ID_KEYS = ("gid", "sample_id", "id", "track_id")
+# ★입력층(우리가 넣은 원본) — Batch C에서 짝 대조군을 살리기 위한 확장(2026-08-22)
+LEO_SP_KEYS = ("leomusic_sp", "input_sp", "prescribed_sp")
+LEO_LYRICS_KEYS = ("leomusic_lyrics", "input_lyrics", "prescribed_lyrics")
 
 
 def pick(item: dict, keys: tuple) -> str:
@@ -119,10 +122,15 @@ def build_entry(item: dict, batch: str, order_idx: dict,
                                          batch == "A" and not lyrics)),
         "series": f"BATCH_{batch}",
         "leomusic_original": {
-            # Batch C: 원곡은 leomusic 생성곡(DB 보유) — 참조 메타만.
+            # Batch C: 원곡은 leomusic 생성곡. 종전엔 참조 메타만 넣었으나(sp=""),
+            #   그러면 그 곡이 **입력↔출력 짝 대조군에서 통째로 빠진다**(기존 BATCH_C 60건이
+            #   전부 그렇게 들어가 있다). ★2026-08-22 확장: 회신이 입력층을 실어 보내면 그대로
+            #   싣는다. source_gid로 나중에 DB 조인해서 채우는 길도 있으나, **조인이 필요하면
+            #   그건 행 안이 아니라 밖**이고 읽는 쪽은 「없음」으로 본다. 하위호환 —
+            #   회신에 필드가 없으면 종전과 동일하게 ""(기존 60건 영향 0).
             # Batch A: 외부 음원 — 원본 SP/가사 없음.
-            "sp": "",
-            "lyrics": "",
+            "sp": pick(item, LEO_SP_KEYS),
+            "lyrics": pick(item, LEO_LYRICS_KEYS),
             "source_gid": item.get("gid") if batch == "C" else None,
             "source_batch": (orig or {}).get("batch_src", "") if batch == "C"
                             else item.get("source", ""),
