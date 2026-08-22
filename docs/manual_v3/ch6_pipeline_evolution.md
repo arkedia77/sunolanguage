@@ -185,11 +185,16 @@ Suno corpus에 전혀 없는 악기·주법 전문어. SP에 넣어도 Suno가 �
 | 어휘 | 출현 | 교정 |
 |---|---|---|
 | `bounce` | 74곡 | "disco bass"(50건)/"bouncing bass" |
-| `chord progressions` | 25곡 | **삭제 — 5장 확인 그대로 Suno는 코드진행을 묘사하지 않는다** |
+| `chord progressions`(★복수형 한정) | 25곡 | **삭제** — 복수형 출력층 0곡. ⚠**단수 `chord progression`은 삭제 대상이 아니다**(출력층 28곡). 2026-08-22 정정 |
 | `vintage` | 19곡 | warm/analog/lo-fi |
 | `modal` 17 · `arco` 16 · `suspended` 15 · `programmed` 11 | | key 직접명시 / bowed strings / (삭제) / drum machine |
 
-특히 `chord progressions`가 25곡에서 0건으로 확인된 것은, 5장 5.1("코드 진행 0건")의 데드존 원칙이 **자매 프로젝트의 실제 SP에서 그대로 깨진** 증거다 — 책의 정적 발견이 생성 현장에서 검증된 셈.
+특히 `chord progressions`(복수)가 25곡에서 0건으로 확인된 것은, 5장 5.1의 데드존 원칙이 **자매 프로젝트의 실제 SP에서 그대로 깨진** 증거다 — 책의 정적 발견이 생성 현장에서 검증된 셈.
+
+> ⚠**2026-08-22 정정 — 이 문단이 실피해를 냈다.** 위 표의 근거는 **복수형 25곡**인데, 이 문단이 「5장 「코드 진행 0건」 원칙」이라고
+> **일반화**해 적었다. leomusic-trot 구현자가 그 문면을 읽고 정규식 `chord progressions?`로 **단수까지** strip 했고, 출력층 28곡짜리
+> attested 표현이 06-15부터 08-22까지 그쪽 SP에서 조용히 지워졌다. 5장 §5.1의 원문면(「코드 진행 0건」) 자체가 반증됐다 —
+> `chords` 269곡·`chord progression`(단수) 28곡. **표는 옳았고 해설이 넓었다.** 상세·재실측표=§5.1.
 
 ### 등급 3 — inert 군더더기 / canon 불일치 (2층 부근)
 
