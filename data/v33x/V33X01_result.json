@@ -1,0 +1,167 @@
+{
+ "batch": "V33X01",
+ "album": "빈 홀에서 (In the Empty Hall)",
+ "generated_at": "2026-08-22T14:04:18",
+ "suno_account": "leoarkedia",
+ "summary": "10/10 생성 성공 · DB 정합 검증 전건 PASS",
+ "_★검증_실측(2026-08-22)": {
+  "곡수": "회신 10 / DB 10 / 결측 0",
+  "status": "전건 generated (pending_suno 잔류 0)",
+  "uuid": "총 20건 · distinct 20 · NULL 0 · 곡별 uuid1≠uuid2(2take) 전건 성립",
+  "gid": "30209~30218 연속 · 갭 0",
+  "uuid_writeback": "sunomusic 회신값과 DB 저장값 전건 일치(불일치 0)"
+ },
+ "_★이_배치의_목적_미완": "이 배치는 v3.3 신규 어휘를 **입력층에 처음 써넣은 시행**이다. 생성 완주는 절반이고, **재분석 회수 전까지 대조쌍은 없다**. ⇒ 다음 단계=생성분 Suno 재분석 SP 회수(sunomusic 발주) → `corpus_ingest_runner.py`로 적재 → 처방↔출력 대조.",
+ "_★정직_고지": "신규 개념 9건의 attested_count는 2~7로 **저표본**이고 confidence는 medium 8 / high 1이다. 이 배치가 잘 나와도 「신규 어휘가 작동한다」의 증거가 아니다 — 곡 성패에는 프라이어층(가사 정서·에너지·구조)이 함께 걸린다(L4 prior-bound).",
+ "songs": [
+  {
+   "gid": 30209,
+   "pos": 1,
+   "title": "먼저 도착한 사람",
+   "status": "generated",
+   "genre_prescribed": "Cinematic orchestral score",
+   "v33_vocab_prescribed": [
+    "sustained harmonic pads in the background",
+    "a spacious acoustic environment"
+   ],
+   "uuid1": "7dab0169-be79-4451-ac3c-6a076f2b616e",
+   "uuid2": "d1067a4c-aa09-4aee-a669-f93c543c1c70",
+   "mp3_1": "https://cdn1.suno.ai/7dab0169-be79-4451-ac3c-6a076f2b616e.mp3",
+   "mp3_2": "https://cdn1.suno.ai/d1067a4c-aa09-4aee-a669-f93c543c1c70.mp3"
+  },
+  {
+   "gid": 30210,
+   "pos": 2,
+   "title": "빈 홀에서",
+   "status": "generated",
+   "genre_prescribed": "Orchestral film score in 3/4 time at 100 BPM",
+   "v33_vocab_prescribed": [
+    "sustained root notes",
+    "major seventh"
+   ],
+   "uuid1": "8e25bd87-489b-4dc3-962b-e71294aa9606",
+   "uuid2": "3799bf69-d444-47e8-9e00-2780b1f0e793",
+   "mp3_1": "https://cdn1.suno.ai/8e25bd87-489b-4dc3-962b-e71294aa9606.mp3",
+   "mp3_2": "https://cdn1.suno.ai/3799bf69-d444-47e8-9e00-2780b1f0e793.mp3"
+  },
+  {
+   "gid": 30211,
+   "pos": 3,
+   "title": "접이의자 여든두 개",
+   "status": "generated",
+   "genre_prescribed": "Gypsy jazz quartet featuring solo clarinet, acoustic rhythm guitar, upright bass, and accordion",
+   "v33_vocab_prescribed": [
+    "solo clarinet, acoustic rhythm guitar, upright bass"
+   ],
+   "uuid1": "0438dca2-c5a3-481f-9f3b-c8bff07d8795",
+   "uuid2": "05d7bd74-30f9-4291-88b2-1d2b18c60bd6",
+   "mp3_1": "https://cdn1.suno.ai/0438dca2-c5a3-481f-9f3b-c8bff07d8795.mp3",
+   "mp3_2": "https://cdn1.suno.ai/05d7bd74-30f9-4291-88b2-1d2b18c60bd6.mp3"
+  },
+  {
+   "gid": 30212,
+   "pos": 4,
+   "title": "접이의자 마지막 줄",
+   "status": "generated",
+   "genre_prescribed": "Bossa nova jazz quartet",
+   "v33_vocab_prescribed": [
+    "major seventh",
+    "melodic movement in the lower register"
+   ],
+   "uuid1": "193dd252-3f66-4a87-9102-18811ec4e5be",
+   "uuid2": "6e38f3b5-a78a-426c-a7e6-20baf5757051",
+   "mp3_1": "https://cdn1.suno.ai/193dd252-3f66-4a87-9102-18811ec4e5be.mp3",
+   "mp3_2": "https://cdn1.suno.ai/6e38f3b5-a78a-426c-a7e6-20baf5757051.mp3"
+  },
+  {
+   "gid": 30213,
+   "pos": 5,
+   "title": "사 초짜리 메아리",
+   "status": "generated",
+   "genre_prescribed": "K-Pop power ballad featuring a male tenor vocal",
+   "v33_vocab_prescribed": [
+    "doubled",
+    "full band, driving drums"
+   ],
+   "uuid1": "30981a0c-f0b0-49e1-8fe8-5491d12603ee",
+   "uuid2": "d382babc-a9dc-4b8d-b54a-fbea66434ffd",
+   "mp3_1": "https://cdn1.suno.ai/30981a0c-f0b0-49e1-8fe8-5491d12603ee.mp3",
+   "mp3_2": "https://cdn1.suno.ai/d382babc-a9dc-4b8d-b54a-fbea66434ffd.mp3"
+  },
+  {
+   "gid": 30214,
+   "pos": 6,
+   "title": "먼지가 보이는 각도",
+   "status": "generated",
+   "genre_prescribed": "Orchestral cinematic score with a focus on woodwinds and strings",
+   "v33_vocab_prescribed": [
+    "a spacious acoustic environment",
+    "sustained harmonic pads in the background"
+   ],
+   "uuid1": "f8bd5e8c-4867-410f-babf-2cfd6340e3b2",
+   "uuid2": "699e5924-91ce-474a-ade6-f47a1bf6db8b",
+   "mp3_1": "https://cdn1.suno.ai/f8bd5e8c-4867-410f-babf-2cfd6340e3b2.mp3",
+   "mp3_2": "https://cdn1.suno.ai/699e5924-91ce-474a-ade6-f47a1bf6db8b.mp3"
+  },
+  {
+   "gid": 30215,
+   "pos": 7,
+   "title": "마루에 남은 걸음",
+   "status": "generated",
+   "genre_prescribed": "Tango with a chamber ensemble arrangement",
+   "v33_vocab_prescribed": [
+    "melodic movement in the lower register",
+    "sustained root notes"
+   ],
+   "uuid1": "f3747178-24b7-4294-b428-9174c349ab96",
+   "uuid2": "84e022ef-1eb5-450d-9bc6-a2c349dcc29a",
+   "mp3_1": "https://cdn1.suno.ai/f3747178-24b7-4294-b428-9174c349ab96.mp3",
+   "mp3_2": "https://cdn1.suno.ai/84e022ef-1eb5-450d-9bc6-a2c349dcc29a.mp3"
+  },
+  {
+   "gid": 30216,
+   "pos": 8,
+   "title": "사운드체크",
+   "status": "generated",
+   "genre_prescribed": "K-Pop power ballad",
+   "v33_vocab_prescribed": [
+    "full band enters, drums and bass",
+    "doubled"
+   ],
+   "uuid1": "2c98447d-fede-437a-a2a9-20f735e1d694",
+   "uuid2": "ed292179-f815-4631-9b3f-1b66688bcfaf",
+   "mp3_1": "https://cdn1.suno.ai/2c98447d-fede-437a-a2a9-20f735e1d694.mp3",
+   "mp3_2": "https://cdn1.suno.ai/ed292179-f815-4631-9b3f-1b66688bcfaf.mp3"
+  },
+  {
+   "gid": 30217,
+   "pos": 9,
+   "title": "마지막 큐가 끝나고",
+   "status": "generated",
+   "genre_prescribed": "Bossa nova and Latin jazz fusion",
+   "v33_vocab_prescribed": [
+    "major seventh",
+    "adlibs"
+   ],
+   "uuid1": "2d96be13-486f-49be-b273-62902df1fa4e",
+   "uuid2": "1490bfd3-8b68-4c5a-b640-36e73a7f483a",
+   "mp3_1": "https://cdn1.suno.ai/2d96be13-486f-49be-b273-62902df1fa4e.mp3",
+   "mp3_2": "https://cdn1.suno.ai/1490bfd3-8b68-4c5a-b640-36e73a7f483a.mp3"
+  },
+  {
+   "gid": 30218,
+   "pos": 10,
+   "title": "다시 문을 열면",
+   "status": "generated",
+   "genre_prescribed": "Operatic pop ballad with cinematic orchestral arrangements",
+   "v33_vocab_prescribed": [
+    "full band, driving drums",
+    "adlibs"
+   ],
+   "uuid1": "a27e16e7-23b4-4dd5-b9ba-7c7cce05a726",
+   "uuid2": "4e3c87d7-adb2-41d7-afd9-5ec0a44d6e79",
+   "mp3_1": "https://cdn1.suno.ai/a27e16e7-23b4-4dd5-b9ba-7c7cce05a726.mp3",
+   "mp3_2": "https://cdn1.suno.ai/4e3c87d7-adb2-41d7-afd9-5ec0a44d6e79.mp3"
+  }
+ ]
+}
