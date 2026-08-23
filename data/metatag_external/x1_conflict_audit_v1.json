@@ -1,0 +1,276 @@
+{
+ "무엇": "X1 「충돌」 검산 v1 — 대장 §3 X1의 「정면 반대」 판정 자체를 검산",
+ "재현": "scripts/x1_bracket_conflict_audit_v1.py",
+ "★생성": "0건 · 크레딧 0 · 새 수집 0 (리포 내 기존 자료만)",
+ "A_축정합_외부주장_원문": [
+  {
+   "id": "D001",
+   "host": "jackrighteous.com",
+   "주장": "\"The label is sung aloud\" — caused by the cue being too verbose or too lyrical. Remedy: keep bracket cues short.",
+   "★검증가능성": "already_measured"
+  },
+  {
+   "id": "D002",
+   "host": "jackrighteous.com",
+   "주장": "'Avoid tag stuffing. A long bracket inventory makes the map harder to read.' Recommends testing one variable at a time; 'Every retry is unrelated' results from changing too many variables at once.",
+   "★검증가능성": "needs_generation"
+  },
+  {
+   "id": "D006",
+   "host": "hookgenius.app",
+   "주장": "'Tags being sung as lyrics' occurs when tags aren't on their own line; 'Song ignores structure tags' happens with complex tag descriptions; 'Parenthetical directions being sung' results from full sentences in parentheses.",
+   "★검증가능성": "already_measured"
+  },
+  {
+   "id": "D013",
+   "host": "hookgenius.app",
+   "주장": "Long bracket cues degrade: 'The model's tokenizer front-loads processing and prefers short, recognizable descriptors. Long bracketed sentences like [Ethereal synth build with rising tension over sparse percussion] get compressed into noise.' Keep each tag to 1-3 words.",
+   "★검증가능성": "needs_generation"
+  },
+  {
+   "id": "D016",
+   "host": "hookgenius.app",
+   "주장": "Tier ranking (from a claimed 400+ generation test): gender, delivery mode (whisper, rap, belt, spoken word), BPM and basic texture (raspy, breathy) are Tier-1 reliably honored; [Whispered] is '>80% compliance'; [Spoken Word] is 'Tier 1 and one of the cleanest-complying tags Suno has'. [Falsetto] ~60%. [Intro] 'notoriously skipped entirely'.",
+   "★검증가능성": "impossible_by_design"
+  },
+  {
+   "id": "D051",
+   "host": "tagasong.com",
+   "주장": "Guidance runs AGAINST catch-all rule blocks: 'Best practice is to shorten the bracket, remove sentence-like wording and place one concise cue directly before the intended event.' Evidence favors specific targeted tags over broad instruction containers.",
+   "★검증가능성": "needs_generation"
+  },
+  {
+   "id": "D053",
+   "host": "tagasong.com",
+   "주장": "Countervailing caution on long bracket text: 'Use the tag as a header, then write clean lyric lines underneath it, rather than putting full lyric lines inside brackets, which can cause Suno to sing command text.' Directly at odds with the multi-line [PERFORMANCE RULES] bullet-block form.",
+   "★검증가능성": "needs_generation"
+  }
+ ],
+ "B_실측": {
+  "근거곡": "https://www.youtube.com/watch?v=dxG9qPPpRnI",
+  "입력가사_출처": "영상 설명란 '// Lyrics (as input)'",
+  "자막_출처": "data/metatag_external/yt/verify_v1/dxG9qPPpRnI.en-orig.vtt (유튜브 자동자막 = 실제 렌더 ASR)",
+  "브라켓_고유": 11,
+  "브라켓_총출현": 27,
+  "브라켓_낱말수_분포": [
+   {
+    "표기": "[Female spoken, vocaloid, gentle]",
+    "낱말수": 4,
+    "출현": 8
+   },
+   {
+    "표기": "[Lyrics by Josh Powlison]",
+    "낱말수": 4,
+    "출현": 1
+   },
+   {
+    "표기": "[Monster spoken, raspy, angry]",
+    "낱말수": 4,
+    "출현": 8
+   },
+   {
+    "표기": "[Verse 1, Man]",
+    "낱말수": 3,
+    "출현": 1
+   },
+   {
+    "표기": "[Verse 2, Man]",
+    "낱말수": 3,
+    "출현": 1
+   },
+   {
+    "표기": "[Bridge, Man]",
+    "낱말수": 2,
+    "출현": 1
+   },
+   {
+    "표기": "[Chorus, Man]",
+    "낱말수": 2,
+    "출현": 3
+   },
+   {
+    "표기": "[in Latin]",
+    "낱말수": 2,
+    "출현": 1
+   },
+   {
+    "표기": "[End]",
+    "낱말수": 1,
+    "출현": 1
+   },
+   {
+    "표기": "[Intro]",
+    "낱말수": 1,
+    "출현": 1
+   },
+   {
+    "표기": "[laugh]",
+    "낱말수": 1,
+    "출현": 1
+   }
+  ],
+  "누출_판정낱말(브라켓에만 있고 가사본문엔 없음)": [
+   "1",
+   "2",
+   "bridge",
+   "by",
+   "chorus",
+   "female",
+   "intro",
+   "josh",
+   "latin",
+   "laugh",
+   "lyrics",
+   "man",
+   "monster",
+   "powlison",
+   "raspy",
+   "spoken",
+   "verse",
+   "vocaloid"
+  ],
+  "판정불가_낱말(가사본문과 공유 → 누출 판정에 못 씀)": [
+   "angry",
+   "end",
+   "gentle",
+   "in"
+  ],
+  "자막_적중_원값": {
+   "by": 1
+  },
+  "★적중_문맥실사": {
+   "by": {
+    "판정": "누출 아님",
+    "근거": "자막 문맥 'ins I by skull' = 입력 가사 'inside my skull'의 자동자막 오인식. [Lyrics by Josh Powlison]과 무관.",
+    "확인": "문자열 실사 08-23"
+   }
+  },
+  "★누출_확정": {},
+  "★누출_건수": 0,
+  "★분모": {
+   "서술브라켓_출현": 16,
+   "판정가능_낱말종수": 18
+  },
+  "지배대사_렌더_확인": [
+   {
+    "태그": "[Female spoken, vocaloid, gentle]",
+    "대사_앞30자": "Don't do it.",
+    "내용어": 2,
+    "자막적중": 2,
+    "적중률": 1.0
+   },
+   {
+    "태그": "[Monster spoken, raspy, angry]",
+    "대사_앞30자": "Do it.",
+    "내용어": 0,
+    "자막적중": 0,
+    "적중률": null
+   },
+   {
+    "태그": "[Female spoken, vocaloid, gentle]",
+    "대사_앞30자": "Make sure to comment your code",
+    "내용어": 14,
+    "자막적중": 13,
+    "적중률": 0.929
+   },
+   {
+    "태그": "[Monster spoken, raspy, angry]",
+    "대사_앞30자": "No. If a programmer can't read",
+    "내용어": 10,
+    "자막적중": 9,
+    "적중률": 0.9
+   },
+   {
+    "태그": "[Female spoken, vocaloid, gentle]",
+    "대사_앞30자": "Remember that you have a lot o",
+    "내용어": 15,
+    "자막적중": 15,
+    "적중률": 1.0
+   },
+   {
+    "태그": "[Monster spoken, raspy, angry]",
+    "대사_앞30자": "But how will they learn unless",
+    "내용어": 9,
+    "자막적중": 9,
+    "적중률": 1.0
+   },
+   {
+    "태그": "[Monster spoken, raspy, angry]",
+    "대사_앞30자": "Don't you know that your super",
+    "내용어": 23,
+    "자막적중": 23,
+    "적중률": 1.0
+   },
+   {
+    "태그": "[Female spoken, vocaloid, gentle]",
+    "대사_앞30자": "No. You're on a team. Think of",
+    "내용어": 13,
+    "자막적중": 12,
+    "적중률": 0.923
+   },
+   {
+    "태그": "[Monster spoken, raspy, angry]",
+    "대사_앞30자": "[laugh] They already did, you ",
+    "내용어": 9,
+    "자막적중": 8,
+    "적중률": 0.889
+   },
+   {
+    "태그": "[Monster spoken, raspy, angry]",
+    "대사_앞30자": "I know their code works, but i",
+    "내용어": 20,
+    "자막적중": 20,
+    "적중률": 1.0
+   },
+   {
+    "태그": "[Female spoken, vocaloid, gentle]",
+    "대사_앞30자": "It may be messy, but they did ",
+    "내용어": 9,
+    "자막적중": 9,
+    "적중률": 1.0
+   },
+   {
+    "태그": "[Female spoken, vocaloid, gentle]",
+    "대사_앞30자": "You're a good programmer.",
+    "내용어": 3,
+    "자막적중": 3,
+    "적중률": 1.0
+   },
+   {
+    "태그": "[Monster spoken, raspy, angry]",
+    "대사_앞30자": "There's no such thing as a goo",
+    "내용어": 11,
+    "자막적중": 10,
+    "적중률": 0.909
+   },
+   {
+    "태그": "[Female spoken, vocaloid, gentle]",
+    "대사_앞30자": "That's not true.",
+    "내용어": 3,
+    "자막적중": 3,
+    "적중률": 1.0
+   },
+   {
+    "태그": "[Monster spoken, raspy, angry]",
+    "대사_앞30자": "Is so.",
+    "내용어": 0,
+    "자막적중": 0,
+    "적중률": null
+   },
+   {
+    "태그": "[Female spoken, vocaloid, gentle]",
+    "대사_앞30자": "Let's prove her wrong. [in Lat",
+    "내용어": 9,
+    "자막적중": 5,
+    "적중률": 0.556
+   }
+  ],
+  "자막_문자수": 2062
+ },
+ "★이_실측이_못_하는_것": [
+  "낭독이었는지·쉰 목소리였는지·화났는지 = 자막은 낱말만 준다. 못 잰다.",
+  "대조군 없음 — 맨 명찰 [spoken]로 같은 가사를 돌린 판이 없다. 「서술이 더 낫다」는 못 나온다.",
+  "자동자막은 오인식이 있다(실측: 'array dot join'→'a rap B join'). 낱말 부재는 약한 증거다.",
+  "N=1곡. 한 곡의 한 판이다."
+ ]
+}

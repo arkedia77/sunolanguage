@@ -9,7 +9,9 @@ import shlex
 
 STEMS_REMOTE = "/Volumes/sunomusic/sunolanguage/stems"
 TRIMMED_REMOTE = "/Volumes/sunomusic/sunolanguage/stems_trimmed"
-MUSHIN = "mushin@172.30.1.77"
+# 08-23 실측: 172.30.1.77(DHCP 사설IP)은 ping 불통 — 죽은 주소.
+# sunomusic 회신(08-23 21:35) = mukl·mushin 동일 머신, 고정 주소는 tailscale.
+MUSHIN = "mushin@100.75.69.61"  # tailscale 고정 (구: mushin@172.30.1.77)
 LOCAL_TMP = "/tmp/stems_trim"
 TRIM_DURATION = 15  # seconds
 SIZE_LIMIT = 50 * 1024 * 1024  # 50MB

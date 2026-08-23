@@ -10,7 +10,8 @@ _ROOT = Path(__file__).resolve().parent.parent
 merged = json.load(open(_ROOT / "data/reanalysis_v2/merged_4values.json"))
 existing_genres = Counter(s.get("genre") or "미정" for s in merged)
 
-cmd = ["ssh", "mushin@172.30.1.77",
+# 08-23: 172.30.1.77 ping 불통 → tailscale 고정 주소로 교체 (구: mushin@172.30.1.77)
+cmd = ["ssh", "mushin@100.75.69.61",
        "sqlite3 -json ~/projects/leomusic-cli/leomusic.db "
        "\"SELECT global_id, batch, genre, subgenre, bpm, title, substr(style_prompt,1,100) AS sp_head "
        "FROM songs WHERE (lyrics IS NULL OR lyrics = '' OR lyrics LIKE '%[instrumental]%' OR lyrics LIKE '%Instrumental%') "
