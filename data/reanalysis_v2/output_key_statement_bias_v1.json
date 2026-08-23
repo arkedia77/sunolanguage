@@ -1,0 +1,150 @@
+{
+ "무엇": "Suno 자기분석 SP의 조성 서술이 조성 근거로 쓸 수 있는지 — 기저 분포로 판정",
+ "계기": "leomusic-trot 축H(08-23) 평탄화 발견을 우리 코퍼스 텍스트 층으로 검산하려던 시도",
+ "재현": "scripts/output_key_statement_bias_v1.py",
+ "모집단": {
+  "곡": 540,
+  "출력층에_키_서술_있는_곡": 430,
+  "비율": 0.796
+ },
+ "★분포": {
+  "고유_조성_종수": 13,
+  "전체": [
+   [
+    "E major",
+    202
+   ],
+   [
+    "G major",
+    123
+   ],
+   [
+    "C major",
+    45
+   ],
+   [
+    "G minor",
+    17
+   ],
+   [
+    "B major",
+    8
+   ],
+   [
+    "B minor",
+    7
+   ],
+   [
+    "D major",
+    7
+   ],
+   [
+    "D minor",
+    6
+   ],
+   [
+    "F major",
+    5
+   ],
+   [
+    "G# minor",
+    3
+   ],
+   [
+    "C minor",
+    3
+   ],
+   [
+    "E minor",
+    3
+   ],
+   [
+    "F minor",
+    1
+   ]
+  ],
+  "상위3": [
+   [
+    "E major",
+    202
+   ],
+   [
+    "G major",
+    123
+   ],
+   [
+    "C major",
+    45
+   ]
+  ],
+  "상위3_점유": 0.86
+ },
+ "★판정": "**조성 근거로 쓸 수 없다.** 24조성 중 13종만 나오고 상위 3종이 86%다. 음악 분포가 아니라 추정기 쏠림이다. ⇒ 텍스트 층으로는 「무시 ↔ 평탄화」를 못 가른다 — 오디오가 필요하다.",
+ "★실물_예시(계획은 서로 다른데 출력 서술이 같다)": [
+  {
+   "song_id": "1135",
+   "입력_지시문": "Korean Acoustic Folk, Midnight Folk ballad in D minor (Natural Minor), modulating to E minor at the Climax Chorus.",
+   "출력층_키_서술": "G major"
+  },
+  {
+   "song_id": "1146",
+   "입력_지시문": "Piano ballad, minimal chamber, 62 BPM, E minor modulating to F#m.",
+   "출력층_키_서술": "G major"
+  },
+  {
+   "song_id": "1386",
+   "입력_지시문": "Jazz Ballad, Waltz Jazz in Eb Major, modulating to Fm (relative minor) at the bridge.",
+   "출력층_키_서술": "G major"
+  },
+  {
+   "song_id": "1396",
+   "입력_지시문": "Soft R&B, City Night R&B in Ab Major, modulating to Fm (relative minor) at the bridge.",
+   "출력층_키_서술": "G major"
+  },
+  {
+   "song_id": "1405",
+   "입력_지시문": "City Pop, Retro City Pop in Ab Major (Major (Ionian)), modulating at the emotional climax.",
+   "출력층_키_서술": "E major"
+  },
+  {
+   "song_id": "1414",
+   "입력_지시문": "Korean Ballad, Piano Ballad in E minor (Natural Minor), modulating at the emotional climax.",
+   "출력층_키_서술": "G major"
+  },
+  {
+   "song_id": "1415",
+   "입력_지시문": "Lo-fi Pop, Indie Lo-fi in D minor (Natural Minor → Major), modulating at the emotional climax.",
+   "출력층_키_서술": "E major"
+  },
+  {
+   "song_id": "1427",
+   "입력_지시문": "Acoustic Ballad, Folk Ballad in C Major modulating to A minor at Bridge.",
+   "출력층_키_서술": "E major"
+  },
+  {
+   "song_id": "1507",
+   "입력_지시문": "Key of C major with mixolydian touches, modulating to D at climax.",
+   "출력층_키_서술": "C major"
+  },
+  {
+   "song_id": "1535",
+   "입력_지시문": "Synth Pop, Emotional Electro Pop in E minor, natural minor modulating to F# minor at final chorus, 96 BPM.",
+   "출력층_키_서술": "E major"
+  },
+  {
+   "song_id": "1547",
+   "입력_지시문": "Korean Ballad, Adult Contemporary in A minor modulating to B minor on the final chorus, 68 BPM, Mid-Low energy.",
+   "출력층_키_서술": "E major"
+  },
+  {
+   "song_id": "1553",
+   "입력_지시문": "Jazz Pop, Bossa Nova Pop in C major modulating to Db major on the bridge, 88 BPM, Mid-Low energy.",
+   "출력층_키_서술": "E major"
+  }
+ ],
+ "★이_산출이_못_하는_것": [
+  "Suno가 조성을 **틀리게 들었다**는 뜻이 아니다 — 우리가 **그 서술로 판정할 수 없다**는 뜻이다.",
+  "렌더의 실제 조성은 이 자료로 전혀 모른다. 오디오 크로마 실측이 있어야 한다.",
+  "우리 대량 오디오는 현재 `/Volumes/LEO` 미마운트로 심링크 4개가 댕글링이라 못 돌린다."
+ ]
+}
