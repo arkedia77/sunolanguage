@@ -1,10 +1,10 @@
 {
- "handoff": "CB01 채널 태그 프로브 — 생성 핸드오프 v1",
+ "handoff": "N022 채널 태그 프로브 — 생성 핸드오프 v1",
  "authored_by": "sunolanguage",
  "created": "2026-08-25",
  "★성격": "**사전등록 프로브**입니다. 생산 배치가 아니라 6셀 대조 설계이고, **셀 간 차이가 곧 자료**입니다.",
  "★공통_파라미터": {
-  "★Style Influence": "★**50(기본)** — LSP01의 100과 **다릅니다**. 사유=100이면 SP가 포화해 브라켓 채널이 가려질 수 있는데 이 프로브의 물음이 바로 「어느 필드가 하는가」입니다. LEO가 100을 원하시면 한 줄로 바꿉니다.",
+  "★Style Influence": "★**50(기본)** — N021의 100과 **다릅니다**. 사유=100이면 SP가 포화해 브라켓 채널이 가려질 수 있는데 이 프로브의 물음이 바로 「어느 필드가 하는가」입니다. LEO가 100을 원하시면 한 줄로 바꿉니다.",
   "Weirdness": "기본 50",
   "instrumental": "OFF",
   "duration": "Auto",
@@ -20,7 +20,7 @@
    "B. 가사 브라켓 채널 태그": "B0 없음 / B1 `[Lo-fi]`(우리 출력층 실물) / B2 `[Phone Vocals]`(우리 접지 0·외부 B_recited)"
   },
   "셀": "2×3 = 6셀 · 곡당 2 take = **12 클립**",
-  "바닥": "**A0B0(CB01-1)**. 이게 없으면 다른 셀의 값을 견줄 바닥이 없다.",
+  "바닥": "**A0B0(N022-1)**. 이게 없으면 다른 셀의 값을 견줄 바닥이 없다.",
   "판정": "A0B0 바닥 대비 **Δtel_ratio ≥ +0.15**면 「그 셀에서 대역 축소가 일어났다」. 기준 0.15는 양성 대조 실측 반응폭(+0.37~+0.50)의 **약 40%** — 부분 효과도 잡되 잡음으로는 안 넘는 선.",
   "검정력": "★생성 전에 양성 대조를 먼저 돌렸습니다 — 로컬 클립 2건에 전화 대역 필터를 걸어 Δtel_ratio **+0.50/+0.37**. 지표가 반응하는 것을 확인한 뒤 발주합니다."
  },
@@ -42,7 +42,7 @@
  ],
  "songs": [
   {
-   "id": "CB01-1",
+   "id": "N022-1",
    "cell": "A0B0",
    "title": "열두 칸",
    "A_SP채널서술": "없음(문자열만 제거)",
@@ -53,7 +53,7 @@
    "lyrics": "[Intro]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
   },
   {
-   "id": "CB01-2",
+   "id": "N022-2",
    "cell": "A0B1",
    "title": "열두 칸",
    "A_SP채널서술": "없음(문자열만 제거)",
@@ -64,7 +64,7 @@
    "lyrics": "[Intro]\n[Lo-fi]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n[Lo-fi]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n[Lo-fi]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n[Lo-fi]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
   },
   {
-   "id": "CB01-3",
+   "id": "N022-3",
    "cell": "A0B2",
    "title": "열두 칸",
    "A_SP채널서술": "없음(문자열만 제거)",
@@ -75,7 +75,7 @@
    "lyrics": "[Intro]\n[Phone Vocals]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n[Phone Vocals]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n[Phone Vocals]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n[Phone Vocals]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
   },
   {
-   "id": "CB01-4",
+   "id": "N022-4",
    "cell": "A1B0",
    "title": "열두 칸",
    "A_SP채널서술": "있음",
@@ -86,7 +86,7 @@
    "lyrics": "[Intro]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
   },
   {
-   "id": "CB01-5",
+   "id": "N022-5",
    "cell": "A1B1",
    "title": "열두 칸",
    "A_SP채널서술": "있음",
@@ -97,7 +97,7 @@
    "lyrics": "[Intro]\n[Lo-fi]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n[Lo-fi]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n[Lo-fi]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n[Lo-fi]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
   },
   {
-   "id": "CB01-6",
+   "id": "N022-6",
    "cell": "A1B2",
    "title": "열두 칸",
    "A_SP채널서술": "있음",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """믹스 희석 검정 v1 — 「보컬에만 걸린 전화 필터가 **믹스에서도** 보이는가」
 
-계기: CB01 판정에 vocals 스템이 필요하다고 발주했더니 상대가 **Advanced Split 20cr/곡 × 12 = 240cr**을 제안.
+계기: N022 판정에 vocals 스템이 필요하다고 발주했더니 상대가 **Advanced Split 20cr/곡 × 12 = 240cr**을 제안.
       ★쓰기 전에 잰다 — 스템 없이 **믹스만으로** 판정선(Δtel_ratio ≥ +0.15)을 넘는지.
 
 방법(크레딧 0): 우리가 이미 가진 같은 곡의 vocals/no_vocals 스템으로
@@ -58,6 +58,6 @@ print("★결론:", "**믹스만으로 충분 — 스템 불요(240cr 절약)**"
 out = ROOT / "data/metatag_external/channel_mix_dilution_v1.json"
 out.write_text(json.dumps({"무엇": "보컬에만 건 전화필터가 믹스에서도 보이는가", "재현": "scripts/channel_mix_dilution_v1.py",
                            "판정선": GATE, "믹스_최소_Δtel": mn, "결론": "스템 불요" if ok else "스템 필요",
-                           "★한계": "VD 편성(듀엣 발라드·뮤지컬) 4클립. CB01 좌표(Upbeat Psychedelic·sub-bass 두꺼움)와 보컬 점유가 다를 수 있다.",
+                           "★한계": "VD 편성(듀엣 발라드·뮤지컬) 4클립. N022 좌표(Upbeat Psychedelic·sub-bass 두꺼움)와 보컬 점유가 다를 수 있다.",
                            "결과": rows}, ensure_ascii=False, indent=1))
 print("→", out.name)
