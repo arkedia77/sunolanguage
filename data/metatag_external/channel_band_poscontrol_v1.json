@@ -1,0 +1,50 @@
+{
+ "무엇": "채널 대역 지표 양성 대조",
+ "재현": "scripts/channel_band_probe_v1.py poscontrol",
+ "필터": "highpass=f=300,highpass=f=300,lowpass=f=3400,lowpass=f=3400",
+ "판정": "통과",
+ "결과": [
+  {
+   "file": "28c2e16c-36e9-4e88-8bcf-aaf983f838f7.mp3",
+   "원본": {
+    "low_ratio": 0.5603,
+    "tel_ratio": 0.4157,
+    "high_ratio": 0.024,
+    "centroid_hz": 583.5
+   },
+   "전화필터": {
+    "low_ratio": 0.0777,
+    "tel_ratio": 0.9158,
+    "high_ratio": 0.0065,
+    "centroid_hz": 899.5
+   },
+   "델타": {
+    "low_ratio": -0.4826,
+    "tel_ratio": 0.5001,
+    "high_ratio": -0.0175,
+    "centroid_hz": 316.0
+   }
+  },
+  {
+   "file": "3776c8d9-9c2c-4f44-ab17-9cf4cdef5ac4.mp3",
+   "원본": {
+    "low_ratio": 0.3392,
+    "tel_ratio": 0.6067,
+    "high_ratio": 0.0541,
+    "centroid_hz": 1069.2
+   },
+   "전화필터": {
+    "low_ratio": 0.0113,
+    "tel_ratio": 0.9778,
+    "high_ratio": 0.0109,
+    "centroid_hz": 1217.9
+   },
+   "델타": {
+    "low_ratio": -0.3279,
+    "tel_ratio": 0.3711,
+    "high_ratio": -0.0432,
+    "centroid_hz": 148.7
+   }
+  }
+ ]
+}

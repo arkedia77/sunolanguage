@@ -1,0 +1,111 @@
+{
+ "handoff": "CB01 채널 태그 프로브 — 생성 핸드오프 v1",
+ "authored_by": "sunolanguage",
+ "created": "2026-08-25",
+ "★성격": "**사전등록 프로브**입니다. 생산 배치가 아니라 6셀 대조 설계이고, **셀 간 차이가 곧 자료**입니다.",
+ "★공통_파라미터": {
+  "★Style Influence": "★**50(기본)** — LSP01의 100과 **다릅니다**. 사유=100이면 SP가 포화해 브라켓 채널이 가려질 수 있는데 이 프로브의 물음이 바로 「어느 필드가 하는가」입니다. LEO가 100을 원하시면 한 줄로 바꿉니다.",
+  "Weirdness": "기본 50",
+  "instrumental": "OFF",
+  "duration": "Auto",
+  "take": "곡당 2 클립",
+  "model": "직전 배치와 **동일 모델**로 부탁드립니다(셀 간 상수)",
+  "제목": "6곡 전부 「열두 칸」 동일 — 구분은 아래 id"
+ },
+ "★★회신에_반드시_포함(지난 실패 재발 방지)": "**셀 id ↔ uuid 매핑**을 회신에 넣어 주십시오. ★VD 때 uuid 매핑 원장이 없어 블로커 B-1이 됐고, 같은 곡 2 take는 **가사가 같아 원리상 텍스트로 못 가릅니다**. 제목이 6곡 다 같아서 이번엔 더 그렇습니다.",
+ "★스템_요청": "**vocals 스템**이 필요합니다. 판정 지표가 보컬 대역이라 전곡 mix로는 반주가 희석합니다(우리 쪽에 demucs가 없습니다). 가능하시면 12클립 vocals 스템, 어려우시면 알려 주시면 다른 경로를 찾겠습니다 — **생성은 이와 무관하게 진행 가능**합니다.",
+ "★설계_요약": {
+  "요인": {
+   "A. SP 채널 서술": "A1 있음 / A0 없음(그 문자열만 제거·본체 동일)",
+   "B. 가사 브라켓 채널 태그": "B0 없음 / B1 `[Lo-fi]`(우리 출력층 실물) / B2 `[Phone Vocals]`(우리 접지 0·외부 B_recited)"
+  },
+  "셀": "2×3 = 6셀 · 곡당 2 take = **12 클립**",
+  "바닥": "**A0B0(CB01-1)**. 이게 없으면 다른 셀의 값을 견줄 바닥이 없다.",
+  "판정": "A0B0 바닥 대비 **Δtel_ratio ≥ +0.15**면 「그 셀에서 대역 축소가 일어났다」. 기준 0.15는 양성 대조 실측 반응폭(+0.37~+0.50)의 **약 40%** — 부분 효과도 잡되 잡음으로는 안 넘는 선.",
+  "검정력": "★생성 전에 양성 대조를 먼저 돌렸습니다 — 로컬 클립 2건에 전화 대역 필터를 걸어 Δtel_ratio **+0.50/+0.37**. 지표가 반응하는 것을 확인한 뒤 발주합니다."
+ },
+ "★검증_실물": {
+  "가사 채널 중립": "전화·라디오·잡음·기계·신호 어휘 0건",
+  "게이트": "청크 36 · 이슈 0 · SP 지시문 오염 0",
+  "소괄호": "0 (제3 채널 OFF — 상수)",
+  "콜론": "0",
+  "브라켓 자기 줄": "전건 통과",
+  "상수 검증": "고유 SP 2종 · 고유 가사 3종 — 위반 0",
+  "SP 자수": "191 / 305"
+ },
+ "★한계(인용 시 병기)": [
+  "**셀당 곡 1개·take 2**다. 셀 내 분산을 못 잰다.",
+  "**B1과 B2는 정확히 대칭이 아니다** — `[Lo-fi]`는 대역 축소를 **함의**하고 `[Phone Vocals]`는 **명시**한다. 「접지 여부」와 「명시 강도」가 부분적으로 얽혀 있다. 이 교락을 결과에 반드시 병기한다.",
+  "**한 좌표(Upbeat Psychedelic·96BPM·남성 테너) 안의 결과**다.",
+  "우리가 재는 것은 **대역**이지 「전화처럼 들리는가」라는 사람 판정이 아니다.",
+  "★**부재는 여전히 약한 증거**다 — Δ가 안 나와도 「태그가 무시됐다」와 「우리 자가 못 봤다」는 이 설계로 완전히는 안 갈린다. 양성 대조가 그 폭을 좁힐 뿐이다."
+ ],
+ "songs": [
+  {
+   "id": "CB01-1",
+   "cell": "A0B0",
+   "title": "열두 칸",
+   "A_SP채널서술": "없음(문자열만 제거)",
+   "B_가사채널태그": "없음",
+   "is_instrumental": false,
+   "style_prompt": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. Male Tenor Lead, Close And Intimate Delivery. Hypnotic Neo-Psychedelic Groove. 96 Bpm.",
+   "sp_length": 191,
+   "lyrics": "[Intro]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
+  },
+  {
+   "id": "CB01-2",
+   "cell": "A0B1",
+   "title": "열두 칸",
+   "A_SP채널서술": "없음(문자열만 제거)",
+   "B_가사채널태그": "[Lo-fi] — ★우리 출력층 실물 있음(A군)",
+   "is_instrumental": false,
+   "style_prompt": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. Male Tenor Lead, Close And Intimate Delivery. Hypnotic Neo-Psychedelic Groove. 96 Bpm.",
+   "sp_length": 191,
+   "lyrics": "[Intro]\n[Lo-fi]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n[Lo-fi]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n[Lo-fi]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n[Lo-fi]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
+  },
+  {
+   "id": "CB01-3",
+   "cell": "A0B2",
+   "title": "열두 칸",
+   "A_SP채널서술": "없음(문자열만 제거)",
+   "B_가사채널태그": "[Phone Vocals] — ★우리 접지 0(C군·외부 B_recited)",
+   "is_instrumental": false,
+   "style_prompt": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. Male Tenor Lead, Close And Intimate Delivery. Hypnotic Neo-Psychedelic Groove. 96 Bpm.",
+   "sp_length": 191,
+   "lyrics": "[Intro]\n[Phone Vocals]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n[Phone Vocals]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n[Phone Vocals]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n[Phone Vocals]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
+  },
+  {
+   "id": "CB01-4",
+   "cell": "A1B0",
+   "title": "열두 칸",
+   "A_SP채널서술": "있음",
+   "B_가사채널태그": "없음",
+   "is_instrumental": false,
+   "style_prompt": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. Male Tenor Lead, Close And Intimate Delivery. Hypnotic Neo-Psychedelic Groove. 96 Bpm. The Lead Vocal Is Phone-Recorded Through A Narrow Telephone Band, Thin And Band-Limited, No Low End On The Voice.",
+   "sp_length": 305,
+   "lyrics": "[Intro]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
+  },
+  {
+   "id": "CB01-5",
+   "cell": "A1B1",
+   "title": "열두 칸",
+   "A_SP채널서술": "있음",
+   "B_가사채널태그": "[Lo-fi] — ★우리 출력층 실물 있음(A군)",
+   "is_instrumental": false,
+   "style_prompt": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. Male Tenor Lead, Close And Intimate Delivery. Hypnotic Neo-Psychedelic Groove. 96 Bpm. The Lead Vocal Is Phone-Recorded Through A Narrow Telephone Band, Thin And Band-Limited, No Low End On The Voice.",
+   "sp_length": 305,
+   "lyrics": "[Intro]\n[Lo-fi]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n[Lo-fi]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n[Lo-fi]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n[Lo-fi]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n[Lo-fi]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
+  },
+  {
+   "id": "CB01-6",
+   "cell": "A1B2",
+   "title": "열두 칸",
+   "A_SP채널서술": "있음",
+   "B_가사채널태그": "[Phone Vocals] — ★우리 접지 0(C군·외부 B_recited)",
+   "is_instrumental": false,
+   "style_prompt": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. Male Tenor Lead, Close And Intimate Delivery. Hypnotic Neo-Psychedelic Groove. 96 Bpm. The Lead Vocal Is Phone-Recorded Through A Narrow Telephone Band, Thin And Band-Limited, No Low End On The Voice.",
+   "sp_length": 305,
+   "lyrics": "[Intro]\n[Phone Vocals]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals]\n[Phone Vocals]\n계단은 열두 칸이고 나는 아홉에서 쉰다\n난간이 손보다 차가워서 자꾸 놓쳤다\n위층 사람은 오늘도 늦게 들어오고\n나는 그 발소리로 시간을 안다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Verse 2]\n[male tenor vocals]\n[Phone Vocals]\n여름엔 벽이 먼저 더워지고\n겨울엔 내 등이 먼저 식는다\n낡은 집은 사람보다 정직해서\n견딘 만큼만 소리를 낸다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n[Phone Vocals]\n다 오르면 뭐가 있냐고 물으면\n문이 하나 있다고만 답한다\n열어 보면 또 계단일지도 모르지만\n그건 열어 본 다음의 일이다\n\n[Chorus]\n[Phone Vocals]\n한 칸, 한 칸\n숨을 나눠 쓴다\n한 칸, 한 칸\n아직 위가 남았다\n\n[Outro]\n[fades out]"
+  }
+ ]
+}
