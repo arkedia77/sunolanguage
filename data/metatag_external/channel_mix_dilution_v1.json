@@ -1,0 +1,82 @@
+{
+ "무엇": "보컬에만 건 전화필터가 믹스에서도 보이는가",
+ "재현": "scripts/channel_mix_dilution_v1.py",
+ "판정선": 0.15,
+ "믹스_최소_Δtel": -0.0032,
+ "결론": "스템 필요",
+ "★한계": "VD 편성(듀엣 발라드·뮤지컬) 4클립. CB01 좌표(Upbeat Psychedelic·sub-bass 두꺼움)와 보컬 점유가 다를 수 있다.",
+ "결과": [
+  {
+   "clip": "28c2e16c",
+   "★믹스_Δtel": 0.1151,
+   "보컬스템_Δtel": 0.3718,
+   "믹스_원본": {
+    "low_ratio": 0.5596,
+    "tel_ratio": 0.4166,
+    "high_ratio": 0.0238,
+    "centroid_hz": 582.4
+   },
+   "믹스_처치": {
+    "low_ratio": 0.4631,
+    "tel_ratio": 0.5317,
+    "high_ratio": 0.0052,
+    "centroid_hz": 569.0
+   },
+   "보컬_에너지_점유": 0.7004
+  },
+  {
+   "clip": "2b33b2a6",
+   "★믹스_Δtel": 0.0974,
+   "보컬스템_Δtel": 0.3906,
+   "믹스_원본": {
+    "low_ratio": 0.6144,
+    "tel_ratio": 0.3673,
+    "high_ratio": 0.0183,
+    "centroid_hz": 501.7
+   },
+   "믹스_처치": {
+    "low_ratio": 0.5312,
+    "tel_ratio": 0.4647,
+    "high_ratio": 0.0041,
+    "centroid_hz": 488.7
+   },
+   "보컬_에너지_점유": 0.6532
+  },
+  {
+   "clip": "35bec5aa",
+   "★믹스_Δtel": -0.0032,
+   "보컬스템_Δtel": 0.0963,
+   "믹스_원본": {
+    "low_ratio": 0.3669,
+    "tel_ratio": 0.5832,
+    "high_ratio": 0.05,
+    "centroid_hz": 1025.8
+   },
+   "믹스_처치": {
+    "low_ratio": 0.4101,
+    "tel_ratio": 0.58,
+    "high_ratio": 0.0099,
+    "centroid_hz": 780.3
+   },
+   "보컬_에너지_점유": 0.6281
+  },
+  {
+   "clip": "3776c8d9",
+   "★믹스_Δtel": 0.0083,
+   "보컬스템_Δtel": 0.1013,
+   "믹스_원본": {
+    "low_ratio": 0.3389,
+    "tel_ratio": 0.6077,
+    "high_ratio": 0.0534,
+    "centroid_hz": 1066.1
+   },
+   "믹스_처치": {
+    "low_ratio": 0.3723,
+    "tel_ratio": 0.616,
+    "high_ratio": 0.0117,
+    "centroid_hz": 820.0
+   },
+   "보컬_에너지_점유": 0.6591
+  }
+ ]
+}
