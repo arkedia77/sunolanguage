@@ -1,0 +1,70 @@
+{
+ "batch": "LSP01",
+ "line": "sunolanguage",
+ "created": "2026-08-25",
+ "세트_제목": "응답 없음 (3곡)",
+ "origin": "LEO 직발주(08-25): 「방금 준 3개를 가지고 한 배치. 가사는 알아서 새로운 코퍼스셋 기법 등 이용해서 브라켓 만들고, 핸드오프까지」 + 「응용해도 좋아」 + 「수노뮤직한테 스타일 바를 100%로」",
+ "concept": "세 SP의 정서를 한 줄로 꿴 3부작 — ①불러냄(의식) ②좁은 방에서의 송신 ③되돌아온 잔상. 공통축=「응답이 없는 채로도 계속 보내는 일」.",
+ "gid_range": "★미부여 — 이 리포에 PG 적재기가 없다. 적재 경로는 핸드오프에서 별도 확인 항목으로 올림(거짓완료 금지).",
+ "★가사_언어": "한국어. 근거=우리 코퍼스 540곡 전량 한국어 가사이고 게이트·사전이 그 전제로 서 있다. SP가 영어인 것과 독립.",
+ "★브라켓_기법(이번 세션 검산 3건 적용)": {
+  "① 명찰형 0": "`[Male Vocal]` 류 0건. 근거=우리 출력층 exact 0곡(duet_bracket_grammar §30). 서술형만 쓴다.",
+  "② 콜론 파라미터 0": "근거=X2 검산. 콜론+숫자는 우리 출력층 0·입력층 0이고 외부는 placebo라 부른다.",
+  "③ 소괄호 0": "근거=X3 검산. 1낱말 지시어는 누출 0 관측이나 **문장이면 샌다**는 외부 조건부가 있다. 이번엔 쓸 자리가 없어 0으로 뒀다.",
+  "④ 브라켓은 자기 줄에": "근거=hookgenius D006 「태그가 자기 줄에 없으면 불린다」. 전 35개 자기 줄 검증 통과.",
+  "⑤ 서술 3~5어 나열, 긴 규칙문 블록 0": "근거=X1 검산. 4어 서술 브라켓은 누출 0/16 관측·외부 Tier-1 낱말과 정합. `[PERFORMANCE RULES]` 류 다줄 블록은 **양쪽 다 미검증**이라 안 쓴다.",
+  "⑥ ★전 브라켓 코퍼스 실물 대조": "서술 브라켓 35개 · **미접지 낱말 0**. 대부분 exact 원문형(`male tenor vocals`×58 · `falsetto`×24 · `filtered vocal chop loop enters`×2 · `abrupt stop`×4 …).",
+  "⚠예외 3건": "`instruments fade out leaving only vinyl crackle`·`gradual low-pass filter sweep on synth pluck`·`sustained guitar chord fades into vinyl crackle` = **7어**로 ⑤ 상한 초과. ★그러나 셋 다 **코퍼스 exact 원문형**(Suno 자신이 뱉은 문자열)이고 **비보컬 구간**에 있다. 지어낸 긴 서술이 아니라 원문 인용이라 남겼다 — 이 배치의 알려진 불확실점 1건으로 표시."
+ },
+ "★이_배치가_실험이_아닌_것": "3곡 SP가 전부 Title Case 1.0·콜론 0으로 **변이가 없다.** 대조군이 없으므로 어떤 결과가 나와도 SP 표기축의 기여는 못 가른다. 생산 배치이지 사전등록 실험이 아니다.",
+ "songs": [
+  {
+   "no": 1,
+   "id": "LSP01-1",
+   "title": "초혼",
+   "title_en": "Calling Back",
+   "facet": "부르는 쪽 — 의식·강령. 대답을 기대하지 않으면서도 문을 열어 두는 자리",
+   "genre_label": "Atmospheric Ambient Electronic / Progressive Rock",
+   "bpm": 83,
+   "is_instrumental": false,
+   "style_prompt": "Atmospheric Ambient Electronic With Amplified Progressive Rock Elements, Unorthodox Rhythms, Experimental Sound Design, Processed Textures, Melancholic Sullen Mood With Spooky Yet Hopeful Undertones, Ethereal Male Falsetto And Tenor Vocals With Strong Subdued Intimate Presence And Mystical Delivery For Verses And Bridge, Sampled Female Emotional Layered Vocal Stacks Chopped And Reverbed As Central Spectral Hook In Chorus, Faint Progressive And Latin-Jazz Atmospheric Color, Dynamic Processed Guitar With Prog Rock Flair, Math-Rock Influenced Percussion, Sparse-To-Dense Cinematic Arrangements, Avant-Garde And Psychedelic Undertones, Ritualistic Distant Echoes, Tape Warmth, Vinyl Dust, Seance Veil Shimmer, 83 Bpm, Abrupt Hard Cut To Silence At The End",
+   "sp_출처": "LEO 제시 원문 그대로(무변경)",
+   "lyrics": "[Intro]\n[low-frequency sub-bass drone enters]\n[distant reverberant clangs]\n\n[Verse 1]\n[male tenor vocals, soft, intimate]\n초를 세 개 켜고 네 이름을 적었다\n젖은 성냥 냄새, 창은 잠긴 채로\n대답이 오면 놀랄 준비도 없이\n밤새 같은 획만 덧그리고 있었다\n\n[Verse 2]\n[male tenor vocals]\n접시에 물을 붓고 숨을 죽이면\n수면이 아주 잠깐 어긋나 보였다\n착각이라 적었다가 그 줄을 지웠다\n지운 자리가 제일 오래 남았다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[layered vocal harmonies]\n여기, 여기\n들리면 여기\n여기, 여기\n한 번만 여기\n\n[Verse 3]\n[male tenor vocals]\n문틈으로 바람이 두 번 들어왔다\n한 번은 바람이었고 한 번은 몰랐다\n믿지 않으려고 불을 더 켰는데\n켤수록 그림자만 자리를 넓혔다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[layered vocal harmonies]\n여기, 여기\n들리면 여기\n여기, 여기\n한 번만 여기\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n무섭지 않다고 말하려다가\n무섭지 않기를 바란다고 고쳤다\n문 밖에 아무도 없다 해도\n나는 문을 열어 두는 쪽을 골랐다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[low-pass filtered rhythmic vocal chop]\n여기, 여기\n들리면 여기\n여기, 여기\n한 번만 여기\n\n[Outro]\n[vocal chop drops out]\n[abrupt stop]",
+   "sp_length": 757,
+   "lyrics_length": 874,
+   "브라켓_수": 24
+  },
+  {
+   "no": 2,
+   "id": "LSP01-2",
+   "title": "욕실 세 시",
+   "title_en": "Bathroom, 3AM",
+   "facet": "갇힌 방에서의 송신 — 가장 사적인 자리에서만 커지는 목소리",
+   "genre_label": "Upbeat Psychedelic / Lo-fi Room Recording",
+   "bpm": null,
+   "is_instrumental": false,
+   "style_prompt": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. High-Fidelity Phone-Recorded Lead Runs Through Close-Miked Bathroom Acoustics, Natural Tile Reverb, Phased Delay Trails, Tape Echo, And Stereo Chorus. Crisp High-End Detail, Cramped Room Tone, And Hypnotic Neo-Psychedelic Groove. Male Tenor Lead, Close And Intimate Delivery.",
+   "sp_출처": "LEO 제시 원문 + ★응용 1곳(보컬 앵커 1구 추가). 사유=원문에 보컬 지시가 0인데 가사가 붙는다. 우리 실측(duet_bracket_grammar §63 「지시가 약하면 남성으로 붕괴」)에 기대는 대신 명시했다. 추가 낱말 전건 코퍼스 접지 확인(male/tenor/lead/close/intimate/delivery).",
+   "lyrics": "[Intro]\n[syncopated sub-bass enters]\n\n[Verse 1]\n[male tenor vocals, close, dry]\n타일이 차가워서 소리가 잘 붙는다\n새벽 세 시엔 여기가 제일 넓다\n녹음 버튼 하나로 방이 홀이 되고\n나는 나한테만 크게 들린다\n\n[Chorus]\n돌아, 돌아\n벽이 먼저 대답해\n돌아, 돌아\n내 목소리가 나를 따라와\n\n[Verse 2]\n[male tenor vocals]\n문을 잠근 건 숨으려던 게 아니라\n크게 말해도 되는 데가 여기뿐이라서\n수도꼭지가 박자를 세어 주는 동안\n나는 세 번쯤 다른 사람이 됐다\n\n[Chorus]\n돌아, 돌아\n벽이 먼저 대답해\n돌아, 돌아\n내 목소리가 나를 따라와\n\n[Bridge]\n[falsetto]\n[hi-hat opens for accents]\n밖에선 아무도 이 소리를 모른다\n그래서 여기서만 진심을 쓴다\n아침이 오면 다시 접어 넣겠지만\n지금은 타일이 다 받아 적는다\n\n[Outro]\n[instruments fade out leaving only vinyl crackle]",
+   "sp_length": 380,
+   "lyrics_length": 529,
+   "브라켓_수": 13
+  },
+  {
+   "no": 3,
+   "id": "LSP01-3",
+   "title": "되감기",
+   "title_en": "Rewind",
+   "facet": "되돌아온 잔상 — 고쳐진 건 소리지 그날이 아니다",
+   "genre_label": "Vaportrap / Ambient Electronic",
+   "bpm": null,
+   "is_instrumental": false,
+   "style_prompt": "Opens With Prominent Dreamy Plucky Synth Melody Leading Into Heavily Processed Ethereal Vocal Fragments, Then Energetic Crisp Hi-Hats Rolling Underneath, Ethereal Melancholic Vaportrap With Ambient Electronic Depth, Dreamy Plucky Synth Melodies Drenched In Lush Reverb And Delay Throughout, Deep Rumbling 808 Bass, Experimental Sound Design And Heavily Processed Ethereal Vocal Samples, Unorthodox Rhythms Featuring Math-Rock Influenced Percussion, Ethereal Male Falsetto And Tenor With Subdued Haunting Presence, Sparse To Dense Cinematic Builds, Dynamic Processed Guitar, Faint Progressive And Latin-Jazz Atmospheric Color, Avant-Garde Psychedelic Undertones, Sullen Regretful Mood, Reverb-Soaked Nostalgic Yet Futuristic Production",
+   "sp_출처": "LEO 제시 원문 그대로(무변경)",
+   "lyrics": "[Intro]\n[bright plucked synth melody enters]\n[808 bass]\n\n[Verse 1]\n[male tenor vocals, breathy, distant]\n지운 줄 알았던 파일이 아직 있었다\n날짜만 남고 소리는 반쯤 닳아서\n누가 웃었는지도 확실하지 않은데\n그 자리에서 자꾸 되감기를 눌렀다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[layered vocal harmonies]\n되감아도, 되감아도\n같은 데서 끊겨\n되감아도, 되감아도\n네가 말하기 전에서\n\n[Verse 2]\n[male tenor vocals]\n미래처럼 만든 방에 옛날 먼지가 앉고\n새 기계가 오래된 목소리를 흉내 낸다\n고칠 수 있다고 광고는 말하지만\n고쳐진 건 소리지 그날이 아니었다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[layered vocal harmonies]\n되감아도, 되감아도\n같은 데서 끊겨\n되감아도, 되감아도\n네가 말하기 전에서\n\n[Bridge]\n[falsetto]\n[gradual low-pass filter sweep on synth pluck]\n미안하다는 말을 그 뒤에 넣어 봤다\n내 목소리라 아무 데도 닿지 않았다\n그래도 한 번 더 눌러 두는 건\n끊기는 자리를 외우려는 거였다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[low-pass filtered rhythmic vocal chop]\n되감아도, 되감아도\n같은 데서 끊겨\n되감아도, 되감아도\n네가 말하기 전에서\n\n[Outro]\n[sustained guitar chord fades into vinyl crackle]\n[fades out]",
+   "sp_length": 734,
+   "lyrics_length": 853,
+   "브라켓_수": 22
+  }
+ ]
+}
