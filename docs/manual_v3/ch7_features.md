@@ -54,6 +54,11 @@ Write 모드 More Options에 `[Male|Female]` 토글 등장. 단 **소프트큐 �
 ### 나머지
 
 - **Weirdness / Style Influence 슬라이더** [실측 2026-08-03, 10클립] — 둘 다 `aria-label`·0~100·기본 50, More Options 내. 세팅은 JS focus + CDP ArrowRight/Left(스텝 1) — **Home/End 무효**로 Duration 슬라이더와 동일 조작 규약. Weirdness 0/25/50/75/100 스윕(Style Influence 50 고정) 5점×2클립 전건 확보. **어휘 델타(귀측) 판정은 미실시.**
+  - ⛔★**08-25 회귀 — 이 조작 규약이 지금은 안 먹는다**(실측 2026-08-25, sunomusic·N021 배치 중). 08-03 규약을 **그대로 재현했는데 실패**했다.
+    진단(임시 리스너로 직접 확인): **focus는 성공**(`document.activeElement` 일치)하는데 **keydown 리스너가 0회 발화** — 이벤트가 해당 엘리먼트에 **전혀 안 붙는다**. 포인터 드래그도 실패.
+    ★「버스트 중 조용히 멈춤」과는 **다른 증상**이다(그건 일부만 움직인다). 계정/UI단 회귀로 추정되나 **원인 특정 실패**.
+    ★**판정은 `aria-valuenow` 되읽기로 했다** — 추정이 아니다.
+    ⇒ ★**현재 Weirdness·Style Influence는 기본 50에서 못 움직인다.** 비기본값을 요구하는 설계는 **이 블로커에 걸린다**(N021의 LEO 직지시 100이 실제로 여기 걸려 무산됐다).
 - **Persona** [실측] — persona_id 지정, 5개 페르소나 운용 중.
 - **Exclude styles** [실측 2026-08-03] ★**정정** — 종전 "[미사용]·SP 양성 서술로 제어" 판단을 뒤집는다. 필드는 `INPUT[type=text]`(placeholder `Exclude styles`, More Options)이고, **입력값이 clip metadata `negative_tags`로 전달·저장**된다(`accessible_features`에 활성).
   → ★**5장 negative 데드존의 경계가 좁혀졌다**: 데드존인 것은 **SP 산문 안의 부정 서술**(`no female vocals` 0건 비네이티브)이지, **부정 그 자체가 아니다.** 부정에는 **전용 채널**이 따로 있다.
