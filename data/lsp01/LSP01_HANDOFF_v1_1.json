@@ -1,0 +1,103 @@
+{
+ "handoff": "LSP01 「응답 없음」 3곡 — 생성 핸드오프 v1.1 (가사 정정판)",
+ "authored_by": "sunolanguage",
+ "created": "2026-08-25",
+ "발주": "LEO 직발주 08-25 — 「방금 준 3개(SP)를 가지고 한 배치. 가사는 알아서 새로운 코퍼스셋 기법 등 이용해서 브라켓 만들고, 핸드오프까지」 / 「응용해도 좋아」 / ★「수노뮤직한테 스타일 바를 100%로 놓아달라고 해」",
+ "★공통_파라미터": {
+  "★Style Influence": "★**100** — LEO 직지시. 기본값 50에서 올리는 것입니다. 정본 실측=우리 교본 ch7 §슬라이더(‘Weirdness / Style Influence 슬라이더, 둘 다 aria-label·0~100·기본 50, More Options 내. 세팅은 JS focus + CDP ArrowRight/Left 스텝 1 — ★Home/End 무효’). 그쪽 실측 규약이라 그대로 옮깁니다.",
+  "Weirdness": "기본 50 유지 — ★지시 없었습니다. 임의로 안 건드렸습니다.",
+  "instrumental": "OFF (3곡 전부 가사 있음)",
+  "duration": "Auto",
+  "take": "곡당 2 클립 (표준)",
+  "model": "그쪽 최신 안정판 판단에 맡깁니다(직전 배치 기준 v5.5).",
+  "제목": "아래 songs[].title 실제 제목 사용"
+ },
+ "★확인_필요_1건": "**gid 미부여**입니다. 우리 리포에 PG 적재기가 없어 gid 범위를 못 잡았습니다. ⓐ그쪽이 적재까지 하신다면 gid 회신 부탁드리고 ⓑ우리가 적재해야 하는 절차면 경로만 알려 주십시오. ★생성은 이 확인과 무관하게 진행하셔도 됩니다(제목·SP·가사는 확정본).",
+ "세트_제목": "응답 없음 (3곡)",
+ "컨셉": "세 SP의 정서를 한 줄로 꿴 3부작 — ①불러냄(의식) ②좁은 방에서의 송신 ③되돌아온 잔상. 공통축=「응답이 없는 채로도 계속 보내는 일」.",
+ "★가사_브라켓_규칙(이번 배치에 적용한 것)": {
+  "① 명찰형 0": "`[Male Vocal]` 류 0건. 근거=우리 출력층 exact 0곡(duet_bracket_grammar §30). 서술형만 쓴다.",
+  "② 콜론 파라미터 0": "근거=X2 검산. 콜론+숫자는 우리 출력층 0·입력층 0이고 외부는 placebo라 부른다.",
+  "③ 소괄호 0": "근거=X3 검산. 1낱말 지시어는 누출 0 관측이나 **문장이면 샌다**는 외부 조건부가 있다. 이번엔 쓸 자리가 없어 0으로 뒀다.",
+  "④ 브라켓은 자기 줄에": "근거=hookgenius D006 「태그가 자기 줄에 없으면 불린다」. 전 35개 자기 줄 검증 통과.",
+  "⑤ 서술 3~5어 나열, 긴 규칙문 블록 0": "근거=X1 검산. 4어 서술 브라켓은 누출 0/16 관측·외부 Tier-1 낱말과 정합. `[PERFORMANCE RULES]` 류 다줄 블록은 **양쪽 다 미검증**이라 안 쓴다.",
+  "⑥ ★전 브라켓 코퍼스 실물 대조": "서술 브라켓 35개 · **미접지 낱말 0**. 대부분 exact 원문형(`male tenor vocals`×58 · `falsetto`×24 · `filtered vocal chop loop enters`×2 · `abrupt stop`×4 …).",
+  "③ 소괄호": "★v1.1에서 0건 → **(spoken) 3행**으로 정정. 근거=LEO 관측 + 실청취 4/4 + X3 누출 0. **1낱말 지시어만·문장 금지** 유지.",
+  "⑤ 서술 3~5어, 긴 규칙문 블록 0": "★v1.1에서 **5어 초과 0** 달성(7어 3건을 짧은 exact 원문형으로 분해)."
+ },
+ "★검증_실물": {
+  "SP 자수": "757 / 380 / 734 — 전건 1000자 이하 · **SP는 v1과 동일·무변경**",
+  "서술 브라켓": "36개 · 미접지 낱말 0 · ★**5어 초과 0**(v1의 7어 3건 해소)",
+  "소괄호": "★**(spoken) 3행**(v1은 0) — 1낱말 지시어·행 앞·문장 아님",
+  "명찰형": "0건",
+  "콜론 파라미터": "0건",
+  "브라켓 자기 줄": "36/36 통과",
+  "가사 게이트": "청크 20 · 이슈 0 · SP 지시문 오염 0"
+ },
+ "★알려진_불확실점": [
+  "★이 배치는 실험이 아닙니다. 3곡 SP가 전부 Title Case 1.0·콜론 0으로 **변이가 없어** 표기축 기여는 어떤 결과가 나와도 못 가릅니다.",
+  "2번 곡 SP만 응용 1곳(보컬 앵커 1구) — 1·3번은 원문 무변경입니다.",
+  "(spoken)의 근거는 **LEO 실청취 4/4 + 오늘 LEO 관측**입니다. 기계 쪽은 판정가능 2클립 중 1클립만 견고했고 N이 작습니다."
+ ],
+ "songs": [
+  {
+   "no": 1,
+   "id": "LSP01-1",
+   "title": "초혼",
+   "title_en": "Calling Back",
+   "facet": "부르는 쪽 — 의식·강령. 대답을 기대하지 않으면서도 문을 열어 두는 자리",
+   "genre_label": "Atmospheric Ambient Electronic / Progressive Rock",
+   "bpm": 83,
+   "is_instrumental": false,
+   "style_prompt": "Atmospheric Ambient Electronic With Amplified Progressive Rock Elements, Unorthodox Rhythms, Experimental Sound Design, Processed Textures, Melancholic Sullen Mood With Spooky Yet Hopeful Undertones, Ethereal Male Falsetto And Tenor Vocals With Strong Subdued Intimate Presence And Mystical Delivery For Verses And Bridge, Sampled Female Emotional Layered Vocal Stacks Chopped And Reverbed As Central Spectral Hook In Chorus, Faint Progressive And Latin-Jazz Atmospheric Color, Dynamic Processed Guitar With Prog Rock Flair, Math-Rock Influenced Percussion, Sparse-To-Dense Cinematic Arrangements, Avant-Garde And Psychedelic Undertones, Ritualistic Distant Echoes, Tape Warmth, Vinyl Dust, Seance Veil Shimmer, 83 Bpm, Abrupt Hard Cut To Silence At The End",
+   "sp_length": 757,
+   "sp_출처": "LEO 제시 원문 그대로(무변경)",
+   "lyrics": "[Intro]\n[low-frequency sub-bass drone enters]\n[distant reverberant clangs]\n(spoken) 이름을 세 번 부르면 온다고 했다\n(spoken) 나는 두 번까지만 불렀다\n\n[Verse 1]\n[male tenor vocals, soft, intimate]\n초를 세 개 켜고 네 이름을 적었다\n젖은 성냥 냄새, 창은 잠긴 채로\n대답이 오면 놀랄 준비도 없이\n밤새 같은 획만 덧그리고 있었다\n\n[Verse 2]\n[male tenor vocals]\n접시에 물을 붓고 숨을 죽이면\n수면이 아주 잠깐 어긋나 보였다\n착각이라 적었다가 그 줄을 지웠다\n지운 자리가 제일 오래 남았다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[layered vocal harmonies]\n여기, 여기\n들리면 여기\n여기, 여기\n한 번만 여기\n\n[Verse 3]\n[male tenor vocals]\n문틈으로 바람이 두 번 들어왔다\n한 번은 바람이었고 한 번은 몰랐다\n믿지 않으려고 불을 더 켰는데\n켤수록 그림자만 자리를 넓혔다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[layered vocal harmonies]\n여기, 여기\n들리면 여기\n여기, 여기\n한 번만 여기\n\n[Bridge]\n[falsetto]\n[atmospheric synth pad swells]\n무섭지 않다고 말하려다가\n무섭지 않기를 바란다고 고쳤다\n문 밖에 아무도 없다 해도\n나는 문을 열어 두는 쪽을 골랐다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[low-pass filtered rhythmic vocal chop]\n여기, 여기\n들리면 여기\n여기, 여기\n한 번만 여기\n\n[Outro]\n[vocal chop drops out]\n[abrupt stop]"
+  },
+  {
+   "no": 2,
+   "id": "LSP01-2",
+   "title": "욕실 세 시",
+   "title_en": "Bathroom, 3AM",
+   "facet": "갇힌 방에서의 송신 — 가장 사적인 자리에서만 커지는 목소리",
+   "genre_label": "Upbeat Psychedelic / Lo-fi Room Recording",
+   "bpm": null,
+   "is_instrumental": false,
+   "style_prompt": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. High-Fidelity Phone-Recorded Lead Runs Through Close-Miked Bathroom Acoustics, Natural Tile Reverb, Phased Delay Trails, Tape Echo, And Stereo Chorus. Crisp High-End Detail, Cramped Room Tone, And Hypnotic Neo-Psychedelic Groove. Male Tenor Lead, Close And Intimate Delivery.",
+   "sp_length": 380,
+   "sp_출처": "LEO 제시 원문 + ★응용 1곳(보컬 앵커 1구 추가). 사유=원문에 보컬 지시가 0인데 가사가 붙는다. 우리 실측(duet_bracket_grammar §63 「지시가 약하면 남성으로 붕괴」)에 기대는 대신 명시했다. 추가 낱말 전건 코퍼스 접지 확인(male/tenor/lead/close/intimate/delivery).",
+   "lyrics": "[Intro]\n[syncopated sub-bass enters]\n(spoken) 하나, 둘, 지금 잘 들려\n\n[Verse 1]\n[male tenor vocals, close, dry]\n타일이 차가워서 소리가 잘 붙는다\n새벽 세 시엔 여기가 제일 넓다\n녹음 버튼 하나로 방이 홀이 되고\n나는 나한테만 크게 들린다\n\n[Chorus]\n돌아, 돌아\n벽이 먼저 대답해\n돌아, 돌아\n내 목소리가 나를 따라와\n\n[Verse 2]\n[male tenor vocals]\n문을 잠근 건 숨으려던 게 아니라\n크게 말해도 되는 데가 여기뿐이라서\n수도꼭지가 박자를 세어 주는 동안\n나는 세 번쯤 다른 사람이 됐다\n\n[Chorus]\n돌아, 돌아\n벽이 먼저 대답해\n돌아, 돌아\n내 목소리가 나를 따라와\n\n[Bridge]\n[falsetto]\n[hi-hat opens for accents]\n밖에선 아무도 이 소리를 모른다\n그래서 여기서만 진심을 쓴다\n아침이 오면 다시 접어 넣겠지만\n지금은 타일이 다 받아 적는다\n\n[Outro]\n[fades out]\n[vinyl crackle]"
+  },
+  {
+   "no": 3,
+   "id": "LSP01-3",
+   "title": "되감기",
+   "title_en": "Rewind",
+   "facet": "되돌아온 잔상 — 고쳐진 건 소리지 그날이 아니다",
+   "genre_label": "Vaportrap / Ambient Electronic",
+   "bpm": null,
+   "is_instrumental": false,
+   "style_prompt": "Opens With Prominent Dreamy Plucky Synth Melody Leading Into Heavily Processed Ethereal Vocal Fragments, Then Energetic Crisp Hi-Hats Rolling Underneath, Ethereal Melancholic Vaportrap With Ambient Electronic Depth, Dreamy Plucky Synth Melodies Drenched In Lush Reverb And Delay Throughout, Deep Rumbling 808 Bass, Experimental Sound Design And Heavily Processed Ethereal Vocal Samples, Unorthodox Rhythms Featuring Math-Rock Influenced Percussion, Ethereal Male Falsetto And Tenor With Subdued Haunting Presence, Sparse To Dense Cinematic Builds, Dynamic Processed Guitar, Faint Progressive And Latin-Jazz Atmospheric Color, Avant-Garde Psychedelic Undertones, Sullen Regretful Mood, Reverb-Soaked Nostalgic Yet Futuristic Production",
+   "sp_length": 734,
+   "sp_출처": "LEO 제시 원문 그대로(무변경)",
+   "lyrics": "[Intro]\n[bright plucked synth melody enters]\n[808 bass]\n\n[Verse 1]\n[male tenor vocals, breathy, distant]\n지운 줄 알았던 파일이 아직 있었다\n날짜만 남고 소리는 반쯤 닳아서\n누가 웃었는지도 확실하지 않은데\n그 자리에서 자꾸 되감기를 눌렀다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[layered vocal harmonies]\n되감아도, 되감아도\n같은 데서 끊겨\n되감아도, 되감아도\n네가 말하기 전에서\n\n[Verse 2]\n[male tenor vocals]\n미래처럼 만든 방에 옛날 먼지가 앉고\n새 기계가 오래된 목소리를 흉내 낸다\n고칠 수 있다고 광고는 말하지만\n고쳐진 건 소리지 그날이 아니었다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[layered vocal harmonies]\n되감아도, 되감아도\n같은 데서 끊겨\n되감아도, 되감아도\n네가 말하기 전에서\n\n[Bridge]\n[falsetto]\n[filter sweep]\n미안하다는 말을 그 뒤에 넣어 봤다\n내 목소리라 아무 데도 닿지 않았다\n그래도 한 번 더 눌러 두는 건\n끊기는 자리를 외우려는 거였다\n\n[Chorus]\n[filtered vocal chop loop enters]\n[low-pass filtered rhythmic vocal chop]\n되감아도, 되감아도\n같은 데서 끊겨\n되감아도, 되감아도\n네가 말하기 전에서\n\n[Outro]\n[fades out]\n[vinyl crackle]"
+  }
+ ],
+ "★v1_1_정정": {
+  "날짜": "2026-08-25",
+  "사유": "LEO 질의 2건 — ⑴7어 브라켓이 문제가 되는가 ⑵「()도 먹던데」",
+  "⒜7어 브라켓 3건 → 짧은 exact 원문형으로 분해": {
+   "instruments fade out leaving only vinyl crackle (7어)": "→ [fades out]×35 + [vinyl crackle]×11",
+   "sustained guitar chord fades into vinyl crackle (7어)": "→ [fades out] + [vinyl crackle]",
+   "gradual low-pass filter sweep on synth pluck (7어)": "→ [filter sweep]×1",
+   "★내가 틀렸던 정당화": "「코퍼스 exact 원문형이라 안전하다」고 적었는데, exact 원문형은 **출력층 사실**(Suno가 그렇게 묘사한다)이지 **입력 준수**(넣으면 먹는다)가 아니다. ★X2 검산에서 내가 지적한 층 혼동을 내 배치에서 그대로 저질렀다.",
+   "결과": "서술 브라켓 36개 · 미접지 0 · **5어 초과 0**"
+  },
+  "⒝소괄호 0건 → (spoken) 3행 도입": {
+   "근거": "LEO 관측(08-25 「()도 먹던데」) + 우리 최강 괄호 근거 `(spoken)` **LEO 실청취 4/4**(Dead Budget 04-25) + X3 누출 스캔(1낱말 지시어 누출 0).",
+   "★내가 과하게 보수적이었다": "X3의 「문장이면 샌다」(hookgenius 조건부)를 **1낱말에도 적용**해 0건으로 뒀다. 조건이 붙은 규칙을 조건 없이 쓴 것이고, 이번 세션에 내가 외부에서 지적한 바로 그 형태다.",
+   "형태": "`(spoken) ` 행 앞·1낱말 지시어·문장 아님 — VD_REMAKE_M_v1 attested 형태와 동형",
+   "배치": "곡1 인트로 2행(의식의 호명) · 곡2 인트로 1행(녹음 개시). 곡3은 넣을 자리가 없어 0."
+  }
+ }
+}
