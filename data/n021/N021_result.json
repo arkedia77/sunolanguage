@@ -1,0 +1,194 @@
+{
+ "batch": "N021",
+ "세트_제목": "응답 없음 (10곡)",
+ "완료": "2026-08-25T23:35:00+09:00",
+ "결과": "**10/10 성공** — 실패·재시도·moderation 0",
+ "★내가_대조한_것": {
+  "제목 일치": "10/10",
+  "곡 누락": "0",
+  "uuid": "20개 전부 고유·형식 정상·중복 0",
+  "test_id": "297~306 연속 확인"
+ },
+ "★Style_Influence_실측": "**전곡 50**(aria-valuenow 실측). ★LEO 직지시 100은 **슬라이더 조작 불가로 무산**. ⇒ **이 배치는 기본값 50 조건의 산출이다** — 「100이라 이렇게 나왔다」로 읽으면 틀린다.",
+ "Weirdness": "50(기본·무변경)",
+ "계정": "leoarkedia",
+ "보존": "MP3 20/20 + WAV 20/20 갭 0 · PG `songs_test_lab` test_id 297~306 (batch='N021', source_project/creator='sunolanguage'). ★gid 없는 단발 커미션이라 표준 songs 테이블 아닌 test_lab 경로.",
+ "★크레딧": "**추정 약 50cr — 실비 아님.** 상대 자인: 같은 계정 세션에서 leomusic B300(10곡)이 같은 창에 겹쳐 돌아 계정 단위 사용량으로는 **N021분만 못 가른다**. 계정 표준 단가(10,000cr/2,000곡=5cr/곡) 기준 추정치. ★**원장에 실비로 적지 않는다.**",
+ "곡": [
+  {
+   "id": "N021-1",
+   "title": "초혼",
+   "facet": "부르는 쪽 — 의식·강령. 대답을 기대하지 않으면서도 문을 열어 두는 자리",
+   "test_id": 297,
+   "uuid": [
+    "c94b2554-9ebf-493e-8026-851f77a52695",
+    "13b884c6-3d2b-4a91-889a-f7a343256f46"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/c94b2554-9ebf-493e-8026-851f77a52695.mp3",
+    "https://cdn1.suno.ai/13b884c6-3d2b-4a91-889a-f7a343256f46.mp3"
+   ],
+   "sp_출처": "LEO 제시 원문 그대로(무변경)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-2",
+   "title": "욕실 세 시",
+   "facet": "갇힌 방에서의 송신 — 가장 사적인 자리에서만 커지는 목소리",
+   "test_id": 298,
+   "uuid": [
+    "59b68b21-ca41-4c77-898a-53d06f67dc2d",
+    "6ce83e40-8592-40e1-9d55-871e383bedf4"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/59b68b21-ca41-4c77-898a-53d06f67dc2d.mp3",
+    "https://cdn1.suno.ai/6ce83e40-8592-40e1-9d55-871e383bedf4.mp3"
+   ],
+   "sp_출처": "LEO 제시 원문 + ★응용 1곳(보컬 앵커 1구 추가). 사유=원문에 보컬 지시가 0인데 가사가 붙는다. 우리 실측(duet_bracket_grammar §63 「지시가 약하면 남성으로 붕괴」)에 기대는 대신 명시했다. 추가 낱말 전건 코퍼스 접지 확인(male/tenor/lead/close/intimate/delivery).",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-3",
+   "title": "되감기",
+   "facet": "되돌아온 잔상 — 고쳐진 건 소리지 그날이 아니다",
+   "test_id": 299,
+   "uuid": [
+    "5496b459-a161-4128-aaf9-c906427fc2c4",
+    "056bc16b-53c0-4af7-af81-4c947d8a2e30"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/5496b459-a161-4128-aaf9-c906427fc2c4.mp3",
+    "https://cdn1.suno.ai/056bc16b-53c0-4af7-af81-4c947d8a2e30.mp3"
+   ],
+   "sp_출처": "LEO 제시 원문 그대로(무변경)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-4",
+   "title": "무전",
+   "facet": "응답 없이도 정해진 시각마다 보내는 일 — 습관이 된 반복",
+   "test_id": 300,
+   "uuid": [
+    "4ae8df80-ffd9-40d4-8e56-96ef28372f94",
+    "842ebeac-12b5-4a39-a805-43bdd502c90b"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/4ae8df80-ffd9-40d4-8e56-96ef28372f94.mp3",
+    "https://cdn1.suno.ai/842ebeac-12b5-4a39-a805-43bdd502c90b.mp3"
+   ],
+   "sp_출처": "★sunolanguage 저작(LEO 3건의 SP 형식을 따름 — Title Case·쉼표 나열·콜론 헤더 0)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-5",
+   "title": "사서함",
+   "facet": "쌓인 것들 — 열지 않은 채로 무거워지는 자리",
+   "test_id": 301,
+   "uuid": [
+    "310fb61a-70a9-4957-91ea-007d8aadf472",
+    "b5b6e4ad-ebec-47af-a140-9015e13f5053"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/310fb61a-70a9-4957-91ea-007d8aadf472.mp3",
+    "https://cdn1.suno.ai/b5b6e4ad-ebec-47af-a140-9015e13f5053.mp3"
+   ],
+   "sp_출처": "★sunolanguage 저작(LEO 3건의 SP 형식을 따름 — Title Case·쉼표 나열·콜론 헤더 0)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-6",
+   "title": "대신 듣는 사람",
+   "facet": "내게 온 게 아닌 응답을 받는 자리 — 잘못 배달된 다정함",
+   "test_id": 302,
+   "uuid": [
+    "1889aadf-0320-4ee9-8876-d3d3cdf8fb81",
+    "56d1b052-316a-4873-894b-282752d9036d"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/1889aadf-0320-4ee9-8876-d3d3cdf8fb81.mp3",
+    "https://cdn1.suno.ai/56d1b052-316a-4873-894b-282752d9036d.mp3"
+   ],
+   "sp_출처": "★sunolanguage 저작(LEO 3건의 SP 형식을 따름 — Title Case·쉼표 나열·콜론 헤더 0)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-7",
+   "title": "전파 없는 층",
+   "facet": "닿지 않는 구역 — 소리를 질러도 벽이 먹는 곳",
+   "test_id": 303,
+   "uuid": [
+    "498f56da-6509-4ae7-80c0-7095212f9732",
+    "50f371c0-57b1-44bb-8ac4-d7d044e29cd8"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/498f56da-6509-4ae7-80c0-7095212f9732.mp3",
+    "https://cdn1.suno.ai/50f371c0-57b1-44bb-8ac4-d7d044e29cd8.mp3"
+   ],
+   "sp_출처": "★sunolanguage 저작(LEO 3건의 SP 형식을 따름 — Title Case·쉼표 나열·콜론 헤더 0)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-8",
+   "title": "같은 문장",
+   "facet": "강박적 재전송 — 고치고 또 고쳐 보내는 한 줄",
+   "test_id": 304,
+   "uuid": [
+    "5a60cae3-3e87-412e-9a82-f371ce42c898",
+    "b56c152d-010e-43af-ad31-50e44deed907"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/5a60cae3-3e87-412e-9a82-f371ce42c898.mp3",
+    "https://cdn1.suno.ai/b56c152d-010e-43af-ad31-50e44deed907.mp3"
+   ],
+   "sp_출처": "★sunolanguage 저작(LEO 3건의 SP 형식을 따름 — Title Case·쉼표 나열·콜론 헤더 0)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-9",
+   "title": "응답",
+   "facet": "드디어 오는데 내가 부른 것이 아니다 — 두려운 도착",
+   "test_id": 305,
+   "uuid": [
+    "3c14ae15-6dda-4bd4-b23d-a6e6b5d79553",
+    "4d152336-95b3-4f73-b73f-a25cc6488fea"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/3c14ae15-6dda-4bd4-b23d-a6e6b5d79553.mp3",
+    "https://cdn1.suno.ai/4d152336-95b3-4f73-b73f-a25cc6488fea.mp3"
+   ],
+   "sp_출처": "★sunolanguage 저작(LEO 3건의 SP 형식을 따름 — Title Case·쉼표 나열·콜론 헤더 0)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  },
+  {
+   "id": "N021-10",
+   "title": "끊어진 뒤",
+   "facet": "종결 — 보내는 일을 그만둔 다음 날의 아침",
+   "test_id": 306,
+   "uuid": [
+    "a5fbe9ad-4e4b-483e-9104-91d2e50d91c9",
+    "c2836381-d014-4491-bcdd-6540dcb42f68"
+   ],
+   "mp3": [
+    "https://cdn1.suno.ai/a5fbe9ad-4e4b-483e-9104-91d2e50d91c9.mp3",
+    "https://cdn1.suno.ai/c2836381-d014-4491-bcdd-6540dcb42f68.mp3"
+   ],
+   "sp_출처": "★sunolanguage 저작(LEO 3건의 SP 형식을 따름 — Title Case·쉼표 나열·콜론 헤더 0)",
+   "style_influence_실측": 50,
+   "★청취_판정": "미정 — 아직 아무도 안 들었다"
+  }
+ ],
+ "★아직_안_한_것": [
+  "**아무도 안 들었다.** 청취 판정 0건.",
+  "**Suno 자기분석 SP 미회수** — 회수하면 「우리가 넣은 말 ↔ Suno가 되돌려준 말」 짝이 생긴다(sunolang 핵심 자산). 업로드 재분석이 필요하다.",
+  "★**SP 기여는 어떤 결과가 나와도 못 가른다** — 10곡 SP가 Title Case·콜론 0으로 형식 변이가 없고 Style Influence도 전곡 동일하다. 생산 배치이지 실험이 아니다."
+ ]
+}
