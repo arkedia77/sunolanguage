@@ -1,0 +1,234 @@
+{
+ "무엇": "LEO 제시 SP 3건 ↔ 우리 코퍼스(540곡) 대조 — 어휘 접지·형태",
+ "재현": "scripts/leo_sp3_corpus_check_v1.py",
+ "원문": "data/collection/leo_sp3_input_20260825.json",
+ "★생성": "0건 · 크레딧 0",
+ "모집단": {
+  "우리 입력층 SP": 425,
+  "Suno 출력층 SP": 518,
+  "Suno 출력층 총 문자수": 274906
+ },
+ "★대조군(같은 조회기·우리 SP 120건)": {
+  "낱말_출력층_접지율_중앙값": 0.695,
+  "사분범위": [
+   0.63,
+   0.737
+  ],
+  "구_출력층_접지율_중앙값": 0.069,
+  "★읽는_법": "낱말 접지율이 사분범위 안이면 「우리 것과 다르지 않다」. 구 접지율은 조회기 특성상 원래 0에 가깝다 — 여기서 낮다고 낯선 게 아니다."
+ },
+ "형태_기저": {
+  "녹음환경·공간 서술": {
+   "우리_입력층": {
+    "n": 134,
+    "모집단": 425,
+    "비율": 0.315
+   },
+   "Suno_출력층": {
+    "n": 41,
+    "모집단": 518,
+    "비율": 0.079
+   }
+  },
+  "시간전개 서술": {
+   "우리_입력층": {
+    "n": 11,
+    "모집단": 425,
+    "비율": 0.026
+   },
+   "Suno_출력층": {
+    "n": 14,
+    "모집단": 518,
+    "비율": 0.027
+   }
+  },
+  "종결 지시": {
+   "우리_입력층": {
+    "n": 4,
+    "모집단": 425,
+    "비율": 0.009
+   },
+   "Suno_출력층": {
+    "n": 2,
+    "모집단": 518,
+    "비율": 0.004
+   }
+  },
+  "BPM 명시": {
+   "우리_입력층": {
+    "n": 329,
+    "모집단": 425,
+    "비율": 0.774
+   },
+   "Suno_출력층": {
+    "n": 518,
+    "모집단": 518,
+    "비율": 1.0
+   }
+  },
+  "콜론 헤더": {
+   "우리_입력층": {
+    "n": 155,
+    "모집단": 425,
+    "비율": 0.365
+   },
+   "Suno_출력층": {
+    "n": 2,
+    "모집단": 518,
+    "비율": 0.004
+   }
+  }
+ },
+ "Title_Case_기저": {
+  "우리_입력층_중앙값": 0.1,
+  "Suno_출력층_중앙값": 0.09,
+  "≥0.9인 SP": {
+   "우리": 0,
+   "Suno": 0
+  }
+ },
+ "SP별": {
+  "SP1": {
+   "자수": 757,
+   "구": 18,
+   "고유낱말": 74,
+   "Title_Case_비율": 1.0,
+   "콜론_헤더": false,
+   "출력층_낱말_접지율": 0.662,
+   "출력층_구_접지": "1/18",
+   "★ⓐ우리는_쓰는데_Suno출력층엔_없음": [
+    "amplified",
+    "chopped",
+    "color",
+    "dust",
+    "faint",
+    "flair",
+    "hopeful",
+    "mood",
+    "psychedelic",
+    "reverbed",
+    "undertones"
+   ],
+   "★ⓑ양쪽_다_없음(새것)": [
+    "avant-garde",
+    "latin-jazz",
+    "math-rock",
+    "mystical",
+    "prog",
+    "ritualistic",
+    "seance",
+    "sparse-to-dense",
+    "spectral",
+    "spooky",
+    "sullen",
+    "unorthodox",
+    "veil"
+   ],
+   "축_적중": {
+    "녹음환경·공간 서술": true,
+    "시간전개 서술": false,
+    "종결 지시": true,
+    "BPM 명시": true,
+    "콜론 헤더": false
+   }
+  },
+  "SP2": {
+   "자수": 334,
+   "구": 10,
+   "고유낱말": 39,
+   "Title_Case_비율": 1.0,
+   "콜론_헤더": false,
+   "출력층_낱말_접지율": 0.718,
+   "출력층_구_접지": "0/10",
+   "★ⓐ우리는_쓰는데_Suno출력층엔_없음": [
+    "acoustics",
+    "bathroom",
+    "echo",
+    "hypnotic",
+    "psychedelic",
+    "tense",
+    "tile"
+   ],
+   "★ⓑ양쪽_다_없음(새것)": [
+    "cramped",
+    "neo-psychedelic",
+    "phased",
+    "phone-recorded"
+   ],
+   "축_적중": {
+    "녹음환경·공간 서술": true,
+    "시간전개 서술": false,
+    "종결 지시": false,
+    "BPM 명시": false,
+    "콜론 헤더": false
+   }
+  },
+  "SP3": {
+   "자수": 734,
+   "구": 14,
+   "고유낱말": 67,
+   "Title_Case_비율": 1.0,
+   "콜론_헤더": false,
+   "출력층_낱말_접지율": 0.731,
+   "출력층_구_접지": "0/14",
+   "★ⓐ우리는_쓰는데_Suno출력층엔_없음": [
+    "color",
+    "dreamy",
+    "faint",
+    "haunting",
+    "mood",
+    "nostalgic",
+    "psychedelic",
+    "reverb-soaked",
+    "undertones"
+   ],
+   "★ⓑ양쪽_다_없음(새것)": [
+    "avant-garde",
+    "drenched",
+    "futuristic",
+    "latin-jazz",
+    "math-rock",
+    "regretful",
+    "sullen",
+    "unorthodox",
+    "vaportrap"
+   ],
+   "축_적중": {
+    "녹음환경·공간 서술": false,
+    "시간전개 서술": true,
+    "종결 지시": false,
+    "BPM 명시": false,
+    "콜론 헤더": false
+   }
+  }
+ },
+ "★합집합_새_낱말": [
+  "avant-garde",
+  "cramped",
+  "drenched",
+  "futuristic",
+  "latin-jazz",
+  "math-rock",
+  "mystical",
+  "neo-psychedelic",
+  "phased",
+  "phone-recorded",
+  "prog",
+  "regretful",
+  "ritualistic",
+  "seance",
+  "sparse-to-dense",
+  "spectral",
+  "spooky",
+  "sullen",
+  "unorthodox",
+  "vaportrap",
+  "veil"
+ ],
+ "★이_대조가_못_하는_것": [
+  "「이 SP가 잘 먹히나」는 못 잰다 — 생성 필요(B-2).",
+  "미접지 = 「우리 540곡에서 안 나왔다」이지 「Suno가 모른다」가 아니다.",
+  "문자열 대조라 어형 변화는 부분적으로만 잡힌다.",
+  "ⓐ군이 큰 것은 이 SP들의 성질이 아니라 **Suno 출력층 전반의 성질**이다(구조강·감성약)."
+ ]
+}

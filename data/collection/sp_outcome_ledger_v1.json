@@ -1,0 +1,68 @@
+{
+ "무엇": "SP ↔ 결과 판정 원장 v1 — 「우리가 넣은 말」과 「사람이 들은 결과」를 짝으로 담는 자리",
+ "★왜_신설": "우리 코퍼스 540곡은 「입력 SP ↔ Suno 자기분석」 텍스트 짝을 435건 갖고 있는데, **「입력 SP ↔ 사람 청취 판정」 짝을 담는 칸이 아예 없다.** 판정은 문서마다 흩어져 있고 집계에도 인용에도 안 잡힌다. ★지시축 대장 때와 **같은 형태**다 — 자료가 없는 게 아니라 **갈 자리가 없다**.",
+ "★단위": "입력 SP 1건 + 그 결과에 대한 판정 1건",
+ "★이_원장이_주장하지_않는_것": [
+  "「SP가 좋아서 좋게 나왔다」 — **분리 안 된다**. 대조군이 없다.",
+  "판정은 전곡 인상이고 SP 특정 요소의 기여가 아니다.",
+  "N이 작다. 비율을 내지 않는다."
+ ],
+ "항목": [
+  {
+   "id": "LEO-SP3-01",
+   "sp_key": "SP1",
+   "날짜": "2026-08-25",
+   "sp_전문": "Atmospheric Ambient Electronic With Amplified Progressive Rock Elements, Unorthodox Rhythms, Experimental Sound Design, Processed Textures, Melancholic Sullen Mood With Spooky Yet Hopeful Undertones, Ethereal Male Falsetto And Tenor Vocals With Strong Subdued Intimate Presence And Mystical Delivery For Verses And Bridge, Sampled Female Emotional Layered Vocal Stacks Chopped And Reverbed As Central Spectral Hook In Chorus, Faint Progressive And Latin-Jazz Atmospheric Color, Dynamic Processed Guitar With Prog Rock Flair, Math-Rock Influenced Percussion, Sparse-To-Dense Cinematic Arrangements, Avant-Garde And Psychedelic Undertones, Ritualistic Distant Echoes, Tape Warmth, Vinyl Dust, Seance Veil Shimmer, 83 Bpm, Abrupt Hard Cut To Silence At The End",
+   "판정_주체": "LEO(오너) 직접 청취",
+   "판정": "좋음",
+   "판정_원문": "음악은 잘 나왔어 셋다",
+   "★SP_기여": "미분리 — 오너 본인이 「SP라 잘 먹힌 건지는 모르겠다」고 명시",
+   "대조군": "없음",
+   "곡_식별자": "미수령(uuid·링크 없음)",
+   "형태_실측": {
+    "자수": 757,
+    "Title_Case_비율": 1.0,
+    "콜론_헤더": false,
+    "출력층_낱말_접지율": 0.662
+   }
+  },
+  {
+   "id": "LEO-SP3-02",
+   "sp_key": "SP2",
+   "날짜": "2026-08-25",
+   "sp_전문": "Upbeat Psychedelic Song In A Tense Minor Key, Driven By Thick Sub-Bass And A Resonant Analog Bass Synth. High-Fidelity Phone-Recorded Lead Runs Through Close-Miked Bathroom Acoustics, Natural Tile Reverb, Phased Delay Trails, Tape Echo, And Stereo Chorus. Crisp High-End Detail, Cramped Room Tone, And Hypnotic Neo-Psychedelic Groove.",
+   "판정_주체": "LEO(오너) 직접 청취",
+   "판정": "좋음",
+   "판정_원문": "음악은 잘 나왔어 셋다",
+   "★SP_기여": "미분리",
+   "대조군": "없음",
+   "곡_식별자": "미수령",
+   "형태_실측": {
+    "자수": 334,
+    "Title_Case_비율": 1.0,
+    "콜론_헤더": false,
+    "출력층_낱말_접지율": 0.718
+   }
+  },
+  {
+   "id": "LEO-SP3-03",
+   "sp_key": "SP3",
+   "날짜": "2026-08-25",
+   "sp_전문": "Opens With Prominent Dreamy Plucky Synth Melody Leading Into Heavily Processed Ethereal Vocal Fragments, Then Energetic Crisp Hi-Hats Rolling Underneath, Ethereal Melancholic Vaportrap With Ambient Electronic Depth, Dreamy Plucky Synth Melodies Drenched In Lush Reverb And Delay Throughout, Deep Rumbling 808 Bass, Experimental Sound Design And Heavily Processed Ethereal Vocal Samples, Unorthodox Rhythms Featuring Math-Rock Influenced Percussion, Ethereal Male Falsetto And Tenor With Subdued Haunting Presence, Sparse To Dense Cinematic Builds, Dynamic Processed Guitar, Faint Progressive And Latin-Jazz Atmospheric Color, Avant-Garde Psychedelic Undertones, Sullen Regretful Mood, Reverb-Soaked Nostalgic Yet Futuristic Production",
+   "판정_주체": "LEO(오너) 직접 청취",
+   "판정": "좋음",
+   "판정_원문": "음악은 잘 나왔어 셋다",
+   "★SP_기여": "미분리",
+   "대조군": "없음",
+   "곡_식별자": "미수령",
+   "형태_실측": {
+    "자수": 734,
+    "Title_Case_비율": 1.0,
+    "콜론_헤더": false,
+    "출력층_낱말_접지율": 0.731
+   }
+  }
+ ],
+ "★이_3건이_공유하는_것(그래서 못 가르는 것)": "셋 다 Title Case 1.0 · 콜론 헤더 0 · 쉼표 나열이다. **변이가 없다** — 3건이 전부 같은 값이라 이 축이 결과에 기여했는지 **원리상 못 가른다**. 가르려면 같은 내용을 Title Case 없이 쓴 판이 필요하고, 그것은 생성이라 B-2 밖이다(내가 안 연다).",
+ "★크레딧 0으로 늘릴 수 있는 자리": "곡 uuid나 suno 링크가 오면 **Suno 자기분석 SP를 회수**해 「우리가 넣은 말 ↔ Suno가 되돌려준 말」 짝이 생긴다 — 그게 sunolang의 핵심 자산 형태다. 생성 아님."
+}

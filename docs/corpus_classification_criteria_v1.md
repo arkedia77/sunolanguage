@@ -57,6 +57,16 @@ DB 실측 분포(2026-07-31, `expr_concepts`): technique 120 · mood 63 · produ
 
 **llm_prompt 개정**: 대상을 "MusicGen/Stable Audio/**Lyria**류"로 확장. ★엔진별 uptake 편차를 notes에 기록하는 것이 기준 — 첫 등재: **Lyria 절대조성=약한 시민권**(07-24 key-uptake 3세션 실측: restatement echo돼도 렌더는 전조/드롭, C major 지시→E♭ 렌더. BPM·groove·화성어휘·편성·다이내믹은 강한 echo). Lyria엔 상대화성·리듬·편성으로 유도. 정본: `data/lyria_probe/lyria_probe_set_v0.json` ★structure_finding_20260724_key_uptake.
 
+### ★§3.9 코퍼스에 **칸이 없던 것** 1건 — 「입력 SP ↔ 사람 청취 판정」 짝 (08-25 신설)
+
+우리 540곡은 **「입력 SP ↔ Suno 자기분석」 텍스트 짝을 435건** 갖고 있다. 그런데 —
+★**「입력 SP ↔ 사람 청취 판정」 짝을 담는 칸이 아예 없다.** 판정은 문서마다 흩어져 있어 **집계에도 인용에도 안 잡힌다.**
+
+★**지시축 대장 때와 같은 형태다** — 자료가 없는 게 아니라 **갈 자리가 없다.** ⇒ 자리부터 만든다.
+정본 = `data/collection/sp_outcome_ledger_v1.json` (단위 = 입력 SP 1건 + 그 결과 판정 1건).
+
+⚠**이 원장이 주장하지 않는 것**: 「SP가 좋아서 좋게 나왔다」는 **분리 안 된다**(대조군 없음). 판정은 **전곡 인상**이고 SP 특정 요소의 기여가 아니다. **N이 작으면 비율을 내지 않는다.**
+
 ### ★§4.0 계측 금지 항목 1건 — **Suno 자기분석의 「조성 서술」은 조성 근거로 쓰지 않는다** (08-23 신설)
 
 **실측**(재현 `scripts/output_key_statement_bias_v1.py` · 산출 `data/reanalysis_v2/output_key_statement_bias_v1.json`):
