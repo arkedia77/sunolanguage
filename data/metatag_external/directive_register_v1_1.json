@@ -1,0 +1,1525 @@
+{
+ "무엇": "지시축 대장 v1 — 「지시의 효과」에 대한 외부 주장 대장(표기 대장 아님)",
+ "재현": ".venv/bin/python scripts/build_directive_register_v1.py",
+ "원자료": [
+  "data/metatag_external/v2_lanes/*.json (failure_modes·advice·precedence_statements·rule_block_prompting·target_attempts·instances)",
+  "data/metatag_external/reopen_harvest_v1.json (B-4 자막 회수분)"
+ ],
+ "★왜_지금_생겼나": "이 64건은 **새로 모은 게 아니라 이미 수집돼 있던 것**이다. 담을 대장이 없어서 `metatag_lane_recount_v1`이 「안 센 것」으로 제외했고, 그래서 **집계에도 인용에도 한 번도 안 나왔다.** ★08-12에 「관측축만 쌓고 지시축을 안 쌓았다」고 진단했는데 그 공백이 자료 구조에도 그대로 있었다.",
+ "★단위": "주장 1건. 표기가 아니라 **입력의 효과에 대한 남의 말**이다.",
+ "★대장에서_뺀_필드": {
+  "target_attempts": "회수 로그 — 지시의 효과 주장 아님(reopen_v1 소관)",
+  "instances": "실물 SP 예문 — 주장 아님(표기·예문 자산)",
+  "tags": "표기 — 후보 선반 소관",
+  "speaker_syntax": "표기 — 후보 선반 소관",
+  "not_accessed": "미회수 목록 — reopen_v1 소관",
+  "notes": "수집자 메모",
+  "★경위": "1차판에서 `target_attempts`·`instances`를 넣어 71건으로 셌다. 그중 10건은 주장이 아니었다 — 회수 로그와 SP 예문이다. **필드명만 보고 넣은 내 오류**이고, 「지시축 주장 N건」을 부풀렸다."
+ },
+ "집계": {
+  "총_주장": 61,
+  "등급": {
+   "B_recited": 59,
+   "A_demo": 2
+  },
+  "★수치_주장": {
+   "수": 6,
+   "★주": "수치는 시연이 있어도 N·측정법 미기재면 B_recited다. 인용 시 반드시 출처 자기신고임을 병기할 것."
+  },
+  "축": {
+   "우선순위·필드충돌": 20,
+   "준수율·무시": 15,
+   "형태효과(길이·형식)": 12,
+   "실패양식": 12,
+   "위치효과": 12,
+   "범위(스타일↔가사)": 9,
+   "표기법(괄호·대문자)": 7,
+   "미분류": 4,
+   "교습출처_부재": 3,
+   "기능차이·장르의존": 2
+  },
+  "★검증가능성": {
+   "partially_measured": 2,
+   "needs_generation": 47,
+   "already_measured": 1,
+   "impossible_by_design": 10,
+   "measured_offaxis": 1
+  },
+  "출처_호스트": {
+   "jackrighteous.com": 29,
+   "hookgenius.app": 7,
+   "www.youtube.com": 7,
+   "songsmith.studio": 4,
+   "medium.com": 4,
+   "tagasong.com": 4,
+   "stokemctoke.com": 1,
+   "raw.githubusercontent.com": 1,
+   "www.suno.wiki": 1,
+   "acetaggen.com": 1,
+   "www.titanxt.io": 1,
+   "howtopromptsuno.com": 1
+  },
+  "★검증가능성_v1": {
+   "already_measured": 4,
+   "needs_generation": 46,
+   "impossible_by_design": 10,
+   "corpus_now": 1
+  }
+ },
+ "★★단일저자_집중": {
+  "최다": "jackrighteous.com",
+  "건수": 29,
+  "비율": "48%",
+  "★뜻": "이 대장의 절반이 **한 저자**에게서 나온다. 출처 수가 늘어도 **독립 확인은 안 늘어난다.** 선반의 `derivative_cluster` 경고와 같은 문제이고, 여기서는 더 심하다 — ★**「여러 가이드가 그렇게 말한다」를 근거로 쓰지 말 것.**"
+ },
+ "★이_대장이_못_하는_것": [
+  "★어느 주장도 우리가 검증하지 않았다. 전부 **남의 말**이다.",
+  "준수율·무시 축 10건은 우리 코퍼스로 **원리상 못 잰다** — 출력만 담기 때문.",
+  "46건은 생성이 필요하고 **B-2 「설계까지만」**에 걸려 있다. 내가 안 연다.",
+  "축 분류는 키워드 자동이다(`★축_판정` 참조). 사람이 읽고 세운 것은 `curated_conflicts`뿐이다."
+ ],
+ "★corpus_now_실측": {
+  "★무엇을_쟀나": "외부 「콜론 파라미터 태그는 placebo」 주장에 대해 **Suno가 그 형식을 뱉는가**만 쟀다.",
+  "★못_잰_것": "「입력하면 먹히는가」. 우리 코퍼스는 출력만 담아 **원리상 못 잰다** — 생성 필요(B-2).",
+  "모집단": {
+   "Suno_출력층_브라켓_엔트리": 9726,
+   "입력층_SP_엔트리": 425
+  },
+  "Suno_출력층_브라켓": {
+   "key:value 형 총": 22,
+   "고유 키": 7,
+   "상위": [
+    [
+     "libs",
+     12
+    ],
+    [
+     "female vocal harmonies",
+     4
+    ],
+    [
+     "swing jazz breakdown",
+     2
+    ],
+    [
+     "bass swing jazz breakdown",
+     1
+    ],
+    [
+     "foley",
+     1
+    ],
+    [
+     "falsetto vocalizations",
+     1
+    ],
+    [
+     "vocalizing",
+     1
+    ]
+   ],
+   "★주": "상위 `libs`·`female vocal harmonies` 등은 서술문 안의 콜론이지 파라미터 태그가 아니다 — 사실상 0."
+  },
+  "입력층_우리_SP": {
+   "key:value 형 총": 420,
+   "고유 키": 72,
+   "상위": [
+    [
+     "production",
+     57
+    ],
+    [
+     "critical",
+     55
+    ],
+    [
+     "mood",
+     43
+    ],
+    [
+     "instrumentation",
+     34
+    ],
+    [
+     "concept",
+     21
+    ],
+    [
+     "vocal style",
+     12
+    ],
+    [
+     "rhythm",
+     12
+    ],
+    [
+     "bass",
+     12
+    ],
+    [
+     "lead",
+     10
+    ],
+    [
+     "percussion",
+     10
+    ],
+    [
+     "texture",
+     10
+    ],
+    [
+     "energy",
+     9
+    ],
+    [
+     "atmosphere",
+     8
+    ],
+    [
+     "bpm",
+     7
+    ],
+    [
+     "genre",
+     7
+    ]
+   ]
+  },
+  "외부가_지목한_형식별": {
+   "reverb:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 0
+   },
+   "bass:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 12
+   },
+   "vocal style:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 12
+   },
+   "vocal emotion:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 0
+   },
+   "vocal effect:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 0
+   },
+   "harmony:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 5
+   },
+   "vocalist:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 0
+   },
+   "bpm:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 7
+   },
+   "key:": {
+    "출력층_브라켓": 0,
+    "입력층_SP": 3
+   }
+  },
+  "★판정": "외부가 이름 댄 파라미터 키(`reverb:`·`vocal style:`·`vocalist:`·`vocal emotion:`…)는 **Suno 출력층 브라켓에서 전부 0회**다. 외부 주장과 **같은 방향**이나 ★**부재는 무반응의 근거가 아니다** — 우리는 Suno가 뱉은 것만 본다.",
+  "★★섞지_말_것": "우리 입력층 SP에 `Mood:`·`Production:` 류가 **420건** 있지만 이것은 **다른 자리**다 — **SP 산문의 구조화**이고, 외부 주장의 대상은 **가사 브라켓 안의** 파라미터 태그다. 섞으면 「우리가 placebo를 대량 쓰고 있다」는 **거짓 경보**가 된다. ★단 `vocal style:`(우리 SP 12건)은 miraheze가 **브라켓으로** 가르치는 형식이라, 그 형식이 브라켓으로 옮겨가면 이 주장의 사정권에 든다."
+ },
+ "curated_conflicts": {
+  "★왜_따로_적나": "아래는 키워드가 아니라 **내가 64건을 읽고** 세운 것이다. 자동 분류로는 안 나온다.",
+  "외부↔우리_충돌": [
+   {
+    "id": "X1",
+    "★중요도": "최상",
+    "우리_주장": "「맨 명찰(`[spoken]`)은 죽고 **화자+어조 서술 브라켓**(`[Monster spoken, raspy, angry]`)은 공개 음원 시연이 존재한다」 — 08-12 최대 발견. 우리 `duet_bracket_grammar_v1` §0(화자는 명찰 아닌 음원 서술로 전달)과 같은 원리.",
+    "외부_주장": "「브라켓은 1~3단어로 짧게. 긴 브라켓 문장은 토크나이저가 노이즈로 압축한다」(hookgenius) / 「문장형 어투를 빼고 짧은 큐 하나를 사건 직전에」(tagasong) / 「태그를 헤더로 쓰고 가사는 아래에 — 브라켓 안에 문장을 넣으면 명령문이 불린다」(tagasong)",
+    "★판정": "**정면 반대 방향**이다. 우리는 「서술을 얹으면 강해진다」, 외부는 「길면 죽는다」.",
+    "★이미_설계돼_있다": "우리 `docs/field_attribution_2x2_preregistration.md`의 브라켓 축이 **없음/짧은태그/긴규칙문 3수준**이다 — 이 충돌을 재게 이미 설계돼 있다.",
+    "검증가능성": "needs_generation (B-2)",
+    "★주의": "두 주장이 같은 것을 안 재고 있을 수 있다 — 우리 근거는 **공개 음원 실물 존재**(존재 증명)이고 외부는 **평균 성공률**(빈도 주장)이다. 존재와 빈도는 양립한다. ⇒ 「충돌」로 확정하기 전에 축부터 맞출 것."
+   },
+   {
+    "id": "X2",
+    "★중요도": "상",
+    "우리_관측": "오늘(08-22) miraheze에서 회수한 `Vocal Style: soulful`·`Vocal Emotion: energetic`·`Vocalist: Female` 등 **key:value 브라켓** 가족이 우리 **출력층 0**.",
+    "외부_주장": "「`[Reverb: 30%]`·`[Bass: 80%]` 류 콜론+숫자 파라미터 태그는 **placebo**다. Suno는 완전히 무시한다. 문법이 공식처럼 보여서(대괄호·콜론·숫자) 처음 지어낸 가이드가 다음 가이드로 복제됐을 뿐」(hookgenius)",
+    "우리_독립근거": "`duet_bracket_grammar_v1`이 **다른 방법(GLOB)**으로 `[Male Vocal]` exact **0곡** — 명찰형이 안 산다.",
+    "★판정": "★**3경로가 같은 방향(음성)으로 수렴**한다: ⑴우리 출력층 0 ⑵우리 듀엣문법 명찰형 0곡 ⑶외부의 명시적 placebo 주장. **그래도 생성 없이는 미검증**이고, 부재는 여전히 「우리가 못 봤다」다.",
+    "검증가능성": "corpus_now(형식 존재 여부) + needs_generation(입력 준수)"
+   },
+   {
+    "id": "X3",
+    "★중요도": "상",
+    "외부_충돌": "songsmith「소괄호는 **항상 불린다**. `(whispered)`는 '휘스퍼드'라는 **단어로 불린다**」 ↔ sunoaiwiki「소괄호를 spoken 전달에 쓰라」 — **외부끼리 정면 모순**.",
+    "★우리_자산": "우리는 이 자리에 **실측이 있다** — `(spoken)` LEO 실청취 **4/4** + 기계는 **판정 가능 2클립 중 1클립만 견고**.",
+    "★판정": "★**64건 중 우리가 지금 판정에 기여할 수 있는 거의 유일한 자리**다. 우리 실측은 songsmith의 「항상 불린다」를 **약화**시킨다(적어도 우리 4클립에선 안 불렸다). 단 **N=4·우리 편성**이라 일반화 못 한다.",
+    "검증가능성": "already_measured(부분)"
+   }
+  ],
+  "외부↔외부_충돌": [
+   {
+    "id": "C1",
+    "쟁점": "소괄호가 불리는가",
+    "A": "songsmith: 항상 불린다",
+    "B": "sunoaiwiki: spoken에 쓰라",
+    "비고": "X3와 같은 쟁점"
+   },
+   {
+    "id": "C2",
+    "쟁점": "긴 브라켓/규칙블록이 되는가",
+    "A": "hookgenius·tagasong: 짧게(1-3단어), 문장형 금지",
+    "B": "공개곡 실물에 `[VOICEOVER — SPOKEN, NOT SUNG]`+`[PERFORMANCE RULES]` 블록형이 존재(우리 08-12 수집)",
+    "★비고": "★수집자 자신이 적어 둔 음성 소견이 있다 — 「이 레인에서 닿은 **모든 가이드 중 이 패턴을 가르치거나 시연하는 출처를 하나도 못 찾았다**. 곡 저자 개인 습관으로 보인다」. ⇒ **실물은 있는데 교습 출처가 0**."
+   },
+   {
+    "id": "C3",
+    "쟁점": "`[Intro]` 준수율",
+    "A": "hookgenius: notoriously skipped entirely / titanxt: less reliable",
+    "★우리_대조": "우리 **출력층** `Intro` 770히트/581곡(브라켓 711). ★단 이건 **Suno가 뱉은 라벨**이지 **우리가 넣은 `[Intro]`를 지켰나**가 아니다 — **다른 축이라 반박이 아니다.**"
+   }
+  ],
+  "★독립_수렴(양성)": [
+   {
+    "쟁점": "`[Spoken Word]`는 잘 먹힌다",
+    "출처A": "hookgenius — 「Tier 1, Suno에서 가장 깨끗하게 준수되는 태그 중 하나」(자칭 400+ 생성 시험)",
+    "출처B": "youtube Uy2jV0fqTPk — 「성공률 약 80%」(A_demo 시연 있음)",
+    "★비고": "독립 2출처가 같은 방향. 둘 다 N·측정법 미기재라 **수치는 B_recited**이나, **방향은 두 번 나왔다.**"
+   }
+  ]
+ },
+ "주장": [
+  {
+   "주장": "\"The label is sung aloud\" — caused by the cue being too verbose or too lyrical. Remedy: keep bracket cues short.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — Suno Meta Tags Guide 2026",
+   "축": [
+    "형태효과(길이·형식)",
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "partially_measured",
+   "★검증가능성_근거": "결과 변인(누출)은 같은 축을 쟀다. 그러나 **조건 변인(verbose)의 팔이 0**이다 — 관측된 브라켓은 전건 1~4어로 **주장이 말하는 remedy 쪽 조건만** 있다. 「짧은 것이 안 샜다」는 「길면 샌다」를 지지도 반박도 못 한다. ⇒ 판정에는 못 쓴다.",
+   "id": "D001",
+   "★v1_검증가능성": "already_measured",
+   "★v1_검증가능성_근거": "우리 VD 실측 「브라켓 텍스트 가창 누출 0/2」와 같은 축",
+   "★M": {
+    "M-축": "부분",
+    "M-급": "M3 외부실물 + M2 표본",
+    "M-방향": "부재",
+    "M-대조군": "없음"
+   },
+   "★근거_실물": {
+    "X1자막": {
+     "출처": "data/metatag_external/x1_conflict_audit_v1.json (재현 scripts/x1_bracket_conflict_audit_v1.py)",
+     "무엇": "외부 공개곡 1곡의 입력가사 ↔ 유튜브 자동자막(=렌더 ASR) 대조",
+     "값": "서술 브라켓 출현 16 · 판정가능 낱말 18종 · ★누출 0 (자막 적중 1건은 문맥 실사로 오인식 판정)",
+     "급": "M3 외부실물",
+     "N": "1곡",
+     "브라켓_길이_분포": "고유 11종 전건 1~4어 (최장 4어) — ★긴 브라켓 팔 0",
+     "한계": "자막은 낱말만 준다(어조·발성 못 잼) · 자동자막 오인식 있음 · 대조군 0 · N=1곡"
+    },
+    "VD누출": {
+     "출처": "data/vd_duet3/VD_FINAL_judgment.json 「브라켓 텍스트 가창 누출 0/2」",
+     "급": "M2 표본",
+     "N": "2클립(RM1·RM2)"
+    }
+   },
+   "★주장_변인": {
+    "결과": "누출(브라켓 텍스트가 불린다)",
+    "조건": "길이(verbose·lyrical하면)"
+   },
+   "★여는_조건": "같은 가사로 긴 브라켓(문장형) 팔을 돌린 대조 1쌍 — 생성 필요(B-2)"
+  },
+  {
+   "주장": "'Avoid tag stuffing. A long bracket inventory makes the map harder to read.' Recommends testing one variable at a time; 'Every retry is unrelated' results from changing too many variables at once.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — Suno Meta Tags Guide 2026",
+   "축": [
+    "형태효과(길이·형식)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D002"
+  },
+  {
+   "주장": "CRITICAL: 'parentheses are ALWAYS sung. Don't put performance instructions in them — (whispered) will be sung as the word \"whispered.\"' This directly contradicts sunoaiwiki's advice to use parentheses for spoken delivery.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://songsmith.studio/blog/suno-lyric-formatting-symbols",
+   "출처host": "songsmith.studio",
+   "출처label": "SongSmith — Lyric Formatting Symbols Cheat Sheet",
+   "축": [
+    "우선순위·필드충돌",
+    "실패양식",
+    "표기법(괄호·대문자)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "already_measured",
+   "★검증가능성_근거": "주장이 **ALWAYS**라 반례 1건이면 무너진다. 괄호 지시어를 보유한 4클립에서 누출 0 = **반례 4건**. ⇒ 이 값은 주장 판정에 **쓸 수 있다**. ⚠단 계기 결함(한국어 ASR)이 붙어 「반증」이 아니라 「반례」까지다.",
+   "id": "D003",
+   "★v1_검증가능성": "already_measured",
+   "★v1_검증가능성_근거": "우리 `(spoken)` 실측이 있다(LEO 실청취 4/4 · 기계 판정가능 2 중 1 견고)",
+   "★M": {
+    "M-축": "일치",
+    "M-급": "M2 표본",
+    "M-방향": "부재",
+    "M-대조군": "없음"
+   },
+   "★근거_실물": {
+    "X3누출": {
+     "출처": "data/metatag_external/x2_x3_conflict_audit_v1.json §X3 (재현 scripts/x2_x3_conflict_audit_v1.py)",
+     "무엇": "VD ASR 전사 3파일 전수 스캔 — 괄호 안 지시어가 낱말로 불렸는가",
+     "값": "16클립 · 전사 7,054자 · ★라틴 토큰 0 · spoken 음차 0",
+     "★분모_정정": "그중 입력에 괄호 지시어를 실제로 보유한 것은 RM1·RM2·M1·M2 = 4클립",
+     "급": "M2 표본",
+     "N": "4클립",
+     "★계기_결함": "한국어 ASR(faster-whisper)이라 **라틴 0은 「안 뱉는 설정」과 구분되지 않는다** — 자가 못 본 것일 수 있다",
+     "재확인": "2026-08-26 원 ASR 파일 직접 재스캔 — 라틴 토큰 0 · 음차 0 재현됨"
+    }
+   },
+   "★주장_변인": {
+    "결과": "누출(괄호 안 낱말이 불린다)",
+    "조건": "ALWAYS(무조건)"
+   },
+   "★근거_교체": "v1은 delivery 실측을 걸어 뒀다(축 불일치) → **X3 누출 스캔으로 교체**한다",
+   "★못_하는_말": "「괄호는 안 불린다」 — 우리 자가 라틴을 못 뱉는 설정일 수 있다. 부재는 여전히 약한 증거다."
+  },
+  {
+   "주장": "Square brackets are the opposite of parentheses: 'Anything inside [ ] is a structural or production cue. Suno reads it and acts on it but doesn't sing it.'",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://songsmith.studio/blog/suno-lyric-formatting-symbols",
+   "출처host": "songsmith.studio",
+   "출처label": "SongSmith — Lyric Formatting Symbols Cheat Sheet",
+   "축": [
+    "표기법(괄호·대문자)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "partially_measured",
+   "★검증가능성_근거": "한 칸에 두 주장이 눌려 있다. **ⓐ만** 축이 맞고 같은 방향(누출 0/16회)이다. **ⓑ「읽고 반응한다」는 출력만 담는 코퍼스로 원리상 못 잰다** — impossible_by_design 성분이다.",
+   "id": "D004",
+   "★v1_검증가능성": "already_measured",
+   "★v1_검증가능성_근거": "우리 `(spoken)` 실측이 있다(LEO 실청취 4/4 · 기계 판정가능 2 중 1 견고)",
+   "★M": {
+    "M-축": "부분",
+    "M-급": "M3 외부실물 + M2 표본",
+    "M-방향": "부재",
+    "M-대조군": "없음"
+   },
+   "★근거_실물": {
+    "X1자막": {
+     "출처": "data/metatag_external/x1_conflict_audit_v1.json (재현 scripts/x1_bracket_conflict_audit_v1.py)",
+     "무엇": "외부 공개곡 1곡의 입력가사 ↔ 유튜브 자동자막(=렌더 ASR) 대조",
+     "값": "서술 브라켓 출현 16 · 판정가능 낱말 18종 · ★누출 0 (자막 적중 1건은 문맥 실사로 오인식 판정)",
+     "급": "M3 외부실물",
+     "N": "1곡",
+     "브라켓_길이_분포": "고유 11종 전건 1~4어 (최장 4어) — ★긴 브라켓 팔 0",
+     "한계": "자막은 낱말만 준다(어조·발성 못 잼) · 자동자막 오인식 있음 · 대조군 0 · N=1곡"
+    },
+    "VD누출": {
+     "출처": "data/vd_duet3/VD_FINAL_judgment.json 「브라켓 텍스트 가창 누출 0/2」",
+     "급": "M2 표본",
+     "N": "2클립(RM1·RM2)"
+    }
+   },
+   "★주장_변인": {
+    "ⓐ": "누출 부재(안 불린다)",
+    "ⓑ": "준수·효과(읽고 반응한다)"
+   },
+   "★근거_교체": "v1은 delivery 실측을 걸어 뒀다(축 불일치) → **X1 자막 + VD 누출로 교체**한다",
+   "★여는_조건": "ⓑ는 생성 대조 없이는 영원히 안 열린다(코퍼스 종류가 다르다)"
+  },
+  {
+   "주장": "'Quotation marks work better for spoken effects than tags like [Spoken Word]. The tag changes a whole section. Quotes change one phrase.' — scope mismatch is itself a failure mode.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://songsmith.studio/blog/suno-lyric-formatting-symbols",
+   "출처host": "songsmith.studio",
+   "출처label": "SongSmith — Lyric Formatting Symbols Cheat Sheet",
+   "축": [
+    "범위(스타일↔가사)",
+    "표기법(괄호·대문자)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D005"
+  },
+  {
+   "주장": "'Tags being sung as lyrics' occurs when tags aren't on their own line; 'Song ignores structure tags' happens with complex tag descriptions; 'Parenthetical directions being sung' results from full sentences in parentheses.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://hookgenius.app/learn/suno-lyrics-formatting/",
+   "출처host": "hookgenius.app",
+   "출처label": "HookGenius — Suno Lyrics Formatting",
+   "축": [
+    "형태효과(길이·형식)",
+    "준수율·무시",
+    "위치효과",
+    "실패양식",
+    "표기법(괄호·대문자)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "⒜ 우리 브라켓은 **자기 줄 36/36** ⇒ **위반 팔 0** ⒝ 준수율은 **원리상 못 잰다** ⒞ 우리 괄호는 **1낱말** ⇒ **문장 조건 팔 0**. 세 갈래 전부 조건 팔이 비었다. ⇒ **강등.**",
+   "id": "D006",
+   "★v1_검증가능성": "already_measured",
+   "★v1_검증가능성_근거": "우리 `(spoken)` 실측이 있다(LEO 실청취 4/4 · 기계 판정가능 2 중 1 견고)",
+   "★M": {
+    "M-축": "불일치",
+    "M-급": "해당 없음",
+    "M-방향": "해당 없음",
+    "M-대조군": "없음(3갈래 전부)"
+   },
+   "★근거_실물": {
+    "자기줄": {
+     "출처": "data/n021/N021_HANDOFF_v1_1.json 「브라켓 자기 줄 36/36 통과」",
+     "★의미": "우리 브라켓은 **전건 자기 줄**이다 ⇒ 「자기 줄에 없으면 불린다」의 **위반 팔이 0**"
+    },
+    "괄호1낱말": {
+     "출처": "data/vd_duet3/ (spoken) — 괄호 안이 1낱말",
+     "★의미": "「괄호 안이 **완전한 문장**일 때 불린다」의 **조건 팔이 0**"
+    }
+   },
+   "★주장_변인": {
+    "ⓐ": "위치(자기 줄에 없으면 불린다)",
+    "ⓑ": "준수율(복잡한 서술이면 구조 무시)",
+    "ⓒ": "누출(괄호 안이 완전한 문장이면 불린다)"
+   },
+   "★근거_철회": "v1이 걸어 둔 delivery 실측은 세 갈래 어디와도 축이 다르다",
+   "★자기_지적": "N021 설계 규칙 ④는 이 D006을 근거로 「브라켓은 자기 줄에」를 걸었다. ★**미검증 주장을 설계 근거로 쓴 것**이다 — 지키는 것 자체는 무해하나, 전건 준수해 버려서 **이 주장을 잴 팔을 우리 손으로 없앴다**."
+  },
+  {
+   "주장": "Rhyme, repeated hooks, chorus labels and melodic Style terms all encourage SINGING — the main obstacle to spoken output. Also: stage directions get interpreted as lyrics; music bed too active masks the voice; too many words causes rushed delivery.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — How to Make Suno Speak Instead of Sing",
+   "축": [
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D007"
+  },
+  {
+   "주장": "Speech is not a guaranteed mode: 'Suno is built around music generation, so speech is a creative performance tendency—not a guaranteed narration mode.' Suno publishes no official spoken-narration syntax.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — How to Make Suno Speak Instead of Sing",
+   "축": [
+    "준수율·무시",
+    "교습출처_부재"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D008"
+  },
+  {
+   "주장": "Using [Verse]/[Chorus]/[Bridge] on a narration piece 'Forced pop song behavior'; 'lullaby ballad'/'dreamy sung story' 'Triggered melody-based phrasing'; '#Structure: Verse-Chorus-Bridge' 'Conflicted with narrative flow'; even the phrase 'sung narration' 'Still produced melodic lines'.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-word-when-the-world-was-a-whisper",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — When the World Was a Whisper",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D009"
+  },
+  {
+   "주장": "Duet collapse: 'If a song keeps collapsing into one singer, swapping male and female lines, or reading behavior cues inconsistently, the issue is usually one of three things: speaker labels are too weak, sections are too long, or the overlap is too ambitious.' Labeling only once at the top is insufficient.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/duet-harmony-theme-meta-tags-suno",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — Duet & Harmony Meta Tags",
+   "축": [
+    "형태효과(길이·형식)",
+    "위치효과",
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D010"
+  },
+  {
+   "주장": "'It reads tags/objects as lyrics' when there is 'non-lyric text in lyrics field; bracket noise'. Fix: 'Keep lyric field as singable text only.'",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/duet-harmony-theme-meta-tags-suno",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — Duet & Harmony Meta Tags",
+   "축": [
+    "형태효과(길이·형식)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D011"
+  },
+  {
+   "주장": "CONTRADICTION BETWEEN FIELDS: 'If the style prompt says \"breathy female\" and the lyrics say [Male Vocal] [Aggressive], Suno picks one and you don't know which. When both fields agree, compliance is highest.' — 'Reinforce, don't contradict.'",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://hookgenius.app/learn/suno-vocal-prompts/",
+   "출처host": "hookgenius.app",
+   "출처label": "HookGenius — Suno Vocal Prompts: What Works, What's Placebo",
+   "축": [
+    "우선순위·필드충돌",
+    "준수율·무시"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D012"
+  },
+  {
+   "주장": "Long bracket cues degrade: 'The model's tokenizer front-loads processing and prefers short, recognizable descriptors. Long bracketed sentences like [Ethereal synth build with rising tension over sparse percussion] get compressed into noise.' Keep each tag to 1-3 words.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://hookgenius.app/learn/suno-vocal-prompts/",
+   "출처host": "hookgenius.app",
+   "출처label": "HookGenius — Suno Vocal Prompts: What Works, What's Placebo",
+   "축": [
+    "형태효과(길이·형식)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D013"
+  },
+  {
+   "주장": "Mid-song gender swaps WITHOUT per-line [Male]/[Female] labels are 'Tier 3' reliability — 'the model can't anchor the switch.' Precise register words collapse to ~30-50% when 'stranded in a bracket with no reinforcement'.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": true,
+   "출처url": "https://hookgenius.app/learn/suno-vocal-prompts/",
+   "출처host": "hookgenius.app",
+   "출처label": "HookGenius — Suno Vocal Prompts: What Works, What's Placebo",
+   "축": [
+    "준수율·무시",
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D014"
+  },
+  {
+   "주장": "Colon+number parameter tags are PLACEBO: '[Reverb: 30%], [Bass: 80%] ... Suno ignores them completely.' Reason given: 'The syntax feels official — square brackets, colons, numbers — and the first guide to invent it got copied into the next guide.' Relevant caution for the [Vocal Style: X] colon family.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": true,
+   "출처url": "https://hookgenius.app/learn/suno-vocal-prompts/",
+   "출처host": "hookgenius.app",
+   "출처label": "HookGenius — Suno Vocal Prompts: What Works, What's Placebo",
+   "축": [
+    "준수율·무시"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "measured_offaxis",
+   "★검증가능성_근거": "v1 §4-1에서 **실제로 쟀다**(corpus_now 소진). 그러나 잰 것은 「Suno가 그 형식을 **뱉는가**」이고 주장은 「입력하면 **무시하는가**」다 — **다른 축**이다. ★게다가 **우리 입력층에도 콜론+숫자가 0**이라 준수를 잴 **재료 자체가 없다**. ⇒ 「같은 방향」까지고 주장 판정에는 못 쓴다.",
+   "id": "D015",
+   "★v1_검증가능성": "corpus_now",
+   "★v1_검증가능성_근거": "형식이 Suno 출력층에 존재하는지는 지금 잴 수 있다(단 존재≠입력준수)",
+   "★M": {
+    "M-축": "불일치",
+    "M-급": "M1 전수",
+    "M-방향": "부재",
+    "M-대조군": "해당 없음"
+   },
+   "★근거_실물": {
+    "X2형태": {
+     "출처": "data/metatag_external/x2_x3_conflict_audit_v1.json §X2",
+     "값": "출력층 브라켓 9,726 전수 → 콜론+숫자 0 / 콜론+낱말 25 · 입력층 SP 425 전수 → 콜론+숫자 **0** / 콜론+낱말 443",
+     "급": "M1 전수"
+    }
+   },
+   "★주장_변인": {
+    "결과": "입력 준수(무시한다·placebo)",
+    "대상": "가사 브라켓 안 콜론+숫자"
+   },
+   "★상태_변경": "corpus_now → measured_offaxis (측정 완료, 축 불일치)"
+  },
+  {
+   "주장": "Tier ranking (from a claimed 400+ generation test): gender, delivery mode (whisper, rap, belt, spoken word), BPM and basic texture (raspy, breathy) are Tier-1 reliably honored; [Whispered] is '>80% compliance'; [Spoken Word] is 'Tier 1 and one of the cleanest-complying tags Suno has'. [Falsetto] ~60%. [Intro] 'notoriously skipped entirely'.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": true,
+   "출처url": "https://hookgenius.app/learn/suno-vocal-prompts/",
+   "출처host": "hookgenius.app",
+   "출처label": "HookGenius — Suno Vocal Prompts: What Works, What's Placebo",
+   "축": [
+    "준수율·무시",
+    "위치효과"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D016"
+  },
+  {
+   "주장": "VOICES/PERSONA OVERRIDE: when the Voices (clone) feature is active you should drop the gender descriptor from the style prompt — 'the clone already carries it, and stacking a conflicting gender cue makes the output smear.'",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/change-voice-in-suno-without-restarting",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — How to Change the Voice in Suno (via search excerpt; page itself not directly fetched)",
+   "축": [
+    "우선순위·필드충돌",
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D017"
+  },
+  {
+   "주장": "Omitting gender entirely causes random male/female selection — 'the root cause of roughly every \"why does Suno keep changing the voice\" complaint.' Also 'Conflicting vocal descriptors' such as 'soft powerful vocals' are contradictory — pick one direction.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://hookgenius.app/learn/fix-suno-bad-vocals/",
+   "출처host": "hookgenius.app",
+   "출처label": "HookGenius — Fix Suno Bad Vocals",
+   "축": [
+    "우선순위·필드충돌",
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D018"
+  },
+  {
+   "주장": "Placement: 'Tags go before the lyrics / Never mid-line'. Contradictory stacks explicitly shown as wrong: '[Chorus | aggressive | calm | minimal | maximal | orchestral | techno | acoustic]'. Meta tags 'guide, they don't command' — cannot force exact melodies or override Suno's rules.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://stokemctoke.com/the-complete-suno-ai-meta-tags-guide/",
+   "출처host": "stokemctoke.com",
+   "출처label": "Stoke McToke — The Complete Suno AI Meta Tags Guide",
+   "축": [
+    "우선순위·필드충돌",
+    "위치효과"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D019"
+  },
+  {
+   "주장": "Chorus modifiers are frequently NOT honored: 'the Chirp system decides how to render the chorus, so modifiers are often NOT honored'. Also 'The system seems to ignore capitalization' — relevant to the casing question. Note this source predates v5.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://raw.githubusercontent.com/daveshap/suno/main/README.md",
+   "출처host": "raw.githubusercontent.com",
+   "출처label": "github daveshap/suno README",
+   "축": [
+    "준수율·무시",
+    "표기법(괄호·대문자)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D020"
+  },
+  {
+   "주장": "Duets are unreliable in principle: 'metatags within the lyrics might assign multiple voices, but the gender and consistency are not reliable'; voices swap roles or come out too similar; 'duets are more of an exploit, definitely not a feature.'",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://www.suno.wiki/faq/style-and-lyrics/duets/",
+   "출처host": "www.suno.wiki",
+   "출처label": "Suno.wiki — Are Duets Possible? (via search excerpt; page returned 403 on direct fetch)",
+   "축": [
+    "준수율·무시",
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D021"
+  },
+  {
+   "주장": "Style-field vs bracket SCOPE difference: 'Putting whispered in the Style field makes the entire song whispered. Putting [whispered] in a bracket tag before Verse 2 makes only that section whispered.' Misplacing the cue is a scope failure.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://acetaggen.com/blog/vocal-trick-sheet-make-suno-sing-like-you-imagine",
+   "출처host": "acetaggen.com",
+   "출처label": "AceTagGen — SUNO Vocal Tricks",
+   "축": [
+    "위치효과",
+    "범위(스타일↔가사)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D022"
+  },
+  {
+   "주장": "ALL CAPS is a LOUDNESS control, not a speaker label: 'Words in ALL CAPS get sung with more force. Use sparingly — 1 to 3 words max per section, otherwise Suno averages and the effect disappears.' A line that is all caps 'becomes a shout'. This is evidence AGAINST bare ALL-CAPS text functioning as a narrator attribution.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://songsmith.studio/blog/suno-lyric-formatting-symbols",
+   "출처host": "songsmith.studio",
+   "출처label": "SongSmith — Lyric Formatting Symbols Cheat Sheet",
+   "축": [
+    "표기법(괄호·대문자)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D023"
+  },
+  {
+   "주장": "Metatags work best 'when they are short, often just one or two words, maybe up to three'; the AI 'generates voices randomly, so this takes trial and error'; [Intro] is 'less reliable in Suno'.",
+   "레인": "lane2_spoken_narrator",
+   "필드": "실패양식",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://www.titanxt.io/post/guide-to-suno-ai-prompting-metatags-explained",
+   "출처host": "www.titanxt.io",
+   "출처label": "TitanXT — Metatags Explained",
+   "축": [
+    "형태효과(길이·형식)",
+    "준수율·무시",
+    "위치효과",
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D024"
+  },
+  {
+   "주장": "Put short conversational sentences under a label such as `[Spoken narration]`. In Styles, describe `spoken-word narration, voice-forward, minimal documentary underscore, no sung chorus`.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — How to Make Suno Speak Instead of Sing: 2026 Guide",
+   "축": [
+    "형태효과(길이·형식)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D025"
+  },
+  {
+   "주장": "Labels such as `[Spoken narration]`, `[Monologue]` or `[Spoken word]` are practical experiments. Suno does not publish a guaranteed meta-tag grammar for narration.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — How to Make Suno Speak Instead of Sing: 2026 Guide",
+   "축": [
+    "준수율·무시",
+    "교습출처_부재"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D026"
+  },
+  {
+   "주장": "Use a simple spoken label such as `[Spoken narration]`. Treat labels as guidance, not commands.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-narration-workflow",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — How to Make Suno Speak Instead of Sing: 2026 Guide",
+   "축": [
+    "형태효과(길이·형식)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D027"
+  },
+  {
+   "주장": "If you say 'spoken,' Suno delivers narration.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-ai-spoken-word-when-the-world-was-a-whisper",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — When the World Was a Whisper (spoken word case study)",
+   "축": [
+    "미분류"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D028"
+  },
+  {
+   "주장": "Put the song's overall sound in Styles (Style of Music). Put the words to be performed, section labels and short local performance cues in Lyrics.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/where-to-put-your-suno-prompt-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — Suno Prompt Guide: Styles vs Lyrics (v5.5)",
+   "축": [
+    "형태효과(길이·형식)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D029"
+  },
+  {
+   "주장": "Do not repeat the entire Styles prompt inside every section.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/where-to-put-your-suno-prompt-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — Suno Prompt Guide: Styles vs Lyrics (v5.5)",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D030"
+  },
+  {
+   "주장": "if it describes what the entire song should sound like, put it in Styles. If it is sung, spoken or attached to one section, put it in Lyrics.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/where-to-put-your-suno-prompt-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — Suno Prompt Guide: Styles vs Lyrics (v5.5)",
+   "축": [
+    "범위(스타일↔가사)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D031"
+  },
+  {
+   "주장": "Keep structural tags out of the style field entirely. One thread suggested moving every bracketed instruction, section labels, performance notes, all of it, into the Lyrics box and leaving the Style field to describe only the sound itself.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://medium.com/@aitooldiscovery/suno-reddit-tips-and-prompts-what-r-sunoai-users-actually-do-65b59d51bcad",
+   "출처host": "medium.com",
+   "출처label": "Medium/Amara — digest of r/SunoAI threads (secondhand, not the Reddit source itself)",
+   "축": [
+    "범위(스타일↔가사)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D032"
+  },
+  {
+   "주장": "Match the lyric mood to the style prompt mood. A melancholy lyric with an upbeat style prompt produces something incoherent.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://medium.com/@aitooldiscovery/suno-ai-lyric-prompts-complete-template-guide-with-section-tags-and-vocal-cues-2026-d5a87bcdd032",
+   "출처host": "medium.com",
+   "출처label": "Medium/Amara — Suno Lyric Prompts template guide",
+   "축": [
+    "미분류"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D033"
+  },
+  {
+   "주장": "Brackets in the Styles Box are illegal characters and can cause the AI to ignore the tag entirely or hallucinate weird digital artifacts into the audio.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://tagasong.com/suno-guide-lyrics-styles-syntax/",
+   "출처host": "tagasong.com",
+   "출처label": "Tagasong — Simple Suno Guide (surfaced via search snippet; page not directly fetched)",
+   "축": [
+    "준수율·무시",
+    "범위(스타일↔가사)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D034"
+  },
+  {
+   "주장": "Pair the exclusion with a positive replacement in Styles.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "조언",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/negative-prompting-suno-v5-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "Jack Righteous — Suno Exclude Styles & Negative Prompts: 2026 Guide",
+   "축": [
+    "위치효과"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D035"
+  },
+  {
+   "주장": "Suno documents the purpose of its controls, but it does not provide creators with one universal public hierarchy guaranteeing which field will always win whenever instructions compete.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "준수율·무시"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "id": "D036"
+  },
+  {
+   "주장": "Do Not Assume One Field Automatically Overrides the Others",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D037"
+  },
+  {
+   "주장": "Treat the fields as cooperating influences—not courtroom orders where one command automatically overrules every other command.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D038"
+  },
+  {
+   "주장": "Repeating an Instruction Does Not Necessarily Make It Stronger",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D039"
+  },
+  {
+   "주장": "The Lyrics field is not neutral",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D040"
+  },
+  {
+   "주장": "Style defines the broad sound world. Lyrics carries words, section labels and local cues. Exclude removes meaningful conflicts.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D041"
+  },
+  {
+   "주장": "Personalization influences identity and preference, but it does not replace clear song direction.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "미분류"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D042"
+  },
+  {
+   "주장": "Explicit Style field descriptors still override My Taste preferences - Creative Sliders still function independently - Persona Voices and Voice Cloning are unaffected.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌",
+    "범위(스타일↔가사)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D043"
+  },
+  {
+   "주장": "Exclude is model guidance, not a hard rule.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/negative-prompting-suno-v5-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D044"
+  },
+  {
+   "주장": "When Exclude fails, the likely cause is that 'The positive style strongly implies it' — the fix being to 'Remove the conflicting positive term and add a replacement.' (i.e. the positive Style term effectively out-weighs the Exclude field)",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/negative-prompting-suno-v5-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌",
+    "위치효과"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D045"
+  },
+  {
+   "주장": "Suno reads both boxes at the same time. If they conflict, the output tries to satisfy both and fails at both.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://medium.com/@aitooldiscovery/suno-ai-lyric-prompts-complete-template-guide-with-section-tags-and-vocal-cues-2026-d5a87bcdd032",
+   "출처host": "medium.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D046"
+  },
+  {
+   "주장": "Put your strongest line first in every section. Suno gives the most melodic weight to the opening line of each tagged section.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://medium.com/@aitooldiscovery/suno-ai-lyric-prompts-complete-template-guide-with-section-tags-and-vocal-cues-2026-d5a87bcdd032",
+   "출처host": "medium.com",
+   "출처label": "",
+   "축": [
+    "위치효과"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D047"
+  },
+  {
+   "주장": "Clear the Style Prompt or add 'End' to the style description (given as the fix for when the [End] lyric tag alone fails to stop the song — a concrete case of the lyric bracket being insufficient without style-field support)",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "우선순위",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://howtopromptsuno.com/style-lyrics",
+   "출처host": "howtopromptsuno.com",
+   "출처label": "",
+   "축": [
+    "위치효과"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D048"
+  },
+  {
+   "주장": "Worked example of a Style-vs-Lyrics conflict built on bracket blocks: Style says 'Restrained male solo vocal with no choir' while the Lyrics field contains '[Huge Gospel Chorus]' and '[Full Choir Enters]'. The guide's verdict is that these directly conflict and the lyric brackets actively shape phrasing and vocal density regardless of the style field's negation.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "규칙블록",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌",
+    "범위(스타일↔가사)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D049"
+  },
+  {
+   "주장": "Direct warning against the all-caps emphatic rule-block habit: capitals and repetition such as 'NO CHOIR. ABSOLUTELY NO CHOIR.' do not strengthen a command when competing instructions elsewhere pull toward the unwanted result.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "규칙블록",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/ask-jack-why-suno-ignores-instructions",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "우선순위·필드충돌",
+    "표기법(괄호·대문자)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D050"
+  },
+  {
+   "주장": "Guidance runs AGAINST catch-all rule blocks: 'Best practice is to shorten the bracket, remove sentence-like wording and place one concise cue directly before the intended event.' Evidence favors specific targeted tags over broad instruction containers.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "규칙블록",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://tagasong.com/suno-lyrics-tags-square-brackets-prompts/",
+   "출처host": "tagasong.com",
+   "출처label": "",
+   "축": [
+    "형태효과(길이·형식)",
+    "위치효과"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D051"
+  },
+  {
+   "주장": "Mechanism claim underpinning why rule blocks are even attempted: 'Commands in the lyrics box require brackets. Without them, the AI will attempt to sing your instructions as lyrics.' — anything inside [ ] is read as a cue and not sung. This is the stated reason [PERFORMANCE RULES]-type blocks are 'safe' to include, though not evidence they are obeyed.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "규칙블록",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://tagasong.com/suno-lyrics-tags-square-brackets-prompts/",
+   "출처host": "tagasong.com",
+   "출처label": "",
+   "축": [
+    "미분류"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D052"
+  },
+  {
+   "주장": "Countervailing caution on long bracket text: 'Use the tag as a header, then write clean lyric lines underneath it, rather than putting full lyric lines inside brackets, which can cause Suno to sing command text.' Directly at odds with the multi-line [PERFORMANCE RULES] bullet-block form.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "규칙블록",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://tagasong.com/suno-guide-lyrics-styles-syntax/",
+   "출처host": "tagasong.com",
+   "출처label": "",
+   "축": [
+    "형태효과(길이·형식)"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D053"
+  },
+  {
+   "주장": "NEGATIVE FINDING, stated plainly: across every guide reached in this lane, I found NO source that teaches, names, or demonstrates the '[PERFORMANCE RULES] + bullet list inside lyrics' pattern seen in the known example nrhqq4oreDlBEabw. Jack Righteous's own meta-tags guide 'contains no performance rules or rule-block syntax for lyrics'. The pattern appears to be idiosyncratic to the track author rather than a taught technique, and I found no demonstration that it works.",
+   "레인": "lane3_sp_predeclaration",
+   "필드": "규칙블록",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://jackrighteous.com/en-us/pages/suno-ai-meta-tags-guide",
+   "출처host": "jackrighteous.com",
+   "출처label": "",
+   "축": [
+    "교습출처_부재"
+   ],
+   "★축_판정": "자동(키워드) — 사람 검토분은 아래 curated_conflicts",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "id": "D054"
+  },
+  {
+   "주장": "[Spoken Word] = 음악을 무시하고 말한다 / [Spoken Verse] = 음악에 맞춰 말한다(음질 변경·효과 추가·간격 삽입)",
+   "레인": "reopen_v1(B-4 자막)",
+   "필드": "시연영상",
+   "grade": "A_demo",
+   "★수치주장": false,
+   "출처url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "출처host": "www.youtube.com",
+   "출처label": "SunoAI Lab Notes — [Spoken Word]と[Spoken Verse]",
+   "축": [
+    "기능차이·장르의존"
+   ],
+   "★축_판정": "자동(키워드)",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "★우리축": "",
+   "id": "D055"
+  },
+  {
+   "주장": "성공률 [Spoken Word] 약 80% / [Spoken Verse] 약 50% — 태그를 써도 그 구간이 대사가 된다는 보장이 없다",
+   "레인": "reopen_v1(B-4 자막)",
+   "필드": "시연영상",
+   "grade": "B_recited",
+   "★수치주장": true,
+   "출처url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "출처host": "www.youtube.com",
+   "출처label": "SunoAI Lab Notes — [Spoken Word]と[Spoken Verse]",
+   "축": [
+    "준수율·무시"
+   ],
+   "★축_판정": "자동(키워드)",
+   "★검증가능성": "impossible_by_design",
+   "★검증가능성_근거": "준수율·무시 축 — 우리 코퍼스는 Suno가 뱉은 것만 담아 원리상 못 잰다",
+   "★우리축": "★우리가 원리상 못 만드는 축(무시당함)",
+   "id": "D056"
+  },
+  {
+   "주장": "인트로(곡 시작부)에 배치하면 성공률이 급락한다 — Replace Section으로 앞 30초만 재생성하는 편이 낫다",
+   "레인": "reopen_v1(B-4 자막)",
+   "필드": "시연영상",
+   "grade": "B_recited",
+   "★수치주장": true,
+   "출처url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "출처host": "www.youtube.com",
+   "출처label": "SunoAI Lab Notes — [Spoken Word]と[Spoken Verse]",
+   "축": [
+    "준수율·무시",
+    "위치효과"
+   ],
+   "★축_판정": "자동(키워드)",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "★우리축": "위치 효과. 우리 브라켓 대장에 위치 축 없음",
+   "id": "D057"
+  },
+  {
+   "주장": "스타일에 \"spoken word\"를 넣으면 브라켓 성공률을 보완하나 **전곡이 대사화되는 부작용**이 크다",
+   "레인": "reopen_v1(B-4 자막)",
+   "필드": "시연영상",
+   "grade": "B_recited",
+   "★수치주장": true,
+   "출처url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "출처host": "www.youtube.com",
+   "출처label": "SunoAI Lab Notes — [Spoken Word]と[Spoken Verse]",
+   "축": [
+    "우선순위·필드충돌",
+    "준수율·무시",
+    "범위(스타일↔가사)"
+   ],
+   "★축_판정": "자동(키워드)",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "★우리축": "★우리 2×3+1 사전등록의 **「스타일 서술 유무 × 브라켓 형태」 교차와 같은 축**. 외부가 방향을 먼저 말하고 있다.",
+   "id": "D058"
+  },
+  {
+   "주장": "\"Audiobook\" 스타일과 결합하면 전곡을 대사로 바꿀 수 있다",
+   "레인": "reopen_v1(B-4 자막)",
+   "필드": "시연영상",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "출처host": "www.youtube.com",
+   "출처label": "SunoAI Lab Notes — [Spoken Word]と[Spoken Verse]",
+   "축": [
+    "우선순위·필드충돌",
+    "범위(스타일↔가사)"
+   ],
+   "★축_판정": "자동(키워드)",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "★우리축": "",
+   "id": "D059"
+  },
+  {
+   "주장": "장르 의존이 크다 — chillwave는 보컬 효과가 강하게 걸리고, bossa nova는 [Spoken Word]가 단절되며, death metal은 데스보이스를 못 만든다",
+   "레인": "reopen_v1(B-4 자막)",
+   "필드": "시연영상",
+   "grade": "A_demo",
+   "★수치주장": false,
+   "출처url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "출처host": "www.youtube.com",
+   "출처label": "SunoAI Lab Notes — [Spoken Word]と[Spoken Verse]",
+   "축": [
+    "실패양식",
+    "기능차이·장르의존"
+   ],
+   "★축_판정": "자동(키워드)",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "★우리축": "",
+   "id": "D060"
+  },
+  {
+   "주장": "실패의 대부분은 **대사가 노래처럼 되는 것**이다",
+   "레인": "reopen_v1(B-4 자막)",
+   "필드": "시연영상",
+   "grade": "B_recited",
+   "★수치주장": false,
+   "출처url": "https://www.youtube.com/watch?v=Uy2jV0fqTPk",
+   "출처host": "www.youtube.com",
+   "출처label": "SunoAI Lab Notes — [Spoken Word]と[Spoken Verse]",
+   "축": [
+    "실패양식"
+   ],
+   "★축_판정": "자동(키워드)",
+   "★검증가능성": "needs_generation",
+   "★검증가능성_근거": "생성 필요 — B-2 「설계까지만」에 걸림",
+   "★우리축": "★우리 VD 실측 「브라켓 텍스트 가창 누출」과 같은 축 — 설계가 쉬운 자리",
+   "id": "D061"
+  }
+ ],
+ "★v1_1_반영": {
+  "날짜": "2026-08-26",
+  "재현": "scripts/directive_register_axis_reflect_v1_1.py",
+  "생성 0 · 크레딧 0 · 새 수집 0": "리포 내 기존 실측만 재배치",
+  "★고친_것": "v1의 `already_measured` 4건은 **자동 키워드** 배정이었다. 사람이 읽으니 **3건(D003·D004·D006)이 delivery 축 실측을 근거로** 붙어 있었고 주장은 누출·브라켓 축이었다.",
+  "★M_4칸": {
+   "M-축": "주장 변인 ↔ 실측 변인 일치 여부(일치/부분/불일치)",
+   "M-급": "M1 전수 · M2 표본 · M3 외부실물",
+   "M-방향": "존재 / 부재",
+   "M-대조군": "있음 / 없음 — ★조건부 주장은 여기가 비면 판정 불가"
+  },
+  "★결과": "already_measured 4 → **1** · corpus_now 1 → **0** · needs_generation 46 → **47** · partially_measured **2**(신설) · measured_offaxis **1**(신설) · impossible_by_design 10 불변. 총 61 불변.",
+  "★헤드라인_교체": "v1: 「61건 중 지금 뭔가 할 수 있는 건 5건」 → v1.1: **「주장 판정에 실제로 쓸 수 있는 값이 있는 건 1건(D003)이고, 그마저 계기 결함이 붙는다」**",
+  "★반복되는_병": "세 건 다 같은 형태다 — **결과 변인은 맞는데 조건 변인의 팔이 없다.** 조건부 주장(「~하면 ~된다」)에 **조건 쪽 관측이 0**이면 그건 실측이 아니라 **정합일 뿐**이다.",
+  "★대조군이_없는_이유": "우리는 외부 권고를 **지키는 쪽으로만** 만들어 왔다(브라켓 짧게·자기 줄에·괄호는 1낱말). ★**전건 준수는 그 주장을 잴 팔을 우리 손으로 없앤다.** 이게 대장이 46건에서 막힌 것과 별개의 두 번째 병목이다.",
+  "★이_반영이_못_하는_것": [
+   "M-축 판정은 **사람이 읽은 것**이다(자동 아님). 5건만 읽었고 나머지 56건은 v1의 자동 배정 그대로다.",
+   "needs_generation 47건·impossible_by_design 10건은 **한 건도 안 읽었다** — 같은 병이 더 있을 수 있다.",
+   "★부재 근거 3건(D001·D003·D004)은 전부 **방향=부재**다. 부재는 약한 증거이고, D003은 계기 결함까지 붙는다.",
+   "저자 집중 48%는 v1 그대로다 — D001·D006·D015가 전부 이 문제의 사정권에 있다."
+  ]
+ }
+}

@@ -10271,7 +10271,8 @@
    "marimba": "vibraphone",
    "gramophone": "vinyl crackle",
    "prelude": "intro",
-   "dub": "delay"
+   "dub": "delay",
+   "xiqiang": "falsetto"
   },
   "대체어_실증": {
    "fiddle": {
@@ -10333,13 +10334,26 @@
     "출력층_히트": 265,
     "곡수": 64,
     "브라켓_회수": 63
+   },
+   "falsetto": {
+    "출력층_히트": 212,
+    "곡수": 31,
+    "브라켓_회수": 32,
+    "브라켓_고유문면": [
+     "[\"falsetto\"]×24",
+     "[\"falsetto\",\"vocals\"]×5",
+     "[\"falsetto\",\"vocalizing\"]×3"
+    ],
+    "권장문면": "[Falsetto Vocals]"
    }
   },
   "★대체_안_함": {
    "sori·gosu": "판소리 소리·고수. 음색 대체가 문화적 왜곡이라 원어 유지 + SP 산문 서술 권고.",
-   "xiqiang": "원어 미확인. 확인 후 매핑.",
    "roller·post": "UKG/DnB 관용어 추정. 코퍼스의 post 13히트는 전부 장르 접두사(post-punk)라 근거 불충분. 유보."
   },
-  "★부재의_의미": "위 원어들의 출력층 히트 0은 **비네이티브의 근거가 아니다.** 이 코퍼스에 해당 편성 곡이 없다는 뜻일 뿐. 반증: gayageum은 출력층 7히트/1곡(브라켓 4)로 실증된다."
+  "★부재의_의미": "위 원어들의 출력층 히트 0은 **비네이티브의 근거가 아니다.** 이 코퍼스에 해당 편성 곡이 없다는 뜻일 뿐. 반증: gayageum은 출력층 7히트/1곡(브라켓 4)로 실증된다.",
+  "★부분_대체": {
+   "xiqiang": "戏腔(xìqiāng) — 악기 아니라 보컬 창법(leomusic3 08-26 원어 확인). falsetto는 음역·발성만 옮긴다. 변별 성분인 비강 공명·拖腔은 브라켓 실증 0(nasal·melismatic·ornament·portamento·glissando 전부 브라켓 0) ⇒ 브라켓은 [Falsetto Vocals], 비강·拖腔은 SP 산문 서술 권고. 근거=data/reanalysis_v2/substitution_xiqiang_v1.json"
+  }
  }
 }
