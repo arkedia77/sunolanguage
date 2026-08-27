@@ -1,0 +1,720 @@
+{
+ "무엇": "입력 SP·가사에 female을 명시했는데 Suno 재분석이 male로 묘사한 곡 — 오디오 층 판정 의뢰용",
+ "자": "입력=leomusic_original.sp+lyrics에 female 문자열 / 출력=suno_reanalysis.sp+lyrics의 female·male 문자열",
+ "★한계": "이 판정은 전부 **텍스트 층**이다. 오디오를 안 들었다.",
+ "female_명시_전체": 53,
+ "출력_male_묘사": 35,
+ "★uuid_주의": "`재분석_uuid`=Suno 앱이 그 음원을 재분석하며 만든 클립. **오디오 판정에는 `★생성_clip.uuid`/`cdn_mp3`를 쓸 것.**",
+ "rows": [
+  {
+   "song_id": "1",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "38270b87-d811-4836-92e9-dff89cb078a0",
+   "★생성_clip": [
+    {
+     "uuid": "55e88992-bc5f-485e-8dfa-ad7fcec4c17d",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/55e88992-bc5f-485e-8dfa-ad7fcec4c17d.mp3"
+    },
+    {
+     "uuid": "3c9b7ecd-4c13-4d1d-89d8-840f41ee6c84",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/3c9b7ecd-4c13-4d1d-89d8-840f41ee6c84.mp3"
+    }
+   ],
+   "title": "소음의 끝",
+   "genre": "Lo-fi Indie Pop / Dream Pop"
+  },
+  {
+   "song_id": "12",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "7ff0271c-e7b6-439a-bbd3-dc88fe1f0b40",
+   "★생성_clip": [
+    {
+     "uuid": "a4c8d825-bbfa-4353-8da8-f4c9b08e5359",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/a4c8d825-bbfa-4353-8da8-f4c9b08e5359.mp3"
+    },
+    {
+     "uuid": "49785309-8b5f-4ae3-8c99-545552268a1a",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/49785309-8b5f-4ae3-8c99-545552268a1a.mp3"
+    }
+   ],
+   "title": "빈 밥상",
+   "genre": "Contemporary R&B"
+  },
+  {
+   "song_id": "22",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "44623873-0997-4df9-a913-54dd558ff622",
+   "★생성_clip": [
+    {
+     "uuid": "29dffefa-964f-4d55-8ef5-4c631a639640",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/29dffefa-964f-4d55-8ef5-4c631a639640.mp3"
+    },
+    {
+     "uuid": "a37bfe6a-8c81-4974-9bb7-d8aff612a8b9",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/a37bfe6a-8c81-4974-9bb7-d8aff612a8b9.mp3"
+    }
+   ],
+   "title": "뜯지 않은 상자",
+   "genre": "Synth-Pop / Bedroom Pop"
+  },
+  {
+   "song_id": "111",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "fadb9b10-52c7-466f-af03-fe86c5408de2",
+   "★생성_clip": [
+    {
+     "uuid": "1f543c35-57a1-45a1-9947-e9996d1fdf65",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/1f543c35-57a1-45a1-9947-e9996d1fdf65.mp3"
+    },
+    {
+     "uuid": "91037ee3-9312-4902-9874-8628babd7b9b",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/91037ee3-9312-4902-9874-8628babd7b9b.mp3"
+    }
+   ],
+   "title": "새벽 배달",
+   "genre": "Neo-Soul / Chill R&B"
+  },
+  {
+   "song_id": "122",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "4a4d2238-a963-44df-93c5-fa66cdc7486f",
+   "★생성_clip": [
+    {
+     "uuid": "00283f96-0984-447a-8457-4993e4764f60",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/00283f96-0984-447a-8457-4993e4764f60.mp3"
+    },
+    {
+     "uuid": "dd628a72-15a9-46f0-bf06-078420bf15f0",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/dd628a72-15a9-46f0-bf06-078420bf15f0.mp3"
+    }
+   ],
+   "title": "갈라진 지도",
+   "genre": "Acoustic Ballad / Folk Pop"
+  },
+  {
+   "song_id": "122",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "fc6ed53a-102f-4029-982b-32db2ff30034",
+   "★생성_clip": [
+    {
+     "uuid": "00283f96-0984-447a-8457-4993e4764f60",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/00283f96-0984-447a-8457-4993e4764f60.mp3"
+    },
+    {
+     "uuid": "dd628a72-15a9-46f0-bf06-078420bf15f0",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/dd628a72-15a9-46f0-bf06-078420bf15f0.mp3"
+    }
+   ],
+   "title": "갈라진 지도",
+   "genre": "Acoustic Ballad / Folk Pop"
+  },
+  {
+   "song_id": "126",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "c03f8694-6fd9-4fe6-9a71-7a82f621f35a",
+   "★생성_clip": [
+    {
+     "uuid": "51152b7a-ed84-4b08-b188-5bbeeaf3d4b1",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/51152b7a-ed84-4b08-b188-5bbeeaf3d4b1.mp3"
+    },
+    {
+     "uuid": "cd8b513f-276b-4b03-bef0-45582af22c5b",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/cd8b513f-276b-4b03-bef0-45582af22c5b.mp3"
+    }
+   ],
+   "title": "여섯 글자",
+   "genre": "Alternative Rock / Noise Pop"
+  },
+  {
+   "song_id": "127",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "effa0b22-d73a-4518-91cd-4bfac27c14ce",
+   "★생성_clip": [
+    {
+     "uuid": "924ff221-24f9-42f5-a03c-3f3e31e24d62",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/924ff221-24f9-42f5-a03c-3f3e31e24d62.mp3"
+    },
+    {
+     "uuid": "66f90bea-21a1-458f-ba00-75f80a850467",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/66f90bea-21a1-458f-ba00-75f80a850467.mp3"
+    }
+   ],
+   "title": "반 톤",
+   "genre": "Future Bass / Electro Pop"
+  },
+  {
+   "song_id": "130",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "b8ef4f96-a954-48a1-bd99-be5ef8a76b2b",
+   "★생성_clip": [
+    {
+     "uuid": "36a330d4-ad92-44c7-8e0a-64fdc535e7d6",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/36a330d4-ad92-44c7-8e0a-64fdc535e7d6.mp3"
+    },
+    {
+     "uuid": "e31f4c6e-849f-4f98-9344-20920f66200f",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/e31f4c6e-849f-4f98-9344-20920f66200f.mp3"
+    }
+   ],
+   "title": "잔물결",
+   "genre": "Dream Pop / Shoegaze"
+  },
+  {
+   "song_id": "415",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "13e7d542-aea6-440a-8868-88275acab4ba",
+   "★생성_clip": [
+    {
+     "uuid": "25c22132-6a77-46fe-8830-9b5780d064d4",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/25c22132-6a77-46fe-8830-9b5780d064d4.mp3"
+    },
+    {
+     "uuid": "68c00189-a40c-4812-a269-e639e02724ee",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/68c00189-a40c-4812-a269-e639e02724ee.mp3"
+    }
+   ],
+   "title": "좋아요 누르기",
+   "genre": "Dance Pop"
+  },
+  {
+   "song_id": "1009",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "0786ed16-ef46-42df-bbff-b8de6648255c",
+   "★생성_clip": [
+    {
+     "uuid": "4d055c8a-e510-4cc7-bbd5-fc1d00596089",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/4d055c8a-e510-4cc7-bbd5-fc1d00596089.mp3"
+    },
+    {
+     "uuid": "6e36db0b-88df-4d3f-9b1e-4a588b97b5b4",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/6e36db0b-88df-4d3f-9b1e-4a588b97b5b4.mp3"
+    }
+   ],
+   "title": "어른이 되면 알 줄 알았어",
+   "genre": "Acoustic Pop / Folk Pop"
+  },
+  {
+   "song_id": "1110",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "cf1ee5ff-5f18-4f8d-a776-27765b607fd2",
+   "★생성_clip": [
+    {
+     "uuid": "2f60bb3b-39fc-4647-8b6c-879f7a380d9d",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/2f60bb3b-39fc-4647-8b6c-879f7a380d9d.mp3"
+    },
+    {
+     "uuid": "239c32f9-7267-4b3c-8272-4e6d62476b0d",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/239c32f9-7267-4b3c-8272-4e6d62476b0d.mp3"
+    }
+   ],
+   "title": "고요한 슬픔",
+   "genre": "Neoclassical Cinematic / Post-Minimalist String Chamber"
+  },
+  {
+   "song_id": "1111",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "e2b28bb6-1db0-42b4-affc-0ce2ddde8428",
+   "★생성_clip": [
+    {
+     "uuid": "58509940-77a0-4c9d-871a-da23975ec53f",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/58509940-77a0-4c9d-871a-da23975ec53f.mp3"
+    },
+    {
+     "uuid": "9238e8de-8317-400b-b1f7-fbc66ceff404",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/9238e8de-8317-400b-b1f7-fbc66ceff404.mp3"
+    }
+   ],
+   "title": "꿈결의 경계",
+   "genre": "Ambient Neoclassical / Somnolent Minimalism"
+  },
+  {
+   "song_id": "1126",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "d55961ac-1f50-4bcf-b96c-fd14bff0840e",
+   "★생성_clip": [
+    {
+     "uuid": "fd1c2b06-8358-4704-abe0-30eb08b7905f",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/fd1c2b06-8358-4704-abe0-30eb08b7905f.mp3"
+    },
+    {
+     "uuid": "05225004-b62f-4de5-8e1e-9bae934f72fa",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/05225004-b62f-4de5-8e1e-9bae934f72fa.mp3"
+    }
+   ],
+   "title": "밴드 한 묶음",
+   "genre": "Piano Ballad / Soft Pop"
+  },
+  {
+   "song_id": "1145",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "f3e65dac-c58e-4d40-bf6c-98c3ca696064",
+   "★생성_clip": [
+    {
+     "uuid": "c6141c6b-0617-427e-b21d-50ba55dd9d5f",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/c6141c6b-0617-427e-b21d-50ba55dd9d5f.mp3"
+    },
+    {
+     "uuid": "e3d8b8f2-1f1d-45c6-b040-5770cc85c542",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/e3d8b8f2-1f1d-45c6-b040-5770cc85c542.mp3"
+    }
+   ],
+   "title": "헬멧 안의 새벽",
+   "genre": "Acoustic Indie Folk"
+  },
+  {
+   "song_id": "1156",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "c6b800fb-702e-4884-9a6f-a9aefd2654e7",
+   "★생성_clip": [
+    {
+     "uuid": "900c285d-71ff-43d8-85e0-0642abfcc557",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/900c285d-71ff-43d8-85e0-0642abfcc557.mp3"
+    },
+    {
+     "uuid": "41cf8885-767d-43d6-975d-4e1acff35bbf",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/41cf8885-767d-43d6-975d-4e1acff35bbf.mp3"
+    }
+   ],
+   "title": "새벽 3시의 고속도로",
+   "genre": "Shoegaze"
+  },
+  {
+   "song_id": "1165",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "db76277a-9cfc-4461-8fa4-ed21804927ef",
+   "★생성_clip": [],
+   "title": "나가기 취소",
+   "genre": "Indie Pop"
+  },
+  {
+   "song_id": "1167",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "db76277a-9cfc-4461-8fa4-ed21804927ef",
+   "★생성_clip": [],
+   "title": "박스 제일 밑에서",
+   "genre": "Acoustic Ballad"
+  },
+  {
+   "song_id": "1175",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "fa017505-617b-43c2-9f78-50d9a8ec8a50",
+   "★생성_clip": [],
+   "title": "별점 2.3",
+   "genre": "Lo-fi Pop"
+  },
+  {
+   "song_id": "1177",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "ffa3d3d3-4406-4f14-a22d-2492f8ec7c0a",
+   "★생성_clip": [],
+   "title": "디지털 디톡스 실패기",
+   "genre": "City Pop"
+  },
+  {
+   "song_id": "1197",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "7687f334-36cd-473a-bd64-206d73593eaa",
+   "★생성_clip": [],
+   "title": "용서의 타이밍",
+   "genre": "Art Pop"
+  },
+  {
+   "song_id": "1198",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "1d44ff6a-b6cd-4c18-b678-8d488ff4aa81",
+   "★생성_clip": [],
+   "title": "배터리 18%",
+   "genre": "City Pop"
+  },
+  {
+   "song_id": "1205",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "9498bd08-3d80-4e0f-adb2-eac217c1aade",
+   "★생성_clip": [
+    {
+     "uuid": "b3ae256b-20f3-4c41-91f7-ccc6076fef4d",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/b3ae256b-20f3-4c41-91f7-ccc6076fef4d.mp3"
+    },
+    {
+     "uuid": "16cfa4d6-e011-48d3-8f62-5f7a70668265",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/16cfa4d6-e011-48d3-8f62-5f7a70668265.mp3"
+    }
+   ],
+   "title": "오늘도 같은 걸로",
+   "genre": "Indie Pop"
+  },
+  {
+   "song_id": "1206",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "c552029a-50d7-4008-bd0d-447e0c3d8243",
+   "★생성_clip": [
+    {
+     "uuid": "8f2764a8-a282-46fc-a67b-a8138b7744ee",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/8f2764a8-a282-46fc-a67b-a8138b7744ee.mp3"
+    },
+    {
+     "uuid": "8cdb30d3-ffb6-4b2d-a6b1-0b3503ee1714",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/8cdb30d3-ffb6-4b2d-a6b1-0b3503ee1714.mp3"
+    }
+   ],
+   "title": "시작하기 전",
+   "genre": "Dream Pop"
+  },
+  {
+   "song_id": "1217",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "cf303b3d-7716-47a0-97f5-80ee4e891fb3",
+   "★생성_clip": [
+    {
+     "uuid": "4e366eb2-3c56-4250-beb9-ff13f64b115e",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/4e366eb2-3c56-4250-beb9-ff13f64b115e.mp3"
+    },
+    {
+     "uuid": "c50ceb2f-af0b-44ee-ace6-6f2afe472d8b",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/c50ceb2f-af0b-44ee-ace6-6f2afe472d8b.mp3"
+    }
+   ],
+   "title": "낯선 골목",
+   "genre": "Korean Ballad"
+  },
+  {
+   "song_id": "1225",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "603d6863-becc-4243-bda8-1f98a98667e6",
+   "★생성_clip": [],
+   "title": "연락할까",
+   "genre": "Korean Ballad"
+  },
+  {
+   "song_id": "1232",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "973ca1b4-39e9-4d11-80b1-81077a256433",
+   "★생성_clip": [],
+   "title": "10년 만에",
+   "genre": "Indie Folk"
+  },
+  {
+   "song_id": "1241",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "23510a93-7917-49b9-9254-b194bdcf4628",
+   "★생성_clip": [],
+   "title": "30분이 왜 이래",
+   "genre": "City Pop"
+  },
+  {
+   "song_id": "1244",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "eb3e4b05-8b06-4466-8606-088ed7f8f28b",
+   "★생성_clip": [],
+   "title": "지금이 나중에",
+   "genre": "Alt R&B"
+  },
+  {
+   "song_id": "1273",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "2f3f98b3-17b0-43af-a094-b91394a1fd78",
+   "★생성_clip": [],
+   "title": "크레딧이 올라가는 동안",
+   "genre": "R&B Soul"
+  },
+  {
+   "song_id": "1435",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "5bdbc2f4-cd74-4b63-8e46-1f3a7fd21edf",
+   "★생성_clip": [],
+   "title": "내가 센터야",
+   "genre": "Funk Pop"
+  },
+  {
+   "song_id": "1436",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "eed4f461-2e67-40be-8537-c0cb55c708d8",
+   "★생성_clip": [],
+   "title": "거울 리허설",
+   "genre": "Piano Ballad"
+  },
+  {
+   "song_id": "10472",
+   "출력_성별_묘사": "-",
+   "재분석_uuid": "13a4ef2b-65b1-4f51-ab2c-0f7d546ef157",
+   "★생성_clip": [
+    {
+     "uuid": "714fb48a-8536-4ae6-b21e-a40bb57c4033",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/714fb48a-8536-4ae6-b21e-a40bb57c4033.mp3"
+    },
+    {
+     "uuid": "a71163fe-3968-4047-bade-81b6d9bd6814",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/a71163fe-3968-4047-bade-81b6d9bd6814.mp3"
+    }
+   ],
+   "title": "Closing Frame",
+   "genre": "Cinematic Emotional"
+  },
+  {
+   "song_id": "1149",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "05e8308f-33b8-4066-84b0-82432249ab27",
+   "★생성_clip": [
+    {
+     "uuid": "c9ab5897-0c34-46f1-ae50-4a58b8243a2d",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/c9ab5897-0c34-46f1-ae50-4a58b8243a2d.mp3"
+    },
+    {
+     "uuid": "fb2cfcf7-5cd3-4073-ba85-b7d57b6c7829",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/fb2cfcf7-5cd3-4073-ba85-b7d57b6c7829.mp3"
+    }
+   ],
+   "title": "오늘은 그림자만큼만",
+   "genre": "Folk Pop"
+  },
+  {
+   "song_id": "1160",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "d549564f-de7f-475f-bbc2-7e2bd918155b",
+   "★생성_clip": [
+    {
+     "uuid": "1ecccae3-f96b-4bca-9115-422790014a3b",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/1ecccae3-f96b-4bca-9115-422790014a3b.mp3"
+    },
+    {
+     "uuid": "52ee75e0-1ada-4d06-b270-02d83c4099d5",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/52ee75e0-1ada-4d06-b270-02d83c4099d5.mp3"
+    }
+   ],
+   "title": "달리는 갤러리",
+   "genre": "Dream Pop"
+  },
+  {
+   "song_id": "1173",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "061e0b8a-6240-49e4-ba4b-d8e752c9a9f4",
+   "★생성_clip": [],
+   "title": "일곱 번의 박수",
+   "genre": "Jazz Ballad"
+  },
+  {
+   "song_id": "1200",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "dce45152-4a60-4be9-9800-a9a7eb790501",
+   "★생성_clip": [],
+   "title": "구름 창고",
+   "genre": "Dream Pop"
+  },
+  {
+   "song_id": "1209",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "ffe58d7c-a121-4530-9040-cc2e1ae57c4f",
+   "★생성_clip": [
+    {
+     "uuid": "e64e9edd-50d6-45ad-a5aa-b5c2a309c54b",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/e64e9edd-50d6-45ad-a5aa-b5c2a309c54b.mp3"
+    },
+    {
+     "uuid": "6ec881e4-7f93-43fc-804c-fcb77544b66c",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/6ec881e4-7f93-43fc-804c-fcb77544b66c.mp3"
+    }
+   ],
+   "title": "증인",
+   "genre": "Art Pop"
+  },
+  {
+   "song_id": "1219",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "4a7d9183-776b-4628-a08d-7d76b17f70ee",
+   "★생성_clip": [
+    {
+     "uuid": "7bf4eb07-5ce6-449b-8e1d-39c8a1a419b8",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/7bf4eb07-5ce6-449b-8e1d-39c8a1a419b8.mp3"
+    },
+    {
+     "uuid": "1c407302-ddba-4d87-bf9f-f7adb65d7b39",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/1c407302-ddba-4d87-bf9f-f7adb65d7b39.mp3"
+    }
+   ],
+   "title": "빈 방",
+   "genre": "Art Pop"
+  },
+  {
+   "song_id": "417",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "a392f7f4-6c1e-4c84-b6f4-bd78cf60e77e",
+   "★생성_clip": [
+    {
+     "uuid": "b1c0ba77-ebc1-4747-ab82-cbc1843cace1",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/b1c0ba77-ebc1-4747-ab82-cbc1843cace1.mp3"
+    },
+    {
+     "uuid": "b757d9b3-300f-4c57-8d1f-b4a51d805a6d",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/b757d9b3-300f-4c57-8d1f-b4a51d805a6d.mp3"
+    }
+   ],
+   "title": "공실의 시계",
+   "genre": "Indie Acoustic"
+  },
+  {
+   "song_id": "420",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "19fbe84b-ad54-4056-bf25-b10a44b4104b",
+   "★생성_clip": [
+    {
+     "uuid": "307a433e-2090-4f5e-86d3-61782131e912",
+     "take": "take1",
+     "cdn_mp3": "https://cdn1.suno.ai/307a433e-2090-4f5e-86d3-61782131e912.mp3"
+    },
+    {
+     "uuid": "8ff22b6e-6894-4db8-9978-a5fbf07345d7",
+     "take": "take2",
+     "cdn_mp3": "https://cdn1.suno.ai/8ff22b6e-6894-4db8-9978-a5fbf07345d7.mp3"
+    }
+   ],
+   "title": "손잡이의 손들",
+   "genre": "Dance Pop"
+  },
+  {
+   "song_id": "S016_08",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "0dc5caae-6d0f-4ec4-8c95-8bfd3499971b",
+   "★생성_clip": [],
+   "title": "Acoustic Pop Lunch",
+   "genre": "Acoustic Pop"
+  },
+  {
+   "song_id": "S018_04",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "8f404638-038b-423a-8db3-3bb56b665611",
+   "★생성_clip": [],
+   "title": "DembowCaliente",
+   "genre": "Reggaeton"
+  },
+  {
+   "song_id": "S018_13",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "4ce1a558-6a4e-492b-81e4-4fdab1fba595",
+   "★생성_clip": [],
+   "title": "AccordionFiesta",
+   "genre": "Cumbia"
+  },
+  {
+   "song_id": "C_30211",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "0438dca2-c5a3-481f-9f3b-c8bff07d8795",
+   "★생성_clip": [],
+   "title": "접이의자 여든두 개",
+   "genre": ""
+  },
+  {
+   "song_id": "C_30212",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "193dd252-3f66-4a87-9102-18811ec4e5be",
+   "★생성_clip": [],
+   "title": "접이의자 마지막 줄",
+   "genre": ""
+  },
+  {
+   "song_id": "C_30214",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "f8bd5e8c-4867-410f-babf-2cfd6340e3b2",
+   "★생성_clip": [],
+   "title": "먼지가 보이는 각도",
+   "genre": ""
+  },
+  {
+   "song_id": "C_30217",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "2d96be13-486f-49be-b273-62902df1fa4e",
+   "★생성_clip": [],
+   "title": "마지막 큐가 끝나고",
+   "genre": ""
+  },
+  {
+   "song_id": "C_30218",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "a27e16e7-23b4-4dd5-b9ba-7c7cce05a726",
+   "★생성_clip": [],
+   "title": "다시 문을 열면",
+   "genre": ""
+  },
+  {
+   "song_id": "C_30201",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "740394a8-efcb-459e-9ddc-f69d6b59e030",
+   "★생성_clip": [],
+   "title": "",
+   "genre": ""
+  },
+  {
+   "song_id": "C_30203",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "e4d6e847-41d7-40cb-99fe-41b4e58e8f30",
+   "★생성_clip": [],
+   "title": "",
+   "genre": ""
+  },
+  {
+   "song_id": "C_30205",
+   "출력_성별_묘사": "F",
+   "재분석_uuid": "1da873ef-d29b-4768-9253-9c9df23a8e89",
+   "★생성_clip": [],
+   "title": "",
+   "genre": ""
+  },
+  {
+   "song_id": "C_30208",
+   "출력_성별_묘사": "M",
+   "재분석_uuid": "de73ba03-b0e1-40b3-b61f-736e39995e62",
+   "★생성_clip": [],
+   "title": "",
+   "genre": ""
+  }
+ ]
+}
