@@ -1,0 +1,604 @@
+{
+ "무엇": "leomusic-trot 축H 교락 분리용 — 우리 코퍼스의 자연 발생 팔",
+ "★왜": "그쪽 W030-01 실물 SP에 `modulating to B minor`와 `the key change arrives`가 **둘 다** 있었다(08-27 자기 정정). 기전을 가르려면 「키 문장은 두고 key change만 뺀」 조건이 필요한데 우리 코퍼스에 자연 발생해 있다.",
+ "자": "입력층(leomusic_original.sp+lyrics) 문자열. POS=`modulat* to/at/into` 지시형 · NEG=`no modulation`류 · FX=`filter/LFO modulation` 동음이의.",
+ "★내가 한 번 틀렸다": "처음엔 `modulat`만 잡아 **`no modulation`(부정문)까지 대조군에 넣었다.** 부정형을 분리하고 다시 냈다.",
+ "★한계": [
+  "문자열 기준이라 문맥 오판이 남을 수 있다 — 쓰기 전에 `문맥` 필드를 눈으로 보십시오.",
+  "우리는 **조성 측정 도구가 없다** — 크로마 실측은 그쪽 몫.",
+  "오디오는 클립 대장 gid 교집합 곡만 잡힌다.",
+  "★**좌표 통제 없음**(장르·BPM·보컬 제각각) — 짝 대조가 아니라 **모집단**이다. W030 짝의 대체물이 아니라 **모집단 검정용**이다."
+ ],
+ "처치형_pos+kc": [
+  {
+   "song_id": "1386",
+   "title": "맛있다",
+   "genre": "Jazz Ballad",
+   "bpm": 90,
+   "문맥": "Jazz Ballad, Waltz Jazz in Eb Major, modulating to Fm (relative minor) at the bridge. 90 BPM. Mid-Low energy with emotional war",
+   "audio": [
+    {
+     "uuid": "4647b257-4f75-4fe6-8709-8b31aac6715e",
+     "cdn_mp3": "https://cdn1.suno.ai/4647b257-4f75-4fe6-8709-8b31aac6715e.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "d75309aa-0e8b-4a17-b7ae-518294bdd81c",
+     "cdn_mp3": "https://cdn1.suno.ai/d75309aa-0e8b-4a17-b7ae-518294bdd81c.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1507",
+   "title": "냉장고 마지막 밤",
+   "genre": "Indie Acoustic",
+   "bpm": null,
+   "문맥": "n, 108 BPM, mid energy with playful shuffle feel. Key of C major with mixolydian touches, modulating to D at climax.  Warm, friendly vocals in mid-register with natural, unpolished",
+   "audio": []
+  },
+  {
+   "song_id": "1630",
+   "title": "비타민D 부족",
+   "genre": "Funk Pop",
+   "bpm": 112,
+   "문맥": "Funk Pop, Comedy Funk in E minor modulating to G Major on final hook. 112 BPM. Mid-high energy with tight syncopation funk ",
+   "audio": []
+  },
+  {
+   "song_id": "1644",
+   "title": "다섯 줄의 앵콜",
+   "genre": "Hard Rock",
+   "bpm": 128,
+   "문맥": "Hard Rock, Arena Rock in E minor modulating to G Major on final chorus. 128 BPM. High energy with straight hard rock drive ",
+   "audio": []
+  },
+  {
+   "song_id": "1451",
+   "title": "청소부 발소리",
+   "genre": "Piano Ballad",
+   "bpm": 66,
+   "문맥": "Piano Ballad, Cinematic Ballad. Key of D major modulating to F major on the climax chorus. 66 BPM. Low energy deepening into a single cat",
+   "audio": [
+    {
+     "uuid": "450f82dc-1e04-46f1-85ab-d744f266dea9",
+     "cdn_mp3": "https://cdn1.suno.ai/450f82dc-1e04-46f1-85ab-d744f266dea9.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "2e3cc5c8-ccf7-4c50-b440-cb57523ba315",
+     "cdn_mp3": "https://cdn1.suno.ai/2e3cc5c8-ccf7-4c50-b440-cb57523ba315.mp3",
+     "take": "take2"
+    }
+   ]
+  }
+ ],
+ "★대조형_pos_only": [
+  {
+   "song_id": "1135",
+   "title": "4시 반의 출발",
+   "genre": "Acoustic Folk / Midnight Folk",
+   "bpm": 72,
+   "문맥": "Korean Acoustic Folk, Midnight Folk ballad in D minor (Natural Minor), modulating to E minor at the Climax Chorus. 72 BPM. Low energy, intimate and contemplative",
+   "audio": [
+    {
+     "uuid": "9f44b1a1-5e47-4e83-bcc6-6aa0110325b2",
+     "cdn_mp3": "https://cdn1.suno.ai/9f44b1a1-5e47-4e83-bcc6-6aa0110325b2.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "4fa187a5-c3ed-49e8-8a79-04a1fed8fce9",
+     "cdn_mp3": "https://cdn1.suno.ai/4fa187a5-c3ed-49e8-8a79-04a1fed8fce9.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1146",
+   "title": "안경을 닦는 손",
+   "genre": "Piano Ballad",
+   "bpm": 62,
+   "문맥": "Piano ballad, minimal chamber, 62 BPM, E minor modulating to F#m. Solo piano as the only instrument through most of the song — single not",
+   "audio": [
+    {
+     "uuid": "d2414f2e-34b6-4a10-bd5d-d49bfc9a9f25",
+     "cdn_mp3": "https://cdn1.suno.ai/d2414f2e-34b6-4a10-bd5d-d49bfc9a9f25.mp3",
+     "take": "take1"
+    }
+   ]
+  },
+  {
+   "song_id": "1396",
+   "title": "이어폰 한쪽",
+   "genre": "Soft R&B",
+   "bpm": 78,
+   "문맥": "Soft R&B, City Night R&B in Ab Major, modulating to Fm (relative minor) at the bridge. 78 BPM. Mid-Low energy with warm emotiona",
+   "audio": [
+    {
+     "uuid": "7522291b-c3d0-4501-97f5-52f8bf1f10cf",
+     "cdn_mp3": "https://cdn1.suno.ai/7522291b-c3d0-4501-97f5-52f8bf1f10cf.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "4d40e89a-afdf-4701-a726-f9c2489e96ce",
+     "cdn_mp3": "https://cdn1.suno.ai/4d40e89a-afdf-4701-a726-f9c2489e96ce.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1405",
+   "title": "리모컨을 내려놓다",
+   "genre": "City Pop",
+   "bpm": 92,
+   "문맥": "City Pop, Retro City Pop in Ab Major (Major (Ionian)), modulating at the emotional climax. 92 BPM. Mid energy with balanced dynamics. Dynamic voc",
+   "audio": []
+  },
+  {
+   "song_id": "1414",
+   "title": "주머니 속 십이월",
+   "genre": "Korean Ballad",
+   "bpm": 66,
+   "문맥": "Korean Ballad, Piano Ballad in E minor (Natural Minor), modulating at the emotional climax. 66 BPM. Low energy with quiet intimacy. Soft vocals wi",
+   "audio": []
+  },
+  {
+   "song_id": "1415",
+   "title": "한 정거장만 더",
+   "genre": "Lo-fi Pop",
+   "bpm": 74,
+   "문맥": "Lo-fi Pop, Indie Lo-fi in D minor (Natural Minor → Major), modulating at the emotional climax. 74 BPM. Mid-low energy with gentle warmth. Warm vocals",
+   "audio": []
+  },
+  {
+   "song_id": "1427",
+   "title": "아버지 등",
+   "genre": "Acoustic Ballad",
+   "bpm": 68,
+   "문맥": "Acoustic Ballad, Folk Ballad in C Major modulating to A minor at Bridge. 68 BPM. Low energy. Soft vocals with singing delivery, te",
+   "audio": []
+  },
+  {
+   "song_id": "1535",
+   "title": "점 세 개",
+   "genre": "Synth Pop",
+   "bpm": null,
+   "문맥": "Synth Pop, Emotional Electro Pop in E minor, natural minor modulating to F# minor at final chorus, 96 BPM. Mid energy, digital-clean texture, 16th-no",
+   "audio": []
+  },
+  {
+   "song_id": "1539",
+   "title": "같은 네트워크",
+   "genre": "Acoustic Pop",
+   "bpm": null,
+   "문맥": "Acoustic Pop, Indie Acoustic Pop in C Major modulating to D Major at final chorus, 88 BPM. Mid-low energy with a light even pulse and ",
+   "audio": []
+  },
+  {
+   "song_id": "1547",
+   "title": "거기도 비가 올까",
+   "genre": "Korean Ballad",
+   "bpm": null,
+   "문맥": "Korean Ballad, Adult Contemporary in A minor modulating to B minor on the final chorus, 68 BPM, Mid-Low energy. A long instrumental int",
+   "audio": []
+  },
+  {
+   "song_id": "1553",
+   "title": "폐관 오 분 전",
+   "genre": "Jazz Pop",
+   "bpm": null,
+   "문맥": "Jazz Pop, Bossa Nova Pop in C major modulating to Db major on the bridge, 88 BPM, Mid-Low energy. A long instrumental intro le",
+   "audio": []
+  },
+  {
+   "song_id": "1558",
+   "title": "나란히 1위",
+   "genre": "Disco Pop",
+   "bpm": 118,
+   "문맥": "Disco Pop, K-Disco Pop in F# minor modulating to G# minor at final chorus, 118 BPM. Mid-high energy, four-on-the-floor disco ",
+   "audio": []
+  },
+  {
+   "song_id": "1580",
+   "title": "스물네 시간 고백",
+   "genre": "K-POP",
+   "bpm": 112,
+   "문맥": "K-POP, K-Pop Ballad Pop in F# minor modulating to G minor on final chorus, 112 BPM. Mid-high energy with straight rhythm and d",
+   "audio": []
+  },
+  {
+   "song_id": "1660",
+   "title": "경계선은 지나고 나서 보인다",
+   "genre": "Indie Rock",
+   "bpm": 96,
+   "문맥": "Indie Rock, Post-Rock Indie in C minor modulating to Eb Major. 96 BPM. Mid energy building to high with gradual crescendo matchin",
+   "audio": []
+  },
+  {
+   "song_id": "1733",
+   "title": "빗소리 편지",
+   "genre": "Acoustic Pop",
+   "bpm": 70,
+   "문맥": "lass tapping woven into guitar rhythm as ambient hook. Acoustic Folk Pop, 70 BPM, D Major modulating to B minor at bridge. Low energy, rubato feel following irregular rainfall rhyt",
+   "audio": []
+  },
+  {
+   "song_id": "1766",
+   "title": "삼십칠 초",
+   "genre": "Indie Pop",
+   "bpm": null,
+   "문맥": "ning intro hook, film reel clicking on bridge. Indie Pop, Cinematic Indie Pop in F# Minor modulating to G Minor at final chorus. 108 BPM. Mid energy building whisper-to-riot. Contr",
+   "audio": []
+  },
+  {
+   "song_id": "10464",
+   "title": "Horizon Step",
+   "genre": "Cinematic",
+   "bpm": 85,
+   "문맥": "ance Dawn Bloom in E minor (Natural minor with raised 6 Dorian brightening on the bloom), modulating at the emotional climax. 85 BPM. Mid energy with balanced dynamics. Lead melody",
+   "audio": [
+    {
+     "uuid": "af626d71-d820-48dc-a820-f6570d65c47b",
+     "cdn_mp3": "https://cdn1.suno.ai/af626d71-d820-48dc-a820-f6570d65c47b.mp3",
+     "take": "take1"
+    }
+   ]
+  },
+  {
+   "song_id": "10466",
+   "title": "Hallway Hold",
+   "genre": "Cinematic Emotional",
+   "bpm": 70,
+   "문맥": "Confession Felt Piano Wave in F# minor (Natural minor with suspended 4 hesitation color), modulating at the emotional climax. 70 BPM. Low energy with quiet intimacy. A single lead ",
+   "audio": [
+    {
+     "uuid": "fbaf54a1-2310-4014-b800-8aa02d668406",
+     "cdn_mp3": "https://cdn1.suno.ai/fbaf54a1-2310-4014-b800-8aa02d668406.mp3",
+     "take": "take1"
+    }
+   ]
+  },
+  {
+   "song_id": "10469",
+   "title": "Crack of Light",
+   "genre": "Cinematic",
+   "bpm": 100,
+   "문맥": "sing Dome Crisis Eruption in C minor (Natural minor with Phrygian ♭2 dissonance cluster), modulating at the emotional climax. 100 BPM. Mid-high energy with expressive power. Lead m",
+   "audio": [
+    {
+     "uuid": "cc062635-7ada-4f70-8add-44bcbc9210b7",
+     "cdn_mp3": "https://cdn1.suno.ai/cc062635-7ada-4f70-8add-44bcbc9210b7.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "04bd0a00-fef9-4aca-bbc9-aff72ad58bd6",
+     "cdn_mp3": "https://cdn1.suno.ai/04bd0a00-fef9-4aca-bbc9-aff72ad58bd6.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "10472",
+   "title": "Closing Frame",
+   "genre": "Cinematic Emotional",
+   "bpm": 88,
+   "문맥": "age Emotional Summation in Bb major (Major with added 6 and suspended 2 summation color), modulating at the emotional climax. 88 BPM. Mid energy with balanced dynamics. Lead melody",
+   "audio": [
+    {
+     "uuid": "714fb48a-8536-4ae6-b21e-a40bb57c4033",
+     "cdn_mp3": "https://cdn1.suno.ai/714fb48a-8536-4ae6-b21e-a40bb57c4033.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "a71163fe-3968-4047-bade-81b6d9bd6814",
+     "cdn_mp3": "https://cdn1.suno.ai/a71163fe-3968-4047-bade-81b6d9bd6814.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1399",
+   "title": "돌길 끝",
+   "genre": "Bossa Nova",
+   "bpm": 82,
+   "문맥": "Bossa Nova, Jazz Pop Bossa in F Major, modulating to Dm (relative minor) at the bridge. 82 BPM. Mid-Low energy with wanderlust an",
+   "audio": [
+    {
+     "uuid": "1a6e8d1e-f57f-4acb-8d89-ab608cb78ca2",
+     "cdn_mp3": "https://cdn1.suno.ai/1a6e8d1e-f57f-4acb-8d89-ab608cb78ca2.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "82d6da33-eadd-4fa7-80a5-01c88f6ab051",
+     "cdn_mp3": "https://cdn1.suno.ai/82d6da33-eadd-4fa7-80a5-01c88f6ab051.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1432",
+   "title": "건네는 손",
+   "genre": "Piano Ballad",
+   "bpm": 76,
+   "문맥": "Piano Ballad, Cinematic Ballad in Ab Major modulating to Bb Major at Final Chorus. 76 BPM. Mid-Low energy building to peak. Warm voca",
+   "audio": []
+  },
+  {
+   "song_id": "1433",
+   "title": "거울 속 아버지",
+   "genre": "Neo-Soul",
+   "bpm": 84,
+   "문맥": "Neo-Soul, Alternative R&B in E minor (Dorian) modulating to G Major at Final Chorus. 84 BPM. Mid energy. Dynamic vocals with singing del",
+   "audio": []
+  }
+ ],
+ "부정형_neg": [
+  {
+   "song_id": "1103",
+   "title": "중간고사보다 중요한 산책",
+   "genre": "Acoustic Pop",
+   "bpm": 110,
+   "문맥": "Acoustic Pop / Bright Acoustic Pop in G Major (Major), no modulation. 110 BPM, mid-high energy. Bright singing with cheerful, youthful attitude, pre",
+   "audio": [
+    {
+     "uuid": "d0f47091-2cbb-4970-99f9-080e81633472",
+     "cdn_mp3": "https://cdn1.suno.ai/d0f47091-2cbb-4970-99f9-080e81633472.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "17f07c35-95a7-45f9-9f2f-a3ebc09973ea",
+     "cdn_mp3": "https://cdn1.suno.ai/17f07c35-95a7-45f9-9f2f-a3ebc09973ea.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1105",
+   "title": "댕댕이 인스타",
+   "genre": "Electro Pop",
+   "bpm": 118,
+   "문맥": "Electro Pop / Trendy Synth Pop in A minor (Dorian), no modulation. 118 BPM, mid-high energy. Expressive rap-sung delivery with witty, ironic atti",
+   "audio": [
+    {
+     "uuid": "c69026f5-d2a0-478d-abb6-a67c4358a920",
+     "cdn_mp3": "https://cdn1.suno.ai/c69026f5-d2a0-478d-abb6-a67c4358a920.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "6921875d-3d53-41f7-bef9-40e887293fe8",
+     "cdn_mp3": "https://cdn1.suno.ai/6921875d-3d53-41f7-bef9-40e887293fe8.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1365",
+   "title": "6분 후 도착",
+   "genre": "Indie Pop",
+   "bpm": 74,
+   "문맥": "Indie Pop, Urban Acoustic Pop. D Major, natural major scale throughout, no modulation. 74 BPM. Mid-Low energy — a quiet, grounded urban acoustic groove that lingers ",
+   "audio": []
+  },
+  {
+   "song_id": "1366",
+   "title": "배달 추적의 달인",
+   "genre": "City Pop",
+   "bpm": 91,
+   "문맥": "City Pop, Funk Pop. G Major, natural major scale throughout, no modulation. 91 BPM. Mid energy — bouncy, rhythmically confident, with self-deprecating com",
+   "audio": []
+  },
+  {
+   "song_id": "1466",
+   "title": "첫 번째 물",
+   "genre": "Acoustic Pop",
+   "bpm": 62,
+   "문맥": "Acoustic Pop, Minimalist Folk in D major with no modulation. 62 BPM, low energy with gentle build from whisper to quiet affirmation. Soft v",
+   "audio": []
+  },
+  {
+   "song_id": "1486",
+   "title": "막차가 맞아",
+   "genre": "Lo-fi Acoustic Folk",
+   "bpm": 60,
+   "문맥": "Lo-fi Acoustic Folk, Indie Folk. Key of G Major, no modulation, flat energy arc throughout. 60 BPM. Low energy with a soft, unhurried folk war",
+   "audio": []
+  },
+  {
+   "song_id": "1102",
+   "title": "고양이의 우주",
+   "genre": "Dream Pop",
+   "bpm": 86,
+   "문맥": "Dream Pop / Indie Dream Pop in E Major (Lydian), no modulation. 86 BPM, mid-low energy. Dreamy singing with playful, whimsical quality, relaxe",
+   "audio": [
+    {
+     "uuid": "e0c95114-05a4-4cbf-a6b5-2d9d07e66ab8",
+     "cdn_mp3": "https://cdn1.suno.ai/e0c95114-05a4-4cbf-a6b5-2d9d07e66ab8.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "bcba54a3-cdcc-4dc9-bb05-a40fce57f96f",
+     "cdn_mp3": "https://cdn1.suno.ai/bcba54a3-cdcc-4dc9-bb05-a40fce57f96f.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1150",
+   "title": "야 어디야",
+   "genre": "Dance Pop",
+   "bpm": 118,
+   "문맥": "Dance Pop, Synth Pop / Idol Pop subgenre. F Major, no modulation. Straight 4-on-the-floor, bright hi-hats. 118 BPM. Mid-High energy, explosive c",
+   "audio": []
+  },
+  {
+   "song_id": "1153",
+   "title": "이른 꽃잎",
+   "genre": "Acoustic Ballad",
+   "bpm": 66,
+   "문맥": "Acoustic Ballad, Folk Ballad subgenre. D Major, Major Pentatonic, no modulation. Extremely free rubato. 66 BPM. Low energy, spare and intimate, one gentle arri",
+   "audio": []
+  },
+  {
+   "song_id": "1491",
+   "title": "아직 거기 있어?",
+   "genre": "Neo-Soul",
+   "bpm": 76,
+   "문맥": "Neo-Soul, R&B Ballad. Key of C minor, natural minor with jazz extensions, no modulation. 76 BPM. Mid-Low energy with a laid-back neo-soul groove. Vocals are warm and m",
+   "audio": []
+  }
+ ],
+ "동음이의_fx": [],
+ "모호": [
+  {
+   "song_id": "123",
+   "title": "닳는 말",
+   "genre": "Industrial / Dark Electronic",
+   "bpm": 125,
+   "문맥": "lease and catharsis, bridge creating breakdown moment and tonal shift, climax chorus with key change and full sonic intensity, outro fading into ambience and darkness, three minute",
+   "audio": [
+    {
+     "uuid": "3b08e497-78d8-4213-ba26-3c59cd7b240e",
+     "cdn_mp3": "https://cdn1.suno.ai/3b08e497-78d8-4213-ba26-3c59cd7b240e.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "e21b9d29-ea75-45c5-b72a-d33e846a2a49",
+     "cdn_mp3": "https://cdn1.suno.ai/e21b9d29-ea75-45c5-b72a-d33e846a2a49.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "133",
+   "title": "진짜가 된 거짓말",
+   "genre": "Dark Pop / Art Pop",
+   "bpm": 103,
+   "문맥": "ding release and catharsis, bridge creating breakdown and tonal shift, climax chorus with key change and full intensity, outro fading into darkness and ambience, three minutes plus",
+   "audio": [
+    {
+     "uuid": "c25f6137-2f44-4129-b1f0-db45746de0b1",
+     "cdn_mp3": "https://cdn1.suno.ai/c25f6137-2f44-4129-b1f0-db45746de0b1.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "647482a8-af51-465b-8fca-c9c0b47a4308",
+     "cdn_mp3": "https://cdn1.suno.ai/647482a8-af51-465b-8fca-c9c0b47a4308.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1126",
+   "title": "밴드 한 묶음",
+   "genre": "Piano Ballad / Soft Pop",
+   "bpm": 72,
+   "문맥": "only, music box outro  Production: Spacious piano-forward mix, cinematic build to climax, key change C→D at Climax Chorus, music box ending  Structure: Cinematic intro (piano) → V1",
+   "audio": [
+    {
+     "uuid": "fd1c2b06-8358-4704-abe0-30eb08b7905f",
+     "cdn_mp3": "https://cdn1.suno.ai/fd1c2b06-8358-4704-abe0-30eb08b7905f.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "05225004-b62f-4de5-8e1e-9bae934f72fa",
+     "cdn_mp3": "https://cdn1.suno.ai/05225004-b62f-4de5-8e1e-9bae934f72fa.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1485",
+   "title": "창가 한 자리",
+   "genre": "City Pop",
+   "bpm": 76,
+   "문맥": "City Pop, J-City Pop influenced. Key of F Major, major scale, final chorus modulates up to G. 76 BPM. Mid-High energy with a polished city groove. Vocals are express",
+   "audio": []
+  },
+  {
+   "song_id": "1508",
+   "title": "그 카페에 네가 있을 줄은",
+   "genre": "R&B",
+   "bpm": 82,
+   "문맥": ", exposed. Reverb tail grows longer creating distance. The departure. [Final Chorus](16b) Key change Bbm → Cm. Full band returns with more weight. Walking bass drives forward motio",
+   "audio": []
+  },
+  {
+   "song_id": "1648",
+   "title": "아버지의 밥상",
+   "genre": "City Pop",
+   "bpm": 94,
+   "문맥": ", ceramic bowl on table gentle click. Major seventh chords warm city pop voicings, gentle modulations within diatonic. A father cooking for the first time in thirty years — burnt e",
+   "audio": []
+  },
+  {
+   "song_id": "1734",
+   "title": "타다다닥",
+   "genre": "Lo-fi Pop",
+   "bpm": 88,
+   "문맥": "lling to whisper resignation. Dusty electric piano with tape-warped edges and slow chorus modulation. Lo-fi synth pad breathing muffled and distant like office ventilation. Program",
+   "audio": []
+  },
+  {
+   "song_id": "1759",
+   "title": "0.1",
+   "genre": null,
+   "bpm": null,
+   "문맥": "nt intro hook, crowd roar swell on final chorus. Electro Pop, Stadium Electro in F# Minor modulating half-step up at final chorus. 150 BPM. High energy with plateau intensity, neve",
+   "audio": []
+  },
+  {
+   "song_id": "1100",
+   "title": "빈 방석",
+   "genre": "Acoustic Ballad",
+   "bpm": 72,
+   "문맥": "Acoustic Ballad / Folk Ballad in D minor (Natural Minor), key change up to E minor at Climax Chorus for emotional lift. 72 BPM, low energy. Soft sin",
+   "audio": [
+    {
+     "uuid": "47d9f216-9c79-4102-9524-abbcd97d3b69",
+     "cdn_mp3": "https://cdn1.suno.ai/47d9f216-9c79-4102-9524-abbcd97d3b69.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "5a533fec-11c1-44c8-a874-b49dd5f264c4",
+     "cdn_mp3": "https://cdn1.suno.ai/5a533fec-11c1-44c8-a874-b49dd5f264c4.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "1149",
+   "title": "오늘은 그림자만큼만",
+   "genre": "Folk Pop",
+   "bpm": 84,
+   "문맥": " quietly supportive. Chord progression: C - G - Am - F (verses), D - A - Bm - G (chorus — key change up one whole step). Dusk walking path atmosphere — stretched shadows, golden ho",
+   "audio": [
+    {
+     "uuid": "c9ab5897-0c34-46f1-ae50-4a58b8243a2d",
+     "cdn_mp3": "https://cdn1.suno.ai/c9ab5897-0c34-46f1-ae50-4a58b8243a2d.mp3",
+     "take": "take1"
+    },
+    {
+     "uuid": "fb2cfcf7-5cd3-4073-ba85-b7d57b6c7829",
+     "cdn_mp3": "https://cdn1.suno.ai/fb2cfcf7-5cd3-4073-ba85-b7d57b6c7829.mp3",
+     "take": "take2"
+    }
+   ]
+  },
+  {
+   "song_id": "S018_16",
+   "title": "UpliftingArcs",
+   "genre": "Trance",
+   "bpm": null,
+   "문맥": "ing  [Build 2 - 16 bars] Snare roll, rising tension  [Drop 2 - 32 bars] Maximum euphoria, key change to F major  [Outro - 32 bars] Elements remove one by one, kick last",
+   "audio": []
+  },
+  {
+   "song_id": "C_30218",
+   "title": "다시 문을 열면",
+   "genre": "",
+   "bpm": 72,
+   "문맥": "wnbeats. Verse two pulls back to piano, harp and solo violin. The bridge builds through a modulating string ostinato into a key change, and the last chorus carries a massive choir,",
+   "audio": []
+  }
+ ]
+}
