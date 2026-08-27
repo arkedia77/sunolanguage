@@ -125869,6 +125869,521 @@
     }
   },
   {
+    "chunk_id": "sp_genre_C_30199_000",
+    "text": "K-Pop R&B ballad.",
+    "embed_text": "K-Pop R&B ballad.",
+    "payload": {
+      "slot": "genre",
+      "entity": "K-Pop R&B ballad",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30199_000",
+    "text": "Clean electric guitar plays syncopated jazz-influenced chords with a slight chorus effect.",
+    "embed_text": "Clean electric guitar plays syncopated jazz-influenced chords with a slight chorus effect.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "clean electric guitar",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"clean\", \"slight\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "execute",
+      "pattern": "syncopated jazz-influenced chords with a slight chorus effect"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30199_001",
+    "text": "Clean electric guitar plays syncopated jazz-influenced chords with a slight chorus effect.",
+    "embed_text": "Clean electric guitar plays syncopated jazz-influenced chords with a slight chorus effect.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric guitar",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"clean\", \"slight\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "execute",
+      "pattern": "syncopated jazz-influenced chords with a slight chorus effect"
+    }
+  },
+  {
+    "chunk_id": "sp_effect_electronic_C_30199_000",
+    "text": "Clean electric guitar plays syncopated jazz-influenced chords with a slight chorus effect.",
+    "embed_text": "Clean electric guitar plays syncopated jazz-influenced chords with a slight chorus effect.",
+    "payload": {
+      "slot": "effect_electronic",
+      "entity": [
+        "chorus effect"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"clean\", \"slight\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_vocal_main_C_30199_000",
+    "text": "A smooth male tenor vocal leads with frequent use of falsetto and breathy delivery.",
+    "embed_text": "A smooth male tenor vocal leads with frequent use of falsetto and breathy delivery.",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "male tenor vocals",
+        "falsetto"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"smooth\", \"frequent\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_drums_C_30199_000",
+    "text": "The drums feature a crisp snare on beats 2 and 4, a tight kick pattern, and subtle hi-hat embellishments.",
+    "embed_text": "The drums feature a crisp snare on beats 2 and 4, a tight kick pattern, and subtle hi-hat embellishments.",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "kick drum",
+        "snare drum",
+        "hi-hat",
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"crisp\", \"tight\", \"subtle\"]",
+      "observation_layer": "output",
+      "pattern": "a crisp snare on beats 2 and 4, a tight kick pattern"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30199_002",
+    "text": "A melodic electric bass follows the kick drum with occasional slides.",
+    "embed_text": "A melodic electric bass follows the kick drum with occasional slides.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric bass",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"occasional\"]",
+      "observation_layer": "output",
+      "kit": "bass",
+      "layer": "bass",
+      "role": "groove_lock",
+      "pattern": "the kick drum with occasional slides"
+    }
+  },
+  {
+    "chunk_id": "sp_drums_C_30199_001",
+    "text": "A melodic electric bass follows the kick drum with occasional slides.",
+    "embed_text": "A melodic electric bass follows the kick drum with occasional slides.",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "kick drum",
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"occasional\"]",
+      "observation_layer": "output",
+      "pattern": "the kick drum with occasional slides"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30199_003",
+    "text": "A Rhodes-style electric piano provides harmonic padding during the chorus.",
+    "embed_text": "A Rhodes-style electric piano provides harmonic padding during the chorus.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric piano",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "keys",
+      "layer": "pad",
+      "role": "support",
+      "pattern": "harmonic padding during the chorus",
+      "chords": "[\"harmonic padding\"]"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30199_004",
+    "text": "A Rhodes-style electric piano provides harmonic padding during the chorus.",
+    "embed_text": "A Rhodes-style electric piano provides harmonic padding during the chorus.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "rhodes",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "keys",
+      "layer": "pad",
+      "role": "support",
+      "pattern": "harmonic padding during the chorus",
+      "chords": "[\"harmonic padding\"]"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30199_005",
+    "text": "The arrangement includes layered vocal harmonies and occasional synth sweeps.",
+    "embed_text": "The arrangement includes layered vocal harmonies and occasional synth sweeps.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "synthesizer",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"occasional\"]",
+      "observation_layer": "output",
+      "kit": "synth",
+      "layer": "unspecified",
+      "role": "unspecified"
+    }
+  },
+  {
+    "chunk_id": "sp_vocal_main_C_30199_001",
+    "text": "The arrangement includes layered vocal harmonies and occasional synth sweeps.",
+    "embed_text": "The arrangement includes layered vocal harmonies and occasional synth sweeps.",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"occasional\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_vocal_chorus_C_30199_000",
+    "text": "The arrangement includes layered vocal harmonies and occasional synth sweeps.",
+    "embed_text": "The arrangement includes layered vocal harmonies and occasional synth sweeps.",
+    "payload": {
+      "slot": "vocal_chorus",
+      "entity": [
+        "layered vocal",
+        "harmonies"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"occasional\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_arrangement_C_30199_000",
+    "text": "The arrangement includes layered vocal harmonies and occasional synth sweeps.",
+    "embed_text": "The arrangement includes layered vocal harmonies and occasional synth sweeps.",
+    "payload": {
+      "slot": "arrangement",
+      "entity": [
+        "arrangement"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[\"occasional\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_tempo_key_time_C_30199_000",
+    "text": "Tempo is 88 BPM in the key of E Major.",
+    "embed_text": "Tempo is 88 BPM in the key of E Major.",
+    "payload": {
+      "slot": "tempo_key_time",
+      "entity": {
+        "bpm": 88,
+        "key": "e major",
+        "time_signature": null
+      },
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "sp",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_genre_C_30202_000",
+    "text": "K-Pop rock anthem with a driving 4/4 beat at 128 BPM in the key of E Major.",
+    "embed_text": "K-Pop rock anthem with a driving 4/4 beat at 128 BPM in the key of E Major.",
+    "payload": {
+      "slot": "genre",
+      "entity": "K-Pop rock anthem with a driving 4/4 beat at 128 BPM in the key of E Major",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_drums_C_30202_000",
+    "text": "K-Pop rock anthem with a driving 4/4 beat at 128 BPM in the key of E Major.",
+    "embed_text": "K-Pop rock anthem with a driving 4/4 beat at 128 BPM in the key of E Major.",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "beat"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"driving\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_tempo_key_time_C_30202_000",
+    "text": "K-Pop rock anthem with a driving 4/4 beat at 128 BPM in the key of E Major.",
+    "embed_text": "K-Pop rock anthem with a driving 4/4 beat at 128 BPM in the key of E Major.",
+    "payload": {
+      "slot": "tempo_key_time",
+      "entity": {
+        "bpm": 128,
+        "key": "e major",
+        "time_signature": null
+      },
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"driving\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30202_000",
+    "text": "The arrangement features bright, overdriven electric guitars playing rhythmic power chords and melodic lead lines.",
+    "embed_text": "The arrangement features bright, overdriven electric guitars playing rhythmic power chords and melodic lead lines.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "overdriven electric guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"bright\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "lead",
+      "role": "execute",
+      "chords": "[\"power chords\"]"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30202_001",
+    "text": "The arrangement features bright, overdriven electric guitars playing rhythmic power chords and melodic lead lines.",
+    "embed_text": "The arrangement features bright, overdriven electric guitars playing rhythmic power chords and melodic lead lines.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"bright\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "lead",
+      "role": "execute",
+      "chords": "[\"power chords\"]"
+    }
+  },
+  {
+    "chunk_id": "sp_effect_electronic_C_30202_000",
+    "text": "The arrangement features bright, overdriven electric guitars playing rhythmic power chords and melodic lead lines.",
+    "embed_text": "The arrangement features bright, overdriven electric guitars playing rhythmic power chords and melodic lead lines.",
+    "payload": {
+      "slot": "effect_electronic",
+      "entity": [
+        "overdriven"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"bright\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_arrangement_C_30202_000",
+    "text": "The arrangement features bright, overdriven electric guitars playing rhythmic power chords and melodic lead lines.",
+    "embed_text": "The arrangement features bright, overdriven electric guitars playing rhythmic power chords and melodic lead lines.",
+    "payload": {
+      "slot": "arrangement",
+      "entity": [
+        "arrangement"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"bright\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30202_002",
+    "text": "A prominent slap bass technique is used during the verses, providing a percussive, funky low-end.",
+    "embed_text": "A prominent slap bass technique is used during the verses, providing a percussive, funky low-end.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "slap bass",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"prominent\", \"funky\"]",
+      "observation_layer": "output",
+      "kit": "bass",
+      "layer": "bass",
+      "role": "support"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30202_003",
+    "text": "A prominent slap bass technique is used during the verses, providing a percussive, funky low-end.",
+    "embed_text": "A prominent slap bass technique is used during the verses, providing a percussive, funky low-end.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric bass",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"prominent\", \"funky\"]",
+      "observation_layer": "output",
+      "kit": "bass",
+      "layer": "bass",
+      "role": "support"
+    }
+  },
+  {
+    "chunk_id": "sp_drums_C_30202_001",
+    "text": "The drums consist of a punchy kick, crisp snare, and shimmering hi-hats.",
+    "embed_text": "The drums consist of a punchy kick, crisp snare, and shimmering hi-hats.",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "kick drum",
+        "snare drum",
+        "hi-hat",
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"punchy\", \"crisp\", \"shimmering\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_vocal_main_C_30202_000",
+    "text": "The male lead vocals range from a powerful chest voice to soaring falsetto ad-libs, supported by layered group backing vocals in the chorus.",
+    "embed_text": "The male lead vocals range from a powerful chest voice to soaring falsetto ad-libs, supported by layered group backing vocals in the chorus.",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "falsetto",
+        "vocals",
+        "voice"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"powerful\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_vocal_chorus_C_30202_000",
+    "text": "The male lead vocals range from a powerful chest voice to soaring falsetto ad-libs, supported by layered group backing vocals in the chorus.",
+    "embed_text": "The male lead vocals range from a powerful chest voice to soaring falsetto ad-libs, supported by layered group backing vocals in the chorus.",
+    "payload": {
+      "slot": "vocal_chorus",
+      "entity": [
+        "ad-libs"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"powerful\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30202_004",
+    "text": "Synthesizer pads and subtle electronic textures fill the mid-range, while occasional acoustic guitar strumming adds organic warmth to the verses.",
+    "embed_text": "Synthesizer pads and subtle electronic textures fill the mid-range, while occasional acoustic guitar strumming adds organic warmth to the verses.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "acoustic guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"subtle\", \"mid-range\", \"occasional\", \"organic\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "pad",
+      "role": "fill"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30202_005",
+    "text": "Synthesizer pads and subtle electronic textures fill the mid-range, while occasional acoustic guitar strumming adds organic warmth to the verses.",
+    "embed_text": "Synthesizer pads and subtle electronic textures fill the mid-range, while occasional acoustic guitar strumming adds organic warmth to the verses.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "synthesizer",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"subtle\", \"mid-range\", \"occasional\", \"organic\"]",
+      "observation_layer": "output",
+      "kit": "synth",
+      "layer": "pad",
+      "role": "fill"
+    }
+  },
+  {
+    "chunk_id": "sp_instrument_C_30202_006",
+    "text": "Synthesizer pads and subtle electronic textures fill the mid-range, while occasional acoustic guitar strumming adds organic warmth to the verses.",
+    "embed_text": "Synthesizer pads and subtle electronic textures fill the mid-range, while occasional acoustic guitar strumming adds organic warmth to the verses.",
+    "payload": {
+      "slot": "instrument",
+      "entity": "pad",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "sp",
+      "modifiers": "[\"subtle\", \"mid-range\", \"occasional\", \"organic\"]",
+      "observation_layer": "output",
+      "kit": "synth",
+      "layer": "pad",
+      "role": "fill"
+    }
+  },
+  {
     "chunk_id": "bracket_section_1_000",
     "text": "Intro",
     "embed_text": "Intro",
@@ -246083,6 +246598,1137 @@
       "layer": "unspecified",
       "role": "unspecified",
       "action": "flourish"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_000",
+    "text": "Intro",
+    "embed_text": "Intro",
+    "payload": {
+      "slot": "section",
+      "entity": "Intro",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_000",
+    "text": "clean electric guitar arpeggio with chorus effect",
+    "embed_text": "clean electric guitar arpeggio with chorus effect",
+    "payload": {
+      "slot": "instrument",
+      "entity": "clean electric guitar",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"clean\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "effects": "[\"chorus\"]"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_001",
+    "text": "clean electric guitar arpeggio with chorus effect",
+    "embed_text": "clean electric guitar arpeggio with chorus effect",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric guitar",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"clean\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "effects": "[\"chorus\"]"
+    }
+  },
+  {
+    "chunk_id": "bracket_effect_electronic_C_30199_000",
+    "text": "clean electric guitar arpeggio with chorus effect",
+    "embed_text": "clean electric guitar arpeggio with chorus effect",
+    "payload": {
+      "slot": "effect_electronic",
+      "entity": [
+        "with chorus"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"clean\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_002",
+    "text": "bass enters with a slide",
+    "embed_text": "bass enters with a slide",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric bass",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "bass",
+      "layer": "bass",
+      "role": "unspecified",
+      "action": "enters"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_001",
+    "text": "Verse 1",
+    "embed_text": "Verse 1",
+    "payload": {
+      "slot": "section",
+      "entity": "Verse 1",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_003",
+    "text": "electric guitar continues syncopated chords",
+    "embed_text": "electric guitar continues syncopated chords",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric guitar",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "action": "continues"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_002",
+    "text": "Pre-Chorus",
+    "embed_text": "Pre-Chorus",
+    "payload": {
+      "slot": "section",
+      "entity": "Pre-Chorus",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_drums_C_30199_000",
+    "text": "drums enter, crisp snare and tight kick",
+    "embed_text": "drums enter, crisp snare and tight kick",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "kick drum",
+        "snare drum",
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"crisp\", \"tight\"]",
+      "observation_layer": "output",
+      "action": "enter"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_003",
+    "text": "Chorus",
+    "embed_text": "Chorus",
+    "payload": {
+      "slot": "section",
+      "entity": "Chorus",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_004",
+    "text": "full band, Rhodes piano pads enter",
+    "embed_text": "full band, Rhodes piano pads enter",
+    "payload": {
+      "slot": "instrument",
+      "entity": "rhodes",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"full\"]",
+      "observation_layer": "output",
+      "kit": "keys",
+      "layer": "pad",
+      "role": "unspecified",
+      "action": "enter"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_005",
+    "text": "full band, Rhodes piano pads enter",
+    "embed_text": "full band, Rhodes piano pads enter",
+    "payload": {
+      "slot": "instrument",
+      "entity": "piano",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"full\"]",
+      "observation_layer": "output",
+      "kit": "keys",
+      "layer": "pad",
+      "role": "unspecified",
+      "action": "enter"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_006",
+    "text": "full band, Rhodes piano pads enter",
+    "embed_text": "full band, Rhodes piano pads enter",
+    "payload": {
+      "slot": "instrument",
+      "entity": "pad",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"full\"]",
+      "observation_layer": "output",
+      "kit": "synth",
+      "layer": "pad",
+      "role": "unspecified",
+      "action": "enter"
+    }
+  },
+  {
+    "chunk_id": "bracket_arrangement_C_30199_000",
+    "text": "full band, Rhodes piano pads enter",
+    "embed_text": "full band, Rhodes piano pads enter",
+    "payload": {
+      "slot": "arrangement",
+      "entity": "full band, Rhodes piano pads enter",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"full\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_004",
+    "text": "Verse 2",
+    "embed_text": "Verse 2",
+    "payload": {
+      "slot": "section",
+      "entity": "Verse 2",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_007",
+    "text": "bass-heavy groove, staccato guitar hits",
+    "embed_text": "bass-heavy groove, staccato guitar hits",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric bass",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "bass",
+      "layer": "bass",
+      "role": "unspecified"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_008",
+    "text": "bass-heavy groove, staccato guitar hits",
+    "embed_text": "bass-heavy groove, staccato guitar hits",
+    "payload": {
+      "slot": "instrument",
+      "entity": "guitar",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_005",
+    "text": "Chorus",
+    "embed_text": "Chorus",
+    "payload": {
+      "slot": "section",
+      "entity": "Chorus",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30199_000",
+    "text": "vocal harmonies layer in",
+    "embed_text": "vocal harmonies layer in",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_chorus_C_30199_000",
+    "text": "vocal harmonies layer in",
+    "embed_text": "vocal harmonies layer in",
+    "payload": {
+      "slot": "vocal_chorus",
+      "entity": [
+        "vocal harmonies"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_006",
+    "text": "Bridge",
+    "embed_text": "Bridge",
+    "payload": {
+      "slot": "section",
+      "entity": "Bridge",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_009",
+    "text": "drums drop out, atmospheric synth pads",
+    "embed_text": "drums drop out, atmospheric synth pads",
+    "payload": {
+      "slot": "instrument",
+      "entity": "synthesizer",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"atmospheric\"]",
+      "observation_layer": "output",
+      "kit": "synth",
+      "layer": "pad",
+      "role": "unspecified",
+      "action": "drop "
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_010",
+    "text": "drums drop out, atmospheric synth pads",
+    "embed_text": "drums drop out, atmospheric synth pads",
+    "payload": {
+      "slot": "instrument",
+      "entity": "synth pad",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"atmospheric\"]",
+      "observation_layer": "output",
+      "kit": "synth",
+      "layer": "pad",
+      "role": "unspecified",
+      "action": "drop "
+    }
+  },
+  {
+    "chunk_id": "bracket_drums_C_30199_001",
+    "text": "drums drop out, atmospheric synth pads",
+    "embed_text": "drums drop out, atmospheric synth pads",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"atmospheric\"]",
+      "observation_layer": "output",
+      "action": "drop "
+    }
+  },
+  {
+    "chunk_id": "bracket_drums_C_30199_002",
+    "text": "crescendo, drums return",
+    "embed_text": "crescendo, drums return",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "action": "crescendo"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_007",
+    "text": "Chorus",
+    "embed_text": "Chorus",
+    "payload": {
+      "slot": "section",
+      "entity": "Chorus",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30199_001",
+    "text": "high tenor belt, powerful vocal delivery",
+    "embed_text": "high tenor belt, powerful vocal delivery",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[\"high\", \"powerful\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30199_008",
+    "text": "Outro",
+    "embed_text": "Outro",
+    "payload": {
+      "slot": "section",
+      "entity": "Outro",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30199_011",
+    "text": "music softens, guitar arpeggios return",
+    "embed_text": "music softens, guitar arpeggios return",
+    "payload": {
+      "slot": "instrument",
+      "entity": "guitar",
+      "genre": "",
+      "song_id": "C_30199",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "action": "return"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30202_000",
+    "text": "Intro",
+    "embed_text": "Intro",
+    "payload": {
+      "slot": "section",
+      "entity": "Intro",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_000",
+    "text": "overdriven electric guitar riff, drum fill",
+    "embed_text": "overdriven electric guitar riff, drum fill",
+    "payload": {
+      "slot": "instrument",
+      "entity": "overdriven electric guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "fill",
+      "role": "fill"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_001",
+    "text": "overdriven electric guitar riff, drum fill",
+    "embed_text": "overdriven electric guitar riff, drum fill",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "fill",
+      "role": "fill"
+    }
+  },
+  {
+    "chunk_id": "bracket_drums_C_30202_000",
+    "text": "overdriven electric guitar riff, drum fill",
+    "embed_text": "overdriven electric guitar riff, drum fill",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_effect_electronic_C_30202_000",
+    "text": "overdriven electric guitar riff, drum fill",
+    "embed_text": "overdriven electric guitar riff, drum fill",
+    "payload": {
+      "slot": "effect_electronic",
+      "entity": [
+        "overdriven"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_000",
+    "text": "high-pitched vocal scream",
+    "embed_text": "high-pitched vocal scream",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"high-pitched\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30202_001",
+    "text": "Verse 1",
+    "embed_text": "Verse 1",
+    "payload": {
+      "slot": "section",
+      "entity": "Verse 1",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_002",
+    "text": "slap bass enters, clean electric guitar stabs",
+    "embed_text": "slap bass enters, clean electric guitar stabs",
+    "payload": {
+      "slot": "instrument",
+      "entity": "clean electric guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"clean\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "action": "enters"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_003",
+    "text": "slap bass enters, clean electric guitar stabs",
+    "embed_text": "slap bass enters, clean electric guitar stabs",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"clean\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "action": "enters"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_004",
+    "text": "slap bass enters, clean electric guitar stabs",
+    "embed_text": "slap bass enters, clean electric guitar stabs",
+    "payload": {
+      "slot": "instrument",
+      "entity": "slap bass",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"clean\"]",
+      "observation_layer": "output",
+      "kit": "bass",
+      "layer": "bass",
+      "role": "unspecified",
+      "action": "enters"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_005",
+    "text": "slap bass enters, clean electric guitar stabs",
+    "embed_text": "slap bass enters, clean electric guitar stabs",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric bass",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"clean\"]",
+      "observation_layer": "output",
+      "kit": "bass",
+      "layer": "bass",
+      "role": "unspecified",
+      "action": "enters"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_006",
+    "text": "drum beat enters, funky guitar rhythm",
+    "embed_text": "drum beat enters, funky guitar rhythm",
+    "payload": {
+      "slot": "instrument",
+      "entity": "guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"funky\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "action": "enters"
+    }
+  },
+  {
+    "chunk_id": "bracket_drums_C_30202_001",
+    "text": "drum beat enters, funky guitar rhythm",
+    "embed_text": "drum beat enters, funky guitar rhythm",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "beat",
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"funky\"]",
+      "observation_layer": "output",
+      "action": "enters"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30202_002",
+    "text": "Pre-Chorus",
+    "embed_text": "Pre-Chorus",
+    "payload": {
+      "slot": "section",
+      "entity": "Pre-Chorus",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_007",
+    "text": "distorted guitar power chords",
+    "embed_text": "distorted guitar power chords",
+    "payload": {
+      "slot": "instrument",
+      "entity": "guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified"
+    }
+  },
+  {
+    "chunk_id": "bracket_effect_electronic_C_30202_001",
+    "text": "distorted guitar power chords",
+    "embed_text": "distorted guitar power chords",
+    "payload": {
+      "slot": "effect_electronic",
+      "entity": [
+        "distorted"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30202_003",
+    "text": "Chorus",
+    "embed_text": "Chorus",
+    "payload": {
+      "slot": "section",
+      "entity": "Chorus",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_drums_C_30202_002",
+    "text": "full band, driving rock beat",
+    "embed_text": "full band, driving rock beat",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "beat"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"full\", \"driving\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_arrangement_C_30202_000",
+    "text": "full band, driving rock beat",
+    "embed_text": "full band, driving rock beat",
+    "payload": {
+      "slot": "arrangement",
+      "entity": "full band, driving rock beat",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"full\", \"driving\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_001",
+    "text": "group backing vocals",
+    "embed_text": "group backing vocals",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_002",
+    "text": "group backing vocals",
+    "embed_text": "group backing vocals",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_003",
+    "text": "group backing vocals",
+    "embed_text": "group backing vocals",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_004",
+    "text": "falsetto ad-lib",
+    "embed_text": "falsetto ad-lib",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "falsetto"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_chorus_C_30202_000",
+    "text": "falsetto ad-lib",
+    "embed_text": "falsetto ad-lib",
+    "payload": {
+      "slot": "vocal_chorus",
+      "entity": [
+        "ad-lib"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30202_004",
+    "text": "Verse 2",
+    "embed_text": "Verse 2",
+    "payload": {
+      "slot": "section",
+      "entity": "Verse 2",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_008",
+    "text": "bass-driven rhythm, muted guitar",
+    "embed_text": "bass-driven rhythm, muted guitar",
+    "payload": {
+      "slot": "instrument",
+      "entity": "electric bass",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"muted\"]",
+      "observation_layer": "output",
+      "kit": "bass",
+      "layer": "bass",
+      "role": "unspecified"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_009",
+    "text": "bass-driven rhythm, muted guitar",
+    "embed_text": "bass-driven rhythm, muted guitar",
+    "payload": {
+      "slot": "instrument",
+      "entity": "guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"muted\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30202_005",
+    "text": "Bridge",
+    "embed_text": "Bridge",
+    "payload": {
+      "slot": "section",
+      "entity": "Bridge",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_010",
+    "text": "crescendo, heavy guitar distortion",
+    "embed_text": "crescendo, heavy guitar distortion",
+    "payload": {
+      "slot": "instrument",
+      "entity": "guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"heavy\"]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "action": "crescendo"
+    }
+  },
+  {
+    "chunk_id": "bracket_effect_electronic_C_30202_002",
+    "text": "crescendo, heavy guitar distortion",
+    "embed_text": "crescendo, heavy guitar distortion",
+    "payload": {
+      "slot": "effect_electronic",
+      "entity": [
+        "distortion"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"heavy\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_005",
+    "text": "vocal belt",
+    "embed_text": "vocal belt",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30202_006",
+    "text": "Chorus",
+    "embed_text": "Chorus",
+    "payload": {
+      "slot": "section",
+      "entity": "Chorus",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_drums_C_30202_003",
+    "text": "high energy, crash cymbals",
+    "embed_text": "high energy, crash cymbals",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "crash cymbal"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"high\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_006",
+    "text": "group backing vocals",
+    "embed_text": "group backing vocals",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_007",
+    "text": "group backing vocals",
+    "embed_text": "group backing vocals",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_008",
+    "text": "group backing vocals",
+    "embed_text": "group backing vocals",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_vocal_main_C_30202_009",
+    "text": "vocal run",
+    "embed_text": "vocal run",
+    "payload": {
+      "slot": "vocal_main",
+      "entity": [
+        "vocals"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_section_C_30202_007",
+    "text": "Outro",
+    "embed_text": "Outro",
+    "payload": {
+      "slot": "section",
+      "entity": "Outro",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_drums_C_30202_004",
+    "text": "rhythmic chanting, heavy drums",
+    "embed_text": "rhythmic chanting, heavy drums",
+    "payload": {
+      "slot": "drums",
+      "entity": [
+        "drums"
+      ],
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[\"heavy\"]",
+      "observation_layer": "output"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_011",
+    "text": "music softens, acoustic guitar",
+    "embed_text": "music softens, acoustic guitar",
+    "payload": {
+      "slot": "instrument",
+      "entity": "acoustic guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified"
+    }
+  },
+  {
+    "chunk_id": "bracket_instrument_C_30202_012",
+    "text": "final guitar chord rings out",
+    "embed_text": "final guitar chord rings out",
+    "payload": {
+      "slot": "instrument",
+      "entity": "guitar",
+      "genre": "",
+      "song_id": "C_30202",
+      "source": "bracket",
+      "modifiers": "[]",
+      "observation_layer": "output",
+      "kit": "guitar",
+      "layer": "unspecified",
+      "role": "unspecified",
+      "action": "rings out"
     }
   }
 ]

@@ -1,6 +1,6 @@
 {
   "electric bass": {
-    "count": 512,
+    "count": 514,
     "top_modifiers": [
       [
         "warm",
@@ -12,7 +12,7 @@
       ],
       [
         "prominent",
-        36
+        37
       ],
       [
         "crisp",
@@ -28,7 +28,7 @@
       ],
       [
         "occasional",
-        31
+        32
       ],
       [
         "steady",
@@ -107,11 +107,11 @@
     ]
   },
   "electric guitar": {
-    "count": 421,
+    "count": 423,
     "top_modifiers": [
       [
         "clean",
-        323
+        324
       ],
       [
         "light",
@@ -119,7 +119,7 @@
       ],
       [
         "bright",
-        43
+        44
       ],
       [
         "muted",
@@ -143,7 +143,7 @@
       ],
       [
         "slight",
-        19
+        20
       ],
       [
         "driving",
@@ -197,7 +197,7 @@
     "top_chords": [
       [
         "power chords",
-        41
+        42
       ],
       [
         "arpeggiated chords",
@@ -218,11 +218,11 @@
     ]
   },
   "clean electric guitar": {
-    "count": 261,
+    "count": 262,
     "top_modifiers": [
       [
         "clean",
-        261
+        262
       ],
       [
         "light",
@@ -250,7 +250,7 @@
       ],
       [
         "slight",
-        15
+        16
       ],
       [
         "occasional",
@@ -329,7 +329,7 @@
     ]
   },
   "acoustic guitar": {
-    "count": 234,
+    "count": 235,
     "top_modifiers": [
       [
         "steady",
@@ -349,7 +349,7 @@
       ],
       [
         "occasional",
-        15
+        16
       ],
       [
         "prominent",
@@ -436,11 +436,11 @@
     ]
   },
   "synthesizer": {
-    "count": 219,
+    "count": 221,
     "top_modifiers": [
       [
         "subtle",
-        59
+        60
       ],
       [
         "bright",
@@ -452,7 +452,7 @@
       ],
       [
         "occasional",
-        23
+        25
       ],
       [
         "shimmering",
@@ -840,11 +840,11 @@
     ]
   },
   "pad": {
-    "count": 88,
+    "count": 89,
     "top_modifiers": [
       [
         "subtle",
-        15
+        16
       ],
       [
         "bright",
@@ -853,6 +853,10 @@
       [
         "shimmering",
         11
+      ],
+      [
+        "occasional",
+        10
       ],
       [
         "lush",
@@ -867,20 +871,16 @@
         9
       ],
       [
-        "occasional",
-        9
+        "high-pitched",
+        3
       ],
       [
-        "high-pitched",
+        "mid-range",
         3
       ],
       [
         "soft",
         3
-      ],
-      [
-        "prominent",
-        2
       ]
     ],
     "top_patterns": [
@@ -1293,11 +1293,11 @@
     "top_chords": []
   },
   "slap bass": {
-    "count": 59,
+    "count": 60,
     "top_modifiers": [
       [
         "prominent",
-        17
+        18
       ],
       [
         "bright",
@@ -1328,12 +1328,12 @@
         5
       ],
       [
-        "clean-toned",
+        "funky",
         3
       ],
       [
-        "muted",
-        2
+        "clean-toned",
+        3
       ]
     ],
     "top_patterns": [
@@ -1736,6 +1736,96 @@
       ]
     ]
   },
+  "electric piano": {
+    "count": 34,
+    "top_modifiers": [
+      [
+        "subtle",
+        14
+      ],
+      [
+        "occasional",
+        4
+      ],
+      [
+        "bright",
+        3
+      ],
+      [
+        "jazzy",
+        3
+      ],
+      [
+        "soft",
+        3
+      ],
+      [
+        "slight",
+        1
+      ],
+      [
+        "soulful",
+        1
+      ],
+      [
+        "high-pitched",
+        1
+      ],
+      [
+        "lush",
+        1
+      ],
+      [
+        "clean",
+        1
+      ]
+    ],
+    "top_patterns": [
+      [
+        "harmonic padding in the background",
+        7
+      ],
+      [
+        "jazz-influenced chord extensions",
+        2
+      ],
+      [
+        "harmonic support during the chorus",
+        1
+      ],
+      [
+        "a bright, syncopated electric piano riff playing jazz-influe",
+        1
+      ],
+      [
+        "jazzy, extended chords with a Rhodes-like timbre",
+        1
+      ]
+    ],
+    "top_effects": [],
+    "top_chords": [
+      [
+        "harmonic padding",
+        9
+      ],
+      [
+        "harmonic support",
+        3
+      ],
+      [
+        "seventh chords",
+        2
+      ],
+      [
+        "harmonic depth",
+        2
+      ],
+      [
+        "sustained chord",
+        1
+      ]
+    ]
+  },
   "cello": {
     "count": 34,
     "top_modifiers": [
@@ -1897,96 +1987,6 @@
       ],
       [
         "jazz chords",
-        1
-      ]
-    ]
-  },
-  "electric piano": {
-    "count": 33,
-    "top_modifiers": [
-      [
-        "subtle",
-        14
-      ],
-      [
-        "occasional",
-        4
-      ],
-      [
-        "bright",
-        3
-      ],
-      [
-        "jazzy",
-        3
-      ],
-      [
-        "soft",
-        3
-      ],
-      [
-        "slight",
-        1
-      ],
-      [
-        "soulful",
-        1
-      ],
-      [
-        "high-pitched",
-        1
-      ],
-      [
-        "lush",
-        1
-      ],
-      [
-        "clean",
-        1
-      ]
-    ],
-    "top_patterns": [
-      [
-        "harmonic padding in the background",
-        7
-      ],
-      [
-        "jazz-influenced chord extensions",
-        2
-      ],
-      [
-        "harmonic support during the chorus",
-        1
-      ],
-      [
-        "a bright, syncopated electric piano riff playing jazz-influe",
-        1
-      ],
-      [
-        "jazzy, extended chords with a Rhodes-like timbre",
-        1
-      ]
-    ],
-    "top_effects": [],
-    "top_chords": [
-      [
-        "harmonic padding",
-        8
-      ],
-      [
-        "harmonic support",
-        3
-      ],
-      [
-        "seventh chords",
-        2
-      ],
-      [
-        "harmonic depth",
-        2
-      ],
-      [
-        "sustained chord",
         1
       ]
     ]
@@ -2378,7 +2378,7 @@
     "top_chords": []
   },
   "rhodes": {
-    "count": 17,
+    "count": 18,
     "top_modifiers": [
       [
         "subtle",
@@ -2438,15 +2438,15 @@
     "top_effects": [],
     "top_chords": [
       [
+        "harmonic padding",
+        3
+      ],
+      [
         "harmonic depth",
         2
       ],
       [
         "sustained chords",
-        2
-      ],
-      [
-        "harmonic padding",
         2
       ],
       [
@@ -3215,11 +3215,11 @@
     "top_chords": []
   },
   "overdriven electric guitar": {
-    "count": 4,
+    "count": 5,
     "top_modifiers": [
       [
         "bright",
-        2
+        3
       ],
       [
         "clean",
@@ -3236,7 +3236,7 @@
     "top_chords": [
       [
         "power chords",
-        3
+        4
       ]
     ]
   },

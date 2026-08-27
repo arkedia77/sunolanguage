@@ -134379,5 +134379,49 @@
       "granularity": "couplet",
       "repeat_count": 1
     }
+  },
+  {
+    "chunk_id": "lyrics_pre_chorus_C_30199_000",
+    "text": "멈추면 없어 정말로 없어\n남는 건 방 하나 그리고 먼지",
+    "embed_text": "멈추면 없어 정말로 없어\n남는 건 방 하나 그리고 먼지 | section: pre_chorus | genre: K-Pop R&B ballad",
+    "payload": {
+      "chunk_id": "lyrics_pre_chorus_C_30199_000",
+      "song_id": "C_30199",
+      "section_tag": "pre_chorus",
+      "section_tag_raw": "Pre-Chorus",
+      "section_index": 0,
+      "text": "멈추면 없어 정말로 없어\n남는 건 방 하나 그리고 먼지",
+      "embed_text": "멈추면 없어 정말로 없어\n남는 건 방 하나 그리고 먼지 | section: pre_chorus | genre: K-Pop R&B ballad",
+      "genre": "K-Pop R&B ballad",
+      "language": "mixed",
+      "line_count": 2,
+      "char_count": 30,
+      "structure": "pre_chorus",
+      "granularity": "section",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30199_pre_chorus_000",
+    "text": "멈추면 없어 정말로 없어\n남는 건 방 하나 그리고 먼지",
+    "embed_text": "멈추면 없어 정말로 없어\n남는 건 방 하나 그리고 먼지 | section: pre_chorus | genre: K-Pop R&B ballad",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30199_pre_chorus_000",
+      "song_id": "C_30199",
+      "section_tag": "pre_chorus",
+      "section_tag_raw": "Pre-Chorus",
+      "section_index": 0,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_pre_chorus_C_30199_000",
+      "text": "멈추면 없어 정말로 없어\n남는 건 방 하나 그리고 먼지",
+      "embed_text": "멈추면 없어 정말로 없어\n남는 건 방 하나 그리고 먼지 | section: pre_chorus | genre: K-Pop R&B ballad",
+      "genre": "K-Pop R&B ballad",
+      "language": "mixed",
+      "line_count": 2,
+      "char_count": 30,
+      "structure": "pre_chorus",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
   }
 ]
