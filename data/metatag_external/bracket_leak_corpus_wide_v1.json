@@ -1,0 +1,249 @@
+{
+ "무엇": "입력 가사 브라켓 → 출력(Suno 재분석) 가사 본문 누출 전수 측정 v1",
+ "날짜": "2026-08-27",
+ "재현": "scripts/bracket_leak_corpus_wide_v1.py",
+ "★생성 0 · 크레딧 0 · 새 수집 0": "기존 코퍼스만",
+ "★전제_정정": "지시축 대장 v1의 「우리 코퍼스는 출력만 담는다」는 **틀렸다** — merged_4values.json은 leomusic_original(입력 SP·가사)과 suno_reanalysis(출력 SP·가사)를 **둘 다** 담는다.",
+ "모집단": {
+  "곡": 540,
+  "입력가사_보유곡": 403,
+  "입력↔출력_가사짝": 411,
+  "입력_브라켓_연인원": 3863
+ },
+ "★양성_대조": {
+  "출력본문_라틴토큰": 1424,
+  "출력본문_라틴보유_짝": 61,
+  "★뜻": "출력 가사 본문에 라틴 토큰이 실제로 나온다 ⇒ **이 자는 라틴을 뱉을 수 있다.** VD ASR(한국어 전용)의 계기 결함이 여기서는 해소된다."
+ },
+ "집계": {
+  "판정가능_낱말_연인원": 5968,
+  "누출_연인원": 0
+ },
+ "★층화_낱말수(D001 길이 조건축)": {
+  "0어": {
+   "브라켓": 10,
+   "판정가능낱말": 0,
+   "누출": 0,
+   "누출브라켓": 0
+  },
+  "1어": {
+   "브라켓": 2748,
+   "판정가능낱말": 2748,
+   "누출": 0,
+   "누출브라켓": 0
+  },
+  "2어": {
+   "브라켓": 500,
+   "판정가능낱말": 990,
+   "누출": 0,
+   "누출브라켓": 0
+  },
+  "3어": {
+   "브라켓": 238,
+   "판정가능낱말": 692,
+   "누출": 0,
+   "누출브라켓": 0
+  },
+  "4어": {
+   "브라켓": 208,
+   "판정가능낱말": 773,
+   "누출": 0,
+   "누출브라켓": 0
+  },
+  "5어": {
+   "브라켓": 109,
+   "판정가능낱말": 460,
+   "누출": 0,
+   "누출브라켓": 0
+  },
+  "6어": {
+   "브라켓": 50,
+   "판정가능낱말": 305,
+   "누출": 0,
+   "누출브라켓": 0
+  }
+ },
+ "★층화_위치(D006ⓐ 위치 조건축)": {
+  "자기줄": {
+   "브라켓": 3853,
+   "판정가능낱말": 5968,
+   "누출": 0,
+   "누출브라켓": 0
+  },
+  "★줄안": {
+   "브라켓": 10,
+   "판정가능낱말": 0,
+   "누출": 0,
+   "누출브라켓": 0
+  }
+ },
+ "누출_실물": [],
+ "입력_소괄호_지시어(D003 조건축)": [
+  [
+   "run it up",
+   3
+  ],
+  [
+   "hey!",
+   3
+  ],
+  [
+   "let's go",
+   2
+  ],
+  [
+   "distant, veiled, dreaming",
+   2
+  ],
+  [
+   "gentle, never belting",
+   2
+  ],
+  [
+   "pulsing synth build + heartbeat bass",
+   1
+  ],
+  [
+   "synth drop + bass build",
+   1
+  ],
+  [
+   "beat fades with running footsteps",
+   1
+  ],
+  [
+   "snappy drum machine + synth stab",
+   1
+  ],
+  [
+   "beat continues + crowd chant fade",
+   1
+  ],
+  [
+   "fingerpicking",
+   1
+  ],
+  [
+   "harmonica fade",
+   1
+  ],
+  [
+   "piano arpeggios",
+   1
+  ],
+  [
+   "music box",
+   1
+  ],
+  [
+   "wurlitzer",
+   1
+  ],
+  [
+   "wurlitzer만",
+   1
+  ],
+  [
+   "wurlitzer 페이드",
+   1
+  ],
+  [
+   "smooth, connected bowing",
+   1
+  ],
+  [
+   "dance-like, sparkling",
+   1
+  ],
+  [
+   "percussive clicking texture",
+   1
+  ],
+  [
+   "glassy, metallic overtones",
+   1
+  ],
+  [
+   "virtuosic display",
+   1
+  ],
+  [
+   "bell-like, fading",
+   1
+  ],
+  [
+   "deep, wide vibrato, from the earth",
+   1
+  ],
+  [
+   "climbing, each note higher",
+   1
+  ],
+  [
+   "narrow intense vibrato, singing",
+   1
+  ],
+  [
+   "bell-like overtones floating",
+   1
+  ],
+  [
+   "ghostly, barely there",
+   1
+  ],
+  [
+   "coming home to earth",
+   1
+  ],
+  [
+   "the instrument breathing its last",
+   1
+  ],
+  [
+   "classical, centered tone",
+   1
+  ],
+  [
+   "buzzing, vibrating air column",
+   1
+  ],
+  [
+   "bright, piercing, raw",
+   1
+  ],
+  [
+   "two pitches at once, otherworldly",
+   1
+  ],
+  [
+   "barely audible, floating",
+   1
+  ],
+  [
+   "wind through a hollow reed",
+   1
+  ],
+  [
+   "clarity after chaos",
+   1
+  ],
+  [
+   "nasal, singing, reedy",
+   1
+  ],
+  [
+   "each phrase a single exhale",
+   1
+  ],
+  [
+   "two reed voices conversing",
+   1
+  ]
+ ],
+ "★이_측정이_못_하는_것": [
+  "출력 가사는 **Suno가 그 음원을 듣고 쓴 것**이다. 전사가 아니라 재분석이라 오인식·요약·주석이 섞인다.",
+  "「누출 0」은 「안 불렸다」가 아니라 「**이 자에 안 잡혔다**」다. 다만 양성 대조가 서 있어 VD보다 강하다.",
+  "반대로 「누출 1」도 Suno의 **주석 습관**일 수 있다(브라켓 없이 `Full kit enters`를 한 줄로 쓰는 버릇). ⇒ 누출 실물은 반드시 행 문면을 보고 판정할 것.",
+  "입력 가사가 있는 곡만 본다(전 540곡 아님)."
+ ]
+}

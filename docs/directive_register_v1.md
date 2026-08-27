@@ -3,6 +3,8 @@
 **날짜** 2026-08-22 · **작성** sunolanguage · **크레딧 0 · 신규 생성 0 · 새 수집 0**
 **재현** `scripts/build_directive_register_v1.py` · **산출** `data/metatag_external/directive_register_v1.json`
 
+> ★★**08-27 — 61건 전건 사람 읽기 완료. 최신 정본 = `docs/directive_register_v1_2.md`.** ★v1의 전제 「우리 코퍼스는 출력만 담는다」는 **틀렸다**(merged_4values.json은 입력·출력 양쪽) ⇒ `impossible_by_design` **10 → 0**.
+
 
 > ★★**08-26 — 이 문서의 §2 집계는 `docs/directive_register_v1_1.md`로 대체됐다.** 축 재검사 결과 `already_measured` **4 → 1**·`corpus_now` **1 → 0**·D006 **강등**. 본문 §0·§3·§4·§4-1은 그대로 유효.
 

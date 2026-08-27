@@ -2,6 +2,9 @@
 
 **날짜** 2026-08-26 · **작성** sunolanguage · **크레딧 0 · 신규 생성 0 · 새 수집 0**
 **재현** `scripts/directive_register_axis_reflect_v1_1.py` · **산출** `data/metatag_external/directive_register_v1_1.json`
+
+> ★★**08-27 — 최신 정본 = `docs/directive_register_v1_2.md`.** 이 문서의 D001·D004 강등은 **자진 정정**됐다(조건 팔이 코퍼스에 실재했다·v1_2 §3).
+
 **전판** `docs/directive_register_v1.md` (61건 수집·자동 분류. 본문은 그대로 유효)
 
 ---
