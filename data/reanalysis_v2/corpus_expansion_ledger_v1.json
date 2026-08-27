@@ -1,0 +1,8308 @@
+{
+ "무엇": "코퍼스 확장 대장 v1 — 재분석하면 실제로 코퍼스가 커지는 곡의 목록과 우선순위",
+ "날짜": "2026-08-27",
+ "작성": "sunolanguage",
+ "재현": "scripts/corpus_expansion_ledger_v1.py",
+ "★비용": "재분석 = 0cr 실측 확정(sunomusic 08-03 AWARE05 회신: upload_audio 전후 monthly_remaining Δ0, 9클립 전량 후도 Δ0). 생성 아님 — 업로드+Describe Your Audio 자동 서술.",
+ "★모집단": {
+  "대장": "/Users/purple/projects/agent-comm/projects/sunomusic/exchange/aware_clip_index_20260803.jsonl.gz",
+  "기준일": "2026-08-03(★스테일 — 이후 생산분 미포함)",
+  "고유_gid": 2966,
+  "클립": 5754,
+  "cdn_mp3_보유": 5754
+ },
+ "★현재_코퍼스": {
+  "곡": 540,
+  "그중_입력가사_보유": 403,
+  "★입력_결손": 137,
+  "대장과_gid_교집합": 155
+ },
+ "★격차": {
+  "미재분석_곡": 2811,
+  "상한": 3351,
+  "프로젝트별": {
+   "leomusic": 1229,
+   "leomusic2": 766,
+   "leomusic-trot": 274,
+   "sunolanguage": 268,
+   "leomusic3": 160,
+   "yoonnest": 80,
+   "pet_sleep_cat": 30,
+   "special": 3,
+   "lunavibe": 1
+  },
+  "★코퍼스_진입_프로젝트": "leomusic 148 · leomusic2 7 — **나머지 전 프로젝트 0곡**"
+ },
+ "★장르_우선순위(배수=미재분석/(보유+1))": [
+  {
+   "장르族": "trot",
+   "코퍼스_보유": 12,
+   "미재분석": 513,
+   "배수": 39.5
+  },
+  {
+   "장르族": "cn_",
+   "코퍼스_보유": 0,
+   "미재분석": 12,
+   "배수": 12.0
+  },
+  {
+   "장르族": "trip-hop",
+   "코퍼스_보유": 0,
+   "미재분석": 11,
+   "배수": 11.0
+  },
+  {
+   "장르族": "pansori",
+   "코퍼스_보유": 0,
+   "미재분석": 11,
+   "배수": 11.0
+  },
+  {
+   "장르族": "rap",
+   "코퍼스_보유": 4,
+   "미재분석": 51,
+   "배수": 10.2
+  },
+  {
+   "장르族": "house",
+   "코퍼스_보유": 1,
+   "미재분석": 20,
+   "배수": 10.0
+  },
+  {
+   "장르族": "boom bap",
+   "코퍼스_보유": 1,
+   "미재분석": 20,
+   "배수": 10.0
+  },
+  {
+   "장르族": "korean cinematic epic",
+   "코퍼스_보유": 0,
+   "미재분석": 10,
+   "배수": 10.0
+  },
+  {
+   "장르族": "en_rnb",
+   "코퍼스_보유": 0,
+   "미재분석": 10,
+   "배수": 10.0
+  },
+  {
+   "장르族": "jp_anison",
+   "코퍼스_보유": 0,
+   "미재분석": 10,
+   "배수": 10.0
+  },
+  {
+   "장르族": "kr_ost_romcom",
+   "코퍼스_보유": 0,
+   "미재분석": 10,
+   "배수": 10.0
+  },
+  {
+   "장르族": "kr_wuxia_ost",
+   "코퍼스_보유": 0,
+   "미재분석": 10,
+   "배수": 10.0
+  },
+  {
+   "장르族": "kr_rnb",
+   "코퍼스_보유": 0,
+   "미재분석": 10,
+   "배수": 10.0
+  },
+  {
+   "장르族": "kr_acoustic",
+   "코퍼스_보유": 0,
+   "미재분석": 10,
+   "배수": 10.0
+  },
+  {
+   "장르族": "kr_slowcore",
+   "코퍼스_보유": 0,
+   "미재분석": 10,
+   "배수": 10.0
+  },
+  {
+   "장르族": "hip",
+   "코퍼스_보유": 12,
+   "미재분석": 109,
+   "배수": 8.4
+  },
+  {
+   "장르族": "rock",
+   "코퍼스_보유": 30,
+   "미재분석": 209,
+   "배수": 6.7
+  },
+  {
+   "장르族": "ambient",
+   "코퍼스_보유": 14,
+   "미재분석": 81,
+   "배수": 5.4
+  },
+  {
+   "장르族": "classic",
+   "코퍼스_보유": 6,
+   "미재분석": 37,
+   "배수": 5.3
+  },
+  {
+   "장르族": "soul",
+   "코퍼스_보유": 19,
+   "미재분석": 97,
+   "배수": 4.8
+  }
+ ],
+ "★1차_묶음(코퍼스 0곡 장르 + 트로트)": {
+  "곡수": 882,
+  "목록": [
+   {
+    "gid": 35,
+    "project": "leomusic",
+    "batch": "B014",
+    "title": "뒷사람",
+    "genre_design": "Jersey Club / Footwork",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 38,
+    "project": "leomusic",
+    "batch": "B014",
+    "title": "창문 속 얼굴",
+    "genre_design": "Slowcore / Sadcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 43,
+    "project": "leomusic",
+    "batch": "B015",
+    "title": "별 하나",
+    "genre_design": "UK Garage / 2-Step",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 46,
+    "project": "leomusic",
+    "batch": "B015",
+    "title": "젖은 흙",
+    "genre_design": "Trip-Hop / Downtempo",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 53,
+    "project": "leomusic",
+    "batch": "B016",
+    "title": "마지막 불",
+    "genre_design": "Darkwave / Synthwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 59,
+    "project": "leomusic",
+    "batch": "B016",
+    "title": "냉동실 고고학",
+    "genre_design": "Ska Punk / 2-Tone Ska",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 63,
+    "project": "leomusic",
+    "batch": "B017",
+    "title": "삼 분",
+    "genre_design": "Dub / Dub Reggae",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 65,
+    "project": "leomusic",
+    "batch": "B017",
+    "title": "모국어",
+    "genre_design": "World Music / Ethnic Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 80,
+    "project": "leomusic",
+    "batch": "B018",
+    "title": "앨범 속 타인",
+    "genre_design": "Ethereal Wave / Darkwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 83,
+    "project": "leomusic",
+    "batch": "B019",
+    "title": "첫 줄",
+    "genre_design": "Spoken Word / Poetry Slam",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 93,
+    "project": "leomusic",
+    "batch": "B020",
+    "title": "평일 낮",
+    "genre_design": "Indie Dance / Dance-Punk",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 98,
+    "project": "leomusic",
+    "batch": "B020",
+    "title": "음소거",
+    "genre_design": "Minimal Wave / Cold Wave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 253,
+    "project": "leomusic",
+    "batch": "B036",
+    "title": "사탕 봉지",
+    "genre_design": "Minimal Electro / Detached",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 266,
+    "project": "leomusic",
+    "batch": "B037",
+    "title": "죽은 빛",
+    "genre_design": "Trip-Hop / Melancholic Electronic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1034,
+    "project": "leomusic",
+    "batch": "B114",
+    "title": "별다줄",
+    "genre_design": "Jersey Club",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1802,
+    "project": "leomusic",
+    "batch": "B194",
+    "title": "마지막 불",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1827,
+    "project": "leomusic",
+    "batch": "B197",
+    "title": "쓱싹 쓱싹",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1828,
+    "project": "leomusic",
+    "batch": "B197",
+    "title": "새벽 세 시",
+    "genre_design": "Contemporary Instrumental",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1831,
+    "project": "leomusic",
+    "batch": "B197",
+    "title": "달려",
+    "genre_design": "Film Score/OST",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1844,
+    "project": "leomusic",
+    "batch": "B199",
+    "title": "마지막 가방",
+    "genre_design": "Hybrid / Cinematic",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1846,
+    "project": "leomusic",
+    "batch": "B199",
+    "title": "놓지 마",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1865,
+    "project": "leomusic",
+    "batch": "B201",
+    "title": "눈동자",
+    "genre_design": "Film Score / OST",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1866,
+    "project": "leomusic",
+    "batch": "B201",
+    "title": "좋아요만!",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1876,
+    "project": "leomusic",
+    "batch": "B202",
+    "title": "도복을 개는 손",
+    "genre_design": "Contemporary Instrumental",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1890,
+    "project": "leomusic",
+    "batch": "B203",
+    "title": "먼지 친구",
+    "genre_design": "Hybrid / Cinematic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1892,
+    "project": "leomusic",
+    "batch": "B203",
+    "title": "부침개 앞에서",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1899,
+    "project": "leomusic",
+    "batch": "B204",
+    "title": "도시락 냄새잖아",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1913,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "띵동 띵동",
+    "genre_design": "K-Pop Dance + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1914,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "찰떡찰떡",
+    "genre_design": "K-Pop Dance + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1915,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "흥 타령",
+    "genre_design": "New Trot Dance",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1916,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "삐빅삐빅",
+    "genre_design": "K-Pop Dance + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1917,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "반짝반짝",
+    "genre_design": "K-Pop + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1918,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "사뿐사뿐",
+    "genre_design": "K-Pop Dance + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1919,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "따르릉",
+    "genre_design": "K-Pop + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1920,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "띠링띠링",
+    "genre_design": "K-Pop Dance + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1921,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "두둥두둥",
+    "genre_design": "K-Pop Dance + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1922,
+    "project": "leomusic",
+    "batch": "B208",
+    "title": "슈루룩",
+    "genre_design": "K-Pop + Trot Fusion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1926,
+    "project": "leomusic",
+    "batch": "B209",
+    "title": "네온사인",
+    "genre_design": "Synth Wave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1955,
+    "project": "leomusic",
+    "batch": "B212",
+    "title": "Disconnected",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1962,
+    "project": "leomusic",
+    "batch": "B212",
+    "title": "Dear Stranger",
+    "genre_design": "New Wave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1964,
+    "project": "leomusic",
+    "batch": "B213",
+    "title": "Taxi Confessions",
+    "genre_design": "Darkwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1966,
+    "project": "leomusic",
+    "batch": "B213",
+    "title": "Rooftop",
+    "genre_design": "Future Bass",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1973,
+    "project": "leomusic",
+    "batch": "B214",
+    "title": "Concrete Garden",
+    "genre_design": "Americana",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1985,
+    "project": "leomusic",
+    "batch": "B215",
+    "title": "Burning Bridges",
+    "genre_design": "Synth Wave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 1999,
+    "project": "leomusic",
+    "batch": "B216",
+    "title": "Telescope",
+    "genre_design": "Electro Swing",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2025,
+    "project": "leomusic",
+    "batch": "B219",
+    "title": "Dusk Patrol",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2028,
+    "project": "leomusic",
+    "batch": "B219",
+    "title": "Fade Together",
+    "genre_design": "Downtempo",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2029,
+    "project": "leomusic",
+    "batch": "B219",
+    "title": "Shadow Hour",
+    "genre_design": "Ethereal Wave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2052,
+    "project": "leomusic",
+    "batch": "B221",
+    "title": "장바구니",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2070,
+    "project": "leomusic",
+    "batch": "B223",
+    "title": "삭제하고 다시 깔고",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2073,
+    "project": "leomusic",
+    "batch": "B224",
+    "title": "제로 웨이스트",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2100,
+    "project": "leomusic",
+    "batch": "B226",
+    "title": "2010년대",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2113,
+    "project": "leomusic",
+    "batch": "B228",
+    "title": "물오리",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2130,
+    "project": "leomusic",
+    "batch": "B229",
+    "title": "방충제 얼굴",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2135,
+    "project": "leomusic",
+    "batch": "B230",
+    "title": "안개 동네",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2147,
+    "project": "leomusic",
+    "batch": "B231",
+    "title": "Overdue",
+    "genre_design": "Post-Punk Revival",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2157,
+    "project": "leomusic",
+    "batch": "B232",
+    "title": "Grease and Grain",
+    "genre_design": "Motown Revival",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2170,
+    "project": "leomusic",
+    "batch": "B233",
+    "title": "Glass Fox",
+    "genre_design": "Electro Acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2176,
+    "project": "leomusic",
+    "batch": "B234",
+    "title": "Fluorescent",
+    "genre_design": "Indie Surf",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2181,
+    "project": "leomusic",
+    "batch": "B234",
+    "title": "Monitor",
+    "genre_design": "Chillwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2191,
+    "project": "leomusic",
+    "batch": "B235",
+    "title": "Seventy-Two",
+    "genre_design": "Minimal Wave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2195,
+    "project": "leomusic",
+    "batch": "B236",
+    "title": "Ceiling Count",
+    "genre_design": "Neo-Psychedelia",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2196,
+    "project": "leomusic",
+    "batch": "B236",
+    "title": "Last Call",
+    "genre_design": "Quiet Storm",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2198,
+    "project": "leomusic",
+    "batch": "B236",
+    "title": "Quiet Ward",
+    "genre_design": "Punk Blues",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2201,
+    "project": "leomusic",
+    "batch": "B236",
+    "title": "All Night Menu",
+    "genre_design": "Acoustic Shoegaze",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2205,
+    "project": "leomusic",
+    "batch": "B237",
+    "title": "Ghostwriter",
+    "genre_design": "Indie Punk",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2208,
+    "project": "leomusic",
+    "batch": "B237",
+    "title": "Before the Main",
+    "genre_design": "Electro Blues",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2219,
+    "project": "leomusic",
+    "batch": "B238",
+    "title": "Sunday Choir",
+    "genre_design": "Slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2221,
+    "project": "leomusic",
+    "batch": "B238",
+    "title": "River Stays",
+    "genre_design": "New Jack Swing",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2229,
+    "project": "leomusic",
+    "batch": "B239",
+    "title": "Orange Bottle",
+    "genre_design": "Acoustic Darkwave",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2235,
+    "project": "leomusic",
+    "batch": "B240",
+    "title": "Empty Rooms",
+    "genre_design": "Post-Grunge",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2245,
+    "project": "leomusic",
+    "batch": "B241",
+    "title": "虹の在りか",
+    "genre_design": "Shibuya-kei",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2248,
+    "project": "leomusic",
+    "batch": "B241",
+    "title": "最初の一音",
+    "genre_design": "Future Bass",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2266,
+    "project": "leomusic",
+    "batch": "B243",
+    "title": "コインランドリー・ユニバース",
+    "genre_design": "Ska Punk",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2277,
+    "project": "leomusic",
+    "batch": "B244",
+    "title": "한 술 뜨고 또 한 술",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2319,
+    "project": "leomusic",
+    "batch": "B248",
+    "title": "네가 먼저!",
+    "genre_design": "Future Bass",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2321,
+    "project": "leomusic",
+    "batch": "B248",
+    "title": "지금 보낼게",
+    "genre_design": "UK Garage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2322,
+    "project": "leomusic",
+    "batch": "B248",
+    "title": "툭툭 끊겨",
+    "genre_design": "Breakbeat",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2326,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "다시 그 사진",
+    "genre_design": "Trot Fox",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2327,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "그 사람 사진",
+    "genre_design": "Trot Fox",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2328,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "거울 속 얼굴",
+    "genre_design": "Trot Waltz",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2329,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "종점인데",
+    "genre_design": "Ppongjjak Slow",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2330,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "빈 수저 하나",
+    "genre_design": "Trot Ballad",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2331,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "하필 오늘",
+    "genre_design": "Trot Ballad",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2332,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "또 그 방에",
+    "genre_design": "Semi Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2333,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "쿵짝 쿵짝",
+    "genre_design": "Trot Dance",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2334,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "지워 버려!",
+    "genre_design": "Trot Dance",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2335,
+    "project": "leomusic",
+    "batch": "B249",
+    "title": "한 곡 더!",
+    "genre_design": "EDM Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2338,
+    "project": "leomusic",
+    "batch": "B250",
+    "title": "오늘도 창밖",
+    "genre_design": "New Wave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2345,
+    "project": "leomusic",
+    "batch": "B250",
+    "title": "어른이 뭔데",
+    "genre_design": "Emo",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2350,
+    "project": "leomusic",
+    "batch": "B251",
+    "title": "유리에 겹친",
+    "genre_design": "Quiet Storm",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2352,
+    "project": "leomusic",
+    "batch": "B251",
+    "title": "네가 넣은 곡",
+    "genre_design": "Slow Jam",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2359,
+    "project": "leomusic",
+    "batch": "B252",
+    "title": "안개 든 동네",
+    "genre_design": "Slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2360,
+    "project": "leomusic",
+    "batch": "B252",
+    "title": "노을이 와!",
+    "genre_design": "Chillwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2363,
+    "project": "leomusic",
+    "batch": "B252",
+    "title": "또 첫서리",
+    "genre_design": "Downtempo",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2365,
+    "project": "leomusic",
+    "batch": "B252",
+    "title": "지금 멈춰",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2378,
+    "project": "leomusic",
+    "batch": "B253",
+    "title": "오늘은 진짜",
+    "genre_design": "Drill",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2389,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "쿵쿵 울려라",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2390,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "비 그친 마당",
+    "genre_design": "Latin Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2391,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "오늘 밤 끝장!",
+    "genre_design": "Electro Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2392,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "펑펑 터져",
+    "genre_design": "Trot House",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2393,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "그냥 질러 봐",
+    "genre_design": "City Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2394,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "다시 불러",
+    "genre_design": "Funk Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2395,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "판 뒤집기",
+    "genre_design": "Trot Trap",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2396,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "오늘은 놀자",
+    "genre_design": "Swing Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2397,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "끓어 넘쳐",
+    "genre_design": "Trot Rock",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2398,
+    "project": "leomusic",
+    "batch": "B255",
+    "title": "지금 다 풀어",
+    "genre_design": "Soul Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2399,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "다다닥 뛰어",
+    "genre_design": "Trot Boom Bap",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2400,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "지금이 좋아",
+    "genre_design": "City Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2401,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "남는 게 없어",
+    "genre_design": "Funk Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2402,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "이자가 먼저",
+    "genre_design": "Trot Trap",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2403,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "이게 맞나",
+    "genre_design": "Jazz Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2404,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "오늘도 출근",
+    "genre_design": "Trot Rock",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2405,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "단골집 가자",
+    "genre_design": "Soul Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2406,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "이제 어쩌지",
+    "genre_design": "Bossa Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2407,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "첫차를 타고",
+    "genre_design": "Newtro Synth Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2408,
+    "project": "leomusic",
+    "batch": "B256",
+    "title": "주말에 띵동!",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2419,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "또 보자고!",
+    "genre_design": "Funk Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2420,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "쾅쾅 두드려",
+    "genre_design": "Rock Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2421,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "여전히 부르네",
+    "genre_design": "Acoustic Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2422,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "또 떠올라",
+    "genre_design": "Swing Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2423,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "이제 와서",
+    "genre_design": "Trot Ballad",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2424,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "그저 바라봐",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2425,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "다 같이 뛰어",
+    "genre_design": "Electro Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2426,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "발 벗고 나서",
+    "genre_design": "Boom Bap Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2427,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "너는 다 알잖아",
+    "genre_design": "City Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2428,
+    "project": "leomusic",
+    "batch": "B258",
+    "title": "잘 지내지",
+    "genre_design": "Soul Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2447,
+    "project": "leomusic",
+    "batch": "B260",
+    "title": "마음챙김 실패",
+    "genre_design": "Future Bass",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2455,
+    "project": "leomusic",
+    "batch": "B261",
+    "title": "둥둥 울려",
+    "genre_design": "Gospel",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2470,
+    "project": "leomusic",
+    "batch": "B262",
+    "title": "무대를 찍어",
+    "genre_design": "Big Band Swing",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2474,
+    "project": "leomusic",
+    "batch": "B262",
+    "title": "빙빙 돌아",
+    "genre_design": "Electro Swing",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2489,
+    "project": "leomusic",
+    "batch": "B263",
+    "title": "새 몸으로 뛰어",
+    "genre_design": "Ragga Jungle",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2510,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "필름을 다시 넣어",
+    "genre_design": "Ballad Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2511,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "시동을 걸어",
+    "genre_design": "Rock Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2512,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "짤랑짤랑 열어",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2513,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "알림 소리 울려",
+    "genre_design": "Electro Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2514,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "다시 시장으로",
+    "genre_design": "Funk Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2515,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "낡은 동전 하나",
+    "genre_design": "Swing Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2516,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "딸꾹질 사건",
+    "genre_design": "Trot Waltz",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2517,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "낡은 피아노 의자",
+    "genre_design": "Acoustic Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2518,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "기어 5단 다시",
+    "genre_design": "Trap Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2519,
+    "project": "leomusic",
+    "batch": "B266",
+    "title": "두 배로 간다",
+    "genre_design": "Synth Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2590,
+    "project": "leomusic",
+    "batch": "B274",
+    "title": "칼퇴근했어",
+    "genre_design": "Private Piano Amapiano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2591,
+    "project": "leomusic",
+    "batch": "B274",
+    "title": "유행이 뭐라고",
+    "genre_design": "Amapiano Chill",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2596,
+    "project": "leomusic",
+    "batch": "B274",
+    "title": "큰 소리로 떠들었어 !",
+    "genre_design": "Bedroom Amapiano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2598,
+    "project": "leomusic",
+    "batch": "B274",
+    "title": "다른 말을 했지",
+    "genre_design": "Gqom-Amapiano Crossover",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2599,
+    "project": "leomusic",
+    "batch": "B274",
+    "title": "끝까지 했어",
+    "genre_design": "Amapiano Anthem",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2610,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "등 밀어주는 오늘",
+    "genre_design": "Ballad Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2611,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "억울해도 웃지",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2612,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "실없는 그 농담",
+    "genre_design": "City Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2613,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "콩콩 뛰는 재롱잔치",
+    "genre_design": "Trot Swing",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2614,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "그 별명 아직도",
+    "genre_design": "Newtro Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2615,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "마이크 돌아왔어 !",
+    "genre_design": "Trot Pop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2616,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "또 우려먹었지",
+    "genre_design": "Trot Funk",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2617,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "오늘의 애창곡",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2618,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "부케 받다 넘어질 뻔",
+    "genre_design": "Trot House",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2619,
+    "project": "leomusic",
+    "batch": "B276",
+    "title": "결국 떠밀려 나갔지 !",
+    "genre_design": "Trot Rock",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2623,
+    "project": "leomusic",
+    "batch": "B277",
+    "title": "샤워기 아래 철썩",
+    "genre_design": "Nu-Gaze",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2449,
+    "project": "leomusic",
+    "batch": "GOLF02",
+    "title": "나이스 샷",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2450,
+    "project": "leomusic",
+    "batch": "GOLF02",
+    "title": "같이 칠래?",
+    "genre_design": "House Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2451,
+    "project": "leomusic",
+    "batch": "GOLF02",
+    "title": "홀인원",
+    "genre_design": "EDM Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2452,
+    "project": "leomusic",
+    "batch": "GOLF02",
+    "title": "빠졌어",
+    "genre_design": "Synth Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 2453,
+    "project": "leomusic",
+    "batch": "GOLF02",
+    "title": "둘이 라운딩",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40245,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "방을 채워",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40246,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "번지는 떨림",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40247,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "남은 여운",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40248,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "창을 울려",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40249,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "퍼지는 파동",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40250,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "데우는 소리",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40251,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "천장을 적셔",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40252,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "되돌아온 떨림",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40253,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "몸을 지나",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40254,
+    "project": "leomusic-trot",
+    "batch": "AWARE04",
+    "title": "하나의 방",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40014,
+    "project": "leomusic-trot",
+    "batch": "DNE",
+    "title": "동네엉아들-레오뮤직트로트",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40001,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "네온 드라이브",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40002,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "새벽아",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40003,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "주말이다",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40004,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "이 밤의 고백",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40005,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "빈 방",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40006,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "디스코볼",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40007,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "그 골목",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40008,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "춤춰라 올레",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40009,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "내일은 몰라",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40010,
+    "project": "leomusic-trot",
+    "batch": "W001",
+    "title": "같은 노래",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40015,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "여름밤 파도",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40016,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "여름아",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40017,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "바다로 간다",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40018,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "불꽃 야시장",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40019,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "빛바랜 여름",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40020,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "식은 커피",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40021,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "빗속에",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40022,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "불금 해방",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40023,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "꿈은 식지 않네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40024,
+    "project": "leomusic-trot",
+    "batch": "W002",
+    "title": "그 바닷가에서",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40025,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "옥상 파티",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40026,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "그 창가",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40027,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "첫 출근",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40028,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "네온 속 얼굴",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40029,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "내민 손",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40030,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "별이 뜨는 자리",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40031,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "털고 가자",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40032,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "다시 일어서네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40033,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "못다 한 말",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40034,
+    "project": "leomusic-trot",
+    "batch": "W003",
+    "title": "우리 골목",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40035,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "옥상 보름달",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40036,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "그대야",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40037,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "왔네 왔어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40038,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "괜찮은가",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40039,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "억새 길",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40040,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "보름달 아래",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40041,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "고갯길 잔치",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40042,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "다시 펴볼게",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40043,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "차마 못한 말",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40044,
+    "project": "leomusic-trot",
+    "batch": "W004",
+    "title": "평상에서",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40045,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "갠 옥상",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40046,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "새벽 빗물",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40047,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "네온 빗길",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40048,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "빗속 포장마차",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40049,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "젖은 어깨",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40050,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "비 갠 한강",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40051,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "마른 자리",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40052,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "도시 밤비",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40053,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "잠 못 든 새벽",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40054,
+    "project": "leomusic-trot",
+    "batch": "W005",
+    "title": "맑게 갠 도시",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40055,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "불야성 첫 발",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40056,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "흐르는 불빛",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40057,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "가로등 길",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40058,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "간판 불빛",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40059,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "꺼진 간판 앞",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40060,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "간판불 쏟아져",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40061,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "식은 거리",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40062,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "가로등 질주",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40063,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "불 밝힌 창",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40064,
+    "project": "leomusic-trot",
+    "batch": "W006",
+    "title": "다시 떼는 걸음",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40065,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "마주친 봄날",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40066,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "빛바랜 사진",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40067,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "선명한 너",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40068,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "콩닥 첫 데이트",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40069,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "하굣길 노을",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40070,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "라디오 켜고",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40071,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "서툰 안녕",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40072,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "쿵쾅 쿵쾅",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40073,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "별 세던 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40074,
+    "project": "leomusic-trot",
+    "batch": "W007",
+    "title": "다시 봄",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40075,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "손잡고 일어나",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40076,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "창가의 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40077,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "보통의 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40078,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "어서 일어나",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40079,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "곁을 지켜",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40080,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "퇴원하는 날",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40081,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "견딘 새벽",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40082,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "지지 않아",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40083,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "새벽을 세며",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40084,
+    "project": "leomusic-trot",
+    "batch": "W008",
+    "title": "봄을 부르네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40085,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "그 시절 노래",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40086,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "빈 자리",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40087,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "흐려진 잔상",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40088,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "빙글 그 춤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40089,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "사무친 정",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40090,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "그날 첫 미소",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40091,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "못 부친 편지",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40092,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "폼만 잡는다",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40093,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "닿지 못한 말",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40094,
+    "project": "leomusic-trot",
+    "batch": "W009",
+    "title": "곱게 가라",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40095,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "먼저 갈게",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40096,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "잘한 거야",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40097,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "안 궁금해",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40098,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "내일에게",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40099,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "막걸리 부르스",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40100,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "짐 없는 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40101,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "소리 없이",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40102,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "늦지 않았네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40103,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "첫날의 창",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40104,
+    "project": "leomusic-trot",
+    "batch": "W010",
+    "title": "고개 들어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40105,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "오늘도 청춘",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40106,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "환갑 파티",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40107,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "다시 뛰는 나이",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40108,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "어깨춤 나네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40109,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "이만하면 됐어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40110,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "담담하게",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40111,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "눈부신 오늘",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40112,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "너의 봄",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40113,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "흥 한 자락",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40114,
+    "project": "leomusic-trot",
+    "batch": "W011",
+    "title": "오늘 밤 주인공",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40115,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "얼굴 한 번 보자고",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40116,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "그 손을 놓지 말 걸",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40117,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "어쩌다 마주친 너",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40118,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "네 손이 제일 곱다",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40119,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "그때는 몰랐네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40120,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "돌아와 줘서 고마워",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40121,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "손 잡고 여기까지",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40122,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "그 말도 못 했는데",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40123,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "가지 마라 애원해도",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40124,
+    "project": "leomusic-trot",
+    "batch": "W012",
+    "title": "우리 만난 게 복이야",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40125,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "드디어 간다 고향으로",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40126,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "어머니 그 손 한 번 잡아볼 걸",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40127,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "동네 사람 다 모여라",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40128,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "불러도 대답 없는",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40129,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "타향살이 부르스",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40130,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "엄마 나 지금 가고 있어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40131,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "변함없는 내 고향",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40132,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "친정 가는 길",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40133,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "반겨줄 이 없는 고향",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40134,
+    "project": "leomusic-trot",
+    "batch": "W013",
+    "title": "고향만 한 곳 어디 있나",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40135,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "주말 밤은 내 세상",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40136,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "불타는 금요일 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40137,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "오늘 밤 다 흔들어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40138,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "불 꺼진 창문들 사이로",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40139,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "너와 보내는 이 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40140,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "오늘 뭐 입지",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40141,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "한 잔 술에 흥이 나네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40142,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "이 밤이 너무 길어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40143,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "너 없는 주말 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40144,
+    "project": "leomusic-trot",
+    "batch": "W014",
+    "title": "이 밤을 태워버려",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40145,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "애썼네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40146,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "네가 있어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40147,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "잘 버텼어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40148,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "잘하고 있어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40149,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "다 이겨냈네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40150,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "안아줄게",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40151,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "어깨 펴자",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40152,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "말없이 곁에",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40153,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "한잔하지",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40154,
+    "project": "leomusic-trot",
+    "batch": "W015",
+    "title": "내일도 걷자",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40155,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "그 자리에",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40156,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "설레는 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40157,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "그 얼굴",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40158,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "이제야 말할게",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40159,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "곱게 늙어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40160,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "빙글빙글",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40161,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "동네방네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40162,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "진심이네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40163,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "못 잊는 사람",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40164,
+    "project": "leomusic-trot",
+    "batch": "W016",
+    "title": "돌아온 봄",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40165,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "잔치 한마당",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40166,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "두근두근",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40167,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "미련이더라",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40168,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "곱게 든 사랑",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40169,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "살아온 날",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40170,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "못다 한 사랑",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40171,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "기다린 세월",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40172,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "너를 보낸 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40173,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "한잔 술",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40174,
+    "project": "leomusic-trot",
+    "batch": "W017",
+    "title": "다시 뛰는 사랑",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40175,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "딜팡딜팡",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40176,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "여름 미풍",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40177,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "돌고 돌아",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40178,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "반짝반짝",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40179,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "얼쑤 한마당",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40180,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "창밖의 달",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40181,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "삼키는 노을",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40182,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "젖은 골목",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40183,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "들썩들썩",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40184,
+    "project": "leomusic-trot",
+    "batch": "W018",
+    "title": "다시 뛰자",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40185,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "밀당 장단",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40186,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "삼킨 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40187,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "들썩 한판",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40188,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "네온이 젖네",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40189,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "흥이더라",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40190,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "빈 우산",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40191,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "천 근 걸음",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40192,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "빗속의 잔",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40193,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "무르익은 사랑",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40194,
+    "project": "leomusic-trot",
+    "batch": "W019",
+    "title": "곧게 걸어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40195,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "줄 하나로",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40196,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "오후 세 시",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40197,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "발맞춰 걷는 길",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40198,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "우는 활 현",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40199,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "살아온 자락",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40200,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "못 잊어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40201,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "삼킨 이름",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40202,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "기대도 돼",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40203,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "천천히 웃을게",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40204,
+    "project": "leomusic-trot",
+    "batch": "W020",
+    "title": "심장이 뛴다",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40205,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "한 자락",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40206,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "네온 창가",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40207,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "세월 한 자락",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40208,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "저녁 활 현",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40209,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "삼킨 밤길",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40210,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "못 잊어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40211,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "넘어온 고개",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40212,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "묻은 이름",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40213,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "무르익어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40214,
+    "project": "leomusic-trot",
+    "batch": "W021",
+    "title": "오늘도 힘차게",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40215,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "주고받는 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40216,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "네온이 번져",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40217,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "힘찬 걸음",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40218,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "먼저 웃을래",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40219,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "마지막 말",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40220,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "담담한 고백",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40221,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "네온 산책",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40222,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "여름밤 축제",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40223,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "굽이길 인생",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40224,
+    "project": "leomusic-trot",
+    "batch": "W022",
+    "title": "쉬어가는 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40225,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "손뼉 맞춰",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40226,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "유리 도시",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40227,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "첫눈에 반해",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40228,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "오늘 밤 무대",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40229,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "콩닥콩닥",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40230,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "무르익은 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40231,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "도시의 리듬",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40232,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "웃으며 가자",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40233,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "다시 춤춰",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40234,
+    "project": "leomusic-trot",
+    "batch": "W023",
+    "title": "별빛 아래",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40235,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "너에게 스며",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40236,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "느린 고백",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40237,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "혼잣말",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40238,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "리듬 타고",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40239,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "새벽 두 시",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40240,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "삭인 그리움",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40241,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "도시 야경",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40242,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "남은 온기",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40243,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "들썩이는 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40244,
+    "project": "leomusic-trot",
+    "batch": "W024",
+    "title": "그저 괜찮아",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40255,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "네온을 걸어",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40256,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "야간 드라이브",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40257,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "한여름 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40258,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "늦은 도시",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40259,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "네온 설렘",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40260,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "유리창 너머",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40261,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "도시의 열기",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40262,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "밤을 헤엄쳐",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40263,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "달리는 밤",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40264,
+    "project": "leomusic-trot",
+    "batch": "W025",
+    "title": "다시 이 도시",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40265,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "무대는 내 것",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40266,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "뜨거워져",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40267,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "판을 벌여",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40268,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "걸어온 길",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40269,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "목청껏",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40270,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "무너진 자리",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40271,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "이 악물고",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40272,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "터진다",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40273,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "인생 블루스",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40274,
+    "project": "leomusic-trot",
+    "batch": "W026",
+    "title": "부르지 못해",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40011,
+    "project": "leomusic-trot",
+    "batch": "Y016",
+    "title": "막차",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40012,
+    "project": "leomusic-trot",
+    "batch": "Y016",
+    "title": "그대 오늘도",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 40013,
+    "project": "leomusic-trot",
+    "batch": "Y016",
+    "title": "포장마차 부르스",
+    "genre_design": "Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10549,
+    "project": "leomusic2",
+    "batch": "A001",
+    "title": "일어나",
+    "genre_design": "Gospel A Cappella",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10550,
+    "project": "leomusic2",
+    "batch": "A001",
+    "title": "그때 그 골목",
+    "genre_design": "Barbershop Quartet",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10551,
+    "project": "leomusic2",
+    "batch": "A001",
+    "title": "너밖에 없는걸",
+    "genre_design": "Doo-wop A Cappella",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10554,
+    "project": "leomusic2",
+    "batch": "A001",
+    "title": "숨이 차도 뛰어",
+    "genre_design": "Beatbox-Driven A Cappella",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10556,
+    "project": "leomusic2",
+    "batch": "A001",
+    "title": "함께 가자",
+    "genre_design": "Afro Vocal A Cappella",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10560,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "골짜기 건너 너를 불러",
+    "genre_design": "Bulgarian Women's Choir",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10561,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "잔을 들어 다 같이",
+    "genre_design": "Georgian Polyphony",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10562,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "오래 남는 자리",
+    "genre_design": "Corsican Paghjella",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10563,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "원을 그리며 도는 노래",
+    "genre_design": "Sardinian Cantu a Tenore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10564,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "초원 한가운데 바람",
+    "genre_design": "Tuvan Throat Singing",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10565,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "숨을 주고받아",
+    "genre_design": "Inuit Katajjaq",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10566,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "벤치가 울리게",
+    "genre_design": "Sacred Harp Shape-Note",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10567,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "촛불 회랑에 빛이 스며",
+    "genre_design": "Gregorian / Byzantine Chant",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10568,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "먼 길 돌아 어서 와",
+    "genre_design": "Māori Waiata",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10569,
+    "project": "leomusic2",
+    "batch": "A003",
+    "title": "저 바다 건너",
+    "genre_design": "Klapa",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10580,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "아직, 손끝만 내밀고",
+    "genre_design": "Hushed Solo A Cappella",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10581,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "닿았어, 손끝 하나에",
+    "genre_design": "Bright Interlocking Close-Harmony",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10582,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "이 손 안에 다 있어",
+    "genre_design": "Homophonic Warm Bloom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10583,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "자꾸 미끄러지는 손",
+    "genre_design": "Dissonant Cluster Tension",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10584,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "놓친 자리, 빈 손",
+    "genre_design": "Thinning Lead-Alone A Cappella",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10585,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "주머니 속에 괜찮다고",
+    "genre_design": "Monotone Chant Drone",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10586,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "두 손에 얼굴을 묻고",
+    "genre_design": "Raw Solo Lament",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10587,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "어깨에 얹힌 손 하나",
+    "genre_design": "Gentle Re-Harmonization",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10588,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "다시 내미는 손",
+    "genre_design": "Building Layered Vocal March",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10589,
+    "project": "leomusic2",
+    "batch": "A004",
+    "title": "나에게 펴는 두 손",
+    "genre_design": "Full Choir Resolve",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10640,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "아직, 그림자도 없이",
+    "genre_design": "Nocturne Drone Chant",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10641,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "풀린다, 잿빛 그림자",
+    "genre_design": "Slowly Opening Cluster Bloom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10642,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "떠오른다, 첫 그림자",
+    "genre_design": "Sunrise Overtone Bloom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10643,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "그림자도 나도, 걷는다",
+    "genre_design": "Bright Polyrhythmic Body-Percussion",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10644,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "발밑엔, 그림자가 없다",
+    "genre_design": "Pure Unison Clarity",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10645,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "그림자, 흐물흐물 녹아",
+    "genre_design": "Lazy Glissando Haze",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10646,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "그림자가 물든다",
+    "genre_design": "Shifting Modal Color-Wash",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10647,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "창문마다, 그림자가 켜진다",
+    "genre_design": "Urban Close-Harmony Groove",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10648,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "그림자, 빛 속으로 녹는다",
+    "genre_design": "Wide Open Night Pad",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10649,
+    "project": "leomusic2",
+    "batch": "A005",
+    "title": "다시, 그림자도 없이",
+    "genre_design": "Circling Return Drone",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10700,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "얼씨구, 소리판을 여네",
+    "genre_design": "Pansori-Inspired Narrative Chant",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10701,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "어히야, 저무는 논둑길",
+    "genre_design": "Yukjabaegi-Style Lament Melisma",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10702,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "강강술래, 도는 달밤",
+    "genre_design": "Ganggangsullae Circle Call-and-Response",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10703,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "어야디야, 새벽 바다",
+    "genre_design": "Baechigi-Style Boatman's Work Chant",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10704,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "어허넘차, 산길을 넘어",
+    "genre_design": "Sangyeosori-Style Funeral Bearer's Dirge",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10705,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "돌아보소, 이내 마음",
+    "genre_design": "Hoesimgok-Inspired Devotional Solo",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10706,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "유수는 청산을",
+    "genre_design": "Jeongga-Style Refined Court Vocal",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10707,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "아리아리랑, 주막 마당",
+    "genre_design": "Jindo Arirang-Style Playful Round",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10708,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "천지신명이여, 오소서",
+    "genre_design": "Muga-Inspired Shamanic Ritual Chant",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10709,
+    "project": "leomusic2",
+    "batch": "A006",
+    "title": "얼럴럴 상사디야, 뙤약볕 논",
+    "genre_design": "Nonmaegi-sori-Style Rice-Field Work Call",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10610,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "얼음이 숨을 참는다",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10611,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "방패이자 감옥",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10612,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "뭐라 불렀지",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10613,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "밀가루뿐",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10614,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "단단한 빈손",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10615,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "핏빛 여명",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10616,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "형제이자 원수",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10617,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "다 가져가라",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10618,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "이름 하나 되찾았어",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10619,
+    "project": "leomusic2",
+    "batch": "COMM_MUSHINGWIHWAN",
+    "title": "달그락 수저",
+    "genre_design": "Korean Cinematic Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10208,
+    "project": "leomusic2",
+    "batch": "I002",
+    "title": "Before the Storm",
+    "genre_design": "Trailer Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10210,
+    "project": "leomusic2",
+    "batch": "I002",
+    "title": "Bright Start",
+    "genre_design": "Corporate Upbeat",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10211,
+    "project": "leomusic2",
+    "batch": "I002",
+    "title": "Soft Focus",
+    "genre_design": "Corporate Calm",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10304,
+    "project": "leomusic2",
+    "batch": "I012",
+    "title": "Alley Compás",
+    "genre_design": "Flamenco Nuevo",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10305,
+    "project": "leomusic2",
+    "batch": "I012",
+    "title": "Slack Tide",
+    "genre_design": "Hawaiian Slack-Key Guitar",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10306,
+    "project": "leomusic2",
+    "batch": "I012",
+    "title": "Kora Circle",
+    "genre_design": "West African Kora",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10307,
+    "project": "leomusic2",
+    "batch": "I012",
+    "title": "Pub Reel",
+    "genre_design": "Irish Fiddle",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10309,
+    "project": "leomusic2",
+    "batch": "I012",
+    "title": "Backyard Zydeco",
+    "genre_design": "Cajun Zydeco",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10310,
+    "project": "leomusic2",
+    "batch": "I012",
+    "title": "Santoor Fountain",
+    "genre_design": "Persian Santoor",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10312,
+    "project": "leomusic2",
+    "batch": "I012",
+    "title": "Ney Breath",
+    "genre_design": "Turkish Ney",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10313,
+    "project": "leomusic2",
+    "batch": "I012",
+    "title": "Porch Dulcimer",
+    "genre_design": "Appalachian Dulcimer",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10314,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Salon Mirror",
+    "genre_design": "Baroque Harpsichord",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10315,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Una Corda",
+    "genre_design": "Romantic Piano Nocturne",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10316,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Quintet Light",
+    "genre_design": "Wind Quintet",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10317,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Rain Chord",
+    "genre_design": "Film Noir Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10318,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Barre to Grand",
+    "genre_design": "Modern Ballet Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10319,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Lobby Fanfare",
+    "genre_design": "Brass Quintet",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10320,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Caprice Edge",
+    "genre_design": "Solo Violin Caprice",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10321,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Pond Hours",
+    "genre_design": "Impressionist Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10322,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Nave Pillar",
+    "genre_design": "Church Organ",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10323,
+    "project": "leomusic2",
+    "batch": "I013",
+    "title": "Duo Breath",
+    "genre_design": "Cello Piano Duo",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10324,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "First Haze",
+    "genre_design": "Sci-Fi Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10325,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Noon Draw",
+    "genre_design": "Western Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10326,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Canopy Hours",
+    "genre_design": "Nature Documentary Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10327,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Fog Charge",
+    "genre_design": "War Film Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10328,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Two Cups",
+    "genre_design": "Romantic Comedy Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10329,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Cloud Prow",
+    "genre_design": "Steampunk Adventure Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10330,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Neon Memory",
+    "genre_design": "Cyberpunk Noir Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10331,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Moonlit Path",
+    "genre_design": "Fairy Tale Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10332,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Starting Line",
+    "genre_design": "Sports Anthem Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10333,
+    "project": "leomusic2",
+    "batch": "I014",
+    "title": "Trench Light",
+    "genre_design": "Underwater Score",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10336,
+    "project": "leomusic2",
+    "batch": "I015",
+    "title": "Ten Second Count",
+    "genre_design": "Hardstyle",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10338,
+    "project": "leomusic2",
+    "batch": "I015",
+    "title": "Neon Rainbow",
+    "genre_design": "Melodic Dubstep",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10339,
+    "project": "leomusic2",
+    "batch": "I015",
+    "title": "Sunday Shuffle",
+    "genre_design": "UK Garage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10342,
+    "project": "leomusic2",
+    "batch": "I015",
+    "title": "Modular Dawn",
+    "genre_design": "Berlin School Electronic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10343,
+    "project": "leomusic2",
+    "batch": "I015",
+    "title": "Float Trance",
+    "genre_design": "Binaural Meditation",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10344,
+    "project": "leomusic2",
+    "batch": "I016",
+    "title": "Paper Parasol",
+    "genre_design": "Exotica",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10345,
+    "project": "leomusic2",
+    "batch": "I016",
+    "title": "Brass Hour",
+    "genre_design": "Hammond Lounge",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10347,
+    "project": "leomusic2",
+    "batch": "I016",
+    "title": "Snake Pit",
+    "genre_design": "Motown Instrumental",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10350,
+    "project": "leomusic2",
+    "batch": "I016",
+    "title": "Cue Card",
+    "genre_design": "Library Music 70s",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10352,
+    "project": "leomusic2",
+    "batch": "I016",
+    "title": "High Noon Dust",
+    "genre_design": "Spaghetti Western",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10353,
+    "project": "leomusic2",
+    "batch": "I016",
+    "title": "Reel Flicker",
+    "genre_design": "Silent Film Piano Ragtime",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10354,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Encounter Circle",
+    "genre_design": "JRPG Battle Theme",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10355,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Fountain Square",
+    "genre_design": "JRPG Town Theme",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10357,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Frost Vault",
+    "genre_design": "Metroidvania Exploration",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10358,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Tenth Floor",
+    "genre_design": "Roguelike Dungeon Crawl",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10359,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Green Hill Run",
+    "genre_design": "Retro Platformer 16-bit",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10360,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Last Straight",
+    "genre_design": "Racing Arcade",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10361,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Between Moves",
+    "genre_design": "Indie Puzzle Calm",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10362,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Server Corridor",
+    "genre_design": "Stealth Infiltration",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10363,
+    "project": "leomusic2",
+    "batch": "I017",
+    "title": "Final Credits",
+    "genre_design": "Victory Fanfare Ending Credits",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10364,
+    "project": "leomusic2",
+    "batch": "I018",
+    "title": "Moonlit Mobile",
+    "genre_design": "Baby Sleep Lullaby",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10365,
+    "project": "leomusic2",
+    "batch": "I018",
+    "title": "Block Sunlight",
+    "genre_design": "Baby Playtime Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10366,
+    "project": "leomusic2",
+    "batch": "I018",
+    "title": "First Light",
+    "genre_design": "Gentle Morning Wake",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10367,
+    "project": "leomusic2",
+    "batch": "I018",
+    "title": "Long Inhale",
+    "genre_design": "Yoga Flow Meditative",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10368,
+    "project": "leomusic2",
+    "batch": "I018",
+    "title": "Rainy Pages",
+    "genre_design": "Acoustic Reading Cafe",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10370,
+    "project": "leomusic2",
+    "batch": "I018",
+    "title": "Candle Glass",
+    "genre_design": "Evening Wine Piano Cello",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10465,
+    "project": "leomusic2",
+    "batch": "I019",
+    "title": "Rooftop Sprint",
+    "genre_design": "Trailer Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10468,
+    "project": "leomusic2",
+    "batch": "I019",
+    "title": "Arrival Gate",
+    "genre_design": "K-Drama OST",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10471,
+    "project": "leomusic2",
+    "batch": "I019",
+    "title": "Ridge Banner",
+    "genre_design": "Trailer Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10473,
+    "project": "leomusic2",
+    "batch": "I019",
+    "title": "After Credits",
+    "genre_design": "New Age Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20052,
+    "project": "leomusic2",
+    "batch": "I020",
+    "title": "Wide Curtain",
+    "genre_design": "New Age Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20055,
+    "project": "leomusic2",
+    "batch": "I020",
+    "title": "Pale Dawn",
+    "genre_design": "New Age Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20056,
+    "project": "leomusic2",
+    "batch": "I021",
+    "title": "Pillow Drift",
+    "genre_design": "New Age Piano",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20057,
+    "project": "leomusic2",
+    "batch": "I021",
+    "title": "Moonbox Lullaby",
+    "genre_design": "New Age Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20060,
+    "project": "leomusic2",
+    "batch": "I021",
+    "title": "Soft Awake",
+    "genre_design": "New Age Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20086,
+    "project": "leomusic2",
+    "batch": "I024",
+    "title": "Missed Call",
+    "genre_design": "K-Drama OST",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20087,
+    "project": "leomusic2",
+    "batch": "I024",
+    "title": "Window Seat",
+    "genre_design": "K-Drama OST",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20088,
+    "project": "leomusic2",
+    "batch": "I024",
+    "title": "Long Corridor",
+    "genre_design": "K-Drama OST",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20089,
+    "project": "leomusic2",
+    "batch": "I024",
+    "title": "Rain Resolve",
+    "genre_design": "K-Drama OST",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20090,
+    "project": "leomusic2",
+    "batch": "I024",
+    "title": "Lamp Forgiveness",
+    "genre_design": "K-Drama OST",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20091,
+    "project": "leomusic2",
+    "batch": "I025",
+    "title": "Ember Rising",
+    "genre_design": "Trailer Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20092,
+    "project": "leomusic2",
+    "batch": "I025",
+    "title": "Horn Call",
+    "genre_design": "Trailer Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20093,
+    "project": "leomusic2",
+    "batch": "I025",
+    "title": "First Drop",
+    "genre_design": "Trailer Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20094,
+    "project": "leomusic2",
+    "batch": "I025",
+    "title": "Siege Lift",
+    "genre_design": "Trailer Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20095,
+    "project": "leomusic2",
+    "batch": "I025",
+    "title": "Heroes Coda",
+    "genre_design": "Trailer Epic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10539,
+    "project": "leomusic2",
+    "batch": "I027",
+    "title": "Guardrail Pulse",
+    "genre_design": "Phonk",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10540,
+    "project": "leomusic2",
+    "batch": "I027",
+    "title": "Mist Bell Cycle",
+    "genre_design": "Gamelan",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10541,
+    "project": "leomusic2",
+    "batch": "I027",
+    "title": "Salt Alley Lament",
+    "genre_design": "Fado",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10542,
+    "project": "leomusic2",
+    "batch": "I027",
+    "title": "Fountain Fanfare",
+    "genre_design": "Mariachi",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10543,
+    "project": "leomusic2",
+    "batch": "I027",
+    "title": "Golden Field Stomp",
+    "genre_design": "Bhangra",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10544,
+    "project": "leomusic2",
+    "batch": "I027",
+    "title": "Horizon Gallop",
+    "genre_design": "Mongolian Steppe",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10546,
+    "project": "leomusic2",
+    "batch": "I027",
+    "title": "Harbor Smoke Taxim",
+    "genre_design": "Rebetiko",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10574,
+    "project": "leomusic2",
+    "batch": "I028",
+    "title": "미끄러지는 빗방울",
+    "genre_design": "Minimalism",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10631,
+    "project": "leomusic2",
+    "batch": "I029",
+    "title": "Second Floor, Closed",
+    "genre_design": "Vaporwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10632,
+    "project": "leomusic2",
+    "batch": "I029",
+    "title": "Sublevel Chase",
+    "genre_design": "Darksynth",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10633,
+    "project": "leomusic2",
+    "batch": "I029",
+    "title": "Rosewater Coastline",
+    "genre_design": "Dreamwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10636,
+    "project": "leomusic2",
+    "batch": "I029",
+    "title": "Silent Array",
+    "genre_design": "Sovietwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10681,
+    "project": "leomusic2",
+    "batch": "I030",
+    "title": "Before the Words",
+    "genre_design": "K-Drama OST",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10682,
+    "project": "leomusic2",
+    "batch": "I030",
+    "title": "Morning Launch",
+    "genre_design": "Corporate Upbeat",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10683,
+    "project": "leomusic2",
+    "batch": "I030",
+    "title": "The Quiet Room",
+    "genre_design": "Corporate Calm",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10684,
+    "project": "leomusic2",
+    "batch": "I030",
+    "title": "Recital, Age Seven",
+    "genre_design": "New Age Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10686,
+    "project": "leomusic2",
+    "batch": "I030",
+    "title": "Arrivals Gate",
+    "genre_design": "K-Drama OST",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10688,
+    "project": "leomusic2",
+    "batch": "I030",
+    "title": "Snowbound Waltz",
+    "genre_design": "Romantic Piano Nocturne",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10068,
+    "project": "leomusic2",
+    "batch": "K007",
+    "title": "파이팅 한 곡",
+    "genre_design": "Punk",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10100,
+    "project": "leomusic2",
+    "batch": "K010",
+    "title": "마르는 중",
+    "genre_design": "Chillwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10126,
+    "project": "leomusic2",
+    "batch": "K013",
+    "title": "다음 곡",
+    "genre_design": "Punk",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10170,
+    "project": "leomusic2",
+    "batch": "K017",
+    "title": "첫 새소리",
+    "genre_design": "Singer-Songwriter",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10190,
+    "project": "leomusic2",
+    "batch": "K019",
+    "title": "보글보글",
+    "genre_design": "Singer-Songwriter",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20139,
+    "project": "leomusic2",
+    "batch": "K030",
+    "title": "물결 오후",
+    "genre_design": "Chillwave",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20166,
+    "project": "leomusic2",
+    "batch": "K033",
+    "title": "마디",
+    "genre_design": "Singer-Songwriter",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20216,
+    "project": "leomusic2",
+    "batch": "K038",
+    "title": "흙 묻은 손",
+    "genre_design": "Singer-Songwriter",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10507,
+    "project": "leomusic2",
+    "batch": "K040",
+    "title": "지우며 산다",
+    "genre_design": "Singer-Songwriter",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10594,
+    "project": "leomusic2",
+    "batch": "K044",
+    "title": "아직 그 번호야",
+    "genre_design": "Quiet Storm",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10595,
+    "project": "leomusic2",
+    "batch": "K044",
+    "title": "내 건데 몰라",
+    "genre_design": "Trip-Hop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10602,
+    "project": "leomusic2",
+    "batch": "K045",
+    "title": "우리만 아는 봄",
+    "genre_design": "Fingerstyle Acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10605,
+    "project": "leomusic2",
+    "batch": "K045",
+    "title": "웃으며 우는",
+    "genre_design": "Unplugged Piano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10608,
+    "project": "leomusic2",
+    "batch": "K045",
+    "title": "번거로운데 좋아",
+    "genre_design": "Americana",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10651,
+    "project": "leomusic2",
+    "batch": "K046",
+    "title": "그 칸 하나만은",
+    "genre_design": "Slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10655,
+    "project": "leomusic2",
+    "batch": "K046",
+    "title": "그 역, 안내방송",
+    "genre_design": "Midwest Emo",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10659,
+    "project": "leomusic2",
+    "batch": "K046",
+    "title": "18%, 간다",
+    "genre_design": "Grunge",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10661,
+    "project": "leomusic2",
+    "batch": "K047",
+    "title": "삐빅, 삼십 초만 더",
+    "genre_design": "Jersey Club",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10662,
+    "project": "leomusic2",
+    "batch": "K047",
+    "title": "연결 안 됨, 그 골목",
+    "genre_design": "Phonk (Drift)",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 10668,
+    "project": "leomusic2",
+    "batch": "K047",
+    "title": "숫자 하나가 정해",
+    "genre_design": "Digicore / Glitchcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20291,
+    "project": "leomusic2",
+    "batch": "T007",
+    "title": "새벽 페달",
+    "genre_design": "Reggae",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20293,
+    "project": "leomusic2",
+    "batch": "T007",
+    "title": "같은 골목 다른 표정",
+    "genre_design": "Afrobeat",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20296,
+    "project": "leomusic2",
+    "batch": "T007",
+    "title": "단 하루",
+    "genre_design": "Ska",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20298,
+    "project": "leomusic2",
+    "batch": "T007",
+    "title": "같은 어둠",
+    "genre_design": "World",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20307,
+    "project": "leomusic2",
+    "batch": "T008",
+    "title": "Weekday Off",
+    "genre_design": "Reggae",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20308,
+    "project": "leomusic2",
+    "batch": "T008",
+    "title": "9시 카페",
+    "genre_design": "Afrobeat",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20309,
+    "project": "leomusic2",
+    "batch": "T008",
+    "title": "새벽 두 시 한 곡",
+    "genre_design": "Ska",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20310,
+    "project": "leomusic2",
+    "batch": "T008",
+    "title": "같은 종소리",
+    "genre_design": "World",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20061,
+    "project": "leomusic2",
+    "batch": "Y007",
+    "title": "달그림자 동무",
+    "genre_design": "Traditional Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20062,
+    "project": "leomusic2",
+    "batch": "Y007",
+    "title": "그 길 그대로",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20063,
+    "project": "leomusic2",
+    "batch": "Y007",
+    "title": "내 사람",
+    "genre_design": "K-Pop Korean Trot",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20064,
+    "project": "leomusic2",
+    "batch": "Y007",
+    "title": "고향 정거장 벤치",
+    "genre_design": "Korean Trot Ballad",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20065,
+    "project": "leomusic2",
+    "batch": "Y007",
+    "title": "안녕이라는 말",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20096,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "어머니 빗",
+    "genre_design": "Traditional Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20097,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "선풍기",
+    "genre_design": "Traditional Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20098,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "세 걸음",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20099,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "감나무 아래",
+    "genre_design": "Traditional Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20100,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "이름 모르는 정",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20101,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "안녕 이 집아",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20102,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "합격이야",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20103,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "끝나지 마",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20104,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "새벽 세 시",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20105,
+    "project": "leomusic2",
+    "batch": "Y009",
+    "title": "파란 타일",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20106,
+    "project": "leomusic2",
+    "batch": "Y010",
+    "title": "합격이야 (Chamber Trot)",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20107,
+    "project": "leomusic2",
+    "batch": "Y010",
+    "title": "합격이야 (Jazz Trot)",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20108,
+    "project": "leomusic2",
+    "batch": "Y010",
+    "title": "합격이야 (Cinematic Trot)",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20109,
+    "project": "leomusic2",
+    "batch": "Y010",
+    "title": "합격이야 (Latin Trot)",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20110,
+    "project": "leomusic2",
+    "batch": "Y010",
+    "title": "합격이야 (Celtic Trot)",
+    "genre_design": "Traditional Korean Trot",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20221,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "삼십 년",
+    "genre_design": "Modern Korean Trot",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20222,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "멈춘 시계",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20223,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "다 일어났네",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20224,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "빈 그릇",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20225,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "오데서 왔노",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20226,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "고향 한 평",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20227,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "도착 30분",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20228,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "좋아요 하나",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20229,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "흰 가닥",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20230,
+    "project": "leomusic2",
+    "batch": "Y011",
+    "title": "저녁 짓고 있다",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20231,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "옆자리",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20232,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "검은 코트",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20233,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "잡은 손",
+    "genre_design": "Disco Trot",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20234,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "마지막 접시",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20235,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "회색 우산",
+    "genre_design": "Ballad Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20236,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "라면 두 봉지",
+    "genre_design": "Ballad Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20237,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "쉰셋의 화요일",
+    "genre_design": "Latin Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20238,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "새 사람",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20239,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "일곱 번",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20240,
+    "project": "leomusic2",
+    "batch": "Y012",
+    "title": "삼십 초",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20241,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "다섯 평",
+    "genre_design": "Modern Korean Trot",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20242,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "첫 수확",
+    "genre_design": "Modern Korean Trot",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20243,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "다시 일어선 자리",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20244,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "백만의 새벽",
+    "genre_design": "Disco Trot",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20245,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "다 팔린 화요일",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20246,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "육 년의 두 손",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20247,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "열한 번 만의",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20248,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "흰 운동화",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20249,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "백만의 그래프",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20250,
+    "project": "leomusic2",
+    "batch": "Y013",
+    "title": "너 써",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20251,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "쌍화차 두 잔",
+    "genre_design": "Jazz Trot",
+    "takes": 1,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20252,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "한 줄 주소",
+    "genre_design": "Jazz Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20253,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "십삼 년 친구",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20254,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "돈은 잊어",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20255,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "일곱 캔",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20256,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "떡국 한 그릇",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20257,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "양초 다섯 개",
+    "genre_design": "Latin Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20258,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "윙크 하나",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20259,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "어깨를 빌려요",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20260,
+    "project": "leomusic2",
+    "batch": "Y014",
+    "title": "셋의 브이",
+    "genre_design": "Latin Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20261,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "입춘 새벽",
+    "genre_design": "Traditional Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20262,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "송편 다섯 알",
+    "genre_design": "Jazz Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20263,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "팥죽 두 그릇",
+    "genre_design": "Trot Ballad",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20264,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "마지막 막차",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20265,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "영산홍",
+    "genre_design": "Disco Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20266,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "룸 십삼 호",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20267,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "단오 그네",
+    "genre_design": "Modern Korean Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20268,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "한 뼘 거리",
+    "genre_design": "K-Pop Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20269,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "평상 아래",
+    "genre_design": "Latin Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20270,
+    "project": "leomusic2",
+    "batch": "Y015",
+    "title": "사계 한 바퀴",
+    "genre_design": "Dance Trot",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70125,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "떨리는 잔향",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70126,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "유리창의 잔향",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70127,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "마지막 소절이 식어갈 때",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70128,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "세 마디의 잔향",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70129,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "파란 불꽃의 유언",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70130,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "현은 그대로 두었다",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70131,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "정적의 온기",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70132,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "골짜기의 대답",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70133,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "세 음절, 녹슨 철로",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70134,
+    "project": "leomusic3",
+    "batch": "AWARE02",
+    "title": "닫힌 문의 숨결",
+    "genre_design": "kr_acoustic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70042,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "First Light Brew",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70043,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Still Water",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70044,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Amber Table",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70045,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Gilded Sill",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70046,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Plain Sight Gold",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70047,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Amber & Stone",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70048,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Still Bends South",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70049,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Dustfall",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70050,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Corner Candle",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70051,
+    "project": "leomusic3",
+    "batch": "E3001",
+    "title": "Cedar Light",
+    "genre_design": "en_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70078,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "凍える一歩目",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70079,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "生存の合図",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70080,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "いかだの約束",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70081,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "野次を割る足音",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70082,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "折れぬ名前",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70083,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "白息軌道",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70084,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "痛みが証明",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70085,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "夜明けを呼ぶ声",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70086,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "光速のタイムリミット",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70087,
+    "project": "leomusic3",
+    "batch": "J3002",
+    "title": "瓦礫の合唱",
+    "genre_design": "jp_anison",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70011,
+    "project": "leomusic3",
+    "batch": "K3002",
+    "title": "식은 라면",
+    "genre_design": "kr_neotrot_hyperpop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70012,
+    "project": "leomusic3",
+    "batch": "K3002",
+    "title": "폐허의 왕관",
+    "genre_design": "kr_neotrot_hyperpop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70013,
+    "project": "leomusic3",
+    "batch": "K3002",
+    "title": "쑥내음 야야야",
+    "genre_design": "kr_neotrot_hyperpop",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70014,
+    "project": "leomusic3",
+    "batch": "K3003",
+    "title": "황혼 두레박",
+    "genre_design": "kr_minyo_amapiano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70015,
+    "project": "leomusic3",
+    "batch": "K3003",
+    "title": "강변에 쏟아져라",
+    "genre_design": "kr_minyo_amapiano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70016,
+    "project": "leomusic3",
+    "batch": "K3003",
+    "title": "침묵 끝에 너",
+    "genre_design": "kr_minyo_amapiano",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70018,
+    "project": "leomusic3",
+    "batch": "K3005",
+    "title": "流灯问月",
+    "genre_design": "cn_gufeng_futurebass",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70019,
+    "project": "leomusic3",
+    "batch": "K3005",
+    "title": "风暴之巅",
+    "genre_design": "cn_gufeng_futurebass",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70020,
+    "project": "leomusic3",
+    "batch": "K3005",
+    "title": "灰烬星河",
+    "genre_design": "cn_gufeng_futurebass",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70021,
+    "project": "leomusic3",
+    "batch": "K3006",
+    "title": "마이다스 챔피언",
+    "genre_design": "kr_brass_cheer_anthem",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70022,
+    "project": "leomusic3",
+    "batch": "K3007",
+    "title": "窗痕",
+    "genre_design": "cn_shuimo_lofi",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70023,
+    "project": "leomusic3",
+    "batch": "K3007",
+    "title": "墨未寄",
+    "genre_design": "cn_shuimo_lofi",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70024,
+    "project": "leomusic3",
+    "batch": "K3007",
+    "title": "雾市",
+    "genre_design": "cn_shuimo_lofi",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70025,
+    "project": "leomusic3",
+    "batch": "K3008",
+    "title": "灯火围城夜",
+    "genre_design": "cn_xiqiang_dnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70026,
+    "project": "leomusic3",
+    "batch": "K3008",
+    "title": "山灵坠",
+    "genre_design": "cn_xiqiang_dnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70027,
+    "project": "leomusic3",
+    "batch": "K3008",
+    "title": "烈火追千里",
+    "genre_design": "cn_xiqiang_dnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70028,
+    "project": "leomusic3",
+    "batch": "K3009",
+    "title": "街头王座",
+    "genre_design": "cn_suona_trap",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70029,
+    "project": "leomusic3",
+    "batch": "K3009",
+    "title": "血脉封神",
+    "genre_design": "cn_suona_trap",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70030,
+    "project": "leomusic3",
+    "batch": "K3009",
+    "title": "黄土债",
+    "genre_design": "cn_suona_trap",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70037,
+    "project": "leomusic3",
+    "batch": "K3012",
+    "title": "Solevāri",
+    "genre_design": "vox_cinematic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70038,
+    "project": "leomusic3",
+    "batch": "K3012",
+    "title": "Veltrohm",
+    "genre_design": "vox_cinematic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70039,
+    "project": "leomusic3",
+    "batch": "K3012",
+    "title": "Sorevahl",
+    "genre_design": "vox_cinematic",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70040,
+    "project": "leomusic3",
+    "batch": "K3013",
+    "title": "첫 스윙에 반했어",
+    "genre_design": "kr_dance_tiktok",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70041,
+    "project": "leomusic3",
+    "batch": "K3013",
+    "title": "홀인원",
+    "genre_design": "kr_dance_tiktok",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70068,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "새벽 어물전 얼씨구",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70069,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "환불청구서",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70070,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "마지막 패",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70071,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "할매 목소리",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70072,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "틈으로 새는 사분",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70073,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "골목 한판 승부",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70074,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "판결의 소리굿",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70075,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "삼경편의점",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70076,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "무릎으로 쓰는 승부",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70077,
+    "project": "leomusic3",
+    "batch": "K3014",
+    "title": "실이 우는 날",
+    "genre_design": "kr_pansori_ukgarage",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70088,
+    "project": "leomusic3",
+    "batch": "K3015",
+    "title": "눈웃음 한 잔",
+    "genre_design": "kr_trot_reggaeton",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70089,
+    "project": "leomusic3",
+    "batch": "K3015",
+    "title": "번지는 불빛 아래",
+    "genre_design": "kr_trot_reggaeton",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70090,
+    "project": "leomusic3",
+    "batch": "K3015",
+    "title": "유리 위의 스텝",
+    "genre_design": "kr_trot_reggaeton",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70091,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "유리문 저편",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70092,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "하늘 위 관아",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70093,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "포스트잇 랠리",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70094,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "숫자보다 빠른 심장",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70095,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "같은 피, 다른 자리",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70096,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "남은 시간표",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70097,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "아니라는 거짓말",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70098,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "문밖의 발소리",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70099,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "안개 속의 가마",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70100,
+    "project": "leomusic3",
+    "batch": "K3016",
+    "title": "한 줄이 되는 밤",
+    "genre_design": "kr_ost_romcom",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70101,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "얼음이 기억하는 신음",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70102,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "손끝의 옛 무게",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70103,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "입술이 먼저 불렀다",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70104,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "밥상을 바로잡는 손",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70105,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "맨손의 밤",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70106,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "핏빛 천군의 발걸음",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70107,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "한 자루였던 검",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70108,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "올올이 새하얀 밤",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70109,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "곡성 대신 걸어온 아비",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70110,
+    "project": "leomusic3",
+    "batch": "K3017",
+    "title": "손끝이 머무는 저녁",
+    "genre_design": "kr_wuxia_ost",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70111,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "누르지 못한 발신",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70112,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "우산 밑 심장",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70113,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "지문이 마르기 전에",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70114,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "지우는 연습",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70115,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "반으로 접은 하루",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70116,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "미소의 뒷면",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70117,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "식지 않는 계절",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70118,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "재킷 한 장의 온기",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70119,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "새벽은 아직",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70120,
+    "project": "leomusic3",
+    "batch": "K3018",
+    "title": "혼자 부르는 자장가",
+    "genre_design": "kr_rnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70121,
+    "project": "leomusic3",
+    "batch": "K3019",
+    "title": "파랗게 앓는 새벽",
+    "genre_design": "kr_pluggnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70122,
+    "project": "leomusic3",
+    "batch": "K3019",
+    "title": "조수석의 거리",
+    "genre_design": "kr_pluggnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70123,
+    "project": "leomusic3",
+    "batch": "K3019",
+    "title": "빈 방에 남은 울림",
+    "genre_design": "kr_pluggnb",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70135,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "기대는 각도",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70136,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "너 오면 앉으라고",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70137,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "누르면 놓일까 봐",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70138,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "건너편 승강장",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70139,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "십칠에서 멈춘 밤",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70140,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "탈수 없는 밤",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70141,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "떨리는 손끝",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70142,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "이름만 나눈 뿌리",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70143,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "취소함",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 70144,
+    "project": "leomusic3",
+    "batch": "K3020",
+    "title": "삼켜진 이름",
+    "genre_design": "kr_slowcore",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 90003,
+    "project": "special",
+    "batch": "BRIDE01",
+    "title": "한여름의 신부 (A Midsummer Bride)",
+    "genre_design": "첼로4중주 무가사",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 90001,
+    "project": "special",
+    "batch": "GEO01",
+    "title": "지오 세레나데",
+    "genre_design": "현악4중주 무가사",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 30202,
+    "project": "sunolanguage",
+    "batch": "AWARE05",
+    "title": "들릴 때만 산다",
+    "genre_design": "Gospel",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 30204,
+    "project": "sunolanguage",
+    "batch": "AWARE05",
+    "title": "그 짧은 순간이 전 생애다",
+    "genre_design": "Flamenco",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 30207,
+    "project": "sunolanguage",
+    "batch": "AWARE05",
+    "title": "발을 굴러 손을 쳐",
+    "genre_design": "Afrobeat",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20366,
+    "project": "sunolanguage",
+    "batch": "N005",
+    "title": "해두자",
+    "genre_design": "ACOUSTIC",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20372,
+    "project": "sunolanguage",
+    "batch": "N006",
+    "title": "직전",
+    "genre_design": "ACOUSTIC",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20380,
+    "project": "sunolanguage",
+    "batch": "N006",
+    "title": "아무것도 무엇인가",
+    "genre_design": "RNB",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20391,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "빈 잔 하나",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20392,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "등대 아래",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20393,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "달라진 우리",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20394,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "같은 곳을 봐요",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20395,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "따뜻한 한 그릇",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20396,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "한 잔 더",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20397,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "오늘 밤 다 태워",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20398,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "컵 위에 번호",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20399,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "손 놓지 마",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20400,
+    "project": "yoonnest",
+    "batch": "Y017",
+    "title": "드디어 너야",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20401,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "새벽 좌판",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20402,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "터뜨려",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20403,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "묻어 둘게요",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20404,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "오십 년",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20405,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "버텼잖아",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20406,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "이 소리가 우리야",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20407,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "늦어도 시작이야",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20408,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "정이 한 발",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20409,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "어른이 된다는 게",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20410,
+    "project": "yoonnest",
+    "batch": "Y018",
+    "title": "또 달려가",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20411,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "둥기둥기 좋다",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20412,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "정든 자리",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20413,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "잘 가라 내 편지야",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20414,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "옛 별명을 불러 봐",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20415,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "살아 있길 잘했어",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20416,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "이 밤도 가자",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20417,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "떡볶이 한 접시",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20418,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "가자 첫걸음",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20419,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "올해는 진짜야",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20420,
+    "project": "yoonnest",
+    "batch": "Y019",
+    "title": "비야 비야 실컷 와라",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20421,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "뱃고동",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20422,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "이 빛 속에서",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20423,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "건배 오늘 밤",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20424,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "광장에서",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20425,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "다 함께 불러요",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20426,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "멈출 수 없어",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20427,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "우리 길",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20428,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "다시 한 번 왈츠를",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20429,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "젖은 대로",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20430,
+    "project": "yoonnest",
+    "batch": "Y020",
+    "title": "희망을 외쳐",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20431,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "웃고 있어",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20432,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "보낼까 말까",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20433,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "괜찮아 잘 가",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20434,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "게이트 앞에서",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20435,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "필터 너머",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20436,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "여기서 보면",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20437,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "다 나야",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20438,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "멈추지 마",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20439,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "식었어",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20440,
+    "project": "yoonnest",
+    "batch": "Y021",
+    "title": "담담하게",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20441,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "냉이 향",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20442,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "잔칫집 국수",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20443,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "그 여름 냉면",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20444,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "당신 곁",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20445,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "엄마 전 냄새",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20446,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "소주 한잔",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20447,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "붕어빵 하나",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20448,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "삼십 년 뚝배기",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20449,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "자취방 라면",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20450,
+    "project": "yoonnest",
+    "batch": "Y022",
+    "title": "또 한 살",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20451,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "불이 켜지면",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20452,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "분장실 거울",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20453,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "첫 무대",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20454,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "앵콜이야",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20455,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "흔들려도",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20456,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "빗소리 천막",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20457,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "빈 객석",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20458,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "그래도 웃지요",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20459,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "고맙습니다",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20460,
+    "project": "yoonnest",
+    "batch": "Y023",
+    "title": "무대가 내 인생",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20461,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "고향역",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20462,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "삼등칸",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20463,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "타향의 봄",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20464,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "못다한 편지",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20465,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "공장의 불빛",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20466,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "소주 한 잔",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20467,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "먼 그 사람",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20468,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "완행열차",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20469,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "세월이 가면",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   },
+   {
+    "gid": 20470,
+    "project": "yoonnest",
+    "batch": "Y024",
+    "title": "다시, 고향역",
+    "genre_design": "TROT",
+    "takes": 2,
+    "cdn_mp3": true
+   }
+  ]
+ },
+ "★반입_규격": {
+  "경로": "data/reanalysis_v2/incoming/{배치}_reanalysis_{YYYYMMDD}.json",
+  "필드": "gid · suno_uuid(재분석 클립) · suno_sp · suno_lyrics · suno_genre · suno_title",
+  "★입력층_동봉_필수": "`leomusic_sp`/`leomusic_lyrics` — 이걸 비우면 **짝 대조군에서 빠진다**. 종전 BATCH_C 60건이 그렇게 빠졌다(V33X01 반입서 자인).",
+  "병합기": "scripts/merge_batch_reanalysis.py <회신.json> --batch C [--execute]"
+ },
+ "★이_대장이_못_하는_것": [
+  "대장이 **08-03 기준**이라 8월 하순 생산분이 안 들어 있다 — 최신본을 받아야 격차가 확정된다.",
+  "`genre_design`은 **설계 라벨**이지 관측이 아니다. 장르 공백 판정은 설계 기준이고, 렌더 실물과 다를 수 있다.",
+  "입력층(`leomusic_sp`/`leomusic_lyrics`)은 **각 프로듀서 프로젝트**가 갖고 있다 — 우리 손에 없는 것이 다수.",
+  "재분석 0cr은 sunomusic 실측이지 **내가 잰 값이 아니다**. 대량 처리 시 재확인이 필요하다.",
+  "★병목은 크레딧이 아니라 **sunomusic의 앱 작업량**이다. 2,811곡을 한 번에 요청하지 않는다."
+ ],
+ "★T1_요청분(8배치)": {
+  "총곡수": 80,
+  "★고른_이유": "코퍼스 **0곡** 장르를 메우는 것부터 — 판소리·무협OST·롬콤OST·트로트 3변주·불가리아 여성합창·한국 시네마틱 에픽. 프로듀서도 4곳으로 흩었다(leomusic·leomusic2·leomusic3·yoonnest) — 지금 코퍼스는 leomusic 148 + leomusic2 7이 전부다.",
+  "★크기_근거": "8배치 × 10곡 = 80곡. 2,811곡을 한 번에 요청하지 않는다 — 병목은 크레딧(0cr)이 아니라 앱 작업량이다.",
+  "배치": {
+   "K3014": {
+    "프로젝트": "leomusic3",
+    "장르_설계": [
+     "kr_pansori_ukgarage"
+    ],
+    "곡수": 10,
+    "gid": [
+     70068,
+     70069,
+     70070,
+     70071,
+     70072,
+     70073,
+     70074,
+     70075,
+     70076,
+     70077
+    ],
+    "★우리_코퍼스_보유": 0
+   },
+   "K3017": {
+    "프로젝트": "leomusic3",
+    "장르_설계": [
+     "kr_wuxia_ost"
+    ],
+    "곡수": 10,
+    "gid": [
+     70101,
+     70102,
+     70103,
+     70104,
+     70105,
+     70106,
+     70107,
+     70108,
+     70109,
+     70110
+    ],
+    "★우리_코퍼스_보유": 0
+   },
+   "K3016": {
+    "프로젝트": "leomusic3",
+    "장르_설계": [
+     "kr_ost_romcom"
+    ],
+    "곡수": 10,
+    "gid": [
+     70091,
+     70092,
+     70093,
+     70094,
+     70095,
+     70096,
+     70097,
+     70098,
+     70099,
+     70100
+    ],
+    "★우리_코퍼스_보유": 0
+   },
+   "Y021": {
+    "프로젝트": "yoonnest",
+    "장르_설계": [
+     "TROT"
+    ],
+    "곡수": 10,
+    "gid": [
+     20431,
+     20432,
+     20433,
+     20434,
+     20435,
+     20436,
+     20437,
+     20438,
+     20439,
+     20440
+    ],
+    "★우리_코퍼스_보유": 0
+   },
+   "B256": {
+    "프로젝트": "leomusic",
+    "장르_설계": [
+     "Bossa Trot",
+     "City Pop Trot",
+     "Disco Trot",
+     "Funk Trot",
+     "Jazz Trot",
+     "Newtro Synth Trot",
+     "Soul Trot",
+     "Trot Boom Bap",
+     "Trot Rock",
+     "Trot Trap"
+    ],
+    "곡수": 10,
+    "gid": [
+     2399,
+     2400,
+     2401,
+     2402,
+     2403,
+     2404,
+     2405,
+     2406,
+     2407,
+     2408
+    ],
+    "★우리_코퍼스_보유": 0
+   },
+   "B255": {
+    "프로젝트": "leomusic",
+    "장르_설계": [
+     "City Pop Trot",
+     "Disco Trot",
+     "Electro Trot",
+     "Funk Trot",
+     "Latin Trot",
+     "Soul Trot",
+     "Swing Trot",
+     "Trot House",
+     "Trot Rock",
+     "Trot Trap"
+    ],
+    "곡수": 10,
+    "gid": [
+     2389,
+     2390,
+     2391,
+     2392,
+     2393,
+     2394,
+     2395,
+     2396,
+     2397,
+     2398
+    ],
+    "★우리_코퍼스_보유": 0
+   },
+   "A003": {
+    "프로젝트": "leomusic2",
+    "장르_설계": [
+     "Bulgarian Women's Choir",
+     "Corsican Paghjella",
+     "Georgian Polyphony",
+     "Gregorian / Byzantine Chant",
+     "Inuit Katajjaq",
+     "Klapa",
+     "Māori Waiata",
+     "Sacred Harp Shape-Note",
+     "Sardinian Cantu a Tenore",
+     "Tuvan Throat Singing"
+    ],
+    "곡수": 10,
+    "gid": [
+     10560,
+     10561,
+     10562,
+     10563,
+     10564,
+     10565,
+     10566,
+     10567,
+     10568,
+     10569
+    ],
+    "★우리_코퍼스_보유": 0
+   },
+   "COMM_MUSHINGWIHWAN": {
+    "프로젝트": "leomusic2",
+    "장르_설계": [
+     "Korean Cinematic Epic"
+    ],
+    "곡수": 10,
+    "gid": [
+     10610,
+     10611,
+     10612,
+     10613,
+     10614,
+     10615,
+     10616,
+     10617,
+     10618,
+     10619
+    ],
+    "★우리_코퍼스_보유": 0
+   }
+  }
+ }
+}

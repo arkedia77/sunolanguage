@@ -52,6 +52,32 @@ def _schema_version():
     return m.group(0)
 
 
+def _reject_envelope(body, bodyfile):
+    """★body 파일에 봉투 키를 넣으면 body가 이중 중첩된다 — 2026-08-27 실피해 6건.
+
+    발신기는 body 파일을 **본문 그대로** 싣는다(`msg["body"] = body`). 그런데 내가
+    `{"type":..,"priority":..,"body":{..}}` 형태로 넣어서 `body.body.*`가 됐고,
+    받는 쪽이 기대하는 `body.0_한줄` 경로가 통째로 비었다. `type`도 전부 기본값
+    `report`로 나갔다(내가 넣은 `reply`/`request`/`notice`는 안쪽에 묻혔다).
+
+    ★「존재하고, 파싱되고, 내용만 다르다」 계열이라 **발신 성공이 근거가 안 된다.**
+    경고가 아니라 **거부**다 — 경고면 내가 무시한다(A-068 cc 가드와 같은 사상).
+    """
+    if not isinstance(body, dict):
+        return
+    ENV = {"type", "priority", "status", "action_required", "schema_version",
+           "from", "to", "created_at", "subject", "reply_needed"}
+    hit = ENV & set(body)
+    if "body" in body and hit:
+        raise SystemExit(
+            f"\n[send_msg] ❌ 거부 — body 파일이 **봉투 형태**입니다: {bodyfile}\n"
+            f"  발견한 봉투 키: {sorted(hit)} + 'body'\n"
+            "  ★이대로 보내면 `body.body.*`로 이중 중첩되고, 받는 쪽이 보는 `body.0_한줄`은 **빈 값**이 됩니다.\n"
+            "  처리: body 파일에는 **본문만** 넣으십시오(`{\"0_한줄\": ..., \"1_...\": ...}`).\n"
+            "   ⑴`type`/`priority`는 이 발신기가 정합니다(type=report 고정 · priority=P2).\n"
+            "   ⑵회신 요구는 `--reply-needed` 플래그로.\n"
+            "  ★우회 옵션 없습니다.\n")
+
 def send(to, keyword, body, subject, reply_needed=False, priority="P2", msg_type="report"):
     now = datetime.now().astimezone()          # ★단 1회 호출 — 여기서만 시각이 나온다
     stamp = now.strftime("%Y%m%d_%H%M%S")
@@ -81,4 +107,6 @@ if __name__ == "__main__":
         print(__doc__); sys.exit(1)
     to, keyword, bodyfile = a[0], a[1], a[2]
     subject = a[a.index("--subject") + 1] if "--subject" in a else f"[{FROM}→{to}] {keyword}"
-    send(to, keyword, json.load(open(bodyfile)), subject, "--reply-needed" in a)
+    _body = json.load(open(bodyfile))
+    _reject_envelope(_body, bodyfile)
+    send(to, keyword, _body, subject, "--reply-needed" in a)
