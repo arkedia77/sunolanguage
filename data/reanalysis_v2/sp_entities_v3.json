@@ -131742,5 +131742,2087 @@
     "genre": "",
     "source": "sp",
     "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Rock power ballad",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Rock power ballad.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "rhythm",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Clean electric guitar arpeggios in the verses transition to high-gain distorted rhythm guitars in the choruses.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "rhythm",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Clean electric guitar arpeggios in the verses transition to high-gain distorted rhythm guitars in the choruses.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "clean"
+    ],
+    "sentence": "Clean electric guitar arpeggios in the verses transition to high-gain distorted rhythm guitars in the choruses.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "transition to"
+    ],
+    "modifiers": [
+      "clean"
+    ],
+    "instruments_mentioned": [
+      "clean electric guitar",
+      "electric guitar"
+    ],
+    "sentence": "Clean electric guitar arpeggios in the verses transition to high-gain distorted rhythm guitars in the choruses.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "wide"
+    ],
+    "pattern": "wide vibrato and legato phrasing",
+    "effects": [],
+    "chords": [],
+    "sentence": "A melodic electric guitar solo features wide vibrato and legato phrasing.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "crash cymbal",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "prominent",
+      "punchy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The drum kit uses a standard rock setup with prominent crash cymbals and a punchy snare.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "harmonic density in the background",
+    "effects": [],
+    "chords": [
+      "harmonic density"
+    ],
+    "sentence": "A synth pad provides harmonic density in the background.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "harmonic density in the background",
+    "effects": [],
+    "chords": [
+      "harmonic density"
+    ],
+    "sentence": "A synth pad provides harmonic density in the background.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "the kick drum patterns with eighth-note drive",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar follows the kick drum patterns with eighth-note drive.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "bass guitar",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "the kick drum patterns with eighth-note drive",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar follows the kick drum patterns with eighth-note drive.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "drums"
+    ],
+    "modifiers": [],
+    "pattern": "the kick drum patterns with eighth-note drive",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass guitar follows the kick drum patterns with eighth-note drive.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals"
+    ],
+    "modifiers": [
+      "powerful",
+      "occasional"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals range from a breathy baritone in the verses to powerful, belted tenor notes in the choruses with occasional grit.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 72,
+      "key": "e major",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "Key of E major, 72 BPM, 4/4 time signature.",
+    "song_id": "C_30200",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Indie pop ballad",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Indie pop ballad.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "jazz"
+    ],
+    "modifiers": [
+      "clean",
+      "light"
+    ],
+    "pattern": "jazz-influenced chords with a chorus effect and light reverb",
+    "effects": [
+      "light reverb"
+    ],
+    "chords": [],
+    "sentence": "Clean electric guitar plays jazz-influenced chords with a chorus effect and light reverb.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "jazz"
+    ],
+    "modifiers": [
+      "clean",
+      "light"
+    ],
+    "pattern": "jazz-influenced chords with a chorus effect and light reverb",
+    "effects": [
+      "light reverb"
+    ],
+    "chords": [],
+    "sentence": "Clean electric guitar plays jazz-influenced chords with a chorus effect and light reverb.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "chorus effect",
+      "reverb"
+    ],
+    "modifiers": [
+      "clean",
+      "light"
+    ],
+    "sentence": "Clean electric guitar plays jazz-influenced chords with a chorus effect and light reverb.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "melodic counterpoint with slides and vibrato",
+    "effects": [
+      "vibrato"
+    ],
+    "chords": [],
+    "sentence": "A fretless electric bass provides melodic counterpoint with slides and vibrato.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "drums"
+    ],
+    "modifiers": [
+      "soft",
+      "rounded"
+    ],
+    "pattern": "a brushed snare and a soft, rounded kick drum",
+    "effects": [],
+    "chords": [],
+    "sentence": "Drums feature a brushed snare and a soft, rounded kick drum.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "female vocals",
+      "male vocals"
+    ],
+    "modifiers": [
+      "intimate"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "breathy, intimate style"
+    ],
+    "sentence": "Female vocals are delivered in a breathy, intimate style with close-mic production.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "mixing",
+    "entity": [
+      "close-mic"
+    ],
+    "modifiers": [
+      "intimate"
+    ],
+    "sentence": "Female vocals are delivered in a breathy, intimate style with close-mic production.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "intimate"
+    ],
+    "modifiers": [
+      "intimate"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "Female vocals are delivered in a breathy, intimate style with close-mic production.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "subtle",
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes subtle Rhodes piano accents and a clean electric guitar solo with melodic phrasing.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "subtle",
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes subtle Rhodes piano accents and a clean electric guitar solo with melodic phrasing.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "rhodes",
+    "kit": "keys",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "subtle",
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes subtle Rhodes piano accents and a clean electric guitar solo with melodic phrasing.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "piano",
+    "kit": "keys",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "subtle",
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes subtle Rhodes piano accents and a clean electric guitar solo with melodic phrasing.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "subtle",
+      "clean"
+    ],
+    "instruments_mentioned": [
+      "clean electric guitar",
+      "electric guitar",
+      "rhodes",
+      "piano"
+    ],
+    "sentence": "The arrangement includes subtle Rhodes piano accents and a clean electric guitar solo with melodic phrasing.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 82,
+      "key": "e major",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "Key of E Major, 82 BPM, 4/4 time signature.",
+    "song_id": "C_30201",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop City Pop with elements of Funk and Disco",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop City Pop with elements of Funk and Disco.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "clean",
+      "bright"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a prominent slap bass line, clean electric guitar with rhythmic scratching and palm-muted riffs, and a bright brass section.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "clean",
+      "bright"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a prominent slap bass line, clean electric guitar with rhythmic scratching and palm-muted riffs, and a bright brass section.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "clean",
+      "bright"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a prominent slap bass line, clean electric guitar with rhythmic scratching and palm-muted riffs, and a bright brass section.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "clean",
+      "bright"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a prominent slap bass line, clean electric guitar with rhythmic scratching and palm-muted riffs, and a bright brass section.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass section",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "clean",
+      "bright"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a prominent slap bass line, clean electric guitar with rhythmic scratching and palm-muted riffs, and a bright brass section.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "shimmering",
+      "digital",
+      "slight"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Synthesizers include shimmering digital pads and a lead synth with a slight portamento.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "pad",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "shimmering",
+      "digital",
+      "slight"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Synthesizers include shimmering digital pads and a lead synth with a slight portamento.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "drums"
+    ],
+    "modifiers": [
+      "crisp",
+      "steady",
+      "occasional"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The drums use a crisp snare and a steady kick with occasional syncopated fills.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocalist",
+      "vocalist",
+      "falsetto"
+    ],
+    "modifiers": [
+      "smooth"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "smooth, melodic delivery"
+    ],
+    "sentence": "A male vocalist performs with a smooth, melodic delivery, frequently shifting into falsetto during the chorus.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes a breakdown with a slap bass solo and a rhythmic guitar bridge.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes a breakdown with a slap bass solo and a rhythmic guitar bridge.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes a breakdown with a slap bass solo and a rhythmic guitar bridge.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [],
+    "instruments_mentioned": [
+      "slap bass",
+      "electric bass",
+      "guitar"
+    ],
+    "sentence": "The arrangement includes a breakdown with a slap bass solo and a rhythmic guitar bridge.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 118,
+      "key": "e major",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Tempo is 118 BPM in the key of E Major.",
+    "song_id": "C_30203",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Rock track with flamenco influences",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Rock track with flamenco influences.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "nylon-string acoustic guitar",
+    "kit": "guitar",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The arrangement features a nylon-string acoustic guitar performing rapid rasgueado and picado techniques, a distorted electric guitar playing power chords and lead lines, an electric bass, and a drum kit.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The arrangement features a nylon-string acoustic guitar performing rapid rasgueado and picado techniques, a distorted electric guitar playing power chords and lead lines, an electric bass, and a drum kit.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "distorted electric guitar",
+    "kit": "guitar",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The arrangement features a nylon-string acoustic guitar performing rapid rasgueado and picado techniques, a distorted electric guitar playing power chords and lead lines, an electric bass, and a drum kit.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The arrangement features a nylon-string acoustic guitar performing rapid rasgueado and picado techniques, a distorted electric guitar playing power chords and lead lines, an electric bass, and a drum kit.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The arrangement features a nylon-string acoustic guitar performing rapid rasgueado and picado techniques, a distorted electric guitar playing power chords and lead lines, an electric bass, and a drum kit.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a nylon-string acoustic guitar performing rapid rasgueado and picado techniques, a distorted electric guitar playing power chords and lead lines, an electric bass, and a drum kit.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "rapid"
+    ],
+    "sentence": "The arrangement features a nylon-string acoustic guitar performing rapid rasgueado and picado techniques, a distorted electric guitar playing power chords and lead lines, an electric bass, and a drum kit.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "rapid"
+    ],
+    "instruments_mentioned": [
+      "nylon-string acoustic guitar",
+      "acoustic guitar",
+      "distorted electric guitar",
+      "electric guitar",
+      "electric bass"
+    ],
+    "sentence": "The arrangement features a nylon-string acoustic guitar performing rapid rasgueado and picado techniques, a distorted electric guitar playing power chords and lead lines, an electric bass, and a drum kit.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "singing",
+      "vocals"
+    ],
+    "modifiers": [
+      "powerful",
+      "gritty"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "melodic singing"
+    ],
+    "sentence": "The vocals are a powerful male tenor, shifting between melodic singing and gritty, belted delivery.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 120,
+      "key": null,
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "The tempo is 120 BPM in 4/4 time.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "percussion"
+    ],
+    "modifiers": [
+      "high-energy",
+      "heavy",
+      "driving"
+    ],
+    "pattern": "",
+    "effects": [
+      "heavy distortion"
+    ],
+    "chords": [],
+    "sentence": "The song structure alternates between acoustic-driven flamenco sections and high-energy rock choruses with heavy distortion and driving percussion.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distortion"
+    ],
+    "modifiers": [
+      "high-energy",
+      "heavy",
+      "driving"
+    ],
+    "sentence": "The song structure alternates between acoustic-driven flamenco sections and high-energy rock choruses with heavy distortion and driving percussion.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The electric guitar uses a high-gain tone for the main riffs and a wah-pedal for soloistic flourishes.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "wah"
+    ],
+    "modifiers": [],
+    "sentence": "The electric guitar uses a high-gain tone for the main riffs and a wah-pedal for soloistic flourishes.",
+    "song_id": "C_30204",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Indie ballad featuring female and male vocals",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Indie ballad featuring female and male vocals.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals"
+    ],
+    "modifiers": [],
+    "pattern": "female and male vocals",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "K-Indie ballad featuring female and male vocals.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "delicate",
+      "atmospheric"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement begins with a delicate piano melody and atmospheric synth pads.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "delicate",
+      "atmospheric"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement begins with a delicate piano melody and atmospheric synth pads.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "piano",
+    "kit": "keys",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "delicate",
+      "atmospheric"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement begins with a delicate piano melody and atmospheric synth pads.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "delicate",
+      "atmospheric"
+    ],
+    "instruments_mentioned": [
+      "synthesizer",
+      "synth pad",
+      "piano"
+    ],
+    "sentence": "The arrangement begins with a delicate piano melody and atmospheric synth pads.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "clean",
+      "light"
+    ],
+    "pattern": "rhythmic accents with light chorus and delay",
+    "effects": [
+      "light chorus and delay"
+    ],
+    "chords": [],
+    "sentence": "A clean electric guitar provides rhythmic accents with light chorus and delay.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "clean",
+      "light"
+    ],
+    "pattern": "rhythmic accents with light chorus and delay",
+    "effects": [
+      "light chorus and delay"
+    ],
+    "chords": [],
+    "sentence": "A clean electric guitar provides rhythmic accents with light chorus and delay.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "light chorus",
+      "delay"
+    ],
+    "modifiers": [
+      "clean",
+      "light"
+    ],
+    "sentence": "A clean electric guitar provides rhythmic accents with light chorus and delay.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "percussion"
+    ],
+    "modifiers": [
+      "minimal",
+      "soft",
+      "subtle"
+    ],
+    "pattern": "a soft kick and subtle electronic snare hits",
+    "effects": [],
+    "chords": [],
+    "sentence": "The percussion is minimal, utilizing a soft kick and subtle electronic snare hits.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "warm"
+    ],
+    "pattern": "during the second half",
+    "effects": [],
+    "chords": [],
+    "sentence": "A warm synth bass enters during the second half.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "warm"
+    ],
+    "pattern": "during the second half",
+    "effects": [],
+    "chords": [],
+    "sentence": "A warm synth bass enters during the second half.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "a duet with breathy, emotive delivery",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a duet with breathy, emotive delivery.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 72,
+      "key": "e major",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "Key of E Major, 72 BPM, 4/4 time signature.",
+    "song_id": "C_30205",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop power ballad",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop power ballad.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "grand piano",
+    "kit": "keys",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "lush",
+      "powerful"
+    ],
+    "pattern": "a prominent grand piano, a lush string section",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a prominent grand piano, a lush string section, and a powerful male tenor vocal.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male tenor vocals"
+    ],
+    "modifiers": [
+      "prominent",
+      "lush",
+      "powerful"
+    ],
+    "pattern": "a prominent grand piano, a lush string section",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Features a prominent grand piano, a lush string section, and a powerful male tenor vocal.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "lush"
+    ],
+    "modifiers": [
+      "prominent",
+      "lush",
+      "powerful"
+    ],
+    "instruments_mentioned": [
+      "grand piano"
+    ],
+    "sentence": "Features a prominent grand piano, a lush string section, and a powerful male tenor vocal.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "sparse",
+      "full"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement builds from a sparse piano-and-vocal opening to a full orchestral climax with a standard drum kit and electric bass.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "piano",
+    "kit": "keys",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "sparse",
+      "full"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement builds from a sparse piano-and-vocal opening to a full orchestral climax with a standard drum kit and electric bass.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "sparse",
+      "full"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement builds from a sparse piano-and-vocal opening to a full orchestral climax with a standard drum kit and electric bass.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "sparse",
+      "full"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "The arrangement builds from a sparse piano-and-vocal opening to a full orchestral climax with a standard drum kit and electric bass.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement",
+      "builds from",
+      "sparse"
+    ],
+    "modifiers": [
+      "sparse",
+      "full"
+    ],
+    "instruments_mentioned": [
+      "electric bass",
+      "piano"
+    ],
+    "sentence": "The arrangement builds from a sparse piano-and-vocal opening to a full orchestral climax with a standard drum kit and electric bass.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "cymbal",
+      "drums"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "a heavy snare with long reverb and crashing cymbals during the chorus",
+    "effects": [
+      "long reverb"
+    ],
+    "chords": [],
+    "sentence": "The drums feature a heavy snare with long reverb and crashing cymbals during the chorus.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "long reverb"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "sentence": "The drums feature a heavy snare with long reverb and crashing cymbals during the chorus.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "lead",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "subtle",
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Electric guitar provides subtle clean arpeggios in the verses and soaring, overdriven lead lines in the bridge and final chorus.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "overdriven"
+    ],
+    "modifiers": [
+      "subtle",
+      "clean"
+    ],
+    "sentence": "Electric guitar provides subtle clean arpeggios in the verses and soaring, overdriven lead lines in the bridge and final chorus.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "falsetto",
+      "singing",
+      "vocals"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "The vocal performance is dynamic, moving from breathy low-register singing to high-belted notes and falsetto ad-libs.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "ad-libs"
+    ],
+    "modifiers": [],
+    "sentence": "The vocal performance is dynamic, moving from breathy low-register singing to high-belted notes and falsetto ad-libs.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 72,
+      "key": "e major",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "Key of E Major, 72 BPM, 4/4 time signature.",
+    "song_id": "C_30206",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop, Funk-Pop",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop, Funk-Pop.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "syncopated",
+      "funk"
+    ],
+    "modifiers": [
+      "high-energy",
+      "prominent"
+    ],
+    "pattern": "a prominent brass section with trumpets and saxophones, a slap bass guitar",
+    "effects": [],
+    "chords": [],
+    "sentence": "A high-energy arrangement featuring a prominent brass section with trumpets and saxophones, a slap bass guitar, and a syncopated electric guitar playing clean-tone funk scratches.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "syncopated",
+      "funk"
+    ],
+    "modifiers": [
+      "high-energy",
+      "prominent"
+    ],
+    "pattern": "a prominent brass section with trumpets and saxophones, a slap bass guitar",
+    "effects": [],
+    "chords": [],
+    "sentence": "A high-energy arrangement featuring a prominent brass section with trumpets and saxophones, a slap bass guitar, and a syncopated electric guitar playing clean-tone funk scratches.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "syncopated",
+      "funk"
+    ],
+    "modifiers": [
+      "high-energy",
+      "prominent"
+    ],
+    "pattern": "a prominent brass section with trumpets and saxophones, a slap bass guitar",
+    "effects": [],
+    "chords": [],
+    "sentence": "A high-energy arrangement featuring a prominent brass section with trumpets and saxophones, a slap bass guitar, and a syncopated electric guitar playing clean-tone funk scratches.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "bass guitar",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "syncopated",
+      "funk"
+    ],
+    "modifiers": [
+      "high-energy",
+      "prominent"
+    ],
+    "pattern": "a prominent brass section with trumpets and saxophones, a slap bass guitar",
+    "effects": [],
+    "chords": [],
+    "sentence": "A high-energy arrangement featuring a prominent brass section with trumpets and saxophones, a slap bass guitar, and a syncopated electric guitar playing clean-tone funk scratches.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass section",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "syncopated",
+      "funk"
+    ],
+    "modifiers": [
+      "high-energy",
+      "prominent"
+    ],
+    "pattern": "a prominent brass section with trumpets and saxophones, a slap bass guitar",
+    "effects": [],
+    "chords": [],
+    "sentence": "A high-energy arrangement featuring a prominent brass section with trumpets and saxophones, a slap bass guitar, and a syncopated electric guitar playing clean-tone funk scratches.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "high-energy",
+      "prominent"
+    ],
+    "instruments_mentioned": [
+      "electric guitar",
+      "slap bass",
+      "electric bass",
+      "bass guitar",
+      "brass section"
+    ],
+    "sentence": "A high-energy arrangement featuring a prominent brass section with trumpets and saxophones, a slap bass guitar, and a syncopated electric guitar playing clean-tone funk scratches.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "tight",
+      "punchy",
+      "driving"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The drum kit uses a tight, punchy snare and a driving kick pattern.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "powerful"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "A male lead vocal performs with a powerful, belt-heavy delivery, supported by layered group backing vocals and rhythmic chants.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "flute",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "a breakdown with a melodic flute solo and percussive cowbell accents",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a breakdown with a melodic flute solo and percussive cowbell accents.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "cowbell"
+    ],
+    "modifiers": [],
+    "pattern": "a breakdown with a melodic flute solo and percussive cowbell accents",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a breakdown with a melodic flute solo and percussive cowbell accents.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 128,
+      "key": "g major",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "Key of G Major, 128 BPM, 4/4 time signature.",
+    "song_id": "C_30207",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop ballad with folk-pop influences",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop ballad with folk-pop influences.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "fingerpicked acoustic guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent fingerpicked acoustic guitar, a melodic violin",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent fingerpicked acoustic guitar, a melodic violin, and a grand piano.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent fingerpicked acoustic guitar, a melodic violin",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent fingerpicked acoustic guitar, a melodic violin, and a grand piano.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "grand piano",
+    "kit": "keys",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent fingerpicked acoustic guitar, a melodic violin",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent fingerpicked acoustic guitar, a melodic violin, and a grand piano.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "violin",
+    "kit": "strings",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent fingerpicked acoustic guitar, a melodic violin",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent fingerpicked acoustic guitar, a melodic violin, and a grand piano.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "instruments_mentioned": [
+      "fingerpicked acoustic guitar",
+      "acoustic guitar",
+      "grand piano",
+      "violin"
+    ],
+    "sentence": "The arrangement features a prominent fingerpicked acoustic guitar, a melodic violin, and a grand piano.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male baritone vocals",
+      "male vocals",
+      "voice"
+    ],
+    "modifiers": [
+      "intimate",
+      "powerful"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "breathy, intimate tone"
+    ],
+    "sentence": "A baritone male vocal delivers the verses with a breathy, intimate tone, transitioning to a powerful, belted chest voice in the choruses.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "intimate"
+    ],
+    "modifiers": [
+      "intimate",
+      "powerful"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "A baritone male vocal delivers the verses with a breathy, intimate tone, transitioning to a powerful, belted chest voice in the choruses.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "shaker",
+      "drums",
+      "percussion"
+    ],
+    "modifiers": [
+      "minimal",
+      "light",
+      "occasional"
+    ],
+    "pattern": "of light shakers and occasional orchestral-style kick drum accents",
+    "effects": [],
+    "chords": [],
+    "sentence": "The percussion is minimal, consisting of light shakers and occasional orchestral-style kick drum accents.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 72,
+      "key": "g major",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "The tempo is 72 BPM in 4/4 time, likely in the key of G Major.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "violin",
+    "kit": "strings",
+    "layer": "pad",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "sustained chords"
+    ],
+    "sentence": "The violin plays lyrical counter-melodies throughout, while the piano provides harmonic weight with sustained chords and arpeggios in the higher register during the bridge.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "piano",
+    "kit": "keys",
+    "layer": "pad",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "sustained chords"
+    ],
+    "sentence": "The violin plays lyrical counter-melodies throughout, while the piano provides harmonic weight with sustained chords and arpeggios in the higher register during the bridge.",
+    "song_id": "C_30208",
+    "genre": "",
+    "source": "sp",
+    "observation_layer": "output"
   }
 ]

@@ -1,26 +1,26 @@
 {
   "electric bass": {
-    "count": 504,
+    "count": 512,
     "top_modifiers": [
       [
         "warm",
-        102
+        103
       ],
       [
         "clean",
-        50
+        51
+      ],
+      [
+        "prominent",
+        36
       ],
       [
         "crisp",
         35
       ],
       [
-        "prominent",
-        34
-      ],
-      [
         "bright",
-        34
+        35
       ],
       [
         "rounded",
@@ -68,7 +68,7 @@
     "top_effects": [
       [
         "vibrato",
-        2
+        3
       ],
       [
         "sidechain",
@@ -98,7 +98,7 @@
       ],
       [
         "power chords",
-        3
+        4
       ],
       [
         "seventh chords",
@@ -107,27 +107,27 @@
     ]
   },
   "electric guitar": {
-    "count": 411,
+    "count": 421,
     "top_modifiers": [
       [
         "clean",
-        317
+        323
       ],
       [
         "light",
-        93
+        95
+      ],
+      [
+        "bright",
+        43
       ],
       [
         "muted",
         43
       ],
       [
-        "bright",
-        42
-      ],
-      [
         "subtle",
-        39
+        41
       ],
       [
         "occasional",
@@ -179,7 +179,7 @@
       ],
       [
         "light chorus and delay",
-        25
+        26
       ],
       [
         "subtle chorus and reverb",
@@ -197,7 +197,7 @@
     "top_chords": [
       [
         "power chords",
-        40
+        41
       ],
       [
         "arpeggiated chords",
@@ -218,19 +218,19 @@
     ]
   },
   "clean electric guitar": {
-    "count": 256,
+    "count": 261,
     "top_modifiers": [
       [
         "clean",
-        256
+        261
       ],
       [
         "light",
-        87
+        89
       ],
       [
         "subtle",
-        34
+        35
       ],
       [
         "muted",
@@ -238,7 +238,7 @@
       ],
       [
         "bright",
-        22
+        23
       ],
       [
         "jazzy",
@@ -290,7 +290,7 @@
       ],
       [
         "light chorus and delay",
-        25
+        26
       ],
       [
         "subtle chorus and reverb",
@@ -329,7 +329,7 @@
     ]
   },
   "acoustic guitar": {
-    "count": 232,
+    "count": 234,
     "top_modifiers": [
       [
         "steady",
@@ -353,7 +353,7 @@
       ],
       [
         "prominent",
-        14
+        15
       ],
       [
         "bright",
@@ -428,11 +428,15 @@
       [
         "harmonic support",
         1
+      ],
+      [
+        "power chords",
+        1
       ]
     ]
   },
   "synthesizer": {
-    "count": 216,
+    "count": 219,
     "top_modifiers": [
       [
         "subtle",
@@ -444,7 +448,7 @@
       ],
       [
         "atmospheric",
-        28
+        29
       ],
       [
         "occasional",
@@ -452,11 +456,11 @@
       ],
       [
         "shimmering",
-        19
+        20
       ],
       [
         "digital",
-        17
+        18
       ],
       [
         "crisp",
@@ -482,7 +486,7 @@
       ],
       [
         "harmonic density in the background",
-        5
+        6
       ],
       [
         "low-end weight on the downbeats",
@@ -514,7 +518,7 @@
       ],
       [
         "harmonic density",
-        10
+        11
       ],
       [
         "harmonic texture",
@@ -531,7 +535,7 @@
     ]
   },
   "guitar": {
-    "count": 154,
+    "count": 155,
     "top_modifiers": [
       [
         "sparse",
@@ -642,7 +646,7 @@
     ]
   },
   "bass guitar": {
-    "count": 146,
+    "count": 148,
     "top_modifiers": [
       [
         "warm",
@@ -729,22 +733,22 @@
     ]
   },
   "piano": {
-    "count": 92,
+    "count": 96,
     "top_modifiers": [
       [
         "subtle",
-        13
+        14
       ],
       [
         "occasional",
         10
       ],
       [
-        "bright",
-        7
+        "clean",
+        8
       ],
       [
-        "clean",
+        "bright",
         7
       ],
       [
@@ -756,6 +760,10 @@
         5
       ],
       [
+        "sparse",
+        5
+      ],
+      [
         "steady",
         4
       ],
@@ -764,11 +772,7 @@
         4
       ],
       [
-        "sparse",
-        4
-      ],
-      [
-        "soft",
+        "delicate",
         4
       ]
     ],
@@ -818,11 +822,11 @@
         4
       ],
       [
-        "arpeggiated chords",
-        3
+        "sustained chords",
+        4
       ],
       [
-        "sustained chords",
+        "arpeggiated chords",
         3
       ],
       [
@@ -836,7 +840,7 @@
     ]
   },
   "pad": {
-    "count": 87,
+    "count": 88,
     "top_modifiers": [
       [
         "subtle",
@@ -847,11 +851,15 @@
         11
       ],
       [
+        "shimmering",
+        11
+      ],
+      [
         "lush",
         10
       ],
       [
-        "shimmering",
+        "digital",
         10
       ],
       [
@@ -860,10 +868,6 @@
       ],
       [
         "occasional",
-        9
-      ],
-      [
-        "digital",
         9
       ],
       [
@@ -931,7 +935,7 @@
     ]
   },
   "synth pad": {
-    "count": 81,
+    "count": 83,
     "top_modifiers": [
       [
         "subtle",
@@ -939,7 +943,7 @@
       ],
       [
         "atmospheric",
-        21
+        22
       ],
       [
         "bright",
@@ -1012,12 +1016,12 @@
         11
       ],
       [
-        "harmonic texture",
+        "harmonic density",
         6
       ],
       [
-        "harmonic density",
-        5
+        "harmonic texture",
+        6
       ],
       [
         "harmonic backing",
@@ -1030,11 +1034,11 @@
     ]
   },
   "synth bass": {
-    "count": 73,
+    "count": 74,
     "top_modifiers": [
       [
         "warm",
-        16
+        17
       ],
       [
         "sub-heavy",
@@ -1112,7 +1116,7 @@
     ]
   },
   "grand piano": {
-    "count": 67,
+    "count": 69,
     "top_modifiers": [
       [
         "clean",
@@ -1120,7 +1124,7 @@
       ],
       [
         "prominent",
-        4
+        6
       ],
       [
         "steady",
@@ -1135,12 +1139,12 @@
         3
       ],
       [
-        "full",
+        "lush",
         3
       ],
       [
-        "lush",
-        2
+        "full",
+        3
       ],
       [
         "muted",
@@ -1211,7 +1215,7 @@
     ]
   },
   "fingerpicked acoustic guitar": {
-    "count": 63,
+    "count": 64,
     "top_modifiers": [
       [
         "steady",
@@ -1238,11 +1242,11 @@
         4
       ],
       [
-        "soft",
-        2
+        "prominent",
+        3
       ],
       [
-        "prominent",
+        "soft",
         2
       ],
       [
@@ -1289,15 +1293,15 @@
     "top_chords": []
   },
   "slap bass": {
-    "count": 56,
+    "count": 59,
     "top_modifiers": [
       [
         "prominent",
-        15
+        17
       ],
       [
         "bright",
-        15
+        16
       ],
       [
         "crisp",
@@ -1305,7 +1309,7 @@
       ],
       [
         "clean",
-        8
+        9
       ],
       [
         "frequent",
@@ -1453,7 +1457,7 @@
     ]
   },
   "distorted electric guitar": {
-    "count": 49,
+    "count": 50,
     "top_modifiers": [
       [
         "driving",
@@ -1480,6 +1484,10 @@
         2
       ],
       [
+        "rapid",
+        2
+      ],
+      [
         "thick",
         2
       ],
@@ -1489,10 +1497,6 @@
       ],
       [
         "compressed",
-        1
-      ],
-      [
-        "rapid",
         1
       ]
     ],
@@ -1543,7 +1547,7 @@
     "top_chords": [
       [
         "power chords",
-        33
+        34
       ],
       [
         "power chord",
@@ -1560,11 +1564,11 @@
     ]
   },
   "violin": {
-    "count": 42,
+    "count": 44,
     "top_modifiers": [
       [
         "prominent",
-        5
+        6
       ],
       [
         "frequent",
@@ -1643,19 +1647,23 @@
       [
         "arpeggiated chords",
         1
+      ],
+      [
+        "sustained chords",
+        1
       ]
     ]
   },
   "brass section": {
-    "count": 37,
+    "count": 39,
     "top_modifiers": [
       [
         "bright",
-        18
+        19
       ],
       [
         "prominent",
-        5
+        7
       ],
       [
         "subtle",
@@ -1683,6 +1691,10 @@
       ],
       [
         "powerful",
+        1
+      ],
+      [
+        "clean",
         1
       ]
     ],
@@ -2149,7 +2161,7 @@
     ]
   },
   "nylon-string acoustic guitar": {
-    "count": 25,
+    "count": 26,
     "top_modifiers": [
       [
         "prominent",
@@ -2177,6 +2189,10 @@
       ],
       [
         "rounded",
+        1
+      ],
+      [
+        "rapid",
         1
       ]
     ],
@@ -2210,6 +2226,10 @@
       ],
       [
         "arpeggiated chords",
+        1
+      ],
+      [
+        "power chords",
         1
       ]
     ]
@@ -2289,7 +2309,7 @@
     "top_chords": []
   },
   "flute": {
-    "count": 18,
+    "count": 19,
     "top_modifiers": [
       [
         "prominent",
@@ -2358,11 +2378,11 @@
     "top_chords": []
   },
   "rhodes": {
-    "count": 16,
+    "count": 17,
     "top_modifiers": [
       [
         "subtle",
-        5
+        6
       ],
       [
         "occasional",
@@ -2382,7 +2402,7 @@
       ],
       [
         "clean",
-        1
+        2
       ],
       [
         "soft",

@@ -9517,9 +9517,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 28,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -9540,9 +9540,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 28,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -9561,7 +9561,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 109,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -9584,7 +9584,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 72,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -9607,7 +9607,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 36,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -9628,7 +9628,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 51,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -9651,7 +9651,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 51,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -9672,7 +9672,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 81,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -9695,51 +9695,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 81,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_121_001",
-    "text": "무지개가 발밑에 있었어\n고개 숙인 날에만 보이는 것",
-    "embed_text": "무지개가 발밑에 있었어\n고개 숙인 날에만 보이는 것 | section: hook | genre: K-Pop acoustic ballad",
-    "payload": {
-      "chunk_id": "lyrics_hook_121_001",
-      "song_id": 121,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "무지개가 발밑에 있었어\n고개 숙인 날에만 보이는 것",
-      "embed_text": "무지개가 발밑에 있었어\n고개 숙인 날에만 보이는 것 | section: hook | genre: K-Pop acoustic ballad",
-      "genre": "K-Pop acoustic ballad",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 28,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_121_hook_001",
-    "text": "무지개가 발밑에 있었어\n고개 숙인 날에만 보이는 것",
-    "embed_text": "무지개가 발밑에 있었어\n고개 숙인 날에만 보이는 것 | section: hook | genre: K-Pop acoustic ballad",
-    "payload": {
-      "chunk_id": "lyrics_couplet_121_hook_001",
-      "song_id": 121,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_121_001",
-      "text": "무지개가 발밑에 있었어\n고개 숙인 날에만 보이는 것",
-      "embed_text": "무지개가 발밑에 있었어\n고개 숙인 날에만 보이는 것 | section: hook | genre: K-Pop acoustic ballad",
-      "genre": "K-Pop acoustic ballad",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 28,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -9760,7 +9716,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 89,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -9783,7 +9739,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -9806,7 +9762,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 29,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -9827,7 +9783,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 78,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -9850,7 +9806,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 78,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -9871,7 +9827,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 74,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -9894,7 +9850,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 74,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -9915,7 +9871,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 12,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -26916,7 +26872,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 13,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -26939,7 +26895,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 13,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -26960,7 +26916,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 64,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -26983,7 +26939,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 42,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27006,7 +26962,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 21,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27027,9 +26983,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -27050,9 +27006,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -27071,7 +27027,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 49,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -27094,7 +27050,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 49,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27115,7 +27071,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 57,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -27138,7 +27094,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 36,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27161,51 +27117,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 20,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_pre_chorus_164_001",
-    "text": "밀리고 밀려 움직이는 몸\n내일을 향해 내려가고\n끝이 보이지 않는데\n그래도 가야 하는 길",
-    "embed_text": "밀리고 밀려 움직이는 몸\n내일을 향해 내려가고\n끝이 보이지 않는데\n그래도 가야 하는 길 | section: pre_chorus | genre: K-Pop and Bubblegum Pop",
-    "payload": {
-      "chunk_id": "lyrics_pre_chorus_164_001",
-      "song_id": 164,
-      "section_tag": "pre_chorus",
-      "section_tag_raw": "Pre-Chorus",
-      "section_index": 5,
-      "text": "밀리고 밀려 움직이는 몸\n내일을 향해 내려가고\n끝이 보이지 않는데\n그래도 가야 하는 길",
-      "embed_text": "밀리고 밀려 움직이는 몸\n내일을 향해 내려가고\n끝이 보이지 않는데\n그래도 가야 하는 길 | section: pre_chorus | genre: K-Pop and Bubblegum Pop",
-      "genre": "K-Pop and Bubblegum Pop",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 48,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_164_pre_chorus_001",
-    "text": "밀리고 밀려 움직이는 몸\n내일을 향해 내려가고\n끝이 보이지 않는데\n그래도 가야 하는 길",
-    "embed_text": "밀리고 밀려 움직이는 몸\n내일을 향해 내려가고\n끝이 보이지 않는데\n그래도 가야 하는 길 | section: pre_chorus | genre: K-Pop and Bubblegum Pop",
-    "payload": {
-      "chunk_id": "lyrics_couplet_164_pre_chorus_001",
-      "song_id": 164,
-      "section_tag": "pre_chorus",
-      "section_tag_raw": "Pre-Chorus",
-      "section_index": 5,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_pre_chorus_164_001",
-      "text": "밀리고 밀려 움직이는 몸\n내일을 향해 내려가고\n끝이 보이지 않는데\n그래도 가야 하는 길",
-      "embed_text": "밀리고 밀려 움직이는 몸\n내일을 향해 내려가고\n끝이 보이지 않는데\n그래도 가야 하는 길 | section: pre_chorus | genre: K-Pop and Bubblegum Pop",
-      "genre": "K-Pop and Bubblegum Pop",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 48,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27226,7 +27138,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 59,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -27249,7 +27161,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 36,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27272,7 +27184,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 22,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27293,7 +27205,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 47,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -27316,7 +27228,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 47,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27337,7 +27249,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 36,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -27360,7 +27272,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 36,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27381,7 +27293,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 52,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -27404,7 +27316,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 33,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -27427,7 +27339,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 18,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|drop|chorus|bridge|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|drop|chorus|bridge|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -30016,7 +29928,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 11,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -30037,7 +29949,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 68,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -30060,7 +29972,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 68,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -30081,9 +29993,9 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 26,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -30104,9 +30016,9 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 26,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -30125,7 +30037,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -30148,7 +30060,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -30169,7 +30081,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 59,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -30192,51 +30104,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 59,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_pre_chorus_172_001",
-    "text": "감각은 깨어나고\n세상이 살아난다\n모든 게 느껴져",
-    "embed_text": "감각은 깨어나고\n세상이 살아난다\n모든 게 느껴져 | section: pre_chorus | genre: K-Pop Hip-Hop track featuring a rhythmic piano loop playing syncopated jazz chords",
-    "payload": {
-      "chunk_id": "lyrics_pre_chorus_172_001",
-      "song_id": 172,
-      "section_tag": "pre_chorus",
-      "section_tag_raw": "Pre-Chorus",
-      "section_index": 5,
-      "text": "감각은 깨어나고\n세상이 살아난다\n모든 게 느껴져",
-      "embed_text": "감각은 깨어나고\n세상이 살아난다\n모든 게 느껴져 | section: pre_chorus | genre: K-Pop Hip-Hop track featuring a rhythmic piano loop playing syncopated jazz chords",
-      "genre": "K-Pop Hip-Hop track featuring a rhythmic piano loop playing syncopated jazz chords",
-      "language": "mixed",
-      "line_count": 3,
-      "char_count": 26,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_172_pre_chorus_001",
-    "text": "감각은 깨어나고\n세상이 살아난다\n모든 게 느껴져",
-    "embed_text": "감각은 깨어나고\n세상이 살아난다\n모든 게 느껴져 | section: pre_chorus | genre: K-Pop Hip-Hop track featuring a rhythmic piano loop playing syncopated jazz chords",
-    "payload": {
-      "chunk_id": "lyrics_couplet_172_pre_chorus_001",
-      "song_id": 172,
-      "section_tag": "pre_chorus",
-      "section_tag_raw": "Pre-Chorus",
-      "section_index": 5,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_pre_chorus_172_001",
-      "text": "감각은 깨어나고\n세상이 살아난다\n모든 게 느껴져",
-      "embed_text": "감각은 깨어나고\n세상이 살아난다\n모든 게 느껴져 | section: pre_chorus | genre: K-Pop Hip-Hop track featuring a rhythmic piano loop playing syncopated jazz chords",
-      "genre": "K-Pop Hip-Hop track featuring a rhythmic piano loop playing syncopated jazz chords",
-      "language": "mixed",
-      "line_count": 3,
-      "char_count": 26,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -30257,7 +30125,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 47,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -30280,7 +30148,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 47,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -30301,7 +30169,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 54,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -30324,7 +30192,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 54,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -30345,7 +30213,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -30368,7 +30236,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -30389,7 +30257,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 19,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -30412,7 +30280,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 19,
-      "structure": "intro|verse|pre_chorus|drop|verse|pre_chorus|drop|bridge|drop|outro",
+      "structure": "intro|verse|pre_chorus|drop|verse|drop|bridge|drop|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47489,9 +47357,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 43,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -47512,9 +47380,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 43,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -47533,7 +47401,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 92,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -47556,7 +47424,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 49,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47579,7 +47447,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 42,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47600,7 +47468,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 55,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -47623,7 +47491,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 55,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47644,7 +47512,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 68,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -47667,51 +47535,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 68,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_260_001",
-    "text": "빨간 경고, 1%, 마지막 시간\n세상이 느려진다\n세상이 멈춘다\n손가락이 떨린다",
-    "embed_text": "빨간 경고, 1%, 마지막 시간\n세상이 느려진다\n세상이 멈춘다\n손가락이 떨린다 | section: hook | genre: K-Pop acoustic ballad",
-    "payload": {
-      "chunk_id": "lyrics_hook_260_001",
-      "song_id": 260,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "빨간 경고, 1%, 마지막 시간\n세상이 느려진다\n세상이 멈춘다\n손가락이 떨린다",
-      "embed_text": "빨간 경고, 1%, 마지막 시간\n세상이 느려진다\n세상이 멈춘다\n손가락이 떨린다 | section: hook | genre: K-Pop acoustic ballad",
-      "genre": "K-Pop acoustic ballad",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 43,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_260_hook_001",
-    "text": "빨간 경고, 1%, 마지막 시간\n세상이 느려진다\n세상이 멈춘다\n손가락이 떨린다",
-    "embed_text": "빨간 경고, 1%, 마지막 시간\n세상이 느려진다\n세상이 멈춘다\n손가락이 떨린다 | section: hook | genre: K-Pop acoustic ballad",
-    "payload": {
-      "chunk_id": "lyrics_couplet_260_hook_001",
-      "song_id": 260,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_260_001",
-      "text": "빨간 경고, 1%, 마지막 시간\n세상이 느려진다\n세상이 멈춘다\n손가락이 떨린다",
-      "embed_text": "빨간 경고, 1%, 마지막 시간\n세상이 느려진다\n세상이 멈춘다\n손가락이 떨린다 | section: hook | genre: K-Pop acoustic ballad",
-      "genre": "K-Pop acoustic ballad",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 43,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47732,7 +47556,7 @@
       "language": "mixed",
       "line_count": 7,
       "char_count": 65,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -47755,7 +47579,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 33,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47778,7 +47602,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 31,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47799,7 +47623,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 53,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -47822,7 +47646,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 53,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47843,7 +47667,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 64,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -47866,7 +47690,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 64,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -47887,7 +47711,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 38,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -47910,7 +47734,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 38,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50143,9 +49967,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -50166,9 +49990,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -50187,7 +50011,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 77,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50210,7 +50034,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 50,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50233,7 +50057,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 26,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50254,7 +50078,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 46,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50277,7 +50101,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 46,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50298,7 +50122,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 61,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50321,51 +50145,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 61,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_917_001",
-    "text": "낡은 일기장을 열면 그때의 내가 살아나\n서툴렀던 글씨 속에 순수한 사랑이 있었어",
-    "embed_text": "낡은 일기장을 열면 그때의 내가 살아나\n서툴렀던 글씨 속에 순수한 사랑이 있었어 | section: hook | genre: K-Pop ballad featuring a male tenor vocal",
-    "payload": {
-      "chunk_id": "lyrics_hook_917_001",
-      "song_id": 917,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "낡은 일기장을 열면 그때의 내가 살아나\n서툴렀던 글씨 속에 순수한 사랑이 있었어",
-      "embed_text": "낡은 일기장을 열면 그때의 내가 살아나\n서툴렀던 글씨 속에 순수한 사랑이 있었어 | section: hook | genre: K-Pop ballad featuring a male tenor vocal",
-      "genre": "K-Pop ballad featuring a male tenor vocal",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_917_hook_001",
-    "text": "낡은 일기장을 열면 그때의 내가 살아나\n서툴렀던 글씨 속에 순수한 사랑이 있었어",
-    "embed_text": "낡은 일기장을 열면 그때의 내가 살아나\n서툴렀던 글씨 속에 순수한 사랑이 있었어 | section: hook | genre: K-Pop ballad featuring a male tenor vocal",
-    "payload": {
-      "chunk_id": "lyrics_couplet_917_hook_001",
-      "song_id": 917,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_917_001",
-      "text": "낡은 일기장을 열면 그때의 내가 살아나\n서툴렀던 글씨 속에 순수한 사랑이 있었어",
-      "embed_text": "낡은 일기장을 열면 그때의 내가 살아나\n서툴렀던 글씨 속에 순수한 사랑이 있었어 | section: hook | genre: K-Pop ballad featuring a male tenor vocal",
-      "genre": "K-Pop ballad featuring a male tenor vocal",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50386,7 +50166,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 68,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50409,7 +50189,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 68,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50430,7 +50210,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 38,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50453,7 +50233,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 38,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50474,7 +50254,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 63,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50497,7 +50277,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 63,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50518,7 +50298,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 19,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50539,9 +50319,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 40,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -50562,9 +50342,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 40,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -50583,7 +50363,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 69,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50606,7 +50386,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 69,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50627,7 +50407,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 36,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50650,7 +50430,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 36,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50671,7 +50451,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50694,51 +50474,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_922_001",
-    "text": "말하지 않아도 네 눈빛이 다 말해줘\n한마디 없이도 마음이 통하는 이 순간",
-    "embed_text": "말하지 않아도 네 눈빛이 다 말해줘\n한마디 없이도 마음이 통하는 이 순간 | section: hook | genre: K-Pop ballad with acoustic pop elements",
-    "payload": {
-      "chunk_id": "lyrics_hook_922_001",
-      "song_id": 922,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "말하지 않아도 네 눈빛이 다 말해줘\n한마디 없이도 마음이 통하는 이 순간",
-      "embed_text": "말하지 않아도 네 눈빛이 다 말해줘\n한마디 없이도 마음이 통하는 이 순간 | section: hook | genre: K-Pop ballad with acoustic pop elements",
-      "genre": "K-Pop ballad with acoustic pop elements",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 40,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_922_hook_001",
-    "text": "말하지 않아도 네 눈빛이 다 말해줘\n한마디 없이도 마음이 통하는 이 순간",
-    "embed_text": "말하지 않아도 네 눈빛이 다 말해줘\n한마디 없이도 마음이 통하는 이 순간 | section: hook | genre: K-Pop ballad with acoustic pop elements",
-    "payload": {
-      "chunk_id": "lyrics_couplet_922_hook_001",
-      "song_id": 922,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_922_001",
-      "text": "말하지 않아도 네 눈빛이 다 말해줘\n한마디 없이도 마음이 통하는 이 순간",
-      "embed_text": "말하지 않아도 네 눈빛이 다 말해줘\n한마디 없이도 마음이 통하는 이 순간 | section: hook | genre: K-Pop ballad with acoustic pop elements",
-      "genre": "K-Pop ballad with acoustic pop elements",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 40,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50759,7 +50495,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 68,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50782,7 +50518,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 46,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50805,7 +50541,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 21,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50826,7 +50562,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 45,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50849,7 +50585,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 45,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50870,7 +50606,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 60,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -50893,7 +50629,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 60,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -50914,7 +50650,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 21,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56082,7 +55818,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 38,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56103,7 +55839,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 59,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56126,7 +55862,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 59,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -56147,9 +55883,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -56170,9 +55906,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -56191,7 +55927,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 90,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 2
     }
@@ -56214,7 +55950,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 52,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 2
     }
@@ -56237,7 +55973,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 37,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 2
     }
@@ -56258,7 +55994,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 62,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56281,51 +56017,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 62,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_pre_chorus_1003_001",
-    "text": "심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야",
-    "embed_text": "심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야 | section: pre_chorus | genre: K-Pop with synth-pop and funk influences",
-    "payload": {
-      "chunk_id": "lyrics_pre_chorus_1003_001",
-      "song_id": 1003,
-      "section_tag": "pre_chorus",
-      "section_tag_raw": "Pre-Chorus",
-      "section_index": 5,
-      "text": "심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야",
-      "embed_text": "심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야 | section: pre_chorus | genre: K-Pop with synth-pop and funk influences",
-      "genre": "K-Pop with synth-pop and funk influences",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 48,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1003_pre_chorus_001",
-    "text": "심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야",
-    "embed_text": "심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야 | section: pre_chorus | genre: K-Pop with synth-pop and funk influences",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1003_pre_chorus_001",
-      "song_id": 1003,
-      "section_tag": "pre_chorus",
-      "section_tag_raw": "Pre-Chorus",
-      "section_index": 5,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_pre_chorus_1003_001",
-      "text": "심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야",
-      "embed_text": "심장이 뛰기 시작해\n온몸에 피가 돌기 시작해\n준비됐어 이 순간을 위해\n자 이제 시작이야 | section: pre_chorus | genre: K-Pop with synth-pop and funk influences",
-      "genre": "K-Pop with synth-pop and funk influences",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 48,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -56346,7 +56038,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 57,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56369,7 +56061,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 57,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -56390,7 +56082,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 68,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56413,7 +56105,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 68,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -56434,7 +56126,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 35,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56455,7 +56147,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 34,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56476,7 +56168,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 61,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56499,7 +56191,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 61,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -56520,9 +56212,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -56543,9 +56235,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -56564,7 +56256,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 74,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 2
     }
@@ -56587,7 +56279,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 74,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 2
     }
@@ -56608,7 +56300,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 55,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56631,51 +56323,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 55,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_pre_chorus_1004_001",
-    "text": "속도를 올려 더 빠르게\n바람을 가르며 앞으로\n지금 이 리듬을 놓치지 마\n내가 나의 페이스메이커",
-    "embed_text": "속도를 올려 더 빠르게\n바람을 가르며 앞으로\n지금 이 리듬을 놓치지 마\n내가 나의 페이스메이커 | section: pre_chorus | genre: K-Pop, J-Rock, high-energy pop-rock",
-    "payload": {
-      "chunk_id": "lyrics_pre_chorus_1004_001",
-      "song_id": 1004,
-      "section_tag": "pre_chorus",
-      "section_tag_raw": "Pre-Chorus",
-      "section_index": 5,
-      "text": "속도를 올려 더 빠르게\n바람을 가르며 앞으로\n지금 이 리듬을 놓치지 마\n내가 나의 페이스메이커",
-      "embed_text": "속도를 올려 더 빠르게\n바람을 가르며 앞으로\n지금 이 리듬을 놓치지 마\n내가 나의 페이스메이커 | section: pre_chorus | genre: K-Pop, J-Rock, high-energy pop-rock",
-      "genre": "K-Pop, J-Rock, high-energy pop-rock",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 52,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1004_pre_chorus_001",
-    "text": "속도를 올려 더 빠르게\n바람을 가르며 앞으로\n지금 이 리듬을 놓치지 마\n내가 나의 페이스메이커",
-    "embed_text": "속도를 올려 더 빠르게\n바람을 가르며 앞으로\n지금 이 리듬을 놓치지 마\n내가 나의 페이스메이커 | section: pre_chorus | genre: K-Pop, J-Rock, high-energy pop-rock",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1004_pre_chorus_001",
-      "song_id": 1004,
-      "section_tag": "pre_chorus",
-      "section_tag_raw": "Pre-Chorus",
-      "section_index": 5,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_pre_chorus_1004_001",
-      "text": "속도를 올려 더 빠르게\n바람을 가르며 앞으로\n지금 이 리듬을 놓치지 마\n내가 나의 페이스메이커",
-      "embed_text": "속도를 올려 더 빠르게\n바람을 가르며 앞으로\n지금 이 리듬을 놓치지 마\n내가 나의 페이스메이커 | section: pre_chorus | genre: K-Pop, J-Rock, high-energy pop-rock",
-      "genre": "K-Pop, J-Rock, high-energy pop-rock",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 52,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -56696,7 +56344,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 51,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56719,7 +56367,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 51,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -56740,7 +56388,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 56,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -56763,7 +56411,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 56,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -56784,7 +56432,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 35,
-      "structure": "intro|verse|pre_chorus|chorus|verse|pre_chorus|bridge|chorus|outro",
+      "structure": "intro|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -57806,9 +57454,9 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -57829,9 +57477,9 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -57850,7 +57498,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 76,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -57873,7 +57521,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 50,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -57896,7 +57544,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 25,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -57917,7 +57565,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 32,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -57940,7 +57588,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 32,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -57961,7 +57609,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 81,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -57984,7 +57632,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 51,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -58007,51 +57655,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 29,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1025_001",
-    "text": "쉬는 시간 열 분!\n세상에서 제일 짧고\n세상에서 제일 긴 시간",
-    "embed_text": "쉬는 시간 열 분!\n세상에서 제일 짧고\n세상에서 제일 긴 시간 | section: hook | genre: K-Pop R&B ballad",
-    "payload": {
-      "chunk_id": "lyrics_hook_1025_001",
-      "song_id": 1025,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "쉬는 시간 열 분!\n세상에서 제일 짧고\n세상에서 제일 긴 시간",
-      "embed_text": "쉬는 시간 열 분!\n세상에서 제일 짧고\n세상에서 제일 긴 시간 | section: hook | genre: K-Pop R&B ballad",
-      "genre": "K-Pop R&B ballad",
-      "language": "mixed",
-      "line_count": 3,
-      "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1025_hook_001",
-    "text": "쉬는 시간 열 분!\n세상에서 제일 짧고\n세상에서 제일 긴 시간",
-    "embed_text": "쉬는 시간 열 분!\n세상에서 제일 짧고\n세상에서 제일 긴 시간 | section: hook | genre: K-Pop R&B ballad",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1025_hook_001",
-      "song_id": 1025,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1025_001",
-      "text": "쉬는 시간 열 분!\n세상에서 제일 짧고\n세상에서 제일 긴 시간",
-      "embed_text": "쉬는 시간 열 분!\n세상에서 제일 짧고\n세상에서 제일 긴 시간 | section: hook | genre: K-Pop R&B ballad",
-      "genre": "K-Pop R&B ballad",
-      "language": "mixed",
-      "line_count": 3,
-      "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -58072,7 +57676,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 97,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -58095,7 +57699,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 63,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -58118,7 +57722,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 33,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -58139,7 +57743,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 62,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -58162,7 +57766,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 40,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -58185,7 +57789,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 21,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -58206,7 +57810,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 78,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -58229,7 +57833,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 53,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -58252,7 +57856,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 24,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -58273,7 +57877,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 24,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -58296,7 +57900,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 24,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -60976,9 +60580,9 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 16,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -60997,7 +60601,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 104,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61020,7 +60624,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 71,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61043,7 +60647,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 32,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61064,7 +60668,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 45,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61087,7 +60691,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 45,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61108,7 +60712,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 65,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61131,29 +60735,8 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 65,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1058_001",
-    "text": "고객님, 제가 먼저 끊겠습니다",
-    "embed_text": "고객님, 제가 먼저 끊겠습니다 | section: hook | genre: K-Pop City Pop",
-    "payload": {
-      "chunk_id": "lyrics_hook_1058_001",
-      "song_id": 1058,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "고객님, 제가 먼저 끊겠습니다",
-      "embed_text": "고객님, 제가 먼저 끊겠습니다 | section: hook | genre: K-Pop City Pop",
-      "genre": "K-Pop City Pop",
-      "language": "mixed",
-      "line_count": 1,
-      "char_count": 16,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
       "repeat_count": 1
     }
   },
@@ -61173,7 +60756,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 106,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61196,7 +60779,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 70,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61219,7 +60802,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 35,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61240,7 +60823,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 62,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61263,7 +60846,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 62,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61284,7 +60867,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 67,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61307,7 +60890,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 67,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61328,7 +60911,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 19,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61351,7 +60934,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 19,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61372,9 +60955,9 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 13,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -61393,7 +60976,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 90,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61416,7 +60999,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 41,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61439,7 +61022,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61460,7 +61043,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 54,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61483,7 +61066,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 54,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61504,7 +61087,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 72,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61527,7 +61110,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 46,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61550,29 +61133,8 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 25,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1063_001",
-    "text": "그 삼십 초가 영원 같아",
-    "embed_text": "그 삼십 초가 영원 같아 | section: hook | genre: K-Pop R&B with a mid-tempo groove",
-    "payload": {
-      "chunk_id": "lyrics_hook_1063_001",
-      "song_id": 1063,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "그 삼십 초가 영원 같아",
-      "embed_text": "그 삼십 초가 영원 같아 | section: hook | genre: K-Pop R&B with a mid-tempo groove",
-      "genre": "K-Pop R&B with a mid-tempo groove",
-      "language": "mixed",
-      "line_count": 1,
-      "char_count": 13,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
       "repeat_count": 1
     }
   },
@@ -61592,7 +61154,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 95,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61615,7 +61177,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61638,7 +61200,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 46,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61659,7 +61221,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 20,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61682,7 +61244,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 20,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61703,7 +61265,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 71,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -61726,7 +61288,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 46,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61749,7 +61311,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 24,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -61770,7 +61332,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 11,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -62907,9 +62469,9 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 24,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -62930,9 +62492,9 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 24,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -62951,7 +62513,7 @@
       "language": "mixed",
       "line_count": 11,
       "char_count": 100,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -62974,7 +62536,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 42,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -62997,7 +62559,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 35,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63020,7 +62582,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 21,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63041,7 +62603,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 32,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -63064,7 +62626,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 32,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63085,7 +62647,7 @@
       "language": "mixed",
       "line_count": 11,
       "char_count": 110,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -63108,7 +62670,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 37,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63131,7 +62693,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 41,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63154,51 +62716,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 30,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1103_001",
-    "text": "십 분만 하자\n딱 십 분만\n미분은 내일 하자",
-    "embed_text": "십 분만 하자\n딱 십 분만\n미분은 내일 하자 | section: hook | genre: K-Pop ballad featuring a baritone male vocal",
-    "payload": {
-      "chunk_id": "lyrics_hook_1103_001",
-      "song_id": 1103,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "십 분만 하자\n딱 십 분만\n미분은 내일 하자",
-      "embed_text": "십 분만 하자\n딱 십 분만\n미분은 내일 하자 | section: hook | genre: K-Pop ballad featuring a baritone male vocal",
-      "genre": "K-Pop ballad featuring a baritone male vocal",
-      "language": "mixed",
-      "line_count": 3,
-      "char_count": 24,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1103_hook_001",
-    "text": "십 분만 하자\n딱 십 분만\n미분은 내일 하자",
-    "embed_text": "십 분만 하자\n딱 십 분만\n미분은 내일 하자 | section: hook | genre: K-Pop ballad featuring a baritone male vocal",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1103_hook_001",
-      "song_id": 1103,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1103_001",
-      "text": "십 분만 하자\n딱 십 분만\n미분은 내일 하자",
-      "embed_text": "십 분만 하자\n딱 십 분만\n미분은 내일 하자 | section: hook | genre: K-Pop ballad featuring a baritone male vocal",
-      "genre": "K-Pop ballad featuring a baritone male vocal",
-      "language": "mixed",
-      "line_count": 3,
-      "char_count": 24,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63219,7 +62737,7 @@
       "language": "mixed",
       "line_count": 10,
       "char_count": 101,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -63242,7 +62760,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 36,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63265,7 +62783,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 41,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63288,7 +62806,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 22,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63309,7 +62827,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -63332,7 +62850,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63353,7 +62871,7 @@
       "language": "mixed",
       "line_count": 9,
       "char_count": 89,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -63376,7 +62894,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 39,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63399,7 +62917,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 49,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -63420,7 +62938,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 18,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -63443,7 +62961,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 18,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -65822,9 +65340,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 27,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -65845,9 +65363,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 27,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -65866,7 +65384,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 87,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -65889,7 +65407,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -65912,7 +65430,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 27,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -65933,7 +65451,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -65956,7 +65474,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -65977,7 +65495,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 60,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -66000,51 +65518,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 60,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1136_001",
-    "text": "마일리지가 사라지기 전에\n나도 사라질 거야 여기서",
-    "embed_text": "마일리지가 사라지기 전에\n나도 사라질 거야 여기서 | section: hook | genre: K-Pop ballad featuring a male baritone vocal",
-    "payload": {
-      "chunk_id": "lyrics_hook_1136_001",
-      "song_id": 1136,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "마일리지가 사라지기 전에\n나도 사라질 거야 여기서",
-      "embed_text": "마일리지가 사라지기 전에\n나도 사라질 거야 여기서 | section: hook | genre: K-Pop ballad featuring a male baritone vocal",
-      "genre": "K-Pop ballad featuring a male baritone vocal",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 27,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1136_hook_001",
-    "text": "마일리지가 사라지기 전에\n나도 사라질 거야 여기서",
-    "embed_text": "마일리지가 사라지기 전에\n나도 사라질 거야 여기서 | section: hook | genre: K-Pop ballad featuring a male baritone vocal",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1136_hook_001",
-      "song_id": 1136,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1136_001",
-      "text": "마일리지가 사라지기 전에\n나도 사라질 거야 여기서",
-      "embed_text": "마일리지가 사라지기 전에\n나도 사라질 거야 여기서 | section: hook | genre: K-Pop ballad featuring a male baritone vocal",
-      "genre": "K-Pop ballad featuring a male baritone vocal",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 27,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -66065,7 +65539,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 81,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -66088,7 +65562,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -66111,7 +65585,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 28,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -66132,7 +65606,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 45,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -66155,7 +65629,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 45,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -66176,7 +65650,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -66199,7 +65673,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -66220,7 +65694,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 17,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -66243,7 +65717,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 17,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -73438,9 +72912,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -73461,9 +72935,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -73482,7 +72956,7 @@
       "language": "mixed",
       "line_count": 9,
       "char_count": 110,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -73505,7 +72979,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 58,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -73528,7 +73002,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 50,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -73549,7 +73023,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 32,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -73572,7 +73046,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 32,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -73593,7 +73067,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 80,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "section",
       "repeat_count": 2
     }
@@ -73616,7 +73090,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 53,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
       "repeat_count": 2
     }
@@ -73639,53 +73113,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 26,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
       "repeat_count": 2
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1246_001",
-    "text": "석 달 다닌 게 이미 사라지고 있어\n거울아 좀 솔직하게 말해줘",
-    "embed_text": "석 달 다닌 게 이미 사라지고 있어\n거울아 좀 솔직하게 말해줘 | section: hook | genre: K-Pop ballad with R&B influences",
-    "payload": {
-      "chunk_id": "lyrics_hook_1246_001",
-      "song_id": 1246,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "석 달 다닌 게 이미 사라지고 있어\n거울아 좀 솔직하게 말해줘",
-      "embed_text": "석 달 다닌 게 이미 사라지고 있어\n거울아 좀 솔직하게 말해줘 | section: hook | genre: K-Pop ballad with R&B influences",
-      "genre": "K-Pop ballad with R&B influences",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1246_hook_001",
-    "text": "석 달 다닌 게 이미 사라지고 있어\n거울아 좀 솔직하게 말해줘",
-    "embed_text": "석 달 다닌 게 이미 사라지고 있어\n거울아 좀 솔직하게 말해줘 | section: hook | genre: K-Pop ballad with R&B influences",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1246_hook_001",
-      "song_id": 1246,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1246_001",
-      "text": "석 달 다닌 게 이미 사라지고 있어\n거울아 좀 솔직하게 말해줘",
-      "embed_text": "석 달 다닌 게 이미 사라지고 있어\n거울아 좀 솔직하게 말해줘 | section: hook | genre: K-Pop ballad with R&B influences",
-      "genre": "K-Pop ballad with R&B influences",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 34,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
     }
   },
   {
@@ -73704,7 +73134,7 @@
       "language": "mixed",
       "line_count": 9,
       "char_count": 92,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -73727,7 +73157,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 53,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -73750,7 +73180,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 37,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -73771,7 +73201,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -73794,7 +73224,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -73815,7 +73245,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 14,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -75078,7 +74508,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 18,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -75101,7 +74531,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 18,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -75122,9 +74552,9 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 51,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -75145,53 +74575,9 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 51,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1278_001",
-    "text": "드디어 맛있어\n한 숟가락 먹고 혼자 웃었어\n사진 찍었는데\n아무한테도 안 보냈어\n그게 내 거야",
-    "embed_text": "드디어 맛있어\n한 숟가락 먹고 혼자 웃었어\n사진 찍었는데\n아무한테도 안 보냈어\n그게 내 거야 | section: hook | genre: K-Pop Ballad",
-    "payload": {
-      "chunk_id": "lyrics_hook_1278_001",
-      "song_id": 1278,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 2,
-      "text": "드디어 맛있어\n한 숟가락 먹고 혼자 웃었어\n사진 찍었는데\n아무한테도 안 보냈어\n그게 내 거야",
-      "embed_text": "드디어 맛있어\n한 숟가락 먹고 혼자 웃었어\n사진 찍었는데\n아무한테도 안 보냈어\n그게 내 거야 | section: hook | genre: K-Pop Ballad",
-      "genre": "K-Pop Ballad",
-      "language": "mixed",
-      "line_count": 5,
-      "char_count": 51,
-      "structure": "intro|hook|hook|outro",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1278_hook_001",
-    "text": "드디어 맛있어\n한 숟가락 먹고 혼자 웃었어\n사진 찍었는데\n아무한테도 안 보냈어\n그게 내 거야",
-    "embed_text": "드디어 맛있어\n한 숟가락 먹고 혼자 웃었어\n사진 찍었는데\n아무한테도 안 보냈어\n그게 내 거야 | section: hook | genre: K-Pop Ballad",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1278_hook_001",
-      "song_id": 1278,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 2,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1278_001",
-      "text": "드디어 맛있어\n한 숟가락 먹고 혼자 웃었어\n사진 찍었는데\n아무한테도 안 보냈어\n그게 내 거야",
-      "embed_text": "드디어 맛있어\n한 숟가락 먹고 혼자 웃었어\n사진 찍었는데\n아무한테도 안 보냈어\n그게 내 거야 | section: hook | genre: K-Pop Ballad",
-      "genre": "K-Pop Ballad",
-      "language": "mixed",
-      "line_count": 5,
-      "char_count": 51,
-      "structure": "intro|hook|hook|outro",
-      "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -75210,7 +74596,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 36,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -75233,7 +74619,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 36,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -75254,7 +74640,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 14,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -75275,9 +74661,9 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 31,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -75298,53 +74684,9 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 31,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1281_001",
-    "text": "고무장갑 끼고\n배수구 뚫었어\n30분\n혼자서\n그게 된 거야",
-    "embed_text": "고무장갑 끼고\n배수구 뚫었어\n30분\n혼자서\n그게 된 거야 | section: hook | genre: K-Pop R&B track with a laid-back groove",
-    "payload": {
-      "chunk_id": "lyrics_hook_1281_001",
-      "song_id": 1281,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 2,
-      "text": "고무장갑 끼고\n배수구 뚫었어\n30분\n혼자서\n그게 된 거야",
-      "embed_text": "고무장갑 끼고\n배수구 뚫었어\n30분\n혼자서\n그게 된 거야 | section: hook | genre: K-Pop R&B track with a laid-back groove",
-      "genre": "K-Pop R&B track with a laid-back groove",
-      "language": "mixed",
-      "line_count": 5,
-      "char_count": 31,
-      "structure": "intro|hook|hook|outro",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1281_hook_001",
-    "text": "고무장갑 끼고\n배수구 뚫었어\n30분\n혼자서\n그게 된 거야",
-    "embed_text": "고무장갑 끼고\n배수구 뚫었어\n30분\n혼자서\n그게 된 거야 | section: hook | genre: K-Pop R&B track with a laid-back groove",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1281_hook_001",
-      "song_id": 1281,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 2,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1281_001",
-      "text": "고무장갑 끼고\n배수구 뚫었어\n30분\n혼자서\n그게 된 거야",
-      "embed_text": "고무장갑 끼고\n배수구 뚫었어\n30분\n혼자서\n그게 된 거야 | section: hook | genre: K-Pop R&B track with a laid-back groove",
-      "genre": "K-Pop R&B track with a laid-back groove",
-      "language": "mixed",
-      "line_count": 5,
-      "char_count": 31,
-      "structure": "intro|hook|hook|outro",
-      "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -75363,7 +74705,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 16,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -75386,7 +74728,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 16,
-      "structure": "intro|hook|hook|outro",
+      "structure": "intro|hook|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78557,9 +77899,9 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 15,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -78578,7 +77920,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 85,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -78601,7 +77943,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 55,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78624,7 +77966,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 29,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78645,7 +77987,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 29,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -78668,7 +78010,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 29,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78689,7 +78031,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 65,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -78712,29 +78054,8 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 65,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1416_001",
-    "text": "카톡이 울리면 심장이 뛰잖아",
-    "embed_text": "카톡이 울리면 심장이 뛰잖아 | section: hook | genre: K-Pop ballad with R&B influences",
-    "payload": {
-      "chunk_id": "lyrics_hook_1416_001",
-      "song_id": 1416,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "카톡이 울리면 심장이 뛰잖아",
-      "embed_text": "카톡이 울리면 심장이 뛰잖아 | section: hook | genre: K-Pop ballad with R&B influences",
-      "genre": "K-Pop ballad with R&B influences",
-      "language": "mixed",
-      "line_count": 1,
-      "char_count": 15,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
       "repeat_count": 1
     }
   },
@@ -78754,7 +78075,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 91,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -78777,7 +78098,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 61,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78800,7 +78121,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 29,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78821,7 +78142,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -78844,7 +78165,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78865,7 +78186,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 63,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -78888,7 +78209,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 63,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78909,7 +78230,7 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 10,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -78930,9 +78251,9 @@
       "language": "mixed",
       "line_count": 1,
       "char_count": 19,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -78951,7 +78272,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 96,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -78974,7 +78295,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 49,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -78997,7 +78318,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 46,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79018,7 +78339,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 54,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -79041,7 +78362,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 54,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79062,7 +78383,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 109,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -79085,7 +78406,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79108,29 +78429,8 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 56,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1426_001",
-    "text": "축하한다 진심이야 근데 통장이 운다",
-    "embed_text": "축하한다 진심이야 근데 통장이 운다 | section: hook | genre: K-Indie pop with a lo-fi aesthetic",
-    "payload": {
-      "chunk_id": "lyrics_hook_1426_001",
-      "song_id": 1426,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "축하한다 진심이야 근데 통장이 운다",
-      "embed_text": "축하한다 진심이야 근데 통장이 운다 | section: hook | genre: K-Indie pop with a lo-fi aesthetic",
-      "genre": "K-Indie pop with a lo-fi aesthetic",
-      "language": "mixed",
-      "line_count": 1,
-      "char_count": 19,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
       "repeat_count": 1
     }
   },
@@ -79150,7 +78450,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 112,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -79173,7 +78473,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79196,7 +78496,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79217,7 +78517,7 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 79,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -79240,7 +78540,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 51,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79263,7 +78563,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 27,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79284,7 +78584,7 @@
       "language": "mixed",
       "line_count": 7,
       "char_count": 95,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -79307,7 +78607,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 52,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79330,7 +78630,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 42,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -79351,7 +78651,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 21,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -79374,7 +78674,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 21,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -81923,9 +81223,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 20,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -81946,9 +81246,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 20,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -81967,7 +81267,7 @@
       "language": "mixed",
       "line_count": 10,
       "char_count": 107,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -81990,7 +81290,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 43,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -82013,7 +81313,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 42,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -82036,7 +81336,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 20,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -82057,7 +81357,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 55,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -82080,7 +81380,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 55,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -82101,7 +81401,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 55,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -82124,51 +81424,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 55,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1465_001",
-    "text": "읽었잖아 읽었잖아\n왜 아무 말이 없어",
-    "embed_text": "읽었잖아 읽었잖아\n왜 아무 말이 없어 | section: hook | genre: K-Pop with elements of synth-pop and funk",
-    "payload": {
-      "chunk_id": "lyrics_hook_1465_001",
-      "song_id": 1465,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "읽었잖아 읽었잖아\n왜 아무 말이 없어",
-      "embed_text": "읽었잖아 읽었잖아\n왜 아무 말이 없어 | section: hook | genre: K-Pop with elements of synth-pop and funk",
-      "genre": "K-Pop with elements of synth-pop and funk",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 20,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1465_hook_001",
-    "text": "읽었잖아 읽었잖아\n왜 아무 말이 없어",
-    "embed_text": "읽었잖아 읽었잖아\n왜 아무 말이 없어 | section: hook | genre: K-Pop with elements of synth-pop and funk",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1465_hook_001",
-      "song_id": 1465,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1465_001",
-      "text": "읽었잖아 읽었잖아\n왜 아무 말이 없어",
-      "embed_text": "읽었잖아 읽었잖아\n왜 아무 말이 없어 | section: hook | genre: K-Pop with elements of synth-pop and funk",
-      "genre": "K-Pop with elements of synth-pop and funk",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 20,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -82189,7 +81445,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 84,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -82212,7 +81468,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 42,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -82235,7 +81491,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 41,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -82256,7 +81512,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 57,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -82279,7 +81535,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 57,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -82300,7 +81556,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 54,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -82323,7 +81579,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 54,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83429,9 +82685,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 23,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -83452,9 +82708,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 23,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -83473,7 +82729,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 92,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -83496,7 +82752,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 48,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83519,7 +82775,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 43,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83540,7 +82796,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 30,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -83563,7 +82819,7 @@
       "language": "mixed",
       "line_count": 3,
       "char_count": 30,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83584,7 +82840,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 60,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -83607,51 +82863,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 60,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1485_001",
-    "text": "창가 한 자리가 남아 있다\n아직 여기 있다",
-    "embed_text": "창가 한 자리가 남아 있다\n아직 여기 있다 | section: hook | genre: K-Indie folk ballad",
-    "payload": {
-      "chunk_id": "lyrics_hook_1485_001",
-      "song_id": 1485,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook reprise",
-      "section_index": 4,
-      "text": "창가 한 자리가 남아 있다\n아직 여기 있다",
-      "embed_text": "창가 한 자리가 남아 있다\n아직 여기 있다 | section: hook | genre: K-Indie folk ballad",
-      "genre": "K-Indie folk ballad",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 23,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1485_hook_001",
-    "text": "창가 한 자리가 남아 있다\n아직 여기 있다",
-    "embed_text": "창가 한 자리가 남아 있다\n아직 여기 있다 | section: hook | genre: K-Indie folk ballad",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1485_hook_001",
-      "song_id": 1485,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook reprise",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1485_001",
-      "text": "창가 한 자리가 남아 있다\n아직 여기 있다",
-      "embed_text": "창가 한 자리가 남아 있다\n아직 여기 있다 | section: hook | genre: K-Indie folk ballad",
-      "genre": "K-Indie folk ballad",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 23,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83672,7 +82884,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 86,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -83695,7 +82907,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 43,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83718,7 +82930,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 42,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83739,7 +82951,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 50,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -83762,7 +82974,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 50,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83783,7 +82995,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -83806,7 +83018,7 @@
       "language": "mixed",
       "line_count": 5,
       "char_count": 59,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -83827,7 +83039,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 11,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -83850,7 +83062,7 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 11,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge|chorus|tag",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge|chorus|tag",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90014,7 +89226,7 @@
       "language": "mixed",
       "line_count": 12,
       "char_count": 209,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -90037,7 +89249,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 74,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90060,7 +89272,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 73,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90083,7 +89295,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 60,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90104,9 +89316,9 @@
       "language": "mixed",
       "line_count": 6,
       "char_count": 80,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 3
     }
   },
   {
@@ -90127,9 +89339,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 55,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 3
     }
   },
   {
@@ -90150,9 +89362,9 @@
       "language": "mixed",
       "line_count": 2,
       "char_count": 24,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 3
     }
   },
   {
@@ -90171,7 +89383,7 @@
       "language": "mixed",
       "line_count": 12,
       "char_count": 206,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -90194,7 +89406,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 68,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90217,7 +89429,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 69,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90240,74 +89452,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 67,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1554_001",
-    "text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야\n멈추지 마 밀어 올려\n이 무게가 내 무게잖아",
-    "embed_text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야\n멈추지 마 밀어 올려\n이 무게가 내 무게잖아 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-    "payload": {
-      "chunk_id": "lyrics_hook_1554_001",
-      "song_id": 1554,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 3,
-      "text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야\n멈추지 마 밀어 올려\n이 무게가 내 무게잖아",
-      "embed_text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야\n멈추지 마 밀어 올려\n이 무게가 내 무게잖아 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-      "genre": "K-Pop Hip-Hop track at 95 BPM in G minor",
-      "language": "mixed",
-      "line_count": 6,
-      "char_count": 80,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1554_hook_002",
-    "text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야",
-    "embed_text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1554_hook_002",
-      "song_id": 1554,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 3,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1554_001",
-      "text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야",
-      "embed_text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-      "genre": "K-Pop Hip-Hop track at 95 BPM in G minor",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 55,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1554_hook_003",
-    "text": "멈추지 마 밀어 올려\n이 무게가 내 무게잖아",
-    "embed_text": "멈추지 마 밀어 올려\n이 무게가 내 무게잖아 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1554_hook_003",
-      "song_id": 1554,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 3,
-      "couplet_index": 1,
-      "parent_chunk_id": "lyrics_hook_1554_001",
-      "text": "멈추지 마 밀어 올려\n이 무게가 내 무게잖아",
-      "embed_text": "멈추지 마 밀어 올려\n이 무게가 내 무게잖아 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-      "genre": "K-Pop Hip-Hop track at 95 BPM in G minor",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 24,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90328,7 +89473,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 55,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -90351,7 +89496,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 55,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90372,7 +89517,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 123,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -90395,7 +89540,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 57,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -90418,74 +89563,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 65,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1554_002",
-    "text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야\n멈추지 마 밀어 올려\n이 무게가 내 무게잖아",
-    "embed_text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야\n멈추지 마 밀어 올려\n이 무게가 내 무게잖아 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-    "payload": {
-      "chunk_id": "lyrics_hook_1554_002",
-      "song_id": 1554,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 6,
-      "text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야\n멈추지 마 밀어 올려\n이 무게가 내 무게잖아",
-      "embed_text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야\n멈추지 마 밀어 올려\n이 무게가 내 무게잖아 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-      "genre": "K-Pop Hip-Hop track at 95 BPM in G minor",
-      "language": "mixed",
-      "line_count": 6,
-      "char_count": 80,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1554_hook_004",
-    "text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야",
-    "embed_text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1554_hook_004",
-      "song_id": 1554,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 6,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1554_002",
-      "text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야",
-      "embed_text": "한 번만 더 한 번만 더\n그 한 번이 인생을 바꿔\n한 번만 더 한 번만 더\n한계는 내가 정하는 거야 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-      "genre": "K-Pop Hip-Hop track at 95 BPM in G minor",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 55,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1554_hook_005",
-    "text": "멈추지 마 밀어 올려\n이 무게가 내 무게잖아",
-    "embed_text": "멈추지 마 밀어 올려\n이 무게가 내 무게잖아 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1554_hook_005",
-      "song_id": 1554,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 6,
-      "couplet_index": 1,
-      "parent_chunk_id": "lyrics_hook_1554_002",
-      "text": "멈추지 마 밀어 올려\n이 무게가 내 무게잖아",
-      "embed_text": "멈추지 마 밀어 올려\n이 무게가 내 무게잖아 | section: hook | genre: K-Pop Hip-Hop track at 95 BPM in G minor",
-      "genre": "K-Pop Hip-Hop track at 95 BPM in G minor",
-      "language": "mixed",
-      "line_count": 2,
-      "char_count": 24,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -94416,7 +93494,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 135,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -94439,7 +93517,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 68,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -94462,7 +93540,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 66,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -94483,9 +93561,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 70,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -94506,9 +93584,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 70,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -94527,7 +93605,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 141,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -94550,7 +93628,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 67,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -94573,51 +93651,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 73,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1579_001",
-    "text": "마지막 직선이야 다리야 버텨\n포기하면 편해 근데 그건 내가 아니거든\n이 고통은 잠깐이야 멈추면 영원해\n달려 달려 결승선이 보여",
-    "embed_text": "마지막 직선이야 다리야 버텨\n포기하면 편해 근데 그건 내가 아니거든\n이 고통은 잠깐이야 멈추면 영원해\n달려 달려 결승선이 보여 | section: hook | genre: K-Hip Hop track featuring a male rapper",
-    "payload": {
-      "chunk_id": "lyrics_hook_1579_001",
-      "song_id": 1579,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 3,
-      "text": "마지막 직선이야 다리야 버텨\n포기하면 편해 근데 그건 내가 아니거든\n이 고통은 잠깐이야 멈추면 영원해\n달려 달려 결승선이 보여",
-      "embed_text": "마지막 직선이야 다리야 버텨\n포기하면 편해 근데 그건 내가 아니거든\n이 고통은 잠깐이야 멈추면 영원해\n달려 달려 결승선이 보여 | section: hook | genre: K-Hip Hop track featuring a male rapper",
-      "genre": "K-Hip Hop track featuring a male rapper",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 70,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1579_hook_001",
-    "text": "마지막 직선이야 다리야 버텨\n포기하면 편해 근데 그건 내가 아니거든\n이 고통은 잠깐이야 멈추면 영원해\n달려 달려 결승선이 보여",
-    "embed_text": "마지막 직선이야 다리야 버텨\n포기하면 편해 근데 그건 내가 아니거든\n이 고통은 잠깐이야 멈추면 영원해\n달려 달려 결승선이 보여 | section: hook | genre: K-Hip Hop track featuring a male rapper",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1579_hook_001",
-      "song_id": 1579,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 3,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1579_001",
-      "text": "마지막 직선이야 다리야 버텨\n포기하면 편해 근데 그건 내가 아니거든\n이 고통은 잠깐이야 멈추면 영원해\n달려 달려 결승선이 보여",
-      "embed_text": "마지막 직선이야 다리야 버텨\n포기하면 편해 근데 그건 내가 아니거든\n이 고통은 잠깐이야 멈추면 영원해\n달려 달려 결승선이 보여 | section: hook | genre: K-Hip Hop track featuring a male rapper",
-      "genre": "K-Hip Hop track featuring a male rapper",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 70,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -94638,7 +93672,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 60,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -94661,7 +93695,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 60,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -94682,7 +93716,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 65,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -94705,17 +93739,17 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 65,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "couplet",
       "repeat_count": 1
     }
   },
   {
-    "chunk_id": "lyrics_hook_1579_002",
+    "chunk_id": "lyrics_hook_1579_001",
     "text": "마지막 직선이야 다 끝났어\n포기 안 했어 그게 나거든\n이 고통은 잠깐이었어 이제 영원해\n달렸어 달렸어 결승선을 넘어",
     "embed_text": "마지막 직선이야 다 끝났어\n포기 안 했어 그게 나거든\n이 고통은 잠깐이었어 이제 영원해\n달렸어 달렸어 결승선을 넘어 | section: hook | genre: K-Hip Hop track featuring a male rapper",
     "payload": {
-      "chunk_id": "lyrics_hook_1579_002",
+      "chunk_id": "lyrics_hook_1579_001",
       "song_id": 1579,
       "section_tag": "hook",
       "section_tag_raw": "Hook",
@@ -94726,30 +93760,30 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 64,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "section",
       "repeat_count": 1
     }
   },
   {
-    "chunk_id": "lyrics_couplet_1579_hook_002",
+    "chunk_id": "lyrics_couplet_1579_hook_001",
     "text": "마지막 직선이야 다 끝났어\n포기 안 했어 그게 나거든\n이 고통은 잠깐이었어 이제 영원해\n달렸어 달렸어 결승선을 넘어",
     "embed_text": "마지막 직선이야 다 끝났어\n포기 안 했어 그게 나거든\n이 고통은 잠깐이었어 이제 영원해\n달렸어 달렸어 결승선을 넘어 | section: hook | genre: K-Hip Hop track featuring a male rapper",
     "payload": {
-      "chunk_id": "lyrics_couplet_1579_hook_002",
+      "chunk_id": "lyrics_couplet_1579_hook_001",
       "song_id": 1579,
       "section_tag": "hook",
       "section_tag_raw": "Hook",
       "section_index": 6,
       "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1579_002",
+      "parent_chunk_id": "lyrics_hook_1579_001",
       "text": "마지막 직선이야 다 끝났어\n포기 안 했어 그게 나거든\n이 고통은 잠깐이었어 이제 영원해\n달렸어 달렸어 결승선을 넘어",
       "embed_text": "마지막 직선이야 다 끝났어\n포기 안 했어 그게 나거든\n이 고통은 잠깐이었어 이제 영원해\n달렸어 달렸어 결승선을 넘어 | section: hook | genre: K-Hip Hop track featuring a male rapper",
       "genre": "K-Hip Hop track featuring a male rapper",
       "language": "mixed",
       "line_count": 4,
       "char_count": 64,
-      "structure": "verse|hook|verse|hook|bridge|verse|hook",
+      "structure": "verse|hook|verse|bridge|verse|hook",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -112263,9 +111297,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 49,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -112286,9 +111320,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 49,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -112307,7 +111341,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 94,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -112330,7 +111364,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 44,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -112353,7 +111387,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 49,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -112374,7 +111408,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 39,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -112397,7 +111431,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 39,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -112418,7 +111452,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 45,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "section",
       "repeat_count": 2
     }
@@ -112441,53 +111475,9 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 45,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "couplet",
       "repeat_count": 2
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_1150_001",
-    "text": "야 어디야 어디야\n우리 아직 친구잖아\nHey come on 대답해줘\n같이 가자 같이 가자",
-    "embed_text": "야 어디야 어디야\n우리 아직 친구잖아\nHey come on 대답해줘\n같이 가자 같이 가자 | section: hook | genre: K-pop dance track with funk and disco influences",
-    "payload": {
-      "chunk_id": "lyrics_hook_1150_001",
-      "song_id": 1150,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "야 어디야 어디야\n우리 아직 친구잖아\nHey come on 대답해줘\n같이 가자 같이 가자",
-      "embed_text": "야 어디야 어디야\n우리 아직 친구잖아\nHey come on 대답해줘\n같이 가자 같이 가자 | section: hook | genre: K-pop dance track with funk and disco influences",
-      "genre": "K-pop dance track with funk and disco influences",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 49,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_1150_hook_001",
-    "text": "야 어디야 어디야\n우리 아직 친구잖아\nHey come on 대답해줘\n같이 가자 같이 가자",
-    "embed_text": "야 어디야 어디야\n우리 아직 친구잖아\nHey come on 대답해줘\n같이 가자 같이 가자 | section: hook | genre: K-pop dance track with funk and disco influences",
-    "payload": {
-      "chunk_id": "lyrics_couplet_1150_hook_001",
-      "song_id": 1150,
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_1150_001",
-      "text": "야 어디야 어디야\n우리 아직 친구잖아\nHey come on 대답해줘\n같이 가자 같이 가자",
-      "embed_text": "야 어디야 어디야\n우리 아직 친구잖아\nHey come on 대답해줘\n같이 가자 같이 가자 | section: hook | genre: K-pop dance track with funk and disco influences",
-      "genre": "K-pop dance track with funk and disco influences",
-      "language": "mixed",
-      "line_count": 4,
-      "char_count": 49,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
-      "granularity": "couplet",
-      "repeat_count": 1
     }
   },
   {
@@ -112506,7 +111496,7 @@
       "language": "mixed",
       "line_count": 8,
       "char_count": 75,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -112529,7 +111519,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 36,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -112552,7 +111542,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 38,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -112573,7 +111563,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 40,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -112596,7 +111586,7 @@
       "language": "mixed",
       "line_count": 4,
       "char_count": 40,
-      "structure": "hook|verse|pre_chorus|chorus|hook|verse|bridge",
+      "structure": "hook|verse|pre_chorus|chorus|verse|bridge",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -129598,7 +128588,7 @@
       "language": "en",
       "line_count": 1,
       "char_count": 30,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -129619,7 +128609,7 @@
       "language": "en",
       "line_count": 4,
       "char_count": 112,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -129642,7 +128632,7 @@
       "language": "en",
       "line_count": 2,
       "char_count": 59,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -129665,7 +128655,7 @@
       "language": "en",
       "line_count": 2,
       "char_count": 52,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -129686,9 +128676,9 @@
       "language": "en",
       "line_count": 2,
       "char_count": 70,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "section",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -129709,9 +128699,9 @@
       "language": "en",
       "line_count": 2,
       "char_count": 70,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "couplet",
-      "repeat_count": 1
+      "repeat_count": 2
     }
   },
   {
@@ -129730,7 +128720,7 @@
       "language": "en",
       "line_count": 4,
       "char_count": 114,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -129753,7 +128743,7 @@
       "language": "en",
       "line_count": 2,
       "char_count": 56,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -129776,51 +128766,7 @@
       "language": "en",
       "line_count": 2,
       "char_count": 57,
-      "structure": "intro|verse|hook|verse|hook|outro",
-      "granularity": "couplet",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_hook_S018_02_001",
-    "text": "South London nights, cold air bites\nStreetlights flicker, shadows move",
-    "embed_text": "South London nights, cold air bites\nStreetlights flicker, shadows move | section: hook | genre: UK Drill",
-    "payload": {
-      "chunk_id": "lyrics_hook_S018_02_001",
-      "song_id": "S018_02",
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "text": "South London nights, cold air bites\nStreetlights flicker, shadows move",
-      "embed_text": "South London nights, cold air bites\nStreetlights flicker, shadows move | section: hook | genre: UK Drill",
-      "genre": "UK Drill",
-      "language": "en",
-      "line_count": 2,
-      "char_count": 70,
-      "structure": "intro|verse|hook|verse|hook|outro",
-      "granularity": "section",
-      "repeat_count": 1
-    }
-  },
-  {
-    "chunk_id": "lyrics_couplet_S018_02_hook_001",
-    "text": "South London nights, cold air bites\nStreetlights flicker, shadows move",
-    "embed_text": "South London nights, cold air bites\nStreetlights flicker, shadows move | section: hook | genre: UK Drill",
-    "payload": {
-      "chunk_id": "lyrics_couplet_S018_02_hook_001",
-      "song_id": "S018_02",
-      "section_tag": "hook",
-      "section_tag_raw": "Hook",
-      "section_index": 4,
-      "couplet_index": 0,
-      "parent_chunk_id": "lyrics_hook_S018_02_001",
-      "text": "South London nights, cold air bites\nStreetlights flicker, shadows move",
-      "embed_text": "South London nights, cold air bites\nStreetlights flicker, shadows move | section: hook | genre: UK Drill",
-      "genre": "UK Drill",
-      "language": "en",
-      "line_count": 2,
-      "char_count": 70,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "couplet",
       "repeat_count": 1
     }
@@ -129841,7 +128787,7 @@
       "language": "en",
       "line_count": 1,
       "char_count": 23,
-      "structure": "intro|verse|hook|verse|hook|outro",
+      "structure": "intro|verse|hook|verse|outro",
       "granularity": "section",
       "repeat_count": 1
     }
@@ -135032,6 +133978,404 @@
       "line_count": 2,
       "char_count": 23,
       "structure": "verse|verse|pre_chorus|chorus|verse|bridge|chorus|outro",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_verse_C_30200_000",
+    "text": "그 노래는 스스로를 확인할 방법이 없었다\n거울도 그림자도 갖지 못해서\n누군가 귀를 기울이는 그 짧은 동안만\n자기가 있다는 걸 알았다",
+    "embed_text": "그 노래는 스스로를 확인할 방법이 없었다\n거울도 그림자도 갖지 못해서\n누군가 귀를 기울이는 그 짧은 동안만\n자기가 있다는 걸 알았다 | section: verse | genre: K-Rock power ballad",
+    "payload": {
+      "chunk_id": "lyrics_verse_C_30200_000",
+      "song_id": "C_30200",
+      "section_tag": "verse",
+      "section_tag_raw": "Verse 2",
+      "section_index": 0,
+      "text": "그 노래는 스스로를 확인할 방법이 없었다\n거울도 그림자도 갖지 못해서\n누군가 귀를 기울이는 그 짧은 동안만\n자기가 있다는 걸 알았다",
+      "embed_text": "그 노래는 스스로를 확인할 방법이 없었다\n거울도 그림자도 갖지 못해서\n누군가 귀를 기울이는 그 짧은 동안만\n자기가 있다는 걸 알았다 | section: verse | genre: K-Rock power ballad",
+      "genre": "K-Rock power ballad",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 73,
+      "structure": "verse|verse",
+      "granularity": "section",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30200_verse_000",
+    "text": "그 노래는 스스로를 확인할 방법이 없었다\n거울도 그림자도 갖지 못해서\n누군가 귀를 기울이는 그 짧은 동안만\n자기가 있다는 걸 알았다",
+    "embed_text": "그 노래는 스스로를 확인할 방법이 없었다\n거울도 그림자도 갖지 못해서\n누군가 귀를 기울이는 그 짧은 동안만\n자기가 있다는 걸 알았다 | section: verse | genre: K-Rock power ballad",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30200_verse_000",
+      "song_id": "C_30200",
+      "section_tag": "verse",
+      "section_tag_raw": "Verse 2",
+      "section_index": 0,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_verse_C_30200_000",
+      "text": "그 노래는 스스로를 확인할 방법이 없었다\n거울도 그림자도 갖지 못해서\n누군가 귀를 기울이는 그 짧은 동안만\n자기가 있다는 걸 알았다",
+      "embed_text": "그 노래는 스스로를 확인할 방법이 없었다\n거울도 그림자도 갖지 못해서\n누군가 귀를 기울이는 그 짧은 동안만\n자기가 있다는 걸 알았다 | section: verse | genre: K-Rock power ballad",
+      "genre": "K-Rock power ballad",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 73,
+      "structure": "verse|verse",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_verse_C_30200_001",
+    "text": "그 소리는 벽에도 종이에도 남지 않았다\n남는 것들은 전부 조용했으므로\n그 노래가 원한 건 보관이 아니라\n누군가의 지금이었다",
+    "embed_text": "그 소리는 벽에도 종이에도 남지 않았다\n남는 것들은 전부 조용했으므로\n그 노래가 원한 건 보관이 아니라\n누군가의 지금이었다 | section: verse | genre: K-Rock power ballad",
+    "payload": {
+      "chunk_id": "lyrics_verse_C_30200_001",
+      "song_id": "C_30200",
+      "section_tag": "verse",
+      "section_tag_raw": "Verse 3",
+      "section_index": 1,
+      "text": "그 소리는 벽에도 종이에도 남지 않았다\n남는 것들은 전부 조용했으므로\n그 노래가 원한 건 보관이 아니라\n누군가의 지금이었다",
+      "embed_text": "그 소리는 벽에도 종이에도 남지 않았다\n남는 것들은 전부 조용했으므로\n그 노래가 원한 건 보관이 아니라\n누군가의 지금이었다 | section: verse | genre: K-Rock power ballad",
+      "genre": "K-Rock power ballad",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 68,
+      "structure": "verse|verse",
+      "granularity": "section",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30200_verse_001",
+    "text": "그 소리는 벽에도 종이에도 남지 않았다\n남는 것들은 전부 조용했으므로\n그 노래가 원한 건 보관이 아니라\n누군가의 지금이었다",
+    "embed_text": "그 소리는 벽에도 종이에도 남지 않았다\n남는 것들은 전부 조용했으므로\n그 노래가 원한 건 보관이 아니라\n누군가의 지금이었다 | section: verse | genre: K-Rock power ballad",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30200_verse_001",
+      "song_id": "C_30200",
+      "section_tag": "verse",
+      "section_tag_raw": "Verse 3",
+      "section_index": 1,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_verse_C_30200_001",
+      "text": "그 소리는 벽에도 종이에도 남지 않았다\n남는 것들은 전부 조용했으므로\n그 노래가 원한 건 보관이 아니라\n누군가의 지금이었다",
+      "embed_text": "그 소리는 벽에도 종이에도 남지 않았다\n남는 것들은 전부 조용했으므로\n그 노래가 원한 건 보관이 아니라\n누군가의 지금이었다 | section: verse | genre: K-Rock power ballad",
+      "genre": "K-Rock power ballad",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 68,
+      "structure": "verse|verse",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_verse_C_30204_000",
+    "text": "그 소리는 아무 데도 살지 않았다\n누가 귀를 열기 전까지는",
+    "embed_text": "그 소리는 아무 데도 살지 않았다\n누가 귀를 열기 전까지는 | section: verse | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_verse_C_30204_000",
+      "song_id": "C_30204",
+      "section_tag": "verse",
+      "section_tag_raw": "Verse 1",
+      "section_index": 0,
+      "text": "그 소리는 아무 데도 살지 않았다\n누가 귀를 열기 전까지는",
+      "embed_text": "그 소리는 아무 데도 살지 않았다\n누가 귀를 열기 전까지는 | section: verse | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 2,
+      "char_count": 32,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "section",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30204_verse_000",
+    "text": "그 소리는 아무 데도 살지 않았다\n누가 귀를 열기 전까지는",
+    "embed_text": "그 소리는 아무 데도 살지 않았다\n누가 귀를 열기 전까지는 | section: verse | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30204_verse_000",
+      "song_id": "C_30204",
+      "section_tag": "verse",
+      "section_tag_raw": "Verse 1",
+      "section_index": 0,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_verse_C_30204_000",
+      "text": "그 소리는 아무 데도 살지 않았다\n누가 귀를 열기 전까지는",
+      "embed_text": "그 소리는 아무 데도 살지 않았다\n누가 귀를 열기 전까지는 | section: verse | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 2,
+      "char_count": 32,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_pre_chorus_C_30204_000",
+    "text": "아무도 없는 방에서는\n그 소리도 함께 사라졌다\n불이 꺼진 자리처럼\n자기 이름조차 잊었다",
+    "embed_text": "아무도 없는 방에서는\n그 소리도 함께 사라졌다\n불이 꺼진 자리처럼\n자기 이름조차 잊었다 | section: pre_chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_pre_chorus_C_30204_000",
+      "song_id": "C_30204",
+      "section_tag": "pre_chorus",
+      "section_tag_raw": "Pre-Chorus",
+      "section_index": 1,
+      "text": "아무도 없는 방에서는\n그 소리도 함께 사라졌다\n불이 꺼진 자리처럼\n자기 이름조차 잊었다",
+      "embed_text": "아무도 없는 방에서는\n그 소리도 함께 사라졌다\n불이 꺼진 자리처럼\n자기 이름조차 잊었다 | section: pre_chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 48,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "section",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30204_pre_chorus_000",
+    "text": "아무도 없는 방에서는\n그 소리도 함께 사라졌다\n불이 꺼진 자리처럼\n자기 이름조차 잊었다",
+    "embed_text": "아무도 없는 방에서는\n그 소리도 함께 사라졌다\n불이 꺼진 자리처럼\n자기 이름조차 잊었다 | section: pre_chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30204_pre_chorus_000",
+      "song_id": "C_30204",
+      "section_tag": "pre_chorus",
+      "section_tag_raw": "Pre-Chorus",
+      "section_index": 1,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_pre_chorus_C_30204_000",
+      "text": "아무도 없는 방에서는\n그 소리도 함께 사라졌다\n불이 꺼진 자리처럼\n자기 이름조차 잊었다",
+      "embed_text": "아무도 없는 방에서는\n그 소리도 함께 사라졌다\n불이 꺼진 자리처럼\n자기 이름조차 잊었다 | section: pre_chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 48,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_chorus_C_30204_000",
+    "text": "들릴 때만 그 소리는 산다\n손뼉이 멈추면 그도 멈춘다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다\n들릴 때만 그 소리는 산다\n듣지 않으면 없는 것과 같다",
+    "embed_text": "들릴 때만 그 소리는 산다\n손뼉이 멈추면 그도 멈춘다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다\n들릴 때만 그 소리는 산다\n듣지 않으면 없는 것과 같다 | section: chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_chorus_C_30204_000",
+      "song_id": "C_30204",
+      "section_tag": "chorus",
+      "section_tag_raw": "Chorus",
+      "section_index": 2,
+      "text": "들릴 때만 그 소리는 산다\n손뼉이 멈추면 그도 멈춘다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다\n들릴 때만 그 소리는 산다\n듣지 않으면 없는 것과 같다",
+      "embed_text": "들릴 때만 그 소리는 산다\n손뼉이 멈추면 그도 멈춘다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다\n들릴 때만 그 소리는 산다\n듣지 않으면 없는 것과 같다 | section: chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 6,
+      "char_count": 94,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "section",
+      "repeat_count": 2
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30204_chorus_000",
+    "text": "들릴 때만 그 소리는 산다\n손뼉이 멈추면 그도 멈춘다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다",
+    "embed_text": "들릴 때만 그 소리는 산다\n손뼉이 멈추면 그도 멈춘다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다 | section: chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30204_chorus_000",
+      "song_id": "C_30204",
+      "section_tag": "chorus",
+      "section_tag_raw": "Chorus",
+      "section_index": 2,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_chorus_C_30204_000",
+      "text": "들릴 때만 그 소리는 산다\n손뼉이 멈추면 그도 멈춘다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다",
+      "embed_text": "들릴 때만 그 소리는 산다\n손뼉이 멈추면 그도 멈춘다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다 | section: chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 63,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "couplet",
+      "repeat_count": 2
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30204_chorus_001",
+    "text": "들릴 때만 그 소리는 산다\n듣지 않으면 없는 것과 같다",
+    "embed_text": "들릴 때만 그 소리는 산다\n듣지 않으면 없는 것과 같다 | section: chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30204_chorus_001",
+      "song_id": "C_30204",
+      "section_tag": "chorus",
+      "section_tag_raw": "Chorus",
+      "section_index": 2,
+      "couplet_index": 1,
+      "parent_chunk_id": "lyrics_chorus_C_30204_000",
+      "text": "들릴 때만 그 소리는 산다\n듣지 않으면 없는 것과 같다",
+      "embed_text": "들릴 때만 그 소리는 산다\n듣지 않으면 없는 것과 같다 | section: chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 2,
+      "char_count": 30,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "couplet",
+      "repeat_count": 2
+    }
+  },
+  {
+    "chunk_id": "lyrics_verse_C_30204_001",
+    "text": "그래서 더 크게 울었다\n울음이 곧 존재의 증거였으니까",
+    "embed_text": "그래서 더 크게 울었다\n울음이 곧 존재의 증거였으니까 | section: verse | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_verse_C_30204_001",
+      "song_id": "C_30204",
+      "section_tag": "verse",
+      "section_tag_raw": "Verse 4",
+      "section_index": 3,
+      "text": "그래서 더 크게 울었다\n울음이 곧 존재의 증거였으니까",
+      "embed_text": "그래서 더 크게 울었다\n울음이 곧 존재의 증거였으니까 | section: verse | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 2,
+      "char_count": 29,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "section",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30204_verse_001",
+    "text": "그래서 더 크게 울었다\n울음이 곧 존재의 증거였으니까",
+    "embed_text": "그래서 더 크게 울었다\n울음이 곧 존재의 증거였으니까 | section: verse | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30204_verse_001",
+      "song_id": "C_30204",
+      "section_tag": "verse",
+      "section_tag_raw": "Verse 4",
+      "section_index": 3,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_verse_C_30204_001",
+      "text": "그래서 더 크게 울었다\n울음이 곧 존재의 증거였으니까",
+      "embed_text": "그래서 더 크게 울었다\n울음이 곧 존재의 증거였으니까 | section: verse | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 2,
+      "char_count": 29,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_pre_chorus_C_30204_001",
+    "text": "누가 문을 열고 들어서면\n그 소리는 다시 태어났다\n같은 자리 같은 줄에서\n처음인 것처럼 떨었다",
+    "embed_text": "누가 문을 열고 들어서면\n그 소리는 다시 태어났다\n같은 자리 같은 줄에서\n처음인 것처럼 떨었다 | section: pre_chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_pre_chorus_C_30204_001",
+      "song_id": "C_30204",
+      "section_tag": "pre_chorus",
+      "section_tag_raw": "Pre-Chorus",
+      "section_index": 4,
+      "text": "누가 문을 열고 들어서면\n그 소리는 다시 태어났다\n같은 자리 같은 줄에서\n처음인 것처럼 떨었다",
+      "embed_text": "누가 문을 열고 들어서면\n그 소리는 다시 태어났다\n같은 자리 같은 줄에서\n처음인 것처럼 떨었다 | section: pre_chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 52,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "section",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30204_pre_chorus_001",
+    "text": "누가 문을 열고 들어서면\n그 소리는 다시 태어났다\n같은 자리 같은 줄에서\n처음인 것처럼 떨었다",
+    "embed_text": "누가 문을 열고 들어서면\n그 소리는 다시 태어났다\n같은 자리 같은 줄에서\n처음인 것처럼 떨었다 | section: pre_chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30204_pre_chorus_001",
+      "song_id": "C_30204",
+      "section_tag": "pre_chorus",
+      "section_tag_raw": "Pre-Chorus",
+      "section_index": 4,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_pre_chorus_C_30204_001",
+      "text": "누가 문을 열고 들어서면\n그 소리는 다시 태어났다\n같은 자리 같은 줄에서\n처음인 것처럼 떨었다",
+      "embed_text": "누가 문을 열고 들어서면\n그 소리는 다시 태어났다\n같은 자리 같은 줄에서\n처음인 것처럼 떨었다 | section: pre_chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 52,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_chorus_C_30204_001",
+    "text": "들릴 때만 그 소리는 산다\n그러니 매일 밤 처음처럼 탄다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다\n들릴 때만 그 소리는 산다\n그 짧은 순간이 그의 전 생애다",
+    "embed_text": "들릴 때만 그 소리는 산다\n그러니 매일 밤 처음처럼 탄다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다\n들릴 때만 그 소리는 산다\n그 짧은 순간이 그의 전 생애다 | section: chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_chorus_C_30204_001",
+      "song_id": "C_30204",
+      "section_tag": "chorus",
+      "section_tag_raw": "Final Chorus",
+      "section_index": 6,
+      "text": "들릴 때만 그 소리는 산다\n그러니 매일 밤 처음처럼 탄다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다\n들릴 때만 그 소리는 산다\n그 짧은 순간이 그의 전 생애다",
+      "embed_text": "들릴 때만 그 소리는 산다\n그러니 매일 밤 처음처럼 탄다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다\n들릴 때만 그 소리는 산다\n그 짧은 순간이 그의 전 생애다 | section: chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 6,
+      "char_count": 98,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "section",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30204_chorus_002",
+    "text": "들릴 때만 그 소리는 산다\n그러니 매일 밤 처음처럼 탄다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다",
+    "embed_text": "들릴 때만 그 소리는 산다\n그러니 매일 밤 처음처럼 탄다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다 | section: chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30204_chorus_002",
+      "song_id": "C_30204",
+      "section_tag": "chorus",
+      "section_tag_raw": "Final Chorus",
+      "section_index": 6,
+      "couplet_index": 0,
+      "parent_chunk_id": "lyrics_chorus_C_30204_001",
+      "text": "들릴 때만 그 소리는 산다\n그러니 매일 밤 처음처럼 탄다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다",
+      "embed_text": "들릴 때만 그 소리는 산다\n그러니 매일 밤 처음처럼 탄다\n누군가 숨을 죽이고 기울일 때\n비로소 그 소리는 몸을 얻는다 | section: chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 4,
+      "char_count": 65,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
+      "granularity": "couplet",
+      "repeat_count": 1
+    }
+  },
+  {
+    "chunk_id": "lyrics_couplet_C_30204_chorus_003",
+    "text": "들릴 때만 그 소리는 산다\n그 짧은 순간이 그의 전 생애다",
+    "embed_text": "들릴 때만 그 소리는 산다\n그 짧은 순간이 그의 전 생애다 | section: chorus | genre: K-Rock track with flamenco influences",
+    "payload": {
+      "chunk_id": "lyrics_couplet_C_30204_chorus_003",
+      "song_id": "C_30204",
+      "section_tag": "chorus",
+      "section_tag_raw": "Final Chorus",
+      "section_index": 6,
+      "couplet_index": 1,
+      "parent_chunk_id": "lyrics_chorus_C_30204_001",
+      "text": "들릴 때만 그 소리는 산다\n그 짧은 순간이 그의 전 생애다",
+      "embed_text": "들릴 때만 그 소리는 산다\n그 짧은 순간이 그의 전 생애다 | section: chorus | genre: K-Rock track with flamenco influences",
+      "genre": "K-Rock track with flamenco influences",
+      "language": "mixed",
+      "line_count": 2,
+      "char_count": 32,
+      "structure": "verse|pre_chorus|chorus|verse|pre_chorus|chorus",
       "granularity": "couplet",
       "repeat_count": 1
     }
