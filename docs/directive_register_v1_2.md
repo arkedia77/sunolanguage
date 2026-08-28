@@ -3,6 +3,9 @@
 **날짜** 2026-08-27 · **작성** sunolanguage · **크레딧 0 · 신규 생성 0 · 새 수집 0**
 **재현** `scripts/directive_register_read56_v1_2.py` · **산출** `data/metatag_external/directive_register_v1_2.json`
 **부속 실측** `scripts/bracket_leak_corpus_wide_v1.py` → `data/metatag_external/bracket_leak_corpus_wide_v1.json`
+
+> ★★**08-28 — uptake가 편입됐다. 최신 정본 = `docs/directive_register_v1_3.md`.** §6의 「uptake는 미측정」은 **지워졌다**(leomusic3 강제정렬 28/30·M4 신설). `measured_offaxis` **1→0** · `needs_generation` **19→18**.
+
 **전판** `docs/directive_register_v1.md`(수집) · `docs/directive_register_v1_1.md`(5건 읽기)
 
 ---
