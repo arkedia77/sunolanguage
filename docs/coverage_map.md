@@ -1,15 +1,15 @@
 # Suno 네이티브 어휘 — 전체 맵 (v2 초안)
 
-- 곡(유니크 song_id): **550**
-- Suno 재분석 clips: **558**
+- 곡(유니크 song_id): **560**
+- Suno 재분석 clips: **568**
 - 출처: leomusic 생성곡 1분 컷 → Suno 앱 재업로드 → 자체 분석 SP+가사 수집
 
 ## 1. 장르 그룹 × 곡수
 
 | 그룹 | 곡수 |
 |------|-----:|
+| 기타 | 172 |
 | Pop 계열 | 172 |
-| 기타 | 162 |
 | 미정 | 48 |
 | Folk/Acoustic | 36 |
 | R&B 계열 | 33 |
@@ -24,25 +24,25 @@
 
 | 카테고리 | 총 출현 | 고유 표현 | 상위 예시 |
 |----|---:|---:|---|
-| 악기 | 3999 | 34 | guitar(940), bass(502), drum(430), kick(352), snare(328) |
-| 주법/연주 | 712 | 20 | syncopated(270), arpeggiated(119), backbeat(81), fingerpicked(66), palm-muted(59) |
-| 프로덕션 | 782 | 19 | chorus(319), reverb(259), distorted(62), delay(44), compression(41) |
-| 무드/감정 | 1416 | 24 | crisp(223), bright(159), intimate(140), warm(138), tight(135) |
-| 템포/BPM | 560 | 42 | 72 bpm(160), 92 bpm(42), 115 bpm(36), 105 bpm(30), 118 bpm(25) |
-| 조성/Key | 495 | 23 | key of e major(212), key of g major(120), key of c major(45), g major(24), key of g minor(17) |
-| 보컬 | 1006 | 16 | breathy(234), male vocals(193), tenor(163), baritone(127), male vocal(86) |
-| 음색/텍스처 | 1245 | 13 | clean(422), crisp(223), bright(159), warm(138), muted(114) |
-| 하모니/화성 | 572 | 9 | major(445), minor(67), seventh(33), chromatic(13), ninth(8) |
-| 구조/다이내믹스 | 432 | 11 | chorus(319), verse(29), bridge(25), swells(19), intro(18) |
-| 시간서명 | 298 | 3 | 4/4 time(291), 3/4 time(6), 6/8 time(1) |
-| 장르 자칭 | 880 | 12 | k-pop(367), jazz(119), rock(91), r&b(71), orchestral(63) |
+| 악기 | 4068 | 35 | guitar(949), bass(513), drum(443), kick(357), snare(335) |
+| 주법/연주 | 725 | 20 | syncopated(279), arpeggiated(119), backbeat(82), fingerpicked(66), palm-muted(59) |
+| 프로덕션 | 795 | 19 | chorus(324), reverb(259), distorted(69), delay(44), compression(42) |
+| 무드/감정 | 1439 | 24 | crisp(228), bright(163), intimate(140), warm(138), tight(135) |
+| 템포/BPM | 570 | 42 | 72 bpm(160), 92 bpm(42), 115 bpm(37), 105 bpm(30), 120 bpm(26) |
+| 조성/Key | 505 | 23 | key of e major(212), key of g major(120), key of c major(45), g major(25), key of g minor(20) |
+| 보컬 | 1020 | 16 | breathy(234), male vocals(200), tenor(163), baritone(127), male vocal(87) |
+| 음색/텍스처 | 1264 | 13 | clean(424), crisp(228), bright(163), warm(138), muted(114) |
+| 하모니/화성 | 583 | 9 | major(447), minor(75), seventh(33), chromatic(13), ninth(8) |
+| 구조/다이내믹스 | 443 | 11 | chorus(324), verse(29), bridge(28), swells(19), intro(18) |
+| 시간서명 | 302 | 3 | 4/4 time(295), 3/4 time(6), 6/8 time(1) |
+| 장르 자칭 | 904 | 12 | k-pop(377), jazz(119), rock(97), r&b(71), orchestral(63) |
 
 ## 3. 장르 그룹 × 카테고리 히트 매트릭스
 
 | 장르 그룹 | 악기 | 주법/연주 | 프로덕션 | 무드/감정 | 템포/BPM | 조성/Key | 보컬 | 음색/텍스처 | 하모니/화성 | 구조/다이내믹스 | 시간서명 | 장르 자칭 |
 |----|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 기타 | 1326 | 228 | 263 | 404 | 174 | 154 | 321 | 385 | 179 | 174 | 86 | 274 |
 | Pop 계열 | 1231 | 220 | 243 | 518 | 175 | 152 | 339 | 425 | 171 | 124 | 90 | 254 |
-| 기타 | 1257 | 215 | 250 | 381 | 164 | 144 | 307 | 366 | 168 | 163 | 82 | 250 |
 | 미정 | 383 | 54 | 53 | 87 | 48 | 45 | 60 | 74 | 56 | 30 | 32 | 92 |
 | Folk/Acoustic | 251 | 52 | 39 | 88 | 38 | 32 | 66 | 85 | 35 | 14 | 26 | 56 |
 | R&B 계열 | 237 | 54 | 51 | 95 | 35 | 30 | 71 | 71 | 34 | 20 | 21 | 57 |

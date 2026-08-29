@@ -134388,5 +134388,2584 @@
     "genre": "",
     "source": "sp",
     "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop fusion track blending traditional Korean pansori vocal techniques with modern funk and electronic elements",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop fusion track blending traditional Korean pansori vocal techniques with modern funk and electronic elements.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "modern"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "K-Pop fusion track blending traditional Korean pansori vocal techniques with modern funk and electronic elements.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving drum kit with a crisp snare.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving drum kit with a crisp snare.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving drum kit with a crisp snare.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving drum kit with a crisp snare.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "instruments_mentioned": [
+      "electric guitar",
+      "slap bass",
+      "electric bass"
+    ],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving drum kit with a crisp snare.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "percussion"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Traditional Korean percussion and melodic motifs are integrated into the bridge.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "singing"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "melodic singing"
+    ],
+    "sentence": "Male vocals utilize a mix of rhythmic rapping and melodic singing with characteristic pansori-style vibrato and grit.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 115,
+      "key": "g minor",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "The track is in the key of G minor at 115 BPM in 4/4 time.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "a melodic hook during the instrumental breaks",
+    "effects": [],
+    "chords": [],
+    "sentence": "A recurring staccato synth lead provides a melodic hook during the instrumental breaks.",
+    "song_id": "C_70068",
+    "genre": "K-Pop, Funk, Pansori Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop, Funk-Pop",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop, Funk-Pop.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 128,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "128 BPM, E Major.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "clean electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass, clean electric guitar with wah-wah and rhythmic scratching, brass section, acoustic piano, and electronic drums.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass, clean electric guitar with wah-wah and rhythmic scratching, brass section, acoustic piano, and electronic drums.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass, clean electric guitar with wah-wah and rhythmic scratching, brass section, acoustic piano, and electronic drums.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass, clean electric guitar with wah-wah and rhythmic scratching, brass section, acoustic piano, and electronic drums.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "acoustic piano",
+    "kit": "keys",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass, clean electric guitar with wah-wah and rhythmic scratching, brass section, acoustic piano, and electronic drums.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass section",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass, clean electric guitar with wah-wah and rhythmic scratching, brass section, acoustic piano, and electronic drums.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums"
+    ],
+    "modifiers": [
+      "clean"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass, clean electric guitar with wah-wah and rhythmic scratching, brass section, acoustic piano, and electronic drums.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "wah",
+      "wah"
+    ],
+    "modifiers": [
+      "clean"
+    ],
+    "sentence": "Slap bass, clean electric guitar with wah-wah and rhythmic scratching, brass section, acoustic piano, and electronic drums.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "falsetto",
+      "vocals"
+    ],
+    "modifiers": [
+      "bright",
+      "energetic",
+      "frequent"
+    ],
+    "pattern": "frequent falsetto and rhythmic ad-libs",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "energetic delivery"
+    ],
+    "sentence": "Male lead vocals with a bright, energetic delivery, featuring frequent falsetto and rhythmic ad-libs.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "ad-libs"
+    ],
+    "modifiers": [
+      "bright",
+      "energetic",
+      "frequent"
+    ],
+    "sentence": "Male lead vocals with a bright, energetic delivery, featuring frequent falsetto and rhythmic ad-libs.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "lead_out",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent slap bass line that drives the groove, syncopated brass stabs",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent slap bass line that drives the groove, syncopated brass stabs, and a disco-influenced drum pattern with a strong backbeat.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "lead_out",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent slap bass line that drives the groove, syncopated brass stabs",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent slap bass line that drives the groove, syncopated brass stabs, and a disco-influenced drum pattern with a strong backbeat.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass section",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "lead_out",
+    "role_details": [],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent slap bass line that drives the groove, syncopated brass stabs",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent slap bass line that drives the groove, syncopated brass stabs, and a disco-influenced drum pattern with a strong backbeat.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "a prominent slap bass line that drives the groove, syncopated brass stabs",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent slap bass line that drives the groove, syncopated brass stabs, and a disco-influenced drum pattern with a strong backbeat.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "sudden"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "The arrangement includes sudden stops, vocal-only sections, and layered harmonies in the chorus.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "harmonies"
+    ],
+    "modifiers": [
+      "sudden"
+    ],
+    "sentence": "The arrangement includes sudden stops, vocal-only sections, and layered harmonies in the chorus.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "sudden"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "The arrangement includes sudden stops, vocal-only sections, and layered harmonies in the chorus.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "beat"
+    ],
+    "modifiers": [
+      "minimal",
+      "full"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "A breakdown section features a rhythmic vocal chant over a minimal beat before returning to the full arrangement.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "minimal",
+      "full"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "rhythmic vocal"
+    ],
+    "sentence": "A breakdown section features a rhythmic vocal chant over a minimal beat before returning to the full arrangement.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "minimal",
+      "full"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "A breakdown section features a rhythmic vocal chant over a minimal beat before returning to the full arrangement.",
+    "song_id": "C_70069",
+    "genre": "K-Pop, Funk-Pop, male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop fusion track blending traditional Korean Gugak elements with modern hard rock and hip-hop",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop fusion track blending traditional Korean Gugak elements with modern hard rock and hip-hop.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "distorted electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The arrangement features a prominent piri (bamboo oboe) and gayageum (zither) playing pentatonic melodies alongside distorted electric guitar power chords and a heavy trap-influenced drum kit.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The arrangement features a prominent piri (bamboo oboe) and gayageum (zither) playing pentatonic melodies alongside distorted electric guitar power chords and a heavy trap-influenced drum kit.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "prominent",
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent piri (bamboo oboe) and gayageum (zither) playing pentatonic melodies alongside distorted electric guitar power chords and a heavy trap-influenced drum kit.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "prominent",
+      "heavy"
+    ],
+    "sentence": "The arrangement features a prominent piri (bamboo oboe) and gayageum (zither) playing pentatonic melodies alongside distorted electric guitar power chords and a heavy trap-influenced drum kit.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "prominent",
+      "heavy"
+    ],
+    "instruments_mentioned": [
+      "distorted electric guitar",
+      "electric guitar"
+    ],
+    "sentence": "The arrangement features a prominent piri (bamboo oboe) and gayageum (zither) playing pentatonic melodies alongside distorted electric guitar power chords and a heavy trap-influenced drum kit.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "808 bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "punchy",
+      "crisp"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The percussion combines traditional janggu rhythms with a punchy 808 kick and crisp snare.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "snare drum",
+      "percussion"
+    ],
+    "modifiers": [
+      "punchy",
+      "crisp"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The percussion combines traditional janggu rhythms with a punchy 808 kick and crisp snare.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "rap delivery"
+    ],
+    "modifiers": [
+      "aggressive",
+      "high-energy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals alternate between aggressive rap verses and high-energy melodic rock belts.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 135,
+      "key": "d minor",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "The track is in 4/4 time at 135 BPM in the key of D minor.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [
+      "high-pitched"
+    ],
+    "pattern": "a high-pitched, nasal melodic motif throughout the choruses",
+    "effects": [],
+    "chords": [],
+    "sentence": "A recurring piri hook provides a high-pitched, nasal melodic motif throughout the choruses.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [
+      "thick"
+    ],
+    "pattern": "the kick drum patterns",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass is a thick, distorted synth bass that follows the kick drum patterns.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [
+      "thick"
+    ],
+    "pattern": "the kick drum patterns",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass is a thick, distorted synth bass that follows the kick drum patterns.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "drums"
+    ],
+    "modifiers": [
+      "thick"
+    ],
+    "pattern": "the kick drum patterns",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bass is a thick, distorted synth bass that follows the kick drum patterns.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "thick"
+    ],
+    "sentence": "The bass is a thick, distorted synth bass that follows the kick drum patterns.",
+    "song_id": "C_70070",
+    "genre": "K-Pop, Gugak-Rock, Trap-Metal",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop and Nu-Disco fusion",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop and Nu-Disco fusion.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor drum machine pattern with crisp hi-hats.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor drum machine pattern with crisp hi-hats.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor drum machine pattern with crisp hi-hats.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "hi-hat",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "prominent",
+      "driving",
+      "crisp"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor drum machine pattern with crisp hi-hats.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "rap delivery"
+    ],
+    "modifiers": [
+      "high-energy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals alternate between rhythmic rap verses and melodic, high-energy choruses.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass section",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "bright",
+      "punchy"
+    ],
+    "pattern": "punchy accents during the hook",
+    "effects": [],
+    "chords": [],
+    "sentence": "A bright, staccato brass section provides punchy accents during the hook.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "funky",
+      "shimmering"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes funky synth leads and shimmering pads.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "funky",
+      "shimmering"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement includes funky synth leads and shimmering pads.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "funky",
+      "shimmering"
+    ],
+    "instruments_mentioned": [
+      "synthesizer",
+      "pad"
+    ],
+    "sentence": "The arrangement includes funky synth leads and shimmering pads.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "unclassified",
+    "entity": "",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Key: G minor.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 120,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Tempo: 120 BPM.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "Time signature: 4/4.",
+    "song_id": "C_70071",
+    "genre": "K-Pop, Nu-Disco, Funk, Male Vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop and Funk Rock fusion",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop and Funk Rock fusion.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "syncopated"
+    ],
+    "modifiers": [],
+    "pattern": "syncopated clean-tone riffs and distorted power chords",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "Electric guitar plays syncopated clean-tone riffs and distorted power chords.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [],
+    "sentence": "Electric guitar plays syncopated clean-tone riffs and distorted power chords.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "the kick drum patterns",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass follows the kick drum patterns.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "groove_lock",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "the kick drum patterns",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass follows the kick drum patterns.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "drums"
+    ],
+    "modifiers": [],
+    "pattern": "the kick drum patterns",
+    "effects": [],
+    "chords": [],
+    "sentence": "Slap bass follows the kick drum patterns.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "hi-hat",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "crisp",
+      "prominent"
+    ],
+    "pattern": "a crisp snare and prominent hi-hat sixteenth notes",
+    "effects": [],
+    "chords": [],
+    "sentence": "Drum kit features a crisp snare and prominent hi-hat sixteenth notes.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "falsetto"
+    ],
+    "modifiers": [
+      "occasional"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals range from rhythmic rapping to melodic belting with occasional falsetto.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass section",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "staccato stabs during the chorus",
+    "effects": [],
+    "chords": [],
+    "sentence": "Brass section provides staccato stabs during the chorus.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 120,
+      "key": null,
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "120 BPM, 4/4 time signature, G major.",
+    "song_id": "C_70072",
+    "genre": "K-Pop, Funk Rock, energetic male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop and Electro-Swing fusion",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop and Electro-Swing fusion.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass section",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "syncopated"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Features a prominent, syncopated brass section with trumpets and trombones playing staccato stabs.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "crisp",
+      "driving"
+    ],
+    "pattern": "the groove",
+    "effects": [],
+    "chords": [],
+    "sentence": "A walking synth bass line provides the harmonic foundation, while a swing-style drum kit with crisp hi-hats and a driving snare maintains the groove.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "crisp",
+      "driving"
+    ],
+    "pattern": "the groove",
+    "effects": [],
+    "chords": [],
+    "sentence": "A walking synth bass line provides the harmonic foundation, while a swing-style drum kit with crisp hi-hats and a driving snare maintains the groove.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "hi-hat",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "crisp",
+      "driving"
+    ],
+    "pattern": "the groove",
+    "effects": [],
+    "chords": [],
+    "sentence": "A walking synth bass line provides the harmonic foundation, while a swing-style drum kit with crisp hi-hats and a driving snare maintains the groove.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "distorted electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "Distorted electric guitar power chords and rhythmic scratches appear during transitions.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "Distorted electric guitar power chords and rhythmic scratches appear during transitions.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [],
+    "sentence": "Distorted electric guitar power chords and rhythmic scratches appear during transitions.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "female vocals",
+      "male vocals",
+      "rap delivery",
+      "singing"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "melodic singing"
+    ],
+    "sentence": "Female vocals alternate between melodic singing and rhythmic, rap-influenced delivery.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "heavy",
+      "bright",
+      "polished"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features heavy sidechain compression on the synth pads and a bright, polished production style.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "heavy",
+      "bright",
+      "polished"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features heavy sidechain compression on the synth pads and a bright, polished production style.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "mixing",
+    "entity": [
+      "sidechain",
+      "compression",
+      "polished production"
+    ],
+    "modifiers": [
+      "heavy",
+      "bright",
+      "polished"
+    ],
+    "sentence": "The track features heavy sidechain compression on the synth pads and a bright, polished production style.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 125,
+      "key": "g minor",
+      "time_signature": "4/4"
+    },
+    "modifiers": [],
+    "sentence": "Key of G minor, 125 BPM, 4/4 time signature.",
+    "song_id": "C_70073",
+    "genre": "K-Pop, Electro-Swing, female vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop fusion track blending traditional Korean Gugak elements with modern Trap and Rock",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop fusion track blending traditional Korean Gugak elements with modern Trap and Rock.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "vocalizing"
+    ],
+    "modifiers": [
+      "powerful",
+      "aggressive"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "aggressive delivery"
+    ],
+    "sentence": "Features a powerful male vocal performance with aggressive delivery and traditional pansori-style vocalizations.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "distorted electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "rhythmic"
+    ],
+    "modifiers": [
+      "heavy",
+      "deep",
+      "sharp",
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The instrumentation includes a heavy distorted electric guitar playing rhythmic power chords, a deep 808 sub-bass, and a trap drum kit with sharp snares and rapid hi-hat rolls.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "execute",
+    "role_details": [
+      "rhythmic"
+    ],
+    "modifiers": [
+      "heavy",
+      "deep",
+      "sharp",
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The instrumentation includes a heavy distorted electric guitar playing rhythmic power chords, a deep 808 sub-bass, and a trap drum kit with sharp snares and rapid hi-hat rolls.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "sub-bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "rhythmic"
+    ],
+    "modifiers": [
+      "heavy",
+      "deep",
+      "sharp",
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The instrumentation includes a heavy distorted electric guitar playing rhythmic power chords, a deep 808 sub-bass, and a trap drum kit with sharp snares and rapid hi-hat rolls.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "808 bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "rhythmic"
+    ],
+    "modifiers": [
+      "heavy",
+      "deep",
+      "sharp",
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The instrumentation includes a heavy distorted electric guitar playing rhythmic power chords, a deep 808 sub-bass, and a trap drum kit with sharp snares and rapid hi-hat rolls.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "execute",
+    "role_details": [
+      "rhythmic"
+    ],
+    "modifiers": [
+      "heavy",
+      "deep",
+      "sharp",
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The instrumentation includes a heavy distorted electric guitar playing rhythmic power chords, a deep 808 sub-bass, and a trap drum kit with sharp snares and rapid hi-hat rolls.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "hi-hat",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "heavy",
+      "deep",
+      "sharp",
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The instrumentation includes a heavy distorted electric guitar playing rhythmic power chords, a deep 808 sub-bass, and a trap drum kit with sharp snares and rapid hi-hat rolls.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "heavy",
+      "deep",
+      "sharp",
+      "rapid"
+    ],
+    "sentence": "The instrumentation includes a heavy distorted electric guitar playing rhythmic power chords, a deep 808 sub-bass, and a trap drum kit with sharp snares and rapid hi-hat rolls.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "drums"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Traditional elements include the kkwaenggwari (small gong) and buk (barrel drum) providing syncopated rhythmic accents.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 145,
+      "key": "d minor",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "The track is in the key of D minor at 145 BPM.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "high-energy",
+      "prominent"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "High-energy vocal ad-libs and layered harmonies are prominent in the chorus.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "ad-libs",
+      "harmonies"
+    ],
+    "modifiers": [
+      "high-energy",
+      "prominent"
+    ],
+    "sentence": "High-energy vocal ad-libs and layered harmonies are prominent in the chorus.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "sudden",
+      "sparse",
+      "dense"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features sudden dynamic shifts between sparse trap-influenced verses and dense, guitar-driven choruses.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement",
+      "sparse",
+      "dense"
+    ],
+    "modifiers": [
+      "sudden",
+      "sparse",
+      "dense"
+    ],
+    "instruments_mentioned": [
+      "guitar"
+    ],
+    "sentence": "The arrangement features sudden dynamic shifts between sparse trap-influenced verses and dense, guitar-driven choruses.",
+    "song_id": "C_70074",
+    "genre": "K-Pop, Trap, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop fusion track blending elements of funk, disco, and traditional Korean folk music",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop fusion track blending elements of funk, disco, and traditional Korean folk music.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "slap bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "prominent",
+      "driving"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "drums"
+    ],
+    "modifiers": [
+      "prominent",
+      "driving"
+    ],
+    "pattern": "a prominent slap bass line, syncopated electric guitar scratches",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "prominent",
+      "driving"
+    ],
+    "instruments_mentioned": [
+      "electric guitar",
+      "slap bass",
+      "electric bass"
+    ],
+    "sentence": "The arrangement features a prominent slap bass line, syncopated electric guitar scratches, and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass section",
+    "kit": "brass",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "bright"
+    ],
+    "pattern": "rhythmic accents during the chorus",
+    "effects": [],
+    "chords": [],
+    "sentence": "A bright, staccato brass section provides rhythmic accents during the chorus.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "rap delivery",
+      "singing"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals alternate between rhythmic rap verses and melodic, high-register singing.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "percussion"
+    ],
+    "modifiers": [
+      "modern"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Traditional Korean percussion and vocal ad-libs are integrated into the modern pop production.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "modern"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Traditional Korean percussion and vocal ad-libs are integrated into the modern pop production.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_chorus",
+    "entity": [
+      "ad-libs"
+    ],
+    "modifiers": [
+      "modern"
+    ],
+    "sentence": "Traditional Korean percussion and vocal ad-libs are integrated into the modern pop production.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 128,
+      "key": "g minor",
+      "time_signature": null
+    },
+    "modifiers": [
+      "high-energy"
+    ],
+    "sentence": "The track features a high-energy tempo of 128 BPM in the key of G minor.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "a sawtooth wave with a short decay for percussive melodic lines",
+    "effects": [],
+    "chords": [],
+    "sentence": "Synthesizer leads utilize a sawtooth wave with a short decay for percussive melodic lines.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "a breakdown with filtered synth pads and a build-up using a rising snare roll",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bridge features a breakdown with filtered synth pads and a build-up using a rising snare roll.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth pad",
+    "kit": "synth",
+    "layer": "pad",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [],
+    "pattern": "a breakdown with filtered synth pads and a build-up using a rising snare roll",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bridge features a breakdown with filtered synth pads and a build-up using a rising snare roll.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum"
+    ],
+    "modifiers": [],
+    "pattern": "a breakdown with filtered synth pads and a build-up using a rising snare roll",
+    "effects": [],
+    "chords": [],
+    "sentence": "The bridge features a breakdown with filtered synth pads and a build-up using a rising snare roll.",
+    "song_id": "C_70075",
+    "genre": "K-Pop, Funk, Korean Folk Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop and Electro-House fusion at 128 BPM in G minor",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop and Electro-House fusion at 128 BPM in G minor.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 128,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "K-Pop and Electro-House fusion at 128 BPM in G minor.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "aggressive",
+      "driving"
+    ],
+    "pattern": "aggressive, distorted synth basslines and a driving four-on-the-floor kick drum",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features aggressive, distorted synth basslines and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "aggressive",
+      "driving"
+    ],
+    "pattern": "aggressive, distorted synth basslines and a driving four-on-the-floor kick drum",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features aggressive, distorted synth basslines and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "kick drum",
+      "drums"
+    ],
+    "modifiers": [
+      "aggressive",
+      "driving"
+    ],
+    "pattern": "aggressive, distorted synth basslines and a driving four-on-the-floor kick drum",
+    "effects": [],
+    "chords": [],
+    "sentence": "The track features aggressive, distorted synth basslines and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "aggressive",
+      "driving"
+    ],
+    "sentence": "The track features aggressive, distorted synth basslines and a driving four-on-the-floor kick drum.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "rap delivery"
+    ],
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "Male vocals alternate between rhythmic rap verses and melodic, belted choruses.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [
+      "syncopated"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "syncopated staccato riffs during the drops",
+    "effects": [],
+    "chords": [],
+    "sentence": "A prominent brass-like synth lead plays syncopated staccato riffs during the drops.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "brass",
+    "kit": "brass",
+    "layer": "lead",
+    "role": "execute",
+    "role_details": [
+      "syncopated"
+    ],
+    "modifiers": [
+      "prominent"
+    ],
+    "pattern": "syncopated staccato riffs during the drops",
+    "effects": [],
+    "chords": [],
+    "sentence": "A prominent brass-like synth lead plays syncopated staccato riffs during the drops.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "The arrangement includes heavy use of riser effects, record scratches, and vocal chops.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_sound",
+    "entity": [
+      "riser"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "sentence": "The arrangement includes heavy use of riser effects, record scratches, and vocal chops.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "heavy"
+    ],
+    "instruments_mentioned": [],
+    "sentence": "The arrangement includes heavy use of riser effects, record scratches, and vocal chops.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "clap",
+      "percussion"
+    ],
+    "modifiers": [
+      "sharp"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "Percussion is layered with electronic claps and sharp snare hits.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "vocals"
+    ],
+    "modifiers": [
+      "brief",
+      "high-energy"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "delivery": [],
+    "sentence": "A bridge section features a brief tempo-locked rhythmic breakdown with a focus on the vocal delivery before returning to the high-energy electronic chorus.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": null,
+      "key": null,
+      "time_signature": null
+    },
+    "modifiers": [
+      "brief",
+      "high-energy"
+    ],
+    "sentence": "A bridge section features a brief tempo-locked rhythmic breakdown with a focus on the vocal delivery before returning to the high-energy electronic chorus.",
+    "song_id": "C_70076",
+    "genre": "K-Pop, Electro-House, aggressive male vocals",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "genre",
+    "entity": "K-Pop fusion track blending traditional Korean Gugak elements with modern hard rock and electronic dance music",
+    "modifiers": [],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "K-Pop fusion track blending traditional Korean Gugak elements with modern hard rock and electronic dance music.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "vocal_main",
+    "entity": [
+      "male vocals",
+      "rap delivery",
+      "singing"
+    ],
+    "modifiers": [
+      "high-energy"
+    ],
+    "pattern": "high-energy male vocals with a mix of melodic singing and rhythmic rap delivery",
+    "effects": [],
+    "chords": [],
+    "delivery": [
+      "melodic singing"
+    ],
+    "sentence": "Features high-energy male vocals with a mix of melodic singing and rhythmic rap delivery.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "distorted electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "heavy",
+      "driving",
+      "prominent"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The instrumentation includes distorted electric guitars playing heavy power chords and syncopated riffs, a driving drum kit with prominent snare hits, and traditional Korean instruments like the piri and gayageum providing melodic flourishes.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric guitar",
+    "kit": "guitar",
+    "layer": "unspecified",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "heavy",
+      "driving",
+      "prominent"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [
+      "power chords"
+    ],
+    "sentence": "The instrumentation includes distorted electric guitars playing heavy power chords and syncopated riffs, a driving drum kit with prominent snare hits, and traditional Korean instruments like the piri and gayageum providing melodic flourishes.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "snare drum",
+      "drum kit",
+      "drums"
+    ],
+    "modifiers": [
+      "heavy",
+      "driving",
+      "prominent"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The instrumentation includes distorted electric guitars playing heavy power chords and syncopated riffs, a driving drum kit with prominent snare hits, and traditional Korean instruments like the piri and gayageum providing melodic flourishes.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "effect_electronic",
+    "entity": [
+      "distorted"
+    ],
+    "modifiers": [
+      "heavy",
+      "driving",
+      "prominent"
+    ],
+    "sentence": "The instrumentation includes distorted electric guitars playing heavy power chords and syncopated riffs, a driving drum kit with prominent snare hits, and traditional Korean instruments like the piri and gayageum providing melodic flourishes.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synth bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "thick",
+      "low"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "A thick synth bass supports the low end.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "electric bass",
+    "kit": "bass",
+    "layer": "bass",
+    "role": "support",
+    "role_details": [],
+    "modifiers": [
+      "thick",
+      "low"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "A thick synth bass supports the low end.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "tempo_key_time",
+    "entity": {
+      "bpm": 135,
+      "key": "e minor",
+      "time_signature": null
+    },
+    "modifiers": [],
+    "sentence": "The tempo is 135 BPM in the key of E minor.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "instrument",
+    "entity": "synthesizer",
+    "kit": "synth",
+    "layer": "unspecified",
+    "role": "unspecified",
+    "role_details": [],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement uses rapid transitions between rock-driven choruses and electronic-influenced verses with staccato synth stabs and filtered percussion.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "drums",
+    "entity": [
+      "percussion"
+    ],
+    "modifiers": [
+      "rapid"
+    ],
+    "pattern": "",
+    "effects": [],
+    "chords": [],
+    "sentence": "The arrangement uses rapid transitions between rock-driven choruses and electronic-influenced verses with staccato synth stabs and filtered percussion.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
+  },
+  {
+    "slot": "arrangement",
+    "entity": [
+      "arrangement"
+    ],
+    "modifiers": [
+      "rapid"
+    ],
+    "instruments_mentioned": [
+      "synthesizer"
+    ],
+    "sentence": "The arrangement uses rapid transitions between rock-driven choruses and electronic-influenced verses with staccato synth stabs and filtered percussion.",
+    "song_id": "C_70077",
+    "genre": "K-Pop, Hard Rock, Gugak Fusion",
+    "source": "sp",
+    "observation_layer": "output"
   }
 ]
