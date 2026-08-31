@@ -1,0 +1,56 @@
+{
+ "날짜": "2026-08-31",
+ "재현": "scripts/antisuno_punct_axis_v1.py",
+ "★생성 0 · 크레딧 0 · 새 수집 0": true,
+ "모집단": {
+  "입력가사_보유곡": 423,
+  "입력_브라켓_연인원": 4154
+ },
+ "기저": {
+  "★`),` (R2 문면 그대로)": {
+   "브라켓": 0,
+   "비율": 0.0,
+   "예시": []
+  },
+  "중첩 소괄호 `(...)`": {
+   "브라켓": 0,
+   "비율": 0.0,
+   "예시": []
+  },
+  "쉼표": {
+   "브라켓": 217,
+   "비율": 5.22,
+   "예시": [
+    "[solo cello breathes a slow lonely minor motif, 8 bars, solo cello — lonely low-register minor motif with…]",
+    "[grand piano answers with an exploratory upper-register single line, 12 bars, grand piano — exploratory upper-…]",
+    "[string ensemble divisi blooms beneath both voices, 16 bars, string ensemble — divisi bloom beneath both melod…]",
+    "[full orchestra declaration with timpani heartbeat, 16 bars, full orchestra — unified declaration with timpani…]",
+    "[suspended resonance holds the horizon open, 12 bars]"
+   ]
+  },
+  "콜론": {
+   "브라켓": 3,
+   "비율": 0.07,
+   "예시": [
+    "[last sound: solo violin harmonic]",
+    "[first trumpet: melodic question]",
+    "[second trumpet: answering phrase]"
+   ]
+  },
+  "마침표": {
+   "브라켓": 0,
+   "비율": 0.0,
+   "예시": []
+  },
+  "세미콜론": {
+   "브라켓": 0,
+   "비율": 0.0,
+   "예시": []
+  }
+ },
+ "⛔이_측정이_못_하는_것": [
+  "누출률 비교가 아니다 — 기존 전수에서 누출 0건이라 종속변수 분산이 0, 검정력 없음.",
+  "입력 브라켓만 본다. 출력 오디오는 이 자의 사정권 밖이다(R2 §2의 사각과 같은 한계).",
+  "R2 조건 문면은 E4(Reddit 개인 관측)다. 여기서 재는 건 그 조건의 **발생량**이지 효과가 아니다."
+ ]
+}

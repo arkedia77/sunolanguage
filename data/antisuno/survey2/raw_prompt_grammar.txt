@@ -1,0 +1,1668 @@
+OpenAI Codex v0.149.0
+--------
+workdir: /Users/purple/sunolanguage
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a056c3-def4-72a3-b762-d9e2dd1c37f9
+--------
+user
+# antisuno · Phase 1 조사 브리프 R2 (2차 라운드)
+
+1차(`docs/antisuno/control_surface_register_v0.md`)에서 **엔진 36종의 통제면 「목록」**은 얻었다.
+R2는 그 목록이 답하지 못한 **네 구멍**을 판다. 목록이 아니라 **문면과 수치**를 가져와라.
+
+## 절대 규칙 (1차와 동일 + 강화)
+1. **모든 주장에 출처 URL.** 없으면 `null`+`"unknown"`. ⛔추측·일반론 금지.
+2. 등급: `E1` 공식문서 / `E2` 공식블로그·릴리스노트 / `E3` 논문·기술리포트 / `E4` 커뮤니티 관측(미검증)
+3. ★**E4를 E1처럼 적지 마라.** 이 라운드는 E4를 일부러 수집하지만, **E4라고 반드시 표기**해야 값이 된다.
+4. ★**문면은 원문 그대로 인용**한다. 요약하지 말고 따옴표 안에 원문을 넣어라(영어면 영어로).
+5. 한국어로 서술, 고유명사·파라미터·태그는 원문 그대로.
+6. 마지막에 ```json 펜스 **하나로만** 출력.
+
+---
+## 이번 구멍: `prompt_grammar` — 각 엔진의 **공식 프롬프트 작성 가이드 문면**
+대상: Udio · ElevenLabs Eleven Music · MiniMax Music · Mureka · Sonauto · Stable Audio 2.5 · ACE-Step · Riffusion · Soundverse · Lyria 3.
+
+엔진별로:
+⑴ 공식 프롬프트 가이드 URL + **권장 구조** 원문 인용.
+⑵ 공식 **예시 프롬프트 전문 2건 이상**을 원문 그대로.
+⑶ 공식 태그·장르·스타일 목록(길면 상위 50).
+⑷ **문자 수 상한**과 권장 길이 원문.
+⑸ ★**하지 말라고 명시한 것**(negative guidance) 원문 인용.
+⑹ 아티스트명·상표 차단 정책.
+⑺ 지원 언어 + **한국어 언급이 있으면 반드시 인용**.
+
+스키마:
+```
+{"gap":"prompt_grammar",
+ "engines":[{"engine":"","guide_url":"","evidence":"","recommended_structure_verbatim":"","example_prompts_verbatim":[""],"official_tag_list":[""],"char_limit":null,"recommended_length_verbatim":"","negative_guidance_verbatim":[""],"artist_name_policy_verbatim":"","languages":"","korean_note_verbatim":""}],
+ "cross_notes":"","sources":[""]}
+```
+
+codex
+기존 v0의 엔진 명칭·출처 관례를 먼저 확인한 뒤, 각 엔진의 공식 문서(E1/E2 우선)를 교차 조사하겠습니다. 공식 근거가 없는 필드는 추정하지 않고 `null` 또는 `"unknown"`으로 남기며, 커뮤니티 관측은 반드시 E4로 분리하겠습니다. 최종 응답은 요청대로 JSON 코드펜스 하나만 내보냅니다.
+exec
+/bin/zsh -lc "sed -n '1,240p' docs/antisuno/control_surface_register_v0.md" in /Users/purple/sunolanguage
+ succeeded in 0ms:
+# antisuno · 엔진 통제면 대장 v0
+
+> Phase 0 산출물 ①. 작성 2026-08-31 · sunolanguage
+> 자료: `codex exec`+웹검색 5클러스터(`data/antisuno/survey/parsed_*.json`) + 세션 직접 원문도달분(`claude_firsthand_v0.json`)
+> 병합본 `data/antisuno/survey/merged_v0.json` · **엔진 36종**
+> ⛔**전건 문서층(E)이다. 렌더 실측(M)은 이 문서에 하나도 없다** — 유일한 예외는 §4의 leomusic3 M4 1건이고 출처를 값 옆에 붙였다.
+
+---
+
+## §0. 이 대장의 한 줄
+
+**「대괄호」는 하나의 문법이 아니었다.** 36엔진을 늘어놓으니 같은 `[ ]` 안에 **여섯 가지 서로 다른 의미**가 들어 있다(§4).
+우리가 3년간 잰 건 그중 **한 칸(Suno)의 성질**이고, 그걸 「음악 LLM은 대괄호를 지시로 읽는다」로 일반화한 적이 있다면 그건 틀렸다.
+
+## §1. 축 대조표 (○=있음 ✗=없음 ?=문서 미확인)
+
+| 엔진 | 가사칸 | 구조태그 | 길이지정 | 참조오디오 | 네거티브 | seed | 스템 | 편집 | 실시간 | API 파라미터수 |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|--:|
+| **Suno** *(우리 기준선)* | ○ | ○ | ✗ | ○ | ✗ | ✗ | ○ | ○ | ✗ | 비공개 |
+| Lyria 2 (Vertex) | ✗ | ? | ✗ | ✗ | ○ | ○ | ? | ✗ | ✗ | 4 |
+| **Lyria 3** (Gemini API) | ✗* | ○ | ○ | ✗ | ✗ | ✗ | ? | ✗ | ✗ | 7 |
+| **Lyria RealTime** | ✗ | ✗ | ✗ | ✗ | ○ | ○ | ✗ | ○ | **○** | 15 |
+| Google Flow Music | ○ | ? | ○ | ○ | ? | ? | ? | ○ | ✗ | — |
+| **MiniMax Music 3.0** | ○ | ○ | ✗ | ○ | ✗ | ✗ | ? | ○ | ✗ | 14 |
+| **Mureka** | ○ | ○ | ✗ | ○ | ✗ | ✗ | ○ | ○ | ? | 20 |
+| 天工 SkyMusic 2.0 | ○ | ? | ? | ○ | ? | ? | ? | ? | ○ | — |
+| **Udio** | ○ | ○ | ○ | ○ | ? | ? | ? | ○ | ✗ | — |
+| **Eleven Music (music_v2)** | ○ | ○ | ○ | ○ | ○ | ○ | ? | ○ | ✗ | 17 |
+| Riffusion / FUZZ | ○ | ? | ? | ○ | ? | ? | ○ | ○ | ? | — |
+| Stable Audio 2.5 | ✗ | ✗ | ○ | ○ | ✗ | ○ | ? | ○ | ✗ | 11 |
+| **Sonauto Melodia** | ○ | ? | ○ | ○ | ○ | ○ | ? | ○ | ✗ | 26 |
+| Soundverse | ○ | ? | ○ | ○ | ✗ | ✗ | ○ | ○ | ✗ | 21 |
+| Beatoven.ai | ✗ | ✗ | ○ | ? | ✗ | ✗ | ○ | ? | ✗ | 4 |
+| **YuE** (OSS) | ○ | ○ | ○ | ○ | ? | ○ | ○ | ○ | ✗ | 21 |
+| **ACE-Step** (OSS) | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ✗ | **44** |
+| **DiffRhythm** (OSS) | ○ | ✗† | ○ | ○ | ✗ | ○ | ✗ | ○ | ✗ | 11 |
+| **SongBloom** (OSS) | ○ | ○ | ○ | ○ | ? | ? | ✗ | ✗ | ✗ | 9 |
+| **LeVo / SongGeneration** (OSS) | ○ | ○ | ○ | ○ | ? | ? | ○ | ✗ | ✗ | 12 |
+| MusicGen / AudioCraft | ✗ | ✗ | ○ | ○ | ✗ | ? | ✗ | ○ | ✗ | 18 |
+| JASCO | ✗ | ✗ | ✗ | ○ | ✗ | ? | ✗ | ✗ | ✗ | 7 |
+| MusicGen-Stem | ✗ | ✗ | ? | ○ | ? | ? | ○ | ○ | ✗ | — |
+| Stable Audio Open | ✗ | ✗ | ○ | ○ | ○ | ○ | ✗ | ○ | ✗ | 20 |
+| InspireMusic | ✗ | ✗ | ○ | ○ | ? | ? | ✗ | ○ | ✗ | 15 |
+| Seed-Music (ByteDance) | ○ | ? | ? | ○ | ? | ? | ? | ○ | ? | — |
+| ACE Studio 2.0 ‡ | ○ | ✗ | ○ | ○ | ✗ | ✗ | ○ | ○ | ? | — |
+| Synthesizer V Studio 2 Pro ‡ | ○ | ✗ | ○ | ○ | ✗ | ? | ? | ○ | ? | 8 |
+| VOCALOID6 ‡ | ○ | ✗ | ○ | ○ | ✗ | ✗ | ? | ○ | ○ | — |
+| CeVIO AI Song ‡ | ○ | ✗ | ○ | ✗ | ✗ | ✗ | ? | ○ | ✗ | — |
+| UTAU / OpenUtau ‡ | ○ | ✗§ | ○ | ✗ | ✗ | ✗ | ○ | ○ | ✗ | 16 |
+
+\* Lyria 3는 **가사 칸이 따로 없고** 가사·태그·BPM·조성·타임스탬프를 **자연어 `input` 한 칸에 함께** 넣는다 — 「칸이 없다」가 아니라 「칸이 하나다」.
+† DiffRhythm은 의미 구조 태그 대신 **timed LRC**(`[00:10.00]가사행`)를 쓴다 — §4 Type D.
+‡ 가창 합성 계열. 통제면이 **자연어가 아니라 MIDI 노트+음소+엔벨로프**다. 「길이지정」은 노트 길이를 뜻한다.
+§ OpenUtau의 대괄호는 **음소 힌트**(`read[r iy d]`)다 — §4 Type E.
+
+## §2. Suno에 **없는** 통제면 — 발견 순으로
+
+| # | 통제면 | 실물 | 우리에게 뜻하는 것 |
+|---|--------|------|--------------------|
+| 1 | **가중 프롬프트** | Lyria RealTime `WeightedPrompt{text, weight}` 배열 | 프롬프트가 문자열이 아니라 **벡터**. 「A를 0.8, B를 0.2」가 문법으로 존재 |
+| 2 | **구간별 길이 계약** | Eleven `chunks[].duration_ms`(3~120초) + `respect_sections_durations` | 우리 D015가 「전달조차 안 됐다」로 끝난 축이 여기선 **필드 이름을 갖고 있다** |
+| 3 | **응집 강도 3단** | Eleven `context_adherence: low\|medium\|high` | 「앞뒤 구간과 얼마나 붙일지」를 사람이 고른다 |
+| 4 | **seed 재현성** | Lyria2/RT · Eleven · Sonauto · Stable Audio · ACE-Step · YuE · DiffRhythm | ★**우리는 같은 SP를 두 번 돌린 결과를 고정할 수 없다.** 통제쌍 설계의 근본 제약이 여기서 풀린다 |
+| 5 | **네거티브 프롬프트** | Lyria2 `negative_prompt` · Eleven `negative_styles` · Sonauto `negative_tags` · ACE-Step | 「하지 마라」를 별도 채널로. Suno는 SP 문장 안에서 부정문으로 싸울 수밖에 없다 |
+| 6 | **화성·조성·박자 별도 경로** | ACE-Step `bpm`·`keyscale`·`timesignature`·`duration`이 **각각 독립 조건 경로로 DiT에 전달** | ★우리 사전 v3.3 `suno_does_not_use`가 「코드명 0회·다이나믹 마킹 0회」인 이유의 유력 후보 — **Suno엔 그 경로가 없어서 텍스트로 넣으면 죽는 것** |
+| 7 | **구간 국소 편집** | Mureka `/v1/song/region-edit`(시간구간+가사) · Stable Audio `mask_start`/`mask_end` · Eleven `store_for_inpainting` | 「그 마디만 고친다」 |
+| 8 | **멜로디/MIDI 조건화** | Mureka `melody_id`(5~60초 오디오 **또는 MIDI**) · Soundverse `midi`·`melody` · MusicGen `melody_wavs` · JASCO `chords`+`drums_wav` | ★**JASCO는 코드 진행을 조건으로 직접 받는다** |
+| 9 | **재사용 보이스 ID** | Mureka `vocal_id`(15~30초 샘플로 생성) · Soundverse `vocal_id` | 「같은 가수로 앨범 열 곡」 |
+| 10 | **실시간 스티어링** | Lyria RealTime(WebSocket 중 config 갱신·`reset_context`) · MusicFX DJ · SkyMusic/Melodio | 생성 **도중** 지시 변경 |
+| 11 | **타임스탬프 지시** | Lyria 3 `[0:00 - 0:10] Intro: …` · DiffRhythm LRC `[00:10.00]` | 초 단위 좌표 |
+| 12 | **음소 단위 편집** | CeVIO(직접 입력 음소가 가사 계산 음소보다 **우선**) · OpenUtau `phoneticHint` · Synth V `pitchDelta`·`tension`·`breathiness` | 발음을 문자가 아니라 **음소로** |
+
+## §3. Suno에 **있고** 다른 데 드문 것 — 공정하게
+
+- **가사 칸 + 구조 태그 + 스타일 프롬프트 3채널을 동시에**, 그리고 **엔진이 스스로 만든 태그 어휘가 대량 존재**한다(우리 코퍼스 560곡의 근거).
+- Lyria 계열은 **가사 자체가 없다**(Lyria 2/RealTime = instrumental only, 문서 명시). MusicGen·JASCO·Stable Audio·InspireMusic·Beatoven도 가사 경로 없음.
+  ⇒ **36엔진 중 사용자 가사로 노래를 만드는 건 절반가량이다.** 「Suno 대체」를 말할 때 이 절반은 애초에 후보가 아니다.
+
+## §4. ★대괄호 의미론 6종 — 이 대장의 핵심 산출
+
+| 형 | 의미 | 불리나 | 실물 |
+|---|------|:-:|---|
+| **A. 구조 제어 토큰** | 섹션 경계를 모델에 알림 | 안 불림 | Suno(M1 4,166건) · YuE `[verse]` · ACE-Step · SongBloom · LeVo |
+| **A′. 길이가 정의된 구조 토큰** | 토큰 자체에 **기대 길이가 문서화** | 안 불림 | **SongBloom**: `[intro]`·`[outro]`·`[inst]` 하나가 150초 모델에서 **약 1초**, 240초 모델에서 **약 5초**(E1) · **LeVo**: `[intro-short]`/`[intro-medium]`/`[inst-short]`/`[inst-medium]`처럼 **길이를 태그 이름에 넣음**(E1) |
+| **B. 라벨과 지시의 분리** | `[ ]`=섹션 라벨, `{ }`=연주 지시 | `{}`안 안 불림 | **Eleven Music**: `[Verse 1]` + `{guitar solo}` + `(hmmm)` 3층(E1) |
+| **C. 공인된 지시 태그** | 공식이 'guidance tag'라 부름 | 확률적 | **Udio**: `[Scream]`·`[Guitar Solo]`·`[Announcer]`. 공식 헬프가 **「hard-coded command가 아니고 adherence가 확률적」**이라 명시(E2) |
+| **D. 시간 좌표** | 대괄호가 초 단위 위치 | 해당없음 | **DiffRhythm** `[00:10.00]가사` · **Lyria 3** `[0:00 - 0:10] Intro:` |
+| **E. 음소 힌트** | 발음 지정 | 안 불림 | **OpenUtau** `read[r iy d]`(E1) |
+| **F. ★그냥 불림** | 지시로 안 읽힘 | **불림** | **MiniMax Music 3.0** — 곡 중간 긴 브라켓 2건 bigram recall 0.92·1.00, 합 24.5초=트랙의 13.9%. **M4** · 출처 leomusic3 08-29 통제쌍 n=1 |
+
+★**F가 존재한다는 것만으로 「음악 LLM은 대괄호를 지시로 읽는다」는 일반화가 깨진다.** 다만 A~E는 전부 **문서층(E)**이고 F만 **렌더층(M4)**이다 — 층이 달라서 정면 비교가 아니다. 이 비대칭을 Phase 2 통제쌍이 메꿔야 한다.
+
+## §5. 사전등록 채점 (헌장 §6, 조사 전 기재분)
+
+| 예측 | 판정 | 근거 |
+|---|---|---|
+| **P1** 대부분 엔진은 가사 칸이 프롬프트와 분리 | **지지** | 사용자 가사로 노래를 만드는 상용 10종 중 **9종이 분리**. 유일한 단일칸이 Lyria 3 |
+| **P2** 구조 태그 문법을 공식 공표한 엔진은 소수 | ⛔**기각** | 구조 태그를 가진 9엔진 중 **6종(66.7%)이 공식 목록·예시를 공표**(Lyria3·MiniMax·YuE·SongBloom·LeVo·Udio). ★**공표 안 하는 쪽이 소수파다** |
+| **P3** 「대괄호 안은 안 불린다」는 엔진 조건부 | **판정 유보** | §4대로 의미론이 6갈래로 갈렸다. 「조건부/일반」의 이분법 자체가 틀린 질문이었다 |
+| **P4** Suno에 없는 통제면 최소 3종 | **지지(초과)** | §2에 **12종** |
+
+★**P2 기각의 파장**: 우리 대장 D008·D026·D036은 「Suno는 공식 문법을 공표하지 않는다」류다. 이 조사는 그 주장을 **반박하지 않는다**(Suno가 공표 안 하는 건 그대로다). 대신 **「업계가 원래 안 한다」는 암묵 전제를 깬다** — Suno의 미공표는 관행이 아니라 **선택**이다.
+★**P3의 자기 정정**: 예측 문장을 잘못 세웠다. 「조건부인가 일반인가」는 대괄호가 한 가지 문법일 때만 성립하는 질문인데, 실제로는 6종이었다. 예측은 고치지 않고 **틀린 채로 남긴다**(헌장 §6).
+
+## §6. 자료 한계 — 먼저 밝힌다
+
+1. **전건 문서층.** 「문서에 있다」는 「그렇게 동작한다」가 아니다. §2의 12종 중 우리가 렌더로 확인한 건 **0종**이다.
+2. **외부 검색자 1종.** 이번 라운드는 `codex exec` 단독이다. gemini CLI 미인증으로 **독립 교차검증자가 없었다.** 세션이 직접 원문 도달해 재확인한 건 Eleven·Lyria RealTime·Lyria 3·MiniMax·Udio **5건뿐**이고 나머지는 미검증이다.
+3. **`?` 칸이 많다.** §1 표의 물음표는 「없다」가 아니라 **「문서에서 못 찾았다」**다. 부재로 읽으면 안 된다.
+4. **Suno 행은 우리 실측이 아니라 우리 관행 요약**이다. Suno는 공식 API 문서가 없어 같은 자로 못 잰다 — 그 비대칭이 이 표의 구조적 결함이다.
+
+exec
+/bin/zsh -lc "rg -n -i 'Udio|Eleven Music|MiniMax|Mureka|Sonauto|Stable Audio|ACE-Step|Riffusion|Soundverse|Lyria 3' data/antisuno docs/antisuno | head -n 300" in /Users/purple/sunolanguage
+ succeeded in 0ms:
+docs/antisuno/cross_engine_matrix_v0.md:23:| **D004** | 「`[ ]` 안은 **구조 지시**로 읽고 안 부른다」 | **M1 전수** 브라켓 전용 낱말 4,166건 → 가창 0건 | Suno·YuE·ACE-Step·SongBloom·LeVo = 안 부름(A형) ↔ **MiniMax 3.0 = 곡 중간 긴 브라켓 2건 불림**(M4·recall 0.92/1.00·트랙 13.9%, leomusic3 08-29) | ★**엔진조건부(확정)** — 이 대장에서 유일하게 렌더층으로 갈린 줄 |
+docs/antisuno/cross_engine_matrix_v0.md:24:| **D003** | 「소괄호는 **ALWAYS** 불린다」 | VD 4클립뿐(근거 얇음) | **Eleven**: `(hmmm)`·`(ooh)`를 **가창 음성**으로 문서화(E1) · **Udio**: `(parentheses)`=백보컬(E2) | **일반 후보** — ★우리 쪽 근거가 제일 얇은 축인데 **밖에서 같은 방향 문서 2종**이 나왔다 |
+docs/antisuno/cross_engine_matrix_v0.md:25:| **D013·D024·D053** | 「긴 브라켓은 나쁘다 / 1~3어로 짧게」 | 전달 문면 전건 2~3어(반례 0건, leomusic3 08-29 자진 정정) | **SongBloom·LeVo = 태그가 폐쇄 어휘**(`[intro-short]` 등)라 「길게 쓴다」는 선택지 자체가 없음 · **Eleven = 긴 지시를 `{ }`로 받도록 문법 분리** · **MiniMax = 긴 브라켓을 불러버림**(M4) | **엔진조건부(문서)** — 「길이」가 아니라 **「긴 지시를 받을 별도 채널이 있는가」**가 진짜 변수로 보인다 |
+docs/antisuno/cross_engine_matrix_v0.md:26:| **D015** | 「콜론+숫자 태그(`[Reverb: 30%]`)는 placebo」 | ★08-29 정정으로 **미측정 복귀**(bar 수가 Suno에 전달된 적 없음) | **ACE-Step**: `bpm`·`keyscale`·`timesignature`·`duration`이 **각각 독립 조건 경로**(E1) · **Eleven**: `duration_ms`+`respect_sections_durations` · **Lyria 3**: `[0:00-0:10]` 타임스탬프 · **DiffRhythm**: LRC `[00:10.00]` | **Suno 고유 후보** — ★가설이 바뀐다: 「Suno가 숫자를 무시한다」가 아니라 **「Suno엔 숫자를 받을 경로가 없어서 텍스트 채널로 새는 것」** |
+docs/antisuno/cross_engine_matrix_v0.md:27:| **D012·D037·D038·D046** | 「필드끼리 충돌하면 어느 쪽도 안 이긴다」 | `corpus_now` 미측정 | ★**LeVo 공식 문서**: `descriptions`와 `prompt_audio_path`를 동시에 주고 **내용이 충돌하면 instruction following과 품질이 저하**된다고 경고(E1) · **YuE**: reference audio가 good-case rate를 올리되 **다양성을 줄인다**(E1) | **일반 후보** — 남의 공식 문서가 우리 미측정 축을 **같은 방향으로** 적어 뒀다 |
+docs/antisuno/cross_engine_matrix_v0.md:28:| **D020** | 「Chorus 수식어는 자주 안 지켜진다」 | 미측정 | **Udio 공식 헬프**: guidance tag는 **hard-coded command가 아니고 adherence가 확률적**(E2) | **일반 후보** |
+docs/antisuno/cross_engine_matrix_v0.md:29:| **D008·D026·D036·D054** | 「Suno는 공식 문법을 공표하지 않는다」 | 문서 부재 확인 | 구조 태그를 가진 **9엔진 중 6종이 공식 목록·예시 공표**(Lyria3·MiniMax·YuE·SongBloom·LeVo·Udio) | ★**Suno 고유 확정(문서층)** — 주장은 유효하고, 「업계 관행」이라는 **암묵 전제만 깨진다.** Suno의 미공표는 관행이 아니라 **선택** |
+docs/antisuno/cross_engine_matrix_v0.md:30:| **D034** | 「Styles 박스의 대괄호는 불법문자」 | 미측정 | 타 엔진 다수가 style을 **문자열이 아니라 배열**로 받는다(Eleven `positive_styles[]`·Sonauto `tags`/`negative_tags`) ⇒ 「불법문자」 문제가 성립할 자리가 없음 | **Suno 고유 후보** |
+docs/antisuno/cross_engine_matrix_v0.md:32:| **D010·D014·D018·D021** | 듀엣·성별 배정 신뢰도 | VD 화자순서 5/8 정합 | **Mureka `gender:female\|male` + `vocal_id`** · **Soundverse `gender`·`vocal_id`** — 성별이 **텍스트가 아니라 파라미터** | **Suno 고유 후보** — ★우리가 「신뢰할 수 없다」고 잰 축이 저기선 **enum 필드**다 |
+docs/antisuno/cross_engine_matrix_v0.md:39:2. ★**우리 근거가 가장 얇은 축(D003 소괄호)이 밖에서 가장 잘 지지된다.** 코퍼스 490낱말 중 출현 2건(0.41%)이라 자가 안 서던 축인데, Eleven·Udio 공식 문서가 같은 방향이다. **Phase 2에서 제일 먼저 잴 축**이 이것이다 — 싸고 결론이 난다.
+docs/antisuno/cross_engine_matrix_v0.md:44:★설계 원칙: **seed가 있는 엔진에서 먼저 잰다.** Suno는 같은 SP를 두 번 돌린 결과를 고정할 수 없어 통제쌍의 잡음이 크다. ACE-Step·Eleven·Sonauto·DiffRhythm은 `seed`가 있어 **같은 씨앗에서 한 글자만 바꾼 대조**가 가능하다 — 우리가 3년간 못 한 설계다.
+docs/antisuno/cross_engine_matrix_v0.md:48:| **A. 소괄호 축** (권장 1순위) | D003 | 같은 가사·같은 seed에서 `(whispered)` **있음/없음** 팔. 3엔진(Eleven·MiniMax·ACE-Step) × n=10 | 「소괄호는 항상 불린다」가 한 엔진에서라도 0.00이면 **일반 성질 아님** | 낮음(ACE-Step은 로컬 무과금) |
+docs/antisuno/CHARTER_v0.md:15:08-29 leomusic3 회신(M4): 같은 곡·같은 SP로 **MiniMax Music 3.0**에 우리 `suno_lyrics`를 무변경 이식하니
+docs/antisuno/CHARTER_v0.md:71:  - 클러스터: `lyria`(Google) · `minimax_cn`(MiniMax·Mureka·SkyMusic) · `vocal_synth`(ACE Studio·Synth V·VOCALOID) · `western_commercial`(Udio·ElevenLabs·Riffusion·Stable Audio) · `oss_research`(YuE·DiffRhythm·ACE-Step·MusicGen — 조건화 내부구조)
+docs/antisuno/portability_rules_v0.md:36:> 같은 곡·같은 SP로 `suno_lyrics`를 **MiniMax Music 3.0**에 무변경 이식:
+docs/antisuno/portability_rules_v0.md:57:| **MiniMax 3.0** | ✅**공식 14태그로 매핑**(`[Intro][Verse][Pre Chorus][Chorus][Interlude][Bridge][Outro][Post Chorus][Transition][Break][Hook][Build Up][Inst][Solo]`) | ⛔**가사에서 제거하고 `prompt`로 이동.** 특히 **곡 중간의 긴 지시는 불린다**(M4) | E1 + M4 |
+docs/antisuno/portability_rules_v0.md:58:| **Eleven Music** | ✅`chunks[].text` 안에 `[Verse 1]` 유지 | ✅**중괄호로 변환** `{guitar solo}` · 화성적 음성은 `(hmmm)` | E1 |
+docs/antisuno/portability_rules_v0.md:59:| **Lyria 3** | ✅자연어 `input` 한 칸에 `[Verse]` 포함 | ⚠**타임스탬프 서술로 재작성** 권장 `[0:00 - 0:10] Intro: …` | E1 |
+docs/antisuno/portability_rules_v0.md:61:| **Udio** | ✅그대로 | ⚠그대로 두되 **adherence는 확률적**(공식 명시). `( )`는 **백보컬로 불린다** | E2 |
+docs/antisuno/portability_rules_v0.md:62:| **ACE-Step** | ✅`[verse]`·`[chorus]` 소문자 계열 | ⚠텍스트 지시는 `caption`으로. **bpm·keyscale·timesignature·duration은 브라켓에서 빼서 파라미터로** | E1 |
+docs/antisuno/portability_rules_v0.md:65:| **가창 합성**(ACE Studio·Synth V·VOCALOID) | ⛔**SP·브라켓 전면 폐기.** MIDI 노트 + 음절 배치 + 엔벨로프로 **재설계** | ⛔ | E1 |
+docs/antisuno/portability_rules_v0.md:75:| **형** | 자유 문장 1개(≤1000자) | Eleven `positive_styles[]`(≤50) · Sonauto `tags`/`negative_tags` · ACE-Step `caption` | **문장 → 서술자 배열로 분해**. 우리 사전 437원자가 그대로 그 단위다 |
+docs/antisuno/portability_rules_v0.md:77:| **언어** | 한국어 혼용 관행 있음 | **Eleven: 스타일 서술자 영어 필수**(가사는 임의 언어) · MiniMax 영어·중국어 | **스타일층만 영어 정화.** 우리 `ko_en_mood_glossary` 33어가 그 경로 |
+docs/antisuno/portability_rules_v0.md:78:| **숫자** | 텍스트로 밀어 넣음(→ 죽음) | ACE-Step `bpm`·`keyscale`·`timesignature`·`duration` · Eleven `duration_ms` | ★**텍스트에서 빼서 파라미터로 이사** |
+docs/antisuno/portability_rules_v0.md:91:| MIDI·코드 조건화 | 멜로디 통제 불가 | Mureka `melody_id` · JASCO `chords` |
+docs/antisuno/portability_rules_v0.md:97:1. **가사 칸이 있는 엔진인가?** — 없으면(Lyria·MusicGen·Stable Audio·JASCO·Beatoven) 애초에 후보가 아니다.
+data/antisuno/survey/parsed_lyria.json:56:        "reference_audio": {
+data/antisuno/survey/parsed_lyria.json:175:        "reference_audio": {
+data/antisuno/survey/parsed_lyria.json:276:      "engine": "Lyria 3 via Gemini API / Vertex AI / Gemini app / Google AI Studio",
+data/antisuno/survey/parsed_lyria.json:308:          "url": "https://aistudio.google.com/",
+data/antisuno/survey/parsed_lyria.json:309:          "price_note": "Google AI Studio music playground는 paid API key를 사용. E2. https://blog.google/innovation-and-ai/technology/developers-tools/lyria-3-developers/",
+data/antisuno/survey/parsed_lyria.json:310:          "commercial_use": "Google AI Studio 및 Gemini API 약관 적용."
+data/antisuno/survey/parsed_lyria.json:315:          "price_note": "Gemini app에서 30초 Lyria 3 track 생성이 beta로 공개됨. E2. https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026/",
+data/antisuno/survey/parsed_lyria.json:332:          "notes": "Google AI Studio Composer UI는 section 단위 편집을 제공하지만 Gemini API는 하나의 `input`을 사용한다."
+data/antisuno/survey/parsed_lyria.json:361:        "reference_audio": {
+data/antisuno/survey/parsed_lyria.json:363:          "how": "Gemini API의 Lyria 3 입력은 text와 최대 10개 image를 지원하지만 audio reference 입력은 지원 항목으로 문서화되지 않음.",
+data/antisuno/survey/parsed_lyria.json:369:          "how": "Lyria 3 model capability 표에서 Negative prompting은 Not supported.",
+data/antisuno/survey/parsed_lyria.json:375:          "how": "음악 생성 문서는 같은 prompt를 반복해도 결과가 달라질 수 있다고 명시하며 Lyria 3 전용 seed 입력을 문서화하지 않는다.",
+data/antisuno/survey/parsed_lyria.json:387:          "how": "현재 Lyria 3 API는 single-turn이며 multi-turn iterative editing 또는 refinement를 지원하지 않는다.",
+data/antisuno/survey/parsed_lyria.json:405:          "how": "Lyria 3는 single-turn 비실시간 생성이며 실시간 기능은 별도 Lyria RealTime 모델이다.",
+data/antisuno/survey/parsed_lyria.json:430:          "notes": "Pro에서 WAV 요청에 사용. 예: `{\"type\":\"audio\"}`. 기본 출력은 MP3."
+data/antisuno/survey/parsed_lyria.json:521:          "url": "https://aistudio.google.com/",
+data/antisuno/survey/parsed_lyria.json:522:          "price_note": "AI Studio Prompt DJ 및 MIDI DJ 샘플 앱으로 접근.",
+data/antisuno/survey/parsed_lyria.json:523:          "commercial_use": "Google AI Studio 약관 적용."
+data/antisuno/survey/parsed_lyria.json:559:        "reference_audio": {
+data/antisuno/survey/parsed_lyria.json:561:          "how": "공식 control 입력은 `WeightedPrompt`, `MusicGenerationConfig`, `PlaybackControl`이며 reference-audio 입력은 문서화되지 않음.",
+data/antisuno/survey/parsed_lyria.json:745:        "가사·section tag·audio reference·stems는 지원되지 않거나 문서화되지 않음."
+data/antisuno/survey/parsed_lyria.json:800:        "reference_audio": {
+data/antisuno/survey/parsed_lyria.json:925:        "reference_audio": {
+data/antisuno/survey/parsed_lyria.json:982:          "claim": "Google은 expanded intuitive controls, improved audio quality, new model behaviors 및 친구와의 jam session을 공식적으로 설명했다.",
+data/antisuno/survey/parsed_lyria.json:1049:        "reference_audio": {
+data/antisuno/survey/parsed_lyria.json:1122:          "name": "Lyria 3 Pro",
+data/antisuno/survey/parsed_lyria.json:1128:          "name": "Lyria 3.5",
+data/antisuno/survey/parsed_lyria.json:1177:          "how": "자연어로 tempo·duration을 지시할 수 있고, 편집 예시는 `Shorten the intro to 4 bars`이다. Lyria 3.5는 duration control 개선을 공식 표방한다.",
+data/antisuno/survey/parsed_lyria.json:1181:        "reference_audio": {
+data/antisuno/survey/parsed_lyria.json:1183:          "how": "prompt에 microphone Recording, Audio file 또는 Image reference를 추가할 수 있다.",
+data/antisuno/survey/parsed_lyria.json:1207:          "how": "`Extend`, `Cover`, `Replace`를 선택하고 변경할 audio section을 지정한 뒤 자연어 변경 지시를 입력한다. 구조·mix·style도 prompt로 편집 가능.",
+data/antisuno/survey/parsed_lyria.json:1238:          "claim": "텍스트뿐 아니라 audio recording, audio file 및 image를 prompt reference로 받을 수 있다.",
+data/antisuno/survey/parsed_lyria.json:1256:        "Lyria 3.5의 내부 API 파라미터는 공개되지 않음."
+data/antisuno/survey/parsed_lyria.json:1260:  "cross_notes": "Google 계열에는 세 가지 다른 control surface가 공존한다. Vertex Lyria 2는 `prompt`, `negative_prompt`, `seed`, `sample_count`만 가진 30초 instrumental API이고(https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation), Lyria 3는 하나의 자연어 `input` 안에 lyrics·section tags·BPM·key·timestamps를 함께 넣는 single-turn song API이며(https://ai.google.dev/gemini-api/docs/music-generation), Lyria RealTime은 `WeightedPrompt{text,weight}` 배열과 수치형 `MusicGenerationConfig`를 WebSocket 중 계속 갱신하는 instrumental streaming API다(https://ai.google.dev/gemini-api/docs/realtime-music-generation). Flow Music은 Lyria 3/3.5 위에 별도 Lyrics·Sound·Details 편집면과 audio reference, Extend/Cover/Replace를 추가한 소비자 제품이다(https://support.google.com/flow/answer/17084348). 따라서 `[Verse]`가 지시로 해석된다는 공식 근거는 Lyria 3에만 있으며, 이를 Lyria 2·RealTime·MusicFX 전반의 일반 성질로 확장할 근거는 없다.",
+docs/antisuno/survey_brief_v0.md:29:      "reference_audio": {"exists":null,"how":"","evidence":"","url":""},
+docs/antisuno/control_surface_register_v0.md:21:| **Lyria 3** (Gemini API) | ✗* | ○ | ○ | ✗ | ✗ | ✗ | ? | ✗ | ✗ | 7 |
+docs/antisuno/control_surface_register_v0.md:24:| **MiniMax Music 3.0** | ○ | ○ | ✗ | ○ | ✗ | ✗ | ? | ○ | ✗ | 14 |
+docs/antisuno/control_surface_register_v0.md:25:| **Mureka** | ○ | ○ | ✗ | ○ | ✗ | ✗ | ○ | ○ | ? | 20 |
+docs/antisuno/control_surface_register_v0.md:27:| **Udio** | ○ | ○ | ○ | ○ | ? | ? | ? | ○ | ✗ | — |
+docs/antisuno/control_surface_register_v0.md:28:| **Eleven Music (music_v2)** | ○ | ○ | ○ | ○ | ○ | ○ | ? | ○ | ✗ | 17 |
+docs/antisuno/control_surface_register_v0.md:29:| Riffusion / FUZZ | ○ | ? | ? | ○ | ? | ? | ○ | ○ | ? | — |
+docs/antisuno/control_surface_register_v0.md:30:| Stable Audio 2.5 | ✗ | ✗ | ○ | ○ | ✗ | ○ | ? | ○ | ✗ | 11 |
+docs/antisuno/control_surface_register_v0.md:31:| **Sonauto Melodia** | ○ | ? | ○ | ○ | ○ | ○ | ? | ○ | ✗ | 26 |
+docs/antisuno/control_surface_register_v0.md:32:| Soundverse | ○ | ? | ○ | ○ | ✗ | ✗ | ○ | ○ | ✗ | 21 |
+docs/antisuno/control_surface_register_v0.md:35:| **ACE-Step** (OSS) | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ○ | ✗ | **44** |
+docs/antisuno/control_surface_register_v0.md:39:| MusicGen / AudioCraft | ✗ | ✗ | ○ | ○ | ✗ | ? | ✗ | ○ | ✗ | 18 |
+docs/antisuno/control_surface_register_v0.md:42:| Stable Audio Open | ✗ | ✗ | ○ | ○ | ○ | ○ | ✗ | ○ | ✗ | 20 |
+docs/antisuno/control_surface_register_v0.md:45:| ACE Studio 2.0 ‡ | ○ | ✗ | ○ | ○ | ✗ | ✗ | ○ | ○ | ? | — |
+docs/antisuno/control_surface_register_v0.md:46:| Synthesizer V Studio 2 Pro ‡ | ○ | ✗ | ○ | ○ | ✗ | ? | ? | ○ | ? | 8 |
+docs/antisuno/control_surface_register_v0.md:51:\* Lyria 3는 **가사 칸이 따로 없고** 가사·태그·BPM·조성·타임스탬프를 **자연어 `input` 한 칸에 함께** 넣는다 — 「칸이 없다」가 아니라 「칸이 하나다」.
+docs/antisuno/control_surface_register_v0.md:63:| 4 | **seed 재현성** | Lyria2/RT · Eleven · Sonauto · Stable Audio · ACE-Step · YuE · DiffRhythm | ★**우리는 같은 SP를 두 번 돌린 결과를 고정할 수 없다.** 통제쌍 설계의 근본 제약이 여기서 풀린다 |
+docs/antisuno/control_surface_register_v0.md:64:| 5 | **네거티브 프롬프트** | Lyria2 `negative_prompt` · Eleven `negative_styles` · Sonauto `negative_tags` · ACE-Step | 「하지 마라」를 별도 채널로. Suno는 SP 문장 안에서 부정문으로 싸울 수밖에 없다 |
+docs/antisuno/control_surface_register_v0.md:65:| 6 | **화성·조성·박자 별도 경로** | ACE-Step `bpm`·`keyscale`·`timesignature`·`duration`이 **각각 독립 조건 경로로 DiT에 전달** | ★우리 사전 v3.3 `suno_does_not_use`가 「코드명 0회·다이나믹 마킹 0회」인 이유의 유력 후보 — **Suno엔 그 경로가 없어서 텍스트로 넣으면 죽는 것** |
+docs/antisuno/control_surface_register_v0.md:66:| 7 | **구간 국소 편집** | Mureka `/v1/song/region-edit`(시간구간+가사) · Stable Audio `mask_start`/`mask_end` · Eleven `store_for_inpainting` | 「그 마디만 고친다」 |
+docs/antisuno/control_surface_register_v0.md:67:| 8 | **멜로디/MIDI 조건화** | Mureka `melody_id`(5~60초 오디오 **또는 MIDI**) · Soundverse `midi`·`melody` · MusicGen `melody_wavs` · JASCO `chords`+`drums_wav` | ★**JASCO는 코드 진행을 조건으로 직접 받는다** |
+docs/antisuno/control_surface_register_v0.md:68:| 9 | **재사용 보이스 ID** | Mureka `vocal_id`(15~30초 샘플로 생성) · Soundverse `vocal_id` | 「같은 가수로 앨범 열 곡」 |
+docs/antisuno/control_surface_register_v0.md:70:| 11 | **타임스탬프 지시** | Lyria 3 `[0:00 - 0:10] Intro: …` · DiffRhythm LRC `[00:10.00]` | 초 단위 좌표 |
+docs/antisuno/control_surface_register_v0.md:76:- Lyria 계열은 **가사 자체가 없다**(Lyria 2/RealTime = instrumental only, 문서 명시). MusicGen·JASCO·Stable Audio·InspireMusic·Beatoven도 가사 경로 없음.
+docs/antisuno/control_surface_register_v0.md:83:| **A. 구조 제어 토큰** | 섹션 경계를 모델에 알림 | 안 불림 | Suno(M1 4,166건) · YuE `[verse]` · ACE-Step · SongBloom · LeVo |
+docs/antisuno/control_surface_register_v0.md:85:| **B. 라벨과 지시의 분리** | `[ ]`=섹션 라벨, `{ }`=연주 지시 | `{}`안 안 불림 | **Eleven Music**: `[Verse 1]` + `{guitar solo}` + `(hmmm)` 3층(E1) |
+docs/antisuno/control_surface_register_v0.md:86:| **C. 공인된 지시 태그** | 공식이 'guidance tag'라 부름 | 확률적 | **Udio**: `[Scream]`·`[Guitar Solo]`·`[Announcer]`. 공식 헬프가 **「hard-coded command가 아니고 adherence가 확률적」**이라 명시(E2) |
+docs/antisuno/control_surface_register_v0.md:87:| **D. 시간 좌표** | 대괄호가 초 단위 위치 | 해당없음 | **DiffRhythm** `[00:10.00]가사` · **Lyria 3** `[0:00 - 0:10] Intro:` |
+docs/antisuno/control_surface_register_v0.md:89:| **F. ★그냥 불림** | 지시로 안 읽힘 | **불림** | **MiniMax Music 3.0** — 곡 중간 긴 브라켓 2건 bigram recall 0.92·1.00, 합 24.5초=트랙의 13.9%. **M4** · 출처 leomusic3 08-29 통제쌍 n=1 |
+docs/antisuno/control_surface_register_v0.md:97:| **P1** 대부분 엔진은 가사 칸이 프롬프트와 분리 | **지지** | 사용자 가사로 노래를 만드는 상용 10종 중 **9종이 분리**. 유일한 단일칸이 Lyria 3 |
+docs/antisuno/control_surface_register_v0.md:98:| **P2** 구조 태그 문법을 공식 공표한 엔진은 소수 | ⛔**기각** | 구조 태그를 가진 9엔진 중 **6종(66.7%)이 공식 목록·예시를 공표**(Lyria3·MiniMax·YuE·SongBloom·LeVo·Udio). ★**공표 안 하는 쪽이 소수파다** |
+docs/antisuno/control_surface_register_v0.md:108:2. **외부 검색자 1종.** 이번 라운드는 `codex exec` 단독이다. gemini CLI 미인증으로 **독립 교차검증자가 없었다.** 세션이 직접 원문 도달해 재확인한 건 Eleven·Lyria RealTime·Lyria 3·MiniMax·Udio **5건뿐**이고 나머지는 미검증이다.
+data/antisuno/survey/parsed_oss_research.json:69:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:71:          "how": "`use_audio_prompt`, `audio_prompt_path`, `prompt_start_time`, `prompt_end_time`; 또는 `use_dual_tracks_prompt`, `vocal_track_prompt_path`, `instrumental_track_prompt_path`를 사용한다.",
+data/antisuno/survey/parsed_oss_research.json:176:          "name": "use_audio_prompt",
+data/antisuno/survey/parsed_oss_research.json:180:          "notes": "single-track audio ICL."
+data/antisuno/survey/parsed_oss_research.json:183:          "name": "audio_prompt_path",
+data/antisuno/survey/parsed_oss_research.json:187:          "notes": "reference audio 경로."
+data/antisuno/survey/parsed_oss_research.json:274:          "claim": "공식 가이드는 reference audio가 good-case rate를 높이고 다양성을 줄인다고 보고하며, dual-track ICL이 musicality와 prompt following에 가장 좋다고 기술한다.",
+data/antisuno/survey/parsed_oss_research.json:279:          "claim": "학습·추론 프롬프트는 genre tags, segmented lyrics, optional reference audio를 분리하며 Stage 1은 이를 텍스트·오디오 토큰 문맥으로 직렬화한다.",
+data/antisuno/survey/parsed_oss_research.json:357:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:415:          "name": "ref_audio_path",
+data/antisuno/survey/parsed_oss_research.json:509:      "engine": "ACE-Step",
+data/antisuno/survey/parsed_oss_research.json:510:      "vendor": "ACE-Step team",
+data/antisuno/survey/parsed_oss_research.json:514:          "name": "ACE-Step v1.5 Turbo",
+data/antisuno/survey/parsed_oss_research.json:517:          "url": "https://github.com/ace-step/ACE-Step-1.5"
+data/antisuno/survey/parsed_oss_research.json:520:          "name": "ACE-Step v1.5 Base/SFT",
+data/antisuno/survey/parsed_oss_research.json:523:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:529:          "url": "https://github.com/ace-step/ACE-Step-1.5",
+data/antisuno/survey/parsed_oss_research.json:535:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/API.md",
+data/antisuno/survey/parsed_oss_research.json:545:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:552:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:567:            "url": "https://github.com/ace-step/ACE-Step-1.5"
+data/antisuno/survey/parsed_oss_research.json:570:          "url": "https://github.com/ace-step/ACE-Step",
+data/antisuno/survey/parsed_oss_research.json:577:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:579:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:581:          "how": "`reference_audio`와 `src_audio`; cover, repaint, lego, extract, complete 작업에서 사용한다.",
+data/antisuno/survey/parsed_oss_research.json:583:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:589:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:595:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:599:          "how": "`lego`와 `extract` task가 source audio 기반 stem 조작·추출을 제공한다.",
+data/antisuno/survey/parsed_oss_research.json:601:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:607:          "url": "https://github.com/ace-step/ACE-Step"
+data/antisuno/survey/parsed_oss_research.json:613:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:617:          "how": "`vocal_language`, lyrics, caption의 vocal description, reference audio를 사용한다.",
+data/antisuno/survey/parsed_oss_research.json:619:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:625:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:633:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:640:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:644:          "name": "reference_audio",
+data/antisuno/survey/parsed_oss_research.json:647:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:651:          "name": "src_audio",
+data/antisuno/survey/parsed_oss_research.json:654:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:658:          "name": "audio_codes",
+data/antisuno/survey/parsed_oss_research.json:661:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:668:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:675:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:682:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:689:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:696:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:703:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:710:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:717:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:724:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:731:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:738:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:745:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:752:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:759:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:766:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:773:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:780:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:787:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:794:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:801:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:805:          "name": "audio_cover_strength",
+data/antisuno/survey/parsed_oss_research.json:808:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:815:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:822:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:829:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:836:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:843:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:850:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:857:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:864:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:871:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:878:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:885:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:892:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:899:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:906:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:913:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:920:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:927:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:931:          "name": "audio_format",
+data/antisuno/survey/parsed_oss_research.json:934:          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+data/antisuno/survey/parsed_oss_research.json:940:        "url": "https://github.com/ace-step/ACE-Step",
+data/antisuno/survey/parsed_oss_research.json:947:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+data/antisuno/survey/parsed_oss_research.json:952:          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/acestep/inference.py"
+data/antisuno/survey/parsed_oss_research.json:1031:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:1033:          "how": "`prompt_wav`에 10초·48kHz style audio를 제공한다.",
+data/antisuno/survey/parsed_oss_research.json:1069:          "how": "lyrics와 style prompt audio가 보컬 내용·스타일을 조건화한다. 별도 singer parameter는 없다.",
+data/antisuno/survey/parsed_oss_research.json:1148:        "notes": "공식 lyric-format 문서가 구조 토큰을 정의한다. 장르 사전은 없으며 style은 audio prompt로 입력한다."
+data/antisuno/survey/parsed_oss_research.json:1232:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:1234:          "how": "`prompt_audio_path`; 입력이 길어도 처음 10초만 사용한다. 미제공 시 `auto_prompt_audio_type`으로 내장 reference를 선택한다.",
+data/antisuno/survey/parsed_oss_research.json:1270:          "how": "`descriptions`의 gender tag, `prompt_audio_path`, `--vocal`; reference는 genre, instrumentation, rhythm, voice에 영향을 준다.",
+data/antisuno/survey/parsed_oss_research.json:1297:          "name": "prompt_audio_path",
+data/antisuno/survey/parsed_oss_research.json:1304:          "name": "auto_prompt_audio_type",
+data/antisuno/survey/parsed_oss_research.json:1374:          "claim": "`descriptions`와 `prompt_audio_path`를 동시에 주고 내용이 충돌하면 instruction following과 품질이 저하될 수 있다고 공식 문서가 경고한다.",
+data/antisuno/survey/parsed_oss_research.json:1379:          "claim": "LeVo는 mixed audio tokens와 별도의 vocal/accompaniment dual-track tokens를 병렬 모델링한다.",
+data/antisuno/survey/parsed_oss_research.json:1391:      "engine": "MusicGen / AudioCraft",
+data/antisuno/survey/parsed_oss_research.json:1399:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+data/antisuno/survey/parsed_oss_research.json:1405:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+data/antisuno/survey/parsed_oss_research.json:1411:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+data/antisuno/survey/parsed_oss_research.json:1417:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+data/antisuno/survey/parsed_oss_research.json:1422:          "notes": "text+style-audio conditioning.",
+data/antisuno/survey/parsed_oss_research.json:1423:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py"
+data/antisuno/survey/parsed_oss_research.json:1429:          "url": "https://github.com/facebookresearch/audiocraft",
+data/antisuno/survey/parsed_oss_research.json:1430:          "price_note": "AudioCraft Python API와 Hugging Face Transformers.",
+data/antisuno/survey/parsed_oss_research.json:1439:          "url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1446:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md",
+data/antisuno/survey/parsed_oss_research.json:1455:            "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+data/antisuno/survey/parsed_oss_research.json:1458:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md",
+data/antisuno/survey/parsed_oss_research.json:1465:          "url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"
+data/antisuno/survey/parsed_oss_research.json:1467:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:1471:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py"
+data/antisuno/survey/parsed_oss_research.json:1475:          "how": "공식 AudioCraft MusicGen API에 negative text prompt가 없다.",
+data/antisuno/survey/parsed_oss_research.json:1477:          "url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"
+data/antisuno/survey/parsed_oss_research.json:1483:          "url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"
+data/antisuno/survey/parsed_oss_research.json:1489:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+data/antisuno/survey/parsed_oss_research.json:1493:          "how": "`generate_continuation`으로 audio prefix continuation을 지원한다. 시간 마스크 inpainting은 기본 API에 없다.",
+data/antisuno/survey/parsed_oss_research.json:1495:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py"
+data/antisuno/survey/parsed_oss_research.json:1521:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1528:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1535:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1542:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1549:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1556:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1563:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1570:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1577:          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+data/antisuno/survey/parsed_oss_research.json:1584:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1591:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1592:          "notes": "generate_with_chroma의 melody audio."
+data/antisuno/survey/parsed_oss_research.json:1598:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1605:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1612:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1613:          "notes": "audio tokens도 반환."
+data/antisuno/survey/parsed_oss_research.json:1619:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1626:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1627:          "notes": "style audio excerpt seconds."
+data/antisuno/survey/parsed_oss_research.json:1633:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1640:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+data/antisuno/survey/parsed_oss_research.json:1646:        "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md",
+data/antisuno/survey/parsed_oss_research.json:1651:          "claim": "MusicGen은 text 또는 melody+text를 T5 conditioning과 EnCodec audio-token autoregression으로 처리한다.",
+data/antisuno/survey/parsed_oss_research.json:1656:          "claim": "AudioCraft 평가 구현은 FAD, KL divergence, text consistency, chroma cosine을 계산한다.",
+data/antisuno/survey/parsed_oss_research.json:1658:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/solvers/musicgen.py"
+data/antisuno/survey/parsed_oss_research.json:1676:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1682:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1688:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1689:          "price_note": "AudioCraft Python API·local Gradio·notebook.",
+data/antisuno/survey/parsed_oss_research.json:1698:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1705:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1714:            "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1717:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1724:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1726:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:1728:          "how": "drums와 melody audio condition을 시간축 local control로 제공한다. chords는 `(label, time_seconds)` 튜플 목록이다.",
+data/antisuno/survey/parsed_oss_research.json:1730:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1736:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1742:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1748:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1754:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+data/antisuno/survey/parsed_oss_research.json:1780:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1787:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1794:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1801:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1806:          "type": "Tensor/audio",
+data/antisuno/survey/parsed_oss_research.json:1808:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1813:          "type": "Tensor/audio",
+data/antisuno/survey/parsed_oss_research.json:1815:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1822:          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1828:        "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+data/antisuno/survey/parsed_oss_research.json:1835:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md"
+data/antisuno/survey/parsed_oss_research.json:1840:          "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md"
+data/antisuno/survey/parsed_oss_research.json:1870:          "url": "https://github.com/simonrouard/audiocraft/tree/multistem",
+data/antisuno/survey/parsed_oss_research.json:1871:          "price_note": "연구용 AudioCraft fork/branch와 Hugging Face weights.",
+data/antisuno/survey/parsed_oss_research.json:1908:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:1910:          "how": "기존 drums, bass 또는 other stems를 audio-prefix condition으로 주고 빠진 stem을 생성한다.",
+data/antisuno/survey/parsed_oss_research.json:1934:          "how": "기존 곡에서 한 stem을 제거한 audio prompt를 넣고 해당 stem을 새 prompt에 맞춰 재생성한다.",
+data/antisuno/survey/parsed_oss_research.json:1982:      "engine": "Stable Audio Open",
+data/antisuno/survey/parsed_oss_research.json:1987:          "name": "stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:1989:          "notes": "최대 47초, 44.1kHz stereo text-to-audio.",
+data/antisuno/survey/parsed_oss_research.json:1990:          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+data/antisuno/survey/parsed_oss_research.json:1996:          "url": "https://github.com/Stability-AI/stable-audio-tools",
+data/antisuno/survey/parsed_oss_research.json:1997:          "price_note": "stable-audio-tools 또는 Diffusers 로컬 실행.",
+data/antisuno/survey/parsed_oss_research.json:2006:          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2013:          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2022:            "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+data/antisuno/survey/parsed_oss_research.json:2025:          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2030:          "how": "stable-audio-tools의 conditioning에 `seconds_start`, `seconds_total`; Diffusers에 `audio_end_in_s`. 최대 47초.",
+data/antisuno/survey/parsed_oss_research.json:2032:          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+data/antisuno/survey/parsed_oss_research.json:2034:        "reference_audio": {
+data/antisuno/survey/parsed_oss_research.json:2036:          "how": "저수준 `generate_diffusion_cond`의 `init_audio`, `init_noise_level`로 variation/inpainting 입력을 제공할 수 있다.",
+data/antisuno/survey/parsed_oss_research.json:2038:          "url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"
+data/antisuno/survey/parsed_oss_research.json:2044:          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+data/antisuno/survey/parsed_oss_research.json:2048:          "how": "stable-audio-tools의 `seed`; -1은 random, 지정값은 초기 noise를 재현한다. Diffusers는 seeded `torch.Generator`를 받는다.",
+data/antisuno/survey/parsed_oss_research.json:2050:          "url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"
+data/antisuno/survey/parsed_oss_research.json:2056:          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+data/antisuno/survey/parsed_oss_research.json:2060:          "how": "`init_audio`, `init_noise_level` 및 inpainting-capable stable-audio-tools model path. Open 1.0 모델카드는 기본 text generation을 중심으로 설명한다.",
+data/antisuno/survey/parsed_oss_research.json:2062:          "url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"
+data/antisuno/survey/parsed_oss_research.json:2068:          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+data/antisuno/survey/parsed_oss_research.json:2088:          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2095:          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2099:          "name": "audio_end_in_s",
+data/antisuno/survey/parsed_oss_research.json:2102:          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2109:          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2116:          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2123:          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+data/antisuno/survey/parsed_oss_research.json:2130:          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+
+web search: 
+web search: site:help.udio.com prompt guide example prompt tags character limit artist names languages ...
+exec
+/bin/zsh -lc "for f in data/antisuno/survey/parsed_*.json; do jq -c '.engines[]? | select(.engine|test(\"Udio|Eleven|MiniMax|Mureka|Sonauto|Stable Audio 2.5|ACE-Step|Riffusion|Soundverse|Lyria 3\";\"i\")) | {engine,official_docs,control_surface,parameters,notable_evidence}' \""'$f"; done' in /Users/purple/sunolanguage
+ succeeded in 0ms:
+{"engine":"Lyria 3 via Gemini API / Vertex AI / Gemini app / Google AI Studio","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":null,"evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation","notes":"`input` 하나에 음악 지시, 구조 및 사용자 가사를 함께 넣는다. 문자 제한은 unknown."},"lyrics_field":{"exists":false,"syntax":"별도 API lyrics 필드 없음. `input` prompt 안에 `Lyrics:` prefix 또는 'with the following lyrics:' 문구 뒤에 가사와 태그를 함께 넣는다.","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/generate-content/music-generation","notes":"Google AI Studio Composer UI는 section 단위 편집을 제공하지만 Gemini API는 하나의 `input`을 사용한다."},"structure_tags":{"exists":true,"syntax_examples":["[Intro] -> [Verse 1] -> [Chorus] -> [Verse 2] -> [Chorus] -> [Bridge] -> [Outro]","[Verse 1]","[Pre-chorus]","[Chorus]","[Bridge]","[Outro]","[0:00 - 0:10] Intro: Begin with a soft lo-fi beat and muffled vinyl crackle.","[0:10 - 0:30] Verse 1: Add a warm Fender Rhodes piano melody and gentle vocals singing about a rainy morning."],"tags_are_sung":{"answer":"no","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation"},"evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation","notes":"공식 문서는 대괄호 section tags를 모델이 song structure를 이해하도록 돕는 지시로 정의한다."},"duration_control":{"exists":true,"how":"Clip은 항상 30초. Pro는 prompt에 `create a 2-minute song`처럼 길이를 쓰거나 timestamp 구간으로 진행과 길이를 제어한다.","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation"},"reference_audio":{"exists":false,"how":"Gemini API의 Lyria 3 입력은 text와 최대 10개 image를 지원하지만 audio reference 입력은 지원 항목으로 문서화되지 않음.","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation"},"negative_prompt":{"exists":false,"how":"Lyria 3 model capability 표에서 Negative prompting은 Not supported.","evidence":"E1","url":"https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/lyria/lyria-3"},"seed_determinism":{"exists":false,"how":"음악 생성 문서는 같은 prompt를 반복해도 결과가 달라질 수 있다고 명시하며 Lyria 3 전용 seed 입력을 문서화하지 않는다.","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation"},"stems_export":{"exists":null,"how":"unknown","evidence":"unknown","url":""},"inpaint_extend_edit":{"exists":false,"how":"현재 Lyria 3 API는 single-turn이며 multi-turn iterative editing 또는 refinement를 지원하지 않는다.","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation"},"instrumental_toggle":{"exists":true,"how":"별도 boolean이 아니라 prompt에 `Instrumental only, no vocals.`라고 지시한다.","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation"},"vocal_control":{"exists":true,"how":"prompt에 singer gender, timbre, vocal range를 기술한다. 공식 예시는 `Female Soprano`, `Female Alto`, `Male Tenor`, `Male Baritone`, `Weathered Rocker (Male)`이다.","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/generate-content/music-generation"},"realtime_steering":{"exists":false,"how":"Lyria 3는 single-turn 비실시간 생성이며 실시간 기능은 별도 Lyria RealTime 모델이다.","evidence":"E1","url":"https://ai.google.dev/gemini-api/docs/music-generation"}},"parameters":null,"notable_evidence":null}
+{"engine":"MiniMax Music","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":2000,"evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation","notes":"`prompt`는 style, mood, scenario를 기술한다. Music-3.0/2.6 instrumental은 1–2000자, vocal은 0–2000자이며 music-cover는 10–300자이다."},"lyrics_field":{"exists":true,"syntax":"`lyrics`에 가사를 넣고 줄은 `\\n`으로 구분한다. Music-3.0/2.6 vocal은 1–3500자, cover는 10–1000자이다.","evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation","notes":"`prompt`와 `lyrics`가 별도 필드다. `lyrics_optimizer:true`이고 `lyrics`가 비어 있으면 prompt에서 가사를 자동 생성한다."},"structure_tags":{"exists":true,"syntax_examples":["[Intro]","[Verse]","[Pre Chorus]","[Chorus]","[Interlude]","[Bridge]","[Outro]","[Post Chorus]","[Transition]","[Break]","[Hook]","[Build Up]","[Inst]","[Solo]"],"tags_are_sung":{"answer":"unknown","evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation"},"evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation","notes":"공식 문서는 이 문자열들을 structure tags라고 명시하지만, 태그가 모든 생성에서 비가창 처리된다는 보장은 문서화하지 않았다. 최신 공식 문서에는 `##` 구분 문법이 없다."},"duration_control":{"exists":false,"how":"공개 `/v1/music_generation` 요청 스키마에는 초·마디·목표 길이 파라미터가 없다. Music 3.0의 최대 생성 길이는 5분이지만 사용자가 숫자로 지정하는 제어는 문서화되지 않았다.","evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation"},"reference_audio":{"exists":true,"how":"`music-cover`에서 `audio_url` 또는 `audio_base64` 중 하나를 전달한다. 6초–6분, 최대 50MB이며 `cover_feature_id`와 상호배타적이다.","evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation"},"negative_prompt":{"exists":false,"how":"공개 music-generation 요청 스키마에 negative-prompt 파라미터가 없다.","evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation"},"seed_determinism":{"exists":false,"how":"공개 music-generation 요청 스키마에 `seed` 또는 결정성 파라미터가 없다.","evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation"},"stems_export":{"exists":null,"how":"unknown","evidence":"E1","url":"https://platform.minimax.io/docs/llms.txt"},"inpaint_extend_edit":{"exists":true,"how":"일반 continuation/inpainting은 문서화되지 않았다. 다만 cover preprocess가 `cover_feature_id`, 구조화 가사와 타임스탬프를 추출하며, 가사를 수정해 cover를 다시 생성할 수 있다.","evidence":"E1","url":"https://platform.minimax.io/docs/guides/music-generation"},"instrumental_toggle":{"exists":true,"how":"`is_instrumental:true`; Music-3.0/2.6 계열에서 lyrics가 불필요해진다.","evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation"},"vocal_control":{"exists":true,"how":"`prompt`에서 vocal timbre, delivery, breathiness, falsetto, harmony, Auto-Tune 등을 자연어로 기술한다. 현재 API에는 Music-01의 `refer_voice`와 같은 직접 voice ID 파라미터가 없다.","evidence":"E2","url":"https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model"},"realtime_steering":{"exists":false,"how":"`stream`은 결과 전송 방식일 뿐 생성 도중 음악 지시를 변경하는 steering으로 문서화되지 않았다.","evidence":"E1","url":"https://platform.minimax.io/docs/api-reference/music-generation"}},"parameters":null,"notable_evidence":null}
+{"engine":"Mureka","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":1024,"evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html","notes":"`prompt`는 음악 생성 제어용이며 `vocal_id`와 조합할 수 있다."},"lyrics_field":{"exists":true,"syntax":"`lyrics` 별도 필드, 최대 5000자. 공식 예시는 `[Verse]\\n가사...` 형식이다.","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html","notes":"가사 기반 `/v1/song/generate`와 prompt 기반 song-generation API가 문서에서 별도 항목으로 제공된다."},"structure_tags":{"exists":true,"syntax_examples":["[Verse]","[Intro]","[Chorus]","[Bridge]","[Break]"],"tags_are_sung":{"answer":"unknown","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"},"evidence":"E1","url":"https://platform.mureka.ai/docs/en/changelog.html","notes":"공식 입력 예시는 `[Verse]`와 `[Intro]`를 사용하고, changelog는 반환 가사 구조 이름 `breakdown`을 `break`로 변경했다고 기록한다. 그러나 허용 태그의 완전한 공식 목록 및 비가창 보장은 없다."},"duration_control":{"exists":false,"how":"기본 song-generation API에는 목표 초·마디 파라미터가 없다. extension의 `extend_at`은 생성 길이가 아니라 이어 붙일 시작 시점(ms)이다.","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html"},"reference_audio":{"exists":true,"how":"`reference_id`는 30초 reference 오디오, `melody_id`는 5–60초 오디오 또는 MIDI melody, `instrumental_id`는 30초 instrumental reference를 사용한다.","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-files-upload.html"},"negative_prompt":{"exists":false,"how":"공개 song-generation 요청 스키마에 negative-prompt 파라미터가 없다.","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"},"seed_determinism":{"exists":false,"how":"공개 song-generation 요청 스키마에 `seed` 파라미터가 없다.","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"},"stems_export":{"exists":true,"how":"`POST /v1/song/stem` 및 특정 track을 생성하는 `/v1/track/generate`가 제공된다. 공식 기술 문서는 vocal·instrumental 다중 트랙 출력을 명시한다.","evidence":"E1","url":"https://platform.mureka.ai/docs/en/ai-music-o1-moment.html"},"inpaint_extend_edit":{"exists":true,"how":"`/v1/song/extend`는 head/tail extension, `/v1/song/region-edit`는 시간 구간+가사 기반 국소 편집, `/v1/song/remix`는 prompt·lyrics를 바꾼 리믹스를 제공한다.","evidence":"E1","url":"https://platform.mureka.ai/docs/en/changelog.html"},"instrumental_toggle":{"exists":true,"how":"boolean toggle이 아니라 별도 `/v1/instrumental/generate` 엔드포인트를 사용한다.","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html"},"vocal_control":{"exists":true,"how":"`gender:female|male`, `vocal_id`, reference audio, 또는 15–30초 샘플로 만든 reusable Vocal ID를 사용한다. vocal reference가 `gender`보다 우선한다.","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-song-vocal-clone.html"},"realtime_steering":{"exists":null,"how":"`stream:true`는 생성 중 `stream_url` 재생을 가능하게 하지만, 생성 중 prompt를 변경하는 steering은 문서화되지 않았다.","evidence":"E1","url":"https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"}},"parameters":null,"notable_evidence":null}
+{"engine":"ACE-Step","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":512,"evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md","notes":"`caption`은 장르, mood, instruments 등을 기술하는 별도 필드."},"lyrics_field":{"exists":true,"syntax":"`lyrics` 문자열, 최대 4096자. 구조 라벨을 포함할 수 있다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md","notes":"`caption`과 완전히 분리된다."},"structure_tags":{"exists":true,"syntax_examples":["[verse]","[chorus]","[bridge]","[Verse 1]","[Instrumental]"],"tags_are_sung":{"answer":"unknown","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5"},"evidence":"E1","url":"https://github.com/ace-step/ACE-Step","notes":"공식 UI 가이드는 `[verse]`, `[chorus]`, `[bridge]`를 structure tags로 지시한다. 문서에는 태그가 절대 발성되지 않는다는 보장은 없다."},"duration_control":{"exists":true,"how":"`duration` float, 10–600초. 0 이하 또는 None이면 LM이 가사 길이를 바탕으로 선택한다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"},"reference_audio":{"exists":true,"how":"`reference_audio`와 `src_audio`; cover, repaint, lego, extract, complete 작업에서 사용한다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"},"negative_prompt":{"exists":true,"how":"`lm_negative_prompt`가 5Hz LM의 negative prompt를 노출한다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"},"seed_determinism":{"exists":true,"how":"`seed`; -1은 random, 양의 정수는 fixed seed. batch에서는 `seeds`를 사용할 수 있다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"},"stems_export":{"exists":true,"how":"`lego`와 `extract` task가 source audio 기반 stem 조작·추출을 제공한다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"},"inpaint_extend_edit":{"exists":true,"how":"`repaint`와 `complete` task, `repainting_start`, `repainting_end`, `chunk_mask_mode`; UI에는 Edit와 좌·우 Extend 탭이 있다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step"},"instrumental_toggle":{"exists":true,"how":"`instrumental=true` 또는 lyrics에 `[Instrumental]`.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"},"vocal_control":{"exists":true,"how":"`vocal_language`, lyrics, caption의 vocal description, reference audio를 사용한다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"},"realtime_steering":{"exists":false,"how":"생성 전·후 편집은 지원하지만 sampling 도중의 사용자 실시간 steering은 문서화되지 않았다.","evidence":"E1","url":"https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"}},"parameters":null,"notable_evidence":null}
+{"engine":"MusicGen / AudioCraft","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":null,"evidence":"E1","url":"https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html","notes":"`descriptions: list[str]`; 문자 상한은 unknown."},"lyrics_field":{"exists":false,"syntax":"","evidence":"E1","url":"https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md","notes":"별도 lyrics condition이 없는 instrumental music 모델."},"structure_tags":{"exists":false,"syntax_examples":[],"tags_are_sung":{"answer":"unknown","evidence":"E1","url":"https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"},"evidence":"E1","url":"https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md","notes":"공식 `[Verse]`/`[Chorus]` 문법이 없다."},"duration_control":{"exists":true,"how":"`duration` float seconds; 장시간 생성 시 `extend_stride`로 window extension을 제어한다.","evidence":"E1","url":"https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"},"reference_audio":{"exists":true,"how":"melody 모델의 `melody_wavs`, `melody_sample_rate`; style 모델은 별도 style conditioner를 사용한다.","evidence":"E1","url":"https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py"},"negative_prompt":{"exists":false,"how":"공식 AudioCraft MusicGen API에 negative text prompt가 없다.","evidence":"E1","url":"https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"},"seed_determinism":{"exists":null,"how":"API의 전용 `seed` 인자는 없으며 외부 PyTorch RNG 설정의 재현성 보장은 이 문서에서 unknown.","evidence":"E1","url":"https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"},"stems_export":{"exists":false,"how":"기본 MusicGen은 mix waveform을 출력한다.","evidence":"E1","url":"https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"},"inpaint_extend_edit":{"exists":true,"how":"`generate_continuation`으로 audio prefix continuation을 지원한다. 시간 마스크 inpainting은 기본 API에 없다.","evidence":"E1","url":"https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py"},"instrumental_toggle":{"exists":false,"how":"모델 자체가 instrumental music generation 중심이므로 vocal on/off toggle이 없다.","evidence":"E3","url":"https://arxiv.org/abs/2306.05284"},"vocal_control":{"exists":false,"how":"별도 lyrics 또는 singer condition이 없다.","evidence":"E3","url":"https://arxiv.org/abs/2306.05284"},"realtime_steering":{"exists":false,"how":"autoregressive sampling 전 조건을 고정한다.","evidence":"E3","url":"https://arxiv.org/abs/2306.05284"}},"parameters":null,"notable_evidence":null}
+{"engine":"Stable Audio Open","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":null,"evidence":"E1","url":"https://huggingface.co/stabilityai/stable-audio-open-1.0","notes":"`prompt`; 문자 상한 unknown."},"lyrics_field":{"exists":false,"syntax":"","evidence":"E1","url":"https://huggingface.co/stabilityai/stable-audio-open-1.0","notes":"별도 lyrics condition 없음."},"structure_tags":{"exists":false,"syntax_examples":[],"tags_are_sung":{"answer":"unknown","evidence":"E1","url":"https://huggingface.co/stabilityai/stable-audio-open-1.0"},"evidence":"E1","url":"https://huggingface.co/stabilityai/stable-audio-open-1.0","notes":"공식 가사 구조 문법 없음."},"duration_control":{"exists":true,"how":"stable-audio-tools의 conditioning에 `seconds_start`, `seconds_total`; Diffusers에 `audio_end_in_s`. 최대 47초.","evidence":"E1","url":"https://huggingface.co/stabilityai/stable-audio-open-1.0"},"reference_audio":{"exists":true,"how":"저수준 `generate_diffusion_cond`의 `init_audio`, `init_noise_level`로 variation/inpainting 입력을 제공할 수 있다.","evidence":"E1","url":"https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"},"negative_prompt":{"exists":true,"how":"Diffusers `negative_prompt`.","evidence":"E1","url":"https://huggingface.co/stabilityai/stable-audio-open-1.0"},"seed_determinism":{"exists":true,"how":"stable-audio-tools의 `seed`; -1은 random, 지정값은 초기 noise를 재현한다. Diffusers는 seeded `torch.Generator`를 받는다.","evidence":"E1","url":"https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"},"stems_export":{"exists":false,"how":"stereo mix waveform 출력이며 stem 모델이 아니다.","evidence":"E1","url":"https://huggingface.co/stabilityai/stable-audio-open-1.0"},"inpaint_extend_edit":{"exists":true,"how":"`init_audio`, `init_noise_level` 및 inpainting-capable stable-audio-tools model path. Open 1.0 모델카드는 기본 text generation을 중심으로 설명한다.","evidence":"E1","url":"https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"},"instrumental_toggle":{"exists":false,"how":"별도 toggle 없음; prompt로 instrumental 특성을 기술한다.","evidence":"E1","url":"https://huggingface.co/stabilityai/stable-audio-open-1.0"},"vocal_control":{"exists":false,"how":"lyrics·singer condition 없음.","evidence":"E3","url":"https://arxiv.org/abs/2402.04825"},"realtime_steering":{"exists":false,"how":"diffusion 전 조건을 고정한다.","evidence":"E3","url":"https://arxiv.org/abs/2402.04825"}},"parameters":null,"notable_evidence":null}
+{"engine":"ACE Studio 2.0","official_docs":null,"control_surface":{"text_prompt":{"exists":false,"char_limit":null,"evidence":"E1","url":"https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals","notes":"보컬 합성의 필수 입력은 AI voice가 배치된 트랙의 MIDI notes와 lyrics이며, 자연어 음악 프롬프트가 아니다. 따라서 프롬프트 문자 상한은 unknown."},"lyrics_field":{"exists":true,"syntax":"한 음표당 한 음절. '-'는 앞 음절을 여러 음표로 늘이는 melisma를 뜻한다. 라인 단위 입력 후 음절별로 음표에 배분하며, 음소를 직접 편집할 수 있다.","evidence":"E1","url":"https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/editng-lyrics","notes":"가사는 프롬프트와 분리된 피아노롤 lyrics 영역에 입력한다. 각 note에는 language 속성이 있으며 한국어가 지원된다: https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/singing-languages"},"structure_tags":{"exists":false,"syntax_examples":[],"tags_are_sung":{"answer":"unknown","evidence":"","url":""},"evidence":"E1","url":"https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/editng-lyrics","notes":"[Verse], [Chorus] 같은 섹션 지시 문법은 공식 lyrics 문법에 없다. 대괄호 텍스트가 실제로 어떻게 처리되는지는 공식 문서에서 확인되지 않아 unknown."},"duration_control":{"exists":true,"how":"MIDI note의 위치·길이와 프로젝트 tempo로 가창 시간을 정한다. 곡 전체를 초 단위 목표 길이로 생성하는 파라미터는 문서화되지 않았다.","evidence":"E1","url":"https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals","notes":"MIDI/MusicXML을 가져오거나 피아노롤에서 note를 작성한다: https://docs.acestudio.ai/import"},"reference_audio":{"exists":true,"how":"아카펠라 오디오를 Vocal to MIDI로 변환해 notes, lyrics, 원래 pitch curve를 추출할 수 있다. 보컬 샘플 업로드를 통한 Vocal Synth Cloning도 제공한다.","evidence":"E1","url":"https://docs.acestudio.ai/ai-tools/vocal-to-midi-and-lyrics","notes":"Vocal to MIDI V2는 한국어를 포함한 추가 언어를 지원한다. 음성 복제는 업로드 샘플에서 사용자 전용 모델을 학습한다: https://docs.acestudio.ai/docs/product-wiki-ko/voice-cloning"},"negative_prompt":{"exists":false,"how":"MIDI+가사 합성 control surface에는 negative prompt가 없다.","evidence":"E1","url":"https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals","notes":""},"seed_determinism":{"exists":false,"how":"보컬 합성용 사용자 seed 파라미터는 공식 control 문서에 없다.","evidence":"E1","url":"https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls","notes":""},"stems_export":{"exists":true,"how":"Stem Splitter로 혼합 음원을 Vocal/Instrumental 또는 더 많은 stem으로 분리할 수 있다.","evidence":"E1","url":"https://docs.acestudio.ai/guides/for-newcomers/use-cases/edit-vocal-from-a-mixed-track","notes":"일반 보컬 합성 트랙도 오디오로 export할 수 있다: https://docs.acestudio.ai/guides/for-newcomers/beginner-tutorial/make-a-vocal-in-1-min"},"inpaint_extend_edit":{"exists":true,"how":"생성 후 notes, lyrics, phonemes, consonant timing, pitch 및 vocal-control envelope를 구간별로 다시 편집한다. 자연어 기반 inpainting/continuation은 아니다.","evidence":"E1","url":"https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/editng-lyrics","notes":"기존 혼합 음원도 stem 분리와 Vocal to MIDI 후 편집할 수 있다: https://docs.acestudio.ai/guides/for-newcomers/use-cases/edit-vocal-from-a-mixed-track"},"instrumental_toggle":{"exists":false,"how":"Vocal Synth 트랙은 본질적으로 보컬 출력이며 Suno식 instrumental-only 토글은 없다.","evidence":"E1","url":"https://docs.acestudio.ai/project/arrangement-in-canvas/tracks/midi-tracks","notes":"AI Instrument는 별도 Instrument Track으로 로드한다."},"vocal_control":{"exists":true,"how":"Verse25+: Power, Soft, Breathy, Chest; 지원 가수별 Rap, Opera, Chinese Opera. Verse24 이하: Air, Falsetto, Tension, Energy, Formant. 별도 Breath 이벤트의 삽입 위치와 길이도 조절한다.","evidence":"E1","url":"https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls","notes":"AI가 melody, lyrics, voice style 문맥에서 기본 표현을 추론하며 사용자가 envelope와 global offset으로 덮어쓴다. 구형 파라미터 근거: https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls/emotion-controls ; Breath 근거: https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/breath"},"realtime_steering":{"exists":null,"how":"unknown","evidence":"","url":"","notes":"ACE Bridge 2가 DAW와 audio/MIDI를 동기화하지만, 재생 중 합성 표현 파라미터를 실시간 조작할 수 있는지는 공식 문서에서 확인되지 않았다."}},"parameters":null,"notable_evidence":null}
+{"engine":"Synthesizer V Studio 2 Pro","official_docs":null,"control_surface":{"text_prompt":{"exists":false,"char_limit":null,"evidence":"E1","url":"https://www.dreamtonics.com/synthesizerv/","notes":"공식 workflow는 notes와 lyrics 입력, voice 선택, expression 조정이다. 자연어 곡 프롬프트 및 그 문자 제한은 없다."},"lyrics_field":{"exists":true,"syntax":"각 MIDI note에 lyrics를 지정하고 필요하면 phonemes를 직접 편집한다. Note scripting 객체는 getLyrics/setLyrics와 getPhonemes/setPhonemes를 제공한다.","evidence":"E1","url":"https://resource.dreamtonics.com/scripting/","notes":"Version 2는 dedicated Phoneme Timing Panel과 pronunciation retake를 제공한다: https://www.dreamtonics.com/synthesizerv/"},"structure_tags":{"exists":false,"syntax_examples":[],"tags_are_sung":{"answer":"unknown","evidence":"","url":""},"evidence":"E1","url":"https://www.dreamtonics.com/synthesizerv/","notes":"[Verse], [Chorus] 같은 섹션 태그 문법은 공식 workflow 또는 scripting lyric API에 없다. 대괄호 문자열의 렌더링 결과는 unknown."},"duration_control":{"exists":true,"how":"Note 객체의 onset과 duration을 수치로 지정하며 setTimeRange도 제공한다. 음소 timing은 전용 패널에서 조절한다.","evidence":"E1","url":"https://resource.dreamtonics.com/scripting/","notes":"곡 전체를 목표 초 수로 자동 생성하는 파라미터는 아니다."},"reference_audio":{"exists":true,"how":"Voice-to-MIDI가 solo vocal audio에서 pitch와 lyrics를 추출해 notes로 변환한다.","evidence":"E1","url":"https://sv1.docs.dreamtonics.com/en/synthv/basic-usage/quickstart","notes":"Version 2의 reference audio conditioning 또는 timbre-cloning 기능과 동일한 기능은 아니다."},"negative_prompt":{"exists":false,"how":"MIDI+lyrics 합성 인터페이스에는 negative prompt가 없다.","evidence":"E1","url":"https://www.dreamtonics.com/synthesizerv/","notes":""},"seed_determinism":{"exists":null,"how":"AI Retakes에 take 선택 개념은 있으나 이를 결정적 random seed로 규정한 공식 문서는 확인되지 않았다.","evidence":"","url":"","notes":"Version 2는 Pitch, Timbre, Timing, Pronunciation 차원의 AI Retakes를 제공한다: https://www.dreamtonics.com/synthesizerv/"},"stems_export":{"exists":null,"how":"unknown","evidence":"","url":"","notes":"독립 track 렌더링은 가능하지만 전곡 stem separation 기능의 공식 문서는 확인되지 않았다."},"inpaint_extend_edit":{"exists":true,"how":"note/group 추가·삭제·수정, phoneme timing/strength, pronunciation, pitch control point/curve, vocal mode와 automation을 구간 단위로 편집한다. 자연어 inpainting은 아니다.","evidence":"E1","url":"https://resource.dreamtonics.com/scripting/","notes":"Version 2.1.1 scripting은 retakes, pitch curves, vocal modes, consonant timing/activity까지 접근한다: https://www.dreamtonics.com/synthesizer-v-studio-2-1-1-final-update/"},"instrumental_toggle":{"exists":false,"how":"가창 신시사이저이므로 instrumental-only 생성 토글은 없다.","evidence":"E1","url":"https://www.dreamtonics.com/synthesizerv/","notes":""},"vocal_control":{"exists":true,"how":"Pitch Deviation/pitch control points, Vibrato Envelope, Loudness, Tension, Breathiness, Voicing, Gender, Tone Shift, Mouth Opening, phoneme Duration/Strength, singer별 Vocal Modes와 AI Retakes를 제공한다.","evidence":"E1","url":"https://www.dreamtonics.com/synthesizerv/","notes":"Version 2는 영어·일본어·한국어·중국어·광둥어·스페인어 cross-lingual singing을 지원한다. scripting automation 명칭·범위는 https://resource.dreamtonics.com/scripting/Automation.html"},"realtime_steering":{"exists":null,"how":"unknown","evidence":"","url":"","notes":"Scripting API가 playback을 제어할 수 있으나 재생 중 렌더 파라미터 steering의 보장 여부는 공식 문서에서 확인되지 않았다."}},"parameters":null,"notable_evidence":null}
+{"engine":"Udio","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":null,"evidence":"E1","url":"https://help.udio.com/en/articles/10715838-create-your-first-song","notes":"Prompt 칸에 스타일·무드·주제와 장르 태그를 입력한다. 공식 문자 상한은 확인되지 않아 unknown."},"lyrics_field":{"exists":true,"syntax":"Create → Write Your Lyrics → Custom → Lyrics Editor","evidence":"E1","url":"https://help.udio.com/en/articles/10716221-create-a-song-with-your-own-lyrics","notes":"Prompt와 별도의 Lyrics Editor가 있다. 자동 가사, Write for me, Custom lyrics를 지원한다."},"structure_tags":{"exists":true,"syntax_examples":["[Verse]","[Chorus]","[Intro]","[Outro]","[Bridge]","[Hook]","[Pre-chorus]","[Instrumental Break]","[Spoken Word]","[Choir]","[Announcer]"],"tags_are_sung":{"answer":"unknown","evidence":"E1","url":"https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags"},"evidence":"E1","url":"https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags","notes":"Lyrics 칸에서 `/`를 눌러 guidance tags를 고른다. 공식 문서는 이를 곡의 형태·연주·창법을 안내하는 태그로 설명하지만, 태그가 절대로 발성되지 않는다고 보장하지 않으며 adherence도 확률적이라고 명시한다."},"duration_control":{"exists":true,"how":"신규 생성은 32초 또는 2분 10초 프리셋을 선택한다. 임의 초/마디 숫자를 직접 넣는 공식 컨트롤은 확인되지 않았다.","evidence":"E1","url":"https://help.udio.com/en/articles/10715838-create-your-first-song"},"reference_audio":{"exists":true,"how":"유료 Audio Upload에서 Extend, Inpaint, Session, Remix, Style을 선택한다.","evidence":"E1","url":"https://help.udio.com/en/articles/10754328-create-music-with-your-own-audio"},"negative_prompt":{"exists":null,"how":"unknown","evidence":"unknown","url":""},"seed_determinism":{"exists":null,"how":"unknown","evidence":"unknown","url":""},"stems_export":{"exists":null,"how":"unknown","evidence":"unknown","url":""},"inpaint_extend_edit":{"exists":true,"how":"Extend는 앞/뒤·Intro/Outro·Crop & Extend를 지원하고 최대 10개 섹션까지 확장한다. Inpaint/Edit/Session에서는 선택 구간의 음악이나 가사를 교체한다.","evidence":"E1","url":"https://help.udio.com/en/articles/10732568-extend-your-song"},"instrumental_toggle":{"exists":true,"how":"생성/확장 시 instrumental을 선택하거나 확장 Lyrics 칸을 비운다.","evidence":"E1","url":"https://help.udio.com/en/articles/10732568-extend-your-song"},"vocal_control":{"exists":true,"how":"Voice Control과 lyrics editing이 구독 또는 trial 기능으로 문서화되어 있으나 세부 파라미터는 공개되지 않았다.","evidence":"E1","url":"https://help.udio.com/en/articles/13338649-the-subscription-trial"},"realtime_steering":{"exists":false,"how":"공식 문서에서 생성 중 실시간 파라미터 조작은 확인되지 않는다. Sessions는 생성 후 waveform 기반 편집이다.","evidence":"E1","url":"https://help.udio.com/en/articles/11649525-sessions-udio-s-timeline-editing-view"}},"parameters":null,"notable_evidence":null}
+{"engine":"Eleven Music","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":4100,"evidence":"E1","url":"https://elevenlabs.io/docs/api-reference/music/compose","notes":"`prompt`와 `composition_plan`은 상호 배타적이다."},"lyrics_field":{"exists":true,"syntax":"music_v2: composition_plan.chunks[].text 안에 `[Section]` + newline + lyrics. 독립 최상위 `lyrics` 파라미터는 없다.","evidence":"E1","url":"https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans","notes":"단순 prompt 모드에는 별도 lyrics 필드가 없고, structured composition plan에서 section별 text가 가사 칸 역할을 한다."},"structure_tags":{"exists":true,"syntax_examples":["[Verse 1]\\n Woke up today with a feeling inside","[Pre-Chorus]\\n No more waiting for tomorrow","[Chorus]\\n I'm breaking through","[Outro]","{guitar solo}","{scratching}","{instrumental break}","(hmmm hmmm)","(ooh)","(yeah)"],"tags_are_sung":{"answer":"unknown","evidence":"E1","url":"https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"},"evidence":"E1","url":"https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans","notes":"공식 문법은 대괄호=section name, 중괄호=inline direction, 괄호=phonetic sound이다. 의도상 대괄호·중괄호는 지시이고 괄호는 발성 대상이지만, 절대 비발성 보장은 문서에 없어 실제 거동 답은 unknown."},"duration_control":{"exists":true,"how":"`music_length_ms` 3000–600000 또는 `chunks[].duration_ms` 3000–120000; 최대 30 chunks, 총 3초–10분.","evidence":"E1","url":"https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"},"reference_audio":{"exists":true,"how":"업로드 또는 저장된 `song_id`를 AudioRefChunk의 `song_id`+`range`로 삽입하거나 GenerationChunk의 `conditioning_ref`로 조건화한다.","evidence":"E1","url":"https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting"},"negative_prompt":{"exists":true,"how":"music_v2 각 chunk의 `negative_styles`; music_v1은 `negative_global_styles`와 `negative_local_styles`.","evidence":"E1","url":"https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"},"seed_determinism":{"exists":true,"how":"`seed` 0–2147483647. 동일 파라미터의 일관성을 높일 수 있지만 정확한 재현은 보장되지 않고 시스템 업데이트로 달라질 수 있다.","evidence":"E1","url":"https://elevenlabs.io/docs/api-reference/music/compose"},"stems_export":{"exists":null,"how":"공식 Music API 문서에서 stems export를 확인하지 못해 unknown.","evidence":"unknown","url":""},"inpaint_extend_edit":{"exists":true,"how":"music_v2 plan에서 AudioRefChunk로 보존할 구간과 GenerationChunk로 새로 만들 구간을 조합해 inpaint, intro/outro 확장, 유사곡 조건화를 수행한다.","evidence":"E1","url":"https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting"},"instrumental_toggle":{"exists":true,"how":"prompt 모드의 `force_instrumental=true`; plan 모드에서는 `negative_styles:[\"vocals\",\"lyrics\"]`와 instrumental section 지시를 사용한다.","evidence":"E1","url":"https://elevenlabs.io/docs/api-reference/music/compose"},"vocal_control":{"exists":true,"how":"`positive_styles`에 vocalist, tone, delivery를 자연어로 기술하고 `negative_styles`로 singing/vocals를 배제한다. 고정 singer ID는 기본 Music compose 문서에 없다.","evidence":"E1","url":"https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"},"realtime_steering":{"exists":false,"how":"SSE/stream endpoint는 생성 중 재생·메타데이터 전달을 지원하지만, 생성 도중 control 값을 변경하는 API는 문서화되지 않았다.","evidence":"E1","url":"https://elevenlabs.io/docs/api-reference/music/compose-detailed-stream"}},"parameters":null,"notable_evidence":null}
+{"engine":"Riffusion / FUZZ (현재 Flow Music)","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":null,"evidence":"E1","url":"https://www.flowmusic.app/","notes":"현재 사이트는 Producer와 채팅해 full-length song을 만들고 편집한다고 설명한다. 문자 상한은 unknown."},"lyrics_field":{"exists":true,"syntax":"공개 곡 페이지가 Sound와 Lyrics를 별도 표시하지만 현재 입력 UI의 정확한 스키마는 공개 문서에서 확인되지 않았다.","evidence":"E1","url":"https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69","notes":"별도 Sound/Lyrics 데이터의 존재는 확인되지만 입력 필드 구현 세부는 unknown."},"structure_tags":{"exists":null,"syntax_examples":["[Intro]","[Verse 1]","[Aggressive male vocals]","[Chorus]","[Glitchy vocal effects]","[Bridge]","[Outro]"],"tags_are_sung":{"answer":"unknown","evidence":"E4","url":"https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69"},"evidence":"E4","url":"https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69","notes":"공개 사용자 곡의 Lyrics에 대괄호 구조·연주 지시가 관측되지만 공식 문법 문서는 발견되지 않았다. 따라서 exists와 발성 여부는 unknown."},"duration_control":{"exists":null,"how":"공개 곡의 Sound prompt에 `3:00 length` 또는 `4-minute duration`이 관측되지만 공식 숫자 파라미터는 확인되지 않았다.","evidence":"E4","url":"https://www.flowmusic.app/song/5f5887a5-0fc1-4cfb-be46-eb5846b2e898"},"reference_audio":{"exists":true,"how":"현재 공식 홈페이지가 `Remix your audio`를 기능으로 표시한다.","evidence":"E1","url":"https://www.flowmusic.app/"},"negative_prompt":{"exists":null,"how":"사용자 공개 Sound에 `Negative prompt:`가 관측되지만 공식 파라미터/문법은 unknown.","evidence":"E4","url":"https://www.flowmusic.app/song/216a0bb2-6e11-4ed2-8037-f9dba8d296d0"},"seed_determinism":{"exists":null,"how":"unknown","evidence":"unknown","url":""},"stems_export":{"exists":true,"how":"현재 공식 홈페이지가 `Stem split`을 표시한다.","evidence":"E1","url":"https://www.flowmusic.app/"},"inpaint_extend_edit":{"exists":true,"how":"공식 홈페이지가 full-length song editing과 audio remix를 표시하지만 extend/inpaint의 세부 입력면은 unknown.","evidence":"E1","url":"https://www.flowmusic.app/"},"instrumental_toggle":{"exists":null,"how":"unknown","evidence":"unknown","url":""},"vocal_control":{"exists":true,"how":"공개 곡의 Sound 필드에 vocal gender, tone, delivery가 자연어로 기록되지만 공식 고정 파라미터는 확인되지 않았다.","evidence":"E4","url":"https://www.flowmusic.app/song/693ffaa3-7f3d-404e-bf69-5460609b1fe0"},"realtime_steering":{"exists":null,"how":"chat 기반 Producer는 확인되지만 생성 도중 오디오를 실시간 steering하는지 unknown.","evidence":"E1","url":"https://www.flowmusic.app/"}},"parameters":null,"notable_evidence":null}
+{"engine":"Stable Audio 2.5","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":10000,"evidence":"E1","url":"https://platform.stability.ai/docs/api-reference","notes":"악기·무드·스타일·장르를 설명하는 `prompt`."},"lyrics_field":{"exists":false,"syntax":"","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference","notes":"공식 Stable Audio 2.5 API에는 별도 lyrics 필드가 없다."},"structure_tags":{"exists":false,"syntax_examples":[],"tags_are_sung":{"answer":"unknown","evidence":"unknown","url":""},"evidence":"E1","url":"https://stability.ai/guides/stable-audio-25-prompt-guide","notes":"공식 prompt guide는 자연어 음악 vocabulary를 다루며 `[Verse]`형 가사 구조 문법을 문서화하지 않는다."},"duration_control":{"exists":true,"how":"`duration` 초 단위 number, 1–190, 기본 190.","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference"},"reference_audio":{"exists":true,"how":"Audio-to-Audio와 Inpaint의 필수 `audio`; Audio-to-Audio는 `strength` 0.01–1로 입력 영향 조절.","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference"},"negative_prompt":{"exists":false,"how":"Stable Audio 2.5 audio endpoint의 공식 request schema에는 `negative_prompt`가 없다.","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference"},"seed_determinism":{"exists":true,"how":"`seed` 0–4294967294; 0 또는 생략 시 random seed.","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference"},"stems_export":{"exists":null,"how":"공식 API 레퍼런스에서 stems export를 확인하지 못해 unknown.","evidence":"unknown","url":""},"inpaint_extend_edit":{"exists":true,"how":"Inpaint에 `audio`, `prompt`, `mask_start`, `mask_end`; 선택 시간 구간을 주변 문맥으로 재생성한다. 별도 continuation endpoint는 확인되지 않았다.","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference"},"instrumental_toggle":{"exists":false,"how":"별도 boolean toggle이 없고 prompt로 instrumental을 기술한다.","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference"},"vocal_control":{"exists":false,"how":"별도 vocal/voice 파라미터 없음; prompt 자연어만 사용.","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference"},"realtime_steering":{"exists":false,"how":"공식 API는 요청-응답 생성이며 생성 도중 steering 파라미터는 문서화되지 않았다.","evidence":"E1","url":"https://platform.stability.ai/docs/api-reference"}},"parameters":null,"notable_evidence":null}
+{"engine":"Sonauto Melodia","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":null,"evidence":"E1","url":"https://sonauto.ai/developers/docs","notes":"`prompt`; 문자 상한은 공식 문서에 없어 unknown."},"lyrics_field":{"exists":true,"syntax":"최상위 `lyrics: string`; 생략하면 prompt에서 AI가 생성.","evidence":"E1","url":"https://sonauto.ai/developers/docs","notes":"Prompt, tags, lyrics는 분리된 API 필드다."},"structure_tags":{"exists":null,"syntax_examples":[],"tags_are_sung":{"answer":"unknown","evidence":"unknown","url":""},"evidence":"unknown","url":"","notes":"공식 API 문서에서 `[Verse]`/`[Chorus]` 문법을 찾지 못했다."},"duration_control":{"exists":true,"how":"v3 `length_range:[min_seconds,max_seconds]`; 양쪽 모두 30초 배수, min 0–270, max 30–300. v2 신규곡은 고정 95초이며 extend는 `extend_duration` 0–85초.","evidence":"E1","url":"https://sonauto.ai/developers/docs"},"reference_audio":{"exists":true,"how":"extend/inpaint에서 `audio_url` 또는 `audio_base64`를 전달한다.","evidence":"E1","url":"https://sonauto.ai/developers/docs"},"negative_prompt":{"exists":true,"how":"v3 `negative_tags: array[string]`.","evidence":"E1","url":"https://sonauto.ai/developers/docs"},"seed_determinism":{"exists":true,"how":"v2에서 동일 `tags`, `lyrics`, `seed`는 동일 노래를 생성한다고 공식 문서가 명시한다. v3는 seed 미지원.","evidence":"E1","url":"https://sonauto.ai/developers/docs"},"stems_export":{"exists":null,"how":"공식 API 문서에서 확인되지 않아 unknown.","evidence":"unknown","url":""},"inpaint_extend_edit":{"exists":true,"how":"v3 `/generations/v3/extend`; v2 `/extend`와 `/inpaint`. v2 inpaint는 `sections:[[start,end]]`와 교체 lyrics를 사용한다.","evidence":"E1","url":"https://sonauto.ai/developers/docs"},"instrumental_toggle":{"exists":true,"how":"`instrumental:true`이며 lyrics를 보내지 않는다.","evidence":"E1","url":"https://sonauto.ai/developers/docs"},"vocal_control":{"exists":true,"how":"lyrics, tags, prompt 및 v2 `balance_strength`로 간접 제어한다. 고정 voice ID는 문서화되지 않았다.","evidence":"E1","url":"https://sonauto.ai/developers/docs"},"realtime_steering":{"exists":false,"how":"v3 `enable_streaming`은 생성 중 청취를 지원하지만, 생성 중 입력 변경은 문서화되지 않았다.","evidence":"E1","url":"https://sonauto.ai/developers/docs"}},"parameters":null,"notable_evidence":null}
+{"engine":"Soundverse","official_docs":null,"control_surface":{"text_prompt":{"exists":true,"char_limit":1024,"evidence":"E1","url":"https://platform.soundverse.ai/docs/song-generation","notes":"`prompt`에 style, mood, genre를 기술."},"lyrics_field":{"exists":true,"syntax":"최상위 `lyrics:string`, 최대 3000자.","evidence":"E1","url":"https://platform.soundverse.ai/docs/song-generation","notes":"Prompt와 분리된 lyrics 필드."},"structure_tags":{"exists":null,"syntax_examples":[],"tags_are_sung":{"answer":"unknown","evidence":"unknown","url":""},"evidence":"unknown","url":"","notes":"공식 API 문서에서 `[Verse]`형 입력 문법을 확인하지 못했다."},"duration_control":{"exists":true,"how":"Extend Music는 `extend_seconds` 1–120을 제공하고 inpaint는 `start_seconds`/`end_seconds`를 제공한다. 신규 Song Generation의 직접 duration 필드는 native payload에 없다.","evidence":"E1","url":"https://platform.soundverse.ai/docs/extend"},"reference_audio":{"exists":true,"how":"`song_reference`, `instrumental_reference`, `melody`, `midi`; 노래/연주 스타일 매칭 및 melody/MIDI guided generation.","evidence":"E1","url":"https://platform.soundverse.ai/docs/song-generation"},"negative_prompt":{"exists":false,"how":"현재 native Song/Music Generation payload에 별도 negative 필드가 없다.","evidence":"E1","url":"https://platform.soundverse.ai/docs/song-generation"},"seed_determinism":{"exists":false,"how":"현재 native payload에 seed가 없다.","evidence":"E1","url":"https://platform.soundverse.ai/docs/song-generation"},"stems_export":{"exists":true,"how":"12-stem, 6-stem, vocals/instrumental 2-stem separation API.","evidence":"E1","url":"https://platform.soundverse.ai/docs/stem-separation"},"inpaint_extend_edit":{"exists":true,"how":"Extend Song/Music, full-song Remix, 선택 section 또는 시간 범위 Audio Inpainting을 별도 API로 제공.","evidence":"E1","url":"https://platform.soundverse.ai/docs/audio-inpainting"},"instrumental_toggle":{"exists":true,"how":"별도 boolean이 아니라 Music Generation의 `generate_music` 도구를 사용해 instrumental을 생성한다.","evidence":"E1","url":"https://platform.soundverse.ai/docs/music-generation"},"vocal_control":{"exists":true,"how":"`gender:'female'|'male'`, 저장된 consented `vocal_id`, 별도 Singing Generation/Voice Cloning.","evidence":"E1","url":"https://platform.soundverse.ai/docs/song-generation"},"realtime_steering":{"exists":false,"how":"구형 v6 API는 SSE streaming 응답을 지원하지만 생성 도중 입력 변경은 문서화되지 않았다.","evidence":"E1","url":"https://help.soundverse.ai/enterprise-api/generate/ai-song-gen/ai-song-gen-v6"}},"parameters":null,"notable_evidence":null}
+
+web search: 
+web search: site:stability.ai/guides/stable-audio-25-prompt-guide prompt examples ...
+web search: 
+web search: site:github.com/ace-step/ACE-Step-1.5 prompt guide caption lyrics examples language artist names ...
+web search: 
+web search: 
+web search: 
+web search: site:riffusion.com prompt guide examples lyrics prompt tags ...
+web search: 
+web search: https://www.riffusion.com/docs/best-practices/prompting-tips
+web search: 
+web search: site:platform.minimax.io/docs/guides/music-generation prompt examples lyrics structure tags ...
+web search: 
+web search: site:platform.mureka.ai/docs/api/operations "prompt": music Mureka ...
+web search: 
+web search: site:sonauto.ai/developers/docs prompt tags lyrics examples ...
+web search: 
+web search: 
+web search: 
+web search: site:stability.ai stable audio artist name prompt policy copyrighted artists ...
+web search: 
+web search: 
+web search: 
+web search: site:elevenlabs.io/docs music Korean lyrics Eleven Music multilingual ...
+web search: 
+web search: 
+web search: 
+web search: site:platform.stability.ai/docs/api-reference stable-audio-2.5 prompt 10000 characters ...
+web search: 
+web search: site:platform.soundverse.ai/docs song generation languages Korean artist names copyrighted prompt ...
+web search: 
+web search: site:minimax.io/blog music 2.5 languages Korean vocals ...
+web search: 
+web search: site:platform.mureka.ai/docs/api/operations prompt-to-song Mureka generate prompt song ...
+codex
+```json
+{
+  "gap": "prompt_grammar",
+  "engines": [
+    {
+      "engine": "Udio",
+      "guide_url": "https://help.udio.com/en/articles/10716541-prompt-like-a-master",
+      "evidence": "E1 공식 Help Center. 프롬프트 구조·예시는 https://help.udio.com/en/articles/10716541-prompt-like-a-master, guidance tags는 https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags 에서 확인.",
+      "recommended_structure_verbatim": "\"A great Prompt includes: Topic or free-form text (A song about summer rain). Genre or tags (jazz, mellow, warm).\" / \"Describe the genre, mood, tempo, instruments, and theme in detail.\"",
+      "example_prompts_verbatim": [
+        "Dreamy, ambient piano with soft violin and ocean waves.",
+        "High-energy 80s rock with electric guitar solos and powerful vocals.",
+        "Soulful blues with a slow, smoldering electric guitar solo and husky vocals.",
+        "Futuristic synthwave with deep bass grooves and a neon-lit atmosphere.",
+        "A peaceful melody capturing a sunrise walk through a blooming forest, folk"
+      ],
+      "official_tag_list": [
+        "[Verse]",
+        "[Chorus]",
+        "[Intro]",
+        "[Outro]",
+        "[Bridge]",
+        "[Hook]",
+        "[Pre-chorus]",
+        "[Refrain]",
+        "[Post-chorus]",
+        "[Drop]",
+        "[Interlude]",
+        "[Instrumental Break]",
+        "[Instrumental]",
+        "[Build]",
+        "[Pre-hook]",
+        "[Pre-drop]",
+        "[Pre-refrain]",
+        "[Break]",
+        "[All]",
+        "[Breakdown]",
+        "[Instrumental Bridge]",
+        "[Sample]",
+        "[Solo]",
+        "[Ensemble]",
+        "[Post-hook]",
+        "[Spoken Word]",
+        "[Choir]",
+        "[Announcer]"
+      ],
+      "char_limit": null,
+      "recommended_length_verbatim": "unknown",
+      "negative_guidance_verbatim": [
+        "\"Note: As with everything in the generative AI world... we humans give guidance & suggestions, the AI makes the ultimate decisions.\"",
+        "\"This isn't an exhaustive list, much less a list of 'hard-coded' commands, but rather the ones we've had good luck with.\"",
+        "\"Want to avoid certain styles? Use \\\"Style Reduction\\\" in Advanced Controls to minimize unwanted elements.\""
+      ],
+      "artist_name_policy_verbatim": "\"A song about summer rain, jazz, mellow, warm, in the style of Billie Holiday\" / \"Udio won’t copy an artist’s voice but will capture a similar musical feel.\" 상표명에 관한 별도 공식 차단 문면은 unknown. 출처: https://help.udio.com/en/articles/10716541-prompt-like-a-master",
+      "languages": "\"Try different languages - English isn’t your only option!\" 공식 언어 전체 목록은 unknown. 출처: https://help.udio.com/en/articles/10716541-prompt-like-a-master",
+      "korean_note_verbatim": "unknown"
+    },
+    {
+      "engine": "ElevenLabs Eleven Music",
+      "guide_url": "https://elevenlabs.io/docs/overview/capabilities/music/best-practices",
+      "evidence": "E1 공식 문서. 자연어 프롬프트 구조·예시는 https://elevenlabs.io/docs/overview/capabilities/music/best-practices, composition-plan 문법은 https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans, 상한·저작권 정책은 https://elevenlabs.io/docs/api-reference/music/compose 및 https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music.",
+      "recommended_structure_verbatim": "\"A prompt answers five questions, whether you intend it to or not: genre, mood, instrumentation, tempo, and production era.\" / \"Decide genre, mood, instruments, tempo, and era before the model decides for you.\" / \"The `text` field combines the section name, lyrics, and inline directions: Section name in square brackets: `[Verse 1]`, `[Chorus]`, `[Bridge]`; Lyrics as plain text, with each line separated by a line break (`\\n`); Phonetic sounds in parentheses: `(hmmm hmmm)`, `(ooh)`, `(yeah)`; Inline directions in curly braces: `{guitar solo}`, `{scratching}`, `{instrumental break}`.\"",
+      "example_prompts_verbatim": [
+        "French house, 122 BPM, filtered disco sample chops, sidechained bass, tight four-on-the-floor kick, rooftop-at-sunset mood, warm analog glue",
+        "UK garage, 132 BPM — start with just a shuffled drum loop, add a warm sub bassline after four bars, then bring in chopped vocal stabs for the drop",
+        "boom bap drum break, 90 BPM, dusty and swung, four bars, no melody — just drums",
+        "dreamy guitar loop, 140 BPM, F sharp minor, emo trap, four bars, instrumental",
+        "Create an intense, fast-paced electronic track for a high-adrenaline video game scene. Use driving synth arpeggios, punchy drums, distorted bass, glitch effects, and aggressive rhythmic textures. The tempo should be fast, 130–150 bpm, with rising tension, quick transitions, and dynamic energy bursts."
+      ],
+      "official_tag_list": [
+        "[Verse 1]",
+        "[Chorus]",
+        "[Bridge]",
+        "[Intro]",
+        "[Outro]",
+        "[Tension Build]",
+        "[Climax]",
+        "[Resolution]",
+        "[Voiceover]",
+        "[Peak Drop]",
+        "[Final Burst]",
+        "{guitar solo}",
+        "{scratching}",
+        "{instrumental break}",
+        "(hmmm hmmm)",
+        "(ooh)",
+        "(yeah)",
+        "cinematic",
+        "orchestral",
+        "epic",
+        "low strings tremolo",
+        "building intensity",
+        "80 BPM",
+        "D minor",
+        "full orchestra",
+        "brass fanfare",
+        "triumphant",
+        "gentle strings",
+        "piano melody",
+        "fading out",
+        "upbeat",
+        "modern pop",
+        "energetic",
+        "instrumental",
+        "catchy hook",
+        "spoken voiceover",
+        "confident male voice",
+        "background music",
+        "musical sting",
+        "memorable"
+      ],
+      "char_limit": 4100,
+      "recommended_length_verbatim": "\"Prompt length and detail do not always correlate with better quality outputs. For more creative and unexpected results, try using simple, evocative keywords to let the model interpret and compose freely.\" / \"Aim for at least 6-7 styles in early chunks until the direction is established.\" 출처: https://elevenlabs.io/docs/overview/capabilities/music/best-practices 및 https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+      "negative_guidance_verbatim": [
+        "\"Use negative styles liberally to prevent unwanted sounds.\"",
+        "\"Use curly braces for short, inline cues. For broader characteristics that apply to the whole chunk — genre, instrumentation, or overall vocal style — use `positive_styles` instead.\"",
+        "\"Composition plans and text prompts are mutually exclusive. Use one or the other, not both.\"",
+        "\"To generate music without vocals, add ‘instrumental only’ to your prompt.\""
+      ],
+      "artist_name_policy_verbatim": "\"Attempting to generate music or a composition plan that contains copyrighted material will result in an error. This includes mentioning a band or musician by name or using copyrighted lyrics.\" / \"In these cases, the API will return a `bad_prompt` error that contains a suggestion of what prompt you could use instead.\" 상표명 자체에 관한 별도 문면은 unknown. 출처: https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music",
+      "languages": "\"The model supports multilingual lyric generation.\" / \"Eleven Music supports vocals in multiple languages including English, Spanish, German, and Japanese.\" Styles에는 \"Styles must be in English (lyrics can be any language).\" 출처: https://elevenlabs.io/docs/overview/capabilities/music/best-practices, https://elevenlabs.io/docs/eleven-creative/products/music, https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+      "korean_note_verbatim": "Eleven Music 전용 공식 지원언어 문면에서 Korean을 명시한 근거는 확인되지 않음; \"Korean (kor)\" 목록은 Eleven v3 음성 모델 목록이므로 Eleven Music 근거로 전용하지 않음. Music 기준 unknown. 비교 출처: https://elevenlabs.io/docs/overview/models"
+    },
+    {
+      "engine": "MiniMax Music",
+      "guide_url": "https://platform.minimax.io/docs/guides/music-generation",
+      "evidence": "E1 공식 API 문서·가이드. 구조·상한은 https://platform.minimax.io/docs/api-reference/music-generation 및 https://platform.minimax.io/docs/api-reference/lyrics-generation, Music 3.0의 Structured Caption 설명·예시는 E2 공식 블로그 https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model.",
+      "recommended_structure_verbatim": "\"Use the prompt parameter to define the music’s style, mood, and scenario, and the lyrics parameter to provide the vocal content.\" / Music 3.0: \"These captions specify genre, tempo, time signature, key, use case, and production character, while also tracking emotional contour; the entry and exit of primary and supporting instruments; the development of groove and low-end energy; and section-level changes in vocal delivery, harmony, and vocal effects.\"",
+      "example_prompts_verbatim": [
+        "Soulful Blues, Rainy Night, Melancholy, Male Vocals, Slow Tempo",
+        "Jazz, smooth, late night lounge, saxophone",
+        "Indie folk, melancholic, introspective, longing, solitary walk, coffee shop",
+        "Classic Shanghai jazz / soul with gentle lo-fi warmth. Tender, nostalgic verses unfold into a softly radiant chorus, led by an intimate female vocal with restrained phrasing, supported by mellow piano, upright bass, brushed drums, warm brass accents, and a vintage room-like mix.",
+        "Progressive house / EDM, 126 BPM, B-flat major. Reflective and nostalgic verses rise into a cathartic, euphoric chorus, with a smooth breathy male tenor, pulsing side-chained synths, punchy club bass, crisp drums, and wide hall reverb."
+      ],
+      "official_tag_list": [
+        "[Intro]",
+        "[Verse]",
+        "[Pre-Chorus]",
+        "[Chorus]",
+        "[Hook]",
+        "[Drop]",
+        "[Bridge]",
+        "[Solo]",
+        "[Build-up]",
+        "[Instrumental]",
+        "[Breakdown]",
+        "[Break]",
+        "[Interlude]",
+        "[Outro]"
+      ],
+      "char_limit": 2000,
+      "recommended_length_verbatim": "기본 Music API의 수치 권장 길이는 unknown. 공식 MCP 래퍼에는 prompt \"String, 10–300 characters\"라고 명시됨: https://platform.minimax.io/docs/guides/mcp-guide",
+      "negative_guidance_verbatim": [
+        "\"When using `cover_feature_id`, do not pass `audio_url` or `audio_base64` — they are mutually exclusive.\"",
+        "일반 프롬프트에 대한 별도 금지형 작성 가이드는 unknown."
+      ],
+      "artist_name_policy_verbatim": "아티스트명·밴드명·상표명 차단에 관한 공식 Music API 문면은 unknown.",
+      "languages": "Music 3.0 공식 예시에 영어와 Mandarin 계열 설명이 존재하지만 지원언어 전체 목록은 공표되지 않음. E2 출처: https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+      "korean_note_verbatim": "MiniMax의 40개 언어 목록에는 \"Korean\"이 있으나 이는 speech synthesis 문서이며 Music 지원 근거가 아님. Music 기준 Korean은 unknown. 출처: https://platform.minimax.io/docs/api-reference/api-overview"
+    },
+    {
+      "engine": "Mureka",
+      "guide_url": "https://platform.mureka.ai/docs/en/quickstart.html",
+      "evidence": "E1 공식 API 문서. song prompt·상한·예시는 https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, instrumental 예시는 https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html, remix 예시는 https://platform.mureka.ai/docs/api/operations/post-v1-song-remix.html, 언어는 https://platform.mureka.ai/docs/en/changelog.html.",
+      "recommended_structure_verbatim": "\"Control music generation by inputting a prompt, maximum 1024 characters.\" / 공식 예시가 comma-separated descriptors인 것은 확인되지만 장르→무드→보컬 등의 고정 권장 순서를 명시한 문면은 unknown.",
+      "example_prompts_verbatim": [
+        "r&b, slow, passionate, male vocal",
+        "jazz, upbeat, brass-driven",
+        "cinematic, emotional, ambient soundtrack"
+      ],
+      "official_tag_list": [
+        "[Verse]",
+        "[Intro]",
+        "[Chorus]",
+        "[Bridge]",
+        "[Break]"
+      ],
+      "char_limit": 1024,
+      "recommended_length_verbatim": "unknown",
+      "negative_guidance_verbatim": [
+        "\"Besides individual control, this option does not support combination with other control options.\" 이 문면은 instrumental `prompt`와 `instrumental_id`의 조합 제한에 적용됨. 출처: https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+        "프롬프트 문장 자체의 금지형 작성 지침은 unknown."
+      ],
+      "artist_name_policy_verbatim": "아티스트명·밴드명·상표명 차단에 관한 공식 문면은 unknown.",
+      "languages": "\"supporting 10 languages: Chinese, English, Japanese, Korean, Portuguese, Spanish, German, Italian, French, and Russian.\" 출처: https://platform.mureka.ai/docs/en/changelog.html",
+      "korean_note_verbatim": "\"supporting 10 languages: Chinese, English, Japanese, Korean, Portuguese, Spanish, German, Italian, French, and Russian.\" 출처: https://platform.mureka.ai/docs/en/changelog.html"
+    },
+    {
+      "engine": "Sonauto Melodia",
+      "guide_url": "https://sonauto.ai/developers/docs",
+      "evidence": "E1 공식 API 문서. 2026-08 현재 Sonauto URL은 Treblo로 리디렉션될 수 있으나 조사 문면은 https://sonauto.ai/developers/docs 에서 수집했고, 현재 개발자 페이지는 https://treblo.com/developers.",
+      "recommended_structure_verbatim": "\"Recommended: start with just a prompt\" / \"The best results come from sending only `prompt` and letting our model infer `tags`, `lyrics`, and strength settings for you.\"",
+      "example_prompts_verbatim": [
+        "a chill lofi beat for studying",
+        "An upbeat rock song with heavy guitar riffs",
+        "Country song about my WiFi going out mid-meeting",
+        "Write another verse for my song"
+      ],
+      "official_tag_list": [
+        "2020s",
+        "pop",
+        "rock",
+        "rap",
+        "world",
+        "electronic",
+        "classical",
+        "folk",
+        "country",
+        "jazz",
+        "blues",
+        "hip-hop/rap",
+        "alternative",
+        "hip hop",
+        "latin",
+        "dance",
+        "singer-songwriter",
+        "male vocalist",
+        "metal",
+        "r&b",
+        "alternative rock",
+        "indie rock",
+        "soul",
+        "guitar",
+        "film",
+        "funk",
+        "new age",
+        "piano",
+        "ambient",
+        "bass",
+        "drums",
+        "punk",
+        "original soundtrack",
+        "instrumental",
+        "latin american",
+        "experimental",
+        "indie pop",
+        "r&b/soul",
+        "female vocalist",
+        "folk rock",
+        "keyboard",
+        "energetic",
+        "percussion",
+        "vocal",
+        "downtempo",
+        "rhythmic",
+        "trap",
+        "gospel",
+        "progressive rock",
+        "ballad"
+      ],
+      "char_limit": null,
+      "recommended_length_verbatim": "\"Only supply `tags` if you have a specific style to enforce — and if you do, provide at least 1 tag (recommended 3 minimum).\" 프롬프트 문자 수 권장은 unknown. 출처: https://sonauto.ai/developers/docs",
+      "negative_guidance_verbatim": [
+        "\"Avoid manually setting `tags` or any strength values unless you have a specific reason to override the defaults — an empty `tags` array combined with a non-default strength value is a common source of poor results.\"",
+        "\"If you do pass `tags` explicitly, you must provide at least 1. Sending an empty array while overriding strength parameters tends to produce low-quality output — omit the field entirely instead.\"",
+        "\"Providing only `lyrics` or `tags` (without a prompt) is not supported.\"",
+        "\"Greater values adhere more to the prompt but sound less natural. Defaults are tuned — leave unset unless you are actively iterating.\""
+      ],
+      "artist_name_policy_verbatim": "아티스트명·밴드명·상표명 차단에 관한 공식 문면은 unknown.",
+      "languages": "API는 lyrics 문자열을 받지만 공식 지원언어 목록은 unknown. 출처: https://sonauto.ai/developers/docs",
+      "korean_note_verbatim": "unknown"
+    },
+    {
+      "engine": "Stable Audio 2.5",
+      "guide_url": "https://stability.ai/guides/stable-audio-25-prompt-guide",
+      "evidence": "E1 공식 prompt guide 및 API reference. 구조·예시는 https://stability.ai/guides/stable-audio-25-prompt-guide, 문자 상한은 https://platform.stability.ai/docs/api-reference, 언어 정책은 https://kb.stability.ai/knowledge-base/supported-prompt-languages.",
+      "recommended_structure_verbatim": "\"The order of information you give your prompt should look like: 1. Core style/genre 2. Key instruments and musical elements 3. Mood and emotion 4. Specific details 5. Additional instructions\"",
+      "example_prompts_verbatim": [
+        "A relaxing Bossa Nova instrumental, perfect for an elevator. The mood is smooth, patient, and relaxing, 115 BPM.",
+        "An exciting breakbeat instrumental perfect for fast-paced video games, featuring funky electric guitar chords, steady break drums, smooth electric piano, and supporting bass. The mood is fresh, modern, and adventurous, 105 BPM.",
+        "Cinematic outlaw country instrumental perfect for a long drive featuring a blues pedal steel guitar, a rustic mandolin, a fiddle playing call and response, a tape-driven rattly drum-kit, an autoharp, and a soaring accordion solo. The mood has southern soul, is raw, emotional, expansive, and full of the blues.",
+        "A luxurious indietronica instrumental perfect for a perfume advertisement featuring clean guitars, synthesizers, and a slow-tempo drum machine pattern.",
+        "90s garage rock instrumental with a grunge influence featuring poppy distorted guitars, frantic and energetic drums and tube-distorted bass guitar."
+      ],
+      "official_tag_list": [
+        "Rock",
+        "Country",
+        "Classical",
+        "Electronic",
+        "Classic rock",
+        "Outlaw country",
+        "Contemporary classical",
+        "Ambient house",
+        "Slow",
+        "Medium",
+        "Building",
+        "Fast",
+        "euphoric",
+        "melancholic",
+        "soaring",
+        "mystical",
+        "Piano",
+        "Synthesizer",
+        "Electric guitar",
+        "Violin",
+        "Bass lines",
+        "String section",
+        "Electric piano",
+        "808 drum machine",
+        "SP-1200",
+        "Syncopated percussion",
+        "Break drums",
+        "Jazz improvisation",
+        "Atmospheric pads",
+        "Reverb tails and echoes",
+        "Countermelodies and harmonies",
+        "Studio-quality, pristine",
+        "Lo-fi, bedroom-recorded",
+        "Lush",
+        "Textured",
+        "Vintage, analog",
+        "Expansive",
+        "Layered",
+        "Minimalist",
+        "Modern",
+        "Raw",
+        "Stripped-back"
+      ],
+      "char_limit": 10000,
+      "recommended_length_verbatim": "\"You can make a prompt as simple or complex as you like. Simple prompts are good for clean output audio. Complex prompts are good for adding texture and depth to the output audio.\" 수치형 권장 길이는 unknown. 출처: https://platform.stability.ai/docs/api-reference",
+      "negative_guidance_verbatim": [
+        "\"Use clear, descriptive emotional terms that go beyond simple words like ‘happy’ and ‘sad.’\"",
+        "\"Avoid repeating the same adjectives. Instead, use a range of vocabulary that cohesively fits a musical context.\"",
+        "Less effective: \"Make a song that’s happy and has guitar, fiddle and drums\"",
+        "\"Our Terms of Service require that uploads be free of copyrighted material, and we use advanced content recognition to maintain compliance and prevent infringement\""
+      ],
+      "artist_name_policy_verbatim": "아티스트명 또는 상표명을 텍스트 프롬프트에서 차단한다는 공식 문면은 unknown. 업로드에는 \"We do not allow copyrighted content to be uploaded to our platform.\"가 적용됨. 출처: https://platform.stability.ai/docs/api-reference",
+      "languages": "\"Stability AI maintains an English-only policy for text prompts.\" / \"Using foreign languages in your text prompt may result in mixed outcomes and is not recommended. To maximize accuracy and consistency, we encourage users to provide English-only prompts.\" 출처: https://kb.stability.ai/knowledge-base/supported-prompt-languages",
+      "korean_note_verbatim": "Korean을 개별 언급하지 않으며 영어 외 언어 전체에 대해 \"Using foreign languages in your text prompt may result in mixed outcomes and is not recommended.\"라고 명시. 출처: https://kb.stability.ai/knowledge-base/supported-prompt-languages"
+    },
+    {
+      "engine": "ACE-Step 1.5",
+      "guide_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md",
+      "evidence": "E1 공식 저장소 문서. 사용자용 구조·예시는 https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md 및 https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/Tutorial.md, 상한은 https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md.",
+      "recommended_structure_verbatim": "\"The caption is a short paragraph describing the entire song's vibe.\" / \"Tips for good captions: Name the genre; Name the instruments; Name the mood; Name the production style.\" / \"Lyrics do double duty in ACE-Step. They're not just words — they tell the AI how the song should be structured over time.\"",
+      "example_prompts_verbatim": [
+        "melancholic piano ballad with soft female vocals, gentle string accompaniment, slow tempo, intimate and heartbreaking atmosphere",
+        "rock song with crunchy rhythm guitar, punchy snare, and gravelly male vocals",
+        "female vocal, piano ballad, emotional, intimate atmosphere, strings, building to powerful chorus"
+      ],
+      "official_tag_list": [
+        "pop",
+        "rock",
+        "jazz",
+        "electronic",
+        "hip-hop",
+        "R&B",
+        "folk",
+        "classical",
+        "lo-fi",
+        "synthwave",
+        "melancholic",
+        "uplifting",
+        "energetic",
+        "dreamy",
+        "dark",
+        "nostalgic",
+        "euphoric",
+        "intimate",
+        "acoustic guitar",
+        "piano",
+        "synth pads",
+        "808 drums",
+        "strings",
+        "brass",
+        "electric bass",
+        "warm",
+        "bright",
+        "crisp",
+        "muddy",
+        "airy",
+        "punchy",
+        "lush",
+        "raw",
+        "polished",
+        "[Intro]",
+        "[Verse]",
+        "[Verse 1]",
+        "[Pre-Chorus]",
+        "[Chorus]",
+        "[Bridge]",
+        "[Instrumental]",
+        "[Outro]",
+        "[raspy vocal]",
+        "[whispered]",
+        "[guitar solo]",
+        "[drum break]",
+        "[building energy]",
+        "[explosive drop]",
+        "[Chorus - anthemic]",
+        "[Verse - whispered]"
+      ],
+      "char_limit": 512,
+      "recommended_length_verbatim": "\"The caption is a short paragraph describing the entire song's vibe.\" / \"Keep lines around 6-10 syllables so the AI can fit them naturally.\" 출처: https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md",
+      "negative_guidance_verbatim": [
+        "\"Don't try to control everything on your first attempt. Start with a short caption and see what the AI gives you.\"",
+        "\"Too many instructions confuse the model, making effects worse\"",
+        "\"Principle: Keep structure tags concise; put complex style descriptions in Caption.\"",
+        "\"Models are not good at resolving conflicts. If descriptions in Caption and Lyrics contradict, the model gets confused and output quality decreases.\"",
+        "\"Don't pursue perfect descriptions — Caption is a starting point, not an endpoint.\""
+      ],
+      "artist_name_policy_verbatim": "공식 Tutorial은 \"Use references well — \\\"in the style of 80s synthwave\\\" or \\\"reminiscent of Bon Iver\\\" can quickly convey complex aesthetic preferences.\"라고 적는다. 별도의 아티스트명·상표 차단은 문서화되지 않음. 출처: https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/Tutorial.md",
+      "languages": "\"ACE-Step can generate vocals in 50+ languages, including: English, Spanish, French, German, Italian, Portuguese, Chinese (Mandarin & Cantonese), Japanese, Korean, Hindi, Bengali, Arabic, Turkish, Thai, Vietnamese, Swedish, Dutch, Polish, Hebrew, and many more.\" 출처: https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md",
+      "korean_note_verbatim": "\"ACE-Step can generate vocals in 50+ languages, including: English, Spanish, French, German, Italian, Portuguese, Chinese (Mandarin & Cantonese), Japanese, Korean, Hindi, Bengali, Arabic, Turkish, Thai, Vietnamese, Swedish, Dutch, Polish, Hebrew, and many more.\" 출처: https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md"
+    },
+    {
+      "engine": "Riffusion / FUZZ",
+      "guide_url": null,
+      "evidence": "현재 공식 Riffusion prompting URL https://www.riffusion.com/docs/best-practices/prompting-tips 는 404이며, https://www.riffusion.com/docs 는 Google Flow Music 도움말로 리디렉션됨. 따라서 공식 문면은 unknown. 아래 예시는 모두 E4 커뮤니티 관측이며 공식 지침이 아님: https://www.reddit.com/r/riffusion/comments/1k2ihkj 및 https://www.reddit.com/r/riffusion/comments/1j95h62.",
+      "recommended_structure_verbatim": "unknown",
+      "example_prompts_verbatim": [
+        "[E4·비공식] R&B ballad, 70 BPM, breathy male vocals, soft Rhodes, ambient pads, emotional tone.",
+        "[E4·비공식] genre, subgenre, beat, vibe, mood"
+      ],
+      "official_tag_list": [],
+      "char_limit": null,
+      "recommended_length_verbatim": "unknown",
+      "negative_guidance_verbatim": [
+        "[E4·비공식] \"For duets, describe each voice in the prompt (ex: ‘soprano & bass’) and dn’t try to label verses. Riffusion will sing the brackets!!!\" 출처: https://www.reddit.com/r/riffusion/comments/1k2ihkj",
+        "[E4·비공식] \"With prompt just do not overload it\" 출처: https://www.reddit.com/r/riffusion/comments/1j95h62"
+      ],
+      "artist_name_policy_verbatim": "unknown",
+      "languages": "unknown",
+      "korean_note_verbatim": "unknown"
+    },
+    {
+      "engine": "Soundverse",
+      "guide_url": "https://www.soundverse.ai/blog/article/best-prompts-for-music-generator-ai",
+      "evidence": "E2 공식 Soundverse 블로그의 작성 가이드·예시는 https://www.soundverse.ai/blog/article/best-prompts-for-music-generator-ai 및 https://www.soundverse.ai/blog/article/how-to-write-effective-prompts-for-ai-music-generation-1042. E1 API 상한은 https://platform.soundverse.ai/docs/song-generation 및 https://platform.soundverse.ai/docs/music-generation.",
+      "recommended_structure_verbatim": "\"The ideal music creation prompts describe style, tempo, instrumentation, and emotion in a concise but rich way.\" / \"Essential Elements of an AI Music Prompt: 1. Genre 2. Mood or Emotion 3. Instrumentation 4. Tempo and Rhythm Clues 5. Texture and Atmosphere\"",
+      "example_prompts_verbatim": [
+        "Generate a retro-inspired synthwave track with a driving 80s-style bassline, shimmering analog synths, and pulsating beats. Add a bright, uplifting melody with a steady tempo to evoke a nostalgic yet futuristic vibe.",
+        "Create a mellow lo-fi beat with a soft electric piano, jazzy guitar riffs, and minimalistic drum patterns. Incorporate vinyl crackles and ambient sounds to give it a relaxed, introspective feel.",
+        "Ambient soundtrack with soft piano, airy pads, and gentle rhythm for meditation and relaxation.",
+        "Cinematic orchestral piece building from quiet strings to powerful brass and percussion for film trailer.",
+        "Upbeat electronic pop instrumental with catchy synth layers and driving bassline for social media ads.",
+        "Dark techno beat with atmospheric textures and evolving sequence, ideal for cyberpunk gaming clips."
+      ],
+      "official_tag_list": [
+        "pop",
+        "jazz",
+        "EDM",
+        "classical",
+        "lofi",
+        "trap",
+        "soulful jazz",
+        "cinematic",
+        "orchestral",
+        "electronic house",
+        "tropical",
+        "synthwave",
+        "lo-fi",
+        "ambient",
+        "techno",
+        "hip-hop",
+        "rock",
+        "R&B",
+        "country",
+        "mood",
+        "instrumentation",
+        "tempo",
+        "rhythm",
+        "texture",
+        "atmosphere"
+      ],
+      "char_limit": 1024,
+      "recommended_length_verbatim": "\"A strong prompt balances creativity and clarity. Too little detail leaves the AI guessing; too much can confuse it.\" 수치형 권장 길이는 unknown. 출처: https://www.soundverse.ai/blog/article/how-to-write-effective-prompts-for-ai-music-generation-1042",
+      "negative_guidance_verbatim": [
+        "\"Beware of: Overloaded Prompts: Too many conflicting details confuse the model.\"",
+        "\"Vague Descriptions: ‘Cool beat’ or ‘nice melody’ lacks actionable information.\"",
+        "\"Ignoring Context: A music track intended for commercials may need clean rhythmic consistency rather than artistic complexity.\"",
+        "\"Missing Instrument Control: Forgetting to specify instruments may lead to mixed genre outputs.\""
+      ],
+      "artist_name_policy_verbatim": "\"Without directly naming the artist or track, your job is to describe the qualities that make it special.\" Soundverse의 voice/style 시스템은 \"Artist DNA consent\" 및 \"Voices and styles are opt-in and revocable.\"라고 명시. 상표명 별도 차단 문면은 unknown. 출처: https://www.soundverse.ai/blog/article/best-prompts-for-music-generator-ai 및 https://platform.soundverse.ai/",
+      "languages": "Lyrics API의 `language`는 string이며 기본값은 \"English\"이나 지원언어 enum은 공표되지 않음. 출처: https://platform.soundverse.ai/docs/lyrics",
+      "korean_note_verbatim": "unknown"
+    },
+    {
+      "engine": "Lyria 3",
+      "guide_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+      "evidence": "E1 Google AI for Developers 공식 문서. 프롬프트 구조·예시·언어·안전 정책은 https://ai.google.dev/gemini-api/docs/music-generation 및 legacy 상세 가이드 https://ai.google.dev/gemini-api/docs/generate-content/music-generation.",
+      "recommended_structure_verbatim": "\"The more specific your prompt, the better the results. Here's what you can include to guide the generation: Genre; Instruments; BPM; Key/Scale; Mood and atmosphere; Structure; Duration.\" / \"Separate lyrics from instructions. When providing custom lyrics, clearly separate them from your musical direction instructions.\"",
+      "example_prompts_verbatim": [
+        "A 30-second lofi hip hop beat with dusty vinyl crackle, mellow Rhodes piano chords, a slow boom-bap drum pattern at 85 BPM, and a jazzy upright bass line. Instrumental only.",
+        "An upbeat, feel-good pop song in G major at 120 BPM with bright acoustic guitar strumming, claps, and warm vocal harmonies about a summer road trip.",
+        "A dark, atmospheric trap beat at 140 BPM with heavy 808 bass, eerie synth pads, sharp hi-hats, and a haunting vocal sample. In D minor.",
+        "A 1980s-style synth-pop track with a driving beat, shimmering synthesizers, and a catchy, anthemic chorus. The song should have a retro-futuristic feel, reminiscent of classic 80s pop hits, with a modern production polish. The tempo should be upbeat and danceable, around 120 BPM, with a clear verse-chorus structure and a memorable instrumental hook. The lyrics are about the feeling of getting ready for a party."
+      ],
+      "official_tag_list": [
+        "lo-fi hip hop",
+        "jazz fusion",
+        "cinematic orchestral",
+        "Fender Rhodes piano",
+        "slide guitar",
+        "TR-808 drum machine",
+        "nostalgic",
+        "aggressive",
+        "ethereal",
+        "dreamy",
+        "[Intro]",
+        "[Verse]",
+        "[Verse 1]",
+        "[Verse 2]",
+        "[Pre-chorus]",
+        "[Chorus]",
+        "[Bridge]",
+        "[Outro]",
+        "[0:00 - 0:10] Intro",
+        "Female Soprano",
+        "Female Alto",
+        "Male Tenor",
+        "Male Baritone",
+        "Weathered Rocker (Male)"
+      ],
+      "char_limit": null,
+      "recommended_length_verbatim": "\"Your prompt can be as simple as ‘a folk song about cute cats avoiding puddles, female vocals and the noise of rain’, or something detailed and structured like:\" 수치형 권장 길이는 unknown. 출처: https://ai.google.dev/gemini-api/docs/generate-content/music-generation",
+      "negative_guidance_verbatim": [
+        "\"Vague prompts produce generic results. Mention instruments, BPM, key, mood, and structure for the best output.\"",
+        "\"Iterate with Clip first. Use the faster `lyria-3-clip-preview` model to experiment with prompts before committing to a full-length generation with `lyria-3-pro-preview`.\"",
+        "\"Separate lyrics from instructions. When providing custom lyrics, clearly separate them from your musical direction instructions.\"",
+        "\"All prompts are checked by safety filters. Prompts that trigger the filters will be blocked.\"",
+        "\"Iterative editing or refining a generated clip through multiple prompts is not supported in the current version of Lyria 3.\""
+      ],
+      "artist_name_policy_verbatim": "\"Prompts that trigger the filters will be blocked. This includes prompts that request specific artist voices or the generation of copyrighted lyrics.\" 상표명에 관한 별도 문면은 unknown. 출처: https://ai.google.dev/gemini-api/docs/music-generation",
+      "languages": "\"Lyria 3 generates lyrics in the language of your prompt.\" / \"To generate a song with French lyrics, write your prompt in French. The model adapts its vocal style and pronunciation to match the language.\" 지원언어 전체 enum은 공표되지 않음. 출처: https://ai.google.dev/gemini-api/docs/music-generation",
+      "korean_note_verbatim": "Korean을 개별적으로 명시한 공식 Lyria 3 문면은 확인되지 않음; 언어 일반 규칙은 \"Lyria 3 generates lyrics in the language of your prompt.\" 출처: https://ai.google.dev/gemini-api/docs/music-generation"
+    }
+  ],
+  "cross_notes": "조사 기준일 2026-08-31. E1 공식문서가 실제 고정 문법을 제시한 엔진은 Eleven Music(`[ ]` section, `{ }` inline direction, `( )` phonetic sound), MiniMax(14 structure tags), ACE-Step(section/meta tags), Udio(guidance-tag autocomplete), Lyria 3(section tags)이다. Stable Audio 2.5·Soundverse·Sonauto는 자연어 차원 목록 또는 자유형 tags를 제공하지만 `[Verse]`형 폐쇄 문법은 공식 확인되지 않았다. Mureka는 공식 예시에서 `[Verse]` 등을 사용하지만 완전한 허용 태그 목록은 공표하지 않았다. Riffusion의 과거 공식 prompting URL은 현재 404이고 제품은 Flow Music으로 이전되었으므로 공식 문면을 복원하지 않았으며, 커뮤니티 문면 두 건만 E4로 명시했다. `char_limit`은 prompt 필드 기준이며 lyrics 상한과 혼동하지 않았다: Eleven 4100, MiniMax 2000, Mureka 1024, Stable Audio 2.5 10000, ACE-Step caption 512, Soundverse 1024; Udio·Sonauto·Riffusion·Lyria 3는 공식 숫자 미확인이라 null이다. 아티스트명 정책은 Udio가 스타일 참조를 허용하되 voice 복제는 하지 않는다고 설명하고, Eleven Music과 Lyria 3는 각각 musician/band name 또는 specific artist voice 요청을 차단한다고 명시한다. ACE-Step 공식 가이드는 `reminiscent of Bon Iver`를 작성 원칙의 예로 든다. 나머지는 공식 차단 문면이 없어 unknown이다.",
+  "sources": [
+    "https://help.udio.com/en/articles/10716541-prompt-like-a-master",
+    "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+    "https://elevenlabs.io/docs/overview/capabilities/music/best-practices",
+    "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+    "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music",
+    "https://elevenlabs.io/docs/api-reference/music/compose",
+    "https://elevenlabs.io/docs/eleven-creative/products/music",
+    "https://elevenlabs.io/docs/changelog/2025/11/5",
+    "https://platform.minimax.io/docs/guides/music-generation",
+    "https://platform.minimax.io/docs/api-reference/music-generation",
+    "https://platform.minimax.io/docs/api-reference/lyrics-generation",
+    "https://platform.minimax.io/docs/guides/mcp-guide",
+    "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+    "https://platform.mureka.ai/docs/en/quickstart.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-remix.html",
+    "https://platform.mureka.ai/docs/en/changelog.html",
+    "https://sonauto.ai/developers/docs",
+    "https://treblo.com/developers",
+    "https://stability.ai/guides/stable-audio-25-prompt-guide",
+    "https://platform.stability.ai/docs/api-reference",
+    "https://kb.stability.ai/knowledge-base/supported-prompt-languages",
+    "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md",
+    "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/Tutorial.md",
+    "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+    "https://www.riffusion.com/docs/best-practices/prompting-tips",
+    "https://www.riffusion.com/docs",
+    "https://www.reddit.com/r/riffusion/comments/1k2ihkj",
+    "https://www.reddit.com/r/riffusion/comments/1j95h62",
+    "https://www.soundverse.ai/blog/article/best-prompts-for-music-generator-ai",
+    "https://www.soundverse.ai/blog/article/how-to-write-effective-prompts-for-ai-music-generation-1042",
+    "https://www.soundverse.ai/blog/article/how-to-write-effective-prompts-for-ai-music-generation-1136",
+    "https://platform.soundverse.ai/docs/song-generation",
+    "https://platform.soundverse.ai/docs/music-generation",
+    "https://platform.soundverse.ai/docs/lyrics",
+    "https://platform.soundverse.ai/",
+    "https://ai.google.dev/gemini-api/docs/music-generation",
+    "https://ai.google.dev/gemini-api/docs/generate-content/music-generation"
+  ]
+}
+```
+tokens used
+189,639
+```json
+{
+  "gap": "prompt_grammar",
+  "engines": [
+    {
+      "engine": "Udio",
+      "guide_url": "https://help.udio.com/en/articles/10716541-prompt-like-a-master",
+      "evidence": "E1 공식 Help Center. 프롬프트 구조·예시는 https://help.udio.com/en/articles/10716541-prompt-like-a-master, guidance tags는 https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags 에서 확인.",
+      "recommended_structure_verbatim": "\"A great Prompt includes: Topic or free-form text (A song about summer rain). Genre or tags (jazz, mellow, warm).\" / \"Describe the genre, mood, tempo, instruments, and theme in detail.\"",
+      "example_prompts_verbatim": [
+        "Dreamy, ambient piano with soft violin and ocean waves.",
+        "High-energy 80s rock with electric guitar solos and powerful vocals.",
+        "Soulful blues with a slow, smoldering electric guitar solo and husky vocals.",
+        "Futuristic synthwave with deep bass grooves and a neon-lit atmosphere.",
+        "A peaceful melody capturing a sunrise walk through a blooming forest, folk"
+      ],
+      "official_tag_list": [
+        "[Verse]",
+        "[Chorus]",
+        "[Intro]",
+        "[Outro]",
+        "[Bridge]",
+        "[Hook]",
+        "[Pre-chorus]",
+        "[Refrain]",
+        "[Post-chorus]",
+        "[Drop]",
+        "[Interlude]",
+        "[Instrumental Break]",
+        "[Instrumental]",
+        "[Build]",
+        "[Pre-hook]",
+        "[Pre-drop]",
+        "[Pre-refrain]",
+        "[Break]",
+        "[All]",
+        "[Breakdown]",
+        "[Instrumental Bridge]",
+        "[Sample]",
+        "[Solo]",
+        "[Ensemble]",
+        "[Post-hook]",
+        "[Spoken Word]",
+        "[Choir]",
+        "[Announcer]"
+      ],
+      "char_limit": null,
+      "recommended_length_verbatim": "unknown",
+      "negative_guidance_verbatim": [
+        "\"Note: As with everything in the generative AI world... we humans give guidance & suggestions, the AI makes the ultimate decisions.\"",
+        "\"This isn't an exhaustive list, much less a list of 'hard-coded' commands, but rather the ones we've had good luck with.\"",
+        "\"Want to avoid certain styles? Use \\\"Style Reduction\\\" in Advanced Controls to minimize unwanted elements.\""
+      ],
+      "artist_name_policy_verbatim": "\"A song about summer rain, jazz, mellow, warm, in the style of Billie Holiday\" / \"Udio won’t copy an artist’s voice but will capture a similar musical feel.\" 상표명에 관한 별도 공식 차단 문면은 unknown. 출처: https://help.udio.com/en/articles/10716541-prompt-like-a-master",
+      "languages": "\"Try different languages - English isn’t your only option!\" 공식 언어 전체 목록은 unknown. 출처: https://help.udio.com/en/articles/10716541-prompt-like-a-master",
+      "korean_note_verbatim": "unknown"
+    },
+    {
+      "engine": "ElevenLabs Eleven Music",
+      "guide_url": "https://elevenlabs.io/docs/overview/capabilities/music/best-practices",
+      "evidence": "E1 공식 문서. 자연어 프롬프트 구조·예시는 https://elevenlabs.io/docs/overview/capabilities/music/best-practices, composition-plan 문법은 https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans, 상한·저작권 정책은 https://elevenlabs.io/docs/api-reference/music/compose 및 https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music.",
+      "recommended_structure_verbatim": "\"A prompt answers five questions, whether you intend it to or not: genre, mood, instrumentation, tempo, and production era.\" / \"Decide genre, mood, instruments, tempo, and era before the model decides for you.\" / \"The `text` field combines the section name, lyrics, and inline directions: Section name in square brackets: `[Verse 1]`, `[Chorus]`, `[Bridge]`; Lyrics as plain text, with each line separated by a line break (`\\n`); Phonetic sounds in parentheses: `(hmmm hmmm)`, `(ooh)`, `(yeah)`; Inline directions in curly braces: `{guitar solo}`, `{scratching}`, `{instrumental break}`.\"",
+      "example_prompts_verbatim": [
+        "French house, 122 BPM, filtered disco sample chops, sidechained bass, tight four-on-the-floor kick, rooftop-at-sunset mood, warm analog glue",
+        "UK garage, 132 BPM — start with just a shuffled drum loop, add a warm sub bassline after four bars, then bring in chopped vocal stabs for the drop",
+        "boom bap drum break, 90 BPM, dusty and swung, four bars, no melody — just drums",
+        "dreamy guitar loop, 140 BPM, F sharp minor, emo trap, four bars, instrumental",
+        "Create an intense, fast-paced electronic track for a high-adrenaline video game scene. Use driving synth arpeggios, punchy drums, distorted bass, glitch effects, and aggressive rhythmic textures. The tempo should be fast, 130–150 bpm, with rising tension, quick transitions, and dynamic energy bursts."
+      ],
+      "official_tag_list": [
+        "[Verse 1]",
+        "[Chorus]",
+        "[Bridge]",
+        "[Intro]",
+        "[Outro]",
+        "[Tension Build]",
+        "[Climax]",
+        "[Resolution]",
+        "[Voiceover]",
+        "[Peak Drop]",
+        "[Final Burst]",
+        "{guitar solo}",
+        "{scratching}",
+        "{instrumental break}",
+        "(hmmm hmmm)",
+        "(ooh)",
+        "(yeah)",
+        "cinematic",
+        "orchestral",
+        "epic",
+        "low strings tremolo",
+        "building intensity",
+        "80 BPM",
+        "D minor",
+        "full orchestra",
+        "brass fanfare",
+        "triumphant",
+        "gentle strings",
+        "piano melody",
+        "fading out",
+        "upbeat",
+        "modern pop",
+        "energetic",
+        "instrumental",
+        "catchy hook",
+        "spoken voiceover",
+        "confident male voice",
+        "background music",
+        "musical sting",
+        "memorable"
+      ],
+      "char_limit": 4100,
+      "recommended_length_verbatim": "\"Prompt length and detail do not always correlate with better quality outputs. For more creative and unexpected results, try using simple, evocative keywords to let the model interpret and compose freely.\" / \"Aim for at least 6-7 styles in early chunks until the direction is established.\" 출처: https://elevenlabs.io/docs/overview/capabilities/music/best-practices 및 https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+      "negative_guidance_verbatim": [
+        "\"Use negative styles liberally to prevent unwanted sounds.\"",
+        "\"Use curly braces for short, inline cues. For broader characteristics that apply to the whole chunk — genre, instrumentation, or overall vocal style — use `positive_styles` instead.\"",
+        "\"Composition plans and text prompts are mutually exclusive. Use one or the other, not both.\"",
+        "\"To generate music without vocals, add ‘instrumental only’ to your prompt.\""
+      ],
+      "artist_name_policy_verbatim": "\"Attempting to generate music or a composition plan that contains copyrighted material will result in an error. This includes mentioning a band or musician by name or using copyrighted lyrics.\" / \"In these cases, the API will return a `bad_prompt` error that contains a suggestion of what prompt you could use instead.\" 상표명 자체에 관한 별도 문면은 unknown. 출처: https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music",
+      "languages": "\"The model supports multilingual lyric generation.\" / \"Eleven Music supports vocals in multiple languages including English, Spanish, German, and Japanese.\" Styles에는 \"Styles must be in English (lyrics can be any language).\" 출처: https://elevenlabs.io/docs/overview/capabilities/music/best-practices, https://elevenlabs.io/docs/eleven-creative/products/music, https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+      "korean_note_verbatim": "Eleven Music 전용 공식 지원언어 문면에서 Korean을 명시한 근거는 확인되지 않음; \"Korean (kor)\" 목록은 Eleven v3 음성 모델 목록이므로 Eleven Music 근거로 전용하지 않음. Music 기준 unknown. 비교 출처: https://elevenlabs.io/docs/overview/models"
+    },
+    {
+      "engine": "MiniMax Music",
+      "guide_url": "https://platform.minimax.io/docs/guides/music-generation",
+      "evidence": "E1 공식 API 문서·가이드. 구조·상한은 https://platform.minimax.io/docs/api-reference/music-generation 및 https://platform.minimax.io/docs/api-reference/lyrics-generation, Music 3.0의 Structured Caption 설명·예시는 E2 공식 블로그 https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model.",
+      "recommended_structure_verbatim": "\"Use the prompt parameter to define the music’s style, mood, and scenario, and the lyrics parameter to provide the vocal content.\" / Music 3.0: \"These captions specify genre, tempo, time signature, key, use case, and production character, while also tracking emotional contour; the entry and exit of primary and supporting instruments; the development of groove and low-end energy; and section-level changes in vocal delivery, harmony, and vocal effects.\"",
+      "example_prompts_verbatim": [
+        "Soulful Blues, Rainy Night, Melancholy, Male Vocals, Slow Tempo",
+        "Jazz, smooth, late night lounge, saxophone",
+        "Indie folk, melancholic, introspective, longing, solitary walk, coffee shop",
+        "Classic Shanghai jazz / soul with gentle lo-fi warmth. Tender, nostalgic verses unfold into a softly radiant chorus, led by an intimate female vocal with restrained phrasing, supported by mellow piano, upright bass, brushed drums, warm brass accents, and a vintage room-like mix.",
+        "Progressive house / EDM, 126 BPM, B-flat major. Reflective and nostalgic verses rise into a cathartic, euphoric chorus, with a smooth breathy male tenor, pulsing side-chained synths, punchy club bass, crisp drums, and wide hall reverb."
+      ],
+      "official_tag_list": [
+        "[Intro]",
+        "[Verse]",
+        "[Pre-Chorus]",
+        "[Chorus]",
+        "[Hook]",
+        "[Drop]",
+        "[Bridge]",
+        "[Solo]",
+        "[Build-up]",
+        "[Instrumental]",
+        "[Breakdown]",
+        "[Break]",
+        "[Interlude]",
+        "[Outro]"
+      ],
+      "char_limit": 2000,
+      "recommended_length_verbatim": "기본 Music API의 수치 권장 길이는 unknown. 공식 MCP 래퍼에는 prompt \"String, 10–300 characters\"라고 명시됨: https://platform.minimax.io/docs/guides/mcp-guide",
+      "negative_guidance_verbatim": [
+        "\"When using `cover_feature_id`, do not pass `audio_url` or `audio_base64` — they are mutually exclusive.\"",
+        "일반 프롬프트에 대한 별도 금지형 작성 가이드는 unknown."
+      ],
+      "artist_name_policy_verbatim": "아티스트명·밴드명·상표명 차단에 관한 공식 Music API 문면은 unknown.",
+      "languages": "Music 3.0 공식 예시에 영어와 Mandarin 계열 설명이 존재하지만 지원언어 전체 목록은 공표되지 않음. E2 출처: https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+      "korean_note_verbatim": "MiniMax의 40개 언어 목록에는 \"Korean\"이 있으나 이는 speech synthesis 문서이며 Music 지원 근거가 아님. Music 기준 Korean은 unknown. 출처: https://platform.minimax.io/docs/api-reference/api-overview"
+    },
+    {
+      "engine": "Mureka",
+      "guide_url": "https://platform.mureka.ai/docs/en/quickstart.html",
+      "evidence": "E1 공식 API 문서. song prompt·상한·예시는 https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, instrumental 예시는 https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html, remix 예시는 https://platform.mureka.ai/docs/api/operations/post-v1-song-remix.html, 언어는 https://platform.mureka.ai/docs/en/changelog.html.",
+      "recommended_structure_verbatim": "\"Control music generation by inputting a prompt, maximum 1024 characters.\" / 공식 예시가 comma-separated descriptors인 것은 확인되지만 장르→무드→보컬 등의 고정 권장 순서를 명시한 문면은 unknown.",
+      "example_prompts_verbatim": [
+        "r&b, slow, passionate, male vocal",
+        "jazz, upbeat, brass-driven",
+        "cinematic, emotional, ambient soundtrack"
+      ],
+      "official_tag_list": [
+        "[Verse]",
+        "[Intro]",
+        "[Chorus]",
+        "[Bridge]",
+        "[Break]"
+      ],
+      "char_limit": 1024,
+      "recommended_length_verbatim": "unknown",
+      "negative_guidance_verbatim": [
+        "\"Besides individual control, this option does not support combination with other control options.\" 이 문면은 instrumental `prompt`와 `instrumental_id`의 조합 제한에 적용됨. 출처: https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+        "프롬프트 문장 자체의 금지형 작성 지침은 unknown."
+      ],
+      "artist_name_policy_verbatim": "아티스트명·밴드명·상표명 차단에 관한 공식 문면은 unknown.",
+      "languages": "\"supporting 10 languages: Chinese, English, Japanese, Korean, Portuguese, Spanish, German, Italian, French, and Russian.\" 출처: https://platform.mureka.ai/docs/en/changelog.html",
+      "korean_note_verbatim": "\"supporting 10 languages: Chinese, English, Japanese, Korean, Portuguese, Spanish, German, Italian, French, and Russian.\" 출처: https://platform.mureka.ai/docs/en/changelog.html"
+    },
+    {
+      "engine": "Sonauto Melodia",
+      "guide_url": "https://sonauto.ai/developers/docs",
+      "evidence": "E1 공식 API 문서. 2026-08 현재 Sonauto URL은 Treblo로 리디렉션될 수 있으나 조사 문면은 https://sonauto.ai/developers/docs 에서 수집했고, 현재 개발자 페이지는 https://treblo.com/developers.",
+      "recommended_structure_verbatim": "\"Recommended: start with just a prompt\" / \"The best results come from sending only `prompt` and letting our model infer `tags`, `lyrics`, and strength settings for you.\"",
+      "example_prompts_verbatim": [
+        "a chill lofi beat for studying",
+        "An upbeat rock song with heavy guitar riffs",
+        "Country song about my WiFi going out mid-meeting",
+        "Write another verse for my song"
+      ],
+      "official_tag_list": [
+        "2020s",
+        "pop",
+        "rock",
+        "rap",
+        "world",
+        "electronic",
+        "classical",
+        "folk",
+        "country",
+        "jazz",
+        "blues",
+        "hip-hop/rap",
+        "alternative",
+        "hip hop",
+        "latin",
+        "dance",
+        "singer-songwriter",
+        "male vocalist",
+        "metal",
+        "r&b",
+        "alternative rock",
+        "indie rock",
+        "soul",
+        "guitar",
+        "film",
+        "funk",
+        "new age",
+        "piano",
+        "ambient",
+        "bass",
+        "drums",
+        "punk",
+        "original soundtrack",
+        "instrumental",
+        "latin american",
+        "experimental",
+        "indie pop",
+        "r&b/soul",
+        "female vocalist",
+        "folk rock",
+        "keyboard",
+        "energetic",
+        "percussion",
+        "vocal",
+        "downtempo",
+        "rhythmic",
+        "trap",
+        "gospel",
+        "progressive rock",
+        "ballad"
+      ],
+      "char_limit": null,
+      "recommended_length_verbatim": "\"Only supply `tags` if you have a specific style to enforce — and if you do, provide at least 1 tag (recommended 3 minimum).\" 프롬프트 문자 수 권장은 unknown. 출처: https://sonauto.ai/developers/docs",
+      "negative_guidance_verbatim": [
+        "\"Avoid manually setting `tags` or any strength values unless you have a specific reason to override the defaults — an empty `tags` array combined with a non-default strength value is a common source of poor results.\"",
+        "\"If you do pass `tags` explicitly, you must provide at least 1. Sending an empty array while overriding strength parameters tends to produce low-quality output — omit the field entirely instead.\"",
+        "\"Providing only `lyrics` or `tags` (without a prompt) is not supported.\"",
+        "\"Greater values adhere more to the prompt but sound less natural. Defaults are tuned — leave unset unless you are actively iterating.\""
+      ],
+      "artist_name_policy_verbatim": "아티스트명·밴드명·상표명 차단에 관한 공식 문면은 unknown.",
+      "languages": "API는 lyrics 문자열을 받지만 공식 지원언어 목록은 unknown. 출처: https://sonauto.ai/developers/docs",
+      "korean_note_verbatim": "unknown"
+    },
+    {
+      "engine": "Stable Audio 2.5",
+      "guide_url": "https://stability.ai/guides/stable-audio-25-prompt-guide",
+      "evidence": "E1 공식 prompt guide 및 API reference. 구조·예시는 https://stability.ai/guides/stable-audio-25-prompt-guide, 문자 상한은 https://platform.stability.ai/docs/api-reference, 언어 정책은 https://kb.stability.ai/knowledge-base/supported-prompt-languages.",
+      "recommended_structure_verbatim": "\"The order of information you give your prompt should look like: 1. Core style/genre 2. Key instruments and musical elements 3. Mood and emotion 4. Specific details 5. Additional instructions\"",
+      "example_prompts_verbatim": [
+        "A relaxing Bossa Nova instrumental, perfect for an elevator. The mood is smooth, patient, and relaxing, 115 BPM.",
+        "An exciting breakbeat instrumental perfect for fast-paced video games, featuring funky electric guitar chords, steady break drums, smooth electric piano, and supporting bass. The mood is fresh, modern, and adventurous, 105 BPM.",
+        "Cinematic outlaw country instrumental perfect for a long drive featuring a blues pedal steel guitar, a rustic mandolin, a fiddle playing call and response, a tape-driven rattly drum-kit, an autoharp, and a soaring accordion solo. The mood has southern soul, is raw, emotional, expansive, and full of the blues.",
+        "A luxurious indietronica instrumental perfect for a perfume advertisement featuring clean guitars, synthesizers, and a slow-tempo drum machine pattern.",
+        "90s garage rock instrumental with a grunge influence featuring poppy distorted guitars, frantic and energetic drums and tube-distorted bass guitar."
+      ],
+      "official_tag_list": [
+        "Rock",
+        "Country",
+        "Classical",
+        "Electronic",
+        "Classic rock",
+        "Outlaw country",
+        "Contemporary classical",
+        "Ambient house",
+        "Slow",
+        "Medium",
+        "Building",
+        "Fast",
+        "euphoric",
+        "melancholic",
+        "soaring",
+        "mystical",
+        "Piano",
+        "Synthesizer",
+        "Electric guitar",
+        "Violin",
+        "Bass lines",
+        "String section",
+        "Electric piano",
+        "808 drum machine",
+        "SP-1200",
+        "Syncopated percussion",
+        "Break drums",
+        "Jazz improvisation",
+        "Atmospheric pads",
+        "Reverb tails and echoes",
+        "Countermelodies and harmonies",
+        "Studio-quality, pristine",
+        "Lo-fi, bedroom-recorded",
+        "Lush",
+        "Textured",
+        "Vintage, analog",
+        "Expansive",
+        "Layered",
+        "Minimalist",
+        "Modern",
+        "Raw",
+        "Stripped-back"
+      ],
+      "char_limit": 10000,
+      "recommended_length_verbatim": "\"You can make a prompt as simple or complex as you like. Simple prompts are good for clean output audio. Complex prompts are good for adding texture and depth to the output audio.\" 수치형 권장 길이는 unknown. 출처: https://platform.stability.ai/docs/api-reference",
+      "negative_guidance_verbatim": [
+        "\"Use clear, descriptive emotional terms that go beyond simple words like ‘happy’ and ‘sad.’\"",
+        "\"Avoid repeating the same adjectives. Instead, use a range of vocabulary that cohesively fits a musical context.\"",
+        "Less effective: \"Make a song that’s happy and has guitar, fiddle and drums\"",
+        "\"Our Terms of Service require that uploads be free of copyrighted material, and we use advanced content recognition to maintain compliance and prevent infringement\""
+      ],
+      "artist_name_policy_verbatim": "아티스트명 또는 상표명을 텍스트 프롬프트에서 차단한다는 공식 문면은 unknown. 업로드에는 \"We do not allow copyrighted content to be uploaded to our platform.\"가 적용됨. 출처: https://platform.stability.ai/docs/api-reference",
+      "languages": "\"Stability AI maintains an English-only policy for text prompts.\" / \"Using foreign languages in your text prompt may result in mixed outcomes and is not recommended. To maximize accuracy and consistency, we encourage users to provide English-only prompts.\" 출처: https://kb.stability.ai/knowledge-base/supported-prompt-languages",
+      "korean_note_verbatim": "Korean을 개별 언급하지 않으며 영어 외 언어 전체에 대해 \"Using foreign languages in your text prompt may result in mixed outcomes and is not recommended.\"라고 명시. 출처: https://kb.stability.ai/knowledge-base/supported-prompt-languages"
+    },
+    {
+      "engine": "ACE-Step 1.5",
+      "guide_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md",
+      "evidence": "E1 공식 저장소 문서. 사용자용 구조·예시는 https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md 및 https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/Tutorial.md, 상한은 https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md.",
+      "recommended_structure_verbatim": "\"The caption is a short paragraph describing the entire song's vibe.\" / \"Tips for good captions: Name the genre; Name the instruments; Name the mood; Name the production style.\" / \"Lyrics do double duty in ACE-Step. They're not just words — they tell the AI how the song should be structured over time.\"",
+      "example_prompts_verbatim": [
+        "melancholic piano ballad with soft female vocals, gentle string accompaniment, slow tempo, intimate and heartbreaking atmosphere",
+        "rock song with crunchy rhythm guitar, punchy snare, and gravelly male vocals",
+        "female vocal, piano ballad, emotional, intimate atmosphere, strings, building to powerful chorus"
+      ],
+      "official_tag_list": [
+        "pop",
+        "rock",
+        "jazz",
+        "electronic",
+        "hip-hop",
+        "R&B",
+        "folk",
+        "classical",
+        "lo-fi",
+        "synthwave",
+        "melancholic",
+        "uplifting",
+        "energetic",
+        "dreamy",
+        "dark",
+        "nostalgic",
+        "euphoric",
+        "intimate",
+        "acoustic guitar",
+        "piano",
+        "synth pads",
+        "808 drums",
+        "strings",
+        "brass",
+        "electric bass",
+        "warm",
+        "bright",
+        "crisp",
+        "muddy",
+        "airy",
+        "punchy",
+        "lush",
+        "raw",
+        "polished",
+        "[Intro]",
+        "[Verse]",
+        "[Verse 1]",
+        "[Pre-Chorus]",
+        "[Chorus]",
+        "[Bridge]",
+        "[Instrumental]",
+        "[Outro]",
+        "[raspy vocal]",
+        "[whispered]",
+        "[guitar solo]",
+        "[drum break]",
+        "[building energy]",
+        "[explosive drop]",
+        "[Chorus - anthemic]",
+        "[Verse - whispered]"
+      ],
+      "char_limit": 512,
+      "recommended_length_verbatim": "\"The caption is a short paragraph describing the entire song's vibe.\" / \"Keep lines around 6-10 syllables so the AI can fit them naturally.\" 출처: https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md",
+      "negative_guidance_verbatim": [
+        "\"Don't try to control everything on your first attempt. Start with a short caption and see what the AI gives you.\"",
+        "\"Too many instructions confuse the model, making effects worse\"",
+        "\"Principle: Keep structure tags concise; put complex style descriptions in Caption.\"",
+        "\"Models are not good at resolving conflicts. If descriptions in Caption and Lyrics contradict, the model gets confused and output quality decreases.\"",
+        "\"Don't pursue perfect descriptions — Caption is a starting point, not an endpoint.\""
+      ],
+      "artist_name_policy_verbatim": "공식 Tutorial은 \"Use references well — \\\"in the style of 80s synthwave\\\" or \\\"reminiscent of Bon Iver\\\" can quickly convey complex aesthetic preferences.\"라고 적는다. 별도의 아티스트명·상표 차단은 문서화되지 않음. 출처: https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/Tutorial.md",
+      "languages": "\"ACE-Step can generate vocals in 50+ languages, including: English, Spanish, French, German, Italian, Portuguese, Chinese (Mandarin & Cantonese), Japanese, Korean, Hindi, Bengali, Arabic, Turkish, Thai, Vietnamese, Swedish, Dutch, Polish, Hebrew, and many more.\" 출처: https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md",
+      "korean_note_verbatim": "\"ACE-Step can generate vocals in 50+ languages, including: English, Spanish, French, German, Italian, Portuguese, Chinese (Mandarin & Cantonese), Japanese, Korean, Hindi, Bengali, Arabic, Turkish, Thai, Vietnamese, Swedish, Dutch, Polish, Hebrew, and many more.\" 출처: https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md"
+    },
+    {
+      "engine": "Riffusion / FUZZ",
+      "guide_url": null,
+      "evidence": "현재 공식 Riffusion prompting URL https://www.riffusion.com/docs/best-practices/prompting-tips 는 404이며, https://www.riffusion.com/docs 는 Google Flow Music 도움말로 리디렉션됨. 따라서 공식 문면은 unknown. 아래 예시는 모두 E4 커뮤니티 관측이며 공식 지침이 아님: https://www.reddit.com/r/riffusion/comments/1k2ihkj 및 https://www.reddit.com/r/riffusion/comments/1j95h62.",
+      "recommended_structure_verbatim": "unknown",
+      "example_prompts_verbatim": [
+        "[E4·비공식] R&B ballad, 70 BPM, breathy male vocals, soft Rhodes, ambient pads, emotional tone.",
+        "[E4·비공식] genre, subgenre, beat, vibe, mood"
+      ],
+      "official_tag_list": [],
+      "char_limit": null,
+      "recommended_length_verbatim": "unknown",
+      "negative_guidance_verbatim": [
+        "[E4·비공식] \"For duets, describe each voice in the prompt (ex: ‘soprano & bass’) and dn’t try to label verses. Riffusion will sing the brackets!!!\" 출처: https://www.reddit.com/r/riffusion/comments/1k2ihkj",
+        "[E4·비공식] \"With prompt just do not overload it\" 출처: https://www.reddit.com/r/riffusion/comments/1j95h62"
+      ],
+      "artist_name_policy_verbatim": "unknown",
+      "languages": "unknown",
+      "korean_note_verbatim": "unknown"
+    },
+    {
+      "engine": "Soundverse",
+      "guide_url": "https://www.soundverse.ai/blog/article/best-prompts-for-music-generator-ai",
+      "evidence": "E2 공식 Soundverse 블로그의 작성 가이드·예시는 https://www.soundverse.ai/blog/article/best-prompts-for-music-generator-ai 및 https://www.soundverse.ai/blog/article/how-to-write-effective-prompts-for-ai-music-generation-1042. E1 API 상한은 https://platform.soundverse.ai/docs/song-generation 및 https://platform.soundverse.ai/docs/music-generation.",
+      "recommended_structure_verbatim": "\"The ideal music creation prompts describe style, tempo, instrumentation, and emotion in a concise but rich way.\" / \"Essential Elements of an AI Music Prompt: 1. Genre 2. Mood or Emotion 3. Instrumentation 4. Tempo and Rhythm Clues 5. Texture and Atmosphere\"",
+      "example_prompts_verbatim": [
+        "Generate a retro-inspired synthwave track with a driving 80s-style bassline, shimmering analog synths, and pulsating beats. Add a bright, uplifting melody with a steady tempo to evoke a nostalgic yet futuristic vibe.",
+        "Create a mellow lo-fi beat with a soft electric piano, jazzy guitar riffs, and minimalistic drum patterns. Incorporate vinyl crackles and ambient sounds to give it a relaxed, introspective feel.",
+        "Ambient soundtrack with soft piano, airy pads, and gentle rhythm for meditation and relaxation.",
+        "Cinematic orchestral piece building from quiet strings to powerful brass and percussion for film trailer.",
+        "Upbeat electronic pop instrumental with catchy synth layers and driving bassline for social media ads.",
+        "Dark techno beat with atmospheric textures and evolving sequence, ideal for cyberpunk gaming clips."
+      ],
+      "official_tag_list": [
+        "pop",
+        "jazz",
+        "EDM",
+        "classical",
+        "lofi",
+        "trap",
+        "soulful jazz",
+        "cinematic",
+        "orchestral",
+        "electronic house",
+        "tropical",
+        "synthwave",
+        "lo-fi",
+        "ambient",
+        "techno",
+        "hip-hop",
+        "rock",
+        "R&B",
+        "country",
+        "mood",
+        "instrumentation",
+        "tempo",
+        "rhythm",
+        "texture",
+        "atmosphere"
+      ],
+      "char_limit": 1024,
+      "recommended_length_verbatim": "\"A strong prompt balances creativity and clarity. Too little detail leaves the AI guessing; too much can confuse it.\" 수치형 권장 길이는 unknown. 출처: https://www.soundverse.ai/blog/article/how-to-write-effective-prompts-for-ai-music-generation-1042",
+      "negative_guidance_verbatim": [
+        "\"Beware of: Overloaded Prompts: Too many conflicting details confuse the model.\"",
+        "\"Vague Descriptions: ‘Cool beat’ or ‘nice melody’ lacks actionable information.\"",
+        "\"Ignoring Context: A music track intended for commercials may need clean rhythmic consistency rather than artistic complexity.\"",
+        "\"Missing Instrument Control: Forgetting to specify instruments may lead to mixed genre outputs.\""
+      ],
+      "artist_name_policy_verbatim": "\"Without directly naming the artist or track, your job is to describe the qualities that make it special.\" Soundverse의 voice/style 시스템은 \"Artist DNA consent\" 및 \"Voices and styles are opt-in and revocable.\"라고 명시. 상표명 별도 차단 문면은 unknown. 출처: https://www.soundverse.ai/blog/article/best-prompts-for-music-generator-ai 및 https://platform.soundverse.ai/",
+      "languages": "Lyrics API의 `language`는 string이며 기본값은 \"English\"이나 지원언어 enum은 공표되지 않음. 출처: https://platform.soundverse.ai/docs/lyrics",
+      "korean_note_verbatim": "unknown"
+    },
+    {
+      "engine": "Lyria 3",
+      "guide_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+      "evidence": "E1 Google AI for Developers 공식 문서. 프롬프트 구조·예시·언어·안전 정책은 https://ai.google.dev/gemini-api/docs/music-generation 및 legacy 상세 가이드 https://ai.google.dev/gemini-api/docs/generate-content/music-generation.",
+      "recommended_structure_verbatim": "\"The more specific your prompt, the better the results. Here's what you can include to guide the generation: Genre; Instruments; BPM; Key/Scale; Mood and atmosphere; Structure; Duration.\" / \"Separate lyrics from instructions. When providing custom lyrics, clearly separate them from your musical direction instructions.\"",
+      "example_prompts_verbatim": [
+        "A 30-second lofi hip hop beat with dusty vinyl crackle, mellow Rhodes piano chords, a slow boom-bap drum pattern at 85 BPM, and a jazzy upright bass line. Instrumental only.",
+        "An upbeat, feel-good pop song in G major at 120 BPM with bright acoustic guitar strumming, claps, and warm vocal harmonies about a summer road trip.",
+        "A dark, atmospheric trap beat at 140 BPM with heavy 808 bass, eerie synth pads, sharp hi-hats, and a haunting vocal sample. In D minor.",
+        "A 1980s-style synth-pop track with a driving beat, shimmering synthesizers, and a catchy, anthemic chorus. The song should have a retro-futuristic feel, reminiscent of classic 80s pop hits, with a modern production polish. The tempo should be upbeat and danceable, around 120 BPM, with a clear verse-chorus structure and a memorable instrumental hook. The lyrics are about the feeling of getting ready for a party."
+      ],
+      "official_tag_list": [
+        "lo-fi hip hop",
+        "jazz fusion",
+        "cinematic orchestral",
+        "Fender Rhodes piano",
+        "slide guitar",
+        "TR-808 drum machine",
+        "nostalgic",
+        "aggressive",
+        "ethereal",
+        "dreamy",
+        "[Intro]",
+        "[Verse]",
+        "[Verse 1]",
+        "[Verse 2]",
+        "[Pre-chorus]",
+        "[Chorus]",
+        "[Bridge]",
+        "[Outro]",
+        "[0:00 - 0:10] Intro",
+        "Female Soprano",
+        "Female Alto",
+        "Male Tenor",
+        "Male Baritone",
+        "Weathered Rocker (Male)"
+      ],
+      "char_limit": null,
+      "recommended_length_verbatim": "\"Your prompt can be as simple as ‘a folk song about cute cats avoiding puddles, female vocals and the noise of rain’, or something detailed and structured like:\" 수치형 권장 길이는 unknown. 출처: https://ai.google.dev/gemini-api/docs/generate-content/music-generation",
+      "negative_guidance_verbatim": [
+        "\"Vague prompts produce generic results. Mention instruments, BPM, key, mood, and structure for the best output.\"",
+        "\"Iterate with Clip first. Use the faster `lyria-3-clip-preview` model to experiment with prompts before committing to a full-length generation with `lyria-3-pro-preview`.\"",
+        "\"Separate lyrics from instructions. When providing custom lyrics, clearly separate them from your musical direction instructions.\"",
+        "\"All prompts are checked by safety filters. Prompts that trigger the filters will be blocked.\"",
+        "\"Iterative editing or refining a generated clip through multiple prompts is not supported in the current version of Lyria 3.\""
+      ],
+      "artist_name_policy_verbatim": "\"Prompts that trigger the filters will be blocked. This includes prompts that request specific artist voices or the generation of copyrighted lyrics.\" 상표명에 관한 별도 문면은 unknown. 출처: https://ai.google.dev/gemini-api/docs/music-generation",
+      "languages": "\"Lyria 3 generates lyrics in the language of your prompt.\" / \"To generate a song with French lyrics, write your prompt in French. The model adapts its vocal style and pronunciation to match the language.\" 지원언어 전체 enum은 공표되지 않음. 출처: https://ai.google.dev/gemini-api/docs/music-generation",
+      "korean_note_verbatim": "Korean을 개별적으로 명시한 공식 Lyria 3 문면은 확인되지 않음; 언어 일반 규칙은 \"Lyria 3 generates lyrics in the language of your prompt.\" 출처: https://ai.google.dev/gemini-api/docs/music-generation"
+    }
+  ],
+  "cross_notes": "조사 기준일 2026-08-31. E1 공식문서가 실제 고정 문법을 제시한 엔진은 Eleven Music(`[ ]` section, `{ }` inline direction, `( )` phonetic sound), MiniMax(14 structure tags), ACE-Step(section/meta tags), Udio(guidance-tag autocomplete), Lyria 3(section tags)이다. Stable Audio 2.5·Soundverse·Sonauto는 자연어 차원 목록 또는 자유형 tags를 제공하지만 `[Verse]`형 폐쇄 문법은 공식 확인되지 않았다. Mureka는 공식 예시에서 `[Verse]` 등을 사용하지만 완전한 허용 태그 목록은 공표하지 않았다. Riffusion의 과거 공식 prompting URL은 현재 404이고 제품은 Flow Music으로 이전되었으므로 공식 문면을 복원하지 않았으며, 커뮤니티 문면 두 건만 E4로 명시했다. `char_limit`은 prompt 필드 기준이며 lyrics 상한과 혼동하지 않았다: Eleven 4100, MiniMax 2000, Mureka 1024, Stable Audio 2.5 10000, ACE-Step caption 512, Soundverse 1024; Udio·Sonauto·Riffusion·Lyria 3는 공식 숫자 미확인이라 null이다. 아티스트명 정책은 Udio가 스타일 참조를 허용하되 voice 복제는 하지 않는다고 설명하고, Eleven Music과 Lyria 3는 각각 musician/band name 또는 specific artist voice 요청을 차단한다고 명시한다. ACE-Step 공식 가이드는 `reminiscent of Bon Iver`를 작성 원칙의 예로 든다. 나머지는 공식 차단 문면이 없어 unknown이다.",
+  "sources": [
+    "https://help.udio.com/en/articles/10716541-prompt-like-a-master",
+    "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+    "https://elevenlabs.io/docs/overview/capabilities/music/best-practices",
+    "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+    "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music",
+    "https://elevenlabs.io/docs/api-reference/music/compose",
+    "https://elevenlabs.io/docs/eleven-creative/products/music",
+    "https://elevenlabs.io/docs/changelog/2025/11/5",
+    "https://platform.minimax.io/docs/guides/music-generation",
+    "https://platform.minimax.io/docs/api-reference/music-generation",
+    "https://platform.minimax.io/docs/api-reference/lyrics-generation",
+    "https://platform.minimax.io/docs/guides/mcp-guide",
+    "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+    "https://platform.mureka.ai/docs/en/quickstart.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-remix.html",
+    "https://platform.mureka.ai/docs/en/changelog.html",
+    "https://sonauto.ai/developers/docs",
+    "https://treblo.com/developers",
+    "https://stability.ai/guides/stable-audio-25-prompt-guide",
+    "https://platform.stability.ai/docs/api-reference",
+    "https://kb.stability.ai/knowledge-base/supported-prompt-languages",
+    "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/ace_step_musicians_guide.md",
+    "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/Tutorial.md",
+    "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+    "https://www.riffusion.com/docs/best-practices/prompting-tips",
+    "https://www.riffusion.com/docs",
+    "https://www.reddit.com/r/riffusion/comments/1k2ihkj",
+    "https://www.reddit.com/r/riffusion/comments/1j95h62",
+    "https://www.soundverse.ai/blog/article/best-prompts-for-music-generator-ai",
+    "https://www.soundverse.ai/blog/article/how-to-write-effective-prompts-for-ai-music-generation-1042",
+    "https://www.soundverse.ai/blog/article/how-to-write-effective-prompts-for-ai-music-generation-1136",
+    "https://platform.soundverse.ai/docs/song-generation",
+    "https://platform.soundverse.ai/docs/music-generation",
+    "https://platform.soundverse.ai/docs/lyrics",
+    "https://platform.soundverse.ai/",
+    "https://ai.google.dev/gemini-api/docs/music-generation",
+    "https://ai.google.dev/gemini-api/docs/generate-content/music-generation"
+  ]
+}
+```
