@@ -1,0 +1,30 @@
+{
+  "version": "v0",
+  "created_at": "2026-08-31",
+  "note": "antisuno 이식성 규칙 기계판. 근거=docs/antisuno/portability_rules_v0.md. ⛔변환표는 문서층(E) 유도 처방이며 보존 실측 0건.",
+  "bracket_kinds": {
+    "S": {"name": "섹션 라벨", "detect": "섹션 어휘로 시작(intro/verse/pre-chorus/chorus/post-chorus/hook/bridge/break/interlude/inst/solo/build up/transition/outro/drop/refrain)"},
+    "D": {"name": "연주 지시", "detect": "S가 아닌 모든 브라켓"}
+  },
+  "section_canon": ["intro","verse","pre chorus","chorus","post chorus","hook","bridge","break","interlude","inst","solo","build up","transition","outro","drop","refrain"],
+  "engines": {
+    "suno": {"lyrics_field": true, "S": "keep", "D": "keep", "style": "single_string", "style_max_chars": 1000, "style_lang": "any", "numbers": "text_only", "seed": false, "evidence": "baseline"},
+    "minimax_music_3": {"lyrics_field": true, "S": "map_to_official", "D": "move_to_prompt", "D_reason": "곡 중간 긴 지시는 가창됨(M4, leomusic3 08-29, n=1)", "official_tags": ["[Intro]","[Verse]","[Pre Chorus]","[Chorus]","[Interlude]","[Bridge]","[Outro]","[Post Chorus]","[Transition]","[Break]","[Hook]","[Build Up]","[Inst]","[Solo]"], "style": "single_string", "style_max_chars": 2000, "lyrics_max_chars": 3500, "style_lang": ["en","zh"], "numbers": "none", "seed": false, "evidence": "E1+M4"},
+    "eleven_music_v2": {"lyrics_field": true, "S": "keep", "D": "to_braces", "style": "array", "style_max_items": 50, "style_lang": "en_required", "numbers": "duration_ms", "negative": "negative_styles", "seed": true, "chunk_ms_range": [3000, 120000], "max_chunks": 30, "evidence": "E1"},
+    "lyria_3": {"lyrics_field": false, "single_field": true, "S": "keep", "D": "to_timestamp_prose", "style": "single_string", "style_lang": "en", "numbers": "inline_timestamp", "seed": false, "evidence": "E1"},
+    "lyria_realtime": {"lyrics_field": false, "vocals": "instrumental_only", "S": "drop", "D": "to_weighted_prompt", "style": "weighted_prompt_array", "numbers": ["bpm","density","brightness","guidance","temperature","top_k"], "seed": true, "evidence": "E1"},
+    "udio": {"lyrics_field": true, "S": "keep", "D": "keep", "D_caveat": "adherence 확률적(공식 명시) · (괄호)는 백보컬로 가창", "style": "single_string", "seed": null, "evidence": "E2"},
+    "ace_step": {"lyrics_field": true, "S": "lowercase", "D": "move_to_caption", "style": "caption", "numbers": ["bpm","keyscale","timesignature","duration"], "negative": true, "seed": true, "evidence": "E1"},
+    "songbloom": {"lyrics_field": true, "S": "closed_vocab", "closed_vocab": ["[intro]","[verse]","[chorus]","[inst]","[outro]"], "D": "drop", "note": "150초 모델에서 [intro]/[outro]/[inst] 기대 길이 약 1초, 240초 모델 약 5초", "seed": null, "evidence": "E1"},
+    "levo": {"lyrics_field": true, "S": "closed_vocab", "closed_vocab": ["[intro-short]","[intro-medium]","[inst-short]","[inst-medium]","[verse]","[chorus]","[bridge]","[outro-short]","[outro-medium]"], "D": "move_to_descriptions", "conflict_warning": "descriptions와 prompt_audio 충돌 시 instruction following 저하(공식 E1)", "seed": null, "evidence": "E1"},
+    "diffrhythm": {"lyrics_field": true, "S": "drop", "D": "drop", "lyrics_format": "timed_lrc", "lrc_example": "[00:10.00]Moonlight spills through broken blinds", "seed": true, "evidence": "E1"},
+    "vocal_synth": {"engines": ["ace_studio","synthesizer_v","vocaloid6","cevio_ai","openutau"], "lyrics_field": true, "S": "n/a", "D": "n/a", "style": "n/a", "note": "SP·브라켓 전면 폐기. MIDI 노트 + 음절/음소 배치 + 엔벨로프로 재설계.", "evidence": "E1"}
+  },
+  "portability_tiers": {
+    "T0": {"name": "중립", "assets": ["song_form", "가사 본문 텍스트", "정서·서사 설계", "장르·무드 개념"], "measured": false},
+    "T1": {"name": "변환 필요", "assets": ["style_prompt 본문", "사전 v3.3 437원자"], "measured": false},
+    "T2": {"name": "파손", "assets": ["브라켓 문면 전체(특히 D형)"], "measured": "M4 n=1 · 13.9%"},
+    "T3": {"name": "재설계", "assets": ["spoken/narration 태그 계열", "콜론+숫자 태그"], "measured": false},
+    "T4": {"name": "역이식 기회", "assets": ["seed", "duration_ms", "keyscale", "timesignature", "negative array", "vocal_id", "midi/chords 조건화"], "measured": false}
+  }
+}

@@ -4,6 +4,14 @@
 **재현** `scripts/directive_register_uptake_v1_3.py` · **산출** `data/metatag_external/directive_register_v1_3.json`
 **전판** v1(수집) · v1.1(5건 읽기) · **v1.2**(61건 전건 읽기 — 본문 유효)
 
+
+> ★★**08-31 — 이 문서의 §D015와 §3(D013·D024)은 `docs/directive_register_v1_4.md`로 정정됐다.**
+> ⑴ **D015**: 「leomusic3가 렌더 준수를 쟀다·2.86배」는 ⛔**Suno에 전달된 적 없는 bar 수**로 잰 값이다
+>    (sunolanguage 재현: `E3009M` 브라켓 98건 중 bar 표기 **0**·SP **0/10**). `partially_measured` → **`measured_offaxis`**.
+> ⑵ **§3 「4어에서 28/30 uptake가 D013·D024의 약한 반례」**: 실제 전달 문면이 **전건 2~3어**라 ⛔**반례 아님. 철회.**
+> ⑶ **D004**에 **「Suno에서」 한정어**가 붙는다 — 타 엔진 반례(MiniMax M4). 신설 칸 `engine_conditional` 최초 적용.
+> 그 외 본문(D052·D004ⓐⓑ·D051·§4 한계 3건·§5)은 **그대로 유효**하다.
+
 ---
 
 ## §0. 무엇이 열렸나
