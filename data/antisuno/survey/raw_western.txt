@@ -1,0 +1,3226 @@
+OpenAI Codex v0.149.0
+--------
+workdir: /Users/purple/sunolanguage
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a05643-8d3e-74a3-a20b-67be55fb91d2
+--------
+user
+# antisuno · Phase 0 조사 브리프 v0 (외부 검색자 공통 지침)
+
+## 우리가 알고 싶은 단 하나
+"이 엔진에서 **사람이 타이핑해서 음악을 통제할 수 있는 면(control surface)**이 정확히 무엇인가."
+장르 목록·마케팅 문구가 아니라 **입력 채널·문법·파라미터 이름·문자 제한·관측된 거동**이다.
+
+## 절대 규칙
+1. **모든 사실 주장에 출처 URL을 붙인다.** 출처 없는 값은 `null` + `"unknown"`. 추측 금지.
+2. 공식 문서/API 레퍼런스 > 개발자 블로그 > 논문 > 커뮤니티(Reddit/Discord) 순. 각 항목에 `evidence` 등급을 적는다.
+   - `E1` 공식 문서·API 레퍼런스 / `E2` 공식 블로그·릴리스노트 / `E3` 논문·기술리포트 / `E4` 커뮤니티 관측(미검증)
+3. **"태그가 노래로 불리는가"** 같은 거동 질문은 반드시 `E`등급과 함께. 모르면 모른다고 쓴다.
+4. 한국어로 서술, 고유명사·파라미터 이름은 원문 그대로.
+
+## 출력 형식
+마지막에 ```json 펜스 하나로만 출력. 스키마:
+
+```
+{
+  "cluster": "<클러스터명>",
+  "engines": [{
+    "engine": "", "vendor": "", "status": "live|beta|research|discontinued",
+    "models": [{"name":"","released":"","notes":"","url":""}],
+    "access": [{"channel":"web|api|app|sdk","url":"","price_note":"","commercial_use":""}],
+    "control_surface": {
+      "text_prompt": {"exists":null,"char_limit":null,"evidence":"","url":"","notes":""},
+      "lyrics_field": {"exists":null,"syntax":"","evidence":"","url":"","notes":""},
+      "structure_tags": {"exists":null,"syntax_examples":[],"tags_are_sung":{"answer":"yes|no|partial|unknown","evidence":"","url":""},"evidence":"","url":""},
+      "duration_control": {"exists":null,"how":"","evidence":"","url":""},
+      "reference_audio": {"exists":null,"how":"","evidence":"","url":""},
+      "negative_prompt": {"exists":null,"how":"","evidence":"","url":""},
+      "seed_determinism": {"exists":null,"how":"","evidence":"","url":""},
+      "stems_export": {"exists":null,"how":"","evidence":"","url":""},
+      "inpaint_extend_edit": {"exists":null,"how":"","evidence":"","url":""},
+      "instrumental_toggle": {"exists":null,"how":"","evidence":"","url":""},
+      "vocal_control": {"exists":null,"how":"","evidence":"","url":""},
+      "realtime_steering": {"exists":null,"how":"","evidence":"","url":""}
+    },
+    "api_params": [{"name":"","type":"","required":null,"doc_url":"","notes":""}],
+    "documented_vocabulary": {"has_official_tag_list":null,"url":"","notes":""},
+    "observed_behaviors": [{"claim":"","evidence":"E1|E2|E3|E4","url":""}],
+    "gaps": [""]
+  }],
+  "cross_notes": "",
+  "sources": [""]
+}
+```
+
+## 반드시 답해야 하는 질문 (엔진마다)
+- ⑴ 가사를 **따로 넣는 칸**이 있는가, 아니면 프롬프트 한 칸뿐인가?
+- ⑵ `[Verse]` `[Chorus]` 같은 **구조 태그 문법**이 문서에 있는가? 문면 예시 그대로.
+- ⑶ 대괄호 안 텍스트를 **지시로 읽는가, 노래로 부르는가**? (Suno는 지시로 읽음 — 이게 엔진 성질인지 일반 성질인지가 이 조사의 핵심)
+- ⑷ 길이(초/마디)를 **숫자로 지시**할 수 있는가?
+- ⑸ 레퍼런스 오디오 업로드 / continuation / inpainting이 되는가?
+- ⑹ API가 있는가? 있으면 **파라미터 이름을 전부** 적는다.
+- ⑺ 프롬프트 **문자 수 상한**은?
+- ⑻ 공식 장르·태그 **목록 문서**가 존재하는가?
+
+---
+## 이번 클러스터: `western_commercial` — 서구 상용 (Suno 경쟁군)
+대상: Udio, ElevenLabs Music(Eleven Music), Riffusion(FUZZ), Stable Audio 2.5(Stability AI), Sonauto, Beatoven.ai, Soundverse 등.
+특히: ⑴ 가사 칸 분리 여부 ⑵ **구조 태그 문법이 공식 문서에 있는지**(Udio의 대괄호 사용법, ElevenLabs Music의 `composition plan` JSON 구조 — 있으면 그 JSON 스키마 필드명을 그대로) ⑶ 대괄호 안 텍스트가 불리는지 ⑷ 길이 지정 ⑸ extend/inpaint/remix ⑹ API 파라미터 이름 전부 ⑺ 프롬프트 문자 상한.
+ElevenLabs Music의 composition plan은 이 조사에서 가장 값나가는 항목이니 **필드명·중첩 구조를 문서 그대로** 적어라.
+
+codex
+공식 문서와 API 레퍼런스를 우선해 7개 엔진을 확인하겠습니다. 특히 Eleven Music의 composition plan은 스키마 중첩 필드까지 원문 대조하고, 확인되지 않는 값은 지침대로 `null`/`unknown` 처리하겠습니다.
+web search: 
+web search: site:elevenlabs.io/docs/api-reference music composition plan compose schema ...
+web search: 
+web search: site:help.udio.com "lyrics" "guidance tags" Udio ...
+web search: 
+web search: Riffusion FUZZ official music generator lyrics API ...
+web search: 
+web search: site:docs.soundverse.ai "API" music generation prompt duration ...
+web search: 
+web search: 
+web search: 
+web search: site:elevenlabs.io/docs/api-reference/music/compose "Request" "composition_plan" ...
+web search: 
+web search: site:platform.stability.ai/docs/api-reference "stable-audio-2/text-to-audio" prompt duration seed steps cfg_scale ...
+web search: 
+web search: site:help.udio.com "character" prompt lyrics limit ...
+web search: 
+web search: site:sonauto.ai/developers/docs lyrics [Verse] [Chorus] structure tags ...
+web search: 
+web search: https://www.riffusion.com/
+web search: 
+web search: site:riffusion.com/blog FUZZ 2.0 Producer.ai official ...
+web search: 
+web search: https://platform.soundverse.ai/docs/song-generation
+codex
+```json
+{
+  "cluster": "western_commercial",
+  "engines": [
+    {
+      "engine": "Udio",
+      "vendor": "Uncharted Labs, Inc.",
+      "status": "live",
+      "models": [
+        {
+          "name": "u-32 / u-130",
+          "released": "",
+          "notes": "공식 도움말이 각각 약 32초 및 2분 10초 생성 길이로 구분한다. 모델의 정식 출시일은 공식 문서에서 확인되지 않아 unknown.",
+          "url": "https://help.udio.com/en/articles/10715838-create-your-first-song"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.udio.com/",
+          "price_note": "무료 핵심 생성 기능과 유료 Standard/Pro 구독이 있으며, 공식 도움말은 크레딧 단위와 구독별 한도를 설명한다.",
+          "commercial_use": "유료 가입자는 공개 이용 시 Udio 표시 의무가 없다고 공식 블로그가 설명하지만, 구체적 권리 범위는 현행 약관 확인 필요: https://www.udio.com/blog/editing-lyrics"
+        },
+        {
+          "channel": "app",
+          "url": "https://help.udio.com/en/articles/11386622-ios-app",
+          "price_note": "공식 iOS 앱 제공.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10715838-create-your-first-song",
+          "notes": "Prompt 칸에 스타일·무드·주제와 장르 태그를 입력한다. 공식 문자 상한은 확인되지 않아 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "Create → Write Your Lyrics → Custom → Lyrics Editor",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10716221-create-a-song-with-your-own-lyrics",
+          "notes": "Prompt와 별도의 Lyrics Editor가 있다. 자동 가사, Write for me, Custom lyrics를 지원한다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Verse]",
+            "[Chorus]",
+            "[Intro]",
+            "[Outro]",
+            "[Bridge]",
+            "[Hook]",
+            "[Pre-chorus]",
+            "[Instrumental Break]",
+            "[Spoken Word]",
+            "[Choir]",
+            "[Announcer]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags"
+          },
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+          "notes": "Lyrics 칸에서 `/`를 눌러 guidance tags를 고른다. 공식 문서는 이를 곡의 형태·연주·창법을 안내하는 태그로 설명하지만, 태그가 절대로 발성되지 않는다고 보장하지 않으며 adherence도 확률적이라고 명시한다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "신규 생성은 32초 또는 2분 10초 프리셋을 선택한다. 임의 초/마디 숫자를 직접 넣는 공식 컨트롤은 확인되지 않았다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10715838-create-your-first-song"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "유료 Audio Upload에서 Extend, Inpaint, Session, Remix, Style을 선택한다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10754328-create-music-with-your-own-audio"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "Extend는 앞/뒤·Intro/Outro·Crop & Extend를 지원하고 최대 10개 섹션까지 확장한다. Inpaint/Edit/Session에서는 선택 구간의 음악이나 가사를 교체한다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10732568-extend-your-song"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "생성/확장 시 instrumental을 선택하거나 확장 Lyrics 칸을 비운다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10732568-extend-your-song"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "Voice Control과 lyrics editing이 구독 또는 trial 기능으로 문서화되어 있으나 세부 파라미터는 공개되지 않았다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/13338649-the-subscription-trial"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "공식 문서에서 생성 중 실시간 파라미터 조작은 확인되지 않는다. Sessions는 생성 후 waveform 기반 편집이다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/11649525-sessions-udio-s-timeline-editing-view"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+        "notes": "공식 autocomplete guidance-tag 목록이 있으나 문서 자체가 비완전 목록이며 hard-coded commands가 아니라고 명시한다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "같은 Remix 설정으로 여러 번 생성해도 각 결과는 고유하다고 공식 도움말이 설명한다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10694179-remixing-your-music"
+        },
+        {
+          "claim": "Udio는 현재 public API를 제공하지 않는다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10756277-udio-public-api"
+        }
+      ],
+      "gaps": [
+        "Prompt 및 Lyrics Editor의 공식 문자 수 상한 unknown.",
+        "대괄호 태그가 실제 오디오에서 발성되는 예외 빈도 unknown.",
+        "seed, negative prompt, stems export의 공식 입력면 unknown."
+      ]
+    },
+    {
+      "engine": "Eleven Music",
+      "vendor": "ElevenLabs",
+      "status": "live",
+      "models": [
+        {
+          "name": "music_v1",
+          "released": "2025-08-20 이전",
+          "notes": "Music API가 모든 유료 사용자에게 공개되었다는 공식 changelog 기준.",
+          "url": "https://elevenlabs.io/docs/changelog/2025/8/20"
+        },
+        {
+          "name": "music_v2",
+          "released": "2026-06-15",
+          "notes": "chunk 기반 CompositionPlan과 GenerationChunk/AudioRefChunk를 도입.",
+          "url": "https://elevenlabs.io/docs/changelog/2026/6/15"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://elevenlabs.io/music",
+          "price_note": "플랜별 생성·다운로드 분량이 다르며 현행 가격 페이지 확인 필요.",
+          "commercial_use": "공식 Music API 페이지는 라이선스된 데이터로 구축되어 생성 음악의 상업 이용을 지원한다고 설명한다: https://elevenlabs.io/eleven-music-api"
+        },
+        {
+          "channel": "api",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "price_note": "유료 사용자 API; Composition plan 생성 endpoint 자체는 credit을 소모하지 않지만 rate limit 적용.",
+          "commercial_use": "상업 이용 조건은 Music Terms 적용: https://elevenlabs.io/music-terms"
+        },
+        {
+          "channel": "sdk",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music",
+          "price_note": "공식 Python 및 JavaScript/TypeScript SDK.",
+          "commercial_use": "Music Terms 적용."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 4100,
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "`prompt`와 `composition_plan`은 상호 배타적이다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "music_v2: composition_plan.chunks[].text 안에 `[Section]` + newline + lyrics. 독립 최상위 `lyrics` 파라미터는 없다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+          "notes": "단순 prompt 모드에는 별도 lyrics 필드가 없고, structured composition plan에서 section별 text가 가사 칸 역할을 한다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Verse 1]\\n Woke up today with a feeling inside",
+            "[Pre-Chorus]\\n No more waiting for tomorrow",
+            "[Chorus]\\n I'm breaking through",
+            "[Outro]",
+            "{guitar solo}",
+            "{scratching}",
+            "{instrumental break}",
+            "(hmmm hmmm)",
+            "(ooh)",
+            "(yeah)"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+          },
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+          "notes": "공식 문법은 대괄호=section name, 중괄호=inline direction, 괄호=phonetic sound이다. 의도상 대괄호·중괄호는 지시이고 괄호는 발성 대상이지만, 절대 비발성 보장은 문서에 없어 실제 거동 답은 unknown."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "`music_length_ms` 3000–600000 또는 `chunks[].duration_ms` 3000–120000; 최대 30 chunks, 총 3초–10분.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "업로드 또는 저장된 `song_id`를 AudioRefChunk의 `song_id`+`range`로 삽입하거나 GenerationChunk의 `conditioning_ref`로 조건화한다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting"
+        },
+        "negative_prompt": {
+          "exists": true,
+          "how": "music_v2 각 chunk의 `negative_styles`; music_v1은 `negative_global_styles`와 `negative_local_styles`.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "`seed` 0–2147483647. 동일 파라미터의 일관성을 높일 수 있지만 정확한 재현은 보장되지 않고 시스템 업데이트로 달라질 수 있다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "공식 Music API 문서에서 stems export를 확인하지 못해 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "music_v2 plan에서 AudioRefChunk로 보존할 구간과 GenerationChunk로 새로 만들 구간을 조합해 inpaint, intro/outro 확장, 유사곡 조건화를 수행한다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "prompt 모드의 `force_instrumental=true`; plan 모드에서는 `negative_styles:[\"vocals\",\"lyrics\"]`와 instrumental section 지시를 사용한다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`positive_styles`에 vocalist, tone, delivery를 자연어로 기술하고 `negative_styles`로 singing/vocals를 배제한다. 고정 singer ID는 기본 Music compose 문서에 없다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "SSE/stream endpoint는 생성 중 재생·메타데이터 전달을 지원하지만, 생성 도중 control 값을 변경하는 API는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose-detailed-stream"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string|null, <=4100 chars",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "`composition_plan`과 동시 사용 불가."
+        },
+        {
+          "name": "composition_plan",
+          "type": "MusicPrompt|CompositionPlan|null",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "music_v2 정확한 중첩: `{chunks:[GenerationChunk|AudioRefChunk]}`. GenerationChunk=`{text,duration_ms,positive_styles,negative_styles,context_adherence,conditioning_ref?,condition_strength?}`; conditioning_ref=`{song_id,range:{start_ms,end_ms}}`; AudioRefChunk=`{song_id,range:{start_ms,end_ms}}`. music_v1=`{positive_global_styles,negative_global_styles,sections:[{section_name,lines,duration_ms,positive_local_styles,negative_local_styles}]}`."
+        },
+        {
+          "name": "music_length_ms",
+          "type": "integer|null, 3000–600000",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "prompt 모드 전용."
+        },
+        {
+          "name": "model_id",
+          "type": "enum music_v1|music_v2",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "기본 music_v1."
+        },
+        {
+          "name": "seed",
+          "type": "integer|null, 0–2147483647",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "정확한 결정성은 보장되지 않음."
+        },
+        {
+          "name": "force_instrumental",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "기본 false, prompt 모드 전용."
+        },
+        {
+          "name": "finetune_id",
+          "type": "string|null, <=100 chars",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": ""
+        },
+        {
+          "name": "respect_sections_durations",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "music_v1 전용; music_v2에서는 duration이 항상 강제되고 이 값은 무시됨."
+        },
+        {
+          "name": "store_for_inpainting",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "기본 false."
+        },
+        {
+          "name": "sign_with_c2pa",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "MP3에 적용."
+        },
+        {
+          "name": "output_format",
+          "type": "query enum",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "기본 auto."
+        },
+        {
+          "name": "with_timestamps",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose-detailed",
+          "notes": "detailed endpoint 전용."
+        },
+        {
+          "name": "with_waveform_visual",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose-detailed",
+          "notes": "detailed endpoint 전용."
+        },
+        {
+          "name": "plan.prompt",
+          "type": "string, <=4100 chars",
+          "required": true,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+          "notes": "POST /v1/music/plan."
+        },
+        {
+          "name": "plan.music_length_ms",
+          "type": "integer|null, 3000–600000",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+          "notes": ""
+        },
+        {
+          "name": "plan.source_composition_plan",
+          "type": "object|null",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+          "notes": ""
+        },
+        {
+          "name": "plan.model_id",
+          "type": "enum",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+          "notes": "기본 music_v1."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+        "notes": "공식 문법과 예시는 있지만 폐쇄형 장르·스타일 vocabulary 목록은 아니다. 스타일은 영어 자연어 배열이다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "music_v2 첫 chunk의 styles가 전체 곡의 톤과 장르에 가장 큰 영향을 준다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        },
+        {
+          "claim": "`positive_styles`/`negative_styles`는 각 최대 50개이고 styles는 영어여야 하지만 lyrics는 다른 언어도 가능하다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        }
+      ],
+      "gaps": [
+        "구조 태그의 실제 비발성 보장 여부 unknown.",
+        "공식 폐쇄형 장르·태그 전체 목록 없음.",
+        "기본 Music API의 stems export 여부 unknown."
+      ]
+    },
+    {
+      "engine": "Riffusion / FUZZ (현재 Flow Music)",
+      "vendor": "Riffusion/Flow Music",
+      "status": "live",
+      "models": [
+        {
+          "name": "FUZZ 2.0 Raw",
+          "released": "",
+          "notes": "현재 Flow Music 공개 곡 페이지에 모델명이 남아 있으나 정식 출시일은 공식 문서에서 확인되지 않아 unknown.",
+          "url": "https://www.flowmusic.app/song/371fb423-4734-40ed-b67c-c98396632db8"
+        },
+        {
+          "name": "FUZZ 2.0 Pro",
+          "released": "",
+          "notes": "현재 공개 곡 페이지에서 모델명이 확인되나 정식 출시일은 unknown.",
+          "url": "https://www.flowmusic.app/song/693ffaa3-7f3d-404e-bf69-5460609b1fe0"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.riffusion.com/",
+          "price_note": "현재 riffusion.com과 producer.ai는 Flow Music으로 연결되며 무료 시작·daily credits를 표시한다.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/",
+          "notes": "현재 사이트는 Producer와 채팅해 full-length song을 만들고 편집한다고 설명한다. 문자 상한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "공개 곡 페이지가 Sound와 Lyrics를 별도 표시하지만 현재 입력 UI의 정확한 스키마는 공개 문서에서 확인되지 않았다.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69",
+          "notes": "별도 Sound/Lyrics 데이터의 존재는 확인되지만 입력 필드 구현 세부는 unknown."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [
+            "[Intro]",
+            "[Verse 1]",
+            "[Aggressive male vocals]",
+            "[Chorus]",
+            "[Glitchy vocal effects]",
+            "[Bridge]",
+            "[Outro]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E4",
+            "url": "https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69"
+          },
+          "evidence": "E4",
+          "url": "https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69",
+          "notes": "공개 사용자 곡의 Lyrics에 대괄호 구조·연주 지시가 관측되지만 공식 문법 문서는 발견되지 않았다. 따라서 exists와 발성 여부는 unknown."
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "공개 곡의 Sound prompt에 `3:00 length` 또는 `4-minute duration`이 관측되지만 공식 숫자 파라미터는 확인되지 않았다.",
+          "evidence": "E4",
+          "url": "https://www.flowmusic.app/song/5f5887a5-0fc1-4cfb-be46-eb5846b2e898"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "현재 공식 홈페이지가 `Remix your audio`를 기능으로 표시한다.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "사용자 공개 Sound에 `Negative prompt:`가 관측되지만 공식 파라미터/문법은 unknown.",
+          "evidence": "E4",
+          "url": "https://www.flowmusic.app/song/216a0bb2-6e11-4ed2-8037-f9dba8d296d0"
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "현재 공식 홈페이지가 `Stem split`을 표시한다.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "공식 홈페이지가 full-length song editing과 audio remix를 표시하지만 extend/inpaint의 세부 입력면은 unknown.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "공개 곡의 Sound 필드에 vocal gender, tone, delivery가 자연어로 기록되지만 공식 고정 파라미터는 확인되지 않았다.",
+          "evidence": "E4",
+          "url": "https://www.flowmusic.app/song/693ffaa3-7f3d-404e-bf69-5460609b1fe0"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "chat 기반 Producer는 확인되지만 생성 도중 오디오를 실시간 steering하는지 unknown.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": null,
+        "url": "",
+        "notes": "공식 목록 문서를 찾지 못해 unknown."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "riffusion.com과 producer.ai는 현재 Flow Music 홈페이지로 redirect된다.",
+          "evidence": "E1",
+          "url": "https://www.riffusion.com/"
+        },
+        {
+          "claim": "현재 홈페이지는 chat-based Producer, remix, audio effects, stem split을 표면 기능으로 제시한다.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        }
+      ],
+      "gaps": [
+        "공식 API와 파라미터 레퍼런스 unknown.",
+        "FUZZ 구조 태그 공식 문법, 문자 제한, seed, 길이 숫자 컨트롤 unknown.",
+        "대괄호 지시의 실제 발성 여부는 청취 검증 없이 판단 불가."
+      ]
+    },
+    {
+      "engine": "Stable Audio 2.5",
+      "vendor": "Stability AI",
+      "status": "live",
+      "models": [
+        {
+          "name": "stable-audio-2.5",
+          "released": "2025-09-10",
+          "notes": "Text-to-Audio, Audio-to-Audio, Audio Inpainting을 지원하는 상용 모델.",
+          "url": "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://stableaudio.com/",
+          "price_note": "웹 제공; 현행 플랜 가격은 사이트 확인 필요.",
+          "commercial_use": "공식 발표는 완전 라이선스 데이터로 학습된 commercially safe 모델이라고 설명한다."
+        },
+        {
+          "channel": "api",
+          "url": "https://platform.stability.ai/docs/api-reference",
+          "price_note": "Stable Audio 2.5 요청당 공식 문서 기준 20 credits.",
+          "commercial_use": "API 및 enterprise/on-premises license 제공."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 10000,
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "악기·무드·스타일·장르를 설명하는 `prompt`."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "공식 Stable Audio 2.5 API에는 별도 lyrics 필드가 없다."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://stability.ai/guides/stable-audio-25-prompt-guide",
+          "notes": "공식 prompt guide는 자연어 음악 vocabulary를 다루며 `[Verse]`형 가사 구조 문법을 문서화하지 않는다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "`duration` 초 단위 number, 1–190, 기본 190.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "Audio-to-Audio와 Inpaint의 필수 `audio`; Audio-to-Audio는 `strength` 0.01–1로 입력 영향 조절.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "Stable Audio 2.5 audio endpoint의 공식 request schema에는 `negative_prompt`가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "`seed` 0–4294967294; 0 또는 생략 시 random seed.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "공식 API 레퍼런스에서 stems export를 확인하지 못해 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "Inpaint에 `audio`, `prompt`, `mask_start`, `mask_end`; 선택 시간 구간을 주변 문맥으로 재생성한다. 별도 continuation endpoint는 확인되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "별도 boolean toggle이 없고 prompt로 instrumental을 기술한다.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "별도 vocal/voice 파라미터 없음; prompt 자연어만 사용.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "공식 API는 요청-응답 생성이며 생성 도중 steering 파라미터는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string, <=10000 chars",
+          "required": true,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": ""
+        },
+        {
+          "name": "duration",
+          "type": "number, 1–190",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "기본 190."
+        },
+        {
+          "name": "seed",
+          "type": "number, 0–4294967294",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "0은 random."
+        },
+        {
+          "name": "steps",
+          "type": "integer, 4–8",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "2.5 기본 8."
+        },
+        {
+          "name": "cfg_scale",
+          "type": "number, 1–25",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "2.5 기본 1."
+        },
+        {
+          "name": "model",
+          "type": "enum stable-audio-2|stable-audio-2.5",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": ""
+        },
+        {
+          "name": "output_format",
+          "type": "enum mp3|wav",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "기본 mp3."
+        },
+        {
+          "name": "audio",
+          "type": "binary mp3|wav",
+          "required": true,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "Audio-to-Audio/Inpaint 전용; 6–190초, 최대 요청 50MB."
+        },
+        {
+          "name": "strength",
+          "type": "number, 0.01–1 for 2.5",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "Audio-to-Audio 전용."
+        },
+        {
+          "name": "mask_start",
+          "type": "number, 0–190",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "Inpaint 기본 30."
+        },
+        {
+          "name": "mask_end",
+          "type": "number, 0–190",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "Inpaint 기본 190."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://stability.ai/guides/stable-audio-25-prompt-guide",
+        "notes": "공식 prompt guide는 있지만 폐쇄형 태그 목록은 아니다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Stable Audio 2.5는 intro, development, outro를 포함하는 다중 파트 구조가 개선되었다고 공식 발표가 설명한다.",
+          "evidence": "E2",
+          "url": "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale"
+        }
+      ],
+      "gaps": [
+        "lyrics 및 구조 태그 입력면 없음.",
+        "stems export unknown.",
+        "seed의 bit-identical 재현 보장은 공식 문서에 없음."
+      ]
+    },
+    {
+      "engine": "Sonauto Melodia",
+      "vendor": "Sonauto",
+      "status": "beta",
+      "models": [
+        {
+          "name": "v3-preview",
+          "released": "",
+          "notes": "공식 API 문서가 beta preview로 표시하며 보통 2–4분, 실시간 스트리밍 생성 지원. 정식 출시일은 unknown.",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        {
+          "name": "v2",
+          "released": "",
+          "notes": "95초 모델이며 공식 문서에서 deprecated로 표시.",
+          "url": "https://sonauto.ai/developers/docs"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://sonauto.ai/",
+          "price_note": "웹 생성 제공; 현행 가격은 사이트 확인 필요.",
+          "commercial_use": "unknown"
+        },
+        {
+          "channel": "api",
+          "url": "https://sonauto.ai/developers/docs",
+          "price_note": "Bearer API key 및 credit 기반.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs",
+          "notes": "`prompt`; 문자 상한은 공식 문서에 없어 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "최상위 `lyrics: string`; 생략하면 prompt에서 AI가 생성.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs",
+          "notes": "Prompt, tags, lyrics는 분리된 API 필드다."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "unknown",
+          "url": "",
+          "notes": "공식 API 문서에서 `[Verse]`/`[Chorus]` 문법을 찾지 못했다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "v3 `length_range:[min_seconds,max_seconds]`; 양쪽 모두 30초 배수, min 0–270, max 30–300. v2 신규곡은 고정 95초이며 extend는 `extend_duration` 0–85초.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "extend/inpaint에서 `audio_url` 또는 `audio_base64`를 전달한다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "negative_prompt": {
+          "exists": true,
+          "how": "v3 `negative_tags: array[string]`.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "v2에서 동일 `tags`, `lyrics`, `seed`는 동일 노래를 생성한다고 공식 문서가 명시한다. v3는 seed 미지원.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "공식 API 문서에서 확인되지 않아 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "v3 `/generations/v3/extend`; v2 `/extend`와 `/inpaint`. v2 inpaint는 `sections:[[start,end]]`와 교체 lyrics를 사용한다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "`instrumental:true`이며 lyrics를 보내지 않는다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "lyrics, tags, prompt 및 v2 `balance_strength`로 간접 제어한다. 고정 voice ID는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "v3 `enable_streaming`은 생성 중 청취를 지원하지만, 생성 중 입력 변경은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "최소 하나의 prompt/tags/lyrics 필요."
+        },
+        {
+          "name": "tags",
+          "type": "array[string], provided 시 min 1",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": ""
+        },
+        {
+          "name": "lyrics",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": ""
+        },
+        {
+          "name": "instrumental",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "기본 false."
+        },
+        {
+          "name": "prompt_strength",
+          "type": "float, v3 1.0–4.0",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 기본 1.0."
+        },
+        {
+          "name": "style_scale",
+          "type": "float, 1.0–3.5",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용, 기본 3.0."
+        },
+        {
+          "name": "negative_tags",
+          "type": "array[string]",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용."
+        },
+        {
+          "name": "length_range",
+          "type": "[integer,integer]",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용."
+        },
+        {
+          "name": "webhook_url",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": ""
+        },
+        {
+          "name": "output_format",
+          "type": "enum mp3|flac|wav|ogg|m4a",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "기본 ogg."
+        },
+        {
+          "name": "output_bit_rate",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "mp3/m4a: 128,192,256,320 kbps."
+        },
+        {
+          "name": "enable_streaming",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용."
+        },
+        {
+          "name": "stream_format",
+          "type": "enum ogg|mp3",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용."
+        },
+        {
+          "name": "align_lyrics",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": ""
+        },
+        {
+          "name": "balance_strength",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 전용, 기본 0.7."
+        },
+        {
+          "name": "seed",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 전용."
+        },
+        {
+          "name": "num_songs",
+          "type": "integer 1|2",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 전용."
+        },
+        {
+          "name": "bpm",
+          "type": "integer|'auto'|null",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 전용."
+        },
+        {
+          "name": "audio_url",
+          "type": "string URL",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "extend/inpaint source."
+        },
+        {
+          "name": "audio_base64",
+          "type": "string base64",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "최대 40MB."
+        },
+        {
+          "name": "context_seconds",
+          "type": "float >0 and <=284",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 extend."
+        },
+        {
+          "name": "crop_duration",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "extend."
+        },
+        {
+          "name": "side",
+          "type": "enum left|right",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 extend."
+        },
+        {
+          "name": "extend_duration",
+          "type": "float, 0–85",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 extend."
+        },
+        {
+          "name": "sections",
+          "type": "array[array[float]]",
+          "required": true,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 inpaint."
+        },
+        {
+          "name": "selection_crop",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 inpaint."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://sonauto.ai/tag-explorer",
+        "notes": "공식 Tag Explorer가 있으며 개발자 페이지는 4,160 tags를 표시한다: https://sonauto.ai/developers"
+      },
+      "observed_behaviors": [
+        {
+          "claim": "v3에서는 `prompt_strength`와 `style_scale` 중 정확히 하나만 1.0보다 커야 한다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        {
+          "claim": "공식 문서는 빈 tags 배열과 비기본 strength 조합이 품질 저하의 흔한 원인이라며 tags 필드를 생략하도록 권고한다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        }
+      ],
+      "gaps": [
+        "Prompt/lyrics 문자 상한 unknown.",
+        "구조 태그 문법과 대괄호 발성 여부 unknown.",
+        "v3 seed 및 inpaint 미지원; v2는 deprecated."
+      ]
+    },
+    {
+      "engine": "Beatoven.ai",
+      "vendor": "Beatoven.ai",
+      "status": "live",
+      "models": [
+        {
+          "name": "Track Composition API",
+          "released": "",
+          "notes": "공식 public-api repository가 현재 compose API를 문서화하며 모델명·출시일은 unknown.",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.beatoven.ai/",
+          "price_note": "웹 서비스 제공; 현행 가격은 공식 사이트 확인 필요.",
+          "commercial_use": "공식 API 페이지는 background music용 API로 설명하지만 세부 라이선스 조건은 현행 약관 확인 필요: https://www.beatoven.ai/api"
+        },
+        {
+          "channel": "api",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "price_note": "Bearer token 기반 public REST API.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "`prompt.text`; 문자 상한 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "문서화된 compose payload에는 lyrics가 없다."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "공식 `[Verse]`형 문법 없음."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "별도 숫자 필드가 아니라 `prompt.text`에 `30 seconds ... track`처럼 자연어로 넣는 공식 예시가 있다.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "reference_audio": {
+          "exists": null,
+          "how": "현행 public compose spec에서 확인되지 않아 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "현행 compose payload에 없음.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "현행 compose payload에 없음.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "완료 응답의 `stems_url`에 `bass`, `chords`, `melody`, `percussion` URL이 반환된다.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "inpaint_extend_edit": {
+          "exists": null,
+          "how": "현행 public compose spec에서 확인되지 않아 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "별도 toggle 없음; API 자체가 background/instrumental track composition 중심이다.",
+          "evidence": "E1",
+          "url": "https://www.beatoven.ai/api"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "현행 compose payload에 없음.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "비동기 compose 후 task polling 방식이며 생성 도중 steering은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "object",
+          "required": true,
+          "doc_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "중첩 `{text:string}`."
+        },
+        {
+          "name": "prompt.text",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": ""
+        },
+        {
+          "name": "format",
+          "type": "enum mp3|aac|wav",
+          "required": false,
+          "doc_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "기본 wav."
+        },
+        {
+          "name": "looping",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "true이면 looping 양을 높임; 기본 false."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+        "notes": "폐쇄형 장르·태그 목록 없음."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "compose는 비동기 작업이며 `task_id`를 반환하고 GET `/api/v1/tasks/<task_id>`로 상태를 조회한다.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        }
+      ],
+      "gaps": [
+        "Prompt 문자 상한 unknown.",
+        "reference audio, extend, inpaint 지원 여부 unknown.",
+        "가사·보컬·구조 태그 입력면 없음."
+      ]
+    },
+    {
+      "engine": "Soundverse",
+      "vendor": "Soundverse AI",
+      "status": "live",
+      "models": [
+        {
+          "name": "Song Generation v7",
+          "released": "",
+          "notes": "현재 Enterprise API에서 v5/v6/v7을 제공하며 정식 출시일은 unknown.",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        {
+          "name": "Music Generation v7",
+          "released": "",
+          "notes": "Instrumental prompt/reference generation.",
+          "url": "https://platform.soundverse.ai/docs/music-generation"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.soundverse.ai/",
+          "price_note": "웹 앱 제공; 현행 가격은 공식 사이트 확인 필요.",
+          "commercial_use": "라이선스 tier별 사용권 제공."
+        },
+        {
+          "channel": "api",
+          "url": "https://platform.soundverse.ai/docs/song-generation",
+          "price_note": "Enterprise API는 모델·도구·license tier별 과금.",
+          "commercial_use": "Royalty-Free, Standard, Distribution, Sync, Master tier가 공식 API 문서에 열거됨."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 1024,
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "`prompt`에 style, mood, genre를 기술."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "최상위 `lyrics:string`, 최대 3000자.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "Prompt와 분리된 lyrics 필드."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "unknown",
+          "url": "",
+          "notes": "공식 API 문서에서 `[Verse]`형 입력 문법을 확인하지 못했다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "Extend Music는 `extend_seconds` 1–120을 제공하고 inpaint는 `start_seconds`/`end_seconds`를 제공한다. 신규 Song Generation의 직접 duration 필드는 native payload에 없다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/extend"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`song_reference`, `instrumental_reference`, `melody`, `midi`; 노래/연주 스타일 매칭 및 melody/MIDI guided generation.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "현재 native Song/Music Generation payload에 별도 negative 필드가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "현재 native payload에 seed가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "12-stem, 6-stem, vocals/instrumental 2-stem separation API.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/stem-separation"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "Extend Song/Music, full-song Remix, 선택 section 또는 시간 범위 Audio Inpainting을 별도 API로 제공.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/audio-inpainting"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "별도 boolean이 아니라 Music Generation의 `generate_music` 도구를 사용해 instrumental을 생성한다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/music-generation"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`gender:'female'|'male'`, 저장된 consented `vocal_id`, 별도 Singing Generation/Voice Cloning.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "구형 v6 API는 SSE streaming 응답을 지원하지만 생성 도중 입력 변경은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://help.soundverse.ai/enterprise-api/generate/ai-song-gen/ai-song-gen-v6"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string, <=1024 chars",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "generate_song/generate_music."
+        },
+        {
+          "name": "lyrics",
+          "type": "string, <=3000 chars",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": ""
+        },
+        {
+          "name": "gender",
+          "type": "enum female|male",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": ""
+        },
+        {
+          "name": "vocal_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "계정 소유·동의 활성화된 `sv_voice_...`."
+        },
+        {
+          "name": "versions",
+          "type": "integer, 1–3",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "기본 1."
+        },
+        {
+          "name": "song_reference",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "similar_song; mp3/m4a, 약 30초, 최대 15MB."
+        },
+        {
+          "name": "instrumental_reference",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/music-generation",
+          "notes": "similar_music."
+        },
+        {
+          "name": "melody",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "mp3/m4a/.mid, 5–60초."
+        },
+        {
+          "name": "midi",
+          "type": "file input .mid",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "midi_to_song."
+        },
+        {
+          "name": "song",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "extend_song/remix_song source."
+        },
+        {
+          "name": "extend_at_ms",
+          "type": "integer, 0 or 8000–420000",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "기본 0."
+        },
+        {
+          "name": "extend_type",
+          "type": "enum tail|head",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "기본 tail."
+        },
+        {
+          "name": "music",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "extend_music."
+        },
+        {
+          "name": "extend_seconds",
+          "type": "float, 1–120",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "기본 30."
+        },
+        {
+          "name": "side",
+          "type": "enum tail|head",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": ""
+        },
+        {
+          "name": "source_file_id",
+          "type": "uuid",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": ""
+        },
+        {
+          "name": "section",
+          "type": "string|null",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": "chorus, verse, bridge, intro, outro 등; 시간 범위와 동시 사용 불가."
+        },
+        {
+          "name": "start_seconds",
+          "type": "number|null",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": ""
+        },
+        {
+          "name": "end_seconds",
+          "type": "number|null",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": ""
+        },
+        {
+          "name": "license",
+          "type": "license tier",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": "기본 royalty_free."
+        },
+        {
+          "name": "audio",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/stem-separation",
+          "notes": "stem separation."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://platform.soundverse.ai/docs/song-generation",
+        "notes": "공식 폐쇄형 장르·구조 태그 목록은 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Audio Inpainting은 `section` 또는 `start_seconds`+`end_seconds` 중 정확히 한 targeting 방식을 요구한다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/audio-inpainting"
+        },
+        {
+          "claim": "2-stem 작업은 항상 vocals와 instrumental 두 asset을 함께 생성한다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/stem-separation"
+        }
+      ],
+      "gaps": [
+        "구조 태그 문법 및 대괄호 발성 여부 unknown.",
+        "신규 song의 직접 duration·seed·negative prompt 없음.",
+        "웹 UI와 Enterprise API 사이의 정확한 파라미터 대응 일부 unknown."
+      ]
+    }
+  ],
+  "cross_notes": "가사·구조를 가장 명시적으로 기계 제어하는 표면은 Eleven Music v2의 chunk-based CompositionPlan이다: `chunks[]`가 section별 `text`, `duration_ms`, positive/negative styles와 오디오 참조를 결합한다(https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans). Udio는 별도 Prompt/Lyrics Editor와 공식 guidance-tag autocomplete를 제공하지만 태그는 hard-coded command가 아니며 adherence가 확률적이다(https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags). Stable Audio 2.5와 Beatoven은 본질적으로 단일 음악-description 중심이고 별도 lyrics/구조 문법이 없다(https://platform.stability.ai/docs/api-reference, https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md). Sonauto와 Soundverse는 prompt와 lyrics를 분리하고 강한 API 편집면을 제공하지만 공식 `[Verse]` 문법은 확인되지 않았다(https://sonauto.ai/developers/docs, https://platform.soundverse.ai/docs/song-generation). `tags_are_sung`은 공식 문법이 지시로 정의된 경우에도 실제 오디오에서 절대 발성되지 않는다는 보장이 거의 없으므로, 직접적인 비발성 보장이 없는 엔진은 모두 unknown으로 유지했다.",
+  "sources": [
+    "https://help.udio.com/en/articles/10715838-create-your-first-song",
+    "https://help.udio.com/en/articles/10716221-create-a-song-with-your-own-lyrics",
+    "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+    "https://help.udio.com/en/articles/10754328-create-music-with-your-own-audio",
+    "https://help.udio.com/en/articles/10756277-udio-public-api",
+    "https://elevenlabs.io/docs/api-reference/music/compose",
+    "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+    "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+    "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting",
+    "https://elevenlabs.io/docs/api-reference/music/upload",
+    "https://www.flowmusic.app/",
+    "https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69",
+    "https://platform.stability.ai/docs/api-reference",
+    "https://stability.ai/guides/stable-audio-25-prompt-guide",
+    "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale",
+    "https://sonauto.ai/developers/docs",
+    "https://sonauto.ai/tag-explorer",
+    "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+    "https://platform.soundverse.ai/docs/song-generation",
+    "https://platform.soundverse.ai/docs/music-generation",
+    "https://platform.soundverse.ai/docs/extend",
+    "https://platform.soundverse.ai/docs/remix",
+    "https://platform.soundverse.ai/docs/audio-inpainting",
+    "https://platform.soundverse.ai/docs/stem-separation"
+  ]
+}
+```
+tokens used
+119,521
+```json
+{
+  "cluster": "western_commercial",
+  "engines": [
+    {
+      "engine": "Udio",
+      "vendor": "Uncharted Labs, Inc.",
+      "status": "live",
+      "models": [
+        {
+          "name": "u-32 / u-130",
+          "released": "",
+          "notes": "공식 도움말이 각각 약 32초 및 2분 10초 생성 길이로 구분한다. 모델의 정식 출시일은 공식 문서에서 확인되지 않아 unknown.",
+          "url": "https://help.udio.com/en/articles/10715838-create-your-first-song"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.udio.com/",
+          "price_note": "무료 핵심 생성 기능과 유료 Standard/Pro 구독이 있으며, 공식 도움말은 크레딧 단위와 구독별 한도를 설명한다.",
+          "commercial_use": "유료 가입자는 공개 이용 시 Udio 표시 의무가 없다고 공식 블로그가 설명하지만, 구체적 권리 범위는 현행 약관 확인 필요: https://www.udio.com/blog/editing-lyrics"
+        },
+        {
+          "channel": "app",
+          "url": "https://help.udio.com/en/articles/11386622-ios-app",
+          "price_note": "공식 iOS 앱 제공.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10715838-create-your-first-song",
+          "notes": "Prompt 칸에 스타일·무드·주제와 장르 태그를 입력한다. 공식 문자 상한은 확인되지 않아 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "Create → Write Your Lyrics → Custom → Lyrics Editor",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10716221-create-a-song-with-your-own-lyrics",
+          "notes": "Prompt와 별도의 Lyrics Editor가 있다. 자동 가사, Write for me, Custom lyrics를 지원한다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Verse]",
+            "[Chorus]",
+            "[Intro]",
+            "[Outro]",
+            "[Bridge]",
+            "[Hook]",
+            "[Pre-chorus]",
+            "[Instrumental Break]",
+            "[Spoken Word]",
+            "[Choir]",
+            "[Announcer]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags"
+          },
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+          "notes": "Lyrics 칸에서 `/`를 눌러 guidance tags를 고른다. 공식 문서는 이를 곡의 형태·연주·창법을 안내하는 태그로 설명하지만, 태그가 절대로 발성되지 않는다고 보장하지 않으며 adherence도 확률적이라고 명시한다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "신규 생성은 32초 또는 2분 10초 프리셋을 선택한다. 임의 초/마디 숫자를 직접 넣는 공식 컨트롤은 확인되지 않았다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10715838-create-your-first-song"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "유료 Audio Upload에서 Extend, Inpaint, Session, Remix, Style을 선택한다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10754328-create-music-with-your-own-audio"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "Extend는 앞/뒤·Intro/Outro·Crop & Extend를 지원하고 최대 10개 섹션까지 확장한다. Inpaint/Edit/Session에서는 선택 구간의 음악이나 가사를 교체한다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10732568-extend-your-song"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "생성/확장 시 instrumental을 선택하거나 확장 Lyrics 칸을 비운다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10732568-extend-your-song"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "Voice Control과 lyrics editing이 구독 또는 trial 기능으로 문서화되어 있으나 세부 파라미터는 공개되지 않았다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/13338649-the-subscription-trial"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "공식 문서에서 생성 중 실시간 파라미터 조작은 확인되지 않는다. Sessions는 생성 후 waveform 기반 편집이다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/11649525-sessions-udio-s-timeline-editing-view"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+        "notes": "공식 autocomplete guidance-tag 목록이 있으나 문서 자체가 비완전 목록이며 hard-coded commands가 아니라고 명시한다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "같은 Remix 설정으로 여러 번 생성해도 각 결과는 고유하다고 공식 도움말이 설명한다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10694179-remixing-your-music"
+        },
+        {
+          "claim": "Udio는 현재 public API를 제공하지 않는다.",
+          "evidence": "E1",
+          "url": "https://help.udio.com/en/articles/10756277-udio-public-api"
+        }
+      ],
+      "gaps": [
+        "Prompt 및 Lyrics Editor의 공식 문자 수 상한 unknown.",
+        "대괄호 태그가 실제 오디오에서 발성되는 예외 빈도 unknown.",
+        "seed, negative prompt, stems export의 공식 입력면 unknown."
+      ]
+    },
+    {
+      "engine": "Eleven Music",
+      "vendor": "ElevenLabs",
+      "status": "live",
+      "models": [
+        {
+          "name": "music_v1",
+          "released": "2025-08-20 이전",
+          "notes": "Music API가 모든 유료 사용자에게 공개되었다는 공식 changelog 기준.",
+          "url": "https://elevenlabs.io/docs/changelog/2025/8/20"
+        },
+        {
+          "name": "music_v2",
+          "released": "2026-06-15",
+          "notes": "chunk 기반 CompositionPlan과 GenerationChunk/AudioRefChunk를 도입.",
+          "url": "https://elevenlabs.io/docs/changelog/2026/6/15"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://elevenlabs.io/music",
+          "price_note": "플랜별 생성·다운로드 분량이 다르며 현행 가격 페이지 확인 필요.",
+          "commercial_use": "공식 Music API 페이지는 라이선스된 데이터로 구축되어 생성 음악의 상업 이용을 지원한다고 설명한다: https://elevenlabs.io/eleven-music-api"
+        },
+        {
+          "channel": "api",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "price_note": "유료 사용자 API; Composition plan 생성 endpoint 자체는 credit을 소모하지 않지만 rate limit 적용.",
+          "commercial_use": "상업 이용 조건은 Music Terms 적용: https://elevenlabs.io/music-terms"
+        },
+        {
+          "channel": "sdk",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music",
+          "price_note": "공식 Python 및 JavaScript/TypeScript SDK.",
+          "commercial_use": "Music Terms 적용."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 4100,
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "`prompt`와 `composition_plan`은 상호 배타적이다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "music_v2: composition_plan.chunks[].text 안에 `[Section]` + newline + lyrics. 독립 최상위 `lyrics` 파라미터는 없다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+          "notes": "단순 prompt 모드에는 별도 lyrics 필드가 없고, structured composition plan에서 section별 text가 가사 칸 역할을 한다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Verse 1]\\n Woke up today with a feeling inside",
+            "[Pre-Chorus]\\n No more waiting for tomorrow",
+            "[Chorus]\\n I'm breaking through",
+            "[Outro]",
+            "{guitar solo}",
+            "{scratching}",
+            "{instrumental break}",
+            "(hmmm hmmm)",
+            "(ooh)",
+            "(yeah)"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+          },
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+          "notes": "공식 문법은 대괄호=section name, 중괄호=inline direction, 괄호=phonetic sound이다. 의도상 대괄호·중괄호는 지시이고 괄호는 발성 대상이지만, 절대 비발성 보장은 문서에 없어 실제 거동 답은 unknown."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "`music_length_ms` 3000–600000 또는 `chunks[].duration_ms` 3000–120000; 최대 30 chunks, 총 3초–10분.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "업로드 또는 저장된 `song_id`를 AudioRefChunk의 `song_id`+`range`로 삽입하거나 GenerationChunk의 `conditioning_ref`로 조건화한다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting"
+        },
+        "negative_prompt": {
+          "exists": true,
+          "how": "music_v2 각 chunk의 `negative_styles`; music_v1은 `negative_global_styles`와 `negative_local_styles`.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "`seed` 0–2147483647. 동일 파라미터의 일관성을 높일 수 있지만 정확한 재현은 보장되지 않고 시스템 업데이트로 달라질 수 있다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "공식 Music API 문서에서 stems export를 확인하지 못해 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "music_v2 plan에서 AudioRefChunk로 보존할 구간과 GenerationChunk로 새로 만들 구간을 조합해 inpaint, intro/outro 확장, 유사곡 조건화를 수행한다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "prompt 모드의 `force_instrumental=true`; plan 모드에서는 `negative_styles:[\"vocals\",\"lyrics\"]`와 instrumental section 지시를 사용한다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`positive_styles`에 vocalist, tone, delivery를 자연어로 기술하고 `negative_styles`로 singing/vocals를 배제한다. 고정 singer ID는 기본 Music compose 문서에 없다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "SSE/stream endpoint는 생성 중 재생·메타데이터 전달을 지원하지만, 생성 도중 control 값을 변경하는 API는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/api-reference/music/compose-detailed-stream"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string|null, <=4100 chars",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "`composition_plan`과 동시 사용 불가."
+        },
+        {
+          "name": "composition_plan",
+          "type": "MusicPrompt|CompositionPlan|null",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "music_v2 정확한 중첩: `{chunks:[GenerationChunk|AudioRefChunk]}`. GenerationChunk=`{text,duration_ms,positive_styles,negative_styles,context_adherence,conditioning_ref?,condition_strength?}`; conditioning_ref=`{song_id,range:{start_ms,end_ms}}`; AudioRefChunk=`{song_id,range:{start_ms,end_ms}}`. music_v1=`{positive_global_styles,negative_global_styles,sections:[{section_name,lines,duration_ms,positive_local_styles,negative_local_styles}]}`."
+        },
+        {
+          "name": "music_length_ms",
+          "type": "integer|null, 3000–600000",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "prompt 모드 전용."
+        },
+        {
+          "name": "model_id",
+          "type": "enum music_v1|music_v2",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "기본 music_v1."
+        },
+        {
+          "name": "seed",
+          "type": "integer|null, 0–2147483647",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "정확한 결정성은 보장되지 않음."
+        },
+        {
+          "name": "force_instrumental",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "기본 false, prompt 모드 전용."
+        },
+        {
+          "name": "finetune_id",
+          "type": "string|null, <=100 chars",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": ""
+        },
+        {
+          "name": "respect_sections_durations",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "music_v1 전용; music_v2에서는 duration이 항상 강제되고 이 값은 무시됨."
+        },
+        {
+          "name": "store_for_inpainting",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "기본 false."
+        },
+        {
+          "name": "sign_with_c2pa",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "MP3에 적용."
+        },
+        {
+          "name": "output_format",
+          "type": "query enum",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose",
+          "notes": "기본 auto."
+        },
+        {
+          "name": "with_timestamps",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose-detailed",
+          "notes": "detailed endpoint 전용."
+        },
+        {
+          "name": "with_waveform_visual",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/compose-detailed",
+          "notes": "detailed endpoint 전용."
+        },
+        {
+          "name": "plan.prompt",
+          "type": "string, <=4100 chars",
+          "required": true,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+          "notes": "POST /v1/music/plan."
+        },
+        {
+          "name": "plan.music_length_ms",
+          "type": "integer|null, 3000–600000",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+          "notes": ""
+        },
+        {
+          "name": "plan.source_composition_plan",
+          "type": "object|null",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+          "notes": ""
+        },
+        {
+          "name": "plan.model_id",
+          "type": "enum",
+          "required": false,
+          "doc_url": "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+          "notes": "기본 music_v1."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+        "notes": "공식 문법과 예시는 있지만 폐쇄형 장르·스타일 vocabulary 목록은 아니다. 스타일은 영어 자연어 배열이다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "music_v2 첫 chunk의 styles가 전체 곡의 톤과 장르에 가장 큰 영향을 준다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        },
+        {
+          "claim": "`positive_styles`/`negative_styles`는 각 최대 50개이고 styles는 영어여야 하지만 lyrics는 다른 언어도 가능하다.",
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans"
+        }
+      ],
+      "gaps": [
+        "구조 태그의 실제 비발성 보장 여부 unknown.",
+        "공식 폐쇄형 장르·태그 전체 목록 없음.",
+        "기본 Music API의 stems export 여부 unknown."
+      ]
+    },
+    {
+      "engine": "Riffusion / FUZZ (현재 Flow Music)",
+      "vendor": "Riffusion/Flow Music",
+      "status": "live",
+      "models": [
+        {
+          "name": "FUZZ 2.0 Raw",
+          "released": "",
+          "notes": "현재 Flow Music 공개 곡 페이지에 모델명이 남아 있으나 정식 출시일은 공식 문서에서 확인되지 않아 unknown.",
+          "url": "https://www.flowmusic.app/song/371fb423-4734-40ed-b67c-c98396632db8"
+        },
+        {
+          "name": "FUZZ 2.0 Pro",
+          "released": "",
+          "notes": "현재 공개 곡 페이지에서 모델명이 확인되나 정식 출시일은 unknown.",
+          "url": "https://www.flowmusic.app/song/693ffaa3-7f3d-404e-bf69-5460609b1fe0"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.riffusion.com/",
+          "price_note": "현재 riffusion.com과 producer.ai는 Flow Music으로 연결되며 무료 시작·daily credits를 표시한다.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/",
+          "notes": "현재 사이트는 Producer와 채팅해 full-length song을 만들고 편집한다고 설명한다. 문자 상한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "공개 곡 페이지가 Sound와 Lyrics를 별도 표시하지만 현재 입력 UI의 정확한 스키마는 공개 문서에서 확인되지 않았다.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69",
+          "notes": "별도 Sound/Lyrics 데이터의 존재는 확인되지만 입력 필드 구현 세부는 unknown."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [
+            "[Intro]",
+            "[Verse 1]",
+            "[Aggressive male vocals]",
+            "[Chorus]",
+            "[Glitchy vocal effects]",
+            "[Bridge]",
+            "[Outro]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E4",
+            "url": "https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69"
+          },
+          "evidence": "E4",
+          "url": "https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69",
+          "notes": "공개 사용자 곡의 Lyrics에 대괄호 구조·연주 지시가 관측되지만 공식 문법 문서는 발견되지 않았다. 따라서 exists와 발성 여부는 unknown."
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "공개 곡의 Sound prompt에 `3:00 length` 또는 `4-minute duration`이 관측되지만 공식 숫자 파라미터는 확인되지 않았다.",
+          "evidence": "E4",
+          "url": "https://www.flowmusic.app/song/5f5887a5-0fc1-4cfb-be46-eb5846b2e898"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "현재 공식 홈페이지가 `Remix your audio`를 기능으로 표시한다.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "사용자 공개 Sound에 `Negative prompt:`가 관측되지만 공식 파라미터/문법은 unknown.",
+          "evidence": "E4",
+          "url": "https://www.flowmusic.app/song/216a0bb2-6e11-4ed2-8037-f9dba8d296d0"
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "현재 공식 홈페이지가 `Stem split`을 표시한다.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "공식 홈페이지가 full-length song editing과 audio remix를 표시하지만 extend/inpaint의 세부 입력면은 unknown.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "공개 곡의 Sound 필드에 vocal gender, tone, delivery가 자연어로 기록되지만 공식 고정 파라미터는 확인되지 않았다.",
+          "evidence": "E4",
+          "url": "https://www.flowmusic.app/song/693ffaa3-7f3d-404e-bf69-5460609b1fe0"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "chat 기반 Producer는 확인되지만 생성 도중 오디오를 실시간 steering하는지 unknown.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": null,
+        "url": "",
+        "notes": "공식 목록 문서를 찾지 못해 unknown."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "riffusion.com과 producer.ai는 현재 Flow Music 홈페이지로 redirect된다.",
+          "evidence": "E1",
+          "url": "https://www.riffusion.com/"
+        },
+        {
+          "claim": "현재 홈페이지는 chat-based Producer, remix, audio effects, stem split을 표면 기능으로 제시한다.",
+          "evidence": "E1",
+          "url": "https://www.flowmusic.app/"
+        }
+      ],
+      "gaps": [
+        "공식 API와 파라미터 레퍼런스 unknown.",
+        "FUZZ 구조 태그 공식 문법, 문자 제한, seed, 길이 숫자 컨트롤 unknown.",
+        "대괄호 지시의 실제 발성 여부는 청취 검증 없이 판단 불가."
+      ]
+    },
+    {
+      "engine": "Stable Audio 2.5",
+      "vendor": "Stability AI",
+      "status": "live",
+      "models": [
+        {
+          "name": "stable-audio-2.5",
+          "released": "2025-09-10",
+          "notes": "Text-to-Audio, Audio-to-Audio, Audio Inpainting을 지원하는 상용 모델.",
+          "url": "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://stableaudio.com/",
+          "price_note": "웹 제공; 현행 플랜 가격은 사이트 확인 필요.",
+          "commercial_use": "공식 발표는 완전 라이선스 데이터로 학습된 commercially safe 모델이라고 설명한다."
+        },
+        {
+          "channel": "api",
+          "url": "https://platform.stability.ai/docs/api-reference",
+          "price_note": "Stable Audio 2.5 요청당 공식 문서 기준 20 credits.",
+          "commercial_use": "API 및 enterprise/on-premises license 제공."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 10000,
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "악기·무드·스타일·장르를 설명하는 `prompt`."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "공식 Stable Audio 2.5 API에는 별도 lyrics 필드가 없다."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://stability.ai/guides/stable-audio-25-prompt-guide",
+          "notes": "공식 prompt guide는 자연어 음악 vocabulary를 다루며 `[Verse]`형 가사 구조 문법을 문서화하지 않는다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "`duration` 초 단위 number, 1–190, 기본 190.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "Audio-to-Audio와 Inpaint의 필수 `audio`; Audio-to-Audio는 `strength` 0.01–1로 입력 영향 조절.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "Stable Audio 2.5 audio endpoint의 공식 request schema에는 `negative_prompt`가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "`seed` 0–4294967294; 0 또는 생략 시 random seed.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "공식 API 레퍼런스에서 stems export를 확인하지 못해 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "Inpaint에 `audio`, `prompt`, `mask_start`, `mask_end`; 선택 시간 구간을 주변 문맥으로 재생성한다. 별도 continuation endpoint는 확인되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "별도 boolean toggle이 없고 prompt로 instrumental을 기술한다.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "별도 vocal/voice 파라미터 없음; prompt 자연어만 사용.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "공식 API는 요청-응답 생성이며 생성 도중 steering 파라미터는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.stability.ai/docs/api-reference"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string, <=10000 chars",
+          "required": true,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": ""
+        },
+        {
+          "name": "duration",
+          "type": "number, 1–190",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "기본 190."
+        },
+        {
+          "name": "seed",
+          "type": "number, 0–4294967294",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "0은 random."
+        },
+        {
+          "name": "steps",
+          "type": "integer, 4–8",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "2.5 기본 8."
+        },
+        {
+          "name": "cfg_scale",
+          "type": "number, 1–25",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "2.5 기본 1."
+        },
+        {
+          "name": "model",
+          "type": "enum stable-audio-2|stable-audio-2.5",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": ""
+        },
+        {
+          "name": "output_format",
+          "type": "enum mp3|wav",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "기본 mp3."
+        },
+        {
+          "name": "audio",
+          "type": "binary mp3|wav",
+          "required": true,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "Audio-to-Audio/Inpaint 전용; 6–190초, 최대 요청 50MB."
+        },
+        {
+          "name": "strength",
+          "type": "number, 0.01–1 for 2.5",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "Audio-to-Audio 전용."
+        },
+        {
+          "name": "mask_start",
+          "type": "number, 0–190",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "Inpaint 기본 30."
+        },
+        {
+          "name": "mask_end",
+          "type": "number, 0–190",
+          "required": false,
+          "doc_url": "https://platform.stability.ai/docs/api-reference",
+          "notes": "Inpaint 기본 190."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://stability.ai/guides/stable-audio-25-prompt-guide",
+        "notes": "공식 prompt guide는 있지만 폐쇄형 태그 목록은 아니다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Stable Audio 2.5는 intro, development, outro를 포함하는 다중 파트 구조가 개선되었다고 공식 발표가 설명한다.",
+          "evidence": "E2",
+          "url": "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale"
+        }
+      ],
+      "gaps": [
+        "lyrics 및 구조 태그 입력면 없음.",
+        "stems export unknown.",
+        "seed의 bit-identical 재현 보장은 공식 문서에 없음."
+      ]
+    },
+    {
+      "engine": "Sonauto Melodia",
+      "vendor": "Sonauto",
+      "status": "beta",
+      "models": [
+        {
+          "name": "v3-preview",
+          "released": "",
+          "notes": "공식 API 문서가 beta preview로 표시하며 보통 2–4분, 실시간 스트리밍 생성 지원. 정식 출시일은 unknown.",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        {
+          "name": "v2",
+          "released": "",
+          "notes": "95초 모델이며 공식 문서에서 deprecated로 표시.",
+          "url": "https://sonauto.ai/developers/docs"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://sonauto.ai/",
+          "price_note": "웹 생성 제공; 현행 가격은 사이트 확인 필요.",
+          "commercial_use": "unknown"
+        },
+        {
+          "channel": "api",
+          "url": "https://sonauto.ai/developers/docs",
+          "price_note": "Bearer API key 및 credit 기반.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs",
+          "notes": "`prompt`; 문자 상한은 공식 문서에 없어 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "최상위 `lyrics: string`; 생략하면 prompt에서 AI가 생성.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs",
+          "notes": "Prompt, tags, lyrics는 분리된 API 필드다."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "unknown",
+          "url": "",
+          "notes": "공식 API 문서에서 `[Verse]`/`[Chorus]` 문법을 찾지 못했다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "v3 `length_range:[min_seconds,max_seconds]`; 양쪽 모두 30초 배수, min 0–270, max 30–300. v2 신규곡은 고정 95초이며 extend는 `extend_duration` 0–85초.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "extend/inpaint에서 `audio_url` 또는 `audio_base64`를 전달한다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "negative_prompt": {
+          "exists": true,
+          "how": "v3 `negative_tags: array[string]`.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "v2에서 동일 `tags`, `lyrics`, `seed`는 동일 노래를 생성한다고 공식 문서가 명시한다. v3는 seed 미지원.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "공식 API 문서에서 확인되지 않아 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "v3 `/generations/v3/extend`; v2 `/extend`와 `/inpaint`. v2 inpaint는 `sections:[[start,end]]`와 교체 lyrics를 사용한다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "`instrumental:true`이며 lyrics를 보내지 않는다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "lyrics, tags, prompt 및 v2 `balance_strength`로 간접 제어한다. 고정 voice ID는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "v3 `enable_streaming`은 생성 중 청취를 지원하지만, 생성 중 입력 변경은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "최소 하나의 prompt/tags/lyrics 필요."
+        },
+        {
+          "name": "tags",
+          "type": "array[string], provided 시 min 1",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": ""
+        },
+        {
+          "name": "lyrics",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": ""
+        },
+        {
+          "name": "instrumental",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "기본 false."
+        },
+        {
+          "name": "prompt_strength",
+          "type": "float, v3 1.0–4.0",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 기본 1.0."
+        },
+        {
+          "name": "style_scale",
+          "type": "float, 1.0–3.5",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용, 기본 3.0."
+        },
+        {
+          "name": "negative_tags",
+          "type": "array[string]",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용."
+        },
+        {
+          "name": "length_range",
+          "type": "[integer,integer]",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용."
+        },
+        {
+          "name": "webhook_url",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": ""
+        },
+        {
+          "name": "output_format",
+          "type": "enum mp3|flac|wav|ogg|m4a",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "기본 ogg."
+        },
+        {
+          "name": "output_bit_rate",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "mp3/m4a: 128,192,256,320 kbps."
+        },
+        {
+          "name": "enable_streaming",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용."
+        },
+        {
+          "name": "stream_format",
+          "type": "enum ogg|mp3",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 전용."
+        },
+        {
+          "name": "align_lyrics",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": ""
+        },
+        {
+          "name": "balance_strength",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 전용, 기본 0.7."
+        },
+        {
+          "name": "seed",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 전용."
+        },
+        {
+          "name": "num_songs",
+          "type": "integer 1|2",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 전용."
+        },
+        {
+          "name": "bpm",
+          "type": "integer|'auto'|null",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 전용."
+        },
+        {
+          "name": "audio_url",
+          "type": "string URL",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "extend/inpaint source."
+        },
+        {
+          "name": "audio_base64",
+          "type": "string base64",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "최대 40MB."
+        },
+        {
+          "name": "context_seconds",
+          "type": "float >0 and <=284",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v3 extend."
+        },
+        {
+          "name": "crop_duration",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "extend."
+        },
+        {
+          "name": "side",
+          "type": "enum left|right",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 extend."
+        },
+        {
+          "name": "extend_duration",
+          "type": "float, 0–85",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 extend."
+        },
+        {
+          "name": "sections",
+          "type": "array[array[float]]",
+          "required": true,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 inpaint."
+        },
+        {
+          "name": "selection_crop",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://sonauto.ai/developers/docs",
+          "notes": "v2 inpaint."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://sonauto.ai/tag-explorer",
+        "notes": "공식 Tag Explorer가 있으며 개발자 페이지는 4,160 tags를 표시한다: https://sonauto.ai/developers"
+      },
+      "observed_behaviors": [
+        {
+          "claim": "v3에서는 `prompt_strength`와 `style_scale` 중 정확히 하나만 1.0보다 커야 한다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        },
+        {
+          "claim": "공식 문서는 빈 tags 배열과 비기본 strength 조합이 품질 저하의 흔한 원인이라며 tags 필드를 생략하도록 권고한다.",
+          "evidence": "E1",
+          "url": "https://sonauto.ai/developers/docs"
+        }
+      ],
+      "gaps": [
+        "Prompt/lyrics 문자 상한 unknown.",
+        "구조 태그 문법과 대괄호 발성 여부 unknown.",
+        "v3 seed 및 inpaint 미지원; v2는 deprecated."
+      ]
+    },
+    {
+      "engine": "Beatoven.ai",
+      "vendor": "Beatoven.ai",
+      "status": "live",
+      "models": [
+        {
+          "name": "Track Composition API",
+          "released": "",
+          "notes": "공식 public-api repository가 현재 compose API를 문서화하며 모델명·출시일은 unknown.",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.beatoven.ai/",
+          "price_note": "웹 서비스 제공; 현행 가격은 공식 사이트 확인 필요.",
+          "commercial_use": "공식 API 페이지는 background music용 API로 설명하지만 세부 라이선스 조건은 현행 약관 확인 필요: https://www.beatoven.ai/api"
+        },
+        {
+          "channel": "api",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "price_note": "Bearer token 기반 public REST API.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "`prompt.text`; 문자 상한 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "문서화된 compose payload에는 lyrics가 없다."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "공식 `[Verse]`형 문법 없음."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "별도 숫자 필드가 아니라 `prompt.text`에 `30 seconds ... track`처럼 자연어로 넣는 공식 예시가 있다.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "reference_audio": {
+          "exists": null,
+          "how": "현행 public compose spec에서 확인되지 않아 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "현행 compose payload에 없음.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "현행 compose payload에 없음.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "완료 응답의 `stems_url`에 `bass`, `chords`, `melody`, `percussion` URL이 반환된다.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "inpaint_extend_edit": {
+          "exists": null,
+          "how": "현행 public compose spec에서 확인되지 않아 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "별도 toggle 없음; API 자체가 background/instrumental track composition 중심이다.",
+          "evidence": "E1",
+          "url": "https://www.beatoven.ai/api"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "현행 compose payload에 없음.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "비동기 compose 후 task polling 방식이며 생성 도중 steering은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "object",
+          "required": true,
+          "doc_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "중첩 `{text:string}`."
+        },
+        {
+          "name": "prompt.text",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": ""
+        },
+        {
+          "name": "format",
+          "type": "enum mp3|aac|wav",
+          "required": false,
+          "doc_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "기본 wav."
+        },
+        {
+          "name": "looping",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+          "notes": "true이면 looping 양을 높임; 기본 false."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+        "notes": "폐쇄형 장르·태그 목록 없음."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "compose는 비동기 작업이며 `task_id`를 반환하고 GET `/api/v1/tasks/<task_id>`로 상태를 조회한다.",
+          "evidence": "E1",
+          "url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md"
+        }
+      ],
+      "gaps": [
+        "Prompt 문자 상한 unknown.",
+        "reference audio, extend, inpaint 지원 여부 unknown.",
+        "가사·보컬·구조 태그 입력면 없음."
+      ]
+    },
+    {
+      "engine": "Soundverse",
+      "vendor": "Soundverse AI",
+      "status": "live",
+      "models": [
+        {
+          "name": "Song Generation v7",
+          "released": "",
+          "notes": "현재 Enterprise API에서 v5/v6/v7을 제공하며 정식 출시일은 unknown.",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        {
+          "name": "Music Generation v7",
+          "released": "",
+          "notes": "Instrumental prompt/reference generation.",
+          "url": "https://platform.soundverse.ai/docs/music-generation"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.soundverse.ai/",
+          "price_note": "웹 앱 제공; 현행 가격은 공식 사이트 확인 필요.",
+          "commercial_use": "라이선스 tier별 사용권 제공."
+        },
+        {
+          "channel": "api",
+          "url": "https://platform.soundverse.ai/docs/song-generation",
+          "price_note": "Enterprise API는 모델·도구·license tier별 과금.",
+          "commercial_use": "Royalty-Free, Standard, Distribution, Sync, Master tier가 공식 API 문서에 열거됨."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 1024,
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "`prompt`에 style, mood, genre를 기술."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "최상위 `lyrics:string`, 최대 3000자.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "Prompt와 분리된 lyrics 필드."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "unknown",
+          "url": "",
+          "notes": "공식 API 문서에서 `[Verse]`형 입력 문법을 확인하지 못했다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "Extend Music는 `extend_seconds` 1–120을 제공하고 inpaint는 `start_seconds`/`end_seconds`를 제공한다. 신규 Song Generation의 직접 duration 필드는 native payload에 없다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/extend"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`song_reference`, `instrumental_reference`, `melody`, `midi`; 노래/연주 스타일 매칭 및 melody/MIDI guided generation.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "현재 native Song/Music Generation payload에 별도 negative 필드가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "현재 native payload에 seed가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "12-stem, 6-stem, vocals/instrumental 2-stem separation API.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/stem-separation"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "Extend Song/Music, full-song Remix, 선택 section 또는 시간 범위 Audio Inpainting을 별도 API로 제공.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/audio-inpainting"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "별도 boolean이 아니라 Music Generation의 `generate_music` 도구를 사용해 instrumental을 생성한다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/music-generation"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`gender:'female'|'male'`, 저장된 consented `vocal_id`, 별도 Singing Generation/Voice Cloning.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/song-generation"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "구형 v6 API는 SSE streaming 응답을 지원하지만 생성 도중 입력 변경은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://help.soundverse.ai/enterprise-api/generate/ai-song-gen/ai-song-gen-v6"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string, <=1024 chars",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "generate_song/generate_music."
+        },
+        {
+          "name": "lyrics",
+          "type": "string, <=3000 chars",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": ""
+        },
+        {
+          "name": "gender",
+          "type": "enum female|male",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": ""
+        },
+        {
+          "name": "vocal_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "계정 소유·동의 활성화된 `sv_voice_...`."
+        },
+        {
+          "name": "versions",
+          "type": "integer, 1–3",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "기본 1."
+        },
+        {
+          "name": "song_reference",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "similar_song; mp3/m4a, 약 30초, 최대 15MB."
+        },
+        {
+          "name": "instrumental_reference",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/music-generation",
+          "notes": "similar_music."
+        },
+        {
+          "name": "melody",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "mp3/m4a/.mid, 5–60초."
+        },
+        {
+          "name": "midi",
+          "type": "file input .mid",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/song-generation",
+          "notes": "midi_to_song."
+        },
+        {
+          "name": "song",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "extend_song/remix_song source."
+        },
+        {
+          "name": "extend_at_ms",
+          "type": "integer, 0 or 8000–420000",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "기본 0."
+        },
+        {
+          "name": "extend_type",
+          "type": "enum tail|head",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "기본 tail."
+        },
+        {
+          "name": "music",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "extend_music."
+        },
+        {
+          "name": "extend_seconds",
+          "type": "float, 1–120",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": "기본 30."
+        },
+        {
+          "name": "side",
+          "type": "enum tail|head",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/extend",
+          "notes": ""
+        },
+        {
+          "name": "source_file_id",
+          "type": "uuid",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": ""
+        },
+        {
+          "name": "section",
+          "type": "string|null",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": "chorus, verse, bridge, intro, outro 등; 시간 범위와 동시 사용 불가."
+        },
+        {
+          "name": "start_seconds",
+          "type": "number|null",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": ""
+        },
+        {
+          "name": "end_seconds",
+          "type": "number|null",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": ""
+        },
+        {
+          "name": "license",
+          "type": "license tier",
+          "required": false,
+          "doc_url": "https://platform.soundverse.ai/docs/audio-inpainting",
+          "notes": "기본 royalty_free."
+        },
+        {
+          "name": "audio",
+          "type": "file input",
+          "required": true,
+          "doc_url": "https://platform.soundverse.ai/docs/stem-separation",
+          "notes": "stem separation."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://platform.soundverse.ai/docs/song-generation",
+        "notes": "공식 폐쇄형 장르·구조 태그 목록은 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Audio Inpainting은 `section` 또는 `start_seconds`+`end_seconds` 중 정확히 한 targeting 방식을 요구한다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/audio-inpainting"
+        },
+        {
+          "claim": "2-stem 작업은 항상 vocals와 instrumental 두 asset을 함께 생성한다.",
+          "evidence": "E1",
+          "url": "https://platform.soundverse.ai/docs/stem-separation"
+        }
+      ],
+      "gaps": [
+        "구조 태그 문법 및 대괄호 발성 여부 unknown.",
+        "신규 song의 직접 duration·seed·negative prompt 없음.",
+        "웹 UI와 Enterprise API 사이의 정확한 파라미터 대응 일부 unknown."
+      ]
+    }
+  ],
+  "cross_notes": "가사·구조를 가장 명시적으로 기계 제어하는 표면은 Eleven Music v2의 chunk-based CompositionPlan이다: `chunks[]`가 section별 `text`, `duration_ms`, positive/negative styles와 오디오 참조를 결합한다(https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans). Udio는 별도 Prompt/Lyrics Editor와 공식 guidance-tag autocomplete를 제공하지만 태그는 hard-coded command가 아니며 adherence가 확률적이다(https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags). Stable Audio 2.5와 Beatoven은 본질적으로 단일 음악-description 중심이고 별도 lyrics/구조 문법이 없다(https://platform.stability.ai/docs/api-reference, https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md). Sonauto와 Soundverse는 prompt와 lyrics를 분리하고 강한 API 편집면을 제공하지만 공식 `[Verse]` 문법은 확인되지 않았다(https://sonauto.ai/developers/docs, https://platform.soundverse.ai/docs/song-generation). `tags_are_sung`은 공식 문법이 지시로 정의된 경우에도 실제 오디오에서 절대 발성되지 않는다는 보장이 거의 없으므로, 직접적인 비발성 보장이 없는 엔진은 모두 unknown으로 유지했다.",
+  "sources": [
+    "https://help.udio.com/en/articles/10715838-create-your-first-song",
+    "https://help.udio.com/en/articles/10716221-create-a-song-with-your-own-lyrics",
+    "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+    "https://help.udio.com/en/articles/10754328-create-music-with-your-own-audio",
+    "https://help.udio.com/en/articles/10756277-udio-public-api",
+    "https://elevenlabs.io/docs/api-reference/music/compose",
+    "https://elevenlabs.io/docs/api-reference/music/create-composition-plan/",
+    "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+    "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting",
+    "https://elevenlabs.io/docs/api-reference/music/upload",
+    "https://www.flowmusic.app/",
+    "https://www.flowmusic.app/song/16c29cf8-6cd4-40cb-9fb1-ff9b818c4f69",
+    "https://platform.stability.ai/docs/api-reference",
+    "https://stability.ai/guides/stable-audio-25-prompt-guide",
+    "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale",
+    "https://sonauto.ai/developers/docs",
+    "https://sonauto.ai/tag-explorer",
+    "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+    "https://platform.soundverse.ai/docs/song-generation",
+    "https://platform.soundverse.ai/docs/music-generation",
+    "https://platform.soundverse.ai/docs/extend",
+    "https://platform.soundverse.ai/docs/remix",
+    "https://platform.soundverse.ai/docs/audio-inpainting",
+    "https://platform.soundverse.ai/docs/stem-separation"
+  ]
+}
+```

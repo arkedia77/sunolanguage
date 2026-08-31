@@ -1,0 +1,111 @@
+{
+  "cluster": "claude_firsthand",
+  "note": "sunolanguage 세션이 직접 WebFetch로 원문 도달해 확인한 항목만. 코덱스 5클러스터와 독립. 등급 전건 E1(공식 문서 원문 도달).",
+  "collected_at": "2026-08-31",
+  "engines": [
+    {
+      "engine": "ElevenLabs Eleven Music (music_v2)",
+      "vendor": "ElevenLabs",
+      "control_surface": {
+        "composition_plan": {
+          "exists": true,
+          "evidence": "E1",
+          "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/composition-plans",
+          "schema_v2": {
+            "chunks": "array, 최대 30",
+            "chunks[].text": "섹션 라벨 대괄호 + 가사(\\n 구분) + 괄호 음성(hmmm) + ★중괄호 인라인 지시 {guitar solo}",
+            "chunks[].duration_ms": "3000~120000",
+            "chunks[].positive_styles": "array, 최대 50",
+            "chunks[].negative_styles": "array, 최대 50",
+            "chunks[].context_adherence": "low|medium|high (default high) — 인접 청크와의 응집 통제"
+          },
+          "schema_v1_별도": "positive_global_styles / negative_global_styles / sections[].{section_name,duration_ms,positive_local_styles,negative_local_styles,lines} — 검색결과층(E2), 원문 미도달",
+          "total_duration": "3초~10분"
+        },
+        "★브라켓_대_중괄호": {
+          "finding": "공식 문서가 대괄호=섹션 라벨, ★중괄호 {}=인라인 연주 지시로 축을 분리해 문서화",
+          "why_it_matters": "Suno는 두 기능을 대괄호 하나에 겹쳐 싣는다. ElevenLabs는 문법으로 갈라놨다 — 우리 D052 축의 대조점",
+          "evidence": "E1"
+        },
+        "언어": "스타일 서술자는 영어 필수, 가사는 임의 언어"
+      }
+    },
+    {
+      "engine": "Google Lyria RealTime",
+      "vendor": "Google (Gemini API / Magenta)",
+      "control_surface": {
+        "weighted_prompt": {
+          "exists": true, "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "fields": {"text": "string", "weight": "0 제외 실수, 1.0 권장"},
+          "note": "★프롬프트가 단일 문자열이 아니라 가중 벡터. Suno에 없는 통제면(P4 근거 1)"
+        },
+        "LiveMusicGenerationConfig": {
+          "guidance": "float [0.0,6.0] default 4.0 — 프롬프트 준수 강도",
+          "bpm": "int [60,200] · ★reset_context 필요",
+          "density": "float [0.0,1.0]",
+          "brightness": "float [0.0,1.0]",
+          "scale": "Enum · ★reset_context 필요",
+          "temperature": "float [0.0,3.0] default 1.1",
+          "top_k": "int [1,1000] default 40",
+          "seed": "int [0,2147483647] — ★재현성",
+          "mute_bass": "bool", "mute_drums": "bool", "only_bass_and_drums": "bool",
+          "music_generation_mode": "QUALITY | DIVERSITY | VOCALIZATION"
+        },
+        "lyrics_field": {"exists": false, "evidence": "E1", "quote": "Instrumental only: The model generates instrumental music only.", "note": "VOCALIZATION 모드는 '보컬을 또 하나의 악기로' — 가사 아님"},
+        "prompt_char_limit": {"exists": null, "note": "문서에 명시 없음"}
+      }
+    },
+    {
+      "engine": "MiniMax Music",
+      "vendor": "MiniMax (海螺)",
+      "control_surface": {
+        "models": ["music-3.0", "music-cover", "music-1.5(Replicate 경유)"],
+        "api_params": {
+          "model": "string, required",
+          "prompt": "string, required — 스타일·무드·상황",
+          "lyrics": "string — ★가사 전용 칸 분리(커버 생성 10~1000자)",
+          "audio_setting": {"sample_rate": "44100", "bitrate": "256000", "format": "mp3"},
+          "audio_url / audio_base64": "커버용 레퍼런스 오디오",
+          "cover_feature_id": "전처리 산출 ID, 24시간 유효",
+          "output_format": "url",
+          "lyrics_optimizer": "bool",
+          "is_instrumental": "bool"
+        },
+        "★공식_섹션_태그_목록": {
+          "exists": true, "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/guides/music-generation",
+          "tags": ["[Intro]", "[Verse]", "[Chorus]", "[Pre-chorus]", "[Hook]", "[Bridge]", "[Outro]"],
+          "why_it_matters": "★공식 문서가 대괄호 태그를 예시로 공표. 우리 대장 D008·D026·D036(「Suno는 문법을 공표하지 않는다」)의 업계 관행 전제(P2)에 대한 반례 후보"
+        },
+        "music-1.5_Replicate층": {"lyrics": "최대 600자", "reference_music": "WAV/MP3/M4A ≤60MB, 5~30초 권장", "style_strength": "0.0~1.0 default 0.8", "languages": "영어·중국어", "evidence": "E1", "url": "https://replicate.com/minimax/music-1.5"}
+      }
+    },
+    {
+      "engine": "Udio",
+      "vendor": "Udio",
+      "control_surface": {
+        "structure_tags": {"exists": true, "evidence": "E2", "url": "https://help.udio.com/en/articles/11166249-level-up-your-creations-with-guidance-tags",
+          "note": "공식 헬프센터가 'guidance tags' 개념으로 [Scream]·[Chorus]·[Guitar Solo]를 안내. (parentheses)=백보컬. 태그는 자기 줄에.",
+          "★우리축_관련": "브라켓을 '지시'로 읽는다는 걸 공식이 인정 — D052⒝ 쪽 지지(단 문서층 E2, 렌더 실측 아님)"}
+      }
+    },
+    {
+      "engine": "ACE-Step (open)",
+      "vendor": "ACE Studio / StepFun",
+      "control_surface": {
+        "structure_tags": {"exists": true, "evidence": "E3/E4", "tags": ["[verse]", "[chorus]", "[bridge]", "[instrumental]", "[inst]"],
+          "★핵심": "가사 처리 파이프라인에서 구조 태그를 **제거한 뒤** 분석한다는 보고 — 즉 태그는 구조 조건이지 가창 텍스트가 아니다. 구현 소스 확인 필요(현재 E3/E4)",
+          "url": "https://github.com/ace-step/ACE-Step"}
+      }
+    }
+  ],
+  "★P3_중간판정_초안": {
+    "질문": "「대괄호 안은 지시로 읽고 안 부른다」는 엔진 조건부인가 일반인가",
+    "현재_자료": {
+      "지시로_읽음": ["Suno (우리 M1 전수 4,166건)", "Udio (E2 공식 헬프)", "ACE-Step (E3/E4 소스층)", "ElevenLabs = 대괄호는 섹션라벨·지시는 중괄호로 분리 (E1)"],
+      "불렀음": ["MiniMax Music 3.0 — 곡 중간 긴 브라켓 2건 recall 0.92/1.00 (M4, leomusic3 08-29, n=1)"]
+    },
+    "판정": "★아직 못 함. 문서층(E)과 렌더층(M)을 섞으면 안 된다. 지금 말할 수 있는 최대치는 「문서로 지시라고 밝힌 엔진이 다수이고, 렌더 실측으로 반대가 나온 엔진이 1종 있다」뿐."
+  }
+}

@@ -1,0 +1,1308 @@
+{
+  "cluster": "vocal_synth",
+  "engines": [
+    {
+      "engine": "ACE Studio 2.0",
+      "vendor": "Timedomain Inc.",
+      "status": "live",
+      "models": [
+        {
+          "name": "Verse25",
+          "released": null,
+          "notes": "ACE Studio 2.0의 현행 보컬 합성 모델. 공식 문서는 140개 이상의 AI voice와 영어·중국어·일본어·한국어·스페인어·이탈리아어·프랑스어·포르투갈어 8개 언어를 명시한다.",
+          "url": "https://docs.acestudio.ai/getting-started"
+        },
+        {
+          "name": "Verse24 and earlier",
+          "released": null,
+          "notes": "구형 모델군. Verse25의 Vocal Controls 대신 Air, Falsetto, Tension, Energy, Formant 기반 Emotion Controls를 사용한다.",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls/emotion-controls"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://acestudio.ai/pricing/?cl=general",
+          "price_note": "데스크톱 앱. 지역에 따라 rent-to-own, 구독 또는 ACE Studio 2.0 Lifetime License가 제공된다.",
+          "commercial_use": "사용자 출력은 원칙적으로 상업·비상업 이용이 가능하다. 대부분의 사전 제작 음성은 royalty-free지만 일부 제3자 음성은 별도 라이선스가 필요하다: https://docs.acestudio.ai/appendix/license-and-copyright"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": false,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals",
+          "notes": "보컬 합성의 필수 입력은 AI voice가 배치된 트랙의 MIDI notes와 lyrics이며, 자연어 음악 프롬프트가 아니다. 따라서 프롬프트 문자 상한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "한 음표당 한 음절. '-'는 앞 음절을 여러 음표로 늘이는 melisma를 뜻한다. 라인 단위 입력 후 음절별로 음표에 배분하며, 음소를 직접 편집할 수 있다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/editng-lyrics",
+          "notes": "가사는 프롬프트와 분리된 피아노롤 lyrics 영역에 입력한다. 각 note에는 language 속성이 있으며 한국어가 지원된다: https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/singing-languages"
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/editng-lyrics",
+          "notes": "[Verse], [Chorus] 같은 섹션 지시 문법은 공식 lyrics 문법에 없다. 대괄호 텍스트가 실제로 어떻게 처리되는지는 공식 문서에서 확인되지 않아 unknown."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "MIDI note의 위치·길이와 프로젝트 tempo로 가창 시간을 정한다. 곡 전체를 초 단위 목표 길이로 생성하는 파라미터는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals",
+          "notes": "MIDI/MusicXML을 가져오거나 피아노롤에서 note를 작성한다: https://docs.acestudio.ai/import"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "아카펠라 오디오를 Vocal to MIDI로 변환해 notes, lyrics, 원래 pitch curve를 추출할 수 있다. 보컬 샘플 업로드를 통한 Vocal Synth Cloning도 제공한다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-tools/vocal-to-midi-and-lyrics",
+          "notes": "Vocal to MIDI V2는 한국어를 포함한 추가 언어를 지원한다. 음성 복제는 업로드 샘플에서 사용자 전용 모델을 학습한다: https://docs.acestudio.ai/docs/product-wiki-ko/voice-cloning"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "MIDI+가사 합성 control surface에는 negative prompt가 없다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals",
+          "notes": ""
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "보컬 합성용 사용자 seed 파라미터는 공식 control 문서에 없다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls",
+          "notes": ""
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "Stem Splitter로 혼합 음원을 Vocal/Instrumental 또는 더 많은 stem으로 분리할 수 있다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/guides/for-newcomers/use-cases/edit-vocal-from-a-mixed-track",
+          "notes": "일반 보컬 합성 트랙도 오디오로 export할 수 있다: https://docs.acestudio.ai/guides/for-newcomers/beginner-tutorial/make-a-vocal-in-1-min"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "생성 후 notes, lyrics, phonemes, consonant timing, pitch 및 vocal-control envelope를 구간별로 다시 편집한다. 자연어 기반 inpainting/continuation은 아니다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/editng-lyrics",
+          "notes": "기존 혼합 음원도 stem 분리와 Vocal to MIDI 후 편집할 수 있다: https://docs.acestudio.ai/guides/for-newcomers/use-cases/edit-vocal-from-a-mixed-track"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "Vocal Synth 트랙은 본질적으로 보컬 출력이며 Suno식 instrumental-only 토글은 없다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/project/arrangement-in-canvas/tracks/midi-tracks",
+          "notes": "AI Instrument는 별도 Instrument Track으로 로드한다."
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "Verse25+: Power, Soft, Breathy, Chest; 지원 가수별 Rap, Opera, Chinese Opera. Verse24 이하: Air, Falsetto, Tension, Energy, Formant. 별도 Breath 이벤트의 삽입 위치와 길이도 조절한다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls",
+          "notes": "AI가 melody, lyrics, voice style 문맥에서 기본 표현을 추론하며 사용자가 envelope와 global offset으로 덮어쓴다. 구형 파라미터 근거: https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls/emotion-controls ; Breath 근거: https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/breath"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "ACE Bridge 2가 DAW와 audio/MIDI를 동기화하지만, 재생 중 합성 표현 파라미터를 실시간 조작할 수 있는지는 공식 문서에서 확인되지 않았다."
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls",
+        "notes": "장르·구조 태그 어휘가 아니라 명명된 파라미터와 singer별 special control을 문서화한다. 공개 보컬 합성 REST API/CLI 파라미터 문서는 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "한 note는 한 syllable만 포함하며 '-' note는 앞 syllable을 연장한다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/editng-lyrics"
+        },
+        {
+          "claim": "Verse25에서 수동 envelope가 없으면 AI가 melody, lyrics와 선택 voice의 singing style을 바탕으로 표현을 자동 추론한다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls"
+        },
+        {
+          "claim": "Singer Track은 단성으로 합성되며 polyphonic MIDI는 sustain으로 변환하거나 여러 melody track으로 분할해 가져온다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/import"
+        },
+        {
+          "claim": "Choir Mode로 여러 AI voice를 사용하는 Choir Track을 만들 수 있다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/project/arrangement-in-canvas/tracks/midi-tracks"
+        },
+        {
+          "claim": "ACE Bridge 2는 VST3/AU/AAX instrument plugin이며 DAW와 ACE Studio 사이의 audio 및 MIDI 동기화를 제공한다.",
+          "evidence": "E1",
+          "url": "https://docs.acestudio.ai/daw-integration"
+        }
+      ],
+      "gaps": [
+        "lyrics 또는 phoneme 필드의 최대 문자 수는 unknown.",
+        "대괄호 문자열의 실제 발성 여부는 unknown.",
+        "공개 보컬 합성 API·SDK·CLI 존재 여부와 전체 호출 파라미터는 공식 문서에서 확인되지 않았다.",
+        "동일 입력의 bit-level 결정성과 사용자 seed는 unknown."
+      ]
+    },
+    {
+      "engine": "Synthesizer V Studio 2 Pro",
+      "vendor": "Dreamtonics",
+      "status": "live",
+      "models": [
+        {
+          "name": "Synthesizer V Studio 2 Pro",
+          "released": "2025-03-21",
+          "notes": "Version 2 엔진과 Dreamtonics version 2 voices의 공식 출시일.",
+          "url": "https://dreamtonics.com/announcing-synthesizer-v-studio-2-pro/"
+        },
+        {
+          "name": "Synthesizer V Studio Pro 1.x",
+          "released": null,
+          "notes": "판매는 중단됐지만 기존 영구 라이선스는 계속 유효하고 version 2가 version 1 project를 import한다.",
+          "url": "https://dreamtonics.com/announcing-synthesizer-v-studio-2-pro/"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://www.dreamtonics.com/synthesizerv/",
+          "price_note": "Standalone 및 VST3/AU/AAX/ARA plugin. Studio 2 Pro는 1회 구매형 영구 라이선스다.",
+          "commercial_use": "Dreamtonics 제작 voice는 상업·비상업 작품 배포가 허용되지만 partner voice는 각 라이선스를 확인해야 한다: https://dreamtonics.com/terms/"
+        },
+        {
+          "channel": "sdk",
+          "url": "https://resource.dreamtonics.com/scripting/",
+          "price_note": "Studio 2 Pro 내부에서 JavaScript ECMAScript 5.1 또는 Lua 5.4 script를 실행한다.",
+          "commercial_use": "에디터 확장용 객체지향 scripting API이며 원격/서버 합성 API가 아니다."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": false,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://www.dreamtonics.com/synthesizerv/",
+          "notes": "공식 workflow는 notes와 lyrics 입력, voice 선택, expression 조정이다. 자연어 곡 프롬프트 및 그 문자 제한은 없다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "각 MIDI note에 lyrics를 지정하고 필요하면 phonemes를 직접 편집한다. Note scripting 객체는 getLyrics/setLyrics와 getPhonemes/setPhonemes를 제공한다.",
+          "evidence": "E1",
+          "url": "https://resource.dreamtonics.com/scripting/",
+          "notes": "Version 2는 dedicated Phoneme Timing Panel과 pronunciation retake를 제공한다: https://www.dreamtonics.com/synthesizerv/"
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://www.dreamtonics.com/synthesizerv/",
+          "notes": "[Verse], [Chorus] 같은 섹션 태그 문법은 공식 workflow 또는 scripting lyric API에 없다. 대괄호 문자열의 렌더링 결과는 unknown."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "Note 객체의 onset과 duration을 수치로 지정하며 setTimeRange도 제공한다. 음소 timing은 전용 패널에서 조절한다.",
+          "evidence": "E1",
+          "url": "https://resource.dreamtonics.com/scripting/",
+          "notes": "곡 전체를 목표 초 수로 자동 생성하는 파라미터는 아니다."
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "Voice-to-MIDI가 solo vocal audio에서 pitch와 lyrics를 추출해 notes로 변환한다.",
+          "evidence": "E1",
+          "url": "https://sv1.docs.dreamtonics.com/en/synthv/basic-usage/quickstart",
+          "notes": "Version 2의 reference audio conditioning 또는 timbre-cloning 기능과 동일한 기능은 아니다."
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "MIDI+lyrics 합성 인터페이스에는 negative prompt가 없다.",
+          "evidence": "E1",
+          "url": "https://www.dreamtonics.com/synthesizerv/",
+          "notes": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "AI Retakes에 take 선택 개념은 있으나 이를 결정적 random seed로 규정한 공식 문서는 확인되지 않았다.",
+          "evidence": "",
+          "url": "",
+          "notes": "Version 2는 Pitch, Timbre, Timing, Pronunciation 차원의 AI Retakes를 제공한다: https://www.dreamtonics.com/synthesizerv/"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "독립 track 렌더링은 가능하지만 전곡 stem separation 기능의 공식 문서는 확인되지 않았다."
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "note/group 추가·삭제·수정, phoneme timing/strength, pronunciation, pitch control point/curve, vocal mode와 automation을 구간 단위로 편집한다. 자연어 inpainting은 아니다.",
+          "evidence": "E1",
+          "url": "https://resource.dreamtonics.com/scripting/",
+          "notes": "Version 2.1.1 scripting은 retakes, pitch curves, vocal modes, consonant timing/activity까지 접근한다: https://www.dreamtonics.com/synthesizer-v-studio-2-1-1-final-update/"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "가창 신시사이저이므로 instrumental-only 생성 토글은 없다.",
+          "evidence": "E1",
+          "url": "https://www.dreamtonics.com/synthesizerv/",
+          "notes": ""
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "Pitch Deviation/pitch control points, Vibrato Envelope, Loudness, Tension, Breathiness, Voicing, Gender, Tone Shift, Mouth Opening, phoneme Duration/Strength, singer별 Vocal Modes와 AI Retakes를 제공한다.",
+          "evidence": "E1",
+          "url": "https://www.dreamtonics.com/synthesizerv/",
+          "notes": "Version 2는 영어·일본어·한국어·중국어·광둥어·스페인어 cross-lingual singing을 지원한다. scripting automation 명칭·범위는 https://resource.dreamtonics.com/scripting/Automation.html"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "Scripting API가 playback을 제어할 수 있으나 재생 중 렌더 파라미터 steering의 보장 여부는 공식 문서에서 확인되지 않았다."
+        }
+      },
+      "api_params": [
+        {
+          "name": "pitchDelta",
+          "type": "Automation<number>; -1200..1200 cents",
+          "required": false,
+          "doc_url": "https://resource.dreamtonics.com/scripting/Automation.html",
+          "notes": "Pitch Deviation"
+        },
+        {
+          "name": "vibratoEnv",
+          "type": "Automation<number>; 0..2",
+          "required": false,
+          "doc_url": "https://resource.dreamtonics.com/scripting/Automation.html",
+          "notes": "Vibrato Envelope"
+        },
+        {
+          "name": "loudness",
+          "type": "Automation<number>; -48..12 dB",
+          "required": false,
+          "doc_url": "https://resource.dreamtonics.com/scripting/Automation.html",
+          "notes": "Loudness"
+        },
+        {
+          "name": "tension",
+          "type": "Automation<number>; -1..1",
+          "required": false,
+          "doc_url": "https://resource.dreamtonics.com/scripting/Automation.html",
+          "notes": "Tension"
+        },
+        {
+          "name": "breathiness",
+          "type": "Automation<number>; -1..1",
+          "required": false,
+          "doc_url": "https://resource.dreamtonics.com/scripting/Automation.html",
+          "notes": "Breathiness"
+        },
+        {
+          "name": "voicing",
+          "type": "Automation<number>; 0..1",
+          "required": false,
+          "doc_url": "https://resource.dreamtonics.com/scripting/Automation.html",
+          "notes": "Voicing"
+        },
+        {
+          "name": "gender",
+          "type": "Automation<number>; -1..1",
+          "required": false,
+          "doc_url": "https://resource.dreamtonics.com/scripting/Automation.html",
+          "notes": "Gender"
+        },
+        {
+          "name": "vocalMode_<Name>",
+          "type": "Automation<number>; 0..150",
+          "required": false,
+          "doc_url": "https://resource.dreamtonics.com/scripting/Automation.html",
+          "notes": "실제 suffix는 선택 voice의 Vocal Mode 이름이다."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://www.dreamtonics.com/synthesizerv/",
+        "notes": "공식 장르/구조 태그 목록은 없고 voice별 Vocal Mode 이름과 수치 automation을 사용한다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Version 2 scripting API는 notes, groups, parameters, tracks를 읽고 추가·편집·삭제할 수 있다.",
+          "evidence": "E1",
+          "url": "https://resource.dreamtonics.com/scripting/"
+        },
+        {
+          "claim": "Version 2는 Korean cross-lingual synthesis를 도입했다.",
+          "evidence": "E2",
+          "url": "https://dreamtonics.com/announcing-synthesizer-v-studio-2-pro/"
+        },
+        {
+          "claim": "Version 2는 Manual Mode를 제거하고 Smart Pitch Controls로 대체했다.",
+          "evidence": "E2",
+          "url": "https://www.dreamtonics.com/synthesizer-v-studio-2-pro-upgrade-migration-guide/"
+        },
+        {
+          "claim": "Standalone과 VST3/AU/AAX/ARA plugin으로 동작한다.",
+          "evidence": "E1",
+          "url": "https://www.dreamtonics.com/synthesizerv/"
+        }
+      ],
+      "gaps": [
+        "lyrics 필드의 문자 수 상한은 unknown.",
+        "대괄호 텍스트가 발성되는지 여부는 unknown.",
+        "공개 원격 합성 REST API 또는 CLI는 확인되지 않았다. 열거한 api_params는 내부 scripting automation typeName이다.",
+        "AI Retake 번호가 seed 또는 결정성을 보장하는지는 unknown."
+      ]
+    },
+    {
+      "engine": "VOCALOID6",
+      "vendor": "Yamaha Corporation",
+      "status": "live",
+      "models": [
+        {
+          "name": "VOCALOID6 / VOCALOID:AI",
+          "released": "2022-10-13",
+          "notes": "Yamaha가 공식 출시한 VOCALOID6 Editor와 VOCALOID:AI 합성 엔진.",
+          "url": "https://www.vocaloid.com/en/news/news_001/"
+        },
+        {
+          "name": "VOCALOID3/4/5 compatibility engine",
+          "released": null,
+          "notes": "VOCALOID6는 VOCALOID3 이후의 legacy voicebank를 VOCALOID track에서 지원한다.",
+          "url": "https://www.vocaloid.com/en/learn/ln6105/"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://www.vocaloid.com/en/vocaloid6/",
+          "price_note": "다운로드형 VOCALOID6 Editor. VOCALOID6 Editor Lite는 voicebank 구매 시 제공된다.",
+          "commercial_use": "Yamaha 제공 VOCALOID6 voicebank로 만든 독창적 곡은 원칙적으로 별도 허가 없이 판매할 수 있으나 각 voicebank EULA와 제3자 조건을 확인해야 한다: https://www.vocaloid.com/en/support/faq/703"
+        },
+        {
+          "channel": "sdk",
+          "url": "https://www.vocaloid.com/en/vocaloid6/specs/",
+          "price_note": "Standalone, VST3, AU 및 ARA2 연동. 공개 합성 SDK가 아니라 plugin 형태의 제품 접근이다.",
+          "commercial_use": "voicebank별 EULA 적용."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": false,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/vocaloid6/",
+          "notes": "melody와 lyrics를 입력해 합성한다. 자연어 음악 프롬프트와 문자 상한은 없다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "각 note에 lyric을 입력하며 phonetic symbol 후보를 선택하거나 lyric/phoneme을 별도로 편집할 수 있다. 일본어·영어·중국어를 한 voicebank에서 혼합할 수 있다.",
+          "evidence": "E1",
+          "url": "https://rsc-net.vocaloid.com/assets/pdf_files/bb/VOCALOID_Reference_Manual_ENG.pdf",
+          "notes": "공식 사양의 VOCALOID:AI 언어는 Japanese, English, Chinese이며 한국어 지원은 명시되지 않았다: https://www.vocaloid.com/en/vocaloid6/specs/"
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://rsc-net.vocaloid.com/assets/pdf_files/bb/VOCALOID_Reference_Manual_ENG.pdf",
+          "notes": "[Verse], [Chorus] 섹션 문법은 공식 lyric 입력 문서에 없다. 대괄호 텍스트의 실제 phoneme 변환 결과는 unknown."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "note 길이, tempo, time signature와 measure 위치로 지정한다. 최대 999 measures, 최소 해상도는 quarter note의 1/480이다.",
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/vocaloid6/specs/",
+          "notes": "목표 초 단위 자동 생성 파라미터는 아니다."
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "VOCALO CHANGER에서 사용자의 sung input을 VOCALOID:AI voicebank로 변환하고 원래 singing style을 반영한다. Editor는 WAV audio track도 읽는다.",
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/vocaloid6/",
+          "notes": "일반적인 reference-audio style conditioning과 동일하다고 문서화되지는 않았다."
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "negative prompt 입력 채널이 없다.",
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/vocaloid6/",
+          "notes": ""
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "사용자 seed 파라미터는 공식 reference manual의 control parameter에 없다.",
+          "evidence": "E1",
+          "url": "https://rsc-net.vocaloid.com/assets/pdf_files/bb/VOCALOID_Reference_Manual_ENG.pdf",
+          "notes": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "WAV export와 최대 32개 VOCALOID/audio track은 문서화됐지만 전곡 stem separation 기능은 확인되지 않았다."
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "notes, lyric/phoneme, phoneme timing, pitch, vibrato, expression 및 연속 control-parameter curve를 편집한다. 자연어 continuation/inpainting은 아니다.",
+          "evidence": "E1",
+          "url": "https://rsc-net.vocaloid.com/assets/pdf_files/bb/VOCALOID_Reference_Manual_ENG.pdf",
+          "notes": ""
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "보컬 합성 엔진으로 instrumental-only 생성 토글은 없다.",
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/vocaloid6/",
+          "notes": ""
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "VOCALOID:AI track: Dynamics, Pitch Bend, Pitch Bend Sensitivity, Air, Character, Expression. Legacy VOCALOID track에는 Velocity, Exciter, Growl, Cross Synthesis, Breathiness, Mouth, Brightness, Clearness, Portamento Timing 등이 추가된다. note-level pitch, vibrato, expression, phoneme timing과 Accent도 편집한다.",
+          "evidence": "E1",
+          "url": "https://rsc-net.vocaloid.com/assets/pdf_files/bb/VOCALOID_Reference_Manual_ENG.pdf",
+          "notes": "BREATH frequency와 EXHALATION volume, ROBOT VOICE HARD/NORMAL/SOFT, SINGING SKILL의 SKILL/AMOUNT 및 100개 이상의 STYLE PRESET도 제공한다."
+        },
+        "realtime_steering": {
+          "exists": true,
+          "how": "external MIDI device real-time input을 지원한다. 번들 VX-β는 재생 중 voice parameter를 실시간 변경할 수 있다.",
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/vocaloid6/vxbeta/",
+          "notes": "VOCALOID6 본체의 MIDI 실시간 입력 근거: https://www.vocaloid.com/en/vocaloid6/specs/"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": null,
+        "url": "https://rsc-net.vocaloid.com/assets/pdf_files/bb/VOCALOID_Reference_Manual_ENG.pdf",
+        "notes": "100개 이상의 Style Preset과 preset 검색용 phrase/style tags는 문서화되지만, 고정된 전체 공식 장르·태그 목록을 공개한 문서는 확인되지 않아 unknown."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "VOCALOID:AI track에서 직접 편집 가능한 연속 control parameter는 Dynamics, Pitch Bend, Pitch Bend Sensitivity, Air, Character, Expression이다.",
+          "evidence": "E1",
+          "url": "https://rsc-net.vocaloid.com/assets/pdf_files/bb/VOCALOID_Reference_Manual_ENG.pdf"
+        },
+        {
+          "claim": "AIR는 VOCALOID6.7에서 -100..+100으로 확장됐고 +100은 완전한 무성 whisper를 만든다.",
+          "evidence": "E2",
+          "url": "https://www.vocaloid.com/en/learn/ln6216/"
+        },
+        {
+          "claim": "자동 breath insertion과 breath 빈도 및 EXHALATION volume 조절이 가능하다.",
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/creator/tryvocaloid_006/"
+        },
+        {
+          "claim": "VOCALOID6는 Standalone, VST3, AU 및 ARA2 방식으로 DAW와 연동한다.",
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/vocaloid6/specs/"
+        },
+        {
+          "claim": "VOCALOID6 Editor의 최대 track 수는 VOCALOID와 audio track 합계 32개다.",
+          "evidence": "E1",
+          "url": "https://www.vocaloid.com/en/vocaloid6/specs/"
+        }
+      ],
+      "gaps": [
+        "lyrics 문자 수 상한은 unknown.",
+        "대괄호 텍스트가 발성되는지 여부는 unknown.",
+        "일반 사용자를 위한 공개 합성 API/CLI는 확인되지 않았다.",
+        "STYLE PRESET phrase tags 전체 목록의 공개 URL은 unknown."
+      ]
+    },
+    {
+      "engine": "CeVIO AI Song",
+      "vendor": "CeVIO Project",
+      "status": "live",
+      "models": [
+        {
+          "name": "CeVIO AI",
+          "released": "2021-01",
+          "notes": "CeVIO 공식 연혁에 명시된 출시 월.",
+          "url": "https://cevio.jp/about_cevio/"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://cevio.jp/guide/cevio_ai/",
+          "price_note": "Windows 데스크톱 editor와 별도 Song Voice 라이선스 방식.",
+          "commercial_use": "비상업 취미·2차 창작은 무료 범위가 있으나 상업 이용은 각 캐릭터·음성 지침을 확인해야 한다: https://cevio.jp/guide/cevio_ai/faq/"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": false,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/",
+          "notes": "피아노롤 notes와 lyrics를 입력하는 song editor이며 자연어 음악 프롬프트는 없다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "note별 또는 일괄 lyrics 입력. 일본어 voice에서는 전각 hiragana/katakana 및 반각 alphabet을 입력할 수 있고 한 note에 여러 문자를 넣을 수 있다. phoneme mode는 공백 또는 ','로 음소를 구분하고 '|'로 syllable 경계를 지정한다(공식 예: 'y,e,s|a,i'). '※'는 falsetto 지정 기호다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_04/",
+          "notes": "note property에서 직접 입력한 phoneme이 lyric-derived phoneme보다 우선한다: https://cevio.jp/guide/cevio_ai/songtrack/song_03/"
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_04/",
+          "notes": "[Verse], [Chorus] 구조 문법은 없다. phoneme palette에 없는 문자는 lyric error가 되고 note가 발성되지 않지만, 대괄호 문자열 전체의 정확한 처리 결과는 unknown."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "note property의 Length를 tick으로 직접 지정한다. quarter note는 960 ticks이며 note 위치는 measure, beat, tick으로 표시·편집한다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_03/",
+          "notes": "tempo와 time signature도 수치 편집한다: https://cevio.jp/guide/cevio_ai/songtrack/songtrack/"
+        },
+        "reference_audio": {
+          "exists": false,
+          "how": "외부 audio track을 배치할 수 있지만 이를 song voice의 style·timbre reference로 conditioning하는 기능은 공식 song guide에 없다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/",
+          "notes": ""
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "negative prompt가 없다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/",
+          "notes": ""
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "사용자 seed 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_07/",
+          "notes": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "다중 song track은 지원하지만 stem separation 기능은 공식 문서에서 확인되지 않았다."
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "notes, lyrics, phonemes, phoneme-state timing, volume, pitch, vibrato AMP/FRQ와 voice-quality curve를 구간별로 편집한다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_07/",
+          "notes": "생성형 audio inpainting/continuation은 아니다."
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "Song Track은 가창 합성 트랙이며 instrumental-only 생성 토글은 없다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/",
+          "notes": ""
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "TMG/timing, VOL/volume, PIT/pitch, vibrato AMP·FRQ, ALP/voice quality, HUS/husky; track sliders로 Voice Quality, Husky, Tune, Pitch 및 voice별 Emotion/Rap을 조절한다. note attributes는 Accent, Staccato, Breath, Slur Start/End, Falsetto를 포함한다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_07/",
+          "notes": "Voice Quality/Husky/Tune/Pitch/Emotion/Rap 근거: https://cevio.jp/guide/cevio_ai/songtrack/song_06/ ; note attributes 근거: https://cevio.jp/guide/cevio_ai/songtrack/song_03/"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "공식 외부연동 COM/.NET/SAPI 인터페이스는 Talk 기능용이며 Song Starter 등 talk 기능이 없는 제품에서는 사용할 수 없다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/interface/",
+          "notes": "Song 합성 파라미터를 재생 중 외부에서 조작하는 공식 API는 확인되지 않았다."
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_04/",
+        "notes": "구조·장르 tag list는 없고 phoneme palette와 특수기호 문법을 제공한다. COM/.NET API의 Volume, Speed, Tone, ToneScale, Alpha, Components 등은 Talk API이며 Song API 파라미터가 아니다: https://cevio.jp/guide/cevio_ai/interface/com/"
+      },
+      "observed_behaviors": [
+        {
+          "claim": "직접 입력한 phoneme은 lyric에서 계산된 phoneme보다 우선한다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_03/"
+        },
+        {
+          "claim": "phoneme palette에 없는 문자가 포함되면 lyric error가 되고 해당 note는 발성되지 않는다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_04/"
+        },
+        {
+          "claim": "score 전체에서 singing style을 다시 계산하므로 note, pitch, lyrics, tempo 등의 변경이 다른 위치의 timing과 pitch parameter에도 영향을 줄 수 있다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/song_07/"
+        },
+        {
+          "claim": "MIDI와 MusicXML을 import/export할 수 있지만 timing과 pitch 조정값은 해당 형식으로 export되지 않는다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/songtrack/fileimport/"
+        },
+        {
+          "claim": "공식 문서에 한국어 Song Voice 또는 한국어 singing 지원은 명시되지 않았다.",
+          "evidence": "E1",
+          "url": "https://cevio.jp/guide/cevio_ai/"
+        }
+      ],
+      "gaps": [
+        "lyrics 문자 수 상한은 unknown.",
+        "대괄호 텍스트가 발성되는지 여부는 unknown.",
+        "공식 Song synthesis API/CLI는 확인되지 않았다.",
+        "한국어 가창 지원은 unknown.",
+        "상업 이용 조건은 선택한 voice와 character별 확인이 필요하다."
+      ]
+    },
+    {
+      "engine": "UTAU / UTAU-Synth",
+      "vendor": "Ameya/Ayame",
+      "status": "live",
+      "models": [
+        {
+          "name": "UTAU 0.4.19",
+          "released": "2024-05-23",
+          "notes": "Windows판 보안 취약점 업데이트로 공개된 현행 공식 배포판.",
+          "url": "https://utau-synth.com/"
+        },
+        {
+          "name": "UTAU-Synth 1.0.0b21",
+          "released": "2023-12-15",
+          "notes": "공식 macOS 이식판. 공식 사이트는 현재 trial license만 제공한다고 명시한다.",
+          "url": "https://utau-synth.com/download.html"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://utau-synth.com/",
+          "price_note": "Windows UTAU는 freeware/shareware로 배포되고 UTAU-Synth는 trial-license 방식이다.",
+          "commercial_use": "합성 출력의 상업 이용 조건은 선택한 voicebank의 개별 이용규약에 좌우된다. 통일된 전체 voicebank 상업 라이선스는 unknown."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": false,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://utau-synth.com/",
+          "notes": "sampled voice library에서 melody notes와 lyrics/alias를 조립하는 합성기다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "각 note의 lyric이 voicebank sample alias를 선택한다. 구체 문법은 voicebank 방식에 따라 CV, VCV, CVVC, VCCV 등으로 달라진다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/ushelp/",
+          "notes": "oto.ini의 Alias, Offset, Consonant, Cutoff, Pre-Utterance, Overlap이 sample 연결을 정의한다: https://images1.wikia.nocookie.net/utau/images/6/67/How_To_Create_your_own_UTAU_voice_bank_rev0.40.pdf"
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://utau-synth.com/ushelp/",
+          "notes": "[Verse], [Chorus] 같은 구조 태그 문법은 없다. 대괄호 문자열의 처리는 선택 voicebank alias와 plugin에 따라 달라질 수 있어 통일된 답은 unknown."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "note length, tempo와 time signature를 직접 편집하고 MIDI로 import/export한다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/ushelp/",
+          "notes": "곡 전체 목표 초 수를 입력하는 생성 파라미터는 아니다."
+        },
+        "reference_audio": {
+          "exists": false,
+          "how": "voicebank 자체는 WAV sample 모음이지만 기존 노래를 performance reference로 conditioning하는 기능은 아니다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/",
+          "notes": ""
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "negative prompt가 없다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/",
+          "notes": ""
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "사용자 random seed 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/ushelp/",
+          "notes": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "WAV 저장은 문서화되지만 stem separation 기능은 확인되지 않았다."
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "notes, lyrics/aliases, pitch curve, vibrato, envelope, volume, prefix/suffix와 note property를 수정한다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/ushelp/",
+          "notes": "생성형 inpainting 또는 continuation은 아니다."
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "가창 sample 합성기이며 instrumental generation 토글은 없다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/",
+          "notes": ""
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "Pitch curve, Vibrato, Envelope, Volume, Velocity/Consonant timing, Modulation, Pre-Utterance, Overlap, Prefix/Suffix와 resampler-specific flags를 사용한다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/ushelp/",
+          "notes": "공식 voicebank 제작 가이드는 note property의 Velocity, Modulation, Pre-Utterance, Overlap과 Edit Pitch를 보여준다: https://images1.wikia.nocookie.net/utau/images/6/67/How_To_Create_your_own_UTAU_voice_bank_rev0.40.pdf"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "공식 VST/AU 또는 재생 중 parameter steering 인터페이스는 확인되지 않았다."
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://utau-synth.com/ushelp/",
+        "notes": "통일된 장르·구조 tag list는 없다. 발음 어휘와 alias는 각 voicebank의 녹음 방식 및 oto.ini에 의존한다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "UTAU는 sampled voice library로 singing을 조립하고 사용자가 voice library를 직접 만들 수 있다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/"
+        },
+        {
+          "claim": "UTAU-Synth 공식 help는 note pitch curve, vibrato, envelope, Volume, Prefix/Suffix, MIDI/VSQ import/export를 편집 항목으로 문서화한다.",
+          "evidence": "E1",
+          "url": "https://utau-synth.com/ushelp/"
+        },
+        {
+          "claim": "oto.ini 값은 project에서 기본 sample timing으로 사용되고 note property에서 일부 값을 override할 수 있다.",
+          "evidence": "E1",
+          "url": "https://images1.wikia.nocookie.net/utau/images/6/67/How_To_Create_your_own_UTAU_voice_bank_rev0.40.pdf"
+        },
+        {
+          "claim": "한국어 지원은 엔진 고정 언어가 아니라 한국어 sample alias와 해당 voicebank/plugin 구성 여부에 달려 있다.",
+          "evidence": "E4",
+          "url": "https://www.reddit.com/r/utau/comments/1d0go7h/mysts_comprehensive_guide_to_utau_faqs/"
+        }
+      ],
+      "gaps": [
+        "원본 Windows UTAU의 완전한 최신 영어 reference manual은 확인되지 않았다.",
+        "lyrics/alias 문자 수 상한은 unknown.",
+        "대괄호 처리 결과는 voicebank와 plugin별로 달라질 수 있어 unknown.",
+        "공개 API·SDK·CLI는 확인되지 않았다.",
+        "상업 이용은 voicebank별 약관을 별도로 조사해야 한다."
+      ]
+    },
+    {
+      "engine": "OpenUtau",
+      "vendor": "OpenUtau contributors",
+      "status": "beta",
+      "models": [
+        {
+          "name": "OpenUtau 0.1.x",
+          "released": null,
+          "notes": "MIT 라이선스의 open-source UTAU successor. 공식 release page에는 beta/pre-release 빌드가 지속적으로 게시된다.",
+          "url": "https://github.com/openutau/OpenUtau/releases"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://github.com/openutau/OpenUtau",
+          "price_note": "무료 오픈소스 데스크톱 앱. Windows, macOS, Linux 지원.",
+          "commercial_use": "OpenUtau 코드 자체는 MIT 라이선스지만 합성 출력은 사용하는 voicebank/model의 별도 약관을 따라야 한다."
+        },
+        {
+          "channel": "sdk",
+          "url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md",
+          "price_note": "Phonemizer와 editing macro plugin API를 제공한다.",
+          "commercial_use": "plugin 및 연결된 voicebank/model의 라이선스를 별도 확인해야 한다."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": false,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau",
+          "notes": "feature-rich MIDI editor에서 notes와 lyrics를 작성하는 방식이다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "note lyric을 phonemizer가 voicebank용 phoneme/diphone으로 변환한다. 공식 plugin 문법은 'read[r iy d]' 또는 '[r iy d]'를 phonetic hint로 지원하고 extender note는 '+', '+n'을 쓴다.",
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md",
+          "notes": "CV, VCV, CVVC, Arpasing 등 여러 체계와 English, Japanese, Chinese, Korean, Russian 등을 위한 phonemizer가 포함된다: https://github.com/openutau/OpenUtau"
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [
+            "read[r iy d]",
+            "[r iy d]",
+            "+",
+            "+n"
+          ],
+          "tags_are_sung": {
+            "answer": "no",
+            "evidence": "E1",
+            "url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md",
+          "notes": "대괄호는 Verse/Chorus 구조 지시가 아니라 phonetic hint다. '[r iy d]'는 literal bracket text를 부르는 것이 아니라 지정 phoneme을 phonemizer에 전달한다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "USTX note의 position과 duration을 MIDI tick으로 지정한다. 공식 USTX 문서에서 quarter note는 480 ticks다.",
+          "evidence": "E1",
+          "url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format",
+          "notes": "tempo는 BPM, time signature는 bar position과 numerator/denominator로 저장한다."
+        },
+        "reference_audio": {
+          "exists": false,
+          "how": "USTX wave_parts에 외부 audio를 배치할 수 있지만 보컬 모델 conditioning용 reference audio는 아니다.",
+          "evidence": "E1",
+          "url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format",
+          "notes": ""
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "negative prompt가 없다.",
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau",
+          "notes": ""
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "core USTX control surface에는 사용자 seed가 없다.",
+          "evidence": "E1",
+          "url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format",
+          "notes": "연결하는 ENUNU/DiffSinger 등 외부 renderer의 결정성은 별도 문제다."
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "모든 track을 별도 WAV 파일로 export하거나 하나의 WAV로 mixdown할 수 있다.",
+          "evidence": "E1",
+          "url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/Getting-Started",
+          "notes": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "notes, lyrics, phonetic hints, phoneme name/offset, pitch points, vibrato와 expression curves를 수정한다.",
+          "evidence": "E1",
+          "url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format",
+          "notes": "생성형 audio inpainting/continuation은 아니다."
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "가창 합성 editor로 instrumental generation 토글은 없다.",
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau",
+          "notes": "공식 README는 최소 mixing만 지원하며 DAW를 대체하지 않는다고 명시한다."
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "core expressions와 renderer별 expressions를 사용한다. USTX는 DYN/dynamics curve, pitch curve, note vibrato(depth, period, fade-in/out, shift, drift, vol_link), phoneme expression과 phoneme override를 저장한다. OpenUtau는 legacy UTAU flags 대신 Expressions를 사용한다.",
+          "evidence": "E1",
+          "url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format",
+          "notes": "구체적으로 확인되는 expression 식별자는 dyn, pitd, clr, eng, vel, vol, atk, dec, gen, bre이며 renderer/voicebank에 따라 추가·변경될 수 있다: https://github.com/openutau/OpenUtau/issues/2164"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "실시간 phonetic editing과 pre-render preview는 제공하지만 DAW plugin에서 재생 중 합성 파라미터를 steering하는 공식 기능은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau",
+          "notes": ""
+        }
+      },
+      "api_params": [
+        {
+          "name": "lyric",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/Phonemizer.cs",
+          "notes": "note lyric 중 [] 밖의 부분."
+        },
+        {
+          "name": "phoneticHint",
+          "type": "string|null",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/Phonemizer.cs",
+          "notes": "[] 안의 직접 phoneme hint."
+        },
+        {
+          "name": "tone",
+          "type": "int",
+          "required": true,
+          "doc_url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/Phonemizer.cs",
+          "notes": "MIDI tone."
+        },
+        {
+          "name": "position",
+          "type": "int",
+          "required": true,
+          "doc_url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/Phonemizer.cs",
+          "notes": "note position."
+        },
+        {
+          "name": "duration",
+          "type": "int",
+          "required": true,
+          "doc_url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/Phonemizer.cs",
+          "notes": "note duration."
+        },
+        {
+          "name": "phonemeAttributes",
+          "type": "PhonemeAttributes[]",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/Phonemizer.cs",
+          "notes": "phoneme별 attribute."
+        },
+        {
+          "name": "dyn",
+          "type": "Curve expression",
+          "required": false,
+          "doc_url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format",
+          "notes": "Dynamics. USTX 공식 예시는 -240..120, default 0."
+        },
+        {
+          "name": "pitd",
+          "type": "Curve expression",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/issues/2164",
+          "notes": "Pitch deviation."
+        },
+        {
+          "name": "clr",
+          "type": "Options expression",
+          "required": false,
+          "doc_url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format",
+          "notes": "Voice Color."
+        },
+        {
+          "name": "eng",
+          "type": "Options expression",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/issues/2164",
+          "notes": "Renderer/engine 선택."
+        },
+        {
+          "name": "vel",
+          "type": "Numerical expression",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/issues/2164",
+          "notes": "Velocity/consonant timing 계열."
+        },
+        {
+          "name": "vol",
+          "type": "Numerical expression",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/issues/2164",
+          "notes": "Volume."
+        },
+        {
+          "name": "atk",
+          "type": "Numerical expression",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/issues/2164",
+          "notes": "Attack."
+        },
+        {
+          "name": "dec",
+          "type": "Numerical expression",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/issues/2164",
+          "notes": "Decay."
+        },
+        {
+          "name": "gen",
+          "type": "Renderer-dependent expression",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/issues/2164",
+          "notes": "Gender 계열."
+        },
+        {
+          "name": "bre",
+          "type": "Renderer-dependent expression",
+          "required": false,
+          "doc_url": "https://github.com/openutau/OpenUtau/issues/2164",
+          "notes": "Breathiness 계열."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md",
+        "notes": "장르·구조 tag list는 없다. 대신 phonemizer tag는 IETF language code와 phonetic type 조합(공식 예: 'EN ARPA', 'JA VCV')을 사용한다: https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/Phonemizer.cs"
+      },
+      "observed_behaviors": [
+        {
+          "claim": "대괄호 문법은 구조 지시가 아니라 phonetic hint이며 'read[r iy d]' 또는 '[r iy d]'처럼 쓴다.",
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md"
+        },
+        {
+          "claim": "Phonemizer가 lyric과 앞뒤 note 정보를 이용해 voicebank용 phoneme 또는 diphone을 생성한다.",
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md"
+        },
+        {
+          "claim": "OpenUtau는 English, Japanese, Chinese, Korean, Russian 등 여러 언어와 VCV, CVVC, Arpasing 등의 phonetic system용 phonemizer를 포함한다.",
+          "evidence": "E1",
+          "url": "https://github.com/openutau/OpenUtau"
+        },
+        {
+          "claim": "USTX는 UTF-8 YAML 1.2 형식이며 현재 문서상 version은 0.6이다.",
+          "evidence": "E1",
+          "url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format"
+        },
+        {
+          "claim": "USTX, UST, VSQX, MIDI, UFData, MusicXML을 열 수 있고 track별 WAV 또는 mixdown WAV를 export할 수 있다.",
+          "evidence": "E1",
+          "url": "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/Getting-Started"
+        }
+      ],
+      "gaps": [
+        "lyrics 문자 수 상한은 unknown.",
+        "expression의 정확한 지원 집합과 범위는 선택 renderer 및 voicebank에 따라 달라진다.",
+        "공개 원격 합성 API/CLI는 확인되지 않았다. api_params는 plugin API 및 USTX control identifiers다.",
+        "voicebank별 상업 이용 조건은 별도 조사해야 한다."
+      ]
+    },
+    {
+      "engine": "Vocofy AI Cantonese",
+      "vendor": "Vocofy AI Limited",
+      "status": "live",
+      "models": [
+        {
+          "name": "Vocofy AI Cantonese voice-cloning TTS",
+          "released": null,
+          "notes": "공식 설명상 Cantonese cadence, articulation, pronunciation, exhalation과 speaking rhythm을 학습하는 맞춤형 Text-to-Speech 시스템이다. 가창 합성 엔진으로 문서화되지 않았다.",
+          "url": "https://en.vocofy.ai/about/"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://vocofy.ai/how-does-vocofy-work/",
+          "price_note": "의료진 의뢰, 녹음 수집, 맞춤 모델 구축 후 mobile app을 제공하는 서비스다.",
+          "commercial_use": "공식 공개 페이지에서 일반 음악 제작물의 상업 이용 조건은 확인되지 않아 unknown."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": false,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://vocofy.ai/faq/",
+          "notes": "자연어 지시 prompt가 아니라 TTS로 읽힐 Cantonese text를 입력한다. 문자 상한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://en.vocofy.ai/about/",
+          "notes": "공식 제품 설명에 MIDI note별 lyrics 또는 singing phoneme editor는 없다."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "",
+            "url": ""
+          },
+          "evidence": "E1",
+          "url": "https://vocofy.ai/faq/",
+          "notes": "가창 structure-tag 문법이 아니다."
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "발화 길이·속도에 대한 사용자 수치 파라미터는 공개 문서에서 확인되지 않았다."
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "환자의 녹음을 수집·전사한 뒤 개인 맞춤 voice model을 구축한다.",
+          "evidence": "E1",
+          "url": "https://en.vocofy.ai/about/",
+          "notes": "일반 사용자가 곡 생성 시 업로드하는 singing reference audio가 아니라 모델 구축용 speech recording이다."
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "negative prompt가 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://vocofy.ai/faq/",
+          "notes": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": ""
+        },
+        "stems_export": {
+          "exists": false,
+          "how": "음악 stem 기능이 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://vocofy.ai/",
+          "notes": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": false,
+          "how": "가창 continuation/inpainting 또는 MIDI 편집 기능이 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://en.vocofy.ai/about/",
+          "notes": ""
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "음악 생성 엔진이 아니다.",
+          "evidence": "E1",
+          "url": "https://vocofy.ai/",
+          "notes": ""
+        },
+        "vocal_control": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": "cadence, articulation, pronunciation, exhalation과 speaking rhythm을 모델이 재현한다고 설명하지만 사용자에게 노출된 parameter 이름은 공개되지 않았다."
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": "",
+          "notes": ""
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://vocofy.ai/faq/",
+        "notes": "공식 장르·가창 tag list, MIDI/lyrics syntax, 공개 API/CLI 문서는 없다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Vocofy는 공식적으로 Cantonese voice cloning 및 TTS 서비스로 설명되며 singing synthesizer로 설명되지 않는다.",
+          "evidence": "E1",
+          "url": "https://en.vocofy.ai/about/"
+        },
+        {
+          "claim": "사용자의 개인 발음 특성까지 복제해 동일한 방식으로 단어를 발화할 수 있다고 공식 FAQ가 설명한다.",
+          "evidence": "E1",
+          "url": "https://vocofy.ai/faq/"
+        },
+        {
+          "claim": "현재 확인되는 제품 접근은 맞춤 모델이 배포되는 mobile app 중심이다.",
+          "evidence": "E1",
+          "url": "https://vocofy.ai/how-does-vocofy-work/"
+        }
+      ],
+      "gaps": [
+        "이번 vocal_synth 클러스터의 MIDI+lyrics 가창 합성 대상과 제품 범주가 일치하지 않는다.",
+        "텍스트 문자 수, 발화 파라미터, API, export 형식, 가격 및 일반 상업 이용 조건은 unknown.",
+        "Vocofy라는 이름의 별도 가창 제품이 의도된 것이라면 추가 제품 식별자가 필요하다."
+      ]
+    }
+  ],
+  "cross_notes": "이 클러스터의 핵심 control surface는 자연어 prompt가 아니라 시간축에 배치된 MIDI notes, note별 lyrics/phonemes, phoneme timing, pitch·volume·timbre·breath 계열 envelope다. ACE Studio, Synthesizer V, VOCALOID6, CeVIO AI, UTAU/OpenUtau 모두 [Verse]/[Chorus] 같은 생성형 음악 구조 태그를 공식 문법으로 사용하지 않는다. 다만 OpenUtau의 대괄호는 예외적으로 구조 태그가 아니라 직접 phonetic hint 문법이며 literal bracket text를 부르지 않는다: https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md . 한국어는 ACE Studio Verse25와 Synthesizer V Studio 2 Pro에서 공식 지원되고 OpenUtau에서는 Korean phonemizer/voicebank 조합으로 지원된다. VOCALOID6와 CeVIO AI의 공식 Song 문서에서는 한국어 지원이 확인되지 않았다. Vocofy는 공식 자료상 가창 합성기가 아니라 Cantonese voice-cloning TTS이므로 별도 범주로 보는 것이 타당하다: https://en.vocofy.ai/about/",
+  "sources": [
+    "https://docs.acestudio.ai/getting-started",
+    "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals",
+    "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/editng-lyrics",
+    "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls",
+    "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/vocal-controls/emotion-controls",
+    "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/breath",
+    "https://docs.acestudio.ai/ai-vocal-synth/creating-ai-vocals/singing-languages",
+    "https://docs.acestudio.ai/ai-tools/vocal-to-midi-and-lyrics",
+    "https://docs.acestudio.ai/daw-integration",
+    "https://docs.acestudio.ai/appendix/license-and-copyright",
+    "https://acestudio.ai/pricing/?cl=general",
+    "https://www.dreamtonics.com/synthesizerv/",
+    "https://dreamtonics.com/announcing-synthesizer-v-studio-2-pro/",
+    "https://resource.dreamtonics.com/scripting/",
+    "https://resource.dreamtonics.com/scripting/Automation.html",
+    "https://dreamtonics.com/terms/",
+    "https://www.vocaloid.com/en/news/news_001/",
+    "https://www.vocaloid.com/en/vocaloid6/",
+    "https://www.vocaloid.com/en/vocaloid6/specs/",
+    "https://rsc-net.vocaloid.com/assets/pdf_files/bb/VOCALOID_Reference_Manual_ENG.pdf",
+    "https://www.vocaloid.com/en/vocaloid6/vxbeta/",
+    "https://www.vocaloid.com/en/support/faq/703",
+    "https://www.vocaloid.com/en/learn/ln6216/",
+    "https://cevio.jp/about_cevio/",
+    "https://cevio.jp/guide/cevio_ai/",
+    "https://cevio.jp/guide/cevio_ai/songtrack/",
+    "https://cevio.jp/guide/cevio_ai/songtrack/song_03/",
+    "https://cevio.jp/guide/cevio_ai/songtrack/song_04/",
+    "https://cevio.jp/guide/cevio_ai/songtrack/song_06/",
+    "https://cevio.jp/guide/cevio_ai/songtrack/song_07/",
+    "https://cevio.jp/guide/cevio_ai/songtrack/fileimport/",
+    "https://cevio.jp/guide/cevio_ai/interface/",
+    "https://utau-synth.com/",
+    "https://utau-synth.com/download.html",
+    "https://utau-synth.com/ushelp/",
+    "https://images1.wikia.nocookie.net/utau/images/6/67/How_To_Create_your_own_UTAU_voice_bank_rev0.40.pdf",
+    "https://github.com/openutau/OpenUtau",
+    "https://github.com/openutau/OpenUtau/releases",
+    "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/README.md",
+    "https://github.com/openutau/OpenUtau/blob/master/OpenUtau.Core/Api/Phonemizer.cs",
+    "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/USTX-file-format",
+    "https://github-wiki-see.page/m/openutau/OpenUtau/wiki/Getting-Started",
+    "https://en.vocofy.ai/about/",
+    "https://vocofy.ai/faq/",
+    "https://vocofy.ai/how-does-vocofy-work/"
+  ]
+}

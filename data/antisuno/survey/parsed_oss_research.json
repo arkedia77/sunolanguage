@@ -1,0 +1,2667 @@
+{
+  "cluster": "oss_research",
+  "engines": [
+    {
+      "engine": "YuE",
+      "vendor": "M-A-P / HKUST",
+      "status": "live",
+      "models": [
+        {
+          "name": "YuE-s1-7B-anneal-en-cot",
+          "released": "2025-01-26",
+          "notes": "Stage 1 영어·CoT 체크포인트.",
+          "url": "https://github.com/multimodal-art-projection/YuE"
+        },
+        {
+          "name": "YuE-s2-1B-general",
+          "released": "2025-01-26",
+          "notes": "Stage 2 음질 정제 체크포인트.",
+          "url": "https://github.com/multimodal-art-projection/YuE"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/multimodal-art-projection/YuE",
+          "price_note": "로컬 실행 오픈소스.",
+          "commercial_use": "Apache-2.0이며 저장소는 생성물을 상업 프로젝트에 포함할 수 있다고 명시한다."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE",
+          "notes": "`genre_txt`로 별도 입력한다. 공식 가이드는 genre, instrument, mood, gender, timbre의 다섯 구성요소와 공백 구분을 권장하지만 문자 상한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "`lyrics_txt` 파일. 각 섹션 앞에 구조 라벨을 쓰고 섹션 사이를 빈 줄 2개(`\\n\\n`)로 분리한다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE",
+          "notes": "genre와 lyrics가 별도 경로이며 내부 프롬프트는 `[Genre] {genres}`와 전체 가사를 결합한다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[verse]",
+            "[chorus]",
+            "[bridge]",
+            "[outro]",
+            "[intro]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE",
+          "notes": "공식 문서는 이를 structure labels로 설명한다. `[intro]`는 불안정하므로 `[verse]` 또는 `[chorus]`로 시작하도록 권장한다. 라벨이 항상 비발성이라는 명시적 보장은 없다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "`run_n_segments`로 생성할 가사 섹션 수를 정하고 `max_new_tokens`로 섹션당 토큰 예산을 정한다. 공식 가이드는 기본 3000 tokens가 섹션당 약 30초라고 설명한다. 전체 초 단위 목표 길이 인자는 없다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`use_audio_prompt`, `audio_prompt_path`, `prompt_start_time`, `prompt_end_time`; 또는 `use_dual_tracks_prompt`, `vocal_track_prompt_path`, `instrumental_track_prompt_path`를 사용한다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "`seed`가 Python, NumPy, PyTorch 및 CUDA RNG를 설정하고 deterministic cuDNN을 활성화한다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "Stage 2가 vocal과 instrumental dual tracks를 모델링하며 dual-track prompt 입력도 노출한다. 출력 파이프라인은 vocal/instrumental 디코더를 별도로 사용한다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "공식 저장소는 외부 `YuE-extend`를 continuation 경로로 안내한다. 기본 `infer.py`에는 범용 inpainting 인자가 없다.",
+          "evidence": "E2",
+          "url": "https://github.com/multimodal-art-projection/YuE"
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "공식 가이드는 instrumental-only를 별도 issue로 안내하지만 기본 추론 API의 명시적 boolean은 unknown.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "genre tags에 gender와 vocal timbre를 넣거나 vocal/instrumental dual-track reference를 제공한다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "공식 추론은 섹션별 순차 생성이지만 생성 중 사용자가 실시간으로 조건을 바꾸는 인터페이스는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py"
+        }
+      },
+      "api_params": [
+        {
+          "name": "stage1_model",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "Stage 1 checkpoint."
+        },
+        {
+          "name": "stage2_model",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "Stage 2 checkpoint."
+        },
+        {
+          "name": "max_new_tokens",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "기본 3000."
+        },
+        {
+          "name": "repetition_penalty",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "기본 1.1."
+        },
+        {
+          "name": "run_n_segments",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "처리할 가사 섹션 수."
+        },
+        {
+          "name": "stage2_batch_size",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "Stage 2 batch size."
+        },
+        {
+          "name": "genre_txt",
+          "type": "str",
+          "required": true,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "genre/style tag 파일."
+        },
+        {
+          "name": "lyrics_txt",
+          "type": "str",
+          "required": true,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "구조화된 가사 파일."
+        },
+        {
+          "name": "use_audio_prompt",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "single-track audio ICL."
+        },
+        {
+          "name": "audio_prompt_path",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "reference audio 경로."
+        },
+        {
+          "name": "prompt_start_time",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "reference 구간 시작 초; 기본 0."
+        },
+        {
+          "name": "prompt_end_time",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "reference 구간 종료 초; 기본 30."
+        },
+        {
+          "name": "use_dual_tracks_prompt",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "vocal/instrumental dual-track ICL."
+        },
+        {
+          "name": "vocal_track_prompt_path",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "vocal reference."
+        },
+        {
+          "name": "instrumental_track_prompt_path",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "instrumental reference."
+        },
+        {
+          "name": "output_dir",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "출력 디렉터리."
+        },
+        {
+          "name": "keep_intermediate",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "중간 산출물 저장."
+        },
+        {
+          "name": "disable_offload_model",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "Stage 1 후 CPU offload 비활성화."
+        },
+        {
+          "name": "cuda_idx",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "CUDA device index."
+        },
+        {
+          "name": "seed",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "기본 42."
+        },
+        {
+          "name": "rescale",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+          "notes": "clipping 방지 출력 rescale."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://github.com/multimodal-art-projection/YuE",
+        "notes": "open vocabulary이지만 공식 저장소가 자주 쓰는 top 200 tags 파일을 제공한다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "공식 가이드는 reference audio가 good-case rate를 높이고 다양성을 줄인다고 보고하며, dual-track ICL이 musicality와 prompt following에 가장 좋다고 기술한다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE"
+        },
+        {
+          "claim": "학습·추론 프롬프트는 genre tags, segmented lyrics, optional reference audio를 분리하며 Stage 1은 이를 텍스트·오디오 토큰 문맥으로 직렬화한다.",
+          "evidence": "E1",
+          "url": "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py"
+        }
+      ],
+      "gaps": [
+        "프롬프트와 가사의 공식 문자 수 상한은 unknown.",
+        "구조 라벨이 음성으로 발화되는 실패율은 공식적으로 측정되지 않았다.",
+        "negative prompt와 범용 inpainting의 공식 추론 인자는 unknown."
+      ]
+    },
+    {
+      "engine": "DiffRhythm",
+      "vendor": "ASLP Lab",
+      "status": "live",
+      "models": [
+        {
+          "name": "DiffRhythm-v1.2-base",
+          "released": "2025-05-09",
+          "notes": "1분 35초 계열.",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        },
+        {
+          "name": "DiffRhythm-v1.2-full",
+          "released": "2025-05-09",
+          "notes": "최대 285초 계열.",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/ASLP-lab/DiffRhythm",
+          "price_note": "로컬 실행 오픈소스.",
+          "commercial_use": "Apache-2.0."
+        },
+        {
+          "channel": "web",
+          "url": "https://huggingface.co/spaces/ASLP-lab/DiffRhythm",
+          "price_note": "Hugging Face Space.",
+          "commercial_use": "저장소 라이선스 범위는 Apache-2.0."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/ASLP-lab/DiffRhythm/blob/main/src/update_alert.md",
+          "notes": "style prompt를 텍스트 또는 reference WAV로 받는다. 문자 상한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "별도 LRC 파일. 각 가사 줄은 `[MM:SS.xx]가사` 형식의 타임스탬프를 가진다.",
+          "evidence": "E1",
+          "url": "https://github.com/ASLP-lab/DiffRhythm/blob/main/infer/example/eg_en.lrc",
+          "notes": "style prompt와 timed lyrics가 분리된다."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [
+            "[00:10.00]Moonlight spills through broken blinds"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://github.com/ASLP-lab/DiffRhythm/blob/main/infer/example/eg_en.lrc"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/ASLP-lab/DiffRhythm/blob/main/infer/example/eg_en.lrc",
+          "notes": "공식 v1 입력 예시는 `[Verse]`가 아니라 LRC 시간 태그를 사용한다. `[Verse]`/`[Chorus]` 문법은 공식 v1 문서에 없다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "체크포인트 계열로 95초 또는 285초 길이를 선택한다. v2 공개 추론에는 `max-secs`가 있지만 이는 별도 DiffRhythm2 모델이다.",
+          "evidence": "E1",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "reference WAV 또는 text style prompt 중 하나를 style conditioning으로 사용한다.",
+          "evidence": "E1",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "사용자가 입력하는 negative text prompt는 공식 v1 표면에 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "공식 추론 구현은 `seed`와 `randomize_seed`를 노출한다.",
+          "evidence": "E1",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        },
+        "stems_export": {
+          "exists": false,
+          "how": "공식 v1 출력은 완성된 mix이며 stem 출력은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "v1.2 release note가 song editing과 continuation을 지원한다고 명시한다. 세부 마스크 파라미터는 README에서 완전하게 문서화되지 않았다.",
+          "evidence": "E2",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "lyrics를 생략하고 text style prompt만 주는 pure/instrumental generation 경로.",
+          "evidence": "E2",
+          "url": "https://github.com/ASLP-lab/DiffRhythm/blob/main/src/update_alert.md"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "가사와 LRC 타임스탬프로 vocal content와 timing을 조건화한다. singer identity 전용 인자는 없다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2503.01183"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "공식 추론은 사전 입력된 조건으로 전체 latent를 생성한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2503.01183"
+        }
+      },
+      "api_params": [
+        {
+          "name": "lrc",
+          "type": "str/path",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "timed lyrics; instrumental에서는 생략 가능."
+        },
+        {
+          "name": "ref_audio_path",
+          "type": "str/path",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "reference WAV."
+        },
+        {
+          "name": "text_prompt",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm/blob/main/src/update_alert.md",
+          "notes": "text style condition."
+        },
+        {
+          "name": "seed",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "재현용 seed."
+        },
+        {
+          "name": "randomize_seed",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "seed 무작위화."
+        },
+        {
+          "name": "steps",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "flow/diffusion sampling steps."
+        },
+        {
+          "name": "cfg_strength",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "conditioning guidance strength."
+        },
+        {
+          "name": "chunked",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "저메모리 chunked decoding."
+        },
+        {
+          "name": "file_type",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "출력 형식."
+        },
+        {
+          "name": "odeint_method",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "ODE solver method."
+        },
+        {
+          "name": "Music_Duration",
+          "type": "str/enum",
+          "required": false,
+          "doc_url": "https://github.com/ASLP-lab/DiffRhythm",
+          "notes": "체크포인트 길이 선택 표면."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://github.com/ASLP-lab/DiffRhythm/blob/main/src/update_alert.md",
+        "notes": "공식 예시는 자유형 style prompt이며 장르·태그 사전은 제공하지 않는다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "모델은 lyrics와 style prompt만을 추론 조건으로 받는 단순 latent-diffusion 구조로 기술된다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2503.01183"
+        },
+        {
+          "claim": "공식 v1.2 release note는 반복·가사 누락 개선과 editing/continuation 추가를 주장한다.",
+          "evidence": "E2",
+          "url": "https://github.com/ASLP-lab/DiffRhythm"
+        }
+      ],
+      "gaps": [
+        "공식 prompt 문자 상한은 unknown.",
+        "`[Verse]` 같은 의미 구조 태그의 학습 여부는 공개되지 않았다.",
+        "v1.2 editing/continuation의 전체 저수준 인자 목록은 README만으로 확인되지 않는다."
+      ]
+    },
+    {
+      "engine": "ACE-Step",
+      "vendor": "ACE-Step team",
+      "status": "live",
+      "models": [
+        {
+          "name": "ACE-Step v1.5 Turbo",
+          "released": "2026-01-28",
+          "notes": "8-step distilled checkpoint.",
+          "url": "https://github.com/ace-step/ACE-Step-1.5"
+        },
+        {
+          "name": "ACE-Step v1.5 Base/SFT",
+          "released": "2026-01-28",
+          "notes": "CFG와 최대 200 inference steps를 지원하는 비-Turbo 계열.",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/ace-step/ACE-Step-1.5",
+          "price_note": "로컬 Python API·CLI·Gradio.",
+          "commercial_use": "Apache-2.0."
+        },
+        {
+          "channel": "api",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/API.md",
+          "price_note": "로컬 REST API.",
+          "commercial_use": "Apache-2.0."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 512,
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "`caption`은 장르, mood, instruments 등을 기술하는 별도 필드."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "`lyrics` 문자열, 최대 4096자. 구조 라벨을 포함할 수 있다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "`caption`과 완전히 분리된다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[verse]",
+            "[chorus]",
+            "[bridge]",
+            "[Verse 1]",
+            "[Instrumental]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://github.com/ace-step/ACE-Step-1.5"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step",
+          "notes": "공식 UI 가이드는 `[verse]`, `[chorus]`, `[bridge]`를 structure tags로 지시한다. 문서에는 태그가 절대 발성되지 않는다는 보장은 없다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "`duration` float, 10–600초. 0 이하 또는 None이면 LM이 가사 길이를 바탕으로 선택한다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`reference_audio`와 `src_audio`; cover, repaint, lego, extract, complete 작업에서 사용한다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        },
+        "negative_prompt": {
+          "exists": true,
+          "how": "`lm_negative_prompt`가 5Hz LM의 negative prompt를 노출한다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "`seed`; -1은 random, 양의 정수는 fixed seed. batch에서는 `seeds`를 사용할 수 있다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "`lego`와 `extract` task가 source audio 기반 stem 조작·추출을 제공한다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "`repaint`와 `complete` task, `repainting_start`, `repainting_end`, `chunk_mask_mode`; UI에는 Edit와 좌·우 Extend 탭이 있다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "`instrumental=true` 또는 lyrics에 `[Instrumental]`.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`vocal_language`, lyrics, caption의 vocal description, reference audio를 사용한다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "생성 전·후 편집은 지원하지만 sampling 도중의 사용자 실시간 steering은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        }
+      },
+      "api_params": [
+        {
+          "name": "task_type",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "text2music, cover, repaint, lego, extract, complete."
+        },
+        {
+          "name": "instruction",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "task instruction."
+        },
+        {
+          "name": "reference_audio",
+          "type": "Optional[str]",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "reference 경로."
+        },
+        {
+          "name": "src_audio",
+          "type": "Optional[str]",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "편집 source."
+        },
+        {
+          "name": "audio_codes",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "LM semantic-code hint."
+        },
+        {
+          "name": "caption",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "최대 512자."
+        },
+        {
+          "name": "lyrics",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "최대 4096자."
+        },
+        {
+          "name": "instrumental",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "기본 false."
+        },
+        {
+          "name": "vocal_language",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "ISO 639-1 또는 unknown."
+        },
+        {
+          "name": "bpm",
+          "type": "Optional[int]",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "30–300."
+        },
+        {
+          "name": "keyscale",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "예: C Major, Am."
+        },
+        {
+          "name": "timesignature",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "2, 3, 4, 6."
+        },
+        {
+          "name": "duration",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "10–600초."
+        },
+        {
+          "name": "inference_steps",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "Turbo 기본 8."
+        },
+        {
+          "name": "seed",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "-1은 random."
+        },
+        {
+          "name": "guidance_scale",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "1–15; Turbo에서는 1로 교정."
+        },
+        {
+          "name": "use_adg",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "base model Adaptive Dual Guidance."
+        },
+        {
+          "name": "cfg_interval_start",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "CFG 적용 구간 시작."
+        },
+        {
+          "name": "cfg_interval_end",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "CFG 적용 구간 종료."
+        },
+        {
+          "name": "shift",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "timestep shift; Turbo 권장 3."
+        },
+        {
+          "name": "infer_method",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "기본 ode."
+        },
+        {
+          "name": "timesteps",
+          "type": "Optional[List[float]]",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "custom sampling schedule."
+        },
+        {
+          "name": "repainting_start",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "repaint 시작."
+        },
+        {
+          "name": "repainting_end",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "repaint 종료."
+        },
+        {
+          "name": "chunk_mask_mode",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "기본 auto."
+        },
+        {
+          "name": "audio_cover_strength",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "cover strength."
+        },
+        {
+          "name": "thinking",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "5Hz LM planning."
+        },
+        {
+          "name": "lm_temperature",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "기본 0.85."
+        },
+        {
+          "name": "lm_cfg_scale",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "LM CFG."
+        },
+        {
+          "name": "lm_top_k",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "LM top-k."
+        },
+        {
+          "name": "lm_top_p",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "LM top-p."
+        },
+        {
+          "name": "lm_negative_prompt",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "LM negative prompt."
+        },
+        {
+          "name": "use_cot_metas",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "CoT metadata."
+        },
+        {
+          "name": "use_cot_caption",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "CoT caption."
+        },
+        {
+          "name": "use_cot_lyrics",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "CoT lyrics."
+        },
+        {
+          "name": "use_cot_language",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "CoT language."
+        },
+        {
+          "name": "use_constrained_decoding",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "FSM-constrained LM decoding."
+        },
+        {
+          "name": "batch_size",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "GenerationConfig."
+        },
+        {
+          "name": "allow_lm_batch",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "LM batching."
+        },
+        {
+          "name": "use_random_seed",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "batch random seed."
+        },
+        {
+          "name": "seeds",
+          "type": "Optional[List[int]]",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "batch seeds."
+        },
+        {
+          "name": "lm_batch_chunk_size",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "기본 8."
+        },
+        {
+          "name": "constrained_decoding_debug",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "debug logging."
+        },
+        {
+          "name": "audio_format",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+          "notes": "flac, mp3, opus, aac, wav, wav32."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://github.com/ace-step/ACE-Step",
+        "notes": "공식 구조-tag 예시는 있지만 닫힌 장르·스타일 사전은 없다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Turbo checkpoint는 distillation에 guidance가 내장되어 전달된 `guidance_scale`을 1.0으로 교정한다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md"
+        },
+        {
+          "claim": "caption·lyrics·BPM·key·time signature·duration가 별도 조건 경로로 DiT에 전달된다.",
+          "evidence": "E1",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/acestep/inference.py"
+        }
+      ],
+      "gaps": [
+        "구조 태그의 실제 발성 실패율은 공식 평가가 없다.",
+        "닫힌 공식 genre/style vocabulary는 없다."
+      ]
+    },
+    {
+      "engine": "SongBloom",
+      "vendor": "Tencent AI Lab",
+      "status": "live",
+      "models": [
+        {
+          "name": "songbloom_full_150s",
+          "released": "2025-06",
+          "notes": "2B, 최대 150초, 10초 WAV style prompt.",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        {
+          "name": "songbloom_full_150s_dpo",
+          "released": "2025-09",
+          "notes": "DPO post-trained 150초 모델.",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        {
+          "name": "songbloom_full_240s",
+          "released": "2025-10",
+          "notes": "최대 4분.",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/tencent-ailab/SongBloom",
+          "price_note": "로컬 inference script 및 Hugging Face weights.",
+          "commercial_use": "상업 이용 조건은 저장소 LICENSE 확인 필요."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": false,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "공식 inference 입력은 lyrics와 10초 `prompt_wav`; 자유형 style-text 필드는 없다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "JSONL의 `lyrics` 문자열과 `prompt_wav` 경로.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "가사는 별도 입력이다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[intro]",
+            "[verse]",
+            "[chorus]",
+            "[inst]",
+            "[outro]"
+          ],
+          "tags_are_sung": {
+            "answer": "no",
+            "evidence": "E1",
+            "url": "https://github.com/tencent-ailab/SongBloom"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "`[intro]`, `[outro]`, `[inst]`는 반복 개수로 기대되는 무가사 구간 길이를 정하는 제어 토큰이다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "모델별 max length가 150초 또는 240초이며 구조 토큰 반복으로 무가사 구간 길이를 제어한다. 150s 모델은 토큰 하나당 약 1초, 240s 모델은 약 5초.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`prompt_wav`에 10초·48kHz style audio를 제공한다.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "공식 README에 user-facing seed 인자가 문서화되지 않아 unknown.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        "stems_export": {
+          "exists": false,
+          "how": "공식 출력은 song waveform이며 stem 출력은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        "inpaint_extend_edit": {
+          "exists": false,
+          "how": "reference-conditioned full-song generation만 문서화되어 있다.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "`[intro]`, `[inst]`, `[outro]` 토큰을 사용해 무가사 구간을 구성한다. 전체 곡 boolean toggle은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "lyrics와 style prompt audio가 보컬 내용·스타일을 조건화한다. 별도 singer parameter는 없다.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "사전 입력을 사용하는 batch inference.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        }
+      },
+      "api_params": [
+        {
+          "name": "idx",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "JSONL sample identifier."
+        },
+        {
+          "name": "lyrics",
+          "type": "str",
+          "required": true,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "구조화된 lyrics."
+        },
+        {
+          "name": "prompt_wav",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "10초·48kHz style reference."
+        },
+        {
+          "name": "model-name",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "checkpoint version."
+        },
+        {
+          "name": "local-dir",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "weights directory."
+        },
+        {
+          "name": "input-jsonl",
+          "type": "str",
+          "required": true,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "input JSONL."
+        },
+        {
+          "name": "output-dir",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "output directory."
+        },
+        {
+          "name": "n-samples",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "입력당 생성 수."
+        },
+        {
+          "name": "dtype",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/tencent-ailab/SongBloom",
+          "notes": "예: bfloat16."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://github.com/tencent-ailab/SongBloom",
+        "notes": "공식 lyric-format 문서가 구조 토큰을 정의한다. 장르 사전은 없으며 style은 audio prompt로 입력한다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "150초 모델의 `[intro]`, `[outro]`, `[inst]` 하나는 기대 길이 약 1초, 240초 모델에서는 약 5초다.",
+          "evidence": "E1",
+          "url": "https://github.com/tencent-ailab/SongBloom"
+        }
+      ],
+      "gaps": [
+        "가사 문자 상한은 unknown.",
+        "negative prompt와 fixed seed의 공식 사용자 표면은 unknown.",
+        "구조 태그별 실제 준수율은 공개 문서에서 수치화되지 않았다."
+      ]
+    },
+    {
+      "engine": "LeVo / SongGeneration",
+      "vendor": "Tencent AI Lab",
+      "status": "live",
+      "models": [
+        {
+          "name": "SongGeneration v1.5 / LeVo",
+          "released": "2025",
+          "notes": "LM 기반 mixed-token·dual-track song generator.",
+          "url": "https://arxiv.org/abs/2506.07520"
+        },
+        {
+          "name": "SongGeneration v2 / LeVo 2",
+          "released": "2026",
+          "notes": "hierarchical LM-diffusion generation.",
+          "url": "https://arxiv.org/abs/2606.30642"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/levo-demo/LeVo",
+          "price_note": "로컬 generation script와 모델 weights.",
+          "commercial_use": "상업 이용 조건은 저장소 LICENSE 확인 필요."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo",
+          "notes": "`descriptions`는 comma-separated tags 전용이다. 자연어 문장은 공식적으로 금지하며 문자 상한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "JSONL의 `gt_lyric`; section은 `;`로 분리하고 lyrical section 내부 문장은 `.`로 분리한다.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo",
+          "notes": "`descriptions`와 별도 필드."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[intro-short]",
+            "[intro-medium]",
+            "[inst-short]",
+            "[inst-medium]",
+            "[verse]",
+            "[chorus]",
+            "[bridge]",
+            "[outro-short]",
+            "[outro-medium]"
+          ],
+          "tags_are_sung": {
+            "answer": "no",
+            "evidence": "E1",
+            "url": "https://github.com/levo-demo/LeVo"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo",
+          "notes": "공식 문서가 intro/inst/outro 라벨 구간을 purely instrumental이라고 명시한다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "`short`는 약 0–10초, `medium`은 약 10–20초인 구조 라벨 기반 구간 길이 제어. 전체 곡의 숫자 duration 인자는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`prompt_audio_path`; 입력이 길어도 처음 10초만 사용한다. 미제공 시 `auto_prompt_audio_type`으로 내장 reference를 선택한다.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "공식 Input Guide에 seed 인자가 문서화되지 않아 unknown.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "`--bgm`, `--vocal`, `--separate`로 accompaniment-only, vocal-only, separated tracks를 출력한다.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        },
+        "inpaint_extend_edit": {
+          "exists": false,
+          "how": "공식 공개 inference는 새 곡 생성과 reference conditioning을 설명하며 시간 마스크 inpainting/continuation은 문서화하지 않는다.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "`--bgm`이 pure music을 출력한다.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`descriptions`의 gender tag, `prompt_audio_path`, `--vocal`; reference는 genre, instrumentation, rhythm, voice에 영향을 준다.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "JSONL batch generation 방식.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        }
+      },
+      "api_params": [
+        {
+          "name": "gt_lyric",
+          "type": "str",
+          "required": true,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "구조 라벨 포함 lyrics."
+        },
+        {
+          "name": "descriptions",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "gender, genre, emotion, instrument의 comma-separated tags."
+        },
+        {
+          "name": "prompt_audio_path",
+          "type": "str/path",
+          "required": false,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "처음 10초 사용."
+        },
+        {
+          "name": "auto_prompt_audio_type",
+          "type": "enum",
+          "required": false,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "Pop, Latin, Rock, Electronic, Metal, Country, R&B/Soul, Ballad, Jazz, World, Hip-Hop, Funk, Soundtrack, Auto."
+        },
+        {
+          "name": "ckpt_path",
+          "type": "str",
+          "required": true,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "checkpoint."
+        },
+        {
+          "name": "lyrics_jsonl",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "input JSONL."
+        },
+        {
+          "name": "output_path",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "output."
+        },
+        {
+          "name": "low_mem",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "low-memory mode."
+        },
+        {
+          "name": "not_use_flash_attn",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "Flash Attention 비활성화."
+        },
+        {
+          "name": "bgm",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "pure accompaniment."
+        },
+        {
+          "name": "vocal",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "vocal-only."
+        },
+        {
+          "name": "separate",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/levo-demo/LeVo",
+          "notes": "vocal/accompaniment separate outputs."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://github.com/levo-demo/LeVo",
+        "notes": "`sample/description/`에 gender, genre, emotion, instrument별 권장 태그가 있다. open vocabulary이지만 사전 태그 사용이 더 안정적이라고 명시한다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "`descriptions`와 `prompt_audio_path`를 동시에 주고 내용이 충돌하면 instruction following과 품질이 저하될 수 있다고 공식 문서가 경고한다.",
+          "evidence": "E1",
+          "url": "https://github.com/levo-demo/LeVo"
+        },
+        {
+          "claim": "LeVo는 mixed audio tokens와 별도의 vocal/accompaniment dual-track tokens를 병렬 모델링한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2506.07520"
+        }
+      ],
+      "gaps": [
+        "text·lyrics 문자 상한은 unknown.",
+        "seed와 negative prompt의 공식 표면은 unknown.",
+        "전체 곡을 초나 마디 숫자로 지정하는 인자는 unknown."
+      ]
+    },
+    {
+      "engine": "MusicGen / AudioCraft",
+      "vendor": "Meta",
+      "status": "live",
+      "models": [
+        {
+          "name": "musicgen-small",
+          "released": "2023",
+          "notes": "text-to-music.",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+        },
+        {
+          "name": "musicgen-medium",
+          "released": "2023",
+          "notes": "text-to-music.",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+        },
+        {
+          "name": "musicgen-large",
+          "released": "2023",
+          "notes": "text-to-music.",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+        },
+        {
+          "name": "musicgen-melody",
+          "released": "2023",
+          "notes": "text+melody conditioning.",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+        },
+        {
+          "name": "musicgen-style",
+          "released": "2024",
+          "notes": "text+style-audio conditioning.",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/facebookresearch/audiocraft",
+          "price_note": "AudioCraft Python API와 Hugging Face Transformers.",
+          "commercial_use": "모델별 라이선스 확인 필요."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "`descriptions: list[str]`; 문자 상한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md",
+          "notes": "별도 lyrics condition이 없는 instrumental music 모델."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md",
+          "notes": "공식 `[Verse]`/`[Chorus]` 문법이 없다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "`duration` float seconds; 장시간 생성 시 `extend_stride`로 window extension을 제어한다.",
+          "evidence": "E1",
+          "url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "melody 모델의 `melody_wavs`, `melody_sample_rate`; style 모델은 별도 style conditioner를 사용한다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "공식 AudioCraft MusicGen API에 negative text prompt가 없다.",
+          "evidence": "E1",
+          "url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "API의 전용 `seed` 인자는 없으며 외부 PyTorch RNG 설정의 재현성 보장은 이 문서에서 unknown.",
+          "evidence": "E1",
+          "url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html"
+        },
+        "stems_export": {
+          "exists": false,
+          "how": "기본 MusicGen은 mix waveform을 출력한다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "`generate_continuation`으로 audio prefix continuation을 지원한다. 시간 마스크 inpainting은 기본 API에 없다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "모델 자체가 instrumental music generation 중심이므로 vocal on/off toggle이 없다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2306.05284"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "별도 lyrics 또는 singer condition이 없다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2306.05284"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "autoregressive sampling 전 조건을 고정한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2306.05284"
+        }
+      },
+      "api_params": [
+        {
+          "name": "use_sampling",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "false면 argmax."
+        },
+        {
+          "name": "top_k",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "기본 250."
+        },
+        {
+          "name": "top_p",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "기본 0."
+        },
+        {
+          "name": "temperature",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "기본 1."
+        },
+        {
+          "name": "duration",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "초."
+        },
+        {
+          "name": "cfg_coef",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "기본 3."
+        },
+        {
+          "name": "cfg_coef_beta",
+          "type": "Optional[float]",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "double CFG beta."
+        },
+        {
+          "name": "two_step_cfg",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "two-step CFG."
+        },
+        {
+          "name": "extend_stride",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+          "notes": "기본 18초."
+        },
+        {
+          "name": "descriptions",
+          "type": "List[str]",
+          "required": true,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "text conditions."
+        },
+        {
+          "name": "melody_wavs",
+          "type": "Tensor|List[Tensor]",
+          "required": true,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "generate_with_chroma의 melody audio."
+        },
+        {
+          "name": "melody_sample_rate",
+          "type": "int",
+          "required": true,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "melody sample rate."
+        },
+        {
+          "name": "progress",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "progress callback."
+        },
+        {
+          "name": "return_tokens",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "audio tokens도 반환."
+        },
+        {
+          "name": "eval_q",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "MusicGen-Style quantization streams."
+        },
+        {
+          "name": "excerpt_length",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "style audio excerpt seconds."
+        },
+        {
+          "name": "ds_factor",
+          "type": "Optional[int]",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "style-token downsampling."
+        },
+        {
+          "name": "encodec_n_q",
+          "type": "Optional[int]",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+          "notes": "style EnCodec streams."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md",
+        "notes": "자유형 captions을 사용하며 공식 닫힌 tag list가 없다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "MusicGen은 text 또는 melody+text를 T5 conditioning과 EnCodec audio-token autoregression으로 처리한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2306.05284"
+        },
+        {
+          "claim": "AudioCraft 평가 구현은 FAD, KL divergence, text consistency, chroma cosine을 계산한다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/solvers/musicgen.py"
+        }
+      ],
+      "gaps": [
+        "공식 prompt 문자 상한은 unknown.",
+        "lyrics·structure-token conditioning이 없다.",
+        "동일 seed의 플랫폼 간 bitwise determinism은 unknown."
+      ]
+    },
+    {
+      "engine": "JASCO",
+      "vendor": "Meta",
+      "status": "live",
+      "models": [
+        {
+          "name": "jasco-chords-drums-400M / 1B",
+          "released": "2024",
+          "notes": "text+chords+drums.",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+        },
+        {
+          "name": "jasco-chords-drums-melody-400M / 1B",
+          "released": "2024",
+          "notes": "text+chords+drums+melody.",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "price_note": "AudioCraft Python API·local Gradio·notebook.",
+          "commercial_use": "모델카드 라이선스 확인 필요."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "`descriptions`의 global text prompt; 문자 상한 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "lyrics condition 없음."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "가사 구조 문법 없음."
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "공개 pretrained checkpoints는 10초 sample을 생성하며 공개 high-level API의 duration 인자는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "drums와 melody audio condition을 시간축 local control로 제공한다. chords는 `(label, time_seconds)` 튜플 목록이다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "공식 API에 negative prompt 없음.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "전용 seed 인자는 문서화되지 않아 unknown.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+        },
+        "stems_export": {
+          "exists": false,
+          "how": "condition으로 drums를 받지만 출력 stem export는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+        },
+        "inpaint_extend_edit": {
+          "exists": false,
+          "how": "공식 API는 conditional generation만 설명한다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "instrumental 생성 모델이며 vocal toggle 없음.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2406.10970"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "lyrics/singer condition 없음.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2406.10970"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "조건을 시간축에 배치할 수 있지만 sampling 중 대화형 steering은 아니다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2406.10970"
+        }
+      },
+      "api_params": [
+        {
+          "name": "cfg_coef_all",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "모든 조건의 CFG."
+        },
+        {
+          "name": "cfg_coef_txt",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "text CFG."
+        },
+        {
+          "name": "descriptions",
+          "type": "List[str]",
+          "required": true,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "global text."
+        },
+        {
+          "name": "chords",
+          "type": "List[Tuple[str,float]]",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "chord label과 시작 초."
+        },
+        {
+          "name": "drums_wav",
+          "type": "Tensor/audio",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "drum local condition."
+        },
+        {
+          "name": "melody_wav",
+          "type": "Tensor/audio",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "melody local condition."
+        },
+        {
+          "name": "progress",
+          "type": "bool",
+          "required": false,
+          "doc_url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "notes": "generation progress."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+        "notes": "장르 사전은 없지만 chord vocabulary mapping 파일 `assets/chord_to_index_mapping.pkl`이 공개되어 있다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "JASCO model card의 chords-drums-400M 결과 행은 MusicCaps 평가 수치로 5.866, 0.284, 0.588, 0.328, 0.096을 보고하지만 각 열 이름은 반드시 원문 표 헤더와 함께 해석해야 한다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md"
+        },
+        {
+          "claim": "권장 CFG 비율은 `all:text = 1:2`이며 melody 계열 결과는 1.75:3.5로 sampling되었다.",
+          "evidence": "E1",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md"
+        }
+      ],
+      "gaps": [
+        "prompt 문자 상한과 seed surface는 unknown.",
+        "가사·보컬·구조 태그를 지원하지 않는다.",
+        "공개 checkpoint는 10초로 고정된다."
+      ]
+    },
+    {
+      "engine": "MusicGen-Stem",
+      "vendor": "Meta / Simon Rouard et al.",
+      "status": "research",
+      "models": [
+        {
+          "name": "musicgen-stem-6cb",
+          "released": "2024",
+          "notes": "6-codebook 계열 weights.",
+          "url": "https://huggingface.co/facebook/musicgen-stem-6cb"
+        },
+        {
+          "name": "musicgen-stem-7cb",
+          "released": "2024",
+          "notes": "drums, bass, other별 codec와 LM weights.",
+          "url": "https://huggingface.co/facebook/musicgen-stem-7cb"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/simonrouard/audiocraft/tree/multistem",
+          "price_note": "연구용 AudioCraft fork/branch와 Hugging Face weights.",
+          "commercial_use": "Hugging Face weights는 CC-BY-NC-4.0으로 표시된다."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757",
+          "notes": "text-to-music 및 stem regeneration prompt. 문자 상한 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757",
+          "notes": "lyrics condition 없음."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E3",
+            "url": "https://arxiv.org/abs/2501.01757"
+          },
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757",
+          "notes": "가사 구조 문법 없음."
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "공개 논문·demo에서 사용자-facing 수치 duration 표면은 unknown.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "기존 drums, bass 또는 other stems를 audio-prefix condition으로 주고 빠진 stem을 생성한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "drums, bass, other의 세 stem과 mix를 별도로 생성·출력한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "기존 곡에서 한 stem을 제거한 audio prompt를 넣고 해당 stem을 새 prompt에 맞춰 재생성한다.",
+          "evidence": "E3",
+          "url": "https://simonrouard.github.io/musicgenstem/"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "전체 시스템이 instrumental multi-stem music용이다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "stem 구성이 drums, bass, other이며 vocal 전용 stem·lyrics 조건은 없다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "iterative composition은 가능하지만 sampling 도중 실시간 steering은 문서화되지 않았다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://simonrouard.github.io/musicgenstem/",
+        "notes": "자유형 text prompt 예시만 있으며 공식 tag 사전은 없다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "세 개의 전용 compression model이 drums, bass, other를 각각 토큰화하고 LM이 이 병렬 streams의 음악적 의존성을 학습한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2501.01757"
+        },
+        {
+          "claim": "조건 stem을 유지하면서 bass, drums 또는 other 중 하나를 교체하거나 순차적으로 추가하는 iterative composition이 가능하다.",
+          "evidence": "E3",
+          "url": "https://simonrouard.github.io/musicgenstem/"
+        }
+      ],
+      "gaps": [
+        "multistem branch의 안정된 public API reference와 전체 함수 인자 문서는 없다.",
+        "prompt 상한, seed, negative prompt는 unknown.",
+        "lyrics와 vocal stem은 지원하지 않는다."
+      ]
+    },
+    {
+      "engine": "Stable Audio Open",
+      "vendor": "Stability AI",
+      "status": "live",
+      "models": [
+        {
+          "name": "stable-audio-open-1.0",
+          "released": "2024",
+          "notes": "최대 47초, 44.1kHz stereo text-to-audio.",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/Stability-AI/stable-audio-tools",
+          "price_note": "stable-audio-tools 또는 Diffusers 로컬 실행.",
+          "commercial_use": "Stability AI Community License; 적용 범위는 모델카드 라이선스 확인 필요."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "`prompt`; 문자 상한 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "별도 lyrics condition 없음."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+          },
+          "evidence": "E1",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "공식 가사 구조 문법 없음."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "stable-audio-tools의 conditioning에 `seconds_start`, `seconds_total`; Diffusers에 `audio_end_in_s`. 최대 47초.",
+          "evidence": "E1",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "저수준 `generate_diffusion_cond`의 `init_audio`, `init_noise_level`로 variation/inpainting 입력을 제공할 수 있다.",
+          "evidence": "E1",
+          "url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"
+        },
+        "negative_prompt": {
+          "exists": true,
+          "how": "Diffusers `negative_prompt`.",
+          "evidence": "E1",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "stable-audio-tools의 `seed`; -1은 random, 지정값은 초기 noise를 재현한다. Diffusers는 seeded `torch.Generator`를 받는다.",
+          "evidence": "E1",
+          "url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"
+        },
+        "stems_export": {
+          "exists": false,
+          "how": "stereo mix waveform 출력이며 stem 모델이 아니다.",
+          "evidence": "E1",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "`init_audio`, `init_noise_level` 및 inpainting-capable stable-audio-tools model path. Open 1.0 모델카드는 기본 text generation을 중심으로 설명한다.",
+          "evidence": "E1",
+          "url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "별도 toggle 없음; prompt로 instrumental 특성을 기술한다.",
+          "evidence": "E1",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "lyrics·singer condition 없음.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2402.04825"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "diffusion 전 조건을 고정한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2402.04825"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "str|List[str]",
+          "required": true,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "positive text condition."
+        },
+        {
+          "name": "negative_prompt",
+          "type": "str|List[str]",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "negative text."
+        },
+        {
+          "name": "audio_end_in_s",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "Diffusers 출력 종료 초."
+        },
+        {
+          "name": "num_inference_steps",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "모델카드 예시 200."
+        },
+        {
+          "name": "num_waveforms_per_prompt",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "prompt당 출력 수."
+        },
+        {
+          "name": "generator",
+          "type": "torch.Generator",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "seeded generator."
+        },
+        {
+          "name": "conditioning.prompt",
+          "type": "str",
+          "required": true,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "stable-audio-tools condition."
+        },
+        {
+          "name": "conditioning.seconds_start",
+          "type": "float",
+          "required": true,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "audio start time condition."
+        },
+        {
+          "name": "conditioning.seconds_total",
+          "type": "float",
+          "required": true,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "total duration condition."
+        },
+        {
+          "name": "steps",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py",
+          "notes": "sampling steps."
+        },
+        {
+          "name": "cfg_scale",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "CFG; 모델카드 예시 7."
+        },
+        {
+          "name": "batch_size",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py",
+          "notes": "batch."
+        },
+        {
+          "name": "sample_size",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py",
+          "notes": "audio samples."
+        },
+        {
+          "name": "seed",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py",
+          "notes": "-1은 random."
+        },
+        {
+          "name": "init_audio",
+          "type": "Optional[Tuple[int,Tensor]]",
+          "required": false,
+          "doc_url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py",
+          "notes": "initial audio."
+        },
+        {
+          "name": "init_noise_level",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py",
+          "notes": "initial-audio 보존 정도."
+        },
+        {
+          "name": "sigma_min",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "모델카드 예시 0.3."
+        },
+        {
+          "name": "sigma_max",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "모델카드 예시 500."
+        },
+        {
+          "name": "sampler_type",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "notes": "예: dpmpp-3m-sde."
+        },
+        {
+          "name": "device",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py",
+          "notes": "compute device."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+        "notes": "자유형 captions; 공식 장르·구조 tag 사전 없음."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "학습 metadata의 text와 `seconds_start`·`seconds_total`이 함께 conditioning되며 시간값은 학습 embedding으로 변환된다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2402.04825"
+        },
+        {
+          "claim": "논문은 장문 CLAPscore를 10초 단위의 첫·중간·끝 구간 embedding으로 계산해 prompt alignment를 평가하고, human MOS는 audio quality·text alignment·musicality를 0–4로 평가한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/pdf/2402.04825"
+        }
+      ],
+      "gaps": [
+        "prompt 문자 상한은 unknown.",
+        "가사·구조 토큰·보컬 제어가 없다.",
+        "Stable Audio Open 1.0 모델 자체의 정밀 inpainting 품질·마스크 규약은 모델카드에 충분히 설명되지 않았다."
+      ]
+    },
+    {
+      "engine": "InspireMusic",
+      "vendor": "FunAudioLLM / Alibaba Group",
+      "status": "live",
+      "models": [
+        {
+          "name": "InspireMusic-1.5B-Long",
+          "released": "2025",
+          "notes": "text/audio-conditioned long-form music generation.",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        }
+      ],
+      "access": [
+        {
+          "channel": "sdk",
+          "url": "https://github.com/QwenAudio/FunMusic",
+          "price_note": "로컬 CLI와 Python toolkit.",
+          "commercial_use": "코드는 Apache-2.0으로 표시되며 모델별 조건은 모델카드 확인 필요."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "text-to-music의 `text`/prompt metadata. 문자 상한 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "공개 long-form inference 예시는 별도 lyrics 입력을 노출하지 않는다."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://github.com/QwenAudio/FunMusic"
+          },
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "`--chorus verse`는 모델 내부 generation mode 인자이며 `[Verse]` 가사 문법으로 문서화되지 않았다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "CLI 예시는 `start_time`과 `end_time` 초를 사용해 0–30초 구간을 지정한다.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`continuation` task와 audio prompt 입력.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "공식 README에 seed가 문서화되지 않아 unknown.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        },
+        "stems_export": {
+          "exists": false,
+          "how": "공식 출력은 waveform이며 stem export는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "`task=continuation`으로 audio continuation 지원; 마스크 기반 inpainting은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "별도 boolean은 문서화되지 않았고 text prompt로 instrumental music을 지시한다.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "공개 long-form 모델에는 lyrics/singer 전용 condition이 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "batch CLI inference.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        }
+      },
+      "api_params": [
+        {
+          "name": "task",
+          "type": "enum",
+          "required": true,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "text-to-music 또는 continuation."
+        },
+        {
+          "name": "gpu",
+          "type": "int",
+          "required": false,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "GPU index."
+        },
+        {
+          "name": "config",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "model config."
+        },
+        {
+          "name": "prompt_data",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "input parquet/list."
+        },
+        {
+          "name": "flow_model",
+          "type": "str/path",
+          "required": false,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "flow matching checkpoint."
+        },
+        {
+          "name": "llm_model",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "autoregressive LM checkpoint."
+        },
+        {
+          "name": "music_tokenizer",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "music tokenizer."
+        },
+        {
+          "name": "wavtokenizer",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "waveform tokenizer."
+        },
+        {
+          "name": "result_dir",
+          "type": "str/path",
+          "required": true,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "output directory."
+        },
+        {
+          "name": "chorus",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "공식 예시 값 verse."
+        },
+        {
+          "name": "fast",
+          "type": "bool flag",
+          "required": false,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "flow model 없는 fast mode."
+        },
+        {
+          "name": "text",
+          "type": "str",
+          "required": false,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "text condition."
+        },
+        {
+          "name": "audio_prompt",
+          "type": "str/path",
+          "required": false,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "continuation reference."
+        },
+        {
+          "name": "start_time",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "생성 시작 초."
+        },
+        {
+          "name": "end_time",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://github.com/QwenAudio/FunMusic",
+          "notes": "생성 종료 초."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://github.com/QwenAudio/FunMusic",
+        "notes": "자유형 text prompt; 공식 tag 사전 없음."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "InspireMusic은 Qwen 계열 autoregressive transformer의 text/audio-token next-token prediction과 flow-matching acoustic model을 결합한다.",
+          "evidence": "E1",
+          "url": "https://github.com/QwenAudio/FunMusic"
+        },
+        {
+          "claim": "논문은 text prompt와 audio prompt 모두에서 long-form generation을 지원한다고 기술한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2503.00084"
+        }
+      ],
+      "gaps": [
+        "lyrics 입력 및 `[Verse]` 문법은 공식 공개 추론에서 확인되지 않는다.",
+        "prompt 상한, seed, negative prompt는 unknown.",
+        "`chorus` 인자의 의미와 허용 vocabulary가 README에 충분히 정의되지 않았다."
+      ]
+    },
+    {
+      "engine": "Seed-Music",
+      "vendor": "ByteDance Seed",
+      "status": "research",
+      "models": [
+        {
+          "name": "Seed-Music Lyrics2Song",
+          "released": "2024-09-18",
+          "notes": "text, lyrics, style/audio, score, voice prompt를 다루는 연구 시스템.",
+          "url": "https://seed.bytedance.com/en/seed-music"
+        },
+        {
+          "name": "Seed-Music Music Editing",
+          "released": "2024-09-18",
+          "notes": "diffusion 기반 note-level audio editing.",
+          "url": "https://seed.bytedance.com/en/seed-music"
+        },
+        {
+          "name": "Seed-Music Singing Voice Conversion",
+          "released": "2024-09-18",
+          "notes": "10초 singing 또는 speech reference를 사용하는 zero-shot voice conversion.",
+          "url": "https://seed.bytedance.com/en/seed-music"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://seed.bytedance.com/en/seed-music",
+          "price_note": "연구 demo와 listening examples; 공개 API·weights 없음.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214",
+          "notes": "style description condition. 문자 상한 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "Lyrics2Song이 lyrics를 별도 condition으로 받지만 public 입력 schema와 문자 상한은 공개되지 않았다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214",
+          "notes": "프롬프트 한 칸만 사용하는 구조가 아니다."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E3",
+            "url": "https://arxiv.org/abs/2409.09214"
+          },
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214",
+          "notes": "song-structure prompt를 평가하지만 `[Verse]`와 같은 public syntax는 공개하지 않았다."
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "score와 note-level representation을 통한 timing control은 기술되지만 public seconds/bars parameter는 unknown.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "style audio reference와 voice prompt를 지원하며 voice conversion에는 10초 singing 또는 speech recording을 사용한다.",
+          "evidence": "E2",
+          "url": "https://seed.bytedance.com/en/seed-music"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "내부 vocal/accompaniment 처리는 기술되지만 public stem-export surface는 unknown.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "diffusion 기반 note-level editing으로 생성된 audio의 lyrics와 vocal melody를 직접 수정한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214"
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "",
+          "url": ""
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "lyrics, musical score, voice prompt와 10초 zero-shot voice reference를 조건으로 사용한다.",
+          "evidence": "E2",
+          "url": "https://seed.bytedance.com/en/seed-music"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "interactive post-generation editing은 기술되지만 sampling 중 realtime steering 여부는 unknown.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://seed.bytedance.com/en/seed-music",
+        "notes": "공개 tag list나 prompt grammar가 없다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Lyrics2Song은 style description, audio reference, musical score, voice prompt를 포함한 multimodal conditions를 받는다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214"
+        },
+        {
+          "claim": "controllability 평가는 생성 audio에 내부 MIR model을 적용해 detected genre와 song-structure prompt의 match를 측정한다.",
+          "evidence": "E3",
+          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/zeeh7lpqbps/Seed-Music.pdf"
+        },
+        {
+          "claim": "논문은 WER와 automatic speaker verification만으로 노래의 lyrics alignment와 voice similarity를 충분히 평가하기 어렵다고 지적하고 MIR·human evaluation을 병행한다.",
+          "evidence": "E3",
+          "url": "https://arxiv.org/abs/2409.09214"
+        }
+      ],
+      "gaps": [
+        "공개 코드, weights, API schema가 없다.",
+        "프롬프트·가사 문자 상한, seed, CFG, negative prompt가 모두 unknown.",
+        "구조 태그 문법과 태그 발성 거동이 unknown.",
+        "상업 이용 조건이 unknown."
+      ]
+    }
+  ],
+  "cross_notes": "가사 모델은 세 계열로 갈린다. YuE·ACE-Step은 자유형 style/caption과 별도 lyrics를 사용하고 `[verse]`류 라벨을 넣는다(https://github.com/multimodal-art-projection/YuE, https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md). LeVo와 SongBloom은 구조 토큰 자체의 duration/무가사 의미를 더 엄격히 정의하므로 태그가 제어 토큰이라는 근거가 강하다(https://github.com/levo-demo/LeVo, https://github.com/tencent-ailab/SongBloom). DiffRhythm v1은 의미 구조 태그 대신 timed LRC를 사용한다(https://github.com/ASLP-lab/DiffRhythm/blob/main/infer/example/eg_en.lrc). MusicGen, JASCO, MusicGen-Stem, Stable Audio Open, InspireMusic은 공개 표면상 별도 lyrics token path가 없는 instrumental/text-to-music 계열이다(https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md, https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md, https://arxiv.org/abs/2501.01757, https://huggingface.co/stabilityai/stable-audio-open-1.0, https://github.com/QwenAudio/FunMusic). 수치 duration 제어가 가장 직접적인 모델은 ACE-Step의 10–600초와 Stable Audio Open의 timing conditioning이며, SongBloom·LeVo는 구조 토큰으로 구간 길이를 간접 제어한다(https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md, https://huggingface.co/stabilityai/stable-audio-open-1.0, https://github.com/tencent-ailab/SongBloom, https://github.com/levo-demo/LeVo).",
+  "sources": [
+    "https://github.com/multimodal-art-projection/YuE",
+    "https://github.com/multimodal-art-projection/YuE/blob/main/inference/infer.py",
+    "https://arxiv.org/abs/2503.08638",
+    "https://github.com/ASLP-lab/DiffRhythm",
+    "https://github.com/ASLP-lab/DiffRhythm/blob/main/src/update_alert.md",
+    "https://github.com/ASLP-lab/DiffRhythm/blob/main/infer/example/eg_en.lrc",
+    "https://arxiv.org/abs/2503.01183",
+    "https://github.com/ace-step/ACE-Step",
+    "https://github.com/ace-step/ACE-Step-1.5",
+    "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INFERENCE.md",
+    "https://github.com/ace-step/ACE-Step-1.5/blob/main/acestep/inference.py",
+    "https://github.com/tencent-ailab/SongBloom",
+    "https://arxiv.org/abs/2506.07634",
+    "https://github.com/levo-demo/LeVo",
+    "https://github.com/tencent-ailab/SongGeneration",
+    "https://arxiv.org/abs/2506.07520",
+    "https://arxiv.org/abs/2606.30642",
+    "https://github.com/facebookresearch/audiocraft",
+    "https://github.com/facebookresearch/audiocraft/blob/main/docs/MUSICGEN.md",
+    "https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/models/musicgen.html",
+    "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/models/musicgen.py",
+    "https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/solvers/musicgen.py",
+    "https://arxiv.org/abs/2306.05284",
+    "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+    "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md",
+    "https://arxiv.org/abs/2406.10970",
+    "https://arxiv.org/abs/2501.01757",
+    "https://simonrouard.github.io/musicgenstem/",
+    "https://github.com/simonrouard/audiocraft/tree/multistem",
+    "https://huggingface.co/facebook/musicgen-stem-7cb",
+    "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+    "https://github.com/Stability-AI/stable-audio-tools",
+    "https://github.com/Stability-AI/stable-audio-tools/blob/main/stable_audio_tools/inference/generation.py",
+    "https://arxiv.org/abs/2402.04825",
+    "https://github.com/QwenAudio/FunMusic",
+    "https://arxiv.org/abs/2503.00084",
+    "https://seed.bytedance.com/en/seed-music",
+    "https://arxiv.org/abs/2409.09214",
+    "https://lf3-static.bytednsdoc.com/obj/eden-cn/zeeh7lpqbps/Seed-Music.pdf"
+  ]
+}

@@ -1,0 +1,1286 @@
+{
+  "cluster": "lyria — Google 계열",
+  "engines": [
+    {
+      "engine": "Lyria (original research model)",
+      "vendor": "Google DeepMind",
+      "status": "research",
+      "models": [
+        {
+          "name": "Lyria",
+          "released": "2023-11-16",
+          "notes": "Google DeepMind이 발표한 최초 Lyria 모델. instrumentals·vocals 생성과 transformation·continuation 능력을 공식적으로 설명했다.",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/",
+          "price_note": "일반 공개 API가 아니라 제한된 YouTube Dream Track 및 Music AI 실험으로 소개됨. E2.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/",
+          "notes": "Dream Track에서 사용자가 topic을 입력하고 참여 artist를 선택하는 입력면이 공개되었다. 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": null,
+          "syntax": "unknown",
+          "evidence": "unknown",
+          "url": "",
+          "notes": "사용자 제공 가사 필드의 공개 문서 없음."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "unknown",
+          "url": ""
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "Dream Track 출력은 30초였지만 사용자가 숫자로 길이를 지정하는 기능은 문서화되지 않음.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/"
+        },
+        "reference_audio": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "모델 능력으로 transformation과 continuation이 공식 언급됐으나 공개 UI/API 문법은 제공되지 않았다.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/"
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "모델은 instrumentals와 vocals를 모두 생성할 수 있다고 설명됐지만 사용자 토글 문법은 unknown.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "Dream Track에서 참여 artist를 선택하면 해당 artist의 AI-generated voice와 musical style로 생성했다.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "원본 Lyria 발표에는 실시간 조향 인터페이스가 문서화되지 않음.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": null,
+        "url": "",
+        "notes": "unknown"
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Dream Track는 topic과 artist 선택으로 30초 분량의 lyrics, backing track, AI-generated voice를 동시에 생성했다.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/transforming-the-future-of-music-creation/"
+        }
+      ],
+      "gaps": [
+        "프롬프트 문자 제한, 사용자 가사 문법, 구조 태그, seed 및 공개 API는 unknown."
+      ]
+    },
+    {
+      "engine": "Lyria 2 on Vertex AI",
+      "vendor": "Google Cloud / Google DeepMind",
+      "status": "live",
+      "models": [
+        {
+          "name": "lyria-002 (Lyria 2)",
+          "released": "2025",
+          "notes": "Vertex AI의 text-to-instrumental-music publisher model. 48 kHz WAV, 요청당 30초 출력.",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        }
+      ],
+      "access": [
+        {
+          "channel": "api",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+          "price_note": "Vertex AI 가격표 기준 30초당 USD 0.06. E1. https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "commercial_use": "Google Cloud 계약 및 서비스 약관 적용."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+          "notes": "`prompt`는 required US English string. 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "해당 Vertex API는 instrumental music 생성 전용이며 lyrics 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+          "notes": "가사 칸 없이 `prompt` 한 칸만 존재."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "no",
+            "evidence": "E1",
+            "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+          },
+          "evidence": "unknown",
+          "url": "",
+          "notes": "구조 태그 문법은 문서화되지 않았고 모델 출력은 instrumental-only."
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "API 출력은 항상 30초이며 초·마디 길이 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        },
+        "reference_audio": {
+          "exists": false,
+          "how": "문서화된 요청 입력은 text `prompt`, `negative_prompt`, `seed`뿐이다.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        },
+        "negative_prompt": {
+          "exists": true,
+          "how": "`negative_prompt`: 생성 오디오에서 제외할 요소를 서술하는 optional string.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "`seed` integer. 동일 prompt·parameters에서 같은 오디오 생성을 시도한다. `sample_count`와 동시 사용 불가.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": false,
+          "how": "공개 Vertex API는 text-to-music 단일 생성 요청만 문서화한다.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "모든 출력이 instrumental이므로 별도 토글이 없다.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "instrumental-only API.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "비스트리밍 `predict` 요청.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        }
+      },
+      "api_params": [
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+          "notes": "`instances` 내부. US English text description."
+        },
+        {
+          "name": "negative_prompt",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+          "notes": "`instances` 내부. 제외할 소리·스타일 설명."
+        },
+        {
+          "name": "seed",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+          "notes": "`instances` 내부. `sample_count`와 상호 배타적."
+        },
+        {
+          "name": "sample_count",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+          "notes": "`parameters` 내부. 기본값 1, `seed`와 상호 배타적."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+        "notes": "공식 API 문서에 장르·구조 태그 목록 없음."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "`seed`는 절대 동일성을 보장한다고 쓰지 않고 같은 조건에서 동일 오디오 생성을 'attempt'한다고 문서화한다.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        },
+        {
+          "claim": "`seed`와 `sample_count`는 한 요청에서 함께 사용할 수 없다.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation"
+        }
+      ],
+      "gaps": [
+        "프롬프트 문자 수 상한은 공식 문서에서 확인되지 않아 unknown."
+      ]
+    },
+    {
+      "engine": "Lyria 3 via Gemini API / Vertex AI / Gemini app / Google AI Studio",
+      "vendor": "Google DeepMind / Google",
+      "status": "beta",
+      "models": [
+        {
+          "name": "lyria-3-clip-preview",
+          "released": "2026-03-25",
+          "notes": "30초 MP3 clip·loop·preview 모델.",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        },
+        {
+          "name": "lyria-3-pro-preview",
+          "released": "2026-03-25",
+          "notes": "수 분 길이의 full-song 모델. Vertex AI 릴리스 노트는 184초 출력을 명시한다.",
+          "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes"
+        }
+      ],
+      "access": [
+        {
+          "channel": "api",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "price_note": "Gemini API paid tier: Clip USD 0.04/song, Pro USD 0.08/song; free tier 없음. E1. https://ai.google.dev/gemini-api/docs/pricing",
+          "commercial_use": "API 약관 적용."
+        },
+        {
+          "channel": "sdk",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "price_note": "Google Gen AI SDK의 `client.interactions.create` 사용. E1.",
+          "commercial_use": "API 약관 적용."
+        },
+        {
+          "channel": "web",
+          "url": "https://aistudio.google.com/",
+          "price_note": "Google AI Studio music playground는 paid API key를 사용. E2. https://blog.google/innovation-and-ai/technology/developers-tools/lyria-3-developers/",
+          "commercial_use": "Google AI Studio 및 Gemini API 약관 적용."
+        },
+        {
+          "channel": "app",
+          "url": "https://gemini.google.com/",
+          "price_note": "Gemini app에서 30초 Lyria 3 track 생성이 beta로 공개됨. E2. https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026/",
+          "commercial_use": "Gemini Apps 약관 적용."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "`input` 하나에 음악 지시, 구조 및 사용자 가사를 함께 넣는다. 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "별도 API lyrics 필드 없음. `input` prompt 안에 `Lyrics:` prefix 또는 'with the following lyrics:' 문구 뒤에 가사와 태그를 함께 넣는다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/generate-content/music-generation",
+          "notes": "Google AI Studio Composer UI는 section 단위 편집을 제공하지만 Gemini API는 하나의 `input`을 사용한다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Intro] -> [Verse 1] -> [Chorus] -> [Verse 2] -> [Chorus] -> [Bridge] -> [Outro]",
+            "[Verse 1]",
+            "[Pre-chorus]",
+            "[Chorus]",
+            "[Bridge]",
+            "[Outro]",
+            "[0:00 - 0:10] Intro: Begin with a soft lo-fi beat and muffled vinyl crackle.",
+            "[0:10 - 0:30] Verse 1: Add a warm Fender Rhodes piano melody and gentle vocals singing about a rainy morning."
+          ],
+          "tags_are_sung": {
+            "answer": "no",
+            "evidence": "E1",
+            "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+          },
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "공식 문서는 대괄호 section tags를 모델이 song structure를 이해하도록 돕는 지시로 정의한다."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "Clip은 항상 30초. Pro는 prompt에 `create a 2-minute song`처럼 길이를 쓰거나 timestamp 구간으로 진행과 길이를 제어한다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        },
+        "reference_audio": {
+          "exists": false,
+          "how": "Gemini API의 Lyria 3 입력은 text와 최대 10개 image를 지원하지만 audio reference 입력은 지원 항목으로 문서화되지 않음.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "Lyria 3 model capability 표에서 Negative prompting은 Not supported.",
+          "evidence": "E1",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/lyria/lyria-3"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "음악 생성 문서는 같은 prompt를 반복해도 결과가 달라질 수 있다고 명시하며 Lyria 3 전용 seed 입력을 문서화하지 않는다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": false,
+          "how": "현재 Lyria 3 API는 single-turn이며 multi-turn iterative editing 또는 refinement를 지원하지 않는다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "별도 boolean이 아니라 prompt에 `Instrumental only, no vocals.`라고 지시한다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "prompt에 singer gender, timbre, vocal range를 기술한다. 공식 예시는 `Female Soprano`, `Female Alto`, `Male Tenor`, `Male Baritone`, `Weathered Rocker (Male)`이다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/generate-content/music-generation"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "Lyria 3는 single-turn 비실시간 생성이며 실시간 기능은 별도 Lyria RealTime 모델이다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        }
+      },
+      "api_params": [
+        {
+          "name": "model",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "`lyria-3-clip-preview` 또는 `lyria-3-pro-preview`."
+        },
+        {
+          "name": "input",
+          "type": "string | Content[]",
+          "required": true,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "텍스트 prompt 또는 text·image content 목록."
+        },
+        {
+          "name": "response_format",
+          "type": "object",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "Pro에서 WAV 요청에 사용. 예: `{\"type\":\"audio\"}`. 기본 출력은 MP3."
+        },
+        {
+          "name": "input[].type",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "멀티모달 입력에서 `text` 또는 `image`."
+        },
+        {
+          "name": "input[].text",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "text content의 본문."
+        },
+        {
+          "name": "input[].mime_type",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "image content MIME type. 예: `image/jpeg`."
+        },
+        {
+          "name": "input[].data",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "notes": "base64 image data."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+        "notes": "공식 section-tag 예시는 `[Verse]`, `[Chorus]`, `[Bridge]`, `[Intro]`, `[Outro]`; 폐쇄형 전체 장르 목록은 아니다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Vocals와 lyrics는 기본 생성되며, 사용자 가사는 prompt 내부에 직접 넣는다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/generate-content/music-generation"
+        },
+        {
+          "claim": "괄호는 echo 또는 backing-singer 반복을 지시한다. 공식 예시는 `Let's go (go)`이다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/generate-content/music-generation"
+        },
+        {
+          "claim": "BPM과 key/scale은 별도 숫자 파라미터가 아니라 자연어 prompt로 지정한다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        },
+        {
+          "claim": "최대 10개의 image를 text와 함께 입력해 분위기·스타일에 영향을 줄 수 있다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        }
+      ],
+      "gaps": [
+        "공식 prompt 문자 수 상한은 unknown.",
+        "stems export는 Gemini API 문서에서 확인되지 않아 unknown.",
+        "대괄호 지시가 예외적으로 실제 발화되는 오류율에 관한 공식 평가 자료는 없음."
+      ]
+    },
+    {
+      "engine": "Lyria RealTime",
+      "vendor": "Google DeepMind / Google",
+      "status": "research",
+      "models": [
+        {
+          "name": "models/lyria-realtime-exp",
+          "released": "2025-05-20",
+          "notes": "Gemini API의 experimental, WebSocket 기반 저지연 연속 음악 생성 모델.",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        }
+      ],
+      "access": [
+        {
+          "channel": "api",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "price_note": "Experimental Gemini API 모델. 현재 문서 페이지에 구체 가격은 표시되지 않음.",
+          "commercial_use": "Gemini API 약관 적용."
+        },
+        {
+          "channel": "sdk",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "price_note": "Google Gen AI SDK에서 `client.aio.live.music.connect()` 또는 `client.live.music.connect()` 사용.",
+          "commercial_use": "Gemini API 약관 적용."
+        },
+        {
+          "channel": "web",
+          "url": "https://aistudio.google.com/",
+          "price_note": "AI Studio Prompt DJ 및 MIDI DJ 샘플 앱으로 접근.",
+          "commercial_use": "Google AI Studio 약관 적용."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "하나 이상의 `WeightedPrompt{text, weight}`를 전송한다. 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "lyrics 입력 없음; instrumental-only.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "`VOCALIZATION` mode는 voice-like vocalization을 악기처럼 생성하지만 lyrics 노래 기능은 아니다."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "no",
+            "evidence": "E1",
+            "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+          },
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "instrumental-only이며 `[Verse]` 계열 문법은 공식 문서에 없다."
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "초·마디 길이 파라미터가 아니라 `play`, `pause`, `stop`으로 길이가 정해지는 continuous stream.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "reference_audio": {
+          "exists": false,
+          "how": "공식 control 입력은 `WeightedPrompt`, `MusicGenerationConfig`, `PlaybackControl`이며 reference-audio 입력은 문서화되지 않음.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "negative_prompt": {
+          "exists": true,
+          "how": "`WeightedPrompt.weight`는 0을 제외한 값을 허용하므로 음수 weight를 사용할 수 있다. 다만 별도 `negative_prompt` 필드는 없다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "seed_determinism": {
+          "exists": true,
+          "how": "`MusicGenerationConfig.seed`: 0~2,147,483,647. 미지정 시 임의 선택. 실시간 전체 스트림의 bit-exact 재현 보장은 문서화되지 않음.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "stems_export": {
+          "exists": false,
+          "how": "출력은 하나의 stereo raw PCM stream이며 stems 출력은 문서화되지 않음.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "생성 중 weighted prompts와 config를 다시 보내 연속적으로 morph/steer한다. 파일 기반 inpainting은 지원 문서 없음.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "모델 자체가 instrumental-only.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`music_generation_mode=VOCALIZATION`으로 vocalization을 악기처럼 생성할 수 있으나 명료한 lyrics는 지원하지 않는다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "realtime_steering": {
+          "exists": true,
+          "how": "WebSocket 연결 중 `WeightedPrompt` 배열과 전체 `MusicGenerationConfig`를 갱신한다. `bpm` 또는 `scale` 변경은 `reset_context()`가 필요하고 hard transition을 만든다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        }
+      },
+      "api_params": [
+        {
+          "name": "model",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "`models/lyria-realtime-exp`."
+        },
+        {
+          "name": "WeightedPrompt.text",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "음악 아이디어, 장르, 악기, 분위기 또는 특성."
+        },
+        {
+          "name": "WeightedPrompt.weight",
+          "type": "float",
+          "required": true,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "0을 제외한 값. 공식 권장 시작값 1.0."
+        },
+        {
+          "name": "guidance",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "범위 0.0~6.0, 기본값 4.0. prompt adherence 강도."
+        },
+        {
+          "name": "bpm",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "범위 60~200. 변경 반영에 stop/play 또는 `reset_context()` 필요."
+        },
+        {
+          "name": "density",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "범위 0.0~1.0. 음표·소리 밀도."
+        },
+        {
+          "name": "brightness",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "범위 0.0~1.0. 높은 값은 고주파가 강조된 밝은 음색."
+        },
+        {
+          "name": "scale",
+          "type": "Scale enum",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "`C_MAJOR_A_MINOR`, `D_FLAT_MAJOR_B_FLAT_MINOR`, `D_MAJOR_B_MINOR`, `E_FLAT_MAJOR_C_MINOR`, `E_MAJOR_D_FLAT_MINOR`, `F_MAJOR_D_MINOR`, `G_FLAT_MAJOR_E_FLAT_MINOR`, `G_MAJOR_E_MINOR`, `A_FLAT_MAJOR_F_MINOR`, `A_MAJOR_G_FLAT_MINOR`, `B_FLAT_MAJOR_G_MINOR`, `B_MAJOR_A_FLAT_MINOR`, `SCALE_UNSPECIFIED`."
+        },
+        {
+          "name": "mute_bass",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "기본값 false. bass 출력을 줄이도록 조향."
+        },
+        {
+          "name": "mute_drums",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "기본값 false. drums 출력을 줄이도록 조향."
+        },
+        {
+          "name": "only_bass_and_drums",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "기본값 false. bass와 drums만 출력하도록 시도."
+        },
+        {
+          "name": "music_generation_mode",
+          "type": "MusicGenerationMode enum",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "`QUALITY` 기본값, `DIVERSITY`, `VOCALIZATION`."
+        },
+        {
+          "name": "temperature",
+          "type": "float",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "범위 0.0~3.0, 기본값 1.1."
+        },
+        {
+          "name": "top_k",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "범위 1~1000, 기본값 40."
+        },
+        {
+          "name": "seed",
+          "type": "integer",
+          "required": false,
+          "doc_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "범위 0~2,147,483,647; 기본은 임의 선택."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+        "notes": "공식 문서에 Instruments, Music Genre, Mood/Description별 non-exhaustive prompt vocabulary와 전체 Scale enum이 있다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "활성 스트림 중 새 weighted prompts를 보내면 모델이 새 영향으로 부드럽게 전환한다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        {
+          "claim": "급격한 prompt 변경은 전환이 다소 abrupt할 수 있어 중간 weight를 이용한 cross-fading이 권장된다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        {
+          "claim": "config 갱신은 일부 필드만 patch할 수 없고 전체 config를 다시 보내야 하며, 빠진 필드는 default로 reset된다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        {
+          "claim": "relative major와 minor를 구분하지 않아 각 Scale enum이 두 상대조를 함께 나타낸다.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        }
+      ],
+      "gaps": [
+        "WeightedPrompt.text 문자 수 상한은 unknown.",
+        "동일 seed를 사용한 장시간 스트림의 재현성 수준은 공식 문서에 없음.",
+        "가사·section tag·audio reference·stems는 지원되지 않거나 문서화되지 않음."
+      ]
+    },
+    {
+      "engine": "MusicFX",
+      "vendor": "Google Labs",
+      "status": "discontinued",
+      "models": [
+        {
+          "name": "MusicFX text-to-music experiment",
+          "released": "2023",
+          "notes": "텍스트 아이디어에서 음악을 생성하던 labs.google/fx 실험. 2026-07-31 종료 주장은 커뮤니티 관측이며 Google의 별도 종료 공지는 확인되지 않았다.",
+          "url": "https://www.reddit.com/r/labsdotgoogle/comments/1ulshag/imagen_family_taken_downnow_musicfx/"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://labs.google/fx/",
+          "price_note": "기존 서비스는 무료 일일 quota 방식이었다. 현재 공식 FAQ에는 MusicFX가 제거되고 Project Genie만 남아 있다. E1. https://labs.google/fx/en-au/faq",
+          "commercial_use": "기존 FAQ는 Google이 original output의 소유권을 주장하지 않는다고 했지만 이용은 Terms of Service 전체에 따르도록 명시했다. https://labs.google/fx/en-au/faq"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/",
+          "notes": "text-to-music 생성 제품. 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "별도 lyrics 필드의 공식 문서 없음.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/",
+          "notes": "MusicFX는 vocals가 포함된 일부 요청을 생성하지 않는 안전장치를 사용했다. https://labs.google/fx/en-au/faq"
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "unknown",
+          "url": ""
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "reference_audio": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "vocals 포함 요청이 차단될 수 있었으나 별도 instrumental toggle 문서는 확인되지 않음.",
+          "evidence": "E1",
+          "url": "https://labs.google/fx/en-au/faq"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "공식 FAQ는 특정 artist 또는 vocals를 포함하는 일부 query가 생성되지 않는다고 설명했다.",
+          "evidence": "E1",
+          "url": "https://labs.google/fx/en-au/faq"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "실시간 조향은 별도 MusicFX DJ 제품이었다.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": null,
+        "url": "",
+        "notes": "unknown"
+      },
+      "observed_behaviors": [
+        {
+          "claim": "MusicFX와 MusicFX DJ가 2026-07-31 종료됐다는 관측이 있으나 Google 공식 종료 공지는 확인되지 않았다.",
+          "evidence": "E4",
+          "url": "https://www.reddit.com/r/labsdotgoogle/comments/1ulshag/imagen_family_taken_downnow_musicfx/"
+        },
+        {
+          "claim": "현재 labs.google/fx 공식 FAQ에는 MusicFX가 제품 목록에서 제거되어 있다.",
+          "evidence": "E1",
+          "url": "https://labs.google/fx/en-au/faq"
+        }
+      ],
+      "gaps": [
+        "종료일의 E1/E2 공식 확인 자료가 없어 status 판정은 E4 관측과 현재 공식 페이지 부재를 결합한 판정.",
+        "기존 prompt 길이, duration, download 형식 및 태그 행동의 공식 레퍼런스가 보존되어 있지 않음."
+      ]
+    },
+    {
+      "engine": "MusicFX DJ",
+      "vendor": "Google Labs / Google DeepMind",
+      "status": "discontinued",
+      "models": [
+        {
+          "name": "Lyria RealTime-backed MusicFX DJ",
+          "released": "2024-10-23",
+          "notes": "연속 음악을 실시간 생성·조향하는 웹 인터페이스. 2025년 공식 자료는 Lyria RealTime이 MusicFX DJ를 구동한다고 명시한다.",
+          "url": "https://blog.google/innovation-and-ai/products/generative-media-models-io-2025/"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://labs.google/fx/",
+          "price_note": "기존 Google Labs 실험. 현재 공식 Labs 제품 목록에서는 제거됨. https://labs.google/fx/en-au/faq",
+          "commercial_use": "기존 Labs Terms of Service 적용."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/",
+          "notes": "사용자가 음악 아이디어를 추가하고 연속 스트림을 조향하는 UI. 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": false,
+          "syntax": "instrumental 실시간 모델 기반.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "MusicFX DJ 기반 모델인 Lyria RealTime은 instrumental-only."
+        },
+        "structure_tags": {
+          "exists": false,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "no",
+            "evidence": "E1",
+            "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+          },
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+          "notes": "기반 모델이 instrumental-only이고 section tag 문법 없음."
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "고정 초·마디가 아니라 continuous flow를 재생·정지하는 방식.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        },
+        "reference_audio": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "UI의 음수 weight 노출 여부는 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "UI seed 노출 여부는 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "연속 음악을 생성하면서 prompt/control을 바꾸어 실시간으로 steer한다.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        },
+        "instrumental_toggle": {
+          "exists": false,
+          "how": "기반 모델은 instrumental-only.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "vocal_control": {
+          "exists": false,
+          "how": "lyrics vocals는 지원하지 않음.",
+          "evidence": "E1",
+          "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+        },
+        "realtime_steering": {
+          "exists": true,
+          "how": "continuous flow를 생성하면서 prompts와 controls로 실시간 조향.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": null,
+        "url": "",
+        "notes": "MusicFX DJ UI 자체의 보존된 공식 목록은 unknown. 기반 Lyria RealTime 목록은 별도 엔진 항목 참조."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "Google은 expanded intuitive controls, improved audio quality, new model behaviors 및 친구와의 jam session을 공식적으로 설명했다.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        },
+        {
+          "claim": "2026-07-31 종료 관측이 있으나 공식 종료 공지는 확인되지 않았다.",
+          "evidence": "E4",
+          "url": "https://www.reddit.com/r/labsdotgoogle/comments/1ulshag/imagen_family_taken_downnow_musicfx/"
+        }
+      ],
+      "gaps": [
+        "UI에 실제 노출되던 parameter 이름과 범위는 공식 문서가 보존되지 않아 unknown.",
+        "기반 엔진 API 파라미터와 MusicFX DJ UI 컨트롤을 동일하다고 가정하지 않았다."
+      ]
+    },
+    {
+      "engine": "Music AI Sandbox",
+      "vendor": "Google DeepMind / YouTube",
+      "status": "beta",
+      "models": [
+        {
+          "name": "Lyria 2-powered Music AI Sandbox",
+          "released": "2024",
+          "notes": "음악가·프로듀서·송라이터용 experimental suite. 2025년에는 Lyria 2 기반으로 공식 설명됐다.",
+          "url": "https://deepmind.google/lyria"
+        }
+      ],
+      "access": [
+        {
+          "channel": "app",
+          "url": "https://deepmind.google/lyria",
+          "price_note": "일반 공개가 아닌 waitlist·trusted testers·Music AI Incubator 중심 실험.",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E2",
+          "url": "https://deepmind.google/lyria",
+          "notes": "Lyria 2 기반이며 text prompts로 음악의 key, BPM 및 기타 특성을 조형한다고 설명한다. 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": null,
+          "syntax": "unknown",
+          "evidence": "unknown",
+          "url": "",
+          "notes": "vocal parts를 만들 수 있다는 설명은 있으나 별도 lyrics 입력칸·문법은 공개되지 않음."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "unknown",
+          "url": ""
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "precise controls와 multi-track view가 언급되지만 초·마디 숫자 입력 문법은 unknown.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "existing pieces의 instrumental 또는 vocal parts를 만들고 sound transformation을 수행할 수 있다.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/lyria"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "multi-track view는 공식 발표됐지만 stems export 형식은 unknown.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "loop generation, sound transformation, in-painting 및 track parts 연결 기능.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "existing piece에 instrumental 또는 vocal parts를 생성할 수 있다고 설명되지만 정확한 UI 토글 이름은 unknown.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/lyria"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "vocal parts 생성은 공식 확인되지만 singer/lyrics 파라미터 문법은 unknown.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/lyria"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "Lyria RealTime 기술 통합은 언급되지만 Sandbox 내 실시간 조향 입력면의 정확한 문법은 unknown.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": null,
+        "url": "",
+        "notes": "unknown"
+      },
+      "observed_behaviors": [
+        {
+          "claim": "multi-track view에서 곡을 sketch, organize, refine하고 loop generation, transformation, in-painting을 사용할 수 있다고 공식 발표됐다.",
+          "evidence": "E2",
+          "url": "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/"
+        }
+      ],
+      "gaps": [
+        "공개 API 없음.",
+        "lyrics field, structure tag, prompt limit, seed, stems export 규격 및 구체적인 control 이름은 공개 문서 부족으로 unknown."
+      ]
+    },
+    {
+      "engine": "Google Flow Music",
+      "vendor": "Google Labs",
+      "status": "live",
+      "models": [
+        {
+          "name": "Lyria 3 Pro",
+          "released": "2026",
+          "notes": "Flow Music 초기 기반 모델.",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-updates/"
+        },
+        {
+          "name": "Lyria 3.5",
+          "released": "2026-07-29",
+          "notes": "향상된 musicality, lyrics, vocals, tempo 및 duration control을 제공하는 현재 Flow Music 모델.",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.flowmusic.app/",
+          "price_note": "Google 계정으로 무료 가입 가능하며 더 많은 credits/generations에는 Flow Music 또는 Google AI membership upgrade가 필요하다. E1. https://support.google.com/flow/answer/17083868",
+          "commercial_use": "Google은 생성 original content의 소유권을 주장하지 않지만 전체 Terms of Service가 적용된다. https://support.google.com/flow/answer/16353333"
+        },
+        {
+          "channel": "app",
+          "url": "https://www.flowmusic.app/",
+          "price_note": "공식 도움말은 iPhone/iPad 앱 작업 흐름을 문서화한다. E1. https://support.google.com/flow/answer/17084348",
+          "commercial_use": "Google Flow Music 약관 적용."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348",
+          "notes": "New session의 prompt box에서 음악을 자연어로 설명한다. 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "초기 생성은 prompt box 하나지만 생성 후 Compose 화면에 별도 `Lyrics`, `Sound`, `Details` 영역이 있다.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348",
+          "notes": "표시된 lyrics도 Details에서 직접 편집 가능."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "unknown",
+            "url": ""
+          },
+          "evidence": "unknown",
+          "url": "",
+          "notes": "Flow Music 도움말에는 `[Verse]` 문법과 태그 발화 거동이 명시되지 않음."
+        },
+        "duration_control": {
+          "exists": true,
+          "how": "자연어로 tempo·duration을 지시할 수 있고, 편집 예시는 `Shorten the intro to 4 bars`이다. Lyria 3.5는 duration control 개선을 공식 표방한다.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "prompt에 microphone Recording, Audio file 또는 Image reference를 추가할 수 있다.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "별도 negative prompt UI는 공식 도움말에서 확인되지 않아 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "여러 file format으로 download할 수 있지만 stems 형식 여부는 도움말에 명시되지 않음.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "`Extend`, `Cover`, `Replace`를 선택하고 변경할 audio section을 지정한 뒤 자연어 변경 지시를 입력한다. 구조·mix·style도 prompt로 편집 가능.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "자연어로 instrumental을 요청할 가능성은 있으나 별도 toggle의 공식 문서는 unknown.",
+          "evidence": "unknown",
+          "url": ""
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "prompt로 female vocals 같은 특성을 지정하고 Compose의 `Lyrics`·`Sound`에서 수정할 수 있다.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "연속 오디오 스트림 조향이 아니라 generate 후 대화형 edit/remix workflow.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": null,
+        "url": "",
+        "notes": "공식 장르·section-tag 폐쇄형 목록은 확인되지 않음."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "텍스트뿐 아니라 audio recording, audio file 및 image를 prompt reference로 받을 수 있다.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        },
+        {
+          "claim": "곡의 일부를 선택해 Extend, Cover 또는 Replace할 수 있다.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        },
+        {
+          "claim": "자연어 편집 예시로 `Shorten the intro to 4 bars`, `Add a bridge before the final chorus`, `Make the kick drum punchier`, `Add more reverb to the vocals`가 공식 제공된다.",
+          "evidence": "E1",
+          "url": "https://support.google.com/flow/answer/17084348"
+        }
+      ],
+      "gaps": [
+        "공개 API 없음.",
+        "prompt 문자 제한, seed, negative prompt, section-tag 발화 거동 및 stems export 형식은 unknown.",
+        "Lyria 3.5의 내부 API 파라미터는 공개되지 않음."
+      ]
+    }
+  ],
+  "cross_notes": "Google 계열에는 세 가지 다른 control surface가 공존한다. Vertex Lyria 2는 `prompt`, `negative_prompt`, `seed`, `sample_count`만 가진 30초 instrumental API이고(https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation), Lyria 3는 하나의 자연어 `input` 안에 lyrics·section tags·BPM·key·timestamps를 함께 넣는 single-turn song API이며(https://ai.google.dev/gemini-api/docs/music-generation), Lyria RealTime은 `WeightedPrompt{text,weight}` 배열과 수치형 `MusicGenerationConfig`를 WebSocket 중 계속 갱신하는 instrumental streaming API다(https://ai.google.dev/gemini-api/docs/realtime-music-generation). Flow Music은 Lyria 3/3.5 위에 별도 Lyrics·Sound·Details 편집면과 audio reference, Extend/Cover/Replace를 추가한 소비자 제품이다(https://support.google.com/flow/answer/17084348). 따라서 `[Verse]`가 지시로 해석된다는 공식 근거는 Lyria 3에만 있으며, 이를 Lyria 2·RealTime·MusicFX 전반의 일반 성질로 확장할 근거는 없다.",
+  "sources": [
+    "https://deepmind.google/blog/transforming-the-future-of-music-creation/",
+    "https://deepmind.google/lyria",
+    "https://deepmind.google/models/lyria/",
+    "https://deepmind.google/models/model-cards/lyria-3/",
+    "https://deepmind.google/blog/new-generative-ai-tools-open-the-doors-of-music-creation/",
+    "https://blog.google/innovation-and-ai/products/generative-media-models-io-2025/",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/lyria-music-generation",
+    "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+    "https://ai.google.dev/gemini-api/docs/music-generation",
+    "https://ai.google.dev/gemini-api/docs/generate-content/music-generation",
+    "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/lyria/lyria-3",
+    "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/lyria-3-developers/",
+    "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026/",
+    "https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-updates/",
+    "https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/",
+    "https://support.google.com/flow/answer/17083868",
+    "https://support.google.com/flow/answer/17084348",
+    "https://support.google.com/flow/answer/16353333",
+    "https://labs.google/fx/en-au/faq",
+    "https://www.reddit.com/r/labsdotgoogle/comments/1ulshag/imagen_family_taken_downnow_musicfx/"
+  ]
+}

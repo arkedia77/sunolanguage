@@ -1,0 +1,1709 @@
+OpenAI Codex v0.149.0
+--------
+workdir: /Users/purple/sunolanguage
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a05643-488c-76e0-a2dd-ff7de72e74a2
+--------
+user
+# antisuno · Phase 0 조사 브리프 v0 (외부 검색자 공통 지침)
+
+## 우리가 알고 싶은 단 하나
+"이 엔진에서 **사람이 타이핑해서 음악을 통제할 수 있는 면(control surface)**이 정확히 무엇인가."
+장르 목록·마케팅 문구가 아니라 **입력 채널·문법·파라미터 이름·문자 제한·관측된 거동**이다.
+
+## 절대 규칙
+1. **모든 사실 주장에 출처 URL을 붙인다.** 출처 없는 값은 `null` + `"unknown"`. 추측 금지.
+2. 공식 문서/API 레퍼런스 > 개발자 블로그 > 논문 > 커뮤니티(Reddit/Discord) 순. 각 항목에 `evidence` 등급을 적는다.
+   - `E1` 공식 문서·API 레퍼런스 / `E2` 공식 블로그·릴리스노트 / `E3` 논문·기술리포트 / `E4` 커뮤니티 관측(미검증)
+3. **"태그가 노래로 불리는가"** 같은 거동 질문은 반드시 `E`등급과 함께. 모르면 모른다고 쓴다.
+4. 한국어로 서술, 고유명사·파라미터 이름은 원문 그대로.
+
+## 출력 형식
+마지막에 ```json 펜스 하나로만 출력. 스키마:
+
+```
+{
+  "cluster": "<클러스터명>",
+  "engines": [{
+    "engine": "", "vendor": "", "status": "live|beta|research|discontinued",
+    "models": [{"name":"","released":"","notes":"","url":""}],
+    "access": [{"channel":"web|api|app|sdk","url":"","price_note":"","commercial_use":""}],
+    "control_surface": {
+      "text_prompt": {"exists":null,"char_limit":null,"evidence":"","url":"","notes":""},
+      "lyrics_field": {"exists":null,"syntax":"","evidence":"","url":"","notes":""},
+      "structure_tags": {"exists":null,"syntax_examples":[],"tags_are_sung":{"answer":"yes|no|partial|unknown","evidence":"","url":""},"evidence":"","url":""},
+      "duration_control": {"exists":null,"how":"","evidence":"","url":""},
+      "reference_audio": {"exists":null,"how":"","evidence":"","url":""},
+      "negative_prompt": {"exists":null,"how":"","evidence":"","url":""},
+      "seed_determinism": {"exists":null,"how":"","evidence":"","url":""},
+      "stems_export": {"exists":null,"how":"","evidence":"","url":""},
+      "inpaint_extend_edit": {"exists":null,"how":"","evidence":"","url":""},
+      "instrumental_toggle": {"exists":null,"how":"","evidence":"","url":""},
+      "vocal_control": {"exists":null,"how":"","evidence":"","url":""},
+      "realtime_steering": {"exists":null,"how":"","evidence":"","url":""}
+    },
+    "api_params": [{"name":"","type":"","required":null,"doc_url":"","notes":""}],
+    "documented_vocabulary": {"has_official_tag_list":null,"url":"","notes":""},
+    "observed_behaviors": [{"claim":"","evidence":"E1|E2|E3|E4","url":""}],
+    "gaps": [""]
+  }],
+  "cross_notes": "",
+  "sources": [""]
+}
+```
+
+## 반드시 답해야 하는 질문 (엔진마다)
+- ⑴ 가사를 **따로 넣는 칸**이 있는가, 아니면 프롬프트 한 칸뿐인가?
+- ⑵ `[Verse]` `[Chorus]` 같은 **구조 태그 문법**이 문서에 있는가? 문면 예시 그대로.
+- ⑶ 대괄호 안 텍스트를 **지시로 읽는가, 노래로 부르는가**? (Suno는 지시로 읽음 — 이게 엔진 성질인지 일반 성질인지가 이 조사의 핵심)
+- ⑷ 길이(초/마디)를 **숫자로 지시**할 수 있는가?
+- ⑸ 레퍼런스 오디오 업로드 / continuation / inpainting이 되는가?
+- ⑹ API가 있는가? 있으면 **파라미터 이름을 전부** 적는다.
+- ⑺ 프롬프트 **문자 수 상한**은?
+- ⑻ 공식 장르·태그 **목록 문서**가 존재하는가?
+
+---
+## 이번 클러스터: `minimax_cn` — 중국계 상용
+대상: MiniMax Music(海螺/Hailuo Music, music-1.5 / music-01 / Music 2.0 / 3.0 등 버전 전부), Mureka(昆仑万维 Kunlun, O1/V6/V7), 天工 SkyMusic, 그 외 중국계 프롬프트 음악 서비스.
+특히: MiniMax 공개 API(platform.minimaxi.com / api.minimax.chat)의 music generation 엔드포인트 **파라미터 이름 전부**(`lyrics`·`refer_voice`·`refer_instrumental`·`audio_setting` 등 실제 문서 문면), 가사 칸에 `##`나 `[Verse]` 같은 **구분 문법이 문서화돼 있는지**, 가사 문자수 상한, 지원 언어. Mureka도 API 문서가 있으면 동일하게.
+
+codex
+공식 API 문서와 제품 문서를 우선해 각 버전·파라미터·문법을 교차검증하겠습니다. 요청 스키마의 모든 사실값에는 URL/E등급을 붙이고, 확인되지 않는 부분은 `null` 또는 `unknown`으로 남기겠습니다.
+web search: 
+web search: site:platform.minimaxi.com documentation music generation lyrics refer_voice refer_instrumental audio_setting ...
+web search: 
+web search: site:platform.minimax.io/docs/api-reference/music-generation music-2.0 refer_voice refer_instrumental ...
+web search: 
+web search: "refer_voice" "refer_instrumental" MiniMax ...
+web search: 
+web search: https://platform.minimax.io/docs/llms.txt
+web search: 
+web search: 
+codex
+MiniMax 최신 문서에서는 `music-3.0`까지 확인됐고, 2026-08-20 이후 신규 사용자의 유료 API 진입 제한과 free 모델 종료 공지도 확인했습니다. 이제 Mureka의 동적 OpenAPI 스키마와 SkyMusic의 공식 공개 범위를 분리해 추적 중입니다.
+web search: 
+web search: site:platform.mureka.ai/docs/api/operations/post-v1-song-generate.html "model" "prompt" "lyrics" ...
+web search: 
+web search: 天工 SkyMusic 官方 发布 文本 歌词 结构 标签 API ...
+web search: 
+web search: site:kunlun.com Mureka SkyMusic replaced rebrand 2024 ...
+web search: 
+web search: site:platform.mureka.ai/docs/api/operations/post-v1-song-region-edit.html "start" "end" "lyrics" ...
+web search: 
+web search: https://platform.minimax.io/docs/api-reference/music-generation.md
+web search: 
+web search: site:platform.minimax.io/docs/api-reference/music-generation "sample_rate" "bitrate" "format" ...
+web search: 
+web search: site:minimax.io/news "Music 3.0" MiniMax ...
+codex
+```json
+{
+  "cluster": "minimax_cn",
+  "engines": [
+    {
+      "engine": "MiniMax Music",
+      "vendor": "MiniMax",
+      "status": "live",
+      "models": [
+        {
+          "name": "Music-01",
+          "released": "2024-08-31",
+          "notes": "레퍼런스 음악에서 보컬·반주의 리듬과 스타일을 학습한 뒤 입력 가사로 최대 60초 음악을 생성한다고 발표됐다.",
+          "url": "https://www.minimax.io/news/music-01"
+        },
+        {
+          "name": "Music-1.5",
+          "released": "2025-09-11",
+          "notes": "최대 4분, natural-language prompt 및 Intro·Verse·Chorus별 가사 배치를 지원한다고 발표됐다.",
+          "url": "https://www.minimax.io/news/minimax-music-15"
+        },
+        {
+          "name": "Music-2.0",
+          "released": "2025-10-31",
+          "notes": "최대 5분, prompt를 통한 보컬 음색·창법·악기 지시를 공식 소개했다.",
+          "url": "https://www.minimax.io/news/minimax-music-20"
+        },
+        {
+          "name": "Music-2.5",
+          "released": "2026-01-28",
+          "notes": "문단 단위 정밀 제어와 음질 개선 버전으로 발표됐다.",
+          "url": "https://www.minimax.io/news/minimax-music-25"
+        },
+        {
+          "name": "Music-2.5+",
+          "released": "2026-03-04",
+          "notes": "instrumental-only 생성 기능이 추가됐다.",
+          "url": "https://www.minimax.io/news/minimax-music-25-2"
+        },
+        {
+          "name": "Music-2.6",
+          "released": "2026-04-10",
+          "notes": "현재 API가 허용하는 이전 세대 text-to-music 모델이다.",
+          "url": "https://www.minimax.io/news/music-26"
+        },
+        {
+          "name": "Music-3.0",
+          "released": "2026-08-13",
+          "notes": "최대 5분의 완곡, optional lyrics, fine-grained temporal description 및 open weights를 발표했다.",
+          "url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model"
+        },
+        {
+          "name": "music-cover",
+          "released": "",
+          "notes": "레퍼런스 오디오를 새 스타일로 재연하는 API 모델이다. 정확한 최초 공개일은 unknown.",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.minimax.io/audio/music",
+          "price_note": "unknown",
+          "commercial_use": "unknown"
+        },
+        {
+          "channel": "api",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "price_note": "2026-08-20부터 신규 사용자는 유료 Music Generation·Lyrics Generation API를 이용할 수 없고 기존 유료 사용자는 계속 이용할 수 있다. free music API는 종료됐다.",
+          "commercial_use": "unknown"
+        },
+        {
+          "channel": "sdk",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+          "price_note": "Music 3.0 open weights가 제공된다.",
+          "commercial_use": "별도 라이선스 확인 필요"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 2000,
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "`prompt`는 style, mood, scenario를 기술한다. Music-3.0/2.6 instrumental은 1–2000자, vocal은 0–2000자이며 music-cover는 10–300자이다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "`lyrics`에 가사를 넣고 줄은 `\\n`으로 구분한다. Music-3.0/2.6 vocal은 1–3500자, cover는 10–1000자이다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "`prompt`와 `lyrics`가 별도 필드다. `lyrics_optimizer:true`이고 `lyrics`가 비어 있으면 prompt에서 가사를 자동 생성한다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Intro]",
+            "[Verse]",
+            "[Pre Chorus]",
+            "[Chorus]",
+            "[Interlude]",
+            "[Bridge]",
+            "[Outro]",
+            "[Post Chorus]",
+            "[Transition]",
+            "[Break]",
+            "[Hook]",
+            "[Build Up]",
+            "[Inst]",
+            "[Solo]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+          },
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "공식 문서는 이 문자열들을 structure tags라고 명시하지만, 태그가 모든 생성에서 비가창 처리된다는 보장은 문서화하지 않았다. 최신 공식 문서에는 `##` 구분 문법이 없다."
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "공개 `/v1/music_generation` 요청 스키마에는 초·마디·목표 길이 파라미터가 없다. Music 3.0의 최대 생성 길이는 5분이지만 사용자가 숫자로 지정하는 제어는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`music-cover`에서 `audio_url` 또는 `audio_base64` 중 하나를 전달한다. 6초–6분, 최대 50MB이며 `cover_feature_id`와 상호배타적이다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "공개 music-generation 요청 스키마에 negative-prompt 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "공개 music-generation 요청 스키마에 `seed` 또는 결정성 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/llms.txt"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "일반 continuation/inpainting은 문서화되지 않았다. 다만 cover preprocess가 `cover_feature_id`, 구조화 가사와 타임스탬프를 추출하며, 가사를 수정해 cover를 다시 생성할 수 있다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/guides/music-generation"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "`is_instrumental:true`; Music-3.0/2.6 계열에서 lyrics가 불필요해진다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`prompt`에서 vocal timbre, delivery, breathiness, falsetto, harmony, Auto-Tune 등을 자연어로 기술한다. 현재 API에는 Music-01의 `refer_voice`와 같은 직접 voice ID 파라미터가 없다.",
+          "evidence": "E2",
+          "url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "`stream`은 결과 전송 방식일 뿐 생성 도중 음악 지시를 변경하는 steering으로 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        }
+      },
+      "api_params": [
+        {
+          "name": "model",
+          "type": "enum<string>",
+          "required": true,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "`music-3.0`, `music-2.6`, `music-cover`; 종료된 free 변형도 스키마에 남아 있다."
+        },
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "모델·instrumental 여부에 따라 required 조건이 달라진다."
+        },
+        {
+          "name": "lyrics",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "vocal Music-3.0/2.6에서는 원칙적으로 필수이나 `lyrics_optimizer` 사용 시 비울 수 있다."
+        },
+        {
+          "name": "stream",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "기본값 false."
+        },
+        {
+          "name": "output_format",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "`url|hex`, 기본값 `hex`; stream에서는 `hex`만 지원한다."
+        },
+        {
+          "name": "audio_setting",
+          "type": "object",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "오디오 출력 설정 객체."
+        },
+        {
+          "name": "audio_setting.sample_rate",
+          "type": "integer",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/guides/mcp-guide",
+          "notes": "공식 MCP 문서 허용값: 16000, 24000, 32000, 44100."
+        },
+        {
+          "name": "audio_setting.bitrate",
+          "type": "integer",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/guides/mcp-guide",
+          "notes": "공식 MCP 문서 허용값: 32000, 64000, 128000, 256000."
+        },
+        {
+          "name": "audio_setting.format",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/guides/mcp-guide",
+          "notes": "공식 MCP 문서 허용값: `mp3`, `wav`, `pcm`."
+        },
+        {
+          "name": "lyrics_optimizer",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "기본값 false; 빈 lyrics를 prompt 기반 자동 가사로 대체한다."
+        },
+        {
+          "name": "is_instrumental",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "기본값 false."
+        },
+        {
+          "name": "audio_url",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "music-cover 전용; `audio_base64`와 정확히 하나를 제공하며 `cover_feature_id`와 상호배타적이다."
+        },
+        {
+          "name": "audio_base64",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "music-cover 전용; `audio_url`과 정확히 하나를 제공하며 `cover_feature_id`와 상호배타적이다."
+        },
+        {
+          "name": "cover_feature_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "preprocess 결과 ID; 24시간 유효하며 전달 시 lyrics가 필수다."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+        "notes": "공식 structure-tag 목록은 있으나 공식 장르 vocabulary의 폐쇄형 전체 목록은 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "공식 예시는 `[Intro]`, `[verse]`, `[pre-chorus]`, `[chorus]`, `[hook]`, `[bridge]`, `[outro]`를 가사 줄과 분리해 사용한다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/guides/music-generation"
+        },
+        {
+          "claim": "cover preprocess는 `[Verse]`, `[Chorus]` 등이 포함된 `formatted_lyrics`와 구간 타임스탬프를 반환한다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/guides/music-generation"
+        },
+        {
+          "claim": "Music-01용 제3자 API 문서에는 가사를 `##...##`로 감싼 예시와 `refer_voice`, `refer_instrumental`이 존재하지만, MiniMax 현재 공식 API 문서에는 이 문법·파라미터가 없다.",
+          "evidence": "E4",
+          "url": "https://docs.aimlapi.com/api-references/music-models/minimax/music-01"
+        }
+      ],
+      "gaps": [
+        "구조 태그가 실제 음원에서 절대로 발음되지 않는다는 공식 보장은 확인되지 않음: https://platform.minimax.io/docs/api-reference/music-generation",
+        "Music-01의 원본 MiniMax API 스키마와 `refer_voice`·`refer_instrumental`·`##` 문법을 보존한 공식 문서는 확인되지 않음: https://www.minimax.io/news/music-01",
+        "지원 가창 언어의 공식 전체 목록은 확인되지 않음: https://platform.minimax.io/docs/api-reference/music-generation",
+        "stems export와 일반 continuation/inpainting API는 공식 음악 문서 색인에서 확인되지 않음: https://platform.minimax.io/docs/llms.txt"
+      ]
+    },
+    {
+      "engine": "Mureka",
+      "vendor": "Kunlun Tech / SKYWORK AI",
+      "status": "live",
+      "models": [
+        {
+          "name": "Mureka V6",
+          "released": "2025-03-26",
+          "notes": "Mureka O1과 함께 최초 발표됐으며 2025-06-03 최적화판이 API에 반영됐다.",
+          "url": "https://www1.kunlun.com/news/3.html"
+        },
+        {
+          "name": "Mureka O1",
+          "released": "2025-03-26",
+          "notes": "음악 추론 모델로 발표됐다.",
+          "url": "https://platform.mureka.ai/docs/en/ai-music-o1-moment.html"
+        },
+        {
+          "name": "Mureka V7",
+          "released": "2025-07-23",
+          "notes": "API changelog에는 2025-07-29 추가로 기록됐다.",
+          "url": "https://www1.kunlun.com/news/3.html"
+        },
+        {
+          "name": "Mureka V7.5",
+          "released": "2025-08-15",
+          "notes": "중국어 노래의 음색·발음·감정 표현을 개선한 버전이며 API에서는 V7을 대체했다.",
+          "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-24/32d17b0a-21ba-43e8-ba90-be7f43ef997b.PDF"
+        },
+        {
+          "name": "Mureka V7.6",
+          "released": "2025-12-09",
+          "notes": "현재 API에서 song, instrumental 및 extension 일부에 사용된다.",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        },
+        {
+          "name": "Mureka O2",
+          "released": "2025-12-09",
+          "notes": "현재 song-generation API에서 `vocal_id`와 `melody_id`를 지원하지 않는다.",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        {
+          "name": "Mureka V8",
+          "released": "2026-01-05",
+          "notes": "2026-03-02 최적화판이 배포됐다.",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        },
+        {
+          "name": "Mureka V9",
+          "released": "2026-04-09",
+          "notes": "공식 changelog가 enhanced version 배포를 기록한다.",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        },
+        {
+          "name": "Mureka V9.5",
+          "released": "2026-08-28",
+          "notes": "공식 changelog가 enhanced version 배포를 기록하며 현재 song-generation enum에 포함된다.",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.mureka.ai/",
+          "price_note": "unknown",
+          "commercial_use": "Mureka는 consumer product와 별도로 상용 창작 플랫폼 및 B2B 서비스를 운영한다고 공식 발표했다."
+        },
+        {
+          "channel": "api",
+          "url": "https://platform.mureka.ai/docs/",
+          "price_note": "요청당 과금 세부값은 이 조사에서 확인하지 못해 unknown.",
+          "commercial_use": "API 약관은 Customer Application에 API를 통합하고 최종 사용자에게 제공할 권리를 규정한다."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 1024,
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`prompt`는 음악 생성 제어용이며 `vocal_id`와 조합할 수 있다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "`lyrics` 별도 필드, 최대 5000자. 공식 예시는 `[Verse]\\n가사...` 형식이다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "가사 기반 `/v1/song/generate`와 prompt 기반 song-generation API가 문서에서 별도 항목으로 제공된다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Verse]",
+            "[Intro]",
+            "[Chorus]",
+            "[Bridge]",
+            "[Break]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+          },
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html",
+          "notes": "공식 입력 예시는 `[Verse]`와 `[Intro]`를 사용하고, changelog는 반환 가사 구조 이름 `breakdown`을 `break`로 변경했다고 기록한다. 그러나 허용 태그의 완전한 공식 목록 및 비가창 보장은 없다."
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "기본 song-generation API에는 목표 초·마디 파라미터가 없다. extension의 `extend_at`은 생성 길이가 아니라 이어 붙일 시작 시점(ms)이다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`reference_id`는 30초 reference 오디오, `melody_id`는 5–60초 오디오 또는 MIDI melody, `instrumental_id`는 30초 instrumental reference를 사용한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-files-upload.html"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "공개 song-generation 요청 스키마에 negative-prompt 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "공개 song-generation 요청 스키마에 `seed` 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "`POST /v1/song/stem` 및 특정 track을 생성하는 `/v1/track/generate`가 제공된다. 공식 기술 문서는 vocal·instrumental 다중 트랙 출력을 명시한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/en/ai-music-o1-moment.html"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "`/v1/song/extend`는 head/tail extension, `/v1/song/region-edit`는 시간 구간+가사 기반 국소 편집, `/v1/song/remix`는 prompt·lyrics를 바꾼 리믹스를 제공한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "boolean toggle이 아니라 별도 `/v1/instrumental/generate` 엔드포인트를 사용한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`gender:female|male`, `vocal_id`, reference audio, 또는 15–30초 샘플로 만든 reusable Vocal ID를 사용한다. vocal reference가 `gender`보다 우선한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-vocal-clone.html"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "`stream:true`는 생성 중 `stream_url` 재생을 가능하게 하지만, 생성 중 prompt를 변경하는 steering은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        }
+      },
+      "api_params": [
+        {
+          "name": "lyrics",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`POST /v1/song/generate`; 최대 5000자."
+        },
+        {
+          "name": "model",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`auto|mureka-7.6|mureka-o2|mureka-8|mureka-9|mureka-9.5`."
+        },
+        {
+          "name": "n",
+          "type": "integer<int32>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "기본 2, 최대 3."
+        },
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "최대 1024자."
+        },
+        {
+          "name": "gender",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`female|male`."
+        },
+        {
+          "name": "reference_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "reference-purpose 업로드 ID; `vocal_id`와 조합 가능."
+        },
+        {
+          "name": "vocal_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`reference_id` 또는 `prompt`와 조합 가능; mureka-o2는 미지원."
+        },
+        {
+          "name": "melody_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "다른 control option과 조합 불가; mureka-o2는 미지원."
+        },
+        {
+          "name": "stream",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "생성 중 streaming playback을 활성화한다."
+        },
+        {
+          "name": "song_id",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "extension 입력; `upload_audio_id`와 상호배타적."
+        },
+        {
+          "name": "upload_audio_id",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "업로드 음원 extension 입력; `song_id`와 상호배타적."
+        },
+        {
+          "name": "extend.lyrics",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "extension 가사, 최대 3000자."
+        },
+        {
+          "name": "extend_at",
+          "type": "integer<int64>",
+          "required": true,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "밀리초 단위 연결 지점; mureka-7.6 범위 8000–420000."
+        },
+        {
+          "name": "extend_type",
+          "type": "enum<string>",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "`tail|head`; mureka-8에서는 필수."
+        },
+        {
+          "name": "extend.model",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "`mureka-7.6|mureka-8`."
+        },
+        {
+          "name": "instrumental.model",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "`auto|mureka-7.6|mureka-8|mureka-9|mureka-9.5`."
+        },
+        {
+          "name": "instrumental.n",
+          "type": "integer<int32>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "기본 2, 최대 3."
+        },
+        {
+          "name": "instrumental.prompt",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "최대 1024자; `instrumental_id`와 조합 불가."
+        },
+        {
+          "name": "instrumental_id",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "instrumental-purpose reference ID."
+        },
+        {
+          "name": "instrumental.stream",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "streaming playback."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+        "notes": "공식 예시에 `[Verse]` 등이 있지만 허용되는 전체 구조 태그 또는 장르 vocabulary 목록은 공개 API 문서에서 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "`prompt`, `reference_id`, `vocal_id`, `melody_id`는 자유 조합이 아니라 문서화된 조합 규칙을 따른다. `melody_id`는 다른 control option과 조합할 수 없다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        {
+          "claim": "업로드한 보컬 특성은 `gender` 선호보다 우선한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        {
+          "claim": "공식 changelog는 vocal 생성이 중국어·영어·일본어·한국어·포르투갈어·스페인어·독일어·이탈리아어·프랑스어·러시아어 10개 언어를 지원한다고 기록한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        }
+      ],
+      "gaps": [
+        "대괄호 구조 태그가 실제 출력에서 발음되는지 여부는 공식 문서에 없음: https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+        "허용되는 구조 태그의 완전한 목록 및 태그별 의미는 공개되지 않음: https://platform.mureka.ai/docs/en/changelog.html",
+        "일반 song-generation의 목표 길이를 숫자로 지정하는 파라미터는 확인되지 않음: https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+        "region-edit·stem·track 엔드포인트의 동적 페이지에서 세부 request schema가 검색 결과에 노출되지 않아 전체 하위 파라미터는 unknown: https://platform.mureka.ai/docs/en/changelog.html"
+      ]
+    },
+    {
+      "engine": "天工 SkyMusic / SkyMusic 2.0",
+      "vendor": "Kunlun Tech",
+      "status": "beta",
+      "models": [
+        {
+          "name": "天工 SkyMusic",
+          "released": "2024-04-17",
+          "notes": "공식적으로 공개 베타를 시작한 가사 기반 음악 생성 모델이다.",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        {
+          "name": "SkyMusic 2.0",
+          "released": "2024-08-14",
+          "notes": "Melodio와 Mureka에 탑재된 후속 모델로 공식 반기보고서에 기록됐다.",
+          "url": "https://epaper.stcn.com/pic/202408/24/dd9ca8f53aab5ed78cb5efd5b15b13cf.pdf"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.kunlun.com/2024/mnews_0814/377.html",
+          "price_note": "현재 독립 SkyMusic 서비스 가격은 unknown.",
+          "commercial_use": "SkyMusic 2.0 기반 Mureka가 AI 음악 상용 창작 플랫폼으로 발표됐다."
+        },
+        {
+          "channel": "app",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf",
+          "price_note": "unknown",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf",
+          "notes": "Melodio에서는 상황·기분 prompt로 연속 음악을 생성한다. SkyMusic 노래 생성 화면의 prompt 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "곡명과 가사를 입력하거나 AI가 가사를 생성하고, reference 곡으로 스타일을 선택한다.",
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf",
+          "notes": "가사와 곡명 입력은 공식 반기보고서에 명시되지만 문자 제한은 unknown."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://www.kunlun.com/news/7.html"
+          },
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html",
+          "notes": "공식 공개 자료에서 `[Verse]`, `[Chorus]` 또는 전각 괄호 기반 입력 문법을 확인하지 못했다."
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "숫자형 초·마디 입력은 공식 자료에서 확인되지 않았다.",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "사용자는 reference 곡을 선택해 스타일을 지정하거나 AI 자동 매칭을 사용할 수 있었다.",
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "inpaint_extend_edit": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "공식 자료는 다양한 singing technique와 가사 단락별 감정 제어를 설명하지만, 사용자가 입력하는 정확한 파라미터·문법은 공개하지 않았다.",
+          "evidence": "E1",
+          "url": "https://static.cninfo.com.cn/finalpage/2024-04-27/1219864246.PDF"
+        },
+        "realtime_steering": {
+          "exists": true,
+          "how": "SkyMusic 2.0 기반 Melodio는 사용자 상황·기분 prompt에 따라 무한 스트리밍 음악을 지속 생성한다. 생성 도중 prompt 변경의 정확한 프로토콜은 unknown.",
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://www.kunlun.com/news/7.html",
+        "notes": "공식 장르·구조 태그 목록 문서는 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "공식 회사 보고서는 SkyMusic가 입력 가사에 맞춰 곡을 만들고 reference 곡 또는 AI 자동 매칭으로 스타일을 정한다고 설명한다.",
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf"
+        },
+        {
+          "claim": "SkyMusic 2.0은 2024-08-14 공개된 Melodio와 Mureka에 탑재됐다.",
+          "evidence": "E1",
+          "url": "https://epaper.stcn.com/pic/202408/24/dd9ca8f53aab5ed78cb5efd5b15b13cf.pdf"
+        }
+      ],
+      "gaps": [
+        "독립 SkyMusic의 현재 운영·종료 상태를 명시한 공식 공지는 확인되지 않아 마지막 공식 상태인 공개 beta로 표기함: https://www.kunlun.com/news/7.html",
+        "공개 API 레퍼런스와 요청 파라미터는 확인되지 않음: https://www.kunlun.com/",
+        "가사 문자 제한, 구조 태그 문법, 태그 가창 여부, seed, negative prompt, stems, continuation/inpainting은 모두 unknown: https://www.kunlun.com/news/7.html"
+      ]
+    }
+  ],
+  "cross_notes": "MiniMax 최신 API와 Mureka는 모두 음악 설명과 가사를 별도 채널로 제공한다. MiniMax는 공식 structure-tag 전체 목록을 공개하지만 태그의 비가창을 보장하지 않는다(https://platform.minimax.io/docs/api-reference/music-generation). Mureka는 `[Verse]` 입력 예시는 공개하지만 완전한 태그 목록은 없다(https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html). 숫자형 목표 길이는 두 기본 생성 API 모두에서 확인되지 않았고, Mureka의 `extend_at`은 길이가 아니라 편집 연결 시점이다(https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html).",
+  "sources": [
+    "https://platform.minimax.io/docs/api-reference/music-generation",
+    "https://platform.minimax.io/docs/guides/music-generation",
+    "https://platform.minimax.io/docs/llms.txt",
+    "https://www.minimax.io/news/music-01",
+    "https://www.minimax.io/news/minimax-music-15",
+    "https://www.minimax.io/news/minimax-music-20",
+    "https://www.minimax.io/news/minimax-music-25",
+    "https://www.minimax.io/news/minimax-music-25-2",
+    "https://www.minimax.io/news/music-26",
+    "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+    "https://platform.mureka.ai/docs/",
+    "https://platform.mureka.ai/docs/en/changelog.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-files-upload.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-vocal-clone.html",
+    "https://platform.mureka.ai/docs/en/ai-music-o1-moment.html",
+    "https://www.kunlun.com/news/7.html",
+    "https://www.kunlun.com/2024/mnews_0814/377.html",
+    "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf"
+  ]
+}
+```
+tokens used
+123,175
+```json
+{
+  "cluster": "minimax_cn",
+  "engines": [
+    {
+      "engine": "MiniMax Music",
+      "vendor": "MiniMax",
+      "status": "live",
+      "models": [
+        {
+          "name": "Music-01",
+          "released": "2024-08-31",
+          "notes": "레퍼런스 음악에서 보컬·반주의 리듬과 스타일을 학습한 뒤 입력 가사로 최대 60초 음악을 생성한다고 발표됐다.",
+          "url": "https://www.minimax.io/news/music-01"
+        },
+        {
+          "name": "Music-1.5",
+          "released": "2025-09-11",
+          "notes": "최대 4분, natural-language prompt 및 Intro·Verse·Chorus별 가사 배치를 지원한다고 발표됐다.",
+          "url": "https://www.minimax.io/news/minimax-music-15"
+        },
+        {
+          "name": "Music-2.0",
+          "released": "2025-10-31",
+          "notes": "최대 5분, prompt를 통한 보컬 음색·창법·악기 지시를 공식 소개했다.",
+          "url": "https://www.minimax.io/news/minimax-music-20"
+        },
+        {
+          "name": "Music-2.5",
+          "released": "2026-01-28",
+          "notes": "문단 단위 정밀 제어와 음질 개선 버전으로 발표됐다.",
+          "url": "https://www.minimax.io/news/minimax-music-25"
+        },
+        {
+          "name": "Music-2.5+",
+          "released": "2026-03-04",
+          "notes": "instrumental-only 생성 기능이 추가됐다.",
+          "url": "https://www.minimax.io/news/minimax-music-25-2"
+        },
+        {
+          "name": "Music-2.6",
+          "released": "2026-04-10",
+          "notes": "현재 API가 허용하는 이전 세대 text-to-music 모델이다.",
+          "url": "https://www.minimax.io/news/music-26"
+        },
+        {
+          "name": "Music-3.0",
+          "released": "2026-08-13",
+          "notes": "최대 5분의 완곡, optional lyrics, fine-grained temporal description 및 open weights를 발표했다.",
+          "url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model"
+        },
+        {
+          "name": "music-cover",
+          "released": "",
+          "notes": "레퍼런스 오디오를 새 스타일로 재연하는 API 모델이다. 정확한 최초 공개일은 unknown.",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.minimax.io/audio/music",
+          "price_note": "unknown",
+          "commercial_use": "unknown"
+        },
+        {
+          "channel": "api",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "price_note": "2026-08-20부터 신규 사용자는 유료 Music Generation·Lyrics Generation API를 이용할 수 없고 기존 유료 사용자는 계속 이용할 수 있다. free music API는 종료됐다.",
+          "commercial_use": "unknown"
+        },
+        {
+          "channel": "sdk",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+          "price_note": "Music 3.0 open weights가 제공된다.",
+          "commercial_use": "별도 라이선스 확인 필요"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 2000,
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "`prompt`는 style, mood, scenario를 기술한다. Music-3.0/2.6 instrumental은 1–2000자, vocal은 0–2000자이며 music-cover는 10–300자이다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "`lyrics`에 가사를 넣고 줄은 `\\n`으로 구분한다. Music-3.0/2.6 vocal은 1–3500자, cover는 10–1000자이다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "`prompt`와 `lyrics`가 별도 필드다. `lyrics_optimizer:true`이고 `lyrics`가 비어 있으면 prompt에서 가사를 자동 생성한다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Intro]",
+            "[Verse]",
+            "[Pre Chorus]",
+            "[Chorus]",
+            "[Interlude]",
+            "[Bridge]",
+            "[Outro]",
+            "[Post Chorus]",
+            "[Transition]",
+            "[Break]",
+            "[Hook]",
+            "[Build Up]",
+            "[Inst]",
+            "[Solo]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+          },
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "공식 문서는 이 문자열들을 structure tags라고 명시하지만, 태그가 모든 생성에서 비가창 처리된다는 보장은 문서화하지 않았다. 최신 공식 문서에는 `##` 구분 문법이 없다."
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "공개 `/v1/music_generation` 요청 스키마에는 초·마디·목표 길이 파라미터가 없다. Music 3.0의 최대 생성 길이는 5분이지만 사용자가 숫자로 지정하는 제어는 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`music-cover`에서 `audio_url` 또는 `audio_base64` 중 하나를 전달한다. 6초–6분, 최대 50MB이며 `cover_feature_id`와 상호배타적이다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "공개 music-generation 요청 스키마에 negative-prompt 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "공개 music-generation 요청 스키마에 `seed` 또는 결정성 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/llms.txt"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "일반 continuation/inpainting은 문서화되지 않았다. 다만 cover preprocess가 `cover_feature_id`, 구조화 가사와 타임스탬프를 추출하며, 가사를 수정해 cover를 다시 생성할 수 있다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/guides/music-generation"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "`is_instrumental:true`; Music-3.0/2.6 계열에서 lyrics가 불필요해진다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`prompt`에서 vocal timbre, delivery, breathiness, falsetto, harmony, Auto-Tune 등을 자연어로 기술한다. 현재 API에는 Music-01의 `refer_voice`와 같은 직접 voice ID 파라미터가 없다.",
+          "evidence": "E2",
+          "url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model"
+        },
+        "realtime_steering": {
+          "exists": false,
+          "how": "`stream`은 결과 전송 방식일 뿐 생성 도중 음악 지시를 변경하는 steering으로 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/api-reference/music-generation"
+        }
+      },
+      "api_params": [
+        {
+          "name": "model",
+          "type": "enum<string>",
+          "required": true,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "`music-3.0`, `music-2.6`, `music-cover`; 종료된 free 변형도 스키마에 남아 있다."
+        },
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "모델·instrumental 여부에 따라 required 조건이 달라진다."
+        },
+        {
+          "name": "lyrics",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "vocal Music-3.0/2.6에서는 원칙적으로 필수이나 `lyrics_optimizer` 사용 시 비울 수 있다."
+        },
+        {
+          "name": "stream",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "기본값 false."
+        },
+        {
+          "name": "output_format",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "`url|hex`, 기본값 `hex`; stream에서는 `hex`만 지원한다."
+        },
+        {
+          "name": "audio_setting",
+          "type": "object",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "오디오 출력 설정 객체."
+        },
+        {
+          "name": "audio_setting.sample_rate",
+          "type": "integer",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/guides/mcp-guide",
+          "notes": "공식 MCP 문서 허용값: 16000, 24000, 32000, 44100."
+        },
+        {
+          "name": "audio_setting.bitrate",
+          "type": "integer",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/guides/mcp-guide",
+          "notes": "공식 MCP 문서 허용값: 32000, 64000, 128000, 256000."
+        },
+        {
+          "name": "audio_setting.format",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/guides/mcp-guide",
+          "notes": "공식 MCP 문서 허용값: `mp3`, `wav`, `pcm`."
+        },
+        {
+          "name": "lyrics_optimizer",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "기본값 false; 빈 lyrics를 prompt 기반 자동 가사로 대체한다."
+        },
+        {
+          "name": "is_instrumental",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "기본값 false."
+        },
+        {
+          "name": "audio_url",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "music-cover 전용; `audio_base64`와 정확히 하나를 제공하며 `cover_feature_id`와 상호배타적이다."
+        },
+        {
+          "name": "audio_base64",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "music-cover 전용; `audio_url`과 정확히 하나를 제공하며 `cover_feature_id`와 상호배타적이다."
+        },
+        {
+          "name": "cover_feature_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.minimax.io/docs/api-reference/music-generation",
+          "notes": "preprocess 결과 ID; 24시간 유효하며 전달 시 lyrics가 필수다."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": true,
+        "url": "https://platform.minimax.io/docs/api-reference/music-generation",
+        "notes": "공식 structure-tag 목록은 있으나 공식 장르 vocabulary의 폐쇄형 전체 목록은 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "공식 예시는 `[Intro]`, `[verse]`, `[pre-chorus]`, `[chorus]`, `[hook]`, `[bridge]`, `[outro]`를 가사 줄과 분리해 사용한다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/guides/music-generation"
+        },
+        {
+          "claim": "cover preprocess는 `[Verse]`, `[Chorus]` 등이 포함된 `formatted_lyrics`와 구간 타임스탬프를 반환한다.",
+          "evidence": "E1",
+          "url": "https://platform.minimax.io/docs/guides/music-generation"
+        },
+        {
+          "claim": "Music-01용 제3자 API 문서에는 가사를 `##...##`로 감싼 예시와 `refer_voice`, `refer_instrumental`이 존재하지만, MiniMax 현재 공식 API 문서에는 이 문법·파라미터가 없다.",
+          "evidence": "E4",
+          "url": "https://docs.aimlapi.com/api-references/music-models/minimax/music-01"
+        }
+      ],
+      "gaps": [
+        "구조 태그가 실제 음원에서 절대로 발음되지 않는다는 공식 보장은 확인되지 않음: https://platform.minimax.io/docs/api-reference/music-generation",
+        "Music-01의 원본 MiniMax API 스키마와 `refer_voice`·`refer_instrumental`·`##` 문법을 보존한 공식 문서는 확인되지 않음: https://www.minimax.io/news/music-01",
+        "지원 가창 언어의 공식 전체 목록은 확인되지 않음: https://platform.minimax.io/docs/api-reference/music-generation",
+        "stems export와 일반 continuation/inpainting API는 공식 음악 문서 색인에서 확인되지 않음: https://platform.minimax.io/docs/llms.txt"
+      ]
+    },
+    {
+      "engine": "Mureka",
+      "vendor": "Kunlun Tech / SKYWORK AI",
+      "status": "live",
+      "models": [
+        {
+          "name": "Mureka V6",
+          "released": "2025-03-26",
+          "notes": "Mureka O1과 함께 최초 발표됐으며 2025-06-03 최적화판이 API에 반영됐다.",
+          "url": "https://www1.kunlun.com/news/3.html"
+        },
+        {
+          "name": "Mureka O1",
+          "released": "2025-03-26",
+          "notes": "음악 추론 모델로 발표됐다.",
+          "url": "https://platform.mureka.ai/docs/en/ai-music-o1-moment.html"
+        },
+        {
+          "name": "Mureka V7",
+          "released": "2025-07-23",
+          "notes": "API changelog에는 2025-07-29 추가로 기록됐다.",
+          "url": "https://www1.kunlun.com/news/3.html"
+        },
+        {
+          "name": "Mureka V7.5",
+          "released": "2025-08-15",
+          "notes": "중국어 노래의 음색·발음·감정 표현을 개선한 버전이며 API에서는 V7을 대체했다.",
+          "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-24/32d17b0a-21ba-43e8-ba90-be7f43ef997b.PDF"
+        },
+        {
+          "name": "Mureka V7.6",
+          "released": "2025-12-09",
+          "notes": "현재 API에서 song, instrumental 및 extension 일부에 사용된다.",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        },
+        {
+          "name": "Mureka O2",
+          "released": "2025-12-09",
+          "notes": "현재 song-generation API에서 `vocal_id`와 `melody_id`를 지원하지 않는다.",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        {
+          "name": "Mureka V8",
+          "released": "2026-01-05",
+          "notes": "2026-03-02 최적화판이 배포됐다.",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        },
+        {
+          "name": "Mureka V9",
+          "released": "2026-04-09",
+          "notes": "공식 changelog가 enhanced version 배포를 기록한다.",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        },
+        {
+          "name": "Mureka V9.5",
+          "released": "2026-08-28",
+          "notes": "공식 changelog가 enhanced version 배포를 기록하며 현재 song-generation enum에 포함된다.",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.mureka.ai/",
+          "price_note": "unknown",
+          "commercial_use": "Mureka는 consumer product와 별도로 상용 창작 플랫폼 및 B2B 서비스를 운영한다고 공식 발표했다."
+        },
+        {
+          "channel": "api",
+          "url": "https://platform.mureka.ai/docs/",
+          "price_note": "요청당 과금 세부값은 이 조사에서 확인하지 못해 unknown.",
+          "commercial_use": "API 약관은 Customer Application에 API를 통합하고 최종 사용자에게 제공할 권리를 규정한다."
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": 1024,
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`prompt`는 음악 생성 제어용이며 `vocal_id`와 조합할 수 있다."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "`lyrics` 별도 필드, 최대 5000자. 공식 예시는 `[Verse]\\n가사...` 형식이다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "가사 기반 `/v1/song/generate`와 prompt 기반 song-generation API가 문서에서 별도 항목으로 제공된다."
+        },
+        "structure_tags": {
+          "exists": true,
+          "syntax_examples": [
+            "[Verse]",
+            "[Intro]",
+            "[Chorus]",
+            "[Bridge]",
+            "[Break]"
+          ],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+          },
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html",
+          "notes": "공식 입력 예시는 `[Verse]`와 `[Intro]`를 사용하고, changelog는 반환 가사 구조 이름 `breakdown`을 `break`로 변경했다고 기록한다. 그러나 허용 태그의 완전한 공식 목록 및 비가창 보장은 없다."
+        },
+        "duration_control": {
+          "exists": false,
+          "how": "기본 song-generation API에는 목표 초·마디 파라미터가 없다. extension의 `extend_at`은 생성 길이가 아니라 이어 붙일 시작 시점(ms)이다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "`reference_id`는 30초 reference 오디오, `melody_id`는 5–60초 오디오 또는 MIDI melody, `instrumental_id`는 30초 instrumental reference를 사용한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-files-upload.html"
+        },
+        "negative_prompt": {
+          "exists": false,
+          "how": "공개 song-generation 요청 스키마에 negative-prompt 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        "seed_determinism": {
+          "exists": false,
+          "how": "공개 song-generation 요청 스키마에 `seed` 파라미터가 없다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        "stems_export": {
+          "exists": true,
+          "how": "`POST /v1/song/stem` 및 특정 track을 생성하는 `/v1/track/generate`가 제공된다. 공식 기술 문서는 vocal·instrumental 다중 트랙 출력을 명시한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/en/ai-music-o1-moment.html"
+        },
+        "inpaint_extend_edit": {
+          "exists": true,
+          "how": "`/v1/song/extend`는 head/tail extension, `/v1/song/region-edit`는 시간 구간+가사 기반 국소 편집, `/v1/song/remix`는 prompt·lyrics를 바꾼 리믹스를 제공한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        },
+        "instrumental_toggle": {
+          "exists": true,
+          "how": "boolean toggle이 아니라 별도 `/v1/instrumental/generate` 엔드포인트를 사용한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "`gender:female|male`, `vocal_id`, reference audio, 또는 15–30초 샘플로 만든 reusable Vocal ID를 사용한다. vocal reference가 `gender`보다 우선한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-vocal-clone.html"
+        },
+        "realtime_steering": {
+          "exists": null,
+          "how": "`stream:true`는 생성 중 `stream_url` 재생을 가능하게 하지만, 생성 중 prompt를 변경하는 steering은 문서화되지 않았다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        }
+      },
+      "api_params": [
+        {
+          "name": "lyrics",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`POST /v1/song/generate`; 최대 5000자."
+        },
+        {
+          "name": "model",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`auto|mureka-7.6|mureka-o2|mureka-8|mureka-9|mureka-9.5`."
+        },
+        {
+          "name": "n",
+          "type": "integer<int32>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "기본 2, 최대 3."
+        },
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "최대 1024자."
+        },
+        {
+          "name": "gender",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`female|male`."
+        },
+        {
+          "name": "reference_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "reference-purpose 업로드 ID; `vocal_id`와 조합 가능."
+        },
+        {
+          "name": "vocal_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "`reference_id` 또는 `prompt`와 조합 가능; mureka-o2는 미지원."
+        },
+        {
+          "name": "melody_id",
+          "type": "string",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "다른 control option과 조합 불가; mureka-o2는 미지원."
+        },
+        {
+          "name": "stream",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+          "notes": "생성 중 streaming playback을 활성화한다."
+        },
+        {
+          "name": "song_id",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "extension 입력; `upload_audio_id`와 상호배타적."
+        },
+        {
+          "name": "upload_audio_id",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "업로드 음원 extension 입력; `song_id`와 상호배타적."
+        },
+        {
+          "name": "extend.lyrics",
+          "type": "string",
+          "required": true,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "extension 가사, 최대 3000자."
+        },
+        {
+          "name": "extend_at",
+          "type": "integer<int64>",
+          "required": true,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "밀리초 단위 연결 지점; mureka-7.6 범위 8000–420000."
+        },
+        {
+          "name": "extend_type",
+          "type": "enum<string>",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "`tail|head`; mureka-8에서는 필수."
+        },
+        {
+          "name": "extend.model",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+          "notes": "`mureka-7.6|mureka-8`."
+        },
+        {
+          "name": "instrumental.model",
+          "type": "enum<string>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "`auto|mureka-7.6|mureka-8|mureka-9|mureka-9.5`."
+        },
+        {
+          "name": "instrumental.n",
+          "type": "integer<int32>",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "기본 2, 최대 3."
+        },
+        {
+          "name": "instrumental.prompt",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "최대 1024자; `instrumental_id`와 조합 불가."
+        },
+        {
+          "name": "instrumental_id",
+          "type": "string",
+          "required": null,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "instrumental-purpose reference ID."
+        },
+        {
+          "name": "instrumental.stream",
+          "type": "boolean",
+          "required": false,
+          "doc_url": "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+          "notes": "streaming playback."
+        }
+      ],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+        "notes": "공식 예시에 `[Verse]` 등이 있지만 허용되는 전체 구조 태그 또는 장르 vocabulary 목록은 공개 API 문서에서 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "`prompt`, `reference_id`, `vocal_id`, `melody_id`는 자유 조합이 아니라 문서화된 조합 규칙을 따른다. `melody_id`는 다른 control option과 조합할 수 없다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        {
+          "claim": "업로드한 보컬 특성은 `gender` 선호보다 우선한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html"
+        },
+        {
+          "claim": "공식 changelog는 vocal 생성이 중국어·영어·일본어·한국어·포르투갈어·스페인어·독일어·이탈리아어·프랑스어·러시아어 10개 언어를 지원한다고 기록한다.",
+          "evidence": "E1",
+          "url": "https://platform.mureka.ai/docs/en/changelog.html"
+        }
+      ],
+      "gaps": [
+        "대괄호 구조 태그가 실제 출력에서 발음되는지 여부는 공식 문서에 없음: https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+        "허용되는 구조 태그의 완전한 목록 및 태그별 의미는 공개되지 않음: https://platform.mureka.ai/docs/en/changelog.html",
+        "일반 song-generation의 목표 길이를 숫자로 지정하는 파라미터는 확인되지 않음: https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+        "region-edit·stem·track 엔드포인트의 동적 페이지에서 세부 request schema가 검색 결과에 노출되지 않아 전체 하위 파라미터는 unknown: https://platform.mureka.ai/docs/en/changelog.html"
+      ]
+    },
+    {
+      "engine": "天工 SkyMusic / SkyMusic 2.0",
+      "vendor": "Kunlun Tech",
+      "status": "beta",
+      "models": [
+        {
+          "name": "天工 SkyMusic",
+          "released": "2024-04-17",
+          "notes": "공식적으로 공개 베타를 시작한 가사 기반 음악 생성 모델이다.",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        {
+          "name": "SkyMusic 2.0",
+          "released": "2024-08-14",
+          "notes": "Melodio와 Mureka에 탑재된 후속 모델로 공식 반기보고서에 기록됐다.",
+          "url": "https://epaper.stcn.com/pic/202408/24/dd9ca8f53aab5ed78cb5efd5b15b13cf.pdf"
+        }
+      ],
+      "access": [
+        {
+          "channel": "web",
+          "url": "https://www.kunlun.com/2024/mnews_0814/377.html",
+          "price_note": "현재 독립 SkyMusic 서비스 가격은 unknown.",
+          "commercial_use": "SkyMusic 2.0 기반 Mureka가 AI 음악 상용 창작 플랫폼으로 발표됐다."
+        },
+        {
+          "channel": "app",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf",
+          "price_note": "unknown",
+          "commercial_use": "unknown"
+        }
+      ],
+      "control_surface": {
+        "text_prompt": {
+          "exists": true,
+          "char_limit": null,
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf",
+          "notes": "Melodio에서는 상황·기분 prompt로 연속 음악을 생성한다. SkyMusic 노래 생성 화면의 prompt 문자 제한은 unknown."
+        },
+        "lyrics_field": {
+          "exists": true,
+          "syntax": "곡명과 가사를 입력하거나 AI가 가사를 생성하고, reference 곡으로 스타일을 선택한다.",
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf",
+          "notes": "가사와 곡명 입력은 공식 반기보고서에 명시되지만 문자 제한은 unknown."
+        },
+        "structure_tags": {
+          "exists": null,
+          "syntax_examples": [],
+          "tags_are_sung": {
+            "answer": "unknown",
+            "evidence": "E1",
+            "url": "https://www.kunlun.com/news/7.html"
+          },
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html",
+          "notes": "공식 공개 자료에서 `[Verse]`, `[Chorus]` 또는 전각 괄호 기반 입력 문법을 확인하지 못했다."
+        },
+        "duration_control": {
+          "exists": null,
+          "how": "숫자형 초·마디 입력은 공식 자료에서 확인되지 않았다.",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "reference_audio": {
+          "exists": true,
+          "how": "사용자는 reference 곡을 선택해 스타일을 지정하거나 AI 자동 매칭을 사용할 수 있었다.",
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf"
+        },
+        "negative_prompt": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "seed_determinism": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "stems_export": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "inpaint_extend_edit": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "instrumental_toggle": {
+          "exists": null,
+          "how": "unknown",
+          "evidence": "E1",
+          "url": "https://www.kunlun.com/news/7.html"
+        },
+        "vocal_control": {
+          "exists": true,
+          "how": "공식 자료는 다양한 singing technique와 가사 단락별 감정 제어를 설명하지만, 사용자가 입력하는 정확한 파라미터·문법은 공개하지 않았다.",
+          "evidence": "E1",
+          "url": "https://static.cninfo.com.cn/finalpage/2024-04-27/1219864246.PDF"
+        },
+        "realtime_steering": {
+          "exists": true,
+          "how": "SkyMusic 2.0 기반 Melodio는 사용자 상황·기분 prompt에 따라 무한 스트리밍 음악을 지속 생성한다. 생성 도중 prompt 변경의 정확한 프로토콜은 unknown.",
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf"
+        }
+      },
+      "api_params": [],
+      "documented_vocabulary": {
+        "has_official_tag_list": false,
+        "url": "https://www.kunlun.com/news/7.html",
+        "notes": "공식 장르·구조 태그 목록 문서는 확인되지 않았다."
+      },
+      "observed_behaviors": [
+        {
+          "claim": "공식 회사 보고서는 SkyMusic가 입력 가사에 맞춰 곡을 만들고 reference 곡 또는 AI 자동 매칭으로 스타일을 정한다고 설명한다.",
+          "evidence": "E1",
+          "url": "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf"
+        },
+        {
+          "claim": "SkyMusic 2.0은 2024-08-14 공개된 Melodio와 Mureka에 탑재됐다.",
+          "evidence": "E1",
+          "url": "https://epaper.stcn.com/pic/202408/24/dd9ca8f53aab5ed78cb5efd5b15b13cf.pdf"
+        }
+      ],
+      "gaps": [
+        "독립 SkyMusic의 현재 운영·종료 상태를 명시한 공식 공지는 확인되지 않아 마지막 공식 상태인 공개 beta로 표기함: https://www.kunlun.com/news/7.html",
+        "공개 API 레퍼런스와 요청 파라미터는 확인되지 않음: https://www.kunlun.com/",
+        "가사 문자 제한, 구조 태그 문법, 태그 가창 여부, seed, negative prompt, stems, continuation/inpainting은 모두 unknown: https://www.kunlun.com/news/7.html"
+      ]
+    }
+  ],
+  "cross_notes": "MiniMax 최신 API와 Mureka는 모두 음악 설명과 가사를 별도 채널로 제공한다. MiniMax는 공식 structure-tag 전체 목록을 공개하지만 태그의 비가창을 보장하지 않는다(https://platform.minimax.io/docs/api-reference/music-generation). Mureka는 `[Verse]` 입력 예시는 공개하지만 완전한 태그 목록은 없다(https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html). 숫자형 목표 길이는 두 기본 생성 API 모두에서 확인되지 않았고, Mureka의 `extend_at`은 길이가 아니라 편집 연결 시점이다(https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html).",
+  "sources": [
+    "https://platform.minimax.io/docs/api-reference/music-generation",
+    "https://platform.minimax.io/docs/guides/music-generation",
+    "https://platform.minimax.io/docs/llms.txt",
+    "https://www.minimax.io/news/music-01",
+    "https://www.minimax.io/news/minimax-music-15",
+    "https://www.minimax.io/news/minimax-music-20",
+    "https://www.minimax.io/news/minimax-music-25",
+    "https://www.minimax.io/news/minimax-music-25-2",
+    "https://www.minimax.io/news/music-26",
+    "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+    "https://platform.mureka.ai/docs/",
+    "https://platform.mureka.ai/docs/en/changelog.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-extend.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-instrumental-generate.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-files-upload.html",
+    "https://platform.mureka.ai/docs/api/operations/post-v1-song-vocal-clone.html",
+    "https://platform.mureka.ai/docs/en/ai-music-o1-moment.html",
+    "https://www.kunlun.com/news/7.html",
+    "https://www.kunlun.com/2024/mnews_0814/377.html",
+    "https://rdfile.dzh.com.cn/new/dzh/tb_gg/2024/8/24/31C322F52E1DFB6625AC1265D4D7B74E_10409610.pdf"
+  ]
+}
+```
