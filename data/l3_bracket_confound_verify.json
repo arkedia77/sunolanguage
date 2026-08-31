@@ -1,0 +1,219 @@
+{
+ "source": "leomusic3:batches/*.json results.stage_8.sps[].suno_lyrics",
+ "measured_at": "2026-08-31",
+ "batches": [
+  {
+   "batch": "E3010",
+   "songs_n": 10,
+   "section_labels_total": 60,
+   "injected_total": 46,
+   "injected_wordcount_dist": {
+    "2": 2,
+    "3": 18,
+    "4": 8,
+    "5": 2,
+    "9": 2,
+    "11": 2,
+    "12": 8,
+    "13": 2,
+    "14": 2
+   },
+   "injected_max_words": 14,
+   "unique_bracket_sets": 5,
+   "confound_a_contentwords": "10/10",
+   "confound_b_instruments_strict": "8/10",
+   "per_song": [
+    {
+     "position": 1,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "organ"
+     ],
+     "absent_contentwords_n": 21
+    },
+    {
+     "position": 2,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "string"
+     ],
+     "absent_contentwords_n": 22
+    },
+    {
+     "position": 3,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "string"
+     ],
+     "absent_contentwords_n": 7
+    },
+    {
+     "position": 4,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "pad",
+      "piano",
+      "shaker"
+     ],
+     "absent_contentwords_n": 7
+    },
+    {
+     "position": 5,
+     "brackets_section": 6,
+     "brackets_injected": 3,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 5
+    },
+    {
+     "position": 6,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "organ",
+      "tremolo"
+     ],
+     "absent_contentwords_n": 21
+    },
+    {
+     "position": 7,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "glockenspiel",
+      "string"
+     ],
+     "absent_contentwords_n": 22
+    },
+    {
+     "position": 8,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "string"
+     ],
+     "absent_contentwords_n": 8
+    },
+    {
+     "position": 9,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "pad",
+      "piano",
+      "shaker",
+      "synth"
+     ],
+     "absent_contentwords_n": 10
+    },
+    {
+     "position": 10,
+     "brackets_section": 6,
+     "brackets_injected": 3,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 5
+    }
+   ]
+  },
+  {
+   "batch": "K3035",
+   "songs_n": 10,
+   "section_labels_total": 60,
+   "injected_total": 50,
+   "injected_wordcount_dist": {
+    "2": 12,
+    "3": 10,
+    "4": 8,
+    "5": 4,
+    "7": 4,
+    "8": 2,
+    "10": 2,
+    "11": 2,
+    "12": 2,
+    "14": 2,
+    "15": 2
+   },
+   "injected_max_words": 15,
+   "unique_bracket_sets": 5,
+   "confound_a_contentwords": "10/10",
+   "confound_b_instruments_strict": "1/10",
+   "per_song": [
+    {
+     "position": 1,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 24
+    },
+    {
+     "position": 2,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 16
+    },
+    {
+     "position": 3,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [
+      "kick"
+     ],
+     "absent_contentwords_n": 6
+    },
+    {
+     "position": 4,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 5
+    },
+    {
+     "position": 5,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 8
+    },
+    {
+     "position": 6,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 26
+    },
+    {
+     "position": 7,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 14
+    },
+    {
+     "position": 8,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 4
+    },
+    {
+     "position": 9,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 7
+    },
+    {
+     "position": 10,
+     "brackets_section": 6,
+     "brackets_injected": 5,
+     "absent_instruments_strict": [],
+     "absent_contentwords_n": 7
+    }
+   ]
+  }
+ ]
+}
