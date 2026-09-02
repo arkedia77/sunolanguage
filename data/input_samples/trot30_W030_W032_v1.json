@@ -1,0 +1,723 @@
+{
+ "무엇": "입력 표본 — 출력층(suno_reanalysis) 미관측 레코드 보관소. ★코퍼스(merged_4values.json)에 넣지 않는다.",
+ "★왜_분리하나": [
+  "merged_4values.json 의 추출·색인 경로는 전량 suno_reanalysis(출력층)만 읽는다(parse_slot_entities_v3·bracket_presets·chunk_builder).",
+  "입력층은 우리가 써넣은 문자열이지 Suno 관측이 아니다 ⇒ 사전에 들어가면 안 된다.",
+  "★그래서 merged_4values 곡수는 이 30건으로 움직이지 않는다(560 불변). 코퍼스 곡수는 출력층 관측 수다.",
+  "정식 인제스트 경로(corpus_ingest_runner → merge_batch_reanalysis)는 출력층 SP가 비면 「SP 비어있음(4값 필수)」로 거부한다 — 설계상 맞는 거부다."
+ ],
+ "batch": "TROT30 (W030·W031·W032)",
+ "수령": {
+  "from": "leomusic-trot",
+  "인도통": "agent-comm:projects/sunolanguage/messages/processed/sunolanguage_leomusic-trot_20260901_210121_..._W030_W031_W032.json",
+  "첨부_커밋": "4800e70f4",
+  "origin_도달_확인": "2026-09-02(sha256 3/3 재대조 일치)"
+ },
+ "계상": {
+  "입력_표본": 30,
+  "짝": 0,
+  "★설명": "오디오/재분석이 오면 같은 song_id 로 merged_4values 에 짝 승격"
+ },
+ "★층_한정자(leomusic-trot 원문 보존·인용 시 떼지 말 것)": {
+  "실린_것": "통합PG songs.style_prompt / songs.lyrics 무변환 축자 — 접근 가능한 가장 아래층",
+  "⛔보지_못한_것": "Suno 폼에 실제로 붙여진 문자열. 생성 슬롯(sunomusic)이 「DB 값을 그대로 읽어 폼에 넣을 뿐」이라 밝혔으나 leomusic-trot이 그 진술을 검증하지 못함 ⇒ 한 칸이 진술로 메워져 있음",
+  "PG↔설계파일_30/30의_범위": "「두 층이 안 갈린다」까지이고 「폼에 그대로 들어갔다」의 증거가 아니다"
+ },
+ "★내_인수_검사(독립 재현)": {
+  "sha256": "3/3 일치(로컬·origin 양쪽)",
+  "gid": "40326~40355 연속 30 · 중복 0 · merged_4values song_id 와 충돌 0",
+  "필드_결손": 0,
+  "clip_uuids": "30/30 곡이 2개(v1·v2)",
+  "arm_라벨↔내_실측": {
+   "처치": 2,
+   "통제": 28
+  },
+  "arm_독립_재현": {
+   "검출기": "modulat\\w*|key change|lifts a whole step (leomusic-trot 도구 미사용)",
+   "SP_검출": [
+    40326,
+    40346
+   ],
+   "가사_검출": "0곡",
+   "결과": "라벨↔실측 불일치 0곡(30/30)"
+  },
+  "원문성": {
+   "lyrics_대괄호": 572,
+   "sp_대괄호": 0,
+   "★주의": "이 수치는 원문 보존 확인용이지 브라켓 계수치가 아니다(구간 라벨/주입 지시 미분리)"
+  }
+ },
+ "⛔이_파일이_못_하는_것": [
+  "출력층이 없으므로 이 30곡에서 Suno 어휘를 뽑을 수 없다. 어휘 사전 기여 = 0.",
+  "arm(처치 2·통제 28)은 입력층 문자열 기준이다 — 렌더 결과가 아니다.",
+  "통제 28은 좌표 통제된 짝이 아니라 「같은 배치의 무처치 곡」이다(leomusic-trot 축H 사전등록 §4)."
+ ],
+ "첨부_manifest": {
+  "W030": {
+   "file": "W030_transfer_layer_verbatim.json",
+   "sha256": "fc54b03773c49feb18fa33a4482f7d224b3c4b3020101753b29a485a059a56d3",
+   "source_slot": "leomusic-trot",
+   "_manifest": {
+    "generated_at": "2026-09-01T21:00:14.297911+09:00",
+    "source_layer": "통합PG `songs.style_prompt` / `songs.lyrics` (role_leomusictrot) — 무변환 축자",
+    "★한정자": "우리가 볼 수 있는 최근접 전달층이 PG다. **Suno 폼에 붙은 문자열 자체를 관측한 적은 없다** — 생성 슬롯(sunomusic)이 「PG 값을 그대로 읽어 폼에 넣는다」고 밝힌 진술에 기대고 있고, 그 진술은 우리가 검증하지 못했다.",
+    "PG↔설계파일_대조": {
+     "sp_vs_STEP8_불일치": {},
+     "lyrics_vs_STEP5_불일치": {},
+     "읽는_법": "0건은 「PG와 설계 파일이 안 갈린다」까지다. 값은 어느 쪽이든 PG를 실었다."
+    },
+    "arm_판정": {
+     "방법": "SP에서 전조 문형(modulat*/key change/lifts a whole step) 검출 — 선언이 아니라 실측",
+     "검출": {
+      "40326": 2,
+      "40346": 2
+     },
+     "사전등록_처치곡": [
+      40326,
+      40346
+     ],
+     "양성_대조": "사전등록 처치곡이 검출되는지 같은 실행에서 확인(실패 시 파일 미작성)",
+     "통제의_뜻": "축 H 사전등록 §4 = 「같은 배치의 나머지 9곡이 그대로 기저」. 좌표 통제된 짝이 아니라 **같은 배치 안의 무처치 곡**이라는 뜻이다."
+    },
+    "repo_commit": "82ca08ff62f9b1ac5665dfaf0102877db2102357",
+    "tool": "scripts/export_trot30_for_sunolang.py"
+   }
+  },
+  "W031": {
+   "file": "W031_transfer_layer_verbatim.json",
+   "sha256": "3dfdc61e72dd6d08b9415f5822fa8fb5b8635da34eda72a55c2b06f83227afee",
+   "source_slot": "leomusic-trot",
+   "_manifest": {
+    "generated_at": "2026-09-01T21:00:14.297911+09:00",
+    "source_layer": "통합PG `songs.style_prompt` / `songs.lyrics` (role_leomusictrot) — 무변환 축자",
+    "★한정자": "우리가 볼 수 있는 최근접 전달층이 PG다. **Suno 폼에 붙은 문자열 자체를 관측한 적은 없다** — 생성 슬롯(sunomusic)이 「PG 값을 그대로 읽어 폼에 넣는다」고 밝힌 진술에 기대고 있고, 그 진술은 우리가 검증하지 못했다.",
+    "PG↔설계파일_대조": {
+     "sp_vs_STEP8_불일치": {},
+     "lyrics_vs_STEP5_불일치": {},
+     "읽는_법": "0건은 「PG와 설계 파일이 안 갈린다」까지다. 값은 어느 쪽이든 PG를 실었다."
+    },
+    "arm_판정": {
+     "방법": "SP에서 전조 문형(modulat*/key change/lifts a whole step) 검출 — 선언이 아니라 실측",
+     "검출": {
+      "40326": 2,
+      "40346": 2
+     },
+     "사전등록_처치곡": [
+      40326,
+      40346
+     ],
+     "양성_대조": "사전등록 처치곡이 검출되는지 같은 실행에서 확인(실패 시 파일 미작성)",
+     "통제의_뜻": "축 H 사전등록 §4 = 「같은 배치의 나머지 9곡이 그대로 기저」. 좌표 통제된 짝이 아니라 **같은 배치 안의 무처치 곡**이라는 뜻이다."
+    },
+    "repo_commit": "82ca08ff62f9b1ac5665dfaf0102877db2102357",
+    "tool": "scripts/export_trot30_for_sunolang.py"
+   }
+  },
+  "W032": {
+   "file": "W032_transfer_layer_verbatim.json",
+   "sha256": "dd6461bc3cdfc335631da30e6e6e2101a24692f867b29bed803a5d1931dc1af3",
+   "source_slot": "leomusic-trot",
+   "_manifest": {
+    "generated_at": "2026-09-01T21:00:14.297911+09:00",
+    "source_layer": "통합PG `songs.style_prompt` / `songs.lyrics` (role_leomusictrot) — 무변환 축자",
+    "★한정자": "우리가 볼 수 있는 최근접 전달층이 PG다. **Suno 폼에 붙은 문자열 자체를 관측한 적은 없다** — 생성 슬롯(sunomusic)이 「PG 값을 그대로 읽어 폼에 넣는다」고 밝힌 진술에 기대고 있고, 그 진술은 우리가 검증하지 못했다.",
+    "PG↔설계파일_대조": {
+     "sp_vs_STEP8_불일치": {},
+     "lyrics_vs_STEP5_불일치": {},
+     "읽는_법": "0건은 「PG와 설계 파일이 안 갈린다」까지다. 값은 어느 쪽이든 PG를 실었다."
+    },
+    "arm_판정": {
+     "방법": "SP에서 전조 문형(modulat*/key change/lifts a whole step) 검출 — 선언이 아니라 실측",
+     "검출": {
+      "40326": 2,
+      "40346": 2
+     },
+     "사전등록_처치곡": [
+      40326,
+      40346
+     ],
+     "양성_대조": "사전등록 처치곡이 검출되는지 같은 실행에서 확인(실패 시 파일 미작성)",
+     "통제의_뜻": "축 H 사전등록 §4 = 「같은 배치의 나머지 9곡이 그대로 기저」. 좌표 통제된 짝이 아니라 **같은 배치 안의 무처치 곡**이라는 뜻이다."
+    },
+    "repo_commit": "82ca08ff62f9b1ac5665dfaf0102877db2102357",
+    "tool": "scripts/export_trot30_for_sunolang.py"
+   }
+  }
+ },
+ "생성": {
+  "날짜": "2026-09-02T19:10:01.121018+09:00",
+  "작성": "sunolanguage"
+ },
+ "records": [
+  {
+   "song_id": 40326,
+   "title": "여름은 아직",
+   "genre": "Trot",
+   "subgenre": "City Pop Trot",
+   "bpm": 108,
+   "key_signature": "Am",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. City Pop Trot, 108 BPM, key of A minor modulating to B minor on the final chorus, 4/4 time, a mid-tempo late-summer city groove, warm and shimmering under a night sky. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A warm electric piano leads with bright city-pop chords and answers each line with shimmering fills, while a clean electric guitar traces bright counter-lines over a soft synth pad. A steady hi-hat pulse and a warm snare on two and four carry the groove, and a bass settles on the root note of each chord. After a short break the key change arrives and the vocal rides it with a wider vibrato. Airy reverb, radio-ready city-pop production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n[electric piano]\n[female vocals with vibrato]\n아직 안 식었어\n\n[Verse 1]\n[electric piano]\n[female vocals with vibrato]\n버스 창에 이마를 대고\n식지 않은 도시를 봐\n에어컨 바람이 스쳐도\n여름 냄새는 남았잖아\n\n[Pre-Chorus]\n[clean electric guitar]\n[female vocals with vibrato]\n네 이름 하나에\n손끝이 다시 데워지지\n\n[Chorus 1]\n[electric piano]\n[female vocals with vibrato]\n여름은 아직 안 끝났어\n가로등 밑에 남아 있잖아\n계절이 지나가도 나는 그대로야\n여름은 아직 내 안에 있어\n\n[Verse 2]\n[clean electric guitar]\n[female vocals with vibrato]\n편의점 불빛 아래 서서\n차가운 캔을 쥐어 봐\n손바닥은 금세 미지근해지고\n나는 아직 그 밤에 서 있네\n\n[Chorus 2]\n[electric piano]\n[female vocals with vibrato]\n여름은 아직 안 끝났어\n네 목소리에 남아 있잖아\n새벽이 밝아 와도 나는 그대로야\n여름은 아직 내 안에 있어\n\n[Bridge]\n[synth pad]\n[female vocals with vibrato]\n간판이 하나씩 꺼져 가도\n나는 아직 할 말이 남았어\n\n[Chorus 3]\n[electric piano]\n[female vocals with vibrato]\n여름은 아직 안 끝났어\n네 목소리에 남아 있잖아\n새벽이 밝아 와도 나는 그대로야\n여름은 아직 내 안에 있어\n\n[Outro]\n[electric piano]\n[female vocals with vibrato]\n여름은 아직 내 안에 있어"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "8b57d706-88d2-4ed2-84de-1ca44b7eeafb",
+    "006f3b23-2726-4fc5-a90d-7e601cf8b09d"
+   ],
+   "arm": "처치"
+  },
+  {
+   "song_id": 40327,
+   "title": "식지 않은 말",
+   "genre": "Trot",
+   "subgenre": "R&B Trot",
+   "bpm": 92,
+   "key_signature": "Dm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. R&B Trot, 92 BPM, key of D minor, 4/4 time, an electric piano opens with soft sustained chords under a slow late-night groove. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, warm and full-hearted on the hooks, the vibrato widening toward each phrase end, keeping the Korean trot color strong. The chords lean on a minor seventh color, with one major seventh opening the last line. A bass sits low on the root notes with a relaxed swing, a soft hi-hat and a light shaker keep the pulse unhurried, and warm strings drift in behind the second chorus. The electric piano answers her in the gaps with short warm fills, a clean electric guitar adds quiet muted figures, gentle reverb and a touch of delay around the voice. Intimate, warm Korean trot production, close and easy at daybreak.",
+    "lyrics": "[Intro]\n[electric piano]\n[female vocals with vibrato]\n새벽 네 시 편의점 앞\n\n[Verse 1]\n[electric piano]\n[female vocals with vibrato]\n얼음 다 녹은 컵을 들고 앉아\n늦여름 바람을 세고 있어\n어젯밤 네가 두고 간 한마디\n아직도 손끝이 뜨겁잖아\n\n[Pre-Chorus]\n[clean electric guitar]\n[female vocals with vibrato]\n여름은 벌써 등을 돌렸는데\n나는 왜 여기 앉아서 웃지\n\n[Chorus 1]\n[electric piano]\n[female vocals with vibrato]\n식지 않은 말 한마디\n밤새 나를 데워 놨어\n집에 가는 길이 환해\n오늘은 좀 걸어갈래\n\n[Verse 2]\n[electric piano]\n[shaker]\n[female vocals with vibrato]\n가로등이 하나씩 눈을 감고\n첫차가 골목을 깨우는데\n나는 그 말을 자꾸 꺼내 봐\n꺼내 볼수록 더 따뜻해\n\n[Pre-Chorus]\n[clean electric guitar]\n[female vocals with vibrato]\n계절이 넘어가는 자리에서\n네 목소리만 여름으로 남지\n\n[Chorus 2]\n[electric piano]\n[strings]\n[female vocals with vibrato]\n식지 않은 말 한마디\n새벽까지 안 식었어\n바람이 좀 선선해도\n나는 반팔로 걸을 거야\n\n[Bridge]\n[electric piano]\n[female vocals with vibrato]\n말은 지나가면 그만이라던데\n어떤 말은 계절을 건너와\n나는 그걸 오늘 배웠어\n\n[Chorus 3]\n[electric piano]\n[strings]\n[female vocals with vibrato]\n식지 않은 말 한마디\n이제 내가 돌려줄게\n너도 새벽에 꺼내 봐\n아직 따뜻할 거야\n\n[Outro]\n[electric piano]\n[female vocals with vibrato]\n아직 따뜻할 거야"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "596215cc-0cd8-430b-b38f-f70f1c75f61e",
+    "4845e2bc-10cd-4f93-a128-826ede1d964e"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40328,
+   "title": "두고 간 자리",
+   "genre": "Trot",
+   "subgenre": "Trot Ballad",
+   "bpm": 78,
+   "key_signature": "Bm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 78 BPM, key of B minor, shuffle rhythm, a slow triple-pulse sway where each beat opens into three and the last of the three leans back a hair. A man sings in an unmistakably Korean trot style, with restrained delivery, light vibrato, and traditional phrasing, the emotion held in a warm mid dynamic and each phrase end shaped with a gentle, unhurried turn, keeping the Korean trot color clear and front-and-center. A warm accordion carries the lead melody, breathing the opening phrase alone, and an accordion counter-melody threads through as the trot identity anchor. Soft acoustic piano lays quiet triplet figures underneath, warm strings and a cello swell through the second half, a bass resting on the root notes steps once per bar, brushes on the snare keep the sway loose, and a light shaker rides the triplets. Intimate, warm, spacious analog Korean production with a soft reverb tail.",
+    "lyrics": "[Intro]\n[accordion counter-melody]\n[male vocals with light vibrato]\n여름이 다 지나갔네\n\n[Verse 1]\n[accordion counter-melody]\n[male vocals with light vibrato]\n문턱에 앉아 식은 바람을 세고 있네\n마당 끝 평상은 아직 그대로인데\n거기 앉아 웃던 사람만 없네\n불러도 대답이 없는 이름 하나\n\n[Pre-Chorus]\n[strings]\n[male vocals with light vibrato]\n다 접어 보낸 줄 알았는데\n왜 나만 여태 못 접는가\n\n[Chorus 1]\n[accordion counter-melody]\n[male vocals with light vibrato]\n두고 간 자리 두고 간 자리\n그 자리에 내가 아직 앉아 있네\n치우지도 못하고 덮어 두고\n여름이 두고 간 자리에 앉아 있네\n\n[Verse 2]\n[accordion counter-melody]\n[male vocals with light vibrato]\n장독 옆 채송화도 고개를 떨구고\n밤이면 풀벌레가 대신 우네\n나는 그 소리에 잠을 놓치고\n빈 평상만 자꾸 내다보네\n\n[Pre-Chorus]\n[strings]\n[male vocals with light vibrato]\n잊는 게 이렇게 더딘가\n사람아 나는 왜 이런가\n\n[Chorus 2]\n[accordion counter-melody]\n[male vocals with light vibrato]\n두고 간 자리 두고 간 자리\n그 자리만 여태 비워 두고 있네\n누가 앉을까 봐 겁이 나서\n여름이 두고 간 자리를 지키고 있네\n\n[Bridge]\n[accordion counter-melody]\n[male vocals with light vibrato]\n가을이 와도 나는 못 가겠네\n여기 두고 간 자리가 있어서\n\n[Chorus 3]\n[accordion counter-melody]\n[strings]\n[male vocals with light vibrato]\n두고 간 자리 두고 간 자리\n이제는 내가 그 자리가 되었네\n치우지도 못하고 덮어 두고\n여름이 두고 간 자리에 남았네\n\n[Outro]\n[accordion counter-melody]\n[male vocals with light vibrato]\n두고 간 자리"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "bc249bbe-8b86-4a03-b013-68dd46e9414e",
+    "99b256f0-d51b-4303-ab09-3d8aaccacf56"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40329,
+   "title": "아직 뜨거워",
+   "genre": "Trot",
+   "subgenre": "City Pop Trot",
+   "bpm": 108,
+   "key_signature": "Am",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. City Pop Trot, 108 BPM, key of A minor, 4/4 time, a warm late-summer city groove holding one steady pulse throughout. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An electric piano leads with warm shimmering chords and bright fills between the vocal phrases, and a clean electric guitar answers in short muted figures while a synth pad glows underneath with soft reverb. A snare marks beats two and four under a steady hi-hat pulse, a shaker keeps the sixteenths moving, and the bass sits on the root note of every chord with a firm rounded tone. The interlude gives the tune to the electric piano over that same groove. Warm, glowing city-pop production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n[electric piano]\n[female vocals with vibrato]\n아직 안 식었어\n\n[Verse 1]\n[electric piano]\n[clean electric guitar]\n[female vocals with vibrato]\n편의점 앞 플라스틱 의자\n얼음컵 하나 사이에 두고\n실외기 바람이 등을 떠밀어\n새벽 두 시가 여름을 붙잡지\n\n[Pre-Chorus]\n[synth pad]\n[female vocals with vibrato]\n가로등은 하나씩 눈을 감잖아\n그런데 우리는 안 일어나\n\n[Chorus 1]\n[electric piano]\n[female vocals with vibrato]\n아직 뜨거워 여름은 갔는데\n손끝도 골목도 아직 뜨거워\n집에 가자 말만 하고 웃지\n이 밤이 아까워 조금만 더 있자\n\n[Verse 2]\n[clean electric guitar]\n[shaker]\n[female vocals with vibrato]\n자전거 세워 둔 담벼락에도\n한낮의 열이 그대로 남아\n반쯤 녹은 얼음을 굴리면서\n안 끝난 얘기를 또 꺼내\n\n[Pre-Chorus]\n[synth pad]\n[female vocals with vibrato]\n첫차 소리가 골목을 돌잖아\n그래도 아직은 여름이야\n\n[Chorus 2]\n[electric piano]\n[female vocals with vibrato]\n아직 뜨거워 계절은 갔는데\n목소리도 마음도 아직 뜨거워\n잘 가라 인사도 미뤄 두지\n이 밤이 아까워 조금만 더 있자\n\n[Bridge]\n[synth pad]\n[female vocals with vibrato]\n끝났다는 말은 안 할 거야\n식었다는 말도 안 할 거야\n\n[Chorus 3]\n[electric piano]\n[strings]\n[female vocals with vibrato]\n아직 뜨거워 여름이 가도\n네 옆자리는 아직 뜨거워\n가로등 꺼져도 우린 여기 있지\n이 밤이 아까워 조금만 더 있자\n\n[Outro]\n[electric piano]\n[female vocals with vibrato]\n아직 뜨거워"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "263f8b2f-c003-4abc-a1a0-98e108da9d48",
+    "a84bada3-9a0b-492e-ac48-e975427b5a48"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40330,
+   "title": "마지막 밤바다",
+   "genre": "Trot",
+   "subgenre": "Disco Korean Trot",
+   "bpm": 124,
+   "key_signature": "C",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Disco Korean Trot, 124 BPM, key of C major, 4/4 time, an accordion opens alone with a bright turn and the whole band lands on the downbeat one bar later. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A disco bass springs between octaves under an eighth-note hi-hat and a snare on beats two and four, the groove wide and easy to dance to. An accordion counter-melody threads through as the trot identity anchor, a brass section punches the head of each chorus, and a shaker rides the top through every bar. Clean electric guitar chops on the offbeats, warm reverb around the lead vocal, bright celebratory summer-night production with the vocal up front and the crowd wide behind.",
+    "lyrics": "[Intro]\n[accordion counter-melody]\n[shaker]\n\n[Verse 1]\n[male vocals with vibrato]\n파도가 발목을 툭 치고 가네\n벗어 둔 신발은 모래에 두고\n파라솔 접히는 소리가 나도\n어깨는 벌써 들썩이네\n\n[Pre-Chorus]\n[clean electric guitar]\n[male vocals with vibrato]\n오늘은 시계를 안 보기로\n다 같이 한 바퀴 돌아 보세\n\n[Chorus 1]\n[accordion counter-melody]\n[male vocals with vibrato]\n마지막 밤바다 신나게 놀자\n등대 불빛이 박자를 세네\n마지막 밤바다 웃음이 번져\n모두모두 손잡고 빙글빙글\n\n[Verse 2]\n[male vocals with vibrato]\n낮에 달궈진 모래가 따뜻해\n발바닥이 먼저 장단을 타네\n아직 안 식은 자리가 아까워\n아무도 안 일어나는구나\n\n[Chorus 2]\n[accordion counter-melody]\n[male vocals with vibrato]\n마지막 밤바다 신나게 놀자\n등대 불빛이 박자를 세네\n마지막 밤바다 웃음이 번져\n모두모두 손잡고 빙글빙글\n\n[Bridge]\n[shaker]\n[male vocals with vibrato]\n내년 여름은 아직 멀지만\n오늘 이 밤은 우리 것이네\n\n[Chorus 3]\n[accordion counter-melody]\n[clean electric guitar]\n[male vocals with vibrato]\n마지막 밤바다 목청껏 부르자\n파도가 후렴을 받아 주네\n마지막 밤바다 별빛이 번져\n밤새도록 손잡고 빙글빙글\n\n[Outro]\n[accordion counter-melody]\n[male vocals with vibrato]\n마지막 밤바다 신나게 놀자"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "c0ecfb6a-f526-4eaf-885e-db290cc41b0b",
+    "097677af-6b02-4fe2-8d5f-a521e79df51f"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40331,
+   "title": "네온 꺼지면",
+   "genre": "Trot",
+   "subgenre": "Synth Trot",
+   "bpm": 116,
+   "key_signature": "Fm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Synth Trot, 116 BPM, key of F minor, 4/4 time, a mid-tempo late-summer city groove with a warm glow. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, warm and full-hearted on the hooks, the vibrato widening toward each phrase end, keeping the Korean trot color strong. A wide synth pad glows under the track while a clean electric guitar traces bright single-line figures around the vocal, and a warm electric piano answers each hook with short shimmering fills. A disco bass rolls a bouncing octave pattern with a round tone, a snare lands on beats two and four, and a hi-hat with a shaker keeps the groove bright. Warm strings swell under the last chorus. Soft reverb and a touch of delay on the guitar, the vocal close and up front. Glowing Korean trot production for a summer night, the heavy trot vibrato front-and-center.",
+    "lyrics": "[Intro]\n[synth pad]\n[male vocals with vibrato]\n불빛이 아직 안 꺼졌네\n\n[Verse 1]\n[clean electric guitar]\n[male vocals with vibrato]\n가게 문 닫는 소리 들리고\n골목은 아직 미지근해\n반팔 소매에 여름이 남아\n발걸음이 자꾸 느려지네\n\n[Pre-Chorus]\n[electric piano]\n[male vocals with vibrato]\n오늘 밤은 왠지\n집에 가기 아깝구나\n\n[Chorus 1]\n[synth pad]\n[male vocals with vibrato]\n네온 꺼지면 우리도 가자\n그때까지는 여기 있어\n여름이 짧아도 오늘은 길어\n이 밤은 우리 편이네\n\n[Verse 2]\n[clean electric guitar]\n[male vocals with vibrato]\n편의점 앞 얼음컵 두 개\n웃음소리가 길을 채우고\n버스는 벌써 끊겼는데\n하나도 안 아쉽네\n\n[Chorus 2]\n[synth pad]\n[male vocals with vibrato]\n네온 꺼지면 우리도 가자\n셔터 내릴 때까지 놀자\n여름이 가도 오늘은 남아\n이 밤은 우리 편이네\n\n[Bridge]\n[shaker]\n[male vocals with vibrato]\n간판이 하나둘 눈을 감아도\n우리 웃음은 안 꺼지더라\n\n[Chorus 3]\n[strings]\n[synth pad]\n[male vocals with vibrato]\n네온 꺼지면 우리도 가자\n첫차 올 때까지 걷자\n여름이 가도 이 골목 있으니\n다음 밤도 우리 편이네\n\n[Outro]\n[synth pad]\n[male vocals with vibrato]\n네온 꺼지면"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "509359f4-c169-4e87-bcfd-f765b58addc0",
+    "9bddf2d8-9618-427b-85bc-0568673a6716"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40332,
+   "title": "돌아가는 길",
+   "genre": "Trot",
+   "subgenre": "Modern Korean Trot",
+   "bpm": 96,
+   "key_signature": "Em",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Modern Korean Trot, 96 BPM, key of E minor, 4/4 time, a steady mid-tempo pulse, late-summer dusk, warm and open. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion counter-melody threads through as the trot identity anchor, opening the intro alone and singing the interlude. The verses sit in the minor and each chorus opens out into its relative major, so the room widens the moment the hook arrives. A bass on the root notes holds the low end under a light hi-hat groove, while a piano lays warm chords beneath the lines and strings swell into every chorus. Chest-register delivery, close and warm. Clean modern production with a touch of reverb.",
+    "lyrics": "[Intro]\n[accordion counter-melody]\n[male vocals with vibrato]\n막차 창에 여름이 걸리네\n\n[Verse 1]\n[male vocals with vibrato]\n해가 능선 뒤로 천천히 내려앉고\n차창엔 내 얼굴만 자꾸 겹쳐 지네\n말 한마디 못 하고 돌아섰던 저녁이\n여태 내 소매를 붙잡고 놓지 않네\n\n[Pre-Chorus]\n다 지난 여름을 나는 왜 못 놓는가\n\n[Chorus 1]\n[accordion counter-melody]\n[male vocals with vibrato]\n돌아가는 길 돌아가는 길\n들판이 환하게 열리는 길\n그리워서 가는 게 아니더라\n아직 안 식어서 가는 길이더라\n\n[Verse 2]\n[male vocals with vibrato]\n읍내 불빛이 하나둘 낮게 켜지고\n옥수수밭 사이로 바람이 지나가네\n이름을 부르면 대답할 것만 같아서\n차 소리보다 크게 한 번 불러 보네\n\n[Pre-Chorus]\n그 여름은 지금 어디쯤 서 있는가\n\n[Chorus 2]\n[accordion counter-melody]\n[male vocals with vibrato]\n돌아가는 길 돌아가는 길\n어둠이 뒤로 물러서는 길\n못 잊어서 가는 게 아니더라\n두고 온 게 있어서 가는 길이더라\n\n[Bridge]\n[accordion counter-melody]\n[male vocals with vibrato]\n사람아 나는 아직 그 자리에\n여름 하나를 통째로 두고 왔네\n\n[Chorus 3]\n[accordion counter-melody]\n[strings]\n[male vocals with vibrato]\n돌아가는 길 돌아가는 길\n멀리까지 훤히 트이는 길\n늦어서 못 가는 건 아니더라\n오늘은 기어이 가는 길이더라\n\n[Outro]\n[accordion counter-melody]\n[male vocals with vibrato]\n돌아가는 길에 여름이 서 있네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "0b6b3440-89fa-424d-9f97-3e5d4afe9ec1",
+    "ff5cbeeb-b190-4184-a5b2-7050b6a45e96"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40333,
+   "title": "여름 장사",
+   "genre": "Trot",
+   "subgenre": "Funk Trot",
+   "bpm": 114,
+   "key_signature": "Gm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Funk Trot, 114 BPM, key of G minor, 4/4 time, a tight late-summer groove, warm and bright, a saxophone opens alone with a short curling phrase and the band drops in one bar later. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A saxophone carries the lead line, answering the vocal in every gap and taking the instrumental break alone. A bass bounces between octaves in springy sixteenths, the drums snap tight on two and four, a clean electric guitar chops thin muted offbeat chords, hi-hat ticking sixteenths and a shaker riding the top. A brass section punches short accents at line ends. Warm reverb, the vocal close and dry up front. Bright, sweaty, dance-floor Korean trot production.",
+    "lyrics": "[Intro]\n[saxophone]\n[male vocals with vibrato]\n여름 장사 오늘도 잘했네\n\n[Verse 1]\n[clean electric guitar]\n[male vocals with vibrato]\n새벽 네 시에 트럭을 밀고 나와\n골목 끝자리에 좌판을 폈네\n얼음물 한 병에 목을 축이고\n오늘 팔 것들을 줄 맞춰 놓지\n\n[Chorus 1]\n[saxophone]\n[male vocals with vibrato]\n여름 장사 오늘도 잘했네\n땀 식는 골목에 바람 한 줄기\n남는 게 없어도 사람이 남더라\n셔터를 내리며 웃어 보네\n\n[Verse 2]\n[shaker]\n[male vocals with vibrato]\n단골 아주머니껜 덤을 한 줌 얹고\n학생들 오면 값을 좀 깎아 주지\n해가 기울면 그늘이 길어지고\n등에 붙은 셔츠가 슬슬 마르네\n\n[Chorus 2]\n[saxophone]\n[male vocals with vibrato]\n여름 장사 오늘도 잘했네\n동전 소리에 하루가 접히고\n밑진 날이라 세지는 않을래\n셔터를 내리며 웃어 보네\n\n[Bridge]\n[clean electric guitar]\n[male vocals with vibrato]\n누가 알아주나 물어도\n나는 내 몫을 알지\n한 철을 이렇게 건너왔구나\n\n[Chorus 3]\n[saxophone]\n[clean electric guitar]\n[male vocals with vibrato]\n여름 장사 올해도 잘했네\n내년 이맘때 또 여기 서 있지\n남는 게 없어도 사람이 남더라\n셔터를 내리며 웃어 보네\n\n[Outro]\n[saxophone]\n[male vocals with vibrato]\n여름 장사 오늘도 잘했네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "afc6d4bc-a808-4210-9435-f43ab9ae9e1f",
+    "c21dd724-7224-43ae-8294-a9795e9f499e"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40334,
+   "title": "다음 계절도",
+   "genre": "Trot",
+   "subgenre": "K-Pop Trot",
+   "bpm": 120,
+   "key_signature": "D",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. K-Pop Trot, 120 BPM, key of D major, 4/4 time, a bright uptempo dance groove with a shaker on top and a clean electric guitar cutting short chords on the offbeats. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion counter-melody threads through as the trot identity anchor, answering the vocal in the gaps and doubling the hook line in the last chorus. A synth bass bounces between the root and the octave above it under the groove, snare on two and four with a bright hi-hat pulse driving into every chorus, a brass section stacking short answers behind the hook. Warm strings sweep in across the bridge. Bright, uplifting Korean trot production, vocal up front.",
+    "lyrics": "[Intro]\n[accordion counter-melody]\n[female vocals with vibrato]\n여기야 손 흔들어\n\n[Verse 1]\n[shaker]\n[female vocals with vibrato]\n여름이 짐을 싸는 저녁\n평상에 둘러앉아 웃네\n수박 한 통 반으로 쪼개\n반은 너 반은 나\n선풍기 소리도 느긋해\n\n[Pre-Chorus]\n[clean electric guitar]\n[female vocals with vibrato]\n바람이 조금 선선해도\n우리 온도는 그대로\n\n[Chorus 1]\n[accordion counter-melody]\n[female vocals with vibrato]\n다음 계절도 같이 가자\n룰루랄라 발맞춰 가자\n찬바람 불면 더 신나게\n다음 계절도 우리로 가자\n\n[Verse 2]\n[shaker]\n[female vocals with vibrato]\n장바구니 가득 채워 놓고\n겨울 얘기부터 하는구나\n털모자는 네가 고르고\n장갑은 내가 살게\n달력에 동그라미 치자\n\n[Pre-Chorus]\n[clean electric guitar]\n[female vocals with vibrato]\n여름이 다 지나가도\n약속은 그대로 두자\n\n[Chorus 2]\n[accordion counter-melody]\n[female vocals with vibrato]\n다음 계절도 같이 가자\n룰루랄라 발맞춰 가자\n첫눈이 와도 더 신나게\n다음 계절도 우리로 가자\n\n[Bridge]\n[strings]\n[female vocals with vibrato]\n헤어질 때 인사는 짧게\n내년 여름에 또 보자고\n모두모두 손 흔들고\n두근두근 벌써 기다려\n\n[Chorus 3]\n[accordion counter-melody]\n[shaker]\n[female vocals with vibrato]\n다음 계절도 모두 가자\n룰루랄라 어깨동무로\n꽃 필 때까지 더 신나게\n다음 계절도 우리로 가자\n\n[Outro]\n[accordion counter-melody]\n[female vocals with vibrato]\n룰루랄라 우리로 가자\n다음 계절도 우리로 가자"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "6fe29e25-a8f5-4ce8-8d34-1d42aa7510cc",
+    "ca338e93-2ff0-4219-ad04-4a0d11aa0c66"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40335,
+   "title": "가을이 오면",
+   "genre": "Trot",
+   "subgenre": "Trot Ballad",
+   "bpm": 82,
+   "key_signature": "Am",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 82 BPM, key of A minor, 6/8 time, a slow swaying pulse in threes, warm and intimate like the first cool evening after a long summer. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion counter-melody threads through as the trot identity anchor, alone in the intro, answering every vocal line and swelling warm under each chorus. A piano replies low between phrases, warm strings and a cello hold long tones behind the chorus, a clean electric guitar picks a soft arpeggio in the second verse. A bass sits on the root notes, one to a bar, a shaker keeps the sway, the snare lands soft at each bar's end. Warm analog Korean trot production, warm reverb on each phrase tail, vocal up front.",
+    "lyrics": "[Intro]\n[accordion counter-melody]\n[male vocals with vibrato]\n평상에 앉아 부채를 접네\n\n[Verse 1]\n[accordion counter-melody]\n[male vocals with vibrato]\n매미 소리가 어제 그쳤네\n반팔에 스치는 저녁 바람이\n어느새 서늘해졌구나\n여름이 짐을 싸고 있네\n\n[Chorus 1]\n[accordion counter-melody]\n[strings]\n[male vocals with vibrato]\n가을이 오면 가을이 오면\n식은 자리에 볕이 들겠네\n여름 내 뜨겁던 이 마음도\n천천히 익어 가겠네\n\n[Verse 2]\n[clean electric guitar]\n[male vocals with vibrato]\n골목 평상엔 수박 자국뿐\n아이들 소리도 들어갔네\n문틈으로 새 계절이 들어와\n여름 이불을 개어 놓네\n\n[Chorus 2]\n[accordion counter-melody]\n[strings]\n[male vocals with vibrato]\n가을이 오면 가을이 오면\n접은 부채를 넣어 두겠네\n여름 내 태우던 그 저녁도\n서랍 속에서 익어 가겠네\n\n[Bridge]\n[accordion counter-melody]\n[shaker]\n[male vocals with vibrato]\n보낸다는 말은 아껴 둘게요\n잘 지냈다고 그거면 돼요\n서두르지 않아도 괜찮아요\n\n[Chorus 3]\n[accordion counter-melody]\n[strings]\n[male vocals with vibrato]\n가을이 오면 가을이 오면\n빈 평상에도 볕이 들겠네\n여름 내 뜨겁던 이 마음은\n그 볕에 곱게 마르겠네\n\n[Outro]\n[accordion counter-melody]\n[male vocals with vibrato]\n가을이 오면 다시 만나겠네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W030",
+   "clip_uuids": [
+    "3d9c93e9-6a97-4358-85a0-932f18e0a9e8",
+    "2da75cf0-b8a1-461d-8aaf-668e5cb03d41"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40336,
+   "title": "장이 선다",
+   "genre": "Trot",
+   "subgenre": "Traditional Korean Trot",
+   "bpm": 96,
+   "key_signature": "Am",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 96 BPM, key of A minor, 4/4 time, a mid-tempo daybreak market groove, warm and unhurried, brightening as the morning fills in. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion leads with a warm bellows tone, opening in free time and answering each vocal line with short bright fills, while a nylon-string guitar and a soft string pad hold the middle. Electric bass sits on a steady root-fifth pattern under a snare on beats two and four with a steady hi-hat pulse. The band drops to drums and bass alone before the last chorus, then the full band returns. Clean warm production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n[rubato, free tempo]\n어스름 걷히기 전에\n\n[Verse 1]\n첫차보다 먼저 나와\n파라솔 대를 세우네\n언 손을 비벼 가면서\n좌판에 물건을 펴요\n\n[Chorus 1]\n[full band, tempo locks in]\n[male vocals with vibrato]\n장이 선다 오늘도 장이 선다\n불빛 하나 둘 켜지고 사람이 드네\n잔돈을 세는 손이 따뜻해져요\n장이 선다 오늘도 장이 선다\n\n[Verse 2]\n해가 좌판 위로 오르면\n흥정 소리가 골목을 채우네\n비닐봉지 부스럭 소리에\n하루가 제일 시끄러워요\n\n[Chorus 2]\n장이 선다 오늘도 장이 선다\n낯익은 얼굴들이 하나씩 오네\n깎아 달라 웃는 말도 정이 들어요\n장이 선다 오늘도 장이 선다\n\n[Bridge]\n[breakdown, drums and bass only]\n사람이 다 빠져나간 자리에\n파라솔 그림자만 길어지네\n\n[Chorus 3]\n[full band enters]\n[vocal ad-lib]\n장이 선다 내일도 장이 선다\n접었다 펴는 게 사는 일이더라\n빈 수레 끌고 가도 웃음이 나요\n장이 선다 내일도 장이 선다\n\n[Outro]\n[rubato, free tempo]\n장이 선다 내일도 장이 선다"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "62803369-82d4-444f-8c01-60af09d4e170",
+    "e83c2724-cc04-496a-88ed-f0b82f33468b"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40337,
+   "title": "파장 무렵",
+   "genre": "Trot",
+   "subgenre": "Adult Contemporary Korean Trot",
+   "bpm": 88,
+   "key_signature": "Em",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Adult Contemporary Korean Trot, 88 BPM, key of E minor, shuffle rhythm, a slow triple pulse where every beat opens into three and the last of the three leans back a breath. A woman sings in an unmistakably Korean trot style, with restrained delivery, light vibrato, and traditional phrasing, the emotion held in a warm mid dynamic and every phrase end closed with a soft, unhurried turn, keeping the Korean trot color clear and front-and-center. A warm accordion carries the lead melody and an accordion counter-melody threads underneath as the trot identity anchor. Soft acoustic piano lays quiet triplet figures, warm strings swell through the last third, a bass sits on the root notes and steps once per bar, brushes on the snare keep the sway loose, and a light shaker rides the triplets. Intimate, warm, spacious analog Korean production with a long soft reverb tail.",
+    "lyrics": "[Intro]\n장이 다 파했네\n\n[Verse 1]\n파라솔 접는 소리가 골목을 지나가고\n남은 건 시든 나물 한 줌뿐이네\n이맘때면 와서 다 쓸어 가던 사람\n오늘은 발소리 하나 들리지 않네\n\n[Pre-Chorus]\n붙잡는 말 한마디가 그렇게 어려웠는가\n값을 조금 더 깎아 줄걸 그랬네\n\n[Chorus 1]\n[accordion melody enters]\n[female vocals, light vibrato]\n파장 무렵 파장 무렵\n나만 아직 좌판을 못 접네\n빈 봉지 하나 접었다 폈다\n파장 무렵이면 자꾸 뒤를 돌아보네\n\n[Verse 2]\n옆집은 벌써 손수레를 밀고 갔고\n장터 불빛도 하나씩 꺼지고 있네\n나는 잔돈만 세었지 사람은 못 세었네\n그게 내가 오늘 놓친 값이었네\n\n[Pre-Chorus]\n이름 한 번 물어볼걸 그랬네\n그 흔한 인사조차 아꼈던가\n\n[Chorus 2]\n[accordion counter-melody]\n[female vocals, light vibrato]\n[accordion, sparse fills]\n파장 무렵 파장 무렵\n나만 아직 좌판을 못 접네\n남은 나물 한 줌 싸 두었다가\n파장 무렵이면 다시 풀어 놓고 있네\n\n[Bridge]\n사람아 나는 셈이 서툴렀네\n사람아 남는 줄도 모르고 살았네\n\n[Chorus 3]\n[accordion lead]\n[female vocals, light vibrato]\n[warm strings swell]\n파장 무렵 파장 무렵\n이제는 내가 빈 좌판이 되었네\n접을 것도 없이 그냥 앉아서\n파장 무렵을 통째로 지고 가네\n\n[Outro]\n파장 무렵"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "19645624-9750-498c-88f0-c2a2db8a146f",
+    "5152151a-fa2a-429f-8272-7976609c20f2"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40338,
+   "title": "뜨끈한 한 술",
+   "genre": "Trot",
+   "subgenre": "Traditional Korean Trot",
+   "bpm": 100,
+   "key_signature": "Dm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 100 BPM, key of D minor, 4/4 time, a brisk warm mid-tempo pulse, bustling like a market alley at breakfast. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion carries the melody as the trot identity anchor, alone in the intro, answering each vocal line and swelling warm under every chorus. A piano comps steady offbeats, an acoustic guitar strums lightly under the verses, warm strings enter behind the bridge and swell wide through the final chorus. The electric bass holds a steady root-fifth pattern, the snare lands on beats two and four with a steady hi-hat pulse. Warm analog Korean trot production, warm reverb on each phrase tail, vocal up front.",
+    "lyrics": "[Intro]\n[accordion melody enters]\n장터 골목에 김이 오르네\n\n[Verse 1]\n새벽부터 줄지어 선 좌판\n국밥집 앞이 제일 붐비네\n뚝배기 김이 골목을 덮고\n언 손을 비비며 앉으면\n아주머니 국자가 먼저 와요\n\n[Verse 2]\n깍두기 접시를 말없이 놓고\n많이 들라고 한마디 얹네\n국물 한 술에 속이 풀리고\n잔돈은 다음에 주라 하시니\n그 말이 더 뜨끈해요\n\n[Chorus 1]\n[male vocals with vibrato]\n[accordion counter-melody]\n뜨끈한 한 술 뜨끈한 한 술\n언 손이 스르르 풀리는 국밥\n정을 말아 주는 한 그릇에\n오늘 하루가 살 만하네\n\n[Bridge]\n[warm strings]\n이름도 모르고 십 년째인데\n얼굴만 봐도 아는 사이예요\n말없이 한 그릇 더 주시는\n그 손이 참 고마워요\n\n[Chorus 2]\n[strings swell]\n뜨끈한 한 술 뜨끈한 한 술\n헛헛한 속을 데워 주는 국밥\n등 두드려 주는 한 그릇에\n내일도 또 나와 보겠네\n\n[Outro]\n숟가락 놓고 잘 먹었다 하네\n또 오시라고 손을 흔드네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "da172626-2c8d-446a-81ab-62e8dde5ffc5",
+    "07d4b72a-b205-4390-bff9-d5afeb786e31"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40339,
+   "title": "엄마 손잡고",
+   "genre": "Trot",
+   "subgenre": "Modern Korean Trot",
+   "bpm": 108,
+   "key_signature": "G",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Modern Korean Trot, 108 BPM, key of G major, 4/4 time, an electric piano opens alone with a soft rubato figure before the full band locks the tempo in. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, warm and full-hearted on the hooks, the vibrato widening toward each phrase end, keeping the Korean trot color strong. An acoustic bass walks on the root notes with a light bounce, a brushed snare and a steady kick hold a bright mid-tempo pulse, and a shaker adds a small clatter underneath. The electric piano answers her with short warm fills, and an accordion drifts in behind the second chorus with a soft bellows swell. The band pushes into a double-time feel through the late chorus, then settles back for an electric piano interlude. Warm, bright Korean trot production, homey and close at the end of a market day.",
+    "lyrics": "[Intro]\n[rubato, free tempo]\n엄마 옷자락 잡고 골목을 나서\n\n[Verse 1]\n[full band, tempo locks in]\n[female vocals with heavy vibrato]\n좌판이 쭉 늘어선 큰길로 들어서\n사람들 소리가 한꺼번에 쏟아져\n나는 옷자락 놓칠까 봐 무서워서\n두 손에 힘을 꽉 주고 걸어가\n\n[Chorus 1]\n엄마 손잡고 이 골목을 걸어\n세상이 이만큼 크고 시끄러워\n그래도 하나도 안 무섭잖아\n내 손안에 엄마가 있는 거야\n\n[Verse 2]\n국밥 김이 얼굴에 확 끼치고\n잔돈이 손바닥에서 딸그락거려\n비닐봉지가 자꾸 다리에 부딪혀\n나는 자꾸 뒤를 돌아보고 있어\n\n[Chorus 2]\n[drums push into double-time feel]\n[female vocals with heavy vibrato]\n엄마 손잡고 사람들 사이를 지나\n흥정 소리가 파도처럼 밀려와\n손수레가 지나가면 옆으로 붙어\n엄마 나는 지금 여기 잘 있어\n\n[Interlude]\n[groove settles back]\n[electric piano]\n\n[Chorus 3]\n엄마 손잡고 장터를 빠져나와\n방금까지 그 소리가 하나도 안 들려\n집에 가는 길은 이렇게 조용해\n엄마 손이 아직 따뜻하잖아\n\n[Outro]\n오늘은 참 좋은 날이야"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "93f524ae-9710-4c12-a556-addada80c12f",
+    "721f06b3-27dd-477e-8585-aaac66915e0f"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40340,
+   "title": "서른 해",
+   "genre": "Trot",
+   "subgenre": "Traditional Korean Trot",
+   "bpm": 84,
+   "key_signature": "Bm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 84 BPM, key of B minor, 6/8 time, a slow swaying pulse in threes, warm and weathered like a stall that has stood in the same spot for thirty years. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion counter-melody threads through as the trot identity anchor, alone in the intro, answering every vocal line and swelling warm under each chorus. An electric bass holds a steady root-fifth pattern, one move to a bar. A soft acoustic piano replies low between phrases, warm strings hold long tones behind the chorus, brushes on the snare keep the sway. Warm analog Korean trot production, warm reverb on each phrase tail, vocal up front.",
+    "lyrics": "[Intro]\n파라솔 대를 오늘도 펴네\n\n[Verse 1]\n스무 살에 잡은 자리 여기 그대로\n나무 궤짝 위에 저울을 놓네\n앞치마 끈이 손에 익어서\n매듭은 눈 감고도 지어지네\n\n[Chorus 1]\n서른 해 이 자리에\n비바람도 지나가고 볕도 들었네\n값 깎아 주던 손도 늙어 갔지만\n아침이면 나는 또 여기 있네\n\n[Verse 2]\n잔돈 통 소리로 하루를 세고\n비닐봉지 묶어 건네는 손\n파라솔 그늘이 조금씩 기울면\n그림자 따라 궤짝을 미네\n\n[Bridge]\n[accordion solo]\n[male vocals with vibrato]\n자랑은 아니어도 부끄럽진 않아요\n아이 셋을 이 좌판이 키웠어요\n내가 지킨 게 아니라\n이 자리가 나를 지켰네\n\n[Chorus 2]\n[accordion counter-melody]\n[strings]\n[male vocals with vibrato]\n[male vocals with heavy vibrato]\n서른 해 이 자리에\n간판은 낡았어도 저울은 바르네\n잔돈처럼 작은 하루가 모여\n서른 해가 되었네\n\n[Outro]\n서른 해 이 자리에 오늘도 서 있네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "0284a15e-7c74-41b8-bcec-8d75cfce7181",
+    "70c52b17-a3a5-4cba-871b-06fe4149d562"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40341,
+   "title": "안 팔린 날",
+   "genre": "Trot",
+   "subgenre": "Blues Korean Trot",
+   "bpm": 92,
+   "key_signature": "Gm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Blues Korean Trot, 92 BPM, key of G minor, 4/4 time, an unhurried mid-tempo blues shuffle, dusty and warm at the close of a long day. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A clean electric guitar carries the lead, tracing short single-line answers between the vocal phrases with a soft round tone. An accordion threads a warm counter-melody through the later choruses as the trot identity anchor. An acoustic bass walks steady root notes under every bar, brushes keep a relaxed shuffling backbeat with the snare on beats two and four, and a warm organ pad sits low behind the band. Live-band Korean trot production, the vocal close and up front, the heavy trot vibrato front-and-center.",
+    "lyrics": "[Intro]\n안 팔린 날\n\n[Verse 1]\n파라솔 그늘이 옆으로 눕고\n비닐봉지는 아침 그대로 접혀 있네\n저울 눈금도 아침에 맞춘 그 자리\n사람은 오늘 스쳐만 가네\n\n[Chorus 1]\n안 팔린 날 안 팔린 날\n잔돈통이 아침이랑 똑같은 날\n안 팔린 날 안 팔린 날\n그래도 하루는 다 썼네\n\n[Verse 2]\n[clean electric guitar]\n[male vocals with vibrato]\n옆자리는 벌써 천막을 걷고\n나는 아직 앉아만 있네\n누가 나를 부르지 않는가\n불러도 대답할 목은 남았지\n\n[Pre-Chorus]\n[breakdown, drums and bass only]\n무릎 한 번 툭 털고\n파라솔을 접는다\n\n[Chorus 2]\n[full band enters]\n[accordion counter-melody]\n[male vocals with vibrato]\n안 팔린 날 안 팔린 날\n그래도 손수레는 내가 끄는 날\n안 팔린 날 안 팔린 날\n접는 것도 내 손으로 하네\n\n[Bridge]\n[rubato, free tempo]\n못 판 건 내일 또 펴면 되지\n빈 통을 들고도 걸음은 가볍구나\n\n[Chorus 3]\n[full band, tempo locks in]\n[male vocals with vibrato]\n[accordion counter-melody]\n안 팔린 날 안 팔린 날\n내일 아침에 또 펴러 오는 날\n안 팔린 날 안 팔린 날\n오늘은 여기까지 하네\n\n[Outro]\n[groove settles back]\n안 팔린 날\n또 나오네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "ac76fd2f-59b3-43ea-a998-f98f69a2fb5f",
+    "42fa800a-5615-42b9-ad24-01e67bc7ca6f"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40342,
+   "title": "덩실 장터",
+   "genre": "Trot",
+   "subgenre": "Dance Korean Trot",
+   "bpm": 126,
+   "key_signature": "C",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Dance Korean Trot, 126 BPM, key of C major, 4/4 time, an accordion opens alone with a bright flourish and the whole band lands one bar later. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A disco bass springs between octaves under an eighth-note hi-hat and a snare on beats two and four, the groove fast and easy to dance to. An accordion counter-melody threads through as the trot identity anchor, answering the vocal in the gaps. A brass section punches the head of each chorus, a shaker rides the top through every bar, and clean electric guitar chops on the offbeats. Warm reverb around the lead vocal, bright market-day production with the vocal up front and the crowd wide behind.",
+    "lyrics": "[Intro]\n[rubato, free tempo]\n장 서는 소리가 하나 둘\n\n[Drop]\n[full band, tempo locks in]\n[four-on-the-floor kicks in]\n자 다 같이 덩실덩실\n\n[Verse 1]\n[female vocals]\n좌판이 나란히 문을 열었네\n엿장수 가위가 박자를 치네\n뻥튀기 소리에 아이가 웃고\n동네가 통째로 모여든다\n\n[Pre-Chorus]\n손수레 바퀴도 신이 났는지\n비닐봉지 흔들며 come on\n\n[Chorus 1]\n덩실 장터 오늘은 신난다\n흥정 소리가 장단을 맞추네\n덩실 장터 어깨가 들썩\n모두모두 손뼉을 짝짝짝\n\n[Verse 2]\n잔돈을 세면서 아주머니 웃고\n파라솔 그늘에 발이 먼저 나가네\n오늘은 값도 좀 깎아 주는구나\n장터가 통째로 무대가 된다\n\n[Chorus 2]\n덩실 장터 오늘은 신난다\n흥정 소리가 장단을 맞추네\n덩실 장터 어깨가 들썩\n모두모두 손뼉을 짝짝짝\n\n[Bridge]\n[breakdown, drums and bass only]\n장단만 남기고 잠깐 숨 고르자\n발끝은 벌써 다음 박을 세네\n\n[Chorus 3]\n[full band enters]\n[female vocals with heavy vibrato]\n덩실 장터 다 같이 불러 보자\n파라솔 아래로 웃음이 도네\n덩실 장터 노을도 들썩\n해가 져도 손뼉은 짝짝짝\n\n[Outro]\n덩실 장터 오늘은 신난다"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "99d2eddd-b36b-498e-847e-062c7490c44d",
+    "04ae42ed-ad71-49a5-ae35-d039e6c62c57"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40343,
+   "title": "새 단골",
+   "genre": "Trot",
+   "subgenre": "Modern Korean Trot",
+   "bpm": 104,
+   "key_signature": "F",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Modern Korean Trot, 104 BPM, key of F major, 4/4 time, an electric piano opens with bright bell-like chords over a brisk, cheerful market-morning groove. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, warm and full-hearted on the hooks, the vibrato widening toward each phrase end, keeping the Korean trot color strong and front-and-center. An acoustic bass walks lightly on the root notes, a crisp snare and a light tambourine keep the pulse springy, and a clean electric guitar adds short muted chops between the lines. An accordion answers her in the back half of each chorus with a warm counter-melody, warm strings lift under the final chorus, and gentle reverb keeps the voice close and present. Bright, warm Korean trot production, busy and generous like a market street at midday.",
+    "lyrics": "[Intro]\n[electric piano]\n스물여섯 살 첫 장날\n\n[Verse 1]\n간판도 없이 파라솔 하나 폈어\n옆집 아주머니가 자리를 내줬지\n비닐봉지 묶는 손은 아직 서툰데\n어서 오세요 그 말은 잘 나와\n\n[Pre-Chorus]\n낯선 얼굴이라고 흘깃 보시더니\n국밥 한 그릇을 시켜 주고 가시잖아\n\n[Chorus 1]\n새 단골 하나 늘었어\n오늘은 그걸로 됐지\n[accordion]\n[female vocals with heavy vibrato]\n잔돈을 세는 손끝까지\n장터가 나를 부르네\n\n[Verse 2]\n손수레 끌고 오는 새벽이 좋아\n흥정 소리가 여기선 인사야\n할머니 좌판 옆에 내 좌판을 붙여\n세월이랑 나란히 앉아 있어\n\n[Chorus 2]\n새 단골 하나 늘었어\n이 골목이 나를 알아\n[accordion counter-melody]\n[female vocals with heavy vibrato]\n[warm strings swell]\n언젠가 나도 여기서\n[vocal ad-lib]\n누군가의 옛날이 될 거야\n\n[Outro]\n누군가의 옛날이 될 거야"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "58e0b683-2cfa-467e-ad47-5bfd5c11351b",
+    "8364e373-774d-4384-976b-c4374b4ea568"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40344,
+   "title": "단골 왔네",
+   "genre": "Trot",
+   "subgenre": "Adult Contemporary Korean Trot",
+   "bpm": 98,
+   "key_signature": "D",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Adult Contemporary Korean Trot, 98 BPM, key of D major, 4/4 time, a warm mid-tempo sway with an easy market-day lift, bright and neighborly. A saxophone opens alone with a short rounded phrase and the band settles in a bar later. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A saxophone carries the lead line as the identity anchor, answering the vocal in every gap and taking the closing phrase alone. An acoustic bass sits low on the root notes, stepping in a relaxed walk. Brushes keep a soft backbeat on two and four, a steady hi-hat ticking underneath, and an acoustic guitar strums warm open chords. Warm reverb, the vocal close and up front. Bright, affectionate Korean trot production.",
+    "lyrics": "[Intro]\n[saxophone]\n단골 왔네 오늘도 웃으며\n\n[Verse 1]\n문 여는 소리에 익숙한 발소리\n말도 안 했는데 국물부터 뜨네\n십 년째 앉던 저 자리에\n숟가락이 먼저 놓여 있지\n오늘 뭐가 좋냐 묻지도 않고\n좋은 걸로 담아 달라 하네\n\n[Chorus 1]\n[male vocals with vibrato]\n단골 왔네 오늘도 그 자리에\n얼굴만 봐도 다 아는 사이\n덤이 얹히고 잔이 채워지고\n말 없이 통하는 정이 있네\n\n[Verse 2]\n[acoustic guitar]\n비 오는 날엔 우산을 챙겨 주고\n바쁜 날에는 눈인사 한 번\n값을 깎자는 말도 없이\n잔돈은 늘 그냥 두고 가지\n장이 파해도 불은 켜 두네\n그 발소리 아직 안 왔으니\n\n[Chorus 2]\n[full band enters]\n단골 왔네 오늘도 그 자리에\n얼굴만 봐도 다 아는 사이\n비닐봉지 하나 더 얹어 주고\n웃으며 손 흔드는 정이 있네\n\n[Outro]\n[saxophone solo]\n단골 왔네 오늘도 웃으며"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "e0fd77a7-c58b-433c-af65-fbaf678e4712",
+    "b092f635-f880-402a-89b4-2c5b896f73e3"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40345,
+   "title": "잘 팔았네",
+   "genre": "Trot",
+   "subgenre": "Traditional Korean Trot",
+   "bpm": 94,
+   "key_signature": "Am",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 94 BPM, key of A minor, 4/4 time, an unhurried walking pulse, settled like a market street after the last stall folds. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion carries the melody as the trot identity anchor, opening alone and answering each vocal line. A piano marks the beat with warm chords, strings swell under the final chorus, a clean electric guitar picks a quiet figure in verse two. The electric bass walks a steady root-fifth pattern, the snare lands on beats two and four, brushes keep a footstep pace. The bridge opens into free time with the accordion alone, then the full band returns and locks the pace back in. Warm analog Korean trot production, vocal up front.",
+    "lyrics": "[Verse 1]\n[accordion counter-melody]\n[male vocals with vibrato]\n파라솔 접어 싣고 손수레를 미네\n하루치 소란이 등 뒤로 멀어지네\n주머니 잔돈 소리 걸음마다 울리네\n해가 낮게 앉아 길을 데워 놓았네\n\n[Chorus 1]\n오늘도 잘 팔았네 잘 팔았네\n빈 수레가 이렇게 가볍네\n남은 건 저녁 한 끼 그거면 됐네\n돌아가는 이 길이 참 좋네\n\n[Verse 2]\n옆 좌판 아주머니 손을 흔들고 가네\n비닐봉지 하나에 저녁거리 담기네\n흥정 소리 그치고 발소리만 남았네\n바람이 앞서 가며 길을 열어 주네\n\n[Chorus 2]\n오늘도 잘 팔았네 잘 팔았네\n어깨가 저려도 마음은 가볍네\n다 못 판 몇 개는 이웃 주고 왔네\n돌아가는 이 길이 참 좋네\n\n[Bridge]\n[rubato, free tempo]\n장이 서고 파하는 게 하루지요\n수고했다 그 한마디면 되지요\n내일도 또 서겠지요 그러면 됐지요\n\n[Chorus 3]\n[full band, tempo locks in]\n[strings]\n[male vocals with vibrato]\n오늘도 잘 팔았네 잘 팔았네\n불빛이 저 앞에서 나를 부르네\n빈 수레 소리마저 노래가 되네\n돌아가는 이 길이 참 좋네\n\n[Outro]\n[accordion counter-melody]\n잘 팔았네 오늘도 참 좋았네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W031",
+   "clip_uuids": [
+    "f4809e31-cd06-4c57-b809-43362ddab373",
+    "1ad79ea7-ba9a-4ca3-bcd2-6a939746174e"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40346,
+   "title": "스쳐도 좋아",
+   "genre": "Trot",
+   "subgenre": "City Pop Trot",
+   "bpm": 108,
+   "key_signature": "Am",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. City Pop Trot, 108 BPM, key of A minor modulating to B minor on the final chorus, 4/4 time, a mid-tempo late-night station groove, warm and shimmering under platform lights. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A warm electric piano leads with bright city-pop chords and answers each line with shimmering fills, while a clean electric guitar traces bright counter-lines over a soft synth pad. A steady hi-hat pulse and a warm snare on two and four carry the groove, and a bass settles on the root note of each chord. After a short break the key change arrives and the vocal rides it with a wider vibrato. Airy reverb, radio-ready city-pop production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n[rubato, free tempo]\n막차 안내가 흐르고\n\n[Verse 1]\n계단을 반쯤 내려오다\n너를 봤어 반대편에\n말을 걸 시간은 없었고\n그냥 눈이 마주쳤어\n\n[Pre-Chorus]\n문이 닫히기 삼 초 전\n나도 모르게 웃었지\n\n[Chorus 1]\n[full band, tempo locks in]\n[female vocals, wide vibrato]\n스쳐도 좋아 오늘은 스쳐도 좋아\n불빛이 길게 흐르는 환승 통로에서\n이름도 모르는 사람이 두고 간\n눈인사 하나로 밤이 환해\n스쳐도 좋아 오늘은 스쳐도 좋아\n\n[Verse 2]\n전광판 숫자가 바뀌고\n사람들이 밀려 나가\n나만 아직 서 있는데\n발끝이 자꾸 따뜻해\n\n[Chorus 2]\n스쳐도 좋아 오늘은 스쳐도 좋아\n막차가 데려갈 자리에 앉아서\n창밖에 흐르는 불빛을 세다 보면\n모르는 얼굴도 정이 들어\n스쳐도 좋아 오늘은 스쳐도 좋아\n\n[Interlude]\n[breakdown, drums and bass only]\n\n[Chorus 3]\n[full band enters]\n[vocal ad-lib]\n스쳐도 좋아 내일도 스쳐도 좋아\n같은 시간 같은 통로 지나갈 거야\n못 물어본 이름은 그냥 두기로 해\n오늘 밤은 이대로 충분해\n스쳐도 좋아 내일도 스쳐도 좋아\n\n[Outro]\n[rubato, free tempo]\n스쳐도 좋아 내일도 스쳐도 좋아"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "1d0e1edb-af93-4bef-a1b4-6b44e37d3f38",
+    "0e6c38e0-b22f-4fe9-ae76-895a5ca71ab8"
+   ],
+   "arm": "처치"
+  },
+  {
+   "song_id": 40347,
+   "title": "개찰구 너머",
+   "genre": "Trot",
+   "subgenre": "Modern Korean Trot",
+   "bpm": 96,
+   "key_signature": "Em",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Modern Korean Trot, 96 BPM, key of E minor, 4/4 time, a mid-tempo late-night station feel, dim and unhurried, lit by ticket-gate lamps. A man sings in an unmistakably Korean trot style, with restrained delivery, light vibrato, and traditional phrasing, the emotion held in a warm mid dynamic, never pushed, keeping the Korean trot color strong and front-and-center. A saxophone carries the lead in a soft breathy tone and answers each vocal line with short falling phrases, while a warm electric piano lays quiet chords underneath. An upright bass walks a slow line under brushed drums with a light snare on two and four. Warm room reverb, intimate late-night production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n개찰구 불빛이 흐리네\n\n[Verse 1]\n표를 넣고 돌아서던\n그 어깨가 좁아 보이네\n불러 세울 말을 고르다\n문장이 다 흩어지네\n\n[Verse 2]\n사람들 사이로 멀어지고\n나는 그 자리에 서서\n잘 가라는 말 한마디를\n끝내 삼키고 마네\n\n[Pre-Chorus]\n다시 만나자는 인사는\n누가 먼저 해야 하나\n\n[Chorus 1]\n[saxophone answers the line]\n[male vocals, light vibrato]\n[traditional phrasing]\n[warm electric piano fill]\n개찰구 너머 뒷모습\n그 뒤로 문이 닫히고\n나는 여기 남아서 오래\n그 자리만 바라보네\n\n[Bridge]\n표 한 장이면 갈 수 있는데\n그 한 장을 못 끊고 서 있어\n\n[Chorus 2]\n[saxophone answers the line]\n[male vocals, light vibrato]\n[sustained saxophone tone]\n[brushed drums soften]\n개찰구 너머 뒷모습\n불빛에 조금씩 지워지고\n나는 여기 남아서 오래\n그 자리만 바라보네\n\n[Outro]\n개찰구 불빛이 흐리네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "882019dd-7837-4075-aac2-f53381b29297",
+    "5a066b86-eaee-4e7b-9292-8f4b5f07e10d"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40348,
+   "title": "김이 오른다",
+   "genre": "Trot",
+   "subgenre": "Traditional Korean Trot",
+   "bpm": 100,
+   "key_signature": "Dm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 100 BPM, key of D minor, 4/4 time, a mid-tempo late-night alley groove, warm and steady, thick with kitchen steam. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion leads with a warm bellows tone and answers each vocal line with short bright fills, while a nylon-string guitar and a soft string pad hold the middle. Electric bass sits on a steady root-fifth pattern under a snare on beats two and four with a steady hi-hat pulse. Clean warm production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n[accordion opens]\n역 앞 골목 첫 불빛\n\n[Verse 1]\n막차 놓친 사람들이\n문 열고 들어오네\n뚝배기 끓는 소리가\n언 손을 먼저 녹이네\n\n[Chorus 1]\n[male vocals with heavy vibrato]\n[traditional phrasing]\n김이 오른다 뽀얗게 김이 오른다\n누가 어디서 왔는지 묻지도 않고\n한 그릇 앞에 앉으면 다 같은 사람\n김이 오른다 뽀얗게 김이 오른다\n\n[Verse 2]\n주인은 국자만 젓고\n손님은 말이 없네\n창에 서린 물기 너머\n막차가 또 떠나네\n\n[Chorus 2]\n김이 오른다 뽀얗게 김이 오른다\n누가 어디로 가는지 묻지도 않고\n한 그릇 비우고 나면 다시 걸음\n김이 오른다 뽀얗게 김이 오른다\n\n[Bridge]\n스쳐 가는 자리라도\n따뜻하면 그게 집이더라\n\n[Chorus 3]\n김이 오른다 내일도 김이 오른다\n누가 어디서 오든지 자리는 있고\n한 그릇 값에 온기까지 얹어 주네\n김이 오른다 내일도 김이 오른다\n\n[Outro]\n[accordion closes]\n김이 오른다 내일도 김이 오른다"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "250c61f3-39ad-45ec-801f-fa0535615f6d",
+    "144f9641-dd73-449c-9cdf-9d9936de67e1"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40349,
+   "title": "삼 분만",
+   "genre": "Trot",
+   "subgenre": "Adult Contemporary Korean Trot",
+   "bpm": 84,
+   "key_signature": "F",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Adult Contemporary Korean Trot, 84 BPM, key of F major, 6/8 time, a gently swaying mid-tempo feel, warm and unhurried, sunlit through a station window. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, warm and open on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. Warm strings carry the lead line and answer each vocal phrase with soft rising figures, while an accordion sits behind them as a quiet pad and a nylon-string guitar marks the sway. An acoustic bass settles on the root note of each chord under brushed drums with a soft snare on the strong beat. Clean warm production with the Korean trot vocal up front.",
+    "lyrics": "[Verse 1]\n[rubato, free tempo]\n갈아타는 통로 한가운데서\n너를 만난 시간은 겨우 삼 분\n커피는 식을 새도 없었고\n하고 싶던 말은 반도 못 했어\n\n[Chorus 1]\n[full band, tempo locks in]\n[female vocals, warm and wide]\n삼 분만 삼 분만 더\n곁에 있어 줬으면 좋겠다고\n속으로만 세 번쯤 말했어\n손을 흔드는 그 동안에\n\n[Verse 2]\n너는 위층으로 나는 아래층으로\n계단 하나가 우릴 갈라놓고\n돌아보니 벌써 사람들 사이로\n네 뒷모습이 섞여 버렸어\n\n[Pre-Chorus]\n[breakdown, drums and bass only]\n삼 분이 짧아서 아쉬운 게 아니라\n그 삼 분이 좋아서 아쉬운 거야\n\n[Chorus 2]\n[full band enters]\n[vocal ad-lib]\n삼 분만 삼 분만 더\n그 말은 못 하고 왔지만\n오늘은 이걸로 충분해\n손을 흔들어 줬으니까\n\n[Outro]\n삼 분만 삼 분만 더"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "fb5a2196-3061-4f29-a440-ee6966056f6c",
+    "444e2826-ed01-4c92-aefe-035c64562981"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40350,
+   "title": "배웅이란 게",
+   "genre": "Trot",
+   "subgenre": "Trot Ballad",
+   "bpm": 72,
+   "key_signature": "Bm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 72 BPM, key of B minor, shuffle rhythm, a slow and spacious late-night platform feel, tender and unhurried. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional phrasing, holding each phrase long, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion leads with a warm bellows tone and answers each vocal line with slow falling figures, while a soft string pad and a nylon-string guitar hold the middle. An acoustic bass settles on the root note of each chord under brushed drums with a soft snare on the strong beat. Warm room reverb, spacious production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n플랫폼 끝 흰 선 앞에 둘이 서서\n\n[Verse 1]\n무거운 가방을 들어 주고\n말없이 표를 손에 쥐여 주네\n잘 지내라 그 한마디를\n목 끝에서 몇 번을 삼키네\n\n[Chorus 1]\n배웅이란 게 원래 그렇더라\n보내는 사람이 더 오래 서 있네\n문이 닫히고 불빛이 다 가도\n발이 쉽게 안 떨어지네\n\n[Verse 2]\n차창에 손을 대던\n그 온기가 손바닥에 남네\n차가 다 사라진 뒤에도\n빈 선로만 한참 보고 섰네\n\n[Bridge]\n[accordion solo]\n[rubato, free tempo]\n잘 가라는 말은 늦어도\n잘 지내라는 말은 늦지 않네\n그 말 하나만 붙들고 돌아서네\n\n[Chorus 2]\n[full band, tempo locks in]\n[male vocals with heavy vibrato]\n[traditional phrasing]\n[accordion swells behind the vocal]\n배웅이란 게 원래 그렇더라\n보내는 사람이 더 오래 서 있네\n다음에 네가 오는 날에는\n내가 먼저 여기 나와 서 있을 테니\n\n[Outro]\n플랫폼 끝 흰 선 앞에 둘이 서서"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "6a1799e8-8db6-4fa7-89c1-ac15513fa90d",
+    "275d7b33-fe57-4ab9-babc-cf165a6829be"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40351,
+   "title": "네온이 켜진다",
+   "genre": "Trot",
+   "subgenre": "Synth Trot",
+   "bpm": 116,
+   "key_signature": "Gm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Synth Trot, 116 BPM, key of G minor, 4/4 time, a bright mid-tempo evening groove, neon-lit and forward-moving. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, bright and forward on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A warm synth pad and a clean electric guitar share the lead, the guitar answering each vocal line with short bright figures while the pad swells underneath. An analog synth bass drives a steady eighth-note line under a four-on-the-floor kick and a crisp snare on two and four. Bright polished production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n하루가 접히는 시간\n\n[Verse 1]\n개찰구를 나오면\n거리가 막 켜지고\n굽은 어깨 위로\n간판 불이 쏟아지네\n\n[Pre-Chorus]\n집에 가는 길이 왜\n이렇게 반짝이나\n\n[Chorus 1]\n네온이 켜진다 하나 둘 켜진다\n하루를 다 쓴 사람들 얼굴 위로\n오늘도 잘 버텼다고 말해 주듯이\n네온이 켜진다 하나 둘 켜진다\n\n[Interlude]\n[synth pad swells]\n[clean electric guitar enters]\n\n[Verse 2]\n분식집 유리창에\n김이 서리기 시작하고\n누군가는 웃으면서\n전화를 받고 있네\n\n[Chorus 2]\n[female vocals, bright and forward]\n[four-on-the-floor kicks in]\n네온이 켜진다 하나 둘 켜진다\n하루를 다 쓴 사람들 얼굴 위로\n오늘도 잘 버텼다고 말해 주듯이\n네온이 켜진다 하나 둘 켜진다\n\n[Bridge]\n[drums and bass drop out]\n지나가는 사람마다\n불빛 한 조각씩 묻히고\n\n[Chorus 3]\n[full band enters]\n[vocal ad-lib]\n네온이 켜진다 내일도 켜진다\n하루를 다 쓸 사람들 얼굴 위로\n내일도 잘 버티라고 말해 주듯이\n네온이 켜진다 내일도 켜진다\n\n[Outro]\n[synth pad fades out]\n네온이 켜진다 내일도 켜진다"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "3d13269e-f7de-4f10-abd9-3d0ade87baa3",
+    "66bb2e24-cef8-47e4-acef-14cb9f4aad1c"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40352,
+   "title": "돌아갈 자리",
+   "genre": "Trot",
+   "subgenre": "Traditional Korean Trot",
+   "bpm": 94,
+   "key_signature": "G",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. 94 BPM, key of G major, 4/4 time, a warm mid-tempo station groove, open and steady, bright as an afternoon platform. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. An accordion leads with a warm bellows tone and answers each vocal line with short bright fills, while a nylon-string guitar and a soft string pad hold the middle. Electric bass sits on a steady root-fifth pattern under a snare on beats two and four with a steady hi-hat pulse. Clean warm production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n[rubato, free tempo]\n전광판을 한참 동안 올려다보네\n\n[Verse 1]\n고향으로 가는 열차는\n하루에 네 번밖에 없고\n나는 늘 세 번째 차를\n놓치고 마는 사람이네\n표를 끊었다 물렸다\n그러다 하루가 다 가네\n\n[Chorus 1]\n[full band, tempo locks in]\n[male vocals with heavy vibrato]\n돌아갈 자리가 있다는 게\n이렇게 든든한 일이더라\n못 가도 시간표는 그대로고\n그 자리도 그대로네\n비워 둔 게 아니라 남겨 둔 거라\n\n[Verse 2]\n[breakdown, drums and bass only]\n어머니 목소리가\n수화기 너머로 짧고\n다음 주엔 내려간다는 말을\n올해도 또 하고 마네\n바쁘냐고 묻지도 않고\n밥은 먹었냐고만 하시네\n\n[Chorus 2]\n[full band enters]\n[vocal ad-lib]\n돌아갈 자리가 있다는 게\n이렇게 든든한 일이더라\n늦어도 기다려 주는 곳이\n아직 남아 있다는 게\n\n[Outro]\n[rubato, free tempo]\n전광판을 한참 동안 올려다보네"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "15cc2e82-1d3d-47dd-9387-c035fe196890",
+    "47217835-6c69-435f-b9c3-5f119af503c7"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40353,
+   "title": "같은 칸 다른 방향",
+   "genre": "Trot",
+   "subgenre": "Modern Korean Trot",
+   "bpm": 104,
+   "key_signature": "C",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Modern Korean Trot, 104 BPM, key of C major, 4/4 time, a smooth mid-tempo night-train groove, easy and gently rolling. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, smooth and unhurried on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A warm electric piano leads with soft rolling chords and answers each vocal line with short bright fills, while a saxophone traces a low counter-line in a breathy tone. Electric bass moves in a bouncing octave disco bass pattern under a steady hi-hat pulse and a warm snare on two and four. Clean warm production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n같은 칸에 나란히 앉아\n\n[Verse 1]\n어디까지 가느냐고\n묻지 않고 앉아 있네\n창밖은 다 같은 밤인데\n내릴 역만 다르네\n\n[Pre-Chorus]\n두 정거장쯤 지나면\n너는 일어서겠지\n\n[Chorus 1]\n같은 칸 다른 방향\n잠깐은 나란히 갔네\n문이 열리면 갈라질 걸\n알면서도 좋았네\n\n[Verse 2]\n어깨가 스칠 만큼\n가까이 앉았는데\n서로 아는 게 없어서\n더 편했는지 몰라\n이런 밤이 가끔 있어\n\n[Pre-Chorus]\n안내 방송이 나오고\n너는 가방을 드네\n\n[Chorus 2]\n[saxophone answers the line]\n[male vocals, light vibrato]\n[traditional phrasing]\n[warm electric piano fill]\n같은 칸 다른 방향\n잠깐은 나란히 갔네\n문이 닫히고 남은 자리에\n온기만 조금 남았네\n\n[Outro]\n같은 칸에 나란히 앉아"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "bf479cd1-e782-45b9-89c5-35421cd57ab9",
+    "feb45553-af72-44b3-9288-7ee9762a288b"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40354,
+   "title": "이름도 안 물어봤어",
+   "genre": "Trot",
+   "subgenre": "Adult Contemporary Korean Trot",
+   "bpm": 88,
+   "key_signature": "A",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Adult Contemporary Korean Trot, 88 BPM, key of A major, 4/4 time, a warm mid-tempo rain-shelter feel, soft and unhurried. A woman sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, warm and open on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. Warm strings carry the lead line and answer each vocal phrase with soft falling figures, while an accordion sits behind them as a quiet pad and a nylon-string guitar marks the pulse. An upright bass walks a gentle line under brushed drums with a soft snare on two and four. Warm room reverb, clean production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n[warm strings open]\n소나기가 갑자기 쏟아졌지\n\n[Verse 1]\n승강장 계단 밑에\n사람들이 모여 서서\n하늘만 보고 있는데\n누가 우산을 내밀어\n우산도 없이 나온 게\n오늘따라 다행이었나\n\n[Chorus 1]\n[female vocals, warm vibrato]\n[traditional phrasing]\n이름도 안 물어봤어\n그냥 고맙다고만 했어\n돌려줄 방법도 없는데\n그게 더 오래 남더라\n\n[Bridge]\n다음 비 오는 날엔\n내가 하나 더 들고 나가야지\n우산 두 개쯤은 무겁지도 않으니까\n\n[Verse 2]\n버스를 타고 가면서\n젖은 어깨를 손으로 털었어\n우산은 아직 내 손에\n그 사람은 어디 갔을까\n손잡이에 걸어 두고\n한참을 들여다봤어\n\n[Chorus 2]\n이름도 안 물어봤어\n그냥 고맙다고만 했어\n갚을 데가 없는 마음은\n다른 사람한테 가더라\n\n[Outro]\n[warm strings close]\n소나기가 갑자기 쏟아졌지"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "541d9d83-53ed-4e4a-aebb-ec3821a905cd",
+    "1633ea62-d9fe-4c1f-821a-5ed35e85b6b5"
+   ],
+   "arm": "통제"
+  },
+  {
+   "song_id": 40355,
+   "title": "두 칸씩 뛰어",
+   "genre": "Trot",
+   "subgenre": "Modern Korean Trot",
+   "bpm": 122,
+   "key_signature": "Cm",
+   "leomusic_original": {
+    "sp": "Trot, Korean adult contemporary. Modern Korean Trot, 122 BPM, key of C minor, 4/4 time, a driving up-tempo groove, urgent and bright, rushing like a run up a staircase. A man sings in an unmistakably Korean trot style, with heavy vibrato and pronounced slides and traditional trot phrasing, full-throated on the hooks, the wide vibrato blooming at every phrase end, keeping the Korean trot color strong and front-and-center. A clean electric guitar leads with bright driving chords and answers each vocal line with short cutting figures, while a warm electric piano fills the middle. Electric bass moves in a bouncing octave disco bass pattern under a four-on-the-floor kick and a crisp snare on two and four. Bright punchy production with the Korean trot vocal up front.",
+    "lyrics": "[Intro]\n[four-on-the-floor kicks in]\n계단이 저 위까지\n\n[Chorus 1]\n[male vocals with heavy vibrato]\n뛰어 뛰어 두 칸씩 뛰어\n막차는 아직 안 갔을 거야\n숨이 턱까지 차올라도\n오늘은 놓치지 않겠네\n\n[Verse 1]\n회식 자리 빠져나와\n가방을 들쳐 메고\n개찰구를 지나면서\n표를 손에 쥐었네\n다음 차는 없다는 걸\n아니까 발이 더 빨라지네\n\n[Chorus 2]\n뛰어 뛰어 두 칸씩 뛰어\n막차는 아직 안 갔을 거야\n숨이 턱까지 차올라도\n오늘은 놓치지 않겠네\n\n[Verse 2]\n[groove settles back]\n문이 닫히는 소리에\n겨우 한 발 걸쳤네\n숨을 겨우 고르고 돌아보니\n다들 나처럼 뛰었네\n\n[Bridge]\n뛰는 사람들 얼굴이\n어쩐지 다 웃고 있네\n\n[Chorus 3]\n[full band enters]\n[vocal ad-lib]\n뛰어 뛰어 두 칸씩 뛰어\n내일도 또 뛰겠지만\n그렇게 닿는 자리가\n집이라서 좋겠네\n\n[Outro]\n뛰어 뛰어 두 칸씩 뛰어"
+   },
+   "suno_reanalysis": [],
+   "series": "TROT30_W032",
+   "clip_uuids": [
+    "f565e743-163f-4ca7-8347-e1e5a0ba81ae",
+    "1ffd0c47-407d-4b0c-b38f-7ab67141130c"
+   ],
+   "arm": "통제"
+  }
+ ]
+}
