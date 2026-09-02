@@ -38,12 +38,21 @@ SECTION_RE = re.compile(
     r'^(Intro|Verse|Chorus|Bridge|Outro|Pre-Chorus|Hook|Section|'
     r'Instrumental|Refrain|Interlude|Build|Climax|Main|Drop|Guitar Solo)\b', re.I
 )
+# ★층 분리 (2026-09-02) — `leomusic_sp_full`은 **우리가 써넣은 입력층**이지 Suno 관측이 아니다.
+#   종전엔 이것을 `'sp'`로 접어 넣어 `freq_sp`·`freq_total`에 섞였고, 그 값을 읽는
+#   사전 3섹션(mood_emotion·timbre_texture·tempo_rhythm)과
+#   `update_suspicion_tracker.py`(`freq_total>0 ⇒ suno_seen_in_reanalysis=True`)가
+#   **우리 문자열을 Suno 관측으로 셌다**(실측: 3섹션 68단어 phrase 9,228 중 3,052=33.1%,
+#   nostalgic 49/49·dreamy 33/33은 Suno 관측 0). ⇒ 별도 버킷 `input`으로 분리한다.
+#   ★`freq_total`은 **출력층 합계만**이다(입력층은 `freq_input`으로 따로 본다).
 SOURCE_COL = {
-    'sp_entity': 'sp', 'suno_sp_full': 'sp', 'leomusic_sp_full': 'sp',
+    'sp_entity': 'sp', 'suno_sp_full': 'sp',
+    'leomusic_sp_full': 'input',          # ★입력층 — freq_sp/freq_total에 넣지 않는다
     'bracket_entity': 'bracket',
     'stems_sp': 'stems_sp',
     'stems_bracket': 'stems_bracket',
 }
+OUTPUT_COLS = ('sp', 'bracket', 'stems_sp', 'stems_bracket')   # freq_total 산정 대상
 
 
 def tokenize(text):
@@ -195,7 +204,8 @@ def build_index():
             freq_sp INTEGER DEFAULT 0,
             freq_bracket INTEGER DEFAULT 0,
             freq_stems_sp INTEGER DEFAULT 0,
-            freq_stems_bracket INTEGER DEFAULT 0
+            freq_stems_bracket INTEGER DEFAULT 0,
+            freq_input INTEGER DEFAULT 0
         )
     """)
     c.execute("CREATE INDEX idx_word ON words(word)")
@@ -240,7 +250,8 @@ def build_index():
         words = tokenize(text)
         for pos, w in enumerate(words):
             if w not in word_freq:
-                word_freq[w] = {'sp': 0, 'bracket': 0, 'stems_sp': 0, 'stems_bracket': 0}
+                word_freq[w] = {'sp': 0, 'bracket': 0, 'stems_sp': 0,
+                                'stems_bracket': 0, 'input': 0}
             word_freq[w][col] += 1
             word_phrase_links.append((w, phrase_idx, pos))
 
@@ -250,9 +261,10 @@ def build_index():
 
     c.executemany(
         "INSERT INTO words(id, word, freq_total, freq_sp, freq_bracket, "
-        "freq_stems_sp, freq_stems_bracket) VALUES(?,?,?,?,?,?,?)",
-        [(word_id_map[w], w, sum(f.values()), f['sp'], f['bracket'],
-          f['stems_sp'], f['stems_bracket'])
+        "freq_stems_sp, freq_stems_bracket, freq_input) VALUES(?,?,?,?,?,?,?,?)",
+        # ★freq_total = 출력층 합계만(입력층 제외). 종전은 sum(f.values())라 입력층이 섞였다.
+        [(word_id_map[w], w, sum(f[k] for k in OUTPUT_COLS), f['sp'], f['bracket'],
+          f['stems_sp'], f['stems_bracket'], f['input'])
          for w, f in sorted(word_freq.items())]
     )
 

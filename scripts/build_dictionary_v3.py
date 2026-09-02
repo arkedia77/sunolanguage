@@ -175,9 +175,14 @@ def build_mood_and_timbre(cur):
     ]
     mood_emotion = {}
     for w in mood_words:
-        row = query_all(cur, "SELECT freq_total, freq_sp, freq_bracket FROM words WHERE word=?", (w,))
+        row = query_all(cur, "SELECT freq_total, freq_sp, freq_bracket, freq_input "
+                             "FROM words WHERE word=?", (w,))
         if row:
-            mood_emotion[w] = {"count": row[0][0], "sp": row[0][1], "bracket": row[0][2]}
+            # ★층은 값 옆에 — count/sp/bracket 은 **Suno 출력층**, input 은 우리가 써넣은 입력층.
+            #   input 만 있고 count==0 이면 「우리는 썼는데 Suno 관측 0」이다(키는 지우지 않는다:
+            #   지우면 증분 병합기가 큐레이션으로 보고 옛 오염값을 되살린다).
+            mood_emotion[w] = {"count": row[0][0], "sp": row[0][1],
+                               "bracket": row[0][2], "input": row[0][3]}
 
     timbre_words = [
         'distorted', 'soft', 'resonant', 'compressed', 'saturated', 'crisp',
@@ -187,9 +192,11 @@ def build_mood_and_timbre(cur):
     ]
     timbre_texture = {}
     for w in timbre_words:
-        row = query_all(cur, "SELECT freq_total, freq_sp, freq_bracket FROM words WHERE word=?", (w,))
+        row = query_all(cur, "SELECT freq_total, freq_sp, freq_bracket, freq_input "
+                             "FROM words WHERE word=?", (w,))
         if row:
-            timbre_texture[w] = {"count": row[0][0], "sp": row[0][1], "bracket": row[0][2]}
+            timbre_texture[w] = {"count": row[0][0], "sp": row[0][1],
+                                 "bracket": row[0][2], "input": row[0][3]}
 
     return mood_emotion, timbre_texture
 
@@ -202,9 +209,11 @@ def build_tempo_rhythm(cur):
     ]
     result = {}
     for w in tempo_words:
-        row = query_all(cur, "SELECT freq_total, freq_sp, freq_bracket FROM words WHERE word=?", (w,))
+        row = query_all(cur, "SELECT freq_total, freq_sp, freq_bracket, freq_input "
+                             "FROM words WHERE word=?", (w,))
         if row:
-            result[w] = {"count": row[0][0], "sp": row[0][1], "bracket": row[0][2]}
+            result[w] = {"count": row[0][0], "sp": row[0][1],
+                         "bracket": row[0][2], "input": row[0][3]}
     return result
 
 

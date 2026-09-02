@@ -1,0 +1,59 @@
+{
+ "무엇": "사전 층 오염 처방 — 사전등록(착수 전 기재·결과 보고 전 고정)",
+ "언제": "2026-09-02T20:27:14.972306+09:00",
+ "처방": "lexical_search_cli.py: leomusic_sp_full(입력층)을 freq_sp 에서 분리해 freq_input 신설 · freq_total = 출력층 합계만. build_dictionary_v3.py 3섹션은 항목에 input 칸 병기.",
+ "★예측(맞든 틀리든 이 문면 고정)": {
+  "⑴3섹션 항목 수": "줄지 않는다(키 유지·수치만 정정) — 키를 지우면 병합기가 「큐레이션」으로 보고 옛 오염값을 되살린다",
+  "⑵출력층 0으로 떨어질 단어": {
+   "mood_emotion": {
+    "★출력층 0으로 떨어질 단어": [
+     "dreamy",
+     "nostalgic",
+     "haunting",
+     "moody",
+     "somber",
+     "sultry",
+     "euphoric",
+     "serene"
+    ],
+    "감소하는 단어 수": 22
+   },
+   "timbre_texture": {
+    "★출력층 0으로 떨어질 단어": [
+     "glassy",
+     "hollow",
+     "hi-fi"
+    ],
+    "감소하는 단어 수": 19
+   },
+   "tempo_rhythm": {
+    "★출력층 0으로 떨어질 단어": [
+     "trill"
+    ],
+    "감소하는 단어 수": 15
+   }
+  },
+  "⑶descriptor_combos 상위 300": "freq_total 정의가 바뀌므로 목록이 바뀐다. 얼마나 바뀌는지는 미예측(측정 후 보고)",
+  "⑷사전 버전": "v3.4 → v3.5",
+  "⑸pytest": "88 passed 유지 예상. 깨지면 처방을 되돌린다(사전 백업 있음)"
+ },
+ "⛔이 사전등록이 못 하는 것": "입력층 분리가 「옳은 사전」을 만든다는 보장은 없다 — 다만 「Suno 관측」 칸이 우리 문자열을 세지 않게 만들 뿐이다.",
+ "기준선(처방 전)": {
+  "lexical entries": 20456,
+  "words": 5649,
+  "top300_freq_total 표본": [
+   "guitar",
+   "electric",
+   "bass",
+   "vocals",
+   "drum",
+   "bpm",
+   "male",
+   "chorus",
+   "drums",
+   "acoustic",
+   "key",
+   "arrangement"
+  ]
+ }
+}
