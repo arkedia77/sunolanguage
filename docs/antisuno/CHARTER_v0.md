@@ -80,5 +80,5 @@ Phase 0 산출물에 M급 값이 하나라도 들어가면 그건 규약 위반�
 | 외부 검색 위임 | `codex exec` + `tools.web_search=true` · 5클러스터 병렬 |
 | 공통 브리프 | `docs/antisuno/survey_brief_v0.md` (스키마·등급·필수 8문항) |
 | 원본 산출 | `data/antisuno/survey/raw_*.txt` |
-| ⚠gemini CLI | **미인증**(`~/.gemini/settings.json` 부재·`GEMINI_API_KEY` 미설정) — 이번 라운드 미참여. 인증되면 2차 라운드에 독립 교차검증자로 투입 |
+| ⚠~~gemini CLI~~ ⇒ **`agy`(antigravity-cli)** | ~~미인증~~ ⇒ ⛔**09-04 정정**: 이 머신의 구글 CLI는 **`agy` 1.1.3**(07-16 설치)이고 `~/.gemini/settings.json`·`GEMINI_API_KEY`는 **그 도구가 안 쓰는 자리**였다. 실측 `agy --print`→**PONG·rc=0**(인증 유효, 모델 목록 회수). 이번 라운드 미참여는 **도구 부재가 아니라 내 오판** — 2차 라운드 독립 교차검증자로 투입 가능 |
 | 자체 검증 | Claude WebSearch로 클러스터별 표본 재확인 (E1 링크 실물 도달 여부) |
