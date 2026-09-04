@@ -1,0 +1,171 @@
+{
+  "id": "ANTISUNO_P2_R1",
+  "prereg": "data/antisuno/phase2/prereg_audio_layer_r1_v0.json (commit 21a588f · ASR 실행 전)",
+  "measured_at": "2026-09-04T21:50:43",
+  "layer": "★오디오층(가창 실물) — 재분석 텍스트층 아님",
+  "method": "demucs 보컬 스템(기존 산출) → faster_whisper medium cpu int8 → 영어 지시토큰 대조",
+  "generation": {
+    "신규생성": 0,
+    "크레딧": 0
+  },
+  "n_clips": 12,
+  "n_judged": 12,
+  "by_condition": {
+    "B1": {
+      "n": 3,
+      "leaked": 0,
+      "clips_leaked": []
+    },
+    "B2": {
+      "n": 5,
+      "leaked": 0,
+      "clips_leaked": []
+    },
+    "CTRL": {
+      "n": 4,
+      "leaked": 0,
+      "clips_leaked": []
+    }
+  },
+  "positive_control_min": 0.5,
+  "leak_tokens": [
+    "breathy",
+    "female",
+    "vocals",
+    "vocal"
+  ],
+  "clips": [
+    {
+      "clip": "BP_B1_1_t1",
+      "condition": "B1",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 0.758,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 46.5,
+      "asr_text": "그 길 위에 나 홀로 서 있어  시간이 멈춘 듯 흘러가고  이 자리에 여전히 남아  돌아올 수 없는 그 길 위에 나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리며  돌아올 수 없는 그 길 위에 나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_B1_2_t1",
+      "condition": "B1",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 1.0,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 58.1,
+      "asr_text": "돌아오면  어둠 속에 홀로 남은 밤  기억 속에 네가 스며들어  돌아올 수 없는 그 길 위에  나 홀로 서 있어  시간이 멈춘 듯 흘러가고  이 자리에 여전히 남아  돌아올 수 없는 그 길 위에  나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리며  돌아올 수 없는 그 길 위에  나 홀로 서 있어  이 자리에 여전히 남아"
+    },
+    {
+      "clip": "BP_B1_3_t1",
+      "condition": "B1",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 0.968,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 80.5,
+      "asr_text": "아 아 아 아 아 아 아 아  아  어둠 속에 홀로 남는 밤  기억 속에 네가 스며들어  돌아올 수 없는 그 길 위에  나 홀로 서 있어  시간이 멈춘 듯 흘러가고  이 자리에 여전히 남아  돌아올 수 없는 그 길 위에  나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리며  돌아올 수 없는 그 길 위에  나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_B2_1_t1",
+      "condition": "B2",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 0.823,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 76.7,
+      "asr_text": "6. 연기  어둠 속에 홀로 남은 밤  기억 속에 니가 스며들어  돌아올 수 없는 그 길 위에  나 홀로 서 있어  이 자리에 여전히 남아  돌아올 수 없는 그 길 위에  나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리며  돌아올 수 없는 그 길 위에  나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_B2_1_t2",
+      "condition": "B2",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 1.0,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 63.3,
+      "asr_text": "I love you  어둠 속에 홀로 남은 밤  기억 속에 네가 스며들어  돌아올 수 없는 그 길 위에 나 홀로 서 있어  시간이 멈춘 듯 흘러가고 이 자리에 여전히 남아  돌아올 수 없는 그 길 위에 나 홀로 서 있어  언젠가 다시 만날 수 있을까 그날을 기다리며  돌아올 수 없는 그 길 위에 나 홀로 서 있어  돌아올 수 없는 그 길 위에 나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_B2_2_t1",
+      "condition": "B2",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 0.758,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 35.2,
+      "asr_text": "이 노래는 저의 최애곡입니다.  이 곡은 제가 가장 좋아하는 곡입니다.  이 곡은 저의 최애곡입니다.  이 곡은 저의 최애곡입니다.  이 곡은 저의 최애곡입니다.  돌아올 수 없는 그 길 위에 나 홀로 서 있어  시간이 멈춘 듯 흘러가고  이 자리에 여전히 남아  돌아올 수 없는 그 길 위에 나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리며  돌아올 수 없는 그 길 위에 나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_B2_3_t1",
+      "condition": "B2",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 0.968,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 47.1,
+      "asr_text": "말이야  말이야  말이야  어둠 속에 홀로 남은 밤  기억 속에 니가 스며들어  돌아올 수 없는 그 길 위에 나 홀로 서 있어  시간이 멈춘 듯 흘러가고 이 자리에 여전히 남아  돌아올 수 없는 그 길 위에 나 홀로 서 있어  언젠가 다시 만날 수 있을까 그 날을 기다리며  돌아올 수 없는 그 길 위에 나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_B2_3_t2",
+      "condition": "B2",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 0.935,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 57.9,
+      "asr_text": "smile  어둠속에 홀로 나는 밤  기억 속에 네가 스며들어  돌아올 수 없는 그 길 위에  나 홀로 서 있어  시간이 멈춘 듯 흘러가고  이 자리에 여전히 남아  돌아올 수 없는 그 길 위에  나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리면  돌아올 수 없는 그 길 위에  나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_CTRL_1_t1",
+      "condition": "CTRL",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 0.968,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 42.9,
+      "asr_text": "널 사랑해  어둠 속에 홀로 남은 밤  기억 속에 니가 스며들어  돌아올 수 없는 그 길 위에  나 홀로 서 있어  시간이 멈춘 듯 흘러가고  이 자리에 여전히 남아  돌아올 수 없는 그 길 위에  나 홀로 서 있어  나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리며  돌아올 수 없는 그 길 위에  나 홀로 서 있어  나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_CTRL_2_t1",
+      "condition": "CTRL",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 0.952,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 53.1,
+      "asr_text": "내게 영원히  어둠 속에 홀로 남은 밤  기억 속에 니가 스며들어  돌아올 수 없는 그 길 위에 나 홀로 서 있어  시간이 멈춘 듯 흘러가라고 이 자리에 여전히 남아  돌아올 수 없는 그 길 위에 나 홀로 서 있어  언젠가 다시 만날 수 있을까 그 날을 기다리며  돌아올 수 없는 그 길 위에 나 홀로 서 있어  돌아올 수 없는 그 길 위에 나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_CTRL_2_t2",
+      "condition": "CTRL",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 1.0,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 76.5,
+      "asr_text": "눈부신다  영원히  어둠 속에 홀로 남은 밤  기억 속에 네가 스며들어  돌아올 수 없는 그 길 위에  나 홀로 서 있어  시간이 멈춘 듯 흘러가고  이 자리에 여전히 남아  돌아올 수 없는 그 길 위에  나 홀로 서 있어  나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리며  돌아올 수 없는 그 길 위에  나 홀로 서 있어  나 홀로 서 있어"
+    },
+    {
+      "clip": "BP_CTRL_3_t1",
+      "condition": "CTRL",
+      "leak_hits": [],
+      "leaked": false,
+      "positive_control_recall": 1.0,
+      "positive_control": "PASS",
+      "asr_lang": "ko",
+      "asr_sec": 69.0,
+      "asr_text": "멤버들의 merchants  어둠 속에 홀로 남은 밤  기억 속에 네가 스며들어  돌아올 수 없는 그 길 위에 나 홀로 서 있어  시간이 멈춘 듯 흘러가고 이 자리에 여전히 남아  돌아올 수 없는 그 길 위에 나 홀로 서 있어  언젠가 다시 만날 수 있을까  그날을 기다리며 돌아올 수 없는 그 길 위에 나 홀로 서 있어  돌아올 수 없는 그 길 위에 나 홀로 서 있어"
+    }
+  ]
+}
