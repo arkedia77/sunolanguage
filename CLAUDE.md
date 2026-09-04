@@ -17,7 +17,7 @@ Suno 앱에 실제 음악을 녹음(~10초)하면 Suno가 **자기 언어로** �
 - **대장·서사**=`KANBAN.md`(L2·무제한) / **분류 기준 정본**=`docs/corpus_classification_criteria_v1.md` / 교본=`docs/manual_v3/`
 - **DB**=`sunolang.db`(tracks=레퍼런스 153곡 / `expr_*`=표현 코퍼스 / `match_*`·`ingest_runs`) — ★단일 Writer
 - **스크립트**=`scripts/`(발신 `send_msg.py` · 인박스 `inbox_scan.py` — ★`.venv/bin/python`으로 실행)
-- **데이터**=`data/`(배치·프로브·재분석 산출. `data/raw`·`data/parsed`·`rag/`는 03월 원설계 잔재이므로 **없다고 가정하고 확인부터**)
+- **데이터**=`data/`(배치·프로브·재분석 산출). ⛔`data/{raw,mp3_phase5,stems_phase5*,upload_batch_*}` **6건은 `/Volumes/LEO/sunolanguage_archive/` 심링크인데 그 볼륨이 미마운트**(09-02 실측) ⇒ 「없음」이 아니라 **끊긴 링크**. `data/parsed`·`rag/`는 실재.
 
 ---
 
