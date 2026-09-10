@@ -11,7 +11,8 @@ mkdir -p "$OUT"
 # 클러스터 = 엔진군. agy 세션 하나당 1클러스터(문맥 격리 = 교차오염 방지)
 typeset -A CLUSTERS
 CLUSTERS[limits_langs]="Suno, Udio, ElevenLabs Music, MiniMax Music, Mureka, Stable Audio, ACE-Step, Google Lyria — 문항 1·2 (문자 상한 · 음악 생성 문서의 한국어 명시)"
-CLUSTERS[bracket_grammar]="Suno, Udio, ElevenLabs Music, MiniMax Music, ACE-Step, YuE, DiffRhythm, SongBloom, LeVo — 문항 3·4 (가사 채널 괄호 문법 · ★태그 비가창을 공식이 보증하는가)"
+CLUSTERS[bracket_grammar]="★Suno(자기 엔진부터), Udio, ElevenLabs Music, MiniMax Music, ACE-Step, YuE, DiffRhythm, SongBloom, LeVo — 문항 3·4 (가사 채널 괄호 문법 · ★태그 비가창을 공식이 보증하는가)"
+CLUSTERS[suno6_version]="Suno 전용 — 문항 7 (6.0 판본 축: 자연어 서술형 권장 여부 · 기존 태그 문법 유효/폐기 · v4.5→v5→v6 거동 변화 · 판본별 입력 상한 · ★값의 판본 명시 여부)"
 CLUSTERS[params_seed]="Udio, ElevenLabs Music, MiniMax Music, Mureka, Stable Audio, ACE-Step, Lyria, MusicGen/JASCO — 문항 5·6 (seed·가중/네거티브 프롬프트·inpaint·BPM/키 독립 파라미터)"
 
 for c in ${(k)CLUSTERS}; do
