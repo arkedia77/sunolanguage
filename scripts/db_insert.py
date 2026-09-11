@@ -33,7 +33,10 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SOURCE_PROJECT = "sunolanguage"
 CREATOR = "sunolanguage"
 CREATED_BY = "sunolanguage"
-MUSIC_ENGINE = "suno_v5"
+MUSIC_ENGINE = "suno_v5"   # 기본값 — ⛔판본은 배치마다 다르다. --music-engine 로 덮어쓴다.
+# ★2026-09-11: 이 상수가 하드코딩이라 v6 배치도 suno_v5로 찍힐 뻔했다(N021 dry-run에서 발각).
+#   우리 코퍼스 4값 레코드엔 판본 칸이 없어서(09-10 전수 실측) 이 칸이 유일한 판본 기록이다.
+#   ⇒ 여기서 틀리면 6.0 관측이 구판 관측과 한 통에 섞인다. 배치마다 명시 전달할 것.
 DEFAULT_MARKET = "KR2"
 STATUS = "pending_suno"
 
@@ -52,7 +55,7 @@ SONGS_COLUMNS = [
 ]
 
 
-def song_to_row(opt_a: dict, gid: int, now) -> dict:
+def song_to_row(opt_a: dict, gid: int, now, music_engine=None) -> dict:
     """Option A 곡 dict → songs 테이블 컬럼 dict (40컬럼)."""
     genre = opt_a.get("genre") or ""
     return {
@@ -91,7 +94,7 @@ def song_to_row(opt_a: dict, gid: int, now) -> dict:
         "subgenre": genre,
         "creator": CREATOR,
         "label": SOURCE_PROJECT,             # leomusic2는 "KR2"였으나 의미상 프로젝트명 사용
-        "music_engine": MUSIC_ENGINE,
+        "music_engine": music_engine or MUSIC_ENGINE,
         "created_date": now.strftime("%Y-%m-%d %H:%M:%S"),  # varchar(20) — 19자 문자열
         "theme_id": 0,                       # self_generated (themebank 미사용)
         "created_by": CREATED_BY,
@@ -100,7 +103,7 @@ def song_to_row(opt_a: dict, gid: int, now) -> dict:
 
 
 def build_rows(raw_path: Path, batch: str, gid_start: int, *, seed, drift,
-               engine, market, energy, now):
+               engine, market, energy, now, music_engine=None):
     items, raw_meta = load_raw(raw_path)
     seed = seed or raw_meta.get("seed", "")
     drift = drift if drift is not None else raw_meta.get("drift")
@@ -110,7 +113,7 @@ def build_rows(raw_path: Path, batch: str, gid_start: int, *, seed, drift,
     for i, item in enumerate(items):
         opt_a = map_song(item, batch, i + 1, market=market, energy=energy,
                          engine=engine, seed=seed, drift=drift)
-        rows.append((opt_a, song_to_row(opt_a, gid_start + i, now)))
+        rows.append((opt_a, song_to_row(opt_a, gid_start + i, now, music_engine)))
     return rows
 
 
@@ -140,6 +143,8 @@ def main():
     ap.add_argument("--engine", default="")
     ap.add_argument("--market", default=DEFAULT_MARKET)
     ap.add_argument("--energy", default="Medium")
+    ap.add_argument("--music-engine", default=None,
+                    help="★렌더 엔진 판본(예: suno_v6). 미지정 시 %s" % MUSIC_ENGINE)
     ap.add_argument("--execute", action="store_true",
                     help="실제 INSERT (미지정 시 dry-run: 연결 없이 검증/출력만)")
     args = ap.parse_args()
@@ -154,7 +159,8 @@ def main():
     now = datetime.now() if args.execute else datetime(2026, 1, 1)
     rows = build_rows(raw_path, args.batch, args.gid_start,
                       seed=args.seed, drift=args.drift, engine=args.engine,
-                      market=args.market, energy=args.energy, now=now)
+                      market=args.market, energy=args.energy, now=now,
+                      music_engine=args.music_engine)
 
     problems = validate(rows)
     if problems:
