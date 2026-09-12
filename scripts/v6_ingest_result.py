@@ -33,13 +33,35 @@ GEN_ALT = {              # 표기 → 영어 정규형
 }
 
 
+# ★2026-09-13 07:0x 가드 추가(남의 정정통에서 온 점검 — ⑨-6 규율의 두 번째 작동).
+#   sunomusic 09-13 06:45 §4: 자기 성별어 자에 한국어 18낱말을 넣으면서 **악기 결합**
+#   (`테너 색소폰`·`알토 플루트`)은 일부러 뺐다고 고지. 내 GEN_ALT는 **부분문자열 매칭**이라
+#   같은 함정이 원리상 열려 있었다. ⛔단 **내 데이터에서는 아직 0건**(한글 SP 79건 전수 실측
+#   2026-09-13) ⇒ 이건 **과거 수치의 정정이 아니라 미발현 결함의 봉인**이다.
+#   ★그래서 고친 뒤 **같은 79건을 다시 재서 판정 불변임을 확인**한다(양성통제).
+_INSTR_TAIL = ('색소폰', '색스', '섹소폰', '플루트', '트롬본', '클라리넷', '호른',
+               '리코더', '오보에', '바순', '트럼펫', '기타', 'saxophone', 'sax', 'flute')
+
+
 def gender_words(text: str) -> list:
-    """SP 문자열의 성별·음역 낱말을 «언어 불문» 뽑아 영어 정규형으로 돌려준다."""
+    """SP 문자열의 성별·음역 낱말을 «언어 불문» 뽑아 영어 정규형으로 돌려준다.
+
+    ⛔음역어(테너·알토 등)가 **악기 이름 앞자리**면 성별어가 아니다(`테너 색소폰`).
+    """
     out = {w.lower() for w in GEN.findall(text or '')}
     low = (text or '').lower()
+    raw = text or ''
     for k, v in GEN_ALT.items():
-        if k.lower() in low:
-            out.add(v)
+        kl = k.lower()
+        if kl not in low:
+            continue
+        # 한국어 표기는 뒤에 악기어가 붙은 자리를 뺀다(영문은 GEN 정규식이 단어경계로 봄)
+        if any('가' <= ch <= '힣' for ch in k):
+            hits = [m.end() for m in __import__('re').finditer(k, raw)]
+            if hits and all(any(raw[e:e + 8].lstrip().startswith(w) for w in _INSTR_TAIL)
+                            for e in hits):
+                continue
+        out.add(v)
     return sorted(out)
 INBOX = '/Users/purple/projects/agent-comm/projects/sunolanguage/messages'
 
