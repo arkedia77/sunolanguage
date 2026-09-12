@@ -33,7 +33,7 @@ def main(tag):
     if not v0:
         print('  ⚠rendered_sp 없는 판 — 대장 갱신 보류(다음 통 대기)'); return
     v4, gen, varieties = [], [], set()
-    by_actual, intents, mismatch = {}, set(), []
+    by_actual, intents, mismatch, unarmed = {}, set(), [], []
     for s in songs:
         pc = s['pair_clips'][0] if isinstance(s.get('pair_clips'), list) else s.get('pair_clips')
         if not pc: continue
@@ -49,6 +49,16 @@ def main(tag):
         #   ⇒ **어긋나면 클립 기록이 이긴다**(그쪽 칸의 뜻·내 처방 아님) ⇒ 버킷은 «실제»로 건다.
         #   ★실측(내가 쥔 통 전수, 09-12): 210곡 중 어긋남 1곡(N041 gid 30423 의도2→실제1).
         intent = pc.get('pair_variety', pc.get('variety', s.get('variety')))
+        # ★2026-09-12 22:2x 추가 — sunomusic 확인통: **판별식이 이미 이 통 안에 있었다.**
+        #   `pair_clips.patch_record`가 `[PATCH]`로 시작하지 않으면(`no_patch_record`·
+        #   `arm_failed:`·`wait_failed:`) 그 곡의 대조본은 **레버가 안 걸린 채 UI 기본값(1)로 나간 것**.
+        #   ⇒ 그쪽 로그를 청구하지 않고 내 대장에서 가른다. 원인=패처 무장이 Create보다 늦음
+        #   (그쪽 수리 커밋 8a97946) ⚠**이미 기동한 워커엔 안 걸린다** ⇒ 지금 돌는 로트는 구판이라
+        #   같은 사건이 또 날 수 있다 — 이 칸으로 매 배치 자동 검출한다.
+        #   ⛔단 최종 판정은 계속 `aug_creativity`다(패치가 걸려도 값이 어긋날 자리가 이론상 남음).
+        pr = str(pc.get('patch_record') or '')
+        if not pr.startswith('[PATCH]'):
+            unarmed.append({"gid": s['id'], "patch_record": pr or None, "의도": intent})
         for r in pc['rendered_sp']:
             act = r.get('aug_creativity', intent)
             varieties.add(act)
@@ -84,6 +94,7 @@ def main(tag):
         "대조본_의도": (sorted(intents)[0] if len(intents) == 1 else sorted(intents) or None),
         "대조본_버킷_실제": per,
         "★의도_실제_불일치": mismatch,
+        "★패치_미무장": unarmed,
         "V0": {"무수정": f"{sum(1 for r in v0 if r['무수정'])}/{len(v0)}",
                "길이비": sorted({r['길이비'] for r in v0})},
         vkey: {"무수정": f"{sum(1 for r in v4 if r['무수정'])}/{len(v4)}" if v4 else "0/0",
@@ -92,7 +103,7 @@ def main(tag):
         "성별어": gen}
     json.dump(rec, open(LEDGER, 'w'), ensure_ascii=False, indent=2)
     # ★누적은 버킷별로 — 대조본 조건(Variety)이 다른 배치를 한 수로 합치지 않는다.
-    t0 = t0u = mm = 0; mg = set(); cnt = {'유지': 0, '확장': 0, '소실': 0, '역전': 0, '축소': 0}
+    t0 = t0u = mm = 0; mg = set(); ua = set(); cnt = {'유지': 0, '확장': 0, '소실': 0, '역전': 0, '축소': 0}
     buckets = {}   # 대조본 칸 → [미수정, 전체, 배치수, 곡수]
     for bb in rec['batches'].values():
         a, x = bb['V0']['무수정'].split('/'); t0u += int(a); t0 += int(x)
@@ -111,6 +122,7 @@ def main(tag):
                 e[0] += int(a); e[1] += int(x); e[2] += 1; e[3] += bb['n_songs']
         _mmx = bb.get('★의도_실제_불일치') or []
         mm += len(_mmx); mg |= {e['gid'] for e in _mmx}
+        ua |= {e['gid'] for e in (bb.get('★패치_미무장') or [])}
         for g in bb['성별어']: cnt[g['판정']] = cnt.get(g['판정'], 0) + 1
     n = sum(x['n_songs'] for x in rec['batches'].values())
     broke = cnt['소실'] + cnt['역전']
@@ -119,6 +131,8 @@ def main(tag):
         print(f"   대조본 {k}(클립 실제값): 무수정 {u}/{x} · 해당 배치 {nb}  ⛔다른 칸과 합산 금지")
     print(f"   ★의도(pair_variety)≠실제(aug_creativity) = **곡 {len(mg)}건 / 클립 {mm}건**"
           f"{' — 실제 쪽으로 버킷팅했다(어긋나면 클립 기록이 이긴다)' if mm else ''}")
+    print(f"   ★패치 미무장(`patch_record`가 [PATCH] 아님) = 곡 {len(ua)}건"
+          f"{' ⇒ ' + str(sorted(ua)) if ua else ''}  ※대조본 조건 이탈분(버릴 것 아니라 갈라 적을 것)")
     print(f"   성별어 {cnt} ⇒ 깨짐 {broke}/{n} ({broke/n*100:.1f}%) "
           f"※성별어는 대조본 판정이라 버킷이 섞여 있다 — 경계 후 재분리 필요")
 
