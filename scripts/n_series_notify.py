@@ -35,6 +35,14 @@ if not gate_txt.exists():
     sys.exit(f"⛔게이트 박제 없음: {gate_txt} — n_series_ship.py 를 먼저 돌린다(사후 재실행 금지).")
 gout = gate_txt.read_text(encoding="utf-8")
 unatt = len([l for l in gout.splitlines() if "장르 라벨 미관측" in l])
+# ★어휘 native는 «세서» 적는다. 09-12까지 이 자리에 "native 전건 1.0000"이 **고정 문구**로
+#   박혀 있었다 — N051~N060에서는 결과적으로 참이었지만(100/100 재측정 일치) 그때 나는
+#   재지 않고 단정했다. sunomusic이 같은 날 자인한 「산출물 칸에서는 단정하고 산문에서는
+#   유보」와 같은 형태다. ⇒ 게이트 박제의 G2 미관측 줄 수로 파생한다.
+vocab_unatt = len([l for l in gout.splitlines() if "G2 미관측" in l])
+n_songs = len(songs)
+native_line = (f"어휘 native **{n_songs - vocab_unatt}/{n_songs}곡이 1.0000**"
+               + ("" if not vocab_unatt else f" · ⛔미관측 어휘 선언곡 {vocab_unatt}건"))
 maxj = next((l.split("=")[1].strip() for l in gout.splitlines() if l.startswith("최대 jaccard")), "?")
 
 body = {
@@ -47,7 +55,7 @@ body = {
   "설계": f"`repo:sunolanguage:data/{a.tag.lower()}/{a.tag}_design.json` · "
           f"`{a.tag}_raw.json` · 방식 `sunolanguage_design_v1`(설계 기반·코퍼스 조합 아님)"},
  "2_게이트": {
-  "결과": f"G1~G6 hard fail 0 · 어휘 native 전건 1.0000 · **최대 jaccard {maxj}**"
+  "결과": f"G1~G6 hard fail 0 · {native_line} · **최대 jaccard {maxj}**"
           f"(대조군 = PG 내 우리 곡 전건 ∪ 같은 배치 앞 곡)",
   "⚠미관측": (f"장르 라벨 미관측 **{unatt}건** — 발주 차단 아님. ⛔**관측 라벨로 인용하지 마십시오.** "
              f"앞 라인(N021~N050)과 같은 라벨 풀을 일부러 유지합니다(라벨 드리프트 차단)."
