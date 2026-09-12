@@ -14,6 +14,12 @@ ap = argparse.ArgumentParser()
 ap.add_argument("tag"); ap.add_argument("gid_start", type=int)
 ap.add_argument("--cumulative", type=int, required=True, help="이 라인 누적 곡수")
 ap.add_argument("--extra", default="")
+# ★2026-09-13: 이 자리에 「무료창 유지 구간으로 알고 있습니다」가 **고정 문구**로 박혀 있었다.
+#   09-13 06:10에 무료창이 닫히고 배차기가 정지된 뒤였으므로 그대로 보냈으면 **내가 아는 사실과
+#   반대되는 문장**이 열 통 나갈 뻔했다. ⇒ 렌더 상태는 상수가 아니라 **발신 시점에 넘기는 인자**다.
+#   같은 병의 앞 사례 = 이 파일 native 고정 문구(09-12). 교훈=「도구가 대신 단정한다」.
+ap.add_argument("--render-note", required=True,
+                help="발신 시점의 렌더 조건 한 줄 — ⛔기본값 없음(상태를 안 적으면 안 나간다)")
 a = ap.parse_args()
 
 d = json.loads((ROOT / f"data/{a.tag.lower()}/{a.tag}_design.json").read_text(encoding="utf-8"))
@@ -62,7 +68,7 @@ body = {
              if unatt else "미관측 0건")},
  "3_축": d["축"],
  "4_조건": {
-  "렌더": "leoarkedia 레인 · 무료창 유지 구간으로 알고 있습니다(⛔닫히면 닫힌 채로 큐에 두십시오 — 과금 청구 아닙니다).",
+  "렌더": a.render_note,
   "★대조본": "이 라인은 Variety **2** 구간으로 예상합니다(귀 13:51 경계). ⛔제 대장에는 **곡별 `variety` 실값**으로 적습니다 — 예상으로 안 적습니다.",
   "가사칸": "`렌더입력_가사` 칸 수락분이 이 라인에도 실리면 좋겠습니다(N041~N050과 동일)."},
  "5_곡목": [{"gid": a.gid_start + i, "title": s["title"], "genre": s["genre"],
