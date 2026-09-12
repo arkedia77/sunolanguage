@@ -33,6 +33,7 @@ def main(tag):
     if not v0:
         print('  ⚠rendered_sp 없는 판 — 대장 갱신 보류(다음 통 대기)'); return
     v4, gen, varieties = [], [], set()
+    by_actual, intents, mismatch = {}, set(), []
     for s in songs:
         pc = s['pair_clips'][0] if isinstance(s.get('pair_clips'), list) else s.get('pair_clips')
         if not pc: continue
@@ -42,7 +43,19 @@ def main(tag):
         #   다른 두 버킷이 한 칸에 섞일 수 있었다. ⇒ pair_variety를 1순위로 읽는다.
         #   ★같은 통의 `patch_record`(sliders.aug_creativity)와 per-clip `aug_creativity`가
         #   pair_variety와 같은 값이다 ⇒ aug_creativity=variety 같은 칸(09-12 확인).
-        varieties.add(pc.get('pair_variety', pc.get('variety', s.get('variety'))))
+        # ★2026-09-12 21:5x 재수리 — sunomusic 회신(코드 근거 4건)으로 두 칸의 «뜻»이 갈렸다:
+        #   `pair_variety`=**그쪽 입력(의도)** / `rendered_sp[].aug_creativity`=**수노가 클립에 적은 실제**.
+        #   패치 무장이 실패하면 의도는 목표값으로 남고 클립은 UI 기본값(1)으로 나간다.
+        #   ⇒ **어긋나면 클립 기록이 이긴다**(그쪽 칸의 뜻·내 처방 아님) ⇒ 버킷은 «실제»로 건다.
+        #   ★실측(내가 쥔 통 전수, 09-12): 210곡 중 어긋남 1곡(N041 gid 30423 의도2→실제1).
+        intent = pc.get('pair_variety', pc.get('variety', s.get('variety')))
+        for r in pc['rendered_sp']:
+            act = r.get('aug_creativity', intent)
+            varieties.add(act)
+            by_actual.setdefault(act, []).append(r)
+            if act != intent:
+                mismatch.append({"gid": s['id'], "의도": intent, "실제": act})
+        intents.add(intent)
         v4 += pc['rendered_sp']
         ask = sorted(set(w.lower() for w in GEN.findall(om[s['title']])))
         got = pc['rendered_sp'][0].get('성별어') or []
@@ -57,10 +70,20 @@ def main(tag):
         gen.append({"gid": s['id'], "발주": ask, "v4": got, "판정": verdict})
     vs = {v for v in varieties if v is not None}
     vkey = f"V{int(list(vs)[0])}" if len(vs) == 1 else ("V?" if not vs else "V혼재")
+    # ★버킷은 «클립 실제값»별로 쪼갠다 — 한 배치 안에서도 갈릴 수 있다(패치 실패 곡).
+    per = {}
+    for act, rs in sorted(by_actual.items(), key=lambda x: (x[0] is None, x[0])):
+        per[f"V{int(act)}" if act is not None else "V?"] = {
+            "무수정": f"{sum(1 for r in rs if r['무수정'])}/{len(rs)}",
+            "길이비_최소": min((r['길이비'] for r in rs), default=None),
+            "길이비_최대": max((r['길이비'] for r in rs), default=None)}
     rec['batches'][tag] = {
         "n_songs": len(songs),
         "대조본_variety": (list(vs)[0] if len(vs) == 1 else sorted(vs) or None),
         "대조본_칸": vkey,
+        "대조본_의도": (sorted(intents)[0] if len(intents) == 1 else sorted(intents) or None),
+        "대조본_버킷_실제": per,
+        "★의도_실제_불일치": mismatch,
         "V0": {"무수정": f"{sum(1 for r in v0 if r['무수정'])}/{len(v0)}",
                "길이비": sorted({r['길이비'] for r in v0})},
         vkey: {"무수정": f"{sum(1 for r in v4 if r['무수정'])}/{len(v4)}" if v4 else "0/0",
@@ -69,21 +92,33 @@ def main(tag):
         "성별어": gen}
     json.dump(rec, open(LEDGER, 'w'), ensure_ascii=False, indent=2)
     # ★누적은 버킷별로 — 대조본 조건(Variety)이 다른 배치를 한 수로 합치지 않는다.
-    t0 = t0u = 0; cnt = {'유지': 0, '확장': 0, '소실': 0, '역전': 0, '축소': 0}
+    t0 = t0u = mm = 0; mg = set(); cnt = {'유지': 0, '확장': 0, '소실': 0, '역전': 0, '축소': 0}
     buckets = {}   # 대조본 칸 → [미수정, 전체, 배치수, 곡수]
     for bb in rec['batches'].values():
         a, x = bb['V0']['무수정'].split('/'); t0u += int(a); t0 += int(x)
-        k = bb.get('대조본_칸') or next((c for c in ('V4', 'V2', 'V?', 'V혼재') if c in bb), None)
-        if k:
-            a, x = bb[k]['무수정'].split('/')
-            e = buckets.setdefault(k, [0, 0, 0, 0])
-            e[0] += int(a); e[1] += int(x); e[2] += 1; e[3] += bb['n_songs']
+        # ★누적도 «실제값» 버킷으로 — 의도로 합치면 패치 실패분이 남의 칸에 섞인다.
+        pb = bb.get('대조본_버킷_실제')
+        if pb:
+            for k, v in pb.items():
+                a, x = v['무수정'].split('/')
+                e = buckets.setdefault(k, [0, 0, 0, 0])
+                e[0] += int(a); e[1] += int(x); e[2] += 1; e[3] += bb['n_songs']
+        else:
+            k = bb.get('대조본_칸') or next((c for c in ('V4', 'V2', 'V?', 'V혼재') if c in bb), None)
+            if k:
+                a, x = bb[k]['무수정'].split('/')
+                e = buckets.setdefault(k, [0, 0, 0, 0])
+                e[0] += int(a); e[1] += int(x); e[2] += 1; e[3] += bb['n_songs']
+        _mmx = bb.get('★의도_실제_불일치') or []
+        mm += len(_mmx); mg |= {e['gid'] for e in _mmx}
         for g in bb['성별어']: cnt[g['판정']] = cnt.get(g['판정'], 0) + 1
     n = sum(x['n_songs'] for x in rec['batches'].values())
     broke = cnt['소실'] + cnt['역전']
     print(f"★누적 {len(rec['batches'])}배치({n}곡): V0 무수정 {t0u}/{t0}")
     for k, (u, x, nb, ns) in sorted(buckets.items()):
-        print(f"   대조본 {k}: 무수정 {u}/{x} ({nb}배치·{ns}곡)  ⛔다른 칸과 합산 금지")
+        print(f"   대조본 {k}(클립 실제값): 무수정 {u}/{x} · 해당 배치 {nb}  ⛔다른 칸과 합산 금지")
+    print(f"   ★의도(pair_variety)≠실제(aug_creativity) = **곡 {len(mg)}건 / 클립 {mm}건**"
+          f"{' — 실제 쪽으로 버킷팅했다(어긋나면 클립 기록이 이긴다)' if mm else ''}")
     print(f"   성별어 {cnt} ⇒ 깨짐 {broke}/{n} ({broke/n*100:.1f}%) "
           f"※성별어는 대조본 판정이라 버킷이 섞여 있다 — 경계 후 재분리 필요")
 
