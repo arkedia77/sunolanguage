@@ -62,7 +62,7 @@ def check_term(t: str, att: set, words: set) -> bool:
     return len(parts) == 1 and t in words
 
 
-def gate(design_path: Path, use_db=True):
+def gate(design_path: Path, use_db=True, exclude_gids=None):
     d = json.loads(design_path.read_text(encoding="utf-8"))
     batch = d["batch"]
     songs = d["songs"]
@@ -73,9 +73,15 @@ def gate(design_path: Path, use_db=True):
         sys.path.insert(0, str(ROOT / "scripts"))
         from json_to_db import get_conn
         con = get_conn(); cur = con.cursor()
-        cur.execute("SELECT title FROM songs")
+        # ★exclude_gids = 「적재 전 조건」 재현용. 자기 배치를 이미 넣은 뒤에 게이트를 다시
+        #   돌리면 대조군에 자기 곡이 들어가 jaccard가 1.000이 된다(09-12 N051에서 실제로 찍힘).
+        #   ⇒ 사후에 같은 수를 «옮겨 적지» 말고 이 인자로 «다시 재라».
+        ex = ""
+        if exclude_gids:
+            ex = f" AND global_id NOT BETWEEN {int(exclude_gids[0])} AND {int(exclude_gids[1])}"
+        cur.execute(f"SELECT title FROM songs WHERE TRUE{ex}")
         db_titles = {r[0] for r in cur.fetchall()}
-        cur.execute("SELECT title, lyrics FROM songs WHERE source_project='sunolanguage'")
+        cur.execute(f"SELECT title, lyrics FROM songs WHERE source_project='sunolanguage'{ex}")
         prior = [(t, tok(l or "")) for t, l in cur.fetchall()]
         con.close()
     else:
@@ -165,5 +171,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("design")
     ap.add_argument("--no-db", action="store_true")
+    ap.add_argument("--exclude-gids", default=None,
+                    help="대조군에서 뺄 gid 구간 'START-END' (적재 전 조건 재현용)")
     a = ap.parse_args()
-    sys.exit(gate(Path(a.design), use_db=not a.no_db))
+    eg = tuple(a.exclude_gids.split("-")) if a.exclude_gids else None
+    sys.exit(gate(Path(a.design), use_db=not a.no_db, exclude_gids=eg))
