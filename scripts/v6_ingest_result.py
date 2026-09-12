@@ -17,6 +17,30 @@ import json, glob, re, sys
 
 LEDGER = 'data/v6_obs/v6_input_layer_running.json'
 GEN = re.compile(r'\b(male|female|tenor|alto|soprano|baritone)\b', re.I)
+# ★2026-09-13 03:0x 수리(자적발·이 세션 최대) — 성별어 자가 **영어만** 봤다.
+#   수노가 대조본 SP를 한국어·프랑스어로 다시 쓰면(재작성분의 약 19~21%) 「여성 보컬」·
+#   「voix féminine」이 들어 있는데도 영어 정규식엔 0건 ⇒ **'소실'로 찍혔다.**
+#   실측: 고유 260곡에서 깨짐 **39/260(15.0%) → 11/260(4.2%)**, 28건이 소실→유지(전부 ko).
+#   남은 소실 3건은 전부 프랑스어 판이었고 둘은 `voix féminine` 명시 ⇒ fr까지 넣는다.
+#   ⛔이 수는 세션 내내 내가 인용했고 KANBAN 대기 항목(「깨진 38곡 오디오층 회수」)의 근거였다.
+#   ★교훈=**자가 한 언어만 보면 「없다」가 「깨졌다」로 찍힌다.**
+GEN_ALT = {              # 표기 → 영어 정규형
+    '여성': 'female', '여자': 'female', '남성': 'male', '남자': 'male',
+    '테너': 'tenor', '알토': 'alto', '소프라노': 'soprano', '바리톤': 'baritone',
+    '중성적': 'androgynous', '가성': 'falsetto',
+    'féminine': 'female', 'feminine': 'female', 'masculine': 'male',
+    'masculin': 'male', 'ténor': 'tenor', 'contralto': 'contralto',
+}
+
+
+def gender_words(text: str) -> list:
+    """SP 문자열의 성별·음역 낱말을 «언어 불문» 뽑아 영어 정규형으로 돌려준다."""
+    out = {w.lower() for w in GEN.findall(text or '')}
+    low = (text or '').lower()
+    for k, v in GEN_ALT.items():
+        if k.lower() in low:
+            out.add(v)
+    return sorted(out)
 INBOX = '/Users/purple/projects/agent-comm/projects/sunolanguage/messages'
 
 def main(tag):
@@ -67,8 +91,11 @@ def main(tag):
                 mismatch.append({"gid": s['id'], "의도": intent, "실제": act})
         intents.add(intent)
         v4 += pc['rendered_sp']
-        ask = sorted(set(w.lower() for w in GEN.findall(om[s['title']])))
-        got = pc['rendered_sp'][0].get('성별어') or []
+        ask = gender_words(om[s['title']])
+        # ★성별어는 통에 실린 칸(영어 추출분)에 **다국어 재추출**을 합집합한다.
+        #   통의 `성별어`는 sunomusic이 영어 정규식으로 뽑은 값이다(자기고지) ⇒ 내가 다시 본다.
+        _r0 = pc['rendered_sp'][0]
+        got = sorted(set(_r0.get('성별어') or []) | set(gender_words(_r0.get('렌더입력SP') or '')))
         # ★2026-09-12 수리(자적발) — 옛 사다리엔 «확장» 칸이 없어서 발주 ['male'] →
         #   렌더 ['male','tenor'](=발주어 유지 + 음역어 추가)가 **'축소'**로 찍혔다
         #   (N041 gid 30419 실측). 늘어난 걸 줄었다고 적는 라벨이다. ⛔깨짐 수(소실+역전)는
