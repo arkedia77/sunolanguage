@@ -93,9 +93,17 @@ def main(tag):
         v4 += pc['rendered_sp']
         ask = gender_words(om[s['title']])
         # ★성별어는 통에 실린 칸(영어 추출분)에 **다국어 재추출**을 합집합한다.
-        #   통의 `성별어`는 sunomusic이 영어 정규식으로 뽑은 값이다(자기고지) ⇒ 내가 다시 본다.
-        _r0 = pc['rendered_sp'][0]
-        got = sorted(set(_r0.get('성별어') or []) | set(gender_words(_r0.get('렌더입력SP') or '')))
+        #   통의 `성별어`는 sunomusic이 영어 정규식 16종으로 뽑은 값이다(자기고지·`androgynous`
+        #   `contralto` `falsetto` 포함) ⇒ 결함은 어휘가 아니라 **언어**뿐이라 내가 다시 본다.
+        # ★2026-09-13 04:2x 재수리 — 여태 **첫 클립만** 봤다. sunomusic 코드 주석(:298-299)이
+        #   「같은 곡의 두 클립이 다른 성별로 갈린다」(gid 10880 실측)를 이미 적어 두고 있었고,
+        #   내 실측에서도 **쌍 280개 중 17개(6.1%)가 두 클립의 성별어가 다르다**.
+        #   ⇒ 클립별로 다 적고 **단위를 셋 다** 낸다(어느 하나가 참이 아니라 물음이 다르다):
+        #     ⒜첫 클립(임의) ⒝둘 중 하나라도 유지(=발주대로 난 테이크가 있는가·A&R용)
+        #     ⒞둘 다 유지(엄격). ⛔단위를 안 적고 「깨짐 N건」이라 쓰면 그 수는 못 읽는다.
+        _clips = [sorted(set(r.get('성별어') or []) | set(gender_words(r.get('렌더입력SP') or '')))
+                  for r in pc['rendered_sp']]
+        got = _clips[0]
         # ★2026-09-12 수리(자적발) — 옛 사다리엔 «확장» 칸이 없어서 발주 ['male'] →
         #   렌더 ['male','tenor'](=발주어 유지 + 음역어 추가)가 **'축소'**로 찍혔다
         #   (N041 gid 30419 실측). 늘어난 걸 줄었다고 적는 라벨이다. ⛔깨짐 수(소실+역전)는
@@ -104,7 +112,15 @@ def main(tag):
                    '소실' if not got else
                    '역전' if not set(got) & set(ask) else
                    '확장' if set(ask) <= set(got) else '축소')
-        gen.append({"gid": s['id'], "발주": ask, "v4": got, "판정": verdict})
+        def _vd(g):
+            if sorted(g) == ask: return '유지'
+            if not g: return '소실'
+            if not set(g) & set(ask): return '역전'
+            return '확장' if set(ask) <= set(g) else '축소'
+        _vs = [_vd(c) for c in _clips]
+        gen.append({"gid": s['id'], "발주": ask, "v4": got, "판정": verdict,
+                    "클립별": _clips, "클립별_판정": _vs,
+                    "쌍_갈림": len(set(map(tuple, _clips))) > 1})
     vs = {v for v in varieties if v is not None}
     vkey = f"V{int(list(vs)[0])}" if len(vs) == 1 else ("V?" if not vs else "V혼재")
     # ★버킷은 «클립 실제값»별로 쪼갠다 — 한 배치 안에서도 갈릴 수 있다(패치 실패 곡).
@@ -160,8 +176,20 @@ def main(tag):
           f"{' — 실제 쪽으로 버킷팅했다(어긋나면 클립 기록이 이긴다)' if mm else ''}")
     print(f"   ★패치 미무장(`patch_record`가 [PATCH] 아님) = 곡 {len(ua)}건"
           f"{' ⇒ ' + str(sorted(ua)) if ua else ''}  ※대조본 조건 이탈분(버릴 것 아니라 갈라 적을 것)")
-    print(f"   성별어 {cnt} ⇒ 깨짐 {broke}/{n} ({broke/n*100:.1f}%) "
-          f"※성별어는 대조본 판정이라 버킷이 섞여 있다 — 경계 후 재분리 필요")
+    # ★단위 3종 — 어느 하나가 참이 아니라 «물음이 다르다»
+    u_first = u_any = u_all = 0; pair_split = 0; tot_pair = 0
+    for bb in rec['batches'].values():
+        for g in bb['성별어']:
+            vs = g.get('클립별_판정') or [g['판정']]
+            tot_pair += 1
+            pair_split += 1 if g.get('쌍_갈림') else 0
+            u_first += vs[0] in ('소실', '역전')
+            u_any += all(v in ('소실', '역전') for v in vs)
+            u_all += any(v in ('소실', '역전') for v in vs)
+    print(f"   성별어 {cnt} ⇒ ★단위 3종(분모 {tot_pair}쌍): "
+          f"⒜첫 클립 {u_first} · ⒝둘 다 깨짐 {u_any} · ⒞하나라도 깨짐 {u_all} "
+          f"· **쌍 갈림 {pair_split}({pair_split/tot_pair*100:.1f}%)**")
+    print(f"      ⛔단위를 안 적고 「깨짐 N건」이라 쓰지 말 것 · ※대조본 판정이라 버킷 혼재")
 
 if __name__ == '__main__':
     main(sys.argv[1])
