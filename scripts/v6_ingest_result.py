@@ -16,7 +16,10 @@
 import json, glob, re, sys
 
 LEDGER = 'data/v6_obs/v6_input_layer_running.json'
-GEN = re.compile(r'\b(male|female|tenor|alto|soprano|baritone|androgynous|mezzo-soprano|falsetto|contralto|countertenor)\b', re.I)
+GEN = re.compile(r'\b(mezzo-soprano|bass-baritone|countertenor|counter-tenor|contralto|androgynous|falsetto|male|female|tenor|alto|soprano|baritone)\b', re.I)
+# ★긴 낱말을 «앞»에 둔다 — 파이썬 교체는 «첫 일치»라 `baritone`이 앞에 있으면
+#   `bass-baritone`을 통째로 못 집는다(2026-09-13 sunomusic이 `bass-baritone`을 언급해 확인).
+#   ⛔내 표본엔 `bass-baritone` 0건이라 **과거 수치 영향은 없다** — 어휘만 넓힌다.
 # ★2026-09-13 18:5x — 내 영어 정규식에 `androgynous`·`mezzo-soprano`·`falsetto`가 «없었다».
 #   ⛔그 낱말들은 지금까지 **오로지 sunomusic 칸으로만** 들어왔다 — 즉 내 ⑨-8 발견
 #   (「역전의 주된 모양은 androgynous 치환」)은 **두 자의 합의가 아니라 그쪽 자 단독**이었다.
@@ -102,16 +105,20 @@ def gender_words(text: str) -> list:
 #   `['female','soprano','mezzo-soprano']`를 낸다. 실물 확인: 그 SP에 **독립 `soprano`는 0회**.
 #   (⛔`contralto⊃alto`는 6건 중 0건 — 'r'이 경계를 막아 상대도 정상. **하이픈 중첩만** 문제다.)
 #   ⇒ 상대 토큰 중 **SP에 독립 출현이 0이고 더 긴 음역어 안에만 있는 것**은 버린다.
-_NESTED = (('mezzo-soprano', 'soprano'), ('countertenor', 'tenor'))
-
-
+# ★2026-09-13 21:1x 일반화 — 목록식(`_NESTED`)은 **내가 안 적은 중첩쌍을 놓친다**
+#   (그쪽이 `bass-baritone`을 언급해 드러났다). ⇒ **검출된 토큰끼리 포함관계를 스스로 본다.**
+#   ⛔그쪽 반례 수용: `mezzo-soprano … and soprano`처럼 **짧은 낱말이 «독립으로도» 있으면 남긴다**
+#   — 판정은 **출현 «횟수»**로 한다(짧은 것의 출현수 > 그것을 품는 긴 것들의 출현수 합 ⇒ 독립 있음).
 def _drop_nested(tokens: set, sp: str) -> set:
     low = (sp or '').lower()
     out = set(tokens)
-    for outer, inner in _NESTED:
-        if inner not in out or outer not in low:
+    for inner in list(out):
+        outers = [o for o in out if o != inner and inner in o]
+        if not outers:
             continue
-        if not re.search(r'\b' + re.escape(inner) + r'\b', low.replace(outer, '')):
+        n_in = len(re.findall(r'\b' + re.escape(inner) + r'\b', low))
+        n_out = sum(len(re.findall(re.escape(o), low)) for o in outers)
+        if n_in <= n_out:          # 안쪽에서만 잡혔다
             out.discard(inner)
     return out
 
