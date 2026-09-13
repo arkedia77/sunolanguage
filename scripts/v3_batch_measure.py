@@ -17,13 +17,45 @@
 사용: .venv/bin/python scripts/v3_batch_measure.py N059 N060 ...
       (인자 없으면 원장에서 대조본_칸=='V3'인 배치 전건)
 """
-import json, glob, re, statistics, sys
+import json, glob, math, re, statistics, sys
 sys.path.insert(0, 'scripts')
 from v6_ingest_result import (  # noqa: E402 — 자(정규식·사상·중첩해제·상대칸)는 하나만 쓴다
     LEDGER, INBOX, gender_words, _peer_tokens, _norm_tokens, _drop_nested,
 )
 
 HANGUL = re.compile(r'[가-힣]')
+
+
+def wilson(k, n, z=1.96):
+    """Wilson 95% CI(%) — ★자를 바꾸지 않는다: 기존 기재(1/20 → 0.9~23.6)가 Wilson 값이다.
+    Clopper-Pearson으로 갈아타면 같은 분자·분모에서 다른 구간이 나와 시계열이 끊긴다."""
+    if n == 0:
+        return None, None
+    p = k / n
+    d = 1 + z * z / n
+    c = (p + z * z / (2 * n)) / d
+    m = (z / d) * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
+    return round(100 * max(0.0, c - m), 1), round(100 * min(1.0, c + m), 1)
+
+
+def clip_level(tags):
+    """클립 단위 깨짐 + 길이비 층별. ★원장의 `클립별_판정` 순서는 통의 `rendered_sp` 순서와
+    같다(적재기가 그 순서로 만든다) ⇒ 같은 첨자로 길이비와 짝지을 수 있다."""
+    rec = json.load(open(LEDGER))['batches']
+    rows = []
+    for t in tags:
+        byg = {g['gid']: g for g in rec[t]['성별어']}
+        for _s, _pc, r in clips_of(t):
+            g = byg.get(_s['id'])
+            if not g:
+                continue
+            cj = g.get('클립별_판정') or []
+            idx = [i for i, rr in enumerate(_pc['rendered_sp']) if rr is r]
+            if not idx or idx[0] >= len(cj):
+                continue
+            rows.append({"gid": _s['id'], "판정": cj[idx[0]],
+                         "길이비": r.get('길이비'), "batch": t})
+    return rows
 
 
 def clips_of(tag):
@@ -131,6 +163,29 @@ def main(tags):
     need = 60 - tot
     print(f"     사전등록 판정선 = V3 클립 60 ⇒ {'도달' if need <= 0 else f'{need}클립 부족(배치 {-(-need//20)}건)'}"
           f" · 그 전엔 V2와 비교 안 함")
+
+    rows = clip_level([m['tag'] for m in acc])
+    broke = [r for r in rows if r['판정'] != '유지']
+    up = [r for r in rows if isinstance(r['길이비'], (int, float)) and r['길이비'] > 1.0]
+    dn = [r for r in rows if isinstance(r['길이비'], (int, float)) and r['길이비'] <= 1.0]
+    bu = sum(1 for r in up if r['판정'] != '유지')
+    bd = sum(1 for r in dn if r['판정'] != '유지')
+    lo, hi = wilson(len(broke), len(rows))
+    print(f"\n  ★클립 단위 깨짐 = {len(broke)}/{len(rows)} = {100*len(broke)/len(rows):.2f}%"
+          f" (Wilson CI {lo}~{hi}) {[(r['gid'], r['판정'], r['길이비']) for r in broke]}")
+    print(f"     층별 — 늘어남(>1.0) {bu}/{len(up)} · 안 늘어남(≤1.0) {bd}/{len(dn)}"
+          f" · 늘어난 비율 {len(up)}/{len(rows)} = {100*len(up)/len(rows):.1f}%")
+    if need <= 0:
+        print("\n  ■ 사전등록 판정 (KANBAN ①-23 — 판정선 도달했으므로 여기서만 V2 기저를 쓴다)")
+        for name, share in (("등록 가정 25%", 0.25), ("실측 비율", len(up) / len(rows))):
+            exp = share * 21.7 + (1 - share) * 5.7        # V2 층별 기저(등록값)
+            print(f"     {name}: 예상 {exp:.1f}% = {exp*len(rows)/100:.1f}건"
+                  f" ↔ 귀무 5.7% = {5.7*len(rows)/100:.1f}건"
+                  f" ↔ 실측 {100*len(broke)/len(rows):.2f}% = {len(broke)}건"
+                  f" ⇒ 예상은 CI {'밖 → 반증' if not (lo <= exp <= hi) else '안 → 유지'}"
+                  f" · 귀무는 CI {'밖' if not (lo <= 5.7 <= hi) else '안'}")
+        print("     ⛔예상·귀무 둘 다 CI 밖이면 「예측이 틀렸다」와 「기저 자체가 다르다」가 같이 참이다"
+              " — 하나만 적지 않는다.")
 
 
 if __name__ == '__main__':
