@@ -97,6 +97,25 @@ def gender_words(text: str) -> list:
     return sorted(out)
 
 
+# ★2026-09-13 20:3x — 상대 자의 «중첩어 이중 계수» 실측(4건·v1/v3/v6 전 판본에서 살아남음).
+#   `mezzo-soprano`는 하이픈이 낱말경계를 만들어 `\bsoprano\b`가 «안쪽»에 걸린다 ⇒ 상대 칸이
+#   `['female','soprano','mezzo-soprano']`를 낸다. 실물 확인: 그 SP에 **독립 `soprano`는 0회**.
+#   (⛔`contralto⊃alto`는 6건 중 0건 — 'r'이 경계를 막아 상대도 정상. **하이픈 중첩만** 문제다.)
+#   ⇒ 상대 토큰 중 **SP에 독립 출현이 0이고 더 긴 음역어 안에만 있는 것**은 버린다.
+_NESTED = (('mezzo-soprano', 'soprano'), ('countertenor', 'tenor'))
+
+
+def _drop_nested(tokens: set, sp: str) -> set:
+    low = (sp or '').lower()
+    out = set(tokens)
+    for outer, inner in _NESTED:
+        if inner not in out or outer not in low:
+            continue
+        if not re.search(r'\b' + re.escape(inner) + r'\b', low.replace(outer, '')):
+            out.discard(inner)
+    return out
+
+
 def _peer_tokens(clip: dict) -> tuple:
     """상대 칸에서 토큰을 꺼낸다 — **v6부터는 상대가 정규화 칸을 같이 싣는다.**
 
@@ -108,11 +127,12 @@ def _peer_tokens(clip: dict) -> tuple:
     ⛔v6 이전 통에는 정규화 칸이 없다 ⇒ **내가 원형을 사상**한다(종전 동작).
     """
     raw = clip.get('성별어')
-    mine = _norm_tokens(raw)
+    mine = _drop_nested(_norm_tokens(raw), clip.get('렌더입력SP') or '')
     theirs = clip.get('성별어_정규화')
     if theirs is None:
         return mine, None
-    theirs = {str(w).strip().lower() for w in theirs}
+    theirs = _drop_nested({str(w).strip().lower() for w in theirs}, clip.get('렌더입력SP') or '')
+    mine = _drop_nested(mine, clip.get('렌더입력SP') or '')
     if theirs != mine:
         return theirs | mine, f"gid칸 사상 불일치: 그쪽 {sorted(theirs)} ↔ 내 사상 {sorted(mine)} (원형 {raw})"
     return theirs, None
