@@ -15,6 +15,7 @@
     H3 사전 신선도 rebuild_counter·경과일 → B1 임계 근접 경고
     H4 백업 존재   최근 run backup_path 실존
     H5 게이트 재검 lyrics_chunks 품질게이트 재통과
+    H6 표현 저작 커버 사전 원자 == 저작 레지스터(정본 파일) == expr_concepts(DB 파생)
 """
 from __future__ import annotations
 
@@ -128,6 +129,41 @@ def main() -> None:
               tail[-1] if tail else f"exit {proc.returncode}")
     else:
         check(results, "H5", True, "lyrics_chunks.json 없음 — 생략")
+
+    # H6 표현 레이어 저작 커버리지 (2026-09-13 신설)
+    # ★왜 기계로 옮겼나: 이 칸은 08-15부터 「5줄 점검」의 손 항목(ⓒ)이었는데,
+    #   09-02 v3.4 재빌드가 신규 원자 7건을 들여오고 저작을 안 한 상태가 11일 살아남았다.
+    #   그동안 H1~H5는 PASS 6/6이었다 — ★기계가 안 보는 칸은 「정상」으로 보인다.
+    #   사전이 앞서고 표현이 뒤처지면 커넥터 OUT은 「라벨만 새 버전」인 빈 통지가 된다(08-15 실물).
+    # 레벨: WARN. 저작은 결재 대기일 수 있고 FAIL은 corpus_ingest_runner의 인제스트를
+    #   막으므로(모듈 docstring), 인제스트와 무관한 미완으로 수집을 잠그지 않는다.
+    try:
+        import build_expression_db as BX  # 단일 진실원 재사용 (원자 추출·저작 로드)
+        atoms, dict_ver = BX.extract_atoms()
+        authored = BX.load_authored()
+        missing = sorted(n for n in atoms if n not in authored)
+        detail = f"사전 v{dict_ver} 원자 {len(atoms)} / 저작 {len(authored)} / 미저작 {len(missing)}"
+        if missing:
+            head = ", ".join(atoms[n]["suno_term"] for n in missing[:3])
+            detail += f" — 미저작 예: {head}{' …' if len(missing) > 3 else ''}"
+        check(results, "H6", not missing, detail, warn_only=True)
+        # H6-db 정본 파일 ↔ DB 파생 동기 (08-15 별칭 6건이 DB 전용이라 재빌드로 소실된 병)
+        expr_db = ROOT / "sunolang.db"
+        if expr_db.exists():
+            with sqlite3.connect(expr_db) as ec:
+                has = ec.execute(
+                    "SELECT count(*) FROM sqlite_master "
+                    "WHERE type='table' AND name='expr_concepts'").fetchone()[0]
+                if has:
+                    db_n = ec.execute("SELECT count(*) FROM expr_concepts").fetchone()[0]
+                    check(results, "H6-db", db_n == len(authored),
+                          f"expr_concepts {db_n} / 저작 정본 {len(authored)}"
+                          + ("" if db_n == len(authored) else " — build 미반영"),
+                          warn_only=True)
+                else:
+                    check(results, "H6-db", True, "expr_concepts 테이블 없음 — 생략")
+    except Exception as exc:  # 점검기가 죽어 「없음」으로 보이지 않게 경고로 남긴다
+        check(results, "H6", False, f"표현 커버리지 조회 실패: {exc}", warn_only=True)
 
     # 종합
     fails = [r for r in results if r[0] == "FAIL"]
