@@ -110,15 +110,28 @@ def gender_words(text: str) -> list:
 #   ⛔그쪽 반례 수용: `mezzo-soprano … and soprano`처럼 **짧은 낱말이 «독립으로도» 있으면 남긴다**
 #   — 판정은 **출현 «횟수»**로 한다(짧은 것의 출현수 > 그것을 품는 긴 것들의 출현수 합 ⇒ 독립 있음).
 def _drop_nested(tokens: set, sp: str) -> set:
+    """중첩어 «이중 계수»만 걷어낸다 — ⛔독립 출현은 절대 안 지운다.
+
+    ★2026-09-13 21:2x 재수리(sunomusic이 자기 v7에서 같은 결함을 찾아 알려 줌).
+      내 종전 규칙은 「짧은 것의 출현수 ≤ 그것을 품는 긴 것들의 출현수」였는데,
+      ⛔**하이픈이 없는 중첩어는 안쪽이 «애초에 안 잡힌다»**(`countertenor`의 `tenor`는
+      앞이 `r`이라 낱말경계가 없다) ⇒ `n_in`이 이미 «독립분만» 센 값인데
+      그걸 `n_out`과 비교해 **독립 출현을 안쪽 계수로 오판**했다.
+      실측 결함: `countertenor and tenor` → `tenor` 삭제 · `contralto and alto` → `alto` 삭제.
+    ⇒ ★**먼저 「긴 낱말 «안»에서 내 경계 규칙으로 실제로 잡히는가」를 본다.**
+      안 잡히면 중첩 보정을 **아예 하지 않는다**(이중 계수가 원리상 불가능하므로).
+    """
     low = (sp or '').lower()
     out = set(tokens)
     for inner in list(out):
-        outers = [o for o in out if o != inner and inner in o]
-        if not outers:
+        pat = r'\b' + re.escape(inner) + r'\b'
+        outers = [o for o in out if o != inner and re.search(pat, o)]
+        if not outers:                      # 경계 규칙상 안쪽에서 안 잡힌다 ⇒ 보정 안 함
             continue
-        n_in = len(re.findall(r'\b' + re.escape(inner) + r'\b', low))
-        n_out = sum(len(re.findall(re.escape(o), low)) for o in outers)
-        if n_in <= n_out:          # 안쪽에서만 잡혔다
+        n_in = len(re.findall(pat, low))
+        n_out = sum(len(re.findall(re.escape(o), low)) * len(re.findall(pat, o))
+                    for o in outers)
+        if n_in <= n_out:
             out.discard(inner)
     return out
 
