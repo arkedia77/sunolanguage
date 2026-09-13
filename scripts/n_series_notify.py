@@ -49,7 +49,14 @@ vocab_unatt = len([l for l in gout.splitlines() if "G2 미관측" in l])
 n_songs = len(songs)
 native_line = (f"어휘 native **{n_songs - vocab_unatt}/{n_songs}곡이 1.0000**"
                + ("" if not vocab_unatt else f" · ⛔미관측 어휘 선언곡 {vocab_unatt}건"))
-maxj = next((l.split("=")[1].strip() for l in gout.splitlines() if l.startswith("최대 jaccard")), "?")
+# ★2026-09-13 자적발 — 게이트가 한 줄에 «두 수»를 내게 바뀌었는데(자 v2) 이 파서가
+#   `split("=")[1]`이라 **뒤엣것까지 통째로 물어 파일명에 「· ★최대 jaccard_ko(내용만)」이 박혔다.**
+#   발신 «전»에 파일명에서 적발(10통 폐기·재생성). ⇒ 자를 늘리면 **그 자를 읽는 쪽도 같이 고친다.**
+import re as _re
+_line = next((l for l in gout.splitlines() if l.startswith("최대 jaccard")), "")
+_nums = _re.findall(r"=\s*([0-9.]+)", _line)
+maxj = _nums[0] if _nums else "?"
+maxj_ko = _nums[1] if len(_nums) > 1 else None   # v1 박제분엔 없다(그 배치는 옛 자만 있음)
 
 body = {
  "0_한줄": f"★**{a.tag} 10곡 적재 — gid {a.gid_start}~{end}** · 축=「{d['축'].split('—')[0].strip()}」 · "
@@ -61,8 +68,11 @@ body = {
   "설계": f"`repo:sunolanguage:data/{a.tag.lower()}/{a.tag}_design.json` · "
           f"`{a.tag}_raw.json` · 방식 `sunolanguage_design_v1`(설계 기반·코퍼스 조합 아님)"},
  "2_게이트": {
-  "결과": f"G1~G6 hard fail 0 · {native_line} · **최대 jaccard {maxj}**"
-          f"(대조군 = PG 내 우리 곡 전건 ∪ 같은 배치 앞 곡)",
+  "결과": (f"G1~G6 hard fail 0 · {native_line} · "
+           + (f"★**최대 jaccard_ko {maxj_ko}**(내용만·자 v2) · 참고 maxJ {maxj}"
+              "(브래킷 포함·편곡 반영이라 같은 편성이면 올라갑니다)"
+              if maxj_ko else f"**최대 jaccard {maxj}**(⛔자 v1 박제분 — 브래킷 포함)")
+           + "(대조군 = PG 내 우리 곡 전건 ∪ 같은 배치 앞 곡)"),
   "⚠미관측": (f"장르 라벨 미관측 **{unatt}건** — 발주 차단 아님. ⛔**관측 라벨로 인용하지 마십시오.** "
              f"앞 라인(N021~N050)과 같은 라벨 풀을 일부러 유지합니다(라벨 드리프트 차단)."
              if unatt else "미관측 0건")},
@@ -76,9 +86,9 @@ body = {
 }
 tmp = Path("/tmp") / f"n_notify_{a.tag}.json"
 tmp.write_text(json.dumps(body, ensure_ascii=False, indent=1), encoding="utf-8")
-kw = f"{a.tag}_10곡적재_gid{a.gid_start}~{end}_게이트10of10_maxJ{maxj}_누적{a.cumulative}곡"
+kw = f"{a.tag}_10곡적재_gid{a.gid_start}~{end}_게이트10of10_maxJko{maxj_ko or maxj}_누적{a.cumulative}곡"
 subj = (f"[적재 통지] {a.tag} 10곡 · gid {a.gid_start}~{end} · 축=「{d['축'].split('—')[0].strip()}」 · "
-        f"게이트 10/10 PASS(최대 jaccard {maxj}) · 라인 누적 {a.cumulative}곡")
+        f"게이트 10/10 PASS(최대 jaccard_ko {maxj_ko or maxj}{'' if maxj_ko else ' ·자 v1'}) · 라인 누적 {a.cumulative}곡")
 r = subprocess.run([PY, "scripts/send_msg.py", "sunomusic", kw, str(tmp), "--subject", subj],
                    cwd=ROOT, text=True, capture_output=True)
 print(r.stdout.rstrip(), r.stderr.rstrip())

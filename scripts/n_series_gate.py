@@ -31,8 +31,26 @@ SECTION = re.compile(
 HANGUL = re.compile(r"[가-힣]")
 
 
+# ★2026-09-13 10:0x 자적발 — **G6 자의 2/3가 가사가 아니라 편곡이었다.**
+#   `tok()`이 영문 3자+를 세는데, 가사의 브래킷 줄(`[Verse 1]`·`[a rhodes piano in slow chords]`)이
+#   전부 영문이라 **같은 악기·같은 큐 문구를 쓰면 두 곡의 jaccard가 올라간다.**
+#   실측(최근 120곡·7,140쌍): 현행 평균 0.0906/최대 0.2571 → **브래킷 줄 제거 시 평균 0.0306/최대 0.1720**.
+#   내 0.25 검토선을 넘겼던 단 한 쌍(N090_10 vs N086_02 0.257)도 **내용만 재면 0.082**였다 —
+#   장면이 겹친 게 아니라 **둘 다 rhodes/브러시 편성이라 큐 문구가 같았을 뿐**이다.
+#   ⇒ ★반대 방향이 더 위험하다: 공통 구조 토큰이 **모든 쌍의 바닥을 깔아** 차이를 눌러서,
+#     **진짜 장면 겹침이 중간값에 묻힌다**(N076_01 초고가 0.147로 통과한 그 자리).
+#   ⛔자를 «바꾸지» 않고 «늘린다** — 옛 수(maxJ)는 그대로 찍고 내용만 잰 수(maxJ_ko)를 나란히 낸다.
+#     둘 중 하나라도 문턱을 넘으면 hard fail ⇒ 판정은 **엄격해지기만** 하고 과거 PASS가 뒤집히지 않는다.
+BRACKET_LINE = re.compile(r"^\s*\[[^\]]*\]\s*$", re.M)
+
+
 def tok(s: str) -> set[str]:
     return set(re.findall(r"[가-힣]{2,}|[a-zA-Z]{3,}", s))
+
+
+def tok_content(s: str) -> set[str]:
+    """브래킷 줄(섹션 태그·사운드 큐)을 걷어낸 **가사 본문**만 센다."""
+    return tok(BRACKET_LINE.sub("", s or ""))
 
 
 def jaccard(a: set, b: set) -> float:
@@ -68,7 +86,7 @@ def gate(design_path: Path, use_db=True, exclude_gids=None):
     songs = d["songs"]
     att, words, genres = load_vocab()
 
-    prior = []      # (title, tokens)
+    prior = []      # (title, tokens, content_tokens)
     if use_db:
         sys.path.insert(0, str(ROOT / "scripts"))
         from json_to_db import get_conn
@@ -82,13 +100,14 @@ def gate(design_path: Path, use_db=True, exclude_gids=None):
         cur.execute(f"SELECT title FROM songs WHERE TRUE{ex}")
         db_titles = {r[0] for r in cur.fetchall()}
         cur.execute(f"SELECT title, lyrics FROM songs WHERE source_project='sunolanguage'{ex}")
-        prior = [(t, tok(l or "")) for t, l in cur.fetchall()]
+        prior = [(t, tok(l or ""), tok_content(l or "")) for t, l in cur.fetchall()]
         con.close()
     else:
         db_titles = set()
 
     fails, warns = [], []
     max_j_all = 0.0
+    max_k_all = 0.0
     seen_titles, seen_tokens = set(), []
     rows = []
 
@@ -139,21 +158,30 @@ def gate(design_path: Path, use_db=True, exclude_gids=None):
         seen_titles.add(title)
         # G6
         t_now = tok(ly)
-        cands = [(t, jaccard(t_now, tk)) for t, tk in prior] + \
-                [(t, jaccard(t_now, tk)) for t, tk in seen_tokens]
+        k_now = tok_content(ly)
+        cands = [(t, jaccard(t_now, tk)) for t, tk, _ in prior] + \
+                [(t, jaccard(t_now, tk)) for t, tk, _ in seen_tokens]
         mj, mt = (max(cands, key=lambda x: x[1]) if cands else ("", 0.0))[::-1]
+        kc = [(t, jaccard(k_now, kk)) for t, _, kk in prior] + \
+             [(t, jaccard(k_now, kk)) for t, _, kk in seen_tokens]
+        mk, mkt = (max(kc, key=lambda x: x[1]) if kc else ("", 0.0))[::-1]
         max_j_all = max(max_j_all, mj)
+        max_k_all = max(max_k_all, mk)
         if mj >= JACCARD_MAX:
             fails.append(f"{line} G6 jaccard {mj:.3f} ≥ {JACCARD_MAX} vs 「{mt}」")
-        seen_tokens.append((title, t_now))
+        if mk >= JACCARD_MAX:
+            fails.append(f"{line} G6 jaccard_ko {mk:.3f} ≥ {JACCARD_MAX} vs 「{mkt}」(내용만)")
+        seen_tokens.append((title, t_now, k_now))
 
-        rows.append((line, title, len(sp), native, n_sec, mj, mt))
+        rows.append((line, title, len(sp), native, n_sec, mj, mt, mk, mkt))
 
     print(f"■ {batch} 게이트 — {len(songs)}곡 · 대조군 {len(prior)}곡(PG 우리 곡 전건)")
-    print(f"{'line':10} {'제목':22} {'SP자':>5} {'native':>7} {'섹션':>4} {'maxJ':>6}  최근접")
-    for line, title, spn, nat, nsec, mj, mt in rows:
-        print(f"{line:10} {title[:20]:22} {spn:5} {nat:7.4f} {nsec:4} {mj:6.3f}  {mt[:18]}")
-    print(f"\n최대 jaccard(배치) = {max_j_all:.3f}")
+    print(f"{'line':10} {'제목':22} {'SP자':>5} {'native':>7} {'섹션':>4} {'maxJ':>6} {'maxJ_ko':>8}  최근접(내용)")
+    for line, title, spn, nat, nsec, mj, mt, mk, mkt in rows:
+        print(f"{line:10} {title[:20]:22} {spn:5} {nat:7.4f} {nsec:4} {mj:6.3f} {mk:8.3f}  {mkt[:18]}")
+    print(f"\n최대 jaccard(배치) = {max_j_all:.3f}  ·  ★최대 jaccard_ko(내용만) = {max_k_all:.3f}")
+    print("  ⛔maxJ는 브래킷(섹션·사운드 큐)을 포함한 옛 자다 — 편곡이 같으면 올라간다."
+          " 인용은 **maxJ_ko**로 한다(자 판번 v2, 2026-09-13).")
     if warns:
         print("\n⚠ 경고(발주 차단 아님 — ★단 「미관측」은 내가 코퍼스 밖으로 나갔다는 사실이다):")
         for w in warns:
