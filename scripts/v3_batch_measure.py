@@ -153,7 +153,54 @@ def unit_counts(tags):
     return pairs, first, both, any_, split
 
 
+def cmd_json(tags):
+    """회신·기록에 쓸 값을 **기계가 내놓는다**(2026-09-14 신설).
+
+    ⛔경위: 회신 본문을 손으로 쓰다가 누적 중앙값을 **이틀 연속 틀렸다**
+      (09-13 「0.9550 수준」=추정 / 09-14 「0.9384」=오기 · 실측 0.9526·0.9284).
+      다른 칸은 도구 출력을 그대로 옮겼는데 **한 칸만 기억으로 채웠다.**
+    ★그래서 값을 손으로 옮기는 단계를 없앤다 — `--json`으로 받아 본문에 붙인다.
+    """
+    rec = json.load(open(LEDGER))['batches']
+    if not tags:
+        tags = [t for t, b in rec.items() if b.get('대조본_칸') == 'V3']
+    ms = [m for m in (measure(t) for t in tags) if m]
+    rows = clip_level([m['tag'] for m in ms])
+    BASE_KINDS = ('역전', '확장', '소실')
+    broke = [r for r in rows if r['판정'] in BASE_KINDS]
+    extra = [r for r in rows if r['판정'] not in BASE_KINDS and r['판정'] != '유지']
+    up = [r for r in rows if isinstance(r['길이비'], (int, float)) and r['길이비'] > 1.0]
+    dn = [r for r in rows if isinstance(r['길이비'], (int, float)) and r['길이비'] <= 1.0]
+    allr = [x for m in ms for x in m['길이비']]
+    lo, hi = wilson(len(broke), len(rows))
+    out = {
+        "배치": [m['tag'] for m in ms], "클립": len(rows),
+        "무수정": f"{sum(m['무수정'] for m in ms)}/{len(rows)}",
+        "길이비_중앙값": round(statistics.median(allr), 4),
+        "길이비_1초과": f"{len(up)}/{len(rows)} = {100*len(up)/len(rows):.1f}%",
+        "한글_재작성": sum(len(m['ko']) for m in ms),
+        "깨짐_기저자": f"{len(broke)}/{len(rows)} = {100*len(broke)/len(rows):.2f}%"
+                       f" (Wilson CI {lo}~{hi})",
+        "기저정의_밖": [(r['gid'], r['판정'], r['길이비']) for r in extra] or "없음",
+        "층별_늘어남": f"{sum(1 for r in up if r['판정'] in BASE_KINDS)}/{len(up)}",
+        "층별_안늘어남": f"{sum(1 for r in dn if r['판정'] in BASE_KINDS)}/{len(dn)}",
+        "두_대조": f"사상 {sum(len(m['사상_불일치']) for m in ms)}/{len(rows)} ·"
+                   f" 탐지 {sum(len(m['탐지_불일치']) for m in ms)}/{len(rows)}",
+        "검정력": f"{100*power_at(len(rows), 0.057, 0.097):.0f}% (등록선 309 · 현재 {len(rows)})",
+        "배치별": {m['tag']: {
+            "무수정": f"{m['무수정']}/{m['clips']}",
+            "길이비_중앙값": round(statistics.median(m['길이비']), 4),
+            "길이비_최소": round(min(m['길이비']), 4), "길이비_최대": round(max(m['길이비']), 4),
+            "길이비_1초과": f"{sum(1 for x in m['길이비'] if x > 1.0)}/{m['clips']}",
+            "한글_재작성": m['ko'] or "0클립",
+        } for m in ms},
+    }
+    print(json.dumps(out, ensure_ascii=False, indent=1))
+
+
 def main(tags):
+    if tags and tags[0] == '--json':
+        return cmd_json(tags[1:])
     rec = json.load(open(LEDGER))['batches']
     if not tags:
         tags = [t for t, b in rec.items() if b.get('대조본_칸') == 'V3']
