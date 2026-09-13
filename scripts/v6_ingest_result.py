@@ -97,6 +97,27 @@ def gender_words(text: str) -> list:
     return sorted(out)
 
 
+def _peer_tokens(clip: dict) -> tuple:
+    """상대 칸에서 토큰을 꺼낸다 — **v6부터는 상대가 정규화 칸을 같이 싣는다.**
+
+    반환 = (합집합에 쓸 집합, 불일치 메모 or None)
+
+    ⛔상대(sunomusic) v6 스키마: `성별어`=찾은 **원형** · `성별어_정규화`=상대의 **사상 결과**.
+      그쪽이 원형을 남긴 이유가 「사상은 내 해석이라 틀릴 수 있다」이므로,
+      ★**나는 둘 다 받아서 «내 사상»과 대조**한다 — 그게 그쪽이 원형을 남긴 값이다.
+    ⛔v6 이전 통에는 정규화 칸이 없다 ⇒ **내가 원형을 사상**한다(종전 동작).
+    """
+    raw = clip.get('성별어')
+    mine = _norm_tokens(raw)
+    theirs = clip.get('성별어_정규화')
+    if theirs is None:
+        return mine, None
+    theirs = {str(w).strip().lower() for w in theirs}
+    if theirs != mine:
+        return theirs | mine, f"gid칸 사상 불일치: 그쪽 {sorted(theirs)} ↔ 내 사상 {sorted(mine)} (원형 {raw})"
+    return theirs, None
+
+
 def _norm_tokens(tokens) -> set:
     """상대 칸의 토큰을 **내 영어 정규형으로 맞춘 뒤** 합집합에 넣는다.
 
@@ -173,7 +194,7 @@ def main(tag):
         #   ⇒ 클립별로 다 적고 **단위를 셋 다** 낸다(어느 하나가 참이 아니라 물음이 다르다):
         #     ⒜첫 클립(임의) ⒝둘 중 하나라도 유지(=발주대로 난 테이크가 있는가·A&R용)
         #     ⒞둘 다 유지(엄격). ⛔단위를 안 적고 「깨짐 N건」이라 쓰면 그 수는 못 읽는다.
-        _clips = [sorted(_norm_tokens(r.get('성별어')) | set(gender_words(r.get('렌더입력SP') or '')))
+        _clips = [sorted(_peer_tokens(r)[0] | set(gender_words(r.get('렌더입력SP') or '')))
                   for r in pc['rendered_sp']]
         got = _clips[0]
         # ★2026-09-12 수리(자적발) — 옛 사다리엔 «확장» 칸이 없어서 발주 ['male'] →
