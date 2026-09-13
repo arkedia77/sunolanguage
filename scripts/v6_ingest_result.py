@@ -16,7 +16,11 @@
 import json, glob, re, sys
 
 LEDGER = 'data/v6_obs/v6_input_layer_running.json'
-GEN = re.compile(r'\b(male|female|tenor|alto|soprano|baritone)\b', re.I)
+GEN = re.compile(r'\b(male|female|tenor|alto|soprano|baritone|androgynous|mezzo-soprano|falsetto|contralto|countertenor)\b', re.I)
+# ★2026-09-13 18:5x — 내 영어 정규식에 `androgynous`·`mezzo-soprano`·`falsetto`가 «없었다».
+#   ⛔그 낱말들은 지금까지 **오로지 sunomusic 칸으로만** 들어왔다 — 즉 내 ⑨-8 발견
+#   (「역전의 주된 모양은 androgynous 치환」)은 **두 자의 합의가 아니라 그쪽 자 단독**이었다.
+#   ⇒ 넣어서 «내 자로도 독립 확인»이 되게 한다.
 # ★2026-09-13 03:0x 수리(자적발·이 세션 최대) — 성별어 자가 **영어만** 봤다.
 #   수노가 대조본 SP를 한국어·프랑스어로 다시 쓰면(재작성분의 약 19~21%) 「여성 보컬」·
 #   「voix féminine」이 들어 있는데도 영어 정규식엔 0건 ⇒ **'소실'로 찍혔다.**
@@ -39,30 +43,76 @@ GEN_ALT = {              # 표기 → 영어 정규형
 #   같은 함정이 원리상 열려 있었다. ⛔단 **내 데이터에서는 아직 0건**(한글 SP 79건 전수 실측
 #   2026-09-13) ⇒ 이건 **과거 수치의 정정이 아니라 미발현 결함의 봉인**이다.
 #   ★그래서 고친 뒤 **같은 79건을 다시 재서 판정 불변임을 확인**한다(양성통제).
-_INSTR_TAIL = ('색소폰', '색스', '섹소폰', '플루트', '트롬본', '클라리넷', '호른',
-               '리코더', '오보에', '바순', '트럼펫', '기타', 'saxophone', 'sax', 'flute')
+# ★2026-09-13 18:5x 재수리(sunomusic이 내 가드의 결함을 찾아 줌 — 상호 점검 3회차).
+#   ⛔내 09-13 07시 가드는 **한국어 경로에만** 걸려 있었다: GEN 정규식(영어)과 GEN_ALT의
+#   프랑스어 항목은 **가드를 아예 안 거쳤다.** ⇒ `tenor saxophone`·`saxophone ténor`가 그대로 통과.
+#   ★그쪽이 佛 어순(`saxophone ténor` = 악기→음역어)에서 먼저 걸렸고, 내 쪽은 **영어에서 실물 1건**
+#   (gid 30565 `baritone saxophone`)이 이미 있었다 — ⛔**내가 아침에 「발현 0건」이라 보고한 것은
+#   «한국어만» 잰 결과였다**(분모를 안 적고 0을 말한 그 병).
+#   ⇒ 수리: **세 경로(영어 정규식·한국어·프랑스어) 전부**에 **앞뒤 양방향** 악기 가드를 건다.
+#   ★판정 영향 0: gid 30565 clip0은 `male`이 따로 있어 female→male 역전이 그대로 선다(전수 대조함).
+_INSTR = ('색소폰', '색스', '섹소폰', '플루트', '트롬본', '클라리넷', '호른',
+          '리코더', '오보에', '바순', '트럼펫', '기타',
+          'saxophone', 'sax', 'flute', 'clarinet', 'guitar', 'horn', 'trombone',
+          'oboe', 'recorder', 'cornet', 'bassoon', 'trumpet', 'ukulele',
+          'flûte', 'clarinette', 'guitare', 'hautbois', 'basson', 'trompette')
+_REGISTER = ('tenor', 'alto', 'soprano', 'baritone', 'contralto',
+             '테너', '알토', '소프라노', '바리톤', 'ténor')
+_WINDOW = 14
+
+
+def _instrument_adjacent(text: str, start: int, end: int) -> bool:
+    """음역어 앞·뒤 창에 악기어가 있으면 성별어가 아니다.
+
+    ⛔앞뒤를 다 본다 — 영어·한국어는 `tenor sax`(음역어→악기)지만
+    프랑스어는 `saxophone ténor`(악기→음역어)로 **어순이 뒤집힌다.**
+    """
+    low = text.lower()
+    before = low[max(0, start - _WINDOW):start]
+    after = low[end:end + _WINDOW]
+    return any(w in before for w in _INSTR) or any(w in after for w in _INSTR)
 
 
 def gender_words(text: str) -> list:
     """SP 문자열의 성별·음역 낱말을 «언어 불문» 뽑아 영어 정규형으로 돌려준다.
 
-    ⛔음역어(테너·알토 등)가 **악기 이름 앞자리**면 성별어가 아니다(`테너 색소폰`).
+    ⛔음역어가 악기 이름과 붙어 있으면(앞이든 뒤든) 성별어가 아니다.
     """
-    out = {w.lower() for w in GEN.findall(text or '')}
-    low = (text or '').lower()
     raw = text or ''
+    low = raw.lower()
+    out = set()
+    for m in GEN.finditer(raw):
+        w = m.group(0).lower()
+        if w in _REGISTER and _instrument_adjacent(raw, m.start(), m.end()):
+            continue
+        out.add(w)
     for k, v in GEN_ALT.items():
         kl = k.lower()
         if kl not in low:
             continue
-        # 한국어 표기는 뒤에 악기어가 붙은 자리를 뺀다(영문은 GEN 정규식이 단어경계로 봄)
-        if any('가' <= ch <= '힣' for ch in k):
-            hits = [m.end() for m in __import__('re').finditer(k, raw)]
-            if hits and all(any(raw[e:e + 8].lstrip().startswith(w) for w in _INSTR_TAIL)
-                            for e in hits):
-                continue
+        hits = [(m.start(), m.end()) for m in re.finditer(re.escape(kl), low)]
+        if kl in _REGISTER and hits and all(_instrument_adjacent(raw, s, e) for s, e in hits):
+            continue
         out.add(v)
     return sorted(out)
+
+
+def _norm_tokens(tokens) -> set:
+    """상대 칸의 토큰을 **내 영어 정규형으로 맞춘 뒤** 합집합에 넣는다.
+
+    ⛔2026-09-13 실측: sunomusic v3는 한국어를 «찾기는» 하는데 **정규화를 안 하고**
+      원형(`여성`·`남성`)을 그대로 싣는다. 그대로 합집합하면 `{'female','여성'}`이 되어
+      **같은 사람이 두 낱말로 세어지고 「확장」으로 오판된다**(실측 gid 30573 = 가짜 확장,
+      30536 = 가짜 쌍_갈림). ⇒ **합치기 전에 자를 맞춘다.**
+    ★교훈: 합집합은 상대의 «못 봄»은 막아 주지만 **«표기 차이»는 못 막는다 — 맞춰서 합쳐야 한다.**
+    """
+    out = set()
+    for w in (tokens or []):
+        if not isinstance(w, str):
+            continue
+        key = w.strip()
+        out.add(GEN_ALT.get(key, GEN_ALT.get(key.lower(), key.lower())))
+    return out
 INBOX = '/Users/purple/projects/agent-comm/projects/sunolanguage/messages'
 
 def main(tag):
@@ -123,7 +173,7 @@ def main(tag):
         #   ⇒ 클립별로 다 적고 **단위를 셋 다** 낸다(어느 하나가 참이 아니라 물음이 다르다):
         #     ⒜첫 클립(임의) ⒝둘 중 하나라도 유지(=발주대로 난 테이크가 있는가·A&R용)
         #     ⒞둘 다 유지(엄격). ⛔단위를 안 적고 「깨짐 N건」이라 쓰면 그 수는 못 읽는다.
-        _clips = [sorted(set(r.get('성별어') or []) | set(gender_words(r.get('렌더입력SP') or '')))
+        _clips = [sorted(_norm_tokens(r.get('성별어')) | set(gender_words(r.get('렌더입력SP') or '')))
                   for r in pc['rendered_sp']]
         got = _clips[0]
         # ★2026-09-12 수리(자적발) — 옛 사다리엔 «확장» 칸이 없어서 발주 ['male'] →
