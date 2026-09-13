@@ -192,14 +192,32 @@ def main(tags):
           f" · 그 전엔 V2와 비교 안 함")
 
     rows = clip_level([m['tag'] for m in acc])
-    broke = [r for r in rows if r['판정'] != '유지']
+    # ★2026-09-14 정정 — 분자를 **기저와 같은 자**로 맞춘다.
+    #   ⛔경위: V2 기저(>1.0 21.7% = 5/23 · ≤1.0 5.7% = 40/697)의 「깨짐」은
+    #     **역전+확장+소실**이다(KANBAN ①-10·①-101에 명시). 내 도구는 「'유지'가 아닌 것」
+    #     전부를 셌고, 그래서 **'축소'까지 분자에 들어갔다.**
+    #   ★실측: '축소'는 전 대장 클립 900에서 **1건뿐이고 그게 V3(N062 gid 30635)**다.
+    #     V2 버킷엔 0건 ⇒ 기저는 축소를 **포함할 수 없었다**(표본에 없었다).
+    #     ⇒ 정의 차이가 V3에서 처음 드러났고, 내 도구가 조용히 다른 자로 셌다.
+    #   ⇒ 주 분자 = 기저와 같은 자. 축소는 **버리지 않고 따로 적는다**(0으로 숨기면 못 본다).
+    BASE_KINDS = ('역전', '확장', '소실')
+    broke = [r for r in rows if r['판정'] in BASE_KINDS]
+    extra = [r for r in rows if r['판정'] not in BASE_KINDS and r['판정'] != '유지']
     up = [r for r in rows if isinstance(r['길이비'], (int, float)) and r['길이비'] > 1.0]
     dn = [r for r in rows if isinstance(r['길이비'], (int, float)) and r['길이비'] <= 1.0]
     bu = sum(1 for r in up if r['판정'] != '유지')
     bd = sum(1 for r in dn if r['판정'] != '유지')
     lo, hi = wilson(len(broke), len(rows))
-    print(f"\n  ★클립 단위 깨짐 = {len(broke)}/{len(rows)} = {100*len(broke)/len(rows):.2f}%"
-          f" (Wilson CI {lo}~{hi}) {[(r['gid'], r['판정'], r['길이비']) for r in broke]}")
+    print(f"\n  ★클립 단위 깨짐(기저와 같은 자 = 역전+확장+소실) = {len(broke)}/{len(rows)}"
+          f" = {100*len(broke)/len(rows):.2f}% (Wilson CI {lo}~{hi})"
+          f" {[(r['gid'], r['판정'], r['길이비']) for r in broke]}")
+    if extra:
+        lo2, hi2 = wilson(len(broke) + len(extra), len(rows))
+        print(f"     ※기저 정의 밖 {len(extra)}건 따로 적음: "
+              f"{[(r['gid'], r['판정'], r['길이비']) for r in extra]}"
+              f" ⇒ 합치면 {len(broke)+len(extra)}/{len(rows)}"
+              f" = {100*(len(broke)+len(extra))/len(rows):.2f}% (CI {lo2}~{hi2})"
+              f" — ⛔이 값은 V2 기저와 비교할 수 없다(자가 다르다)")
     print(f"     층별 — 늘어남(>1.0) {bu}/{len(up)} · 안 늘어남(≤1.0) {bd}/{len(dn)}"
           f" · 늘어난 비율 {len(up)}/{len(rows)} = {100*len(up)/len(rows):.1f}%")
     if need <= 0:
@@ -223,10 +241,17 @@ def main(tags):
             #     **같은 화면에 나란히** 찍었다. 읽는 사람(나 포함)은 앞 낱말을 집는다.
             #   ★이게 내 메모리에 적힌 「도구가 대신 단정한다(고정 문구)」의 실물이다 —
             #     경고를 덧붙이는 것으로는 안 되고, **낱말 자체를 안 내야** 한다.
+            # ★2026-09-14 재개정 ⑵ — 판정 낱말은 **등록선(클립 309)에 도달했을 때만** 낸다.
+            #   ⛔경위: 직전 판은 「검정력 50% 이상」이면 낱말을 냈다. N065에서 검정력이
+            #     **53%**가 되자 도구가 「유지」를 찍었는데, 내 등록선은 **309클립(검정력 80%)**이다.
+            #   ⇒ 가드의 문턱(50%)이 **내 등록선을 밀어내고 판정 권한을 가져갔다.**
+            #   ★두 자를 두면 느슨한 쪽이 이긴다 — 등록선 하나만 문턱으로 둔다.
+            REG_N = 309
             if "참고" in name:
                 verdict = ""
-            elif pw < 0.5:
-                verdict = f" → ⛔미판정(검정력 {100*pw:.0f}% < 50%)"
+            elif len(rows) < REG_N:
+                verdict = (f" → ⛔미판정(등록선 클립 {REG_N} 미도달: 현재 {len(rows)}"
+                           f" · 검정력 {100*pw:.0f}%)")
             else:
                 verdict = f" → {'반증' if out else '유지'}"
             print(f"     {name}: 예상 {exp:.1f}% = {exp*len(rows)/100:.1f}건"
@@ -236,8 +261,8 @@ def main(tags):
                   + f" · 귀무는 CI {'밖' if not (lo <= 5.7 <= hi) else '안'}")
             print(f"       ★검정력 = {100*pw:.0f}% (n={len(rows)}) · 검정력 80%에 필요한 클립"
                   f" = {need_n:.0f}(배치 {need_n/20:.0f}건)"
-                  + ("  ⛔CI 밖이어도 「반증」이라 쓰지 않는다 — 등록선(클립 309)까지 수만 적는다"
-                     if pw < 0.5 and "참고" not in name and out else ""))
+                  + ("  ⛔CI 안이든 밖이든 낱말을 쓰지 않는다 — 등록선까지 수만 적는다"
+                     if len(rows) < 309 and "참고" not in name else ""))
         print("     ⛔예상·귀무 둘 다 CI 밖이면 「예측이 틀렸다」와 「기저 자체가 다르다」가 같이 참이다"
               " — 하나만 적지 않는다.")
 
