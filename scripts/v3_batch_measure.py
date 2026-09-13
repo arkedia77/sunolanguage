@@ -215,19 +215,29 @@ def main(tags):
         for name, share in (("등록 가정 25%[판정]", 0.25),
                             ("실측 비율[참고·비판정]", len(up) / len(rows))):
             exp = share * 21.7 + (1 - share) * 5.7        # V2 층별 기저(등록값)
+            pw = power_at(len(rows), 0.057, exp / 100)
+            need_n = n_for(0.057, exp / 100)
+            out = not (lo <= exp <= hi)
+            # ★2026-09-14 재개정 — 검정력이 모자라면 **「반증/유지」 낱말을 아예 찍지 않는다.**
+            #   ⛔직전 판은 「예상은 CI 밖 → 반증」과 「⛔「판정」이라 부르지 않는다」를
+            #     **같은 화면에 나란히** 찍었다. 읽는 사람(나 포함)은 앞 낱말을 집는다.
+            #   ★이게 내 메모리에 적힌 「도구가 대신 단정한다(고정 문구)」의 실물이다 —
+            #     경고를 덧붙이는 것으로는 안 되고, **낱말 자체를 안 내야** 한다.
+            if "참고" in name:
+                verdict = ""
+            elif pw < 0.5:
+                verdict = f" → ⛔미판정(검정력 {100*pw:.0f}% < 50%)"
+            else:
+                verdict = f" → {'반증' if out else '유지'}"
             print(f"     {name}: 예상 {exp:.1f}% = {exp*len(rows)/100:.1f}건"
                   f" ↔ 귀무 5.7% = {5.7*len(rows)/100:.1f}건"
                   f" ↔ 실측 {100*len(broke)/len(rows):.2f}% = {len(broke)}건"
-                  f" ⇒ 예상은 CI {'밖' if not (lo <= exp <= hi) else '안'}"
-                  + ("" if "참고" in name else
-                     f" → {'반증' if not (lo <= exp <= hi) else '유지'}")
+                  f" ⇒ 예상은 CI {'밖' if out else '안'}{verdict}"
                   + f" · 귀무는 CI {'밖' if not (lo <= 5.7 <= hi) else '안'}")
-            pw = power_at(len(rows), 0.057, exp / 100)
-            need_n = n_for(0.057, exp / 100)
-            print(f"       ★이 판정의 검정력 = {100*pw:.0f}% (n={len(rows)}) · 검정력 80%에 필요한 클립"
+            print(f"       ★검정력 = {100*pw:.0f}% (n={len(rows)}) · 검정력 80%에 필요한 클립"
                   f" = {need_n:.0f}(배치 {need_n/20:.0f}건)"
-                  + ("  ⛔검정력 50% 미만 — 「판정」이라 부르지 않는다(어느 쪽도 말하지 않는다)"
-                     if pw < 0.5 and "참고" not in name else ""))
+                  + ("  ⛔CI 밖이어도 「반증」이라 쓰지 않는다 — 등록선(클립 309)까지 수만 적는다"
+                     if pw < 0.5 and "참고" not in name and out else ""))
         print("     ⛔예상·귀무 둘 다 CI 밖이면 「예측이 틀렸다」와 「기저 자체가 다르다」가 같이 참이다"
               " — 하나만 적지 않는다.")
 
