@@ -42,6 +42,8 @@ CREATE TABLE IF NOT EXISTS suno_sp_emissions (
   duration_sec   REAL,
   model          TEXT,
   emitted_sha256 TEXT NOT NULL,
+  clip_status    TEXT,             -- ⛔NULL = «미측정»이지 「정상」이 아니다
+  clip_status_src TEXT,            -- 그 값을 «누가·언제» 쟀는지
   ingested_at    TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS ix_sse_aug   ON suno_sp_emissions(aug_creativity);
@@ -140,9 +142,14 @@ def main():
     cols = ['clip_uuid', 'gid', 'batch', 'title', 'account', 'aug_creativity', 'pair_variety',
             'layer', 'source_field', 'emitted_sp', 'ordered_sp', 'rewritten', 'length_ratio',
             'duration_sec', 'model', 'emitted_sha256']
+    # ⛔INSERT OR REPLACE는 안 실린 칸을 NULL로 «되돌린다» — clip_status 같은
+    #   외부 유래 칸이 재적재 때마다 조용히 지워진다(2026-09-14 N057 실패 클립 계기).
+    #   ⇒ 명시한 칸만 덮어쓰는 UPSERT로 간다.
     c.executemany(
-        f"INSERT OR REPLACE INTO suno_sp_emissions ({','.join(cols)},ingested_at) "
-        f"VALUES ({','.join('?' * len(cols))},?)",
+        f"INSERT INTO suno_sp_emissions ({','.join(cols)},ingested_at) "
+        f"VALUES ({','.join('?' * len(cols))},?) "
+        f"ON CONFLICT(clip_uuid) DO UPDATE SET "
+        + ','.join(f"{k}=excluded.{k}" for k in cols if k != 'clip_uuid') + ",ingested_at=excluded.ingested_at",
         [[r[k] for k in cols] + [now] for r in rs])
     c.commit()
     n = c.execute('select count(*) from suno_sp_emissions').fetchone()[0]
@@ -155,6 +162,10 @@ def main():
     print(f"   양성통제(왕복 1건 {probe['clip_uuid'][:8]}): {'✅원문 동일·layer 고정' if ok else '⛔불일치'}")
     miss = c.execute('select count(*) from suno_sp_emissions where clip_uuid=?', ('없는-uuid',)).fetchone()[0]
     print(f"   음성통제(없는 uuid 조회): {miss}건 {'✅' if miss == 0 else '⛔'}")
+    # ★외부 유래 칸이 재적재에 살아남았는지 본다(보존 통제)
+    kept = c.execute("select count(*) from suno_sp_emissions where clip_status is not null").fetchone()[0]
+    nul = c.execute("select count(*) from suno_sp_emissions where clip_status is null").fetchone()[0]
+    print(f"   보존통제(clip_status): 값 있는 행 {kept} 보존 · ⚠NULL {nul}행은 «미측정»이지 「정상」이 아니다")
     if not ok:
         sys.exit(1)
 
