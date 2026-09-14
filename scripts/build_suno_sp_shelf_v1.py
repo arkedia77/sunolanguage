@@ -17,6 +17,11 @@ sys.path.insert(0, 'scripts')
 from emission_measure import known_vocab, WORD, STOP, fold  # noqa: E402 — 자는 하나만 쓴다
 
 OUT = 'data/metatag_external/candidate_shelf_suno_sp_v1.json'
+# ⛔2026-09-14 자적발 — 같은 것을 «두 자»로 세고 있었다(통에 104, 선반에 102).
+#   원인 = **세는 자**(맨 `reframed as`)와 **뽑는 자**(`X … as Y` 전체형)가 달랐는데
+#   둘 다 「문형 클립 수」라는 이름으로 나갔다. ⇒ ★**세는 자는 하나**로 못 박는다.
+#   HAS = 클립을 «세는» 자 · REFRAME = X·Y를 «뽑는» 자(세기에 안 쓴다).
+HAS = re.compile(r'\breframed\s+as\b', re.I)
 REFRAME = re.compile(r'([A-Za-z][A-Za-z0-9 \-]{2,40}?)\s+reframed\s+as\s+([^,.:;]{3,60})', re.I)
 
 
@@ -49,10 +54,20 @@ def main():
     # 문형
     pat = collections.Counter()
     tgt, srcs, pex = collections.Counter(), collections.Counter(), []
+    # ⛔2026-09-14 자체 하향 — 이 문형을 「수노가 쓰는 문형」으로 적었다가 배치별로 세어 보니
+    #   **특정 창에 뭉쳐 있고 N062 이후 7배치 연속 0**이었다. ⇒ 배치표·교란을 «선반에» 박는다.
+    #   ★0으로 돌아선 것을 지우지 않는다 — 지우면 다음에 「왜 갑자기 나왔나」를 못 본다.
+    perbatch = collections.defaultdict(lambda: [0, 0])
+    peracct = collections.defaultdict(lambda: [0, 0])
+    lr_hit, lr_no = [], []
     inord = 0
     for u, b, a, e, o in rows:
-        if REFRAME.search(o or ''):
+        if HAS.search(o or ''):
             inord += 1
+        _hit = 1 if HAS.search(e) else 0
+        if b:
+            perbatch[b][0] += 1
+            perbatch[b][1] += _hit
         for m in REFRAME.finditer(e):
             pat[f'V{a}'] += 1
             srcs[m.group(1).strip().lower()] += 1
@@ -60,6 +75,17 @@ def main():
             if len(pex) < 10:
                 pex.append({'버킷': f'V{a}', 'X': m.group(1).strip(), 'Y': m.group(2).strip()})
 
+    # 교란 — 계정·길이비
+    for u, b, a, e, o in c.execute("""select clip_uuid,batch,account,emitted_sp,length_ratio
+                                      from suno_sp_emissions where rewritten=1""").fetchall():
+        h = 1 if HAS.search(e or '') else 0
+        peracct[a or '?'][0] += 1
+        peracct[a or '?'][1] += h
+        (lr_hit if h else lr_no).append(o or 0)
+    ks_b = sorted(perbatch)
+    last_hit = max((j for j, x in enumerate(ks_b) if perbatch[x][1] > 0), default=None)
+    tail = ks_b[last_hit + 1:] if last_hit is not None else []
+    import statistics
     shelf = {
         "무엇": "후보 선반 — 수노 «SP 재작성» 채널의 미등재 낱말·문형 (★expr_* 아님·사전 아님)",
         "재현": "scripts/build_suno_sp_shelf_v1.py (수치를 상수로 안 박는다 — 매번 DB·사전에서 다시 잰다)",
@@ -86,7 +112,20 @@ def main():
             "Y_고유_종수": len(tgt), "X_고유_종수": len(srcs),
             "Y_표본": [k for k, _ in tgt.most_common(25)],
             "예": pex,
-            "⚠교란": "버킷별 출현율이 V2 20%·V3 19% ↔ V4 1%로 갈리지만 **V4는 시기·판번이 다르다** ⇒ ⛔「Variety 단계가 올리면 는다」고 말하지 않는다. 수만 적는다.",
+            "★클립_수": sum(1 for _u, _b, _a, _e, _o in rows if HAS.search(_e)),
+            "★세는_자": "`\\breframed\\s+as\\b` 하나. X·Y 추출용 정규식은 «세기에 쓰지 않는다»(두 자로 세면 같은 값이 두 수가 된다 — 2026-09-14 실물 104↔102).",
+            "⛔X·Y_추출_누락": "전체형(X … as Y)으로 안 잡히는 클립이 있다 — 그건 «추출 실패»이지 «출현 안 함»이 아니다.",
+            "★단위_주의": "「출현」과 「클립」은 다른 수다 — 한 클립에 두 번 나오는 경우가 있다. 인용 시 단위를 붙일 것.",
+            "★★배치별": {b: f"{perbatch[b][1]}/{perbatch[b][0]}" for b in ks_b},
+            "★★현재_상태": (f"마지막 출현 = {ks_b[last_hit]} · 이후 **{len(tail)}배치 연속 0"
+                          f"(분모 {sum(perbatch[b][0] for b in tail)}클립)**"
+                          if tail else "최근 배치에서도 출현 중"),
+            "⛔그래서_말할_수_있는_것": "⑴「수노가 이 구문을 «썼다»」=참 ⑵「수노가 이 구문을 «쓴다»」=⛔과하다.",
+            "★교란_계정": {k: f"{v[1]}/{v[0]}" for k, v in sorted(peracct.items())},
+            "★교란_길이비": (f"문형 있음 중앙값 {statistics.median(lr_hit):.4f}(n={len(lr_hit)}) ↔ "
+                          f"없음 {statistics.median(lr_no):.4f}(n={len(lr_no)}) "
+                          f"⇒ 이 구문은 «덜 줄어든» 재작성에 붙는다. ⛔인과는 미상."),
+            "⛔Variety로_돌리지_않는다": "버킷별 차이(V2·V3 ↔ V4)는 **시기·계정과 뒤엉켜** 있다. 「Variety의 효과」로 돌릴 근거가 없다.",
         },
         "★한계": [
             "유효성은 하나도 안 쟀다 — 이 선반은 「수노가 무엇을 썼나」의 대장이지 「무엇이 먹히나」의 대장이 아니다.",
