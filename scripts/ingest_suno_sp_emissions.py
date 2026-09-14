@@ -100,6 +100,16 @@ def rows():
                         'length_ratio': r.get('길이비'), 'duration_sec': r.get('duration_sec'),
                         'model': s.get('model'),
                         'emitted_sha256': hashlib.sha256(sp.encode()).hexdigest()[:16],
+                        # ★2026-09-14 — 결과통이 `clip_status`를 싣기 시작했다(N073부터 실측 40/40).
+                        #   ⛔경계 = **2026-09-14T16:30:13**(그 시각 이후 «새로 뜬» 워커부터).
+                        #     sunomusic 정정: 배차기 재기동(18:01)과 **무관**하다 — 워커가 로트마다
+                        #     새로 떠서 «그때의 코드 파일»을 읽기 때문이다.
+                        #   ⚠**경계 이후에도 「키 없는 행」이 섞일 수 있다** — 그 시점에 이미 돌던
+                        #     워커는 옛 코드로 계속 돈다. ⇒ ★키 없음 = «미측정»이지 「정상」이 아니다.
+                        'clip_status': r.get('clip_status'),
+                        'clip_status_src': (
+                            'sunomusic 결과통 clip_status 칸(경계 2026-09-14T16:30:13 이후 새 워커분)'
+                            if r.get('clip_status') else None),
                     })
     return out, nodesign
 
@@ -141,7 +151,10 @@ def main():
     now = datetime.now().astimezone().isoformat()
     cols = ['clip_uuid', 'gid', 'batch', 'title', 'account', 'aug_creativity', 'pair_variety',
             'layer', 'source_field', 'emitted_sp', 'ordered_sp', 'rewritten', 'length_ratio',
-            'duration_sec', 'model', 'emitted_sha256']
+            'duration_sec', 'model', 'emitted_sha256', 'clip_status', 'clip_status_src']
+    # ★외부 유래 칸은 «새 값이 있을 때만» 덮는다 — 키가 안 실린 통을 다시 적재해도
+    #   앞서 받은 값이 NULL로 지워지지 않게(2026-09-14 N057 error 표시 소실 위험 실물).
+    KEEP = {'clip_status', 'clip_status_src'}
     # ⛔INSERT OR REPLACE는 안 실린 칸을 NULL로 «되돌린다» — clip_status 같은
     #   외부 유래 칸이 재적재 때마다 조용히 지워진다(2026-09-14 N057 실패 클립 계기).
     #   ⇒ 명시한 칸만 덮어쓰는 UPSERT로 간다.
@@ -149,7 +162,9 @@ def main():
         f"INSERT INTO suno_sp_emissions ({','.join(cols)},ingested_at) "
         f"VALUES ({','.join('?' * len(cols))},?) "
         f"ON CONFLICT(clip_uuid) DO UPDATE SET "
-        + ','.join(f"{k}=excluded.{k}" for k in cols if k != 'clip_uuid') + ",ingested_at=excluded.ingested_at",
+        + ','.join(
+            (f"{k}=COALESCE(excluded.{k},suno_sp_emissions.{k})" if k in KEEP else f"{k}=excluded.{k}")
+            for k in cols if k != 'clip_uuid') + ",ingested_at=excluded.ingested_at",
         [[r[k] for k in cols] + [now] for r in rs])
     c.commit()
     n = c.execute('select count(*) from suno_sp_emissions').fetchone()[0]
@@ -165,7 +180,11 @@ def main():
     # ★외부 유래 칸이 재적재에 살아남았는지 본다(보존 통제)
     kept = c.execute("select count(*) from suno_sp_emissions where clip_status is not null").fetchone()[0]
     nul = c.execute("select count(*) from suno_sp_emissions where clip_status is null").fetchone()[0]
-    print(f"   보존통제(clip_status): 값 있는 행 {kept} 보존 · ⚠NULL {nul}행은 «미측정»이지 「정상」이 아니다")
+    bad = c.execute("select count(*) from suno_sp_emissions "
+                    "where clip_status is not null and clip_status!='complete'").fetchone()[0]
+    print(f"   보존통제(clip_status): 값 있는 행 {kept}(그중 complete 아님 {bad}) · "
+          f"⚠NULL {nul}행은 «미측정»이지 「정상」이 아니다")
+    print("     ★경계 2026-09-14T16:30:13(새 워커분부터) · ⚠경계 이후에도 옛 워커분은 키가 없다")
     if not ok:
         sys.exit(1)
 
