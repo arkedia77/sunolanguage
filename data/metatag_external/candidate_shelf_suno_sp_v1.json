@@ -10,17 +10,17 @@
  "대장_등급": "A_관측(우리 실측·출력 문자열 전수) — ⛔단 **채널이 코퍼스와 다르므로 승격 자격은 별건**이다.",
  "승격_규칙": "⛔이 스크립트는 승격을 하지 않는다. expr_*·사전·커넥터 반영은 **오너 결재 + 채널 정의 확정** 뒤에만.",
  "분모": {
-  "재작성 클립": 1053,
+  "재작성 클립": 1164,
   "버킷": {
    "V4": 377,
    "V2": 344,
    "V1": 2,
-   "V3": 330
+   "V3": 441
   },
   "★주": "V0은 분모에 없다 — Variety 0에서 수노는 우리 SP를 그대로 돌려주므로 재작성이 구조적으로 0이다."
  },
  "미등재_낱말": {
-  "고유 종수": 362,
+  "고유 종수": 389,
   "★자_한정자": "「미등재」는 대상의 성질이 아니라 **내 대조기의 출력**이다. 기능어 제외·하이픈 접기 후의 수이며, 첫 측정에서 이 둘을 안 했을 때는 739였다(→342→현재). 인용 시 **대조 규칙을 함께** 적을 것.",
   "⛔비영어_주의": "V4 상위가 프랑스어(avec·guitare·voix·batterie)인데 이는 기존 「비영어 재작성」 항목이지 **신어가 아니다.**",
   "항목": [
@@ -64,11 +64,11 @@
    },
    {
     "표기": "clipped",
-    "클립수": 38,
+    "클립수": 42,
     "버킷": {
      "V4": 3,
      "V2": 11,
-     "V3": 24
+     "V3": 28
     },
     "배치": [
      "N021",
@@ -86,7 +86,10 @@
      "N071",
      "N072",
      "N073",
-     "N074"
+     "N074",
+     "N076",
+     "N078",
+     "N085"
     ],
     "예문": [
      "PM C-minor boom bap, low spoken male vocal recited like a film narrator through clipped pauses, dusty refracted piano loop, bowed 808 gli",
@@ -119,10 +122,10 @@
    },
    {
     "표기": "sway",
-    "클립수": 18,
+    "클립수": 23,
     "버킷": {
      "V2": 5,
-     "V3": 13
+     "V3": 18
     },
     "배치": [
      "N042",
@@ -137,11 +140,60 @@
      "N067",
      "N069",
      "N070",
-     "N075"
+     "N075",
+     "N076",
+     "N077",
+     "N079",
+     "N080"
     ],
     "예문": [
      "acted through a slow halo pedal, soft kick pulses drawn from a minimal waltting sway, spacious long reverb tails and restrained room d",
      "ft upright bass root notes, brushed snare and soft kick, unhurried quarter-note sway at 90 BPM in A Major, 4/4"
+    ]
+   },
+   {
+    "표기": "silences",
+    "클립수": 13,
+    "버킷": {
+     "V2": 2,
+     "V3": 11
+    },
+    "배치": [
+     "N052",
+     "N055",
+     "N059",
+     "N062",
+     "N066",
+     "N071",
+     "N077",
+     "N078"
+    ],
+    "예문": [
+     "피아노 발라드, soft-pedal grand piano with wide voicings and long silences, cello entering only in the bridge, natural room",
+     "hestral framing widens the last section, deep room reverb, long sustain, sparse silences, gradual dissolving into the piano"
+    ]
+   },
+   {
+    "표기": "adventurous",
+    "클립수": 13,
+    "버킷": {
+     "V3": 13
+    },
+    "배치": [
+     "N061",
+     "N063",
+     "N065",
+     "N073",
+     "N074",
+     "N075",
+     "N077",
+     "N078",
+     "N080",
+     "N085"
+    ],
+    "예문": [
+     "Korean indie pop, bright open mix with lightly adventurous stereo movement and subtle tape saturation, 116 B",
+     "Korean funk, bright clipped male vocal in Korean with stacked harmonies, adventurous syncopated 114 BPM four-on-the-floor pocket in F"
     ]
    },
    {
@@ -185,7 +237,7 @@
     ]
    },
    {
-    "표기": "silences",
+    "표기": "thinning",
     "클립수": 10,
     "버킷": {
      "V2": 2,
@@ -193,15 +245,16 @@
     },
     "배치": [
      "N052",
-     "N055",
+     "N053",
      "N059",
-     "N062",
-     "N066",
-     "N071"
+     "N063",
+     "N070",
+     "N076",
+     "N077"
     ],
     "예문": [
-     "피아노 발라드, soft-pedal grand piano with wide voicings and long silences, cello entering only in the bridge, natural room",
-     "hestral framing widens the last section, deep room reverb, long sustain, sparse silences, gradual dissolving into the piano"
+     "pocket, F Major, light vinyl crackle, gentle compression, small intimate room, thinning guitar and swelling pad at the bridge",
+     "rasing, stacked quiet harmonies, tape saturation, round close-room compression, thinning bridge and trailing Rhodes ad-libs"
     ]
    },
    {
@@ -245,6 +298,29 @@
     "예문": [
      "arrangement pivots sharply between restrained verses, brass-punctuated choru",
      "ht conversational male vocal with light harmonies, intimate verses opening into sharply timed repeated choruses"
+    ]
+   },
+   {
+    "표기": "midrange",
+    "클립수": 8,
+    "버킷": {
+     "V4": 1,
+     "V2": 1,
+     "V3": 6
+    },
+    "배치": [
+     "N039",
+     "N043",
+     "N064",
+     "N065",
+     "N067",
+     "N068",
+     "N071",
+     "N078"
+    ],
+    "예문": [
+     "slap electric bass and muted guitar scratches lead clipped androgynous midrange funk vocals, with warm extended electric-piano ch",
+     "Androgynous midrange lead with rhythmic phrasing and bright ad-libs, d"
     ]
    },
    {
@@ -306,28 +382,6 @@
     ]
    },
    {
-    "표기": "midrange",
-    "클립수": 7,
-    "버킷": {
-     "V4": 1,
-     "V2": 1,
-     "V3": 5
-    },
-    "배치": [
-     "N039",
-     "N043",
-     "N064",
-     "N065",
-     "N067",
-     "N068",
-     "N071"
-    ],
-    "예문": [
-     "slap electric bass and muted guitar scratches lead clipped androgynous midrange funk vocals, with warm extended electric-piano ch",
-     "Androgynous midrange lead with rhythmic phrasing and bright ad-libs, d"
-    ]
-   },
-   {
     "표기": "nocturne",
     "클립수": 7,
     "버킷": {
@@ -345,41 +399,40 @@
     ]
    },
    {
-    "표기": "thinning",
-    "클립수": 7,
-    "버킷": {
-     "V2": 2,
-     "V3": 5
-    },
-    "배치": [
-     "N052",
-     "N053",
-     "N059",
-     "N063",
-     "N070"
-    ],
-    "예문": [
-     "pocket, F Major, light vinyl crackle, gentle compression, small intimate room, thinning guitar and swelling pad at the bridge",
-     "rasing, stacked quiet harmonies, tape saturation, round close-room compression, thinning bridge and trailing Rhodes ad-libs"
-    ]
-   },
-   {
-    "표기": "adventurous",
+    "표기": "stepping",
     "클립수": 7,
     "버킷": {
      "V3": 7
     },
     "배치": [
-     "N061",
-     "N063",
-     "N065",
-     "N073",
-     "N074",
-     "N075"
+     "N067",
+     "N068",
+     "N077",
+     "N085"
     ],
     "예문": [
-     "Korean indie pop, bright open mix with lightly adventurous stereo movement and subtle tape saturation, 116 B",
-     "Korean funk, bright clipped male vocal in Korean with stacked harmonies, adventurous syncopated 114 BPM four-on-the-floor pocket in F"
+     "Soul ballad in G Minor, warm sustained electric piano chords, slowly stepping electric bass, brushed snare and quiet closed hi-",
+     "ng into final-chorus harmonies, G-minor electric piano sustained chords, slowly stepping electric bass, brushed snare and quiet closed hi-"
+    ]
+   },
+   {
+    "표기": "tracing",
+    "클립수": 6,
+    "버킷": {
+     "V4": 3,
+     "V3": 3
+    },
+    "배치": [
+     "N021",
+     "N034",
+     "N039",
+     "N076",
+     "N077",
+     "N079"
+    ],
+    "예문": [
+     "mple right-hand motif, synth pad beneath the verses, warm rounded electric bass tracing the soft kick at each chorus, brushed snare, clea",
+     "arpeggios with light chorus and delay, melodic clean-guitar fills, rounded bass tracing the kick, crisp snare and tight hi-hats, chorus s"
     ]
    },
    {
@@ -421,6 +474,25 @@
     ]
    },
    {
+    "표기": "softened",
+    "클립수": 6,
+    "버킷": {
+     "V2": 2,
+     "V3": 4
+    },
+    "배치": [
+     "N051",
+     "N055",
+     "N062",
+     "N065",
+     "N077"
+    ],
+    "예문": [
+     "register, Rhodes answering the crackle-encased drums, restrained brushed swing, softened 808 pulses, tape saturation, sparse bridge isolat",
+     "ing beneath slow electric bass, breathy female Korean vocal with tight doubles, softened muffled kick, dry snare and clipped hats, hazy sl"
+    ]
+   },
+   {
     "표기": "inverted",
     "클립수": 6,
     "버킷": {
@@ -436,7 +508,7 @@
     ]
    },
    {
-    "표기": "et",
+    "표기": "superpos",
     "클립수": 5,
     "버킷": {
      "V4": 5
@@ -448,10 +520,22 @@
      "N025",
      "N037"
     ],
-    "예문": [
-     "e électrique en marches syncopées avec glissés, batterie feutrée au cross-stick et charley fermé, guitare claire en arpèges discrets",
-     "basse électrique mélodique en glissés syncopés, batterie douce avec cross-stick et charlestons fermés, guitare claire en arpèges dis"
-    ]
+    "예문": []
+   },
+   {
+    "표기": "lectrique",
+    "클립수": 5,
+    "버킷": {
+     "V4": 5
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N023",
+     "N025",
+     "N037"
+    ],
+    "예문": []
    },
    {
     "표기": "voix",
@@ -472,6 +556,75 @@
     ]
    },
    {
+    "표기": "en",
+    "클립수": 5,
+    "버킷": {
+     "V4": 5
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N023",
+     "N025",
+     "N037"
+    ],
+    "예문": [
+     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccor",
+     "Neo-soul coréen à 78 BPM en La mineur, groove 4/4 détendu"
+    ]
+   },
+   {
+    "표기": "claire",
+    "클립수": 5,
+    "버킷": {
+     "V4": 5
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N023",
+     "N025",
+     "N037"
+    ],
+    "예문": [
+     "ncopées avec glissés, batterie feutrée au cross-stick et charley fermé, guitare claire en arpèges discrets, voix féminine soufflée en pr",
+     "lissés syncopés, batterie douce avec cross-stick et charlestons fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique"
+    ]
+   },
+   {
+    "표기": "cor",
+    "클립수": 5,
+    "버킷": {
+     "V4": 5
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N023",
+     "N025",
+     "N037"
+    ],
+    "예문": []
+   },
+   {
+    "표기": "et",
+    "클립수": 5,
+    "버킷": {
+     "V4": 5
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N023",
+     "N025",
+     "N037"
+    ],
+    "예문": [
+     "e électrique en marches syncopées avec glissés, batterie feutrée au cross-stick et charley fermé, guitare claire en arpèges discrets",
+     "basse électrique mélodique en glissés syncopés, batterie douce avec cross-stick et charlestons fermés, guitare claire en arpèges dis"
+    ]
+   },
+   {
     "표기": "batterie",
     "클립수": 5,
     "버킷": {
@@ -487,6 +640,24 @@
     "예문": [
      "ux accords étendus en tête, basse électrique en marches syncopées avec glissés, batterie feutrée au cross-stick et charley fermé, guitare",
      "étendus légèrement désaccordés, basse électrique mélodique en glissés syncopés, batterie douce avec cross-stick et charlestons fermés, gui"
+    ]
+   },
+   {
+    "표기": "basse",
+    "클립수": 5,
+    "버킷": {
+     "V4": 5
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N023",
+     "N025",
+     "N037"
+    ],
+    "예문": [
+     "i mineur, mesure 4/4, Rhodes légèrement désaccordé aux accords étendus en tête, basse électrique en marches syncopées avec glissés, bat",
+     "Rhodes aux accords étendus légèrement désaccordés, basse électrique mélodique en glissés syncopés, batteri"
     ]
    },
    {
@@ -526,106 +697,7 @@
     ]
    },
    {
-    "표기": "claire",
-    "클립수": 5,
-    "버킷": {
-     "V4": 5
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023",
-     "N025",
-     "N037"
-    ],
-    "예문": [
-     "ncopées avec glissés, batterie feutrée au cross-stick et charley fermé, guitare claire en arpèges discrets, voix féminine soufflée en pr",
-     "lissés syncopés, batterie douce avec cross-stick et charlestons fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique"
-    ]
-   },
-   {
-    "표기": "en",
-    "클립수": 5,
-    "버킷": {
-     "V4": 5
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023",
-     "N025",
-     "N037"
-    ],
-    "예문": [
-     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccor",
-     "Neo-soul coréen à 78 BPM en La mineur, groove 4/4 détendu"
-    ]
-   },
-   {
-    "표기": "cor",
-    "클립수": 5,
-    "버킷": {
-     "V4": 5
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "basse",
-    "클립수": 5,
-    "버킷": {
-     "V4": 5
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023",
-     "N025",
-     "N037"
-    ],
-    "예문": [
-     "i mineur, mesure 4/4, Rhodes légèrement désaccordé aux accords étendus en tête, basse électrique en marches syncopées avec glissés, bat",
-     "Rhodes aux accords étendus légèrement désaccordés, basse électrique mélodique en glissés syncopés, batteri"
-    ]
-   },
-   {
     "표기": "es",
-    "클립수": 5,
-    "버킷": {
-     "V4": 5
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "lectrique",
-    "클립수": 5,
-    "버킷": {
-     "V4": 5
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "superpos",
     "클립수": 5,
     "버킷": {
      "V4": 5
@@ -677,21 +749,22 @@
     ]
    },
    {
-    "표기": "softened",
+    "표기": "tightening",
     "클립수": 5,
     "버킷": {
-     "V2": 2,
+     "V4": 1,
+     "V2": 1,
      "V3": 3
     },
     "배치": [
-     "N051",
-     "N055",
-     "N062",
-     "N065"
+     "N022",
+     "N049",
+     "N060",
+     "N077"
     ],
     "예문": [
-     "register, Rhodes answering the crackle-encased drums, restrained brushed swing, softened 808 pulses, tape saturation, sparse bridge isolat",
-     "ing beneath slow electric bass, breathy female Korean vocal with tight doubles, softened muffled kick, dry snare and clipped hats, hazy sl"
+     "crash cymbals in the final chorus, slow strings on the bridge, quiet male vocal tightening into strained delivery, spacious mix with long de",
+     "tension in B♭ major at 128 BPM: angular clean-guitar ostinato, restrained bass tightening the 4/4 pulse, crisp snared backbeat, overdrained"
     ]
    },
    {
@@ -726,62 +799,6 @@
     ]
    },
    {
-    "표기": "arp",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "saccord",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "tendus",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "gliss",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
     "표기": "au",
     "클립수": 4,
     "버킷": {
@@ -799,7 +816,66 @@
     ]
    },
    {
-    "표기": "analogique",
+    "표기": "minine",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N025",
+     "N037"
+    ],
+    "예문": []
+   },
+   {
+    "표기": "arp",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N025",
+     "N037"
+    ],
+    "예문": []
+   },
+   {
+    "표기": "accords",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N025",
+     "N037"
+    ],
+    "예문": [
+     "soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé aux accords étendus en tête, basse électrique en marches sync",
+     "Rhodes aux accords étendus légèrement désaccordés, basse électrique"
+    ]
+   },
+   {
+    "표기": "tendus",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N025",
+     "N037"
+    ],
+    "예문": []
+   },
+   {
+    "표기": "l",
     "클립수": 4,
     "버킷": {
      "V4": 4
@@ -811,8 +887,24 @@
      "N025"
     ],
     "예문": [
-     "x refrains, interlude de trompette bouchée, réverbération de pièce, compression analogique chaude et crépitement vinyle très bas dans le mix",
-     "avec harmonies superposées au refrain, crépitement vinyle discret, compression analogique chaleureuse et réverbération de pièce"
+     "fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique durant l’interlude, voix féminine soufflée et proche du mi"
+    ]
+   },
+   {
+    "표기": "mineur",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N023",
+     "N037"
+    ],
+    "예문": [
+     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé aux acc",
+     "Neo-soul coréen à 78 BPM en La mineur, groove 4/4 détendu"
     ]
    },
    {
@@ -847,7 +939,66 @@
     ]
    },
    {
+    "표기": "souffl",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N025",
+     "N037"
+    ],
+    "예문": []
+   },
+   {
+    "표기": "analogique",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N023",
+     "N025"
+    ],
+    "예문": [
+     "x refrains, interlude de trompette bouchée, réverbération de pièce, compression analogique chaude et crépitement vinyle très bas dans le mix",
+     "avec harmonies superposées au refrain, crépitement vinyle discret, compression analogique chaleureuse et réverbération de pièce"
+    ]
+   },
+   {
     "표기": "syncop",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N025",
+     "N037"
+    ],
+    "예문": []
+   },
+   {
+    "표기": "saccord",
+    "클립수": 4,
+    "버킷": {
+     "V4": 4
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N025",
+     "N037"
+    ],
+    "예문": []
+   },
+   {
+    "표기": "gliss",
     "클립수": 4,
     "버킷": {
      "V4": 4
@@ -873,84 +1024,6 @@
      "N037"
     ],
     "예문": []
-   },
-   {
-    "표기": "l",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023",
-     "N025"
-    ],
-    "예문": [
-     "fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique durant l’interlude, voix féminine soufflée et proche du mi"
-    ]
-   },
-   {
-    "표기": "accords",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N025",
-     "N037"
-    ],
-    "예문": [
-     "soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé aux accords étendus en tête, basse électrique en marches sync",
-     "Rhodes aux accords étendus légèrement désaccordés, basse électrique"
-    ]
-   },
-   {
-    "표기": "minine",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "souffl",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N025",
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "mineur",
-    "클립수": 4,
-    "버킷": {
-     "V4": 4
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023",
-     "N037"
-    ],
-    "예문": [
-     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé aux acc",
-     "Neo-soul coréen à 78 BPM en La mineur, groove 4/4 détendu"
-    ]
    },
    {
     "표기": "douce",
@@ -1078,18 +1151,69 @@
     ]
    },
    {
-    "표기": "stepping",
+    "표기": "reduced",
+    "클립수": 4,
+    "버킷": {
+     "V2": 1,
+     "V3": 3
+    },
+    "배치": [
+     "N053",
+     "N072",
+     "N076"
+    ],
+    "예문": [
+     "ech close-miked with breathy ad-libs, light delay, steady dynamic space, bridge reduced to bare piano and crackle",
+     "in Verse 2, syncopated kick and snare with closed hi-hat, chorus claps, bridge reduced to kick and clap, groove cutting sharply on the d"
+    ]
+   },
+   {
+    "표기": "surging",
     "클립수": 4,
     "버킷": {
      "V3": 4
     },
     "배치": [
-     "N067",
-     "N068"
+     "N059",
+     "N071",
+     "N076"
     ],
     "예문": [
-     "Soul ballad in G Minor, warm sustained electric piano chords, slowly stepping electric bass, brushed snare and quiet closed hi-",
-     "ng into final-chorus harmonies, G-minor electric piano sustained chords, slowly stepping electric bass, brushed snare and quiet closed hi-"
+     "ean alternative rock, driving 130 BPM in 4/4, pressured male mid-register vocal surging to a doubled-harmony shout in the last chorus, F",
+     "Korean alternative rock, pressured male mid-register vocal surging to a doubled-harmony shout in the last chorus, de"
+    ]
+   },
+   {
+    "표기": "receding",
+    "클립수": 4,
+    "버킷": {
+     "V3": 4
+    },
+    "배치": [
+     "N060",
+     "N062",
+     "N071",
+     "N077"
+    ],
+    "예문": [
+     "ulse, slow-rooted bass, muffled kick opening into dry snare spikes, closed hats receding into haze, twenty-two stairs mapped as widening s",
+     "y female Korean doubles, muffled kick opening like distant thunder, closed hats receding beneath plate reverb and tape-delay smears, hazy"
+    ]
+   },
+   {
+    "표기": "kazoo",
+    "클립수": 4,
+    "버킷": {
+     "V3": 4
+    },
+    "배치": [
+     "N069",
+     "N076",
+     "N080"
+    ],
+    "예문": [
+     "lo-fi hip hop, soft rhodes loop and slow 808 bass with kazoo breakdown, low half-sung male vocal with short de",
+     "ctric bass, open backbeat drums and shaker, bright clean electric guitar lines, kazoo solo through overdrive guitar"
     ]
    },
    {
@@ -1108,20 +1232,17 @@
     ]
    },
    {
-    "표기": "tracing",
+    "표기": "verb",
     "클립수": 3,
     "버킷": {
      "V4": 3
     },
     "배치": [
      "N021",
-     "N034",
-     "N039"
+     "N022",
+     "N023"
     ],
-    "예문": [
-     "mple right-hand motif, synth pad beneath the verses, warm rounded electric bass tracing the soft kick at each chorus, brushed snare, clea",
-     "arpeggios with light chorus and delay, melodic clean-guitar fills, rounded bass tracing the kick, crisp snare and tight hi-hats, chorus s"
-    ]
+    "예문": []
    },
    {
     "표기": "pitement",
@@ -1150,6 +1271,22 @@
     "예문": []
    },
    {
+    "표기": "aux",
+    "클립수": 3,
+    "버킷": {
+     "V4": 3
+    },
+    "배치": [
+     "N021",
+     "N022",
+     "N025"
+    ],
+    "예문": [
+     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé aux accords étendus en tête, basse électrique en marc",
+     "Rhodes aux accords étendus légèrement désaccordés, basse éle"
+    ]
+   },
+   {
     "표기": "ce",
     "클립수": 3,
     "버킷": {
@@ -1176,35 +1313,6 @@
     "예문": []
    },
    {
-    "표기": "verb",
-    "클립수": 3,
-    "버킷": {
-     "V4": 3
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N023"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "aux",
-    "클립수": 3,
-    "버킷": {
-     "V4": 3
-    },
-    "배치": [
-     "N021",
-     "N022",
-     "N025"
-    ],
-    "예문": [
-     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé aux accords étendus en tête, basse électrique en marc",
-     "Rhodes aux accords étendus légèrement désaccordés, basse éle"
-    ]
-   },
-   {
     "표기": "pi",
     "클립수": 3,
     "버킷": {
@@ -1218,38 +1326,17 @@
     "예문": []
    },
    {
-    "표기": "tightening",
-    "클립수": 3,
-    "버킷": {
-     "V4": 1,
-     "V2": 1,
-     "V3": 1
-    },
-    "배치": [
-     "N022",
-     "N049",
-     "N060"
-    ],
-    "예문": [
-     "crash cymbals in the final chorus, slow strings on the bridge, quiet male vocal tightening into strained delivery, spacious mix with long de",
-     "tension in B♭ major at 128 BPM: angular clean-guitar ostinato, restrained bass tightening the 4/4 pulse, crisp snared backbeat, overdrained"
-    ]
-   },
-   {
-    "표기": "chaleureuse",
+    "표기": "lodique",
     "클립수": 3,
     "버킷": {
      "V4": 3
     },
     "배치": [
      "N022",
-     "N023",
-     "N025"
+     "N025",
+     "N037"
     ],
-    "예문": [
-     "nies superposées au refrain, crépitement vinyle discret, compression analogique chaleureuse et réverbération de pièce",
-     "nne douce au registre médium avec harmonies superposées, compression analogique chaleureuse, réverbération de pièce et mixage poli"
-    ]
+    "예문": []
    },
    {
     "표기": "proche",
@@ -1268,17 +1355,20 @@
     ]
    },
    {
-    "표기": "lodique",
+    "표기": "chaleureuse",
     "클립수": 3,
     "버킷": {
      "V4": 3
     },
     "배치": [
      "N022",
-     "N025",
-     "N037"
+     "N023",
+     "N025"
     ],
-    "예문": []
+    "예문": [
+     "nies superposées au refrain, crépitement vinyle discret, compression analogique chaleureuse et réverbération de pièce",
+     "nne douce au registre médium avec harmonies superposées, compression analogique chaleureuse, réverbération de pièce et mixage poli"
+    ]
    },
    {
     "표기": "tighten",
@@ -1310,6 +1400,23 @@
     "예문": [
      "hrases, second verse strings entering as suspended tremolo swells, minimal kick treated like distant heartbeats, wide asymmetric decay",
      "ing sustains widening into the final chorus, macroscopic plate reverb, silences treated as melodic fragments, and a clinical spaciousness"
+    ]
+   },
+   {
+    "표기": "young",
+    "클립수": 3,
+    "버킷": {
+     "V2": 1,
+     "V3": 2
+    },
+    "배치": [
+     "N041",
+     "N073",
+     "N077"
+    ],
+    "예문": [
+     "Korean indie folk, gentle walking pulse at 96 BPM, young male tenor in a warm low register with layered re",
+     "orused guitar harmonics and electric piano fills, smooth melodic electric bass, young male tenor with stacked octave harmonies in the c"
     ]
    },
    {
@@ -1429,22 +1536,6 @@
     ]
    },
    {
-    "표기": "reduced",
-    "클립수": 3,
-    "버킷": {
-     "V2": 1,
-     "V3": 2
-    },
-    "배치": [
-     "N053",
-     "N072"
-    ],
-    "예문": [
-     "ech close-miked with breathy ad-libs, light delay, steady dynamic space, bridge reduced to bare piano and crackle",
-     "in Verse 2, syncopated kick and snare with closed hi-hat, chorus claps, bridge reduced to kick and clap, groove cutting sharply on the d"
-    ]
-   },
-   {
     "표기": "staggered",
     "클립수": 3,
     "버킷": {
@@ -1459,37 +1550,6 @@
     "예문": [
      "synth pad, restrained bass muffled percussion, breathy female Korean vocal with staggered doubles, slow-attacking verses widening into a bl",
      "ramed as neo-barry experimental chamber funk: 114 BPM in C Major, swung through staggered metric phrasing, slap bass foregrounded, clipped"
-    ]
-   },
-   {
-    "표기": "surging",
-    "클립수": 3,
-    "버킷": {
-     "V3": 3
-    },
-    "배치": [
-     "N059",
-     "N071"
-    ],
-    "예문": [
-     "ean alternative rock, driving 130 BPM in 4/4, pressured male mid-register vocal surging to a doubled-harmony shout in the last chorus, F",
-     "Korean alternative rock, pressured male mid-register vocal surging to a doubled-harmony shout in the last chorus, de"
-    ]
-   },
-   {
-    "표기": "receding",
-    "클립수": 3,
-    "버킷": {
-     "V3": 3
-    },
-    "배치": [
-     "N060",
-     "N062",
-     "N071"
-    ],
-    "예문": [
-     "ulse, slow-rooted bass, muffled kick opening into dry snare spikes, closed hats receding into haze, twenty-two stairs mapped as widening s",
-     "y female Korean doubles, muffled kick opening like distant thunder, closed hats receding beneath plate reverb and tape-delay smears, hazy"
     ]
    },
    {
@@ -1555,6 +1615,22 @@
     ]
    },
    {
+    "표기": "unvarnished",
+    "클립수": 3,
+    "버킷": {
+     "V3": 3
+    },
+    "배치": [
+     "N072",
+     "N077",
+     "N078"
+    ],
+    "예문": [
+     ", steady 92 BPM 4/4 walking pulse in D Major, dry natural room reverb and close unvarnished recording",
+     "Korean indie folk, restrained 100 BPM pulse in 4/4, dry room reverb with close, unvarnished presence, plain male mid-register vocal in Korean"
+    ]
+   },
+   {
     "표기": "rement",
     "클립수": 2,
     "버킷": {
@@ -1565,21 +1641,6 @@
      "N022"
     ],
     "예문": []
-   },
-   {
-    "표기": "discrets",
-    "클립수": 2,
-    "버킷": {
-     "V4": 2
-    },
-    "배치": [
-     "N021",
-     "N022"
-    ],
-    "예문": [
-     "és, batterie feutrée au cross-stick et charley fermé, guitare claire en arpèges discrets, voix féminine soufflée en prise rapprochée avec",
-     "atterie douce avec cross-stick et charlestons fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique durant l’interlude,"
-    ]
    },
    {
     "표기": "dans",
@@ -1607,6 +1668,37 @@
      "N037"
     ],
     "예문": []
+   },
+   {
+    "표기": "discrets",
+    "클립수": 2,
+    "버킷": {
+     "V4": 2
+    },
+    "배치": [
+     "N021",
+     "N022"
+    ],
+    "예문": [
+     "és, batterie feutrée au cross-stick et charley fermé, guitare claire en arpèges discrets, voix féminine soufflée en prise rapprochée avec",
+     "atterie douce avec cross-stick et charlestons fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique durant l’interlude,"
+    ]
+   },
+   {
+    "표기": "forceful",
+    "클립수": 2,
+    "버킷": {
+     "V4": 1,
+     "V3": 1
+    },
+    "배치": [
+     "N022",
+     "N078"
+    ],
+    "예문": [
+     "acked in choruses, room-reverberant drums, restrained dark verses rising into a forceful chorus and ringing distorted-guitar stop",
+     "Korean alternative rock, forceful high male tenor with shouted backing vocals, drum"
+    ]
    },
    {
     "표기": "discret",
@@ -1639,6 +1731,18 @@
     ]
    },
    {
+    "표기": "ger",
+    "클립수": 2,
+    "버킷": {
+     "V4": 2
+    },
+    "배치": [
+     "N023",
+     "N025"
+    ],
+    "예문": []
+   },
+   {
     "표기": "mol",
     "클립수": 2,
     "버킷": {
@@ -1666,18 +1770,6 @@
     ]
    },
    {
-    "표기": "ger",
-    "클립수": 2,
-    "버킷": {
-     "V4": 2
-    },
-    "배치": [
-     "N023",
-     "N025"
-    ],
-    "예문": []
-   },
-   {
     "표기": "weathered",
     "클립수": 2,
     "버킷": {
@@ -1694,21 +1786,6 @@
     ]
    },
    {
-    "표기": "mesures",
-    "클립수": 2,
-    "버킷": {
-     "V4": 2
-    },
-    "배치": [
-     "N025",
-     "N037"
-    ],
-    "예문": [
-     "eys fermés, guitare claire en arpèges, saxophone mélodique en interlude de huit mesures, léger crépitement vinyle et compression analogiq",
-     "ière-plan, harmonies vocales superposées, interlude saxophone mélodique de huit mesures, craquement vinyle discret dans un mix chaleureux"
-    ]
-   },
-   {
     "표기": "charleys",
     "클립수": 2,
     "버킷": {
@@ -1721,6 +1798,21 @@
     "예문": [
      "ds étendus, basse électrique syncopée et glissée, batterie douce cross-stick et charleys fermés, guitare claire en arpèges, saxophone mélo",
      "en glissés syncopés, batterie douce avec grosse caisse feutrée, cross-stick et charleys fermés, arpèges de guitare électrique claire en a"
+    ]
+   },
+   {
+    "표기": "mesures",
+    "클립수": 2,
+    "버킷": {
+     "V4": 2
+    },
+    "배치": [
+     "N025",
+     "N037"
+    ],
+    "예문": [
+     "eys fermés, guitare claire en arpèges, saxophone mélodique en interlude de huit mesures, léger crépitement vinyle et compression analogiq",
+     "ière-plan, harmonies vocales superposées, interlude saxophone mélodique de huit mesures, craquement vinyle discret dans un mix chaleureux"
     ]
    },
    {
@@ -1794,6 +1886,38 @@
     "예문": [
      "warm analog compression and room reverb shape the changing family kimchi-making ritual, while b",
      "room reverb and warm analog compression shape a steady, nostalgic reunion groove"
+    ]
+   },
+   {
+    "표기": "prelude",
+    "클립수": 2,
+    "버킷": {
+     "V4": 1,
+     "V3": 1
+    },
+    "배치": [
+     "N030",
+     "N079"
+    ],
+    "예문": [
+     "ternative rock in D Minor at 132 BPM, 4/4: a four-minute instrumental bird-song prelude gradually acquires distant room ambience before p",
+     "backing vocals entering on the final chorus, four-minute bird-song instrumental prelude flowing into live room reverb, unhurried 76 BPM i"
+    ]
+   },
+   {
+    "표기": "thunderstorm",
+    "클립수": 2,
+    "버킷": {
+     "V4": 1,
+     "V3": 1
+    },
+    "배치": [
+     "N030",
+     "N076"
+    ],
+    "예문": [
+     "thunderstorm field recordings and lo-fi beat grit sit beneath",
+     "s, walking upright bass and backbeat tambourine, steady 112 BPM 4/4 in D Major, thunderstorm field recordings blended with lo-fi beat textures"
     ]
    },
    {
@@ -1874,22 +1998,6 @@
     "예문": [
      "with light double tracking, bright EQ and a restrained studio mix that lets the remembered shop feel gradually disappear",
      "sponse, upright bass carried in gentle long phrases, glockenspiel entering like remembered dust in the chorus, spacious natural room reverb,"
-    ]
-   },
-   {
-    "표기": "young",
-    "클립수": 2,
-    "버킷": {
-     "V2": 1,
-     "V3": 1
-    },
-    "배치": [
-     "N041",
-     "N073"
-    ],
-    "예문": [
-     "Korean indie folk, gentle walking pulse at 96 BPM, young male tenor in a warm low register with layered re",
-     "orused guitar harmonics and electric piano fills, smooth melodic electric bass, young male tenor with stacked octave harmonies in the c"
     ]
    },
    {
@@ -2073,6 +2181,21 @@
     ]
    },
    {
+    "표기": "opera",
+    "클립수": 2,
+    "버킷": {
+     "V3": 2
+    },
+    "배치": [
+     "N060",
+     "N079"
+    ],
+    "예문": [
+     "Cinematic Korean chamber ballad reframed as nocturnal minimal opera: F minor at 64 BPM, grand piano reframed through",
+     "rained vocal-cord belts and short backing answers, drunken-master sway, sampled opera vocal woven through the hook"
+    ]
+   },
+   {
     "표기": "fracturing",
     "클립수": 2,
     "버킷": {
@@ -2160,20 +2283,6 @@
     ]
    },
    {
-    "표기": "kazoo",
-    "클립수": 2,
-    "버킷": {
-     "V3": 2
-    },
-    "배치": [
-     "N069"
-    ],
-    "예문": [
-     "lo-fi hip hop, soft rhodes loop and slow 808 bass with kazoo breakdown, low half-sung male vocal with short de",
-     "ctric bass, open backbeat drums and shaker, bright clean electric guitar lines, kazoo solo through overdrive guitar"
-    ]
-   },
-   {
     "표기": "slicing",
     "클립수": 2,
     "버킷": {
@@ -2185,6 +2294,21 @@
     "예문": [
      "electric bass, high strained male vocal shouting the Korean hook, clean guitar slicing the pre-chorus, tight drums with snappy snare and",
      "note electric bass, tight drums with snappy snare and busy hi-hat, clean guitar slicing the pre-chorus, half-time bridge, dead-beat outro"
+    ]
+   },
+   {
+    "표기": "subby",
+    "클립수": 2,
+    "버킷": {
+     "V3": 2
+    },
+    "배치": [
+     "N072",
+     "N077"
+    ],
+    "예문": [
+     "Wurlitzer electric piano playing lush extended chords, subby analog synthesizer, sliding electric bass, soft k",
+     "Rhodes piano with lazy spread chords, subby sine bass, muted trumpet accents, brushed drums,"
     ]
    },
    {
@@ -2202,6 +2326,80 @@
     ]
    },
    {
+    "표기": "gregorian",
+    "클립수": 2,
+    "버킷": {
+     "V3": 2
+    },
+    "배치": [
+     "N073",
+     "N077"
+    ],
+    "예문": [
+     "ballad, 74 BPM in 4/4, low warm male Korean vocal with restrained phrasing and Gregorian chant backing, warm sustained electric piano as f",
+     "Korean alt R&B, dark mix with plate reverb and distant Gregorian chant backing, controlled male low-register vocal"
+    ]
+   },
+   {
+    "표기": "overdubs",
+    "클립수": 2,
+    "버킷": {
+     "V3": 2
+    },
+    "배치": [
+     "N074",
+     "N077"
+    ],
+    "예문": [
+     "Korean bedroom pop, close dry overdubs, casual male mid-register lead with doubled choru",
+     "tional mid-register delivery and chorus-doubling backing vocals, layered guitar overdubs with live room reverb, clean electric guitar open"
+    ]
+   },
+   {
+    "표기": "plainly",
+    "클립수": 2,
+    "버킷": {
+     "V3": 2
+    },
+    "배치": [
+     "N076",
+     "N085"
+    ],
+    "예문": [
+     "with plate reverb only on the vocal, mid-register female Korean vocal delivered plainly in the verses with stacked harmonies blooming acr",
+     "bleed and restrained tape saturation, male mid-register Korean vocal delivered plainly and close-mic with backing vocals doubling the fi"
+    ]
+   },
+   {
+    "표기": "nimble",
+    "클립수": 2,
+    "버킷": {
+     "V3": 2
+    },
+    "배치": [
+     "N077",
+     "N085"
+    ],
+    "예문": [
+     "clean electric guitar and nimble electric bass in the verses, distorted guitar dri",
+     "ously strummed acoustic guitar leading, mandolin answering each vocal line with nimble counterphrases, walking upright bass, crisp offbe"
+    ]
+   },
+   {
+    "표기": "interline",
+    "클립수": 2,
+    "버킷": {
+     "V3": 2
+    },
+    "배치": [
+     "N078"
+    ],
+    "예문": [
+     "ate reverb around soft repeated electric-piano chords and clean electric-guitar interline figures, simple electric bass, shaker with a ligh",
+     "Korean indie pop: soft repeated electric-piano chords, clean electric-guitar interline figure, simple electric bass, shaker and light ki"
+    ]
+   },
+   {
     "표기": "mids",
     "클립수": 1,
     "버킷": {
@@ -2212,130 +2410,6 @@
     ],
     "예문": [
      "uble tracking, handclaps in the final chorus, bright modern EQ with clear upper mids, tight compression and wide clean stereo producti"
-    ]
-   },
-   {
-    "표기": "mesure",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": [
-     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé aux accords éte"
-    ]
-   },
-   {
-    "표기": "prise",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": [
-     "et charley fermé, guitare claire en arpèges discrets, voix féminine soufflée en prise rapprochée avec harmonies superposées aux refrain"
-    ]
-   },
-   {
-    "표기": "bouch",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "trompette",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": [
-     "fflée en prise rapprochée avec harmonies superposées aux refrains, interlude de trompette bouchée, réverbération de pièce, compression anal"
-    ]
-   },
-   {
-    "표기": "t",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "marches",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": [
-     ", Rhodes légèrement désaccordé aux accords étendus en tête, basse électrique en marches syncopées avec glissés, batterie feutrée au cross"
-    ]
-   },
-   {
-    "표기": "te",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "mi",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": [
-     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé"
-    ]
-   },
-   {
-    "표기": "charley",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": [
-     "lectrique en marches syncopées avec glissés, batterie feutrée au cross-stick et charley fermé, guitare claire en arpèges discrets, voix f"
-    ]
-   },
-   {
-    "표기": "chaude",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N021"
-    ],
-    "예문": [
-     "interlude de trompette bouchée, réverbération de pièce, compression analogique chaude et crépitement vinyle très bas dans le mix"
     ]
    },
    {
@@ -2352,6 +2426,69 @@
     ]
    },
    {
+    "표기": "charley",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": [
+     "lectrique en marches syncopées avec glissés, batterie feutrée au cross-stick et charley fermé, guitare claire en arpèges discrets, voix f"
+    ]
+   },
+   {
+    "표기": "te",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": []
+   },
+   {
+    "표기": "mesure",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": [
+     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé aux accords éte"
+    ]
+   },
+   {
+    "표기": "chaude",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": [
+     "interlude de trompette bouchée, réverbération de pièce, compression analogique chaude et crépitement vinyle très bas dans le mix"
+    ]
+   },
+   {
+    "표기": "prise",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": [
+     "et charley fermé, guitare claire en arpèges discrets, voix féminine soufflée en prise rapprochée avec harmonies superposées aux refrain"
+    ]
+   },
+   {
     "표기": "le",
     "클립수": 1,
     "버킷": {
@@ -2365,7 +2502,46 @@
     ]
    },
    {
-    "표기": "rapproch",
+    "표기": "trompette",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": [
+     "fflée en prise rapprochée avec harmonies superposées aux refrains, interlude de trompette bouchée, réverbération de pièce, compression anal"
+    ]
+   },
+   {
+    "표기": "marches",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": [
+     ", Rhodes légèrement désaccordé aux accords étendus en tête, basse électrique en marches syncopées avec glissés, batterie feutrée au cross"
+    ]
+   },
+   {
+    "표기": "mi",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": [
+     "neo-soul coréen à 84 BPM en mi mineur, mesure 4/4, Rhodes légèrement désaccordé"
+    ]
+   },
+   {
+    "표기": "t",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2376,7 +2552,7 @@
     "예문": []
    },
    {
-    "표기": "recited",
+    "표기": "bouch",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2384,9 +2560,18 @@
     "배치": [
      "N021"
     ],
-    "예문": [
-     "orean noir cabaret chamber-jazz: 88 BPM C-minor boom bap, low spoken male vocal recited like a film narrator through clipped pauses, dust"
-    ]
+    "예문": []
+   },
+   {
+    "표기": "rapproch",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": []
    },
    {
     "표기": "cabaret",
@@ -2402,7 +2587,7 @@
     ]
    },
    {
-    "표기": "narrator",
+    "표기": "recited",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2411,7 +2596,7 @@
      "N021"
     ],
     "예문": [
-     "hamber-jazz: 88 BPM C-minor boom bap, low spoken male vocal recited like a film narrator through clipped pauses, dusty refracted piano loo"
+     "orean noir cabaret chamber-jazz: 88 BPM C-minor boom bap, low spoken male vocal recited like a film narrator through clipped pauses, dust"
     ]
    },
    {
@@ -2425,6 +2610,19 @@
     ],
     "예문": [
      "timate dry vocal with faint theatrical room reverb, synth pad held as suspended backlight"
+    ]
+   },
+   {
+    "표기": "narrator",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N021"
+    ],
+    "예문": [
+     "hamber-jazz: 88 BPM C-minor boom bap, low spoken male vocal recited like a film narrator through clipped pauses, dusty refracted piano loo"
     ]
    },
    {
@@ -2454,19 +2652,6 @@
     ]
    },
    {
-    "표기": "forceful",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N022"
-    ],
-    "예문": [
-     "acked in choruses, room-reverberant drums, restrained dark verses rising into a forceful chorus and ringing distorted-guitar stop"
-    ]
-   },
-   {
     "표기": "tendu",
     "클립수": 1,
     "버킷": {
@@ -2478,7 +2663,7 @@
     "예문": []
    },
    {
-    "표기": "ligne",
+    "표기": "durant",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2487,7 +2672,7 @@
      "N022"
     ],
     "예문": [
-     "s-stick et charlestons fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique durant l’interlude, voix féminine souff"
+     "estons fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique durant l’interlude, voix féminine soufflée et proche du"
     ]
    },
    {
@@ -2504,7 +2689,7 @@
     ]
    },
    {
-    "표기": "durant",
+    "표기": "ligne",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2513,7 +2698,7 @@
      "N022"
     ],
     "예문": [
-     "estons fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique durant l’interlude, voix féminine soufflée et proche du"
+     "s-stick et charlestons fermés, guitare claire en arpèges discrets, saxophone en ligne mélodique durant l’interlude, voix féminine souff"
     ]
    },
    {
@@ -2530,19 +2715,6 @@
     ]
    },
    {
-    "표기": "accelerate",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N023"
-    ],
-    "예문": [
-     "at 138 BPM in G Major and 4/4, bright clean-guitar arpeggios with light chorus accelerate into distorted open power chords"
-    ]
-   },
-   {
     "표기": "are",
     "클립수": 1,
     "버킷": {
@@ -2556,7 +2728,7 @@
     ]
    },
    {
-    "표기": "cuivres",
+    "표기": "accelerate",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2565,11 +2737,24 @@
      "N023"
     ],
     "예문": [
-     "emps et léger chorus, basse slap, batterie serrée, piano électrique chaleureux, cuivres en accents au refrain, voix masculine coréenne do"
+     "at 138 BPM in G Major and 4/4, bright clean-guitar arpeggios with light chorus accelerate into distorted open power chords"
     ]
    },
    {
-    "표기": "dium",
+    "표기": "poli",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N023"
+    ],
+    "예문": [
+     "perposées, compression analogique chaleureuse, réverbération de pièce et mixage poli"
+    ]
+   },
+   {
+    "표기": "serr",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2591,7 +2776,20 @@
     "예문": []
    },
    {
-    "표기": "serr",
+    "표기": "masculine",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N023"
+    ],
+    "예문": [
+     "tterie serrée, piano électrique chaleureux, cuivres en accents au refrain, voix masculine coréenne douce au registre médium avec harmonies"
+    ]
+   },
+   {
+    "표기": "dium",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2600,6 +2798,19 @@
      "N023"
     ],
     "예문": []
+   },
+   {
+    "표기": "cuivres",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N023"
+    ],
+    "예문": [
+     "emps et léger chorus, basse slap, batterie serrée, piano électrique chaleureux, cuivres en accents au refrain, voix masculine coréenne do"
+    ]
    },
    {
     "표기": "contretemps",
@@ -2625,32 +2836,6 @@
     ],
     "예문": [
      "que chaleureux, cuivres en accents au refrain, voix masculine coréenne douce au registre médium avec harmonies superposées, compression an"
-    ]
-   },
-   {
-    "표기": "masculine",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N023"
-    ],
-    "예문": [
-     "tterie serrée, piano électrique chaleureux, cuivres en accents au refrain, voix masculine coréenne douce au registre médium avec harmonies"
-    ]
-   },
-   {
-    "표기": "poli",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N023"
-    ],
-    "예문": [
-     "perposées, compression analogique chaleureuse, réverbération de pièce et mixage poli"
     ]
    },
    {
@@ -2769,19 +2954,6 @@
     ]
    },
    {
-    "표기": "overnight",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N027"
-    ],
-    "예문": [
-     "in choruses, bright EQ and room-reverbed drums, shaped as a quietly uneventful overnight duty log with repeated hourly entries, eight iden"
-    ]
-   },
-   {
     "표기": "interruption",
     "클립수": 1,
     "버킷": {
@@ -2808,16 +2980,16 @@
     ]
    },
    {
-    "표기": "quantities",
+    "표기": "overnight",
     "클립수": 1,
     "버킷": {
      "V4": 1
     },
     "배치": [
-     "N028"
+     "N027"
     ],
     "예문": [
-     "let the arrangement tighten around the changing kimchi quantities, then cut brass and slap bass together in the out"
+     "in choruses, bright EQ and room-reverbed drums, shaped as a quietly uneventful overnight duty log with repeated hourly entries, eight iden"
     ]
    },
    {
@@ -2831,6 +3003,19 @@
     ],
     "예문": [
      "let the arrangement tighten around the changing kimch"
+    ]
+   },
+   {
+    "표기": "quantities",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N028"
+    ],
+    "예문": [
+     "let the arrangement tighten around the changing kimchi quantities, then cut brass and slap bass together in the out"
     ]
    },
    {
@@ -2883,32 +3068,6 @@
     ],
     "예문": [
      "D Minor at 132 BPM, 4/4: a four-minute instrumental bird-song prelude gradually acquires distant room ambience before palm-muted distorted"
-    ]
-   },
-   {
-    "표기": "prelude",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N030"
-    ],
-    "예문": [
-     "ternative rock in D Minor at 132 BPM, 4/4: a four-minute instrumental bird-song prelude gradually acquires distant room ambience before p"
-    ]
-   },
-   {
-    "표기": "thunderstorm",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N030"
-    ],
-    "예문": [
-     "thunderstorm field recordings and lo-fi beat grit sit beneath"
     ]
    },
    {
@@ -2977,7 +3136,7 @@
     ]
    },
    {
-    "표기": "recital",
+    "표기": "snaretight",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -2986,7 +3145,7 @@
      "N035"
     ],
     "예문": [
-     "vocal in A Major at 112 BPM, conversational but framed like a whispered chamber recital, clean electric-guitar arpeggios reframed as harp"
+     "med as harp-like polyrhythms, rounded bass clipped to a brushed backbeat, crisp snaretight hats, muted chorus swell with pad refracting as c"
     ]
    },
    {
@@ -3016,7 +3175,7 @@
     ]
    },
    {
-    "표기": "snaretight",
+    "표기": "recital",
     "클립수": 1,
     "버킷": {
      "V4": 1
@@ -3025,7 +3184,7 @@
      "N035"
     ],
     "예문": [
-     "med as harp-like polyrhythms, rounded bass clipped to a brushed backbeat, crisp snaretight hats, muted chorus swell with pad refracting as c"
+     "vocal in A Major at 112 BPM, conversational but framed like a whispered chamber recital, clean electric-guitar arpeggios reframed as harp"
     ]
    },
    {
@@ -3042,19 +3201,6 @@
     ]
    },
    {
-    "표기": "smoothie",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N035"
-    ],
-    "예문": [
-     "with light chorus and room reverb, blended with a rhythmic field recording of a smoothie blender"
-    ]
-   },
-   {
     "표기": "blender",
     "클립수": 1,
     "버킷": {
@@ -3068,66 +3214,16 @@
     ]
    },
    {
-    "표기": "caisse",
+    "표기": "smoothie",
     "클립수": 1,
     "버킷": {
      "V4": 1
     },
     "배치": [
-     "N037"
+     "N035"
     ],
     "예문": [
-     "dus, basse électrique mélodique en glissés syncopés, batterie douce avec grosse caisse feutrée, cross-stick et charleys fermés, arpèges"
-    ]
-   },
-   {
-    "표기": "arri",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N037"
-    ],
-    "예문": []
-   },
-   {
-    "표기": "grosse",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N037"
-    ],
-    "예문": [
-     "ds étendus, basse électrique mélodique en glissés syncopés, batterie douce avec grosse caisse feutrée, cross-stick et charleys fermés, a"
-    ]
-   },
-   {
-    "표기": "chaud",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N037"
-    ],
-    "예문": [
-     "r, groove 4/4 nonchalant avec voix féminine soufflée et proche du micro, Rhodes chaud et désaccordé sur accords étendus, basse électriq"
-    ]
-   },
-   {
-    "표기": "vocales",
-    "클립수": 1,
-    "버킷": {
-     "V4": 1
-    },
-    "배치": [
-     "N037"
-    ],
-    "예문": [
-     "harleys fermés, arpèges de guitare électrique claire en arrière-plan, harmonies vocales superposées, interlude saxophone mélodique de hui"
+     "with light chorus and room reverb, blended with a rhythmic field recording of a smoothie blender"
     ]
    },
    {
@@ -3144,6 +3240,58 @@
     ]
    },
    {
+    "표기": "grosse",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N037"
+    ],
+    "예문": [
+     "ds étendus, basse électrique mélodique en glissés syncopés, batterie douce avec grosse caisse feutrée, cross-stick et charleys fermés, a"
+    ]
+   },
+   {
+    "표기": "caisse",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N037"
+    ],
+    "예문": [
+     "dus, basse électrique mélodique en glissés syncopés, batterie douce avec grosse caisse feutrée, cross-stick et charleys fermés, arpèges"
+    ]
+   },
+   {
+    "표기": "vocales",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N037"
+    ],
+    "예문": [
+     "harleys fermés, arpèges de guitare électrique claire en arrière-plan, harmonies vocales superposées, interlude saxophone mélodique de hui"
+    ]
+   },
+   {
+    "표기": "chaud",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N037"
+    ],
+    "예문": [
+     "r, groove 4/4 nonchalant avec voix féminine soufflée et proche du micro, Rhodes chaud et désaccordé sur accords étendus, basse électriq"
+    ]
+   },
+   {
     "표기": "sur",
     "클립수": 1,
     "버킷": {
@@ -3155,6 +3303,17 @@
     "예문": [
      "lant avec voix féminine soufflée et proche du micro, Rhodes chaud et désaccordé sur accords étendus, basse électrique mélodique en gl"
     ]
+   },
+   {
+    "표기": "arri",
+    "클립수": 1,
+    "버킷": {
+     "V4": 1
+    },
+    "배치": [
+     "N037"
+    ],
+    "예문": []
    },
    {
     "표기": "punches",
@@ -3287,19 +3446,6 @@
     ]
    },
    {
-    "표기": "unfolding",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N043"
-    ],
-    "예문": [
-     "ocals, warm strings answering each line, harp arpeggios entering like a garment unfolding, upright bass grounded beneath plate reverb and l"
-    ]
-   },
-   {
     "표기": "garment",
     "클립수": 1,
     "버킷": {
@@ -3310,6 +3456,19 @@
     ],
     "예문": [
      "female vocals, warm strings answering each line, harp arpeggios entering like a garment unfolding, upright bass grounded beneath plate re"
+    ]
+   },
+   {
+    "표기": "unfolding",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N043"
+    ],
+    "예문": [
+     "ocals, warm strings answering each line, harp arpeggios entering like a garment unfolding, upright bass grounded beneath plate reverb and l"
     ]
    },
    {
@@ -3339,6 +3498,19 @@
     ]
    },
    {
+    "표기": "surveillance",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N044"
+    ],
+    "예문": [
+     "Korean synth pop reframed as nocturnal urban surveillance pop in B minor at 122 BPM: delayed arpeggio refra"
+    ]
+   },
+   {
     "표기": "lean",
     "클립수": 1,
     "버킷": {
@@ -3365,16 +3537,16 @@
     ]
    },
    {
-    "표기": "surveillance",
+    "표기": "struming",
     "클립수": 1,
     "버킷": {
      "V2": 1
     },
     "배치": [
-     "N044"
+     "N045"
     ],
     "예문": [
-     "Korean synth pop reframed as nocturnal urban surveillance pop in B minor at 122 BPM: delayed arpeggio refra"
+     "geum-inflected chamber color, A Major 112 BPM in 4/4: even eighth-note acoustic struming, clean electric-guitar fills and gayageum respons"
     ]
    },
    {
@@ -3391,19 +3563,6 @@
     ]
    },
    {
-    "표기": "struming",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N045"
-    ],
-    "예문": [
-     "geum-inflected chamber color, A Major 112 BPM in 4/4: even eighth-note acoustic struming, clean electric-guitar fills and gayageum respons"
-    ]
-   },
-   {
     "표기": "exercise",
     "클립수": 1,
     "버킷": {
@@ -3417,19 +3576,6 @@
     ]
    },
    {
-    "표기": "documentary",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N046"
-    ],
-    "예문": [
-     "Korean acoustic reframed as intimate documentary pop in C Major at 108 BPM: steady strummed guitar"
-    ]
-   },
-   {
     "표기": "uneven",
     "클립수": 1,
     "버킷": {
@@ -3440,6 +3586,19 @@
     ],
     "예문": [
      "documentary pop in C Major at 108 BPM: steady strummed guitar becomes slightly uneven observational pulses, muted electric piano fillin"
+    ]
+   },
+   {
+    "표기": "documentary",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N046"
+    ],
+    "예문": [
+     "Korean acoustic reframed as intimate documentary pop in C Major at 108 BPM: steady strummed guitar"
     ]
    },
    {
@@ -3469,19 +3628,6 @@
     ]
    },
    {
-    "표기": "labor",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N048"
-    ],
-    "예문": [
-     "e opening like a kitchen window, room reverb and gentle compression keeping the labor felt rather than dramatized"
-    ]
-   },
-   {
     "표기": "daylight",
     "클립수": 1,
     "버킷": {
@@ -3505,6 +3651,19 @@
     ],
     "예문": [
      "n window, room reverb and gentle compression keeping the labor felt rather than dramatized"
+    ]
+   },
+   {
+    "표기": "labor",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N048"
+    ],
+    "예문": [
+     "e opening like a kitchen window, room reverb and gentle compression keeping the labor felt rather than dramatized"
     ]
    },
    {
@@ -3534,19 +3693,6 @@
     ]
    },
    {
-    "표기": "viewed",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N049"
-    ],
-    "예문": [
-     "Korean funk pop viewed as a neo-noir office thriller: bright female mid-"
-    ]
-   },
-   {
     "표기": "cautious",
     "클립수": 1,
     "버킷": {
@@ -3560,7 +3706,7 @@
     ]
    },
    {
-    "표기": "economy",
+    "표기": "viewed",
     "클립수": 1,
     "버킷": {
      "V2": 1
@@ -3569,7 +3715,7 @@
      "N049"
     ],
     "예문": [
-     "ight but restrained: clipped syncopated clean-guitar answers, slap-bass forward economy, sparse electric-piano warning stabs, tight punch"
+     "Korean funk pop viewed as a neo-noir office thriller: bright female mid-"
     ]
    },
    {
@@ -3583,6 +3729,19 @@
     ],
     "예문": [
      "Korean funk pop noir-camouflage at 120 BPM in D minor, bright but restrained: cli"
+    ]
+   },
+   {
+    "표기": "economy",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N049"
+    ],
+    "예문": [
+     "ight but restrained: clipped syncopated clean-guitar answers, slap-bass forward economy, sparse electric-piano warning stabs, tight punch"
     ]
    },
    {
@@ -3664,32 +3823,6 @@
     ]
    },
    {
-    "표기": "merging",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N051"
-    ],
-    "예문": [
-     "ght bass restrained, answering female harmony entering quietly in verse two and merging in the final chorus"
-    ]
-   },
-   {
-    "표기": "domestically",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N051"
-    ],
-    "예문": [
-     "r sway, fingerpicked guitar drawn closer to the ear, strummed acoustic blooming domestically at each chorus, upright bass restrained, answerin"
-    ]
-   },
-   {
     "표기": "floorboards",
     "클립수": 1,
     "버킷": {
@@ -3713,6 +3846,32 @@
     ],
     "예문": [
      "Korean lead vocal, 92 BPM C-major sway, fingerpicked guitar drawn closer to the ear, strummed acoustic blooming domestically at each"
+    ]
+   },
+   {
+    "표기": "domestically",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N051"
+    ],
+    "예문": [
+     "r sway, fingerpicked guitar drawn closer to the ear, strummed acoustic blooming domestically at each chorus, upright bass restrained, answerin"
+    ]
+   },
+   {
+    "표기": "merging",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N051"
+    ],
+    "예문": [
+     "ght bass restrained, answering female harmony entering quietly in verse two and merging in the final chorus"
     ]
    },
    {
@@ -3781,7 +3940,7 @@
     ]
    },
    {
-    "표기": "photography",
+    "표기": "archive",
     "클립수": 1,
     "버킷": {
      "V2": 1
@@ -3790,7 +3949,7 @@
      "N052"
     ],
     "예문": [
-     "tic ballad reframed as a memorial archive: D-minor 62 BPM, contemporary chamber photography, acoustic piano block chords grounded in a low re"
+     "Cinematic ballad reframed as a memorial archive: D-minor 62 BPM, contemporary chamber photography"
     ]
    },
    {
@@ -3807,7 +3966,7 @@
     ]
    },
    {
-    "표기": "archive",
+    "표기": "photography",
     "클립수": 1,
     "버킷": {
      "V2": 1
@@ -3816,7 +3975,7 @@
      "N052"
     ],
     "예문": [
-     "Cinematic ballad reframed as a memorial archive: D-minor 62 BPM, contemporary chamber photography"
+     "tic ballad reframed as a memorial archive: D-minor 62 BPM, contemporary chamber photography, acoustic piano block chords grounded in a low re"
     ]
    },
    {
@@ -3846,19 +4005,6 @@
     ]
    },
    {
-    "표기": "nocteam",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N053"
-    ],
-    "예문": [
-     "Korean city pop reframed as a nocteam roadside vignette at 120 BPM in G Major: restrain"
-    ]
-   },
-   {
     "표기": "roadside",
     "클립수": 1,
     "버킷": {
@@ -3869,6 +4015,19 @@
     ],
     "예문": [
      "Korean city pop reframed as a nocteam roadside vignette at 120 BPM in G Major: restrained reflec"
+    ]
+   },
+   {
+    "표기": "nocteam",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N053"
+    ],
+    "예문": [
+     "Korean city pop reframed as a nocteam roadside vignette at 120 BPM in G Major: restrain"
     ]
    },
    {
@@ -3885,19 +4044,6 @@
     ]
    },
    {
-    "표기": "enough",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N054"
-    ],
-    "예문": [
-     "through the final chorus, natural room resonance, sparse harmonic space patient enough for each syllable to settle"
-    ]
-   },
-   {
     "표기": "settle",
     "클립수": 1,
     "버킷": {
@@ -3908,6 +4054,19 @@
     ],
     "예문": [
      "tural room resonance, sparse harmonic space patient enough for each syllable to settle"
+    ]
+   },
+   {
+    "표기": "enough",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N054"
+    ],
+    "예문": [
+     "through the final chorus, natural room resonance, sparse harmonic space patient enough for each syllable to settle"
     ]
    },
    {
@@ -3976,19 +4135,6 @@
     ]
    },
    {
-    "표기": "stretching",
-    "클립수": 1,
-    "버킷": {
-     "V2": 1
-    },
-    "배치": [
-     "N056"
-    ],
-    "예문": [
-     "reathy female vocal kept narrow and intimate with doubled strands, plate reverb stretching into delay, the bridge stripped to water-like sus"
-    ]
-   },
-   {
     "표기": "strands",
     "클립수": 1,
     "버킷": {
@@ -4015,7 +4161,7 @@
     ]
    },
    {
-    "표기": "narrowing",
+    "표기": "stretching",
     "클립수": 1,
     "버킷": {
      "V2": 1
@@ -4024,7 +4170,7 @@
      "N056"
     ],
     "예문": [
-     "layered doubles stretched by long plate reverb and delay, narrowing to bare synth in the bridge before a suspended fi"
+     "reathy female vocal kept narrow and intimate with doubled strands, plate reverb stretching into delay, the bridge stripped to water-like sus"
     ]
    },
    {
@@ -4038,6 +4184,19 @@
     ],
     "예문": [
      "Korean ambient reframed as a bioluminescent aquarium elegy: ambient pop at 86 BPM in E minor, breathy"
+    ]
+   },
+   {
+    "표기": "narrowing",
+    "클립수": 1,
+    "버킷": {
+     "V2": 1
+    },
+    "배치": [
+     "N056"
+    ],
+    "예문": [
+     "layered doubles stretched by long plate reverb and delay, narrowing to bare synth in the bridge before a suspended fi"
     ]
    },
    {
@@ -4158,19 +4317,6 @@
     ]
    },
    {
-    "표기": "telegraphed",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N059"
-    ],
-    "예문": [
-     "sitant spoken-swing rubato, rhodes fractured into muted jazz-cluster harmonies, telegraphed bass phrasing pushed behind a brushed swing frame"
-    ]
-   },
-   {
     "표기": "reopens",
     "클립수": 1,
     "버킷": {
@@ -4210,6 +4356,19 @@
     ]
    },
    {
+    "표기": "telegraphed",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N059"
+    ],
+    "예문": [
+     "sitant spoken-swing rubato, rhodes fractured into muted jazz-cluster harmonies, telegraphed bass phrasing pushed behind a brushed swing frame"
+    ]
+   },
+   {
     "표기": "resurfacing",
     "클립수": 1,
     "버킷": {
@@ -4236,19 +4395,6 @@
     ]
    },
    {
-    "표기": "stairs",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N060"
-    ],
-    "예문": [
-     "kick opening into dry snare spikes, closed hats receding into haze, twenty-two stairs mapped as widening spatial steps, 4/4 with linger"
-    ]
-   },
-   {
     "표기": "spikes",
     "클립수": 1,
     "버킷": {
@@ -4262,6 +4408,19 @@
     ]
    },
    {
+    "표기": "stairs",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N060"
+    ],
+    "예문": [
+     "kick opening into dry snare spikes, closed hats receding into haze, twenty-two stairs mapped as widening spatial steps, 4/4 with linger"
+    ]
+   },
+   {
     "표기": "postminimalist",
     "클립수": 1,
     "버킷": {
@@ -4272,6 +4431,19 @@
     ],
     "예문": [
      "Korean dream refracted as postminimalist nocturnal chamber pop in B minor at 96 BPM: clean"
+    ]
+   },
+   {
+    "표기": "closestacked",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N060"
+    ],
+    "예문": [
+     "orus clap accentuated by micro-offsets, bright clipped female Korean vocal with closestacked harmonies and brief filtered doubles, tight punch"
     ]
    },
    {
@@ -4301,19 +4473,6 @@
     ]
    },
    {
-    "표기": "closestacked",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N060"
-    ],
-    "예문": [
-     "orus clap accentuated by micro-offsets, bright clipped female Korean vocal with closestacked harmonies and brief filtered doubles, tight punch"
-    ]
-   },
-   {
     "표기": "suddenly",
     "클립수": 1,
     "버킷": {
@@ -4324,19 +4483,6 @@
     ],
     "예문": [
      "bass, clear mid-register male Korean vocal with airy doubles, light delay and a suddenly spacious open mix"
-    ]
-   },
-   {
-    "표기": "opera",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N060"
-    ],
-    "예문": [
-     "Cinematic Korean chamber ballad reframed as nocturnal minimal opera: F minor at 64 BPM, grand piano reframed through"
     ]
    },
    {
@@ -4353,19 +4499,6 @@
     ]
    },
    {
-    "표기": "dub",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N060"
-    ],
-    "예문": [
-     "Korean bedroom refracted as lo-fi chamber dub pop: 94 BPM in A minor, intimate female Korean vo"
-    ]
-   },
-   {
     "표기": "clockwork",
     "클립수": 1,
     "버킷": {
@@ -4376,6 +4509,19 @@
     ],
     "예문": [
      "ed into breathy call-and-response layers, delayed clean guitar refracted like a clockwork riff, swelling synth-pad bridge, muted bass and c"
+    ]
+   },
+   {
+    "표기": "dub",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N060"
+    ],
+    "예문": [
+     "Korean bedroom refracted as lo-fi chamber dub pop: 94 BPM in A minor, intimate female Korean vo"
     ]
    },
    {
@@ -4457,19 +4603,6 @@
     ]
    },
    {
-    "표기": "recitative",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N060"
-    ],
-    "예문": [
-     "d-piano harmonics, low-register female Korean vocal hovering between murmur and recitative, inverted framing with distant glass-like resonan"
-    ]
-   },
-   {
     "표기": "resonances",
     "클립수": 1,
     "버킷": {
@@ -4483,7 +4616,7 @@
     ]
    },
    {
-    "표기": "deepened",
+    "표기": "recitative",
     "클립수": 1,
     "버킷": {
      "V3": 1
@@ -4492,7 +4625,7 @@
      "N060"
     ],
     "예문": [
-     "tric bass, second-half strings widening like a film corridor, stacked harmonies deepened by close-room delay, natural cavernous reverb, re"
+     "d-piano harmonics, low-register female Korean vocal hovering between murmur and recitative, inverted framing with distant glass-like resonan"
     ]
    },
    {
@@ -4509,6 +4642,19 @@
     ]
    },
    {
+    "표기": "deepened",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N060"
+    ],
+    "예문": [
+     "tric bass, second-half strings widening like a film corridor, stacked harmonies deepened by close-room delay, natural cavernous reverb, re"
+    ]
+   },
+   {
     "표기": "pulled",
     "클립수": 1,
     "버킷": {
@@ -4520,17 +4666,6 @@
     "예문": [
      "ass, vinyl dust, tape compression, restrained delay, flattened dynamics, bridge pulled to bare chamber resonance"
     ]
-   },
-   {
-    "표기": "sque",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N062"
-    ],
-    "예문": []
    },
    {
     "표기": "arvo",
@@ -4546,6 +4681,17 @@
     ]
    },
    {
+    "표기": "sque",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N062"
+    ],
+    "예문": []
+   },
+   {
     "표기": "arcs",
     "클립수": 1,
     "버킷": {
@@ -4556,19 +4702,6 @@
     ],
     "예문": [
      "t close and nearly breathless, restrained tremolo-free edge, late-framed string arcs extending into microtonal shimmer, vast plate ref"
-    ]
-   },
-   {
-    "표기": "glasslike",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N062"
-    ],
-    "예문": [
-     "imalism in C minor at 62 BPM: fractured grand-piano responses refracted through glasslike harmonic shimmer, an unresolved breath-synth pad,"
     ]
    },
    {
@@ -4585,7 +4718,7 @@
     ]
    },
    {
-    "표기": "tunneling",
+    "표기": "glasslike",
     "클립수": 1,
     "버킷": {
      "V3": 1
@@ -4594,7 +4727,7 @@
      "N062"
     ],
     "예문": [
-     "elodica lead, chorus widened into stacked harmonies, polished stereo delay with tunneling filter sweeps and photograph-faded outro"
+     "imalism in C minor at 62 BPM: fractured grand-piano responses refracted through glasslike harmonic shimmer, an unresolved breath-synth pad,"
     ]
    },
    {
@@ -4608,6 +4741,19 @@
     ],
     "예문": [
      "pped by analog saturation, tight 4/4 drums, interlude synthesizer as a filtered mini-melodica lead, chorus widened into stacked harmonies, poli"
+    ]
+   },
+   {
+    "표기": "tunneling",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N062"
+    ],
+    "예문": [
+     "elodica lead, chorus widened into stacked harmonies, polished stereo delay with tunneling filter sweeps and photograph-faded outro"
     ]
    },
    {
@@ -4702,6 +4848,19 @@
     ]
    },
    {
+    "표기": "pockets",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N062"
+    ],
+    "예문": [
+     "ift before the landing expands, slow attack, blurred stereo decay and dry vocal pockets retained"
+    ]
+   },
+   {
     "표기": "breaths",
     "클립수": 1,
     "버킷": {
@@ -4712,19 +4871,6 @@
     ],
     "예문": [
      "ectric guitar responds to glassy arpeggios through plate shimmer, sustained pad breaths beneath slow electric-bass roots, soft muffled ki"
-    ]
-   },
-   {
-    "표기": "synesthesia",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N062"
-    ],
-    "예문": [
-     "ocals pushed into intimate float-chamber harmonies with staggered doubles, hazy synesthesia where the bridge opens as a filtered avant-garde"
     ]
    },
    {
@@ -4741,19 +4887,6 @@
     ]
    },
    {
-    "표기": "pockets",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N062"
-    ],
-    "예문": [
-     "ift before the landing expands, slow attack, blurred stereo decay and dry vocal pockets retained"
-    ]
-   },
-   {
     "표기": "responds",
     "클립수": 1,
     "버킷": {
@@ -4767,7 +4900,7 @@
     ]
    },
    {
-    "표기": "smears",
+    "표기": "synesthesia",
     "클립수": 1,
     "버킷": {
      "V3": 1
@@ -4776,7 +4909,7 @@
      "N062"
     ],
     "예문": [
-     "like distant thunder, closed hats receding beneath plate reverb and tape-delay smears, hazy attack widening into an ascendant final cho"
+     "ocals pushed into intimate float-chamber harmonies with staggered doubles, hazy synesthesia where the bridge opens as a filtered avant-garde"
     ]
    },
    {
@@ -4790,6 +4923,19 @@
     ],
     "예문": [
      "ceding beneath plate reverb and tape-delay smears, hazy attack widening into an ascendant final chorus, then dissolving into the pad"
+    ]
+   },
+   {
+    "표기": "smears",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N062"
+    ],
+    "예문": [
+     "like distant thunder, closed hats receding beneath plate reverb and tape-delay smears, hazy attack widening into an ascendant final cho"
     ]
    },
    {
@@ -4962,19 +5108,6 @@
     ]
    },
    {
-    "표기": "fridge",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N069"
-    ],
-    "예문": [
-     "d simple synth-bass pulse, small kick and closed hi-hat forming a thin pattern, fridge hum as an ambient texture, casual mid-register ma"
-    ]
-   },
-   {
     "표기": "forming",
     "클립수": 1,
     "버킷": {
@@ -4985,6 +5118,19 @@
     ],
     "예문": [
      "s with soft chorus, round simple synth-bass pulse, small kick and closed hi-hat forming a thin pattern, fridge hum as an ambient texture,"
+    ]
+   },
+   {
+    "표기": "fridge",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N069"
+    ],
+    "예문": [
+     "d simple synth-bass pulse, small kick and closed hi-hat forming a thin pattern, fridge hum as an ambient texture, casual mid-register ma"
     ]
    },
    {
@@ -5053,32 +5199,6 @@
     ]
    },
    {
-    "표기": "subby",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N072"
-    ],
-    "예문": [
-     "Wurlitzer electric piano playing lush extended chords, subby analog synthesizer, sliding electric bass, soft k"
-    ]
-   },
-   {
-    "표기": "unvarnished",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N072"
-    ],
-    "예문": [
-     ", steady 92 BPM 4/4 walking pulse in D Major, dry natural room reverb and close unvarnished recording"
-    ]
-   },
-   {
     "표기": "distressed",
     "클립수": 1,
     "버킷": {
@@ -5092,19 +5212,6 @@
     ]
    },
    {
-    "표기": "gregorian",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N073"
-    ],
-    "예문": [
-     "ballad, 74 BPM in 4/4, low warm male Korean vocal with restrained phrasing and Gregorian chant backing, warm sustained electric piano as f"
-    ]
-   },
-   {
     "표기": "death",
     "클립수": 1,
     "버킷": {
@@ -5115,19 +5222,6 @@
     ],
     "예문": [
      "closed hi-hat at 74 BPM in B-flat Major, 4/4 pulse widening into an orchestral death drop before the last chorus, plate reverb and smo"
-    ]
-   },
-   {
-    "표기": "overdubs",
-    "클립수": 1,
-    "버킷": {
-     "V3": 1
-    },
-    "배치": [
-     "N074"
-    ],
-    "예문": [
-     "Korean bedroom pop, close dry overdubs, casual male mid-register lead with doubled choru"
     ]
    },
    {
@@ -5154,6 +5248,318 @@
     ],
     "예문": [
      "ures, upright bass walking beneath the lines, light brush snare taps and shaker timekeeping, open room reverb with a bright plain mix"
+    ]
+   },
+   {
+    "표기": "plated",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N076"
+    ],
+    "예문": [
+     "outed backing vocals, abrupt dynamic breaks and tom-led lifts into each chorus, plated drum reverb with a tight guitar room, distorted e"
+    ]
+   },
+   {
+    "표기": "elastic",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N076"
+    ],
+    "예문": [
+     "Korean dance pop: elastic synth bass, four-on-the-floor kit, bright synth p"
+    ]
+   },
+   {
+    "표기": "highlight",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N076"
+    ],
+    "예문": [
+     "bass sliding between roots, brushed drums with a light backbeat, interlude bass highlight, thinning piano outro"
+    ]
+   },
+   {
+    "표기": "prominently",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N076"
+    ],
+    "예문": [
+     "ecordings blended with lo-fi beat textures, live room reverb, mandolin featured prominently, final-chorus vocal harmonies"
+    ]
+   },
+   {
+    "표기": "threading",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N085"
+    ],
+    "예문": [
+     "he final chorus, 118 BPM reflective 4/4 pulse in C Major, clean electric guitar threading the verses, distorted guitar swelling through cho"
+    ]
+   },
+   {
+    "표기": "voiced",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N085"
+    ],
+    "예문": [
+     "ed nylon-string acoustic guitar carries a steady pattern in G Major with gently voiced accordion chords and breathing swells, upright ba"
+    ]
+   },
+   {
+    "표기": "threads",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N077"
+    ],
+    "예문": [
+     "electric piano sustains spare chords, clean electric guitar threads a thin repeating figure, slowly moving electric b"
+    ]
+   },
+   {
+    "표기": "continuously",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N077"
+    ],
+    "예문": [
+     "rean with lightly doubled chorus harmonies, brisk 124 BPM 4/4 pulse in B Minor, continuously strummed acoustic guitar leading, mandolin answer"
+    ]
+   },
+   {
+    "표기": "counterphrases",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N077"
+    ],
+    "예문": [
+     "trummed acoustic guitar leading, mandolin answering each vocal line with nimble counterphrases, walking upright bass, crisp offbeat tambourine,"
+    ]
+   },
+   {
+    "표기": "downpicked",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N078"
+    ],
+    "예문": [
+     "downpicked distorted rhythm guitar, melodic lead guitar, loc"
+    ]
+   },
+   {
+    "표기": "falls",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N078"
+    ],
+    "예문": [
+     "tering only in the final chorus and resolving beneath the outro while the piano falls silent"
+    ]
+   },
+   {
+    "표기": "diffused",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N078"
+    ],
+    "예문": [
+     "wide room reverb with a spacious, softly diffused image"
+    ]
+   },
+   {
+    "표기": "mumble",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N078"
+    ],
+    "예문": [
+     "Korean lo-fi hip-hop, androgynous low-register mumble with short backing-vocal answers, stiff four-on-t"
+    ]
+   },
+   {
+    "표기": "quick",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N078"
+    ],
+    "예문": [
+     "bright mid-register male vocal with quick, lightly clipped phrasing and stacked chorus harm"
+    ]
+   },
+   {
+    "표기": "smoothie-blender",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "male Korean vocal with restrained backing vocals entering on the final chorus, smoothie-blender field recording woven into the intro and interlud"
+    ]
+   },
+   {
+    "표기": "theremin",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "Korean synth pop, theremin melody over synth bass, four-on-the-floor kit, cl"
+    ]
+   },
+   {
+    "표기": "basement",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "Korean acoustic folk, nasal basement anti-folk female mid-register vocal with clear di"
+    ]
+   },
+   {
+    "표기": "unglamorous",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "Korean hip-hop, dry unglamorous male speaking voice in a low register with short"
+    ]
+   },
+   {
+    "표기": "poem",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "e phrases over heavy 808 bass and a clean hard kit, 84 BPM boom bap spoken-word poem delivery"
+    ]
+   },
+   {
+    "표기": "pristine",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "ered voicings with orchestral strings, brief oboe line before the final chorus, pristine studio polish with a subtle vintage ribbon-mic te"
+    ]
+   },
+   {
+    "표기": "shadowed",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "ballad, piano ballad with deep room reverb and a close, shadowed studio image"
+    ]
+   },
+   {
+    "표기": "threaded",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "4/4 pulse in E Minor, plate reverb with a passing freight-train field recording threaded through transitions, electric piano holding chord"
+    ]
+   },
+   {
+    "표기": "melodica",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N079"
+    ],
+    "예문": [
+     "eneath clean electric guitar, electric bass, shaker, and soft kit, with a stark melodica solo cutting through doom-metal-weighted guitar d"
+    ]
+   },
+   {
+    "표기": "filmstrip",
+    "클립수": 1,
+    "버킷": {
+     "V3": 1
+    },
+    "배치": [
+     "N080"
+    ],
+    "예문": [
+     "sampled old educational filmstrip soundtrack textures and live room reverb"
     ]
    }
   ]
@@ -5307,22 +5713,28 @@
    "N072": "0/20",
    "N073": "0/18",
    "N074": "0/20",
-   "N075": "0/18"
+   "N075": "0/18",
+   "N076": "0/18",
+   "N077": "0/20",
+   "N078": "0/16",
+   "N079": "0/19",
+   "N080": "0/18",
+   "N085": "0/20"
   },
-  "★★현재_상태": "마지막 출현 = N062 · 이후 **13배치 연속 0(분모 252클립)**",
+  "★★현재_상태": "마지막 출현 = N062 · 이후 **19배치 연속 0(분모 363클립)**",
   "⛔그래서_말할_수_있는_것": "⑴「수노가 이 구문을 «썼다»」=참 ⑵「수노가 이 구문을 «쓴다»」=⛔과하다.",
   "⛔철회된_계정_교란": {
    "내가_적었던_것": "asiloveu 32/98(32.7%) ↔ leoarkedia 72/839(8.6%) ⇒ 「계정 교란」",
    "★깨진_근거": {
     "asiloveu": "32/98",
-    "leoarkedia": "72/955"
+    "leoarkedia": "72/1066"
    },
    "★배치로_쪼개면": "asiloveu 적중 32건이 **전부 N060·N062 두 배치**다. 같은 계정인 **N067·N068·N069는 0/58**.",
    "⇒": "★**계정이 축이면 최근 세 배치에서 다시 나왔어야 한다. 안 나왔다.** ⇒ **철회.** 축은 계정이 아니라 시각이다(경계 09-14 00:56~01:14 · 근거=sunomusic 원장 렌더 시각).",
    "★★내_결함": "**주변합만 보고 교란이라 적었다.** 배치로 교차하면 바로 깨지는 값이었고, ⛔**그 반증은 내 DB 안에 이미 있었다** — 내가 교차표를 안 만든 것뿐이다."
   },
   "★교란_길이비": {
-   "주변합": "있음 0.9444(n=104) ↔ 없음 0.7786(n=949)",
+   "주변합": "있음 0.9444(n=104) ↔ 없음 0.7984(n=1060)",
    "★배치_고정": "같은 배치 안에 둘 다 있는 23배치에서 (있음−없음) 중앙값 차 = **+0.0551 · 양수 21/23**",
    "★N060·N062_제외": "있음 0.8698(n=72) ↔ 없음 0.7534(n=825)",
    "⇒": "★**계정과 달리 이 연관은 배치를 고정해도 남는다.** 「이 구문은 «덜 줄어든» 재작성에 붙는다」까지가 실측. ⛔**인과·방향(더해서인지 안 줄여서인지)은 미상** — sunomusic도 「결과만 싣고 과정은 안 싣는다」고 답했다."

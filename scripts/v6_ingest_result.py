@@ -25,13 +25,21 @@ def _known_failed_clips():
     NULL은 「정상」이 아니라 «미측정»이다(sunomusic 배차기 재기동 이전 구간).
     """
     import sqlite3
+    # ⛔2026-09-15 수리(자적발) — 직전 판은 `clip_status != 'complete'` 전부를 «실패»로 셌다.
+    #   그래서 `streaming`(=통 작성 시점에 «진행 중»)이 「렌더 실패」로 찍혔다.
+    #   ★sunomusic이 바로 그 층을 가른 참인데(「빼는 것과 안 보이게 하는 것은 다르다」)
+    #     내가 내 도구 안에서 다시 합쳤다. ⇒ **실패(error)와 미완(submitted/streaming)을 가른다.**
     try:
         c = sqlite3.connect('sunolang.db')
-        return [f"{g}:{u[:8]}" for u, g in c.execute(
+        fail = [f"{g}:{u[:8]}" for u, g in c.execute(
             "select clip_uuid,gid from suno_sp_emissions "
-            "where aug_creativity=0 and clip_status is not null and clip_status!='complete'")]
+            "where aug_creativity=0 and clip_status='error'")]
+        pend = [f"{g}:{u[:8]}" for u, g in c.execute(
+            "select clip_uuid,gid from suno_sp_emissions "
+            "where aug_creativity=0 and clip_status in ('submitted','streaming')")]
+        return fail, pend
     except Exception:
-        return []
+        return [], []
 GEN = re.compile(r'\b(mezzo-soprano|bass-baritone|countertenor|counter-tenor|contralto|androgynous|falsetto|male|female|tenor|alto|soprano|baritone)\b', re.I)
 # ★긴 낱말을 «앞»에 둔다 — 파이썬 교체는 «첫 일치»라 `baritone`이 앞에 있으면
 #   `bass-baritone`을 통째로 못 집는다(2026-09-13 sunomusic이 `bass-baritone`을 언급해 확인).
@@ -323,12 +331,16 @@ def main(tag):
     #     **「결과통에 SP가 실려 온 클립」**이다(텍스트층). N057 `5fddf3da`는 `status=error`인데
     #     이 분모 «안에» 있었다(sunomusic·kee 2026-09-14 전수).
     #   ⇒ ★두 수를 «기계가» 같이 찍는다 — 내가 기억해서 병기하는 방식은 재사용 자리에서 샌다.
-    _err = _known_failed_clips()
+    _err, _pend = _known_failed_clips()
     print(f"★누적 {len(rec['batches'])}배치({n}곡): V0 무수정 {t0u}/{t0}"
           f"  ※단위=**텍스트층**(SP가 실려 온 클립)")
-    if _err:
-        print(f"   ⛔렌더 성공 분모는 **{t0 - len(_err)}** — 렌더 실패 확인분 {len(_err)}클립 제외"
-              f"({', '.join(_err)}) ★두 수를 한 칸에 쓰지 말 것")
+    if _err or _pend:
+        print(f"   ⛔렌더 «성공» 분모는 **{t0 - len(_err) - len(_pend)}** ★두 수를 한 칸에 쓰지 말 것")
+        if _err:
+            print(f"      · 실패(error) {len(_err)}클립 제외: {', '.join(_err)}")
+        if _pend:
+            print(f"      · ⚠미완(submitted/streaming) {len(_pend)}클립 제외 — "
+                  f"**실패가 아니다**(통 작성 시점에 진행 중): {', '.join(_pend)}")
     else:
         print("   ⚠렌더 실패 확인분 0 — ★「없다」가 아니라 «내가 아는 범위에 없다»"
               "(clip status는 sunomusic 칸·무료창 4일치만 전수됨)")
