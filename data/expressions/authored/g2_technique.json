@@ -1,6 +1,6 @@
 {
  "group": "g2_technique",
- "authored_at": "2026-07-16 (+2026-08-15 v3.3 신규분)",
+ "authored_at": "2026-07-16 (+2026-08-15 v3.3 신규분) (+2026-09-14 v3.4/v3.5 신규분)",
  "entries": [
   {
    "suno_term": "enters",
@@ -1838,6 +1838,52 @@
    "confidence": "medium",
    "authored_at": "2026-08-15",
    "notes": "사전 v3.3 신규 원자(technique, attested 4). 기존 'with sustained root notes'의 전치사 없는 형 — 별개 키로 attested"
+  },
+  {
+   "suno_term": "ring out",
+   "music_theory_en": "let ring / sustained decay (a note or chord left to sustain and decay naturally), in base form",
+   "plain_ko": "친 음이나 화음을 끊지 않고 그대로 울려 퍼지게 두는 것",
+   "plain_en": "letting a note or chord ring and fade away naturally",
+   "llm_prompt": "let the final chord ring out",
+   "tags": [
+    "technique",
+    "sustain",
+    "decay",
+    "dynamics"
+   ],
+   "confidence": "high",
+   "notes": "★`rings out`(기존 개념)의 어형 변종이다 — 뜻은 같고 슬러그만 다르다(`ring_out` ↔ `rings_out`). 정본 키 규칙(slugify)은 하이픈·공백·대소문자만 접고 **어미 변화는 안 접으므로** 별개 원자로 잡힌다. ⛔중복이 아니라 표기 변종이니 한쪽을 지우지 말 것 — 지우면 사전 재빌드가 다시 만든다."
+  },
+  {
+   "suno_term": "return",
+   "music_theory_en": "return/reprise (a previously heard part or theme re-entering the arrangement), in base form",
+   "plain_ko": "앞서 나왔던 악기나 멜로디가 다시 돌아오는 것",
+   "plain_en": "an earlier instrument or theme coming back into the song",
+   "llm_prompt": "the main theme returns in the final chorus",
+   "tags": [
+    "technique",
+    "arrangement",
+    "structure",
+    "reprise"
+   ],
+   "confidence": "medium",
+   "notes": "★`returns`(기존 개념)의 어형 변종 — `ring out`/`rings out`과 같은 형태다."
+  },
+  {
+   "suno_term": "a prominent brass section with trumpets and saxophones, a slap bass guitar",
+   "music_theory_en": "featured brass section (trumpets + saxophones) over a slap-bass guitar line — a funk/soul horn-and-slap texture",
+   "plain_ko": "트럼펫과 색소폰이 앞에 나서는 관악 편성에 손가락으로 튕겨 치는 슬랩 베이스가 받쳐 주는 펑크·소울 질감",
+   "plain_en": "punchy horns (trumpets and saxes) out front, carried by a popping slap-bass groove",
+   "llm_prompt": "prominent brass section with trumpets and saxophones over slap bass",
+   "tags": [
+    "technique",
+    "instrumentation",
+    "brass",
+    "bass",
+    "fragment"
+   ],
+   "confidence": "medium",
+   "notes": "SP 한 줄이 통째로 원자가 된 다낱말 구다(기존 저작 446 중 113건이 같은 모양)."
   }
  ]
 }

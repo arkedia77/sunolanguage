@@ -1,6 +1,6 @@
 {
  "group": "g4_mood_tempo_dynamics",
- "authored_at": "2026-07-16 (+2026-08-15 v3.3 신규분)",
+ "authored_at": "2026-07-16 (+2026-08-15 v3.3 신규분) (+2026-09-14 v3.4/v3.5 신규분)",
  "entries": [
   {
    "suno_term": "intimate",
@@ -1559,6 +1559,65 @@
    "confidence": "medium",
    "authored_at": "2026-08-15",
    "notes": "사전 v3.3 신규 원자(dynamics, attested 2). 기존 'full band enters, driving drum beat' 계열"
+  },
+  {
+   "suno_term": "builds from",
+   "music_theory_en": "build/crescendo originating from a stated starting texture (e.g. 'builds from sparse')",
+   "plain_ko": "어떤 상태에서 «시작해» 점점 쌓아 올린다고 말할 때 쓰는 표현",
+   "plain_en": "starting from one texture and growing from there",
+   "llm_prompt": "builds from a sparse intro",
+   "tags": [
+    "dynamics",
+    "structure",
+    "build",
+    "fragment"
+   ],
+   "confidence": "low",
+   "notes": "⚠전치사로 끝나는 조각이라 단독으로는 뜻이 닫히지 않는다 — 사전에서도 `[\"arrangement\", \"builds from\", \"sparse\"]` 묶음 키에서 분해돼 나왔다. confidence=low."
+  },
+  {
+   "suno_term": "half-time feel, filtered synth",
+   "music_theory_en": "half-time feel (backbeat at half the perceived tempo) paired with a filter-swept synth texture",
+   "plain_ko": "드럼이 절반 속도로 느긋해지고 신스는 필터를 먹여 흐릿하게 깔리는 구간 묘사",
+   "plain_en": "the beat drops to half speed while a filtered synth hums underneath",
+   "llm_prompt": "half-time groove with filtered synth pad",
+   "tags": [
+    "rhythm",
+    "dynamics",
+    "texture",
+    "synth",
+    "fragment"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "full band, energetic delivery",
+   "music_theory_en": "full-band tutti with an energetic vocal/instrumental delivery",
+   "plain_ko": "밴드 전체가 들어오고 노래도 힘차게 내지르는 구간 묘사",
+   "plain_en": "the whole band playing with a punchy, energetic performance",
+   "llm_prompt": "full band with energetic delivery",
+   "tags": [
+    "dynamics",
+    "structure",
+    "performance",
+    "fragment"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "suno_term": "full band, brass section enters",
+   "music_theory_en": "full-band tutti at the point where the brass section makes its entrance",
+   "plain_ko": "밴드 전체가 연주하는 가운데 관악 파트가 새로 등장하는 구간 묘사",
+   "plain_en": "the whole band is playing and the horns come in on top",
+   "llm_prompt": "full band, brass section enters",
+   "tags": [
+    "dynamics",
+    "structure",
+    "brass",
+    "entrance",
+    "fragment"
+   ],
+   "confidence": "medium"
   }
  ]
 }
