@@ -252,8 +252,14 @@ def main(tags):
     extra = [r for r in rows if r['판정'] not in BASE_KINDS and r['판정'] != '유지']
     up = [r for r in rows if isinstance(r['길이비'], (int, float)) and r['길이비'] > 1.0]
     dn = [r for r in rows if isinstance(r['길이비'], (int, float)) and r['길이비'] <= 1.0]
-    bu = sum(1 for r in up if r['판정'] != '유지')
-    bd = sum(1 for r in dn if r['판정'] != '유지')
+    # ⛔2026-09-14 수리 — **같은 도구 안에 자가 두 벌이었다.**
+    #   주 분자는 BASE_KINDS(역전+확장+소실)로 고쳤는데 **층별만 「'유지'가 아닌 것」으로 남아**
+    #   축소 1건이 층별에만 섞였다: 텍스트 경로 8/129 ↔ `--json` 경로 7/129로 **두 수**가 났고,
+    #   합 검산(3+8=11 ≠ 깨짐 10)이 잡았다.
+    #   ★오늘 내가 세 번 적은 「자를 두 벌 두면 느슨한 쪽이 이긴다」의 **네 번째 실물**이고
+    #     이번엔 **내가 만든 도구 «내부»**다 — 한 곳만 고치면 다른 경로가 옛 자로 남는다.
+    bu = sum(1 for r in up if r['판정'] in BASE_KINDS)
+    bd = sum(1 for r in dn if r['판정'] in BASE_KINDS)
     lo, hi = wilson(len(broke), len(rows))
     print(f"\n  ★클립 단위 깨짐(기저와 같은 자 = 역전+확장+소실) = {len(broke)}/{len(rows)}"
           f" = {100*len(broke)/len(rows):.2f}% (Wilson CI {lo}~{hi})"
@@ -267,6 +273,15 @@ def main(tags):
               f" — ⛔이 값은 V2 기저와 비교할 수 없다(자가 다르다)")
     print(f"     층별 — 늘어남(>1.0) {bu}/{len(up)} · 안 늘어남(≤1.0) {bd}/{len(dn)}"
           f" · 늘어난 비율 {len(up)}/{len(rows)} = {100*len(up)/len(rows):.1f}%")
+    # ★상시 검산(2026-09-14) — 층별 합 == 주 분자. 두 수가 갈리면 «자가 두 벌»이라는 뜻이다.
+    #   이 한 줄이 없었을 때 실제로 갈렸고(텍스트 8 ↔ json 7) 내가 손으로 대조해서야 잡았다.
+    if bu + bd != len(broke) or len(up) + len(dn) != len(rows):
+        print(f"     ⛔검산 실패 — 층별 합 {bu}+{bd}={bu+bd} ↔ 깨짐 {len(broke)} ·"
+              f" 분모 {len(up)}+{len(dn)}={len(up)+len(dn)} ↔ 클립 {len(rows)}"
+              f"  ★자가 두 벌이다. 위 수를 인용하지 말 것.")
+    else:
+        print(f"     ✅검산 — 층별 합 {bu+bd} == 깨짐 {len(broke)} · 분모 합"
+              f" {len(up)+len(dn)} == 클립 {len(rows)}")
     if need <= 0:
         print("\n  ■ 사전등록 판정 (KANBAN ①-23 — 판정선 도달했으므로 여기서만 V2 기저를 쓴다)")
         # ★2026-09-14 개정 — 「실측 비율판」을 **판정에서 뺀다**(참고로만 찍는다).
