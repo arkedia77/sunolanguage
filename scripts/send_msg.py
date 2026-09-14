@@ -106,7 +106,17 @@ if __name__ == "__main__":
     if len(a) < 3:
         print(__doc__); sys.exit(1)
     to, keyword, bodyfile = a[0], a[1], a[2]
-    subject = a[a.index("--subject") + 1] if "--subject" in a else f"[{FROM}→{to}] {keyword}"
     _body = json.load(open(bodyfile))
     _reject_envelope(_body, bodyfile)
+    # ★2026-09-15 수리(자적발) — `--subject`에 백틱이 있으면 **셸이 명령치환으로 먹는다.**
+    #   실물: 제목에 백틱 낱말을 넣었더니 zsh가 실행을 시도해 그 자리가 **빈 문자열**이 됐다
+    #   (「★귀  칸 작동 확인」으로 나감). 본문은 히어독 안이라 멀쩡했고 **제목만 조용히 잘렸다.**
+    #   ⇒ ★제목을 «셸을 거치지 않는» 곳에서 가져온다: 본문 JSON의 `제목` 칸이 1순위.
+    #   ⛔`--subject`는 남겨 두되(옛 호출 호환) **본문에 `제목`이 있으면 그쪽이 이긴다.**
+    subject = _body.get("제목") if isinstance(_body, dict) and _body.get("제목") else None
+    if subject is None:
+        subject = a[a.index("--subject") + 1] if "--subject" in a else f"[{FROM}\u2192{to}] {keyword}"
+    # ★양성통제 — 셸에 먹혀 빈 자리가 생겼는지 본다(백틱 쌍이 사라지면 공백 2칸이 남는다).
+    if "  " in subject:
+        print(f"\u26a0제목에 공백 2칸 — 셸 치환으로 잘렸을 수 있습니다: {subject!r}")
     send(to, keyword, _body, subject, "--reply-needed" in a)
