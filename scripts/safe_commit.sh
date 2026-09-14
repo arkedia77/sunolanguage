@@ -10,7 +10,10 @@
 # ⇒ 그래서 «조심»이 아니라 **커밋 직전에 staged를 세어 보고 남의 것이 있으면 경로를 강제**한다.
 # ⛔macOS 기본 bash는 3.2라 `mapfile`이 없다(양성통제에서 잡힘) — while-read로 짠다.
 set -u
-cd ~/projects/agent-comm || exit 1
+# ★경로는 기본값 그대로이고, **시험을 위해서만** 오버라이드를 연다(2026-09-14).
+#   ⛔이 도구는 「거짓 보고」 수리를 했는데 **하드코딩된 cd 때문에 스크래치에서 시험이 안 됐다**
+#     — 시험할 수 없는 수리는 「고쳤다」가 아니다(오늘만 도구 수리 다섯 번째).
+cd "${AGENT_COMM_REPO:-$HOME/projects/agent-comm}" || exit 1
 ME="${AGENT_ID:-sunolanguage}"
 MSG="${1:?사용: safe_commit.sh \"커밋 메시지\" [경로...]}"
 shift || true
@@ -37,12 +40,34 @@ if [ "$FN" -gt 0 ]; then
   fi
 fi
 
+BEFORE=$(git rev-parse HEAD)
 if [ "$#" -gt 0 ]; then
   AGENT_ID="$ME" git -c user.name="$ME" -c user.email="$ME@leomusic.os" commit -m "$MSG" -- "$@"
 else
   AGENT_ID="$ME" git -c user.name="$ME" -c user.email="$ME@leomusic.os" commit -m "$MSG"
 fi
 rc=$?
-echo "── 이 커밋에 실린 파일 ──"
-git -c core.quotepath=false show --name-only --pretty=format: HEAD | grep -v '^$'
+# ★2026-09-14 수리 — 이 표시가 «거짓 보고»를 하고 있었다.
+#   ⛔실물: 오늘 10:1x 커밋이 실패했는데 아래 표시는 그대로 돌아 **그 시점 HEAD(남의 커밋)**의
+#     파일 2건을 「이 커밋에 실린 파일」로 찍었다 ⇒ 화면만 보면 **내 커밋에 남의 파일이 실린 것**으로
+#     읽힌다(어제 실제 사고가 그 모양이었으므로 오독의 대가가 크다).
+#   ★rc를 «받아 놓고 쓰지 않은» 것이 원인이다 — 성공 출력은 도달의 증거가 아니다.
+#   ⇒ ⑴실패면 아무것도 안 찍는다 ⑵성공이면 HEAD가 «방금 내가 만든» 커밋인지
+#     (직전 HEAD와 다른가 · author가 나인가) 확인한 뒤에만 목록을 찍는다.
+if [ "$rc" -ne 0 ]; then
+  echo "⛔커밋 실패(rc=$rc) — 아무것도 실리지 않았습니다. staged는 그대로입니다." >&2
+  exit $rc
+fi
+NEW=$(git rev-parse HEAD)
+NEW_AU=$(git log -1 --format=%an "$NEW")
+if [ "$NEW" = "$BEFORE" ]; then
+  echo "⛔HEAD가 안 움직였습니다($NEW) — 커밋이 실제로 만들어지지 않았습니다." >&2
+  exit 1
+fi
+if [ "$NEW_AU" != "$ME" ]; then
+  echo "⛔HEAD author=$NEW_AU (내가 아님) — 그 사이 남의 커밋이 올라왔습니다. 목록을 찍지 않습니다." >&2
+  exit 1
+fi
+echo "── 이 커밋($NEW · author=$NEW_AU)에 실린 파일 ──"
+git -c core.quotepath=false show --name-only --pretty=format: "$NEW" | grep -v '^$'
 exit $rc
