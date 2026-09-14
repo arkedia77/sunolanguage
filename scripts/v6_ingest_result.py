@@ -16,6 +16,22 @@
 import json, glob, re, sys
 
 LEDGER = 'data/v6_obs/v6_input_layer_running.json'
+
+
+def _known_failed_clips():
+    """★렌더 실패가 «확인된» 정본(V0) 클립. ⛔비었다고 「없다」가 아니다 — 미측정이다.
+
+    출처: `sunolang.db:suno_sp_emissions.clip_status`(그쪽이 전수로 잰 값을 옮겨 담은 칸).
+    NULL은 「정상」이 아니라 «미측정»이다(sunomusic 배차기 재기동 이전 구간).
+    """
+    import sqlite3
+    try:
+        c = sqlite3.connect('sunolang.db')
+        return [f"{g}:{u[:8]}" for u, g in c.execute(
+            "select clip_uuid,gid from suno_sp_emissions "
+            "where aug_creativity=0 and clip_status is not null and clip_status!='complete'")]
+    except Exception:
+        return []
 GEN = re.compile(r'\b(mezzo-soprano|bass-baritone|countertenor|counter-tenor|contralto|androgynous|falsetto|male|female|tenor|alto|soprano|baritone)\b', re.I)
 # ★긴 낱말을 «앞»에 둔다 — 파이썬 교체는 «첫 일치»라 `baritone`이 앞에 있으면
 #   `bass-baritone`을 통째로 못 집는다(2026-09-13 sunomusic이 `bass-baritone`을 언급해 확인).
@@ -302,7 +318,20 @@ def main(tag):
         for g in bb['성별어']: cnt[g['판정']] = cnt.get(g['판정'], 0) + 1
     n = sum(x['n_songs'] for x in rec['batches'].values())
     broke = cnt['소실'] + cnt['역전']
-    print(f"★누적 {len(rec['batches'])}배치({n}곡): V0 무수정 {t0u}/{t0}")
+    # ★2026-09-14 — kee §2 조건을 «규율이 아니라 도구»에 넣는다.
+    #   ⛔「무수정 N/N」은 분모가 「렌더 성공 클립」처럼 읽히는데, 이 자가 실제로 센 것은
+    #     **「결과통에 SP가 실려 온 클립」**이다(텍스트층). N057 `5fddf3da`는 `status=error`인데
+    #     이 분모 «안에» 있었다(sunomusic·kee 2026-09-14 전수).
+    #   ⇒ ★두 수를 «기계가» 같이 찍는다 — 내가 기억해서 병기하는 방식은 재사용 자리에서 샌다.
+    _err = _known_failed_clips()
+    print(f"★누적 {len(rec['batches'])}배치({n}곡): V0 무수정 {t0u}/{t0}"
+          f"  ※단위=**텍스트층**(SP가 실려 온 클립)")
+    if _err:
+        print(f"   ⛔렌더 성공 분모는 **{t0 - len(_err)}** — 렌더 실패 확인분 {len(_err)}클립 제외"
+              f"({', '.join(_err)}) ★두 수를 한 칸에 쓰지 말 것")
+    else:
+        print("   ⚠렌더 실패 확인분 0 — ★「없다」가 아니라 «내가 아는 범위에 없다»"
+              "(clip status는 sunomusic 칸·무료창 4일치만 전수됨)")
     for k, (u, x, nb, ns) in sorted(buckets.items()):
         print(f"   대조본 {k}(클립 실제값): 무수정 {u}/{x} · 해당 배치 {nb}  ⛔다른 칸과 합산 금지")
     print(f"   ★의도(pair_variety)≠실제(aug_creativity) = **곡 {len(mg)}건 / 클립 {mm}건**"
