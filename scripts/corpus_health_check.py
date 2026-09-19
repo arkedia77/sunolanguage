@@ -16,6 +16,8 @@
     H4 백업 존재   최근 run backup_path 실존
     H5 게이트 재검 lyrics_chunks 품질게이트 재통과
     H6 표현 저작 커버 사전 원자 == 저작 레지스터(정본 파일) == expr_concepts(DB 파생)
+    H7 커넥터 신선도 발행된 OUT 스냅샷 == 현행 코어(사전·개념) 스냅샷
+    H8 정책표 대조   corpus_propagation_policy.md 표의 값 == 실측(미검사 칸도 센다)
 """
 from __future__ import annotations
 
@@ -164,6 +166,113 @@ def main() -> None:
                     check(results, "H6-db", True, "expr_concepts 테이블 없음 — 생략")
     except Exception as exc:  # 점검기가 죽어 「없음」으로 보이지 않게 경고로 남긴다
         check(results, "H6", False, f"표현 커버리지 조회 실패: {exc}", warn_only=True)
+
+
+    # H7 커넥터 OUT 스냅샷 신선도 (2026-09-19 신설)
+    # ★왜 기계로 옮겼나: 이 칸은 08-15부터 5줄 점검의 손 항목(ⓓ)이었다.
+    #   실물 = 08-17 발행분 `cs-3.3-589-20260815`가 09-02 층 분리·09-14 저작(개념 446→453)
+    #   뒤에도 그대로 남았는데, 그동안 H1~H6는 PASS 8/8을 찍었다 — 기계가 안 보는 칸은
+    #   「정상」으로 보인다(H6 주석과 같은 병의 3회차). 발행 여부는 결재 칸이므로 WARN.
+    pub_id = None  # H8이 이 값을 쓴다 — H7이 죽어도 「없음」이 「일치」로 안 보이게 선언
+    try:
+        import corpus_connector as CC  # 단일 진실원 재사용(스냅샷 산식·매니페스트 로더)
+        with sqlite3.connect(CC.DB_PATH) as cc_conn:
+            cur_snap = CC.corpus_snapshot(cc_conn)
+            pub = (CC.load_manifest().get("corpus_snapshot") or {})
+            pub_id = pub.get("snapshot_id") or "(미발행)"
+            last_out = cc_conn.execute(
+                "SELECT started_at FROM connector_runs WHERE port='out' AND status='ok' "
+                "ORDER BY id DESC LIMIT 1").fetchone()
+        same = pub_id == cur_snap["snapshot_id"]
+        detail = f"발행 {pub_id} / 현행 {cur_snap['snapshot_id']}"
+        if not same:
+            gap = []
+            for k, label in (("dict_version", "사전"), ("corpus_tracks", "트랙"),
+                             ("expr_concepts", "개념")):
+                if pub.get(k) != cur_snap[k]:
+                    gap.append(f"{label} {pub.get(k, '?')}→{cur_snap[k]}")
+            detail += " — 불일치(" + " · ".join(gap) + ")"
+            if last_out and last_out[0]:
+                days = (datetime.now() - datetime.fromisoformat(last_out[0])).days
+                detail += f" · 마지막 OUT 발행 {last_out[0][:10]}({days}일 전)"
+        check(results, "H7", same, detail, warn_only=True)
+    except Exception as exc:
+        check(results, "H7", False, f"커넥터 스냅샷 조회 실패: {exc}", warn_only=True)
+
+    # H8 전파정책 표 ↔ 실측 대조 (2026-09-19 신설)
+    # ★왜 기계로 옮겼나: 5줄 점검의 손 항목(ⓔ). 이 표는 「전파 수행 시마다 갱신」이라
+    #   적어 놓고 06-12~08-15 두 달간 안 고쳤다(문서 497곡 / 실제 530곡 — 문서 자체가 자인).
+    #   ⛔값을 JSON 사이드카로 빼지 않는다 — 같은 수가 두 곳이 되면 「자 두 벌」이다.
+    #   ⇒ 표(정본)를 읽고 기계가 다시 재서 대조만 한다.
+    # ★미검사 칸을 «세어서 찍는다» — 안 보는 칸이 「정상」으로 보이지 않게.
+    try:
+        import re
+        policy = ROOT / "docs" / "corpus_propagation_policy.md"
+        rows = {}
+        for line in policy.read_text().splitlines():
+            if line.startswith("|") and line.count("|") >= 3:
+                cells = [c.strip() for c in line.split("|")[1:-1]]
+                if len(cells) >= 2:
+                    rows[cells[0]] = cells[1]
+
+        def num(pat, text):
+            m = re.search(pat, text)
+            return int(m.group(1).replace(",", "")) if m else None
+
+        checked, bad = [], []
+
+        def cmp_cell(label, declared, measured):
+            if declared is None:
+                bad.append(f"{label} 표기 파싱 실패")
+            elif declared != measured:
+                bad.append(f"{label} 표 {declared} ↔ 실측 {measured}")
+            else:
+                checked.append(label)
+
+        r = rows.get("파일 코퍼스", "")
+        cmp_cell("파일코퍼스곡", num(r"\*\*([\d,]+)곡", r), merged_n)
+
+        r = rows.get("lexical_index", "")
+        with sqlite3.connect(LEXICAL_DB) as lx:
+            lx_e, lx_t, lx_g = lx.execute(
+                "SELECT count(*), count(DISTINCT song_id), count(DISTINCT genre) "
+                "FROM entries").fetchone()
+        cmp_cell("lexical트랙", num(r"([\d,]+)트랙", r), lx_t)
+        cmp_cell("lexical엔트리", num(r"([\d,]+) entries", r), lx_e)
+        cmp_cell("lexical장르", num(r"([\d,]+)장르", r), lx_g)
+
+        dict_j = json.loads((ROOT / "rag" / "suno_dictionary_v3.json").read_text())
+        r = rows.get("사전 최신", "")
+        mv = re.search(r"\*\*v([\d.]+)", r)
+        cmp_cell("사전버전", mv.group(1) if mv else None, str(dict_j.get("version")))
+        cmp_cell("사전기준트랙", num(r"([\d,]+)트랙", r),
+                 int(dict_j.get("corpus", {}).get("tracks_count", -1)))
+
+        r = rows.get("표현 레이어", "")
+        with sqlite3.connect(ROOT / "sunolang.db") as ex:
+            def cnt(t):
+                return ex.execute(f"SELECT count(*) FROM {t}").fetchone()[0]
+            cmp_cell("표현개념", num(r"\*\*([\d,]+)개념", r), cnt("expr_concepts"))
+            cmp_cell("표현수", num(r"([\d,]+)표현", r), cnt("expr_expressions"))
+            cmp_cell("인바운드별칭", num(r"별칭 ([\d,]+)", r), cnt("expr_inbound_aliases"))
+
+        r = rows.get("커넥터 OUT", "")
+        ms = re.search(r"snapshot `([^`]+)`", r)
+        if pub_id is None:
+            bad.append("커넥터스냅샷 실측 불가(H7 실패) — 대조 안 함")
+        else:
+            cmp_cell("커넥터스냅샷", ms.group(1) if ms else None, pub_id)
+
+        # ⛔여기서 «안» 보는 칸을 이름으로 남긴다(측정에 망·외부 자원이 필요한 칸).
+        uncovered = ["Qdrant presets(원격 100.90.35.121:6333)", "DB 테이블(A5 보류)",
+                     "webapp 사전(B2 종속)"]
+        detail = f"대조 {len(checked)}칸 일치 / 불일치 {len(bad)} · ⛔미검사 {len(uncovered)}칸: " \
+                 + ", ".join(uncovered)
+        if bad:
+            detail = "⛔" + " · ".join(bad) + " || " + detail
+        check(results, "H8", not bad, detail, warn_only=True)
+    except Exception as exc:
+        check(results, "H8", False, f"정책표 대조 실패: {exc}", warn_only=True)
 
     # 종합
     fails = [r for r in results if r[0] == "FAIL"]
