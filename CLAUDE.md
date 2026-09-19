@@ -1,7 +1,6 @@
 # SunoLanguage (sunolang) 프로젝트 가이드
 
 **목적**: Suno 앱의 음악 인식 결과(프롬프트)를 수집/분석하여 Suno 네이티브 어휘 RAG 구축
-**생성일**: 2026-03-28
 **약칭**: sunolang
 
 ---
@@ -17,7 +16,7 @@ Suno 앱에 실제 음악을 녹음(~10초)하면 Suno가 **자기 언어로** �
 - **대장·서사**=`KANBAN.md`(L2·무제한) / **분류 기준 정본**=`docs/corpus_classification_criteria_v1.md` / 교본=`docs/manual_v3/`
 - **DB**=`sunolang.db`(tracks=레퍼런스 153곡 / `expr_*`=표현 코퍼스 / `match_*`·`ingest_runs`) — ★단일 Writer
 - **스크립트**=`scripts/`(발신 `send_msg.py` · 인박스 `inbox_scan.py` — ★`.venv/bin/python`으로 실행)
-- **데이터**=`data/`(배치·프로브·재분석 산출). ⛔`data/{raw,mp3_phase5,stems_phase5*,upload_batch_*}` **6건은 `/Volumes/LEO/sunolanguage_archive/` 심링크인데 그 볼륨이 미마운트**(09-02 실측) ⇒ 「없음」이 아니라 **끊긴 링크**. `data/parsed`·`rag/`는 실재.
+- **데이터**=`data/`. ⛔일부는 `/Volumes/LEO/` **끊긴 심링크**(미마운트) — 「없음」이 아니다. ★확인=`ls -l`
 
 ---
 
