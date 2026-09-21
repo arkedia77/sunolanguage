@@ -26,3 +26,22 @@ data/video_OTDqev8aW0A/frames/
 data/n022/audio/
 
 data/n022/stems/
+
+# ── 2026-09-21 (admin 리셋 준비통 「미커밋 0줄」 집행 시 정리) ──
+# ⑴파생 백업 스냅샷 — 정본은 sunolang.db·lexical_index.sqlite·suno_dictionary_v3.json 본체
+*.bak_*
+# ⑵오디오·스템 로컬 사본(원본=sunomusic PG/보존잡) — data/n022 선례와 같은 처분
+data/aware/audio/
+data/aware/stems/
+data/s_bp/audio/
+data/s_bp/stems/
+data/vd_duet3/audio_final/
+data/vd_duet3/stems_final/
+# ⑶⛔끊긴 심링크(미마운트 /Volumes/LEO) — 「없음」이 아니다. 지우지 말 것.
+#   트레일링 슬래시 규칙은 심링크에 안 걸려 매번 ??로 뜬다 ⇒ 슬래시 없이 재지정.
+data/raw
+data/mp3_phase5
+data/stems_phase5
+data/stems_phase5_trimmed
+data/upload_batch_20260421
+data/upload_batch_wave1

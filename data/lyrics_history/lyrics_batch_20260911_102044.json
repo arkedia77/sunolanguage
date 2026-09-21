@@ -1,0 +1,560 @@
+[
+  {
+    "index": 0,
+    "title": "밑창",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "단어",
+      "포장지",
+      "틈새",
+      "스와이프"
+    ],
+    "sp": "J-Rock and Pop-Punk fusion. Key of E Major. clean electric guitar arpeggio, synth pad. Acoustic guitar enters with light strumming. The track features a prominent dembow rhythm played by a crisp electronic drum kit with a heavy kick and sharp snare. Male vocals enter. A baritone male vocal delivers the verses with a breathy, intimate tone, transitioning to a powerful, belted chest voice in the choruses. Tango with a chamber ensemble arrangement. The arrangement is sparse, focusing on the interplay between the fingerpicked guitar and the vocal melody.",
+    "lyrics": "[Verse 1]\n단어가 아닌 마음을 골라\n또다시 온다\n포장지 틈새로 드러난 밑창\n\n[Verse 2]\n또다시 온다\n문제없어 또 시작하면 돼\n그날 밤 공항 대합실 끝에서 잤지\n\n[Bridge]\n앱을 껐어 5분 만에 다시 켰어\n왜 끄지를 못하냐 나도 모르겠어\n외로운 게 아니야 지루한 거야\n스와이프가 멈추면 밤이 너무 길어\n\n[Verse 3]\n또다시 온다\n문제없어 또 시작하면 돼\n또 5분 흘렀어",
+    "sp_length": 556,
+    "lyrics_length": 219,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "verse",
+      "bridge",
+      "verse"
+    ],
+    "song_form_type": "verse → verse → bridge → verse",
+    "bracket_sections": 0,
+    "theme": "이별",
+    "sub_theme": "가족",
+    "refined": false,
+    "_source_song_ids": [
+      1685
+    ],
+    "_variant_sections": [
+      "verse_1",
+      "verse_2",
+      "verse_3"
+    ],
+    "sp_validation": {
+      "sp_length": 556,
+      "total_words": 88,
+      "meaningful_words": 37,
+      "native_count": 37,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 219,
+      "section_count": 4,
+      "has_verse": true,
+      "has_chorus": false,
+      "coherence_score": 0.6213,
+      "verdict": "WARN",
+      "issues": [
+        "all sections from same song (self-plagiarism)"
+      ]
+    }
+  },
+  {
+    "index": 1,
+    "title": "새벽",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "손끝",
+      "오른쪽",
+      "모서리",
+      "커터",
+      "흔적"
+    ],
+    "sp": "K-Rock track with pop-punk and alternative rock influences. Acoustic guitar plays a steady fingerstyle pattern in 4/4 time at 72 BPM in the key of G Major. A sliding 808 bass provides the melodic low end with long glides between notes. The chorus features a driving rock drum kit with a prominent snare and crashing cymbals, accompanied by distorted electric guitar power chords and a soaring string section. clean electric guitar riff, steady drum beat. intimate male vocals. The arrangement is sparse, focusing on the interplay between the fingerpicked acoustic guitar and the vocal melody.",
+    "lyrics": "[Verse 1]\n오른쪽 모서리에 깊은 홈이 있어\n커터칼로 그은 듯한 날카로운 흔적\n왼쪽에는 동그란 커피 자국\n몇 년 치 새벽이 거기 앉아 있는 것 같아\n\n[Chorus]\n얼쑤— 참아야지, 좋다— 참을 수 있지\n그렇지, 웃으며 보내야 한다는데\n손끝이 손끝에 닿았다 떨어지는 그 틈\n얼쑤 그 틈으로 사 분이 다 새어 나가네\n\n[Verse 2]\n월요일부터 금요일까지\n참고 또 참은 내 하루\n오늘 밤만큼은 신나게\n다 잊고 놀아볼 거야\n\n[Chorus]\n얼쑤— 참아야지, 좋다— 참을 수 있지\n그렇지, 웃으며 보내야 한다는데\n손끝이 손끝에 닿았다 떨어지는 그 틈\n얼쑤 그 틈으로 사 분이 다 새어 나가네\n\n[Bridge]\n불을 끄기 전에 한 번만\n이 공기를 마셔 두자\n잔향은 사람보다 오래 남아서\n문을 잠근 뒤에도 울린다\n\n[Outro]\n[fingerpicked acoustic guitar]\n[electric guitar arpeggio fades]",
+    "sp_length": 592,
+    "lyrics_length": 472,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "사랑",
+    "sub_theme": "일상",
+    "refined": false,
+    "_source_song_ids": [
+      128,
+      20002,
+      "C_30212",
+      "C_70072"
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 592,
+      "total_words": 96,
+      "meaningful_words": 39,
+      "native_count": 39,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 472,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5431,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 2,
+    "title": "반 바퀴에서 멈춰",
+    "title_strategy": "rebalanced",
+    "title_alternatives": [
+      "반 바퀴에서 멈춰",
+      "회전",
+      "무대",
+      "가장자리",
+      "테이프"
+    ],
+    "sp": "Orchestral march with a cinematic, celebratory character. Key of D Major. sustained guitar feedback. fingerpicked acoustic guitar, light shaker. snare drum build-up, guitar distortion increases. Instrumentation consists of a clean, arpeggiated electric guitar with a chorus effect, a deep sub-bass synth, and a minimalist drum kit with a crisp snare and a soft kick. rhythmic male vocals, distorted guitar riffs. full band groove, driving bassline. Minimalist production features high-frequency clarity on the guitar strings and a dry, intimate vocal mix with light room reverb.",
+    "lyrics": "[Verse 1]\n무대 가장자리 테이프 자국이 남아 있고\n누가 밟고 간 자리마다 마루가 조금씩 꺼졌다\n천장 조명은 꺼진 채로 매달려\n제 무게를 견디는 소리를 낸다\n\n[Chorus]\n너 없이 도는 회전은\n반 바퀴에서 멈춰\n\n[Verse 2]\n퇴근길 걸음이 멈춘 건\n하늘이 불을 켠 탓이거든\n폰을 꺼내 찍어 봤지만\n화면은 평범한 주황일 뿐\n\n[Chorus]\n너 없이 도는 회전은\n반 바퀴에서 멈춰\n\n[Verse 3]\n삼백열두 개 의자가\n언젠가 다른 곳으로 실려 가도\n그 위에 앉았던 저녁들은\n실려 가지 않아\n\n[Outro]\n[violin fades out, solo fingerpicked acoustic guitar]\n[fingerpicked acoustic guitar, melodic violin]",
+    "sp_length": 578,
+    "lyrics_length": 391,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → verse → outro",
+    "bracket_sections": 1,
+    "theme": "밤",
+    "sub_theme": "고독",
+    "refined": false,
+    "_source_song_ids": [
+      1576,
+      "C_30209",
+      "C_30215",
+      "C_30218"
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 578,
+      "total_words": 84,
+      "meaningful_words": 47,
+      "native_count": 47,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 391,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4987,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 3,
+    "title": "재고",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "사랑이 깊어져가고",
+      "손을 더 꼭 잡으며",
+      "지도",
+      "시간",
+      "주름"
+    ],
+    "sp": "Bossa Nova jazz. The arrangement transitions into a mid-tempo groove at 85 BPM in the key of G Major. snare drum build-up, guitar distortion increases. strings enter, legato pads. strings re-enter. full band enters, drums and bass. The bass guitar follows the kick drum with a legato, melodic approach. The production is polished with a wide stereo image for the acoustic instruments and centered vocals. The vocal performance is intimate with breathy delivery in the lower register, transitioning to a resonant chest voice.",
+    "lyrics": "[Verse 1]\n창고에 구름이 왔어\n오늘 날씨 맑음\n그 말은 여기로 다 온다는 거야\n세부구름 100개\n뭉게구름 50개\n먹구름은 10개\n재고 확인 완료야\n\n[Chorus]\n이 손은 내 손의 지도\n시간이 새긴 주름 속에\n사랑이 깊어져가고\n손을 더 꼭 잡으며\n\n[Verse 2]\n장마가 오면 세상이\n쉬는 줄 알았어\n밖에 안 나가도\n되는 게 선물이었어\n\n[Chorus]\n이 손은 내 손의 지도\n시간이 새긴 주름 속에\n사랑이 깊어져가고\n손을 더 꼭 잡으며\n\n[Verse 3]\n나는 이 우주의 탐험가예요\n아침마다 가장 높은 산에 올라요\n캣타워 꼭대기에서\n세상을 내려다봐요\n\n[Outro]\n[acoustic guitar fades]\n[violin fades out, solo fingerpicked acoustic guitar]",
+    "sp_length": 524,
+    "lyrics_length": 401,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → verse → outro",
+    "bracket_sections": 1,
+    "theme": "성장",
+    "sub_theme": "여행",
+    "refined": false,
+    "_source_song_ids": [
+      1102,
+      1200,
+      1733,
+      261
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 524,
+      "total_words": 83,
+      "meaningful_words": 38,
+      "native_count": 38,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 401,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4288,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 4,
+    "title": "박스",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "안쪽",
+      "주소",
+      "매직",
+      "동네",
+      "삼거리"
+    ],
+    "sp": "Bossa Nova. Key of E Major, 82 BPM. fingerpicked acoustic guitar. drums drop to half-time feel, bass guitar drive. Vocal samples are heavily processed with distortion, pitch-shifting, and reverb, often repeating short phrases. A clean electric guitar provides sparse, palm-muted rhythmic accents and subtle arpeggios. The arrangement is built around a deep, percussive log drum that plays a rhythmic, melodic pattern. The production is clean with a natural room reverb on the saxophone and vocals.",
+    "lyrics": "[Verse 1]\n빈 박스를 접다가 안쪽을 본다\n전 집 주소가 매직으로 적혀 있다\n그 동네 삼거리 편의점도\n새벽에 울던 고양이 소리도\n\n[Verse 2]\n객석엔 팸플릿 몇 장\n접힌 자국이 다 다르게 남아\n누가 어디쯤에서 울었는지\n종이가 대신 말해주네\n\n[Bridge]\n근데 크림빵 맛은\n그대로더라\n새 동네에도 빵집 있겠지\n근데 그 아줌마는 없잖아\n\n[Verse 3]\n접이식 의자 삼백 개가 아직 접힌 채로\n비상구 초록 불만 혼자 깨어 있어\n리허설 표시 은색 테이프는 바닥에 남아\n누가 어디 설지 아직 기억하고 있어",
+    "sp_length": 497,
+    "lyrics_length": 287,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "verse",
+      "bridge",
+      "verse"
+    ],
+    "song_form_type": "verse → verse → bridge → verse",
+    "bracket_sections": 0,
+    "theme": "일상",
+    "sub_theme": "출근",
+    "refined": false,
+    "_source_song_ids": [
+      102,
+      1389,
+      "C_30213",
+      "C_30217"
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 497,
+      "total_words": 75,
+      "meaningful_words": 37,
+      "native_count": 37,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 287,
+      "section_count": 4,
+      "has_verse": true,
+      "has_chorus": false,
+      "coherence_score": 0.465,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 5,
+    "title": "말 대신 흘러내린다",
+    "title_strategy": "rebalanced",
+    "title_alternatives": [
+      "말 대신 흘러내린다",
+      "복도",
+      "대신",
+      "선명",
+      "이유"
+    ],
+    "sp": "K-Indie acoustic ballad. Clean electric guitar plays a syncopated, arpeggiated riff in E major at 115 BPM. staccato piano octaves, pizzicato strings. The arrangement features a fingerpicked acoustic guitar playing a steady eighth-note pattern, accompanied by a melodic electric bass that emphasizes the downbeats. The bass guitar enters with sustained root notes, locking with a subtle kick drum. Soft shakers provide sixteenth-note subdivision. K-Pop ballad featuring a female vocalist. The arrangement centers on a clean electric guitar playing arpeggiated chords with a slight chorus effect. reese bass modulates, half-time drum feel.",
+    "lyrics": "[Verse 1]\n더 선명해지는 이유를\n그때는 몰랐다\n지퍼를 닫는 소리가 울렸다\n\n[Chorus]\n복도를 걸으면서 비로소 눈물이\n말 대신 흘러내린다\n\n[Verse 2]\n혀끝에 올렸다 삼킨다\n\"그래\" 두 글자가 안 나온다\n이상하지 한 글자 바꿨을 뿐인데\n세상이 평평해지는 기분\n\n[Chorus]\n복도를 걸으면서 비로소 눈물이\n말 대신 흘러내린다\n\n[Verse 3]\n카메라 여섯 대가 찍었잖아\n녹화됐어 내 삼십칠 초\nPD가 봤을 거야 편집실에서\n잘랐겠지 흐름에 안 맞아서\n한 달을 고민한 말인데\n흐름 한마디에 사라졌어\n\n[Outro]\n[fingerpicked acoustic guitar]\n[violin fades out, solo fingerpicked acoustic guitar]",
+    "sp_length": 637,
+    "lyrics_length": 381,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → verse → outro",
+    "bracket_sections": 1,
+    "theme": "분노",
+    "sub_theme": "억울",
+    "refined": false,
+    "_source_song_ids": [
+      1126,
+      1766,
+      42,
+      72
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 637,
+      "total_words": 91,
+      "meaningful_words": 51,
+      "native_count": 51,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 381,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5523,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 6,
+    "title": "노래",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "존재한다",
+      "의미 없이도",
+      "분수처럼",
+      "소리 없이",
+      "흐르면 된다"
+    ],
+    "sp": "K-Pop rock track featuring distorted electric guitars and a driving drum kit. Key of E Major, 85 BPM. Clean electric guitar plays jazz-influenced seventh chords with a light chorus effect. maximum energy, layered synths. woodblock accents. Production is polished with modern compression and bright EQ on the guitars and vocals. K-Pop power ballad featuring male tenor vocals and a rock-influenced arrangement. Male vocals are delivered in a breathy, intimate tenor range with subtle double-tracking on key phrases. falsetto ad-libs.",
+    "lyrics": "[Verse 1]\n삼각김밥 모서리 맞춰 서른 개\n얼음 기계 윙윙대는 새벽의 노래\n바코드 찍는 손끝 리듬 하나 둘\n젖은 유리창에 그림자만 번지네\n우산 없이 걷는 노파의 뒷모습\n보리차 캔 하나에 밤이 식어가고\n트럭 기사는 창에 기대 졸고\n비상등만 똑딱똑딱 시간을 세고\n\n[Chorus]\n존재한다\n의미 없이도\n분수처럼\n소리 없이\n흐르면 된다\n되돌아갈 길이 없어도\n그것이 순환이다\n영원한 반복\n그것이 생명이다\n\n[Verse 2]\n기차 소리 자체가 음악인 것 같아서\n이 리듬이면 충분해\n창밖에 전선줄이 올라갔다 내려가\n그 곡선이 악보 같아서 웃었어\n\n[Chorus]\n존재한다\n의미 없이도\n분수처럼\n소리 없이\n흐르면 된다\n되돌아갈 길이 없어도\n그것이 순환이다\n영원한 반복\n그것이 생명이다\n\n[Bridge]\n핸드폰을 내려놓는다\n강아지가 올라온다\n이게 진짜 콘텐츠다\n\n[Outro]\n[distorted electric guitar, driving rock drums, male tenor vocals]\n[full band enters, distorted electric guitar, driving drums]",
+    "sp_length": 532,
+    "lyrics_length": 557,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "자유",
+    "sub_theme": "출발",
+    "refined": false,
+    "_source_song_ids": [
+      1024,
+      1105,
+      210,
+      "C_70075"
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 532,
+      "total_words": 79,
+      "meaningful_words": 37,
+      "native_count": 37,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 557,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4065,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 7,
+    "title": "마네킹",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "혼례",
+      "북소리",
+      "바늘",
+      "사방",
+      "치수"
+    ],
+    "sp": "K-Pop fusion track blending traditional Korean Gugak elements with modern hard rock and electronic dance music. A clean, fingerpicked acoustic guitar plays a repetitive arpeggiated pattern in 4/4 time at 72 BPM. The structure involves call-and-response between the clarinet and guitar, with the bass maintaining a steady pulse. The track features a prominent, distorted reese bass that modulates with a growling, metallic timbre. fingerpicked acoustic guitar, soft kick drum. The production is clean with light plate reverb on the vocals and a wide stereo image for the acoustic guitar. The arrangement centers on a fingerpicked acoustic guitar with a warm, resonant tone.",
+    "lyrics": "[Verse 1]\n바늘이 사방으로 튀고 치수는 두 치나 짧다는데\n동정깃 한 필이 데구르르 풀려 나가\n배달 총각 발끝 걸려 마네킹과 나란히 나자빠지네\n\n[Chorus]\n혼례의 북소리는 사하노니\n열 시를 넘기지만 않는다면\n\n[Verse 2]\n득구의 손끝, 젖은 지폐 한 장\n손금 사이로 스며든 빗물, 종이가 척 붙고\n다 접은 판에 저 혼자 남아\n숨은 참고 심장은 장구채 되어\n\n[Chorus]\n혼례의 북소리는 사하노니\n열 시를 넘기지만 않는다면\n\n[Verse 3]\n손님 하나 값을 삐딱하게 흥정 걸어오면\n영선이 장단 맞춰 되받아 넘기는데\n고등어 꼬리 잡고 형광등 아래로 들어 올리니\n\n[Outro]\n[syncopated electric bass, muted electric guitar, punchy drums]\n[full band, distorted guitar chords, high-energy drums]",
+    "sp_length": 672,
+    "lyrics_length": 452,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → verse → outro",
+    "bracket_sections": 1,
+    "theme": "회상",
+    "sub_theme": "가족",
+    "refined": false,
+    "_source_song_ids": [
+      "C_70068",
+      "C_70070",
+      "C_70074",
+      "C_70077"
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 672,
+      "total_words": 103,
+      "meaningful_words": 50,
+      "native_count": 50,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 452,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.4899,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 8,
+    "title": "손금이 속삭인다",
+    "title_strategy": "rebalanced",
+    "title_alternatives": [
+      "손금이 속삭인다",
+      "주름",
+      "시간",
+      "영원",
+      "손금"
+    ],
+    "sp": "K-Indie ballad. The tempo is 113 BPM in the key of G# minor. The guitar maintains a consistent eighth-note pulse throughout the track. Acoustic guitar plays syncopated strumming patterns in 4/4 time at 105 BPM in the key of G Major. Upright bass plays a steady two-beat pattern on the root and fifth. The arrangement is built around a deep, percussive log drum that plays a rhythmic, melodic pattern. Features a prominent slap bass line that follows a syncopated sixteenth-note pattern, bright electric guitar scratches on the offbeats, and a polished male vocal performance. Minimalist percussion consisting of a soft kick drum on beats 1 and 3.",
+    "lyrics": "[Verse 1]\n그래도 내 손바닥에 있었어\n그게 충분한 것 같았어\n흐린 하늘이 조금 밝아진 것 같았어\n착각이어도 좋아\n\n[Chorus]\n주름진 손이 말하는 것\n시간보다 깊은 사랑이다\n영원이란 이런 것이라고\n손금이 속삭인다\n\n[Verse 2]\n언제 화면이 꺼졌는지도 몰랐어\n그냥 서 있었던 것 같기도 한 걸\n어깨 뒤에 하루가 얹혀있는데\n생각이 잠깐 자리를 비운 것 같았어\n\n[Chorus]\n주름진 손이 말하는 것\n시간보다 깊은 사랑이다\n영원이란 이런 것이라고\n손금이 속삭인다\n\n[Verse 3]\n자정 지난 시간들이 연결되고\n보지 않아도 느껴지는 그것\n말하지 않아도 알아지는 것\n너와 나 사이의 조용한 언어\n\n[Outro]\n[violin fades out, solo fingerpicked acoustic guitar]\n[fingerpicked acoustic guitar]",
+    "sp_length": 646,
+    "lyrics_length": 432,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "verse",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → verse → outro",
+    "bracket_sections": 1,
+    "theme": "이별",
+    "sub_theme": "연인",
+    "refined": false,
+    "_source_song_ids": [
+      1153,
+      1365,
+      161,
+      92
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 646,
+      "total_words": 108,
+      "meaningful_words": 39,
+      "native_count": 39,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 432,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.5346,
+      "verdict": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "index": 9,
+    "title": "박수",
+    "title_strategy": "verse_noun",
+    "title_alternatives": [
+      "(same gentle energy)",
+      "This is all",
+      "is all I",
+      "all I need",
+      "I need today"
+    ],
+    "sp": "Orchestral cinematic score with a focus on woodwinds and strings. A clean, fingerpicked acoustic guitar plays a repetitive arpeggiated pattern in 4/4 time at 72 BPM in the key of G Major. Fingerpicked acoustic guitar plays a repetitive arpeggiated pattern in eighth notes. Features a clean electric guitar playing syncopated 16th-note rhythms, a slap bass guitar, and a drum kit with a crisp snare and tight hi-hats. The production uses light plate reverb on the vocals and a dry, close-mic sound for the guitar. A minimalist drum kit uses a rimshot on the snare and a soft kick drum.",
+    "lyrics": "[Verse 1]\n관객은 일곱 명이었어\n누가 먼저랄 것도 없이 박수를 쳤어\n크지 않았는데 선명했어\n빈 극장 안에서 울렸어\n\n[Chorus]\n(same gentle energy)\nThis is all I need today\n\n[Verse 2]\n판사 앞에 나란히 앉아 서로를 보지 못하는 우리\n변호사의 목소리만이 이 차가운 방을 채워가\n결혼할 때의 맹세가 여기서 풀어지는 거야\n\n[Chorus]\n(same gentle energy)\nThis is all I need today\n\n[Bridge]\n청소는 저녁에 하기로 한다\n그때쯤이면 빛이 각도를 바꾸고\n보이던 것들은 다시\n보이지 않는 자리로 돌아갈 것이다\n\n[Outro]\n[violin fades out, solo fingerpicked acoustic guitar]\n[fingerpicked acoustic guitar, melodic violin]",
+    "sp_length": 584,
+    "lyrics_length": 446,
+    "genre_group": "ACOUSTIC",
+    "song_form": [
+      "verse",
+      "chorus",
+      "verse",
+      "chorus",
+      "bridge",
+      "outro"
+    ],
+    "song_form_type": "verse → chorus → verse → chorus → bridge → outro",
+    "bracket_sections": 1,
+    "theme": "사랑",
+    "sub_theme": "그리움",
+    "refined": false,
+    "_source_song_ids": [
+      1173,
+      910,
+      "C_30214",
+      "S016_08"
+    ],
+    "_variant_sections": [],
+    "sp_validation": {
+      "sp_length": 584,
+      "total_words": 100,
+      "meaningful_words": 45,
+      "native_count": 45,
+      "novel_count": 0,
+      "native_ratio": 1.0,
+      "verdict": "PASS",
+      "novel_words": []
+    },
+    "lyrics_validation": {
+      "lyrics_length": 446,
+      "section_count": 6,
+      "has_verse": true,
+      "has_chorus": true,
+      "coherence_score": 0.2714,
+      "verdict": "WARN",
+      "issues": []
+    }
+  }
+]
