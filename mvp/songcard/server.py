@@ -185,8 +185,18 @@ class H(BaseHTTPRequestHandler):
                 return _json(self, 400, {"error": "what=lyrics|vocal|genre"})
             if req["source"] == "sample":
                 return _json(self, 409, {"error": "샘플 카드는 재요청할 수 없어요"})
+            if req["status"] != "ready":
+                return _json(self, 409, {"error": "지금 만드는 중인 노래가 끝난 뒤에 고칠 수 있어요"})
+            to = None
+            if what in ("vocal", "genre"):   # 무엇으로 바꿀지 값이 있어야 다시 만들 수 있다
+                to = str(body.get("to") or "")
+                allowed = sp_builder.VOCALS if what == "vocal" else sp_builder.GENRES
+                if to not in allowed:
+                    return _json(self, 400, {"error": f"바꿀 {'목소리' if what == 'vocal' else '장르'}를 골라 주세요"})
+                if to == req["vocal_version"][what]:
+                    return _json(self, 400, {"error": "지금과 같은 선택이에요"})
             redo, created = store.request_redo(req["request_id"], what, str(body.get("note", ""))[:300],
-                                               str(body.get("redo_key") or ""))
+                                               str(body.get("redo_key") or ""), to=to)
             return _json(self, 201 if created else 200, {"created": created, "redo": redo})
         self.send_error(404)
 

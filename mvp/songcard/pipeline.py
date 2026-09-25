@@ -109,15 +109,26 @@ def main():
         _need(req, "lyrics_ready")
         lv = req["lyrics_versions"][-1]["v"]
         vv = req["vocal_version"]["v"]
-        _write(f"{rid}_gen_L{lv}_V{vv}.json", {   # 파일명이 곧 중복 방지 키
+        # 아직 어느 발주서에도 안 실린 «닫힌 재요청»을 싣는다 — 고객이 뭘 바꿔 달라 했는지가 발주서에 남게
+        changes = [x for x in req["redos"] if x["status"] == "closed" and not x.get("ordered_in")]
+        key = f"{rid}_gen_L{lv}_V{vv}"
+        _write(f"{key}.json", {   # 파일명이 곧 중복 방지 키
             "request_id": rid, "kind": "suno_generation_order", "to": "sunomusic",
             "order_key": f"{rid}:L{lv}:V{vv}",
             "title": req.get("title") or f"{req['form']['recipient']}에게",
+            "genre": req["vocal_version"]["genre"], "vocal": req["vocal_version"]["vocal"],
             "style_prompt": req["sp"]["sp"], "sp_chars": req["sp"]["sp_chars"],
             "lyrics": req["lyrics_versions"][-1]["text"],
+            "change_requests": [{k: x.get(k) for k in ("redo_id", "what", "to", "note")} for x in changes],
             "takes": 2,
             "return": "오디오 파일(mp3/wav) 원본 + suno_uuid — ⛔cdn1 직링크는 09-25 실측 403이라 링크만으로는 회수 불가",
         })
+
+        def mark(r):
+            for x in r["redos"]:
+                if x["status"] == "closed" and not x.get("ordered_in"):
+                    x["ordered_in"] = key
+        store.update(rid, mark)
         store.set_status(rid, "generation_queued")
 
     elif a.cmd == "gen-ack":
@@ -137,25 +148,53 @@ def main():
         req = store.get(rid)
         if not req["lyrics_versions"] or not req["takes"]:
             sys.exit("⛔ 가사·take 가 있어야 카드가 됩니다")
-        if not any(t["selected"] for t in req["takes"]):
-            def sel(r):
-                r["takes"][0]["selected"] = True
-            store.update(rid, sel)
-        store.set_status(rid, "ready")
+        lv, vv = req["lyrics_versions"][-1]["v"], req["vocal_version"]["v"]
+        cur = [t for t in req["takes"] if t.get("lyrics_v") == lv and t.get("vocal_v") == vv]
+        if not cur:
+            sys.exit(f"⛔ 현재 판(가사 L{lv}·보컬 V{vv})으로 만든 take 가 없습니다 — 옛 판 오디오로는 게시하지 않습니다")
+        take = next((t for t in cur if t["selected"]), cur[0])
+
+        def pub(r):
+            for t in r["takes"]:
+                t["selected"] = t["asset_id"] == take["asset_id"]
+            store.deliver(r, take)
+        store.update(rid, pub)
+        store.set_status(rid, "ready", f"L{lv}·V{vv}")
 
     elif a.cmd == "fail":
         store.set_status(rid, "failed", a.note or "")
 
     elif a.cmd == "redo-close":
-        def f(r):
-            x = next(x for x in r["redos"] if x["redo_id"] == a.extra)
-            x["status"] = "closed"
-            if x["what"] in ("vocal", "genre"):
-                r["vocal_version"]["v"] += 1
-        store.update(rid, f)
-        req = store.get(rid)
-        x = next(x for x in req["redos"] if x["redo_id"] == a.extra)
+        x = next((x for x in req["redos"] if x["redo_id"] == a.extra), None)
+        if not x:
+            sys.exit(f"⛔ 재요청 {a.extra} 없음")
+        if x["status"] == "closed":   # 두 번 닫아도 판이 또 오르지 않게
+            print(f"= {a.extra} 는 이미 닫혀 있습니다(변경 없음)")
+            return
         what = x["what"]
+        if what in ("vocal", "genre"):
+            import sp_builder
+            if not x.get("to"):
+                sys.exit(f"⛔ {a.extra} 에 바꿀 값(to)이 없습니다")
+            vv = dict(req["vocal_version"])
+            vv[what] = x["to"]
+            vv["v"] += 1
+            sp = sp_builder.build_sp(req["form"]["occasion"], vv["genre"], vv["vocal"])
+
+            def f(r):
+                r["vocal_version"] = vv
+                r["sp"] = sp
+        else:
+            def f(r):
+                pass
+
+        def close(r):
+            f(r)
+            y = next(y for y in r["redos"] if y["redo_id"] == a.extra)
+            y["status"] = "closed"
+            y["closed_at"] = store._now()
+        store.update(rid, close)
+        req = store.get(rid)
         if what == "lyrics":
             _write(f"{rid}_lyrics_redo_{a.extra}.json", {
                 "request_id": rid, "kind": "lyrics_redo_order", "to": a.to,

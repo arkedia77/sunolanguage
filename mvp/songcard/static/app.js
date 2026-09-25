@@ -178,18 +178,8 @@ async function viewCard(share) {
   } }, "공유하기");
   const visText = () => r.visibility === "link" ? "링크가 있는 사람은 누구나 들을 수 있어요" : "지금은 나만 볼 수 있어요 · 공유하면 링크가 열립니다";
   const visLine = h("p", { class: "meta" }, visText());
-  const redo = owner && r.source === "live" && r.status === "ready" ? h("details", {},
-    h("summary", {}, "고치고 싶은 곳이 있나요?"),
-    h("div", { class: "row" }, [["lyrics", "가사"], ["vocal", "목소리"], ["genre", "장르"]].map(([w, lb]) =>
-      h("button", { class: "btn ghost", onclick: async e => {
-        const note = prompt(`${lb}를 어떻게 바꿀까요?`) || "";
-        const key = sessionStorage.getItem("songcard.redo." + r.request_id) || uuid();
-        sessionStorage.setItem("songcard.redo." + r.request_id, key);
-        try {
-          const x = await api(`/api/requests/${r.request_id}/redo`, { method: "POST", body: JSON.stringify({ t, what: w, note, redo_key: key }) });
-          toast(x.created ? "다시 만들기를 요청했어요" : "이미 요청된 수정이 진행 중이에요");
-        } catch (err) { toast(err.message); }
-      } }, lb)))) : null;
+  const redo = owner && r.source === "live" && r.status === "ready" ? redoForm(r, t) : null;
+  const updating = r.updating ? h("p", { class: "meta" }, `새 버전을 만드는 중이에요 (${r.status_ko}) · 완성될 때까지 지금 카드가 그대로 보여요`) : null;
   $app.append(h("div", { class: "music" },
     h("div", { class: `cover occ-${r.occasion}` },
       h("span", { class: "e", "aria-hidden": "true" }, o.emoji),
@@ -202,10 +192,39 @@ async function viewCard(share) {
       r.dedication ? h("p", { class: "dedi" }, `“${r.dedication}”`) : null,
       audio ? h("div", { class: "player" }, playBtn, h("div", { class: "bar" }, seek, h("div", { class: "time" }, cur, dur)))
             : h("p", { class: "meta" }, `아직 노래가 준비되지 않았어요 (${r.status_ko})`),
+      updating,
       r.lyrics ? h("details", {}, h("summary", {}, "가사 보기"), h("div", { class: "lyrics" }, r.lyrics)) : null,
       shareBtn, owner ? visLine : null, redo,
       h("a", { class: "btn ghost", href: "/" }, "나도 노래 카드 만들기"),
     )));
+}
+
+// 재요청: 무엇을(가사/목소리/장르) · 목소리·장르면 «무엇으로» · 메모. 키는 폼 하나에 하나, 성공하면 버린다.
+function redoForm(r, t) {
+  const st = { what: null, to: null, key: uuid() };
+  const optsBox = h("div");
+  const note = h("textarea", { maxlength: 300, placeholder: "어떻게 바꾸면 좋을지 적어 주세요 (선택)" });
+  const err = h("div", { class: "err", role: "alert" });
+  const pick = (group, key, val) => { st[key] = val; group.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.v === val))); };
+  const chipRow = (key, list, onPick) => { const g = h("div", { class: "chips" }); list.forEach(x => g.append(h("button", { type: "button", class: "chip", "data-v": x.id, "aria-pressed": "false", onclick: () => { pick(g, key, x.id); onPick && onPick(x.id); } }, x.label))); return g; };
+  const whatRow = chipRow("what", [{ id: "lyrics", label: "가사" }, { id: "vocal", label: "목소리" }, { id: "genre", label: "장르" }], w => {
+    st.to = null;
+    const list = w === "vocal" ? OPT.vocals : w === "genre" ? OPT.genres : [];
+    optsBox.replaceChildren(...(list.length ? [h("label", {}, "무엇으로 바꿀까요?"), chipRow("to", list.filter(x => x.id !== r[w]))] : []));
+  });
+  const btn = h("button", { class: "btn", type: "button", onclick: async () => {
+    err.textContent = "";
+    if (!st.what) { err.textContent = "고칠 곳을 골라 주세요"; return; }
+    if (st.what !== "lyrics" && !st.to) { err.textContent = "바꿀 값을 골라 주세요"; return; }
+    btn.disabled = true;
+    try {
+      const x = await api(`/api/requests/${r.request_id}/redo`, { method: "POST", body: JSON.stringify({ t, what: st.what, to: st.to, note: note.value, redo_key: st.key }) });
+      toast(x.created ? "다시 만들기를 요청했어요" : "이미 요청된 수정이 진행 중이에요");
+      st.key = uuid();
+    } catch (e) { err.textContent = e.message; }
+    btn.disabled = false;
+  } }, "다시 만들어 주세요");
+  return h("details", {}, h("summary", {}, "고치고 싶은 곳이 있나요?"), h("label", {}, "고칠 곳"), whatRow, optsBox, h("label", {}, "메모"), note, btn, err);
 }
 
 // ---------- 내 카드 ----------

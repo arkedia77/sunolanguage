@@ -7,6 +7,7 @@ request_id · legacy_gid · takes[].suno_uuid/selected · lyrics_versions · voc
 - 중복 생성 방지: 같은 client_key 로 두 번 만들면 **처음 것을 돌려준다**. 재요청도 redo_key 로 같다.
 - source = sample | live : 샘플 음원 카드와 실생성 카드를 섞지 않는다.
 """
+import fcntl
 import hashlib
 import json
 import os
@@ -17,7 +18,40 @@ from pathlib import Path
 
 VAR = Path(__file__).resolve().parent / "var"
 DB_FILE = VAR / "songcard_store.json"
-_lock = threading.RLock()
+
+
+class _XLock:
+    """스레드 잠금 + **프로세스 간** 파일 잠금(flock).
+
+    서버와 운영 CLI(pipeline.py)가 서로 다른 프로세스에서 같은 JSON을 읽고-고치고-쓴다.
+    RLock 만으로는 프로세스 사이가 안 막혀서 한쪽 갱신이 사라졌다(solself 09-25 독립 재현).
+    같은 스레드에서 다시 들어오면 flock 은 한 번만 잡는다.
+    """
+
+    def __init__(self):
+        self._r = threading.RLock()
+        self._depth = 0
+        self._fd = None
+
+    def __enter__(self):
+        self._r.acquire()
+        if self._depth == 0:
+            VAR.mkdir(parents=True, exist_ok=True)
+            self._fd = os.open(VAR / ".store.lock", os.O_CREAT | os.O_RDWR, 0o600)
+            fcntl.flock(self._fd, fcntl.LOCK_EX)
+        self._depth += 1
+        return self
+
+    def __exit__(self, *exc):
+        self._depth -= 1
+        if self._depth == 0:
+            fcntl.flock(self._fd, fcntl.LOCK_UN)
+            os.close(self._fd)
+            self._fd = None
+        self._r.release()
+
+
+_lock = _XLock()
 
 STATUSES = [
     "received",            # 사연 접수
@@ -151,21 +185,27 @@ def add_take(rid: str, suno_uuid: str | None, asset_id: str, select: bool = Fals
         if select:
             for t in r["takes"]:
                 t["selected"] = False
-        r["takes"].append({"suno_uuid": suno_uuid, "asset_id": asset_id, "selected": select})
+        # take 는 만들어질 때의 가사판·보컬판에 묶인다(다른 판의 가사와 섞여 보이지 않게)
+        r["takes"].append({"suno_uuid": suno_uuid, "asset_id": asset_id, "selected": select,
+                           "lyrics_v": r["lyrics_versions"][-1]["v"] if r["lyrics_versions"] else None,
+                           "vocal_v": r["vocal_version"]["v"]})
 
     return update(rid, f)
 
 
-def request_redo(rid: str, what: str, note: str, redo_key: str) -> tuple[dict, bool]:
-    """재요청. 같은 redo_key 이거나 이미 열린 재요청이 있으면 새로 만들지 않는다."""
+def request_redo(rid: str, what: str, note: str, redo_key: str, to: str | None = None) -> tuple[dict, bool]:
+    """재요청. 같은 redo_key 이거나 이미 열린 재요청이 있으면 새로 만들지 않는다.
+
+    보컬·장르 재요청은 바꿀 **값**(to)을 같이 받아 둔다 — 닫을 때 그 값으로 SP·발주서를 다시 만든다.
+    """
     created = {"v": False, "redo": None}
 
     def f(r):
         for x in r["redos"]:
-            if x["redo_key"] == redo_key or x["status"] == "open":
+            if (redo_key and x["redo_key"] == redo_key) or x["status"] == "open":
                 created["redo"] = x
                 return
-        x = {"redo_id": f"R{len(r['redos'])+1}", "redo_key": redo_key, "what": what, "note": note,
+        x = {"redo_id": f"R{len(r['redos'])+1}", "redo_key": redo_key, "what": what, "to": to, "note": note,
              "at": _now(), "status": "open"}
         r["redos"].append(x)
         created["v"], created["redo"] = True, x
@@ -174,10 +214,18 @@ def request_redo(rid: str, what: str, note: str, redo_key: str) -> tuple[dict, b
     return created["redo"], created["v"]
 
 
+def deliver(r: dict, take: dict):
+    """납품본 = (take · 그 take 의 가사판 · 보컬판) 한 묶음. 카드는 이것만 보여 준다."""
+    r["delivered"] = {"asset_id": take["asset_id"], "lyrics_v": take["lyrics_v"], "vocal_v": take["vocal_v"],
+                      "title": r.get("title"), "at": _now()}
+
+
 def public_view(req: dict, owner: bool) -> dict:
     """카드 화면용. 비밀 토큰·서버 경로는 내보내지 않는다."""
-    sel = next((t for t in req["takes"] if t["selected"]), req["takes"][0] if req["takes"] else None)
-    lyr = req["lyrics_versions"][-1] if req["lyrics_versions"] else None
+    # 카드에는 «납품본» 묶음만 싣는다. 새 판을 만드는 중이어도 이전 납품본(오디오+그 가사)을 그대로 보여 주고,
+    # 새 가사와 옛 오디오를 섞지 않는다.
+    d = req.get("delivered")
+    lyr = next((x for x in req["lyrics_versions"] if d and x["v"] == d["lyrics_v"]), None)
     f = req["form"]
     v = {
         "request_id": req["request_id"],
@@ -189,11 +237,12 @@ def public_view(req: dict, owner: bool) -> dict:
         "recipient": f["recipient"],
         "sender": f.get("sender", ""),
         "dedication": f.get("message", ""),
-        "title": req.get("title") or f"{f['recipient']}에게",
-        "genre": f["genre"],
-        "vocal": f["vocal"],
+        "title": (d or {}).get("title") or req.get("title") or f"{f['recipient']}에게",
+        "genre": req["vocal_version"]["genre"],   # 원 입력(form)이 아니라 현재 판
+        "vocal": req["vocal_version"]["vocal"],
         "lyrics": lyr["text"] if lyr else None,
-        "audio": f"/audio/{req['share_token']}/{sel['asset_id']}" if sel else None,
+        "audio": f"/audio/{req['share_token']}/{d['asset_id']}" if d else None,
+        "updating": bool(d) and req["status"] != "ready",
         "share_token": req["share_token"],
         "visibility": req["visibility"],
         "sample_note": req.get("sample_note"),
