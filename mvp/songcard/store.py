@@ -217,6 +217,7 @@ def request_redo(rid: str, what: str, note: str, redo_key: str, to: str | None =
 def deliver(r: dict, take: dict):
     """납품본 = (take · 그 take 의 가사판 · 보컬판) 한 묶음. 카드는 이것만 보여 준다."""
     r["delivered"] = {"asset_id": take["asset_id"], "lyrics_v": take["lyrics_v"], "vocal_v": take["vocal_v"],
+                      "genre": r["vocal_version"]["genre"], "vocal": r["vocal_version"]["vocal"],
                       "title": r.get("title"), "at": _now()}
 
 
@@ -238,8 +239,11 @@ def public_view(req: dict, owner: bool) -> dict:
         "sender": f.get("sender", ""),
         "dedication": f.get("message", ""),
         "title": (d or {}).get("title") or req.get("title") or f"{f['recipient']}에게",
-        "genre": req["vocal_version"]["genre"],   # 원 입력(form)이 아니라 현재 판
-        "vocal": req["vocal_version"]["vocal"],
+        # 카드에 보이는 보컬·장르 = 납품본 것. 만드는 중인 판은 production_* 로 따로 둔다(solself 09-25 재검 메모)
+        "genre": (d or {}).get("genre") or req["vocal_version"]["genre"],
+        "vocal": (d or {}).get("vocal") or req["vocal_version"]["vocal"],
+        "production_genre": req["vocal_version"]["genre"],
+        "production_vocal": req["vocal_version"]["vocal"],
         "lyrics": lyr["text"] if lyr else None,
         "audio": f"/audio/{req['share_token']}/{d['asset_id']}" if d else None,
         "updating": bool(d) and req["status"] != "ready",

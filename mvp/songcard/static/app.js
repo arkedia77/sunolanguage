@@ -210,7 +210,7 @@ function redoForm(r, t) {
   const whatRow = chipRow("what", [{ id: "lyrics", label: "가사" }, { id: "vocal", label: "목소리" }, { id: "genre", label: "장르" }], w => {
     st.to = null;
     const list = w === "vocal" ? OPT.vocals : w === "genre" ? OPT.genres : [];
-    optsBox.replaceChildren(...(list.length ? [h("label", {}, "무엇으로 바꿀까요?"), chipRow("to", list.filter(x => x.id !== r[w]))] : []));
+    optsBox.replaceChildren(...(list.length ? [h("label", {}, "무엇으로 바꿀까요?"), chipRow("to", list.filter(x => x.id !== r["production_" + w]))] : []));
   });
   const btn = h("button", { class: "btn", type: "button", onclick: async () => {
     err.textContent = "";

@@ -148,6 +148,8 @@ def main():
     check("(1) 보컬 판 값이 male 로 바뀜·V2", st["vocal_version"] == {"v": 2, "vocal": "male", "genre": "acoustic"}, st["vocal_version"])
     check("(1) 발주서 SP=male vocals·female 없음", "male vocals" in order["style_prompt"] and "female" not in order["style_prompt"], order["style_prompt"])
     check("(1) 발주서에 고객 변경요청 문면", any(c["note"] == "남자 목소리로" and c["to"] == "male" for c in order["change_requests"]))
+    c2 = json.loads(call(B, "GET", f"/api/cards/{share2}?t={t2}")[1])
+    check("(1) 카드 보컬=납품본(female)·제작판(male) 구분", c2["vocal"] == "female" and c2["production_vocal"] == "male", (c2["vocal"], c2["production_vocal"]))
     check("(1) 같은 재요청 두 번 닫아도 판 그대로", rc == 0 and "이미 닫혀" in out and st["vocal_version"]["v"] == 2)
 
     # (2) 새 가사 수령 중에도 카드는 «납품본»(옛 오디오+옛 가사) — 새 가사와 옛 오디오를 섞지 않는다

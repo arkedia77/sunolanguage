@@ -66,7 +66,7 @@ def main():
             for st in ["lyrics_ready", "generation_queued", "generating", "audio_ready", "ready"]:
                 store.set_status(rid, st, "sample")
         r = store.get(rid)
-        if not r.get("delivered"):   # 납품본 묶음(take·가사판·보컬판) — 09-25 수리 이전 샘플도 여기서 채운다
+        if not r.get("delivered") or "vocal" not in r["delivered"]:   # 납품본 묶음(take·가사판·보컬판) — 09-25 수리 이전 샘플도 여기서 채운다
             def fix(x):
                 t = next(t for t in x["takes"] if t["selected"])
                 t.setdefault("lyrics_v", x["lyrics_versions"][-1]["v"])
