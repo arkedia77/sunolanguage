@@ -193,7 +193,7 @@ async function viewCard(share) {
       audio ? h("div", { class: "player" }, playBtn, h("div", { class: "bar" }, seek, h("div", { class: "time" }, cur, dur)))
             : h("p", { class: "meta" }, `아직 노래가 준비되지 않았어요 (${r.status_ko})`),
       updating,
-      r.lyrics ? h("details", {}, h("summary", {}, "가사 보기"), h("div", { class: "lyrics" }, r.lyrics)) : null,
+      r.lyrics ? h("details", {}, h("summary", {}, "가사 보기"), h("div", { class: "lyrics" }, lyricsForCard(r.lyrics))) : null,
       shareBtn, owner ? visLine : null, redo,
       h("a", { class: "btn ghost", href: "/" }, "나도 노래 카드 만들기"),
     )));
@@ -225,6 +225,18 @@ function redoForm(r, t) {
     btn.disabled = false;
   } }, "다시 만들어 주세요");
   return h("details", {}, h("summary", {}, "고치고 싶은 곳이 있나요?"), h("label", {}, "고칠 곳"), whatRow, optsBox, h("label", {}, "메모"), note, btn, err);
+}
+
+// 가사 표시: [Verse 1] 같은 구간 태그는 «— Verse 1 —»로, 빈 구간(전주 등)은 뺀다. 원문은 그대로 둔다(표시만).
+function lyricsForCard(text) {
+  const blocks = text.split(/\n(?=\[)/);
+  return blocks.map(b => {
+    const [head, ...rest] = b.split("\n");
+    const m = head.trim().match(/^\[(.+)\]$/);
+    const body = rest.join("\n").trim();
+    if (!m) return b.trim();
+    return body ? `— ${m[1]} —\n${body}` : "";
+  }).filter(Boolean).join("\n\n");
 }
 
 // ---------- 내 카드 ----------
