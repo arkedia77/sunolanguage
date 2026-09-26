@@ -26,6 +26,8 @@ import store
 
 HERE = Path(__file__).resolve().parent
 STATIC = HERE / "static"
+ROOT = HERE.parents[1]          # sunolanguage 리포 루트 — 자산 경로는 여기 기준 상대경로로 저장
+BASE = ""                       # 배포 경로 접두(--base). 프록시가 접두를 떼든 안 떼든 둘 다 받는다
 
 OCCASIONS = [
     {"id": "birthday", "label": "생일", "emoji": "🎂", "hint": "올해도 태어나줘서 고맙다는 말"},
@@ -41,6 +43,7 @@ LIMITS = {"recipient": 20, "sender": 20, "story": 1200, "memory": 600, "message"
 def _json(h, code, obj):
     body = json.dumps(obj, ensure_ascii=False).encode()
     h.send_response(code)
+    h.send_header("X-Robots-Tag", "noindex, nofollow")
     h.send_header("Content-Type", "application/json; charset=utf-8")
     h.send_header("Cache-Control", "no-store")
     h.send_header("Content-Length", str(len(body)))
@@ -65,12 +68,32 @@ class H(BaseHTTPRequestHandler):
         return json.loads(self.rfile.read(n) or b"{}")
 
     # ---------- GET ----------
+    def _path(self):
+        p = urlparse(self.path).path
+        if BASE and (p == BASE or p.startswith(BASE + "/")):
+            p = p[len(BASE):] or "/"
+        return p
+
     def do_GET(self):
         u = urlparse(self.path)
         q = {k: v[0] for k, v in parse_qs(u.query).items()}
-        p = u.path
+        p = self._path()
+        if p == "/robots.txt":
+            body = b"User-agent: *\nDisallow: /\n"
+            self.send_response(200)
+            self.send_header("Content-Type", "text/plain")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            return self.wfile.write(body)
         if p == "/" or p.startswith("/c/"):
-            return self._file(STATIC / "index.html", "text/html; charset=utf-8")
+            html = (STATIC / "index.html").read_text(encoding="utf-8").replace("__BASE__", BASE).encode()
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("X-Robots-Tag", "noindex, nofollow")
+            self.send_header("Content-Length", str(len(html)))
+            self.end_headers()
+            return self.wfile.write(html)
         if p.startswith("/static/"):
             f = (STATIC / p[len("/static/"):]).resolve()
             if STATIC in f.parents and f.is_file():
@@ -108,7 +131,8 @@ class H(BaseHTTPRequestHandler):
             a = next((a for a in req["asset_manifest"] if a["asset_id"] == m.group(2)), None)
             if not a:
                 return self.send_error(404)
-            return self._file(Path(a["path"]), "audio/mpeg", ranged=True)
+            ap = Path(a["path"])
+            return self._file(ap if ap.is_absolute() else ROOT / ap, "audio/mpeg", ranged=True)
         self.send_error(404)
 
     def _file(self, path: Path, ctype, ranged=False):
@@ -130,6 +154,7 @@ class H(BaseHTTPRequestHandler):
         else:
             self.send_response(200)
         self.send_header("Content-Type", ctype)
+        self.send_header("X-Robots-Tag", "noindex, nofollow")
         self.send_header("Content-Length", str(end - start + 1))
         if ranged:
             self.send_header("Accept-Ranges", "bytes")
@@ -149,7 +174,7 @@ class H(BaseHTTPRequestHandler):
 
     # ---------- POST ----------
     def do_POST(self):
-        p = urlparse(self.path).path
+        p = self._path()
         try:
             body = self._body()
         except Exception as e:
@@ -221,6 +246,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8787)
+    ap.add_argument("--base", default="", help="배포 경로 접두(예: /abc123) — 추측 불가 하위 경로에 올릴 때")
     a = ap.parse_args()
-    print(f"songcard MVP → http://{a.host}:{a.port}/")
+    BASE = "/" + a.base.strip("/") if a.base.strip("/") else ""
+    print(f"songcard MVP → http://{a.host}:{a.port}{BASE}/")
     ThreadingHTTPServer((a.host, a.port), H).serve_forever()

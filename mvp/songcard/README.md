@@ -10,7 +10,16 @@ cd ~/sunolanguage
 .venv/bin/python mvp/songcard/server.py --port 8787         # http://127.0.0.1:8787/
 .venv/bin/python mvp/songcard/e2e_test.py                   # 종단 점검(서버 떠 있는 상태에서)
 ```
-외부에서 열려면 `--host 0.0.0.0`. 공개 URL은 완성 후 admin에 자리를 요청해서 붙인다.
+외부에서 열려면 `--host 0.0.0.0`. 추측 불가 하위 경로에 올릴 땐 `--base /<접두>`(프록시가 접두를 떼든 안 떼든 둘 다 받음).
+모든 응답에 `X-Robots-Tag: noindex`, `/robots.txt` = 전체 Disallow. 오디오 자산 경로는 리포 루트 기준 상대경로로 저장.
+
+## 카드 1장 공개 = 정적 묶음 (LEO 09-26 「링크 아는 사람만 · leomusic.arkedia.work」)
+```bash
+.venv/bin/python mvp/songcard/export_card.py <request_id>    # → var/export/<무작위 16자>/
+```
+index.html · app.css · card.js · card.json · audio.mp3(납품본 1개) — 서버 불필요, 전부 상대경로.
+⛔ 사연·장면 원문·SP·토큰·request_id·다른 take·WAV는 넣지 않고, 내보낸 뒤 폴더를 뒤져 누출 0건을 확인한다(누출 시 묶음 삭제).
+카드에 원래 보이는 받는 분·보내는 분 이름과 헌사 한 줄은 들어간다.
 의존성은 표준 라이브러리뿐이다(SP 조립이 `sunolang.db`를 읽기 전용으로 연다).
 
 ## 흐름

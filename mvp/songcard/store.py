@@ -163,6 +163,18 @@ def set_status(rid: str, status: str, note: str | None = None):
     return update(rid, f)
 
 
+ROOT = Path(__file__).resolve().parents[2]   # sunolanguage 리포 루트
+
+
+def _relpath(path) -> str:
+    """리포 안 파일은 루트 기준 상대경로로 저장(다른 머신·경로에 배포해도 풀리게). 밖이면 절대경로."""
+    p = Path(path).resolve()
+    try:
+        return str(p.relative_to(ROOT))
+    except ValueError:
+        return str(p)
+
+
 def add_asset(rid: str, path: Path, kind: str = "audio") -> str:
     data = Path(path).read_bytes()
     sha = hashlib.sha256(data).hexdigest()
@@ -171,7 +183,7 @@ def add_asset(rid: str, path: Path, kind: str = "audio") -> str:
     def f(r):
         if not any(a["asset_id"] == aid for a in r["asset_manifest"]):
             r["asset_manifest"].append(
-                {"asset_id": aid, "kind": kind, "path": str(Path(path).resolve()), "sha256": sha, "bytes": len(data)}
+                {"asset_id": aid, "kind": kind, "path": _relpath(path), "sha256": sha, "bytes": len(data)}
             )
 
     update(rid, f)

@@ -1,5 +1,7 @@
 "use strict";
 const $app = document.getElementById("app");
+// 배포 경로 접두(예: 추측 불가 하위 경로). 서버가 index.html 에 넣어 준다. 모든 주소는 BASE 를 붙여 만든다.
+const BASE = (window.SONGCARD_BASE || "").replace(/\/$/, "");
 const STEPS = ["received", "lyrics_pending", "lyrics_ready", "generation_queued", "generating", "audio_ready", "ready"];
 const STEP_KO = {
   received: "사연 접수", lyrics_pending: "가사 쓰는 중", lyrics_ready: "가사 완성",
@@ -20,7 +22,7 @@ function h(tag, attrs = {}, ...kids) {
   return el;
 }
 async function api(path, opts = {}) {
-  const r = await fetch(path, { headers: { "Content-Type": "application/json" }, ...opts });
+  const r = await fetch(BASE + path, { headers: { "Content-Type": "application/json" }, ...opts });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(j.error || `요청 실패 (${r.status})`);
   return j;
@@ -37,7 +39,7 @@ function fmt(s) { if (!isFinite(s)) return "0:00"; s = Math.floor(s); return `${
 async function route() {
   clearInterval(pollTimer);
   if (!OPT) OPT = await api("/api/options");
-  const cm = location.pathname.match(/^\/c\/([\w-]+)/);
+  const cm = location.pathname.slice(BASE.length).match(/^\/c\/([\w-]+)/);
   const hash = location.hash.replace(/^#/, "");
   $app.replaceChildren();
   window.scrollTo(0, 0);
@@ -64,7 +66,7 @@ async function viewHome() {
     $app.append(h("h2", {}, "샘플 카드 들어보기"),
       h("p", { class: "meta" }, "샘플은 카드가 어떻게 보이고 재생되는지 보여 드리려고 내부 제작곡을 빌려 쓴 것입니다."),
       h("div", { class: "samples" }, samples.map(s =>
-        h("a", { class: `mini occ-${s.occasion}`, href: `/c/${s.share_token}` }, h("span", {}, `${occ(s.occasion).emoji} ${s.title}`)))));
+        h("a", { class: `mini occ-${s.occasion}`, href: `${BASE}/c/${s.share_token}` }, h("span", {}, `${occ(s.occasion).emoji} ${s.title}`)))));
   }
 }
 
@@ -137,7 +139,7 @@ async function viewStatus(rid) {
           h("ol", { class: "steps" }, STEPS.map((s, i) =>
             h("li", { class: i < idx || s === "ready" && idx === STEPS.length - 1 ? "done" : i === idx ? "now" : "" },
               h("span", { class: "dot" }), STEP_KO[s]))),
-          r.status === "ready" ? h("a", { class: "btn", href: `/c/${r.share_token}` }, "완성된 노래 카드 열기") : h("p", { class: "meta" }, "이 화면은 자동으로 새로 고쳐져요. 닫았다가 ‘내 카드’에서 다시 볼 수 있어요."),
+          r.status === "ready" ? h("a", { class: "btn", href: `${BASE}/c/${r.share_token}` }, "완성된 노래 카드 열기") : h("p", { class: "meta" }, "이 화면은 자동으로 새로 고쳐져요. 닫았다가 ‘내 카드’에서 다시 볼 수 있어요."),
         )),
     );
     if (r.status === "ready" || failed) clearInterval(pollTimer);
@@ -151,10 +153,10 @@ async function viewCard(share) {
   const t = ownerTokenForShare(share);
   let r;
   try { r = await api(`/api/cards/${share}${t ? "?t=" + encodeURIComponent(t) : ""}`); }
-  catch (e) { $app.append(h("div", { class: "card" }, h("p", {}, e.message), h("a", { class: "btn ghost", href: "/" }, "처음으로"))); return; }
+  catch (e) { $app.append(h("div", { class: "card" }, h("p", {}, e.message), h("a", { class: "btn ghost", href: `${BASE}/` }, "처음으로"))); return; }
   const owner = !!r.story || r.story === "";
   const o = occ(r.occasion);
-  const audio = r.audio ? new Audio(r.audio + (t ? "?t=" + encodeURIComponent(t) : "")) : null;
+  const audio = r.audio ? new Audio(BASE + r.audio + (t ? "?t=" + encodeURIComponent(t) : "")) : null;
   const playBtn = h("button", { class: "play", "aria-label": "재생" }, "▶");
   const seek = h("input", { type: "range", min: 0, max: 1000, value: 0, "aria-label": "재생 위치" });
   const cur = h("span", {}, "0:00"), dur = h("span", {}, "--:--");
@@ -167,7 +169,7 @@ async function viewCard(share) {
     audio.ontimeupdate = () => { cur.textContent = fmt(audio.currentTime); if (audio.duration) seek.value = (audio.currentTime / audio.duration) * 1000; };
     seek.oninput = () => { if (audio.duration) audio.currentTime = (seek.value / 1000) * audio.duration; };
   }
-  const url = `${location.origin}/c/${share}`;
+  const url = `${location.origin}${BASE}/c/${share}`;
   const shareBtn = h("button", { class: "btn", onclick: async () => {
     if (owner && r.visibility !== "link") {
       await api(`/api/requests/${r.request_id}/share`, { method: "POST", body: JSON.stringify({ t, visibility: "link" }) });
@@ -195,7 +197,7 @@ async function viewCard(share) {
       updating,
       r.lyrics ? h("details", {}, h("summary", {}, "가사 보기"), h("div", { class: "lyrics" }, lyricsForCard(r.lyrics))) : null,
       shareBtn, owner ? visLine : null, redo,
-      h("a", { class: "btn ghost", href: "/" }, "나도 노래 카드 만들기"),
+      h("a", { class: "btn ghost", href: `${BASE}/` }, "나도 노래 카드 만들기"),
     )));
 }
 
@@ -243,7 +245,7 @@ function lyricsForCard(text) {
 function viewMine() {
   const list = mine();
   $app.append(h("h1", {}, "내 카드"),
-    list.length ? h("div", {}, list.map(m => h("a", { class: "card", style: "display:block;text-decoration:none", href: `/#/r/${m.rid}` },
+    list.length ? h("div", {}, list.map(m => h("a", { class: "card", style: "display:block;text-decoration:none", href: `${BASE}/#/r/${m.rid}` },
       h("b", {}, `${occ(m.occ).emoji} ${m.recipient}`), h("div", { class: "meta" }, m.rid))))
       : h("p", { class: "lead" }, "이 기기에서 만든 카드가 아직 없어요."));
 }
