@@ -75,6 +75,7 @@ def main() -> None:
     # H2 인덱스 정합
     chunks_n = len(json.loads(CHUNKS.read_text()))
     state_q = int(state_get(conn, "qdrant_presets", "0"))
+    live_presets = None  # H8이 이 값을 쓴다 — 못 쟀으면 「미검사」로 남고 「일치」로 안 보인다
     if args.no_net:
         check(results, "H2", chunks_n == state_q,
               f"chunks.json {chunks_n} / 상태DB {state_q} (Qdrant 원격 생략)", warn_only=True)
@@ -83,6 +84,7 @@ def main() -> None:
             import embed_pipeline
             live = embed_pipeline.get_qdrant_client().get_collection(
                 embed_pipeline.COLLECTION_NAME).points_count
+            live_presets = live
             check(results, "H2", live == state_q == chunks_n,
                   f"Qdrant live {live} / 상태DB {state_q} / chunks.json {chunks_n}")
         except Exception as exc:
@@ -263,9 +265,17 @@ def main() -> None:
         else:
             cmp_cell("커넥터스냅샷", ms.group(1) if ms else None, pub_id)
 
+        # Qdrant presets — 2026-09-28 배선. H2가 이미 원격을 재므로 그 값을 쓴다
+        # (★자를 두 벌 두지 않는다). 못 잴 때만 «미검사»로 남긴다 —
+        # ⛔못 쟀다고 조용히 빠지면 그 칸은 「정상」으로 보인다.
+        uncovered = ["DB 테이블(A5 보류)", "webapp 사전(B2 종속)"]
+        r = rows.get("Qdrant presets", "")
+        if live_presets is None:
+            uncovered.insert(0, "Qdrant presets(원격 100.90.35.121:6333 미측—생략/실패)")
+        else:
+            cmp_cell("Qdrant presets", num(r"\*\*([\d,]+) points", r), live_presets)
+
         # ⛔여기서 «안» 보는 칸을 이름으로 남긴다(측정에 망·외부 자원이 필요한 칸).
-        uncovered = ["Qdrant presets(원격 100.90.35.121:6333)", "DB 테이블(A5 보류)",
-                     "webapp 사전(B2 종속)"]
         detail = f"대조 {len(checked)}칸 일치 / 불일치 {len(bad)} · ⛔미검사 {len(uncovered)}칸: " \
                  + ", ".join(uncovered)
         if bad:
