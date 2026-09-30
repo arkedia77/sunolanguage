@@ -5,8 +5,8 @@
 경로
   GET  /                       앱(목적 카드 → 입력 → 상태 → 음악 카드)
   GET  /c/<share_token>        공유된 음악 카드(같은 앱이 카드 화면으로 연다)
-  GET  /api/options            목적·장르·보컬 선택지
-  POST /api/requests           사연 접수 (client_key 로 중복 방지)
+  GET  /api/options            템플릿 12종·장르·보컬 선택지
+  POST /api/requests           사연 접수 (client_key 중복 방지 · ★초대 코드 필수 · 하루 상한)
   GET  /api/requests/<id>?t=   내 요청 상태(owner token 필요)
   POST /api/requests/<id>/redo 재요청(가사/보컬/장르) — redo_key 로 중복 방지
   POST /api/requests/<id>/share  공개 범위 private|link
@@ -23,21 +23,22 @@ from urllib.parse import parse_qs, urlparse
 
 import sp_builder
 import store
+import templates
 
 HERE = Path(__file__).resolve().parent
 STATIC = HERE / "static"
 ROOT = HERE.parents[1]          # sunolanguage 리포 루트 — 자산 경로는 여기 기준 상대경로로 저장
 BASE = ""                       # 배포 경로 접두(--base). 프록시가 접두를 떼든 안 떼든 둘 다 받는다
 
-OCCASIONS = [
-    {"id": "birthday", "label": "생일", "emoji": "🎂", "hint": "올해도 태어나줘서 고맙다는 말"},
-    {"id": "anniversary", "label": "기념일", "emoji": "💍", "hint": "함께 지나온 시간"},
-    {"id": "thanks", "label": "감사", "emoji": "🌿", "hint": "말로 다 못 한 고마움"},
-    {"id": "cheer", "label": "응원", "emoji": "🔥", "hint": "새 출발·시험·도전 앞에서"},
-    {"id": "comfort", "label": "위로", "emoji": "🕯", "hint": "곁에 있다는 마음"},
-    {"id": "parents", "label": "부모님께", "emoji": "🏡", "hint": "늦게 전하는 이야기"},
-]
-LIMITS = {"recipient": 20, "sender": 20, "story": 1200, "memory": 600, "message": 200}
+# ---------- 접근 통제 (2026-09-30 · kee 전결 ⒞ 하루 5건) ----------
+# ★**fail-closed**: 초대 코드를 «하나도 주지 않으면 접수를 전부 막는다**.
+#   반대로 짜면(코드 없으면 통과) 설정을 빠뜨린 배포가 조용히 «공개 POST 구멍»이 된다 —
+#   그 실수는 화면에 아무 표시도 안 남는다. 그래서 기본값을 «닫힘»으로 둔다.
+INVITES: set[str] = set()
+DAILY_LIMIT = 5
+
+LIMITS = {"recipient": 20, "sender": 20, "relation": 20, "story": 1200, "memory": 600, "message": 200}
+OCCASIONS = templates.options()      # ★정본은 templates.py (여기서 목록을 다시 적지 않는다)
 
 
 def _json(h, code, obj):
@@ -103,6 +104,7 @@ class H(BaseHTTPRequestHandler):
         if p == "/api/options":
             return _json(self, 200, {
                 "occasions": OCCASIONS,
+                "invite_required": True,
                 "genres": [{"id": k, "label": v["label"]} for k, v in sp_builder.GENRES.items()],
                 "vocals": [{"id": k, "label": v["label"]} for k, v in sp_builder.VOCALS.items()],
                 "limits": LIMITS,
@@ -181,12 +183,19 @@ class H(BaseHTTPRequestHandler):
             return _json(self, 400, {"error": str(e)})
 
         if p == "/api/requests":
+            # ★순서: 초대 → 검증 → 상한. 상한을 맨 뒤에 두어야 «거절된 요청»이 상한을 먹지 않는다.
+            if str(body.get("invite") or "").strip() not in INVITES:
+                return _json(self, 403, {"error": "지금은 초대 코드를 받은 분만 만들 수 있어요"})
             form, err = _validate(body)
             if err:
                 return _json(self, 400, {"error": err})
             ck = str(body.get("client_key") or "")
             if len(ck) < 8:
                 return _json(self, 400, {"error": "client_key 가 필요합니다"})
+            # 같은 client_key 재전송은 «새 요청»이 아니므로 상한에 걸리면 안 된다 → 기존분은 먼저 돌려준다
+            existing = store.by_client_key(ck)
+            if existing is None and store.count_today_live() >= DAILY_LIMIT:
+                return _json(self, 429, {"error": f"오늘 만들 수 있는 노래({DAILY_LIMIT}곡)를 다 썼어요. 내일 다시 부탁드려요"})
             sp = sp_builder.build_sp(form["occasion"], form["genre"], form["vocal"])
             req, created = store.create_request(form, ck, sp, source="live")
             return _json(self, 201 if created else 200, {
@@ -227,13 +236,26 @@ class H(BaseHTTPRequestHandler):
 
 
 def _validate(b):
-    f = {k: str(b.get(k, "")).strip() for k in ("occasion", "recipient", "sender", "story", "memory", "message", "genre", "vocal")}
-    if f["occasion"] not in {o["id"] for o in OCCASIONS}:
+    f = {k: str(b.get(k, "")).strip() for k in
+         ("occasion", "recipient", "sender", "relation", "story", "memory", "message", "genre", "vocal")}
+    if f["occasion"] not in templates.TEMPLATES:
         return None, "목적을 골라 주세요"
     if f["genre"] not in sp_builder.GENRES or f["vocal"] not in sp_builder.VOCALS:
         return None, "장르와 보컬을 골라 주세요"
     if not f["recipient"]:
         return None, "받는 분 이름을 적어 주세요"
+    if not f["relation"]:
+        return None, "어떤 사이인지 한 단어로 적어 주세요(예: 엄마·친구)"
+    # ★이름 공개 동의(kee 전결 ⒝) — 기본 «꺼짐». 꺼져 있으면 카드엔 호칭만 나간다.
+    f["name_consent"] = bool(b.get("name_consent"))
+    # 템플릿 전용 칸 1개(있는 템플릿만) — 값은 form.extra 에 그대로 싣는다
+    x = templates.TEMPLATES[f["occasion"]]["extra"]
+    if x:
+        val = str(b.get("extra", "")).strip()
+        if len(val) > x["limit"]:
+            return None, f"{x['label']} 은(는) {x['limit']}자까지예요"
+        f["extra"] = val
+        f["extra_label"] = x["label"]
     if len(f["story"]) < 10:
         return None, "사연을 조금만 더 적어 주세요(10자 이상)"
     for k, n in LIMITS.items():
@@ -247,7 +269,14 @@ if __name__ == "__main__":
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8787)
     ap.add_argument("--base", default="", help="배포 경로 접두(예: /abc123) — 추측 불가 하위 경로에 올릴 때")
+    ap.add_argument("--invite", action="append", default=[], metavar="CODE",
+                    help="초대 코드(여러 번 지정 가능). ★하나도 없으면 접수가 전부 막힌다(fail-closed)")
+    ap.add_argument("--daily-limit", type=int, default=DAILY_LIMIT, help=f"하루 새 요청 상한(기본 {DAILY_LIMIT})")
     a = ap.parse_args()
     BASE = "/" + a.base.strip("/") if a.base.strip("/") else ""
+    INVITES = {c.strip() for c in a.invite if c.strip()}
+    DAILY_LIMIT = a.daily_limit
     print(f"songcard MVP → http://{a.host}:{a.port}{BASE}/")
+    print(f"  초대 코드 {len(INVITES)}개" + ("" if INVITES else " — ⛔0개라 접수가 전부 막힙니다(fail-closed)")
+          + f" · 하루 상한 {DAILY_LIMIT}건")
     ThreadingHTTPServer((a.host, a.port), H).serve_forever()

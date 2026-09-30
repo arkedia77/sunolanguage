@@ -86,3 +86,8 @@ summary { cursor: pointer; font-weight: 600; }
 .mini { border-radius: 14px; aspect-ratio: 3 / 4; padding: 10px; color: #fff; text-decoration: none; display: flex; flex-direction: column; justify-content: flex-end; font-size: 13px; font-weight: 700; word-break: keep-all; }
 .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 999px; font-size: 14px; }
 @media (min-width: 720px) { h1 { font-size: 30px; } .grid { grid-template-columns: repeat(3, 1fr); } .cover { aspect-ratio: auto; min-height: 360px; } }
+
+/* 이름 공개 동의 칸(2026-09-30) — 기본 꺼짐. 다른 label 과 달리 한 줄에 체크박스와 같이 선다. */
+label.consent { display: flex; align-items: flex-start; gap: 8px; font-weight: 600; margin-top: 14px; }
+label.consent input { margin-top: 3px; flex: none; }
+label.consent small { font-weight: 400; }

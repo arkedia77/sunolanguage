@@ -49,3 +49,7 @@ data/upload_batch_wave1
 # 사연 노래 카드 MVP — 고객 사연·발주서(비공개)
 mvp/songcard/var/
 data/songcard/*/*.mp3
+
+# songcard — SP 프리셋은 생성물(DB 파생). ★커밋 안 함: 같은 값이 두 곳이 되면 자가 두 벌.
+#   `sp_builder.py --emit` 으로 다시 뜨고 `--verify` 가 DB 재계산과 대조한다.
+mvp/songcard/sp_presets.json

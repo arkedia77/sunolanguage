@@ -83,12 +83,23 @@ def main():
     elif a.cmd == "lyrics-order":
         _need(req, "received")
         f = req["form"]
+        import templates
+        t = templates.TEMPLATES[f["occasion"]]
         _write(f"{rid}_lyrics_order.json", {
             "request_id": rid, "kind": "lyrics_order", "to": a.to,
             "note": "가사 담당 슬롯이 쓴다(sunolanguage 는 가사를 쓰지 않음). 브라켓은 코퍼스 서술형만.",
-            "occasion": f["occasion"], "recipient": f["recipient"], "sender": f["sender"],
+            "occasion": f["occasion"], "template_label": t["label"],
+            "structure_hint": t["structure_hint"],   # ★구조 지시일 뿐 — 문면은 받는 쪽이 쓴다
+            "recipient": f["recipient"], "sender": f["sender"], "relation": f.get("relation", ""),
+            "extra": f.get("extra", ""), "extra_label": f.get("extra_label", ""),
             "story": f["story"], "memory": f["memory"], "message": f["message"],
             "genre": f["genre"], "vocal": f["vocal"], "sp_draft": req["sp"]["sp"],
+            # kee 전결 ⒜(09-30): 실사연은 공유 저장소로 나가므로 **발신 제목에 「실사연」을 단다**.
+            "★발신_제목_규칙": ("실사연 — 제목에 「실사연」을 반드시 넣고 보낼 것"
+                            if req["source"] == "live" else "샘플/시험분 — 실사연 아님"),
+            # kee 전결 ⒝: 이름 공개 동의. 꺼져 있으면 **카드에는** 호칭만 나간다(가사 작성용 실명은 위에 있음).
+            "name_consent": bool(f.get("name_consent")),
+            "카드_표기": "실명 표기" if f.get("name_consent") else f"호칭만({f.get('relation','')}) — 카드에 실명 안 나감",
         })
         store.set_status(rid, "lyrics_pending", f"to={a.to}")
 

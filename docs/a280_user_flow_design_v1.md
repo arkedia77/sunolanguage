@@ -146,7 +146,7 @@
 
 ## 8. 필요한 것
 
-**admin** (서버 쪽 — kee 통 지정): ⑴leoserver에서 `server.py --base /<추측 불가 접두> --host 127.0.0.1 --port 8787` 상시 구동(systemd 등) ⑵기존 Cloudflare 경로에서 그 접두를 프록시 ⑶`/c/…` 정적 경로는 지금 그대로. — **stdlib뿐이라 추가 패키지 0 · 묶음 ~250KB · DB 불요** · ⚠leoserver가 프록시를 받을 수 있는지는 **admin 확인 사항**(내가 그 호스트를 못 본다).
+**admin** (서버 쪽 — kee 통 지정): ⑴leoserver에서 `server.py --base /<추측 불가 접두> --host 127.0.0.1 --port 8787` 상시 구동(systemd 등) ⑵기존 Cloudflare 경로에서 그 접두를 프록시 ⑶`/c/…` 정적 경로는 지금 그대로. — **stdlib뿐이라 추가 패키지 0 · 묶음 186KB(tar 35KB, 10-02 실측) · DB 불요** · ⚠leoserver가 프록시를 받을 수 있는지는 **admin 확인 사항**(내가 그 호스트를 못 본다).
 ✅**09-30 20:05 발신 완료**(`admin_sunolanguage_20260930_200509` — 확인 3가지: 프록시 가능 여부·접두 발급·포트 8787). ⚠무클 장애(09-30 09시~)로 회신 지연 가능 · 10-01 12:00 무응답이면 kee에 1줄.
 **나(sunolanguage)**: SP 96조합 사전계산 JSON(★leoserver에 코퍼스 DB를 안 올리려고 — 동치 확인 완료) · 동의 칸(⒝) 반영 + `export_card.py` 호칭 대체 · 템플릿 12종(신규 6종 = `OCCASIONS`·`MOODS`·`TEMPO`·프리셋·전용 칸·`structure_hint`) + 초대 코드 게이트 + 하루 상한 + 접수 완료 화면 ⑸ (10-02) · 운영자 CLI 문서 1쪽.
 **kee**: 운영자 1명 지정(발주 발신·가사 수령·오디오 붙이기 3번) · leomusic3·sunomusic 수락 확인.

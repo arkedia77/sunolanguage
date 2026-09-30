@@ -25,8 +25,8 @@ from pathlib import Path
 import store
 
 HERE = Path(__file__).resolve().parent
-OCC = {"birthday": ("생일", "🎂"), "anniversary": ("기념일", "💍"), "thanks": ("감사", "🌿"),
-       "cheer": ("응원", "🔥"), "comfort": ("위로", "🕯"), "parents": ("부모님께", "🏡")}
+# ★목적 라벨 정본 = templates.py (여기 복제하지 않는다 — 09-30 3중 기재 해소)
+import templates
 
 INDEX = """<!doctype html>
 <html lang="ko">
@@ -119,16 +119,18 @@ def main():
     src = Path(asset["path"]) if Path(asset["path"]).is_absolute() else store.ROOT / asset["path"]
     lyr = next(x["text"] for x in req["lyrics_versions"] if x["v"] == d["lyrics_v"])
     f = req["form"]
-    label, emoji = OCC[f["occasion"]]
+    label, emoji = templates.label_emoji(f["occasion"])
+    # ★카드에 나갈 이름 = store.display_names 한 곳에서만 정한다(동의 꺼짐이면 호칭).
+    to_name, from_name = store.display_names(f)
 
     alphabet = string.ascii_letters + string.digits
     slug = "".join(secrets.choice(alphabet) for _ in range(16))   # admin 규약: /c/<무작위 16자>/
     out = Path(a.out) / slug
     out.mkdir(parents=True)
     card = {
-        "title": d.get("title") or req.get("title") or f"{f['recipient']}에게",
+        "title": d.get("title") or req.get("title") or f"{to_name}에게",
         "occasion": f["occasion"], "occasion_label": label, "emoji": emoji,
-        "recipient": f["recipient"], "sender": f.get("sender", ""), "dedication": f.get("message", ""),
+        "recipient": to_name, "sender": from_name, "dedication": f.get("message", ""),
         "lyrics": lyr, "source": req["source"], "sample_note": req.get("sample_note"),
         "genre": d.get("genre"), "vocal": d.get("vocal"),
     }

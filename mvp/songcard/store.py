@@ -16,7 +16,11 @@ import threading
 import time
 from pathlib import Path
 
-VAR = Path(__file__).resolve().parent / "var"
+# ★저장 위치는 환경변수로 옮길 수 있다(2026-09-30). 두 가지에 쓴다:
+#   ⑴배포 — leoserver 에서 디스크 위치를 admin 이 정할 수 있게(사연 원문이 들어가는 곳이다)
+#   ⑵점검 — 하루 상한 검사는 «빈 저장소»라야 참을 잰다. 공용 var 로 재면 오늘분에 오염돼
+#     첫 요청부터 429 가 나고, 그래도 「두 번째가 429」는 통과해 **거짓 초록**이 된다(09-30 실물).
+VAR = Path(os.environ.get("SONGCARD_VAR") or (Path(__file__).resolve().parent / "var"))
 DB_FILE = VAR / "songcard_store.json"
 
 
@@ -134,6 +138,23 @@ def get(rid: str) -> dict | None:
         return _load()["requests"].get(rid)
 
 
+def by_client_key(client_key: str) -> dict | None:
+    """이미 접수된 같은 폼인지. ★상한 판정 «전에» 봐야 재전송이 상한을 먹지 않는다."""
+    with _lock:
+        db = _load()
+        rid = db["by_client_key"].get(_key(client_key))
+        return db["requests"].get(rid) if rid else None
+
+
+def count_today_live(today: str | None = None) -> int:
+    """오늘(로컬 날짜) 새로 «만들어진» live 요청 수 — 하루 상한 판정용.
+    ★샘플(source=sample)은 안 센다. 재전송은 새 요청이 아니므로 애초에 여기 안 들어온다."""
+    today = today or time.strftime("%Y-%m-%d")
+    with _lock:
+        return sum(1 for r in _load()["requests"].values()
+                   if r["source"] == "live" and str(r.get("created_at", ""))[:10] == today)
+
+
 def by_share(token: str) -> dict | None:
     with _lock:
         db = _load()
@@ -233,6 +254,21 @@ def deliver(r: dict, take: dict):
                       "title": r.get("title"), "at": _now()}
 
 
+def display_names(form: dict) -> tuple[str, str]:
+    """카드·상태 화면에 보일 (받는 분, 보내는 분). ★이 규칙은 여기 한 곳에만 있다
+    (`public_view` 와 `export_card` 가 둘 다 여기서 읽는다 — 한쪽만 고쳐 새는 걸 막는다).
+
+    kee 전결 ⒝(2026-09-30): 「카드에 이름 표시」 동의 칸 **기본 꺼짐**.
+      꺼져 있으면 실명 대신 **호칭**(relation, 예 「엄마」)만 나간다.
+    ⛔`name_consent` 키가 «없으면» 켜진 것으로 보지 않는다 — **불명이면 가리는 쪽**이다.
+      (09-26 이전 요청에는 이 칸 자체가 없다. 그것들을 노출로 승격시키지 않는다.)
+    """
+    if form.get("name_consent"):
+        return form.get("recipient", ""), form.get("sender", "")
+    rel = (form.get("relation") or "").strip()
+    return (rel or "소중한 분"), ""
+
+
 def public_view(req: dict, owner: bool) -> dict:
     """카드 화면용. 비밀 토큰·서버 경로는 내보내지 않는다."""
     # 카드에는 «납품본» 묶음만 싣는다. 새 판을 만드는 중이어도 이전 납품본(오디오+그 가사)을 그대로 보여 주고,
@@ -240,6 +276,7 @@ def public_view(req: dict, owner: bool) -> dict:
     d = req.get("delivered")
     lyr = next((x for x in req["lyrics_versions"] if d and x["v"] == d["lyrics_v"]), None)
     f = req["form"]
+    to_name, from_name = display_names(f)
     v = {
         "request_id": req["request_id"],
         "source": req["source"],
@@ -247,10 +284,11 @@ def public_view(req: dict, owner: bool) -> dict:
         "status_ko": STATUS_KO[req["status"]],
         "history": [{"status": h["status"], "status_ko": STATUS_KO[h["status"]], "at": h["at"]} for h in req["history"]],
         "occasion": f["occasion"],
-        "recipient": f["recipient"],
-        "sender": f.get("sender", ""),
+        "recipient": to_name,                 # ★동의 꺼짐이면 호칭(display_names)
+        "sender": from_name,
+        "name_consent": bool(f.get("name_consent")),
         "dedication": f.get("message", ""),
-        "title": (d or {}).get("title") or req.get("title") or f"{f['recipient']}에게",
+        "title": (d or {}).get("title") or req.get("title") or f"{to_name}에게",
         # 카드에 보이는 보컬·장르 = 납품본 것. 만드는 중인 판은 production_* 로 따로 둔다(solself 09-25 재검 메모)
         "genre": (d or {}).get("genre") or req["vocal_version"]["genre"],
         "vocal": (d or {}).get("vocal") or req["vocal_version"]["vocal"],
@@ -265,6 +303,8 @@ def public_view(req: dict, owner: bool) -> dict:
     }
     if owner:
         v["story"] = f.get("story", "")
+        v["real_recipient"] = f.get("recipient", "")   # 오너 본인에게만
+        v["relation"] = f.get("relation", "")
         v["redos"] = req["redos"]
         v["sp"] = req["sp"]["sp"]
     return v

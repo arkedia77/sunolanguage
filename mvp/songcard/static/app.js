@@ -27,6 +27,8 @@ async function api(path, opts = {}) {
   if (!r.ok) throw new Error(j.error || `요청 실패 (${r.status})`);
   return j;
 }
+function invite() { try { return localStorage.getItem("songcard.invite") || ""; } catch { return ""; } }
+function saveInvite(v) { try { localStorage.setItem("songcard.invite", v); } catch {} }
 function mine() { try { return JSON.parse(localStorage.getItem("songcard.mine") || "[]"); } catch { return []; } }
 function saveMine(list) { try { localStorage.setItem("songcard.mine", JSON.stringify(list)); } catch {} }
 function ownerTokenForShare(share) { return (mine().find(m => m.share === share) || {}).t; }
@@ -46,6 +48,7 @@ async function route() {
   if (cm && !hash) return viewCard(cm[1]);
   let m;
   if ((m = hash.match(/^\/new\/(\w+)/))) return viewForm(m[1]);
+  if ((m = hash.match(/^\/done\/([\w-]+)/))) return viewDone(m[1]);
   if ((m = hash.match(/^\/r\/([\w-]+)/))) return viewStatus(m[1]);
   if (hash === "/mine") return viewMine();
   return viewHome();
@@ -56,7 +59,7 @@ window.addEventListener("hashchange", route);
 async function viewHome() {
   $app.append(
     h("h1", {}, "마음을 한 곡으로"),
-    h("p", { class: "lead" }, "누구에게, 어떤 날을 위한 노래인지 골라 주세요. 사연을 적으면 그 이야기로 노래를 만들어 카드에 담아 드립니다."),
+    h("p", { class: "lead" }, "어떤 날을 위한 카드인지 고르고 사연을 적으면, 그 이야기로 «새 노래»를 만들어 카드에 담아 드려요."),
     h("div", { class: "grid" }, OPT.occasions.map(o =>
       h("button", { class: "occ", onclick: () => (location.hash = `/new/${o.id}`) },
         h("span", { class: "e", "aria-hidden": "true" }, o.emoji), h("b", {}, o.label), h("small", {}, o.hint)))),
@@ -73,15 +76,18 @@ async function viewHome() {
 // ---------- 2. 사연·장르·보컬 입력 ----------
 function viewForm(occId) {
   const o = occ(occId);
-  const st = { genre: null, vocal: null, client_key: sessionStorage.getItem("songcard.ck." + occId) || uuid() };
+  const preset = o.preset || {};
+  const st = { genre: preset.genre || null, vocal: preset.vocal || null,
+               client_key: sessionStorage.getItem("songcard.ck." + occId) || uuid() };
   sessionStorage.setItem("songcard.ck." + occId, st.client_key); // 새로고침·두 번 누름에도 같은 키 → 같은 요청
   const L = OPT.limits;
   const f = (name, label, hint, tag = "input", extra = {}) => [
     h("label", { for: name }, label, hint ? h("small", {}, " · " + hint) : null),
     h(tag, { id: name, name, maxlength: L[name], ...extra }),
   ];
+  // ★프리셋은 «미리 선택된 채» 뜬다(템플릿이 정한 기본값) — 눌러서 바꿀 수 있다.
   const chips = (key, list) => h("div", { class: "chips", role: "group" }, list.map(x =>
-    h("button", { type: "button", class: "chip", "aria-pressed": "false", onclick: e => {
+    h("button", { type: "button", class: "chip", "aria-pressed": String(st[key] === x.id), onclick: e => {
       st[key] = x.id;
       e.target.parentNode.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(c === e.target)));
     } }, x.label)));
@@ -91,28 +97,62 @@ function viewForm(occId) {
     e.preventDefault();
     err.textContent = "";
     const fd = new FormData(form);
-    const body = { occasion: occId, genre: st.genre, vocal: st.vocal, client_key: st.client_key };
-    for (const k of ["recipient", "sender", "story", "memory", "message"]) body[k] = fd.get(k) || "";
+    const body = { occasion: occId, genre: st.genre, vocal: st.vocal, client_key: st.client_key,
+                   invite: (fd.get("invite") || "").trim(),
+                   name_consent: !!fd.get("name_consent"), extra: fd.get("extra") || "" };
+    for (const k of ["recipient", "sender", "relation", "story", "memory", "message"]) body[k] = fd.get(k) || "";
     btn.disabled = true;
     try {
       const r = await api("/api/requests", { method: "POST", body: JSON.stringify(body) });
       const list = mine().filter(m => m.rid !== r.request_id);
-      list.unshift({ rid: r.request_id, t: r.owner_token, share: r.share_token, recipient: body.recipient, occ: occId });
+      // ★목록에 남기는 이름도 동의에 따른다 — 동의 꺼짐이면 호칭만 저장한다.
+      list.unshift({ rid: r.request_id, t: r.owner_token, share: r.share_token,
+                     recipient: body.name_consent ? body.recipient : body.relation, occ: occId });
       saveMine(list);
+      saveInvite(body.invite);
       sessionStorage.removeItem("songcard.ck." + occId);
-      location.hash = `/r/${r.request_id}`;
+      location.hash = `/done/${r.request_id}`;
     } catch (x) { err.textContent = x.message; btn.disabled = false; }
   } },
-    ...f("recipient", "받는 분 이름", "노래와 카드에 들어가요", "input", { required: true, autocomplete: "off" }),
+    ...f("recipient", "받는 분 이름", "가사를 쓸 때 씁니다", "input", { required: true, autocomplete: "off" }),
+    ...f("relation", "어떤 사이", "예) 엄마·친구·아내 — 이름을 감출 때 카드에 이 말이 나가요", "input", { required: true, autocomplete: "off" }),
     ...f("sender", "보내는 사람", "선택", "input", { autocomplete: "off" }),
     ...f("story", "사연", "어떤 사이인지, 왜 이 노래를 주고 싶은지", "textarea", { required: true, placeholder: "떠오르는 대로 적어 주세요. 이름·장소·말버릇 같은 구체적인 것이 가사를 살립니다." }),
     ...f("memory", "함께한 장면 하나", "선택", "textarea", { placeholder: "예) 비 오는 날 우산 하나로 걸어 온 길" }),
     ...f("message", "카드에 적을 한 줄", "노래 위에 헌사로 보여요", "input", {}),
+    ...(o.extra ? [h("label", { for: "extra" }, o.extra.label, h("small", {}, " · " + o.extra.hint)),
+                   h("input", { id: "extra", name: "extra", maxlength: o.extra.limit, autocomplete: "off" })] : []),
     h("label", {}, "장르"), chips("genre", OPT.genres),
     h("label", {}, "목소리"), chips("vocal", OPT.vocals),
+    // ★기본 «꺼짐» — 켠 경우에만 카드에 실명이 나간다(kee 전결 09-30)
+    h("label", { class: "consent" },
+      h("input", { type: "checkbox", name: "name_consent" }),
+      " 카드에 실명 표시에 동의합니다",
+      h("small", {}, " · 끄면 카드엔 「어떤 사이」에 적은 호칭만 나가요")),
+    ...(OPT.invite_required ? [h("label", { for: "invite" }, "초대 코드"),
+        h("input", { id: "invite", name: "invite", required: true, autocomplete: "off", value: invite() })] : []),
     btn, err,
   );
   $app.append(h("h1", {}, `${o.emoji} ${o.label} 노래`), h("p", { class: "lead" }, o.hint), form);
+}
+
+// ---------- 2.5 접수 완료 — 번호와 «다시 찾아오는 길» ----------
+// ★기기 localStorage 가 유일한 열쇠라 기기를 바꾸면 못 찾는다. 그래서 번호와 링크를 «눈에 보이게» 준다.
+function viewDone(rid) {
+  const m = mine().find(x => x.rid === rid);
+  const url = `${location.origin}${BASE}/#/r/${rid}`;
+  $app.append(
+    h("h1", {}, "접수됐어요"),
+    h("div", { class: "card" },
+      h("p", { class: "lead" }, "노래가 완성되면 이 번호로 찾아올 수 있어요. 보통 20분 안팎이지만, 사람이 확인하는 시간에 따라 더 걸릴 수 있어요."),
+      h("p", {}, h("b", { style: "font-size:1.3em;letter-spacing:.04em" }, rid)),
+      h("div", { class: "row" },
+        h("button", { class: "btn", onclick: () => (location.hash = `/r/${rid}`) }, "제작 상태 보기"),
+        h("button", { class: "btn ghost", onclick: async () => {
+          try { await navigator.clipboard.writeText(url); toast("링크를 복사했어요"); }
+          catch { toast(url); } } }, "다시 찾아올 링크 복사")),
+      h("p", { class: "meta" }, m ? "이 기기의 ‘내 카드’에도 저장해 두었어요." : "이 기기에서 만든 요청이 아니에요."),
+    ));
 }
 
 // ---------- 3. 제작 상태 ----------

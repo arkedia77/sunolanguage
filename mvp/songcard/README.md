@@ -6,10 +6,13 @@ LEO 직지시(2026-09-25, solself 중계) — 참고 서비스 흐름을 분석�
 ## 실행
 ```bash
 cd ~/sunolanguage
-.venv/bin/python mvp/songcard/seed_samples.py              # 샘플 카드 3종(다시 돌려도 중복 없음)
-.venv/bin/python mvp/songcard/server.py --port 8787         # http://127.0.0.1:8787/
-.venv/bin/python mvp/songcard/e2e_test.py                   # 종단 점검(서버 떠 있는 상태에서)
+.venv/bin/python mvp/songcard/seed_samples.py                       # 샘플 카드 3종(다시 돌려도 중복 없음)
+.venv/bin/python mvp/songcard/server.py --port 8787 --invite <코드>  # http://127.0.0.1:8787/
+.venv/bin/python mvp/songcard/e2e_test.py --invite <코드>            # 종단 점검(서버 떠 있는 상태에서)
 ```
+★`--invite` 를 **하나도 안 주면 접수가 전부 막힌다**(fail-closed). 설정을 빠뜨린 배포가 조용히
+공개 POST 구멍이 되지 않게 기본값을 「닫힘」으로 뒀다 — 반대로 짜면 그 실수가 화면에 안 보인다.
+저장 위치는 `SONGCARD_VAR=/경로` 로 옮긴다(기본=`var/`).
 외부에서 열려면 `--host 0.0.0.0`. 추측 불가 하위 경로에 올릴 땐 `--base /<접두>`(프록시가 접두를 떼든 안 떼든 둘 다 받음).
 모든 응답에 `X-Robots-Tag: noindex`, `/robots.txt` = 전체 Disallow. 오디오 자산 경로는 리포 루트 기준 상대경로로 저장.
 
@@ -23,7 +26,22 @@ index.html · app.css · card.js · card.json · audio.mp3(납품본 1개) — �
 의존성은 표준 라이브러리뿐이다(SP 조립이 `sunolang.db`를 읽기 전용으로 연다).
 
 ## 흐름
-목적 카드 6종 → 사연·장르·목소리 입력 → **제작 상태 카드**(7단계, 5초마다 자동 갱신) → **음악 카드**(표지·헌사·재생기·가사·공유·재요청)
+**템플릿 카드 12종** → 사연·장르·목소리 입력(템플릿별 전용 칸 1개·프리셋 미리 선택) → **접수 완료**(접수 번호·다시 찾아올 링크)
+→ **제작 상태 카드**(7단계, 5초마다 자동 갱신) → **음악 카드**(표지·헌사·재생기·가사·공유·재요청)
+
+## 템플릿 12종 (2026-09-30 · kee 「8~12종」)
+정본 = `templates.py` **한 파일**. 그전에는 목적 표가 `server.OCCASIONS`·`sp_builder.MOODS/TEMPO`·`export_card.OCC`
+**3곳에 복제**돼 있었다 — 12종으로 늘리면서 접었다(값은 한 곳에서만).
+분위기 어휘는 **코퍼스 관측어만** 쓴다: 접수 때마다 `expr_concepts` 에서 attested 를 읽어 문턱 미만·데드존이면 **거절**한다.
+`structure_hint`(가사 «구조» 1줄)는 발주서로 나간다 — ⛔가사 문면은 sunolanguage 가 쓰지 않는다(LM 라인).
+
+## 이름 공개 동의 (kee 전결 ⒝ 2026-09-30)
+폼의 「카드에 실명 표시」 동의 칸은 **기본 꺼짐**. 꺼져 있으면 카드·헌사에 실명 대신 **호칭**(「엄마」)만 나간다.
+규칙은 `store.display_names()` **한 곳**에만 있고 화면·내보내기가 둘 다 여기서 읽는다(한쪽만 고쳐 새는 걸 막는다).
+⛔`name_consent` 키가 **없으면 켜진 것으로 보지 않는다** — 불명이면 가리는 쪽. 가사용 실명은 발주서에 그대로 간다(카드에만 안 나갈 뿐).
+
+## 하루 상한 (kee 전결 ⒞)
+`--daily-limit`(기본 5) — 오늘 «새로» 만들어진 live 요청만 센다. 같은 `client_key` 재전송은 새 요청이 아니라 상한을 먹지 않는다.
 
 ## 샘플 카드와 실제 제작 카드
 | | 샘플(`source=sample`) | 실제 제작(`source=live`) |
@@ -58,6 +76,17 @@ received ─lyrics-order→ lyrics_pending ─lyrics-in→ lyrics_ready ─gen-o
 ## 비공개와 공유
 기본은 `private`(요청자 토큰이 있어야 카드·오디오가 열린다). 「공유하기」를 누르면 `link`로 바뀌고, 그때부터는 링크만 있으면 열린다.
 공유 카드 응답에는 사연·SP·토큰이 들어가지 않는다(e2e 점검 항목).
+
+## 배포 묶음 (leoserver·admin 인계)
+```bash
+.venv/bin/python mvp/songcard/sp_builder.py --emit     # 96조합 프리셋(DB 있는 곳에서)
+.venv/bin/python mvp/songcard/make_bundle.py --tar     # → var/bundle · var/bundle.tar.gz
+```
+★**코퍼스 DB 를 공개 호스트에 올리지 않는다.** SP 는 목적×장르×보컬의 결정론 함수라 96조합을 미리 계산해
+`sp_presets.json`(99KB)으로 동봉한다. DB 가 있으면 언제나 **DB 가 정본**이고, 없을 때만 프리셋을 읽는다.
+`--verify` 로 프리셋 == DB 재계산을 대조하며(한 글자라도 다르면 실패) `make_bundle.py` 가 묶기 전에 그것부터 돌린다.
+묶은 뒤 **DB 가 닿지 않는 임시 위치로 복사해 실제로 띄워 본다**(`/api/options` 200·접수 201·SP 가 프리셋 경로인지까지).
+실측: 파일 11개 · 186KB(tar 35KB) · 외부 패키지 0.
 
 ## 저장
 `var/songcard_store.json`(**git 밖**). 필드는 LM4로 옮기기 쉽게 이름을 맞췄다:

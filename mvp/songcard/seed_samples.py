@@ -18,11 +18,11 @@ SONGS = json.loads((ROOT / "data/aware/AWARE05_songs.json").read_text(encoding="
 RESULT = json.loads((ROOT / "data/aware/AWARE05_result.json").read_text(encoding="utf-8"))
 
 SAMPLES = [
-    {"idx": 7, "form": {"occasion": "anniversary", "recipient": "지민", "sender": "현우", "genre": "ballad", "vocal": "male",
+    {"idx": 7, "form": {"occasion": "anniversary", "recipient": "지민", "sender": "현우", "relation": "아내", "name_consent": True, "genre": "ballad", "vocal": "male",
                         "story": "(가상 사연) 처음 만난 겨울부터 열 번째 겨울까지.", "memory": "", "message": "열 번의 겨울 동안 곁에 있어줘서 고마워."}},
-    {"idx": 2, "form": {"occasion": "thanks", "recipient": "김 선생님", "sender": "3학년 2반", "genre": "acoustic", "vocal": "female",
+    {"idx": 2, "form": {"occasion": "thanks", "recipient": "김 선생님", "sender": "3학년 2반", "relation": "선생님", "name_consent": True, "genre": "acoustic", "vocal": "female",
                         "story": "(가상 사연) 졸업을 앞두고 담임 선생님께.", "memory": "", "message": "선생님 덕분에 버틴 일 년이었어요."}},
-    {"idx": 3, "form": {"occasion": "cheer", "recipient": "민서", "sender": "언니", "genre": "gospel", "vocal": "female",
+    {"idx": 3, "form": {"occasion": "cheer", "recipient": "민서", "sender": "언니", "relation": "동생", "name_consent": True, "genre": "gospel", "vocal": "female",
                         "story": "(가상 사연) 첫 출근을 앞둔 동생에게.", "memory": "", "message": "넌 이미 충분해. 내일 잘 다녀와!"}},
 ]
 

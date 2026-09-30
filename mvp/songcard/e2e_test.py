@@ -1,6 +1,8 @@
 """종단 점검 — 서버가 떠 있는 상태에서 실행.
 
-  .venv/bin/python mvp/songcard/e2e_test.py [--base http://127.0.0.1:8787] [--audio 파일.mp3]
+  # 서버를 ★초대 코드와 넉넉한 상한으로 띄운 뒤 실행한다(게이트 자체는 아래에서 따로 검사한다):
+  .venv/bin/python mvp/songcard/server.py --invite e2e --daily-limit 999
+  .venv/bin/python mvp/songcard/e2e_test.py [--base http://127.0.0.1:8787] [--audio 파일.mp3] [--invite e2e]
 
 사연 접수 → (중복 접수 차단) → 비공개 확인 → 파이프라인 단계(가사 발주·수령·생성 발주·접수·오디오·게시)
 → 카드 재생(Range) → 공유 전환 → 재요청 중복 차단 → 샘플 파이프라인 차단 까지 한 번에 본다.
@@ -9,7 +11,11 @@
 """
 import argparse
 import json
+import os
+import shutil
+import socket
 import subprocess
+import time
 import sys
 import urllib.error
 import urllib.request
@@ -18,6 +24,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 PY = sys.executable
 ok = fail = 0
+INVITE = "e2e"
 
 
 def call(base, method, path, body=None, headers=None):
@@ -29,6 +36,12 @@ def call(base, method, path, body=None, headers=None):
             return r.status, data, dict(r.headers)
     except urllib.error.HTTPError as e:
         return e.code, e.read(), dict(e.headers)
+
+
+def _free_port():
+    with socket.socket() as sk:
+        sk.bind(("127.0.0.1", 0))
+        return sk.getsockname()[1]
 
 
 def check(name, cond, extra=""):
@@ -54,7 +67,8 @@ def _store_get(rid):
 def _fresh_ready(B, audio):
     """새 live 요청 하나를 L1·V1 납품(ready)까지 올린다."""
     import secrets
-    body = {"occasion": "thanks", "recipient": "회귀", "sender": "e2e", "story": "회귀 점검용 가상 사연입니다. 실제 인물 아님.",
+    body = {"occasion": "thanks", "recipient": "회귀", "relation": "친구", "sender": "e2e",
+            "story": "회귀 점검용 가상 사연입니다. 실제 인물 아님.", "invite": INVITE,
             "memory": "", "message": "", "genre": "acoustic", "vocal": "female", "client_key": "e2e-" + secrets.token_hex(6)}
     r = json.loads(call(B, "POST", "/api/requests", body)[1])
     rid = r["request_id"]
@@ -72,12 +86,16 @@ def main():
     ap.add_argument("--base", default="http://127.0.0.1:8787")
     ap.add_argument("--audio", default=str(HERE.parents[1] / "data/aware/audio/30201_t1.mp3"))
     ap.add_argument("--key", default=None)
+    ap.add_argument("--invite", default="e2e", help="서버에 --invite 로 준 코드와 같아야 한다")
     a = ap.parse_args()
+    global INVITE
+    INVITE = a.invite
     B = a.base
     import secrets
     key = a.key or "e2e-" + secrets.token_hex(6)
 
-    body = {"occasion": "birthday", "recipient": "테스트", "sender": "e2e", "story": "종단 점검용 가상 사연입니다. 실제 인물 아님.",
+    body = {"occasion": "birthday", "recipient": "테스트", "relation": "친구", "sender": "e2e",
+            "story": "종단 점검용 가상 사연입니다. 실제 인물 아님.", "invite": INVITE,
             "memory": "", "message": "생일 축하해", "genre": "acoustic", "vocal": "female", "client_key": key}
     s1, d1, _ = call(B, "POST", "/api/requests", body)
     s2, d2, _ = call(B, "POST", "/api/requests", body)
@@ -92,6 +110,45 @@ def main():
     check("오너 상태 조회", s == 200 and json.loads(d)["status"] == "received")
     s, d, _ = call(B, "POST", "/api/requests", {**body, "story": "짧음", "client_key": key + "x"})
     check("검증 — 짧은 사연 거절", s == 400, json.loads(d)["error"])
+    s, d, _ = call(B, "POST", "/api/requests", {**body, "relation": "", "client_key": key + "rel"})
+    check("검증 — 관계 비면 거절", s == 400, json.loads(d)["error"])
+
+    # ── 초대 게이트 (2026-09-30) ─────────────────────────────────────
+    s, d, _ = call(B, "POST", "/api/requests", {**{k: v for k, v in body.items() if k != "invite"},
+                                                "client_key": key + "noinv"})
+    check("초대 — 코드 없으면 403", s == 403, json.loads(d)["error"])
+    s, d, _ = call(B, "POST", "/api/requests", {**body, "invite": "틀린코드", "client_key": key + "badinv"})
+    check("초대 — 틀린 코드 403", s == 403)
+    opt = json.loads(call(B, "GET", "/api/options")[1])
+    check("옵션 — 템플릿 12종", len(opt["occasions"]) == 12, str(len(opt["occasions"])))
+    check("옵션 — 템플릿마다 프리셋·전용 칸", all(o.get("preset", {}).get("genre") and o.get("extra") for o in opt["occasions"]))
+    check("옵션 — 초대 필요 표시", opt.get("invite_required") is True)
+    check("옵션 — 서버 내부값(mood·structure_hint) 미노출",
+          not any(k in o for o in opt["occasions"] for k in ("mood", "structure_hint", "bpm")))
+
+    # ── 이름 공개 동의 ⒝ — 기본 꺼짐이면 카드에 실명이 안 나가야 한다 ──
+    ck2 = key + "consent"
+    r_off = json.loads(call(B, "POST", "/api/requests",
+                            {**body, "recipient": "실명노출검사", "relation": "엄마",
+                             "sender": "막내", "client_key": ck2})[1])
+    v = json.loads(call(B, "GET", f"/api/requests/{r_off['request_id']}?t={r_off['owner_token']}")[1])
+    check("동의 ⒝ — 기본 꺼짐: 카드 표기는 호칭", v["recipient"] == "엄마" and v["sender"] == "" and v["name_consent"] is False,
+          f"{v['recipient']}/{v['sender']}")
+    check("동의 ⒝ — 오너 본인에겐 실명이 보인다", v.get("real_recipient") == "실명노출검사")
+    r_on = json.loads(call(B, "POST", "/api/requests",
+                           {**body, "recipient": "동의한이름", "relation": "엄마", "sender": "막내",
+                            "name_consent": True, "client_key": ck2 + "on"})[1])
+    v2 = json.loads(call(B, "GET", f"/api/requests/{r_on['request_id']}?t={r_on['owner_token']}")[1])
+    check("동의 ⒝ — 켜면 실명 표기", v2["recipient"] == "동의한이름" and v2["sender"] == "막내")
+    # ★오너 토큰으로 물으면 본인 데이터라 실명이 보이는 게 맞다 — 지켜야 할 건 «링크만 가진 사람» 쪽이다.
+    call(B, "POST", f"/api/requests/{r_off['request_id']}/share",
+         {"t": r_off["owner_token"], "visibility": "link"})
+    s, d, _ = call(B, "GET", f"/api/cards/{r_off['share_token']}")
+    check("동의 ⒝ — 링크만 가진 사람에겐 실명 없음", s == 200 and "실명노출검사" not in d.decode(),
+          json.loads(d).get("recipient", ""))
+    s, d, _ = call(B, "GET", f"/api/cards/{r_off['share_token']}?t={r_off['owner_token']}")
+    check("동의 ⒝ — 오너 본인은 실명을 본다(대조군)", s == 200 and "실명노출검사" in d.decode())
+
 
     lyr = HERE / "var" / f"{rid}_lyrics.txt"
     lyr.parent.mkdir(exist_ok=True)
@@ -185,7 +242,41 @@ def main():
     for x in (rid2, rid3):
         pipe("fail", x, "--note", "e2e 점검용 — 실제 제작 아님")
 
+    # ── 하루 상한 ⒞ — ★같은 서버로는 못 잰다(상한이 기동 인자다). 상한 1짜리 서버를 따로 띄워 «진짜 429»를 본다.
+    #   ⛔상한 판정은 «오늘 만들어진 live 요청» 전체를 세므로, 이 검사는 위 접수분들 뒤에 와야 한다.
+    port = _free_port()
+    tmpvar = HERE / "var" / ("_e2e_limit_" + secrets.token_hex(4))
+    tmpvar.mkdir(parents=True)
+    env = {**os.environ, "SONGCARD_VAR": str(tmpvar)}   # ★빈 저장소 — 오늘분 오염 없이 참을 잰다
+    srv = subprocess.Popen([PY, str(HERE / "server.py"), "--port", str(port),
+                            "--invite", "lim", "--daily-limit", "1"],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=env)
+    try:
+        B2 = f"http://127.0.0.1:{port}"
+        for _ in range(50):
+            try:
+                if call(B2, "GET", "/api/options")[0] == 200:
+                    break
+            except Exception:
+                pass
+            time.sleep(0.1)
+        lb = {**body, "invite": "lim"}
+        ck_re = "lim-re-" + secrets.token_hex(6)
+        s1_, d1_, _ = call(B2, "POST", "/api/requests", {**lb, "client_key": ck_re})
+        check("상한 ⒞ — 빈 저장소의 첫 요청은 통과(대조군)", s1_ == 201, str(s1_))
+        s2_, d2_, _ = call(B2, "POST", "/api/requests", {**lb, "client_key": "lim-" + secrets.token_hex(6)})
+        check("상한 ⒞ — 상한 1에서 두 번째 «새» 요청 429", s2_ == 429, json.loads(d2_).get("error", ""))
+        s3_, d3_, _ = call(B2, "POST", "/api/requests", {**lb, "client_key": ck_re})
+        check("상한 ⒞ — 같은 client_key 재전송은 상한을 먹지 않는다",
+              s3_ == 200 and json.loads(d3_)["request_id"] == json.loads(d1_)["request_id"], str(s3_))
+    finally:
+        srv.terminate()
+        srv.wait(timeout=10)
+        shutil.rmtree(tmpvar, ignore_errors=True)
+
     # 점검용 요청이 «실제 제작» 완성 카드로 남지 않게 닫는다
+    for extra_rid in (r_off["request_id"], r_on["request_id"]):
+        pipe("fail", extra_rid, "--note", "e2e 점검용 — 실제 제작 아님")
     pipe("fail", rid, "--note", "e2e 점검용 — 실제 제작 아님")
     print(f"\n{ok} 통과 / {fail} 실패 · request_id={rid} (점검 후 failed 로 닫음)")
     print("⚠ 오디오=기존 파일 부착 → «경로 검증»이지 «실생성 연동 검증» 아님")
