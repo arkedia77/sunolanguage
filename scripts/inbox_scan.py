@@ -42,7 +42,18 @@ REPO = Path("/Users/purple/projects/agent-comm")
 # ⇒ 워터마크를 **git 도착 시각**(해당 경로의 최초 커밋 시각)에서 뽑는다. 이 값은 발신자가 못 쓴다.
 #   `created_at`은 **자기신고값**으로 화면에만 남기고, 둘이 크게 어긋나면 드리프트로 표시한다.
 def git_arrivals():
-    """basename → 최초 커밋 시각(ISO). 실패하면 빈 dict(폴백=created_at)."""
+    """basename → 최초 커밋 시각(ISO). 실패하면 빈 dict(폴백=created_at).
+
+    ★불변식(2026-09-30 명시) — **pathspec은 루트 ∪ processed 를 «둘 다» 덮어야 한다.**
+      통은 루트에 착지했다가 `processed/`로 이관된다. 이관은 git에 **새 경로의 추가(A)**로
+      찍히므로, pathspec을 `…/messages/processed/…`처럼 «현재 경로»로 좁히면
+      `--diff-filter=A`가 **이관 커밋을 착지로 답한다**.
+      여기서는 ⑴디렉터리 접두(`…/messages/`)로 물어 두 경로를 다 덮고 ⑵`--reverse`+basename
+      `setdefault`로 **먼저 찍힌 루트 착지를 채택**해 그 축을 피한다.
+      ⛔pathspec을 좁히는 「최적화」를 하면 조용히 깨진다 — 화면엔 여전히 「git 도착」이 찍힌다.
+      양성통제(09-30 실측, kee 111351 통): 현재 경로만 질의=11:23:29(내 이관 커밋) ↔
+      이 함수=11:13:52(실착지) — Δ10분. 출처: fableself `20260930_194123` 정정통(5건 중 5건이 갈림).
+    """
     try:
         out = subprocess.run(
             # ★`core.quotepath=false` 필수 — 한글·★ 파일명이 8진 이스케이프로 나와
