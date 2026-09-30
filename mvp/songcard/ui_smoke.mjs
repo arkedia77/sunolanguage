@@ -11,6 +11,10 @@
 //   뒤따르는 초대 코드 칸까지 밀렸다. 헤드리스 Chrome 렌더로만 보였다(`docs/songcard_mvp_shots/m390_form_v2_BROKEN_consent.png`).
 //   ⇒ 이 하네스 통과는 «화면이 맞다»가 아니다. 화면을 바꾸면 **렌더를 한 장 떠서 눈으로 본다**.
 import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+// ★경로는 «스크립트 기준»으로 푼다 — cwd 기준이면 리포 루트에서 돌릴 때 깨진다(README 가 그렇게 시킨다).
+const HERE = path.dirname(fileURLToPath(import.meta.url));
 const BASE_URL = process.argv[2] || "http://127.0.0.1:8792";
 const text = (n) => (n.nodeValue !== undefined ? n.nodeValue : (n.children || []).map(text).join("") + (n._text || ""));
 function mkEl(tag) {
@@ -43,7 +47,7 @@ global.fetch = async (u, o) => {
   });
   return { ok: res.status < 400, status: res.status, json: async () => JSON.parse(res.body) };
 };
-let src = fs.readFileSync("static/app.js", "utf8").replace(/^"use strict";/, "");
+let src = fs.readFileSync(path.join(HERE, "static/app.js"), "utf8").replace(/^"use strict";/, "");
 src = src.replace(/\nroute\(\);\s*$/, "\n");           // 자동 실행만 막고 나머지는 그대로
 const mod = new Function(src + "\nreturn {route, viewHome, viewForm, viewDone, viewMine, occ};")();
 
