@@ -127,8 +127,8 @@ function viewForm(occId) {
     // ★기본 «꺼짐» — 켠 경우에만 카드에 실명이 나간다(kee 전결 09-30)
     h("label", { class: "consent" },
       h("input", { type: "checkbox", name: "name_consent" }),
-      " 카드에 실명 표시에 동의합니다",
-      h("small", {}, " · 끄면 카드엔 「어떤 사이」에 적은 호칭만 나가요")),
+      h("span", {}, "카드에 실명 표시에 동의합니다",
+        h("small", {}, " · 끄면 카드엔 「어떤 사이」에 적은 호칭만 나가요"))),
     ...(OPT.invite_required ? [h("label", { for: "invite" }, "초대 코드"),
         h("input", { id: "invite", name: "invite", required: true, autocomplete: "off", value: invite() })] : []),
     btn, err,

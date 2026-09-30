@@ -12,7 +12,17 @@ cd ~/sunolanguage
 node mvp/songcard/ui_smoke.mjs http://127.0.0.1:8787                # 화면 함수 점검(node 필요) — 10항목
 ```
 ⚠`ui_smoke.mjs` 는 **렌더 확인이 아니다** — DOM 을 최소 대역해 `app.js` 를 실행하며 참조 오류·문구 누락만 잡는다.
-CSS·레이아웃·실제 클릭·모바일 표시는 **눈으로 봐야 한다**(2026-09-30 이 묶음은 Chrome 확장 미연결로 못 봤다).
+★09-30 실측: **10/10 통과인 채로 CSS 결함 1건을 놓쳤다**(동의 칸이 전역 `input{width:100%}` 를 먹어 문구가 세로로 흐름).
+⇒ 화면을 바꾸면 **렌더를 한 장 떠서 눈으로 본다.** Chrome 확장 없이 뜨는 법(09-30 사용분):
+
+```bash
+# 헤드리스 Chrome 은 창 폭 하한이 ~500 CSS px 이라 390 을 «그대로» 못 준다 → 390 iframe 으로 감싼다
+printf '<!doctype html><meta charset=utf-8><style>body{margin:0}iframe{width:390px;height:1500px;border:0}</style><iframe src="http://127.0.0.1:8787/#/new/wedding"></iframe>' > /tmp/m.html
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+  --window-size=420,1560 --virtual-time-budget=5000 --screenshot=/tmp/shot.png --user-data-dir=/tmp/cp file:///tmp/m.html
+```
+⛔`--window-size=390` 만 주면 500 폭으로 그린 뒤 390 으로 **자른 그림**이 나온다(잘림을 레이아웃 결함으로 오독하기 쉽다 — 09-30 실제로 그랬다).
+화면 기록: `docs/songcard_mvp_shots/m390_*_v2_*.png`
 ★`--invite` 를 **하나도 안 주면 접수가 전부 막힌다**(fail-closed). 설정을 빠뜨린 배포가 조용히
 공개 POST 구멍이 되지 않게 기본값을 「닫힘」으로 뒀다 — 반대로 짜면 그 실수가 화면에 안 보인다.
 저장 위치는 `SONGCARD_VAR=/경로` 로 옮긴다(기본=`var/`).

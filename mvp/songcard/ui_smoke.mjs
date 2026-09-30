@@ -4,8 +4,12 @@
 //
 // ★이건 «렌더 확인»이 아니다. 잡는 것 = 참조 오류·오타·필드 누락·문구 누락.
 //   ⛔못 잡는 것 = CSS·레이아웃·실제 클릭/포커스·모바일 표시. 그건 눈으로 봐야 한다
-//   (2026-09-30 이 묶음은 Chrome 확장 미연결로 «눈으로는 못 봤다» — 그 사실을 여기 적어 둔다).
 // 개발용이라 배포 묶음(make_bundle.FILES)에는 들어가지 않는다.
+//
+// ⚠2026-09-30 실측: 이 하네스는 **10/10 통과인 채로 CSS 결함 1건을 놓쳤다** —
+//   동의 칸 체크박스가 전역 `input{width:100%}` 를 먹어 문구가 세로로 흘러 카드 밖으로 나가고
+//   뒤따르는 초대 코드 칸까지 밀렸다. 헤드리스 Chrome 렌더로만 보였다(`docs/songcard_mvp_shots/m390_form_v2_BROKEN_consent.png`).
+//   ⇒ 이 하네스 통과는 «화면이 맞다»가 아니다. 화면을 바꾸면 **렌더를 한 장 떠서 눈으로 본다**.
 import fs from "node:fs";
 const BASE_URL = process.argv[2] || "http://127.0.0.1:8792";
 const text = (n) => (n.nodeValue !== undefined ? n.nodeValue : (n.children || []).map(text).join("") + (n._text || ""));
