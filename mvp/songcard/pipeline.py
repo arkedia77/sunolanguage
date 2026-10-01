@@ -54,11 +54,12 @@ def _need(req, *allowed):
 
 
 def _write(name, obj):
-    OUTBOX.mkdir(parents=True, exist_ok=True)
+    store.secure_dir(OUTBOX)
     p = OUTBOX / name
     if p.exists():
         sys.exit(f"⛔ 이미 발주서가 있습니다(중복 발주 차단): {p}")
     p.write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
+    store.secure_file(p)      # 0640 — 발주서엔 요약·호칭이 들어간다
     print("WROTE", p)
     return p
 
@@ -97,6 +98,7 @@ def _guard_summary(summary: str, form: dict, lyrics_ok: bool):
 
 
 def main():
+    store.harden()          # umask 027 — 고객 데이터를 쓰는 프로세스다
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd")
     ap.add_argument("rid", nargs="?")

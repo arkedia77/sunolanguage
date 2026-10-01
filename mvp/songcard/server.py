@@ -275,6 +275,7 @@ if __name__ == "__main__":
                     help="초대 코드(여러 번 지정 가능). ★하나도 없으면 접수가 전부 막힌다(fail-closed)")
     ap.add_argument("--daily-limit", type=int, default=DAILY_LIMIT, help=f"하루 새 요청 상한(기본 {DAILY_LIMIT})")
     a = ap.parse_args()
+    store.harden()          # umask 027 — var/ 에 고객 사연이 쌓인다(같은 호스트 타 사용자 읽기 차단)
     BASE = "/" + a.base.strip("/") if a.base.strip("/") else ""
     INVITES = {c.strip() for c in a.invite if c.strip()}
     DAILY_LIMIT = a.daily_limit

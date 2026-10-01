@@ -21,6 +21,33 @@ from pathlib import Path
 #   ⑵점검 — 하루 상한 검사는 «빈 저장소»라야 참을 잰다. 공용 var 로 재면 오늘분에 오염돼
 #     첫 요청부터 429 가 나고, 그래도 「두 번째가 429」는 통과해 **거짓 초록**이 된다(09-30 실물).
 VAR = Path(os.environ.get("SONGCARD_VAR") or (Path(__file__).resolve().parent / "var"))
+
+# ★`var/` 에 들어가는 것 = 고객 사연·요약·가사·오디오. **같은 호스트의 다른 사용자가 읽으면 안 된다.**
+#   기본 umask(022)로 두면 디렉터리 0755·파일 0644 = **world-readable** 로 만들어진다(10-01 실측).
+#   admin 규격은 디렉터리 2750 / 파일 0640 이다(leoserver `sl_reader` 그룹 읽기만 허용).
+#   ⇒ 쓰는 쪽(서버·운영자 CLI)이 **스스로** 조인다. admin 이 미리 만들어 두든 아니든 같은 값이 되게.
+DIR_MODE = 0o2750    # setgid — 새 파일이 그룹(songcard)을 물려받아야 sl_reader 가 읽는다
+FILE_MODE = 0o640
+
+
+def harden():
+    """고객 데이터를 쓰는 프로세스가 기동 때 한 번 부른다(서버·pipeline)."""
+    os.umask(0o027)
+
+
+def secure_dir(d: Path):
+    d.mkdir(parents=True, exist_ok=True)
+    try:
+        d.chmod(DIR_MODE)
+    except OSError:
+        pass          # 소유자가 아니면 admin 이 이미 맞춰 둔 것 — 실패해도 진행
+
+
+def secure_file(f: Path):
+    try:
+        f.chmod(FILE_MODE)
+    except OSError:
+        pass
 DB_FILE = VAR / "songcard_store.json"
 
 
@@ -40,7 +67,7 @@ class _XLock:
     def __enter__(self):
         self._r.acquire()
         if self._depth == 0:
-            VAR.mkdir(parents=True, exist_ok=True)
+            secure_dir(VAR)
             self._fd = os.open(VAR / ".store.lock", os.O_CREAT | os.O_RDWR, 0o600)
             fcntl.flock(self._fd, fcntl.LOCK_EX)
         self._depth += 1
@@ -90,9 +117,10 @@ def _load():
 
 
 def _save(db):
-    VAR.mkdir(parents=True, exist_ok=True)
+    secure_dir(VAR)
     tmp = DB_FILE.with_suffix(".tmp")
     tmp.write_text(json.dumps(db, ensure_ascii=False, indent=1), encoding="utf-8")
+    secure_file(tmp)          # ★rename 전에 조인다 — 잠깐이라도 0644 로 존재하지 않게
     os.replace(tmp, DB_FILE)
 
 
