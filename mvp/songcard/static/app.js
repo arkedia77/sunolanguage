@@ -98,8 +98,8 @@ function viewForm(occId) {
     err.textContent = "";
     const fd = new FormData(form);
     const body = { occasion: occId, genre: st.genre, vocal: st.vocal, client_key: st.client_key,
-                   invite: (fd.get("invite") || "").trim(),
-                   name_consent: !!fd.get("name_consent"), extra: fd.get("extra") || "" };
+                   invite: (fd.get("invite") || "").trim(), extra: fd.get("extra") || "",
+                   consent_card: !!fd.get("consent_card"), consent_lyrics: !!fd.get("consent_lyrics") };
     for (const k of ["recipient", "sender", "relation", "story", "memory", "message"]) body[k] = fd.get(k) || "";
     btn.disabled = true;
     try {
@@ -107,7 +107,7 @@ function viewForm(occId) {
       const list = mine().filter(m => m.rid !== r.request_id);
       // ★목록에 남기는 이름도 동의에 따른다 — 동의 꺼짐이면 호칭만 저장한다.
       list.unshift({ rid: r.request_id, t: r.owner_token, share: r.share_token,
-                     recipient: body.name_consent ? body.recipient : body.relation, occ: occId });
+                     recipient: body.consent_card ? body.recipient : body.relation, occ: occId });
       saveMine(list);
       saveInvite(body.invite);
       sessionStorage.removeItem("songcard.ck." + occId);
@@ -124,11 +124,17 @@ function viewForm(occId) {
                    h("input", { id: "extra", name: "extra", maxlength: o.extra.limit, autocomplete: "off" })] : []),
     h("label", {}, "장르"), chips("genre", OPT.genres),
     h("label", {}, "목소리"), chips("vocal", OPT.vocals),
-    // ★기본 «꺼짐» — 켠 경우에만 카드에 실명이 나간다(kee 전결 09-30)
+    // ★둘 다 기본 «꺼짐» — 쓰임새를 나눠 받는다(kee 10-01, solself 반증 반영).
+    //   받는 분의 허락은 요청자가 대신 해 줄 수 없으므로, 확인 안 된 이름은 호칭으로 남는다.
+    h("p", { class: "meta", style: "margin:18px 0 0" }, "이름은 기본으로 감춰져요. 허락을 받았을 때만 켜 주세요."),
     h("label", { class: "consent" },
-      h("input", { type: "checkbox", name: "name_consent" }),
-      h("span", {}, "카드에 실명 표시에 동의합니다",
+      h("input", { type: "checkbox", name: "consent_card" }),
+      h("span", {}, "카드에 실명 표시",
         h("small", {}, " · 끄면 카드엔 「어떤 사이」에 적은 호칭만 나가요"))),
+    h("label", { class: "consent" },
+      h("input", { type: "checkbox", name: "consent_lyrics" }),
+      h("span", {}, "가사에 이름 넣기",
+        h("small", {}, " · 끄면 가사에도 호칭만 쓰여요"))),
     ...(OPT.invite_required ? [h("label", { for: "invite" }, "초대 코드"),
         h("input", { id: "invite", name: "invite", required: true, autocomplete: "off", value: invite() })] : []),
     btn, err,

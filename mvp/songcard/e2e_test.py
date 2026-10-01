@@ -74,7 +74,8 @@ def _fresh_ready(B, audio):
     rid = r["request_id"]
     lyr = HERE / "var" / f"{rid}_lyrics.txt"
     lyr.write_text("(점검용 가사 L1)", encoding="utf-8")
-    for st in [("lyrics-order", rid), ("lyrics-in", rid, "--file", str(lyr), "--by", "e2e-placeholder"),
+    for st in [("lyrics-order", rid, "--summary", "점검용 비식별 요약 — 가상 사연. 이름·지명 없음."),
+               ("lyrics-in", rid, "--file", str(lyr), "--by", "e2e-placeholder"),
                ("gen-order", rid), ("gen-ack", rid), ("audio-in", rid, "--file", audio, "--select"), ("publish", rid)]:
         rc, out = pipe(*st)
         assert rc == 0, out
@@ -132,12 +133,12 @@ def main():
                             {**body, "recipient": "실명노출검사", "relation": "엄마",
                              "sender": "막내", "client_key": ck2})[1])
     v = json.loads(call(B, "GET", f"/api/requests/{r_off['request_id']}?t={r_off['owner_token']}")[1])
-    check("동의 ⒝ — 기본 꺼짐: 카드 표기는 호칭", v["recipient"] == "엄마" and v["sender"] == "" and v["name_consent"] is False,
+    check("동의 ⒝ — 기본 꺼짐: 카드 표기는 호칭", v["recipient"] == "엄마" and v["sender"] == "" and v["consent_card"] is False,
           f"{v['recipient']}/{v['sender']}")
     check("동의 ⒝ — 오너 본인에겐 실명이 보인다", v.get("real_recipient") == "실명노출검사")
     r_on = json.loads(call(B, "POST", "/api/requests",
                            {**body, "recipient": "동의한이름", "relation": "엄마", "sender": "막내",
-                            "name_consent": True, "client_key": ck2 + "on"})[1])
+                            "consent_card": True, "client_key": ck2 + "on"})[1])
     v2 = json.loads(call(B, "GET", f"/api/requests/{r_on['request_id']}?t={r_on['owner_token']}")[1])
     check("동의 ⒝ — 켜면 실명 표기", v2["recipient"] == "동의한이름" and v2["sender"] == "막내")
     # ★오너 토큰으로 물으면 본인 데이터라 실명이 보이는 게 맞다 — 지켜야 할 건 «링크만 가진 사람» 쪽이다.
@@ -148,13 +149,29 @@ def main():
           json.loads(d).get("recipient", ""))
     s, d, _ = call(B, "GET", f"/api/cards/{r_off['share_token']}?t={r_off['owner_token']}")
     check("동의 ⒝ — 오너 본인은 실명을 본다(대조군)", s == 200 and "실명노출검사" in d.decode())
+    check("동의 ⒝ — 카드 동의를 켜도 «가사» 동의는 따로 꺼져 있다", v2.get("consent_lyrics") is False)
+
+    # ── ⒜ 사연 원문은 발주서로 나가지 않는다 (kee 10-01 102626 · solself 반증) ──
+    rc, out = pipe("lyrics-order", r_off["request_id"])
+    check("⒜ 요약 없이 발주 거절", rc != 0 and "--summary" in out, out.splitlines()[0][:48] if out else "")
+    rc, out = pipe("lyrics-order", r_off["request_id"], "--summary", body["story"])
+    check("⒜ 원문을 요약 칸에 붙여넣으면 거절", rc != 0 and "원문" in out)
+    rc, out = pipe("lyrics-order", r_off["request_id"], "--summary",
+                   "친구에게 주는 감사 노래. 오래 곁에 있어 준 사람에게. 이름·지명 없음.")
+    check("⒜ 비식별 요약이면 발주 통과", rc == 0, out.splitlines()[0][:48] if out else "")
+    order = json.loads((HERE / "var" / "outbox" / f"{r_off['request_id']}_lyrics_order.json").read_text(encoding="utf-8"))
+    blob = json.dumps(order, ensure_ascii=False)
+    check("⒜ 발주서에 사연 원문 없음", body["story"][:12] not in blob)
+    check("⒜ 발주서에 실명 없음(가사 동의 꺼짐)", "실명노출검사" not in blob and order["가사에_실명_사용"] is False)
+    check("⒜ 발주서에 업무ID·요약·구조지시는 있음",
+          order["업무ID"] == r_off["request_id"] and order["요약(비식별)"] and order["structure_hint"])
 
 
     lyr = HERE / "var" / f"{rid}_lyrics.txt"
     lyr.parent.mkdir(exist_ok=True)
     lyr.write_text("(종단 점검용 자리표시 가사 — 실제 가사 아님)\n생일 축하해\n", encoding="utf-8")
     steps = [
-        ("lyrics-order", rid),
+        ("lyrics-order", rid, "--summary", "점검용 비식별 요약 — 가상 사연. 이름·지명 없음."),
         ("lyrics-in", rid, "--file", str(lyr), "--by", "e2e-placeholder", "--title", "점검용 노래"),
         ("gen-order", rid),
         ("gen-ack", rid),

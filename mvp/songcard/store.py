@@ -254,16 +254,28 @@ def deliver(r: dict, take: dict):
                       "title": r.get("title"), "at": _now()}
 
 
+# 동의는 ★«두 칸»이다 (kee 10-01 `102626` — solself 반증 반영).
+#   요청자의 체크는 **제3자(받는 분)의 실명·가족사 공개 허락을 증명하지 못한다** ⇒ 쓰임새별로 나눈다.
+#   consent_card   「카드에 이름 표시」  — 공개 카드에 실명이 보이는가
+#   consent_lyrics 「가사에 이름 넣기」  — 가사 본문에 실명을 쓰는가(발주서로 전달)
+#   둘 다 기본 꺼짐. 확인 안 된 대상은 호칭·비식별 유지.
+CONSENT_KEYS = ("consent_card", "consent_lyrics")
+
+
+def consent(form: dict, which: str) -> bool:
+    """⛔키가 «없으면» 켜진 것으로 보지 않는다 — **불명이면 가리는 쪽**.
+    예외 1개: 09-30 이전 레코드의 구칸 `name_consent` 는 «카드 표시» 동의로만 읽는다
+    (가사 동의로는 승격시키지 않는다 — 그때 물어본 적이 없는 허락이다)."""
+    assert which in CONSENT_KEYS, which
+    if form.get(which):
+        return True
+    return which == "consent_card" and bool(form.get("name_consent"))
+
+
 def display_names(form: dict) -> tuple[str, str]:
     """카드·상태 화면에 보일 (받는 분, 보내는 분). ★이 규칙은 여기 한 곳에만 있다
-    (`public_view` 와 `export_card` 가 둘 다 여기서 읽는다 — 한쪽만 고쳐 새는 걸 막는다).
-
-    kee 전결 ⒝(2026-09-30): 「카드에 이름 표시」 동의 칸 **기본 꺼짐**.
-      꺼져 있으면 실명 대신 **호칭**(relation, 예 「엄마」)만 나간다.
-    ⛔`name_consent` 키가 «없으면» 켜진 것으로 보지 않는다 — **불명이면 가리는 쪽**이다.
-      (09-26 이전 요청에는 이 칸 자체가 없다. 그것들을 노출로 승격시키지 않는다.)
-    """
-    if form.get("name_consent"):
+    (`public_view` 와 `export_card` 가 둘 다 여기서 읽는다 — 한쪽만 고쳐 새는 걸 막는다)."""
+    if consent(form, "consent_card"):
         return form.get("recipient", ""), form.get("sender", "")
     rel = (form.get("relation") or "").strip()
     return (rel or "소중한 분"), ""
@@ -286,7 +298,8 @@ def public_view(req: dict, owner: bool) -> dict:
         "occasion": f["occasion"],
         "recipient": to_name,                 # ★동의 꺼짐이면 호칭(display_names)
         "sender": from_name,
-        "name_consent": bool(f.get("name_consent")),
+        "consent_card": consent(f, "consent_card"),
+        "consent_lyrics": consent(f, "consent_lyrics"),
         "dedication": f.get("message", ""),
         "title": (d or {}).get("title") or req.get("title") or f"{to_name}에게",
         # 카드에 보이는 보컬·장르 = 납품본 것. 만드는 중인 판은 production_* 로 따로 둔다(solself 09-25 재검 메모)

@@ -246,8 +246,10 @@ def _validate(b):
         return None, "받는 분 이름을 적어 주세요"
     if not f["relation"]:
         return None, "어떤 사이인지 한 단어로 적어 주세요(예: 엄마·친구)"
-    # ★이름 공개 동의(kee 전결 ⒝) — 기본 «꺼짐». 꺼져 있으면 카드엔 호칭만 나간다.
-    f["name_consent"] = bool(b.get("name_consent"))
+    # ★이름 공개 동의 — ★«두 칸»(kee 10-01 `102626`, solself 반증 반영). 둘 다 기본 «꺼짐».
+    #   요청자 체크는 제3자의 공개 허락을 증명하지 못하므로 쓰임새별로 나눠 받는다.
+    for k in store.CONSENT_KEYS:
+        f[k] = bool(b.get(k))
     # 템플릿 전용 칸 1개(있는 템플릿만) — 값은 form.extra 에 그대로 싣는다
     x = templates.TEMPLATES[f["occasion"]]["extra"]
     if x:

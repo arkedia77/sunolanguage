@@ -9,12 +9,16 @@
    → publish       : take 선택 확인 후 카드 완성                                           → ready
 
 발주서는 `var/outbox/` 에 JSON 으로 떨어진다. agent-comm 발신은 사람이 확인하고
-`scripts/send_msg.py <to> <키워드> <발주서>` 로 따로 한다(고객 사연이 공유 저장소에 실리므로 자동 발신하지 않는다).
+`scripts/send_msg.py <to> <키워드> <발주서>` 로 따로 한다.
+
+★2026-10-01 (kee `102626` — solself 반증 반영): **사연 원문은 git·agent-comm 에 싣지 않는다.**
+  가사 발주서에 나가는 것 = «운영자가 쓴 최소 비식별 요약» + 업무ID뿐이다. 원문은 접수 서버 로컬(`var/`)에만 남는다.
+  ⇒ `lyrics-order` 는 `--summary` 없이는 **거절한다**(fail-closed). 요약에 원문을 그대로 붙여 넣는 것도 막는다.
 
 사용:
   .venv/bin/python mvp/songcard/pipeline.py list
   .venv/bin/python mvp/songcard/pipeline.py show <rid>
-  .venv/bin/python mvp/songcard/pipeline.py lyrics-order <rid> [--to leomusic2]
+  .venv/bin/python mvp/songcard/pipeline.py lyrics-order <rid> --summary "비식별 요약" [--to leomusic3]
   .venv/bin/python mvp/songcard/pipeline.py lyrics-in <rid> --file lyrics.txt --by leomusic2 [--title 제목]
   .venv/bin/python mvp/songcard/pipeline.py gen-order <rid>
   .venv/bin/python mvp/songcard/pipeline.py gen-ack <rid>
@@ -48,6 +52,28 @@ def _write(name, obj):
     return p
 
 
+def _guard_summary(summary: str, form: dict, lyrics_ok: bool):
+    """요약 칸의 fail-closed 검문. ★「요약을 쓰라」는 규칙은 지켜지는지 «기계가» 본다 —
+    규칙만 적어 두면 바쁜 날 원문을 통째로 붙여 넣게 된다(그게 09-26 에 실제로 한 일이다)."""
+    if not summary:
+        sys.exit("⛔ --summary(또는 --summary-file)가 필요합니다 — 사연 원문은 발주서로 나가지 않습니다(kee 10-01).\n"
+                 "   예: --summary '어머니께 드리는 감사. 30년 장사·새벽 준비·늦게 전하는 고마움. 이름·상호·지명 없음.'")
+    if len(summary) > 400:
+        sys.exit(f"⛔ 요약이 {len(summary)}자입니다 — 400자 이내의 «최소» 요약이어야 합니다")
+    story = (form.get("story") or "") + "\n" + (form.get("memory") or "")
+    norm = lambda x: "".join(x.split())
+    ns, nq = norm(summary), norm(story)
+    for i in range(0, max(0, len(nq) - 20) + 1):     # 원문 20자 연속이 그대로 들어가면 「요약」이 아니다
+        if nq[i:i + 20] and nq[i:i + 20] in ns:
+            sys.exit("⛔ 요약에 사연 원문이 20자 이상 그대로 들어 있습니다 — 다시 써 주십시오(발췌는 요약이 아닙니다).\n"
+                     f"   걸린 대목: …{nq[i:i + 20]}…")
+    if not lyrics_ok:
+        for k, label in (("recipient", "받는 분 이름"), ("sender", "보내는 분 이름")):
+            v = (form.get(k) or "").strip()
+            if v and v in summary:
+                sys.exit(f"⛔ 「가사에 이름 넣기」 동의가 없는데 요약에 {label}({v})이 들어 있습니다 — 호칭으로 바꿔 주십시오")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd")
@@ -61,6 +87,8 @@ def main():
     ap.add_argument("--gid")
     ap.add_argument("--select", action="store_true")
     ap.add_argument("--note")
+    ap.add_argument("--summary", help="가사용 최소 «비식별» 요약(필수) — 사연 원문은 발주서로 나가지 않는다")
+    ap.add_argument("--summary-file", help="같은 요약을 파일로")
     a = ap.parse_args()
 
     if a.cmd == "list":
@@ -85,22 +113,29 @@ def main():
         f = req["form"]
         import templates
         t = templates.TEMPLATES[f["occasion"]]
-        _write(f"{rid}_lyrics_order.json", {
+        summary = (a.summary or (Path(a.summary_file).read_text(encoding="utf-8") if a.summary_file else "")).strip()
+        lyrics_ok = store.consent(f, "consent_lyrics")
+        _guard_summary(summary, f, lyrics_ok)
+        order = {
             "request_id": rid, "kind": "lyrics_order", "to": a.to,
             "note": "가사 담당 슬롯이 쓴다(sunolanguage 는 가사를 쓰지 않음). 브라켓은 코퍼스 서술형만.",
+            "★개인정보": ("사연 원문은 싣지 않습니다(kee 10-01 102626). 아래 요약은 운영자가 쓴 최소 비식별본이며, "
+                       "원문은 접수 서버 로컬에만 있습니다. 원문이 꼭 필요하면 kee 를 통해 요청해 주십시오."),
+            "업무ID": rid,
             "occasion": f["occasion"], "template_label": t["label"],
             "structure_hint": t["structure_hint"],   # ★구조 지시일 뿐 — 문면은 받는 쪽이 쓴다
-            "recipient": f["recipient"], "sender": f["sender"], "relation": f.get("relation", ""),
-            "extra": f.get("extra", ""), "extra_label": f.get("extra_label", ""),
-            "story": f["story"], "memory": f["memory"], "message": f["message"],
+            "호칭": f.get("relation", ""),
+            "전용_칸_항목": f.get("extra_label", ""),   # ⛔값은 안 싣는다(이름·날짜가 들어있을 수 있다)
+            "요약(비식별)": summary,
             "genre": f["genre"], "vocal": f["vocal"], "sp_draft": req["sp"]["sp"],
-            # kee 전결 ⒜(09-30): 실사연은 공유 저장소로 나가므로 **발신 제목에 「실사연」을 단다**.
-            "★발신_제목_규칙": ("실사연 — 제목에 「실사연」을 반드시 넣고 보낼 것"
-                            if req["source"] == "live" else "샘플/시험분 — 실사연 아님"),
-            # kee 전결 ⒝: 이름 공개 동의. 꺼져 있으면 **카드에는** 호칭만 나간다(가사 작성용 실명은 위에 있음).
-            "name_consent": bool(f.get("name_consent")),
-            "카드_표기": "실명 표기" if f.get("name_consent") else f"호칭만({f.get('relation','')}) — 카드에 실명 안 나감",
-        })
+            "가사에_실명_사용": lyrics_ok,
+            "이름_지침": ("요청자가 «가사에 이름 넣기»에 동의했습니다. 아래 이름만 쓰십시오."
+                       if lyrics_ok else "⛔가사에 실명을 쓰지 마십시오 — 호칭만 쓰십시오(동의 없음·기본값)."),
+        }
+        if lyrics_ok:
+            order["받는_분"] = f.get("recipient", "")
+            order["보내는_분"] = f.get("sender", "")
+        _write(f"{rid}_lyrics_order.json", order)
         store.set_status(rid, "lyrics_pending", f"to={a.to}")
 
     elif a.cmd == "lyrics-in":

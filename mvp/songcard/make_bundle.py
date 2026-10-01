@@ -29,6 +29,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 PY = sys.executable
+BASE_PREFIX = "/m0knkbuec3tccpny"   # admin 10-01 발급분 — 확인도 이 접두로 띄워서 한다
 FILES = ["server.py", "store.py", "sp_builder.py", "templates.py", "pipeline.py",
          "export_card.py", "sp_presets.json"]
 DIRS = ["static"]
@@ -68,11 +69,13 @@ def check(bundle: Path) -> bool:
             print("  ⚠이 임시 위치에 DB 가 있습니다 — 확인이 무의미하므로 중단")
             return False
         port = _free_port()
-        p = subprocess.Popen([PY, str(app / "server.py"), "--port", str(port), "--invite", "chk"],
+        # ★접두를 붙인 채 띄워 확인한다 — 배포 형태(admin nginx)가 그렇다
+        p = subprocess.Popen([PY, str(app / "server.py"), "--port", str(port),
+                              "--base", BASE_PREFIX, "--invite", "chk"],
                              stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True,
                              env={**os.environ, "SONGCARD_VAR": str(Path(td) / "var")})
         try:
-            base = f"http://127.0.0.1:{port}"
+            base = f"http://127.0.0.1:{port}{BASE_PREFIX}"
             for _ in range(60):
                 try:
                     urllib.request.urlopen(base + "/api/options", timeout=1)
@@ -93,7 +96,13 @@ def check(bundle: Path) -> bool:
                 rid = json.loads(r.read())["request_id"]
             sp = json.loads((Path(td) / "var" / "songcard_store.json").read_text())["requests"][rid]["sp"]
             from_presets = sp.get("from_presets") is True
-            print(f"  ✅ DB 없이 기동 · 템플릿 {len(opts['occasions'])}종 · 접수 201={created} · SP=프리셋 경로={from_presets}")
+            html = urllib.request.urlopen(f"http://127.0.0.1:{port}{BASE_PREFIX}/", timeout=5).read().decode()
+            css = urllib.request.urlopen(f"http://127.0.0.1:{port}{BASE_PREFIX}/static/app.css", timeout=5).status
+            ok_base = BASE_PREFIX in html and css == 200
+            print(f"  ✅ DB 없이 기동 · 템플릿 {len(opts['occasions'])}종 · 접수 201={created} · "
+                  f"SP=프리셋 경로={from_presets} · 접두 {BASE_PREFIX} 하위에서 HTML·CSS 200={ok_base}")
+            if not ok_base:
+                return False
             return ok_opt and created and from_presets
         except Exception as e:
             out = ""
@@ -114,8 +123,12 @@ RUN_MD = """# songcard — leoserver 구동 안내 (sunolanguage → admin)
 
 의존성 **없음**(시스템 python3 표준 라이브러리만). 코퍼스 DB 불요 — `sp_presets.json` 동봉.
 
-    python3 server.py --base /<접두> --host 127.0.0.1 --port 8787 \\
+admin 10-01 `102919` 회신값 그대로:
+
+    python3 server.py --base /m0knkbuec3tccpny --host 127.0.0.1 --port 8131 \\
             --invite <초대코드> [--invite <또다른코드>] --daily-limit 5
+
+nginx 는 접두를 **붙인 채** 넘겨 주시면 됩니다(떼고 넘겨도 앱이 받습니다). `proxy_buffering off` 필요(상태 폴링·Range).
 
 - `--invite` 를 **하나도 안 주면 접수가 전부 막힙니다**(fail-closed — 설정 누락이 공개 구멍이 되지 않게).
 - 저장 위치를 옮기려면 `SONGCARD_VAR=/경로` (기본=이 폴더의 `var/`).
