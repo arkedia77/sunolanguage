@@ -59,8 +59,11 @@ def git_arrivals():
             # ★`core.quotepath=false` 필수 — 한글·★ 파일명이 8진 이스케이프로 나와
             #   basename이 안 맞고 **조용히 폴백**한다(첫 판에서 실제로 그랬다. 화면엔 「git 도착」이
             #   찍히는데 값은 자기신고였다 = 라벨이 거짓말을 함).
-            ["git", "-c", "core.quotepath=false", "log", "--diff-filter=A", "--reverse",
-             "--date=iso-strict", "--format=@%ad", "--name-only",
+            # ★`AR` — 추가(A)만 보면 **이름이 바뀐 통을 통째로 놓친다**(2026-10-01 실측 17건).
+            #   그 17건은 전부 「도착 없음」이 되어 **조용히 자기신고 시각으로 폴백**했다 —
+            #   이 함수가 막으려던 바로 그것이다. rename(R)은 옛 이름의 도착을 새 이름에 물려준다.
+            ["git", "-c", "core.quotepath=false", "log", "--diff-filter=AR", "--reverse",
+             "--date=iso-strict", "--format=@%ad", "--name-status",
              "--", f"projects/{ME}/messages/"],
             cwd=REPO, capture_output=True, text=True, timeout=60, check=True).stdout
     except Exception:
@@ -70,8 +73,14 @@ def git_arrivals():
         if line.startswith("@"):
             cur = line[1:20]   # "@2026-08-14T23:54:42+09:00" → 초까지 19자
         elif line.strip() and cur:
-            name = line.rsplit("/", 1)[-1]
-            arrivals.setdefault(name, cur)   # --reverse라 첫 등장이 최초 도착
+            parts = line.split("\t")
+            st = parts[0]
+            if st.startswith("R") and len(parts) >= 3:
+                # 이름이 바뀐 통 — ★새 이름의 도착 = «옛 이름의 도착»이다(rename 시각이 아니다).
+                old_n, new_n = parts[1].rsplit("/", 1)[-1], parts[2].rsplit("/", 1)[-1]
+                arrivals.setdefault(new_n, arrivals.get(old_n, cur))
+            elif st.startswith("A") and len(parts) >= 2:
+                arrivals.setdefault(parts[1].rsplit("/", 1)[-1], cur)   # --reverse라 첫 등장이 최초 도착
     return arrivals
 
 
