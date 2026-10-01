@@ -203,6 +203,29 @@ def main():
     s, d, _ = call(B, "GET", f"/api/cards/{share}?t={t}")
     card = json.loads(d)
     check("카드 완성 ready·오디오·가사", s == 200 and card["status"] == "ready" and card["audio"] and card["lyrics"])
+
+    # ── 납품 신고 칸(leomusic3 10-01 필수) — 내 수령부가 흘리지 않는가 ──
+    import hashlib as _h
+    lv = _store_get(rid)["lyrics_versions"][-1]
+    want = _h.sha256((HERE / "var" / f"{rid}_lyrics.txt").read_text(encoding="utf-8").strip().encode()).hexdigest()[:12]
+    check("납품 — 가사 해시를 내가 재측정해 저장", lv.get("lyrics_sha12") == want, f"{lv.get('lyrics_sha12')}/{want}")
+    check("납품 — 미신고는 None(「통과」로 승격 안 함)", lv.get("declaration_status") is None)
+    # ★대조군은 «가사를 받을 수 있는 상태»에서 재야 한다 — 위 rid 는 이미 ready 라
+    #   거절되더라도 사유가 「상태 어긋남」이지 「해시 불일치」가 아니다(09-10-01 첫 판에서 그렇게 헛통과할 뻔했다).
+    import secrets as _s
+    hb = {**body, "client_key": "sha-" + _s.token_hex(6)}
+    hr = json.loads(call(B, "POST", "/api/requests", hb)[1])
+    hrid = hr["request_id"]
+    pipe("lyrics-order", hrid, "--summary", "점검용 비식별 요약 — 가상 사연. 이름·지명 없음.")
+    rc, out = pipe("lyrics-in", hrid, "--file", str(HERE / "var" / f"{rid}_lyrics.txt"),
+                   "--by", "e2e", "--lyrics-sha12", "deadbeef1234")
+    check("납품 — ★신고 해시가 틀리면 거절(대조군)", rc != 0 and "불일치" in out, out.splitlines()[0][:48] if out else "")
+    rc, out = pipe("lyrics-in", hrid, "--file", str(HERE / "var" / f"{rid}_lyrics.txt"),
+                   "--by", "e2e", "--lyrics-sha12", want, "--declaration", "match")
+    check("납품 — 맞는 해시 + declaration 수령", rc == 0 and
+          _store_get(hrid)["lyrics_versions"][-1]["declaration_status"] == "match")
+    pipe("fail", hrid, "--note", "e2e 해시 대조군")
+
     s, d, h = call(B, "GET", card["audio"] + f"?t={t}", headers={"Range": "bytes=0-1023"})
     check("오디오 Range 206", s == 206 and len(d) == 1024, h.get("Content-Range"))
     s, _, _ = call(B, "GET", card["audio"])

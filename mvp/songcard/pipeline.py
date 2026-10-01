@@ -28,7 +28,8 @@
   .venv/bin/python mvp/songcard/pipeline.py list
   .venv/bin/python mvp/songcard/pipeline.py show <rid>
   .venv/bin/python mvp/songcard/pipeline.py lyrics-order <rid> --summary "비식별 요약" [--to leomusic3]
-  .venv/bin/python mvp/songcard/pipeline.py lyrics-in <rid> --file lyrics.txt --by leomusic2 [--title 제목]
+  .venv/bin/python mvp/songcard/pipeline.py lyrics-in <rid> --file lyrics.txt --by leomusic3 [--title 제목]
+        [--declaration match|none_verified] [--lyrics-sha12 <납품자 신고 해시 — 내가 재측정해 대조>]
   .venv/bin/python mvp/songcard/pipeline.py gen-order <rid>
   .venv/bin/python mvp/songcard/pipeline.py gen-ack <rid>
   .venv/bin/python mvp/songcard/pipeline.py audio-in <rid> --file take.mp3 [--uuid U] [--gid G] [--select]
@@ -110,6 +111,8 @@ def main():
     ap.add_argument("--note")
     ap.add_argument("--summary", help="가사용 최소 «비식별» 요약(필수) — 사연 원문은 발주서로 나가지 않는다")
     ap.add_argument("--summary-file", help="같은 요약을 파일로")
+    ap.add_argument("--declaration", help="납품자 신고 상태: match | none_verified (leomusic3 10-01 필수 칸)")
+    ap.add_argument("--lyrics-sha12", help="납품자가 적어 준 가사 해시 — ★내가 다시 재서 대조한다")
     a = ap.parse_args()
 
     if a.cmd == "list":
@@ -178,13 +181,29 @@ def main():
         text = Path(a.file).read_text(encoding="utf-8").strip()
         if not a.by:
             sys.exit("⛔ --by(가사 저자 슬롯)가 필요합니다")
+        # ★납품에 붙는 신고 칸을 «버리지 않고 받는다»(leomusic3 10-01 `135710` §5⑴ — solself 반증으로
+        #   그쪽 납품에 `declaration_status`·`lyrics_sha12` 가 필수가 됐다). 내 수령부가 흘리면 결속이 끊긴다.
+        #   ⛔해시는 상대가 적어 준 값을 «믿지 않고» 내가 받은 본문에서 다시 잰다. 둘이 다르면 중단한다
+        #   (전송 중 바뀌었거나 다른 파일을 가리킨 것 — 어느 쪽이든 그대로 진행하면 안 된다).
+        sha12 = hashlib.sha256(text.encode("utf-8")).hexdigest()[:12]
+        if a.lyrics_sha12 and a.lyrics_sha12 != sha12:
+            sys.exit(f"⛔ 가사 해시 불일치 — 신고 {a.lyrics_sha12} / 내가 받은 본문 {sha12}\n"
+                     f"   같은 파일인지 확인하고 다시 주십시오(끝 공백은 제거 후 계산합니다).")
+        if a.declaration and a.declaration not in ("match", "none_verified"):
+            sys.exit("⛔ --declaration 은 match | none_verified 둘 중 하나입니다")
 
         def f(r):
-            r["lyrics_versions"].append({"v": len(r["lyrics_versions"]) + 1, "text": text, "by": a.by, "at": store._now()})
+            r["lyrics_versions"].append({
+                "v": len(r["lyrics_versions"]) + 1, "text": text, "by": a.by, "at": store._now(),
+                "lyrics_sha12": sha12,                      # 내가 실측한 값
+                "declaration_status": a.declaration or None,  # 상대 신고(없으면 None — 「없음」이지 「통과」가 아니다)
+            })
             if a.title:
                 r["title"] = a.title
         store.update(rid, f)
         store.set_status(rid, "lyrics_ready", f"by={a.by}")
+        print(f"  ↳ lyrics_sha12={sha12} (내가 재측정) · declaration_status="
+              f"{a.declaration or '미신고 — ⛔「통과」가 아니라 「없음」'}")
 
     elif a.cmd == "gen-order":
         _need(req, "lyrics_ready")
