@@ -11,9 +11,18 @@
 발주서는 `var/outbox/` 에 JSON 으로 떨어진다. agent-comm 발신은 사람이 확인하고
 `scripts/send_msg.py <to> <키워드> <발주서>` 로 따로 한다.
 
-★2026-10-01 (kee `102626` — solself 반증 반영): **사연 원문은 git·agent-comm 에 싣지 않는다.**
-  가사 발주서에 나가는 것 = «운영자가 쓴 최소 비식별 요약» + 업무ID뿐이다. 원문은 접수 서버 로컬(`var/`)에만 남는다.
-  ⇒ `lyrics-order` 는 `--summary` 없이는 **거절한다**(fail-closed). 요약에 원문을 그대로 붙여 넣는 것도 막는다.
+★2026-10-01 저장경계 (LEO 직접 결정 · 정본 =
+  `repo:agent-comm projects/solself/attachments/A280_PRIVACY_REVIEW_20260930/LEO_STORAGE_DECISION_20261001.md`)
+
+  **Git(agent-comm) = 프로젝트 정보만.** 설계·코드·일정·담당·상태 + «내용 없는» 업무 참조·완료 영수증.
+  **서비스 데이터 = 별도 저장소.** 사연 원문뿐 아니라 **요약·가사 본문·음원·사용자 입력/동의 데이터**까지.
+  ⇒ 10-01 오전까지의 「최소 비식별 요약은 Git 에 실어도 된다」 대안은 **이 결정으로 대체됐다**.
+
+  그래서 `lyrics-order` 는 파일을 **두 개** 쓴다:
+    `<rid>_lyrics_order.json`  = 내용본(요약·호칭·구조지시…). ⛔**Git 금지** — 별도 경로로만 전달.
+    `<rid>_lyrics_ref.json`    = Git 통용 **참조본**. 업무ID·담당·상태·판본 해시뿐, 내용 0.
+  내용본에는 여전히 **원문이 아니라 요약**만 들어간다(`--summary` 필수·fail-closed 4종 유지).
+  ⚠전달 경로는 admin 제안 대기(kee 청구, 10-02 12:00) — 정해지기 전에는 **내용본을 보내지 않는다**.
 
 사용:
   .venv/bin/python mvp/songcard/pipeline.py list
@@ -28,6 +37,7 @@
   .venv/bin/python mvp/songcard/pipeline.py redo-close <rid> <redo_id>
 """
 import argparse
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -50,6 +60,17 @@ def _write(name, obj):
     p.write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
     print("WROTE", p)
     return p
+
+
+def _assert_git_safe(ref: dict, order: dict):
+    """참조본이 정말 «내용 0» 인지 기계가 본다. ★사람이 「내용 없음」이라고 적는 것과
+    실제로 없는 것은 다르다 — 한 칸이라도 내용본에서 새어 들어오면 여기서 멈춘다."""
+    blob = json.dumps(ref, ensure_ascii=False)
+    leak = [k for k in ("요약(비식별)", "structure_hint", "호칭", "sp_draft", "받는_분", "보내는_분")
+            if (v := order.get(k)) and str(v) in blob]
+    if leak:
+        sys.exit(f"⛔ 참조본에 내용이 섞였습니다: {leak} — Git 통에는 내용을 싣지 않습니다(LEO 10-01 저장경계)")
+    print(f"  ↳ Git 통용 참조본 = 내용 0 확인(검사 칸 6) · 내용본은 var/outbox 로컬만")
 
 
 def _guard_summary(summary: str, form: dict, lyrics_ok: bool):
@@ -136,6 +157,20 @@ def main():
             order["받는_분"] = f.get("recipient", "")
             order["보내는_분"] = f.get("sender", "")
         _write(f"{rid}_lyrics_order.json", order)
+        # ★Git 통용 «참조본» — 내용 0. 이 파일만 agent-comm 으로 나간다.
+        blob = json.dumps(order, ensure_ascii=False, sort_keys=True).encode()
+        ref = {
+            "request_id": rid, "kind": "lyrics_order_ref", "to": a.to,
+            "업무ID": rid,
+            "담당": a.to, "상태": "lyrics_pending",
+            "발주본_sha256": hashlib.sha256(blob).hexdigest()[:16],
+            "★이_통의_성격": ("내용 없는 업무 참조·영수증입니다(LEO 10-01 저장경계). "
+                         "가사 발주 «내용»(요약·호칭·구조 지시·SP)은 별도 서비스 경로로 전달됩니다."),
+            "내용본_위치": "접수 서버 로컬 var/outbox/ — ⛔Git·agent-comm 에 올리지 않음",
+            "전달_경로": "admin 제안 대기(kee 청구 10-02 12:00) — 정해지면 그 경로로 전달",
+        }
+        _write(f"{rid}_lyrics_ref.json", ref)
+        _assert_git_safe(ref, order)
         store.set_status(rid, "lyrics_pending", f"to={a.to}")
 
     elif a.cmd == "lyrics-in":

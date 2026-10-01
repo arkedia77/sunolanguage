@@ -119,7 +119,8 @@
 
 | | 최종 결정 | 반영 |
 |---|---|---|
-| ⒜ | ⛔**사연 원문은 git·agent-comm 에 싣지 않는다**(09-30 「v1 한정 허용」 **철회**). 발주서엔 **운영자가 쓴 최소 비식별 요약 + 업무ID**만. 원문은 접수 서버 로컬에만 | `pipeline.py lyrics-order` 가 `--summary` 없이는 **거절**(fail-closed) · 원문 20자 연속 붙여넣기 거절 · 동의 없는 실명 포함 거절 · 발주서에서 story·memory·message·실명·전용 칸 «값» 제거 |
+| ⒜ | ⛔**사연 원문은 git·agent-comm 에 싣지 않는다**(09-30 「v1 한정 허용」 **철회**) | `pipeline.py lyrics-order` 가 `--summary` 없이는 **거절**(fail-closed) · 원문 20자 연속 붙여넣기 거절 · 동의 없는 실명 포함 거절 · 발주서에서 story·memory·message·실명·전용 칸 «값» 제거 |
+| ⒜′ | ★**LEO 직접 결정 10-01**(정본 `repo:agent-comm projects/solself/attachments/A280_PRIVACY_REVIEW_20260930/LEO_STORAGE_DECISION_20261001.md`): Git 은 **프로젝트 정보만**(설계·코드·일정·담당·상태 + 내용 없는 참조·영수증). **요약·가사 본문·음원·사용자 입력/동의 데이터까지 별도 서비스 저장소.** ⇒ 10-01 오전의 「최소 요약은 Git 가능」이 **대체됨** | `lyrics-order` 가 파일을 **둘** 쓴다: 내용본 `<rid>_lyrics_order.json`(⛔Git 금지·`var/` 로컬) / Git 통용 참조본 `<rid>_lyrics_ref.json`(업무ID·담당·상태·판본 해시뿐). `_assert_git_safe()` 가 참조본에 내용이 한 칸이라도 섞이면 **중단**(대조군으로 작동 확인). ⚠전달 경로는 **admin 제안 대기**(kee 청구 10-02 12:00) — 정해지기 전엔 내용본을 보내지 않는다 |
 | ⒝ | 동의를 **두 칸**으로: 「카드에 이름 표시」/「가사에 이름 넣기」. 둘 다 기본 꺼짐 — 요청자 체크는 **제3자의 공개 허락을 증명하지 못한다** | `store.consent(form, which)` 한 곳에서 판정 · 구칸 `name_consent` 는 **카드 동의로만** 읽고 가사 동의로 승격하지 않는다 |
 | ⒞ | 하루 5건 승인(개인정보 축) | 그대로 |
 

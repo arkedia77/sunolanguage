@@ -166,6 +166,22 @@ def main():
     check("⒜ 발주서에 업무ID·요약·구조지시는 있음",
           order["업무ID"] == r_off["request_id"] and order["요약(비식별)"] and order["structure_hint"])
 
+    # ── 저장경계(LEO 10-01): Git 통에는 «내용 0» 참조본만 ──
+    ref = json.loads((HERE / "var" / "outbox" / f"{r_off['request_id']}_lyrics_ref.json").read_text(encoding="utf-8"))
+    rblob = json.dumps(ref, ensure_ascii=False)
+    check("저장경계 — 참조본에 요약·호칭·SP·구조지시 없음",
+          not any(str(order[k]) in rblob for k in ("요약(비식별)", "호칭", "sp_draft", "structure_hint") if order.get(k)))
+    check("저장경계 — 참조본에 업무ID·담당·판본해시는 있음",
+          ref["업무ID"] == r_off["request_id"] and ref["담당"] and len(ref["발주본_sha256"]) == 16)
+    sys.path.insert(0, str(HERE))
+    import pipeline as _pl
+    leaked = {"업무ID": "x", "메모": order["요약(비식별)"]}
+    try:
+        _pl._assert_git_safe(leaked, order)
+        check("저장경계 — ★가드 대조군: 내용이 새면 차단된다", False, "안 막혔다")
+    except SystemExit:
+        check("저장경계 — ★가드 대조군: 내용이 새면 차단된다", True)
+
 
     lyr = HERE / "var" / f"{rid}_lyrics.txt"
     lyr.parent.mkdir(exist_ok=True)
