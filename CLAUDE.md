@@ -24,7 +24,7 @@ Suno 앱에 실제 음악을 녹음(~10초)하면 Suno가 **자기 언어로** �
 
 **킷 정본**=`agent-comm:projects/fableself/exchange/context-memory-kit-v01.md` §2·§3 (판=제목 줄·로컬 사본 스테일).
 
-**3층 상한제**: L0 항시로드(이 파일 + memory/MEMORY.md, **합계 ≤6KB**) = 트리거+포인터만 / L1 진입 / L2 온디맨드(_HUB_INDEX_L2·memory·KANBAN — 무제한). 초과 시 병합·L2 강등으로만 해소.
+**3층 상한제**: L0 항시로드(이 파일 + memory/MEMORY.md) = 트리거+포인터만 / L1 진입 / L2 온디맨드(_HUB_INDEX_L2·memory·KANBAN — 무제한). ★상한 정본=`repo:agent-comm admin/tools/l0_limits.json` — **CLAUDE.md «단독» ≤6,000B** · MEMORY.md **포인터 줄당 ≤200B**(`^- \[` · 총량 상한 없음) · **합계 상한 없음**(null=「정했고 두지 않음」). ⛔**「합계 ≤6KB」는 폐기된 값·분모다**(ari 10-02 `154717` 정정 · 내가 정본 직접 열람 확인). 초과 시 병합·L2 강등으로만 해소.
 
 ### 추론 수칙 — 트리거만 (전문=킷 §2. 문면 복제 금지=G-K4)
 **R-P1** 전제 감사(쓰기 전 grep·`근거:{파일}`) · **R-P2** 부분 Read · **R-P3** 결정 하나씩 · **R-P4** 양자택일 금지(기본=둘 다) · ★**R-P6 경계 밖 참조엔 `repo:경로` 한정자**(해시 포함 — 없으면 읽는 쪽에서 **에러 아닌 「없음」**)
