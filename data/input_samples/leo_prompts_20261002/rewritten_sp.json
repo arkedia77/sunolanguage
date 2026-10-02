@@ -1,0 +1,443 @@
+[
+ {
+  "id": "R1",
+  "from": "P1 아트팝/인디트로니카",
+  "label": "성긴 전자음·친밀한 여성 보컬",
+  "genre": "indie electronic art pop",
+  "bpm": 86,
+  "structure": "sparse verse, restrained chorus",
+  "observed": [
+   "intimate",
+   "breathy",
+   "female vocals",
+   "synth pad",
+   "electric piano",
+   "sub-bass",
+   "lo-fi",
+   "reverb",
+   "atmospheric"
+  ],
+  "sp": "indie electronic art pop, intimate, breathy, female vocals, synth pad, electric piano, sub-bass, lo-fi, reverb, atmospheric, 86 BPM",
+  "sp_chars": 131,
+  "checks": {
+   "R1 평가어 0": true,
+   "R5 명령문 0": true,
+   "R5 중복 0": true,
+   "R5 1000자 이내": true
+  },
+  "provenance": [
+   {
+    "term": "intimate",
+    "attested_count": 416,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "breathy",
+    "attested_count": 237,
+    "category": "timbre",
+    "layer": "observed"
+   },
+   {
+    "term": "female vocals",
+    "attested_count": 150,
+    "category": "vocal",
+    "layer": "observed"
+   },
+   {
+    "term": "synth pad",
+    "attested_count": 179,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "electric piano",
+    "attested_count": 53,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "sub-bass",
+    "attested_count": 61,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "lo-fi",
+    "attested_count": 30,
+    "category": "timbre",
+    "layer": "observed"
+   },
+   {
+    "term": "reverb",
+    "attested_count": 170,
+    "category": "production",
+    "layer": "observed"
+   },
+   {
+    "term": "atmospheric",
+    "attested_count": 68,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "indie electronic art pop",
+    "layer": "request",
+    "note": "장르 라벨=요청층(관측 아님)"
+   },
+   {
+    "term": "86 BPM",
+    "layer": "request",
+    "note": "템포=요청층"
+   },
+   {
+    "term": "sparse verse, restrained chorus",
+    "layer": "request",
+    "note": "구조 지시=요청층"
+   }
+  ]
+ },
+ {
+  "id": "R2",
+  "from": "P6 컨템포러리 R&B/팝(장문 949자)",
+  "label": "야간 R&B·넓은 공간감",
+  "genre": "contemporary R&B",
+  "bpm": 118,
+  "structure": "verse, pre-chorus, expansive chorus",
+  "observed": [
+   "smooth",
+   "lush",
+   "warm",
+   "female vocals",
+   "grand piano",
+   "synth pad",
+   "sub-bass",
+   "hi-hat",
+   "rimshot",
+   "reverb",
+   "delay",
+   "compression",
+   "atmospheric",
+   "groove",
+   "kick drum"
+  ],
+  "sp": "contemporary R&B, smooth, lush, warm, female vocals, grand piano, synth pad, sub-bass, hi-hat, rimshot, reverb, delay, compression, atmospheric, groove, kick drum, 118 BPM",
+  "sp_chars": 171,
+  "checks": {
+   "R1 평가어 0": true,
+   "R5 명령문 0": true,
+   "R5 중복 0": true,
+   "R5 1000자 이내": true
+  },
+  "provenance": [
+   {
+    "term": "smooth",
+    "attested_count": 118,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "lush",
+    "attested_count": 77,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "warm",
+    "attested_count": 143,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "female vocals",
+    "attested_count": 150,
+    "category": "vocal",
+    "layer": "observed"
+   },
+   {
+    "term": "grand piano",
+    "attested_count": 116,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "synth pad",
+    "attested_count": 179,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "sub-bass",
+    "attested_count": 61,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "hi-hat",
+    "attested_count": 190,
+    "category": "drums",
+    "layer": "observed"
+   },
+   {
+    "term": "rimshot",
+    "attested_count": 50,
+    "category": "drums",
+    "layer": "observed"
+   },
+   {
+    "term": "reverb",
+    "attested_count": 170,
+    "category": "production",
+    "layer": "observed"
+   },
+   {
+    "term": "delay",
+    "attested_count": 60,
+    "category": "production",
+    "layer": "observed"
+   },
+   {
+    "term": "compression",
+    "attested_count": 42,
+    "category": "production",
+    "layer": "observed"
+   },
+   {
+    "term": "atmospheric",
+    "attested_count": 68,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "groove",
+    "attested_count": 321,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "kick drum",
+    "attested_count": 496,
+    "category": "drums",
+    "layer": "observed"
+   },
+   {
+    "term": "contemporary R&B",
+    "layer": "request",
+    "note": "장르 라벨=요청층(관측 아님)"
+   },
+   {
+    "term": "118 BPM",
+    "layer": "request",
+    "note": "템포=요청층"
+   },
+   {
+    "term": "verse, pre-chorus, expansive chorus",
+    "layer": "request",
+    "note": "구조 지시=요청층"
+   }
+  ]
+ },
+ {
+  "id": "R3",
+  "from": "P5 앰비언트 R&B",
+  "label": "느린 재즈팝·유영하는 베이스",
+  "genre": "ambient R&B",
+  "bpm": 65,
+  "structure": "non-traditional, through-composed",
+  "observed": [
+   "breathy",
+   "intimate",
+   "female vocals",
+   "electric bass",
+   "electric piano",
+   "rimshot",
+   "lush",
+   "atmospheric",
+   "reverb"
+  ],
+  "sp": "ambient R&B, breathy, intimate, female vocals, electric bass, electric piano, rimshot, lush, atmospheric, reverb, 65 BPM",
+  "sp_chars": 120,
+  "checks": {
+   "R1 평가어 0": true,
+   "R5 명령문 0": true,
+   "R5 중복 0": true,
+   "R5 1000자 이내": true
+  },
+  "provenance": [
+   {
+    "term": "breathy",
+    "attested_count": 237,
+    "category": "timbre",
+    "layer": "observed"
+   },
+   {
+    "term": "intimate",
+    "attested_count": 416,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "female vocals",
+    "attested_count": 150,
+    "category": "vocal",
+    "layer": "observed"
+   },
+   {
+    "term": "electric bass",
+    "attested_count": 1148,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "electric piano",
+    "attested_count": 53,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "rimshot",
+    "attested_count": 50,
+    "category": "drums",
+    "layer": "observed"
+   },
+   {
+    "term": "lush",
+    "attested_count": 77,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "atmospheric",
+    "attested_count": 68,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "reverb",
+    "attested_count": 170,
+    "category": "production",
+    "layer": "observed"
+   },
+   {
+    "term": "ambient R&B",
+    "layer": "request",
+    "note": "장르 라벨=요청층(관측 아님)"
+   },
+   {
+    "term": "65 BPM",
+    "layer": "request",
+    "note": "템포=요청층"
+   },
+   {
+    "term": "non-traditional, through-composed",
+    "layer": "request",
+    "note": "구조 지시=요청층"
+   }
+  ]
+ },
+ {
+  "id": "R4",
+  "from": "P7 올드스쿨 소울(서사형)",
+  "label": "라이브 밴드 소울",
+  "genre": "old school soul",
+  "bpm": 92,
+  "structure": "verse, chorus, bridge",
+  "observed": [
+   "warm",
+   "smooth",
+   "male vocals",
+   "grand piano",
+   "electric bass",
+   "snare drum",
+   "kick drum",
+   "harmonies",
+   "groove",
+   "intimate"
+  ],
+  "sp": "old school soul, warm, smooth, male vocals, grand piano, electric bass, snare drum, kick drum, harmonies, groove, intimate, 92 BPM",
+  "sp_chars": 130,
+  "checks": {
+   "R1 평가어 0": true,
+   "R5 명령문 0": true,
+   "R5 중복 0": true,
+   "R5 1000자 이내": true
+  },
+  "provenance": [
+   {
+    "term": "warm",
+    "attested_count": 143,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "smooth",
+    "attested_count": 118,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "male vocals",
+    "attested_count": 721,
+    "category": "vocal",
+    "layer": "observed"
+   },
+   {
+    "term": "grand piano",
+    "attested_count": 116,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "electric bass",
+    "attested_count": 1148,
+    "category": "instrument",
+    "layer": "observed"
+   },
+   {
+    "term": "snare drum",
+    "attested_count": 453,
+    "category": "drums",
+    "layer": "observed"
+   },
+   {
+    "term": "kick drum",
+    "attested_count": 496,
+    "category": "drums",
+    "layer": "observed"
+   },
+   {
+    "term": "harmonies",
+    "attested_count": 64,
+    "category": "vocal_chorus",
+    "layer": "observed"
+   },
+   {
+    "term": "groove",
+    "attested_count": 321,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "intimate",
+    "attested_count": 416,
+    "category": "mood",
+    "layer": "observed"
+   },
+   {
+    "term": "old school soul",
+    "layer": "request",
+    "note": "장르 라벨=요청층(관측 아님)"
+   },
+   {
+    "term": "92 BPM",
+    "layer": "request",
+    "note": "템포=요청층"
+   },
+   {
+    "term": "verse, chorus, bridge",
+    "layer": "request",
+    "note": "구조 지시=요청층"
+   }
+  ]
+ }
+]
