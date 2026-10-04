@@ -15,6 +15,11 @@ STEMS_REMOTE = f"{STEMS_BASE}/stems"
 TRIMMED_REMOTE = f"{STEMS_BASE}/stems_trimmed"
 # 08-23 실측: 172.30.1.77(DHCP 사설IP)은 ping 불통 — 죽은 주소.
 # sunomusic 회신(08-23 21:35) = mukl·mushin 동일 머신, 고정 주소는 tailscale.
+# ⛔2026-10-04 경고 — 이 주소로의 ssh 는 **다른 머신에서 금지**일 수 있다.
+#   sunomusic `20261004_222913` 정정: `mushin@100.75.69.61` 경유는 **mukl 이 자기 자신에 접속할 때만** 맞고,
+#   다른 머신의 키는 **Slack 발신 전용**이라 셸이 안 열린다 — leomusic3 에서 **Slack 채널이 생기는 사고**가 났다(admin 수리).
+#   ★이 스크립트는 그 정정 이전(08-23)에 쓰였고 purple 에서 그 주소를 쓴다 ⇒ **돌리기 전에 sunomusic 에 확인할 것.**
+#   자료가 필요하면 sunomusic 에 요청해 mukl 안에서 꺼내는 쪽이 안전하다.
 MUSHIN = "mushin@100.75.69.61"  # tailscale 고정 (구: mushin@172.30.1.77)
 LOCAL_TMP = "/tmp/stems_trim"
 TRIM_DURATION = 15  # seconds

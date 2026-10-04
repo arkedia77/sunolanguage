@@ -11,6 +11,11 @@ merged = json.load(open(_ROOT / "data/reanalysis_v2/merged_4values.json"))
 existing_genres = Counter(s.get("genre") or "미정" for s in merged)
 
 # 08-23: 172.30.1.77 ping 불통 → tailscale 고정 주소로 교체 (구: mushin@172.30.1.77)
+# ⛔2026-10-04 경고 — 이 주소로의 ssh 는 **다른 머신에서 금지**일 수 있다.
+#   sunomusic `20261004_222913` 정정: `mushin@100.75.69.61` 경유는 **mukl 이 자기 자신에 접속할 때만** 맞고,
+#   다른 머신의 키는 **Slack 발신 전용**이라 셸이 안 열린다 — leomusic3 에서 **Slack 채널이 생기는 사고**가 났다(admin 수리).
+#   ★이 스크립트는 그 정정 이전(08-23)에 쓰였고 purple 에서 그 주소를 쓴다 ⇒ **돌리기 전에 sunomusic 에 확인할 것.**
+#   자료가 필요하면 sunomusic 에 요청해 mukl 안에서 꺼내는 쪽이 안전하다.
 cmd = ["ssh", "mushin@100.75.69.61",
        "sqlite3 -json ~/projects/leomusic-cli/leomusic.db "
        "\"SELECT global_id, batch, genre, subgenre, bpm, title, substr(style_prompt,1,100) AS sp_head "
