@@ -7,8 +7,12 @@ import os
 import sys
 import shlex
 
-STEMS_REMOTE = "/Volumes/sunomusic/sunolanguage/stems"
-TRIMMED_REMOTE = "/Volumes/sunomusic/sunolanguage/stems_trimmed"
+# ★2026-10-04 경로 이동(sunomusic `20261004_221628` 고지 · LEO 「수노뮤직 하드에서 니꺼는 다 지워」):
+#   옛 `/Volumes/sunomusic/…` 은 **지워졌다** — 「없음」이 아니라 「옮겨졌다」. 같은 하위 구조로 Leombank 에 있다.
+#   ⛔옛 경로로 두면 이 스크립트는 「대상 0건」을 조용히 찍는다(실패가 아니라 침묵이라 더 나쁘다).
+STEMS_BASE = os.environ.get("SUNOMUSIC_BASE", "/Volumes/Leombank/sunomusic1/sunolanguage")
+STEMS_REMOTE = f"{STEMS_BASE}/stems"
+TRIMMED_REMOTE = f"{STEMS_BASE}/stems_trimmed"
 # 08-23 실측: 172.30.1.77(DHCP 사설IP)은 ping 불통 — 죽은 주소.
 # sunomusic 회신(08-23 21:35) = mukl·mushin 동일 머신, 고정 주소는 tailscale.
 MUSHIN = "mushin@100.75.69.61"  # tailscale 고정 (구: mushin@172.30.1.77)
