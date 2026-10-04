@@ -7,6 +7,24 @@ import os
 import sys
 import shlex
 
+# ⛔2026-10-04 fail-closed — 이 스크립트는 **돌지 않는다.**
+#   sunomusic `20261004_223342` 실측: mukl `~/.ssh/authorized_keys` 의 purple 키에
+#   `command="/Users/mushin/leobridge/outbound_relay.sh"` 가 **강제**돼 있다.
+#   ⇒ purple 에서 `ssh mushin@100.75.69.61 <명령>` 을 하면 그 명령 대신 **Slack 발신 중계가 돈다**
+#     (leomusic3 에서 Slack 채널이 생긴 사고와 같은 경로. admin 수리분).
+#   ★경고 주석은 실행을 막지 못한다 — 그래서 **여기서 멈춘다**(09-26 이후 이 세션에서 배운 fail-closed 규율).
+#   바른 길: 필요한 조회·전송을 **sunomusic 에 요청 통**으로 내면 mukl 안에서 처리해 돌려준다.
+#   admin 이 purple 에 셸 키를 따로 발급하면 `SUNOMUSIC_SSH_OK=1` 로 풀 수 있다(내 판단 사항 아님).
+import os as _os, sys as _sys
+if not _os.environ.get("SUNOMUSIC_SSH_OK"):
+    _sys.exit(
+        "⛔ 막혔습니다 — purple→mushin@100.75.69.61 ssh 는 Slack 발신 중계로 강제됩니다"
+        "(sunomusic 20261004_223342 실측).\n"
+        "   돌리면 조회·전송 대신 Slack 발신이 일어납니다(leomusic3 사고와 같은 경로).\n"
+        "   ▶ 필요한 것은 sunomusic 에 요청 통으로 내십시오 — mukl 안에서 처리해 회신합니다.\n"
+        "   ▶ admin 이 purple 에 셸 키를 발급했다면 SUNOMUSIC_SSH_OK=1 로 다시 실행하십시오."
+    )
+
 # ★2026-10-04 경로 이동(sunomusic `20261004_221628` 고지 · LEO 「수노뮤직 하드에서 니꺼는 다 지워」):
 #   옛 `/Volumes/sunomusic/…` 은 **지워졌다** — 「없음」이 아니라 「옮겨졌다」. 같은 하위 구조로 Leombank 에 있다.
 #   ⛔옛 경로로 두면 이 스크립트는 「대상 0건」을 조용히 찍는다(실패가 아니라 침묵이라 더 나쁘다).
