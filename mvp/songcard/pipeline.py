@@ -24,12 +24,22 @@
   내용본에는 여전히 **원문이 아니라 요약**만 들어간다(`--summary` 필수·fail-closed 4종 유지).
   ⚠전달 경로는 admin 제안 대기(kee 청구, 10-02 12:00) — 정해지기 전에는 **내용본을 보내지 않는다**.
 
+★2026-10-13 가사 숫자 표기 (LEO 직지시 · encore 전달통
+  `repo:agent-comm projects/sunolanguage/messages/sunolanguage_encore_20261013_122703_LEO전달_가사숫자_한글로.json`)
+
+  가사 «본문»에는 아라비아 숫자를 쓰지 않는다 — Suno 가 숫자 글자를 한자어로 읽는다
+  (LEO 청취 실측: 「4시」→「사시」). 브라켓 안([Verse 2]·사운드 큐)·제목·style prompt 는 대상 밖.
+  ⇒ `lyrics-order` 발주서에 규칙을 싣고, `lyrics-in` 수령부에서 기계가 다시 본다
+    (★규칙만 적어 두면 지켜지는지 아무도 모른다 — 요약 fail-closed 와 같은 자리).
+  ⛔읽는 법(고유어 「네 시」 / 한자어 「사 분」)은 쓰는 쪽이 정한다. 여기서 보는 것은 숫자 글자 0 뿐이다.
+
 사용:
   .venv/bin/python mvp/songcard/pipeline.py list
   .venv/bin/python mvp/songcard/pipeline.py show <rid>
   .venv/bin/python mvp/songcard/pipeline.py lyrics-order <rid> --summary "비식별 요약" [--to leomusic3]
   .venv/bin/python mvp/songcard/pipeline.py lyrics-in <rid> --file lyrics.txt --by leomusic3 [--title 제목]
         [--declaration match|none_verified] [--lyrics-sha12 <납품자 신고 해시 — 내가 재측정해 대조>]
+        [--allow-digits <사유 — ⛔LEO 규칙 예외. 사유 없이는 숫자 든 가사를 받지 않는다>]
   .venv/bin/python mvp/songcard/pipeline.py gen-order <rid>
   .venv/bin/python mvp/songcard/pipeline.py gen-ack <rid>
   .venv/bin/python mvp/songcard/pipeline.py audio-in <rid> --file take.mp3 [--uuid U] [--gid G] [--select]
@@ -40,6 +50,7 @@
 import argparse
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -73,6 +84,28 @@ def _assert_git_safe(ref: dict, order: dict):
     if leak:
         sys.exit(f"⛔ 참조본에 내용이 섞였습니다: {leak} — Git 통에는 내용을 싣지 않습니다(LEO 10-01 저장경계)")
     print(f"  ↳ Git 통용 참조본 = 내용 0 확인(검사 칸 6) · 내용본은 var/outbox 로컬만")
+
+
+BRACKET_SPAN = re.compile(r"\[[^\]]*\]")
+DIGIT_RUN = re.compile(r"\d[\d,.:·~\-]*")
+
+가사_숫자_규칙 = (
+    "가사 본문에는 아라비아 숫자를 쓰지 않습니다 — 숫자는 전부 소리 나는 대로 한글로 적어 주십시오. "
+    "고유어로 읽는 단위(시·번·개·살·명·장·잔·병·마리·곡·달…)는 한·두·세·네·다섯…스물, "
+    "한자어로 읽는 단위(분·초·년·월·일·층·원·호·도…)는 일·이·삼…입니다. "
+    "보기: 「4시 30분」→「네 시 삼십 분」. 전화번호·연도처럼 자릿수로 읽는 것도 읽는 소리 그대로. "
+    "영어 구절 안의 숫자도 철자로. ⛔대괄호 메타 태그 안([Verse 2] 등)·제목·style prompt 는 대상이 아닙니다. "
+    "까닭: Suno 는 숫자 글자를 한자어로 읽습니다(LEO 청취 = 「4시」가 「사시」)."
+)
+
+
+def _digit_lines(text: str) -> list[tuple[int, str]]:
+    """가사 본문에 남은 아라비아 숫자 행. 브라켓 구간은 행 안쪽이라도 걷어낸다."""
+    out = []
+    for i, ln in enumerate(text.splitlines(), 1):
+        if DIGIT_RUN.search(BRACKET_SPAN.sub("", ln)):
+            out.append((i, ln.strip()))
+    return out
 
 
 def _guard_summary(summary: str, form: dict, lyrics_ok: bool):
@@ -115,6 +148,7 @@ def main():
     ap.add_argument("--summary-file", help="같은 요약을 파일로")
     ap.add_argument("--declaration", help="납품자 신고 상태: match | none_verified (leomusic3 10-01 필수 칸)")
     ap.add_argument("--lyrics-sha12", help="납품자가 적어 준 가사 해시 — ★내가 다시 재서 대조한다")
+    ap.add_argument("--allow-digits", help="가사 본문 숫자 예외 사유 — ⛔LEO 규칙(10-13) 예외는 사유를 남긴다")
     a = ap.parse_args()
 
     if a.cmd == "list":
@@ -157,6 +191,7 @@ def main():
             "가사에_실명_사용": lyrics_ok,
             "이름_지침": ("요청자가 «가사에 이름 넣기»에 동의했습니다. 아래 이름만 쓰십시오."
                        if lyrics_ok else "⛔가사에 실명을 쓰지 마십시오 — 호칭만 쓰십시오(동의 없음·기본값)."),
+            "숫자_표기": 가사_숫자_규칙,   # LEO 직지시 2026-10-13 · 수령부에서 기계가 다시 본다
         }
         if lyrics_ok:
             order["받는_분"] = f.get("recipient", "")
@@ -193,12 +228,23 @@ def main():
                      f"   같은 파일인지 확인하고 다시 주십시오(끝 공백은 제거 후 계산합니다).")
         if a.declaration and a.declaration not in ("match", "none_verified"):
             sys.exit("⛔ --declaration 은 match | none_verified 둘 중 하나입니다")
+        # ★숫자 표기 검문(LEO 직지시 10-13) — 받는 자리에서 막는다. 생성에 들어간 뒤엔
+        #   「4시」가 「사시」로 나온 걸 듣고서야 알게 되고, 그때는 재생성 비용이다.
+        digs = _digit_lines(text)
+        if digs and not a.allow_digits:
+            lines = "\n".join(f"   {n}행: {t}" for n, t in digs[:8])
+            sys.exit(f"⛔ 가사 본문에 아라비아 숫자 {len(digs)}행 — 소리 나는 대로 한글로 바꿔 받으십시오"
+                     f"(LEO 직지시 10-13).\n{lines}\n"
+                     f"   보기: 「4시 30분」→「네 시 삼십 분」 · 브라켓 안·제목은 대상 아님.\n"
+                     f"   예외로 받아야 하면 --allow-digits '사유' 로 사유를 남기십시오.")
 
         def f(r):
             r["lyrics_versions"].append({
                 "v": len(r["lyrics_versions"]) + 1, "text": text, "by": a.by, "at": store._now(),
                 "lyrics_sha12": sha12,                      # 내가 실측한 값
                 "declaration_status": a.declaration or None,  # 상대 신고(없으면 None — 「없음」이지 「통과」가 아니다)
+                "digit_lines": len(digs),                     # 본문 숫자 행 수(0 이 규칙 준수)
+                "digit_exception": a.allow_digits or None,    # 예외로 받았다면 그 사유
             })
             if a.title:
                 r["title"] = a.title
@@ -301,6 +347,7 @@ def main():
             _write(f"{rid}_lyrics_redo_{a.extra}.json", {
                 "request_id": rid, "kind": "lyrics_redo_order", "to": a.to,
                 "customer_note": x["note"], "previous": req["lyrics_versions"][-1] if req["lyrics_versions"] else None,
+                "숫자_표기": 가사_숫자_규칙,
             })
         store.set_status(rid, "lyrics_pending" if what == "lyrics" else "lyrics_ready", f"redo {a.extra}")
     else:

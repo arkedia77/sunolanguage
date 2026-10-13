@@ -2,8 +2,15 @@
 """g2_lyrics_gate.py — 레오뮤직OS G2 가사게이트 v0 (S2→S3 관문).
 
 발주: kee 2026-07-11 (주담당 sunolanguage, 리뷰 leomusic). LEO Tier2 GO.
-스펙: 가사 체크리스트 5항목 PASS/FAIL (정량화 불요 v0).
-  ①음절수(멜로디 대비) ②발음 난이도 ③금칙어 ④컨셉 일치 ⑤코퍼스 규격
+스펙: 가사 체크리스트 6항목 PASS/FAIL (정량화 불요 v0.1).
+  ①음절수(멜로디 대비) ②발음 난이도 ③금칙어 ④컨셉 일치 ⑤코퍼스 규격 ⑥숫자 표기(한글)
+
+★v0.1 추가 = ⑥ (2026-10-13, LEO 직지시 · encore 전달통
+  `repo:agent-comm projects/sunolanguage/messages/sunolanguage_encore_20261013_122703_LEO전달_가사숫자_한글로.json`):
+  가사 «본문»에 아라비아 숫자를 쓰지 않는다 — Suno 가 숫자 글자를 한자어로 읽는다
+  (LEO 청취 실측: 「4시」→「사시」. 고유어로 읽어야 할 자리가 한자어로 나온다).
+  브라켓 안([Verse 2]·사운드 큐)·제목·style prompt 는 대상이 아니다(렌더 가사가 아님).
+  ⛔읽는 법(고유어/한자어)까지는 기계가 정하지 않는다 — 숫자 «글자»가 0인지만 본다.
 
 G5 원칙 적용(3070 수출본 07-11):
   - 자연 기준선: 코퍼스 실측 분포만 사용 [MEASURED], 매직넘버 금지
@@ -292,7 +299,35 @@ def check_format(lyrics: str) -> dict:
                        "problems": problems[:20], "n_problems": len(problems)}}
 
 
+DIGIT_RUN = re.compile(r"\d[\d,.:·~\-]*")
+BRACKET_SPAN = re.compile(r"\[[^\]]*\]")
+
+
+def digit_hits(lyrics: str) -> list[dict]:
+    """가사 «본문»에 남은 아라비아 숫자. 브라켓 구간은 행 안쪽이라도 걷어낸다
+    (섹션 태그·사운드 큐는 가창되지 않는다 = 규칙 대상 밖)."""
+    hits = []
+    for i, ln in enumerate(lyrics.splitlines(), 1):
+        body = BRACKET_SPAN.sub("", ln)
+        found = DIGIT_RUN.findall(body)
+        if found:
+            hits.append({"line_no": i, "line": ln.strip(), "digits": found})
+    return hits
+
+
+def check_digits(lyrics: str) -> dict:
+    """⑥숫자 표기 (hard_fail) — 본문 아라비아 숫자 0. 소리 나는 대로 한글로 적는다."""
+    hits = digit_hits(lyrics)
+    return {"id": 6, "name": "숫자 표기(한글)", "role": "hard_fail",
+            "verdict": "FAIL" if hits else "PASS",
+            "detail": {"basis": ("가사 본문 아라비아 숫자 0 (LEO 직지시 2026-10-13 · encore 전달). "
+                                 "브라켓 구간·제목·style prompt 는 대상 밖. "
+                                 "고유어 단위(시·번·개·살…)=한·두·세·네… / 한자어 단위(분·초·년·원…)=일·이·삼…"),
+                       "hits": hits[:20], "n_hits": len(hits)}}
+
+
 OUTSIDE_GATE = [
+    "숫자를 «어느 말로» 읽을지 (고유어/한자어 선택은 쓰는 쪽 — 게이트는 숫자 글자 0만 본다)",
     "감성·뉘앙스·시적 완성도 (Leo 청취 영역)",
     "멜로디 싱커페이션·프레이징 적합 (실청취 필요)",
     "가창 전달력·호흡 배치",
@@ -311,10 +346,11 @@ def run_gate(lyrics: str, concept: str | None = None, concept_keywords: list[str
         check_forbidden(lyrics, forbidden_extra),
         check_concept(lyrics, concept, concept_keywords),
         check_format(lyrics),
+        check_digits(lyrics),
     ]
     hard_fails = [i for i in items if i["role"] == "hard_fail" and i["verdict"] == "FAIL"]
     return {
-        "gate": "G2", "version": "v0",
+        "gate": "G2", "version": "v0.1",
         "verdict": "FAIL" if hard_fails else "PASS",
         "hard_fail_items": [i["name"] for i in hard_fails],
         "items": items,
@@ -400,7 +436,7 @@ def main():
     if args.json:
         print(json.dumps(result, ensure_ascii=False, indent=2))
     else:
-        print(f"=== G2 v0 verdict: {result['verdict']} ===")
+        print(f"=== G2 {result['version']} verdict: {result['verdict']} ===")
         for it in result["items"]:
             mark = {"PASS": "✅", "FAIL": "❌", "NOT_COMPARED": "➖"}[it["verdict"]]
             print(f"  {mark} [{it['id']}] {it['name']} ({it['role']}) — {it['verdict']}")

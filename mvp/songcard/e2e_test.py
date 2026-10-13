@@ -73,7 +73,7 @@ def _fresh_ready(B, audio):
     r = json.loads(call(B, "POST", "/api/requests", body)[1])
     rid = r["request_id"]
     lyr = HERE / "var" / f"{rid}_lyrics.txt"
-    lyr.write_text("(점검용 가사 L1)", encoding="utf-8")
+    lyr.write_text("(점검용 가사 — 첫 판)", encoding="utf-8")   # ⛔숫자 글자 금지(10-13 규칙) — 「L1」의 1 이 걸린다
     for st in [("lyrics-order", rid, "--summary", "점검용 비식별 요약 — 가상 사연. 이름·지명 없음."),
                ("lyrics-in", rid, "--file", str(lyr), "--by", "e2e-placeholder"),
                ("gen-order", rid), ("gen-ack", rid), ("audio-in", rid, "--file", audio, "--select"), ("publish", rid)]:
@@ -226,6 +226,25 @@ def main():
           _store_get(hrid)["lyrics_versions"][-1]["declaration_status"] == "match")
     pipe("fail", hrid, "--note", "e2e 해시 대조군")
 
+    # ── 숫자 표기 검문(LEO 직지시 10-13) — 본문 숫자 글자는 수령부에서 막힌다 ──
+    nb = {**body, "client_key": "dig-" + _s.token_hex(6)}
+    nr = json.loads(call(B, "POST", "/api/requests", nb)[1])
+    nrid = nr["request_id"]
+    pipe("lyrics-order", nrid, "--summary", "점검용 비식별 요약 — 가상 사연. 이름·지명 없음.")
+    order_n = json.loads((HERE / "var" / "outbox" / f"{nrid}_lyrics_order.json").read_text(encoding="utf-8"))
+    check("발주서 — 숫자 표기 규칙이 실려 나간다", "아라비아 숫자" in order_n.get("숫자_표기", ""))
+    dig = HERE / "var" / f"{nrid}_lyrics_digit.txt"
+    dig.write_text("[Verse 2]\n새벽 4시 30분에 불을 켰어\n", encoding="utf-8")
+    rc, out = pipe("lyrics-in", nrid, "--file", str(dig), "--by", "e2e")
+    check("납품 — ★본문 아라비아 숫자는 거절(대조군)", rc != 0 and "아라비아 숫자" in out,
+          out.splitlines()[0][:48] if out else "")
+    ok_ly = HERE / "var" / f"{nrid}_lyrics_ok.txt"
+    ok_ly.write_text("[Verse 2]\n새벽 네 시 삼십 분에 불을 켰어\n", encoding="utf-8")
+    rc, out = pipe("lyrics-in", nrid, "--file", str(ok_ly), "--by", "e2e")
+    check("납품 — 한글 숫자 + 브라켓 안 숫자([Verse 2])는 통과(양성통제)", rc == 0, out)
+    check("판본에 digit_lines=0 기록", _store_get(nrid)["lyrics_versions"][-1].get("digit_lines") == 0)
+    pipe("fail", nrid, "--note", "e2e 숫자 표기 대조군")
+
     s, d, h = call(B, "GET", card["audio"] + f"?t={t}", headers={"Range": "bytes=0-1023"})
     check("오디오 Range 206", s == 206 and len(d) == 1024, h.get("Content-Range"))
     s, _, _ = call(B, "GET", card["audio"])
@@ -271,7 +290,7 @@ def main():
     s, d, _ = call(B, "POST", f"/api/requests/{rid3}/redo", {"t": t3, "what": "lyrics", "note": "2절에 이름", "redo_key": "k-l"})
     pipe("redo-close", rid3, json.loads(d)["redo"]["redo_id"])
     newl = HERE / "var" / f"{rid3}_lyrics2.txt"
-    newl.write_text("(점검용 새 가사 L2)", encoding="utf-8")
+    newl.write_text("(점검용 새 가사 — 둘째 판)", encoding="utf-8")   # ⛔숫자 글자 금지(10-13 규칙)
     pipe("lyrics-in", rid3, "--file", str(newl), "--by", "e2e-placeholder")
     mid = json.loads(call(B, "GET", f"/api/cards/{share3}?t={t3}")[1])
     check("(2) 제작 중 카드 = 옛 오디오 + 옛 가사(묶음 유지)", mid["audio"] == old_card["audio"] and mid["lyrics"] == old_card["lyrics"] and mid["updating"] is True)
@@ -283,7 +302,7 @@ def main():
     alt.write_bytes(Path(a.audio).read_bytes()[: 400_000])
     pipe("audio-in", rid3, "--file", str(alt), "--select"); pipe("publish", rid3)
     new_card = json.loads(call(B, "GET", f"/api/cards/{share3}?t={t3}")[1])
-    check("(2) 게시 후 카드 = 새 오디오 + 새 가사", new_card["audio"] != old_card["audio"] and new_card["lyrics"] == "(점검용 새 가사 L2)" and not new_card["updating"])
+    check("(2) 게시 후 카드 = 새 오디오 + 새 가사", new_card["audio"] != old_card["audio"] and new_card["lyrics"] == "(점검용 새 가사 — 둘째 판)" and not new_card["updating"])
 
     # (3) 서버와 다른 프로세스가 동시에 고쳐도 둘 다 남는다(잠금 안에서 0.3초씩 붙잡는 두 프로세스)
     worker = (

@@ -12,6 +12,12 @@
   G4 가사 브래킷 = 섹션 태그 ∪ 사운드 큐    — 명찰형(화자 이름) 0 · 한글 브래킷 0
   G5 제목 중복 0                           — 배치 내 ∪ PG songs 전건
   G6 가사 jaccard 최대치                   — 대조군 = PG 내 우리 곡 전건 ∪ 같은 배치 앞 곡
+  G7 가사 본문 아라비아 숫자 0             — LEO 직지시(2026-10-13 · encore 전달통
+                                             `repo:agent-comm projects/sunolanguage/messages/
+                                             sunolanguage_encore_20261013_122703_LEO전달_가사숫자_한글로.json`).
+                                             Suno 는 숫자 글자를 한자어로 읽는다(LEO 청취: 「4시」→「사시」) ⇒
+                                             소리 나는 대로 한글로 적는다. 브라켓·제목·SP 는 대상 밖.
+                                             ⛔읽는 법(고유어/한자어)은 쓰는 쪽이 정한다 — 게이트는 글자만 본다.
 
 사용: .venv/bin/python scripts/n_series_gate.py data/n041/N041_design.json [--no-db]
 """
@@ -42,6 +48,8 @@ HANGUL = re.compile(r"[가-힣]")
 #   ⛔자를 «바꾸지» 않고 «늘린다** — 옛 수(maxJ)는 그대로 찍고 내용만 잰 수(maxJ_ko)를 나란히 낸다.
 #     둘 중 하나라도 문턱을 넘으면 hard fail ⇒ 판정은 **엄격해지기만** 하고 과거 PASS가 뒤집히지 않는다.
 BRACKET_LINE = re.compile(r"^\s*\[[^\]]*\]\s*$", re.M)
+BRACKET_SPAN = re.compile(r"\[[^\]]*\]")
+DIGIT_RUN = re.compile(r"\d[\d,.:·~\-]*")
 
 
 def tok(s: str) -> set[str]:
@@ -150,6 +158,14 @@ def gate(design_path: Path, use_db=True, exclude_gids=None):
                 fails.append(f"{line} G4 명찰형 의심 브래킷: {b}")
         if HANGUL.search(" ".join(re.findall(r"\[[^\]]*\]", ly))):
             pass
+        # G7 — 가사 본문 숫자 글자(브라켓 구간은 행 안쪽이라도 걷어낸다)
+        dig = []
+        for ln in ly.splitlines():
+            body = BRACKET_SPAN.sub("", ln)
+            if DIGIT_RUN.search(body):
+                dig.append(ln.strip())
+        if dig:
+            fails.append(f"{line} G7 가사 본문 아라비아 숫자 {len(dig)}행: {dig[:3]}")
         # G5
         if title in seen_titles:
             fails.append(f"{line} G5 배치 내 제목 중복: {title}")
