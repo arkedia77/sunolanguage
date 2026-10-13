@@ -25,8 +25,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 ME = "sunolanguage"
-BOX = Path("/Users/purple/projects/agent-comm/projects") / ME / "messages"
-REPO = Path("/Users/purple/projects/agent-comm")
+BOX = Path("/Users/purple/agent-comm-sunolanguage/projects") / ME / "messages"
+REPO = Path("/Users/purple/agent-comm-sunolanguage")
 
 
 # ─────────────────────────────────────────────────────────────

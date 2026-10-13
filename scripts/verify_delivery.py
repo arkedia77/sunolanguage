@@ -16,7 +16,7 @@
 """
 import argparse, hashlib, json, subprocess, sys
 
-ROOT = "/Users/purple/projects/agent-comm"   # ★통신용 클론(공유). 배선 이전 시 여기 1곳만 바꾼다.
+ROOT = "/Users/purple/agent-comm-sunolanguage"   # ★통신용 클론(독립 · 10-13 이전). ⛔「1곳만」은 틀렸다 — 실제 4곳(send_msg·safe_commit·inbox_scan·여기)
 
 def git(*a):
     return subprocess.run(["git", "-c", "core.quotepath=false", *a],

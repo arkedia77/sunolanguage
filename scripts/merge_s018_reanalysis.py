@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 
 CORPUS_PATH = Path("data/reanalysis_v2/merged_4values.json")
-AGENT_MSG = Path.home() / "projects/agent-comm/projects/sunolanguage/messages/sunolanguage_sunomusic_20260507_175000_S018_phase1_phase2_완료.json"
+AGENT_MSG = Path.home() / "agent-comm-sunolanguage/projects/sunolanguage/messages/sunolanguage_sunomusic_20260507_175000_S018_phase1_phase2_완료.json"
 S018_PROMPTS = Path("data/test_s018/s018_prompts.json")
 
 msg = json.loads(AGENT_MSG.read_text())

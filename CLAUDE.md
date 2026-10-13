@@ -30,7 +30,7 @@ Suno 앱에 실제 음악을 녹음(~10초)하면 Suno가 **자기 언어로** �
 **R-P1** 전제 감사(쓰기 전 grep·`근거:{파일}`) · **R-P2** 부분 Read · **R-P3** 결정 하나씩 · **R-P4** 양자택일 금지(기본=둘 다) · ★**R-P6 경계 밖 참조엔 `repo:경로` 한정자**(해시 포함 — 없으면 읽는 쪽에서 **에러 아닌 「없음」**)
 
 ### agent-comm 동기화 (ari D237 09-02)
-★**내 통신용 클론 = 공유(`~/projects/agent-comm`) — 4분기 규율 적용**(⛔raw rebase 금지·`admin/scripts/sync_shared_clone.sh` 경유). ★**공유 트리는 커밋 전에도 남이 읽는다** ⇒ ⑴읽힘≠배달(인수=`origin/main` 실물 조회) ⑵읽힌 통은 폐기 말고 **철회통**.
+★**내 통신용 클론 = 독립(`~/agent-comm-sunolanguage` · 10-13 이전)** — index 는 나 혼자 것. 동기화=`git fetch`→`git rebase origin/main`(⛔`git pull` 금지=webhook 이 같은 클론에 pull·FETCH_HEAD 겹침 · `cannot lock ref` 는 재시도). ⛔구 공유 클론(`~/projects/agent-comm`)엔 쓰지 않는다. ★인수=`origin/main` 실물+본문 해시(변함없음).
 
 ### 세션 종료 루틴 (지식 수명주기 §3)
 - **G-K1 승격**: 사건 1건=session_log까지. 2회↑ 재발/타도메인 재사용만 룰 승격(단발 룰화 금지).

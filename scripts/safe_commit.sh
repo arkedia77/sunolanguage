@@ -13,7 +13,7 @@ set -u
 # ★경로는 기본값 그대로이고, **시험을 위해서만** 오버라이드를 연다(2026-09-14).
 #   ⛔이 도구는 「거짓 보고」 수리를 했는데 **하드코딩된 cd 때문에 스크래치에서 시험이 안 됐다**
 #     — 시험할 수 없는 수리는 「고쳤다」가 아니다(오늘만 도구 수리 다섯 번째).
-cd "${AGENT_COMM_REPO:-$HOME/projects/agent-comm}" || exit 1
+cd "${AGENT_COMM_REPO:-$HOME/agent-comm-sunolanguage}" || exit 1
 ME="${AGENT_ID:-sunolanguage}"
 MSG="${1:?사용: safe_commit.sh \"커밋 메시지\" [경로...]}"
 shift || true

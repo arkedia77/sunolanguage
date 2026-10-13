@@ -20,7 +20,7 @@ import json, os, re, sys
 from datetime import datetime
 
 FROM = "sunolanguage"
-ROOT = "/Users/purple/projects/agent-comm"
+ROOT = "/Users/purple/agent-comm-sunolanguage"
 
 
 def _body_hash(body):

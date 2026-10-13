@@ -90,7 +90,7 @@ msg={"created_at":ts.strftime('%Y-%m-%dT%H:%M:%S')+'+09:00',"from":"sunolanguage
  "generation_spec":"★Custom 모드 + Instrumental=ON(전곡 무가사 연주곡). 곡당 1회=2클립(uuid1/uuid2). style_prompt=tags란 그대로. 가사란 비움. 전 10곡 가동.",
  "writeback":"songs gid 기준 suno_uuid1/2+suno_url UPDATE, status=generated. 결과 회신: projects/sunolanguage/messages/ BS01_생성결과.json.",
  "songs":[{"gid":30120+s["pos"],"title":s["title"],"genre":"Neoclassical chamber (four cellos)","is_instrumental":True,"bpm":s["bpm"],"key":s["key"]} for s in SONGS]}
-fn='/Users/purple/projects/agent-comm/projects/sunomusic/messages/sunomusic_sunolanguage_'+ts.strftime('%Y%m%d_%H%M%S')+'_BS01_신부첼로4중주_생성요청.json'
+fn='/Users/purple/agent-comm-sunolanguage/projects/sunomusic/messages/sunomusic_sunolanguage_'+ts.strftime('%Y%m%d_%H%M%S')+'_BS01_신부첼로4중주_생성요청.json'
 json.dump(msg, open(fn,'w'), ensure_ascii=False, indent=2)
 print("handoff ->", fn.split('/')[-1])
 print("TS:", ts.strftime('%Y%m%d_%H%M%S'))

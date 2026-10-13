@@ -15,7 +15,7 @@
 import json, gzip, re
 from collections import Counter, defaultdict
 
-REG='/Users/purple/projects/agent-comm/projects/sunomusic/exchange/aware_clip_index_20260803.jsonl.gz'
+REG='/Users/purple/agent-comm-sunolanguage/projects/sunomusic/exchange/aware_clip_index_20260803.jsonl.gz'
 COR='data/reanalysis_v2/merged_4values.json'
 OUT='data/reanalysis_v2/corpus_expansion_ledger_v1.json'
 

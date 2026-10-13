@@ -18,7 +18,7 @@ import json, os, sqlite3, subprocess, time, urllib.request, ssl
 from datetime import datetime
 from pathlib import Path
 
-AGENT_COMM   = Path.home() / "projects/agent-comm"
+AGENT_COMM   = Path.home() / "agent-comm-sunolanguage"
 TO_MUKL      = AGENT_COMM / "sunolang/to_mukl"
 FROM_MUKL    = AGENT_COMM / "sunolang/from_mukl"
 DB_PATH      = Path.home() / "projects/sunolang/sunolang.db"

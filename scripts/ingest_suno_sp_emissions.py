@@ -22,7 +22,7 @@
 import json, glob, sqlite3, sys, hashlib, os
 
 DB = 'sunolang.db'
-INBOX = '/Users/purple/projects/agent-comm/projects/sunolanguage/messages'
+INBOX = '/Users/purple/agent-comm-sunolanguage/projects/sunolanguage/messages'
 
 DDL = """
 CREATE TABLE IF NOT EXISTS suno_sp_emissions (

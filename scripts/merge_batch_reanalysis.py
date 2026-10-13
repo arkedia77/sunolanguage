@@ -37,7 +37,7 @@ from lyrics_sanitizer import sanitize_text
 
 BASE = Path(__file__).resolve().parent.parent
 CORPUS_PATH = BASE / "data/reanalysis_v2/merged_4values.json"
-ORDER_MSG = (Path.home() / "projects/agent-comm/projects/sunomusic/messages/"
+ORDER_MSG = (Path.home() / "agent-comm-sunolanguage/projects/sunomusic/messages/"
              "sunomusic_sunolanguage_20260609_143800_batchAC_발주.json")
 
 SP_KEYS = ("suno_sp", "reanalysis_sp", "sp")

@@ -21,7 +21,7 @@ import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DELTA = Path("/Users/purple/projects/agent-comm/projects/leomusic-trot/messages/"
+DELTA = Path("/Users/purple/agent-comm-sunolanguage/projects/leomusic-trot/messages/"
              "attachments/20260815_corpus_v33_crosswalk_v02/delta_v0.1_to_v0.2.json")
 
 SP_MAX = 1000

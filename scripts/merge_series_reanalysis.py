@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 CORPUS_PATH = Path("data/reanalysis_v2/merged_4values.json")
-REANALYSIS_MSG = Path.home() / "projects/agent-comm/projects/sunolanguage/messages/sunolanguage_sunomusic_20260507_005000_S016_S017_S003_S004_재분석회신.json"
+REANALYSIS_MSG = Path.home() / "agent-comm-sunolanguage/projects/sunolanguage/messages/sunolanguage_sunomusic_20260507_005000_S016_S017_S003_S004_재분석회신.json"
 
 SERIES_PROMPTS = {
     "S003": Path("data/test_s003/s003_prompts.json"),

@@ -25,7 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 LEX = ROOT / 'data/reanalysis_v2/lexical_index.sqlite'
-INBOX = Path('/Users/purple/projects/agent-comm/projects/sunolanguage/messages')
+INBOX = Path('/Users/purple/agent-comm-sunolanguage/projects/sunolanguage/messages')
 # ★자 5판(09-12) — 종전 ASCII 전용 정규식이 **악센트 낱말을 쪼갰다**:
 #   électrique → "lectrique" · coréen → "cor"+"en" · superposées → "superpos".
 #   그 파편이 「신규 낱말」로 71종까지 부풀었다(오염). ⇒ 유니코드 글자 기준으로 잡는다.

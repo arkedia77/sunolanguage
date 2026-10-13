@@ -198,7 +198,7 @@ def _norm_tokens(tokens) -> set:
         key = w.strip()
         out.add(GEN_ALT.get(key, GEN_ALT.get(key.lower(), key.lower())))
     return out
-INBOX = '/Users/purple/projects/agent-comm/projects/sunolanguage/messages'
+INBOX = '/Users/purple/agent-comm-sunolanguage/projects/sunolanguage/messages'
 
 def main(tag):
     rec = json.load(open(LEDGER))
