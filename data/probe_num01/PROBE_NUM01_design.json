@@ -1,0 +1,63 @@
+{
+ "batch": "PROBE_NUM01",
+ "designed_by": "sunolanguage",
+ "designed_at": "2026-10-13",
+ "축": "가사 속 숫자 표기 ↔ 한글 표기가 «불리는 소리»를 바꾸는가 (LEO 10-13 청취 「4시」→「사시」의 처방 효과 검정)",
+ "★사전등록": "docs/probe_number_reading_v1.md (쌍 A만 집행 — encore 라우팅 124710 · 잔여 크레딧 20cr)",
+ "★게이트_예정_실패_2건(설계상·고치지 않는다)": {
+  "G7/G2⑥ 숫자": "pos 1(A⒜)은 본문에 「4시」가 든다 — **그게 실험 암이다**. ⛔이 자료는 실서비스 경로로 흘리지 않는다.",
+  "G6 jaccard": "두 곡은 **최소 쌍**이라 가사가 한 토큰 빼고 같다 — jaccard ≈ 1.0 이 설계 의도다(중복 아님)."
+ },
+ "★측정 위생": {
+  "⒜ 변형 축 외 숫자 0": "두 곡 모두 다른 자리에는 숫자 글자도 수사도 넣지 않았다(하나·둘·세… 0) — 전사에 숫자가 보이면 그건 축이다.",
+  "⒝ 「네」 음절 격리": "대명사 「네가」·대답 「네」를 전부 뺐다 ⇒ A⒝ 전사의 「네」는 **축에서만** 나온다.",
+  "⒞ 들리게 만든다": "72 BPM·무드럼·피아노+기타·클로즈 보컬·런 금지 = ASR 가독을 위해 고른 편성(판독기가 못 읽으면 실험이 죽는다).",
+  "⒟ 나머지 전건 동일": "SP·키·BPM·보컬·행 수·브라켓 전부 같다. 제목만 다르다(DB 제목 중복 금지 + ⛔SPEC④ — 제목이 암을 누설하지 않게 중립어로)."
+ },
+ "songs": [
+  {
+   "pos": 1,
+   "title": "약속한 자리",
+   "genre": "Korean Acoustic Ballad",
+   "genre_group": "ballad",
+   "key": "F Major",
+   "bpm": 72,
+   "vocal": "female",
+   "_암": "A⒜ 숫자 표기 — ⛔10-13 규칙에 «일부러» 걸리는 실험 암",
+   "_변형_축": "후렴 3회 × 2절 = 6발화의 표기만 바꾼다 — 「4시」",
+   "theme": "약속한 시각에 그 자리로 나가는 사람",
+   "sub_theme": "기다림",
+   "terms": [
+    "soft piano",
+    "fingerpicked acoustic guitar",
+    "female vocals",
+    "room reverb",
+    "no drums"
+   ],
+   "sp": "Korean acoustic ballad at 72 BPM in the key of F Major, 4/4 time. A soft piano plays slow chords with a fingerpicked acoustic guitar beside it. A female vocal sings plainly in a mid register, close to the microphone, with clear diction and no vocal runs. No drums. Light room reverb. A sparse arrangement that leaves space around the voice.",
+   "lyrics": "[Intro]\n[a soft piano in slow chords]\n\n[Verse 1]\n창문 턱에 먼지가 앉아\n오늘은 바람이 자꾸 들어와\n남겨 둔 쪽지를 천천히 폈어\n약속한 자리 이름만 적혀 있어\n\n[Pre-Chorus]\n시계를 보고 또 봤어\n밖은 아직 환한데\n\n[Chorus]\n4시에 만나 그 자리에서\n4시에 만나 늦지 않을게\n문을 열면 거기 서 있을까\n4시에 만나 그 자리에서\n\n[Verse 2]\n우산을 챙겼어 비는 안 오는데\n버릇처럼 손에 쥐고 나섰어\n골목은 그대로 가게도 그대로\n간판 불빛만 바랜 채로 있어\n\n[Pre-Chorus]\n시계를 보고 또 봤어\n해가 기울기 전에\n\n[Chorus]\n4시에 만나 그 자리에서\n4시에 만나 늦지 않을게\n문을 열면 거기 서 있을까\n4시에 만나 그 자리에서\n\n[Outro]\n[a soft piano fading out]\n그 자리에서"
+  },
+  {
+   "pos": 2,
+   "title": "바랜 간판 아래",
+   "genre": "Korean Acoustic Ballad",
+   "genre_group": "ballad",
+   "key": "F Major",
+   "bpm": 72,
+   "vocal": "female",
+   "_암": "A⒝ 한글 표기 — 처방본",
+   "_변형_축": "후렴 3회 × 2절 = 6발화의 표기만 바꾼다 — 「네 시」",
+   "theme": "약속한 시각에 그 자리로 나가는 사람",
+   "sub_theme": "기다림",
+   "terms": [
+    "soft piano",
+    "fingerpicked acoustic guitar",
+    "female vocals",
+    "room reverb",
+    "no drums"
+   ],
+   "sp": "Korean acoustic ballad at 72 BPM in the key of F Major, 4/4 time. A soft piano plays slow chords with a fingerpicked acoustic guitar beside it. A female vocal sings plainly in a mid register, close to the microphone, with clear diction and no vocal runs. No drums. Light room reverb. A sparse arrangement that leaves space around the voice.",
+   "lyrics": "[Intro]\n[a soft piano in slow chords]\n\n[Verse 1]\n창문 턱에 먼지가 앉아\n오늘은 바람이 자꾸 들어와\n남겨 둔 쪽지를 천천히 폈어\n약속한 자리 이름만 적혀 있어\n\n[Pre-Chorus]\n시계를 보고 또 봤어\n밖은 아직 환한데\n\n[Chorus]\n네 시에 만나 그 자리에서\n네 시에 만나 늦지 않을게\n문을 열면 거기 서 있을까\n네 시에 만나 그 자리에서\n\n[Verse 2]\n우산을 챙겼어 비는 안 오는데\n버릇처럼 손에 쥐고 나섰어\n골목은 그대로 가게도 그대로\n간판 불빛만 바랜 채로 있어\n\n[Pre-Chorus]\n시계를 보고 또 봤어\n해가 기울기 전에\n\n[Chorus]\n네 시에 만나 그 자리에서\n네 시에 만나 늦지 않을게\n문을 열면 거기 서 있을까\n네 시에 만나 그 자리에서\n\n[Outro]\n[a soft piano fading out]\n그 자리에서"
+  }
+ ]
+}
