@@ -21,6 +21,7 @@ leomusic/leomusic2와 동일한 DB-direct 구조로 통일 → 핸드오프 변�
   python3 scripts/db_insert.py <raw> --batch N008 --gid-start 20391 --execute
 """
 import argparse
+import re
 import sys
 from datetime import datetime, date
 from pathlib import Path
@@ -43,7 +44,7 @@ STATUS = "pending_suno"
 # leomusic2 insert_k030_to_pg.py 정본 컬럼셋 (40)
 SONGS_COLUMNS = [
     "global_id", "source_project", "batch", "batch_position", "market",
-    "title", "lyrics", "style_prompt", "status",
+    "title", "lyrics", "lyrics_language", "style_prompt", "status",
     "theme", "episode", "category", "lyricist", "genre", "genre_mode",
     "energy", "song_form", "song_form_name", "voicing", "char_count",
     "voice_perspective_type", "bpm", "genre_group", "sub_theme", "coherence",
@@ -55,8 +56,38 @@ SONGS_COLUMNS = [
 ]
 
 
+BRACKET_LINE = re.compile(r"^\s*\[[^\]]*\]\s*$")
+HANGUL_CH = re.compile(r"[가-힣]")
+LATIN_CH = re.compile(r"[A-Za-z]")
+
+
+def detect_lyrics_language(lyrics: str):
+    """가창 행의 «글자»로 언어 칸을 정한다. 모르면 ⛔None 을 둔다(추측해 채우지 않는다).
+
+    ★2026-10-13 신설. 경위: 내 적재분 **1,006행이 `lyrics_language` NULL** 이었다
+    (이 함수가 없어서 — 이 칸을 채운 48행은 전부 JIOBD/MOM 류 일회성 스크립트가 'ko' 를 손으로 박은 것).
+    같은 날 sunomusic 이 **렌더 전 숫자 검사가 언어 칸 NULL 을 빠져나가던 구멍**을 PROBE_NUM01 로 발견했다
+    (sunomusic `20261013_130138` ⚠한정 ③). 내 검문 3곳은 언어 칸을 안 보고 글자만 보므로 같은 구멍은 없지만,
+    **내가 NULL 을 계속 내보내면 남의 검사에 구멍을 공급하는 쪽**이 된다 ⇒ 쓰는 자리에서 채운다.
+    값역 = 코퍼스 실측 5종: ko · en · zh · ja · zxx(가창 없음). ⛔판별 안 되면 None — 「미상」과 「한국어」는 다르다.
+    """
+    if not (lyrics or "").strip():
+        return None                               # 가사 칸 자체가 비었다 = 「무가사」가 아니라 「모름」
+    vocal = [ln for ln in lyrics.splitlines()
+             if ln.strip() and not BRACKET_LINE.match(ln)]
+    text = "\n".join(vocal)
+    ko, en = len(HANGUL_CH.findall(text)), len(LATIN_CH.findall(text))
+    if ko + en == 0:
+        return "zxx" if not vocal else None      # 브라켓만 = 가창 없음 / 글자는 있는데 둘 다 아님 = 미상
+    if ko / (ko + en) >= 0.5:
+        return "ko"
+    if en / (ko + en) >= 0.9:
+        return "en"
+    return None                                   # 섞여 있으면 ⛔적지 않는다
+
+
 def song_to_row(opt_a: dict, gid: int, now, music_engine=None) -> dict:
-    """Option A 곡 dict → songs 테이블 컬럼 dict (40컬럼)."""
+    """Option A 곡 dict → songs 테이블 컬럼 dict (41컬럼)."""
     genre = opt_a.get("genre") or ""
     return {
         "global_id": gid,
@@ -66,6 +97,8 @@ def song_to_row(opt_a: dict, gid: int, now, music_engine=None) -> dict:
         "market": opt_a.get("market") or DEFAULT_MARKET,
         "title": opt_a["title"],
         "lyrics": opt_a["lyrics"],
+        "lyrics_language": detect_lyrics_language(opt_a["lyrics"]),   # ★10-13 신설 — 모르면 None
+
         "style_prompt": opt_a["style_prompt"],
         "status": STATUS,
         "theme": opt_a.get("theme") or "",
