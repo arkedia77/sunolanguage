@@ -2,15 +2,26 @@
 """g2_lyrics_gate.py — 레오뮤직OS G2 가사게이트 v0 (S2→S3 관문).
 
 발주: kee 2026-07-11 (주담당 sunolanguage, 리뷰 leomusic). LEO Tier2 GO.
-스펙: 가사 체크리스트 6항목 PASS/FAIL (정량화 불요 v0.1).
+스펙: 가사 체크리스트 7항목 PASS/FAIL (정량화 불요 v0.2).
   ①음절수(멜로디 대비) ②발음 난이도 ③금칙어 ④컨셉 일치 ⑤코퍼스 규격 ⑥숫자 표기(한글)
+  ⑦읽기 계열 짝맞음 (**report_only** — 막지 않고 경고만)
 
 ★v0.1 추가 = ⑥ (2026-10-13, LEO 직지시 · encore 전달통
   `repo:agent-comm projects/sunolanguage/messages/sunolanguage_encore_20261013_122703_LEO전달_가사숫자_한글로.json`):
   가사 «본문»에 아라비아 숫자를 쓰지 않는다 — Suno 가 숫자 글자를 한자어로 읽는다
   (LEO 청취 실측: 「4시」→「사시」. 고유어로 읽어야 할 자리가 한자어로 나온다).
   브라켓 안([Verse 2]·사운드 큐)·제목·style prompt 는 대상이 아니다(렌더 가사가 아님).
-  ⛔읽는 법(고유어/한자어)까지는 기계가 정하지 않는다 — 숫자 «글자»가 0인지만 본다.
+  ⛔읽는 법(고유어/한자어)까지는 ⑥이 정하지 않는다 — 숫자 «글자»가 0인지만 본다.
+
+★v0.2 추가 = ⑦ (2026-10-13, encore 판정통
+  `repo:agent-comm projects/sunolanguage/messages/sunolanguage_encore_20261013_172132_받음_판정_hardfail안함_reportonly넣음_재개때문면보탬.json`):
+  ⑥만으로는 문이 하나 열려 있었다 — **「오후 삼 시」는 아라비아 숫자가 0이라 ⑥을 통과하는데
+  수노는 「삼 시」로 읽는다**(=LEO 가 들은 것과 같은 소리). 코퍼스 7,965곡 실측 **8곡 0.10%**.
+  ⇒ ⛔**hard_fail 로 넣지 않는다**(빈도 0.10% · 오탐 실재 = 동사 「오래 **사시**라는」).
+     report_only = verdict 에 안 들어간다. 판정은 **쓰는 쪽**이 한다.
+  ⛔고유어 수사를 한자어 단위에 쓴 꼴(「세 초」)은 **보지 않는다** — 한글로 적힌 순간
+     수노는 적힌 대로 읽으므로 오독이 아니고, 어색함은 작사·A&R 칸이다(encore 판정 동일).
+  측정·손검증 전문 = `sunolanguage:data/number_reading_class/HANDCHECK_20261013.md`
 
 G5 원칙 적용(3070 수출본 07-11):
   - 자연 기준선: 코퍼스 실측 분포만 사용 [MEASURED], 매직넘버 금지
@@ -326,8 +337,34 @@ def check_digits(lyrics: str) -> dict:
                        "hits": hits[:20], "n_hits": len(hits)}}
 
 
+def check_reading_class(lyrics: str) -> dict:
+    """⑦읽기 계열 짝맞음 (report_only) — 한자어 수사 + 고유어 의무 단위 꼴만 경고한다.
+
+    ★패턴·제외 목록은 **여기에 복제하지 않는다** — 정본 1곳 = `number_reading_class_v1`
+      (G-K4 「값은 한 곳에서만」. 그 파일이 자가 16칸 + 음성통제를 들고 있다).
+    ⛔검출기를 못 불러오면 조용히 PASS 하지 않고 **UNMEASURED** 로 적는다
+      — 「미측정」과 「이상 없음」은 다르다.
+    """
+    try:
+        from number_reading_class_v1 import hits as _hits, P_A  # noqa: F401
+    except Exception as e:                                       # pragma: no cover
+        return {"id": 7, "name": "읽기 계열 짝맞음", "role": "report_only",
+                "verdict": "UNMEASURED",
+                "detail": {"basis": "검출기 number_reading_class_v1 적재 실패 — 미측정(이상 없음 아님)",
+                           "error": repr(e)[:200]}}
+    h = [x for x in _hits(lyrics) if x["kind"].startswith("A_")]
+    return {"id": 7, "name": "읽기 계열 짝맞음", "role": "report_only",
+            "verdict": "WARN" if h else "PASS",
+            "detail": {"basis": ("고유어로 읽는 단위(시·살·개·명…) 앞의 한자어 수사 = 「삼 시」 꼴. "
+                                 "⛔막지 않는다(report_only) — 읽기 선택은 쓰는 쪽이 정한다. "
+                                 "⛔고유어 수사+한자어 단위(「세 초」)는 대상 밖 · 100 이상은 한자어가 표준(「백 개」 정당)."),
+                       "hits": [{"line_no": x["line_no"], "token": x["token"]} for x in h[:20]],
+                       "n_hits": len(h),
+                       "precision_note": "실측 정밀도 9/10 (오탐 = 동사 「사시다」) — 사람이 읽고 판단할 것"}}
+
+
 OUTSIDE_GATE = [
-    "숫자를 «어느 말로» 읽을지 (고유어/한자어 선택은 쓰는 쪽 — 게이트는 숫자 글자 0만 본다)",
+    "숫자를 «어느 말로» 읽을지 (고유어/한자어 선택은 쓰는 쪽 — ⑦은 경고만 하고 막지 않는다)",
     "감성·뉘앙스·시적 완성도 (Leo 청취 영역)",
     "멜로디 싱커페이션·프레이징 적합 (실청취 필요)",
     "가창 전달력·호흡 배치",
@@ -347,10 +384,11 @@ def run_gate(lyrics: str, concept: str | None = None, concept_keywords: list[str
         check_concept(lyrics, concept, concept_keywords),
         check_format(lyrics),
         check_digits(lyrics),
+        check_reading_class(lyrics),
     ]
     hard_fails = [i for i in items if i["role"] == "hard_fail" and i["verdict"] == "FAIL"]
     return {
-        "gate": "G2", "version": "v0.1",
+        "gate": "G2", "version": "v0.2",
         "verdict": "FAIL" if hard_fails else "PASS",
         "hard_fail_items": [i["name"] for i in hard_fails],
         "items": items,
@@ -438,9 +476,10 @@ def main():
     else:
         print(f"=== G2 {result['version']} verdict: {result['verdict']} ===")
         for it in result["items"]:
-            mark = {"PASS": "✅", "FAIL": "❌", "NOT_COMPARED": "➖"}[it["verdict"]]
+            mark = {"PASS": "✅", "FAIL": "❌", "NOT_COMPARED": "➖",
+                    "WARN": "⚠", "UNMEASURED": "⛔"}.get(it["verdict"], "?")
             print(f"  {mark} [{it['id']}] {it['name']} ({it['role']}) — {it['verdict']}")
-            if it["verdict"] == "FAIL":
+            if it["verdict"] in ("FAIL", "WARN", "UNMEASURED"):
                 print(f"      {json.dumps(it['detail'], ensure_ascii=False)[:300]}")
         print(f"  outside_gate: {len(result['outside_gate'])}항목 (게이트 미보증 영역)")
     sys.exit(0 if result["verdict"] == "PASS" else 1)

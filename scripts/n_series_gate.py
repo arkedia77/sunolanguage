@@ -17,7 +17,12 @@
                                              sunolanguage_encore_20261013_122703_LEO전달_가사숫자_한글로.json`).
                                              Suno 는 숫자 글자를 한자어로 읽는다(LEO 청취: 「4시」→「사시」) ⇒
                                              소리 나는 대로 한글로 적는다. 브라켓·제목·SP 는 대상 밖.
-                                             ⛔읽는 법(고유어/한자어)은 쓰는 쪽이 정한다 — 게이트는 글자만 본다.
+                                             ⛔읽는 법(고유어/한자어)은 쓰는 쪽이 정한다 — G7 은 글자만 본다.
+  G8 읽기 계열 짝맞음                      — ★**경고만**(WARN · 차단 아님 · encore 판정 2026-10-13
+                                             `…_172132_받음_판정_hardfail안함_reportonly넣음_…json`).
+                                             「오후 삼 시」는 G7 을 통과하는데 수노는 「삼 시」로 읽는다
+                                             (코퍼스 7,965곡 실측 8곡 0.10% · 정밀도 9/10) ⇒ 빈도·오탐 때문에
+                                             차단하지 않는다. 검출기 정본 = `scripts/number_reading_class_v1.py`.
 
 사용: .venv/bin/python scripts/n_series_gate.py data/n041/N041_design.json [--no-db]
 """
@@ -166,6 +171,15 @@ def gate(design_path: Path, use_db=True, exclude_gids=None):
                 dig.append(ln.strip())
         if dig:
             fails.append(f"{line} G7 가사 본문 아라비아 숫자 {len(dig)}행: {dig[:3]}")
+        # G8 — 읽기 계열 짝맞음(★경고만) · ⛔검출기 못 불러오면 조용히 넘기지 않고 경고로 적는다
+        try:
+            from number_reading_class_v1 import hits as _rc_hits
+            rc = [x["token"] for x in _rc_hits(ly) if x["kind"].startswith("A_")]
+            if rc:
+                warns.append(f"{line} G8 한자어 수사+고유어 단위 {len(rc)}곳: {rc[:3]} "
+                             f"— 「세 시」 꼴로 읽히길 원하면 고치십시오(차단 아님·정밀도 9/10)")
+        except Exception as _e:
+            warns.append(f"{line} G8 ⛔미측정 — 검출기 적재 실패({_e!r:.60}) · 「이상 없음」이 아니다")
         # G5
         if title in seen_titles:
             fails.append(f"{line} G5 배치 내 제목 중복: {title}")

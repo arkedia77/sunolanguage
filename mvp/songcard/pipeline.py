@@ -95,7 +95,9 @@ DIGIT_RUN = re.compile(r"\d[\d,.:·~\-]*")
     "한자어로 읽는 단위(분·초·년·월·일·층·원·호·도…)는 일·이·삼…입니다. "
     "보기: 「4시 30분」→「네 시 삼십 분」. 전화번호·연도처럼 자릿수로 읽는 것도 읽는 소리 그대로. "
     "영어 구절 안의 숫자도 철자로. ⛔대괄호 메타 태그 안([Verse 2] 등)·제목·style prompt 는 대상이 아닙니다. "
-    "까닭: Suno 는 숫자 글자를 한자어로 읽습니다(LEO 청취 = 「4시」가 「사시」)."
+    "까닭: Suno 는 숫자 글자를 한자어로 읽습니다(LEO 청취 = 「4시」가 「사시」). "
+    "★한글로 적을 때도 **단위에 맞는 계열**로 적어 주십시오 — 「삼 시」가 아니라 「세 시」입니다. "
+    "한글은 적힌 대로 불리므로, 계열이 틀리면 숫자를 지운 뒤에도 같은 소리가 납니다."
 )
 
 
@@ -238,6 +240,25 @@ def main():
                      f"   보기: 「4시 30분」→「네 시 삼십 분」 · 브라켓 안·제목은 대상 아님.\n"
                      f"   예외로 받아야 하면 --allow-digits '사유' 로 사유를 남기십시오.")
 
+        # ★읽기 계열 짝맞음 — **경고만**(encore 판정 10-13: hard_fail 안 함).
+        #   「오후 삼 시」는 위 숫자 검문을 통과하는데 수노는 「삼 시」로 읽는다.
+        #   코퍼스 실측 8곡/7,965 = 0.10% · 정밀도 9/10(오탐 = 동사 「사시다」) ⇒ 막지 않는다.
+        #   ⛔검출기를 못 불러오면 조용히 0 으로 적지 않고 None(=미측정)으로 남긴다.
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+            from number_reading_class_v1 import hits as _rc_hits
+            _rc = [x for x in _rc_hits(text) if x["kind"].startswith("A_")]
+            rc_warn = len(_rc)
+            if _rc:
+                print(f"⚠ 읽기 계열 경고 {rc_warn}곳(차단 아님) — "
+                      + " · ".join(f"{x['line_no']}행 「{x['token']}」" for x in _rc[:5])
+                      + "\n   고유어로 읽는 단위 앞이라 「세 시」 꼴이 맞습니다. 그대로 두면 적힌 대로 불립니다.",
+                      file=sys.stderr)
+        except Exception as _e:
+            rc_warn = None
+            print(f"⚠ 읽기 계열 검문 ⛔미측정(검출기 적재 실패: {_e!r:.80}) — 「이상 없음」이 아닙니다",
+                  file=sys.stderr)
+
         def f(r):
             r["lyrics_versions"].append({
                 "v": len(r["lyrics_versions"]) + 1, "text": text, "by": a.by, "at": store._now(),
@@ -245,6 +266,7 @@ def main():
                 "declaration_status": a.declaration or None,  # 상대 신고(없으면 None — 「없음」이지 「통과」가 아니다)
                 "digit_lines": len(digs),                     # 본문 숫자 행 수(0 이 규칙 준수)
                 "digit_exception": a.allow_digits or None,    # 예외로 받았다면 그 사유
+                "reading_class_warn": rc_warn,                # ⛔None = 미측정(0 과 다르다)
             })
             if a.title:
                 r["title"] = a.title

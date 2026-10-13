@@ -142,3 +142,45 @@ def test_tukey_zero_inflated():
     f = tukey([0.0] * 80 + [1.0, 1.2, 1.4, 2.0] * 5)
     assert f.get("zero_inflated_nonzero_fence") is True
     assert f["hi"] > 0 and f["lo"] == 0.0
+
+
+# ── ⑦ 읽기 계열 짝맞음 (report_only · 2026-10-13 encore 판정) ──
+def test_reading_class_warns_on_sino_before_native_unit():
+    """「오후 삼 시」는 ⑥(숫자 글자)을 통과한다 — ⑦이 그 문을 본다."""
+    ly = "[Verse 1]\n오후 삼 시 그 자리에\n네 시에 만나자고\n"
+    r = run_gate(ly, baseline=BASELINE_FIXTURE)
+    it = r["items"][6]
+    assert it["id"] == 7 and it["role"] == "report_only"
+    assert it["verdict"] == "WARN", it["detail"]
+    assert it["detail"]["n_hits"] == 1
+    assert it["detail"]["hits"][0]["token"] == "삼 시"
+
+
+def test_reading_class_is_report_only_and_never_blocks():
+    """★report_only = verdict 에 안 들어간다. 이게 깨지면 0.10% 가 가사를 막는다."""
+    ly = "[Verse 1]\n오후 삼 시 그 자리에\n칠 시 반 교복 위에\n"
+    r = run_gate(ly, baseline=BASELINE_FIXTURE)
+    assert r["items"][6]["verdict"] == "WARN"
+    assert r["verdict"] == "PASS", r["hard_fail_items"]
+    assert "읽기 계열 짝맞음" not in r["hard_fail_items"]
+
+
+def test_reading_class_silent_on_native_before_sino_unit():
+    """「세 초」는 대상 밖 — 한글로 적힌 순간 적힌 대로 읽히므로 오독이 아니다(encore 판정)."""
+    ly = "[Verse 1]\n세 초만 더 기다려\n열두 퍼센트 남은 밤\n"
+    r = run_gate(ly, baseline=BASELINE_FIXTURE)
+    assert r["items"][6]["verdict"] == "PASS", r["items"][6]["detail"]
+
+
+def test_reading_class_no_false_alarm_on_hundreds():
+    """100 이상은 한자어가 표준 — 「백 개」·「십 명」은 정당(1차 검출기 오탐 59% 자기정정분)."""
+    ly = "[Verse 1]\n별 백 개를 세었다\n사람 십 명이 모여\n"
+    r = run_gate(ly, baseline=BASELINE_FIXTURE)
+    assert r["items"][6]["verdict"] == "PASS", r["items"][6]["detail"]
+
+
+def test_item_order_unchanged_for_first_six():
+    """★판본이 올라도 ①~⑥ 인덱스는 안 흔들린다(남의 호출부가 items[i] 로 읽는다)."""
+    r = run_gate("[Verse 1]\n조용한 밤의 노래\n먼 길을 걸어서\n", baseline=BASELINE_FIXTURE)
+    assert [i["id"] for i in r["items"]] == [1, 2, 3, 4, 5, 6, 7]
+    assert r["version"] == "v0.2"

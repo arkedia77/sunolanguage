@@ -243,6 +243,15 @@ def main():
     rc, out = pipe("lyrics-in", nrid, "--file", str(ok_ly), "--by", "e2e")
     check("납품 — 한글 숫자 + 브라켓 안 숫자([Verse 2])는 통과(양성통제)", rc == 0, out)
     check("판본에 digit_lines=0 기록", _store_get(nrid)["lyrics_versions"][-1].get("digit_lines") == 0)
+    check("판본에 reading_class_warn=0 기록(★None 이면 미측정)",
+          _store_get(nrid)["lyrics_versions"][-1].get("reading_class_warn") == 0)
+    # ── 읽기 계열 경고(encore 판정 10-13) — ★막지 않는다. 막으면 이 칸이 FAIL 로 돈다 ──
+    rc_ly = HERE / "var" / f"{nrid}_lyrics_readingclass.txt"
+    rc_ly.write_text("[Verse 2]\n오후 삼 시 그 자리에 섰어\n", encoding="utf-8")
+    rc2, out2 = pipe("lyrics-in", nrid, "--file", str(rc_ly), "--by", "e2e")
+    check("납품 — 「삼 시」는 ★통과시키고 경고만(차단 아님)", rc2 == 0, out2.splitlines()[0][:48] if out2 else "")
+    check("경고 문면이 실제로 나온다(양성통제)", "읽기 계열 경고" in out2, out2[:60])
+    check("판본에 reading_class_warn=1 기록", _store_get(nrid)["lyrics_versions"][-1].get("reading_class_warn") == 1)
     pipe("fail", nrid, "--note", "e2e 숫자 표기 대조군")
 
     s, d, h = call(B, "GET", card["audio"] + f"?t={t}", headers={"Range": "bytes=0-1023"})
