@@ -105,6 +105,18 @@ def main(dry):
         db.execute("alter table suno_emitted_terms add column category text")
     db.create_function("rx", 2, lambda p, s: 1 if s and re.search(p, s) else 0)
     db.execute("update suno_emitted_terms set category = case when rx(?, term) then 'recording_production' end", (REC,))
+    # 시작일 주석(encore 213530 · LEO 증언 «수노 6.0 이전엔 그런 게 없었으니까» — 데이터 대조 아님)
+    #   ⛔녹음 상황어는 반증 조건이 이미 걸렸다: v6 이전 Suno 녹음 인식 프롬프트(tracks.suno_prompt 79 · 적재 2026-03-28)
+    #     에 51건 — 「생성 tags 재작성」은 v6 부터지만 「Suno 가 그 말을 썼다」는 v6 이전부터다.
+    db.execute("""create table if not exists suno_emitted_meta(k text primary key, v text)""")
+    db.executemany("insert or replace into suno_emitted_meta values(?,?)", [
+        ("v6_before", "v6(2026-09-10) 이전 «생성 시 Suno 자생 tags» 없음 — 출처 LEO 증언 10-16(encore 213530) · 데이터 대조 아님 · "
+                      "반증 조건 = 09-10 이전 생성 클립에서 입력에 없는 Suno tags 가 나오면 고침"),
+        ("semicolon_form", "세미콜론 블록 꼴 = v6 와 함께 시작 [LEO 증언] · v6 이전 Suno 녹음 인식 프롬프트 79 중 ; 0 건과 정합"),
+        ("recording_category", "⛔«v6 와 함께 시작» 아님 — v6 이전 Suno 녹음 인식 프롬프트(tracks 79)에 녹음 상황어 51건"
+                               "(mix·recording·saturation·tape·close-mic·polished) · first_seen 09-10 은 이 층(생성 tags)의 시작일일 뿐 · "
+                               "attested 사전 0 은 Suno 가 안 쓴 게 아니라 우리 사전 추출이 못 담은 것"),
+    ])
     db.commit()
     print("적재", db.execute("select count(*) from suno_emitted_terms").fetchone()[0],
           "· recording_production", db.execute("select count(*) from suno_emitted_terms where category='recording_production'").fetchone()[0])
