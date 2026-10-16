@@ -111,7 +111,8 @@ def main(dry):
     db.execute("""create table if not exists suno_emitted_meta(k text primary key, v text)""")
     db.executemany("insert or replace into suno_emitted_meta values(?,?)", [
         ("v6_before", "v6(2026-09-10) 이전 «생성 시 Suno 자생 tags» 없음 — 출처 LEO 증언 10-16(encore 213530) · 데이터 대조 아님 · "
-                      "반증 조건 = 09-10 이전 생성 클립에서 입력에 없는 Suno tags 가 나오면 고침"),
+                      "반증 조건 = 09-10 이전 생성 클립에서 입력에 없는 Suno tags 가 나오면 고침"
+                      " · ⚠10-16 21:4x 반증 후보: PG suno_clip_style v6 이전 8,716(입력 있음) 중 Suno SP ≠ 우리 입력 1,142 · Suno 쪽 새 낱말 ≥3 = 337(chirp-crow 224·fenix 112 · 02~08월) — 단 songs.style_prompt 가 생성 당시 값인지 미확인(updated_at > 클립 생성 1,139/1,142 · 잘림 444) ⇒ 미판정"),
         ("semicolon_form", "세미콜론 블록 꼴 = v6 와 함께 시작 [LEO 증언] · v6 이전 Suno 녹음 인식 프롬프트 79 중 ; 0 건과 정합"),
         ("recording_category", "⛔«v6 와 함께 시작» 아님 — v6 이전 Suno 녹음 인식 프롬프트(tracks 79)에 녹음 상황어 51건"
                                "(mix·recording·saturation·tape·close-mic·polished) · first_seen 09-10 은 이 층(생성 tags)의 시작일일 뿐 · "
