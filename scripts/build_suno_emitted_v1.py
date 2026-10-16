@@ -51,7 +51,6 @@ def main(dry):
     v0 = {g: t for u, g, a, t in em if not a}
     ours |= {t.strip().lower() for t in v0.values() if t}
 
-    excluded_b = 0
     src = []  # (clip, song_key, created, source, input_text|None, tags, author_known)
     seen = set()
     for u, g, a, t in em:
@@ -68,12 +67,12 @@ def main(dry):
         if not tags:
             continue
         if r["method"] == "DB 배치" and r["input_eq_suno_tags"] == "False":
-            # ⛔B 는 v1.1 에서 뺀다(10-16 21:5x). sunomusic `215544`: 생성 당시 원본 기록이 남은 40클립 전부
-            #   «원본 = Suno tags · songs.style_prompt 만 생성 뒤에 고쳐짐». ⇒ 이 갈래의 «다름»은 Suno 재작성이 아니라
-            #   우리 입력 칸이 바뀐 것일 수 있다(Variety 0 인데 다른 30 은 그 외 설명이 없다). 입력이 믿을 만하지 않으면
-            #   «우리가 안 넣은 말»을 셀 수 없다. 원본 기록과 붙일 수 있게 되면 그 클립만 되살린다.
-            excluded_b += 1
-            continue
+            # B 는 v1.2 에서 되살린다(10-16 22:0x). v1.1 의 제외 근거였던 sunomusic `215544` «40/40 사후 수정»을
+            #   저자가 `220109` 에서 철회했다(절반 gid 충돌 · 절반 04-17 이관 판 차이). 그리고 감사 로그(songs_audit_log)
+            #   실측상 이 140클립(70곡)은 생성 뒤 style_prompt 수정 0 ⇒ 입력 칸을 믿을 근거가 있다.
+            #   ⛔그 감사 로그를 나는 못 연다(role_sunolanguage permission denied) — 근거는 sunomusic 실측(남의 값)이다.
+            #   ⚠30클립은 Variety 0 인데 Suno tags 가 우리 SP 와 다르다 — «V0 = 메아리» 성질의 예외인지 미분해.
+            src.append((r["clip"], f"gid{r['gid']}", r["created_at"][:10], "B_db_diff", r["input_sp_ours"], tags, 1)); seen.add(r["clip"])
         elif r["input_sp_ours"] in ("", "DB 행 없음") and (r["method"] in ("커버", "agentic 리믹스") or (sw or 0) > 0.5):
             if tags.strip().lower() in ours:
                 continue
@@ -94,7 +93,7 @@ def main(dry):
     con = {t.lower(): n for t, n in db.execute("select suno_term, attested_count from expr_concepts")}
     out = [(t, k, len(a["clips"]), len(a["songs"]), a["first"], json.dumps(dict(a["src"]), ensure_ascii=False),
             a["known"], con.get(t)) for (t, k), a in agg.items()]
-    print(f"출처 클립 {len(src)} = " + str(collections.Counter(x[3] for x in src)) + f" · B 제외 {excluded_b} · 낱말·구절 {len(out)}")
+    print(f"출처 클립 {len(src)} = " + str(collections.Counter(x[3] for x in src)) + f" · 낱말·구절 {len(out)}")
     if dry:
         return out
     db.execute("""create table if not exists suno_emitted_terms(
@@ -104,7 +103,7 @@ def main(dry):
         build text, primary key(term, kind))""")
     db.execute("delete from suno_emitted_terms")
     db.executemany("insert into suno_emitted_terms(term,kind,n_clips,n_songs,first_seen,sources,author_known,attested_count,build) "
-                   "values(?,?,?,?,?,?,?,?,'v1.1 2026-10-16 census V6_CENSUS_20261016 (B 제외)')", out)
+                   "values(?,?,?,?,?,?,?,?,'v1.2 2026-10-16 census V6_CENSUS_20261016 (B 복원)')", out)
     # 범주 «녹음·믹스·공간·처리»(encore 213228 · LEO «레코딩; 이런 거 없었잖아») — 낱말 경계 정규식, 사람 손 분류 아님
     cols = [r[1] for r in db.execute("pragma table_info(suno_emitted_terms)")]
     if "category" not in cols:
@@ -115,11 +114,12 @@ def main(dry):
     #   ⛔녹음 상황어는 반증 조건이 이미 걸렸다: v6 이전 Suno 녹음 인식 프롬프트(tracks.suno_prompt 79 · 적재 2026-03-28)
     #     에 51건 — 「생성 tags 재작성」은 v6 부터지만 「Suno 가 그 말을 썼다」는 v6 이전부터다.
     db.execute("""create table if not exists suno_emitted_meta(k text primary key, v text)""")
+    db.execute("delete from suno_emitted_meta where k='b_excluded'")  # v1.1 의 철회된 근거 — 남기지 않는다(경위는 b_restored 에)
     db.executemany("insert or replace into suno_emitted_meta values(?,?)", [
         ("v6_before", "v6(2026-09-10) 이전 «생성 시 Suno 자생 tags» 없음 — 출처 LEO 증언 10-16(encore 213530) · 데이터 대조 아님 · "
                       "반증 조건 = 09-10 이전 생성 클립에서 입력에 없는 Suno tags 가 나오면 고침"
-                      " · ⚠10-16 21:4x 반증 후보: PG suno_clip_style v6 이전 8,716(입력 있음) 중 Suno SP ≠ 우리 입력 1,142 · Suno 쪽 새 낱말 ≥3 = 337(chirp-crow 224·fenix 112 · 02~08월) — 단 songs.style_prompt 가 생성 당시 값인지 미확인(updated_at > 클립 생성 1,139/1,142 · 잘림 444) · ✅21:55 sunomusic 215544: 생성 당시 원본 대조 가능 40/40 = 원본은 Suno tags 와 같고 songs.style_prompt 만 생성 뒤 수정 ⇒ 증언과 정합 · 나머지 원본 기록 없음(배치 2개 · 일반화 불가)"),
-        ("b_excluded", "v1.1(10-16 21:5x): 출처 B(DB 배치 ∧ songs.style_prompt ≠ Suno tags · 140클립) 제외 — sunomusic 215544 원본 대조 40/40 = 입력 칸 사후 수정 · 입력을 못 믿으면 «우리가 안 넣은 말»을 못 셈"),
+                      " · ⚠10-16 21:4x 반증 후보: PG suno_clip_style v6 이전 8,716(입력 있음) 중 Suno SP ≠ 우리 입력 1,142 · Suno 쪽 새 낱말 ≥3 = 337(chirp-crow 224·fenix 112 · 02~08월) — 단 songs.style_prompt 가 생성 당시 값인지 미확인(updated_at > 클립 생성 1,139/1,142 · 잘림 444) · ⛔21:55 sunomusic 215544 «40/40 사후 수정»은 22:01 `220109` 에서 저자 철회(gid 충돌 20 · 04-17 이관 판 차이 20) ⇒ 그 40 은 증언의 근거도 반증도 아님 · 감사 로그상 생성 뒤 SP 수정은 96건/93곡(대부분 role_leomusic2 6월 · 9월 이후 0) ⇒ v6 이전 1,142 는 여전히 **미판정**(감사 로그 시작 04-18 이전 이관분 섞임 · encore 220236)"),
+        ("b_restored", "v1.2(10-16 22:0x): 출처 B(140클립·70곡) 복원 — v1.1 제외 근거(sunomusic 215544)가 저자 철회(220109) · 감사 로그상 생성 뒤 SP 수정 0(sunomusic 실측 · 내 role 은 로그 열람 권한 없음) · ⚠그중 Variety 0 인데 다름 30 = 미분해"),
         ("semicolon_form", "세미콜론 블록 꼴 = v6 와 함께 시작 [LEO 증언] · v6 이전 Suno 녹음 인식 프롬프트 79 중 ; 0 건과 정합"),
         ("recording_category", "⛔«v6 와 함께 시작» 아님 — v6 이전 Suno 녹음 인식 프롬프트(tracks 79)에 녹음 상황어 51건"
                                "(mix·recording·saturation·tape·close-mic·polished) · first_seen 09-10 은 이 층(생성 tags)의 시작일일 뿐 · "
