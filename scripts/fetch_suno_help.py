@@ -48,3 +48,16 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def fetch_pages(kind, slugs):
+    """suno.com 릴리스 노트·블로그 본문 수집(10-19 ② 학습) — data/suno_docs/{kind}/{slug}.json"""
+    out = OUT.parent / kind; out.mkdir(parents=True, exist_ok=True)
+    for s in slugs:
+        r = subprocess.run(["curl", "-sL", "-A", "Mozilla/5.0", "--max-time", "30", f"https://suno.com/{kind}/{s}"], capture_output=True)
+        h = r.stdout.decode("utf-8", "ignore"); time.sleep(0.5)
+        t = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", h, flags=re.S)
+        t = re.sub(r"<(br|/p|/li|/h\d|/div)[^>]*>", "\n", t)
+        t = re.sub(r"\n\s*\n+", "\n", html.unescape(re.sub(r"<[^>]+>", "", t))).strip()
+        title = html.unescape((re.search(r"<title>(.*?)</title>", h, re.S) or [None, ""])[1]).strip()
+        (out / f"{s}.json").write_text(json.dumps({"slug": s, "url": f"https://suno.com/{kind}/{s}", "title": title, "text": t}, ensure_ascii=False, indent=1))
