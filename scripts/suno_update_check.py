@@ -83,9 +83,15 @@ def check_emitted(since):
             diff += 1
         if inp:
             cnt.update(w for w in extra if w not in known)
+    # 되울림 가르기(10-23): 짝 입력엔 없어도 «다른 곡» 입력에 있으면 Suno 말이 아니라 우리 말이 돌아온 것(첫 측정 30 중 18)
+    cur.execute("select style_prompt from songs where style_prompt is not null")
+    ours = set().union(*(words(x) for x, in cur.fetchall()))
+    top = cnt.most_common(30)
     return {"models": models, "model_kinds": dict(kinds), "arrived": len(rows),
             "new_clips": sum(1 for r in rows if r[2]), "non_gen_skipped": dict(skipped),
-            "new_clips_with_input_and_extra": diff, "candidate_terms_top": cnt.most_common(30)}
+            "new_clips_with_input_and_extra": diff, "candidate_terms_top": top,
+            "candidate_suno_only": [(w, n) for w, n in top if w not in ours],
+            "candidate_echo": [(w, n) for w, n in top if w in ours]}
 
 
 def main():
@@ -136,7 +142,8 @@ def main():
         out.append(f"- [자생] model_name 새 것: {new_models or '0'} — ⚠이름 ≠ 새 생성 모델 · 용도(gen_method/clip_type:행) "
                    f"{ {m: r['model_kinds'].get(m) for m in new_models} }")
         out.append(f"- [자생] model 현황 {r['models']}")
-        out.append(f"- [자생] suno_emitted 미등재 후보 낱말(곡 아님 · 클립 수) 상위: {r['candidate_terms_top']}")
+        out.append(f"- [자생] suno_emitted 미등재 후보 낱말(곡 아님 · 클립 수) — **Suno 단독**(전 입력 코퍼스에 없음): "
+                   f"{r['candidate_suno_only']} · 되울림(다른 곡 입력에 있음 · 후보 아님): {r['candidate_echo']}")
         st["models"] = r["models"]
         st["emitted_checked_at"] = now.isoformat()
     except Exception as e:
