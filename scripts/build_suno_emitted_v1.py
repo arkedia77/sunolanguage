@@ -123,7 +123,7 @@ def main(dry):
         ("semicolon_form", "세미콜론 블록 꼴 = v6 와 함께 시작 [LEO 증언] · v6 이전 Suno 녹음 인식 프롬프트 79 중 ; 0 건과 정합"),
         ("recording_category", "⛔«v6 와 함께 시작» 아님 — v6 이전 Suno 녹음 인식 프롬프트(tracks 79)에 녹음 상황어 51건"
                                "(mix·recording·saturation·tape·close-mic·polished) · first_seen 09-10 은 이 층(생성 tags)의 시작일일 뿐 · "
-                               "attested 사전 0 은 Suno 가 안 쓴 게 아니라 우리 사전 추출이 못 담은 것"),
+                               "⛔10-24 정정: 사전엔 녹음어 개념 25개 있음(reverb·compression·close-mic·lo-fi·processed…) · 진짜 빈칸 = dry(52곡)·saturation 명사형·room ambience — 음색 닫힌 목록 기전 · docs/recording_terms_dictionary_gap_v1.md"),
     ])
     db.commit()
     print("적재", db.execute("select count(*) from suno_emitted_terms").fetchone()[0],
