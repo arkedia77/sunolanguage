@@ -4,6 +4,7 @@
 **계기**: LEO 지적 — "브라켓에 (여)인데 남자 목소리 나옴. 노래는 만들어짐"
 **근거**: `data/reanalysis_v2/lexical_index.sqlite` (bracket_entity 6,635 + stems_bracket 2,343 + sp_entity 6,614 + suno_sp_full 505)
 **전 세션 오판 정정**: VD 재제작 시 `[Male Vocal]` 명찰형 단일 토큰만 조회하여 "듀엣 코퍼스 0건"으로 보고 → **곡 단위 듀엣 문법 3곡이 실재**. 본 문서가 정본.
+**⚠11-06 해석 좁힘**: 이 문서의 «코퍼스 N건» 은 「Suno 가 스스로 쓰는 꼴인가」(출력층)이지 「Suno 가 따르는가」(입력층)가 아니다. 코퍼스 0 꼴 `[Verse 1: Female Vocal]`·`[Chorus: Male and Female Duet]` 콜론 화자 브라켓이 **입력으로 작동한 반례 2** — DV1(여 듀오) · DT1/DT3 혼성 10곡 곡 단위 10/10 여몫 오름(묶음 효과 · 교락) ⇒ 아래 «0건, 쓰지 말 것» 류는 **「입력 미측정」으로 읽는다**. 근거 `agent-comm:projects/sunolanguage/exchange/duet_sp_bracket_20261104/table.md` §6.
 
 ---
 
