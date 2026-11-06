@@ -29,11 +29,14 @@ def words(s):
     return {w for w in re.findall(r"[a-z][a-z\-']+", (s or "").lower()) if w not in STOP and len(w) > 2}
 
 
+NOT_POST = {"opengraph-image", "all", "category", "rss", "tag"}  # 11-06: all·category·rss 가 «새 글»로 잡힘(보관본 = 목록·404)
+
+
 def check_pages(kind):
     h = fh.subprocess.run(["curl", "-sL", "-A", "Mozilla/5.0", "--max-time", "30", f"https://suno.com/{kind}"],
                           capture_output=True).stdout.decode("utf-8", "ignore")
     live = {x for x in re.findall(rf"/{kind}/([a-z0-9][a-z0-9-]+)", h)
-            if x != "opengraph-image" and not x.startswith("page-")}  # 공유 이미지·페이지 조각 = 글 아님
+            if x not in NOT_POST and not x.startswith("page-")}  # 공유 이미지·페이지 조각·목록 링크 = 글 아님
     if not live:
         return None
     have = {p.stem for p in (DOCS / kind).glob("*.json")}
