@@ -149,8 +149,11 @@ def main():
         rows = []
         for line in Path(a.tsv).read_text().splitlines():
             if line.startswith("#") or not line.strip(): continue
-            rk, t, ar = line.split("\t")[:3]
-            rows.append({"rank": int(rk), "title": t, "artist": ar, "song_id": idx.get((norm(t), norm(ar)))})
+            c = line.split("\t")
+            rk, t, ar = c[0], html.unescape(c[1]), html.unescape(c[2])
+            sid = c[3].strip() if len(c) > 3 and c[3].strip().isdigit() else None  # 11-08부터 스냅숏에 song_id 칸
+            rows.append({"rank": int(rk), "title": t, "artist": ar, "song_id": sid or idx.get((norm(t), norm(ar))),
+                         "matched_by": "tsv_song_id" if sid else None})
         source = f"tsv:{a.tsv}"
     else:
         rows, source = now, f"{M}/chart/index.htm @ {time.strftime('%Y-%m-%dT%H:%M%z')}"
