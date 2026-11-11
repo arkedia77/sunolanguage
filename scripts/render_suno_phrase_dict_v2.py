@@ -68,6 +68,10 @@ def main():
     P("- 다섯 구가 재료에 나오는 곡 수(V+ · HS · HU): " + " · ".join(f"`{k}` {byp[k]['V+']}·{byp[k]['HS']}·{byp[k]['HU']}" for k in ep["phrases"] if k in byp)
       + " ⇒ ★`live mix` 는 Suno 가 거의 안 쓰는 꼴(홈 1곡) · Suno 가 스스로 쓰는 쪽은 `studio mix`(더함 81곡)")
     P("- ⇒ 이 짝은 «라이브 문구 묶음 + 템포 + 성별이 함께 바뀌면 판이 바뀐다»까지만 말한다. «Live Mix 한 낱말이 먹혔다»는 [미확인] — §6 한 칸 짝으로 가린다.\n")
+    P("### 3b. 반대 방향 근거 — 적은 숫자가 안 먹히는 칸 (11-11 덧 · encore 판단)\n")
+    P("- **느린 곡 템포 끌림** [결/리듬]: SP 에 66~79 BPM 을 적어도 렌더 중앙은 64~69(78 → 66.8 · 72 → 68.3) · <80 칸 556클립 중앙 −5.1 · ±3 안 20.5% · 110~139 칸 +2.4 · ≥140 칸 −0.8(±3 안 84.8%)")
+    P("- 근거 = hitmaking 231048 `reklcli:~/hitmaking/output/external/suno_tempo_bias_20261111/REPORT.md`(박 추적 통제 GT 16/16) — ⚠**내가 읽은 곳 = encore 231139 본문**(그 기계 파일 직접 열람 0) · 한계 = 장르·Suno 판 안 나눔 · 인과 아님")
+    P("- 쓰임: «NNN BPM» 꼴은 빠른 곡에선 대체로 따르고(≥140 ±3 안 84.8%) **80 아래에선 숫자로 못 고름** — §5 발라드 예의 72 BPM 도 같은 칸\n")
     P("## 4. Suno 가 고쳐 쓸 때 (Variety 1,681곡)\n")
     tp = m["templates"]
     P("- **Suno 서명 꼴 «NNN BPM in <조>»**: " + " · ".join(f"{k} {v}" for k, v in tp.items()) + " ⇒ Suno 다시쓰기가 템포·조를 앞에 박는 버릇(우리 SP 엔 거의 없음)")
@@ -89,7 +93,7 @@ def main():
 
 EXAMPLES = [  # 쉼표 사이 덩어리 = 사전 행 1~2개를 이은 것(구성 구 전부 dict.json 에 있음 — 11-12 대조) · 템포·조 숫자는 꼴(«NNN BPM in <조>») 자리
     "**걸그룹 댄스** — `K-pop, dance-pop at 124 BPM in F minor, four-on-the-floor kick, sidechain synth bass, bright, female Korean vocals, layered chorus harmonies, chant on the hook, half-time bridge before the final chorus, polished, wide stereo, studio mix`",
-    "**발라드** — `Korean ballad at 72 BPM in D major, felt piano, bowed strings entering in verse two, intimate close-mic male Korean vocal, restrained vibrato, plate reverb, swelling final chorus, warm analog, studio mix`",
+    "**발라드**(⚠72 BPM = 느린 칸 · 렌더 중앙 ≈68 · §3b) — `Korean ballad at 72 BPM in D major, felt piano, bowed strings entering in verse two, intimate close-mic male Korean vocal, restrained vibrato, plate reverb, swelling final chorus, warm analog, studio mix`",
     "**밴드·싱어송라이터** — `Korean indie rock at 132 BPM, clean electric-guitar arpeggios, rounded bass, locked to the kick, live drums, room tone, female Korean vocal, half-spoken verses opening, belting choruses, tape saturation, stripped-back open-space mix`",
 ]
 TESTS = [
