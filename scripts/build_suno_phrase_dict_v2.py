@@ -13,7 +13,7 @@
   OD  우리 클립 display_tags(PG · Suno 화면 표시 태그 · 곡 단위 global_id)
   LEO LEO 문장 4(실명·곡명 든 구 뺌)
   ⛔Enhance·Inspire 자동 스타일 = 식별 칸 없음(PG·홈 둘 다) → 미측정
-먹힘 근거: effect_pair(효과 대조 짝 · 교락 표기) / listen_layer(LS 곡 수) / render_example(나온 클립·곡 id — 나옴 ≠ 들림).
+먹힘 근거: effect_pair(효과 대조 짝 · 교락 표기) / test_result(한 칸 짝 시험 PH2 · n=2) / listen_layer(LS 곡 수) / render_example(나온 클립·곡 id — 나옴 ≠ 들림).
 쓰기 = data/suno_phrase_dict_v2/dict.json · sunolang.db suno_phrase_dict(DROP→CREATE). 생성 0 · 네트워크 0.
 """
 import collections, hashlib, json, re, sqlite3, sys
@@ -23,7 +23,7 @@ REPO = Path(__file__).resolve().parent.parent
 AC = Path.home() / "agent-comm-sunolanguage/projects"
 REFS = AC / "sunomusic/attachments/SUNO_HOME_REFS_20261111/refs.json"
 VAR = AC / "sunomusic/attachments/SUNO_HOME_REFS_20261111/variety_rewrites.json"
-VERSION = "suno_phrase v2.0 (2026-11-12)"
+VERSION = "suno_phrase v2.1 (2026-11-12 · PH2 시험 칸)"
 
 LEO = [  # encore 210058 «LEO 문장 4개» · 2·3 은 leomusic_encore_20261111_193153·193333 축자
     "Flamenco-Pop Fast Rumba, Hard-Struck Spanish Guitars With Cross-Accented Cajón, Fierce Palmas And Stomps Dropping Into Silence For A Half-Time Breakdown, Virtuosic Guitar Solo Into The Driving Final Refrain; Polished Wide-Stereo Live Mix, Dense Mastering, Controlled Limiting, Clean Powerful Bass And Stadium Ambience; Fast, Syncopated Groove; Upfront Close-Miked Gritty, Raspy Female Chest Voice, Shifting From Playful, Intimate Spoken Delivery To Explosive Belts And Fiery Melismas, With Crowd Chants And Jaleos Answering The Refrain.",
@@ -38,6 +38,21 @@ EFFECT_PAIR = {
     "case": "플라멩코 커버 v1 84fcb262·3223fbba ↔ v2 f7a1a05a·cd6fb7c7 (같은 원곡 31eaa64d·가사·style_weight 0.9)",
     "phrases": {"live mix": "v1 에 있음 → v2 studio mix", "studio mix": "v2 에 있음", "stadium ambience": "v1 에만", "crowd chants": "v1 에만", "jaleos": "v1 에만"},
     "confound": "v2 는 6곳 함께 바뀜(Fast→Slow Rumba·100 BPM · Live→Studio Mix · Stadium Ambience 뺌 · Female→Male · Crowd Chants And Jaleos 뺌) ⇒ «라이브↔스튜디오» 들림 차를 낱말 하나에 못 돌림 · 판정 = LEO·encore 청취(내 측정 0)",
+}
+
+# 한 칸 짝 시험 PH2 — encore 134146 · ⚠내가 읽은 곳 = 그 본문(hitmaking 133842 REPORT 는 reklcli · 직접 열람 0)
+# 설계 = 발라드 B0 문장의 restrained vibrato 자리 하나만 바꿈 · 팔마다 2클립 · v6 · 가사 71605
+PH2 = {
+    "source": "encore 134146 ← hitmaking 20261112_133842 · reklcli:~/hitmaking/output/external/suno_phrase_ph2_20261112/REPORT.md",
+    "noise": "같은 SP 기준 클립끼리 ≈3반음 흔들림 ⇒ n=2 «+1반음 먹힘»은 잡음 폭 안 · n<6 수치는 이 단서와 함께만",
+    "verdict": "짝1(S1s↔N1)·짝2(S2↔N2) 둘 다 못 가름 → «Suno 말이라 더 먹힘» 근거 없음(반증도 아님)",
+    "phrases": {
+        "powerful belting": "최고음 p95: PH2 2/2 기준 밖(71.09·73.69 vs 기준 66.09~69.09) · PH1 2/2(67.99·67.82)는 넓어진 기준 안 ⇒ 경향(⛔4/4 아님) · 사전 전 채널 0(Suno 꼴 아님)",
+        "powerful full-voice belts": "최고음 p95 1/2 밖(67.09·70.53) — 남의 말보다 낫다는 증거 없음 · Suno 꼴(V+ 1·HS 1·HU 8 · 축자 대조 115430)",
+        "full-throated high notes": "최고음 0/2 · 세기(vox_lvl p95−p50) 12클립 중 최대 → 곁 칸 [경향] · 먹힘 근거 아님",
+        "vocal with heavy vibrato": "긴 음 떨림 폭 1/2 밖(90.7¢ = 12클립 최대) · Suno 말(V+ 41 · Variety 고쳐쓰기 층)",
+        "wide wobbling pitch on held notes": "긴 음 떨림 폭 0/2(둘 다 기준 밑)",
+    },
 }
 
 STOP = set("a an the and or of with into to in on for by from as at that this is are its it over under while but than then so who which where when your their his her our has have be".split())
@@ -173,6 +188,7 @@ def main():
     KEYFRAG = re.compile(r"^(\d{2,3} )?bpm in( the key)?( [a-g](b|#|-flat|-sharp)?)?( (major|minor))?$|^in [a-g]( (major|minor))?$")
     keep = {g for g in keep if not KEYFRAG.match(g)}
     keep |= set(df["LEO"])
+    keep |= set(PH2["phrases"])  # 시험한 구는 곡 수 0 이어도 행으로 둠(먹힘 칸 자리)
     keep = {g for g in keep if not NAME_BLOCK.search(g)}
     keep -= {"no", "not", "never", "without", "avoid"}  # 금지형 홑낱말 = 뜻 없음
     # 포섭: 더 긴 구 안에서만(같은 채널 곡 수의 80% 이상) 나오는 짧은 구는 뺌 — 근거 채널 합으로 판정
@@ -209,6 +225,7 @@ def main():
             "in_v1_2": k in v12, "v1_2_songs": v12.get(k, (0, ""))[0], "in_v3_5": k in v35,
             "new_kind": "기존" if (k in v12 or k in v35) else ("구 꼴만 새것" if all(w in oldwords for w in k.split()) else "새 낱말 포함"),
             "effect_pair": f"{ep} · 교락" if ep else None,
+            "test_result": f"PH2 n=2 · {PH2['phrases'][g]}" if g in PH2["phrases"] else None,
             "listen_layer": df["LS"][g],  # tracks 녹음 인식 79곡 중 곡 수
             "render_example": ex[g].get("V+") or ex[g].get("AG") or ex[g].get("HS") or ex[g].get("HU") or ex[g].get("OD") or ex[g].get("LEO"),
         })
@@ -225,7 +242,7 @@ def main():
                  "같은 꼴 — 홈 곡": sum(1 for x in refs if tpl.search(x.get("style") or ""))}
     meta = {"version": VERSION, "builder": "scripts/build_suno_phrase_dict_v2.py",
             "inputs": {"refs.json": sha(REFS), "variety_rewrites.json": sha(VAR), "tracks.suno_prompt": "sunolang.db"},
-            "channel_docs": dict(ch_n), "effect_pair": EFFECT_PAIR, "templates": templates,
+            "channel_docs": dict(ch_n), "effect_pair": EFFECT_PAIR, "ph2": PH2, "templates": templates,
             "compared_with": {"suno_emitted v1.2": "2026-10-16 · 5,904 낱말·구(우리 클립 Suno tags · V6 census)",
                               "expr_concepts v3.5": "2026-09-14 · 453 개념"},
             "stale_v1_2_absent_in_new": {"n": len(stale), "top": stale[:40],
@@ -241,7 +258,7 @@ def main():
     c = collections.Counter(r["category"] for r in rows)
     print(json.dumps({"rows": len(rows), "dropped_subsumed": len(drop), "channel_docs": dict(ch_n), "by_cat": c,
                       "new_vs_both": sum(1 for r in rows if not r["in_v1_2"] and not r["in_v3_5"]),
-                      "effect_pair_rows": sum(1 for r in rows if r["effect_pair"]), "listen_layer_rows": sum(1 for r in rows if r["LS"]),
+                      "effect_pair_rows": sum(1 for r in rows if r["effect_pair"]), "test_rows": sum(1 for r in rows if r["test_result"]), "listen_layer_rows": sum(1 for r in rows if r["LS"]),
                       "stale": len(stale)}, ensure_ascii=False, indent=1))
 
 

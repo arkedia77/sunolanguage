@@ -33,7 +33,8 @@ def main():
     P(f"- 지금 판 대조: 기존(v1.2·v3.5 에 같은 꼴) {sum(r['new_kind']=='기존' for r in R):,} · **구 꼴만 새것**(낱말은 다 있던 것) {sum(r['new_kind']=='구 꼴만 새것' for r in R):,} · **새 낱말 포함** {sum(r['new_kind']=='새 낱말 포함' for r in R):,}(그중 Suno 근거 {sum(1 for r in R if r['new_kind']=='새 낱말 포함' and suno_known(r))})")
     st = m["stale_v1_2_absent_in_new"]
     P(f"- 낡은 구(v1.2 10곡↑인데 새 재료 0): {st['n']} — {', '.join(t for t, _ in st['top'])} ⇒ 한글 2 = 토크나이저 밖 · 5낱말 2 = 4낱말 창 밖 ⇒ **실제 낡은 구 ≈0 · 폐기 0**")
-    P(f"- 효과 대조 짝 = **5구뿐**(§3 · 교락) — 나머지 «먹힘»은 **[미확인]**: 나옴(렌더 실례) ≠ 들림\n")
+    P(f"- 효과 대조 짝 = **5구뿐**(§3 · 교락) + 한 칸 짝 시험 **{sum(1 for r in R if r.get('test_result'))}구**(§3c · PH2 n=2 · 못 가름) — 나머지 «먹힘»은 **[미확인]**: 나옴(렌더 실례) ≠ 들림")
+    P(f"- 덧(11-12 v2.1): 우리 클립 display_tags(OD) 채널은 PG 실시간 재료라 다시 지을 때 곡 수가 늘 수 있음 — 이번 판 OD {n['OD']:,}곡\n")
     P("| 칸 | 구 | Suno 근거 있는 구 |\n|---|---|---|")
     for c in CATS:
         P(f"| {c} | {cnt[c]} | {kn[c]} |")
@@ -72,6 +73,19 @@ def main():
     P("- **느린 곡 템포 끌림** [결/리듬]: SP 에 66~79 BPM 을 적어도 렌더 중앙은 64~69(78 → 66.8 · 72 → 68.3) · <80 칸 556클립 중앙 −5.1 · ±3 안 20.5% · 110~139 칸 +2.4 · ≥140 칸 −0.8(±3 안 84.8%)")
     P("- 근거 = hitmaking 231048 `reklcli:~/hitmaking/output/external/suno_tempo_bias_20261111/REPORT.md`(박 추적 통제 GT 16/16) — ⚠**내가 읽은 곳 = encore 231139 본문**(그 기계 파일 직접 열람 0) · 한계 = 장르·Suno 판 안 나눔 · 인과 아님")
     P("- 쓰임: «NNN BPM» 꼴은 빠른 곡에선 대체로 따르고(≥140 ±3 안 84.8%) **80 아래에선 숫자로 못 고름** — §5 발라드 예의 72 BPM 도 같은 칸\n")
+    ph = m.get("ph2")
+    if ph:
+        P("### 3c. 한 칸 짝 시험 PH2 — «Suno 말 vs 남의 말» (11-12 · encore 설계·렌더 · 내 측정 0)\n")
+        P("- 설계: §5 발라드 문장의 `restrained vibrato` 자리 **하나만** 바꿈 · 팔마다 2클립 · v6 · 같은 가사 · 짝1 = 센 전달(잴 값 보컬 최고음 p95) · 짝2 = 떨림(긴 음 떨림 폭 cents)")
+        P(f"- **판정**: {ph['verdict']}")
+        P(f"- ⚠**잡음 단서**: {ph['noise']}\n")
+        P("| 구 | 시험 결과 | V+ | HS | HU | AG |\n|---|---|---|---|---|---|")
+        for k, v in ph["phrases"].items():
+            r = byp.get(k, {})
+            P(f"| `{k}` | {v} | {r.get('V+', 0)} | {r.get('HS', 0)} | {r.get('HU', 0)} | {r.get('AG', 0)} |")
+        P(f"\n- 근거 = {ph['source']} — ⚠**내가 읽은 곳 = encore 134146 본문**(REPORT 직접 열람 0)")
+        P("- 곡 수 칸 = 축자 구(하이픈 = 공백) · `powerful full-voice belts` 는 복수형 그대로 셈(단·복수 합친 «full-voice belt(s)»는 115430 축자 대조에서 HS 1·HU 8)")
+        P("- 쓰임: 지금 판에서 «Suno 가 쓰는 꼴로 바꾸면 더 먹힌다»는 **말할 수 없음** — §5 예의 구 선택은 «Suno 가 쓰는 말»(나옴) 근거까지만\n")
     P("## 4. Suno 가 고쳐 쓸 때 (Variety 1,681곡)\n")
     tp = m["templates"]
     P("- **Suno 서명 꼴 «NNN BPM in <조>»**: " + " · ".join(f"{k} {v}" for k, v in tp.items()) + " ⇒ Suno 다시쓰기가 템포·조를 앞에 박는 버릇(우리 SP 엔 거의 없음)")
