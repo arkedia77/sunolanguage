@@ -1,0 +1,549 @@
+{
+ "summary": {
+  "n": 24,
+  "songs": 8,
+  "chars": "씨앗 중앙 856.0 → 출력 중앙 670.5",
+  "sent": "씨앗 중앙 9.5 → 출력 {4: 6, 6: 6, 5: 12}",
+  "word_keep_med": 0.4,
+  "new_word_share_med": 0.57,
+  "bpm_kept": "24/24",
+  "bpm_in_first_sentence": "24/24",
+  "key_seed_has": 24,
+  "key_kept_same": 17,
+  "key_dropped": 0,
+  "key_changed": 7,
+  "first_genre": 24,
+  "last_structure": 13,
+  "mix_sentence": 5,
+  "slot_word_keep_med": {
+   "장르": 0.75,
+   "그 밖": 0.33,
+   "믹스": 0.33,
+   "리드·화성": 0.43,
+   "리듬·저역": 0.35,
+   "구조": 0.4,
+   "보컬": 0.5
+  },
+  "jaccard_med_by_song": {
+   "4079": 0.35,
+   "4090": 0.3,
+   "11645": 0.3,
+   "11648": 0.27,
+   "41054": 0.34,
+   "41058": 0.29,
+   "71636": 0.32,
+   "71644": 0.36
+  },
+  "added_words_top": [
+   "before",
+   "sub-bass",
+   "groove",
+   "intimate",
+   "verses",
+   "final",
+   "crisp",
+   "modern",
+   "driven",
+   "pads",
+   "delivers",
+   "rhythmic",
+   "tight",
+   "leads",
+   "delicate",
+   "countermelodies",
+   "dance-pop",
+   "four-on-the-floor",
+   "punchy",
+   "builds",
+   "lush",
+   "k-pop",
+   "emotive",
+   "rhythm",
+   "side-chained",
+   "bright",
+   "energetic",
+   "vocals",
+   "answered",
+   "drops",
+   "hooks",
+   "alongside",
+   "resolving",
+   "soaring",
+   "sustained",
+   "ornamentation",
+   "finishes",
+   "syncopated",
+   "breakdown",
+   "dynamic"
+  ]
+ },
+ "songs": [
+  {
+   "gid": 4079,
+   "seed_chars": 851,
+   "seed_sent": 11,
+   "seed_slots": [
+    "장르",
+    "그 밖",
+    "믹스",
+    "리드·화성",
+    "리듬·저역",
+    "리듬·저역",
+    "리듬·저역",
+    "구조",
+    "리듬·저역",
+    "믹스",
+    "보컬"
+   ],
+   "outs": [
+    {
+     "chars": 641,
+     "n_sent": 4,
+     "keep": 0.42,
+     "new_share": 0.51,
+     "bpm_kept": true,
+     "key_seed": "F major",
+     "key_out": "F major",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 678,
+     "n_sent": 4,
+     "keep": 0.31,
+     "new_share": 0.66,
+     "bpm_kept": true,
+     "key_seed": "F major",
+     "key_out": "F major",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 714,
+     "n_sent": 4,
+     "keep": 0.34,
+     "new_share": 0.62,
+     "bpm_kept": true,
+     "key_seed": "F major",
+     "key_out": "F major",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    }
+   ],
+   "jaccard_med": 0.35
+  },
+  {
+   "gid": 4090,
+   "seed_chars": 862,
+   "seed_sent": 11,
+   "seed_slots": [
+    "장르",
+    "그 밖",
+    "보컬",
+    "리듬·저역",
+    "구조",
+    "리드·화성",
+    "리듬·저역",
+    "구조",
+    "믹스",
+    "믹스",
+    "보컬"
+   ],
+   "outs": [
+    {
+     "chars": 699,
+     "n_sent": 6,
+     "keep": 0.41,
+     "new_share": 0.6,
+     "bpm_kept": true,
+     "key_seed": "E major",
+     "key_out": "E major",
+     "first": "장르",
+     "last": "믹스",
+     "mix_sentence": true,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 683,
+     "n_sent": 5,
+     "keep": 0.31,
+     "new_share": 0.67,
+     "bpm_kept": true,
+     "key_seed": "E major",
+     "key_out": "E major",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": true,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 708,
+     "n_sent": 5,
+     "keep": 0.39,
+     "new_share": 0.6,
+     "bpm_kept": true,
+     "key_seed": "E major",
+     "key_out": "E major",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    }
+   ],
+   "jaccard_med": 0.3
+  },
+  {
+   "gid": 11645,
+   "seed_chars": 869,
+   "seed_sent": 10,
+   "seed_slots": [
+    "장르",
+    "그 밖",
+    "리드·화성",
+    "구조",
+    "구조",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "그 밖",
+    "그 밖"
+   ],
+   "outs": [
+    {
+     "chars": 637,
+     "n_sent": 5,
+     "keep": 0.35,
+     "new_share": 0.58,
+     "bpm_kept": true,
+     "key_seed": "C ",
+     "key_out": "C minor",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 673,
+     "n_sent": 5,
+     "keep": 0.28,
+     "new_share": 0.69,
+     "bpm_kept": true,
+     "key_seed": "C ",
+     "key_out": "C minor",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 650,
+     "n_sent": 4,
+     "keep": 0.4,
+     "new_share": 0.55,
+     "bpm_kept": true,
+     "key_seed": "C ",
+     "key_out": "C minor",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    }
+   ],
+   "jaccard_med": 0.3
+  },
+  {
+   "gid": 11648,
+   "seed_chars": 861,
+   "seed_sent": 10,
+   "seed_slots": [
+    "장르",
+    "그 밖",
+    "리드·화성",
+    "구조",
+    "구조",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "그 밖",
+    "그 밖"
+   ],
+   "outs": [
+    {
+     "chars": 657,
+     "n_sent": 5,
+     "keep": 0.4,
+     "new_share": 0.56,
+     "bpm_kept": true,
+     "key_seed": "F# ",
+     "key_out": "F# minor",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 613,
+     "n_sent": 4,
+     "keep": 0.26,
+     "new_share": 0.7,
+     "bpm_kept": true,
+     "key_seed": "F# ",
+     "key_out": "F# minor",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 616,
+     "n_sent": 5,
+     "keep": 0.3,
+     "new_share": 0.64,
+     "bpm_kept": true,
+     "key_seed": "F# ",
+     "key_out": "F# minor",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    }
+   ],
+   "jaccard_med": 0.27
+  },
+  {
+   "gid": 41054,
+   "seed_chars": 874,
+   "seed_sent": 9,
+   "seed_slots": [
+    "장르",
+    "그 밖",
+    "구조",
+    "리드·화성",
+    "보컬",
+    "리듬·저역",
+    "구조",
+    "믹스",
+    "리드·화성"
+   ],
+   "outs": [
+    {
+     "chars": 679,
+     "n_sent": 5,
+     "keep": 0.41,
+     "new_share": 0.49,
+     "bpm_kept": true,
+     "key_seed": "G major",
+     "key_out": "G major",
+     "first": "장르",
+     "last": "리드·화성",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 706,
+     "n_sent": 5,
+     "keep": 0.34,
+     "new_share": 0.57,
+     "bpm_kept": true,
+     "key_seed": "G major",
+     "key_out": "G major",
+     "first": "장르",
+     "last": "리드·화성",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 663,
+     "n_sent": 6,
+     "keep": 0.36,
+     "new_share": 0.56,
+     "bpm_kept": true,
+     "key_seed": "G major",
+     "key_out": "G major",
+     "first": "장르",
+     "last": "리드·화성",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    }
+   ],
+   "jaccard_med": 0.34
+  },
+  {
+   "gid": 41058,
+   "seed_chars": 834,
+   "seed_sent": 8,
+   "seed_slots": [
+    "장르",
+    "구조",
+    "리드·화성",
+    "리듬·저역",
+    "리듬·저역",
+    "리드·화성",
+    "구조",
+    "구조"
+   ],
+   "outs": [
+    {
+     "chars": 704,
+     "n_sent": 6,
+     "keep": 0.35,
+     "new_share": 0.55,
+     "bpm_kept": true,
+     "key_seed": "BB major",
+     "key_out": "BB major",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 723,
+     "n_sent": 6,
+     "keep": 0.4,
+     "new_share": 0.51,
+     "bpm_kept": true,
+     "key_seed": "BB major",
+     "key_out": "B-FLAT major",
+     "first": "장르",
+     "last": "리드·화성",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 732,
+     "n_sent": 5,
+     "keep": 0.44,
+     "new_share": 0.45,
+     "bpm_kept": true,
+     "key_seed": "BB major",
+     "key_out": "BB major",
+     "first": "장르",
+     "last": "리드·화성",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    }
+   ],
+   "jaccard_med": 0.29
+  },
+  {
+   "gid": 71636,
+   "seed_chars": 541,
+   "seed_sent": 8,
+   "seed_slots": [
+    "장르",
+    "보컬",
+    "리드·화성",
+    "리드·화성",
+    "리듬·저역",
+    "리듬·저역",
+    "구조",
+    "구조"
+   ],
+   "outs": [
+    {
+     "chars": 603,
+     "n_sent": 6,
+     "keep": 0.56,
+     "new_share": 0.52,
+     "bpm_kept": true,
+     "key_seed": "G major",
+     "key_out": "G major",
+     "first": "장르",
+     "last": "리드·화성",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 645,
+     "n_sent": 6,
+     "keep": 0.49,
+     "new_share": 0.6,
+     "bpm_kept": true,
+     "key_seed": "G major",
+     "key_out": "G major",
+     "first": "장르",
+     "last": "리드·화성",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 627,
+     "n_sent": 5,
+     "keep": 0.45,
+     "new_share": 0.62,
+     "bpm_kept": true,
+     "key_seed": "G major",
+     "key_out": "G major",
+     "first": "장르",
+     "last": "믹스",
+     "mix_sentence": true,
+     "bpm_in_first_sentence": true
+    }
+   ],
+   "jaccard_med": 0.32
+  },
+  {
+   "gid": 71644,
+   "seed_chars": 551,
+   "seed_sent": 8,
+   "seed_slots": [
+    "장르",
+    "보컬",
+    "리드·화성",
+    "구조",
+    "리듬·저역",
+    "구조",
+    "구조",
+    "구조"
+   ],
+   "outs": [
+    {
+     "chars": 628,
+     "n_sent": 5,
+     "keep": 0.53,
+     "new_share": 0.57,
+     "bpm_kept": true,
+     "key_seed": "A major",
+     "key_out": "A major",
+     "first": "장르",
+     "last": "구조",
+     "mix_sentence": false,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 668,
+     "n_sent": 5,
+     "keep": 0.55,
+     "new_share": 0.56,
+     "bpm_kept": true,
+     "key_seed": "A major",
+     "key_out": "A major",
+     "first": "장르",
+     "last": "믹스",
+     "mix_sentence": true,
+     "bpm_in_first_sentence": true
+    },
+    {
+     "chars": 689,
+     "n_sent": 4,
+     "keep": 0.56,
+     "new_share": 0.57,
+     "bpm_kept": true,
+     "key_seed": "A major",
+     "key_out": "A major",
+     "first": "장르",
+     "last": "믹스",
+     "mix_sentence": true,
+     "bpm_in_first_sentence": true
+    }
+   ],
+   "jaccard_med": 0.36
+  }
+ ]
+}
