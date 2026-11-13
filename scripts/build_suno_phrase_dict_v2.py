@@ -23,7 +23,8 @@ REPO = Path(__file__).resolve().parent.parent
 AC = Path.home() / "agent-comm-sunolanguage/projects"
 REFS = AC / "sunomusic/attachments/SUNO_HOME_REFS_20261111/refs.json"
 VAR = AC / "sunomusic/attachments/SUNO_HOME_REFS_20261111/variety_rewrites.json"
-VERSION = "suno_phrase v2.1 (2026-11-12 · PH2 시험 칸)"
+ACE = [AC / "sunomusic/attachments/acelang_collect_v2_20261113.jsonl", AC / "sunomusic/attachments/acelang_pilot_20261113.jsonl"]  # ✦ 출력(encore 235637 OK)
+VERSION = "suno_phrase v2.2 (2026-11-14 · V± 하이픈 정규화 · ACE 칸)"
 
 LEO = [  # encore 210058 «LEO 문장 4개» · 2·3 은 leomusic_encore_20261111_193153·193333 축자
     "Flamenco-Pop Fast Rumba, Hard-Struck Spanish Guitars With Cross-Accented Cajón, Fierce Palmas And Stomps Dropping Into Silence For A Half-Time Breakdown, Virtuosic Guitar Solo Into The Driving Final Refrain; Polished Wide-Stereo Live Mix, Dense Mastering, Controlled Limiting, Clean Powerful Bass And Stadium Ambience; Fast, Syncopated Groove; Upfront Close-Miked Gritty, Raspy Female Chest Voice, Shifting From Playful, Intimate Spoken Delivery To Explosive Belts And Fiery Melismas, With Crowd Chants And Jaleos Answering The Refrain.",
@@ -53,6 +54,18 @@ PH2 = {
         "vocal with heavy vibrato": "긴 음 떨림 폭 1/2 밖(90.7¢ = 12클립 최대) · Suno 말(V+ 41 · Variety 고쳐쓰기 층)",
         "wide wobbling pitch on held notes": "긴 음 떨림 폭 0/2(둘 다 기준 밑)",
     },
+}
+
+# ACE ✦ 문장 틀 — sunolanguage acelang_v1.md(70출력 · 휴리스틱 칸 판정) · 판 단위 따름은 our_sp_on_ace_v0.md
+ACE_FRAME = {
+    "source": "agent-comm:projects/sunolanguage/exchange/ace_wizard_sp_20261113/acelang_v1.md · repo:sunolanguage data/acelang/frame_v1.json",
+    "frame": ["장르 + «at NNN BPM» (첫 문장 70/70 · 씨앗 BPM 62/62 그대로 · 조는 씨앗에 있을 때만 · 지어 넣음 0/70)",
+              "리듬·저역 / 리드·화성 / 보컬 — 순서 자유(정해진 순서 안 거스름 43/70)",
+              "[믹스 문장 — 선택 · 39/70 · «The mix/production …» 머리 33/70]",
+              "구조 활 intro → verses → pre-chorus → chorus → break → final chorus → outro (끝 문장 54/70 · 몫 중앙 25%)"],
+    "size": "중앙 652자 (568~732) · 5문장 47/70",
+    "variability": "같은 씨앗 출력끼리 낱말 자카드 중앙 0.25 = 표본기 ⇒ ace_n 은 여러 번 나온 말만 믿음",
+    "follows_by_field": "BPM 대체로 따름(±3 안 21/32 · 빠른 신스팝 +4~+8) · 4/4 못 가름 · 조·드럼·리드·보컬·구조 미측정(드럼 = ACE MIDI 박 격자라 못 잼)",
 }
 
 STOP = set("a an the and or of with into to in on for by from as at that this is are its it over under while but than then so who which where when your their his her our has have be".split())
@@ -104,6 +117,10 @@ CATS = [  # (칸, 낱말 정규식) — 위에서부터 먼저 걸리는 것 · 
 CATS = [(c, re.compile(p)) for c, p in CATS]
 
 
+def hy(g):
+    return g.replace("-", " ")
+
+
 def category(g):
     for c, rx in CATS:
         if rx.search(g):
@@ -138,17 +155,21 @@ def main():
             continue
         per = [(c["clip"], grams(c["sp_suno"])) for c in clips]
         allu = set().union(*(u for _, u in per))
+        # v2.2: 하이픈=공백 같은 꼴로 대조(v2.1 은 «electric guitar»→«electric-guitar» 고쳐쓰기를 뺌·더함으로 셈 — 189 중 79)
+        sentN = {hy(g) for g in sent}; alluN = {hy(g) for g in allu}
         added = {}
         for cid, u in per:
-            for g in u - sent:
-                added.setdefault(g, cid)
+            for g in u:
+                if hy(g) not in sentN:
+                    added.setdefault(g, cid)
         ch_n["V+"] += 1; ch_n["V-"] += 1; ch_n["Vkeep"] += 1
         for g, cid in added.items():
             df["V+"][g] += 1; ex[g].setdefault("V+", cid)
-        for g in sent - allu:
-            df["V-"][g] += 1; ex[g].setdefault("V-", f"gid {s['gid']}")
-        for g in sent & allu:
-            df["Vkeep"][g] += 1
+        for g in sent:
+            if hy(g) in alluN:
+                df["Vkeep"][g] += 1
+            else:
+                df["V-"][g] += 1; ex[g].setdefault("V-", f"gid {s['gid']}")
     # 홈
     for s in refs:
         st = s.get("style") or ""
@@ -178,6 +199,17 @@ def main():
         segs = [x for x in re.split(r"[,;.]", t) if not NAME_BLOCK.search(x)]
         add("LEO", grams(", ".join(segs)), f"LEO{i}")
 
+    # ACE ✦ 출력 — 출력 단위(씨앗 여러 번 누름) · Suno 채널과 합산 0 · 하이픈=공백 꼴로 셈
+    ace_n, ace_seed = collections.Counter(), collections.defaultdict(set)
+    ace_docs = 0
+    for f in ACE:
+        for l in f.read_text().splitlines():
+            d = json.loads(l); ace_docs += 1
+            sd = d.get("seed_id") or d.get("seed")
+            for g in grams(d["out"]):
+                ace_n[hy(g)] += 1; ace_seed[hy(g)].add(sd)
+    ch_n["ACE"] = ace_docs
+
     # 후보: Suno 확정·근거 채널에서 곡 ≥3 · 저자 모름 홈은 ≥5 · LEO 문장 구는 전부(재료 지정)
     keep = set()
     for ch, th in (("V+", 5), ("HS", 3), ("LS", 3), ("HD", 3), ("HU", 8), ("AG", 2), ("OD", 5)):
@@ -189,6 +221,13 @@ def main():
     keep = {g for g in keep if not KEYFRAG.match(g)}
     keep |= set(df["LEO"])
     keep |= set(PH2["phrases"])  # 시험한 구는 곡 수 0 이어도 행으로 둠(먹힘 칸 자리)
+    # ACE 가 5출력↑ 쓴 2낱말↑ 구 = 행으로(Suno 0 이어도 · ace_only 표시) — 같은 꼴(하이픈) 행이 이미 있으면 그 행에 붙음
+    have = {hy(g) for g in keep}
+    edge = re.compile(r"\bbpm\b|^(between|driven|by)\b|\b(before|between|set|by|a)$")
+    ace_only = {g for g in ace_n if " " in g and ace_n[g] >= 5 and g not in have and not re.search(r"\d", g) and not edge.search(g)}
+    # ACE 행끼리 포섭: 더 긴 ACE 행이 출력 수의 80%↑ 를 덮으면 짧은 쪽 뺌(«pitched down» ⊂ «pitched down memphis rap vocal»)
+    ace_only = {g for g in ace_only if not any(h != g and f" {g} " in f" {h} " and ace_n[h] >= 0.8 * ace_n[g] for h in ace_only)}
+    keep |= ace_only
     keep = {g for g in keep if not NAME_BLOCK.search(g)}
     keep -= {"no", "not", "never", "without", "avoid"}  # 금지형 홑낱말 = 뜻 없음
     # 포섭: 더 긴 구 안에서만(같은 채널 곡 수의 80% 이상) 나오는 짧은 구는 뺌 — 근거 채널 합으로 판정
@@ -225,6 +264,12 @@ def main():
             "in_v1_2": k in v12, "v1_2_songs": v12.get(k, (0, ""))[0], "in_v3_5": k in v35,
             "new_kind": "기존" if (k in v12 or k in v35) else ("구 꼴만 새것" if all(w in oldwords for w in k.split()) else "새 낱말 포함"),
             "effect_pair": f"{ep} · 교락" if ep else None,
+            "ace_n": ace_n[hy(g)], "ace_seeds": len(ace_seed[hy(g)]),
+            # 홑낱말(vocal·rhythm)은 Suno 가 꼴만 바꿔도 V- 가 커서 표시 안 함
+            "ace_vs_suno": None if " " not in g else ("ACE 씀·Suno 뺌" if ace_n[hy(g)] >= 5 and df["V-"][g] >= 15 and df["V-"][g] >= 2 * max(df["V+"][g], 1)
+                            else "둘 다 씀" if ace_n[hy(g)] >= 5 and (df["V+"][g] >= 5 or df["HS"][g] >= 3)
+                            else "ACE 만" if ace_n[hy(g)] >= 5 and not any(df[c][g] for c in ("V+", "Vkeep", "HS", "HU", "HD", "LS", "AG", "OD")) else None),
+            "ace_follows": None,  # 들림 측정 = encore 렌더(지금 BPM 만 칸 아닌 판 단위 · meta.ace_frame)
             "test_result": f"PH2 n=2 · {PH2['phrases'][g]}" if g in PH2["phrases"] else None,
             "listen_layer": df["LS"][g],  # tracks 녹음 인식 79곡 중 곡 수
             "render_example": ex[g].get("V+") or ex[g].get("AG") or ex[g].get("HS") or ex[g].get("HU") or ex[g].get("OD") or ex[g].get("LEO"),
@@ -242,7 +287,7 @@ def main():
                  "같은 꼴 — 홈 곡": sum(1 for x in refs if tpl.search(x.get("style") or ""))}
     meta = {"version": VERSION, "builder": "scripts/build_suno_phrase_dict_v2.py",
             "inputs": {"refs.json": sha(REFS), "variety_rewrites.json": sha(VAR), "tracks.suno_prompt": "sunolang.db"},
-            "channel_docs": dict(ch_n), "effect_pair": EFFECT_PAIR, "ph2": PH2, "templates": templates,
+            "channel_docs": dict(ch_n), "effect_pair": EFFECT_PAIR, "ph2": PH2, "ace_frame": ACE_FRAME, "templates": templates,
             "compared_with": {"suno_emitted v1.2": "2026-10-16 · 5,904 낱말·구(우리 클립 Suno tags · V6 census)",
                               "expr_concepts v3.5": "2026-09-14 · 453 개념"},
             "stale_v1_2_absent_in_new": {"n": len(stale), "top": stale[:40],

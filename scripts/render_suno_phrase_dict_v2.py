@@ -34,6 +34,7 @@ def main():
     st = m["stale_v1_2_absent_in_new"]
     P(f"- 낡은 구(v1.2 10곡↑인데 새 재료 0): {st['n']} — {', '.join(t for t, _ in st['top'])} ⇒ 한글 2 = 토크나이저 밖 · 5낱말 2 = 4낱말 창 밖 ⇒ **실제 낡은 구 ≈0 · 폐기 0**")
     P(f"- 효과 대조 짝 = **5구뿐**(§3 · 교락) + 한 칸 짝 시험 **{sum(1 for r in R if r.get('test_result'))}구**(§3c · PH2 n=2 · 못 가름) — 나머지 «먹힘»은 **[미확인]**: 나옴(렌더 실례) ≠ 들림")
+    P("- ⚠**v2.2 정정(11-14)**: v2.1 까지 V+/V-(Suno 가 더한/뺀 곡)는 하이픈 고쳐쓰기를 더함·뺌으로 셈(예 `electric guitar` V- 189 중 79 = Suno 가 `electric-guitar` 로 고쳐 남긴 것) ⇒ **v2.1 의 하이픈 든 구 V± 는 부풀었음** · v2.2 는 하이픈=공백 같은 꼴로 대조(electric guitar V- 189→111) · 그 결과 하이픈 꼴 행 일부(`electric-guitar`·`grand-piano` 등)는 문턱 밑으로 빠짐")
     P(f"- 덧(11-12 v2.1): 우리 클립 display_tags(OD) 채널은 PG 실시간 재료라 다시 지을 때 곡 수가 늘 수 있음 — 이번 판 OD {n['OD']:,}곡\n")
     P("| 칸 | 구 | Suno 근거 있는 구 |\n|---|---|---|")
     for c in CATS:
@@ -47,6 +48,7 @@ def main():
             ("HD", "홈 곡 display_tags", n["HD"], "Suno 화면 표시 태그"),
             ("OD", "우리 클립 display_tags(PG)", n["OD"], "Suno 화면 표시 태그"),
             ("LS", "녹음 인식 프롬프트(tracks 79 · 실음악 듣고 Suno 가 쓴 말)", n["LS"], "**Suno 확정** · 역방향 근거(들리면 이 말로 부름)"),
+            ("ACE", "ACE Music ✦(마법사) 출력 — 씨앗 18 × 3~5번(sunomusic 수집 · 0cr) · 출력 단위", n.get("ACE", 0), "**ACE 확정**(다른 엔진 · Suno 채널과 합산 0)"),
             ("LEO", "LEO 문장 4", n["LEO"], "LEO 가 가져온 문장(출처 Suno 쪽으로 보임 · 미확인)")]
     for a, b, c_, e in rows:
         P(f"| {a} | {b} | {c_:,} | {e} |")
@@ -94,6 +96,19 @@ def main():
     P("- Suno 가 **더한** 구 상위 20: " + " · ".join(f"{r['phrase']} {r['V+']}" for r in add))
     P("- Suno 가 **뺀** 구 상위 20: " + " · ".join(f"{r['phrase']} {r['V-']}" for r in rem))
     P("- 읽기: «guitar plays»·«piano plays» 같은 **서술 동사 꼴을 버리고** «clean electric-guitar arpeggios»·«bass locked to the kick» 같은 **명사구 + 관계 꼴**로 바꿔 씀 · «male/female vocal» → «male korean vocal»·«mid-register vocal» 로 **언어·음역을 붙임**\n")
+    af = m.get("ace_frame")
+    if af:
+        P("## 4b. ACE 랭귀지 칸 (v2.2 · encore 235637 OK · 문면만 — 들림 0)\n")
+        P("- 칸: `ace_n`(✦ 출력 중 나온 수) · `ace_seeds`(나온 씨앗 수) · `ace_vs_suno` · `ace_follows`(들림 · 지금 전부 빈칸) — ACE 셈은 하이픈=공백 꼴")
+        P(f"- 근거 = {af['source']} · 크기 {af['size']} · {af['variability']}")
+        P("- **문장 틀 `ace_frame`**: " + " → ".join(af["frame"]))
+        P(f"- 칸별 따름(판 단위): {af['follows_by_field']}\n")
+        vs = collections.Counter(r.get("ace_vs_suno") for r in R)
+        P(f"| ace_vs_suno | 구 |\n|---|---|\n| 둘 다 씀 | {vs['둘 다 씀']} |\n| **ACE 씀·Suno 뺌** | {vs['ACE 씀·Suno 뺌']} |\n| ACE 만(Suno 채널 0) | {vs['ACE 만']} |\n")
+        for lab in ("ACE 씀·Suno 뺌", "ACE 만", "둘 다 씀"):
+            rs = sorted([r for r in R if r.get("ace_vs_suno") == lab], key=lambda r: -r["ace_n"])[:12]
+            P(f"- **{lab}** 상위: " + " · ".join(f"`{r['phrase']}` ace {r['ace_n']}" + (f"/V- {r['V-']}" if lab != "ACE 만" else "") for r in rs))
+        P("- 읽기: 같은 낱말(`electric bass`·`drum kit`·`korean trot`)이 두 엔진에서 반대 대접 ⇒ ACE 쪽 SP 는 Suno 사전에서 그대로 끌어오지 말 것 · ⚠Suno 가 tags 에서 뺌 ≠ 소리로 안 따름\n")
     P("## 5. 4라인 SP 에 바로 쓸 꼴 예 (쉼표 사이 덩어리 = 사전 행 1~2개 이음 · 구성 구 전부 사전에 있음 · 실명 0 · ⛔시험 전 = 참고용 · 약한 구 = korean indie rock(AG 2)·live drums(HS 10·V+ 0))\n")
     for line in EXAMPLES:
         P(f"- {line}")
