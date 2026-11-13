@@ -1,0 +1,107 @@
+{
+ "meta": {
+  "script": "scripts/acelang_reframe_v1.py",
+  "script_sha256": "8c12a76b07f35d9e499a6d79760ec92ad1d2c91c027cb8770cb82ec296ba951b",
+  "source": "agent-comm:projects/sunomusic/attachments/acelang_collect_v3_우리SP_20261114.jsonl",
+  "source_sha256": "0e24636b5482c2dcfc0c2c35fc6739b4787a47ad24be2f453115f445c0219152",
+  "rules": "① BPM·조 장르 문장 안 · ② 믹스 문장 지움 · 재배열 장르→리듬→리드→보컬→그 밖→구조 · ③ 길이 맞춤 안 함 · 덧붙인 낱말 = at·BPM·in·minor/major 뿐(검사)"
+ },
+ "arms": [
+  {
+   "gid": 4079,
+   "in_chars": 851,
+   "out_chars": 658,
+   "in_sha256": "70044c5c065dcf78159220e033c86bdf51706077f39ce1d53177de3696b83ffe",
+   "out_sha256": "a7dc10d9778554c920668ad2d83fa258c0203a31c826dee77ef47ed27dbff37d",
+   "bpm": "126",
+   "key": "F major",
+   "dropped_mix": 2,
+   "sp_in": "korean bubblegum dance, girl group dance pop, toy accordion bounce.\n\n126 BPM, 4/4, key of F major.\n\nA playful, polished female vocal teases every line with a wink.\n\nA toy accordion hook carries the melody over a thin synth pad. The sub bass outlines each root and follows phrases with short slides. Cabasa percussion fills the gaps with quick shakes.\n\nA bouncy kick drum lands four to the floor with jersey-style kick rolls, snappy claps on two and four and open hi-hats on the offbeats.\n\nThe arrangement begins on accordion and cabasa, then an instrumental break lets accordion and bass trade phrases.\n\nThe mix keeps the lead vocal close, with the sub bass tucked under the kick drum.\n\nSide-chain compression pumps the pad, and playful ear-candy sound effects pop between phrases.\n\nA teasing female group vocal answers each call in call-and-response.",
+   "sp_out": "korean bubblegum dance at 126 BPM in F major, girl group dance pop, toy accordion bounce. The sub bass outlines each root and follows phrases with short slides. Cabasa percussion fills the gaps with quick shakes. A bouncy kick drum lands four to the floor with jersey-style kick rolls, snappy claps on two and four and open hi-hats on the offbeats. A toy accordion hook carries the melody over a thin synth pad. A playful, polished female vocal teases every line with a wink. A teasing female group vocal answers each call in call-and-response. The arrangement begins on accordion and cabasa, then an instrumental break lets accordion and bass trade phrases."
+  },
+  {
+   "gid": 4090,
+   "in_chars": 862,
+   "out_chars": 687,
+   "in_sha256": "e3a41adda3616ef1442bfc980a7829c7c7c43da6f620d9eb39d0dfca4dd568b2",
+   "out_sha256": "576d7b338c0a6fdbf1b2447410de9487a3ae12658d57bcc13d66d428a75e2fe7",
+   "bpm": "124",
+   "key": "E major",
+   "dropped_mix": 2,
+   "sp_in": "electropop, girl group dance pop, orchestral bells and soaring brass on a night train.\n\n124 BPM, 4/4, key of E major.\n\nPowerful female vocal stays low in the train lines and opens into a high belt on each title.\n\nA rolling sub bass layers pulses under each kick. Orchestral bells trace the hook in ringing runs over strings. A soaring brass section doubles every title line as grand piano holds the chords.\n\nDrum machine programming puts a kick on every beat, claps on two and four, and rolling sixteenth hi-hats.\n\nThe arrangement opens on bells and piano, adds brass at the first title line, and thins to bells for an instrumental break.\n\nIn the mix, vocal and bells share the center while brass spreads wide.\n\nSide-chain compression pumps the piano on each kick, and plate reverb trails the bells.\n\nA female group vocal answers each title line in tight unison.",
+   "sp_out": "electropop at 124 BPM in E major, girl group dance pop, orchestral bells and soaring brass on a night train. A rolling sub bass layers pulses under each kick. Drum machine programming puts a kick on every beat, claps on two and four, and rolling sixteenth hi-hats. Orchestral bells trace the hook in ringing runs over strings. A soaring brass section doubles every title line as grand piano holds the chords. Powerful female vocal stays low in the train lines and opens into a high belt on each title. A female group vocal answers each title line in tight unison. The arrangement opens on bells and piano, adds brass at the first title line, and thins to bells for an instrumental break."
+  },
+  {
+   "gid": 11645,
+   "in_chars": 869,
+   "out_chars": 783,
+   "in_sha256": "1d68190f272ebb50023c969ad9573b13681ef1d0fc1a6e3aea5d20c3b5718bc3",
+   "out_sha256": "5096f6f2b5f06414cd2a26141cd1f73b0668fe74e223aa0e21fa096325024465",
+   "bpm": "124",
+   "key": "C minor",
+   "dropped_mix": 1,
+   "sp_in": "Hip-hop dance pop. The tempo is 124 BPM in the key of Cm. Lead is carried by punchy synth stabs with sharp and bright, deep sub bass with punchy and short anchors the low end, and dark synth chords with short and punchy fills out the harmony. The song opens with a hip-hop beat intro, rises through the pre-chorus into a full chorus, passing through a beat break interlude, with a contrasting bridge, closing with a hip-hop beat outro. Minor chords with a bright lift on the chorus. The drums feature a punchy hip-hop dance beat, a hard kick with snappy snares and bouncing hi-hats. The vocals are gritty powerful, with male group voices trading lines, strong Korean pop singing, confident. The production is polished with light compression and subtle reverb. Color comes from a meeting room on a Monday, a hand raised, my name said out loud. Korean lyrics, Korean pop.",
+   "sp_out": "Hip-hop dance pop at 124 BPM in C minor. The drums feature a punchy hip-hop dance beat, a hard kick with snappy snares and bouncing hi-hats. Lead is carried by punchy synth stabs with sharp and bright, deep sub bass with punchy and short anchors the low end, and dark synth chords with short and punchy fills out the harmony. Minor chords with a bright lift on the chorus. The vocals are gritty powerful, with male group voices trading lines, strong Korean pop singing, confident. Color comes from a meeting room on a Monday, a hand raised, my name said out loud. Korean lyrics, Korean pop. The song opens with a hip-hop beat intro, rises through the pre-chorus into a full chorus, passing through a beat break interlude, with a contrasting bridge, closing with a hip-hop beat outro."
+  },
+  {
+   "gid": 11648,
+   "in_chars": 861,
+   "out_chars": 775,
+   "in_sha256": "7b8c8f466ac74dec41125f4431efb9276817ea71771139f4c21a150f235ed9cb",
+   "out_sha256": "e22ff8cf459b54694afae26b005d6a9240d684a69dc6f0b2025f4946f729ebe6",
+   "bpm": "122",
+   "key": "F# minor",
+   "dropped_mix": 1,
+   "sp_in": "Edm trap pop. The tempo is 122 BPM in the key of F#m. Lead is carried by huge trap synth lead with sharp and loud, heavy 808 bass with sliding and deep anchors the low end, and dark supersaw chords with wide fills out the harmony. The song opens with a trap synth intro, rises through the pre-chorus into a full chorus, passing through an edm drop interlude, with a contrasting bridge, closing with a trap synth outro. Minor chords exploding into the drop. The drums feature a hard EDM trap beat, booming 808 kicks with sharp claps and rapid hi-hat rolls into each drop. The vocals are gritty powerful, with male voice, strong Korean pop singing, intense and confident. The production is polished with light compression and subtle reverb. Color comes from a bus pulling away, running to the next stop, someone waiting under the light. Korean lyrics, Korean pop.",
+   "sp_out": "Edm trap pop at 122 BPM in F# minor. The drums feature a hard EDM trap beat, booming 808 kicks with sharp claps and rapid hi-hat rolls into each drop. Lead is carried by huge trap synth lead with sharp and loud, heavy 808 bass with sliding and deep anchors the low end, and dark supersaw chords with wide fills out the harmony. Minor chords exploding into the drop. The vocals are gritty powerful, with male voice, strong Korean pop singing, intense and confident. Color comes from a bus pulling away, running to the next stop, someone waiting under the light. Korean lyrics, Korean pop. The song opens with a trap synth intro, rises through the pre-chorus into a full chorus, passing through an edm drop interlude, with a contrasting bridge, closing with a trap synth outro."
+  },
+  {
+   "gid": 41054,
+   "in_chars": 874,
+   "out_chars": 799,
+   "in_sha256": "5c67ea21e1ad08f88f13821d8f1e5ed2bd46425fe7e31f5789544d5ce017fa26",
+   "out_sha256": "d5ec2fa85952ea519b012ac033a26b99c7d23949b2ba47c520210a2f458d9ef9",
+   "bpm": "76",
+   "key": "G major",
+   "dropped_mix": 1,
+   "sp_in": "Korean trot-voiced acoustic ballad, 76 BPM, 4/4, G major. Warm mid-tempo semi-ballad with a gentle, hopeful glow. Male vocal in a standard range, restrained and close, with traditional phrasing, light vibrato on held line endings and pronounced slides into the high notes. Fingerpicked steel-string acoustic guitar carries the verses with soft arpeggios, a felt-touch piano adds sparse chords, and a warm saxophone answers the vocal lines as the counter-melody, stepping forward in each chorus. The acoustic bass plays a steady root note pattern under the harmony. A full kit with brushed snare and soft kick on a straight eighth-note groove, lifting gently in the choruses. Low strings swell under the second and third choruses. Clean, dry mix with the voice up front and plenty of air between phrases. Quiet guitar and saxophone duet to close, ending on a soft held chord.",
+   "sp_out": "Korean trot-voiced acoustic ballad at 76 BPM in G major. The acoustic bass plays a steady root note pattern under the harmony. A full kit with brushed snare and soft kick on a straight eighth-note groove, lifting gently in the choruses. Fingerpicked steel-string acoustic guitar carries the verses with soft arpeggios, a felt-touch piano adds sparse chords, and a warm saxophone answers the vocal lines as the counter-melody, stepping forward in each chorus. Low strings swell under the second and third choruses. Male vocal in a standard range, restrained and close, with traditional phrasing, light vibrato on held line endings and pronounced slides into the high notes. Warm mid-tempo semi-ballad with a gentle, hopeful glow. Quiet guitar and saxophone duet to close, ending on a soft held chord."
+  },
+  {
+   "gid": 41058,
+   "in_chars": 834,
+   "out_chars": 833,
+   "in_sha256": "426b973ae905c18ae72b89c5d9083fcd08debe2f8803ce6f58fc534c70cb614b",
+   "out_sha256": "6d45d3970b196ec75506c0cbe0dad07ff8e35de24d188093552b614cd0e75a0b",
+   "bpm": "72",
+   "key": "Bb major",
+   "dropped_mix": 0,
+   "sp_in": "Korean trot-voiced guitar pop ballad, 72 BPM, 4/4, Bb major. Male vocal, standard register, restrained and warm, traditional phrasing, light vibrato on held line endings, pronounced slides into chorus lines, every word clear. Fingerpicked steel-string acoustic guitar leads; accordion answers each sung phrase as a gentle countermelody and carries the instrumental breaks. Smooth bass in a soft, laid-back pocket, round sustained notes gliding root to fifth. Full kit drums kept light, rim clicks and closed hi-hat in verses, a straight eighth-note groove with warm kick and snare in choruses. Soft piano pads and a thin string bed underneath. Bridge thins to guitar and voice alone, then the band returns; the ending fades on accordion and guitar. Tender, grateful late-night mood, unhurried, dry close vocal with subtle room reverb.",
+   "sp_out": "Korean trot-voiced guitar pop ballad at 72 BPM in Bb major. Smooth bass in a soft, laid-back pocket, round sustained notes gliding root to fifth. Full kit drums kept light, rim clicks and closed hi-hat in verses, a straight eighth-note groove with warm kick and snare in choruses. Fingerpicked steel-string acoustic guitar leads; accordion answers each sung phrase as a gentle countermelody and carries the instrumental breaks. Soft piano pads and a thin string bed underneath. Male vocal, standard register, restrained and warm, traditional phrasing, light vibrato on held line endings, pronounced slides into chorus lines, every word clear. Tender, grateful late-night mood, unhurried, dry close vocal with subtle room reverb. Bridge thins to guitar and voice alone, then the band returns; the ending fades on accordion and guitar."
+  },
+  {
+   "gid": 71636,
+   "in_chars": 541,
+   "out_chars": 546,
+   "in_sha256": "a539dcea49498992e6fd5e7e92e6a8f29a09eb887f1891a6fb491905b8e98f78",
+   "out_sha256": "959e494195fd6d22d817d9a4864f6610ee26c405eac271c9ba02fb1bfb31b415",
+   "bpm": "68",
+   "key": "G major",
+   "dropped_mix": 0,
+   "sp_in": "Korean Everyday Piano Ballad — Upright Piano, Cello and Soft Strings, 68 BPM, G major, Calm energy. vocal: female solo vocal, clear gentle tone with a little breath, brief vibrato at line endings. lead: intimate upright piano melody over a sparse verse. harmony: a solo cello line and soft strings under the bridge. rhythm: no drums until a soft brushed kit under the last chorus. bass: low piano left hand holding the roots. color: a single glockenspiel note closing the song over a held string chord. drums: brushes only on the last chorus",
+   "sp_out": "Korean Everyday Piano Ballad at 68 BPM in G major — Upright Piano, Cello and Soft Strings, Calm energy. rhythm: no drums until a soft brushed kit under the last chorus. bass: low piano left hand holding the roots. drums: brushes only on the last chorus. lead: intimate upright piano melody over a sparse verse. harmony: a solo cello line and soft strings under the bridge. vocal: female solo vocal, clear gentle tone with a little breath, brief vibrato at line endings. color: a single glockenspiel note closing the song over a held string chord."
+  },
+  {
+   "gid": 71644,
+   "in_chars": 551,
+   "out_chars": 556,
+   "in_sha256": "5eed305a25daa55050840a6252dad511323aa721bdc8ff20c8d3f2a45c84e4b9",
+   "out_sha256": "4fa23a3f50131bc83249ee1f2cbec35279995372d80eef6c7c1d66d479c8e46a",
+   "bpm": "150",
+   "key": "A major",
+   "dropped_mix": 0,
+   "sp_in": "Korean Band Pop Rock — Guitars, Piano and Live Kit, Fast to Mellow, 150 BPM, A major, Explosive energy. vocal: female voice crisp and urgent on short hook phrases. lead: fast palm-muted electric guitar riff opening the hook. harmony: rhythm guitar in wide open power chords through the chorus. rhythm: live drum kit with steady backbeat and driving eighth-note hi-hats. bass: round electric bass holding steady under the verse, sliding up into each chorus downbeat. color: glockenspiel touches on the chorus. drums: soft kit opening into a full chorus",
+   "sp_out": "Korean Band Pop Rock at 150 BPM in A major — Guitars, Piano and Live Kit, Fast to Mellow, Explosive energy. rhythm: live drum kit with steady backbeat and driving eighth-note hi-hats. bass: round electric bass holding steady under the verse, sliding up into each chorus downbeat. drums: soft kit opening into a full chorus. lead: fast palm-muted electric guitar riff opening the hook. harmony: rhythm guitar in wide open power chords through the chorus. vocal: female voice crisp and urgent on short hook phrases. color: glockenspiel touches on the chorus."
+  }
+ ]
+}
