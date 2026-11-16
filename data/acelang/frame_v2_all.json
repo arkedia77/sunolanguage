@@ -1,0 +1,5372 @@
+{
+ "summary": {
+  "n": 115,
+  "by_set": {
+   "v2": 40,
+   "pilot": 30,
+   "v4": 45
+  },
+  "chars": {
+   "med": 655,
+   "min": 568,
+   "max": 732
+  },
+  "n_sent": {
+   "4": 25,
+   "5": 77,
+   "6": 12,
+   "3": 1
+  },
+  "first_slot_genre": 115,
+  "last_is_structure": 87,
+  "last_longest": 71,
+  "last_share_med": 0.26,
+  "order_monotone": 76,
+  "has_mix_sentence": 57,
+  "slot_seq_top": [
+   [
+    "장르 → 리듬·저역 → 리드·화성 → 보컬 → 구조",
+    14
+   ],
+   [
+    "장르 → 리듬·저역 → 보컬 → 믹스 → 구조",
+    12
+   ],
+   [
+    "장르 → 리드·화성 → 보컬 → 구조",
+    11
+   ],
+   [
+    "장르 → 리드·화성 → 보컬 → 믹스 → 구조",
+    10
+   ],
+   [
+    "장르 → 리듬·저역 → 보컬 → 구조",
+    8
+   ],
+   [
+    "장르 → 리듬·저역 → 리드·화성 → 보컬 → 믹스 → 구조",
+    4
+   ],
+   [
+    "장르 → 보컬 → 구조",
+    3
+   ],
+   [
+    "장르 → 리듬·저역 → 리드·화성 → 구조",
+    3
+   ]
+  ],
+  "bpm_kept": "107/107",
+  "bpm_any_when_seed_no_bpm": "7/8",
+  "key_added": 0,
+  "chunks_suno_share_med": 0.2857142857142857,
+  "seeds": [
+   {
+    "set": "pilot",
+    "seed": "Afro-pop dance, 116 BPM",
+    "n": 3,
+    "chars": [
+     602,
+     589,
+     645
+    ],
+    "n_sent": [
+     4,
+     4,
+     4
+    ],
+    "jaccard_med": 0.26,
+    "core_all": [
+     "afro-pop",
+     "bpm",
+     "call-and-response",
+     "charismatic",
+     "chords",
+     "chorus",
+     "clean",
+     "dance",
+     "driven",
+     "electric",
+     "guitar",
+     "harmonies",
+     "log",
+     "melodic",
+     "shakers",
+     "syncopated",
+     "verses"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 구조",
+      3
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "Chill lo-fi R&B, 116 BPM",
+    "n": 3,
+    "chars": [
+     583,
+     681,
+     609
+    ],
+    "n_sent": [
+     4,
+     6,
+     5
+    ],
+    "jaccard_med": 0.25,
+    "core_all": [
+     "bpm",
+     "breathy",
+     "filtered",
+     "groove",
+     "guitar",
+     "harmonies",
+     "intimate",
+     "keys",
+     "lo-fi",
+     "lush",
+     "opens",
+     "pocket",
+     "rhodes",
+     "soft",
+     "subtle",
+     "swung",
+     "vinyl",
+     "warm"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 구조",
+      1
+     ],
+     [
+      "장르 → 믹스 → 리드·화성 → 보컬 → 믹스 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "Drift phonk",
+    "n": 3,
+    "chars": [
+     693,
+     704,
+     656
+    ],
+    "n_sent": [
+     6,
+     5,
+     5
+    ],
+    "jaccard_med": 0.28,
+    "core_all": [
+     "aggressive",
+     "bpm",
+     "deliberate",
+     "drift",
+     "driven",
+     "filtered",
+     "groove",
+     "heavily",
+     "hi-hat",
+     "hook",
+     "memphis",
+     "modern",
+     "phonk",
+     "pitched-down",
+     "rap",
+     "relentless",
+     "rhythmically",
+     "saturated",
+     "sub-bass",
+     "tape",
+     "trap",
+     "vocal"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 보컬 → 리드·화성 → 믹스 → 구조",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 보컬 → 믹스 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     null,
+     null,
+     null
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "EDM trap pop, 122 BPM",
+    "n": 3,
+    "chars": [
+     660,
+     623,
+     647
+    ],
+    "n_sent": [
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.22,
+    "core_all": [
+     "bpm",
+     "bright",
+     "chops",
+     "chorus",
+     "drop",
+     "edm",
+     "explosive",
+     "filtered",
+     "pop",
+     "rolls",
+     "snare",
+     "sub-bass",
+     "supersaw",
+     "synth",
+     "through",
+     "trap",
+     "vocal"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 리듬·저역 → 믹스 → 리드·화성",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "Korean bubblegum pop, 126 BPM",
+    "n": 3,
+    "chars": [
+     695,
+     610,
+     631
+    ],
+    "n_sent": [
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.32,
+    "core_all": [
+     "bass",
+     "bouncy",
+     "bpm",
+     "brass",
+     "bright",
+     "bubblegum",
+     "chorus",
+     "clean",
+     "crisp",
+     "deliver",
+     "female",
+     "four-on-the-floor",
+     "harmonies",
+     "korean",
+     "multi-tracked",
+     "playful",
+     "pop",
+     "punchy",
+     "synth",
+     "tight",
+     "vocals",
+     "youthful"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 믹스 → 구조",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "Korean electropop, 125 BPM",
+    "n": 3,
+    "chars": [
+     608,
+     571,
+     637
+    ],
+    "n_sent": [
+     4,
+     4,
+     5
+    ],
+    "jaccard_med": 0.26,
+    "core_all": [
+     "before",
+     "bpm",
+     "bridge",
+     "chords",
+     "chorus",
+     "crisp",
+     "dynamic",
+     "electropop",
+     "final",
+     "four-on-the-floor",
+     "hook",
+     "korean",
+     "plucks",
+     "polished",
+     "sidechained",
+     "synth",
+     "verses",
+     "vocal",
+     "vocals"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 구조",
+      1
+     ],
+     [
+      "장르 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "Korean hip-hop dance-pop boy group, 124 BPM",
+    "n": 3,
+    "chars": [
+     638,
+     687,
+     674
+    ],
+    "n_sent": [
+     5,
+     6,
+     6
+    ],
+    "jaccard_med": 0.23,
+    "core_all": [
+     "before",
+     "bpm",
+     "brass",
+     "builds",
+     "dance-pop",
+     "four-on-the-floor",
+     "hip-hop",
+     "korean",
+     "male",
+     "punchy",
+     "rap",
+     "stabs",
+     "synth",
+     "trap"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 믹스 → 구조",
+      2
+     ],
+     [
+      "장르 → 리듬·저역 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "Korean piano and strings ballad, 68 BPM",
+    "n": 3,
+    "chars": [
+     568,
+     687,
+     632
+    ],
+    "n_sent": [
+     4,
+     5,
+     4
+    ],
+    "jaccard_med": 0.27,
+    "core_all": [
+     "arrangement",
+     "ballad",
+     "belt",
+     "bpm",
+     "breathy",
+     "cello",
+     "cinematic",
+     "delicate",
+     "dynamic",
+     "grand",
+     "intimate",
+     "korean",
+     "orchestral",
+     "piano",
+     "soaring",
+     "vocal",
+     "warm"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 구조 → 리드·화성",
+      1
+     ],
+     [
+      "장르 → 구조 → 리드·화성 → 보컬 → 믹스",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "Korean trot semi-ballad, 76 BPM",
+    "n": 3,
+    "chars": [
+     657,
+     637,
+     687
+    ],
+    "n_sent": [
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.23,
+    "core_all": [
+     "accordion",
+     "before",
+     "bpm",
+     "gentle",
+     "intimate",
+     "korean",
+     "lead",
+     "orchestral",
+     "piano",
+     "semi-ballad",
+     "strings",
+     "trot",
+     "vibrato",
+     "vocal"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 믹스",
+      1
+     ],
+     [
+      "장르 → 리드·화성 → 리듬·저역 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "pilot",
+    "seed": "Korean youth rock band, 150 BPM",
+    "n": 3,
+    "chars": [
+     716,
+     711,
+     614
+    ],
+    "n_sent": [
+     6,
+     6,
+     4
+    ],
+    "jaccard_med": 0.25,
+    "core_all": [
+     "anthemic",
+     "bpm",
+     "bright",
+     "builds",
+     "chorus",
+     "gang",
+     "guitar",
+     "guitars",
+     "harmonies",
+     "high-energy",
+     "korean",
+     "lead",
+     "melodic",
+     "modern",
+     "passionate",
+     "piano",
+     "punchy",
+     "rhythm",
+     "rock",
+     "soaring",
+     "sparkling",
+     "vocal",
+     "youth"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 믹스 → 구조",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 보컬 → 리드·화성 → 믹스 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v2",
+    "seed": "S1 Korean girl group dance-pop, 124 BPM",
+    "n": 5,
+    "chars": [
+     617,
+     677,
+     664,
+     669,
+     708
+    ],
+    "n_sent": [
+     4,
+     5,
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.25,
+    "core_all": [
+     "bpm",
+     "bright",
+     "dance-pop",
+     "female",
+     "four-on-the-floor",
+     "girl",
+     "group",
+     "rhythmic",
+     "syncopated",
+     "synth",
+     "verses",
+     "vocals"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 구조",
+      2
+     ],
+     [
+      "장르 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v2",
+    "seed": "S2 Korean boy group dance-pop, 124 BPM",
+    "n": 5,
+    "chars": [
+     669,
+     647,
+     640,
+     719,
+     649
+    ],
+    "n_sent": [
+     5,
+     4,
+     5,
+     5,
+     6
+    ],
+    "jaccard_med": 0.26,
+    "core_all": [
+     "between",
+     "bpm",
+     "chorus",
+     "dance-pop",
+     "four-on-the-floor",
+     "kick",
+     "male",
+     "melodic",
+     "punchy",
+     "rap",
+     "synth",
+     "vocals"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 믹스 → 구조",
+      1
+     ],
+     [
+      "장르 → 구조 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v2",
+    "seed": "S3 Korean ballad, 68 BPM",
+    "n": 5,
+    "chars": [
+     673,
+     633,
+     665,
+     679,
+     627
+    ],
+    "n_sent": [
+     5,
+     5,
+     6,
+     5,
+     5
+    ],
+    "jaccard_med": 0.24,
+    "core_all": [
+     "ballad",
+     "bpm",
+     "breathy",
+     "grand",
+     "intimate",
+     "korean",
+     "lush",
+     "piano",
+     "reverb",
+     "strings",
+     "vocal",
+     "warm"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 구조 → 보컬 → 믹스",
+      1
+     ],
+     [
+      "장르 → 리드·화성 → 리듬·저역 → 보컬 → 믹스",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v2",
+    "seed": "S4 Korean trot, 76 BPM",
+    "n": 5,
+    "chars": [
+     672,
+     681,
+     606,
+     697,
+     640
+    ],
+    "n_sent": [
+     5,
+     5,
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.25,
+    "core_all": [
+     "accordion",
+     "ballad",
+     "bpm",
+     "guitar",
+     "korean",
+     "nylon-string",
+     "strings",
+     "swaying",
+     "trot",
+     "vibrato",
+     "warm"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 구조 → 믹스",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 보컬 → 리드·화성 → 믹스",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v2",
+    "seed": "S5 Korean hip-hop, 95 BPM",
+    "n": 5,
+    "chars": [
+     633,
+     669,
+     643,
+     623,
+     658
+    ],
+    "n_sent": [
+     5,
+     5,
+     6,
+     5,
+     5
+    ],
+    "jaccard_med": 0.21,
+    "core_all": [
+     "boom-bap",
+     "bpm",
+     "chorus",
+     "crisp",
+     "hip-hop",
+     "korean",
+     "subtle"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 보컬 → 믹스 → 구조",
+      2
+     ],
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 믹스 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v2",
+    "seed": "S6 Korean indie rock band, 140 BPM",
+    "n": 5,
+    "chars": [
+     697,
+     644,
+     640,
+     687,
+     670
+    ],
+    "n_sent": [
+     5,
+     5,
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.26,
+    "core_all": [
+     "bpm",
+     "driving",
+     "dynamic",
+     "guitar",
+     "guitars",
+     "impassioned",
+     "indie",
+     "korean",
+     "lead",
+     "punchy",
+     "rhythm",
+     "riff",
+     "rock",
+     "soaring",
+     "verses"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 구조 → 리드·화성",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 구조 → 믹스 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v2",
+    "seed": "S7 R&B slow jam, 70 BPM",
+    "n": 5,
+    "chars": [
+     634,
+     637,
+     702,
+     670,
+     612
+    ],
+    "n_sent": [
+     5,
+     5,
+     6,
+     5,
+     4
+    ],
+    "jaccard_med": 0.3,
+    "core_all": [
+     "bpm",
+     "chest",
+     "crisp",
+     "deep",
+     "falsetto",
+     "groove",
+     "guitar",
+     "harmonies",
+     "intimate",
+     "jam",
+     "lush",
+     "rhodes",
+     "slow",
+     "vocal",
+     "warm"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 구조",
+      1
+     ],
+     [
+      "장르 → 리드·화성 → 리듬·저역 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v2",
+    "seed": "S8 Drift phonk",
+    "n": 5,
+    "chars": [
+     649,
+     732,
+     637,
+     690,
+     658
+    ],
+    "n_sent": [
+     5,
+     6,
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.21,
+    "core_all": [
+     "cowbell",
+     "drift",
+     "memphis",
+     "phonk",
+     "pitched-down",
+     "relentless",
+     "sidechain",
+     "trap",
+     "vocal"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 보컬 → 믹스 → 구조",
+      3
+     ],
+     [
+      "장르 → 리듬·저역 → 믹스 → 구조 → 리듬·저역",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "B2 Korean piano ballad, 72 BPM",
+    "n": 5,
+    "chars": [
+     615,
+     619,
+     686,
+     675,
+     659
+    ],
+    "n_sent": [
+     5,
+     5,
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.22,
+    "core_all": [
+     "ballad",
+     "bpm",
+     "breathy",
+     "contemporary",
+     "delicate",
+     "grand",
+     "korean",
+     "piano",
+     "vocal",
+     "warm"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 리듬·저역 → 믹스",
+      1
+     ],
+     [
+      "장르 → 구조 → 리듬·저역 → 보컬",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "E1 Korean electropop, 120 BPM",
+    "n": 5,
+    "chars": [
+     641,
+     658,
+     668,
+     656,
+     588
+    ],
+    "n_sent": [
+     4,
+     5,
+     5,
+     4,
+     3
+    ],
+    "jaccard_med": 0.21,
+    "core_all": [
+     "bpm",
+     "bright",
+     "chorus",
+     "crisp",
+     "electropop",
+     "filtered",
+     "four-on-the-floor",
+     "kick",
+     "korean",
+     "punchy",
+     "sidechained",
+     "verses"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 구조",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "E2 Korean synth-pop, 118 BPM",
+    "n": 5,
+    "chars": [
+     624,
+     614,
+     695,
+     606,
+     621
+    ],
+    "n_sent": [
+     5,
+     5,
+     5,
+     4,
+     5
+    ],
+    "jaccard_med": 0.24,
+    "core_all": [
+     "analog",
+     "bpm",
+     "chorus",
+     "driving",
+     "guitar",
+     "korean",
+     "modern",
+     "punchy",
+     "synth-pop"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 구조",
+      2
+     ],
+     [
+      "장르 → 리듬·저역 → 보컬 → 믹스 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "G1 Korean bubblegum dance, 126 BPM",
+    "n": 5,
+    "chars": [
+     657,
+     642,
+     719,
+     713,
+     653
+    ],
+    "n_sent": [
+     5,
+     5,
+     5,
+     5,
+     5
+    ],
+    "jaccard_med": 0.25,
+    "core_all": [
+     "bouncy",
+     "bpm",
+     "bright",
+     "bubblegum",
+     "chants",
+     "explosive",
+     "female",
+     "four-on-the-floor",
+     "korean",
+     "synth",
+     "vocals"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 구조",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 보컬 → 리드·화성 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "G2 Korean bubblegum pop, 132 BPM",
+    "n": 5,
+    "chars": [
+     658,
+     639,
+     631,
+     655,
+     635
+    ],
+    "n_sent": [
+     5,
+     4,
+     5,
+     4,
+     5
+    ],
+    "jaccard_med": 0.24,
+    "core_all": [
+     "bpm",
+     "bright",
+     "bubblegum",
+     "female",
+     "korean",
+     "playful",
+     "pop",
+     "synth"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 믹스 → 구조",
+      2
+     ],
+     [
+      "장르 → 리드·화성 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "H2 Korean R&B, 86 BPM",
+    "n": 5,
+    "chars": [
+     652,
+     634,
+     606,
+     648,
+     673
+    ],
+    "n_sent": [
+     5,
+     5,
+     4,
+     5,
+     5
+    ],
+    "jaccard_med": 0.22,
+    "core_all": [
+     "bpm",
+     "falsetto",
+     "guitar",
+     "intimate",
+     "korean",
+     "sub-bass",
+     "vocal",
+     "warm"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 구조",
+      2
+     ],
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "P2 Korean boom-bap hip-hop, 90 BPM",
+    "n": 5,
+    "chars": [
+     667,
+     676,
+     604,
+     677,
+     637
+    ],
+    "n_sent": [
+     6,
+     5,
+     4,
+     5,
+     5
+    ],
+    "jaccard_med": 0.24,
+    "core_all": [
+     "boom-bap",
+     "bpm",
+     "dusty",
+     "gritty",
+     "hip-hop",
+     "jazz",
+     "korean",
+     "piano",
+     "vinyl"
+    ],
+    "seq": [
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 구조 → 믹스",
+      1
+     ],
+     [
+      "장르 → 리드·화성 → 보컬 → 믹스 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "R2 Korean pop-rock band, 150 BPM",
+    "n": 5,
+    "chars": [
+     655,
+     704,
+     671,
+     596,
+     639
+    ],
+    "n_sent": [
+     4,
+     5,
+     5,
+     4,
+     5
+    ],
+    "jaccard_med": 0.27,
+    "core_all": [
+     "anthemic",
+     "bass",
+     "bpm",
+     "bright",
+     "chorus",
+     "energetic",
+     "group",
+     "guitars",
+     "korean",
+     "lead",
+     "overdriven",
+     "pop-rock",
+     "soaring"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 구조",
+      1
+     ],
+     [
+      "장르 → 리듬·저역 → 리드·화성 → 보컬 → 리드·화성",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "set": "v4",
+    "seed": "T2 Korean semi-trot, 128 BPM",
+    "n": 5,
+    "chars": [
+     643,
+     673,
+     657,
+     662,
+     690
+    ],
+    "n_sent": [
+     4,
+     4,
+     4,
+     4,
+     5
+    ],
+    "jaccard_med": 0.25,
+    "core_all": [
+     "accordion",
+     "bpm",
+     "brass",
+     "bright",
+     "four-on-the-floor",
+     "korean",
+     "modern",
+     "punchy",
+     "semi-trot",
+     "vocal"
+    ],
+    "seq": [
+     [
+      "장르 → 리드·화성 → 보컬 → 구조",
+      2
+     ],
+     [
+      "장르 → 리듬·저역 → 보컬 → 구조",
+      1
+     ]
+    ],
+    "key_added": 0,
+    "bpm_kept": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   }
+  ],
+  "ace_top_phrases": [
+   {
+    "phrase": "four-on-the-floor kick",
+    "ace_outputs": 32,
+    "V+": 18,
+    "V-": 16,
+    "HS": 6,
+    "HU": 13,
+    "AG": 0
+   },
+   {
+    "phrase": "modern korean",
+    "ace_outputs": 23,
+    "in_dict": false
+   },
+   {
+    "phrase": "lead vocal",
+    "ace_outputs": 23,
+    "V+": 11,
+    "V-": 11,
+    "HS": 18,
+    "HU": 29,
+    "AG": 1
+   },
+   {
+    "phrase": "brass stabs",
+    "ace_outputs": 20,
+    "V+": 7,
+    "V-": 6,
+    "HS": 1,
+    "HU": 9,
+    "AG": 0
+   },
+   {
+    "phrase": "punchy four-on-the-floor",
+    "ace_outputs": 20,
+    "in_dict": false
+   },
+   {
+    "phrase": "arrangement opens",
+    "ace_outputs": 20,
+    "V+": 0,
+    "V-": 2,
+    "HS": 0,
+    "HU": 1,
+    "AG": 0
+   },
+   {
+    "phrase": "synth bass",
+    "ace_outputs": 18,
+    "V+": 4,
+    "V-": 22,
+    "HS": 6,
+    "HU": 37,
+    "AG": 0
+   },
+   {
+    "phrase": "rhythm section",
+    "ace_outputs": 16,
+    "V+": 1,
+    "V-": 4,
+    "HS": 2,
+    "HU": 5,
+    "AG": 0
+   },
+   {
+    "phrase": "bpm driven",
+    "ace_outputs": 16,
+    "in_dict": false
+   },
+   {
+    "phrase": "grand piano",
+    "ace_outputs": 16,
+    "V+": 4,
+    "V-": 14,
+    "HS": 2,
+    "HU": 7,
+    "AG": 0
+   },
+   {
+    "phrase": "final chorus",
+    "ace_outputs": 15,
+    "V+": 124,
+    "V-": 40,
+    "HS": 24,
+    "HU": 76,
+    "AG": 1
+   },
+   {
+    "phrase": "punchy four-on-the-floor kick",
+    "ace_outputs": 15,
+    "in_dict": false
+   },
+   {
+    "phrase": "contemporary korean",
+    "ace_outputs": 15,
+    "V+": 1,
+    "V-": 0,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "vocal chops",
+    "ace_outputs": 14,
+    "V+": 18,
+    "V-": 10,
+    "HS": 4,
+    "HU": 25,
+    "AG": 0
+   },
+   {
+    "phrase": "vocal delivers",
+    "ace_outputs": 14,
+    "V+": 0,
+    "V-": 313,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "124 bpm",
+    "ace_outputs": 13,
+    "V+": 0,
+    "V-": 2,
+    "HS": 2,
+    "HU": 10,
+    "AG": 0
+   },
+   {
+    "phrase": "synth pads",
+    "ace_outputs": 13,
+    "V+": 9,
+    "V-": 1,
+    "HS": 9,
+    "HU": 58,
+    "AG": 0
+   },
+   {
+    "phrase": "lead vocals",
+    "ace_outputs": 13,
+    "V+": 1,
+    "V-": 0,
+    "HS": 1,
+    "HU": 15,
+    "AG": 0
+   },
+   {
+    "phrase": "korean bubblegum",
+    "ace_outputs": 13,
+    "in_dict": false
+   },
+   {
+    "phrase": "piano chords",
+    "ace_outputs": 12,
+    "V+": 16,
+    "V-": 19,
+    "HS": 6,
+    "HU": 20,
+    "AG": 0
+   },
+   {
+    "phrase": "guitar chops",
+    "ace_outputs": 11,
+    "V+": 5,
+    "V-": 7,
+    "HS": 1,
+    "HU": 4,
+    "AG": 0
+   },
+   {
+    "phrase": "synth arpeggios",
+    "ace_outputs": 11,
+    "V+": 3,
+    "V-": 0,
+    "HS": 1,
+    "HU": 4,
+    "AG": 0
+   },
+   {
+    "phrase": "wide stereo",
+    "ace_outputs": 11,
+    "V+": 22,
+    "V-": 17,
+    "HS": 5,
+    "HU": 46,
+    "AG": 0
+   },
+   {
+    "phrase": "electric guitar",
+    "ace_outputs": 11,
+    "V+": 5,
+    "V-": 111,
+    "HS": 17,
+    "HU": 120,
+    "AG": 1
+   },
+   {
+    "phrase": "female vocals",
+    "ace_outputs": 10,
+    "V+": 33,
+    "V-": 24,
+    "HS": 18,
+    "HU": 80,
+    "AG": 0
+   },
+   {
+    "phrase": "electric piano",
+    "ace_outputs": 10,
+    "V+": 21,
+    "V-": 43,
+    "HS": 10,
+    "HU": 35,
+    "AG": 1
+   },
+   {
+    "phrase": "driving four-on-the-floor",
+    "ace_outputs": 10,
+    "V+": 12,
+    "V-": 1,
+    "HS": 2,
+    "HU": 7,
+    "AG": 0
+   },
+   {
+    "phrase": "track builds",
+    "ace_outputs": 10,
+    "V+": 0,
+    "V-": 0,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "bpm korean",
+    "ace_outputs": 10,
+    "in_dict": false
+   },
+   {
+    "phrase": "builds through",
+    "ace_outputs": 10,
+    "V+": 1,
+    "V-": 52,
+    "HS": 0,
+    "HU": 3,
+    "AG": 0
+   },
+   {
+    "phrase": "lead vocal delivers",
+    "ace_outputs": 10,
+    "V+": 0,
+    "V-": 1,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "rap vocal",
+    "ace_outputs": 10,
+    "V+": 1,
+    "V-": 1,
+    "HS": 0,
+    "HU": 1,
+    "AG": 0
+   },
+   {
+    "phrase": "150 bpm",
+    "ace_outputs": 10,
+    "in_dict": false
+   },
+   {
+    "phrase": "group dance-pop",
+    "ace_outputs": 9,
+    "in_dict": false
+   },
+   {
+    "phrase": "rubbery synth",
+    "ace_outputs": 9,
+    "V+": 0,
+    "V-": 1,
+    "HS": 0,
+    "HU": 2,
+    "AG": 0
+   },
+   {
+    "phrase": "guitar licks",
+    "ace_outputs": 9,
+    "V+": 0,
+    "V-": 4,
+    "HS": 0,
+    "HU": 6,
+    "AG": 0
+   },
+   {
+    "phrase": "driven by a punchy",
+    "ace_outputs": 9,
+    "in_dict": false
+   },
+   {
+    "phrase": "track opens",
+    "ace_outputs": 9,
+    "V+": 0,
+    "V-": 0,
+    "HS": 0,
+    "HU": 10,
+    "AG": 0
+   },
+   {
+    "phrase": "orchestral strings",
+    "ace_outputs": 9,
+    "in_dict": false
+   },
+   {
+    "phrase": "hi-hat rolls",
+    "ace_outputs": 9,
+    "in_dict": false
+   },
+   {
+    "phrase": "vocals deliver",
+    "ace_outputs": 9,
+    "V+": 1,
+    "V-": 30,
+    "HS": 1,
+    "HU": 1,
+    "AG": 0
+   },
+   {
+    "phrase": "rhythm guitars",
+    "ace_outputs": 9,
+    "V+": 0,
+    "V-": 2,
+    "HS": 1,
+    "HU": 4,
+    "AG": 0
+   },
+   {
+    "phrase": "bright brass",
+    "ace_outputs": 8,
+    "in_dict": false
+   },
+   {
+    "phrase": "vocal harmonies",
+    "ace_outputs": 8,
+    "V+": 1,
+    "V-": 19,
+    "HS": 2,
+    "HU": 22,
+    "AG": 0
+   },
+   {
+    "phrase": "bridge before",
+    "ace_outputs": 8,
+    "V+": 10,
+    "V-": 0,
+    "HS": 0,
+    "HU": 4,
+    "AG": 0
+   },
+   {
+    "phrase": "gang chants",
+    "ace_outputs": 8,
+    "in_dict": false
+   },
+   {
+    "phrase": "arrangement builds",
+    "ace_outputs": 8,
+    "V+": 0,
+    "V-": 23,
+    "HS": 0,
+    "HU": 3,
+    "AG": 0
+   },
+   {
+    "phrase": "vocal ad-libs",
+    "ace_outputs": 8,
+    "in_dict": false
+   },
+   {
+    "phrase": "hall reverb",
+    "ace_outputs": 8,
+    "V+": 0,
+    "V-": 26,
+    "HS": 0,
+    "HU": 1,
+    "AG": 0
+   },
+   {
+    "phrase": "drum kit",
+    "ace_outputs": 8,
+    "V+": 10,
+    "V-": 117,
+    "HS": 4,
+    "HU": 13,
+    "AG": 0
+   },
+   {
+    "phrase": "68 bpm",
+    "ace_outputs": 8,
+    "V+": 0,
+    "V-": 2,
+    "HS": 0,
+    "HU": 8,
+    "AG": 0
+   },
+   {
+    "phrase": "plate reverb",
+    "ace_outputs": 8,
+    "V+": 20,
+    "V-": 35,
+    "HS": 9,
+    "HU": 30,
+    "AG": 0
+   },
+   {
+    "phrase": "76 bpm",
+    "ace_outputs": 8,
+    "in_dict": false
+   },
+   {
+    "phrase": "nylon-string guitar",
+    "ace_outputs": 8,
+    "V+": 16,
+    "V-": 1,
+    "HS": 1,
+    "HU": 2,
+    "AG": 0
+   },
+   {
+    "phrase": "rhodes chords",
+    "ace_outputs": 8,
+    "V+": 20,
+    "V-": 6,
+    "HS": 1,
+    "HU": 15,
+    "AG": 0
+   },
+   {
+    "phrase": "electric guitars",
+    "ace_outputs": 8,
+    "V+": 1,
+    "V-": 27,
+    "HS": 9,
+    "HU": 22,
+    "AG": 0
+   },
+   {
+    "phrase": "drift phonk",
+    "ace_outputs": 8,
+    "in_dict": false
+   },
+   {
+    "phrase": "sidechain compression",
+    "ace_outputs": 8,
+    "V+": 3,
+    "V-": 7,
+    "HS": 0,
+    "HU": 2,
+    "AG": 0
+   },
+   {
+    "phrase": "korean electropop",
+    "ace_outputs": 8,
+    "V+": 0,
+    "V-": 0,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "126 bpm",
+    "ace_outputs": 8,
+    "in_dict": false
+   },
+   {
+    "phrase": "korean bubblegum pop",
+    "ace_outputs": 8,
+    "in_dict": false
+   },
+   {
+    "phrase": "bubblegum pop",
+    "ace_outputs": 8,
+    "V+": 0,
+    "V-": 0,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "driving four-on-the-floor kick",
+    "ace_outputs": 7,
+    "in_dict": false
+   },
+   {
+    "phrase": "production features",
+    "ace_outputs": 7,
+    "V+": 0,
+    "V-": 0,
+    "HS": 0,
+    "HU": 1,
+    "AG": 0
+   },
+   {
+    "phrase": "vocals alternate between",
+    "ace_outputs": 7,
+    "in_dict": false
+   },
+   {
+    "phrase": "vocals alternate",
+    "ace_outputs": 7,
+    "V+": 0,
+    "V-": 0,
+    "HS": 0,
+    "HU": 1,
+    "AG": 0
+   },
+   {
+    "phrase": "alternate between",
+    "ace_outputs": 7,
+    "in_dict": false
+   },
+   {
+    "phrase": "synth leads",
+    "ace_outputs": 7,
+    "V+": 0,
+    "V-": 6,
+    "HS": 0,
+    "HU": 7,
+    "AG": 0
+   },
+   {
+    "phrase": "korean trot",
+    "ace_outputs": 7,
+    "V+": 1,
+    "V-": 73,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "vinyl crackle",
+    "ace_outputs": 7,
+    "V+": 1,
+    "V-": 21,
+    "HS": 7,
+    "HU": 25,
+    "AG": 0
+   },
+   {
+    "phrase": "tape saturation",
+    "ace_outputs": 7,
+    "V+": 42,
+    "V-": 37,
+    "HS": 12,
+    "HU": 71,
+    "AG": 1
+   },
+   {
+    "phrase": "drift phonk driven",
+    "ace_outputs": 7,
+    "V+": 0,
+    "V-": 0,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "phonk driven",
+    "ace_outputs": 7,
+    "in_dict": false
+   },
+   {
+    "phrase": "memphis rap",
+    "ace_outputs": 7,
+    "in_dict": false
+   },
+   {
+    "phrase": "trap groove",
+    "ace_outputs": 7,
+    "V+": 2,
+    "V-": 1,
+    "HS": 0,
+    "HU": 0,
+    "AG": 0
+   },
+   {
+    "phrase": "memphis rap vocal",
+    "ace_outputs": 7,
+    "in_dict": false
+   },
+   {
+    "phrase": "pitched-down memphis",
+    "ace_outputs": 7,
+    "in_dict": false
+   },
+   {
+    "phrase": "bouncy four-on-the-floor",
+    "ace_outputs": 7,
+    "in_dict": false
+   },
+   {
+    "phrase": "guitar plucks",
+    "ace_outputs": 6,
+    "in_dict": false
+   },
+   {
+    "phrase": "melodic hooks",
+    "ace_outputs": 6,
+    "in_dict": false
+   }
+  ],
+  "suno_deleted_forms_in_ace": {
+   "자리 낱말(in the background/midground/foreground)": 2,
+   "weave(s)": 5,
+   "embrace(s)": 1,
+   "«The mix/production …» 문장 머리": 52
+  }
+ },
+ "rows": [
+  {
+   "set": "v2",
+   "seed": "S1 Korean girl group dance-pop, 124 BPM",
+   "n": 1,
+   "out": "Modern K-pop girl group dance-pop at 124 BPM, built around an infectious four-on-the-floor kick, bouncy syncopated synth bass, and bright electric piano stabs. Versatile female vocals trade energetic rap-talk verses with soaring, multi-layered melodic hooks and synchronized group chants. Verses stay taut and rhythmic with muted guitar plucks and crisp 808 claps, swelling through an arpeggiated pre-chorus riser into an explosive, supersaw-drenched chorus. An energetic, trap-inflected half-time dance break introduces pitched vocal chops before a maximalist final chorus closes on a tight, reverb-tailed final hit.",
+   "chars": 617,
+   "n_sent": 4,
+   "sent_len": [
+    159,
+    128,
+    169,
+    158
+   ],
+   "slots": [
+    "장르",
+    "보컬",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 8
+  },
+  {
+   "set": "v2",
+   "seed": "S1 Korean girl group dance-pop, 124 BPM",
+   "n": 2,
+   "out": "Modern K-pop girl group dance-pop at an energetic 124 BPM. The groove locks into a driving four-on-the-floor kick, syncopated claps, and a buoyant, rubbery synth bassline. Plucky synth arpeggios and funky muted guitar chops carry the verses, detonating into wide supersaw chords, bright brass hits, and sparkling glitter risers on the chorus. Crisp, multi-tracked female vocals trade playful, rhythmic verses and charismatic unison chants before soaring into powerful, harmonized pop hooks. The production is pristine, punchy, and wide, moving from a stripped-back bounce into explosive drops, a half-time trap-flavored bridge, and a climactic final chorus with belted ad-libs.",
+   "chars": 677,
+   "n_sent": 5,
+   "sent_len": [
+    58,
+    112,
+    170,
+    147,
+    186
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 19,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v2",
+   "seed": "S1 Korean girl group dance-pop, 124 BPM",
+   "n": 3,
+   "out": "High-energy Korean girl group dance-pop at 124 BPM. The rhythm section pairs a driving four-on-the-floor kick with a bouncy, rubbery synth bass and syncopated handclaps. Bright brass stabs, shimmering sidechained chords, and funky muted guitar licks fill the mid frequencies. Female vocals shift dynamically from playful, rhythmic spoken-rap verses to soaring, multi-tracked vocal harmonies in the pre-chorus, culminating in an explosive, anthemic chorus packed with tight unison chants. Polished, hyper-clean production features dramatic sweep risers, bass drops, and an exhilarating final chorus laced with high-register ad-libs before a sharp, impactful finish.",
+   "chars": 664,
+   "n_sent": 5,
+   "sent_len": [
+    51,
+    117,
+    105,
+    211,
+    176
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 8
+  },
+  {
+   "set": "v2",
+   "seed": "S1 Korean girl group dance-pop, 124 BPM",
+   "n": 4,
+   "out": "Modern Korean girl group dance-pop at 124 BPM driven by a four-on-the-floor kick, bouncy side-chained sub-bass, and syncopated metallic claps. Bright synth plucks and clean rhythm guitar chops build verses, opening into lush sawtooth supersaws and playful brass stabs during the chorus. Dynamic multi-tracked female vocals trade off between charismatic, rhythmic delivery in the verses and high-energy belted ensemble hooks with sparkling harmonies. The hyper-polished mix emphasizes a wide stereo field and crisp high-end sheen. The track builds from an addictive vocal-chop intro to explosive choruses, stepping down for an airy bridge before a maximalist final hook.",
+   "chars": 669,
+   "n_sent": 5,
+   "sent_len": [
+    142,
+    143,
+    162,
+    79,
+    139
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.21,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 10,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v2",
+   "seed": "S1 Korean girl group dance-pop, 124 BPM",
+   "n": 5,
+   "out": "A high-energy 124 BPM Korean girl group dance-pop anthem built around punchy four-on-the-floor kicks, bouncy syncopated synth bass, and bright brass stabs. Crisp claps, sidechained pads, and sparkling arpeggios drive the upbeat, confident groove. Dynamic multi-part female vocals alternate between rhythmic, charismatic chant-rap verses, soaring pre-chorus melodies, and a wide, layered hook sung in tight, polished unison with playful ad-libs. The production is ultra-glossy and hyper-compressed with shimmering highs and tight low-end weight. The track surges through a rising pre-chorus, explodes into a vibrant hook, navigates an intense half-time dance break, and finishes on a punchy, abrupt synth hit.",
+   "chars": 708,
+   "n_sent": 5,
+   "sent_len": [
+    155,
+    90,
+    197,
+    99,
+    163
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.23,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 19,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v2",
+   "seed": "S2 Korean boy group dance-pop, 124 BPM",
+   "n": 1,
+   "out": "Energetic 2020s Korean boy group dance-pop at 124 BPM driven by a punchy four-on-the-floor kick, rolling sub-bass, and crisp syncopated percussion. Staccato brass stabs and plucky synth arpeggios push the verse groove forward, opening into soaring supersaw chords and lush guitar strums in the chorus. Layered male vocals alternate between sharp, rhythmic rap deliveries in the verses and emotive, auto-tuned melodic belting with tight multi-part harmonies on the hook. Pristine, hyper-compressed modern pop mix with wide stereo imaging and dramatic riser sweeps. An explosive dance break peaks with distorted synth leads before a triumphant final chorus and hard stop.",
+   "chars": 669,
+   "n_sent": 5,
+   "sent_len": [
+    147,
+    153,
+    167,
+    93,
+    105
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.16,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 11,
+   "chunks_suno": 7
+  },
+  {
+   "set": "v2",
+   "seed": "S2 Korean boy group dance-pop, 124 BPM",
+   "n": 2,
+   "out": "Energetic 2020s Korean boy group dance-pop at 124 BPM driven by a punchy four-on-the-floor kick, rolling 16th-note hi-hats, and aggressive sidechained synth bass. Bright supersaw stabs and metallic percussion build dynamic intensity between sections. Layered male group vocals alternate between crisp, syncopated rap cadences and soaring, auto-tuned melodic choruses backed by gang chants and glossy falsetto ad-libs. The arrangement shifts from a tight, suspenseful intro to an explosive, maximalist chorus, followed by a halftime trap-infused bridge and a dramatic final drop with layered harmony stacks, ending abruptly on a clean sub-bass hit.",
+   "chars": 647,
+   "n_sent": 4,
+   "sent_len": [
+    162,
+    87,
+    166,
+    229
+   ],
+   "slots": [
+    "장르",
+    "구조",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.35,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v2",
+   "seed": "S2 Korean boy group dance-pop, 124 BPM",
+   "n": 3,
+   "out": "A high-octane 124 BPM K-pop boy group dance-pop anthem driven by electro-pop and future bass textures. A punchy sidechained four-on-the-floor kick and deep sub-bass anchor syncopated synth plucks and aggressive brass stabs. Dynamic male vocals alternate between rapid-fire rhythmic rap flows in the verses and soaring melodic belts with tight choir harmonies across the hook. Sweeping risers and pitch-bent vocal chops drive intense builds. The track opens with a filtered melodic motif, explodes into an anthemic multi-layered chorus, dips into an emotional piano-led bridge, and finishes on a kinetic final drop with sharp stop-time hits.",
+   "chars": 640,
+   "n_sent": 5,
+   "sent_len": [
+    102,
+    120,
+    151,
+    64,
+    199
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.31,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 8,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v2",
+   "seed": "S2 Korean boy group dance-pop, 124 BPM",
+   "n": 4,
+   "out": "High-octane modern Korean boy group dance-pop at 124 BPM, fusing aggressive electro-pop with hard-hitting bass house. A punchy four-on-the-floor kick and raspy, sidechained synth bass drive the groove beneath syncopated metallic percussion and bright supersaw chords. Versatile male group vocals shift seamlessly between crisp, rhythmic rap deliveries in the verses, emotive melodic pre-choruses, and explosive, multi-tracked gang harmonies on the anthemic hook. The production features a pristine, ultra-wide digital mix with laser-focused low end. The arrangement builds through tense risers and stuttering fills into massive drops, pivoting to a stripped-back half-time bridge before a grand, climactic final chorus.",
+   "chars": 719,
+   "n_sent": 5,
+   "sent_len": [
+    117,
+    149,
+    194,
+    86,
+    169
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "구조",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.24,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v2",
+   "seed": "S2 Korean boy group dance-pop, 124 BPM",
+   "n": 5,
+   "out": "High-energy 2020s K-pop dance-pop at 124 BPM. The groove locks in with a punchy four-on-the-floor kick, tight claps, and a driving, sidechained synth bassline. Piercing synth brass stabs and bright digital plucks trade space with sweeping FX risers. Dynamic male vocals alternate between rhythmic, staccato rap verses, soaring melodic pre-choruses, and powerful, multi-layered unison belts on the chorus. High-gloss, hyper-polished mix with laser-focused sub-bass and wide vocal spreads. The track builds from a crisp synth motif to an explosive drop, transitions through a half-time trap-influenced bridge, and concludes with intense vocal ad-libs.",
+   "chars": 649,
+   "n_sent": 6,
+   "sent_len": [
+    45,
+    113,
+    89,
+    154,
+    82,
+    161
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "구조",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v2",
+   "seed": "S3 Korean ballad, 68 BPM",
+   "n": 1,
+   "out": "A poignant modern Korean ballad set at a slow 68 BPM in 4/4 time. The arrangement opens on intimate, melancholic grand piano voicings and delicate nylon acoustic guitar arpeggios, creating a fragile emotional space. A solo cello introduces lush orchestral strings that swell into the sweeping chorus, supported by a warm bassline and deep, slow-blooming drum kit dynamics with crisp cross-stick accents. The lead vocal begins breathy and restrained, ascending into impassioned, belted head voice with expressive vibrato. The mix is pristine and expansive, washed in luminous hall reverb, rising to a dramatic, tear-stained climax before tapering to an exposed piano finish.",
+   "chars": 673,
+   "n_sent": 5,
+   "sent_len": [
+    65,
+    149,
+    187,
+    116,
+    152
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "보컬",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.23,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v2",
+   "seed": "S3 Korean ballad, 68 BPM",
+   "n": 2,
+   "out": "A sweeping 68 BPM Korean orchestral ballad centered on emotional vulnerability and dramatic dynamic contrast. An intimate grand piano and delicate nylon guitar establish a tender verse foundation beneath a breathy, emotive vocal. Lush cinematic strings enter subtly, swelling into rich harmonic layers alongside warm electric bass and slow-burning drum kit accents. The vocal ascends from restrained, conversational tones to powerful, resonant belting with sustained vibrato during the soaring climax. Polished, spacious mix with shimmering plate reverb and warm low end, concluding with a fragile piano coda that fades into silence.",
+   "chars": 633,
+   "n_sent": 5,
+   "sent_len": [
+    109,
+    119,
+    135,
+    135,
+    131
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "리듬·저역",
+    "보컬",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.21,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 11,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v2",
+   "seed": "S3 Korean ballad, 68 BPM",
+   "n": 3,
+   "out": "A poignant Korean ballad set at a slow 68 BPM in 4/4 time. An expressive, intimate vocal moves from fragile, breathy lower-register verses into passionate, soaring chest-voice climaxes with dramatic vibrato. The arrangement opens with warm grand piano chords and subtle acoustic guitar picking. Lush orchestral strings swell across the choruses, anchored by deep bass warmth and restrained cross-stick percussion that develops into full, emotive drums. The mix features pristine high-end clarity, wide stereo string imaging, and cinematic hall reverb. A sweeping dynamic arc builds toward a grand emotional peak before gently fading out on an unresolved piano coda.",
+   "chars": 665,
+   "n_sent": 6,
+   "sent_len": [
+    58,
+    148,
+    86,
+    157,
+    98,
+    113
+   ],
+   "slots": [
+    "장르",
+    "보컬",
+    "리드·화성",
+    "리듬·저역",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.17,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v2",
+   "seed": "S3 Korean ballad, 68 BPM",
+   "n": 4,
+   "out": "A poignant contemporary Korean ballad at 68 BPM with a classic emotional K-drama arc. The arrangement opens with a delicate acoustic grand piano and fragile, breathy vocals before swelling with lush orchestral strings, warm electric bass, and a soft-hitting, resonant pop drum kit. Rich minor-to-major harmonic progressions build dramatic tension. The vocal transitions from intimate, whispered lower registers in the verses to soaring, impassioned belts with expressive vibrato across the climactic choruses. Modern studio production features wide cinematic string panning, shimmering plate reverb, and pristine vocal clarity, resolving into a quiet, unresolved solo piano coda.",
+   "chars": 679,
+   "n_sent": 5,
+   "sent_len": [
+    85,
+    195,
+    65,
+    161,
+    169
+   ],
+   "slots": [
+    "장르",
+    "구조",
+    "구조",
+    "보컬",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v2",
+   "seed": "S3 Korean ballad, 68 BPM",
+   "n": 5,
+   "out": "A sweeping contemporary Korean ballad at a deliberate 68 BPM. An intimate, emotive vocal begins with breathy, vulnerable phrasing over delicate grand piano arpeggios and warm ambient pads. The arrangement gradually expands, introducing a lush, cinematic string orchestra and subtle acoustic guitar strums. By the second verse, deep bass and a soft, echoing snare anchor the slow-burning groove. The piece swells into a soaring, tearful climax driven by full strings, resonant cymbal swells, and impassioned high-register vocal belting, before subsiding into a quiet, tender solo piano outro enveloped in spacious studio reverb.",
+   "chars": 627,
+   "n_sent": 5,
+   "sent_len": [
+    61,
+    126,
+    116,
+    88,
+    232
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "리듬·저역",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.37,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v2",
+   "seed": "S4 Korean trot, 76 BPM",
+   "n": 1,
+   "out": "Sentimental slow Korean trot ballad at 76 BPM with a swaying, nostalgic pulse. A mournful accordion and nylon-string guitar open with weeping counter-melodies before a steady rhythm section enters with soft rim clicks and a resonant bassline. Lush string arrangements and warm brass swells elevate the emotional tension across dynamic minor-to-relative-major harmonic shifts. A passionate lead vocal delivers distinctive trot vocal breaks and rich vibrato, building from an intimate, sorrowful verse to a full-throated, dramatic chorus. The mix remains warm and spacious with vintage plate reverb, climaxing with soaring strings before a tender accordion outro ritardando.",
+   "chars": 672,
+   "n_sent": 5,
+   "sent_len": [
+    78,
+    163,
+    132,
+    160,
+    135
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "구조",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 10,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S4 Korean trot, 76 BPM",
+   "n": 2,
+   "out": "A slow-tempo Korean trot ballad set at 76 BPM, drenched in bittersweet longing and dramatic emotion. A weeping accordion and tender nylon-string guitar establish a swaying, deliberate slow foxtrot rhythm alongside a subtle kick and brushed snare. A passionate lead vocal delivers deep vibrato and signature sorrowful vocal breaks (kkeok-ki), framed by sweeping melodrama. Lush orchestral strings and a melancholic alto saxophone provide weeping counter-melodies in the choruses. The production maintains a warm, analog-style reverb with pristine vocal focus, building from a sparse, reflective verse into an intensely expressive climax, ending on a soft, lingering accordion chord.",
+   "chars": 681,
+   "n_sent": 5,
+   "sent_len": [
+    100,
+    145,
+    124,
+    106,
+    202
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "리드·화성",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.3,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S4 Korean trot, 76 BPM",
+   "n": 3,
+   "out": "Dramatic Korean trot ballad at a deliberate 76 BPM with a swaying slow-trot groove. Expressive accordion and weeping nylon-string guitar weave around a warm electric bass and steady rimshot percussion. Sweeping orchestral strings and subtle vibrato-laden electric guitar fills expand the emotional space during the choruses. A passionate lead vocal delivers rich kkeokk-ki melodic breaking techniques, deep vibrato, and heartfelt yearning. The mix is warm and cinematic, starting intimate and fragile before building into a tearful, grand crescendo and settling into a tender, unresolved accordion fadeout.",
+   "chars": 606,
+   "n_sent": 5,
+   "sent_len": [
+    83,
+    117,
+    122,
+    114,
+    166
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "리드·화성",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 10,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S4 Korean trot, 76 BPM",
+   "n": 4,
+   "out": "A poignant Korean ballad trot at 76 BPM, guided by an emotional, swaying rhythm. Intimate accordion motifs and warm nylon-string guitar establish a nostalgic core over soft brushed percussion and a melodic electric bassline. Lush orchestral strings and plaintive saxophone fills swell to support the dramatic chorus. The vocalist leads with deep emotive yearning, executing signature trot ornamentation, soulful pitch bends, and rich vibrato with theatrical intensity. The production features a polished, broadcast-ready warmth with expansive plate reverb on the vocals, building from a gentle, reflective verse into an impassioned orchestral climax before resolving on a lingering solo accordion.",
+   "chars": 697,
+   "n_sent": 5,
+   "sent_len": [
+    80,
+    143,
+    91,
+    151,
+    228
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "리드·화성",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.33,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S4 Korean trot, 76 BPM",
+   "n": 5,
+   "out": "A sentimental Korean trot ballad set at 76 BPM, driven by an emotive, swaying 4/4 groove. A weeping solo alto saxophone and tremolo accordion trade nostalgic melodies over gentle nylon-string guitar comping, warm bass, and a soft rimshot beat. The vocal delivers passionate, melancholic phrasing rich with traditional trot flexions and wide, expressive vibrato. The verses remain intimate and subdued, gradually swelling into sweeping brass accents, lush retro synth strings, and subtle backing harmonies in the chorus. The arrangement builds to an impassioned, sorrowful climax before resolving on a lingering, heartfelt saxophone cadence.",
+   "chars": 640,
+   "n_sent": 5,
+   "sent_len": [
+    89,
+    153,
+    117,
+    157,
+    120
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.19,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 2
+  },
+  {
+   "set": "v2",
+   "seed": "S5 Korean hip-hop, 95 BPM",
+   "n": 1,
+   "out": "A polished Korean hip-hop track at a steady 95 BPM, blending jazzy boom-bap textures with sleek modern trap bounce. Muted Rhodes chords and pitched guitar licks establish a moody, reflective atmosphere over swinging unquantized hi-hats, a snappy snare, and warm, rounded sub-bass. A charismatic rapper transitions fluidly between syncopated, rapid-fire flows and smooth, melodic auto-tuned hook lines. The mix is crisp and intimate, holding vocals upfront with subtle stereo delay throws. The track builds from a filtered melodic intro into a hard-hitting groove, peaks during the lushly harmonized chorus, and resolves on solo keys.",
+   "chars": 633,
+   "n_sent": 5,
+   "sent_len": [
+    115,
+    164,
+    120,
+    86,
+    144
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.23,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S5 Korean hip-hop, 95 BPM",
+   "n": 2,
+   "out": "Modern Korean hip-hop paced at a bouncy 95 BPM with a laid-back boom-bap swing merged with trap production. Melancholic electric piano chords and subtle jazz guitar chops establish a moody harmonic base over sliding 808 basslines, crisp rimshots, and skittering hi-hats. A versatile Korean-style rap vocal delivers rhythmic, syncopated verses with dynamic cadence shifts, transitioning seamlessly into smooth, melodically tuned hooks layered with tight harmonies. The mix balances deep analog low-end warmth with pristine, wide vocal presence. It builds from an intimate piano-led intro to an energetic, layered chorus before resolving on a gentle, tape-filtered outro.",
+   "chars": 669,
+   "n_sent": 5,
+   "sent_len": [
+    107,
+    162,
+    192,
+    79,
+    125
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.19,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S5 Korean hip-hop, 95 BPM",
+   "n": 3,
+   "out": "A polished Korean hip-hop track at 95 BPM blending melodic trap sensibilities with boom-bap swing. A warm, swung drum groove anchors the beat, propelled by punchy rimshots, crisp hi-hat rolls, and deep 808 sub-bass. Chipped jazz piano chords and moody Rhodes pads provide soulful harmonic texture beneath subtle, glossy synth accents. A confident male vocalist alternates between fast, syncopated rap cadences and a catchy, melodic sing-rap chorus. The mix is crisp and upfront with tight spatial delays on ad-libs. The arrangement opens with filtered piano, drops into an infectious head-nodding groove, and winds down to a soft Rhodes outro.",
+   "chars": 643,
+   "n_sent": 6,
+   "sent_len": [
+    98,
+    116,
+    118,
+    113,
+    66,
+    127
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S5 Korean hip-hop, 95 BPM",
+   "n": 4,
+   "out": "Modern Korean hip-hop at 95 BPM with a laid-back, late-night bounce. A punchy boom-bap rhythm combines hard-hitting kicks, crisp snares, and low-slung 808 sub-bass, swung slightly for a head-nodding groove. Atmospheric chopped electric piano and delicate, detuned plucked string accents establish a moody, introspective harmonic bed. A confident rap vocal alternates dynamic, syncopated verse cadences with a smooth, melodic sing-rap chorus layered in subtle harmonies. The mix keeps the low end tight and drums upfront, opening with filtered keys and resolving into a stripped-back outro over lingering instrumental loops.",
+   "chars": 623,
+   "n_sent": 5,
+   "sent_len": [
+    68,
+    137,
+    126,
+    135,
+    153
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 2
+  },
+  {
+   "set": "v2",
+   "seed": "S5 Korean hip-hop, 95 BPM",
+   "n": 5,
+   "out": "Modern Korean hip-hop set at a relaxed 95 BPM, fusing crisp boom-bap swing with contemporary trap low-end. The rhythm section features a punchy, compressed kick-snare pattern, unquantized swinging hi-hats, and a rounded 808 sub. Dusty Rhodes electric piano chords and chopped jazz guitar licks anchor the melancholic harmonic bed, dusted with subtle vinyl crackle. A dynamic male vocal alternates between rhythmic, conversational rap delivery in the verses and smooth, melodic auto-tuned hooks. The arrangement opens with filtered keys, hits full stride in the verses, widens with stacked vocal harmonies in the chorus, and fades out over a solo Rhodes riff.",
+   "chars": 658,
+   "n_sent": 5,
+   "sent_len": [
+    106,
+    121,
+    135,
+    129,
+    163
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S6 Korean indie rock band, 140 BPM",
+   "n": 1,
+   "out": "Modern Korean indie rock at an energetic 140 BPM, balancing nostalgic melodic warmth with crisp garage-pop drive. The dynamic rhythm section features a tight, driving drum groove and bouncy melodic bass guitar. Interlocking electric guitars juxtapose jangly, chorus-soaked clean arpeggios against punchy overdriven rhythm strumming, complemented by subtle vintage synth pads. An emotive, youthful lead vocal shifts from intimate, breathy verses to a soaring, impassioned chorus with layered harmonies. The mix favors warm studio room ambiance and punchy transients, building from a distinctive guitar riff into an expansive, anthemic chorus, concluding with an exhilarating instrumental crescendo.",
+   "chars": 697,
+   "n_sent": 5,
+   "sent_len": [
+    113,
+    96,
+    164,
+    125,
+    195
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "구조",
+    "리드·화성"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.28,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 10
+  },
+  {
+   "set": "v2",
+   "seed": "S6 Korean indie rock band, 140 BPM",
+   "n": 2,
+   "out": "Uptempo Korean indie rock driving at 140 BPM with an energetic, bittersweet edge. Rhythmic, jangly electric guitars trade melodic motifs with fuzzy rhythm chords over a melodic, running bassline and crisp, punchy drums. Emotive, clear lead vocals deliver intimate, conversational verses before pushing into impassioned, soaring dynamic choruses doubled with light harmonies. Sparkling chorus pedals, vintage spring reverb, and warm tape saturation frame the mix with retro warmth. The track opens on an interlocking guitar riff, surges into soaring full-band choruses, and resolves on a climactic instrumental crescendo with sustained feedback.",
+   "chars": 644,
+   "n_sent": 5,
+   "sent_len": [
+    81,
+    137,
+    154,
+    105,
+    163
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "구조",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v2",
+   "seed": "S6 Korean indie rock band, 140 BPM",
+   "n": 3,
+   "out": "Driving 140 BPM Korean indie rock driven by urgent, angular dual-guitar interplay and a punchy rhythm section. A bouncy, melodic bassline locks with crisp live drums featuring a dynamic four-on-the-floor pulse and splashy cymbals. Clean, jangly rhythm guitars contrast with overdriven lead lines soaked in subtle tape delay. The lead vocal balances youthful, conversational intimacy in the verses with soaring, impassioned belting in the anthemic choruses. An energetic guitar riff introduces the track, dynamic verses swell into euphoric hooks, and the song climaxes in an emotional, guitar-fueled bridge before a tight, ringing final hit.",
+   "chars": 640,
+   "n_sent": 5,
+   "sent_len": [
+    110,
+    119,
+    93,
+    131,
+    183
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.29,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v2",
+   "seed": "S6 Korean indie rock band, 140 BPM",
+   "n": 4,
+   "out": "Uptempo Korean indie rock at a driving 140 BPM, capturing the energetic, bittersweet emotion of the Hongdae band scene. The groove pushes forward with punchy, live-kit drums, tight basslines, and interlocking dual electric guitars, alternating chiming arpeggios with overdriven rhythm strums. An earnest, youthful lead vocal shifts from understated, breathy storytelling in the verses to an impassioned, soaring delivery on the anthemic hooks. The production balances garage-band grit with modern clarity, framed by bright spring reverb. The track launches from an energetic guitar riff into dynamic verses, swelling to an explosive final chorus that finishes on a ringing chord sustain.",
+   "chars": 687,
+   "n_sent": 5,
+   "sent_len": [
+    119,
+    172,
+    150,
+    93,
+    149
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.22,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v2",
+   "seed": "S6 Korean indie rock band, 140 BPM",
+   "n": 5,
+   "out": "High-energy 140 BPM Korean indie rock track balancing nostalgic melancholy with driving anthemic momentum. A punchy live drum kit propels a steady four-on-the-floor beat, locking tightly with a melodic, running bassline. Jangly chorus-soaked rhythm guitars contrast with shimmering, angular lead guitar hooks and subtle analog synth pads. An emotive male vocal transitions from intimate, breathy low tones in the verses to soaring, impassioned belts in the chorus, bathed in lush spring reverb. The mix remains warm and dynamic with tape-saturated presence, building from a sparse guitar riff intro into a cathartic, wall-of-sound climax before a sudden, ringing cutoff.",
+   "chars": 670,
+   "n_sent": 5,
+   "sent_len": [
+    106,
+    113,
+    117,
+    155,
+    175
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "구조",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v2",
+   "seed": "S7 R&B slow jam, 70 BPM",
+   "n": 1,
+   "out": "A late-night contemporary R&B slow jam at an intimate 70 BPM. A deep, rounded sub-bass underpins a relaxed half-time groove led by crisp finger snaps, soft rimshots, and gently swung hi-hats. Lush Fender Rhodes chords trace warm extended harmonies, framed by ambient synth pads and delicate electric guitar fills. The close-mic lead vocal moves effortlessly between breathy chest tones and soaring falsetto runs, enveloped in wide, multi-tracked harmony stacks. The track unfolds from a sparse, simmering verse into an emotionally rich chorus, peaking with expressive vocal ad-libs before dissolving into a soft, echoing Rhodes outro.",
+   "chars": 634,
+   "n_sent": 5,
+   "sent_len": [
+    61,
+    129,
+    121,
+    147,
+    172
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v2",
+   "seed": "S7 R&B slow jam, 70 BPM",
+   "n": 2,
+   "out": "A sensual 70 BPM contemporary R&B slow jam built on a deep, unhurried half-time groove. Lush Fender Rhodes electric piano lays down rich extended ninth chords, complemented by warm analog synth pads and melodic, muted electric guitar fills. A round 808 sub-bass locks with crisp snap-infused percussion and subtle swung hi-hats. Sultry, emotive vocals glide between intimate close-mic chest voice and airy falsetto, supported by silky, wide-panned multi-tracked vocal harmonies. The track builds from an understated, atmospheric intro into an immersive, harmonically rich chorus, before easing into a lingering, reverb-drenched fade-out.",
+   "chars": 637,
+   "n_sent": 5,
+   "sent_len": [
+    87,
+    152,
+    87,
+    149,
+    158
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "리듬·저역",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v2",
+   "seed": "S7 R&B slow jam, 70 BPM",
+   "n": 3,
+   "out": "Late 1990s-inspired contemporary R&B slow jam set at a sensual 70 BPM. A laid-back half-time groove anchors the track with deep sub-bass, crisp finger snaps, and delicate swung hi-hats. Warm Fender Rhodes chords and muted nylon-string guitar licks provide lush harmonic movement beneath airy analog synth pads. The soulful lead vocal moves seamlessly from an intimate, smoky chest register to breathy falsetto runs, wrapped in tight, velvety backing harmonies. The mix is warm and spacious, featuring subtle plate reverb on ad-libs and a tight, modern low-end. The arrangement blooms from a stripped-down verse into an immersive, harmonic chorus, eventually drifting into a soft, ad-lib-laden fade-out.",
+   "chars": 702,
+   "n_sent": 6,
+   "sent_len": [
+    70,
+    114,
+    124,
+    149,
+    99,
+    141
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v2",
+   "seed": "S7 R&B slow jam, 70 BPM",
+   "n": 4,
+   "out": "Late-90s inspired R&B slow jam paced at a deliberate 70 BPM with a deep half-time groove. Tremolo-soaked Rhodes chords and muted jazz guitar fills outline warm, minor-ninth harmonies over a round sine-wave sub bass and crisp, pocketed rimshots. The intimate, soulful lead vocal glides effortlessly between breathy chest tones and melismatic falsetto, doubled by lush multi-tracked backing harmonies in the hook. The mix stays close, warm, and velvety with vintage plate reverb and rounded low-end saturation. The song builds from an understated electric piano intro into rich, layered choruses, peaking with passionate vocal ad-libs over an extended, sensual outro fade.",
+   "chars": 670,
+   "n_sent": 5,
+   "sent_len": [
+    89,
+    154,
+    166,
+    96,
+    161
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.24,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v2",
+   "seed": "S7 R&B slow jam, 70 BPM",
+   "n": 5,
+   "out": "A sultry 70 BPM contemporary R&B slow jam with a laid-back, swung groove. A warm Rhodes electric piano and delicate, muted neo-soul guitar licks provide lush harmonic beds over deep sub-bass and a crisp, unhurried pocket of brushed rimshots and soft hi-hats. An intimate, emotive vocal glides between tender chest voice and airy falsetto, supported in the chorus by lush, multi-tracked vocal harmonies. The arrangement opens with solo electric keys, builds dynamic warmth with swelling analog synth pads, introduces expressive vocal ad-libs over the bridge, and dissolves into an intimate, repeating groove fade.",
+   "chars": 612,
+   "n_sent": 4,
+   "sent_len": [
+    73,
+    184,
+    143,
+    209
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.34,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S8 Drift phonk",
+   "n": 1,
+   "out": "High-energy drift phonk driven by aggressively distorted, chromatic 808 cowbell leads and crushed, sliding sub-bass. The rhythm locks into a punishing, fast-paced trap groove with machine-gun hi-hat rolls, punchy rim-snare cracks, and extreme sidechain ducking. Pitched-down, gritty Memphis rap vocal samples loop rhythmically through vintage tape saturation and bandpass filters. The arrangement opens with a dry, filtered melody before detonating into a relentless, bass-heavy drop. Tension peaks through stutter edits, white-noise risers, and aggressive synth layers, culminating in an intense, sustained groove before an abrupt, slamming cutoff.",
+   "chars": 649,
+   "n_sent": 5,
+   "sent_len": [
+    116,
+    144,
+    118,
+    103,
+    164
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "믹스",
+    "구조",
+    "리듬·저역"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.25,
+   "bpm_kept": null,
+   "bpm_any": false,
+   "key": false,
+   "chunks": 18,
+   "chunks_suno": 2
+  },
+  {
+   "set": "v2",
+   "seed": "S8 Drift phonk",
+   "n": 2,
+   "out": "Modern drift phonk with an aggressive, adrenaline-fueled bounce. An overdriven, tuned 808 cowbell leads with a frenetic minor-pentatonic hook over blown-out, saturated sub-bass glides. The drums deliver relentless 160 BPM half-time momentum with rapid trap hi-hat rolls, snapping clap-snares, and hard-clipped kicks. Hypnotic, pitched-down Memphis rap vocal chops loop through heavy tape distortion and filtered delays. The mix is characterized by extreme soft-clipping, analog grit, and heavy sidechain pumping. Opening with a filtered lo-fi melody and atmospheric vinyl crackle, it abruptly drops into wall-to-wall bass weight, surges through a stuttering breakdown, and slams into a final explosive refrain before an abrupt stop.",
+   "chars": 732,
+   "n_sent": 6,
+   "sent_len": [
+    64,
+    119,
+    131,
+    102,
+    92,
+    219
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.3,
+   "bpm_kept": null,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 17,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v2",
+   "seed": "S8 Drift phonk",
+   "n": 3,
+   "out": "High-octane drift phonk driven by a blistering 160 BPM syncopated trap groove. Heavily saturated 808 bass glides aggressively beneath piercing, tuned cowbell leads that carve out repetitive minor-key hook melodies. Chopped, pitched-down Memphis vocal samples loop as dark rhythmic chants drenched in gritty tape saturation and plate reverb. Rapid-fire triplet hi-hats and hard clipping snares cut through intense sidechain compression. Opening with filtered cassette hiss and distant synth tones, the track detonates into a relentless, overdriven drop, strips back to a brooding half-time bridge, and snaps shut with an abrupt tape stop.",
+   "chars": 637,
+   "n_sent": 5,
+   "sent_len": [
+    78,
+    135,
+    125,
+    94,
+    201
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "믹스",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.32,
+   "bpm_kept": null,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 11,
+   "chunks_suno": 2
+  },
+  {
+   "set": "v2",
+   "seed": "S8 Drift phonk",
+   "n": 4,
+   "out": "High-octane drift phonk driven by a relentless 150 BPM trap groove. The track centers on distorted, pitch-bent Roland 808 cowbell leads executing sinister minor-key hooks over heavily saturated, sliding sub-bass and crisp, galloping hi-hat rolls. Chopped, pitched-down Memphis rap vocal chants provide rhythmic counterpoints and dark atmosphere through vintage tape degradation and bitcrushed filters. Aggressive sidechain compression forces synths and lo-fi textures to pump violently against a punchy kick. After a muffled, vinyl-scratched intro, the arrangement explodes into high-energy drops, escalating in percussive intensity before cutting abruptly on a dark, lingering reverb tail.",
+   "chars": 690,
+   "n_sent": 5,
+   "sent_len": [
+    67,
+    178,
+    154,
+    106,
+    181
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.26,
+   "bpm_kept": null,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 0
+  },
+  {
+   "set": "v2",
+   "seed": "S8 Drift phonk",
+   "n": 5,
+   "out": "Aggressive modern drift phonk driven by tuned, abrasive Roland cowbell riffs and heavily distorted, blown-out 808 sub-bass glides. A punishing 150 BPM trap groove powers the rhythm with clipping kick drums, rapid-fire triplets on the hi-hats, and punchy snares. Sliced and pitched-down Memphis rap vocal chops loop relentlessly in the mid-frequency pocket. The mix is raw, intentionally pushed into hard saturation and aggressive master-bus limiting with deep sidechain compression. The track launches from a filtered ambient motif into an explosive, relentless drop, pulls back momentarily into a sparse half-time bridge, and ends on an abrupt, echoing hit.",
+   "chars": 658,
+   "n_sent": 5,
+   "sent_len": [
+    130,
+    130,
+    94,
+    125,
+    175
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.27,
+   "bpm_kept": null,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 2
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean trot semi-ballad, 76 BPM",
+   "n": 1,
+   "out": "A polished modern Korean trot semi-ballad at 76 BPM blending poignant ballad sentiment with traditional melodic inflections. Delicate acoustic piano and nylon-string guitar open the track over a gentle, slow-swinging brush percussion pocket. Expressive accordion and sweeping orchestral strings provide rich counter-melodies as the arrangement blooms. An impassioned lead vocal delivers heartfelt, soaring melodies colored with authentic trot vocal flexions and wide, controlled vibrato. The mix maintains pristine contemporary clarity, warming the bottom end and suspending the strings in lush reverb before closing on an intimate, unresolved piano phrase.",
+   "chars": 657,
+   "n_sent": 5,
+   "sent_len": [
+    124,
+    116,
+    109,
+    135,
+    169
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "리드·화성",
+    "보컬",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 10,
+   "chunks_suno": 4
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean trot semi-ballad, 76 BPM",
+   "n": 2,
+   "out": "Korean trot semi-ballad at a poignant 76 BPM. A tender grand piano and nylon-string guitar establish a nostalgic, melancholic intro before swelling orchestral strings and subtle accordion accents enrich the arrangement. The rhythm section maintains a gentle, swaying ballad pulse driven by warm electric bass and soft rim-shot percussion with subtle syncopated trot lilt. An emotive lead vocal moves from intimate verse phrasing to a soaring belt, showcasing signature kkeokki vocal-bending ornaments and deep vibrato. The arrangement peaks in a dramatic, full-orchestra chorus before gently settling into a delicate, fading piano outro.",
+   "chars": 637,
+   "n_sent": 5,
+   "sent_len": [
+    45,
+    173,
+    151,
+    146,
+    118
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "리듬·저역",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.19,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 10,
+   "chunks_suno": 5
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean trot semi-ballad, 76 BPM",
+   "n": 3,
+   "out": "A heartfelt Korean trot semi-ballad at 76 BPM blending adult contemporary trot tradition with lush orchestral balladry. A warm acoustic piano and wistful accordion carry a gentle, swaying two-beat lilt, underpinned by soft brushed drums and a round electric bass. Expressive, weeping strings swell to reinforce the nostalgic sentiment. The lead vocal showcases classic trot ornamentation, subtle throat breaks, and wide vibrato, opening with intimate restraint before blooming into an impassioned, resonant chorus belt. The production features polished, wide reverbs and upfront vocal clarity, climaxing in dramatic orchestral unison before tapering to a tender, bittersweet piano outro.",
+   "chars": 687,
+   "n_sent": 5,
+   "sent_len": [
+    119,
+    143,
+    71,
+    183,
+    167
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "구조",
+    "구조",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.24,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 4
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean piano and strings ballad, 68 BPM",
+   "n": 1,
+   "out": "An emotional Korean drama ballad at 68 BPM driven by an intimate acoustic grand piano and a cinematic orchestral string section. Verses begin minimally with delicate rubato piano chords and warm solo cello, framing a vulnerable, breathy vocal. As emotional stakes rise, the arrangement expands into soaring full violin sweeps, rich viola counter-melodies, and soft, expressive floor tom swells. The chorus delivers a powerful, heartfelt vocal belt supported by wide dynamic strings and resonant piano chords, before gently subsiding into an aching, sparse piano outro.",
+   "chars": 568,
+   "n_sent": 4,
+   "sent_len": [
+    128,
+    114,
+    150,
+    173
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "리드·화성"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.3,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 4
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean piano and strings ballad, 68 BPM",
+   "n": 2,
+   "out": "A contemporary Korean OST piano ballad set at an intimate 68 BPM. The arrangement opens with delicate, rubato-leaning grand piano arpeggios paired with a warm, breathy vocal delivering subtle vibrato and profound vulnerability. Lush cinematic strings gradually swell from soft cello counterpoints in the verse into sweeping, layered violin sections that drive dynamic emotional peaks. Subdued timpani and light orchestral percussion enter to anchor the bridge, pushing the vocal into a soaring, full-chested belt. The mix maintains pristine acoustic warmth and expansive hall reverb, culminating in an impassioned dramatic crescendo before retreating to a gentle, unresolved piano motif.",
+   "chars": 687,
+   "n_sent": 5,
+   "sent_len": [
+    65,
+    161,
+    156,
+    128,
+    173
+   ],
+   "slots": [
+    "장르",
+    "구조",
+    "리드·화성",
+    "보컬",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 1
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean piano and strings ballad, 68 BPM",
+   "n": 3,
+   "out": "A tender Korean ballad at 68 BPM driven by emotive grand piano arpeggios and a lush, sweeping orchestral string section. A passionate, breathy vocal leads with intimate fragility in the lower register, gradually soaring into a powerful, resonant belt. Subtle nylon guitar accents and warm bass anchor the middle register, while dynamic cello countermelodies enrich the verses. The arrangement ascends from a delicate, rubato-leaning introduction to an expansive, cinematic climax featuring full string swells and gentle orchestral percussion, ultimately resolving into a hushed, fading solo piano finish wrapped in warm hall reverb.",
+   "chars": 632,
+   "n_sent": 4,
+   "sent_len": [
+    120,
+    130,
+    124,
+    255
+   ],
+   "slots": [
+    "장르",
+    "보컬",
+    "리드·화성",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.4,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 2
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean electropop, 125 BPM",
+   "n": 1,
+   "out": "Modern Korean electropop at 125 BPM driven by a punchy four-on-the-floor kick, crisp layered claps, and a pumping sidechained synth bass. Bright digital plucks and shimmering arpeggiated leads establish an infectious groove in the verse, escalating with rising white noise and risers into an explosive chorus rich with glossy supersaws. Polished, dynamic vocals shift smoothly from breathy, intimate verses to powerful, auto-tuned hook deliveries with tight vocal chops. The bridge strips back to filtered chords and building snare rolls before a final, vibrant chorus that resolves on a sharp rhythmic stop.",
+   "chars": 608,
+   "n_sent": 4,
+   "sent_len": [
+    137,
+    198,
+    133,
+    137
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.23,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 11,
+   "chunks_suno": 5
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean electropop, 125 BPM",
+   "n": 2,
+   "out": "A polished Korean electropop arrangement at 125 BPM, driven by a punchy four-on-the-floor kick, rubbery sidechained synth bass, and sparkling digital plucks. Breathy, agile lead vocals navigate crisp verses before ascending into soaring, multi-tracked vocal harmonies in the hook. The chorus erupts with wide supersaw chords, gated noise sweeps, and syncopated snare rolls. A dynamic bridge strips the drums back for lush vocoder pads and emotional falsetto before a hyper-charged final drop delivers peak festival-pop energy, concluding on an abrupt, resonant synth hit.",
+   "chars": 571,
+   "n_sent": 4,
+   "sent_len": [
+    157,
+    122,
+    92,
+    197
+   ],
+   "slots": [
+    "장르",
+    "보컬",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.35,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 4
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean electropop, 125 BPM",
+   "n": 3,
+   "out": "High-energy 125 BPM Korean electropop built around a driving four-on-the-floor groove and sidechained saw chords. Rubbery synth basslines and glittering 16th-note arpeggios lock with crisp, layered modern claps. Dynamic, polished vocals pivot effortlessly from airy, rhythmic verses into soaring, harmonized belt tones and energetic gang chants on the hook. The intro introduces filtered synth plucks and pitch-shifted vocal chops, swelling through an intensifying riser into a vibrant, maximalist chorus. A brief, syncopated half-time bridge offers contrast before a final key-lifted climax that cuts cleanly on an echo-soaked downbeat.",
+   "chars": 637,
+   "n_sent": 5,
+   "sent_len": [
+    113,
+    97,
+    145,
+    147,
+    131
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.21,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 4
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean bubblegum pop, 126 BPM",
+   "n": 1,
+   "out": "Upbeat, sparkling Korean bubblegum pop at 126 BPM driven by an energetic four-on-the-floor kick, bouncy side-chained synth bass, and crisp handclaps. Bright digital bell plucks and funky clean rhythm guitar chanks define the verses, swelling with synthetic brass stabs into an explosive, hyper-catchy chorus. Youthful female vocals deliver playful, sweet melodies accented by tight multi-tracked harmonies and energetic group chant hooks. The production is glossy and punchy, featuring wide stereo synth arpeggios and pitch-bent vocal chops. After a playful half-time bridge with rhythmic talk-singing, the final chorus surges with soaring high ad-libs, resolving on an abrupt, joyful chime hit.",
+   "chars": 695,
+   "n_sent": 5,
+   "sent_len": [
+    149,
+    158,
+    129,
+    102,
+    153
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.22,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 7
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean bubblegum pop, 126 BPM",
+   "n": 2,
+   "out": "Vibrant Korean bubblegum pop moving at an energetic 126 BPM. Driven by a bouncy four-on-the-floor kick, rubbery synth bass, and crisp syncopated handclaps. Bright plucky synth bells, fizzy brass stabs, and clean funk guitar chops create a colorful, dynamic backdrop. Youthful, sweet female lead vocals deliver infectious melodic phrases, backed by playful gang chants and tight multi-tracked harmonies. The mix is ultra-glossy and wide, opening with an effervescent chime hook, swelling through a drum-roll pre-chorus, exploding into a maximalist chorus, and wrapping up on an enthusiastic, punchy final chord.",
+   "chars": 610,
+   "n_sent": 5,
+   "sent_len": [
+    60,
+    94,
+    110,
+    135,
+    207
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.34,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 17,
+   "chunks_suno": 7
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean bubblegum pop, 126 BPM",
+   "n": 3,
+   "out": "Korean bubblegum pop at 126 BPM with an exuberant, sparkling electro-pop groove. Bouncy four-on-the-floor kicks and rubbery synth bass drive syncopated rhythm guitars, chirpy synth brass, and bright FM bell arpeggios. Youthful female vocals deliver crisp, cheerful melodies, bursting into playful group chants and tight multi-tracked harmonies in the hook. The verses lean into clean rhythm and percussive claps, blooming into an explosive, glittery chorus packed with gated snare fills and sweeping risers. The mix is glossy, punchy, and hyper-saturated with crisp high-end detail, ending abruptly on an upbeat group vocal accent.",
+   "chars": 631,
+   "n_sent": 5,
+   "sent_len": [
+    80,
+    136,
+    138,
+    150,
+    123
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "리듬·저역",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.19,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 3
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean hip-hop dance-pop boy group, 124 BPM",
+   "n": 1,
+   "out": "Contemporary Korean hip-hop dance-pop at a driving 124 BPM, blending hard trap grit with club-ready electro energy. Distorted 808 sub-bass and brass stabs trade off with punchy four-on-the-floor dance beats and rapid hi-hat rolls. Male group vocals cycle dynamically between rapid, rhythmic rap deliveries and soaring, polished melodic harmonies. The track opens with dark synth plucks, builds through an escalating, risers-heavy pre-chorus, and explodes into an anthemic chant hook over high-octane synth leads. The bridge pulls back into atmospheric R&B chords before a final, layered dance-break climax hits with sharp syncopated hits.",
+   "chars": 638,
+   "n_sent": 5,
+   "sent_len": [
+    115,
+    114,
+    115,
+    165,
+    125
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 2
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean hip-hop dance-pop boy group, 124 BPM",
+   "n": 2,
+   "out": "High-energy Korean dance-pop fused with aggressive hip-hop at 124 BPM. The rhythm section pairs a driving four-on-the-floor kick with sharp trap snares, rapid hi-hat rolls, and heavily saturated 808 bass slides. Piercing sawtooth synth leads and metallic brass stabs punctuate the groove. Versatile male vocals shift seamlessly from fast-cadence rap verses to soaring, multi-tracked melodic hooks and punchy gang shouts. Modern, high-gloss production emphasizes razor-sharp transients and wide stereo polish. The arrangement builds from a tense, percussive verse into an expansive pre-chorus, exploding into an anthemic, choreography-ready chorus drop before a climactic final breakdown.",
+   "chars": 687,
+   "n_sent": 6,
+   "sent_len": [
+    70,
+    140,
+    76,
+    131,
+    87,
+    178
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 5
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean hip-hop dance-pop boy group, 124 BPM",
+   "n": 3,
+   "out": "High-energy contemporary Korean dance-pop and hip-hop at 124 BPM. The production anchors on a punchy four-on-the-floor kick, rolling trap hi-hats, and a snarling 808 bassline layered with distorted brass stabs. Syncopated guitar plucks and stuttering synth arpeggios drive the verses before opening into wide supersaws for the chorus. Dynamic male vocal group delivery alternates between rhythmic, percussive rap bars and polished, emotive belting with dense gang-vocal hooks. Crisp, modern studio mix with tight sidechain compression. The track builds from a chant-driven intro to an explosive chorus, featuring a halftime trap bridge and an ecstatic, full-throttle finale.",
+   "chars": 674,
+   "n_sent": 6,
+   "sent_len": [
+    65,
+    144,
+    123,
+    141,
+    58,
+    138
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 6
+  },
+  {
+   "set": "pilot",
+   "seed": "EDM trap pop, 122 BPM",
+   "n": 1,
+   "out": "Modern EDM trap pop at 122 BPM fusing festival dance energy with slick radio appeal. A bright melodic synth pluck and syncopated snaps anchor the verse beneath polished, autotune-glazed pop vocals. The arrangement surges through a tension-filled riser with accelerating snare rolls, exploding into a dynamic drop dominated by sliding 808 sub-bass, metallic trap hi-hats, pitched vocal chops, and wide supersaw chords. Heavy sidechain compression pumps throughout the chorus, maintaining tight punch and clean low-end separation. The track alternates between intimate melodic breakdowns and explosive bass-heavy drops before resolving on a filtered synth motif.",
+   "chars": 660,
+   "n_sent": 5,
+   "sent_len": [
+    84,
+    112,
+    219,
+    110,
+    131
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "리듬·저역",
+    "믹스",
+    "리드·화성"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 11,
+   "chunks_suno": 1
+  },
+  {
+   "set": "pilot",
+   "seed": "EDM trap pop, 122 BPM",
+   "n": 3,
+   "out": "Energetic EDM trap pop at 122 BPM driven by a punchy half-time bounce and festival-ready electronic production. Crisp trap hi-hat rolls, pitched 808 sub-bass glides, and snappy layered claps lock with bright supersaw leads and plucky synth arpeggios. A clear, autotune-polished pop lead vocal delivers hook-heavy melodies, doubled by pitched vocal chops in the periphery. The arrangement builds through atmospheric, filtered synth pads and rising snare rolls into an explosive, sidechained drop. After a stripped-back melodic bridge, the final chorus hits with maximum dynamic impact, resolving into a lingering vocal echo.",
+   "chars": 623,
+   "n_sent": 5,
+   "sent_len": [
+    111,
+    138,
+    120,
+    123,
+    127
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 5
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean youth rock band, 150 BPM",
+   "n": 2,
+   "out": "Energetic Korean youth rock driven at 150 BPM with anthemic pop-punk and modern indie-rock influences. The rhythm section features punchy live drums and melodic, overdriven basslines, locked with layered electric guitars alternating between sparkling arpeggios and roaring power chords. Bright upright piano accents weave uplifting counter-melodies throughout. An earnest, youthful lead vocal delivers clear, emotive verses before soaring into belted, passionate chorus hooks reinforced by full gang harmonies. The mix is crisp, wide, and modern with tight low-end punch. An infectious guitar intro launches into dynamic verse-chorus builds, peaking in an ecstatic bridge breakdown and a ringing, high-energy finish.",
+   "chars": 716,
+   "n_sent": 6,
+   "sent_len": [
+    102,
+    183,
+    73,
+    149,
+    60,
+    144
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 5
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean youth rock band, 150 BPM",
+   "n": 3,
+   "out": "Modern Korean youth rock running at an energetic 150 BPM. A driving drum groove with bright cymbals and articulate, melodic basslines propels overdriven rhythm guitars and sparkling piano chord stabs. A clear, passionate youthful lead vocal shifts from earnest storytelling in the verses to soaring, emotional belts reinforced by stacked gang harmonies on the anthemic chorus. Twin lead guitars weave bright melodic counterpoints throughout. The mix is crisp and spacious, balancing punchy modern rock transients with lush vocal reverb. The track builds from an open guitar arpeggio intro into high-energy power-pop hooks, peaking in a triumphant, cathartic final chorus that ends on a resonant sustained chord.",
+   "chars": 711,
+   "n_sent": 6,
+   "sent_len": [
+    57,
+    142,
+    175,
+    64,
+    94,
+    174
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "리드·화성",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.24,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 4
+  },
+  {
+   "set": "pilot",
+   "seed": "Chill lo-fi R&B, 116 BPM",
+   "n": 1,
+   "out": "Mid-tempo chill lo-fi R&B at 116 BPM driven by a swung neo-soul pocket groove, soft rimshots, and a warm, rounded bassline. Detuned Rhodes piano layers drift with subtle tape flutter and crackle, punctuated by clean, muted electric guitar fills and warm ambient synth pads. Intimate, breathy vocals sit up close with lush three-part harmonies and light saturation. The arrangement opens on filtered keys, locks into an easy bounce for the verses, broadens dynamically in the choruses with silky backing stacks, and peacefully fades out over lingering guitar arpeggios and vinyl hiss.",
+   "chars": 583,
+   "n_sent": 4,
+   "sent_len": [
+    123,
+    149,
+    90,
+    218
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.37,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 3
+  },
+  {
+   "set": "pilot",
+   "seed": "Chill lo-fi R&B, 116 BPM",
+   "n": 2,
+   "out": "A breezy, laid-back lo-fi R&B track at 116 BPM anchored by a swung, syncopated pocket. Warbled Rhodes chords carrying lush jazz-extended harmonies provide harmonic warmth over tape-saturated drums and rounded sub-bass. A clean electric guitar adds subtle, melodic neo-soul plucks in the mid-range. An intimate, breathy vocal leads with effortless phrasing, dipping between smooth chest voice and floating falsetto ad-libs. The mix features soft high-end rolloff, vinyl texture, and gentle sidechain compression. The arrangement opens on filtered keys and ambient noise, locks into a buoyant groove, deepens with lush backing stacks, and gradually dissolves into a quiet, warm fade.",
+   "chars": 681,
+   "n_sent": 6,
+   "sent_len": [
+    86,
+    131,
+    78,
+    124,
+    88,
+    169
+   ],
+   "slots": [
+    "장르",
+    "믹스",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 17,
+   "chunks_suno": 2
+  },
+  {
+   "set": "pilot",
+   "seed": "Chill lo-fi R&B, 116 BPM",
+   "n": 3,
+   "out": "A breezy, downtempo-feel lo-fi R&B groove set at a brisk 116 BPM. The rhythm section features a bouncy, swung pocket with sidechained kicks, crisp rimshots, and subtle vinyl crackle under warm analog basslines. Warped Rhodes piano and chorus-drenched jazz guitar licks establish lush, melancholic harmony. An intimate, close-mic'd vocal glides effortlessly in a breathy head voice, layered with stacked falsetto harmonies and soft slapback delay. The track opens on filtered keys and texture, builds with syncopated percussion and melodic ad-libs, and dissolves into a hazy, tape-saturated instrumental outro.",
+   "chars": 609,
+   "n_sent": 5,
+   "sent_len": [
+    65,
+    144,
+    94,
+    140,
+    162
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 3
+  },
+  {
+   "set": "pilot",
+   "seed": "Afro-pop dance, 116 BPM",
+   "n": 1,
+   "out": "Vibrant Afro-pop dance moving at 116 BPM, driven by syncopated log drums, rolling shakers, and a bouncy, warm sub-bass groove. Bright, highlife-inspired clean electric guitar licks interlock with warm Rhodes chords and airy marimba accents. Smooth, charismatic lead vocals deliver rhythmic verses with expressive melodic cadence, backed by lush, layered call-and-response group harmonies. The arrangement builds from an intimate percussive intro into an explosive, dance-ready chorus, dipping into a stripped-back bridge before hitting a final euphoric hook that fades on infectious rhythmic interplay.",
+   "chars": 602,
+   "n_sent": 4,
+   "sent_len": [
+    126,
+    113,
+    147,
+    213
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.35,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 3
+  },
+  {
+   "set": "pilot",
+   "seed": "Afro-pop dance, 116 BPM",
+   "n": 2,
+   "out": "A buoyant contemporary Afro-pop dance track set at 116 BPM, driven by syncopated log drums, crisp shakers, and interlocking highlife guitar plucks. A warm, melodic sub-bass anchors breezy electric piano chords and punchy brass accents. Charismatic, rhythmically agile vocals deliver catchy melodic hooks with stacked call-and-response harmonies. The arrangement opens on clean guitar and light percussion, surges into a propulsive groove for the verses, expands with celebratory synth textures and heavy low-end in the chorus, and winds down through an energetic, percussion-heavy fadeout.",
+   "chars": 589,
+   "n_sent": 4,
+   "sent_len": [
+    147,
+    87,
+    109,
+    243
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.41,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 2
+  },
+  {
+   "set": "pilot",
+   "seed": "Afro-pop dance, 116 BPM",
+   "n": 3,
+   "out": "Contemporary Afro-pop dance track set at 116 BPM, driven by a syncopated kick-and-rimshot rhythm, crisp shakers, and resonant log drum thumps. Bright, clean highlife guitar plucks interlace with mellow electric piano chords and punchy synth bass. A charismatic lead vocalist alternates between rhythmic, spoken-inflected verses and smooth, melodic hooks, answered by rich call-and-response vocal harmonies. The track opens with isolated guitar and percussive vocal ad-libs, swells into an irresistible, dynamic chorus, strips down to percussive polyrhythms in the bridge, and culminates in a vibrant, dancefloor-ready climax before a tight fade.",
+   "chars": 645,
+   "n_sent": 4,
+   "sent_len": [
+    142,
+    103,
+    159,
+    238
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.37,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 1
+  },
+  {
+   "set": "pilot",
+   "seed": "Drift phonk",
+   "n": 1,
+   "out": "High-octane modern drift phonk driven by a fast, aggressive trap groove around 155 BPM. Saturated, heavily distorted 808 cowbells lead the abrasive melodic hook, supported by blown-out, gliding sub-bass and relentless rolling hi-hat patterns. Chopped, pitched-down Memphis rap vocal chants are looped rhythmically, treated with lo-fi tape flutter and slapback delay. An eerie, sidechained ambient synth pad hangs in the background to sustain dark momentum. The production embraces deliberate hard-clipping and extreme dynamic pumping. Opening with a filtered melodic motif, the track slams into a punishing main groove, sustains relentless energy across hypnotic variations, and cuts abruptly.",
+   "chars": 693,
+   "n_sent": 6,
+   "sent_len": [
+    87,
+    154,
+    123,
+    89,
+    77,
+    158
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "리드·화성",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.23,
+   "bpm_kept": null,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 0
+  },
+  {
+   "set": "pilot",
+   "seed": "Drift phonk",
+   "n": 2,
+   "out": "High-octane modern drift phonk driven by an aggressive trap groove at 160 BPM with relentless forward momentum. Saturated, metallic 808 cowbells hammer out a sinister minor-key lead hook, anchored by heavily overdriven, sliding sub-bass and blistering hi-hat rolls. Chopped and pitched-down Memphis rap vocal chants loop rhythmically in the background, treated with telephone EQ and gritty tape saturation. The production leans into deliberate clipping, extreme sidechain pumping, and lo-fi distortion for raw underground energy. An eerie filtered intro quickly erupts into a punishing, bass-heavy drop, cycling through intense syncopated variations before terminating on an abrupt, echoing sub-bass hit.",
+   "chars": 704,
+   "n_sent": 5,
+   "sent_len": [
+    111,
+    153,
+    140,
+    122,
+    174
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": null,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 1
+  },
+  {
+   "set": "pilot",
+   "seed": "Drift phonk",
+   "n": 3,
+   "out": "Aggressive modern drift phonk driven at 155 BPM by blown-out, overdriven 808 sub-bass glides and rapid, biting trap hi-hat rolls. The core melodic hook relies on saturated, chromatic 808 cowbell leads playing sharp, minor-scale figures alongside dark ambient synth pads. Heavily sidechained, pitched-down Memphis rap vocal samples loop rhythmically with gritty telephone filtering. The mix favors raw tape saturation and deliberate master-bus distortion for maximum impact. Starting with a filtered intro and screeching engine textures, the track explodes into a relentless driving groove, pauses briefly for a stuttering snare roll, and cuts out abruptly.",
+   "chars": 656,
+   "n_sent": 5,
+   "sent_len": [
+    129,
+    140,
+    110,
+    91,
+    182
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "리듬·저역"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.28,
+   "bpm_kept": null,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 2
+  },
+  {
+   "set": "pilot",
+   "seed": "EDM trap pop, 122 BPM",
+   "n": 2,
+   "out": "A polished modern EDM trap-pop crossover at 122 BPM, blending radio-friendly hooks with explosive club energy. The rhythm relies on a bouncy half-time trap groove driven by tuned 808 sub-bass slides, punchy claps, and rolling triplet hi-hats. Filtered pluck arpeggios and bright vocal chops guide the verses, setting up side-chained supersaw chords and driving synth leads in the chorus. Intimate, autotuned pop vocals glide through rhythmic verse cadences before soaring into an anthemic, layered hook. White-noise risers and rapid snare rolls escalate the tension, exploding into a high-impact drop and concluding on a clean, fading reverb tail.",
+   "chars": 647,
+   "n_sent": 5,
+   "sent_len": [
+    110,
+    131,
+    144,
+    115,
+    143
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.22,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 2
+  },
+  {
+   "set": "pilot",
+   "seed": "Korean youth rock band, 150 BPM",
+   "n": 1,
+   "out": "Modern Korean youth rock at 150 BPM with an anthemic, bittersweet energy. Chimey electric rhythm guitars and sparkling grand piano drive the uptempo rhythm, anchored by an articulate, melodic bassline and punchy, driving drum kit work. Passionate, clean youth lead vocals alternate between intimate, breathy verse phrasing and soaring, full-throated chorus belting supported by gang vocal harmonies. The arrangement begins with bright arpeggiated piano chords, builds through driving four-on-the-floor verse transitions, bursts into wide, distortion-layered choruses, and concludes on a high-energy guitar sustain.",
+   "chars": 614,
+   "n_sent": 4,
+   "sent_len": [
+    73,
+    161,
+    163,
+    214
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.35,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "G1 Korean bubblegum dance, 126 BPM",
+   "n": 1,
+   "out": "High-energy Korean bubblegum dance-pop at 126 BPM with bright, glossy production. Bouncy four-on-the-floor electro drums, rubbery synth bass, and sparkling arpeggios anchor the playful groove. Staccato brass hits and fizzy pluck melodies drive the verse into an explosive chorus layered with wide supersaws and stacked female group harmonies. Lead vocals are bright, spirited, and hyper-melodic, punctuated by cute spoken ad-libs and crisp gang chants. The arrangement builds from a bubbly synth intro through rhythmic verses, surges with a dynamic half-time trap-infused bridge, and finishes on an exuberant, celebratory hook with a tight vocal-cut ending.",
+   "chars": 657,
+   "n_sent": 5,
+   "sent_len": [
+    81,
+    110,
+    149,
+    109,
+    204
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.31,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 2
+  },
+  {
+   "set": "v4",
+   "seed": "G1 Korean bubblegum dance, 126 BPM",
+   "n": 2,
+   "out": "Early-2010s Korean bubblegum dance-pop at 126 BPM. A driving four-on-the-floor kick anchors bouncy electro-bassline grooves, syncopated clean funk guitar chops, and shimmering synth plucks. Cheerful female group vocals alternate between crisp, playful verses, sweet melodic harmonies, and bright unison chants. Glossy supersaw pads and brass stabs lift the choruses with explosive energy, while the mix stays ultra-punchy, wide, and polished. The arrangement launches with an effervescent arpeggiated intro, builds through dynamic drops and a soaring vocal bridge, peaking in a high-octane final chorus that cuts sharply on an energetic hook.",
+   "chars": 642,
+   "n_sent": 5,
+   "sent_len": [
+    50,
+    138,
+    120,
+    131,
+    199
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "리드·화성",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.31,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "G1 Korean bubblegum dance, 126 BPM",
+   "n": 3,
+   "out": "High-energy Korean bubblegum dance-pop at 126 BPM, led by punchy four-on-the-floor kicks and a bouncy, rubbery synth bassline. Sparkling polyphonic synth arpeggios, syncopated funk guitar chops, and staccato brass hits drive the verse into an explosive, kaleidoscopic chorus. Youthful, bright female vocals switch seamlessly between playful, rhythmic delivery in the verses and soaring, multi-tracked melodic hooks with energetic unison gang chants. The mix is glossy and hyper-compressed, featuring laser-focused transients, crisp layered handclaps, and shimmering top-end polish. The track builds through dynamic riser-filled pre-choruses, peaks with an infectious dance hook, and ends on a tight, cheerful vocal tag.",
+   "chars": 719,
+   "n_sent": 5,
+   "sent_len": [
+    126,
+    148,
+    173,
+    131,
+    137
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.19,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 19,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "G1 Korean bubblegum dance, 126 BPM",
+   "n": 4,
+   "out": "Late 2010s Korean bubblegum dance-pop driven by an energetic 126 BPM groove. A punchy four-on-the-floor kick anchors rubbery synth basslines, syncopated claps, and glittering sixteenth-note arpeggiators. Candy-coated bell plucks, bright brass stabs, and pitched vocal chops frame youthful female vocals delivered with bouncy rhythms, tight double-tracking, and stacked unison gang chants on the hooks. The production is hyper-polished, pristine, and stereo-wide with sparkling high-end sheen. An infectious chime intro sweeps into a buoyant verse, launching into an explosive, hook-stuffed chorus, taking a brief halftime detour in the bridge before a euphoric final chorus that cuts out on a sharp staccato beat.",
+   "chars": 713,
+   "n_sent": 5,
+   "sent_len": [
+    76,
+    126,
+    197,
+    90,
+    220
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.31,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v4",
+   "seed": "G1 Korean bubblegum dance, 126 BPM",
+   "n": 5,
+   "out": "Energetic Korean bubblegum dance pop at 126 BPM driven by a punchy four-on-the-floor kick and rubbery, bouncy synth bass. Bright FM plucks, fizzy arpeggios, and sugary supersaw chord stacks build an infectious, hyper-polished atmosphere. Youthful, bright female lead vocals deliver playful verses and soaring, doubled hook melodies interspersed with cheerful gang chants. Crisp claps and pristine 16th-note shakers keep the forward momentum tight and buoyant. The arrangement moves from a sparkling intro into explosive, wide-stereo choruses, dropping into a cheeky half-time rap bridge before surging into a sparkling finale with stacked vocal ad-libs.",
+   "chars": 653,
+   "n_sent": 5,
+   "sent_len": [
+    121,
+    115,
+    133,
+    87,
+    193
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "리듬·저역",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.3,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v4",
+   "seed": "G2 Korean bubblegum pop, 132 BPM",
+   "n": 1,
+   "out": "Bright Korean bubblegum pop at 132 BPM driven by a punchy four-on-the-floor beat, rubbery slap-synth bassline, and upbeat funky guitar chucks. Shimmering bell plucks, lush detuned supersaws, and brassy synth hits punctuate the groove with hyperactive cheer. A youthful female vocal unit trades playful, syncopated verses and spoken cute ad-libs, exploding into tightly harmonized, anthemic gang choruses. The production is ultra-glossy and wide with sparkling top-end saturation. Opening with a playful acapella chant, the track builds through energetic snare-roll pre-choruses into a dazzling, technicolor hook, culminating in a celebratory key-lift finale.",
+   "chars": 658,
+   "n_sent": 5,
+   "sent_len": [
+    142,
+    114,
+    146,
+    74,
+    178
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 1
+  },
+  {
+   "set": "v4",
+   "seed": "G2 Korean bubblegum pop, 132 BPM",
+   "n": 2,
+   "out": "Upbeat contemporary Korean bubblegum pop at 132 BPM driven by a bouncy four-on-the-floor groove and rubbery synth bass. Bright FM pluck synths and funky clean rhythm guitars set an infectious, sugary mood alongside crisp handclaps and sparkling digital percussion. Youthful, crystalline female vocals deliver pitch-perfect hooks with tight unison doubling, playful spoken ad-libs, and soaring stacked harmonies in the chorus. The arrangement opens on an earworm synth riff, builds through a surging pre-chorus with snappy snare rolls, and bursts into a maximalist chorus layered with fizzy supersaws, ending on an emphatic staccato accent.",
+   "chars": 639,
+   "n_sent": 4,
+   "sent_len": [
+    119,
+    144,
+    160,
+    213
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.33,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 11,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "G2 Korean bubblegum pop, 132 BPM",
+   "n": 3,
+   "out": "An infectious 132 BPM Korean bubblegum pop track bursting with candy-coated energy. The rhythm section pairs a bouncy plucked synth bass with punchy electronic kicks, snappy claps, and bright sixteenth-note hi-hats. Sparkling FM bells, funky rhythm guitars, and vibrant synth leads drive the buoyant major-key harmonies. Glossy, charismatic female lead vocals are supported by tight multi-part harmonies and playful gang-vocal chants. The track opens with an earworm synth hook, dials back for a syncopated verse, surges through a rising pre-chorus, and bursts into a layered, anthemic chorus before resolving on a crisp final hit.",
+   "chars": 631,
+   "n_sent": 5,
+   "sent_len": [
+    83,
+    131,
+    104,
+    113,
+    196
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.31,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "G2 Korean bubblegum pop, 132 BPM",
+   "n": 4,
+   "out": "High-energy modern Korean bubblegum pop at 132 BPM driven by a bouncy four-on-the-floor groove, punchy synth bass, and sparkling polyphonic plucks. Funky rhythm guitar chops and bright brass stabs accent syncopated claps and skittering hi-hats. Playful, youthful female lead vocals deliver rhythmic, upbeat verses and soaring, heavily stacked harmonies in the euphoric chorus, punctuated by cheerful spoken ad-libs. The arrangement opens with a catchy pitched-vocal motif, scales back for a bouncy verse, explodes into a maximalist chorus, and diverts into a playful halftime bridge before a sparkling, high-octane final chorus with a tight button finish.",
+   "chars": 655,
+   "n_sent": 4,
+   "sent_len": [
+    147,
+    96,
+    170,
+    239
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.36,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 7
+  },
+  {
+   "set": "v4",
+   "seed": "G2 Korean bubblegum pop, 132 BPM",
+   "n": 5,
+   "out": "Upbeat 132 BPM Korean bubblegum pop driven by an infectious four-on-the-floor groove and syncopated slap synth bass. Crystalline digital arpeggios, punchy brass stabs, and crisp acoustic rhythm guitars provide bright harmonic motion. Sweet, charismatic female lead vocals transition smoothly between rhythmic, spoken-word verses and soaring melodic lines, bolstered by tight unison gang chants and pitch-perfect backing harmonies. The mix is glossy, hyper-compressed, and wide, with pristine modern top-end. The track builds from a playful synth fanfare into an explosive, glittery chorus, concluding with an exuberant multi-vocal tag.",
+   "chars": 635,
+   "n_sent": 5,
+   "sent_len": [
+    116,
+    116,
+    196,
+    76,
+    127
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.2,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "E1 Korean electropop, 120 BPM",
+   "n": 1,
+   "out": "A polished Korean electropop track at 120 BPM powered by a punchy four-on-the-floor kick, syncopated claps, and a rubbery, sidechained synth bassline. Bright supersaw stabs and cascading digital arpeggios drive the energetic progression. Melodic, rhythmically agile vocals move seamlessly between breathy close-mic verses and soaring, multi-tracked pop hooks with crisp autotune polish. The arrangement opens on filtered synth plucks, swells through an accelerating snare-roll pre-chorus, bursts into an explosive, hook-heavy drop, dips into a minimal half-time bridge, and culminates in a maximalist final chorus before a tight synth decay.",
+   "chars": 641,
+   "n_sent": 4,
+   "sent_len": [
+    150,
+    86,
+    148,
+    254
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.4,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "E1 Korean electropop, 120 BPM",
+   "n": 2,
+   "out": "A polished, modern Korean electropop track set at a driving 120 BPM. The groove locks into a crisp four-on-the-floor kick, snappy claps, and a pumping, sidechained electro bassline. Glossy synth arpeggios and bright pluck melodies interplay with warm supersaw chord pads and pitched vocal chops. Energetic lead vocals transition effortlessly from rhythmic, fast-paced verses to an airy, rising pre-chorus, peaking with dynamic, multi-layered belts in the hook. The production carries pristine top-end sheen and modern stereo width, opening with a filtered motif, exploding into an anthemic dance-pop chorus, and concluding with a tight, punchy synth stinger.",
+   "chars": 658,
+   "n_sent": 5,
+   "sent_len": [
+    68,
+    112,
+    113,
+    164,
+    197
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.3,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 17,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "E1 Korean electropop, 120 BPM",
+   "n": 3,
+   "out": "Pulsing Korean electropop at a crisp 120 BPM, fusing glittering synthwave nostalgia with high-gloss modern dance-pop. A punchy four-on-the-floor kick anchors bouncy sidechained sub-bass and syncopated 16th-note hi-hats, while bright pluck synths and clean funk guitar chops energize the verses. Emotive, agile lead vocals shift seamlessly from breathy melodic verses into soaring, harmonized choruses backed by tight vocal chops. The mix is wide, luminous, and ultra-compressed with pristine top-end sparkle. Dynamic sweeps propel the track from an intimate, filtered intro into an explosive, hook-heavy chorus, resolving on a sharp vocal tag and decaying reverb tail.",
+   "chars": 668,
+   "n_sent": 5,
+   "sent_len": [
+    117,
+    176,
+    134,
+    78,
+    159
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.24,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "E1 Korean electropop, 120 BPM",
+   "n": 4,
+   "out": "A polished Korean electropop track at 120 BPM driven by a punchy four-on-the-floor kick, rolling sidechained bass, and shimmering arpeggiated synths. Verses feature tight percussion, muted rhythm guitar plucks, and crisp, dynamic vocal delivery that glides into soaring, multi-layered chorus hooks supported by bright brassy synth leads. The production maintains high-gloss digital clarity with wide stereo textures and snappy transients. The arrangement builds through a filtered, suspenseful pre-chorus, peaks in an explosive pop drop, drops into an emotional, stripped-back bridge, and finishes on a high-energy final chorus with a tight, abrupt cutoff.",
+   "chars": 656,
+   "n_sent": 4,
+   "sent_len": [
+    149,
+    187,
+    100,
+    217
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.33,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "E1 Korean electropop, 120 BPM",
+   "n": 5,
+   "out": "Contemporary Korean electropop at a driving 120 BPM, propelled by a punchy four-on-the-floor kick, rubbery sidechained bassline, and crisp 16th-note percussion. Bright synth stabs and bubbling arpeggiators create an infectious, kinetic pulse beneath slick vocal delivery, balancing breathy, intimate verses with soaring, multi-tracked falsetto hooks in the chorus. The arrangement opens on filtered polyphonic keys, builds energy through layered claps and white-noise sweeps, peaks in a radiant dancefloor drop with wide stereo vocal stacks, and resolves with a snappy rhythmic breakdown.",
+   "chars": 588,
+   "n_sent": 3,
+   "sent_len": [
+    160,
+    203,
+    223
+   ],
+   "slots": [
+    "장르",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.38,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v4",
+   "seed": "E2 Korean synth-pop, 118 BPM",
+   "n": 1,
+   "out": "A polished 118 BPM Korean synth-pop arrangement blending sparkling 1980s retro aesthetics with modern K-pop precision. Driving four-on-the-floor kick and gated snare lock with a punchy, rolling sixteenth-note analog bassline. Shimmering poly-synths and clean rhythmic funk guitar stabs frame the verses, while lush brassy synth chords expand the chorus. Smooth, emotive vocals feature pristine tuning, airy doubles, and dynamic falsetto ad-libs. The track opens with atmospheric filtered arpeggios, builds momentum through ascending tom fills into a soaring, euphoric hook, and concludes on an energetic, pulsing synth vamp.",
+   "chars": 624,
+   "n_sent": 5,
+   "sent_len": [
+    118,
+    106,
+    127,
+    91,
+    178
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.29,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "E2 Korean synth-pop, 118 BPM",
+   "n": 2,
+   "out": "Glossy Korean synth-pop set at 118 BPM with an energetic, bittersweet emotional core. Driven by driving analog bass arpeggios, a punchy gated snare, and lush Juno synthesizer pads complemented by rhythmic clean electric guitar chops. Breathy, charismatic vocals move from intimate mid-register verses to soaring, layered falsetto hooks in the chorus with tight vocal doubles. The production features a modern wide stereo field, rhythmic sidechain compression, and bright shimmer reverb. The song opens on a solitary pulsing synth riff, swells into a vibrant dance groove, and resolves into a sparkling synth outro.",
+   "chars": 614,
+   "n_sent": 5,
+   "sent_len": [
+    85,
+    147,
+    141,
+    110,
+    127
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.21,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "E2 Korean synth-pop, 118 BPM",
+   "n": 3,
+   "out": "A sleek 118 BPM Korean synth-pop track blending retro eighties nostalgia with glossy modern production. A punchy four-on-the-floor beat and driving sixteenth-note analog bass synth establish an infectious dance pulse, framed by clean rhythmic electric guitar chops and warm synth pads. Polished, emotive vocals transition from airy, intimate verses into soaring, multi-tracked melodic hooks enriched with bright brass synth accents. The mix is wide and pristinely compressed with shimmering reverb tails. Starting with a sparkling arpeggiated motif, the arrangement builds dynamically through rhythmic pre-choruses toward an explosive, euphoric chorus, resolving in a vibrant synth-driven outro.",
+   "chars": 695,
+   "n_sent": 5,
+   "sent_len": [
+    103,
+    181,
+    146,
+    71,
+    190
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v4",
+   "seed": "E2 Korean synth-pop, 118 BPM",
+   "n": 4,
+   "out": "Modern Korean synth-pop at 118 BPM with an energetic retro-futuristic groove. A driving four-on-the-floor kick and an arpeggiated analog bassline anchor the rhythm, embellished by clean disco-funk guitar strums and bright 1980s polyphonic synth brass. Sleek, emotive dual-tracked vocals move smoothly from intimate breathy verse phrasing to soaring, layered harmonies in the chorus. Sparking digital bell arpeggios introduce the track, verse sections pull back to bass and rhythm guitar, and choruses bloom with wide stereo synth leads and sidechained pads before concluding on a punchy, staccato drop out.",
+   "chars": 606,
+   "n_sent": 4,
+   "sent_len": [
+    77,
+    173,
+    130,
+    223
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "구조",
+    "리드·화성"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.37,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 10,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v4",
+   "seed": "E2 Korean synth-pop, 118 BPM",
+   "n": 5,
+   "out": "Upbeat 118 BPM Korean synth-pop blending sparkling 1980s nostalgia with modern K-pop polish. A driving four-on-the-floor kick and gated snare anchor a pulsing, syncopated analog bassline. Shimmering chorus-drenched poly-synths and bright electric guitar chops weave around rhythmic Juno arpeggios. The lead vocal glides effortlessly from intimate, breathy verses to a bright, belted chorus framed by tight multi-tracked harmonies and sparkling vocal chops. The mix is glossy, wide, and punchy with modern sidechain pumping, rising into an explosive, brassy post-chorus hook before ending on a resonant analog chord decay.",
+   "chars": 621,
+   "n_sent": 5,
+   "sent_len": [
+    92,
+    94,
+    109,
+    158,
+    164
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "T2 Korean semi-trot, 128 BPM",
+   "n": 1,
+   "out": "An upbeat, modern Korean semi-trot dance track at 128 BPM blending traditional dramatic flair with energetic K-pop disco production. Driven by a punchy four-on-the-floor kick, rhythmic offbeat open hi-hats, and a bouncy synth bassline, the arrangement layers bright brass section stabs with playful accordion melodies and funk guitar skanks. The vocal delivery is passionate, expressive, and charismatic, showcasing classic trot vocal bends and rich vibrato over an uplifting chord progression. Verses maintain a tight dance pulse, building through synth risers into an explosive, hook-laden chorus, concluding with an exuberant brass fanfare.",
+   "chars": 643,
+   "n_sent": 4,
+   "sent_len": [
+    132,
+    208,
+    152,
+    148
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.23,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 2
+  },
+  {
+   "set": "v4",
+   "seed": "T2 Korean semi-trot, 128 BPM",
+   "n": 2,
+   "out": "Modern Korean semi-trot at an infectious 128 BPM, fusing classic melodic ornamentation with high-energy contemporary electro-pop. A punchy four-on-the-floor kick and rolling bassline drive the groove, paired with rhythmic acoustic guitar strums, playful accordion melodies, and bright synthetic brass hits. Charismatic vocals feature theatrical dynamics and signature sigimsae vocal vibrato, layered with joyful group shout responses on the downbeats. The track opens with an attention-grabbing brass fanfare, bounces through a fast-stepping verse, builds suspense across a surging pre-chorus, and explodes into an exuberant festival chorus before a tight, decisive ending.",
+   "chars": 673,
+   "n_sent": 4,
+   "sent_len": [
+    129,
+    176,
+    144,
+    221
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.33,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "T2 Korean semi-trot, 128 BPM",
+   "n": 3,
+   "out": "Modern Korean semi-trot at a driving 128 BPM, fusing traditional melodic flair with bouncy four-on-the-floor dance-pop energy. Crisp accordion hooks and punchy brass stabs lead the melody over disco-style rhythm guitar, bright synth arpeggios, and tight sub-bass. A charismatic, theatrical lead vocal delivers signature microtonal bends, emotive vibrato, and soaring belts. Opening with an exuberant brass and accordion fanfare, the track moves through snappy, rhythmic verses and builds into an explosive, festival-ready chorus with shimmering strings and layered backing shouts, culminating in a triumphant key modulation and a punchy, celebratory finish.",
+   "chars": 657,
+   "n_sent": 4,
+   "sent_len": [
+    126,
+    136,
+    109,
+    283
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.43,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "T2 Korean semi-trot, 128 BPM",
+   "n": 4,
+   "out": "An upbeat modern Korean semi-trot production at 128 BPM fusing traditional trot inflection with high-octane dance-pop. A relentless four-on-the-floor kick and buoyant synth bass drive the groove beneath punchy brass stabs, swirling accordion riffs, and bright synth arpeggios. A charismatic lead vocalist belts with theatrical exuberance, executing classic trot vocal bends and rapid ornamental trills with contemporary pop clarity. The verse bounces with tight guitar chucks, surging into a festival-scale chorus packed with call-and-response hooks and soaring horns, peaking in an energetic climactic modulation before resolving on a tight, decisive brass hit.",
+   "chars": 662,
+   "n_sent": 4,
+   "sent_len": [
+    118,
+    157,
+    155,
+    229
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "리드·화성"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.35,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 10,
+   "chunks_suno": 2
+  },
+  {
+   "set": "v4",
+   "seed": "T2 Korean semi-trot, 128 BPM",
+   "n": 5,
+   "out": "Energetic modern Korean semi-trot at 128 BPM fusing classic theatrical melodrama with upbeat EDM dance-pop. A bouncy four-on-the-floor kick and pumping offbeat bass drive the groove, paired with rhythmic accordion riffs, bright brass hits, and sparkling synth arpeggios. The vocal features a passionate, theatrical delivery marked by traditional pitch-bending ornaments and deep vibrato, soaring over dynamic chord shifts. Modern sidechain compression and punchy K-pop mix aesthetics provide pristine clarity and maximum dancefloor energy. The arrangement opens with an accordion lead hook, escalates with EDM risers into explosive choruses, and concludes on a crisp, theatrical unison hit.",
+   "chars": 690,
+   "n_sent": 5,
+   "sent_len": [
+    107,
+    162,
+    151,
+    116,
+    150
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.22,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 2
+  },
+  {
+   "set": "v4",
+   "seed": "B2 Korean piano ballad, 72 BPM",
+   "n": 1,
+   "out": "A contemporary Korean drama OST-style piano ballad at an expressive 72 BPM. An intimate, close-mic’d grand piano leads with melancholic arpeggios and rich suspended chord resolutions. A passionate, breathy solo vocal delivers heartfelt intimacy in the verses, gradually building into a powerful, resonant head-voice belt on the chorus. Warm legato cellos and sweeping chamber violins enter to heighten the emotional stakes, supported by gentle bass pedals and subtle brushed percussion at the peak. The mix balances crystalline vocal presence with lush hall reverb, concluding on a delicate, unresolved piano decay.",
+   "chars": 615,
+   "n_sent": 5,
+   "sent_len": [
+    75,
+    107,
+    151,
+    162,
+    116
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "리듬·저역",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.19,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v4",
+   "seed": "B2 Korean piano ballad, 72 BPM",
+   "n": 2,
+   "out": "Contemporary Korean piano ballad at a deliberate 72 BPM. The arrangement opens with an intimate concert grand piano carrying delicate arpeggios beneath a breathy, vulnerable vocal. Subtle cello countermelodies and a lush string section bloom into the pre-chorus, heightening harmonic tension with gentle suspensions. The groove solidifies midway as a restrained rhythm section introduces soft brush drums, acoustic guitar plucks, and warm bass. Reaching an emotive, sweeping orchestral peak with soaring chest-voice belts, the piece then gently recedes to a lone piano progression and an intimate, lingering vocal sigh.",
+   "chars": 619,
+   "n_sent": 5,
+   "sent_len": [
+    56,
+    123,
+    135,
+    127,
+    174
+   ],
+   "slots": [
+    "장르",
+    "구조",
+    "구조",
+    "리듬·저역",
+    "보컬"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.28,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "B2 Korean piano ballad, 72 BPM",
+   "n": 3,
+   "out": "A contemporary Korean piano ballad at an expressive 72 BPM. The arrangement opens intimately with delicate, arpeggiated acoustic grand piano chords and a breathy, vulnerable vocal delivery. Gentle cello lines and warm bass enter to support the second verse, expanding into lush, cinematic string ensembles and soft orchestral percussion for the chorus. The bridge escalates into powerful vocal belting with full drum kit dynamics and soaring violin countermelodies, delivering dramatic emotional catharsis. The mix is polished and spacious, featuring expansive hall reverb around the strings while keeping the vocal centered and pristine, resolving into a quiet, solitary piano fadeout.",
+   "chars": 686,
+   "n_sent": 5,
+   "sent_len": [
+    59,
+    129,
+    162,
+    153,
+    179
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "보컬",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v4",
+   "seed": "B2 Korean piano ballad, 72 BPM",
+   "n": 4,
+   "out": "A contemporary Korean piano ballad at 72 BPM built around an expressive concert grand piano playing lyrical arpeggios and lush seventh chords. An intimate, breathy lead vocal delivers delicate verses with slight rubato, accompanied by a warm acoustic cello. The arrangement gradually swells as swept acoustic guitar, subtle sub-bass, and a lush string section enter for the chorus. Heavy, resonant toms and crisp rim clicks drive the climactic final chorus, pushing the vocal into powerful, chest-resonant belted high notes with emotional vibrato. The mix features close-mic warmth, expansive hall reverb on the strings, and concludes with a gentle, fading solo piano figure.",
+   "chars": 675,
+   "n_sent": 5,
+   "sent_len": [
+    142,
+    114,
+    123,
+    165,
+    127
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "구조",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.19,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "B2 Korean piano ballad, 72 BPM",
+   "n": 5,
+   "out": "Contemporary Korean piano ballad at a deliberate 72 BPM, capturing poignant cinematic melodrama. A warm acoustic grand piano anchors the arrangement with delicate arpeggios, later supported by swelling orchestral strings, subtle acoustic bass, and soft brush percussion. The lead vocal begins breathy, intimate, and vulnerable, gradually ascending into an impassioned, resonant belt during climactic phrases. Rich hall reverb envelopes the strings while keeping the vocal upfront and crystalline. The song opens sparsely with exposed piano and voice, surges into sweeping emotional height through the choruses, and resolves on a tender, lingering piano decay.",
+   "chars": 659,
+   "n_sent": 5,
+   "sent_len": [
+    96,
+    173,
+    137,
+    87,
+    162
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "R2 Korean pop-rock band, 150 BPM",
+   "n": 1,
+   "out": "Energetic Korean pop-rock at 150 BPM driven by a propulsive rhythm section with a punchy kick and galloping bass. Jangly clean electric guitars interlock with bright synth arpeggios and punchy acoustic piano stabs, swelling into massive overdriven power chords for the anthemic chorus. An expressive, youthful lead vocal delivers melodic, heartfelt hooks, transitioning from conversational verse intimacy to soaring, belted head-voice refrains supported by energetic group gang vocals. The mix is crisp and modern, featuring snappy drums and a wide stereo image, building from a bright guitar-driven intro to an explosive, guitar-solo-fueled final climax.",
+   "chars": 655,
+   "n_sent": 4,
+   "sent_len": [
+    113,
+    171,
+    199,
+    169
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 12,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v4",
+   "seed": "R2 Korean pop-rock band, 150 BPM",
+   "n": 2,
+   "out": "Upbeat, anthemic modern Korean pop-rock at a driving 150 BPM. A punchy live drum kit delivers a four-on-the-floor groove balanced with bright, syncopated piano chords and tight bass guitar hooks. Dual electric guitars trade shimmering clean arpeggios in the verses with overdriven power chords in the chorus. The lead vocals are clear, youthful, and emotionally charged, effortlessly transitioning from intimate chest-voice verses to powerful, belted head-voice refrains supported by energetic group gang vocals. The production is glossy and expansive, building from a bright instrumental riff into explosive choruses, culminating in a soaring guitar-and-synth unison solo and an abrupt, tight final hit.",
+   "chars": 704,
+   "n_sent": 5,
+   "sent_len": [
+    61,
+    133,
+    112,
+    203,
+    191
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "리드·화성"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "R2 Korean pop-rock band, 150 BPM",
+   "n": 3,
+   "out": "Modern Korean pop-rock at an energetic 150 BPM, driven by soaring emotional hooks and propulsive rock instrumentation. A punchy drum kit lays down driving four-on-the-floor rhythms beneath locked, melodic bass and chugging, overdriven electric guitars. Sparkling synth accents and bright grand piano provide polished pop shimmer over dynamic verses. An emotive tenor lead delivers heartfelt, narrative phrasing that bursts into powerful, belted chorus anthems backed by soaring group harmonies. The mix is wide, crisp, and radio-ready, advancing from a catchy guitar-riff intro through an anthemic, modulation-ready bridge before ending on an explosive, tight unison hit.",
+   "chars": 671,
+   "n_sent": 5,
+   "sent_len": [
+    118,
+    133,
+    96,
+    144,
+    176
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 5
+  },
+  {
+   "set": "v4",
+   "seed": "R2 Korean pop-rock band, 150 BPM",
+   "n": 4,
+   "out": "High-octane Korean pop-rock at 150 BPM driven by an energetic, four-on-the-floor kick and crisp, open hi-hats. Interlocking electric guitars trade chiming clean arpeggios with overdriven power chords, supported by a melodic, active bass guitar and atmospheric synth pads. A passionate, clear lead vocal delivers dynamic verses that build into soaring, belted chorus hooks with tight group harmonies. The arrangement kicks off with a bright guitar motif, drives through anthemic choruses, peaks with an expressive melodic guitar solo in the bridge, and resolves on a tight, climactic crash finish.",
+   "chars": 596,
+   "n_sent": 4,
+   "sent_len": [
+    110,
+    160,
+    127,
+    196
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "구조",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.33,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 6
+  },
+  {
+   "set": "v4",
+   "seed": "R2 Korean pop-rock band, 150 BPM",
+   "n": 5,
+   "out": "An energetic Korean pop-rock band track at 150 BPM. Driving live drums with a steady four-on-the-floor kick and tight syncopated bass anchor the uptempo groove. Bright, jangly rhythm guitars and warm acoustic strums define the verses, opening up into soaring overdriven guitar walls and lively synth flourishes in the chorus. The lead vocal is clear, emotive, and agile, shifting from intimate chest voice to powerful, belting highs with anthemic group harmony responses. Modern, punchy production with pristine vocal clarity builds through dynamic pre-choruses toward an explosive, euphoric climax and a tight, decisive instrumental stop.",
+   "chars": 639,
+   "n_sent": 5,
+   "sent_len": [
+    51,
+    108,
+    164,
+    145,
+    167
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "구조",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "H2 Korean R&B, 86 BPM",
+   "n": 1,
+   "out": "Contemporary Korean R and B at 86 BPM, fusing smooth neo-soul harmony with crisp hip-hop groove. Warm Rhodes keys outline lush extended jazz chords over a laid-back, swung drum groove featuring a soft boom-bap kick, crisp snap snare, and deep sub-bass. A clean, chorus-drenched electric guitar weaves delicate melodic counter-lines. Breathy, emotive vocals transition fluidly between intimate conversational delivery and agile falsetto runs, wrapped in warm plate reverb. The arrangement begins sparsely with keys and vocal ad-libs, blooms into lushly stacked vocal harmonies during the choruses, and fades out over a gentle, ambient instrumental vamp.",
+   "chars": 652,
+   "n_sent": 5,
+   "sent_len": [
+    96,
+    155,
+    79,
+    138,
+    180
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "보컬"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.28,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "H2 Korean R&B, 86 BPM",
+   "n": 2,
+   "out": "A contemporary Korean alternative R&B track at a laid-back 86 BPM. The rhythm relies on a lazy, swung drum pocket featuring crisp rimshots, brushed hi-hats, and warm 808 sub-bass glides. Neo-soul Rhodes chords and chorused clean guitar licks outline jazzy chord extensions beneath detuned, atmospheric synth pads. An intimate, emotive vocal glides between smooth conversational phrasing and breathy falsetto runs, supported by tight, lush harmony stacks in the refrain. The arrangement opens with dry keys and finger snaps, swells into a rich and spacious chorus, and concludes on delicate vocal ad-libs trailing into soft tape delay.",
+   "chars": 634,
+   "n_sent": 5,
+   "sent_len": [
+    66,
+    119,
+    126,
+    155,
+    164
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.26,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "H2 Korean R&B, 86 BPM",
+   "n": 3,
+   "out": "A modern Korean R&B groove set at 86 BPM, driven by a laid-back swung beat with tight snap snares and deep 808 sub-bass. Lush, detuned electric piano chords and clean, chorused neo-soul guitar fills anchor the harmonic warmth beneath airy synth textures. An intimate, breathy vocal leads with effortless falsetto runs, doubled harmonies, and subtle stereo slapback delay. The track begins with sparse keys and ambient textures, builds momentum as the rhythm section locks into a sensual pocket, expands into rich vocal stacks in the chorus, and gently winds down into a warm, drifting electric piano outro.",
+   "chars": 606,
+   "n_sent": 4,
+   "sent_len": [
+    120,
+    133,
+    116,
+    234
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.39,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "H2 Korean R&B, 86 BPM",
+   "n": 4,
+   "out": "Modern Korean R&B set at a relaxed 86 BPM. The groove locks into a swinging half-time beat with crisp rimshots, warm sub-bass, and a subtly syncopated electric bassline. Lush, chorus-treated Rhodes chords and soft neo-soul guitar licks provide harmonic richness beneath ambient synth pads. An intimate, emotive vocal glides between spoken-cadence phrasing and airy falsetto runs, supported by tight, wide stereo backing harmonies. The track opens sparsely on filtered keys, builds warmth as the rhythm section enters, peaks with soaring ad-libs over rich vocal stacks in the chorus, and gently dissolves into an introspective, trailing Rhodes vamp.",
+   "chars": 648,
+   "n_sent": 5,
+   "sent_len": [
+    42,
+    126,
+    119,
+    140,
+    217
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.33,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 3
+  },
+  {
+   "set": "v4",
+   "seed": "H2 Korean R&B, 86 BPM",
+   "n": 5,
+   "out": "Mid-tempo contemporary Korean R&B at 86 BPM, built on a late-night, melancholic groove. A lazy halftime beat pairs warm, rounded 808 sub-bass with crisp rimshots, brushed snares, and subtle rolling hi-hats. Jazzy Fender Rhodes voicings and clean, chorus-drenched electric guitar arpeggios carry the bittersweet harmonic progression. An intimate, breathy vocal leads with conversational verses before effortlessly floating into melismatic falsetto hooks and lushly stacked backing harmonies. The mix features tight low-end weight, vinyl warmth, and spacious stereo reverbs, starting sparse and building harmonic density before gently fading out on an unresolved Rhodes vamp.",
+   "chars": 673,
+   "n_sent": 5,
+   "sent_len": [
+    87,
+    118,
+    125,
+    157,
+    182
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.27,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 15,
+   "chunks_suno": 1
+  },
+  {
+   "set": "v4",
+   "seed": "P2 Korean boom-bap hip-hop, 90 BPM",
+   "n": 1,
+   "out": "Authentic 90s-inspired Korean boom-bap hip-hop at a head-nodding 90 BPM. The rhythm section features an MPC-swung acoustic drum break with a thumping kick and a snappy, dry snare locked to a warm, filtered upright bass. Dusty chopped jazz piano chords, muted horn stabs, and vinyl crackle establish a gritty, reflective atmosphere. A confident male Korean rap delivery rides tightly in the pocket with intricate syncopation, crisp articulation, and selective vocal doubling on punchlines. Turntable scratches punctuate transitions into the hook. The production utilizes analog tape saturation and punchy low-end presence, resolving cleanly on a vinyl power-down stop.",
+   "chars": 667,
+   "n_sent": 6,
+   "sent_len": [
+    72,
+    146,
+    111,
+    156,
+    56,
+    121
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.18,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 14,
+   "chunks_suno": 7
+  },
+  {
+   "set": "v4",
+   "seed": "P2 Korean boom-bap hip-hop, 90 BPM",
+   "n": 2,
+   "out": "Korean boom-bap hip-hop at a head-nodding 90 BPM with a dusty, soulful swing. The groove drives on a crunchy unquantized drum break, heavy round bass guitar, and vinyl-scratched jazz piano chops layered with subtle brass stabs. Articulate Korean male rap delivery commands the center, alternating between a relaxed conversational cadence and focused, rhythmic syncopation. Production features gritty vintage sampler warmth, analog saturation, and intimate, dry vocal tracking. The arrangement opens on a filtered soul loop and vinyl crackle, hits hard as the main rhythm drops, layers turntable scratches into the transitions, and concludes with a drifting instrumental outro.",
+   "chars": 676,
+   "n_sent": 5,
+   "sent_len": [
+    77,
+    149,
+    144,
+    103,
+    199
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.29,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 16,
+   "chunks_suno": 7
+  },
+  {
+   "set": "v4",
+   "seed": "P2 Korean boom-bap hip-hop, 90 BPM",
+   "n": 3,
+   "out": "Gritty 90s-inspired Korean boom-bap hip-hop at 90 BPM, anchored by dusty MPC drum breaks, a snapping snare, and a punchy acoustic kick over subtle vinyl crackle. A deep, walking upright bass carries the low end beneath melancholic jazz piano chops and muted brass stabs. The Korean male rap delivery features tight, articulate rhythmic flows with internal rhymes and grounded swagger, contrasted with vocal scratch cuts on the hook. Warm tape saturation and unpolished analog punch define the mix, starting on an isolated loop, hitting hard with full drums, and concluding on a raw turntable scratch-out.",
+   "chars": 604,
+   "n_sent": 4,
+   "sent_len": [
+    161,
+    108,
+    161,
+    171
+   ],
+   "slots": [
+    "장르",
+    "리드·화성",
+    "보컬",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.28,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 4
+  },
+  {
+   "set": "v4",
+   "seed": "P2 Korean boom-bap hip-hop, 90 BPM",
+   "n": 4,
+   "out": "A gritty Korean boom-bap hip-hop track rolling at a deliberate 90 BPM. The groove locks into swung, unquantized drums with punchy kicks, cracking layered snares, and subtle vinyl dust. Melodic movement stems from chopped, melancholic jazz piano loops paired with a warm, walking upright bassline and occasional muted brass accents. The rapper delivers tightly articulated, rhythmic Korean verses with dynamic internal rhymes and confident cadences, backed by gritty turntable scratches and sparse hype ad-libs on the hook. The mix balances dusty SP-1200 warmth with punchy low-end presence, moving from filtered sample intros through driving verses to a sudden tape-stop outro.",
+   "chars": 677,
+   "n_sent": 5,
+   "sent_len": [
+    70,
+    113,
+    146,
+    190,
+    154
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "구조",
+    "믹스"
+   ],
+   "last_is_structure": false,
+   "last_share": 0.23,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 1
+  },
+  {
+   "set": "v4",
+   "seed": "P2 Korean boom-bap hip-hop, 90 BPM",
+   "n": 5,
+   "out": "Korean boom-bap hip-hop set at 90 BPM with a gritty late-90s underground aesthetic. The rhythm section leans on an unquantized MPC swing, pairing hard-hitting acoustic kick-snare patterns with crisp, shuffled hi-hats and a warm, walking upright bassline. Melodic chops feature dusty vinyl jazz piano, muted brass stabs, and subtle vinyl crackle. A charismatic Korean rap vocal delivers intricate, rhythmic multisyllabic cadences with confident swagger and dynamic breath control. The track builds from a filtered melodic sample loop into the full groove, opens up in the hook with vocal scratches, and fades out cleanly over solo Rhodes.",
+   "chars": 637,
+   "n_sent": 5,
+   "sent_len": [
+    83,
+    170,
+    90,
+    133,
+    157
+   ],
+   "slots": [
+    "장르",
+    "리듬·저역",
+    "리드·화성",
+    "보컬",
+    "구조"
+   ],
+   "last_is_structure": true,
+   "last_share": 0.25,
+   "bpm_kept": true,
+   "bpm_any": true,
+   "key": false,
+   "chunks": 13,
+   "chunks_suno": 4
+  }
+ ]
+}

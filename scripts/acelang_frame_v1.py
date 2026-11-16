@@ -45,8 +45,8 @@ def load():
     return rows
 
 
-def main():
-    rows = load()
+def main(rows=None, name="frame_v1.json"):
+    rows = rows if rows is not None else load()
     D = {r["phrase"]: r for r in json.loads((REPO / "data/suno_phrase_dict_v2/dict.json").read_text())["rows"]}
     sk = lambda r: r["V+"] >= 5 or r["HS"] >= 3 or r["AG"] >= 2
     out = {"n": len(rows), "by_set": collections.Counter(r["set"] for r in rows)}
@@ -106,7 +106,7 @@ def main():
     DEL = {"자리 낱말(in the background/midground/foreground)": r"\bin the (back|mid|fore)ground\b", "weave(s)": r"\bweaves?\b", "embrace(s)": r"\bembrac", "«The mix/production …» 문장 머리": r"(^|\.\s+)The (mix|production)\b"}
     out["suno_deleted_forms_in_ace"] = {k: sum(bool(re.search(v, r["out"], re.I)) for r in rows) for k, v in DEL.items()}
     o = REPO / "data/acelang"; o.mkdir(exist_ok=True)
-    (o / "frame_v1.json").write_text(json.dumps({"summary": out, "rows": rows}, ensure_ascii=False, indent=1, default=list))
+    (o / name).write_text(json.dumps({"summary": out, "rows": rows}, ensure_ascii=False, indent=1, default=list))
     print(json.dumps({k: v for k, v in out.items() if k not in ("seeds", "ace_top_phrases")}, ensure_ascii=False, indent=1, default=list))
     for s in seeds:
         print(s["set"], s["seed"][:40], "n", s["n"], "자", s["chars"], "문장", s["n_sent"], "J", s["jaccard_med"], "조", s["key_added"], "BPM", s["bpm_kept"], s["seq"][0])
