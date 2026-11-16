@@ -1,0 +1,1305 @@
+{
+ "rows": [
+  {
+   "group": "홈 새로 걸림(11-11에 없던)",
+   "n": 209,
+   "chars_q": [
+    290,
+    401,
+    516
+   ],
+   "bpm": "110 (52%)",
+   "meter": "21 (10%)",
+   "scene": "6 (2%)",
+   "flow": "142 (67%)",
+   "neg_body": "19 (9%)",
+   "female_male": "141 (67%)",
+   "time_directive": "0 (0%)",
+   "sentence": "78 (37%)",
+   "bpm_first": "72 (34%)",
+   "titlecase": "4 (1%)",
+   "korean": "3 (1%)"
+  },
+  {
+   "group": "홈 11-11에도 있던",
+   "n": 1138,
+   "chars_q": [
+    164,
+    308,
+    477
+   ],
+   "bpm": "336 (29%)",
+   "meter": "43 (3%)",
+   "scene": "47 (4%)",
+   "flow": "437 (38%)",
+   "neg_body": "127 (11%)",
+   "female_male": "588 (51%)",
+   "time_directive": "6 (0%)",
+   "sentence": "415 (36%)",
+   "bpm_first": "207 (18%)",
+   "titlecase": "51 (4%)",
+   "korean": "11 (0%)"
+  },
+  {
+   "group": "앨범 112장 곡",
+   "n": 1718,
+   "chars_q": [
+    174,
+    364,
+    489
+   ],
+   "bpm": "563 (32%)",
+   "meter": "29 (1%)",
+   "scene": "21 (1%)",
+   "flow": "805 (46%)",
+   "neg_body": "271 (15%)",
+   "female_male": "1101 (64%)",
+   "time_directive": "1 (0%)",
+   "sentence": "560 (32%)",
+   "bpm_first": "311 (18%)",
+   "titlecase": "96 (5%)",
+   "korean": "0 (0%)"
+  },
+  {
+   "group": "인증 앨범 2장 곡",
+   "n": 24,
+   "chars_q": [
+    14,
+    46,
+    387
+   ],
+   "bpm": "2 (8%)",
+   "meter": "0 (0%)",
+   "scene": "6 (25%)",
+   "flow": "3 (12%)",
+   "neg_body": "5 (20%)",
+   "female_male": "2 (8%)",
+   "time_directive": "1 (4%)",
+   "sentence": "5 (20%)",
+   "bpm_first": "2 (8%)",
+   "titlecase": "0 (0%)",
+   "korean": "0 (0%)"
+  }
+ ],
+ "refs_negative_tags": 83,
+ "albums_with_3plus": 106,
+ "albums_identical_style": 2,
+ "album_jaccard_q": [
+  9,
+  16,
+  28
+ ],
+ "albums": [
+  {
+   "album_key": "c392d946",
+   "n": 16,
+   "identical": false,
+   "jaccard_med": 0.0,
+   "chars_med": 17.0,
+   "core": []
+  },
+  {
+   "album_key": "06c4b8c7",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.25,
+   "chars_med": 636.5,
+   "core": [
+    "forward",
+    "hypnotic",
+    "loop",
+    "samples",
+    "stuttering",
+    "vocals"
+   ]
+  },
+  {
+   "album_key": "11869576",
+   "n": 171,
+   "identical": false,
+   "jaccard_med": 0.3,
+   "chars_med": 473,
+   "core": []
+  },
+  {
+   "album_key": "f02020cb",
+   "n": 68,
+   "identical": false,
+   "jaccard_med": 0.29,
+   "chars_med": 360.0,
+   "core": []
+  },
+  {
+   "album_key": "bf1c76e1",
+   "n": 59,
+   "identical": false,
+   "jaccard_med": 0.33,
+   "chars_med": 367,
+   "core": [
+    "brazilian"
+   ]
+  },
+  {
+   "album_key": "55519c49",
+   "n": 52,
+   "identical": false,
+   "jaccard_med": 0.07,
+   "chars_med": 150.5,
+   "core": []
+  },
+  {
+   "album_key": "a8de31b5",
+   "n": 42,
+   "identical": false,
+   "jaccard_med": 0.03,
+   "chars_med": 48.0,
+   "core": []
+  },
+  {
+   "album_key": "13070f0d",
+   "n": 37,
+   "identical": false,
+   "jaccard_med": 0.06,
+   "chars_med": 283,
+   "core": []
+  },
+  {
+   "album_key": "f8762731",
+   "n": 34,
+   "identical": false,
+   "jaccard_med": 0.12,
+   "chars_med": 234.5,
+   "core": []
+  },
+  {
+   "album_key": "bd44ef82",
+   "n": 30,
+   "identical": false,
+   "jaccard_med": 0.05,
+   "chars_med": 503.5,
+   "core": []
+  },
+  {
+   "album_key": "34c175be",
+   "n": 28,
+   "identical": false,
+   "jaccard_med": 0.0,
+   "chars_med": 8.0,
+   "core": []
+  },
+  {
+   "album_key": "4031b3d2",
+   "n": 29,
+   "identical": false,
+   "jaccard_med": 0.92,
+   "chars_med": 90,
+   "core": [
+    "beats",
+    "electronically",
+    "hip-hop",
+    "lyrics",
+    "of",
+    "over",
+    "produced",
+    "rap",
+    "rapping",
+    "recitation",
+    "rhythmic"
+   ]
+  },
+  {
+   "album_key": "3eebb354",
+   "n": 26,
+   "identical": false,
+   "jaccard_med": 0.09,
+   "chars_med": 589.5,
+   "core": [
+    "progressive"
+   ]
+  },
+  {
+   "album_key": "a407553c",
+   "n": 26,
+   "identical": false,
+   "jaccard_med": 0.09,
+   "chars_med": 128.0,
+   "core": [
+    "rap"
+   ]
+  },
+  {
+   "album_key": "de582b21",
+   "n": 12,
+   "identical": false,
+   "jaccard_med": 0.11,
+   "chars_med": 31.5,
+   "core": []
+  },
+  {
+   "album_key": "fec31028",
+   "n": 25,
+   "identical": false,
+   "jaccard_med": 0.13,
+   "chars_med": 232,
+   "core": []
+  },
+  {
+   "album_key": "2fd15303",
+   "n": 25,
+   "identical": false,
+   "jaccard_med": 0.15,
+   "chars_med": 483,
+   "core": []
+  },
+  {
+   "album_key": "9c969620",
+   "n": 24,
+   "identical": false,
+   "jaccard_med": 0.05,
+   "chars_med": 181.5,
+   "core": []
+  },
+  {
+   "album_key": "004c0423",
+   "n": 23,
+   "identical": false,
+   "jaccard_med": 0.12,
+   "chars_med": 544,
+   "core": []
+  },
+  {
+   "album_key": "16ff9f31",
+   "n": 22,
+   "identical": false,
+   "jaccard_med": 0.17,
+   "chars_med": 396.0,
+   "core": [
+    "with"
+   ]
+  },
+  {
+   "album_key": "1b3e9660",
+   "n": 22,
+   "identical": false,
+   "jaccard_med": 0.45,
+   "chars_med": 129.5,
+   "core": [
+    "and",
+    "english",
+    "in",
+    "solo",
+    "song"
+   ]
+  },
+  {
+   "album_key": "48ea27d3",
+   "n": 22,
+   "identical": false,
+   "jaccard_med": 0.07,
+   "chars_med": 652.0,
+   "core": []
+  },
+  {
+   "album_key": "b6dec696",
+   "n": 21,
+   "identical": false,
+   "jaccard_med": 0.1,
+   "chars_med": 293,
+   "core": []
+  },
+  {
+   "album_key": "eef61715",
+   "n": 21,
+   "identical": false,
+   "jaccard_med": 0.06,
+   "chars_med": 60,
+   "core": [
+    "rap"
+   ]
+  },
+  {
+   "album_key": "d362cdf4",
+   "n": 20,
+   "identical": false,
+   "jaccard_med": 0.32,
+   "chars_med": 449.5,
+   "core": [
+    "and",
+    "rap",
+    "with"
+   ]
+  },
+  {
+   "album_key": "90b33cfe",
+   "n": 20,
+   "identical": false,
+   "jaccard_med": 0.07,
+   "chars_med": 861.0,
+   "core": []
+  },
+  {
+   "album_key": "10b4df09",
+   "n": 19,
+   "identical": false,
+   "jaccard_med": 0.08,
+   "chars_med": 302,
+   "core": []
+  },
+  {
+   "album_key": "56bed857",
+   "n": 18,
+   "identical": false,
+   "jaccard_med": 0.21,
+   "chars_med": 530.0,
+   "core": [
+    "and",
+    "bpm"
+   ]
+  },
+  {
+   "album_key": "eb589006",
+   "n": 18,
+   "identical": false,
+   "jaccard_med": 0.15,
+   "chars_med": 227.5,
+   "core": []
+  },
+  {
+   "album_key": "97ee81aa",
+   "n": 18,
+   "identical": false,
+   "jaccard_med": 0.1,
+   "chars_med": 338.5,
+   "core": []
+  },
+  {
+   "album_key": "8855c1c3",
+   "n": 17,
+   "identical": false,
+   "jaccard_med": 0.21,
+   "chars_med": 310,
+   "core": [
+    "and"
+   ]
+  },
+  {
+   "album_key": "6edbd208",
+   "n": 17,
+   "identical": false,
+   "jaccard_med": 0.36,
+   "chars_med": 733,
+   "core": [
+    "and",
+    "bass",
+    "distorted",
+    "drums",
+    "harmonica",
+    "metal",
+    "raw",
+    "southern",
+    "with"
+   ]
+  },
+  {
+   "album_key": "0e2b0890",
+   "n": 17,
+   "identical": false,
+   "jaccard_med": 0.04,
+   "chars_med": 325,
+   "core": []
+  },
+  {
+   "album_key": "9b540310",
+   "n": 16,
+   "identical": false,
+   "jaccard_med": 0.14,
+   "chars_med": 416.0,
+   "core": []
+  },
+  {
+   "album_key": "af954d89",
+   "n": 16,
+   "identical": false,
+   "jaccard_med": 0.25,
+   "chars_med": 21.5,
+   "core": []
+  },
+  {
+   "album_key": "9a36e81b",
+   "n": 16,
+   "identical": false,
+   "jaccard_med": 0.3,
+   "chars_med": 425.0,
+   "core": [
+    "and",
+    "bpm",
+    "chorus",
+    "deep",
+    "male",
+    "piano"
+   ]
+  },
+  {
+   "album_key": "26c56059",
+   "n": 16,
+   "identical": false,
+   "jaccard_med": 0.28,
+   "chars_med": 448.0,
+   "core": [
+    "and",
+    "deep",
+    "dense",
+    "female",
+    "guitars",
+    "harmonica",
+    "hoarse",
+    "with"
+   ]
+  },
+  {
+   "album_key": "a54d11a7",
+   "n": 16,
+   "identical": false,
+   "jaccard_med": 0.22,
+   "chars_med": 695.0,
+   "core": [
+    "and",
+    "dense",
+    "guitars",
+    "harmonica",
+    "rhythm",
+    "with"
+   ]
+  },
+  {
+   "album_key": "d580ad8f",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.08,
+   "chars_med": 443,
+   "core": []
+  },
+  {
+   "album_key": "47b41ce1",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.21,
+   "chars_med": 419,
+   "core": [
+    "and",
+    "male"
+   ]
+  },
+  {
+   "album_key": "4d246db6",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.22,
+   "chars_med": 515,
+   "core": [
+    "and",
+    "guitars",
+    "harmonica",
+    "with"
+   ]
+  },
+  {
+   "album_key": "c1983031",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.18,
+   "chars_med": 348,
+   "core": []
+  },
+  {
+   "album_key": "853840a6",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.21,
+   "chars_med": 419,
+   "core": []
+  },
+  {
+   "album_key": "eac0ab3b",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.3,
+   "chars_med": 512,
+   "core": [
+    "acoustic",
+    "and",
+    "fingerpicked",
+    "guitar",
+    "intimate",
+    "restrained",
+    "steel-string",
+    "the",
+    "warm"
+   ]
+  },
+  {
+   "album_key": "9776dd76",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.32,
+   "chars_med": 465,
+   "core": [
+    "acoustic",
+    "ambience",
+    "live",
+    "natural",
+    "restrained",
+    "room",
+    "warm"
+   ]
+  },
+  {
+   "album_key": "058dad0d",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.26,
+   "chars_med": 704,
+   "core": [
+    "and",
+    "harmonica",
+    "solo",
+    "with"
+   ]
+  },
+  {
+   "album_key": "f986ac08",
+   "n": 15,
+   "identical": false,
+   "jaccard_med": 0.11,
+   "chars_med": 601,
+   "core": []
+  },
+  {
+   "album_key": "901303d1",
+   "n": 14,
+   "identical": false,
+   "jaccard_med": 0.0,
+   "chars_med": 20.5,
+   "core": []
+  },
+  {
+   "album_key": "4cd051ac",
+   "n": 14,
+   "identical": false,
+   "jaccard_med": 0.3,
+   "chars_med": 405.5,
+   "core": []
+  },
+  {
+   "album_key": "d655ac08",
+   "n": 13,
+   "identical": false,
+   "jaccard_med": 0.12,
+   "chars_med": 509,
+   "core": [
+    "chorus",
+    "with"
+   ]
+  },
+  {
+   "album_key": "24c7a835",
+   "n": 13,
+   "identical": false,
+   "jaccard_med": 0.12,
+   "chars_med": 310,
+   "core": [
+    "with"
+   ]
+  },
+  {
+   "album_key": "fad61716",
+   "n": 13,
+   "identical": false,
+   "jaccard_med": 0.14,
+   "chars_med": 459,
+   "core": [
+    "and",
+    "male"
+   ]
+  },
+  {
+   "album_key": "9a99a527",
+   "n": 13,
+   "identical": false,
+   "jaccard_med": 1.0,
+   "chars_med": 16,
+   "core": []
+  },
+  {
+   "album_key": "89889d00",
+   "n": 13,
+   "identical": false,
+   "jaccard_med": 0.45,
+   "chars_med": 741,
+   "core": [
+    "acoustic",
+    "bass",
+    "bridge",
+    "drums",
+    "heavy",
+    "metal",
+    "southern"
+   ]
+  },
+  {
+   "album_key": "d41bc6b9",
+   "n": 13,
+   "identical": false,
+   "jaccard_med": 0.25,
+   "chars_med": 409,
+   "core": [
+    "and",
+    "blues",
+    "harmonica",
+    "male",
+    "with"
+   ]
+  },
+  {
+   "album_key": "f6c200fa",
+   "n": 13,
+   "identical": false,
+   "jaccard_med": 0.09,
+   "chars_med": 323,
+   "core": []
+  },
+  {
+   "album_key": "943211b5",
+   "n": 12,
+   "identical": false,
+   "jaccard_med": 0.04,
+   "chars_med": 37.0,
+   "core": []
+  },
+  {
+   "album_key": "b05126f9",
+   "n": 12,
+   "identical": false,
+   "jaccard_med": 0.25,
+   "chars_med": 642.5,
+   "core": [
+    "baritone",
+    "bpm",
+    "chorus",
+    "country",
+    "male",
+    "raspy"
+   ]
+  },
+  {
+   "album_key": "7543c3f4",
+   "n": 12,
+   "identical": false,
+   "jaccard_med": 0.28,
+   "chars_med": 527.5,
+   "core": [
+    "bpm",
+    "rap"
+   ]
+  },
+  {
+   "album_key": "720bd456",
+   "n": 11,
+   "identical": false,
+   "jaccard_med": 0.43,
+   "chars_med": 30,
+   "core": [
+    "dubstep"
+   ]
+  },
+  {
+   "album_key": "cd9bdc43",
+   "n": 10,
+   "identical": false,
+   "jaccard_med": 0.13,
+   "chars_med": 289.0,
+   "core": []
+  },
+  {
+   "album_key": "8b858f01",
+   "n": 10,
+   "identical": true,
+   "jaccard_med": 1.0,
+   "chars_med": 35.0,
+   "core": [
+    "folk",
+    "indie",
+    "singer-songwriter",
+    "soul"
+   ]
+  },
+  {
+   "album_key": "46e056ac",
+   "n": 10,
+   "identical": false,
+   "jaccard_med": 0.42,
+   "chars_med": 823.0,
+   "core": [
+    "alternative",
+    "and",
+    "bass",
+    "bpm",
+    "bridge",
+    "chorus",
+    "cinematic",
+    "drums",
+    "final",
+    "guitars",
+    "haunting",
+    "intimate"
+   ]
+  },
+  {
+   "album_key": "f4189365",
+   "n": 10,
+   "identical": false,
+   "jaccard_med": 0.09,
+   "chars_med": 458.0,
+   "core": []
+  },
+  {
+   "album_key": "9b44adde",
+   "n": 10,
+   "identical": false,
+   "jaccard_med": 0.54,
+   "chars_med": 526.5,
+   "core": [
+    "analog",
+    "and",
+    "bass",
+    "bpm",
+    "breakdowns",
+    "chopped",
+    "deep",
+    "extended",
+    "filter",
+    "gritty",
+    "instrumental",
+    "intro"
+   ]
+  },
+  {
+   "album_key": "0ef18b05",
+   "n": 10,
+   "identical": true,
+   "jaccard_med": 1.0,
+   "chars_med": 39.0,
+   "core": [
+    "acid",
+    "club",
+    "kickdrum",
+    "melodie",
+    "ready",
+    "techno"
+   ]
+  },
+  {
+   "album_key": "10139219",
+   "n": 10,
+   "identical": false,
+   "jaccard_med": 0.28,
+   "chars_med": 426.5,
+   "core": [
+    "and",
+    "contralto",
+    "with"
+   ]
+  },
+  {
+   "album_key": "db86e743",
+   "n": 10,
+   "identical": false,
+   "jaccard_med": 0.11,
+   "chars_med": 37.0,
+   "core": []
+  },
+  {
+   "album_key": "bbe467bf",
+   "n": 10,
+   "identical": false,
+   "jaccard_med": 0.06,
+   "chars_med": 99.0,
+   "core": []
+  },
+  {
+   "album_key": "e09c6715",
+   "n": 9,
+   "identical": false,
+   "jaccard_med": 0.0,
+   "chars_med": 36,
+   "core": []
+  },
+  {
+   "album_key": "fd7fdb2b",
+   "n": 10,
+   "identical": false,
+   "jaccard_med": 0.15,
+   "chars_med": 313.0,
+   "core": [
+    "and",
+    "male",
+    "with"
+   ]
+  },
+  {
+   "album_key": "ecddd754",
+   "n": 9,
+   "identical": false,
+   "jaccard_med": 0.07,
+   "chars_med": 23,
+   "core": []
+  },
+  {
+   "album_key": "e4e13ac6",
+   "n": 9,
+   "identical": false,
+   "jaccard_med": 0.37,
+   "chars_med": 326,
+   "core": [
+    "airy",
+    "bass",
+    "dream-pop",
+    "midtempo",
+    "shoegaze",
+    "stereo",
+    "synth"
+   ]
+  },
+  {
+   "album_key": "c3e6dfd2",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.2,
+   "chars_med": 228.0,
+   "core": [
+    "and",
+    "female",
+    "unhurried"
+   ]
+  },
+  {
+   "album_key": "01e24d2e",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.07,
+   "chars_med": 294.0,
+   "core": []
+  },
+  {
+   "album_key": "2e39407e",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.44,
+   "chars_med": 124.0,
+   "core": [
+    "and",
+    "english",
+    "song",
+    "synthesizer"
+   ]
+  },
+  {
+   "album_key": "3d243227",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.23,
+   "chars_med": 869.5,
+   "core": []
+  },
+  {
+   "album_key": "b7218cd6",
+   "n": 4,
+   "identical": false,
+   "jaccard_med": 0.13,
+   "chars_med": 343.0,
+   "core": [
+    "female",
+    "idol",
+    "pop",
+    "trap",
+    "vocals"
+   ]
+  },
+  {
+   "album_key": "b677f0c0",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.0,
+   "chars_med": 39.5,
+   "core": []
+  },
+  {
+   "album_key": "fe3b1914",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.34,
+   "chars_med": 420.5,
+   "core": [
+    "atmospheric",
+    "bittersweet",
+    "ethereal",
+    "k-pop",
+    "lonely",
+    "longing",
+    "love",
+    "mysterious",
+    "nostalgia",
+    "playful",
+    "pop",
+    "rain"
+   ]
+  },
+  {
+   "album_key": "48322e08",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.21,
+   "chars_med": 34.5,
+   "core": [
+    "k-pop"
+   ]
+  },
+  {
+   "album_key": "5f6705dc",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.24,
+   "chars_med": 43.0,
+   "core": [
+    "pop"
+   ]
+  },
+  {
+   "album_key": "60d6ef38",
+   "n": 8,
+   "identical": false,
+   "jaccard_med": 0.17,
+   "chars_med": 18.0,
+   "core": [
+    "rap"
+   ]
+  },
+  {
+   "album_key": "9a9696b9",
+   "n": 7,
+   "identical": false,
+   "jaccard_med": 0.08,
+   "chars_med": 335,
+   "core": [
+    "indie"
+   ]
+  },
+  {
+   "album_key": "a35225af",
+   "n": 7,
+   "identical": false,
+   "jaccard_med": 0.11,
+   "chars_med": 245,
+   "core": [
+    "and",
+    "with"
+   ]
+  },
+  {
+   "album_key": "0806ce68",
+   "n": 6,
+   "identical": false,
+   "jaccard_med": 0.06,
+   "chars_med": 547.5,
+   "core": [
+    "female"
+   ]
+  },
+  {
+   "album_key": "a78d76c0",
+   "n": 7,
+   "identical": false,
+   "jaccard_med": 0.14,
+   "chars_med": 514,
+   "core": [
+    "delivery",
+    "female"
+   ]
+  },
+  {
+   "album_key": "3b892414",
+   "n": 6,
+   "identical": false,
+   "jaccard_med": 0.35,
+   "chars_med": 605.5,
+   "core": [
+    "and",
+    "electric",
+    "intimate",
+    "into",
+    "male",
+    "reverb",
+    "saturation",
+    "sparse",
+    "tape"
+   ]
+  },
+  {
+   "album_key": "3634bd20",
+   "n": 6,
+   "identical": false,
+   "jaccard_med": 0.23,
+   "chars_med": 255.0,
+   "core": [
+    "dancehall",
+    "guitar",
+    "love",
+    "riddim",
+    "with"
+   ]
+  },
+  {
+   "album_key": "6ec6e38d",
+   "n": 6,
+   "identical": false,
+   "jaccard_med": 0.11,
+   "chars_med": 254.5,
+   "core": []
+  },
+  {
+   "album_key": "e52cfce7",
+   "n": 6,
+   "identical": false,
+   "jaccard_med": 0.07,
+   "chars_med": 386.5,
+   "core": []
+  },
+  {
+   "album_key": "e5ec6a0f",
+   "n": 6,
+   "identical": false,
+   "jaccard_med": 0.14,
+   "chars_med": 419.5,
+   "core": [
+    "and",
+    "vocals",
+    "with"
+   ]
+  },
+  {
+   "album_key": "3ba9eeda",
+   "n": 5,
+   "identical": false,
+   "jaccard_med": 0.09,
+   "chars_med": 284,
+   "core": [
+    "and",
+    "bass",
+    "industrial",
+    "textures",
+    "with"
+   ]
+  },
+  {
+   "album_key": "9b7b880b",
+   "n": 5,
+   "identical": false,
+   "jaccard_med": 0.37,
+   "chars_med": 574,
+   "core": [
+    "and",
+    "bass",
+    "bpm",
+    "breathy",
+    "detune",
+    "eq",
+    "falsetto",
+    "rapid",
+    "reverb",
+    "shifts",
+    "slight",
+    "snares"
+   ]
+  },
+  {
+   "album_key": "cedb87b3",
+   "n": 5,
+   "identical": false,
+   "jaccard_med": 0.19,
+   "chars_med": 962,
+   "core": [
+    "analog",
+    "and",
+    "bass",
+    "compression",
+    "hiss",
+    "to",
+    "with"
+   ]
+  },
+  {
+   "album_key": "b2065cc3",
+   "n": 5,
+   "identical": false,
+   "jaccard_med": 0.3,
+   "chars_med": 359,
+   "core": [
+    "and",
+    "drums",
+    "female",
+    "piano",
+    "production",
+    "soft",
+    "warm"
+   ]
+  },
+  {
+   "album_key": "1e584a78",
+   "n": 5,
+   "identical": false,
+   "jaccard_med": 0.44,
+   "chars_med": 380,
+   "core": [
+    "ambient",
+    "analog",
+    "bpm",
+    "contralto",
+    "deep",
+    "dynamic",
+    "female",
+    "house",
+    "lead",
+    "low",
+    "melodic",
+    "plucky"
+   ]
+  },
+  {
+   "album_key": "350bae50",
+   "n": 5,
+   "identical": false,
+   "jaccard_med": 0.43,
+   "chars_med": 475,
+   "core": [
+    "analog",
+    "and",
+    "bass",
+    "bpm",
+    "clean",
+    "deep",
+    "drums",
+    "evolving",
+    "house",
+    "hypnotic",
+    "koto",
+    "melodic"
+   ]
+  },
+  {
+   "album_key": "10aad4eb",
+   "n": 5,
+   "identical": false,
+   "jaccard_med": 0.11,
+   "chars_med": 253,
+   "core": []
+  },
+  {
+   "album_key": "2d5e98a6",
+   "n": 5,
+   "identical": false,
+   "jaccard_med": 0.19,
+   "chars_med": 183,
+   "core": [
+    "authentic",
+    "vocals"
+   ]
+  },
+  {
+   "album_key": "4e41ceee",
+   "n": 4,
+   "identical": false,
+   "jaccard_med": 0.02,
+   "chars_med": 173.5,
+   "core": []
+  },
+  {
+   "album_key": "988d1b43",
+   "n": 4,
+   "identical": false,
+   "jaccard_med": 0.25,
+   "chars_med": 274.5,
+   "core": [
+    "chill",
+    "chopped",
+    "cloud",
+    "melodic",
+    "rage",
+    "rap",
+    "screwed",
+    "tone",
+    "under",
+    "water"
+   ]
+  },
+  {
+   "album_key": "35ca09f2",
+   "n": 4,
+   "identical": false,
+   "jaccard_med": 0.23,
+   "chars_med": 400.0,
+   "core": [
+    "and",
+    "bright",
+    "buoyant",
+    "chorus",
+    "crisp",
+    "four-on-the-floor",
+    "guitar",
+    "hand",
+    "kick",
+    "lead",
+    "mix",
+    "offbeat"
+   ]
+  },
+  {
+   "album_key": "55b43238",
+   "n": 4,
+   "identical": false,
+   "jaccard_med": 0.14,
+   "chars_med": 904.0,
+   "core": [
+    "and",
+    "drift",
+    "ghostly",
+    "of",
+    "organ",
+    "tape",
+    "vocals"
+   ]
+  },
+  {
+   "album_key": "22e8e771",
+   "n": 3,
+   "identical": false,
+   "jaccard_med": 0.15,
+   "chars_med": 261,
+   "core": [
+    "and",
+    "female",
+    "k-pop",
+    "vocals"
+   ]
+  },
+  {
+   "album_key": "41372b29",
+   "n": 3,
+   "identical": false,
+   "jaccard_med": 0.17,
+   "chars_med": 24,
+   "core": [
+    "trap"
+   ]
+  }
+ ]
+}
