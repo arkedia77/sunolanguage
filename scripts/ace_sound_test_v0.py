@@ -50,7 +50,7 @@ def main():
     runs = []
 
     def add(rid, test, arm, g, sp, ly, infl=80, excl="", note="", control_of=None, model="acemusic-v1"):
-        lim = (512, 2000) if model == "ace-step-1.5" else (1000, 5000)
+        lim = (512, 2000) if model.startswith("ace-step") else (1000, 5000)
         assert len(sp) <= lim[0] and len(ly) <= lim[1], (rid, len(sp), len(ly))
         runs.append({"run_id": rid, "test": test, "arm": arm, "gid": g, "title": S[g]["title"], "design_bpm": S[g]["bpm"], "design_key_db": S[g]["key"],
                      "vocal_gender_db": S[g]["vg"], "style_influence": infl, "exclude_styles": excl, "model": model, "mode": "custom", "lyricsMode": "own",
@@ -72,8 +72,8 @@ def main():
         add(f"T3_{g}", "T3", "캡션 끝 부정 문장(T3 고침 11-21 21:4x)", g, S[g]["sp"].rstrip() + " " + NEG, S[g]["ly"],
             note="v1 은 제외 칸을 모델에 안 보냄(sunomusic 213501 · 앱 주석) ⇒ 제외 칸 대신 캡션 끝에 부정 문장 1개")
     for g in (71016, 71019):  # T3S: ACE-Step 1.5(0cr · 제외 칸 받는 엔진) 같은 모델 안 짝 · encore 213648 · T1A와 비교 금지
-        add(f"T3S_A_{g}", "T3S", "A 제외 칸 빈 채(ACE-Step 대조)", g, S[g]["sp"], S[g]["ly"], model="ace-step-1.5", note="엔진 다름 · T1A와 비교 금지")
-        add(f"T3S_B_{g}", "T3S", "B 제외할 스타일 «drums, percussion»(ACE-Step)", g, S[g]["sp"], S[g]["ly"], excl=EXCLUDE, model="ace-step-1.5", note="엔진 다름 · T1A와 비교 금지")
+        add(f"T3S_A_{g}", "T3S", "A 제외 칸 빈 채(ACE-Step 대조)", g, S[g]["sp"], S[g]["ly"], model="ace-step-1.5-xl", note="엔진 다름 · T1A와 비교 금지")
+        add(f"T3S_B_{g}", "T3S", "B 제외할 스타일 «drums, percussion»(ACE-Step)", g, S[g]["sp"], S[g]["ly"], excl=EXCLUDE, model="ace-step-1.5-xl", note="엔진 다름 · T1A와 비교 금지")
     for g in (11645, 11648):
         add(f"T4A_{g}", "T4", "A 지시 태그 있음(원문)", g, S[g]["sp"], S[g]["ly"])
         st = strip_directive_tags(S[g]["ly"])
