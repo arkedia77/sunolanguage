@@ -1,0 +1,387 @@
+{
+ "meta": {
+  "script": "repo:sunolanguage scripts/magic_prompts_v1.py",
+  "rx": {
+   "bpm": "\\b\\d{2,3} ?BPM\\b",
+   "key": "\\b[A-G][#b]?(?:-flat|-sharp)? (?:major|minor)\\b|\\bkey of\\b",
+   "meter": "\\b\\d/\\d\\b|\\bhalf-time\\b|\\bswung\\b|\\bshuffle\\b",
+   "decade": "\\b(?:early|mid|late)?[- ]?(?:19|20)?\\d0s\\b",
+   "vocal": "\\bvocals?\\b|\\bvoice\\b|\\bsinger\\b|\\brap\\b|\\bharmonies\\b|\\bchoir\\b|\\bfalsetto\\b",
+   "gender": "\\b(?:male|female|boy|girl|women|men)\\b",
+   "flow": "\\bintro\\b|\\bopens?\\b|\\bopening\\b|\\bbuilds?\\b|\\bbridge\\b|\\bchorus(?:es)?\\b|\\bfade|\\bfinale\\b|\\boutro\\b|\\bdrop\\b|\\bbreakdown\\b|\\bending\\b|\\bconclud|\\bclos(?:e|es|ing)\\b|\\bfinal\\b",
+   "mix": "\\bmix\\b|\\bmaster|\\bproduction\\b|\\bcompress|\\bsidechain|\\breverb\\b|\\btape\\b|\\bsaturat|\\blo-fi\\b|\\bstereo\\b|\\bwide\\b",
+   "region": "\\b(?:Korean|K-pop|Japanese|Latin|Brazilian|African|Afro|UK|British|American|Nordic|Pacific Northwest|Detroit|Chicago|Memphis|Jamaican|French|Indian|Arabic|Spanish|Irish|Balkan|West Coast|East Coast|Southern|Nashville|Berlin|Atlanta)\\b",
+   "scene": "\\blike (?:a|an|the)\\b|\\bas if\\b|\\bimagine\\b|\\bnight drive\\b|\\brain\\b|\\bcity lights\\b",
+   "neg": "\\bno \\w+|\\bwithout\\b|\\bavoid\\b|\\bdon't\\b",
+   "kpop": "\\bk-?pop\\b|\\bkorean\\b"
+  },
+  "src": {
+   "suno": "agent-comm:projects/sunomusic/attachments/SUNO_MAGIC_PROMPTS_20261118/prompts.jsonl",
+   "ace": "agent-comm:projects/sunomusic/attachments/ACE_MAGIC_PROMPTS_20261119/prompts.jsonl"
+  }
+ },
+ "suno_magic": {
+  "n": 100,
+  "chars_med": 321.0,
+  "chars_min": 208,
+  "chars_max": 395,
+  "commas_med": 15.0,
+  "sent_med": 1.0,
+  "prose": 0,
+  "bpm": 88,
+  "key": 0,
+  "meter": 21,
+  "decade": 17,
+  "vocal": 20,
+  "gender": 0,
+  "flow": 82,
+  "mix": 100,
+  "region": 11,
+  "scene": 0,
+  "neg": 0,
+  "kpop": 10,
+  "genre_head_top": [
+   [
+    "atmospheric progressive rock",
+    27
+   ],
+   [
+    "post-rock pop",
+    12
+   ],
+   [
+    "alternative rock",
+    12
+   ],
+   [
+    "progressive rock",
+    12
+   ],
+   [
+    "korean indie rock",
+    5
+   ],
+   [
+    "philly soul-funk",
+    5
+   ],
+   [
+    "horrorcore",
+    4
+   ],
+   [
+    "ambient progressive rock",
+    2
+   ]
+  ],
+  "genre_head_distinct": 26,
+  "genre_word_top": [
+   [
+    "rock",
+    81
+   ],
+   [
+    "ambient",
+    35
+   ],
+   [
+    "pop",
+    18
+   ],
+   [
+    "soul",
+    8
+   ],
+   [
+    "funk",
+    6
+   ],
+   [
+    "punk",
+    4
+   ],
+   [
+    "hip-hop",
+    1
+   ]
+  ],
+  "bpm_pos": [
+   [
+    "first3",
+    66
+   ],
+   [
+    "last2",
+    9
+   ],
+   [
+    "mid",
+    8
+   ],
+   [
+    "last",
+    5
+   ]
+  ],
+  "bpm_first_chunk": 1
+ },
+ "ace_magic": {
+  "n": 100,
+  "chars_med": 638.5,
+  "chars_min": 526,
+  "chars_max": 764,
+  "commas_med": 8.0,
+  "sent_med": 5.0,
+  "prose": 100,
+  "bpm": 27,
+  "key": 1,
+  "meter": 25,
+  "decade": 42,
+  "vocal": 84,
+  "gender": 57,
+  "flow": 100,
+  "mix": 88,
+  "region": 28,
+  "scene": 4,
+  "neg": 2,
+  "kpop": 1,
+  "genre_head_top": [
+   [
+    "aggressive drift phonk driven by a",
+    2
+   ],
+   [
+    "early 1990s pacific northwest grunge built",
+    2
+   ],
+   [
+    "early 1980s japanese city pop with",
+    1
+   ],
+   [
+    "euphoric progressive festival edm at 128",
+    1
+   ],
+   [
+    "uplifting contemporary black gospel ballad in",
+    1
+   ],
+   [
+    "heartfelt neo-traditional country driven by a",
+    1
+   ],
+   [
+    "a contemporary romantic reggaeton production centered",
+    1
+   ],
+   [
+    "modern festival progressive house at 128",
+    1
+   ]
+  ],
+  "genre_head_distinct": 98,
+  "genre_word_top": [
+   [
+    "pop",
+    14
+   ],
+   [
+    "rock",
+    12
+   ],
+   [
+    "cinematic",
+    8
+   ],
+   [
+    "ambient",
+    7
+   ],
+   [
+    "r&b",
+    6
+   ],
+   [
+    "lo-fi",
+    6
+   ],
+   [
+    "house",
+    5
+   ],
+   [
+    "phonk",
+    4
+   ],
+   [
+    "grunge",
+    4
+   ],
+   [
+    "gospel",
+    3
+   ],
+   [
+    "orchestral",
+    3
+   ],
+   [
+    "latin",
+    3
+   ]
+  ],
+  "bpm_first_sentence": 24,
+  "decade_first_sentence": 42,
+  "last_slot": [
+   [
+    "구조",
+    71
+   ],
+   [
+    "리드·화성",
+    14
+   ],
+   [
+    "믹스",
+    10
+   ],
+   [
+    "리듬·저역",
+    3
+   ],
+   [
+    "보컬",
+    2
+   ]
+  ],
+  "has_mix_sentence": 64
+ },
+ "ace_seeded_115": {
+  "n": 115,
+  "chars_med": 655,
+  "chars_min": 568,
+  "chars_max": 732,
+  "commas_med": 9,
+  "sent_med": 5,
+  "prose": 115,
+  "bpm": 114,
+  "key": 0,
+  "meter": 34,
+  "decade": 13,
+  "vocal": 114,
+  "gender": 32,
+  "flow": 113,
+  "mix": 100,
+  "region": 104,
+  "scene": 0,
+  "neg": 0,
+  "kpop": 93,
+  "genre_head_top": [
+   [
+    "modern k-pop girl group dance-pop at",
+    2
+   ],
+   [
+    "energetic 2020s korean boy group dance-pop",
+    2
+   ],
+   [
+    "a polished korean hip-hop track at",
+    2
+   ],
+   [
+    "high-octane drift phonk driven by a",
+    2
+   ],
+   [
+    "high-octane modern drift phonk driven by",
+    2
+   ],
+   [
+    "high-energy korean bubblegum dance-pop at 126",
+    2
+   ],
+   [
+    "a polished korean electropop track at",
+    2
+   ],
+   [
+    "contemporary korean piano ballad at a",
+    2
+   ]
+  ],
+  "genre_head_distinct": 106,
+  "genre_word_top": [
+   [
+    "pop",
+    40
+   ],
+   [
+    "rock",
+    13
+   ],
+   [
+    "hip-hop",
+    12
+   ],
+   [
+    "r&b",
+    12
+   ],
+   [
+    "phonk",
+    8
+   ],
+   [
+    "k-pop",
+    4
+   ],
+   [
+    "trap",
+    3
+   ],
+   [
+    "edm",
+    3
+   ],
+   [
+    "lo-fi",
+    3
+   ],
+   [
+    "orchestral",
+    1
+   ]
+  ],
+  "bpm_first_sentence": 112,
+  "decade_first_sentence": 12,
+  "last_slot": [
+   [
+    "구조",
+    87
+   ],
+   [
+    "믹스",
+    18
+   ],
+   [
+    "리드·화성",
+    6
+   ],
+   [
+    "리듬·저역",
+    2
+   ],
+   [
+    "보컬",
+    2
+   ]
+  ],
+  "has_mix_sentence": 57,
+  "seed_has_bpm": 107
+ },
+ "uniq_all": {
+  "suno": 100,
+  "ace": 100
+ }
+}
