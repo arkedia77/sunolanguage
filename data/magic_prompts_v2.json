@@ -1,0 +1,653 @@
+{
+ "meta": {
+  "script": "repo:sunolanguage scripts/magic_prompts_v2.py",
+  "src_v2": "agent-comm:projects/sunomusic/attachments/SUNO_MAGIC_PROMPTS_20261121/prompts.jsonl"
+ },
+ "groups": {
+  "L1": {
+   "n": 100,
+   "chars_med": 321.0,
+   "chars_min": 208,
+   "chars_max": 395,
+   "commas_med": 15.0,
+   "sent_med": 1.0,
+   "prose": 0,
+   "bpm": 88,
+   "key": 0,
+   "meter": 21,
+   "decade": 17,
+   "vocal": 20,
+   "gender": 0,
+   "flow": 82,
+   "mix": 100,
+   "region": 11,
+   "scene": 0,
+   "neg": 0,
+   "kpop": 10,
+   "genre_head_top": [
+    [
+     "atmospheric progressive rock",
+     27
+    ],
+    [
+     "post-rock pop",
+     12
+    ],
+    [
+     "alternative rock",
+     12
+    ],
+    [
+     "progressive rock",
+     12
+    ],
+    [
+     "korean indie rock",
+     5
+    ],
+    [
+     "philly soul-funk",
+     5
+    ],
+    [
+     "horrorcore",
+     4
+    ],
+    [
+     "ambient progressive rock",
+     2
+    ]
+   ],
+   "genre_head_distinct": 26,
+   "genre_word_top": [
+    [
+     "rock",
+     81
+    ],
+    [
+     "ambient",
+     35
+    ],
+    [
+     "pop",
+     18
+    ],
+    [
+     "soul",
+     8
+    ],
+    [
+     "funk",
+     6
+    ],
+    [
+     "punk",
+     4
+    ],
+    [
+     "hip-hop",
+     1
+    ]
+   ],
+   "bpm_pos": [
+    [
+     "first3",
+     66
+    ],
+    [
+     "last2",
+     9
+    ],
+    [
+     "mid",
+     8
+    ],
+    [
+     "last",
+     5
+    ]
+   ],
+   "bpm_first_chunk": 1
+  },
+  "A": {
+   "n": 100,
+   "chars_med": 298.5,
+   "chars_min": 237,
+   "chars_max": 369,
+   "commas_med": 15.0,
+   "sent_med": 1.0,
+   "prose": 0,
+   "bpm": 96,
+   "key": 0,
+   "meter": 38,
+   "decade": 21,
+   "vocal": 55,
+   "gender": 37,
+   "flow": 61,
+   "mix": 100,
+   "region": 22,
+   "scene": 0,
+   "neg": 0,
+   "kpop": 21,
+   "genre_head_top": [
+    [
+     "broken beat neo-soul",
+     34
+    ],
+    [
+     "broken-beat neo-soul",
+     17
+    ],
+    [
+     "korean r&b ballad",
+     12
+    ],
+    [
+     "korean r&b",
+     4
+    ],
+    [
+     "moody r&b pop",
+     3
+    ],
+    [
+     "82 bpm",
+     3
+    ],
+    [
+     "pop",
+     3
+    ],
+    [
+     "electronic",
+     3
+    ]
+   ],
+   "genre_head_distinct": 25,
+   "genre_word_top": [
+    [
+     "soul",
+     73
+    ],
+    [
+     "r&b",
+     23
+    ],
+    [
+     "gospel",
+     14
+    ],
+    [
+     "pop",
+     11
+    ],
+    [
+     "jazz",
+     8
+    ],
+    [
+     "k-pop",
+     2
+    ],
+    [
+     "rock",
+     2
+    ],
+    [
+     "bop",
+     1
+    ],
+    [
+     "hip-hop",
+     1
+    ],
+    [
+     "latin",
+     1
+    ],
+    [
+     "funk",
+     1
+    ]
+   ],
+   "bpm_pos": [
+    [
+     "first3",
+     81
+    ],
+    [
+     "mid",
+     8
+    ],
+    [
+     "last2",
+     5
+    ],
+    [
+     "last",
+     2
+    ]
+   ],
+   "bpm_first_chunk": 3
+  },
+  "I": {
+   "n": 20,
+   "chars_med": 322.0,
+   "chars_min": 272,
+   "chars_max": 401,
+   "commas_med": 15.0,
+   "sent_med": 1.0,
+   "prose": 0,
+   "bpm": 17,
+   "key": 0,
+   "meter": 5,
+   "decade": 2,
+   "vocal": 4,
+   "gender": 0,
+   "flow": 16,
+   "mix": 20,
+   "region": 2,
+   "scene": 0,
+   "neg": 0,
+   "kpop": 2,
+   "genre_head_top": [
+    [
+     "atmospheric progressive rock",
+     5
+    ],
+    [
+     "progressive rock",
+     4
+    ],
+    [
+     "alternative rock",
+     3
+    ],
+    [
+     "post-rock pop",
+     2
+    ],
+    [
+     "108 bpm",
+     1
+    ],
+    [
+     "neo soul",
+     1
+    ],
+    [
+     "sparse instrumental intro",
+     1
+    ],
+    [
+     "progressive metal",
+     1
+    ]
+   ],
+   "genre_head_distinct": 10,
+   "genre_word_top": [
+    [
+     "rock",
+     16
+    ],
+    [
+     "ambient",
+     11
+    ],
+    [
+     "pop",
+     5
+    ],
+    [
+     "soul",
+     1
+    ],
+    [
+     "metal",
+     1
+    ],
+    [
+     "punk",
+     1
+    ],
+    [
+     "folk",
+     1
+    ]
+   ],
+   "bpm_pos": [
+    [
+     "first3",
+     9
+    ],
+    [
+     "mid",
+     4
+    ],
+    [
+     "last2",
+     3
+    ],
+    [
+     "last",
+     1
+    ]
+   ],
+   "bpm_first_chunk": 1
+  },
+  "S": {
+   "n": 30,
+   "chars_med": 283.5,
+   "chars_min": 249,
+   "chars_max": 340,
+   "commas_med": 15.0,
+   "sent_med": 1.0,
+   "prose": 0,
+   "bpm": 26,
+   "key": 0,
+   "meter": 10,
+   "decade": 7,
+   "vocal": 7,
+   "gender": 0,
+   "flow": 16,
+   "mix": 30,
+   "region": 12,
+   "scene": 0,
+   "neg": 0,
+   "kpop": 12,
+   "genre_head_top": [
+    [
+     "k-pop",
+     3
+    ],
+    [
+     "korean ballad",
+     3
+    ],
+    [
+     "trot",
+     3
+    ],
+    [
+     "city pop",
+     3
+    ],
+    [
+     "hip-hop",
+     3
+    ],
+    [
+     "neo soul",
+     3
+    ],
+    [
+     "dance pop",
+     3
+    ],
+    [
+     "indie pop",
+     3
+    ]
+   ],
+   "genre_head_distinct": 11,
+   "genre_word_top": [
+    [
+     "pop",
+     12
+    ],
+    [
+     "rock",
+     9
+    ],
+    [
+     "k-pop",
+     3
+    ],
+    [
+     "city pop",
+     3
+    ],
+    [
+     "hip-hop",
+     3
+    ],
+    [
+     "r&b",
+     3
+    ],
+    [
+     "soul",
+     3
+    ],
+    [
+     "folk",
+     3
+    ],
+    [
+     "ambient",
+     2
+    ],
+    [
+     "funk",
+     2
+    ],
+    [
+     "hip hop",
+     1
+    ]
+   ],
+   "bpm_pos": [
+    [
+     "first3",
+     15
+    ],
+    [
+     "last2",
+     7
+    ],
+    [
+     "mid",
+     4
+    ]
+   ],
+   "bpm_first_chunk": 0
+  }
+ },
+ "head_overlap_L1_A": [
+  "82 bpm",
+  "alternative rock",
+  "electronic",
+  "indie rock"
+ ],
+ "chunk_jaccard_L1_A": 0.08,
+ "seeds": [
+  {
+   "seed": "acoustic folk",
+   "n": 3,
+   "first_chunk": [
+    "acoustic folk",
+    "acoustic folk",
+    "acoustic folk"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [
+    "rock"
+   ],
+   "bpm": [
+    null,
+    "92 BPM",
+    "92 BPM"
+   ]
+  },
+  {
+   "seed": "city pop",
+   "n": 3,
+   "first_chunk": [
+    "city pop",
+    "city pop",
+    "city pop"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [
+    "funk"
+   ],
+   "bpm": [
+    "116 BPM",
+    "105 BPM",
+    "106 BPM"
+   ]
+  },
+  {
+   "seed": "dance pop",
+   "n": 3,
+   "first_chunk": [
+    "dance pop",
+    "dance pop",
+    "dance pop"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [],
+   "bpm": [
+    "118 BPM",
+    "118 BPM",
+    "118 BPM"
+   ]
+  },
+  {
+   "seed": "hip hop",
+   "n": 3,
+   "first_chunk": [
+    "hip-hop",
+    "hip-hop",
+    "hip-hop"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [
+    "hip-hop"
+   ],
+   "bpm": [
+    "92 BPM",
+    "92 BPM",
+    "92 BPM"
+   ]
+  },
+  {
+   "seed": "indie pop",
+   "n": 3,
+   "first_chunk": [
+    "indie pop",
+    "indie pop",
+    "indie pop"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [
+    "rock"
+   ],
+   "bpm": [
+    "92 BPM",
+    "98 BPM",
+    "98 BPM"
+   ]
+  },
+  {
+   "seed": "k-pop",
+   "n": 3,
+   "first_chunk": [
+    "k-pop",
+    "k-pop",
+    "k-pop"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [
+    "ambient",
+    "rock"
+   ],
+   "bpm": [
+    "104 BPM",
+    "102 BPM",
+    null
+   ]
+  },
+  {
+   "seed": "korean ballad",
+   "n": 3,
+   "first_chunk": [
+    "Korean ballad",
+    "korean ballad",
+    "korean ballad"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [
+    "ambient",
+    "rock"
+   ],
+   "bpm": [
+    "74 BPM",
+    "84 BPM",
+    "78 BPM"
+   ]
+  },
+  {
+   "seed": "r&b",
+   "n": 3,
+   "first_chunk": [
+    "neo soul",
+    "neo soul",
+    "neo soul"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 0,
+   "added_genre_words": [
+    "soul"
+   ],
+   "bpm": [
+    "104 BPM",
+    "94 BPM",
+    "96 BPM"
+   ]
+  },
+  {
+   "seed": "rock",
+   "n": 3,
+   "first_chunk": [
+    "alternative rock",
+    "alternative rock",
+    "progressive rock"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [],
+   "bpm": [
+    "126 BPM",
+    "132 BPM",
+    null
+   ]
+  },
+  {
+   "seed": "trot",
+   "n": 3,
+   "first_chunk": [
+    "trot",
+    "trot",
+    "trot"
+   ],
+   "seed_words_all_kept": 3,
+   "seed_in_first_chunk": 3,
+   "added_genre_words": [],
+   "bpm": [
+    null,
+    "92 BPM",
+    "104 BPM"
+   ]
+  }
+ ],
+ "instrumental_vocal_word": 4,
+ "instrumental_has_instrumental_word": 4
+}
