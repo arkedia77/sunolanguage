@@ -3,7 +3,7 @@
 결정적 변환(난수·모델 0). SP·가사 = DB songs 축자 · 손 입력 0.
   T1 우리 SP 그대로(A) vs 옮긴 판(B = acelang_reframe_v1.reframe · R1 BPM·조 장르 문장 안 · R2 믹스 문장 지움 · R4 칸 순서) — 4079·41054·71644
   T2 반영도 50 — 4079·41054 (대조 = T1-A · 반영도 80)
-  T3 제외할 스타일 «drums, percussion» — 41054·71644 (대조 = T1-A · 제외 칸 빈 채)
+  T3 (고침 11-21 21:4x) 캡션 끝에 «No drums or percussion.» 1문장 — 41054·71644 (대조 = T1-A) · 제외 칸은 v1 에서 모델에 안 감(sunomusic 213501)
   T4 가사 지시 태그 있음(A = 원문) vs 지시 태그 줄 뺌(B = 쉼표 든 [ ] 줄만 지움 · 섹션 태그는 둠) — 11645·11648 · SP 그대로 · 반영도 80
   T5 보컬 성별 바꿈(SP 안 female↔male · women↔men · girl↔boy · woman↔man) — 4079·41054 (대조 = T1-A)
 쓰기 = agent-comm:projects/sunolanguage/exchange/ace_sound_test_v0/inputs/{run_id}.json + manifest.json
@@ -16,7 +16,8 @@ sys.path.insert(0, str(REPO / "scripts"))
 from acelang_reframe_v1 import reframe
 
 OUT = Path.home() / "agent-comm-sunolanguage/projects/sunolanguage/exchange/ace_sound_test_v0/inputs"
-EXCLUDE = "drums, percussion"
+EXCLUDE = "drums, percussion"  # 11-21 21:4x 안 씀 — v1 이 제외 칸을 모델에 안 보냄
+NEG = "No drums or percussion."
 SWAP = {"female": "male", "male": "female", "women": "men", "men": "women", "woman": "man", "man": "woman", "girl": "boy", "boy": "girl", "girls": "boys", "boys": "girls"}
 
 
@@ -65,7 +66,8 @@ def main():
         assert sw != S[g]["sp"], g
         add(f"T5_{g}", "T5", "보컬 성별 바꿈", g, sw, S[g]["ly"], note=f"SP 성별 낱말 바꿈 · DB 성별 {S[g]['vg']} → 기대 {SWAP[S[g]['vg']]}")
     for g in (41054, 71644):
-        add(f"T3_{g}", "T3", "제외할 스타일", g, S[g]["sp"], S[g]["ly"], excl=EXCLUDE)
+        add(f"T3_{g}", "T3", "캡션 끝 부정 문장(T3 고침 11-21 21:4x)", g, S[g]["sp"].rstrip() + " " + NEG, S[g]["ly"],
+            note="v1 은 제외 칸을 모델에 안 보냄(sunomusic 213501 · 앱 주석) ⇒ 제외 칸 대신 캡션 끝에 부정 문장 1개")
     for g in (11645, 11648):
         add(f"T4A_{g}", "T4", "A 지시 태그 있음(원문)", g, S[g]["sp"], S[g]["ly"])
         st = strip_directive_tags(S[g]["ly"])
