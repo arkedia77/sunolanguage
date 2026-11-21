@@ -1,0 +1,3291 @@
+{
+ "meta": {
+  "script": "repo:sunolanguage scripts/build_ace_pack_v0.py",
+  "n_outputs": 239,
+  "by_set": {
+   "v2": 40,
+   "pilot": 30,
+   "v4": 45,
+   "v3": 24,
+   "magic": 100
+  },
+  "min_outputs": 5,
+  "dict": "repo:sunolanguage data/suno_phrase_dict_v2/dict.json (v2.2)"
+ },
+ "vocab_n": 293,
+ "vocab_in_suno_dict": 142,
+ "by_slot_n": {
+  "구조": 49,
+  "리듬·저역": 50,
+  "보컬": 53,
+  "리드·화성": 79,
+  "장르": 33,
+  "믹스": 29
+ },
+ "by_slot": {
+  "구조": [
+   {
+    "phrase": "arrangement opens",
+    "ace_outputs": 37,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rhythm section",
+    "ace_outputs": 31,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 2,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "track opens",
+    "ace_outputs": 28,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "final chorus",
+    "ace_outputs": 26,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 24,
+    "suno_Vplus": 124
+   },
+   {
+    "phrase": "builds through",
+    "ace_outputs": 20,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "arrangement builds",
+    "ace_outputs": 18,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "track builds",
+    "ace_outputs": 15,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "verses before",
+    "ace_outputs": 13,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "before resolving",
+    "ace_outputs": 12,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "bridge before",
+    "ace_outputs": 10,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 10
+   },
+   {
+    "phrase": "climactic final",
+    "ace_outputs": 9,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "half-time bridge",
+    "ace_outputs": 9,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 1,
+    "suno_Vplus": 31
+   },
+   {
+    "phrase": "opens sparsely",
+    "ace_outputs": 9,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "verses to soaring",
+    "ace_outputs": 8,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "verses and soaring",
+    "ace_outputs": 8,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "low end",
+    "ace_outputs": 8,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 17,
+    "suno_Vplus": 5
+   },
+   {
+    "phrase": "arrangement builds through",
+    "ace_outputs": 8,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "chorus before",
+    "ace_outputs": 8,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 11
+   },
+   {
+    "phrase": "intimate verses",
+    "ace_outputs": 8,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 5,
+    "suno_Vplus": 23
+   },
+   {
+    "phrase": "rhythmic verses",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "anthemic chorus",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 6,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "maximalist chorus",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "before gently",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rhythm section features",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "before dissolving",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "before an abrupt",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "open hi-hats",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "arrangement opens sparsely",
+    "ace_outputs": 7,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "climactic final chorus",
+    "ace_outputs": 6,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "tight low-end",
+    "ace_outputs": 6,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "piano outro",
+    "ace_outputs": 6,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 7
+   },
+   {
+    "phrase": "dynamic verses",
+    "ace_outputs": 6,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "between breathy",
+    "ace_outputs": 6,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "strips back",
+    "ace_outputs": 6,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "pulls back",
+    "ace_outputs": 6,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "explosive chorus",
+    "ace_outputs": 6,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 2,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "before soaring",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rising pre-chorus",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "surges through",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "fading out",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "fades out",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "breathy verses",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "string section",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "vinyl hiss",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "opens on filtered",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "arrangement begins",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "builds through dynamic",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "chorus-drenched electric",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "before exploding",
+    "ace_outputs": 5,
+    "slot": "구조",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   }
+  ],
+  "리듬·저역": [
+   {
+    "phrase": "four-on-the-floor kick",
+    "ace_outputs": 36,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 6,
+    "suno_Vplus": 18
+   },
+   {
+    "phrase": "punchy four-on-the-floor",
+    "ace_outputs": 22,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "synth bass",
+    "ace_outputs": 18,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 6,
+    "suno_Vplus": 4
+   },
+   {
+    "phrase": "punchy four-on-the-floor kick",
+    "ace_outputs": 16,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "hi-hat rolls",
+    "ace_outputs": 15,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rhythm guitars",
+    "ace_outputs": 15,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "drum kit",
+    "ace_outputs": 14,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 4,
+    "suno_Vplus": 10
+   },
+   {
+    "phrase": "driving four-on-the-floor",
+    "ace_outputs": 12,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "결/리듬",
+    "suno_HS": 2,
+    "suno_Vplus": 12
+   },
+   {
+    "phrase": "snare rolls",
+    "ace_outputs": 10,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "upright bass",
+    "ace_outputs": 10,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 6,
+    "suno_Vplus": 7
+   },
+   {
+    "phrase": "deep sub-bass",
+    "ace_outputs": 9,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 3,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "warm electric",
+    "ace_outputs": 9,
+    "slot": "리듬·저역",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 3,
+    "suno_Vplus": 20
+   },
+   {
+    "phrase": "electric bass",
+    "ace_outputs": 9,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 4,
+    "suno_Vplus": 7
+   },
+   {
+    "phrase": "rim clicks",
+    "ace_outputs": 9,
+    "slot": "리듬·저역",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 1,
+    "suno_Vplus": 16
+   },
+   {
+    "phrase": "sub-bass glides",
+    "ace_outputs": 9,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "bouncy four-on-the-floor",
+    "ace_outputs": 9,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "driving four-on-the-floor kick",
+    "ace_outputs": 8,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rhythm guitar",
+    "ace_outputs": 8,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "between rhythmic",
+    "ace_outputs": 8,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "drum groove",
+    "ace_outputs": 8,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "trap groove",
+    "ace_outputs": 8,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "결/리듬",
+    "suno_HS": 0,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "four-on-the-floor groove",
+    "ace_outputs": 8,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "결/리듬",
+    "suno_HS": 1,
+    "suno_Vplus": 12
+   },
+   {
+    "phrase": "brushed snare",
+    "ace_outputs": 7,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 7,
+    "suno_Vplus": 20
+   },
+   {
+    "phrase": "crisp rimshots",
+    "ace_outputs": 7,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "bass guitar",
+    "ace_outputs": 7,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 3,
+    "suno_Vplus": 3
+   },
+   {
+    "phrase": "four-on-the-floor beat",
+    "ace_outputs": 7,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "groove locks",
+    "ace_outputs": 6,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "warm electric bass",
+    "ace_outputs": 6,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 9
+   },
+   {
+    "phrase": "punchy kick",
+    "ace_outputs": 6,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 2,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "warm acoustic",
+    "ace_outputs": 6,
+    "slot": "리듬·저역",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 4
+   },
+   {
+    "phrase": "dance groove",
+    "ace_outputs": 6,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "결/리듬",
+    "suno_HS": 2,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "fingerpicked steel-string",
+    "ace_outputs": 6,
+    "slot": "리듬·저역",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 3
+   },
+   {
+    "phrase": "synth bassline",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rubbery synth bass",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "crisp claps",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "drive the groove",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "soft brushed",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rounded sub-bass",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 2,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "overdriven rhythm",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "punchy live",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "live drum",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "half-time groove",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "sliding sub-bass",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "trap hi-hat",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "layered claps",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "sixteenth-note hi-hats",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "snappy claps",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "upright bassline",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "acoustic drums",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 4,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "mid-tempo groove",
+    "ace_outputs": 5,
+    "slot": "리듬·저역",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "결/리듬",
+    "suno_HS": 1,
+    "suno_Vplus": 0
+   }
+  ],
+  "보컬": [
+   {
+    "phrase": "lead vocal",
+    "ace_outputs": 33,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 18,
+    "suno_Vplus": 11
+   },
+   {
+    "phrase": "vocal chops",
+    "ace_outputs": 31,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 4,
+    "suno_Vplus": 18
+   },
+   {
+    "phrase": "vocal delivers",
+    "ace_outputs": 27,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "male vocal",
+    "ace_outputs": 23,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 9,
+    "suno_Vplus": 89
+   },
+   {
+    "phrase": "lead vocals",
+    "ace_outputs": 19,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 1,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "female vocal",
+    "ace_outputs": 17,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 9,
+    "suno_Vplus": 122
+   },
+   {
+    "phrase": "vocal harmonies",
+    "ace_outputs": 16,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 2,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "rap vocal",
+    "ace_outputs": 13,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "전달",
+    "suno_HS": 0,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "vocals deliver",
+    "ace_outputs": 13,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 1,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "female vocals",
+    "ace_outputs": 12,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 18,
+    "suno_Vplus": 33
+   },
+   {
+    "phrase": "lead vocal delivers",
+    "ace_outputs": 12,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "backing harmonies",
+    "ace_outputs": 11,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocal ad-libs",
+    "ace_outputs": 10,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "memphis rap vocal",
+    "ace_outputs": 10,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocal leads",
+    "ace_outputs": 10,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocals alternate between",
+    "ace_outputs": 9,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "falsetto runs",
+    "ace_outputs": 9,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "pitched vocal chops",
+    "ace_outputs": 8,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 0,
+    "suno_Vplus": 9
+   },
+   {
+    "phrase": "gang chants",
+    "ace_outputs": 8,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "lead vocals deliver",
+    "ace_outputs": 8,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocal glides",
+    "ace_outputs": 8,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "female lead vocals",
+    "ace_outputs": 8,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "tight unison",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocal moves",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "alternates between",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "confident male",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocal shifts",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "pitched-down memphis rap",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "breathy vocal",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "group harmonies",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "raspy male",
+    "ace_outputs": 7,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocals shift",
+    "ace_outputs": 6,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocal transitions",
+    "ace_outputs": 6,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "between intimate",
+    "ace_outputs": 6,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocal chants",
+    "ace_outputs": 6,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "multi-tracked harmonies",
+    "ace_outputs": 6,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocals trade",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rhythmic rap",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "전달",
+    "suno_HS": 4,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "male vocals",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 32,
+    "suno_Vplus": 29
+   },
+   {
+    "phrase": "male group vocals",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rap cadences",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "dynamic male",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vocal begins",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "emotive vocal",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "harmonic shifts",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rap delivery",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "youthful lead vocal",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "effortlessly between",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "youthful female",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "stacked harmonies",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 5,
+    "suno_Vplus": 36
+   },
+   {
+    "phrase": "vocal delivery",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "전달",
+    "suno_HS": 1,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "vocal sits",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "breathy female",
+    "ace_outputs": 5,
+    "slot": "보컬",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 2,
+    "suno_Vplus": 47
+   }
+  ],
+  "리드·화성": [
+   {
+    "phrase": "grand piano",
+    "ace_outputs": 30,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 2,
+    "suno_Vplus": 4
+   },
+   {
+    "phrase": "synth pads",
+    "ace_outputs": 29,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 9,
+    "suno_Vplus": 9
+   },
+   {
+    "phrase": "electric guitar",
+    "ace_outputs": 28,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 17,
+    "suno_Vplus": 5
+   },
+   {
+    "phrase": "brass stabs",
+    "ace_outputs": 27,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 7
+   },
+   {
+    "phrase": "piano chords",
+    "ace_outputs": 24,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 6,
+    "suno_Vplus": 16
+   },
+   {
+    "phrase": "electric piano",
+    "ace_outputs": 22,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 10,
+    "suno_Vplus": 21
+   },
+   {
+    "phrase": "female lead",
+    "ace_outputs": 20,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 10,
+    "suno_Vplus": 43
+   },
+   {
+    "phrase": "acoustic guitar",
+    "ace_outputs": 18,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 15,
+    "suno_Vplus": 8
+   },
+   {
+    "phrase": "electric guitars",
+    "ace_outputs": 17,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 9,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "synth arpeggios",
+    "ace_outputs": 15,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 3
+   },
+   {
+    "phrase": "orchestral strings",
+    "ace_outputs": 14,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "nylon-string guitar",
+    "ace_outputs": 14,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 16
+   },
+   {
+    "phrase": "melodic hooks",
+    "ace_outputs": 13,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rhodes chords",
+    "ace_outputs": 13,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 20
+   },
+   {
+    "phrase": "upright piano",
+    "ace_outputs": 13,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 3,
+    "suno_Vplus": 4
+   },
+   {
+    "phrase": "power chords",
+    "ace_outputs": 13,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 4,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "lead delivers",
+    "ace_outputs": 13,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vinyl crackle",
+    "ace_outputs": 12,
+    "slot": "리드·화성",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 7,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "guitar chops",
+    "ace_outputs": 11,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 5
+   },
+   {
+    "phrase": "synth plucks",
+    "ace_outputs": 11,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "male lead",
+    "ace_outputs": 11,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "보컬 음색",
+    "suno_HS": 11,
+    "suno_Vplus": 47
+   },
+   {
+    "phrase": "guitar solo",
+    "ace_outputs": 10,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 4,
+    "suno_Vplus": 5
+   },
+   {
+    "phrase": "guitar plucks",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rubbery synth",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "bright brass",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "supersaw chords",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "guitar licks",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "guitar arpeggios",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 26
+   },
+   {
+    "phrase": "electric piano chords",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 2,
+    "suno_Vplus": 6
+   },
+   {
+    "phrase": "jazz piano",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "piano ballad",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "clean electric",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "felt piano",
+    "ace_outputs": 9,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 2,
+    "suno_Vplus": 7
+   },
+   {
+    "phrase": "solo cello",
+    "ace_outputs": 8,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "fender rhodes",
+    "ace_outputs": 8,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "guitar riffs",
+    "ace_outputs": 8,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 3,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "bright synth",
+    "ace_outputs": 7,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 3,
+    "suno_Vplus": 8
+   },
+   {
+    "phrase": "synth leads",
+    "ace_outputs": 7,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "piano and delicate",
+    "ace_outputs": 7,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "guitar riff",
+    "ace_outputs": 7,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 2,
+    "suno_Vplus": 5
+   },
+   {
+    "phrase": "analog synth pads",
+    "ace_outputs": 7,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 2,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "ambient synth",
+    "ace_outputs": 7,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "acoustic piano",
+    "ace_outputs": 7,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "female lead delivers",
+    "ace_outputs": 7,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "brass hits",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 13
+   },
+   {
+    "phrase": "lush orchestral strings",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "solo piano",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "곡 흐름",
+    "suno_HS": 0,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "acoustic grand piano",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "guitar fills",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 3,
+    "suno_Vplus": 16
+   },
+   {
+    "phrase": "filtered keys",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rhodes electric piano",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 9
+   },
+   {
+    "phrase": "lays down",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "funk guitar",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "clean electric guitar",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 3,
+    "suno_Vplus": 5
+   },
+   {
+    "phrase": "punchy brass",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "synth stabs",
+    "ace_outputs": 6,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 4,
+    "suno_Vplus": 7
+   },
+   {
+    "phrase": "bright brass stabs",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "guitar strums",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 5
+   },
+   {
+    "phrase": "synth brass",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "guitar establish",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "unresolved piano",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "grand piano chords",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "sweeping orchestral",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "brass accents",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "subtle vinyl",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "electric guitars trade",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "ambient synth pads",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "warm rhodes",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 2,
+    "suno_Vplus": 7
+   },
+   {
+    "phrase": "cowbell leads",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "filtered synth",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 0,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "isolated guitar",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean synth-pop",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "piano decay",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "electric guitar arpeggios",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "muted brass",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "male lead delivers",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "guitar leads",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "악기·연주",
+    "suno_HS": 1,
+    "suno_Vplus": 14
+   },
+   {
+    "phrase": "felted upright piano",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "field recordings",
+    "ace_outputs": 5,
+    "slot": "리드·화성",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 3,
+    "suno_Vplus": 2
+   }
+  ],
+  "장르": [
+   {
+    "phrase": "modern korean",
+    "ace_outputs": 25,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "bpm driven",
+    "ace_outputs": 19,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean bubblegum",
+    "ace_outputs": 16,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "contemporary korean",
+    "ace_outputs": 15,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 0,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "drift phonk",
+    "ace_outputs": 12,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "group dance-pop",
+    "ace_outputs": 10,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "bpm korean",
+    "ace_outputs": 10,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "drift phonk driven",
+    "ace_outputs": 9,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean trot",
+    "ace_outputs": 8,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 0,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "korean electropop",
+    "ace_outputs": 8,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean bubblegum pop",
+    "ace_outputs": 8,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "girl group dance-pop",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "modern k-pop",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "ballad set",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean ballad",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 1,
+    "suno_Vplus": 12
+   },
+   {
+    "phrase": "korean hip-hop",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 0,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "energetic korean",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean bubblegum dance-pop",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean pop-rock",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "alternative rnb",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 2,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "bpm in f",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "g major",
+    "ace_outputs": 6,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 2,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "built around",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "그 밖",
+    "suno_HS": 0,
+    "suno_Vplus": 6
+   },
+   {
+    "phrase": "high-octane modern",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "trot ballad",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean indie rock",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rock driven",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "rnb slow jam",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "결/리듬",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "modern drift phonk",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "modern korean semi-trot",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "korean boom-bap hip-hop",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "modern ambient",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "alternative rock",
+    "ace_outputs": 5,
+    "slot": "장르",
+    "slot_by": "든 문장",
+    "suno_dict": true,
+    "suno_category": "장르",
+    "suno_HS": 11,
+    "suno_Vplus": 1
+   }
+  ],
+  "믹스": [
+   {
+    "phrase": "tape saturation",
+    "ace_outputs": 22,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 12,
+    "suno_Vplus": 42
+   },
+   {
+    "phrase": "plate reverb",
+    "ace_outputs": 18,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "공간(라이브↔스튜디오)",
+    "suno_HS": 9,
+    "suno_Vplus": 20
+   },
+   {
+    "phrase": "wide stereo",
+    "ace_outputs": 15,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 5,
+    "suno_Vplus": 22
+   },
+   {
+    "phrase": "hall reverb",
+    "ace_outputs": 14,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "공간(라이브↔스튜디오)",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "sidechain compression",
+    "ace_outputs": 13,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 0,
+    "suno_Vplus": 3
+   },
+   {
+    "phrase": "analog synth",
+    "ace_outputs": 11,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 7,
+    "suno_Vplus": 9
+   },
+   {
+    "phrase": "analog tape",
+    "ace_outputs": 11,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 1,
+    "suno_Vplus": 10
+   },
+   {
+    "phrase": "tape hiss",
+    "ace_outputs": 11,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 0,
+    "suno_Vplus": 3
+   },
+   {
+    "phrase": "production features",
+    "ace_outputs": 10,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "spring reverb",
+    "ace_outputs": 9,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "공간(라이브↔스튜디오)",
+    "suno_HS": 1,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "mix emphasizes",
+    "ace_outputs": 8,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "mix features",
+    "ace_outputs": 8,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "stereo field",
+    "ace_outputs": 7,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 0,
+    "suno_Vplus": 13
+   },
+   {
+    "phrase": "sidechained synth",
+    "ace_outputs": 7,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 1,
+    "suno_Vplus": 1
+   },
+   {
+    "phrase": "climax before",
+    "ace_outputs": 7,
+    "slot": "믹스",
+    "slot_by": "든 문장",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "mix is crisp",
+    "ace_outputs": 7,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "sidechain pumping",
+    "ace_outputs": 7,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 1,
+    "suno_Vplus": 2
+   },
+   {
+    "phrase": "production maintains",
+    "ace_outputs": 6,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "polished korean",
+    "ace_outputs": 6,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 0,
+    "suno_Vplus": 7
+   },
+   {
+    "phrase": "tape delay",
+    "ace_outputs": 6,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "vintage tape",
+    "ace_outputs": 6,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "heavy sidechain",
+    "ace_outputs": 6,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "analog tape saturation",
+    "ace_outputs": 6,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "warm tape saturation",
+    "ace_outputs": 5,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 0,
+    "suno_Vplus": 9
+   },
+   {
+    "phrase": "warm analog",
+    "ace_outputs": 5,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": true,
+    "suno_category": "믹스·마스터",
+    "suno_HS": 5,
+    "suno_Vplus": 25
+   },
+   {
+    "phrase": "mix is glossy",
+    "ace_outputs": 5,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "tape flutter",
+    "ace_outputs": 5,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "mix is wide",
+    "ace_outputs": 5,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   },
+   {
+    "phrase": "analog bassline",
+    "ace_outputs": 5,
+    "slot": "믹스",
+    "slot_by": "구 자체",
+    "suno_dict": false,
+    "suno_category": null,
+    "suno_HS": 0,
+    "suno_Vplus": 0
+   }
+  ]
+ },
+ "capitalized_top": [
+  [
+   "The",
+   340
+  ],
+  [
+   "Korean",
+   78
+  ],
+  [
+   "An",
+   74
+  ],
+  [
+   "High",
+   26
+  ],
+  [
+   "Rhodes",
+   21
+  ],
+  [
+   "Modern",
+   18
+  ],
+  [
+   "Bright",
+   17
+  ],
+  [
+   "Late",
+   17
+  ],
+  [
+   "Modern Korean",
+   15
+  ],
+  [
+   "Memphis",
+   14
+  ],
+  [
+   "Early",
+   13
+  ],
+  [
+   "Crisp",
+   11
+  ],
+  [
+   "Lush",
+   11
+  ],
+  [
+   "Opening",
+   10
+  ],
+  [
+   "Verses",
+   9
+  ],
+  [
+   "Dynamic",
+   8
+  ],
+  [
+   "Aggressive",
+   7
+  ],
+  [
+   "Polished",
+   6
+  ],
+  [
+   "Roland",
+   6
+  ],
+  [
+   "Upbeat",
+   6
+  ],
+  [
+   "Youthful",
+   6
+  ],
+  [
+   "Mid",
+   6
+  ],
+  [
+   "Juno",
+   6
+  ],
+  [
+   "Hammond",
+   6
+  ],
+  [
+   "Energetic",
+   5
+  ],
+  [
+   "Intimate",
+   5
+  ],
+  [
+   "Clean",
+   5
+  ],
+  [
+   "After",
+   5
+  ],
+  [
+   "Driven",
+   5
+  ],
+  [
+   "Contemporary Korean",
+   5
+  ],
+  [
+   "Energetic Korean",
+   5
+  ],
+  [
+   "Warm",
+   5
+  ],
+  [
+   "Gritty",
+   5
+  ],
+  [
+   "Cinematic",
+   5
+  ],
+  [
+   "Versatile",
+   4
+  ],
+  [
+   "Sweeping",
+   4
+  ],
+  [
+   "Rich",
+   4
+  ],
+  [
+   "It",
+   4
+  ],
+  [
+   "Sparkling",
+   4
+  ],
+  [
+   "Driving",
+   4
+  ],
+  [
+   "Chopped",
+   4
+  ],
+  [
+   "Distorted",
+   4
+  ],
+  [
+   "Heavy",
+   4
+  ],
+  [
+   "Filtered",
+   4
+  ],
+  [
+   "Shimmering",
+   4
+  ],
+  [
+   "Melodic",
+   4
+  ],
+  [
+   "Dual",
+   4
+  ],
+  [
+   "Pacific Northwest",
+   4
+  ],
+  [
+   "Distant",
+   4
+  ],
+  [
+   "Nostalgic",
+   4
+  ],
+  [
+   "Staccato",
+   3
+  ],
+  [
+   "Expressive",
+   3
+  ],
+  [
+   "Jangly",
+   3
+  ],
+  [
+   "Pitched",
+   3
+  ],
+  [
+   "Heavily",
+   3
+  ],
+  [
+   "Subtle",
+   3
+  ],
+  [
+   "Breathy",
+   3
+  ],
+  [
+   "Smooth",
+   3
+  ],
+  [
+   "Charismatic",
+   3
+  ],
+  [
+   "Saturated",
+   3
+  ],
+  [
+   "Glossy",
+   3
+  ],
+  [
+   "Jersey",
+   3
+  ],
+  [
+   "Dark",
+   3
+  ],
+  [
+   "Bb",
+   3
+  ],
+  [
+   "Euphoric",
+   3
+  ],
+  [
+   "Telecaster",
+   3
+  ],
+  [
+   "Contemporary Latin",
+   3
+  ],
+  [
+   "Punchy",
+   3
+  ],
+  [
+   "Instrumental",
+   3
+  ],
+  [
+   "Fender Rhodes",
+   3
+  ],
+  [
+   "Opens",
+   3
+  ],
+  [
+   "Soulful",
+   3
+  ],
+  [
+   "Layered",
+   2
+  ],
+  [
+   "Piercing",
+   2
+  ],
+  [
+   "Atmospheric",
+   2
+  ],
+  [
+   "Interlocking",
+   2
+  ],
+  [
+   "Uptempo Korean",
+   2
+  ],
+  [
+   "Emotive",
+   2
+  ],
+  [
+   "Lush Fender Rhodes",
+   2
+  ],
+  [
+   "Subdued",
+   2
+  ]
+ ]
+}
