@@ -10,11 +10,11 @@ CATS = ["공간(라이브↔스튜디오)", "믹스·마스터", "전달", "보�
 
 
 def ev(r):
-    return r["V+"] + 3 * r["HS"] + 5 * r["AG"]
+    return r["V+"] + 3 * r["HS"] + 5 * r["AG"] + r.get("MG", 0)
 
 
 def suno_known(r):
-    return r["V+"] >= 5 or r["HS"] >= 3 or r["AG"] >= 2
+    return r["V+"] >= 5 or r["HS"] >= 3 or r["AG"] >= 2 or r.get("MG", 0) >= 5
 
 
 def main():
@@ -24,17 +24,23 @@ def main():
     P = print
     P(f"# 수노말 사전 {m['version']}\n")
     P(f"- 빌더 `repo:sunolanguage {m['builder']}` · 표 `scripts/render_suno_phrase_dict_v2.py` · 값 `data/suno_phrase_dict_v2/dict.json` · DB `sunolang.db` `suno_phrase_dict`(v1.2 `suno_emitted_terms` 안 건드림)")
-    P(f"- 재료 해시: refs.json `{m['inputs']['refs.json']}` · variety_rewrites.json `{m['inputs']['variety_rewrites.json']}` (`repo:agent-comm projects/sunomusic/attachments/SUNO_HOME_REFS_20261111/`)")
+    P(f"- 재료 해시: refs.json `{m['inputs']['refs.json']}` · variety_rewrites.json `{m['inputs']['variety_rewrites.json']}` (`repo:agent-comm projects/sunomusic/attachments/SUNO_HOME_REFS_20261111/`)" + (f" · refs 11-16 `{m['inputs']['refs_20261116.json']}`(`…/SUNO_HOME_REFS_20261116/` · id 로 합침)" if 'refs_20261116.json' in m['inputs'] else ""))
+    if "magic" in m["inputs"]:
+        P("- 매직 버튼(v2.3): " + " · ".join(f"`{k}` `{v}`" for k, v in m["inputs"]["magic"].items()) + " (`repo:agent-comm projects/sunomusic/attachments/`)")
     P("- 생성 0 · 지출 0 · 실가수·그룹·곡 이름 0(LEO 문장 2 의 이름 든 구는 뺌)\n")
     cnt = collections.Counter(r["category"] for r in R)
     kn = collections.Counter(r["category"] for r in R if suno_known(r))
     P("## 0. 한눈에\n")
-    P(f"- **{len(R):,}구** · 그중 **Suno 가 썼다는 근거 있는 구 {sum(kn.values()):,}**(Variety 더함 ≥5곡 · 홈 Suno 작성 ≥3곡 · agentic ≥2 중 하나)")
+    P(f"- **{len(R):,}구** · 그중 **Suno 가 썼다는 근거 있는 구 {sum(kn.values()):,}**(Variety 더함 ≥5곡 · 홈 Suno 작성 ≥3곡 · agentic ≥2 · **매직 버튼 ≥5출력**(v2.3) 중 하나)")
     P(f"- 지금 판 대조: 기존(v1.2·v3.5 에 같은 꼴) {sum(r['new_kind']=='기존' for r in R):,} · **구 꼴만 새것**(낱말은 다 있던 것) {sum(r['new_kind']=='구 꼴만 새것' for r in R):,} · **새 낱말 포함** {sum(r['new_kind']=='새 낱말 포함' for r in R):,}(그중 Suno 근거 {sum(1 for r in R if r['new_kind']=='새 낱말 포함' and suno_known(r))})")
     st = m["stale_v1_2_absent_in_new"]
     P(f"- 낡은 구(v1.2 10곡↑인데 새 재료 0): {st['n']} — {', '.join(t for t, _ in st['top'])} ⇒ 한글 2 = 토크나이저 밖 · 5낱말 2 = 4낱말 창 밖 ⇒ **실제 낡은 구 ≈0 · 폐기 0**")
     P(f"- 효과 대조 짝 = **5구뿐**(§3 · 교락) + 한 칸 짝 시험 **{sum(1 for r in R if r.get('test_result'))}구**(§3c · PH2 n=2 · 못 가름) — 나머지 «먹힘»은 **[미확인]**: 나옴(렌더 실례) ≠ 들림")
     P("- ⚠**v2.2 정정(11-14)**: v2.1 까지 V+/V-(Suno 가 더한/뺀 곡)는 하이픈 고쳐쓰기를 더함·뺌으로 셈(예 `electric guitar` V- 189 중 79 = Suno 가 `electric-guitar` 로 고쳐 남긴 것) ⇒ **v2.1 의 하이픈 든 구 V± 는 부풀었음** · v2.2 는 하이픈=공백 같은 꼴로 대조(electric guitar V- 189→111) · 그 결과 하이픈 꼴 행 일부(`electric-guitar`·`grand-piano` 등)는 문턱 밑으로 빠짐")
+    if "MG" in n:
+        mg = [r for r in R if r.get("MG", 0) >= 5]
+        P(f"- ★**v2.3(11-26) 바뀐 칸**: ⓐ새 채널 **MG = Suno 매직 버튼 {n['MG']}출력**(Suno 가 직접 씀 · leoarkedia {n.get('MG_L', 0)} · asiloveu {n.get('MG_A', 0)}) — MG ≥5 행 {len(mg)} · 그중 **두 계정 다 ≥2 = {sum(r['mg_both_accounts'] for r in mg)}**(`mg_both_accounts`) · ⚠매직 버튼은 **계정 취향 맞춤**(두 계정 쉼표 칸 자카드 0.08 · `exchange/magic_prompts_20261121/analysis_v2.md`) ⇒ 한 계정에만 큰 MG 는 «Suno 일반» 아님 ⓑ홈 = 11-11 + 11-16 id 로 합침(HS·HU·HD 곡 수 늘어남) ⓒACE 열(`ace_*`)은 v2.2 그대로 — ACE 는 **ACE 팩 v0**(`exchange/ace_language_pack_v0/`)이 정본")
+        P("- ★**v2.3 꼴 관측(정본 규칙 아님 · [글])**: Suno 가 스스로 쓰는 스타일 = 쉼표 태그 한 줄 ≈300자(208~401) · 쉼표 15칸 · BPM 88~96%(장르 바로 뒤) · 조 0 · 믹스·공간 낱말 100% — 두 계정 같음 · 우리 카드(≈850자 문장형)와 가장 먼 꼴 · ⛔«Suno 가 쓰는 꼴 = 잘 따르는 꼴»은 증명 안 됨(청음·측정 0)")
     P(f"- 덧(11-12 v2.1): 우리 클립 display_tags(OD) 채널은 PG 실시간 재료라 다시 지을 때 곡 수가 늘 수 있음 — 이번 판 OD {n['OD']:,}곡\n")
     P("| 칸 | 구 | Suno 근거 있는 구 |\n|---|---|---|")
     for c in CATS:
@@ -50,16 +56,18 @@ def main():
             ("LS", "녹음 인식 프롬프트(tracks 79 · 실음악 듣고 Suno 가 쓴 말)", n["LS"], "**Suno 확정** · 역방향 근거(들리면 이 말로 부름)"),
             ("ACE", "ACE Music ✦(마법사) 출력 — 씨앗 18 × 3~5번(sunomusic 수집 · 0cr) · 출력 단위", n.get("ACE", 0), "**ACE 확정**(다른 엔진 · Suno 채널과 합산 0)"),
             ("LEO", "LEO 문장 4", n["LEO"], "LEO 가 가져온 문장(출처 Suno 쪽으로 보임 · 미확인)")]
+    if "MG" in n:
+        rows.insert(3, ("MG (MG_L · MG_A)", "Suno 매직 버튼 ✦(Styles 칸 «Personalize») — 빈칸 보컬 200 · 빈칸 반주 20 · 장르 씨앗 30 · 출력 단위 · 계정별 열 따로", n["MG"], "**Suno 확정**(Suno 가 씀) · ⚠계정 취향 맞춤"))
     for a, b, c_, e in rows:
         P(f"| {a} | {b} | {c_:,} | {e} |")
     P("\n⛔ Enhance·Inspire 자동 스타일 = 홈·PG 어디에도 식별 칸 없음 → **미측정**.\n")
     P("## 2. 칸별 대표 구 (Suno 근거 큰 순 · 2낱말↑ · 칸마다 14)\n")
-    P("열: V+ = Suno 가 더한 곡 · V- = 뺀 곡 · AG · HS · HU · LS(녹음 인식 79 중) · 새 = 지금 판 대조 · 예 = 렌더 실례 id(나옴 ≠ 들림)\n")
+    P("열: V+ = Suno 가 더한 곡 · V- = 뺀 곡 · AG · HS · HU · MG(매직 버튼 출력 · L/A = 두 계정) · LS(녹음 인식 79 중) · 새 = 지금 판 대조 · 예 = 렌더 실례 id(나옴 ≠ 들림)\n")
     for c in CATS:
         rs = sorted([r for r in R if r["category"] == c and r["n_words"] >= 2], key=lambda r: (-ev(r), -r["HU"]))[:14]
-        P(f"### {c}\n\n| 구 | V+ | V- | AG | HS | HU | LS | 새 | 예 |\n|---|---|---|---|---|---|---|---|---|")
+        P(f"### {c}\n\n| 구 | V+ | V- | AG | HS | HU | MG(L·A) | LS | 새 | 예 |\n|---|---|---|---|---|---|---|---|---|---|")
         for r in rs:
-            P(f"| {r['phrase']} | {r['V+']} | {r['V-']} | {r['AG']} | {r['HS']} | {r['HU']} | {r['LS']} | {r['new_kind']} | `{str(r['render_example'])[:8]}` |")
+            P(f"| {r['phrase']} | {r['V+']} | {r['V-']} | {r['AG']} | {r['HS']} | {r['HU']} | {r.get('MG', 0)}({r.get('MG_L', 0)}·{r.get('MG_A', 0)}) | {r['LS']} | {r['new_kind']} | `{str(r['render_example'])[:8]}` |")
         P("")
     ep = m["effect_pair"]
     P("## 3. 효과 대조 짝 (먹힘 근거 1층 — 지금 1건)\n")

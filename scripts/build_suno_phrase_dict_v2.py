@@ -22,9 +22,11 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 AC = Path.home() / "agent-comm-sunolanguage/projects"
 REFS = AC / "sunomusic/attachments/SUNO_HOME_REFS_20261111/refs.json"
+REFS2 = AC / "sunomusic/attachments/SUNO_HOME_REFS_20261116/refs.json"  # v2.3 · 11-16 재수집(1,376 · 새 210) — id 로 합침 · 겹치면 11-16 판
+MAGIC = [AC / "sunomusic/attachments/SUNO_MAGIC_PROMPTS_20261118/prompts.jsonl", AC / "sunomusic/attachments/SUNO_MAGIC_PROMPTS_20261121/prompts.jsonl"]  # v2.3 · Suno 매직 버튼(Suno 가 직접 씀 · 0cr) 250
 VAR = AC / "sunomusic/attachments/SUNO_HOME_REFS_20261111/variety_rewrites.json"
 ACE = [AC / "sunomusic/attachments/acelang_collect_v2_20261113.jsonl", AC / "sunomusic/attachments/acelang_pilot_20261113.jsonl"]  # ✦ 출력(encore 235637 OK)
-VERSION = "suno_phrase v2.2 (2026-11-14 · V± 하이픈 정규화 · ACE 칸)"
+VERSION = "suno_phrase v2.3 (2026-11-26 · 매직 버튼 MG 채널 250 · 홈 11-16 합침 · ACE 칸은 ACE 팩 v0 로 · ACE 열은 v2.2 그대로)"
 
 LEO = [  # encore 210058 «LEO 문장 4개» · 2·3 은 leomusic_encore_20261111_193153·193333 축자
     "Flamenco-Pop Fast Rumba, Hard-Struck Spanish Guitars With Cross-Accented Cajón, Fierce Palmas And Stomps Dropping Into Silence For A Half-Time Breakdown, Virtuosic Guitar Solo Into The Driving Final Refrain; Polished Wide-Stereo Live Mix, Dense Mastering, Controlled Limiting, Clean Powerful Bass And Stadium Ambience; Fast, Syncopated Groove; Upfront Close-Miked Gritty, Raspy Female Chest Voice, Shifting From Playful, Intimate Spoken Delivery To Explosive Belts And Fiery Melismas, With Crowd Chants And Jaleos Answering The Refrain.",
@@ -133,9 +135,11 @@ def sha(p):
 
 
 def main():
-    refs = json.loads(REFS.read_text())["songs"]
+    refs = {s["id"]: s for s in json.loads(REFS.read_text())["songs"]}
+    refs.update({s["id"]: s for s in json.loads(REFS2.read_text())["songs"]})
+    refs = list(refs.values())
     var = json.loads(VAR.read_text())["songs"]
-    df = {k: collections.Counter() for k in ("V+", "V-", "Vkeep", "HS", "HU", "HD", "LS", "AG", "OD", "LEO")}
+    df = {k: collections.Counter() for k in ("V+", "V-", "Vkeep", "HS", "HU", "HD", "LS", "AG", "OD", "LEO", "MG", "MG_L", "MG_A")}
     ex = collections.defaultdict(dict)  # gram → 채널 → 예 id
     ch_n = collections.Counter()
 
@@ -195,6 +199,17 @@ def main():
     cur.execute("select global_id, min(clip_uuid::text), string_agg(display_tags, ', ') from suno_clip_style where display_tags is not null and display_tags <> '' group by global_id")
     for gid, cu, dt in cur.fetchall():
         add("OD", grams(dt), cu)
+    # 매직 버튼(v2.3) — 출력 단위 · Suno 가 빈칸/씨앗에 직접 쓴 태그 줄 · 계정별 따로 셈(계정 취향 맞춤 · 2판 자카드 0.08)
+    for f in MAGIC:
+        for l in f.read_text().splitlines():
+            d = json.loads(l)
+            gs = grams(d["prompt"])
+            eid = f"magic:{f.parent.name[-8:]}:{d.get('n') or d.get('request_id')}"
+            add("MG", gs, eid)
+            acct = "MG_A" if d.get("account") == "asiloveu" else "MG_L"
+            ch_n[acct] += 1
+            for g in gs:
+                df[acct][g] += 1
     for i, t in enumerate(LEO, 1):
         segs = [x for x in re.split(r"[,;.]", t) if not NAME_BLOCK.search(x)]
         add("LEO", grams(", ".join(segs)), f"LEO{i}")
@@ -212,7 +227,7 @@ def main():
 
     # 후보: Suno 확정·근거 채널에서 곡 ≥3 · 저자 모름 홈은 ≥5 · LEO 문장 구는 전부(재료 지정)
     keep = set()
-    for ch, th in (("V+", 5), ("HS", 3), ("LS", 3), ("HD", 3), ("HU", 8), ("AG", 2), ("OD", 5)):
+    for ch, th in (("V+", 5), ("HS", 3), ("LS", 3), ("HD", 3), ("HU", 8), ("AG", 2), ("OD", 5), ("MG", 5)):
         keep |= {g for g, n in df[ch].items() if n >= th}
     # «그 밖» 칸 홑낱말(reframed·beneath 류 서술 연결어)은 Suno 가 20곡↑ 더한 것만
     keep = {g for g in keep if g in df["LEO"] or " " in g or category(g) != "그 밖" or df["V+"][g] >= 20}
@@ -231,7 +246,7 @@ def main():
     keep = {g for g in keep if not NAME_BLOCK.search(g)}
     keep -= {"no", "not", "never", "without", "avoid"}  # 금지형 홑낱말 = 뜻 없음
     # 포섭: 더 긴 구 안에서만(같은 채널 곡 수의 80% 이상) 나오는 짧은 구는 뺌 — 근거 채널 합으로 판정
-    tot = lambda g: sum(df[c][g] for c in ("V+", "HS", "HU", "LS", "HD", "AG", "OD"))
+    tot = lambda g: sum(df[c][g] for c in ("V+", "HS", "HU", "LS", "HD", "AG", "OD", "MG"))
     by_len = sorted(keep, key=lambda g: -len(g.split()))
     drop = set()
     longer = collections.defaultdict(list)
@@ -261,18 +276,19 @@ def main():
             "phrase": g, "category": category(g), "n_words": len(g.split()),
             "V+": df["V+"][g], "V-": df["V-"][g], "Vkeep": df["Vkeep"][g], "HS": df["HS"][g], "HU": df["HU"][g],
             "HD": df["HD"][g], "LS": df["LS"][g], "AG": df["AG"][g], "OD": df["OD"][g], "LEO": df["LEO"][g],
+            "MG": df["MG"][g], "MG_L": df["MG_L"][g], "MG_A": df["MG_A"][g], "mg_both_accounts": df["MG_L"][g] >= 2 and df["MG_A"][g] >= 2,
             "in_v1_2": k in v12, "v1_2_songs": v12.get(k, (0, ""))[0], "in_v3_5": k in v35,
             "new_kind": "기존" if (k in v12 or k in v35) else ("구 꼴만 새것" if all(w in oldwords for w in k.split()) else "새 낱말 포함"),
             "effect_pair": f"{ep} · 교락" if ep else None,
             "ace_n": ace_n[hy(g)], "ace_seeds": len(ace_seed[hy(g)]),
             # 홑낱말(vocal·rhythm)은 Suno 가 꼴만 바꿔도 V- 가 커서 표시 안 함
             "ace_vs_suno": None if " " not in g else ("ACE 씀·Suno 뺌" if ace_n[hy(g)] >= 5 and df["V-"][g] >= 15 and df["V-"][g] >= 2 * max(df["V+"][g], 1)
-                            else "둘 다 씀" if ace_n[hy(g)] >= 5 and (df["V+"][g] >= 5 or df["HS"][g] >= 3)
-                            else "ACE 만" if ace_n[hy(g)] >= 5 and not any(df[c][g] for c in ("V+", "Vkeep", "HS", "HU", "HD", "LS", "AG", "OD")) else None),
+                            else "둘 다 씀" if ace_n[hy(g)] >= 5 and (df["V+"][g] >= 5 or df["HS"][g] >= 3 or df["MG"][g] >= 5)
+                            else "ACE 만" if ace_n[hy(g)] >= 5 and not any(df[c][g] for c in ("V+", "Vkeep", "HS", "HU", "HD", "LS", "AG", "OD", "MG")) else None),
             "ace_follows": None,  # 들림 측정 = encore 렌더(지금 BPM 만 칸 아닌 판 단위 · meta.ace_frame)
             "test_result": f"PH2 n=2 · {PH2['phrases'][g]}" if g in PH2["phrases"] else None,
             "listen_layer": df["LS"][g],  # tracks 녹음 인식 79곡 중 곡 수
-            "render_example": ex[g].get("V+") or ex[g].get("AG") or ex[g].get("HS") or ex[g].get("HU") or ex[g].get("OD") or ex[g].get("LEO"),
+            "render_example": ex[g].get("V+") or ex[g].get("AG") or ex[g].get("HS") or ex[g].get("HU") or ex[g].get("OD") or ex[g].get("MG") or ex[g].get("LEO"),
         })
     rows.sort(key=lambda r: (r["category"], -(r["V+"] + r["HS"] + r["LS"]), r["phrase"]))
     home_any, vplus = collections.Counter(), collections.Counter()  # 하이픈·띄어쓰기 같은 꼴로 모아 셈
@@ -286,7 +302,7 @@ def main():
                  "같은 꼴 — 보낸 SP": sum(1 for x in var if tpl.search(x.get("sp_sent") or "")),
                  "같은 꼴 — 홈 곡": sum(1 for x in refs if tpl.search(x.get("style") or ""))}
     meta = {"version": VERSION, "builder": "scripts/build_suno_phrase_dict_v2.py",
-            "inputs": {"refs.json": sha(REFS), "variety_rewrites.json": sha(VAR), "tracks.suno_prompt": "sunolang.db"},
+            "inputs": {"refs.json": sha(REFS), "refs_20261116.json": sha(REFS2), "variety_rewrites.json": sha(VAR), "magic": {f.parent.name: sha(f) for f in MAGIC}, "tracks.suno_prompt": "sunolang.db"},
             "channel_docs": dict(ch_n), "effect_pair": EFFECT_PAIR, "ph2": PH2, "ace_frame": ACE_FRAME, "templates": templates,
             "compared_with": {"suno_emitted v1.2": "2026-10-16 · 5,904 낱말·구(우리 클립 Suno tags · V6 census)",
                               "expr_concepts v3.5": "2026-09-14 · 453 개념"},
