@@ -62,7 +62,7 @@ def strip_tempo(u):
         return ""
     u = BPM.sub("", u)
     u = re.sub(r"\b\d/\d\b", "", u)
-    u = re.sub(r"\bkey of [A-G][#b]?m?(?: (?:major|minor))?", "", u)
+    u = re.sub(r"\b(?:in the |in )?key of [A-G][#b]?m?(?: (?:major|minor))?", "", u)  # «in the» 찌꺼기 막음(11-26)
     u = re.sub(r"\b[A-G][#b]? (?:major|minor)\b", "", u)
     u = re.sub(r"\s*,\s*(?=[,.]|$)", "", u)          # 빈 쉼표 칸
     u = re.sub(r"(,\s*){2,}", ", ", u)
@@ -93,7 +93,7 @@ def reframe(sp):
     rest.sort()
     out = " ".join([genre] + [u for _, _, u in rest])
     w = lambda t: set(re.findall(r"[a-z]+", t.lower()))
-    extra = w(out) - w(sp) - ALLOWED_NEW
+    extra = w(out) - w(sp) - ALLOWED_NEW - (w(key) if key else set())  # 조를 풀어 쓴 음이름 철자(«Ebm»→«Eb minor»의 eb) · leomusic2 164247
     if extra:
         raise SystemExit(f"덧붙인 낱말 있음: {sorted(extra)}")
     return out, {"bpm": bpm.group(1) if bpm else None, "key": key, "dropped_mix": sum(bool(MIX.search(strip_tempo(u))) for u in us[1:])}
