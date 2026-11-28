@@ -17,17 +17,17 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 OUT = Path.home() / "agent-comm-sunolanguage/projects/sunolanguage/exchange/ace_bracket_test_v0/inputs"
 LYR = OUT.parent / "lyrics"
-KEYS = [("B68", 68, ("ballad",)), ("P100", 100, ("mid", "medium", "pop100", "_pop")), ("D120", 120, ("dance",))]
+KEYS = [("B68", 68, ("ballad",)), ("P100", 100, ("midpop",)), ("D120", 120, ("dancepop",))]  # mora 093816 파일 이름 · 성별 = mora 결 칸(남·여·여)
 SPS = {
     "B68": "Korean piano ballad at 68 BPM in E-flat major, slow and tender with a gentle half-time pulse. "
            "Soft acoustic piano carries the chords while warm strings rise underneath, and a brushed acoustic drum kit with a soft kick and rim clicks keeps time. "
            "A deep electric bass holds sustained root notes below the piano. "
-           "A warm, breathy female lead vocal sings close to the microphone with restrained phrasing that opens up in the chorus. "
+           "A warm, calm male lead vocal sings close to the microphone with restrained phrasing that swells in the final chorus. "
            "The song moves from intimate verses to a fuller chorus with layered harmonies and ends on a quiet piano outro.",
     "P100": "Korean mid-tempo pop at 100 BPM in G major, warm and easygoing with a light bounce in the groove. "
             "Clean electric guitar plays muted rhythmic chords over a round electric bass, and a full acoustic drum kit with a crisp snare and tight hi-hats drives the beat. "
             "Soft synth pads and a bright electric piano fill the background. "
-            "A clear, friendly male lead vocal sings in a conversational tone and lifts into a catchy chorus. "
+            "A bright, playful female lead vocal sings in a conversational tone and lifts into a catchy chorus. "
             "Verses stay light and open before the chorus adds stacked backing vocals and handclaps.",
     "D120": "Korean dance pop at 120 BPM in A minor, energetic and glossy with a punchy four-on-the-floor groove. "
             "A tight electronic drum kit with a heavy kick, crisp claps and open hi-hats drives the track over a pulsing synth bass. "
